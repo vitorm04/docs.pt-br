@@ -6,13 +6,13 @@ ms.openlocfilehash: 7de5d52587e1796ecfa05048024f8847a555655c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972829"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Como: usar vários tokens de segurança do mesmo tipo
--   No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, um token de cliente de mensagem somente deles independente de qualquer tipo. Agora, as mensagens do cliente podem conter vários tokens de um tipo. Este tópico mostra como incluir vários tokens do mesmo tipo em uma mensagem do cliente.  
+- No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, um token de cliente de mensagem somente deles independente de qualquer tipo. Agora, as mensagens do cliente podem conter vários tokens de um tipo. Este tópico mostra como incluir vários tokens do mesmo tipo em uma mensagem do cliente.  
   
--   Observe que você não pode configurar um serviço dessa maneira: um serviço pode conter apenas um token de suporte.  
+- Observe que você não pode configurar um serviço dessa maneira: um serviço pode conter apenas um token de suporte.  
   
 ### <a name="to-use-multiple-security-tokens-of-the-same-type"></a>Para usar vários tokens de segurança do mesmo tipo  
   

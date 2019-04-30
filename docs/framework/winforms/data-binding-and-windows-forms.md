@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967031"
 ---
 # <a name="data-binding-and-windows-forms"></a>Associação de dados e o Windows Forms
 No Windows Forms, você pode vincular não apenas a fontes de dados tradicionais, mas também a praticamente qualquer estrutura que contenha dados. Você pode vincular a uma matriz de valores que você calcula no tempo de execução, lê de um arquivo ou deriva dos valores de outros controles.  
   
  Além disso, você pode vincular qualquer propriedade de qualquer controle à fonte de dados. Na vinculação de dados tradicional, você geralmente vincula a propriedade de exibição — por exemplo, a propriedade <xref:System.Windows.Forms.Control.Text%2A> de um controle <xref:System.Windows.Forms.TextBox> — à fonte de dados. Com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você tem também a opção de definir outras propriedades por meio da vinculação. É possível usar a vinculação para realizar as seguintes tarefas:  
   
--   Definir o grafo de um controle de imagem.  
+- Definir o grafo de um controle de imagem.  
   
--   Definir a cor do plano de fundo de um ou mais controles.  
+- Definir a cor do plano de fundo de um ou mais controles.  
   
--   Definir o tamanho dos controles.  
+- Definir o tamanho dos controles.  
   
  Basicamente, a vinculação de dados é uma maneira automática de configurar qualquer propriedade acessível do tempo de execução de qualquer controle em um formulário.  
   

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 71e0ffc7f03a27a878aeb48eda9fbc58e5faae82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945321"
 ---
 # <a name="group-by-clause-visual-basic"></a>Cláusula Group By (Visual Basic)
 Agrupa os elementos de um resultado de consulta. Também pode ser usado para aplicar funções de agregação a cada grupo. A operação de agrupamento se baseia em uma ou mais chaves.  
@@ -31,19 +31,19 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="parts"></a>Partes  
   
--   `listField1`, `listField2`  
+- `listField1`, `listField2`  
   
      Opcional. Um ou mais campos de variável de consulta ou variáveis que identificam explicitamente os campos a serem incluídos no resultado agrupado. Se nenhum campo foi especificado, todos os campos de variável de consulta ou variáveis serão incluídos no resultado agrupado.  
   
--   `keyExp1`  
+- `keyExp1`  
   
      Necessário. Uma expressão que identifica a chave a ser usada para determinar os grupos de elementos. Você pode especificar mais de uma chave para especificar uma chave composta.  
   
--   `keyExp2`  
+- `keyExp2`  
   
      Opcional. Uma ou mais chaves adicionais que são combinadas com `keyExp1` para criar uma chave composta.  
   
--   `aggregateList`  
+- `aggregateList`  
   
      Necessário. Uma ou mais expressões que identificam como os grupos são agregados. Para identificar um nome de membro para os resultados agrupados, use o `Group` palavra-chave, que pode estar em qualquer uma das seguintes formas:  
   

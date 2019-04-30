@@ -1,15 +1,15 @@
 ---
-title: Propriedades vs. Arguments
+title: Propriedades versus Arguments
 ms.date: 03/30/2017
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
 ms.openlocfilehash: a6ea4755599f18e8bbaa8187941623578d2168ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962624"
 ---
-# <a name="properties-vs-arguments"></a>Propriedades vs. Arguments
+# <a name="properties-vs-arguments"></a>Propriedades versus Arguments
 Há várias opções disponíveis para passar dados em uma atividade. Além de usar de <xref:System.Activities.InArgument>, as atividades também podem ser desenvolvidas que recebem dados usando propriedades padrão de CLR ou propriedades públicas de <xref:System.Activities.ActivityAction> . Este tópico discute como selecionar o tipo apropriado do método.  
   
 ## <a name="using-clr-properties"></a>Usando propriedades de CLR  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983340"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementando o padrão de controle Invoke de automação de interface de usuário
 > [!NOTE]
@@ -25,30 +25,30 @@ ms.locfileid: "59134778"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle Invoke, observe as seguintes diretrizes e convenções:  
   
--   Implementam controles <xref:System.Windows.Automation.Provider.IInvokeProvider> se o mesmo comportamento não é exposto por meio de outro fornecedor de padrão de controle. Por exemplo, se o <xref:System.Windows.Automation.InvokePattern.Invoke%2A> método em um controle executa a mesma ação que o <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> método, o controle não deve implementar <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
+- Implementam controles <xref:System.Windows.Automation.Provider.IInvokeProvider> se o mesmo comportamento não é exposto por meio de outro fornecedor de padrão de controle. Por exemplo, se o <xref:System.Windows.Automation.InvokePattern.Invoke%2A> método em um controle executa a mesma ação que o <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> método, o controle não deve implementar <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
   
--   Chamar um controle é geralmente executado clicando duas vezes ou pressionar ENTER, um atalho de teclado predefinidos ou alguma combinação alternativa de pressionamentos de tecla.  
+- Chamar um controle é geralmente executado clicando duas vezes ou pressionar ENTER, um atalho de teclado predefinidos ou alguma combinação alternativa de pressionamentos de tecla.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> é gerado em um controle que foi ativado (como uma resposta a um controle levar a ação associada). Se possível, o evento deve ser gerado depois que o controle tiver concluído a ação e retornado sem bloqueio. O evento deve ser gerado antes de atender a solicitação Invoke nos seguintes cenários:  
+- <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> é gerado em um controle que foi ativado (como uma resposta a um controle levar a ação associada). Se possível, o evento deve ser gerado depois que o controle tiver concluído a ação e retornado sem bloqueio. O evento deve ser gerado antes de atender a solicitação Invoke nos seguintes cenários:  
   
-    -   Não é possível ou prático esperar até que a ação seja concluída.  
+    - Não é possível ou prático esperar até que a ação seja concluída.  
   
-    -   A ação requer interação do usuário.  
+    - A ação requer interação do usuário.  
   
-    -   A ação é demorada e fará com que o cliente da chamada bloquear uma quantidade significativa de tempo.  
+    - A ação é demorada e fará com que o cliente da chamada bloquear uma quantidade significativa de tempo.  
   
--   Se invocar o controle tiver efeitos colaterais significativos, esses efeitos colaterais devem ser expostos por meio de <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> propriedade. Por exemplo, embora <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> não está associada com a seleção, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> pode fazer com que o outro controle fique selecionado.  
+- Se invocar o controle tiver efeitos colaterais significativos, esses efeitos colaterais devem ser expostos por meio de <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> propriedade. Por exemplo, embora <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> não está associada com a seleção, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> pode fazer com que o outro controle fique selecionado.  
   
--   Passe o mouse (ou passar o mouse) efeitos geralmente não constituem um evento Invoked. No entanto, devem dar suporte a controles que executam uma ação (em vez de causar um efeito visual) com base no estado em foco o <xref:System.Windows.Automation.InvokePattern> padrão de controle.  
+- Passe o mouse (ou passar o mouse) efeitos geralmente não constituem um evento Invoked. No entanto, devem dar suporte a controles que executam uma ação (em vez de causar um efeito visual) com base no estado em foco o <xref:System.Windows.Automation.InvokePattern> padrão de controle.  
   
 > [!NOTE]
 >  Essa implementação é considerada um problema de acessibilidade se o controle pode ser invocado apenas como resultado de um efeito colateral de relacionados ao mouse.  
   
--   Chamar um controle é diferente de selecionar um item. No entanto, dependendo do controle, invocá-lo pode causar o item a se tornar selecionado como um efeito colateral. Por exemplo, invocando um [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] item de lista do documento na pasta Meus documentos seleciona o item e abre o documento.  
+- Chamar um controle é diferente de selecionar um item. No entanto, dependendo do controle, invocá-lo pode causar o item a se tornar selecionado como um efeito colateral. Por exemplo, invocando um [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] item de lista do documento na pasta Meus documentos seleciona o item e abre o documento.  
   
--   Um elemento pode desaparecer do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore imediatamente após ser chamado. Solicitando informações do elemento fornecido pelo retorno de chamada do evento pode falhar como resultado. Pré-busca de informações armazenadas em cache é a solução recomendada.  
+- Um elemento pode desaparecer do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore imediatamente após ser chamado. Solicitando informações do elemento fornecido pelo retorno de chamada do evento pode falhar como resultado. Pré-busca de informações armazenadas em cache é a solução recomendada.  
   
--   Os controles podem implementar vários padrões de controle. Por exemplo, o controle de cor de preenchimento na [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] barra de ferramentas implementa ambos o <xref:System.Windows.Automation.InvokePattern> e o <xref:System.Windows.Automation.ExpandCollapsePattern> padrões de controle. <xref:System.Windows.Automation.ExpandCollapsePattern> expõe o menu e o <xref:System.Windows.Automation.InvokePattern> preenche a seleção ativa com a cor escolhida.  
+- Os controles podem implementar vários padrões de controle. Por exemplo, o controle de cor de preenchimento na [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] barra de ferramentas implementa ambos o <xref:System.Windows.Automation.InvokePattern> e o <xref:System.Windows.Automation.ExpandCollapsePattern> padrões de controle. <xref:System.Windows.Automation.ExpandCollapsePattern> expõe o menu e o <xref:System.Windows.Automation.InvokePattern> preenche a seleção ativa com a cor escolhida.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Membros necessários para IInvokeProvider  

@@ -8,11 +8,11 @@ ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949208"
 ---
 # <a name="runtime-information-etw-events"></a>Eventos ETW de informações de tempo de execução
 Esses eventos ETW registram informações sobre o tempo de execução, incluindo a SKU, o número de versão, a maneira pela qual o tempo de execução foi ativado, os parâmetros de linha de comando com os quais ele foi iniciado, o GUID (se aplicável) e outras informações relevantes. Se vários tempos de execução estiverem sendo executados dentro de um processo, as informações fornecidas por esses eventos (o ClrInstanceID) ajudarão a desfazer a ambiguidade entre os tempos de execução.  

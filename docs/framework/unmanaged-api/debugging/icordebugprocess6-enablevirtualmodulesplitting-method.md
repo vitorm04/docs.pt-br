@@ -5,11 +5,11 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948649"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Método ICorDebugProcess6::EnableVirtualModuleSplitting
 Habilita ou desabilita a divisão de módulo virtual.  
@@ -54,40 +54,40 @@ HRESULT EnableVirtualModuleSplitting(
 ## <a name="behavioral-differences"></a>Diferenças de comportamento  
  Módulos de contêiner têm as seguintes características e comportamentos:  
   
--   Seus metadados para todos os submódulos constituintes é mesclado.  
+- Seus metadados para todos os submódulos constituintes é mesclado.  
   
--   Seus nomes de tipos podem ser danificados.  
+- Seus nomes de tipos podem ser danificados.  
   
--   O [icordebugmodule:: GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) método retorna o caminho para um módulo em disco.  
+- O [icordebugmodule:: GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) método retorna o caminho para um módulo em disco.  
   
--   O [icordebugmodule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) método retorna o tamanho da imagem.  
+- O [icordebugmodule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) método retorna o tamanho da imagem.  
   
--   O método ICorDebugAssembly3.EnumerateContainedAssemblies lista os submódulos.  
+- O método ICorDebugAssembly3.EnumerateContainedAssemblies lista os submódulos.  
   
--   O método ICorDebugAssembly3.GetContainerAssembly retorna `S_FALSE`.  
+- O método ICorDebugAssembly3.GetContainerAssembly retorna `S_FALSE`.  
   
  Submódulos têm as seguintes características e comportamentos:  
   
--   Eles têm um conjunto reduzido de metadados que corresponde apenas ao assembly original que foi mesclado.  
+- Eles têm um conjunto reduzido de metadados que corresponde apenas ao assembly original que foi mesclado.  
   
--   Os nomes de metadados não são danificados.  
+- Os nomes de metadados não são danificados.  
   
--   Os tokens de metadados dificilmente correspondem aos tokens do assembly original antes de ser mesclado no processo de compilação.  
+- Os tokens de metadados dificilmente correspondem aos tokens do assembly original antes de ser mesclado no processo de compilação.  
   
--   O [icordebugmodule:: GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) método retorna o nome do assembly, não um caminho de arquivo.  
+- O [icordebugmodule:: GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) método retorna o nome do assembly, não um caminho de arquivo.  
   
--   O [icordebugmodule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) método retorna o tamanho original da imagem não mescladas.  
+- O [icordebugmodule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) método retorna o tamanho original da imagem não mescladas.  
   
--   O método ICorDebugModule3.EnumerateContainedAssemblies retorna `S_FALSE`.  
+- O método ICorDebugModule3.EnumerateContainedAssemblies retorna `S_FALSE`.  
   
--   O método ICorDebugAssembly3.GetContainerAssembly retorna o módulo recipiente.  
+- O método ICorDebugAssembly3.GetContainerAssembly retorna o módulo recipiente.  
   
 ## <a name="interfaces-retrieved-from-modules"></a>Interfaces obtidas de módulos  
  Uma variedade de interfaces pode ser criada ou obtida de módulos. Algumas dessas incluem:  
   
--   Um objeto ICorDebugClass, que é retornado pelo [icordebugmodule:: Getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) método.  
+- Um objeto ICorDebugClass, que é retornado pelo [icordebugmodule:: Getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) método.  
   
--   Um objeto ICorDebugAssembly, que é retornado pelo [icordebugmodule:: Getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) método.  
+- Um objeto ICorDebugAssembly, que é retornado pelo [icordebugmodule:: Getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) método.  
   
  Esses objetos sempre são armazenados em cache por [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md), e eles terão a mesma identidade de ponteiro, independentemente se eles foram criados ou consultados a partir do módulo de contêiner ou um submódulo. O submódulo fornece uma exibição filtrada desses objetos em cache, não um cache separado com suas própria cópias.  
   

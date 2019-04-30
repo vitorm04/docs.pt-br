@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971698"
 ---
 # <a name="single-data-type-visual-basic"></a>Tipo de dados único (Visual Basic)
 Mantém conectado IEEE de 32 bits (4 bytes) de precisão simples números de ponto flutuante que variam em valor de - 3,4028235E + 38 a - 1,401298E-45 para valores negativos e de 1,401298E-45 3,4028235E + 38 para valores positivos. Números de precisão simples armazenam uma aproximação de um número real.  
@@ -37,15 +37,15 @@ Mantém conectado IEEE de 32 bits (4 bytes) de precisão simples números de pon
   
 ## <a name="programming-tips"></a>Dicas de programação  
   
--   **Precisão.** Quando você trabalha com números de ponto flutuante, lembre-se de que eles nem sempre têm uma representação precisa na memória. Isso pode levar a resultados inesperados em certas operações, como comparação de valor e o `Mod` operador. Para obter mais informações, consulte [solução de problemas de tipos de dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Precisão.** Quando você trabalha com números de ponto flutuante, lembre-se de que eles nem sempre têm uma representação precisa na memória. Isso pode levar a resultados inesperados em certas operações, como comparação de valor e o `Mod` operador. Para obter mais informações, consulte [solução de problemas de tipos de dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Ampliação.** O `Single` tipo de dados é ampliado para `Double`. Isso significa que você pode converter `Single` à `Double` sem encontrar uma <xref:System.OverflowException?displayProperty=nameWithType> erro.  
+- **Ampliação.** O `Single` tipo de dados é ampliado para `Double`. Isso significa que você pode converter `Single` à `Double` sem encontrar uma <xref:System.OverflowException?displayProperty=nameWithType> erro.  
   
--   **Zeros à direita.** Os tipos de dados de ponto flutuante não possuem uma representação interna de 0 caracteres à direita. Por exemplo, eles não fazem distinção entre 4,2000 e 4.2. Consequentemente, 0 caracteres à direita não aparecem quando você exibe ou imprimir valores de ponto flutuante.  
+- **Zeros à direita.** Os tipos de dados de ponto flutuante não possuem uma representação interna de 0 caracteres à direita. Por exemplo, eles não fazem distinção entre 4,2000 e 4.2. Consequentemente, 0 caracteres à direita não aparecem quando você exibe ou imprimir valores de ponto flutuante.  
   
--   **Caracteres de tipo.** Acrescentar o caractere de tipo literal `F` a um literal o força ao tipo de dados `Single`. Acrescentar o caractere de tipo identificador `!` a qualquer identificador o força ao tipo `Single`.  
+- **Caracteres de tipo.** Acrescentar o caractere de tipo literal `F` a um literal o força ao tipo de dados `Single`. Acrescentar o caractere de tipo identificador `!` a qualquer identificador o força ao tipo `Single`.  
   
--   **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Single?displayProperty=nameWithType>.  
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Single?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
 

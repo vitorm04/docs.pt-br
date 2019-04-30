@@ -3,11 +3,11 @@ title: Introdução ao roteamento
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991088"
 ---
 # <a name="routing-introduction"></a>Introdução ao roteamento
 O serviço Routing fornece um SOAP conectável genérico que é capaz de roteamento de mensagens com base no conteúdo da mensagem intermediário. Com o serviço de roteamento, você pode criar lógica de roteamento complexa que permite implementar cenários como a agregação de serviço, controle de versão do serviço, roteamento de prioridades e roteamento de multicast. O serviço de roteamento também fornece a manipulação de erros permite que você configurar as listas de pontos de extremidade de backup, ao qual as mensagens são enviadas se ocorrer uma falha ao enviar para o ponto de extremidade de destino principal.  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  Embora muitas configurações de serviço de roteamento usam lógica de filtro exclusivo que encaminha mensagens para apenas um ponto de extremidade específico, você precisa rotear uma mensagem específica para vários pontos de extremidade de destino. Como uma mensagem para vários destinos de difusão seletiva, as condições a seguir devem ser verdadeiras:  
   
--   A forma de canal não deve ser de solicitação-resposta (embora podem ser unidirecionais ou bidirecionais,) porque apenas uma resposta pode ser recebida pelo aplicativo cliente em resposta à solicitação.  
+- A forma de canal não deve ser de solicitação-resposta (embora podem ser unidirecionais ou bidirecionais,) porque apenas uma resposta pode ser recebida pelo aplicativo cliente em resposta à solicitação.  
   
--   Vários filtros devem retornar `true` ao avaliar a mensagem.  
+- Vários filtros devem retornar `true` ao avaliar a mensagem.  
   
  Se essas condições forem atendidas, a mensagem é roteada para todos os pontos de extremidade de todos os filtros que são avaliadas como `true`. O exemplo a seguir define uma configuração de roteamento que resulta em mensagens sendo roteadas para os pontos de extremidade, se o endereço do ponto de extremidade na mensagem for `http://localhost:8000/routingservice/router/rounding`.  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **Processamento de solicitação**  
   
--   Obter o **MessageVersion** da associação/canal de saída.  
+- Obter o **MessageVersion** da associação/canal de saída.  
   
--   Obter o leitor de corpo da mensagem original.  
+- Obter o leitor de corpo da mensagem original.  
   
--   Crie uma nova mensagem com a mesma ação, o leitor de corpo e um novo **MessageVersion**.  
+- Crie uma nova mensagem com a mesma ação, o leitor de corpo e um novo **MessageVersion**.  
   
--   Se <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copie o para, de FaultTo e os cabeçalhos RelatesTo para a nova mensagem.  
+- Se <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copie o para, de FaultTo e os cabeçalhos RelatesTo para a nova mensagem.  
   
--   Copie todas as propriedades de mensagem para a nova mensagem.  
+- Copie todas as propriedades de mensagem para a nova mensagem.  
   
--   Store a mensagem de solicitação original a ser usado ao processar a resposta.  
+- Store a mensagem de solicitação original a ser usado ao processar a resposta.  
   
--   Retorna a nova mensagem de solicitação.  
+- Retorna a nova mensagem de solicitação.  
   
  **Processamento da resposta**  
   
--   Obter o **MessageVersion** da mensagem de solicitação original.  
+- Obter o **MessageVersion** da mensagem de solicitação original.  
   
--   Obter o leitor de corpo da mensagem de resposta recebida.  
+- Obter o leitor de corpo da mensagem de resposta recebida.  
   
--   Crie uma nova mensagem de resposta com a mesma ação, o leitor de corpo e o **MessageVersion** da mensagem de solicitação original.  
+- Crie uma nova mensagem de resposta com a mesma ação, o leitor de corpo e o **MessageVersion** da mensagem de solicitação original.  
   
--   Se <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copie o para, de FaultTo e os cabeçalhos RelatesTo para a nova mensagem.  
+- Se <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copie o para, de FaultTo e os cabeçalhos RelatesTo para a nova mensagem.  
   
--   Copie as propriedades de mensagem para a nova mensagem.  
+- Copie as propriedades de mensagem para a nova mensagem.  
   
--   Retorna a nova mensagem de resposta.  
+- Retorna a nova mensagem de resposta.  
   
  Por padrão, o **SoapProcessingBehavior** é adicionado automaticamente para os pontos de extremidade do cliente pelo <xref:System.ServiceModel.Routing.RoutingBehavior> quando o serviço é iniciado; no entanto, você pode controlar se o processamento SOAP é adicionado a todos os pontos de extremidade do cliente usando o <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> propriedade. Você também pode adicionar o comportamento diretamente para um ponto de extremidade específico e habilitar ou desabilitar esse comportamento no nível do ponto de extremidade, se um controle mais granular do processamento SOAP é necessário.  
   

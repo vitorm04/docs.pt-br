@@ -3,11 +3,11 @@ title: 'Compilando os exemplos do Windows Communication Foundation '
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
 ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944060"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation 
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971763"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Tipo de dados decimal (Visual Basic)
 Mantém conectado valores (16 bytes) de 128 bits que representa os números de 96 bits (12 bytes) inteiro dimensionados por uma potência variável de 10. O fator de escala especifica o número de dígitos à direita da vírgula decimal. ele varia de 0 a 28. Com uma escala de 0 (sem casas decimais), o maior valor possível é + /-79.228.162.514.264.337.593.543.950.335 (+ /-7 .9228162514264337593543950335E + 28). Com 28 casas decimais, o maior valor é + /-7,9228162514264337593543950335 e o menor valor diferente de zero é + /-0,0000000000000000000000000001 (+ /-1E-28).  
@@ -37,13 +37,13 @@ Mantém conectado valores (16 bytes) de 128 bits que representa os números de 9
   
 ## <a name="programming-tips"></a>Dicas de programação  
   
--   **Precisão.** `Decimal` não é um tipo de dados de ponto flutuante. O `Decimal` estrutura contém um valor inteiro binário, junto com um bit de sinal e um inteiro que especifica qual parte do valor é uma fração decimal fator de escala. Por isso, `Decimal` números têm uma representação mais precisa na memória que tipos de ponto flutuantes (`Single` e `Double`).  
+- **Precisão.** `Decimal` não é um tipo de dados de ponto flutuante. O `Decimal` estrutura contém um valor inteiro binário, junto com um bit de sinal e um inteiro que especifica qual parte do valor é uma fração decimal fator de escala. Por isso, `Decimal` números têm uma representação mais precisa na memória que tipos de ponto flutuantes (`Single` e `Double`).  
   
--   **Desempenho.** O `Decimal` tipo de dados é o mais lento de todos os tipos numéricos. Você deve avaliar a importância de precisão em relação ao desempenho antes de escolher um tipo de dados.  
+- **Desempenho.** O `Decimal` tipo de dados é o mais lento de todos os tipos numéricos. Você deve avaliar a importância de precisão em relação ao desempenho antes de escolher um tipo de dados.  
   
--   **Ampliação.** O `Decimal` tipo de dados amplia a `Single` ou `Double`. Isso significa que você pode converter `Decimal` para qualquer um desses tipos sem encontrar uma <xref:System.OverflowException?displayProperty=nameWithType> erro.  
+- **Ampliação.** O `Decimal` tipo de dados amplia a `Single` ou `Double`. Isso significa que você pode converter `Decimal` para qualquer um desses tipos sem encontrar uma <xref:System.OverflowException?displayProperty=nameWithType> erro.  
   
--   **Zeros à direita.** Visual Basic não armazena zeros à direita em um `Decimal` literal. No entanto, um `Decimal` variable preserva os zeros à direita adquiridos computacionalmente. O exemplo a seguir ilustra essa situação.  
+- **Zeros à direita.** Visual Basic não armazena zeros à direita em um `Decimal` literal. No entanto, um `Decimal` variable preserva os zeros à direita adquiridos computacionalmente. O exemplo a seguir ilustra essa situação.  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -59,9 +59,9 @@ Mantém conectado valores (16 bytes) de 128 bits que representa os números de 9
   
      d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4  
   
--   **Caracteres de tipo.** Acrescentar o caractere de tipo literal `D` a um literal o força ao tipo de dados `Decimal`. Acrescentar o caractere de tipo identificador `@` a qualquer identificador o força ao tipo `Decimal`.  
+- **Caracteres de tipo.** Acrescentar o caractere de tipo literal `D` a um literal o força ao tipo de dados `Decimal`. Acrescentar o caractere de tipo identificador `@` a qualquer identificador o força ao tipo `Decimal`.  
   
--   **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Decimal?displayProperty=nameWithType>.  
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Decimal?displayProperty=nameWithType>.  
   
 ## <a name="range"></a>Intervalo  
  Você talvez precise usar o `D` tipo de caractere para atribuir um valor grande para um `Decimal` variável ou constante. Esse requisito existe porque o compilador interpreta um literal como `Long` , a menos que um caractere de tipo literal segue o literal, como mostra o exemplo a seguir.  

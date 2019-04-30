@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
 ms.openlocfilehash: 23699c67de616ba3f535d2527a315aebe7448d3f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955981"
 ---
 # <a name="contextmenustrip-control-overview"></a>Visão geral do controle ContextMenuStrip
 > [!NOTE]

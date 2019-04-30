@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972348"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Erros de tempo de design no Designer de Formulários do Windows
 Este tópico explica o significado e o uso da lista de erros de tempo de design que aparece no Microsoft Visual Studio quando o carregamento do Designer de Formulários do Windows falha. Se essa lista de erros aparecer, não a interprete como um bug do designer, mas como um auxílio para a correção de erros no código.  
@@ -25,11 +25,11 @@ Este tópico explica o significado e o uso da lista de erros de tempo de design 
   
  É possível expandir ou recolher uma categoria de erro clicando no título da categoria de erro ou clicando na divisa expandir/recolher. Ao expandir uma categoria de erro, a ajuda adicional a seguir será exibida:  
   
--   Instâncias desse erro.  
+- Instâncias desse erro.  
   
--   Ajuda sobre esse erro.  
+- Ajuda sobre esse erro.  
   
--   Postagens do fórum sobre esse erro.  
+- Postagens do fórum sobre esse erro.  
   
 ### <a name="instances-of-this-error"></a>Instâncias Desse Erro  
  A ajuda adicional lista todas as instâncias do erro no projeto atual. Muitos erros incluem um local exato no seguinte formato: *[Nome do Projeto]* *[Nome do Formulário]* Linha:*[Número de Linha]* Coluna:*[Número da Coluna]*. O link **Ir para o Código** leva ao local do código em que o erro ocorre.  
@@ -45,9 +45,9 @@ Este tópico explica o significado e o uso da lista de erros de tempo de design 
 ### <a name="forum-posts-about-this-error"></a>Postagens do fórum sobre este erro  
  A ajuda adicional incluirá um link para postagens no fórum do MSDN relacionadas ao erro. Os fóruns são pesquisados com base na cadeia de caracteres da mensagem de erro. Também é possível tentar pesquisar os fóruns a seguir:  
   
--   [Fórum do Designer de Formulários do Windows](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Fórum do Designer de Formulários do Windows](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Fóruns do Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Fóruns do Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Ignorar e Continuar  
  É possível ignorar a condição de erro e continuar o carregamento do designer. Escolher esta ação pode resultar em comportamento inesperado. Por exemplo, os controles podem não aparecer na superfície de design.  

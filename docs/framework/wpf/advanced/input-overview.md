@@ -25,11 +25,11 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001517"
 ---
 # <a name="input-overview"></a>Visão geral da entrada
 <a name="introduction"></a> O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] subsistema fornece um poderoso [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para obter a entrada de uma variedade de dispositivos, incluindo o mouse, teclado, toque e caneta. Este tópico descreve os serviços fornecidos pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e explica a arquitetura dos sistemas de entrada.
@@ -144,43 +144,43 @@ ms.locfileid: "59320009"
 ### <a name="prerequisites"></a>Pré-requisitos
  Você precisará dos componentes a seguir para desenvolver um aplicativo que responde ao toque.
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
--   Windows 7.
+- Windows 7.
 
--   Um dispositivo, como uma tela touch, que dê suporte a Windows Touch.
+- Um dispositivo, como uma tela touch, que dê suporte a Windows Touch.
 
 ### <a name="terminology"></a>Terminologia
  Os termos a seguir são usados quando o toque é discutido.
 
--   **Toque** é um tipo de entrada do usuário que é reconhecida pelo Windows 7. Geralmente o toque é iniciado colocando-se os dedos em uma tela sensível ao toque. Observe que dispositivos como um touchpad, comuns em computadores laptop, não dão suporte ao toque se o dispositivo simplesmente converte a posição e movimentação do dedo como entrada de mouse.
+- **Toque** é um tipo de entrada do usuário que é reconhecida pelo Windows 7. Geralmente o toque é iniciado colocando-se os dedos em uma tela sensível ao toque. Observe que dispositivos como um touchpad, comuns em computadores laptop, não dão suporte ao toque se o dispositivo simplesmente converte a posição e movimentação do dedo como entrada de mouse.
 
--   **Multitoque** é toque que ocorre em mais de um ponto, simultaneamente. O Windows 7 e o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dão suporte a multitoque. Sempre que o toque é discutido na documentação do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], os conceitos se aplicam para multitoque.
+- **Multitoque** é toque que ocorre em mais de um ponto, simultaneamente. O Windows 7 e o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dão suporte a multitoque. Sempre que o toque é discutido na documentação do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], os conceitos se aplicam para multitoque.
 
--   Uma **manipulação** ocorre quando o toque é interpretado como uma ação física que é aplicada a um objeto. Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], eventos de manipulação interpretam a entrada como uma manipulação de translação, expansão ou rotação.
+- Uma **manipulação** ocorre quando o toque é interpretado como uma ação física que é aplicada a um objeto. Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], eventos de manipulação interpretam a entrada como uma manipulação de translação, expansão ou rotação.
 
--   Um `touch device` representa um dispositivo que produz a entrada de toque, por exemplo, um único dedo em uma tela touch.
+- Um `touch device` representa um dispositivo que produz a entrada de toque, por exemplo, um único dedo em uma tela touch.
 
 ### <a name="controls-that-respond-to-touch"></a>Controles que respondem ao toque
  É possível rolar pelos controles a seguir arrastando um dedo pelo controle, caso ele tenha conteúdo que está fora da exibição.
 
--   <xref:System.Windows.Controls.ComboBox>
+- <xref:System.Windows.Controls.ComboBox>
 
--   <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Controls.ContextMenu>
 
--   <xref:System.Windows.Controls.DataGrid>
+- <xref:System.Windows.Controls.DataGrid>
 
--   <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBox>
 
--   <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListView>
 
--   <xref:System.Windows.Controls.MenuItem>
+- <xref:System.Windows.Controls.MenuItem>
 
--   <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.TextBox>
 
--   <xref:System.Windows.Controls.ToolBar>
+- <xref:System.Windows.Controls.ToolBar>
 
--   <xref:System.Windows.Controls.TreeView>
+- <xref:System.Windows.Controls.TreeView>
 
  O <xref:System.Windows.Controls.ScrollViewer> define o <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> anexado a propriedade que permite que você especifique se o movimento panorâmico por toque está habilitado na horizontal, vertical, ambos ou nenhum. O <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType> propriedade especifica a rapidez a rolagem diminui quando o usuário levanta o dedo da tela Touch. O <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType> propriedade anexada Especifica a proporção de deslocamento para traduzir o deslocamento de manipulação de rolagem.
 
@@ -189,25 +189,25 @@ ms.locfileid: "59320009"
 
  Todas as três classes definem os eventos a seguir, que se comportam da mesma forma independentemente da classe que os define.
 
--   <xref:System.Windows.UIElement.TouchDown>
+- <xref:System.Windows.UIElement.TouchDown>
 
--   <xref:System.Windows.UIElement.TouchMove>
+- <xref:System.Windows.UIElement.TouchMove>
 
--   <xref:System.Windows.UIElement.TouchUp>
+- <xref:System.Windows.UIElement.TouchUp>
 
--   <xref:System.Windows.UIElement.TouchEnter>
+- <xref:System.Windows.UIElement.TouchEnter>
 
--   <xref:System.Windows.UIElement.TouchLeave>
+- <xref:System.Windows.UIElement.TouchLeave>
 
--   <xref:System.Windows.UIElement.PreviewTouchDown>
+- <xref:System.Windows.UIElement.PreviewTouchDown>
 
--   <xref:System.Windows.UIElement.PreviewTouchMove>
+- <xref:System.Windows.UIElement.PreviewTouchMove>
 
--   <xref:System.Windows.UIElement.PreviewTouchUp>
+- <xref:System.Windows.UIElement.PreviewTouchUp>
 
--   <xref:System.Windows.UIElement.GotTouchCapture>
+- <xref:System.Windows.UIElement.GotTouchCapture>
 
--   <xref:System.Windows.UIElement.LostTouchCapture>
+- <xref:System.Windows.UIElement.LostTouchCapture>
 
  Assim como os eventos de teclado e mouse, os eventos de toque são eventos roteados. Os eventos que começam com `Preview` são eventos por túnel e os eventos que começam com `Touch` são eventos por propagação. Para obter mais informações sobre os eventos roteados, consulte [Visão geral de eventos roteados](routed-events-overview.md). Quando você lidar com esses eventos, você pode obter a posição da entrada, em relação a qualquer elemento, chamando o <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> ou <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> método.
 
@@ -232,11 +232,11 @@ ms.locfileid: "59320009"
 ### <a name="manipulation-events"></a>Eventos de Manipulação
  Para casos em que um aplicativo permite que um usuário manipular um objeto, o <xref:System.Windows.UIElement> classe define os eventos de manipulação. Diferentemente de eventos de toque que simplesmente relatam a posição do toque, os eventos de manipulação relatam como a entrada pode ser interpretada. Há três tipos de manipulação: rotação, translação e expansão. A lista a seguir descreve como invocar os três tipos de manipulação.
 
--   Coloque um dedo em um objeto e mova o dedo na tela touch para invocar uma manipulação de translação. Geralmente, isso move o objeto.
+- Coloque um dedo em um objeto e mova o dedo na tela touch para invocar uma manipulação de translação. Geralmente, isso move o objeto.
 
--   Coloque dois dedos em um objeto e mova os dedos mais próximos ou mais distantes um do outro para invocar uma manipulação de expansão. Isso geralmente redimensiona o objeto.
+- Coloque dois dedos em um objeto e mova os dedos mais próximos ou mais distantes um do outro para invocar uma manipulação de expansão. Isso geralmente redimensiona o objeto.
 
--   Coloque dois dedos em um objeto e gire os dedos em torno um do outro para invocar uma manipulação de rotação. Isso geralmente gira o objeto.
+- Coloque dois dedos em um objeto e gire os dedos em torno um do outro para invocar uma manipulação de rotação. Isso geralmente gira o objeto.
 
  É possível que mais de um tipo de manipulação ocorram simultaneamente.
 
@@ -246,17 +246,17 @@ ms.locfileid: "59320009"
 
  O <xref:System.Windows.UIElement> define os seguintes eventos de manipulação.
 
--   <xref:System.Windows.UIElement.ManipulationStarting>
+- <xref:System.Windows.UIElement.ManipulationStarting>
 
--   <xref:System.Windows.UIElement.ManipulationStarted>
+- <xref:System.Windows.UIElement.ManipulationStarted>
 
--   <xref:System.Windows.UIElement.ManipulationDelta>
+- <xref:System.Windows.UIElement.ManipulationDelta>
 
--   <xref:System.Windows.UIElement.ManipulationInertiaStarting>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting>
 
--   <xref:System.Windows.UIElement.ManipulationCompleted>
+- <xref:System.Windows.UIElement.ManipulationCompleted>
 
--   <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
+- <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
  Por padrão, um <xref:System.Windows.UIElement> não recebe esses eventos manipulation. Para receber eventos de manipulação em um <xref:System.Windows.UIElement>, defina <xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType> para `true`.
 
@@ -300,13 +300,13 @@ ms.locfileid: "59320009"
 
  A lista a seguir descreve a relação entre os eventos de toque e de manipulação que é mostrada na ilustração anterior.
 
--   Quando o primeiro dispositivo de toque gera uma <xref:System.Windows.UIElement.TouchDown> evento em um <xref:System.Windows.UIElement>, as chamadas de lógica de manipulação de <xref:System.Windows.UIElement.CaptureTouch%2A> método, que gera o <xref:System.Windows.UIElement.GotTouchCapture> eventos.
+- Quando o primeiro dispositivo de toque gera uma <xref:System.Windows.UIElement.TouchDown> evento em um <xref:System.Windows.UIElement>, as chamadas de lógica de manipulação de <xref:System.Windows.UIElement.CaptureTouch%2A> método, que gera o <xref:System.Windows.UIElement.GotTouchCapture> eventos.
 
--   Quando o <xref:System.Windows.UIElement.GotTouchCapture> ocorrer, as chamadas de lógica de manipulação de <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> método, que gera o <xref:System.Windows.UIElement.ManipulationStarting> eventos.
+- Quando o <xref:System.Windows.UIElement.GotTouchCapture> ocorrer, as chamadas de lógica de manipulação de <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> método, que gera o <xref:System.Windows.UIElement.ManipulationStarting> eventos.
 
--   Quando o <xref:System.Windows.UIElement.TouchMove> eventos ocorrem, a lógica de manipulação gera o <xref:System.Windows.UIElement.ManipulationDelta> eventos que ocorrem antes do <xref:System.Windows.UIElement.ManipulationInertiaStarting> eventos.
+- Quando o <xref:System.Windows.UIElement.TouchMove> eventos ocorrem, a lógica de manipulação gera o <xref:System.Windows.UIElement.ManipulationDelta> eventos que ocorrem antes do <xref:System.Windows.UIElement.ManipulationInertiaStarting> eventos.
 
--   Quando o último dispositivo de toque elemento aciona o <xref:System.Windows.UIElement.TouchUp> evento, a lógica de manipulação gera o <xref:System.Windows.UIElement.ManipulationInertiaStarting> eventos.
+- Quando o último dispositivo de toque elemento aciona o <xref:System.Windows.UIElement.TouchUp> evento, a lógica de manipulação gera o <xref:System.Windows.UIElement.ManipulationInertiaStarting> eventos.
 
 <a name="focus"></a>
 ## <a name="focus"></a>Foco

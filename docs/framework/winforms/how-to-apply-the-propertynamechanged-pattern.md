@@ -10,11 +10,11 @@ helpviewer_keywords:
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
 ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966810"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>Como: aplicar o padrão PropertyNameChanged
 O exemplo de código a seguir demonstra como aplicar a *PropertyName*Changed padrão para um controle personalizado. Aplica esse padrão quando você implementa controles personalizados que são usados com o mecanismo de associação de dados de formulários do Windows.  
@@ -26,7 +26,7 @@ O exemplo de código a seguir demonstra como aplicar a *PropertyName*Changed pad
 ## <a name="compiling-the-code"></a>Compilando o código  
  Para compilar o exemplo de código anterior:  
   
--   Cole o código em um arquivo de código vazio. Você deve usar o controle personalizado em um formulário do Windows que contenha um `Main` método.  
+- Cole o código em um arquivo de código vazio. Você deve usar o controle personalizado em um formulário do Windows que contenha um `Main` método.  
   
 ## <a name="see-also"></a>Consulte também
 

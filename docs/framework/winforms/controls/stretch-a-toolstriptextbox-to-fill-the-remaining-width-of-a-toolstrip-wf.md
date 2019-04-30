@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
 ms.openlocfilehash: 707fd2e470a9be1d61d2878eeff845b3cad270db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971919"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Como: Alongar um ToolStripTextBox para preencher a largura restante de um ToolStrip (Windows Forms)
 Quando você define o <xref:System.Windows.Forms.ToolStrip.Stretch%2A> propriedade de um <xref:System.Windows.Forms.ToolStrip> o controle para `true`, o controle preenche seu contêiner de ponta a ponta e é redimensionado quando o contêiner é redimensionado. Nessa configuração, talvez seja útil para alongar um item no controle, como um <xref:System.Windows.Forms.ToolStripTextBox>, para preencher o espaço disponível e redimensionar quando o controle é redimensionado. Esse alongamento será útil, por exemplo, se você desejar obter aparência e comportamento semelhantes para a barra de endereços do Microsoft® Internet Explorer.  
@@ -27,7 +27,7 @@ Quando você define o <xref:System.Windows.Forms.ToolStrip.Stretch%2A> proprieda
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
+- Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
 ## <a name="see-also"></a>Consulte também
 

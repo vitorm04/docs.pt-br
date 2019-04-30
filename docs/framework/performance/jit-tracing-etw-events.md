@@ -8,20 +8,20 @@ ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949273"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de rastreamento JIT
 <a name="top"></a> Esses eventos coletam informações sobre o êxito ou falha de inlining JIT (Just-In-Time) e chamadas tail JIT.  
   
  Eventos de rastreamento JIT consistem nas duas categorias a seguir:  
   
--   [Eventos de inlining JIT](#jit_inlining_events)  
+- [Eventos de inlining JIT](#jit_inlining_events)  
   
--   [Eventos de chamada tail JIT](#jit_tail_call_events)  
+- [Eventos de chamada tail JIT](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
 ## <a name="jit-inlining-events"></a>Eventos de inlining JIT  

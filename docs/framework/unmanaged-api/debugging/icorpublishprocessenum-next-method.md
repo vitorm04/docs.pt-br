@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 169716d1a6d0dd633821cc832de96c9a02958d76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986564"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>Método ICorPublishProcessEnum::Next
 Obtém o número de processos especificado da coleção, começando na posição atual do cursor.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946738"
 ---
 # <a name="application-settings-architecture"></a>Arquitetura das configurações do aplicativo
 Este tópico descreve como a arquitetura das configurações de aplicativo funciona e explora recursos avançados da arquitetura, como as configurações agrupadas e as chaves de configurações.  
@@ -24,15 +24,15 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
 ## <a name="defining-settings"></a>configurando configurações  
  A arquitetura das configurações de aplicativo é usada tanto no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] quanto nos Windows Forms e contém várias classes base que são compartilhadas entre os dois ambientes. O mais importante é <xref:System.Configuration.SettingsBase>, que fornece acesso às configurações através de uma coleção e fornece métodos de baixo nível para carregar e salvar as configurações. Cada ambiente implementa sua própria classe derivada de <xref:System.Configuration.SettingsBase> para fornecer a funcionalidade de configurações adicionais para esse ambiente. Em um aplicativo baseado em Windows Forms, todas as configurações de aplicativo devem ser definidas em uma classe derivada de <xref:System.Configuration.ApplicationSettingsBase> classe, que adiciona a seguinte funcionalidade à classe base:  
   
--   Operações de carregar e salvar de nível mais alto  
+- Operações de carregar e salvar de nível mais alto  
   
--   Suporte a configurações de escopo do usuário  
+- Suporte a configurações de escopo do usuário  
   
--   Reverter as configurações do usuário para os padrões predefinidos  
+- Reverter as configurações do usuário para os padrões predefinidos  
   
--   Atualizar as configurações de uma versão anterior do aplicativo  
+- Atualizar as configurações de uma versão anterior do aplicativo  
   
--   Validar configurações, antes que sejam alteradas ou antes que sejam salvas  
+- Validar configurações, antes que sejam alteradas ou antes que sejam salvas  
   
  As configurações podem ser descritas usando um número de atributos definidos dentro de <xref:System.Configuration> namespace; elas são descritas nas [atributos de configurações do aplicativo](application-settings-attributes.md). Quando você define uma configuração, você deverá aplicá-la com um <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>, que descreve se a configuração se aplica ao aplicativo inteiro ou apenas para o usuário atual.  
   
@@ -46,11 +46,11 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
   
  O sistema de configuração, que foi originalmente lançado com o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], dá suporte ao fornecimento de dados de configuração estática do aplicativo por meio do arquivo machine.config do computador local ou em um arquivo `app.`exe.config que você implanta com seu aplicativo. O <xref:System.Configuration.LocalFileSettingsProvider> classe expande esse suporte nativo das seguintes maneiras:  
   
--   As configurações de escopo do aplicativo podem ser armazenadas nos arquivos machine.config ou `app.`exe.config. O machine.config é sempre somente leitura, enquanto que o `app`.exe.config é restrito, por considerações de segurança, como somente leitura para a maioria dos aplicativos.  
+- As configurações de escopo do aplicativo podem ser armazenadas nos arquivos machine.config ou `app.`exe.config. O machine.config é sempre somente leitura, enquanto que o `app`.exe.config é restrito, por considerações de segurança, como somente leitura para a maioria dos aplicativos.  
   
--   As configurações de escopo do usuário podem ser armazenadas em arquivos `app`.exe.config, caso em que são tratadas como padrões estáticos.  
+- As configurações de escopo do usuário podem ser armazenadas em arquivos `app`.exe.config, caso em que são tratadas como padrões estáticos.  
   
--   As configurações de escopo do usuário não padrão são armazenadas em um novo arquivo, *user*.config, em que *user* é o nome de usuário da pessoa que está executando o aplicativo no momento. Você pode especificar um padrão para uma configuração de escopo do usuário com <xref:System.Configuration.DefaultSettingValueAttribute>. Como as configurações de escopo do usuário geralmente são alteradas durante a execução do aplicativo, o `user`.config é sempre de leitura/gravação.  
+- As configurações de escopo do usuário não padrão são armazenadas em um novo arquivo, *user*.config, em que *user* é o nome de usuário da pessoa que está executando o aplicativo no momento. Você pode especificar um padrão para uma configuração de escopo do usuário com <xref:System.Configuration.DefaultSettingValueAttribute>. Como as configurações de escopo do usuário geralmente são alteradas durante a execução do aplicativo, o `user`.config é sempre de leitura/gravação.  
   
  Todos os três arquivos de configuração armazenam as configurações no formato XML. O elemento XML de nível superior para configurações de escopo do aplicativo é `<appSettings>`, enquanto que o `<userSettings>` é usado para configurações de escopo do usuário. Um arquivo `app`.exe.config que contém configurações de escopo do aplicativo e padrões para configurações de escopo do usuário teria esta aparência:  
   

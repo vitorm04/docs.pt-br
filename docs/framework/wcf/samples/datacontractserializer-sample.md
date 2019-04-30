@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
 ms.openlocfilehash: 3cfa4691376689bb8e7b1f8e8f41ed5d93ba0e61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990347"
 ---
 # <a name="datacontractserializer-sample"></a>Exemplo de DataContractSerializer
 O exemplo de DataContractSerializer demonstra o <xref:System.Runtime.Serialization.DataContractSerializer>, que executa a serialização geral e a desserialização de serviços para os dados de classes de contrato. O exemplo cria um `Record` do objeto, serializa-lo para um fluxo de memória e desserializa o fluxo de memória para outro `Record` objeto demonstrar o uso do <xref:System.Runtime.Serialization.DataContractSerializer>. O exemplo, em seguida, serializa o `Record` usando um gravador binário para demonstrar como o gravador afeta a serialização do objeto.  

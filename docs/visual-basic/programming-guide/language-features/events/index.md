@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973193"
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
 Enquanto você visualiza um projeto do Visual Studio como uma série de procedimentos que executam em uma sequência, na realidade, a maioria dos programas são orientados a eventos — ou seja, o fluxo de execução é determinado pelas ocorrências externas chamadas *eventos*.  
@@ -53,11 +53,11 @@ Enquanto você visualiza um projeto do Visual Studio como uma série de procedim
   
  A instrução `WithEvents` e a cláusula `Handles` geralmente são a melhor opção para manipuladores de eventos, pois a sintaxe declarativa usada torna mais fácil a codificação, a leitura e a depuração para a manipulação de eventos. No entanto, esteja ciente das seguintes limitações no uso de variáveis `WithEvents`:  
   
--   Não é possível usar uma variável `WithEvents` como uma variável de objeto. Ou seja, você não pode declará-la como `Object`— você deve especificar o nome da classe quando declarar a variável.  
+- Não é possível usar uma variável `WithEvents` como uma variável de objeto. Ou seja, você não pode declará-la como `Object`— você deve especificar o nome da classe quando declarar a variável.  
   
--   Como eventos compartilhados não são ligados às instâncias de classe, é possível usar `WithEvents` para manipular eventos compartilhados declarativamente. Da mesma forma, você não pode usar `WithEvents` ou `Handles` para manipular eventos de um `Structure`. Em ambos os casos, você pode usar a instrução `AddHandler` para manipular esses eventos.  
+- Como eventos compartilhados não são ligados às instâncias de classe, é possível usar `WithEvents` para manipular eventos compartilhados declarativamente. Da mesma forma, você não pode usar `WithEvents` ou `Handles` para manipular eventos de um `Structure`. Em ambos os casos, você pode usar a instrução `AddHandler` para manipular esses eventos.  
   
--   Não é possível criar matrizes de variáveis `WithEvents`.  
+- Não é possível criar matrizes de variáveis `WithEvents`.  
   
  As variáveis `WithEvents` permitem que um único manipulador de eventos manipule um ou mais tipos de evento, ou que um ou mais manipuladores de eventos manipulem o mesmo tipo de evento.  
   
@@ -91,7 +91,7 @@ Enquanto você visualiza um projeto do Visual Studio como uma série de procedim
   
 ### <a name="to-handle-events-from-a-base-class"></a>Como manipular eventos de uma classe base  
   
--   Declare um manipulador de eventos na classe derivada adicionando uma instrução `Handles MyBase.` *eventname* à linha da declaração de seu procedimento do manipulador de eventos, no qual *eventname* é o nome do evento na classe base manipulada. Por exemplo:  
+- Declare um manipulador de eventos na classe derivada adicionando uma instrução `Handles MyBase.` *eventname* à linha da declaração de seu procedimento do manipulador de eventos, no qual *eventname* é o nome do evento na classe base manipulada. Por exemplo:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

@@ -8,11 +8,11 @@ ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a575f6c067d22ddf35a238c36f66fe8e91f6be0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949338"
 ---
 # <a name="net-framework-performance"></a>Desempenho do .NET Framework
 Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o desempenho da mesma forma como projetaria qualquer outro recurso do aplicativo. É possível usar as ferramentas fornecidas pela Microsoft para medir o desempenho do aplicativo e, se necessário, fazer melhorias no uso da memória, na produtividade de código e na capacidade de resposta. Este tópico lista as ferramentas de análise de desempenho que a Microsoft fornece, além de fornecer links a outros tópicos que abordam o desempenho em áreas específicas do desenvolvimento de aplicativo.  
@@ -43,7 +43,7 @@ Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o des
 ## <a name="performance-by-app-type"></a>Desempenho por tipo de aplicativo  
  Cada tipo de aplicativo .NET Framework tem as próprias melhores práticas, considerações e ferramentas para avaliar o desempenho. A tabela a seguir está vinculada a tópicos de desempenho para tipos de aplicativo .NET Framework específicos.  
   
-|Tipo de aplicativo|Consulte |  
+|Tipo de aplicativo|Consulte|  
 |--------------|---------|  
 |Aplicativos .NET Framework para todas as plataformas|[Coleta de lixo e desempenho](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [Dicas de desempenho](../../../docs/framework/performance/performance-tips.md)|  
 |Aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] gravados em C++, C# e Visual Basic|[Práticas recomendadas de desempenho para Aplicativos da Windows Store usando C++, C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  

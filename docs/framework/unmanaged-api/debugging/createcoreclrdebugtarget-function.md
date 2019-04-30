@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48ce5381c745669b813f5b28d801add7daba7825
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965828"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>Função CreateCoreClrDebugTarget
 Cria uma conexão a um proxy de depurador que está em execução em um computador remoto e retorna um [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objeto que pode ser usado para consultar os processos em execução e tempos de execução carregados no computador remoto.  

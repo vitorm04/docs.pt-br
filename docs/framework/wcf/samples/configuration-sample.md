@@ -3,11 +3,11 @@ title: Exemplo de configuração
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002226"
 ---
 # <a name="configuration-sample"></a>Exemplo de configuração
 Este exemplo demonstra o uso de um arquivo de configuração para tornar um serviço detectável.  
@@ -27,15 +27,15 @@ Este exemplo demonstra o uso de um arquivo de configuração para tornar um serv
 ## <a name="service-configuration"></a>Configuração de Serviço  
  O arquivo de configuração neste exemplo demonstra dois recursos:  
   
--   Tornando o serviço podem ser descobertos ao longo de um padrão <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+- Tornando o serviço podem ser descobertos ao longo de um padrão <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
--   Ajustando informações relacionadas a descoberta para o serviço ponto de extremidade do aplicativo e ajustar algumas das configurações relacionadas à descoberta no ponto de extremidade padrão.  
+- Ajustando informações relacionadas a descoberta para o serviço ponto de extremidade do aplicativo e ajustar algumas das configurações relacionadas à descoberta no ponto de extremidade padrão.  
   
  Para habilitar a descoberta, algumas alterações devem ser feitas no arquivo de configuração do aplicativo para o serviço:  
   
--   Um ponto de extremidade de descoberta deve ser adicionado para o `<service>` elemento. Este é um padrão <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ponto de extremidade. Esse é um ponto de extremidade do sistema que o tempo de execução associa com o serviço de descoberta. O serviço de descoberta escuta as mensagens nesse ponto de extremidade.  
+- Um ponto de extremidade de descoberta deve ser adicionado para o `<service>` elemento. Este é um padrão <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ponto de extremidade. Esse é um ponto de extremidade do sistema que o tempo de execução associa com o serviço de descoberta. O serviço de descoberta escuta as mensagens nesse ponto de extremidade.  
   
--   Um `<serviceDiscovery>` comportamento é adicionado para o `<serviceBehaviors>` seção. Isso permite que o serviço seja descoberto em tempo de execução e usa o ponto de extremidade de descoberta mencionado anteriormente para ouvir de descoberta `Probe` e `Resolve` mensagens. Com essas duas adições, o serviço é detectável no ponto de extremidade de descoberta especificado.  
+- Um `<serviceDiscovery>` comportamento é adicionado para o `<serviceBehaviors>` seção. Isso permite que o serviço seja descoberto em tempo de execução e usa o ponto de extremidade de descoberta mencionado anteriormente para ouvir de descoberta `Probe` e `Resolve` mensagens. Com essas duas adições, o serviço é detectável no ponto de extremidade de descoberta especificado.  
   
  O trecho de configuração a seguir mostra um serviço com um ponto de extremidade do aplicativo e um ponto de extremidade de descoberta definido:  
   

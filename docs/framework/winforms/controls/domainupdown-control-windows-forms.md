@@ -9,11 +9,11 @@ helpviewer_keywords:
 - up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
 ms.openlocfilehash: 83d674e3fb7ff7e715b75c635b891cd4e9703a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972049"
 ---
 # <a name="domainupdown-control-windows-forms"></a>Controle DomainUpDown (Windows Forms)
 Os formulários do Windows <xref:System.Windows.Forms.DomainUpDown> controle se parece com uma combinação de uma caixa de texto e um par de botões para mover para cima ou para baixo através de uma lista. O controle exibe e define uma sequências de texto em uma lista de escolhas. O usuário pode selecionar a sequência clicando nos botões para cima e para baixo para mover a lista, apertando as teclas de direção PARA BAIXO e PARA CIMA ou digitando uma cadeia de caracteres que corresponda a um item na lista. Um possível uso para este controle é selecionar itens de uma lista de nomes ordenada alfabeticamente. (Para classificar a lista, defina as <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade para `true`.) A função deste controle é bem parecida com a da caixa de listagem ou caixa de combinação, mas ocupa muito pouco espaço.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949598"
 ---
 # <a name="sending-and-receiving-faults"></a>Enviando e recebendo falhas
 Falhas de SOAP transmitem condição informações de erro de um serviço em um cliente e no caso de duplex de um cliente a um serviço de uma maneira interoperável. Normalmente, um serviço define o conteúdo de falha personalizado e especifica quais operações poderá retorná-los. (Para obter mais informações, consulte [definindo e especificando falhas](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Este tópico discute como um serviço ou cliente duplex pode enviar essas falhas quando a condição de erro correspondente e como um cliente ou aplicativo de serviço lida com essas falhas. Para obter uma visão geral de tratamento de erros em aplicativos do Windows Communication Foundation (WCF), consulte [especificação e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -47,9 +47,9 @@ Falhas de SOAP transmitem condição informações de erro de um serviço em um 
 ## <a name="handling-faults"></a>Tratamento de falhas  
  Em clientes do WCF, falhas SOAP que ocorrem durante a comunicação que são de interesse para os aplicativos cliente são geradas como exceções gerenciadas. Embora existam muitas exceções que podem ocorrer durante a execução de qualquer programa, aplicativos que usam o modelo de programação de cliente do WCF podem esperar tratar exceções de dois tipos a seguir como resultado da comunicação.  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  <xref:System.TimeoutException> objetos são gerados quando uma operação excede o período de tempo limite especificado.  
   
@@ -81,13 +81,13 @@ Falhas de SOAP transmitem condição informações de erro de um serviço em um 
   
  Normalmente, os canais de objeto do cliente são fechados em uma das seguintes maneiras:  
   
--   Quando o objeto de cliente do WCF é reciclado.  
+- Quando o objeto de cliente do WCF é reciclado.  
   
--   Quando o aplicativo cliente chama <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
+- Quando o aplicativo cliente chama <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
   
--   Quando o aplicativo cliente chama <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
+- Quando o aplicativo cliente chama <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
   
--   Quando o aplicativo cliente chama uma operação que é uma operação de encerramento de uma sessão.  
+- Quando o aplicativo cliente chama uma operação que é uma operação de encerramento de uma sessão.  
   
  Todos os casos, fechando o canal instrui o canal para comece fechando quaisquer canais subjacentes que podem estar enviando mensagens para dar suporte a funcionalidades complexas no nível do aplicativo. Por exemplo, quando um contrato requer sessões uma associação tenta estabelecer uma sessão por meio da troca mensagens com o canal de serviço até que uma sessão é estabelecida. Quando o canal está fechado, o canal de sessão subjacente notifica o serviço que a sessão seja encerrada. Nesse caso, se o canal já foi anulada, fechado, ou caso contrário, será inutilizável (por exemplo, quando um cabo de rede está desconectado), o canal do cliente não pode informar o canal de serviço que a sessão é encerrada e uma exceção pode ocorrer.  
   

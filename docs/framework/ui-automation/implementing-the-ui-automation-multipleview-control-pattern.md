@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 ms.openlocfilehash: 74e5908dfcd42d031464ffccedb530be4a71a3f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983353"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Implementando o padrão de controle MultipleView de interface de usuário 
 > [!NOTE]
@@ -27,13 +27,13 @@ ms.locfileid: "59125192"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de exibição de várias, observe as seguintes diretrizes e convenções:  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> também deve ser implementada em um contêiner que gerencia a exibição atual se ele for diferente de um controle que fornece a exibição atual. Por exemplo, o Windows Explorer contém um controle de lista para o conteúdo da pasta atual, enquanto o modo de exibição para o controle é gerenciado do aplicativo Windows Explorer.  
+- <xref:System.Windows.Automation.Provider.IMultipleViewProvider> também deve ser implementada em um contêiner que gerencia a exibição atual se ele for diferente de um controle que fornece a exibição atual. Por exemplo, o Windows Explorer contém um controle de lista para o conteúdo da pasta atual, enquanto o modo de exibição para o controle é gerenciado do aplicativo Windows Explorer.  
   
--   Um controle que é capaz de classificar seu conteúdo não é considerado para dar suporte a vários modos de exibição.  
+- Um controle que é capaz de classificar seu conteúdo não é considerado para dar suporte a vários modos de exibição.  
   
--   A coleção de exibições deve ser idêntica entre instâncias.  
+- A coleção de exibições deve ser idêntica entre instâncias.  
   
--   Nomes de exibição devem ser adequados para uso em texto em fala, Braille e outros aplicativos legível por humanos.  
+- Nomes de exibição devem ser adequados para uso em texto em fala, Braille e outros aplicativos legível por humanos.  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>   
 ## <a name="required-members-for-imultipleviewprovider"></a>Membros necessários para IMultipleViewProvider  

@@ -3,32 +3,32 @@ title: Fornecedor de token
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965652"
 ---
 # <a name="token-provider"></a>Fornecedor de token
 Este exemplo demonstra como implementar um provedor de token personalizado. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriado as credenciais para que a infraestrutura de segurança pode proteger a mensagem. O WCF é fornecido com o provedor de Token do Gerenciador de credenciais padrão. O WCF também é fornecido com um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provedor de token. Provedores de token personalizados são úteis nos seguintes casos:
 
--   Se você tiver um repositório de credenciais que esses provedores de token não podem operar com.
+- Se você tiver um repositório de credenciais que esses provedores de token não podem operar com.
 
--   Se você quiser fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando a estrutura do cliente WCF usa as credenciais.
+- Se você quiser fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando a estrutura do cliente WCF usa as credenciais.
 
--   Se você estiver criando um token personalizado.
+- Se você estiver criando um token personalizado.
 
  Este exemplo mostra como criar um provedor de token personalizado que transforma a entrada do usuário em um formato diferente.
 
  Para resumir, este exemplo demonstra o seguinte:
 
--   Como um cliente pode autenticar usando um par de nome de usuário e senha.
+- Como um cliente pode autenticar usando um par de nome de usuário e senha.
 
--   Como um cliente pode ser configurado com um provedor de token personalizado.
+- Como um cliente pode ser configurado com um provedor de token personalizado.
 
--   Como o servidor pode validar as credenciais do cliente usando uma senha com um personalizado <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> que valida o nome de usuário e a senha correspondem.
+- Como o servidor pode validar as credenciais do cliente usando uma senha com um personalizado <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> que valida o nome de usuário e a senha correspondem.
 
--   Como o servidor é autenticado pelo cliente usando o certificado do servidor x. 509.
+- Como o servidor é autenticado pelo cliente usando o certificado do servidor x. 509.
 
  Este exemplo também mostra como a identidade do chamador está acessível após o processo de autenticação de token personalizado.
 
@@ -219,7 +219,7 @@ static void DisplayIdentityInformation()
 
  O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada:
 
--   Criando o certificado do servidor.
+- Criando o certificado do servidor.
 
      As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. O `%SERVER_NAME%` variável Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O valor padrão nesse arquivo em lotes é localhost.
 
@@ -233,7 +233,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalando o certificado do servidor no repositório de certificados confiáveis do cliente:
+- Instalando o certificado do servidor no repositório de certificados confiáveis do cliente:
 
      As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.
 

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971706"
 ---
 # <a name="string-data-type-visual-basic"></a>Tipo de dados da cadeia de caracteres (Visual Basic)
 Contém sequências de pontos de código de (2 bytes) de 16 bits sem sinal que variam em valor de 0 a 65535. Cada *ponto de código*, ou código de caractere, representa um único caractere Unicode. Uma cadeia de caracteres pode conter de 0 a aproximadamente dois bilhões (2 ^ 31) caracteres Unicode.  
@@ -70,13 +70,13 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 ## <a name="programming-tips"></a>Dicas de programação  
   
--   **Números negativos.** Lembre-se de que os caracteres mantidos pela `String` não assinados e não pode representar valores negativos. Em qualquer caso, você não deve usar `String` para armazenar valores numéricos.  
+- **Números negativos.** Lembre-se de que os caracteres mantidos pela `String` não assinados e não pode representar valores negativos. Em qualquer caso, você não deve usar `String` para armazenar valores numéricos.  
   
--   **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos Automation ou COM, lembre-se de que os caracteres da cadeia de caracteres têm uma largura de dados diferente (8 bits) em outros ambientes. Se você estiver passando um argumento de cadeia de caracteres de 8 bits para tal componente, declare-o como `Byte()`, uma matriz de `Byte` elementos, em vez de `String` no seu novo código do Visual Basic.  
+- **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos Automation ou COM, lembre-se de que os caracteres da cadeia de caracteres têm uma largura de dados diferente (8 bits) em outros ambientes. Se você estiver passando um argumento de cadeia de caracteres de 8 bits para tal componente, declare-o como `Byte()`, uma matriz de `Byte` elementos, em vez de `String` no seu novo código do Visual Basic.  
   
--   **Caracteres de tipo.** Acrescentar o caractere de tipo identificador `$` a qualquer identificador o força ao `String` tipo de dados. `String` não tem nenhum caractere de tipo literal. No entanto, o compilador trata literais entre aspas (`" "`) como `String`.  
+- **Caracteres de tipo.** Acrescentar o caractere de tipo identificador `$` a qualquer identificador o força ao `String` tipo de dados. `String` não tem nenhum caractere de tipo literal. No entanto, o compilador trata literais entre aspas (`" "`) como `String`.  
   
--   **Tipo de estrutura.** O tipo correspondente no .NET Framework é o <xref:System.String?displayProperty=nameWithType> classe.  
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é o <xref:System.String?displayProperty=nameWithType> classe.  
   
 ## <a name="see-also"></a>Consulte também
 

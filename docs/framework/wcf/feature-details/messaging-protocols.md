@@ -3,11 +3,11 @@ title: Protocolos de mensagens
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948116"
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensagens
 
@@ -56,9 +56,9 @@ Os seguintes namespaces XML e prefixos associados são usados ao longo deste tó
 | wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` |
 | wsa10 |`http://www.w3.org/2005/08/addressing` |
 | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` |
-| XOP |`http://www.w3.org/2004/08/xop/include` |
+| xop |`http://www.w3.org/2004/08/xop/include` |
 | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` |
-| ponto de distribuição |`http://schemas.microsoft.com/net/2006/06/duplex` |
+| dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 e SOAP 1.2
 
@@ -107,7 +107,7 @@ SOAP 1.2 introduziu um parâmetro de ação opcional para o `application/soap+xm
 
 Quando o WS-Addressing é desabilitado e uma solicitação de entrada não contém um parâmetro de ação, uma mensagem `Action` é considerada como não especificado.
 
-## <a name="ws-addressing"></a>WS-Addressing.
+## <a name="ws-addressing"></a>WS-Addressing
 O WCF implementa as 3 versões do WS-Addressing:
 
 - 2004 de WS-Addressing/08

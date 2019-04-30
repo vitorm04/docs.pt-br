@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
 ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956163"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>Visão geral do controle ComboBox (Windows Forms)
 Os formulários do Windows <xref:System.Windows.Forms.ComboBox> controle é usado para exibir dados em uma caixa de combinação suspensa. Por padrão, o <xref:System.Windows.Forms.ComboBox> controle aparece em duas partes: a parte superior é uma caixa de texto que permite ao usuário digitar um item de lista. A segunda parte é uma caixa de listagem que exibe uma lista de itens na qual o usuário pode selecionar item. Para obter mais informações sobre outros estilos de caixa de combinação, consulte [Quando usar um ComboBox dos Windows Forms em vez de uma caixa de listagem](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).  

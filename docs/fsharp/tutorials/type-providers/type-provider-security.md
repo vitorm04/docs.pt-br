@@ -3,11 +3,11 @@ title: Segurança do provedor de tipos
 description: Saiba mais sobre a segurança do provedor de tipo no F#, inclusive sobre como alterar as configurações de confiança para um provedor de tipo.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968227"
 ---
 # <a name="type-provider-security"></a>Segurança do provedor de tipos
 

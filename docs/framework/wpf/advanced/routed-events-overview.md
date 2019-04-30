@@ -16,11 +16,11 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982341"
 ---
 # <a name="routed-events-overview"></a>Visão geral de eventos roteados
 Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. O tópico define a terminologia de eventos roteados, descreve como eventos roteados são roteados por uma árvore de elementos, resume como manipular eventos roteados e apresenta como criar seus próprios eventos roteados personalizados.
@@ -86,11 +86,11 @@ Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_wincli
 ## <a name="routing-strategies"></a>Estratégias de roteamento  
  Eventos roteados usam uma de três estratégias de roteamento:  
   
--   **Propagação:** Manipuladores de eventos na origem do evento são invocados. O roteamento do evento roteado ocorre então para sucessivos elementos pai até alcançar a raiz da árvore de elementos. A maioria dos eventos roteados usa a estratégia de roteamento por propagação. Eventos roteados por propagação geralmente são usados para relatar as alterações de entrada ou de estado de diferentes controles ou outros elementos de interface do usuário.  
+- **Propagação:** Manipuladores de eventos na origem do evento são invocados. O roteamento do evento roteado ocorre então para sucessivos elementos pai até alcançar a raiz da árvore de elementos. A maioria dos eventos roteados usa a estratégia de roteamento por propagação. Eventos roteados por propagação geralmente são usados para relatar as alterações de entrada ou de estado de diferentes controles ou outros elementos de interface do usuário.  
   
--   **Direto:** Somente o elemento de origem em si tem a oportunidade de invocar manipuladores em resposta. Isso é análogo ao "roteamento" que o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] usa para eventos. No entanto, ao contrário de um padrão [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] evento, direcionar eventos roteados dão suporte a manipulação de classe (manipulação de classe é explicada em uma seção posterior) e pode ser usado por <xref:System.Windows.EventSetter> e <xref:System.Windows.EventTrigger>.  
+- **Direto:** Somente o elemento de origem em si tem a oportunidade de invocar manipuladores em resposta. Isso é análogo ao "roteamento" que o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] usa para eventos. No entanto, ao contrário de um padrão [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] evento, direcionar eventos roteados dão suporte a manipulação de classe (manipulação de classe é explicada em uma seção posterior) e pode ser usado por <xref:System.Windows.EventSetter> e <xref:System.Windows.EventTrigger>.  
   
--   **O túnel:** Inicialmente, os manipuladores de eventos na raiz da árvore de elemento são invocados. O evento roteado, em seguida, passa por sucessivos elementos filho ao longo de uma rota, em direção ao elemento de nó que é a origem do evento roteado (o elemento que acionou o evento roteado). Eventos roteados por túnel são frequentemente usados ou manipulados como parte da composição de um controle, de modo que eventos de partes compostas podem ser deliberadamente suprimidos ou substituídos por eventos que são específicos do controle completo. Eventos de entrada fornecidos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geralmente vêm implementados como um par por túnel/propagação. Eventos por túnel também são chamados de eventos de Visualização, devido a uma convenção de nomenclatura que é usada para os pares.  
+- **O túnel:** Inicialmente, os manipuladores de eventos na raiz da árvore de elemento são invocados. O evento roteado, em seguida, passa por sucessivos elementos filho ao longo de uma rota, em direção ao elemento de nó que é a origem do evento roteado (o elemento que acionou o evento roteado). Eventos roteados por túnel são frequentemente usados ou manipulados como parte da composição de um controle, de modo que eventos de partes compostas podem ser deliberadamente suprimidos ou substituídos por eventos que são específicos do controle completo. Eventos de entrada fornecidos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geralmente vêm implementados como um par por túnel/propagação. Eventos por túnel também são chamados de eventos de Visualização, devido a uma convenção de nomenclatura que é usada para os pares.  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>Por que usar eventos roteados?  
@@ -104,9 +104,9 @@ Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_wincli
   
  Além do aspecto de roteamento, existem dois outros motivos pelos quais um determinado evento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode ser implementado como um evento roteado em vez de um evento [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] padrão. Se você estiver implementando seus próprios eventos, você também poderá considerar estes princípios:  
   
--   Determinados [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estilo e modelagem de recursos, como <xref:System.Windows.EventSetter> e <xref:System.Windows.EventTrigger> exigirá que o evento referenciado seja um evento roteado. Esse é o cenário de identificador do evento mencionado anteriormente.  
+- Determinados [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estilo e modelagem de recursos, como <xref:System.Windows.EventSetter> e <xref:System.Windows.EventTrigger> exigirá que o evento referenciado seja um evento roteado. Esse é o cenário de identificador do evento mencionado anteriormente.  
   
--   Eventos roteados dão suporte a um mecanismo de manipulação de classe pelo qual a classe pode especificar métodos estáticos que têm a oportunidade de manipular eventos roteados antes que quaisquer manipuladores de instância registrados possam acessá-los. Isso é muito útil no design de controle, porque sua classe pode impor comportamentos de classe orientados a eventos que não podem ser acidentalmente suprimidos por meio da manipulação de um evento em uma instância.  
+- Eventos roteados dão suporte a um mecanismo de manipulação de classe pelo qual a classe pode especificar métodos estáticos que têm a oportunidade de manipular eventos roteados antes que quaisquer manipuladores de instância registrados possam acessá-los. Isso é muito útil no design de controle, porque sua classe pode impor comportamentos de classe orientados a eventos que não podem ser acidentalmente suprimidos por meio da manipulação de um evento em uma instância.  
   
  Cada uma das considerações acima é discutida em uma seção separada deste tópico.  
   
@@ -147,21 +147,21 @@ Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_wincli
   
  No entanto, há um mecanismo "handledEventsToo" pelo qual ouvintes podem ainda executar manipuladores em resposta a eventos roteados em que <xref:System.Windows.RoutedEventArgs.Handled%2A> é `true` nos dados do evento. Em outras palavras, marcar os dados do evento como manipulados não interrompe realmente a rota de evento. Você só pode usar o mecanismo handledEventsToo em código ou em um <xref:System.Windows.EventSetter>:  
   
--   No código, em vez de usar uma sintaxe de evento específico do idioma que funciona para gerais [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] eventos, chamar o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] método <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> para adicionar o manipulador. Especifique o valor de `handledEventsToo` como `true`.  
+- No código, em vez de usar uma sintaxe de evento específico do idioma que funciona para gerais [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] eventos, chamar o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] método <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> para adicionar o manipulador. Especifique o valor de `handledEventsToo` como `true`.  
   
--   Em um <xref:System.Windows.EventSetter>, defina a <xref:System.Windows.EventSetter.HandledEventsToo%2A> atributo a ser `true`.  
+- Em um <xref:System.Windows.EventSetter>, defina a <xref:System.Windows.EventSetter.HandledEventsToo%2A> atributo a ser `true`.  
   
  Além do comportamento que <xref:System.Windows.RoutedEventArgs.Handled%2A> estado produz nos eventos roteados, o conceito de <xref:System.Windows.RoutedEventArgs.Handled%2A> tem implicações em como você deve projetar seu aplicativo e escrever o código de manipulador de eventos. Você pode conceitualizar <xref:System.Windows.RoutedEventArgs.Handled%2A> como sendo um protocolo simple que é exposto por eventos roteados. Exatamente como você usa esse protocolo cabe a você, mas o design conceitual sobre como o valor de <xref:System.Windows.RoutedEventArgs.Handled%2A> se destina a ser usado é o seguinte:  
   
--   Se um evento roteado estiver marcado como manipulado, então ele não precisará ser manipulado novamente por outros elementos ao longo dessa rota.  
+- Se um evento roteado estiver marcado como manipulado, então ele não precisará ser manipulado novamente por outros elementos ao longo dessa rota.  
   
--   Se um evento roteado não estiver marcado como manipulado, então outros ouvintes anteriores ao longo da rota optou por não registrar um manipulador, ou os manipuladores que foram registrados decidiram não manipular os dados de eventos e definir <xref:System.Windows.RoutedEventArgs.Handled%2A> para `true`. (Outra possibilidade é que o ouvinte atual seja o primeiro ponto na rota.) Agora, manipuladores no ouvinte atual têm três cursos de ação possíveis:  
+- Se um evento roteado não estiver marcado como manipulado, então outros ouvintes anteriores ao longo da rota optou por não registrar um manipulador, ou os manipuladores que foram registrados decidiram não manipular os dados de eventos e definir <xref:System.Windows.RoutedEventArgs.Handled%2A> para `true`. (Outra possibilidade é que o ouvinte atual seja o primeiro ponto na rota.) Agora, manipuladores no ouvinte atual têm três cursos de ação possíveis:  
   
-    -   Não executar nenhuma ação: o evento permanece não manipulado e é roteado para o próximo ouvinte.  
+    - Não executar nenhuma ação: o evento permanece não manipulado e é roteado para o próximo ouvinte.  
   
-    -   Executar código em resposta ao evento, mas determinar que a ação tomada não foi suficientemente substancial para justificar a marcação do evento como manipulado. O evento é roteado para o próximo ouvinte.  
+    - Executar código em resposta ao evento, mas determinar que a ação tomada não foi suficientemente substancial para justificar a marcação do evento como manipulado. O evento é roteado para o próximo ouvinte.  
   
-    -   Executar código em resposta ao evento. Marque o evento como manipulado nos dados do evento passados para o manipulador de eventos, porque a ação foi considerada suficientemente substancial para garantir a marcação como manipulado. O evento ainda é roteado para o próximo ouvinte, mas com <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` nos dados do evento, portanto, somente `handledEventsToo` ouvintes têm a oportunidade de invocar mais manipuladores.  
+    - Executar código em resposta ao evento. Marque o evento como manipulado nos dados do evento passados para o manipulador de eventos, porque a ação foi considerada suficientemente substancial para garantir a marcação como manipulado. O evento ainda é roteado para o próximo ouvinte, mas com <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` nos dados do evento, portanto, somente `handledEventsToo` ouvintes têm a oportunidade de invocar mais manipuladores.  
   
  Este design conceitual é reforçado pelo comportamento de roteamento mencionado anteriormente: é mais difícil (embora ainda possível em código ou estilos) anexar manipuladores para eventos roteados que são invocados, mesmo se um manipulador anterior na rota já tiver definido <xref:System.Windows.RoutedEventArgs.Handled%2A>para `true`.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971906"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Visão geral das extensões de marcação para XAML
 Extensões de marcação são uma técnica XAML para a obtenção de um valor que não é um primitivo nem um tipo específico de XAML. Para uso do atributo, extensões de marcação usam a sequência de caracteres conhecidos de uma chave de abertura `{` para inserir o escopo de extensão de marcação e uma chave de fechamento `}` para sair. Ao usar os serviços de XAML do .NET Framework, você pode usar alguns das extensões de marcação de linguagem XAML predefinidas do assembly System. XAML. Você também pode subclasses do <xref:System.Windows.Markup.MarkupExtension> classe, definida em System. XAML e definir suas próprias extensões de marcação. Ou você pode usar extensões de marcação definidas por uma determinada estrutura, se você já está fazendo referência a essa estrutura.  
@@ -54,9 +54,9 @@ Extensões de marcação são uma técnica XAML para a obtenção de um valor qu
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>A definição do tipo de suporte para uma extensão de marcação personalizada  
  Quando você usa os serviços de XAML do .NET Framework ou estruturas que aproveitam os serviços de XAML do .NET Framework, você tem duas opções para como nomear o tipo de suporte de extensão de marcação. O nome do tipo é relevante para como gravadores de objeto XAML tentam acessar e invocar um tipo de suporte de extensão de marcação quando encontram um uso de extensão de marcação no XAML. Use uma das seguintes estratégias de nomes:  
   
--   Dê o nome de tipo para ser uma correspondência exata para o token de uso de marcação XAML. Por exemplo, para dar suporte a um `{Collate ...}` uso de extensão de nome de tipo de suporte `Collate`.  
+- Dê o nome de tipo para ser uma correspondência exata para o token de uso de marcação XAML. Por exemplo, para dar suporte a um `{Collate ...}` uso de extensão de nome de tipo de suporte `Collate`.  
   
--   Dê o nome de tipo para ser o token de cadeia de caracteres de uso mais o sufixo `Extension`. Por exemplo, para dar suporte a um `{Collate ...}` uso de extensão de nome de tipo de suporte `CollateExtension`.  
+- Dê o nome de tipo para ser o token de cadeia de caracteres de uso mais o sufixo `Extension`. Por exemplo, para dar suporte a um `{Collate ...}` uso de extensão de nome de tipo de suporte `CollateExtension`.  
   
  A ordem de pesquisa é procurar o `Extension`-classe com sufixo nome primeiro e, em seguida, procure o nome da classe sem o `Extension` sufixo.  
   
@@ -81,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  O processamento conceitualmente funciona como se a extensão de marcação é um objeto a ser criado e, em seguida, seus valores de membro são definidas. Cada propriedade especificada ao conjunto é avaliada semelhante a como um membro especificado pode ser definido em um objeto criado quando o XAML é analisado. Há duas diferenças importantes:  
   
--   Conforme observado anteriormente, um tipo de suporte de extensão de marcação não precisa ter um construtor padrão para ser instanciada em XAML. Sua construção de objeto é adiada até que seus argumentos possíveis na sintaxe de texto são indexados e avaliados como argumentos posicionais ou nomeados, e o construtor apropriado é chamado no momento.  
+- Conforme observado anteriormente, um tipo de suporte de extensão de marcação não precisa ter um construtor padrão para ser instanciada em XAML. Sua construção de objeto é adiada até que seus argumentos possíveis na sintaxe de texto são indexados e avaliados como argumentos posicionais ou nomeados, e o construtor apropriado é chamado no momento.  
   
--   Usos de extensões de marcação podem ser aninhados. A extensão de marcação mais interna é avaliada primeiro. Portanto, você pode supor que tal uso e declarar um dos parâmetros de construção para ser um tipo que requer um conversor de valor (como uma extensão de marcação) para produzir.  
+- Usos de extensões de marcação podem ser aninhados. A extensão de marcação mais interna é avaliada primeiro. Portanto, você pode supor que tal uso e declarar um dos parâmetros de construção para ser um tipo que requer um conversor de valor (como uma extensão de marcação) para produzir.  
   
  Uma dependência de tal processamento foi mostrada no exemplo anterior. O gravador de objeto XAML de serviços de XAML do .NET Framework processa os nomes de constantes de enumeração em valores enumerados em um nível nativo.  
   
@@ -124,9 +124,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> relatórios do <xref:System.Type> tipo de informação para o objeto que <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> retorna. Por sua assinatura pura, <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> retorna <xref:System.Object>. Mas vários consumidores podem querer informações de tipo de retorno mais precisas. Isso inclui:  
   
--   Suporte a designers e IDEs, que pode ser capaz de fornecer o reconhecimento de tipo para usos de extensão de marcação.  
+- Suporte a designers e IDEs, que pode ser capaz de fornecer o reconhecimento de tipo para usos de extensão de marcação.  
   
--   Advanced implementações de `SetMarkupExtension` manipuladores de classes de destino, que talvez dependem de reflexão para determinar o tipo de retorno de uma extensão de marcação, em vez de ramificação em conhecidos específicos <xref:System.Windows.Markup.MarkupExtension> implementações por nome.  
+- Advanced implementações de `SetMarkupExtension` manipuladores de classes de destino, que talvez dependem de reflexão para determinar o tipo de retorno de uma extensão de marcação, em vez de ramificação em conhecidos específicos <xref:System.Windows.Markup.MarkupExtension> implementações por nome.  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>Serialização de usos de extensão de marcação  

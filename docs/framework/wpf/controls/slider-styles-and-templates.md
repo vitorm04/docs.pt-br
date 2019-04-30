@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
 ms.openlocfilehash: 385a69ad2bd17ae4c51437245915109aad446bdf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970970"
 ---
 # <a name="slider-styles-and-templates"></a>Estilos e modelos de controle deslizante
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Slider> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

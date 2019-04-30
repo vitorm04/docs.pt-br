@@ -3,11 +3,11 @@ title: Divulgação de informações
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972595"
 ---
 # <a name="information-disclosure"></a>Divulgação de informações
 Divulgação de informações permite que um invasor obtenha informações valiosas sobre um sistema. Portanto, sempre considere quais informações você está revelando e se ele pode ser usado por um usuário mal-intencionado. A seguir lista os ataques de divulgação de informações possíveis e fornece atenuações para cada um.  
@@ -32,16 +32,16 @@ Divulgação de informações permite que um invasor obtenha informações valio
   
  Atenuantes incluem o seguinte:  
   
--   Referências de serviço devem para ser confiável. Tome cuidado sempre que a transferência de instâncias de referência de serviço para garantir que eles não foram violados.  
+- Referências de serviço devem para ser confiável. Tome cuidado sempre que a transferência de instâncias de referência de serviço para garantir que eles não foram violados.  
   
--   Alguns aplicativos podem apresentar uma experiência de usuário que permite o estabelecimento interativo de confiança com base nos dados em que os dados de referência e a confiança do serviço comprovados pelo host remoto. O WCF fornece pontos de extensibilidade para um recurso, mas o usuário deve ser implementado-los.  
+- Alguns aplicativos podem apresentar uma experiência de usuário que permite o estabelecimento interativo de confiança com base nos dados em que os dados de referência e a confiança do serviço comprovados pelo host remoto. O WCF fornece pontos de extensibilidade para um recurso, mas o usuário deve ser implementado-los.  
   
 ## <a name="ntlm"></a>NTLM  
  Por padrão, no ambiente de domínio do Windows, autenticação do Windows usa o protocolo Kerberos para autenticar e autorizar usuários. Se o protocolo Kerberos não pode ser usado por algum motivo, NT LAN Manager (NTLM) será usado como um fallback. Você pode desativar esse comportamento, definindo a <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> propriedade para `false`. Questões a serem consideradas ao permitir que o NTLM incluem:  
   
--   NTLM expõe o nome de usuário do cliente. Se o nome de usuário precisa ser mantidas confidenciais, em seguida, defina as `AllowNTLM` propriedade na associação à `false`.  
+- NTLM expõe o nome de usuário do cliente. Se o nome de usuário precisa ser mantidas confidenciais, em seguida, defina as `AllowNTLM` propriedade na associação à `false`.  
   
--   NTLM não oferece autenticação de servidor. Portanto, o cliente não pode garantir que ele está se comunicando com o serviço correto ao usar o NTLM como um protocolo de autenticação.  
+- NTLM não oferece autenticação de servidor. Portanto, o cliente não pode garantir que ele está se comunicando com o serviço correto ao usar o NTLM como um protocolo de autenticação.  
   
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>Uso do NTLM especificando as credenciais do cliente ou de força de identidade inválido  
  Ao criar um cliente, especificando as credenciais do cliente sem um nome de domínio, ou especificar uma identidade de servidor inválido, faz com que o NTLM a ser usado em vez do protocolo Kerberos (se o `AlllowNtlm` estiver definida como `true`). Porque o NTLM não faz a autenticação do servidor, informações potencialmente podem ser divulgadas.  

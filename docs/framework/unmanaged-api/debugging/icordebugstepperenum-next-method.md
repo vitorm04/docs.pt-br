@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6ac3165ab17eb1b4bc55a4bee4d2d2b467f8aefe
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987396"
 ---
 # <a name="icordebugstepperenumnext-method"></a>Método ICorDebugStepperEnum::Next
 Obtém o número especificado de instâncias de ICorDebugStepper de enumeração, começando na posição atual.  

@@ -1,25 +1,25 @@
 ---
-title: Quando implantar contêineres do Windows para o Service Fabric
+title: Quando implantar Contêineres do Windows no Service Fabric
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Quando implantar contêineres do Windows para o Service Fabric
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973636"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Quando implantar contêineres do Windows para o Service Fabric
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Quando implantar Contêineres do Windows no Service Fabric
 
 Aplicativos que são baseados em contêineres do Windows rapidamente precisará usar as plataformas ainda mais afastar das VMs de IaaS. Isso é para alta escalabilidade e melhor escalabilidade automatizada, e obter melhorias significativas em uma experiência de gerenciamento completa para implantações, atualizações, controle de versão, reversões e monitoramento de integridade. Para atingir essas metas com o orchestrator do Azure Service Fabric, disponível na nuvem do Microsoft Azure, mas também no local, ou até mesmo em outra nuvem.
 
 Muitas organizações estão levantar e dos aplicativos monolíticos existentes em contêineres por duas razões:
 
--   Reduções de custos, devido à consolidação e a remoção de hardware existente ou de aplicativos em execução em uma densidade mais alta.
+- Reduções de custos, devido à consolidação e a remoção de hardware existente ou de aplicativos em execução em uma densidade mais alta.
 
--   Um contrato de implantação consistente entre o desenvolvimento e operações.
+- Um contrato de implantação consistente entre o desenvolvimento e operações.
 
 Buscando reduções de custo é compreensível, e é provável que todas as organizações estão perseguindo esse objetivo. Implantação consistente é mais difícil avaliar, mas é igualmente importante. Um contrato de implantação consistente diz que os desenvolvedores são livres para optar por usar a tecnologia que é ideal para eles, e a equipe de operações obtém uma única maneira de implantar e gerenciar aplicativos. Este contrato alivia a dificuldade de ter operações que lidam com a complexidade das muitas tecnologias diferentes, ou forçar os desenvolvedores trabalhem apenas com determinadas tecnologias. Essencialmente, cada aplicativo está em contêineres em uma imagem de implantação autocontida.
 

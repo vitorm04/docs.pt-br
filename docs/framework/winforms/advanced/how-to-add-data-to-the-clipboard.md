@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
 ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004465"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Como: adicionar dados à área de transferência
 O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode usar para interagir com o recurso de área de transferência do sistema operacional Windows. Muitos aplicativos usam a Área de Transferência como um repositório temporário para dados. Por exemplo, processadores globais usam a Área de Transferência durante operações de cortar e colar. A Área de Transferência também é útil para transferir dados de um aplicativo para outro.  

@@ -3,11 +3,11 @@ title: Fluxos de trabalho do computador de estado
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004661"
 ---
 # <a name="state-machine-workflows"></a>Fluxos de trabalho do computador de estado
 Um computador de estado é um paradigma conhecido para programas desenvolvimento. A atividade de <xref:System.Activities.Statements.StateMachine> , juntamente com <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, e outras atividades pode ser usada para criar programas de fluxo de trabalho do computador de estado. Este tópico fornece uma visão geral de criar fluxos de trabalho do computador de estado.  
@@ -15,11 +15,11 @@ Um computador de estado é um paradigma conhecido para programas desenvolvimento
 ## <a name="state-machine-workflow-overview"></a>Visão geral de fluxo de trabalho do computador de estado  
  Fluxos de trabalho do computador de estado fornecem um estilo modelagem com que você pode modelar seu fluxo de trabalho em uma maneira de baseada. Uma atividade de <xref:System.Activities.Statements.StateMachine> contém os estados e as transições que compõem a lógica do computador de estado, e pode ser usada em qualquer lugar uma atividade pode ser usada. Há várias classes no tempo de execução do computador de estado:  
   
--   <xref:System.Activities.Statements.StateMachine>  
+- <xref:System.Activities.Statements.StateMachine>  
   
--   <xref:System.Activities.Statements.State>  
+- <xref:System.Activities.Statements.State>  
   
--   <xref:System.Activities.Statements.Transition>  
+- <xref:System.Activities.Statements.Transition>  
   
  Para criar um fluxo de trabalho do computador de estado, os estados são adicionados a uma atividade de <xref:System.Activities.Statements.StateMachine> , e as transições são controle usado o fluxo entre estados. Captura de tela a seguir, do [Tutorial de Introdução](getting-started-tutorial.md) etapa [como: Criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md), mostra um fluxo de trabalho de máquina de estado com três estados e transições de três. **Inicializar destino** é o estado inicial e representa o primeiro estado no fluxo de trabalho. Isso é designado por linha levando a partir de **iniciar** nó. O estado final do fluxo de trabalho é denominado **FinalState**e representa o ponto em que o fluxo de trabalho é concluído.  
   

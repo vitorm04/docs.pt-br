@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
 ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955157"
 ---
 # <a name="reliable-services"></a>Serviços confiáveis
 Sessões confiáveis e filas são os recursos do Windows Communication Foundation (WCF) que implementam o sistema de mensagens confiável. Este tópico explica os recursos de mensagens confiáveis do WCF.  
@@ -22,15 +22,15 @@ Sessões confiáveis e filas são os recursos do Windows Communication Foundatio
   
  Sistema de mensagens confiável executa as seguintes funções:  
   
--   Transfere garantias para as mensagens enviadas de uma fonte para um destino, independentemente das falhas de transporte ou transferência de mensagem.  
+- Transfere garantias para as mensagens enviadas de uma fonte para um destino, independentemente das falhas de transporte ou transferência de mensagem.  
   
--   Separa o código-fonte e o destino uns dos outros. Isso fornece falha independente e recuperação do código-fonte e o destino, bem como transferência confiável e entrega de mensagens, mesmo quando a origem ou destino está indisponível.  
+- Separa o código-fonte e o destino uns dos outros. Isso fornece falha independente e recuperação do código-fonte e o destino, bem como transferência confiável e entrega de mensagens, mesmo quando a origem ou destino está indisponível.  
   
  Mensagens confiáveis com frequência vem às custas de alta latência. *Latência* é o tempo necessário para a mensagem alcançar o destino da origem. WCF, portanto, fornece os seguintes tipos de sistema de mensagens confiável:  
   
--   [Sessões confiáveis](../../../docs/framework/wcf/feature-details/reliable-sessions.md), que oferece uma transferência confiável sem o custo de alta latência.  
+- [Sessões confiáveis](../../../docs/framework/wcf/feature-details/reliable-sessions.md), que oferece uma transferência confiável sem o custo de alta latência.  
   
--   [As filas no WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), que oferece transferências confiáveis e a separação entre a origem e destino.  
+- [As filas no WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), que oferece transferências confiáveis e a separação entre a origem e destino.  
   
 ## <a name="reliable-sessions"></a>Sessões confiáveis  
  Sessões confiáveis fornecem transferência confiável de ponta a ponta de mensagens entre uma origem e um destino usando o protocolo WS-confiável de mensagens, independentemente do número ou tipo de intermediários que separam os pontos de extremidade de mensagens (origem e destino). Isso inclui qualquer intermediário de transporte que não usa SOAP (por exemplo, proxies HTTP) ou intermediários que usam o SOAP (por exemplo, roteadores baseados em SOAP ou pontes) que são necessários para que as mensagens fluam entre os pontos de extremidade. Sessões confiáveis usam uma janela de transferência na memória para falhas de nível de mensagem SOAP máscara e restabelecer as conexões no caso de falhas de transporte.  

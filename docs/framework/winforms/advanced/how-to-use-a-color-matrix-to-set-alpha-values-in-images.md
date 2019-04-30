@@ -11,11 +11,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
 ms.openlocfilehash: 79937f0801a790d4ff1ab327aaaf45ef1b881827
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954528"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Como: usar uma matriz de cores para definir valores alfa em imagens
 O <xref:System.Drawing.Bitmap> classe (que herda a <xref:System.Drawing.Image> classe) e o <xref:System.Drawing.Imaging.ImageAttributes> classe fornecem funcionalidade para obter e definir valores de pixel. Você pode usar o <xref:System.Drawing.Imaging.ImageAttributes> valores de classe para modificar o alfa para uma imagem inteira ou pode chamar o <xref:System.Drawing.Bitmap.SetPixel%2A> método o <xref:System.Drawing.Bitmap> classe para modificar os valores de pixel individuais.  

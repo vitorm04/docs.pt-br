@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38f913b742f7ece2f136454f801ae780124aed87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987959"
 ---
 # <a name="icordebugnativeframegetip-method"></a>Método ICorDebugNativeFrame::GetIP
 Obtém o código nativo de deslocamento local ao qual o ponteiro de instrução está definido atualmente.  

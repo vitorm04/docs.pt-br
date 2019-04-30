@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcd200b7fa431f193dd202c3c2a690aa22ec8e32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986252"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>Método ISymUnmanagedReader2::GetMethodByVersionPreRemap
 Obtém um método de leitor de símbolo, considerando um token de método e um número de versão de editar e continuar. Números de versão começam em 1 e são incrementados sempre que o método é alterado como resultado de uma operação de editar e continuar.  

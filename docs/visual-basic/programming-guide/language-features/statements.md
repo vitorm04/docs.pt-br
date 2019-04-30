@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946452"
 ---
 # <a name="statements-in-visual-basic"></a>Instruções no Visual Basic
 
@@ -156,7 +156,7 @@ Em muitos casos, você pode continuar uma instrução na próxima linha consecut
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    Para obter mais informações, consulte [inicializadores de objeto: tipos nomeados e anônimos](./objects-and-classes/object-initializers-named-and-anonymous-types.md) ou [inicializadores de coleção](./collection-initializers/index.md).
+    Para obter mais informações, consulte [inicializadores de objeto: Tipos nomeados e anônimos](./objects-and-classes/object-initializers-named-and-anonymous-types.md) ou [inicializadores de coleção](./collection-initializers/index.md).
 
 - Após um aberto de expressão incorporada (`<%=`) ou antes do fechamento de uma expressão inserida (`%>`) dentro de um literal XML. Por exemplo:
 
@@ -196,7 +196,7 @@ Em muitos casos, você pode continuar uma instrução na próxima linha consecut
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   Para obter mais informações, consulte [com... Terminar com a instrução](../../../visual-basic/language-reference/statements/with-end-with-statement.md) ou [inicializadores de objeto: tipos nomeados e anônimos](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   Para obter mais informações, consulte [com... Terminar com a instrução](../../../visual-basic/language-reference/statements/with-end-with-statement.md) ou [inicializadores de objeto: Tipos nomeados e anônimos](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
 - Depois de um qualificador de propriedade de eixo XML (`.` ou `.@` ou `...`). No entanto, você deve incluir um caractere de continuação de linha (`_`) quando você especifica um qualificador de membro quando você estiver usando o `With` palavra-chave. Por exemplo:
 
@@ -246,5 +246,5 @@ Se, depois que você digitar uma linha de código, a linha é exibida com um sub
 |---|---|
 |[Operadores de Atribuição](../../../visual-basic/language-reference/operators/assignment-operators.md)|Fornece links para páginas de referência de linguagem que abrangem de operadores de atribuição, como `=`, `*=`, e `&=`.|
 |[Operadores e Expressões](./operators-and-expressions/index.md)|Mostra como combinar elementos com operadores para gerar novos valores.|
-|[Como quebrar e combinar instruções no código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Mostra como dividir uma única instrução em várias linhas e como colocar várias instruções na mesma linha.|
-|[Como rotular instruções](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Mostra como rotular uma linha de código.|
+|[Como: quebrar e combinar instruções no código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Mostra como dividir uma única instrução em várias linhas e como colocar várias instruções na mesma linha.|
+|[Como: rotular instruções](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Mostra como rotular uma linha de código.|

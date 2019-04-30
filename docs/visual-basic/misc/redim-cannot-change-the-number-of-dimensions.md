@@ -5,18 +5,18 @@ f1_keywords:
 - vbrArray_RankMismatch
 ms.assetid: 52505298-9985-4682-8f6e-ff7d56077f34
 ms.openlocfilehash: b6bb78c3f1d7224e6e4b432fd3aef4589f2f1cd4
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58019396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964886"
 ---
 # <a name="redim-cannot-change-the-number-of-dimensions"></a>'ReDim' não é possível alterar o número de dimensões
 Uma operação tenta usar o `ReDim` instrução para alterar a classificação (número de dimensões) de uma matriz. `ReDim` pode alterar o tamanho de uma ou mais dimensões de uma matriz que já foi formalmente declarado, mas ele não é possível alterar a classificação de matriz.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Certifique-se de que você pretende alterar a classificação da matriz e não os tamanhos das suas dimensões e, se possível, use `Dim` para declarar uma nova matriz com a classificação desejada.  
+- Certifique-se de que você pretende alterar a classificação da matriz e não os tamanhos das suas dimensões e, se possível, use `Dim` para declarar uma nova matriz com a classificação desejada.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -1,5 +1,5 @@
 ---
-title: Diretrizes de Design de membro
+title: Diretrizes de design de membro
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: KrzysztofCwalina
 ms.openlocfilehash: d7023bbe59eb3590af47952a2fe24c5f40b3ca68
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945516"
 ---
-# <a name="member-design-guidelines"></a>Diretrizes de Design de membro
+# <a name="member-design-guidelines"></a>Diretrizes de design de membro
 Métodos, propriedades, eventos, construtores e campos são coletivamente denominados membros. Os membros são, por fim, o meio pelo qual funcionalidade do framework é exposta aos usuários finais de uma estrutura.  
   
  Membros podem ser virtual ou não virtual, concreto ou abstrato, estático ou instância e podem ter vários escopos diferentes de acessibilidade. Essa variedade fornece expressividade incrível, mas ao mesmo tempo requer cuidado por parte do designer de estrutura.  

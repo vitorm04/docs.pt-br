@@ -14,18 +14,18 @@ helpviewer_keywords:
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
 ms.openlocfilehash: a480cd29eef1a79a69f702eed7cd02c28d7ea3de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954214"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a>Como: Desabilitar ToolStripMenuItems
 Você pode limitar ou ampliar os comandos que um usuário pode fazer ao habilitar e desabilitar itens de menu em resposta a atividades do usuário. Itens de menu são habilitados por padrão, quando eles são criados, mas isso pode ser ajustado por meio de <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propriedade. Você pode manipular essa propriedade em tempo de design na janela **Propriedades** ou programaticamente configurando ela no código.  
   
 ### <a name="to-disable-a-menu-item-programmatically"></a>Para desabilitar um item de menu por meio de programação  
   
--   Dentro do método em que você definir as propriedades do item de menu, adicionar código para definir a <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propriedade para `false`.  
+- Dentro do método em que você definir as propriedades do item de menu, adicionar código para definir a <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propriedade para `false`.  
   
     ```vb  
     MenuItem1.Enabled = False  

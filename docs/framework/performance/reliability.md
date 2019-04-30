@@ -11,11 +11,11 @@ ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b00ba0fdf732a864fb4fb757c6012a3d36740b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949286"
 ---
 # <a name="reliability"></a>Confiabilidade
 É importante que o código em execução em ambientes de servidor como o SQL Server proteja contra exceções assíncronas. A confiabilidade, conforme discutido aqui, não é específica para o SQL Server, mas sim para escrever código confiável para qualquer host executando em um ambiente do .NET Framework versão 2.0. No entanto, o SQL Server é o primeiro serviço fazendo uso amplo dos novos recursos de confiabilidade da versão 2.0, então ele é usado como exemplo.  

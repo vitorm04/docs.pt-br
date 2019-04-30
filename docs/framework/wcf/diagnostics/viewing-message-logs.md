@@ -3,11 +3,11 @@ title: Visualizando logs de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964392"
 ---
 # <a name="viewing-message-logs"></a>Visualizando logs de mensagem
 Este tópico descreve como você pode exibir os logs de mensagens.  
@@ -29,9 +29,9 @@ Este tópico descreve como você pode exibir os logs de mensagens.
   
  Você pode usar qualquer um dos seguintes métodos para resolver esse problema.  
   
--   Exibir apenas dois dos três logs de mensagem na [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) a qualquer momento.  
+- Exibir apenas dois dos três logs de mensagem na [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) a qualquer momento.  
   
--   Se você deve exibir todos os três logs na [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ao mesmo tempo, você pode modificar o serviço de retransmissão, criando um novo <xref:System.ServiceModel.Channels.Message> instância. A instância deve ser uma cópia do corpo da mensagem de entrada, além de todos os cabeçalhos, exceto para o `ActivityId` e `Action` cabeçalhos. O exemplo de código a seguir demonstra como fazer isso.  
+- Se você deve exibir todos os três logs na [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ao mesmo tempo, você pode modificar o serviço de retransmissão, criando um novo <xref:System.ServiceModel.Channels.Message> instância. A instância deve ser uma cópia do corpo da mensagem de entrada, além de todos os cabeçalhos, exceto para o `ActivityId` e `Action` cabeçalhos. O exemplo de código a seguir demonstra como fazer isso.  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,15 +50,15 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Casos excepcionais para conteúdo da mensagem imprecisa de registro em log  
  Sob as seguintes condições, as mensagens sendo registradas em log podem não ser a representação exata do fluxo de octeto presente durante a transmissão.  
   
--   Para BasicHttpBinding, cabeçalhos de envelope são registrados em log para as novas mensagens na / endereçamento/nenhum namespace.  
+- Para BasicHttpBinding, cabeçalhos de envelope são registrados em log para as novas mensagens na / endereçamento/nenhum namespace.  
   
--   Espaços em branco podem ser incompatíveis.  
+- Espaços em branco podem ser incompatíveis.  
   
--   Mensagens de entrada, elementos em branco podem ser representados de forma diferente. Por exemplo, \<marca >\<marca > em vez de \<marca / >  
+- Mensagens de entrada, elementos em branco podem ser representados de forma diferente. Por exemplo, \<marca >\<marca > em vez de \<marca / >  
   
--   Quando o registro em log de PII conhecido é desabilitado por padrão ou a configuração explícita enableLoggingKnownPii = "true".  
+- Quando o registro em log de PII conhecido é desabilitado por padrão ou a configuração explícita enableLoggingKnownPii = "true".  
   
--   Codificação está habilitada para transformação em UTF-8.  
+- Codificação está habilitada para transformação em UTF-8.  
   
 ## <a name="see-also"></a>Consulte também
 

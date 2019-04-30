@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
 ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983458"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implementando o padrão de controle RangeValue de interface de usuário
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "59175780"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de valor de intervalo, observe as seguintes diretrizes e convenções:  
   
--   Controles permitem que a nova calibragem de suas propriedades com suporte com base na preferência de localidade ou usuário. Um exemplo disso é um controle de termômetro que pode ser definido para exibir a temperatura em Fahrenheit ou Celsius.  
+- Controles permitem que a nova calibragem de suas propriedades com suporte com base na preferência de localidade ou usuário. Um exemplo disso é um controle de termômetro que pode ser definido para exibir a temperatura em Fahrenheit ou Celsius.  
   
--   Os controles que têm valores de intervalo ambíguos, como barras de progresso ou controles deslizantes, devem ter esses valores normalizados.  
+- Os controles que têm valores de intervalo ambíguos, como barras de progresso ou controles deslizantes, devem ter esses valores normalizados.  
   
  ![Barra de progresso. ](../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 Exemplo de uma barra de progresso em que o valor é do tipo inteiro e valores de propriedade de mínimo e máximo são normalizados para 0 e 100, respectivamente  

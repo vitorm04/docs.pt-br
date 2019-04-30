@@ -9,11 +9,11 @@ helpviewer_keywords:
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
 ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954770"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Como: usar uma matriz de cores para transformar uma única cor
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece o <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classes para armazenar e manipular imagens. <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> objetos armazenam a cor de cada pixel como um número de 32 bits: 8 bits cada para vermelho, verde, azul e alfa. Cada um dos quatro componentes é um número de 0 a 255, sendo que 0 representa nenhuma intensidade e 255 representa intensidade total. O componente alfa Especifica a transparência da cor: 0 é completamente transparente e 255 é totalmente opaca.  

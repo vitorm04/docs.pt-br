@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 22c3a480e2b68377e300df1083b3178ee4e2d2a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969852"
 ---
 # <a name="iclrdebugmanager-interface"></a>Interface ICLRDebugManager
 Fornece métodos que permitem que um host associar um conjunto de tarefas com um identificador e um nome amigável.  
