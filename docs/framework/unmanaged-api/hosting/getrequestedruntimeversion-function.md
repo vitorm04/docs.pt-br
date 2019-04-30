@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ee737f4c6d34e77996f5ba08ce4d84132a99238
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985654"
 ---
-# <a name="getrequestedruntimeversion-function"></a><span data-ttu-id="d991a-102">Função GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="d991a-102">GetRequestedRuntimeVersion Function</span></span>
-<span data-ttu-id="d991a-103">Obtém o número de versão do common language runtime (CLR) solicitado pelo aplicativo especificado.</span><span class="sxs-lookup"><span data-stu-id="d991a-103">Gets the version number of the common language runtime (CLR) requested by the specified application.</span></span> <span data-ttu-id="d991a-104">Se essa versão não estiver instalado, obtém a versão mais recente instalado antes da versão solicitada.</span><span class="sxs-lookup"><span data-stu-id="d991a-104">If that version is not installed, gets the most recent version that is installed before the requested version.</span></span>  
+# <a name="getrequestedruntimeversion-function"></a><span data-ttu-id="396e2-102">Função GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="396e2-102">GetRequestedRuntimeVersion Function</span></span>
+<span data-ttu-id="396e2-103">Obtém o número de versão do common language runtime (CLR) solicitado pelo aplicativo especificado.</span><span class="sxs-lookup"><span data-stu-id="396e2-103">Gets the version number of the common language runtime (CLR) requested by the specified application.</span></span> <span data-ttu-id="396e2-104">Se essa versão não estiver instalado, obtém a versão mais recente instalado antes da versão solicitada.</span><span class="sxs-lookup"><span data-stu-id="396e2-104">If that version is not installed, gets the most recent version that is installed before the requested version.</span></span>  
   
- <span data-ttu-id="d991a-105">Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d991a-105">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="396e2-105">Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="396e2-105">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d991a-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d991a-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="396e2-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="396e2-106">Syntax</span></span>  
   
 ```  
 HRESULT GetRequestedRuntimeVersion (  
@@ -40,39 +40,39 @@ HRESULT GetRequestedRuntimeVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d991a-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d991a-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="396e2-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="396e2-107">Parameters</span></span>  
  `pExe`  
- <span data-ttu-id="d991a-108">[in] O nome do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d991a-108">[in] The name of the application.</span></span>  
+ <span data-ttu-id="396e2-108">[in] O nome do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="396e2-108">[in] The name of the application.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="d991a-109">[out] Um buffer que contém a cadeia de caracteres de número de versão após a conclusão bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="d991a-109">[out] A buffer that contains the version number string upon successful completion.</span></span>  
+ <span data-ttu-id="396e2-109">[out] Um buffer que contém a cadeia de caracteres de número de versão após a conclusão bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="396e2-109">[out] A buffer that contains the version number string upon successful completion.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="d991a-110">[in] O comprimento do buffer de versão.</span><span class="sxs-lookup"><span data-stu-id="d991a-110">[in] The length of the version buffer.</span></span>  
+ <span data-ttu-id="396e2-110">[in] O comprimento do buffer de versão.</span><span class="sxs-lookup"><span data-stu-id="396e2-110">[in] The length of the version buffer.</span></span>  
   
  `pdwLength`  
- <span data-ttu-id="d991a-111">[out] Um ponteiro para o comprimento da sequência de números de versão.</span><span class="sxs-lookup"><span data-stu-id="d991a-111">[out] A pointer to the length of the version number string.</span></span>  
+ <span data-ttu-id="396e2-111">[out] Um ponteiro para o comprimento da sequência de números de versão.</span><span class="sxs-lookup"><span data-stu-id="396e2-111">[out] A pointer to the length of the version number string.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d991a-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="d991a-112">Return Value</span></span>  
- <span data-ttu-id="d991a-113">Esse método retorna códigos de erro padrão (COM Component Object Model), conforme definido em Winerror. H, além dos valores a seguir.</span><span class="sxs-lookup"><span data-stu-id="d991a-113">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="396e2-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="396e2-112">Return Value</span></span>  
+ <span data-ttu-id="396e2-113">Esse método retorna códigos de erro padrão (COM Component Object Model), conforme definido em Winerror. H, além dos valores a seguir.</span><span class="sxs-lookup"><span data-stu-id="396e2-113">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="d991a-114">Código de retorno</span><span class="sxs-lookup"><span data-stu-id="d991a-114">Return code</span></span>|<span data-ttu-id="d991a-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="d991a-115">Description</span></span>|  
+|<span data-ttu-id="396e2-114">Código de retorno</span><span class="sxs-lookup"><span data-stu-id="396e2-114">Return code</span></span>|<span data-ttu-id="396e2-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="396e2-115">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="d991a-116">S_OK</span><span class="sxs-lookup"><span data-stu-id="d991a-116">S_OK</span></span>|<span data-ttu-id="d991a-117">O método foi concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="d991a-117">The method completed successfully.</span></span>|  
-|<span data-ttu-id="d991a-118">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="d991a-118">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="d991a-119">O buffer de versão não é grande o suficiente para armazenar a cadeia de caracteres de versão.</span><span class="sxs-lookup"><span data-stu-id="d991a-119">The version buffer is not large enough to store the version string.</span></span>|  
-|<span data-ttu-id="d991a-120">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="d991a-120">E_POINTER</span></span>|<span data-ttu-id="d991a-121">`pdwLength` é nulo.</span><span class="sxs-lookup"><span data-stu-id="d991a-121">`pdwLength` is null.</span></span>|  
+|<span data-ttu-id="396e2-116">S_OK</span><span class="sxs-lookup"><span data-stu-id="396e2-116">S_OK</span></span>|<span data-ttu-id="396e2-117">O método foi concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="396e2-117">The method completed successfully.</span></span>|  
+|<span data-ttu-id="396e2-118">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="396e2-118">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="396e2-119">O buffer de versão não é grande o suficiente para armazenar a cadeia de caracteres de versão.</span><span class="sxs-lookup"><span data-stu-id="396e2-119">The version buffer is not large enough to store the version string.</span></span>|  
+|<span data-ttu-id="396e2-120">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="396e2-120">E_POINTER</span></span>|<span data-ttu-id="396e2-121">`pdwLength` é nulo.</span><span class="sxs-lookup"><span data-stu-id="396e2-121">`pdwLength` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d991a-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d991a-122">Requirements</span></span>  
- <span data-ttu-id="d991a-123">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d991a-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="396e2-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="396e2-122">Requirements</span></span>  
+ <span data-ttu-id="396e2-123">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="396e2-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d991a-124">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d991a-124">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="396e2-124">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="396e2-124">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d991a-125">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d991a-125">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="396e2-125">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="396e2-125">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d991a-126">**Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d991a-126">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="396e2-126">**Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="396e2-126">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d991a-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d991a-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="396e2-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="396e2-127">See also</span></span>
 
-- [<span data-ttu-id="d991a-128">Função GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="d991a-128">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
-- [<span data-ttu-id="d991a-129">Função GetVersionFromProcess</span><span class="sxs-lookup"><span data-stu-id="d991a-129">GetVersionFromProcess Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
-- [<span data-ttu-id="d991a-130">Funções de hospedagem CLR preteridas</span><span class="sxs-lookup"><span data-stu-id="d991a-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="396e2-128">Função GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="396e2-128">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [<span data-ttu-id="396e2-129">Função GetVersionFromProcess</span><span class="sxs-lookup"><span data-stu-id="396e2-129">GetVersionFromProcess Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
+- [<span data-ttu-id="396e2-130">Funções de hospedagem CLR preteridas</span><span class="sxs-lookup"><span data-stu-id="396e2-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2903395f5f834f2435b14d0b3f3e8bfe24af2867
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970034"
 ---
-# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="c2928-102">Método IAppDomainBinding::OnAppDomain</span><span class="sxs-lookup"><span data-stu-id="c2928-102">IAppDomainBinding::OnAppDomain Method</span></span>
-<span data-ttu-id="c2928-103">Chamado pelo common language runtime (CLR) para notificar o host que um domínio de aplicativo foi criado.</span><span class="sxs-lookup"><span data-stu-id="c2928-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
+# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="f249e-102">Método IAppDomainBinding::OnAppDomain</span><span class="sxs-lookup"><span data-stu-id="f249e-102">IAppDomainBinding::OnAppDomain Method</span></span>
+<span data-ttu-id="f249e-103">Chamado pelo common language runtime (CLR) para notificar o host que um domínio de aplicativo foi criado.</span><span class="sxs-lookup"><span data-stu-id="f249e-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2928-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c2928-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f249e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f249e-104">Syntax</span></span>  
   
 ```  
 HRESULT OnAppDomain (  
@@ -35,19 +35,19 @@ HRESULT OnAppDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c2928-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c2928-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f249e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f249e-105">Parameters</span></span>  
  `pAppdomain`  
- <span data-ttu-id="c2928-106">[in] Um ponteiro para um [IUnknown](/cpp/atl/iunknown) objeto de interface que representa o novo domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="c2928-106">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) interface object that represents the new application domain.</span></span>  
+ <span data-ttu-id="f249e-106">[in] Um ponteiro para um [IUnknown](/cpp/atl/iunknown) objeto de interface que representa o novo domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f249e-106">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) interface object that represents the new application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c2928-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c2928-107">Requirements</span></span>  
- <span data-ttu-id="c2928-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2928-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f249e-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f249e-107">Requirements</span></span>  
+ <span data-ttu-id="f249e-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f249e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2928-109">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c2928-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f249e-109">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f249e-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c2928-110">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c2928-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f249e-110">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="f249e-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c2928-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2928-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f249e-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f249e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2928-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c2928-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f249e-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f249e-112">See also</span></span>
 
-- [<span data-ttu-id="c2928-113">Interface IAppDomainBinding</span><span class="sxs-lookup"><span data-stu-id="c2928-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)
+- [<span data-ttu-id="f249e-113">Interface IAppDomainBinding</span><span class="sxs-lookup"><span data-stu-id="f249e-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)

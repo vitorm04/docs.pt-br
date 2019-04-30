@@ -3,20 +3,20 @@ title: System.ServiceModel.TransportListen
 ms.date: 03/30/2017
 ms.assetid: a5e6438c-6562-42f2-8a3b-2bdecf9dc4af
 ms.openlocfilehash: 1b609190531d7d3a95afebfaa5f4fa62d02c2b06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991634"
 ---
-# <a name="systemservicemodeltransportlisten"></a><span data-ttu-id="dcc32-102">System.ServiceModel.TransportListen</span><span class="sxs-lookup"><span data-stu-id="dcc32-102">System.ServiceModel.TransportListen</span></span>
-<span data-ttu-id="dcc32-103">System.ServiceModel.TransportListen</span><span class="sxs-lookup"><span data-stu-id="dcc32-103">System.ServiceModel.TransportListen</span></span>  
+# <a name="systemservicemodeltransportlisten"></a><span data-ttu-id="a0f8c-102">System.ServiceModel.TransportListen</span><span class="sxs-lookup"><span data-stu-id="a0f8c-102">System.ServiceModel.TransportListen</span></span>
+<span data-ttu-id="a0f8c-103">System.ServiceModel.TransportListen</span><span class="sxs-lookup"><span data-stu-id="a0f8c-103">System.ServiceModel.TransportListen</span></span>  
   
-## <a name="description"></a><span data-ttu-id="dcc32-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="dcc32-104">Description</span></span>  
- <span data-ttu-id="dcc32-105">Escute no endereço especificado.</span><span class="sxs-lookup"><span data-stu-id="dcc32-105">Listen at the specified address.</span></span>  
+## <a name="description"></a><span data-ttu-id="a0f8c-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="a0f8c-104">Description</span></span>  
+ <span data-ttu-id="a0f8c-105">Escute no endereço especificado.</span><span class="sxs-lookup"><span data-stu-id="a0f8c-105">Listen at the specified address.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dcc32-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dcc32-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0f8c-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a0f8c-106">See also</span></span>
 
-- [<span data-ttu-id="dcc32-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="dcc32-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="dcc32-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="dcc32-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="dcc32-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="dcc32-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="a0f8c-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="a0f8c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="a0f8c-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="a0f8c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="a0f8c-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="a0f8c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
