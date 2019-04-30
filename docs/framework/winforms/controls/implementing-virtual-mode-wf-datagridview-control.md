@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973765"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Passo a passo: Implementando o modo virtual no controle DataGridView do Windows Forms
 Quando quiser exibir grandes quantidades de dados tabulares em uma <xref:System.Windows.Forms.DataGridView> controle, você pode definir o <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propriedade `true` e gerenciar explicitamente a interação do controle com seu armazenamento de dados. Isso permite ajustar o desempenho do controle nessa situação.  
@@ -112,16 +112,16 @@ Quando quiser exibir grandes quantidades de dados tabulares em uma <xref:System.
   
 #### <a name="to-test-the-form"></a>Para testar o formulário  
   
--   Compile e execute o aplicativo.  
+- Compile e execute o aplicativo.  
   
      Você verá um <xref:System.Windows.Forms.DataGridView> preenchido com três registros de cliente do controle. É possível modificar os valores de várias células em uma linha e pressionar ESC duas vezes no modo de edição e uma vez fora do modo de edição para reverter a linha inteira para seus valores originais. Quando você modifica, adiciona ou exclui linhas no controle, objetos `Customer` no armazenamento de dados também são modificados, adicionados ou excluídos.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Esse aplicativo oferece uma compreensão básica dos eventos que você precisa manipular para implementar o modo virtual no <xref:System.Windows.Forms.DataGridView> controle. É possível aprimorar esse aplicativo básico de várias maneiras:  
   
--   Implemente um armazenamento de dados que armazena em cache os valores de um banco de dados externo. O cache deve recuperar e descartar valores conforme necessário, de modo que ele contenha apenas o que é necessário para exibição enquanto consome uma quantidade pequena de memória no computador cliente.  
+- Implemente um armazenamento de dados que armazena em cache os valores de um banco de dados externo. O cache deve recuperar e descartar valores conforme necessário, de modo que ele contenha apenas o que é necessário para exibição enquanto consome uma quantidade pequena de memória no computador cliente.  
   
--   Ajuste o desempenho do armazenamento de dados dependendo de seus requisitos. Por exemplo, talvez você queira compensar conexões de rede lentas em vez de limitações de memória do computador cliente usando um tamanho de cache maior e minimizando o número de consultas ao banco de dados.  
+- Ajuste o desempenho do armazenamento de dados dependendo de seus requisitos. Por exemplo, talvez você queira compensar conexões de rede lentas em vez de limitações de memória do computador cliente usando um tamanho de cache maior e minimizando o número de consultas ao banco de dados.  
   
  Para obter mais informações sobre o cache de valores de um banco de dados externo, consulte [como: Implementar o modo Virtual com carregamento de dados Just-In-Time para o Windows Forms DataGridView Control](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   

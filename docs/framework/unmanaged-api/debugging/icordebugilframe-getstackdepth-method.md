@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 670c6af66802c8badc5dba9d414427a13a1b815c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988618"
 ---
 # <a name="icordebugilframegetstackdepth-method"></a>Método ICorDebugILFrame::GetStackDepth
 Esse método não foi implementado.  

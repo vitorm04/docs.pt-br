@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49cef22e88613fe4c4dfb3fb35a92977977b1827
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988631"
 ---
 # <a name="icordebugilframecansetip-method"></a>Método ICorDebugILFrame::CanSetIP
 Obtém um HRESULT que indica se é seguro definir o ponteiro de instrução para o local de deslocamento especificado no código Microsoft Intermediate Language (MSIL).  

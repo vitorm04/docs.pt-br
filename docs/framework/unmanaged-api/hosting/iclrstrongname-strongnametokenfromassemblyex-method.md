@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 203c8647366952b1d58799b97dfd53aea22859ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992791"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>Método ICLRStrongName::StrongNameTokenFromAssemblyEx
 Cria um token de nome forte a partir do arquivo de assembly especificado e retorna a chave pública que representa o token.  

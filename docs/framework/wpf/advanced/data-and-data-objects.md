@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
 ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010612"
 ---
 # <a name="data-and-data-objects"></a>Dados e objetos de dados
 Dados que são transferidos como parte de uma operação do tipo "arrastar e soltar" são armazenados em um objeto de dados.  Conceitualmente, um objeto de dados consiste em um ou mais dos seguintes pares:  
   
--   Um <xref:System.Object> que contém os dados reais.  
+- Um <xref:System.Object> que contém os dados reais.  
   
--   Um identificador de formato de dados correspondente.  
+- Um identificador de formato de dados correspondente.  
   
  Os dados em si podem consistir em qualquer coisa que pode ser representado como uma base de <xref:System.Object>.  O formato de dados correspondente é uma cadeia de caracteres ou <xref:System.Type> que fornece uma dica sobre o formato de dados está em.  Objetos de dados dão suporte à hospedagem de vários pares de formato de dados/dados. Isso permite que um único objeto de dados forneça dados em vários formatos.  
   

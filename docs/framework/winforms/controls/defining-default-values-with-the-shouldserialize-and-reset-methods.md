@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
 ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972361"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definindo valores padrão com o ShouldSerialize e os métodos de redefinição
 `ShouldSerialize` e `Reset` são métodos opcionais que você pode fornecer para uma propriedade, caso ela não tenha um valor padrão simples. Se a propriedade tem um valor padrão simples, você deve aplicar o <xref:System.ComponentModel.DefaultValueAttribute> e forneça o valor padrão para o construtor de classe de atributo em vez disso. Qualquer um desses mecanismos habilita os recursos a seguir no designer:  
   
--   A propriedade fornecerá uma indicação visual no navegador de propriedades se tiver sido modificado de seu valor padrão.  
+- A propriedade fornecerá uma indicação visual no navegador de propriedades se tiver sido modificado de seu valor padrão.  
   
--   O usuário pode clicar com o botão direito do mouse na propriedade e escolher **Redefinir** para restaurar a propriedade para o valor padrão.  
+- O usuário pode clicar com o botão direito do mouse na propriedade e escolher **Redefinir** para restaurar a propriedade para o valor padrão.  
   
--   O designer gera um código mais eficiente.  
+- O designer gera um código mais eficiente.  
   
     > [!NOTE]
     >  Alguma se aplicar a <xref:System.ComponentModel.DefaultValueAttribute> ou forneça `Reset` *PropertyName* e `ShouldSerialize` *PropertyName* métodos. Não use os dois.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973297"
 ---
 # <a name="type-promotion-visual-basic"></a>Promoção de tipos (Visual Basic)
 Quando você declara um elemento de programação em um módulo, o Visual Basic promove seu escopo para o namespace que contém o módulo. Isso é conhecido como *promoção de tipos*.  
@@ -54,9 +54,9 @@ Quando você declara um elemento de programação em um módulo, o Visual Basic 
 ## <a name="recommendations"></a>Recomendações  
  As recomendações a seguir representam uma boa prática de programação.  
   
--   **Nomes exclusivos.** Quando você tem controle total sobre a nomeação de elementos de programação, é sempre uma boa ideia usar nomes exclusivos em todos os lugares. Nomes idênticos exigem qualificação extra e podem tornar seu código mais difícil de ler. Eles também podem levar a erros sutis e resultados inesperados.  
+- **Nomes exclusivos.** Quando você tem controle total sobre a nomeação de elementos de programação, é sempre uma boa ideia usar nomes exclusivos em todos os lugares. Nomes idênticos exigem qualificação extra e podem tornar seu código mais difícil de ler. Eles também podem levar a erros sutis e resultados inesperados.  
   
--   **Qualificação completa.** Quando você estiver trabalhando com módulos e outros elementos no mesmo namespace, a abordagem mais segura é usar sempre qualificação completa para todos os elementos de programação. Se a promoção de tipos seja derrotada para um membro de módulo e você não qualificar totalmente esse membro, você poderá acessar inadvertidamente um elemento de programação diferente.  
+- **Qualificação completa.** Quando você estiver trabalhando com módulos e outros elementos no mesmo namespace, a abordagem mais segura é usar sempre qualificação completa para todos os elementos de programação. Se a promoção de tipos seja derrotada para um membro de módulo e você não qualificar totalmente esse membro, você poderá acessar inadvertidamente um elemento de programação diferente.  
   
 ## <a name="see-also"></a>Consulte também
 

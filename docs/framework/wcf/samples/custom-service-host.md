@@ -3,11 +3,11 @@ title: Host de serviço personalizado
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
 ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990659"
 ---
 # <a name="custom-service-host"></a>Host de serviço personalizado
 Este exemplo demonstra como usar um personalizado derivado do <xref:System.ServiceModel.ServiceHost> classe para alterar o comportamento de tempo de execução de um serviço. Essa abordagem fornece uma alternativa reutilizável para configurar um grande número de serviços de uma maneira comum. O exemplo também demonstra como usar o <xref:System.ServiceModel.Activation.ServiceHostFactory> classe para usar um ServiceHost personalizado no ambiente de hospedagem dos serviços de informações da Internet (IIS) ou o serviço de ativação de processos do Windows (WAS).  

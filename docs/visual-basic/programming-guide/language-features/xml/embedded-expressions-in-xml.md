@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961220"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Expressões inseridas no XML (Visual Basic)
 Expressões inseridas permitem criar literais XML que contêm expressões que são avaliadas em tempo de execução. É a sintaxe para uma expressão inserida `<%=` `expression` `%>`, que é o mesmo que a sintaxe usada no [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -42,27 +42,27 @@ Expressões inseridas permitem criar literais XML que contêm expressões que s�
 |Atributo de elemento XML|<xref:System.Xml.Linq.XAttribute> ou uma coleção de <xref:System.Xml.Linq.XAttribute>|Ignorado|  
 |Elemento de raiz do documento XML|<xref:System.Xml.Linq.XElement> ou uma coleção de um <xref:System.Xml.Linq.XElement> objeto e um número arbitrário de <xref:System.Xml.Linq.XProcessingInstruction> e <xref:System.Xml.Linq.XComment> objetos|Ignorado|  
   
--   Exemplo de uma expressão inserida em um nome de elemento XML:  
+- Exemplo de uma expressão inserida em um nome de elemento XML:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
--   Exemplo de uma expressão inserida no conteúdo de um elemento XML:  
+- Exemplo de uma expressão inserida no conteúdo de um elemento XML:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
--   Exemplo de uma expressão inserida em um nome de atributo do elemento XML:  
+- Exemplo de uma expressão inserida em um nome de atributo do elemento XML:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
--   Exemplo de uma expressão inserida em um valor de atributo do elemento XML:  
+- Exemplo de uma expressão inserida em um valor de atributo do elemento XML:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
--   Exemplo de uma expressão inserida em um atributo de elemento XML:  
+- Exemplo de uma expressão inserida em um atributo de elemento XML:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
--   Exemplo de uma expressão inserida em um elemento de raiz do documento XML:  
+- Exemplo de uma expressão inserida em um elemento de raiz do documento XML:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   

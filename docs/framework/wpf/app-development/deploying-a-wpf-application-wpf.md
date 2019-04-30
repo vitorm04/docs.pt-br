@@ -6,11 +6,11 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981486"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implantando um aplicativo do WPF (WPF)
 Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, eles precisam ser implantados. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e o .NET Framework incluem várias tecnologias de implantação. A tecnologia de implantação que é usada para implantar um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende do tipo de aplicativo. Este tópico fornece uma breve visão geral de cada tecnologia de implantação e como elas são usadas em conjunto com os requisitos de implantação de cada tipo de aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -19,21 +19,21 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
 ## <a name="deployment-technologies"></a>Tecnologias de implantação  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e o .NET Framework incluem várias tecnologias de implantação, incluindo:  
   
--   Implantação do XCopy.  
+- Implantação do XCopy.  
   
--   Implantação [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
+- Implantação [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
   
--   Implantação [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)].  
+- Implantação [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)].  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Implantação do XCopy  
  Implantação do XCopy se refere ao uso do programa de linha de comando XCopy para copiar arquivos de um local para outro. A implantação do XCopy é adequada nas seguintes circunstâncias:  
   
--   O aplicativo é independente. Ele não precisa atualizar o cliente para ser executado.  
+- O aplicativo é independente. Ele não precisa atualizar o cliente para ser executado.  
   
--   Arquivos do aplicativo precisam ser movidos de um local para outro, como de um local de build (disco local, compartilhamento de arquivos do [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] e assim por diante) para um local de publicação (site, compartilhamento de arquivos do [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] e assim por diante).  
+- Arquivos do aplicativo precisam ser movidos de um local para outro, como de um local de build (disco local, compartilhamento de arquivos do [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] e assim por diante) para um local de publicação (site, compartilhamento de arquivos do [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] e assim por diante).  
   
--   O aplicativo não requer integração com o shell (atalho no menu Iniciar, ícone da área de trabalho e assim por diante).  
+- O aplicativo não requer integração com o shell (atalho no menu Iniciar, ícone da área de trabalho e assim por diante).  
   
  Embora o XCopy seja adequado para cenários de implantação simples, ele é limitado quando recursos de implantação mais complexos são necessários. Em particular, o uso do XCopy frequentemente causa sobrecarga para criar, executar e manter scripts para gerenciar a implantação de forma robusta. Além disso, o XCopy não dá suporte a controle de versão, desinstalação ou reversão.  
   
@@ -49,15 +49,15 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
 ### <a name="clickonce-deployment"></a>Implantação do ClickOnce  
  O [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] permite uma implantação com estilo Web da para aplicativos que não são Web. Os aplicativos são publicados e implantados de servidores Web ou de arquivos. Embora o [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] não dê suporte a toda a gama de recursos de cliente a que aplicativos instalados por [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] dão, ele dá suporte a um subconjunto que inclui o seguinte:  
   
--   Integração com o menu Iniciar e o painel de controle Programas.  
+- Integração com o menu Iniciar e o painel de controle Programas.  
   
--   Controle de versão, reversão e desinstalação.  
+- Controle de versão, reversão e desinstalação.  
   
--   Modo de instalação online, que sempre inicializa um aplicativo do local de implantação.  
+- Modo de instalação online, que sempre inicializa um aplicativo do local de implantação.  
   
--   Atualização automática quando novas versões são lançadas.  
+- Atualização automática quando novas versões são lançadas.  
   
--   Registro de extensões de arquivo.  
+- Registro de extensões de arquivo.  
   
  Para obter mais informações sobre o [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], consulte [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
@@ -65,11 +65,11 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
 ## <a name="deploying-wpf-applications"></a>Implantando aplicativos do WPF  
  As opções de implantação de um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dependem do tipo de aplicativo. Da perspectiva da implantação, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tem três tipos de aplicativo significativos:  
   
--   Aplicativos autônomos.  
+- Aplicativos autônomos.  
   
--   Aplicativos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] somente de marcação.  
+- Aplicativos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] somente de marcação.  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Implantando aplicativos autônomos  
@@ -89,11 +89,11 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
 ### <a name="deploying-xaml-browser-applications"></a>Implantando aplicativos de navegador XAML  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] são aplicativos compilados que exigem que os três arquivos a seguir sejam implantados:  
   
--   *ApplicationName*.exe: O arquivo de aplicativo do assembly executável.  
+- *ApplicationName*.exe: O arquivo de aplicativo do assembly executável.  
   
--   *ApplicationName*.xbap: O manifesto de implantação.  
+- *ApplicationName*.xbap: O manifesto de implantação.  
   
--   *ApplicationName*.exe.manifest: O manifesto do aplicativo.  
+- *ApplicationName*.exe.manifest: O manifesto do aplicativo.  
   
 > [!NOTE]
 >  Para obter mais informações sobre manifestos de aplicativo e de implantação, consulte [Compilando um aplicativo WPF](building-a-wpf-application-wpf.md).  

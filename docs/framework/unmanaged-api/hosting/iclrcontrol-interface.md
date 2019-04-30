@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f70e7958cc9ac198738ed72732fe7b6563c89067
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970060"
 ---
 # <a name="iclrcontrol-interface"></a>Interface ICLRControl
 Fornece métodos que permitem obter referências a um host e configurem aspectos do, o common language runtime (CLR).  

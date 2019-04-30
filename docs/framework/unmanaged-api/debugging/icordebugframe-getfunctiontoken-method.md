@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 156c16f73916d2b4efa1c1b3541a772fb43dd470
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988761"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>Método ICorDebugFrame::GetFunctionToken
 Obtém o token de metadados para a função que contém o código associado a esse registro de ativação.  

@@ -3,11 +3,11 @@ title: Serializando fluxos de trabalho e atividades para e do XAML
 ms.date: 03/30/2017
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
 ms.openlocfilehash: 70ee2e8e0c457e9db2853935ef95b86c7f903fc3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004634"
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Serializando fluxos de trabalho e atividades para e do XAML
 Além de serem construídas em tipos contidos nos assemblies, as definições de fluxo de trabalho também podem ser serializadas para XAML. Essas definições serializadas possam ser recarregadas para edição ou inspeção, podem ser passadas para um sistema de compilação ou carregadas e chamadas. Este tópico fornece uma visão geral de como serializar definições de fluxo de trabalho e trabalhar com definições de fluxo de trabalho XAML.  

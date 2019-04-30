@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957554"
 ---
 # <a name="ihostsecuritymanager-interface"></a>Interface IHostSecurityManager
 Fornece métodos que permitem acesso e controle sobre o contexto de segurança do thread em execução no momento.  
@@ -42,13 +42,13 @@ Fornece métodos que permitem acesso e controle sobre o contexto de segurança d
   
  O CLR trata o contexto de thread gerenciado internamente. Ele consulta o processo específico `IHostSecurityManager` nas seguintes situações:  
   
--   No thread do finalizador, durante a execução do finalizador.  
+- No thread do finalizador, durante a execução do finalizador.  
   
--   Durante a execução de construtor de classe e módulo.  
+- Durante a execução de construtor de classe e módulo.  
   
--   Em pontos assíncronos no thread de trabalho, em chamadas para o [ihostthreadpoolmanager:: QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) método.  
+- Em pontos assíncronos no thread de trabalho, em chamadas para o [ihostthreadpoolmanager:: QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) método.  
   
--   Na manutenção das portas de conclusão de e/s.  
+- Na manutenção das portas de conclusão de e/s.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

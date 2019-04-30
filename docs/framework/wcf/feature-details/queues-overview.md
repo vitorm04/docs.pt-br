@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991233"
 ---
 # <a name="queues-overview"></a>Visão geral de filas
 Esta seção apresenta geral e principais conceitos por trás de comunicação em fila. As seções subsequentes entram em detalhes sobre como os conceitos de enfileiramento de mensagens descritos aqui se manifestam no Windows Communication Foundation (WCF).  
@@ -36,9 +36,9 @@ Esta seção apresenta geral e principais conceitos por trás de comunicação e
 ## <a name="queues-and-transactions"></a>Filas e transações  
  As transações permitem que você agrupar um conjunto de operações para que se uma operação falhar, todas as operações falharão. Um exemplo de como usar transações é quando uma pessoa usa um caixa eletrônico para transferir a US $1.000 de sua conta da economia para sua conta corrente. Isso envolve as seguintes operações:  
   
--   -O da conta de economia de US $1.000.  
+- -O da conta de economia de US $1.000.  
   
--   Depositando US $1.000 para a conta corrente.  
+- Depositando US $1.000 para a conta corrente.  
   
  Se a primeira operação seja bem-sucedida e US $1.000 é retirado da conta de economia, mas a segunda operação falhará, US $1.000 é perdida porque ele já foi revogado da conta de economia. Para manter as contas em um estado válido, se uma operação falhar, ambas as operações devem falhar.  
   
@@ -59,9 +59,9 @@ Esta seção apresenta geral e principais conceitos por trás de comunicação e
   
  Qualquer erro, como uma mensagem não puder acessar a fila de destino ou o expirando Time-To-Live, deve ser processado separadamente. Não é incomum, portanto, para aplicativos em fila gravar os dois conjuntos de lógica:  
   
--   O cliente normal e lógica do serviço de envio e recebimento de mensagens.  
+- O cliente normal e lógica do serviço de envio e recebimento de mensagens.  
   
--   Lógica de compensação para lidar com mensagens de falha de transmissão ou a entrega.  
+- Lógica de compensação para lidar com mensagens de falha de transmissão ou a entrega.  
   
  As seções a seguir discutem esses conceitos.  
   

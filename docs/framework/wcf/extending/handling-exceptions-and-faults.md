@@ -3,11 +3,11 @@ title: Lidando com exceções e falhas
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991389"
 ---
 # <a name="handling-exceptions-and-faults"></a>Lidando com exceções e falhas
 As exceções são usadas para comunicar erros localmente dentro do serviço ou a implementação do cliente. Falhas, por outro lado, são usadas para comunicar erros entre limites de serviço, como a do servidor para o cliente ou vice-versa. Além das falhas, os canais de transporte geralmente usam mecanismos de transporte específicos para comunicar erros de nível de transporte. Por exemplo, o transporte HTTP usa códigos de status como 404 para comunicar uma URL de ponto de extremidade não existente (não há nenhum ponto de extremidade para enviar de volta uma falha). Este documento consiste em três seções que fornecem orientação para os autores de canal personalizado. A primeira seção fornece orientação sobre quando e como definir e lançar exceções. A segunda seção fornece orientação sobre como gerar e consumir falhas. A terceira seção explica como fornecer informações de rastreamento para ajudar o usuário do seu canal personalizado na solução de problemas de aplicativos em execução.  
@@ -309,9 +309,9 @@ public class MessageFault
 ## <a name="tracing"></a>Rastreamento  
  O .NET Framework fornece um mecanismo para rastrear a execução de programa como uma maneira de ajudar a diagnosticar aplicativos de produção ou problemas intermitentes onde não é possível simplesmente anexar um depurador e percorrer o código. Os principais componentes desse mecanismo estão no <xref:System.Diagnostics?displayProperty=nameWithType> namespace e consistem em:  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, que é a origem das informações de rastreamento a serem gravados <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, que é uma classe base abstrata para os ouvintes concretas que recebem as informações a ser rastreado do <xref:System.Diagnostics.TraceSource> e fazê-lo para um destino específica do ouvinte. Por exemplo, <xref:System.Diagnostics.XmlWriterTraceListener> informações para um arquivo XML de rastreamento de saídas. Por fim, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, que permite que o usuário do aplicativo controlar o nível de detalhes de rastreamento e geralmente é especificado na configuração.  
+- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, que é a origem das informações de rastreamento a serem gravados <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, que é uma classe base abstrata para os ouvintes concretas que recebem as informações a ser rastreado do <xref:System.Diagnostics.TraceSource> e fazê-lo para um destino específica do ouvinte. Por exemplo, <xref:System.Diagnostics.XmlWriterTraceListener> informações para um arquivo XML de rastreamento de saídas. Por fim, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, que permite que o usuário do aplicativo controlar o nível de detalhes de rastreamento e geralmente é especificado na configuração.  
   
--   Além dos componentes principais, você pode usar o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para exibir e pesquisar WCF rastreamentos. A ferramenta foi criada especificamente para arquivos de rastreamento gerados pelo WCF e escritos usando <xref:System.Diagnostics.XmlWriterTraceListener>. A figura a seguir mostra os vários componentes envolvidos no rastreamento.  
+- Além dos componentes principais, você pode usar o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para exibir e pesquisar WCF rastreamentos. A ferramenta foi criada especificamente para arquivos de rastreamento gerados pelo WCF e escritos usando <xref:System.Diagnostics.XmlWriterTraceListener>. A figura a seguir mostra os vários componentes envolvidos no rastreamento.  
   
  ![Tratando exceções e falhas](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   

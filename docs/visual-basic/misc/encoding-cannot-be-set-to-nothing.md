@@ -3,11 +3,11 @@ title: Codificação não pode ser definida como Nothing
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
 ms.openlocfilehash: 30b0b4a29fbdf931aa62263b75d1fa946e87b145
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58028448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970320"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>Codificação não pode ser definida como Nothing
 Falha ao tentar ler ou gravar em um arquivo porque o parâmetro `encoding` foi definida como `Nothing` , mas requer um valor válido.  
@@ -16,7 +16,7 @@ Falha ao tentar ler ou gravar em um arquivo porque o parâmetro `encoding` foi d
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Forneça um valor válido para o `encoding` parâmetro.  
+- Forneça um valor válido para o `encoding` parâmetro.  
   
 ## <a name="see-also"></a>Consulte também
 

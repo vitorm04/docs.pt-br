@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: adef1010d08561c0a0fe38480fe0d2f519a80b49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993428"
 ---
 # <a name="corsymaddrkind-enumeration"></a>Enumeração CorSymAddrKind
 Indica o tipo de endereço de memória.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae64fcccb49123f34cca2622a972a89bf700904f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995534"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>Método ICorDebugGenericValue::SetValue
 Copia um novo valor de buffer especificado.  

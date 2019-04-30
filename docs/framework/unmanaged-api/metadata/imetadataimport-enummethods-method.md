@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bab625b8415183b9cf90c35cba140c4d28095805
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992440"
 ---
 # <a name="imetadataimportenummethods-method"></a>Método IMetaDataImport::EnumMethods
 Enumera os tokens MethodDef que representam os métodos do tipo especificado.  

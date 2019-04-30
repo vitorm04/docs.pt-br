@@ -6,8 +6,8 @@ ms.openlocfilehash: 5f2b1500f54f8ade3c4924e3eb22cd022c6800c0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965614"
 ---
 # <a name="supporting-tokens"></a>Tokens com suporte
 O que dão suporte a Tokens que demonstra como adicionar tokens adicionais a uma mensagem que usa WS-Security. O exemplo adiciona um token de segurança binário X.509, além de um token de segurança do nome de usuário. O token é passado em um cabeçalho de mensagem do WS-Security do cliente para o serviço e parte da mensagem é assinado com a chave privada associada ao token de segurança x. 509 para provar a posse do certificado X.509 para o receptor. Isso é útil no caso de quando há um requisito de ter várias declarações associadas com uma mensagem para autentica ou autoriza o remetente. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.
@@ -15,11 +15,11 @@ O que dão suporte a Tokens que demonstra como adicionar tokens adicionais a uma
 ## <a name="demonstrates"></a>Demonstra
  O exemplo demonstra:
 
--   Como um cliente pode passar tokens de segurança adicionais para um serviço.
+- Como um cliente pode passar tokens de segurança adicionais para um serviço.
 
--   Como o servidor possa acessar declarações associadas com tokens de segurança adicionais.
+- Como o servidor possa acessar declarações associadas com tokens de segurança adicionais.
 
--   Como o certificado X.509 do servidor é usado para proteger a chave simétrica usada para assinatura e criptografia de mensagem.
+- Como o certificado X.509 do servidor é usado para proteger a chave simétrica usada para assinatura e criptografia de mensagem.
 
 > [!NOTE]
 >  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.
@@ -461,7 +461,7 @@ iisreset
   
 ##### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
--   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
+- Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
 > [!NOTE]
 >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre máquinas. Se você executou os exemplos do WCF que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

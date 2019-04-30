@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972452"
 ---
 # <a name="message-security-user-name"></a>Message Security User Name
 Este exemplo demonstra como implementar um aplicativo que usa WS-Security com autenticação de nome de usuário para o cliente e requer autenticação de servidor usando o certificado X.509v3 do servidor. Todas as mensagens de aplicativo entre o cliente e servidor assinadas e criptografadas. Por padrão, o nome de usuário e senha fornecidos pelo cliente são usados para fazer logon em uma conta válida do Windows. Este exemplo se baseia a [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Esse exemplo consiste em um programa de console de cliente (Client.exe) e uma biblioteca de serviço (Service.dll) hospedado pelo Internet Information Services (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
@@ -19,9 +19,9 @@ Este exemplo demonstra como implementar um aplicativo que usa WS-Security com au
   
  Este exemplo também demonstra:  
   
--   O mapeamento padrão para as contas do Windows para que possa ser executada autorização adicional.  
+- O mapeamento padrão para as contas do Windows para que possa ser executada autorização adicional.  
   
--   Como acessar informações de identidade do chamador do código de serviço.  
+- Como acessar informações de identidade do chamador do código de serviço.  
   
  O serviço expõe um ponto de extremidade para se comunicar com o serviço, que é definido usando o arquivo de configuração Web. config. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), cujo padrão é usando a segurança de mensagem. Este exemplo define o padrão [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) para usar a autenticação de nome de usuário do cliente. O comportamento Especifica que as credenciais do usuário devem ser usados para autenticação de serviço. O certificado do servidor deve conter o mesmo valor para o nome da entidade como o `findValue` de atributo em de [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
@@ -147,7 +147,7 @@ Press <ENTER> to terminate client.
   
  O exemplo a seguir fornece uma visão geral sobre as diferentes seções dos arquivos de lote.  
   
--   Criando o certificado do servidor  
+- Criando o certificado do servidor  
   
      As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado.  
   
@@ -163,7 +163,7 @@ Press <ENTER> to terminate client.
   
      A variável % SERVER_NAME % Especifica o nome do servidor. O certificado é armazenado no repositório de LocalMachine. Se o arquivo em lotes de Setup. bat é executado com um argumento de serviço (como `setup.bat service`) % % SERVER_NAME contém o nome de domínio totalmente qualificado do computador.  Caso contrário, o padrão é localhost.  
   
--   Instalando o certificado do servidor no repositório de certificados confiáveis do cliente  
+- Instalando o certificado do servidor no repositório de certificados confiáveis do cliente  
   
      A linha a seguir copia o certificado do servidor para o repositório de pessoas confiáveis do cliente. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado emitido Microsoft — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.  
   
@@ -171,7 +171,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   Concedendo permissões de chave privada do certificado  
+- Concedendo permissões de chave privada do certificado  
   
      As seguintes linhas no arquivo em lotes bat Verifique o certificado de servidor armazenado no repositório de LocalMachine acessível para o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] conta de processo de trabalho.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
--   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
+- Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
     > [!NOTE]
     >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

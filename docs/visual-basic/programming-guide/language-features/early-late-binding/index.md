@@ -14,11 +14,11 @@ helpviewer_keywords:
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
 ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973219"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Associação antecipada e tardia (Visual Basic)
 O compilador do Visual Basic executa um processo chamado `binding` quando um objeto é atribuído a uma variável de objeto. Um objeto é *associado inicialmente* quando ele é atribuído a uma variável declarada como de um tipo de objeto específico. Os objetos de associação inicial permitem que o compilador aloque memória e execute outras otimizações antes que um aplicativo seja executado. Por exemplo, o seguinte fragmento de código declara que uma variável é do tipo <xref:System.IO.FileStream>:  

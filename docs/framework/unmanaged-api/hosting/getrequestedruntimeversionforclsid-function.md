@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4b4ac1a37c2b3506216499ed0c9f8194949b768
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985641"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>Função GetRequestedRuntimeVersionForCLSID
 Obtém o common language runtime (CLR) versão informações apropriadas para a classe com especificado `CLSID`.  
@@ -56,9 +56,9 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  `dwResolutionFlags`  
  [in]  Um dos valores CLSID_RESOLUTION_FLAGS. Há suporte para os seguintes valores:  
   
--   CLSID_RESOLUTION_DEFAULT: (0x0) Especifica que o comportamento de interoperabilidade padrão deve ser usado.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) Especifica que o comportamento de interoperabilidade padrão deve ser usado.  
   
--   CLSID_RESOLUTION_REGISTERED: (0x1) Especifica que o registro deve ser pesquisado e política de correção deve ser aplicada.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) Especifica que o registro deve ser pesquisado e política de correção deve ser aplicada.  
   
 ## <a name="return-value"></a>Valor de retorno  
   

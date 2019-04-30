@@ -3,11 +3,11 @@ title: Ponto de extremidade de metadados seguros personalizados
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
 ms.openlocfilehash: c835cfecab38a76f285767f918dfc082915ffcfc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990711"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Ponto de extremidade de metadados seguros personalizados
 Este exemplo demonstra como implementar um serviço com um ponto de extremidade de metadados seguros que usa uma das associações não-metadata exchange e como configurar [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ou clientes para buscar o metadados de tal um ponto de extremidade de metadados. Há duas associações fornecidas pelo sistema disponíveis para expor pontos de extremidade de metadados: mexHttpBinding e mexHttpsBinding. mexHttpBinding é usado para expor um ponto de extremidade de metadados sobre HTTP de forma não segura. mexHttpsBinding é usado para expor um ponto de extremidade de metadados via HTTPS de uma maneira segura. Este exemplo ilustra como expor um ponto de extremidade de metadados seguros usando o <xref:System.ServiceModel.WSHttpBinding>. Você pode querer fazer isso quando você deseja alterar as configurações de segurança na associação, mas você não deseja usar HTTPS. Se você usar o mexHttpsBinding seu ponto de extremidade de metadados será seguro, mas não é possível modificar as configurações de associação.  
@@ -168,11 +168,11 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. O computador cliente, execute o MetadataResolverClient ou o SvcutilClient do VS.  
   
-    1.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+    1. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
--   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
+- Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
     > [!NOTE]
     >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre máquinas. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

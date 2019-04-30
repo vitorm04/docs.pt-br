@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f968d84ae695eb1da127538ebdc5e4f55d6ebf39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985842"
 ---
 # <a name="corexemain2-function"></a>Função _CorExeMain2
 Executa o ponto de entrada no código mapeado na memória especificado. Essa função é chamada pelo carregador do sistema operacional.  

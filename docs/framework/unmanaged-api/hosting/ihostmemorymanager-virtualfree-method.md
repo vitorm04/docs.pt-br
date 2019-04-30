@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03cac2b8433d6491d1fa474a0d4064ef4e260d6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993220"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>Método IHostMemoryManager::VirtualFree
 Serve como um wrapper lógico para a função Win32 correspondente. A implementação do Win32 de `VirtualFree` versões, desfaz a confirmação, ou versões e anulações de confirmação de uma região de páginas no espaço de endereço virtual do processo de chamada.  

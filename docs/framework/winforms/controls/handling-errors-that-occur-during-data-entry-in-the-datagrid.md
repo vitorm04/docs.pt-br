@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
 ms.openlocfilehash: 9e803b6450fb8c9ade4adde5bf98fb1c3c62c861
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971269"
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Passo a passo: Identificando Erros que Ocorrem Durante a Entrada de Dados no Controle DataGridView do Windows Forms
 O tratamento de erros do armazenamento de dados subjacente é um recurso necessário para um aplicativo de entrada de dados. Os formulários do Windows <xref:System.Windows.Forms.DataGridView> controle torna isso fácil ao expor o <xref:System.Windows.Forms.DataGridView.DataError> evento, que é gerado quando o armazenamento de dados detecta uma violação de restrição ou uma regra de negócio.  
@@ -29,7 +29,7 @@ O tratamento de erros do armazenamento de dados subjacente é um recurso necess�
 ## <a name="prerequisites"></a>Pré-requisitos  
  Para concluir este passo a passo, você precisará de:  
   
--   Acesso a um servidor com o banco de dados de exemplo Northwind do SQL Server.  
+- Acesso a um servidor com o banco de dados de exemplo Northwind do SQL Server.  
   
 ## <a name="creating-the-form"></a>Criando o formulário  
   
@@ -71,22 +71,22 @@ O tratamento de erros do armazenamento de dados subjacente é um recurso necess�
   
 #### <a name="to-test-the-form"></a>Para testar o formulário  
   
--   Pressione F5 para executar o aplicativo.  
+- Pressione F5 para executar o aplicativo.  
   
      Você verá um <xref:System.Windows.Forms.DataGridView> controle é preenchido com dados da tabela Customers. Se você inserir um valor duplicado para `CustomerID` e confirmar a edição, o valor da célula será revertido automaticamente e você verá um <xref:System.Windows.Forms.MessageBox> que exibe o erro de entrada de dados.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Esse aplicativo oferece uma compreensão básica do <xref:System.Windows.Forms.DataGridView> recursos do controle. Você pode personalizar a aparência e comportamento do <xref:System.Windows.Forms.DataGridView> controle de várias maneiras:  
   
--   Alterar estilos de borda e cabeçalho. Para obter mais informações, confira [Como: Alterar a borda e estilos de linha de grade no Windows Forms DataGridView Control](change-the-border-and-gridline-styles-in-the-datagrid.md).  
+- Alterar estilos de borda e cabeçalho. Para obter mais informações, confira [Como: Alterar a borda e estilos de linha de grade no Windows Forms DataGridView Control](change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Habilitar ou restringir a entrada do usuário para o <xref:System.Windows.Forms.DataGridView> controle. Para obter mais informações, confira [Como: Evitar a adição de linha e exclusão no Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md), e [como: Controle DataGridView de tornar as colunas somente leitura no Windows Forms](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+- Habilitar ou restringir a entrada do usuário para o <xref:System.Windows.Forms.DataGridView> controle. Para obter mais informações, confira [Como: Evitar a adição de linha e exclusão no Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md), e [como: Controle DataGridView de tornar as colunas somente leitura no Windows Forms](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Validar a entrada do usuário para o <xref:System.Windows.Forms.DataGridView> controle. Para obter mais informações, confira [Passo a passo: Validando dados em que o Windows Forms DataGridView Control](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+- Validar a entrada do usuário para o <xref:System.Windows.Forms.DataGridView> controle. Para obter mais informações, confira [Passo a passo: Validando dados em que o Windows Forms DataGridView Control](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
--   Manipule grandes conjuntos de dados usando o modo virtual. Para obter mais informações, confira [Passo a passo: Implementando o modo Virtual no Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).  
+- Manipule grandes conjuntos de dados usando o modo virtual. Para obter mais informações, confira [Passo a passo: Implementando o modo Virtual no Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Personalize a aparência das células. Para obter mais informações, confira [Como: Personalizar a aparência de células no controle DataGridView dos Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) e [como: Definir estilos de célula padrão para o Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+- Personalize a aparência das células. Para obter mais informações, confira [Como: Personalizar a aparência de células no controle DataGridView dos Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) e [como: Definir estilos de célula padrão para o Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Consulte também
 

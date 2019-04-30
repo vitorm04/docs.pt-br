@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983401"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implementando o padrão de controle Scroll de automação de interface do usuário
 > [!NOTE]
@@ -30,17 +30,17 @@ Exemplo de um controle de rolagem que não usa barras de rolagem
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle Scroll, observe as seguintes diretrizes e convenções:  
   
--   O filho desse controle deve implementar <xref:System.Windows.Automation.Provider.IScrollItemProvider>.  
+- O filho desse controle deve implementar <xref:System.Windows.Automation.Provider.IScrollItemProvider>.  
   
--   As barras de rolagem de um controle de contêiner não dão suporte a <xref:System.Windows.Automation.ScrollPattern> padrão de controle. Eles devem dar suporte a <xref:System.Windows.Automation.RangeValuePattern> em vez disso, o padrão de controle.  
+- As barras de rolagem de um controle de contêiner não dão suporte a <xref:System.Windows.Automation.ScrollPattern> padrão de controle. Eles devem dar suporte a <xref:System.Windows.Automation.RangeValuePattern> em vez disso, o padrão de controle.  
   
--   Quando a rolagem é medida em porcentagens, todos os valores ou valores relacionados à graduação de rolagem deve ser normalizadas em um intervalo de 0 a 100.  
+- Quando a rolagem é medida em porcentagens, todos os valores ou valores relacionados à graduação de rolagem deve ser normalizadas em um intervalo de 0 a 100.  
   
--   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> e <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> independem do <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
+- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> e <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> independem do <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
   
--   Se <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false` , em seguida, <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> deve ser definido como 100% e <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> deve ser definido como <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Da mesma forma, se <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>  =  `false` , em seguida, <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> deve ser definido como 100 por cento e <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> deve ser definido como <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Isso permite que um cliente de automação de interface do usuário para usar esses valores de propriedade dentro de <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> método, evitando uma [condição de corrida](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) se uma direção o cliente não estiver interessado em rolagem torna-se ativado.  
+- Se <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false` , em seguida, <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> deve ser definido como 100% e <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> deve ser definido como <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Da mesma forma, se <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>  =  `false` , em seguida, <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> deve ser definido como 100 por cento e <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> deve ser definido como <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Isso permite que um cliente de automação de interface do usuário para usar esses valores de propriedade dentro de <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> método, evitando uma [condição de corrida](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) se uma direção o cliente não estiver interessado em rolagem torna-se ativado.  
   
--   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> é específica da localidade. Configuração HorizontalScrollPercent = 100,0 deve definir o local de rolagem do controle para o equivalente da sua posição mais à direita para idiomas como inglês lidos da esquerda para a direita. Como alternativa, para idiomas como árabe lidos da direita para esquerda, a configuração HorizontalScrollPercent = 100,0 deve definir o local de rolagem para a posição mais à esquerda.  
+- <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> é específica da localidade. Configuração HorizontalScrollPercent = 100,0 deve definir o local de rolagem do controle para o equivalente da sua posição mais à direita para idiomas como inglês lidos da esquerda para a direita. Como alternativa, para idiomas como árabe lidos da direita para esquerda, a configuração HorizontalScrollPercent = 100,0 deve definir o local de rolagem para a posição mais à esquerda.  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
 ## <a name="required-members-for-iscrollprovider"></a>Membros necessários para IScrollProvider  

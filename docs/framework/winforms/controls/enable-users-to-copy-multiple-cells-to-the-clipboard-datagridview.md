@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying multiple cells
 ms.assetid: fd0403b2-d0e3-4ae0-839c-0f737e1eb4a9
 ms.openlocfilehash: f7b6c37db0935dae703e9641b2c2605b2ec88126
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972036"
 ---
 # <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Como: Habilitar usuários para copiarem várias células na Área de Transferência usando o controle DataGridView do Windows Forms
 Quando você habilita a cópia de célula, você tornar os dados no seu <xref:System.Windows.Forms.DataGridView> controle facilmente acessível para outras aplicações através de <xref:System.Windows.Forms.Clipboard>. Os valores das células selecionadas são convertidos em cadeias de caracteres e adicionados à área de transferência como valores de texto delimitado por tabulação para colar em aplicativos como Bloco de Notas e Excel, e como uma tabela formatada em HTML para colar em aplicativos como Word.  
@@ -26,7 +26,7 @@ Quando você habilita a cópia de célula, você tornar os dados no seu <xref:Sy
   
 ### <a name="to-enable-cell-copying"></a>Habilitar cópia de célula  
   
--   Definir a propriedade <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A?displayProperty=nameWithType>.  
+- Definir a propriedade <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A?displayProperty=nameWithType>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewClipboardDemo#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewClipboardDemo/CS/datagridviewclipboarddemo.cs#15)]
      [!code-vb[System.Windows.Forms.DataGridViewClipboardDemo#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewClipboardDemo/VB/datagridviewclipboarddemo.vb#15)]  
@@ -40,7 +40,7 @@ Quando você habilita a cópia de célula, você tornar os dados no seu <xref:Sy
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este código requer:  
   
--   Referências aos assemblies N:System e N:System.Windows.Forms.  
+- Referências aos assemblies N:System e N:System.Windows.Forms.  
   
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
 ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977555"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Recursos do Visual Basic que suportam LINQ
 O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] refere-se à tecnologia no Visual Basic que dá suporte à sintaxe de consulta e outra linguagem constrói diretamente na linguagem. Com [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você não precisa aprender uma nova linguagem de consulta em relação a uma fonte de dados externa. Você pode consultar em relação aos dados em bancos de dados relacionais, armazenamentos de XML ou objetos usando o Visual Basic. Essa integração de recursos de consulta para o idioma permite a verificação de tempo de compilação para erros de sintaxe e segurança de tipo. Essa integração também garante que você já sabe a maioria dos quais você precisa saber para escrever consultas avançadas e variadas em Visual Basic.  

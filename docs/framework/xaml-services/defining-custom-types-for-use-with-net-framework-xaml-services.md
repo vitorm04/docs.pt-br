@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971945"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definindo tipos personalizados para uso com serviços XAML do .NET Framework
 Quando você define tipos personalizados que são objetos de negócios ou é tipos que não têm uma dependência em estruturas específicas, há algumas melhores práticas para XAML, você pode seguir. Se você seguir essas práticas, serviços de XAML do .NET Framework e seus leitores XAML e gravadores XAML podem descobrir as características XAML de seu tipo e dê a ele representação apropriada em um fluxo de nó XAML usando o sistema de tipo XAML. Este tópico descreve as práticas recomendadas para definições de tipo, definições de membro e atribuição do CLR de tipos ou membros.  
@@ -17,9 +17,9 @@ Quando você define tipos personalizados que são objetos de negócios ou é tip
 ## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>Padrões de construtor e definições de tipo para XAML  
  Para ser instanciado como um elemento de objeto em XAML, uma classe personalizada deve atender aos seguintes requisitos:  
   
--   A classe personalizada deve ser pública e deve expor um construtor de público (sem parâmetros) padrão. (Consulte a seção a seguir para ver as observações sobre estruturas.)  
+- A classe personalizada deve ser pública e deve expor um construtor de público (sem parâmetros) padrão. (Consulte a seção a seguir para ver as observações sobre estruturas.)  
   
--   A classe personalizada não deve ser uma classe aninhada. O extra "dot" no caminho do nome completo torna a divisão de namespace de classe ambíguo e interfere com outros recursos XAML como propriedades anexadas.  
+- A classe personalizada não deve ser uma classe aninhada. O extra "dot" no caminho do nome completo torna a divisão de namespace de classe ambíguo e interfere com outros recursos XAML como propriedades anexadas.  
   
  Se um objeto pode ser instanciado como um elemento de objeto, o objeto criado pode preencher o formulário de elemento de propriedade de todas as propriedades que usam o objeto como seu tipo base.  
   
@@ -72,9 +72,9 @@ Quando você define tipos personalizados que são objetos de negócios ou é tip
   
  `public static object Get` *PropertyName* `(object`  `target` `)`  
   
--   O objeto `target` pode ser especificado como um tipo mais específico na sua implementação. Você pode usar isso para definir o escopo o uso de seu membro anexável; usos de fora de seu escopo pretendido gerará exceções de conversão inválida que, em seguida, são apresentadas por um erro de análise XAML. O nome do parâmetro `target` não é um requisito, mas é denominado `target` por convenção, na maioria das implementações.  
+- O objeto `target` pode ser especificado como um tipo mais específico na sua implementação. Você pode usar isso para definir o escopo o uso de seu membro anexável; usos de fora de seu escopo pretendido gerará exceções de conversão inválida que, em seguida, são apresentadas por um erro de análise XAML. O nome do parâmetro `target` não é um requisito, mas é denominado `target` por convenção, na maioria das implementações.  
   
--   O valor retornado pode ser especificado como um tipo mais específico na sua implementação.  
+- O valor retornado pode ser especificado como um tipo mais específico na sua implementação.  
   
  Para dar suporte a um <xref:System.ComponentModel.TypeConverter> sintaxe de texto habilitada para uso do atributo do membro anexável, aplique <xref:System.ComponentModel.TypeConverterAttribute> para o `Get` *PropertyName* acessador. Aplicação para o `get` em vez do `set` pode parecer (nada óbvio); no entanto, essa convenção pode dar suporte o conceito de somente leitura membros anexáveis que são serializados, que é útil em cenários de designer.  
   
@@ -83,9 +83,9 @@ Quando você define tipos personalizados que são objetos de negócios ou é tip
   
  `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
--   O `target` objeto pode ser especificado como um tipo mais específico na sua implementação, com a mesma lógica e consequências, conforme descrito na seção anterior.  
+- O `target` objeto pode ser especificado como um tipo mais específico na sua implementação, com a mesma lógica e consequências, conforme descrito na seção anterior.  
   
--   O objeto `value` pode ser especificado como um tipo mais específico na sua implementação.  
+- O objeto `value` pode ser especificado como um tipo mais específico na sua implementação.  
   
  Lembre-se de que o valor para esse método é a entrada proveniente do uso de XAML, normalmente na forma de atributo. No formulário do atributo deve haver suporte de conversor de valor para uma sintaxe de texto e atributo na `Get` *PropertyName* acessador.  
   

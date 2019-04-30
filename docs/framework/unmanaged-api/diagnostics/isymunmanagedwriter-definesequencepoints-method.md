@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 735b33ac1f049f8d4d3740239e7c34a6fa16dd32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969163"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>Método ISymUnmanagedWriter::DefineSequencePoints
 Define um grupo de pontos de sequência dentro do método atual. Cada linha de início e a coluna inicial definem o início de uma instrução dentro de um método. Cada um final de linha e coluna de término definem o final de uma instrução dentro de um método. As matrizes devem ser classificadas em ordem crescente de deslocamentos. O deslocamento é sempre medido desde o início do método, em bytes.  

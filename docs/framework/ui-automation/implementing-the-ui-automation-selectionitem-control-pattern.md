@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
 ms.openlocfilehash: 00a2dae818091c20649deae79c093a61b6e93732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983249"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementando o padrão de controle SelectionItem de interface de usuário 
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59183749"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de Item de seleção, observe as seguintes diretrizes e convenções:  
   
--   Controles de seleção única que gerenciam os controles filho que implementam <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, como o **resolução de tela** controle deslizante no **as propriedades de exibição** caixa de diálogo deve implementar <xref:System.Windows.Automation.Provider.ISelectionProvider>e seus filhos devem implementar ambos <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> e <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- Controles de seleção única que gerenciam os controles filho que implementam <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, como o **resolução de tela** controle deslizante no **as propriedades de exibição** caixa de diálogo deve implementar <xref:System.Windows.Automation.Provider.ISelectionProvider>e seus filhos devem implementar ambos <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> e <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iselectionitemprovider"></a>Membros necessários para ISelectionItemProvider  
@@ -38,7 +38,7 @@ ms.locfileid: "59183749"
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Método|Nenhum|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|evento|Gerado quando uma seleção em um contêiner mudou significativamente e requer o envio mais <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> e <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> eventos do que o <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> permite constante.|  
   
--   Se o resultado de uma <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, uma <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, ou uma <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> é um único item selecionado, uma <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> deve ser gerado; caso contrário, envie <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> conforme apropriado.  
+- Se o resultado de uma <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, uma <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, ou uma <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> é um único item selecionado, uma <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> deve ser gerado; caso contrário, envie <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> conforme apropriado.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  

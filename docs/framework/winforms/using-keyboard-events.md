@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966888"
 ---
 # <a name="using-keyboard-events"></a>Usando eventos do teclado
 A maioria dos programas do Windows Forms processa a entrada do teclado tratando eventos de teclado. Este tópico fornece uma visão geral dos eventos de teclado, incluindo detalhes sobre quando usar cada evento e os dados que são fornecidos para cada evento.  Consulte também [visão geral de manipuladores de eventos (Windows Forms)](event-handlers-overview-windows-forms.md) e [visão geral de eventos (Windows Forms)](events-overview-windows-forms.md).  
@@ -22,11 +22,11 @@ A maioria dos programas do Windows Forms processa a entrada do teclado tratando 
 ## <a name="keyboard-events"></a>Eventos de teclado  
  O Windows Forms fornece dois eventos que ocorrem quando um usuário pressiona uma tecla do teclado e um evento quando um usuário libera uma tecla do teclado:  
   
--   O <xref:System.Windows.Forms.Control.KeyDown> evento ocorre uma vez  
+- O <xref:System.Windows.Forms.Control.KeyDown> evento ocorre uma vez  
   
--   O <xref:System.Windows.Forms.Control.KeyPress> evento, que pode ocorrer várias vezes quando um usuário segura a mesma tecla.  
+- O <xref:System.Windows.Forms.Control.KeyPress> evento, que pode ocorrer várias vezes quando um usuário segura a mesma tecla.  
   
--   O <xref:System.Windows.Forms.Control.KeyUp> evento ocorre uma vez quando um usuário libera uma tecla.  
+- O <xref:System.Windows.Forms.Control.KeyUp> evento ocorre uma vez quando um usuário libera uma tecla.  
   
  Quando um usuário pressiona uma tecla, o Windows Forms determina qual evento deve ser gerado com base em se a mensagem do teclado especifica uma tecla de caractere ou uma tecla física. Para obter mais informações sobre teclas de caracteres e físicas, consulte [Como funciona a entrada do teclado](how-keyboard-input-works.md).  
   

@@ -3,11 +3,11 @@ title: Publicando e recuperando metadados através de uma associação personali
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
 ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991205"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Publicando e recuperando metadados através de uma associação personalizada
 O <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> fornece suporte para adicionar o ponto de extremidade de metadados para um serviço. Esses pontos de extremidade de metadados podem responder a solicitações HTTP GET em uma URL que tem um `?wsdl` querystring e as solicitações GET do WS-Transfer conforme definido na especificação de WS-MetadataExchange (MEX). Pontos de extremidade MEX implementam o <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> contrato.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991038"
 ---
 # <a name="routing-scenarios"></a>Cenários de roteamento
 Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um desafio para a lógica de roteamento eficiente de design ao criar uma nova configuração do zero.  No entanto, há vários cenários comuns que seguem a maioria das configurações de serviço de roteamento. Enquanto esses cenários não podem ser aplicadas diretamente em sua configuração específica, Noções básicas sobre como o serviço de roteamento pode ser configurado para tratar desses cenários ajudam a entender o serviço de roteamento.  
@@ -49,9 +49,9 @@ Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um 
 ### <a name="multicast"></a>Multicast  
  Quando o roteamento de mensagens, geralmente você roteamento cada mensagem ao ponto de extremidade de um destino específico.  No entanto, ocasionalmente, talvez precise rotear uma cópia da mensagem para vários pontos de extremidade de destino. Para executar o roteamento de difusão seletiva, as seguintes condições devem ser verdadeiras:  
   
--   A forma de canal não deve ser de solicitação-resposta (embora ele possa ser unidirecionais ou bidirecionais,) porque a solicitação-resposta exige que apenas uma resposta pode ser recebida pelo aplicativo cliente em resposta à solicitação.  
+- A forma de canal não deve ser de solicitação-resposta (embora ele possa ser unidirecionais ou bidirecionais,) porque a solicitação-resposta exige que apenas uma resposta pode ser recebida pelo aplicativo cliente em resposta à solicitação.  
   
--   Vários filtros devem retornar **verdadeira** ao avaliar a mensagem.  
+- Vários filtros devem retornar **verdadeira** ao avaliar a mensagem.  
   
  Se essas condições forem atendidas, a cada ponto de extremidade de destino que está associado com um filtro que retorna true receberá uma cópia da mensagem.  
   

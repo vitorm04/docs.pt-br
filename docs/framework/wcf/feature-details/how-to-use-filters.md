@@ -3,22 +3,22 @@ title: 'Como: usar filtros'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972855"
 ---
 # <a name="how-to-use-filters"></a>Como: usar filtros
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que usa vários filtros. Neste exemplo, as mensagens são roteadas para duas implementações de um serviço de Calculadora, regularCalc e roundingCalc. Ambas as implementações de suportam as mesmas operações; No entanto, um serviço Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deseja usar a versão de arredondamento do serviço; Se nenhuma preferência de serviço é expressa a mensagem é balanceada entre os dois serviços. As operações expostas por ambos os serviços são:  
   
--   Adicionar  
+- Adicionar  
   
--   Subtração  
+- Subtração  
   
--   Multiplicar  
+- Multiplicar  
   
--   Divisão  
+- Divisão  
   
  Como ambos os serviços de implementam as mesmas operações, é possível usar o filtro de ação, porque a ação especificada na mensagem não será exclusiva. Em vez disso, você deve fazer o trabalho adicional para garantir que as mensagens são roteadas para os pontos de extremidade apropriados.  
   
@@ -137,10 +137,10 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
     > [!NOTE]
     >  O filtro PrefixEndpointAddress não avalia o nome do host ao executar uma correspondência, pois um único host pode ser chamado usando uma variedade de nomes de host que podem todos ser válidas maneiras de fazer referência ao host do aplicativo cliente. Por exemplo, todos os itens a seguir podem se referir ao mesmo host:  
     >   
-    > -   localhost  
-    > -   127.0.0.1  
-    > -   `www.contoso.com`  
-    > -   ContosoWeb01  
+    > - localhost  
+    > - 127.0.0.1  
+    > - `www.contoso.com`  
+    > - ContosoWeb01  
   
 4. O filtro final deve oferecer suporte a roteamento de mensagens que chegam no ponto de extremidade geral sem o cabeçalho personalizado. Para este cenário, as mensagens devem alternam entre os serviços regularCalc e roundingCalc. Para dar suporte a roteamento de "round robin" dessas mensagens, use um filtro personalizado que permite que uma instância de filtro para correspondência para cada mensagem processada.  O exemplo a seguir define duas instâncias de um RoundRobinMessageFilter, que são agrupados juntos para indicar que eles devem se alternam entre si.  
   

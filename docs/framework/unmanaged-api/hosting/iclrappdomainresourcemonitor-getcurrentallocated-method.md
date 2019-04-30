@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7fcd7a3aa1a6c034985099c24071429384563700
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985290"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>Método ICLRAppDomainResourceMonitor::GetCurrentAllocated
 Obtém o tamanho total, em bytes, de todas as alocações de memória que foram feitas pelo domínio do aplicativo, pois ele foi criado, sem subtrair a memória que foi coletado como lixo.  

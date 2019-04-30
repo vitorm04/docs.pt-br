@@ -1,5 +1,5 @@
 ---
-title: Convenções de maiusculas e minúsculas
+title: Convenções de maiúsculas e minúsculas
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
 ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966472"
 ---
-# <a name="capitalization-conventions"></a>Convenções de maiusculas e minúsculas
+# <a name="capitalization-conventions"></a>Convenções de maiúsculas e minúsculas
 As diretrizes neste capítulo dispor de um método simples para usar o caso, que, quando aplicadas de forma consistente, os identificadores de marca para tipos, membros e parâmetros de fácil leitura.  
   
 ## <a name="capitalization-rules-for-identifiers"></a>Regras de maiusculas e minúsculas de identificadores  
  Para diferenciar as palavras em um identificador, maiuscula a primeira letra de cada palavra no identificador. Não use sublinhados para diferenciar as palavras, ou, de fato, em qualquer lugar em identificadores. Há duas maneiras de apropriado para capitalizar identificadores, dependendo do uso do identificador:  
   
--   PascalCasing  
+- PascalCasing  
   
--   camelCasing  
+- camelCasing  
   
  A convenção de PascalCasing, usada para todos os identificadores, exceto os nomes de parâmetro, escreve o primeiro caractere de cada palavra (incluindo acrônimos ao longo de duas letras), conforme mostrado nos exemplos a seguir:  
   

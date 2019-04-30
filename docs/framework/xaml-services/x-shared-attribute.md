@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
 ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982625"
 ---
 # <a name="xshared-attribute"></a>Atributo x:Shared
 Quando definido como `false`, modifica o comportamento de recuperação de recursos do WPF para que as solicitações para o recurso atribuído criam uma nova instância para cada solicitação em vez de compartilhar a mesma instância para todas as solicitações.  
@@ -45,9 +45,9 @@ Quando definido como `false`, modifica o comportamento de recuperação de recur
   
  No WPF, `x:Shared` só é válida nas seguintes condições:  
   
--   O <xref:System.Windows.ResourceDictionary> que contém os itens com `x:Shared` deve ser compilado. O <xref:System.Windows.ResourceDictionary> não pode estar dentro do XAML flexível ou usado para temas.  
+- O <xref:System.Windows.ResourceDictionary> que contém os itens com `x:Shared` deve ser compilado. O <xref:System.Windows.ResourceDictionary> não pode estar dentro do XAML flexível ou usado para temas.  
   
--   O <xref:System.Windows.ResourceDictionary> que contém os itens não deve ser aninhado dentro de outra <xref:System.Windows.ResourceDictionary>. Por exemplo, você não pode usar `x:Shared` para itens em uma <xref:System.Windows.ResourceDictionary> que está em um <xref:System.Windows.Style> que já está um <xref:System.Windows.ResourceDictionary> item.  
+- O <xref:System.Windows.ResourceDictionary> que contém os itens não deve ser aninhado dentro de outra <xref:System.Windows.ResourceDictionary>. Por exemplo, você não pode usar `x:Shared` para itens em uma <xref:System.Windows.ResourceDictionary> que está em um <xref:System.Windows.Style> que já está um <xref:System.Windows.ResourceDictionary> item.  
   
 ## <a name="see-also"></a>Consulte também
 

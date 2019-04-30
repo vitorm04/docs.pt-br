@@ -3,11 +3,11 @@ title: Publicando pontos de extremidade de metadados
 ms.date: 03/30/2017
 ms.assetid: 29cd8a60-dfb7-460c-bf5a-c2b31b782671
 ms.openlocfilehash: 143a46ce18a0d9dee89bbbffac9be9a467e951df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955149"
 ---
 # <a name="publishing-metadata-endpoints"></a>Publicando pontos de extremidade de metadados
 Serviços Windows Communication Foundation (WCF) publicam metadados, um ou mais pontos de extremidade de metadados de publicação. Publicação de metadados de serviço disponibiliza os metadados usando protocolos padronizados, como solicitações de WS-MetadataExchange (MEX) e HTTP/GET. Pontos de extremidade de metadados são semelhantes aos outros pontos de extremidade de serviço que têm um endereço, uma ligação e um contrato, e eles podem ser adicionados a um host de serviço por meio da configuração ou no código. Para habilitar a publicação pontos de extremidade de metadados, você deve adicionar o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> comportamento para o serviço de serviço.  
