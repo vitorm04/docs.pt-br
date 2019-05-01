@@ -3,20 +3,20 @@ title: 'Como: usar Svcutil.exe para exportar metadados de código de serviço co
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
 ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047328"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Como: usar Svcutil.exe para exportar metadados de código de serviço compilado
 Svcutil.exe pode exportar metadados para os serviços, contratos e tipos de dados em assemblies compilados, da seguinte maneira:  
   
--   Para exportar metadados para todos os compilado contratos de serviço para um conjunto de módulos (assemblies) usando Svcutil.exe, especifique os assemblies como parâmetros de entrada. Este é o comportamento padrão.  
+- Para exportar metadados para todos os compilado contratos de serviço para um conjunto de módulos (assemblies) usando Svcutil.exe, especifique os assemblies como parâmetros de entrada. Este é o comportamento padrão.  
   
--   Para exportar metadados para um serviço compilado usando Svcutil.exe, especifique o assembly de serviço ou assemblies como parâmetros de entrada. Você deve usar o `/serviceName` opção para indicar o nome da configuração do serviço que você deseja exportar. Svcutil.exe carregará automaticamente o arquivo de configuração para o assembly executável especificado.  
+- Para exportar metadados para um serviço compilado usando Svcutil.exe, especifique o assembly de serviço ou assemblies como parâmetros de entrada. Você deve usar o `/serviceName` opção para indicar o nome da configuração do serviço que você deseja exportar. Svcutil.exe carregará automaticamente o arquivo de configuração para o assembly executável especificado.  
   
--   Para exportar todos os tipos de contrato de dados em um conjunto de módulos (assemblies), use o `/dataContractOnly` opção.  
+- Para exportar todos os tipos de contrato de dados em um conjunto de módulos (assemblies), use o `/dataContractOnly` opção.  
   
 > [!NOTE]
 >  Use o `/reference` opção para especificar os caminhos de arquivo para todos os assemblies dependentes.  

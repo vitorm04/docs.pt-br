@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053152"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Passo a passo: mapear propriedades usando o controle ElementHost
 
@@ -21,13 +21,13 @@ Este passo a passo mostra como usar o <xref:System.Windows.Forms.Integration.Ele
 
 As tarefas ilustradas neste passo a passo incluem:
 
--   Criar o projeto.
+- Criar o projeto.
 
--   Definir um novo mapeamento de propriedade.
+- Definir um novo mapeamento de propriedade.
 
--   Remover um mapeamento de propriedade padrão.
+- Remover um mapeamento de propriedade padrão.
 
--   Estender um mapeamento de propriedade padrão.
+- Estender um mapeamento de propriedade padrão.
 
 Para ver uma listagem de código completa de todas tarefas ilustradas nesta instrução passo a passo, consulte [Mapeando propriedades usando o exemplo de controle ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
@@ -37,7 +37,7 @@ Quando você terminar, poderá mapear propriedades [!INCLUDE[TLA#tla_winforms](.
 
 Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-project"></a>Criando o Projeto
 
@@ -47,13 +47,13 @@ Você precisa dos seguintes componentes para concluir esta instrução passo a p
 
 2. Na **Gerenciador de soluções**, adicione referências para os seguintes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies.
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
 3. Copie o seguinte código na parte superior do arquivo de código `Form1`.
 
@@ -101,7 +101,7 @@ Remover um mapeamento de propriedade padrão chamando o <xref:System.Windows.For
 
 ### <a name="to-remove-a-default-property-mapping"></a>Remover um mapeamento de propriedade padrão
 
--   Copie o código a seguir para a definição da classe `Form1`.
+- Copie o código a seguir para a definição da classe `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
@@ -114,7 +114,7 @@ Você pode usar um mapeamento de propriedade padrão e também estendê-lo com s
 
 ### <a name="to-extend-a-default-property-mapping"></a>Estender um mapeamento de propriedade padrão
 
--   Copie o código a seguir para a definição da classe `Form1`.
+- Copie o código a seguir para a definição da classe `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
@@ -132,11 +132,11 @@ Você pode usar um mapeamento de propriedade padrão e também estendê-lo com s
 
      O `Form1_Load` identificadores de método a <xref:System.Windows.Forms.Form.Load> eventos e realiza a seguinte inicialização.
 
-    -   Cria uma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> elemento.
+    - Cria uma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> elemento.
 
-    -   Chama os métodos definidos anteriormente no passo a passo para configurar os mapeamentos de propriedade.
+    - Chama os métodos definidos anteriormente no passo a passo para configurar os mapeamentos de propriedade.
 
-    -   Atribui valores iniciais para as propriedades mapeadas.
+    - Atribui valores iniciais para as propriedades mapeadas.
 
 2. Pressione F5 para compilar e executar o aplicativo.
 

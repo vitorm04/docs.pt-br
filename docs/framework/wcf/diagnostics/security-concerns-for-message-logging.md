@@ -3,11 +3,11 @@ title: Problemas de segurança de registro em log de mensagens
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998147"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
 Este tópico descreve como você pode proteger dados confidenciais sejam expostas em logs de mensagens, bem como os eventos gerados pelo log de mensagens.  
@@ -21,11 +21,11 @@ Este tópico descreve como você pode proteger dados confidenciais sejam exposta
   
  As dicas a seguir podem ajudar você a impedir que o conteúdo de um arquivo de log seja exposto indesejadamente:  
   
--   Certifique-se de que o log de arquivos são protegidos por listas de ACL (Access Control) no host da Web e cenários de hospedagem interna.  
+- Certifique-se de que o log de arquivos são protegidos por listas de ACL (Access Control) no host da Web e cenários de hospedagem interna.  
   
--   Escolha uma extensão de arquivo que não pode ser facilmente exposta com uma solicitação da Web. Por exemplo, a extensão de arquivo. XML não é uma opção segura. Você pode verificar o guia de administração de serviços de informações da Internet (IIS) para ver uma lista de extensões que podem ser atendidas.  
+- Escolha uma extensão de arquivo que não pode ser facilmente exposta com uma solicitação da Web. Por exemplo, a extensão de arquivo. XML não é uma opção segura. Você pode verificar o guia de administração de serviços de informações da Internet (IIS) para ver uma lista de extensões que podem ser atendidas.  
   
--   Especifique um caminho absoluto para o local de arquivo de log, que deve estar fora do diretório da Web host vroot público impedi-lo de que está sendo acessado por terceiros usando um navegador da Web.  
+- Especifique um caminho absoluto para o local de arquivo de log, que deve estar fora do diretório da Web host vroot público impedi-lo de que está sendo acessado por terceiros usando um navegador da Web.  
   
  Por padrão, as chaves e informações de identificação pessoal (PII), como nome de usuário e senha não são registradas em rastreamentos e registrado mensagens. No entanto, um administrador do computador, pode usar o `enableLoggingKnownPII` de atributo no `machineSettings` elemento do arquivo Machine. config para permitir que aplicativos em execução no computador para fazer logon conhecidas informações de identificação pessoal (PII). A configuração a seguir demonstra como fazer isso:  
   
@@ -99,13 +99,13 @@ Este tópico descreve como você pode proteger dados confidenciais sejam exposta
 ## <a name="events-triggered-by-message-logging"></a>Eventos disparados pelo log de mensagens  
  O exemplo a seguir lista todos os eventos emitidos pelo log de mensagens.  
   
--   Mensagem de log em: Esse evento é emitido quando o log de mensagens está habilitado na configuração ou por meio do WMI. O conteúdo do evento é "mensagem de log foi ativado. Informações confidenciais podem ser registradas em texto não criptografado, mesmo se eles foram criptografados durante a transmissão, por exemplo, corpos de mensagem."  
+- Mensagem de log em: Esse evento é emitido quando o log de mensagens está habilitado na configuração ou por meio do WMI. O conteúdo do evento é "mensagem de log foi ativado. Informações confidenciais podem ser registradas em texto não criptografado, mesmo se eles foram criptografados durante a transmissão, por exemplo, corpos de mensagem."  
   
--   Mensagem de logoff: Esse evento é emitido quando o log de mensagens é desabilitado por meio do WMI. O conteúdo do evento é "Mensagem de log foi desativado."  
+- Mensagem de logoff: Esse evento é emitido quando o log de mensagens é desabilitado por meio do WMI. O conteúdo do evento é "Mensagem de log foi desativado."  
   
--   Logon PII conhecido: Esse evento é emitido quando o log de PII conhecido é habilitado. Isso acontece quando o `enableLoggingKnownPii` de atributo na `machineSettings` do arquivo Machine. config é definido como `true`e o `logKnownPii` atributo do `source` elemento no arquivo App. config ou Web. config é definido como `true`.  
+- Logon PII conhecido: Esse evento é emitido quando o log de PII conhecido é habilitado. Isso acontece quando o `enableLoggingKnownPii` de atributo na `machineSettings` do arquivo Machine. config é definido como `true`e o `logKnownPii` atributo do `source` elemento no arquivo App. config ou Web. config é definido como `true`.  
   
--   Faça logon PII conhecido não permitida: Esse evento é emitido quando o registro em log de PII conhecido não é permitido. Isso acontece quando o `logKnownPii` atributo do `source` elemento no arquivo App. config ou Web. config é definido como `true`, mas o `enableLoggingKnownPii` atributo no `machineSettings` elemento do arquivo Machine. config é definido como `false`. Nenhuma exceção é lançada.  
+- Faça logon PII conhecido não permitida: Esse evento é emitido quando o registro em log de PII conhecido não é permitido. Isso acontece quando o `logKnownPii` atributo do `source` elemento no arquivo App. config ou Web. config é definido como `true`, mas o `enableLoggingKnownPii` atributo no `machineSettings` elemento do arquivo Machine. config é definido como `false`. Nenhuma exceção é lançada.  
   
  Esses eventos podem ser exibidos na ferramenta do Visualizador de eventos que vem com o Windows. Para obter mais informações sobre isso, consulte [log de eventos](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   

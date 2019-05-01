@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af75a645b11325b96740807f9a3df65f5a676026
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000240"
 ---
 # <a name="strongnamekeygenex-function"></a>Função StrongNameKeyGenEx
 Gera um novo par de chaves pública/privada com o tamanho da chave especificado, para uso de nome forte.  
@@ -47,9 +47,9 @@ BOOLEAN StrongNameKeyGenEx (
  `dwFlags`  
  [in] Especifica se é necessário deixar a chave registrada. Há suporte para os seguintes valores:  
   
--   0x00000000 - usado quando `wszKeyContainer` é nula para gerar um nome de contêiner de chave temporária.  
+- 0x00000000 - usado quando `wszKeyContainer` é nula para gerar um nome de contêiner de chave temporária.  
   
--   0x00000001 (`SN_LEAVE_KEY`)-Especifica que a chave deve ser registrada para a esquerda.  
+- 0x00000001 (`SN_LEAVE_KEY`)-Especifica que a chave deve ser registrada para a esquerda.  
   
  `dwKeySize`  
  [in] O tamanho solicitado da chave, em bits.  

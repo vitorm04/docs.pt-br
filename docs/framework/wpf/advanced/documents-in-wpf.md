@@ -11,11 +11,11 @@ helpviewer_keywords:
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
 ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051657"
 ---
 # <a name="documents-in-wpf"></a>Documentos no WPF
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferece uma ampla gama de recursos de documento que permitem a criação de conteúdo de alta fidelidade, projetado para ser mais facilmente acessado e lido que nas gerações anteriores do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Além das capacidades e da qualidade aprimoradas, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também oferece serviços integrados para exibição, empacotamento e segurança de documentos. Este tópico fornece uma introdução aos tipos de documento e ao empacotamento de documento do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -61,11 +61,11 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  A arquitetura de pacote do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] serve como base para várias tecnologias-chave:  
   
--   Conformidade de documentos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] com o [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
+- Conformidade de documentos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] com o [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
   
--   Formato de documentos Microsoft Office "12" Open XML (.docx).  
+- Formato de documentos Microsoft Office "12" Open XML (.docx).  
   
--   Formatos de armazenamento personalizado para seu próprio projeto de aplicativo.  
+- Formatos de armazenamento personalizado para seu próprio projeto de aplicativo.  
   
  Com base em APIs de empacotamento, um <xref:System.Windows.Xps.Packaging.XpsDocument> foi projetado especificamente para armazenar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] documentos de conteúdo estático. Uma <xref:System.Windows.Xps.Packaging.XpsDocument> é um documento autocontido que pode ser aberto em um visualizador, exibido em um <xref:System.Windows.Controls.DocumentViewer> controle, roteado para um spool de impressão ou enviado diretamente para um [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-impressora compatível.  
   
@@ -99,11 +99,11 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 #### <a name="packagerelationships"></a>PackageRelationships  
  Um <xref:System.IO.Packaging.PackageRelationship> ("relacionamento") fornece um mecanismo para associar informações adicionais com o pacote ou uma parte dentro do pacote. Um relacionamento é um recurso de nível de pacote que pode associar informações adicionais com uma parte, sem modificar o conteúdo da parte. Inserir novos dados diretamente no conteúdo de uma parte, geralmente, não é algo prático em muitos casos:  
   
--   O tipo real da parte e seu esquema de conteúdo não é conhecido.  
+- O tipo real da parte e seu esquema de conteúdo não é conhecido.  
   
--   Mesmo se for conhecido, o esquema de conteúdo poderá não fornecer um meio para acrescentar novas informações.  
+- Mesmo se for conhecido, o esquema de conteúdo poderá não fornecer um meio para acrescentar novas informações.  
   
--   A parte pode ser digitalmente assinada ou criptografada, impedindo qualquer modificação.  
+- A parte pode ser digitalmente assinada ou criptografada, impedindo qualquer modificação.  
   
  Os relacionamentos de pacotes fornecem um meio detectável de acrescentar e associar informações adicionais com as partes individuais ou com o pacote inteiro. Os relacionamentos de pacotes são usados para duas funções principais:  
   
@@ -125,13 +125,13 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 ## <a name="xps-documents"></a>Documentos XPS  
  O documento [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] é um pacote que contém um ou mais documentos estáticos junto com todos os recursos e informações necessárias para a renderização.  O [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] também é o formato de arquivo de spool de impressão nativo do [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Um <xref:System.Windows.Xps.Packaging.XpsDocument> é armazenada no conjunto de dados ZIP padrão e pode incluir uma combinação de componentes XML e binários, como arquivos de imagem e fontes. Os [PackageRelationships](#PackageRelationships) são usados para definir as dependências entre o conteúdo e os recursos necessários para renderizar completamente o documento.  O <xref:System.Windows.Xps.Packaging.XpsDocument> design fornece uma solução de documento único e de alta fidelidade que dá suporte a vários usos:  
   
--   Leitura, gravação e armazenamento de conteúdo e recursos de documento estático como um arquivo simples, portátil e de fácil distribuição.  
+- Leitura, gravação e armazenamento de conteúdo e recursos de documento estático como um arquivo simples, portátil e de fácil distribuição.  
   
--   Exibição de documentos com o aplicativo visualizador [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+- Exibição de documentos com o aplicativo visualizador [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
--   Geração de documentos no formato de saída do spool de impressão nativo do [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  
+- Geração de documentos no formato de saída do spool de impressão nativo do [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  
   
--   Roteamento de documentos diretamente para uma impressora compatível com [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+- Roteamento de documentos diretamente para uma impressora compatível com [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
 ## <a name="see-also"></a>Consulte também
 

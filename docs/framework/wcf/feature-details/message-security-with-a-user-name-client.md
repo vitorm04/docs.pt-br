@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046550"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Segurança de mensagem com um nome de usuário cliente
 A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF) e o cliente protegido usando a segurança em nível de mensagem. O serviço é autenticado com um certificado X.509. O cliente é autenticado usando um nome de usuário e senha.  
@@ -33,9 +33,9 @@ A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF
 ## <a name="service"></a>Serviço  
  O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
   
--   Crie um serviço autônomo usando o código sem nenhuma configuração.  
+- Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
+- Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem.  

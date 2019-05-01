@@ -3,11 +3,11 @@ title: Atividade
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998017"
 ---
 # <a name="activity"></a>Atividade
 Este tópico descreve os rastreamentos de atividade no modelo de rastreamento do Windows Communication Foundation (WCF). As atividades são unidades que ajudam o usuário a restringir o escopo de uma falha de processamento. Erros que ocorrem na mesma atividade estão diretamente relacionados. Por exemplo, uma operação falhará porque a falha na descriptografia mensagem. Os rastreamentos para a operação e a falha na descriptografia mensagem aparecem na mesma atividade, mostrando uma correlação direta entre o erro de descriptografia e o erro da solicitação.  
@@ -29,18 +29,18 @@ Este tópico descreve os rastreamentos de atividade no modelo de rastreamento do
 ### <a name="correlating-activities-in-service-trace-viewer"></a>Correlacionar atividades no Visualizador de rastreamento de serviço  
  A ferramenta Visualizador de rastreamento de serviço fornece dois modos de exibição de atividades:  
   
--   **Lista** exibição, onde a ID de atividade é usada para correlacionar diretamente rastreamentos entre processos. Rastreamentos de processos diferentes, por exemplo, o cliente e o serviço, mas com a mesma ID de atividade são agrupados na mesma atividade. Portanto, um erro que ocorre no serviço que, em seguida, faz com que um erro no cliente ambos aparecerão na mesma exibição da atividade na ferramenta.  
+- **Lista** exibição, onde a ID de atividade é usada para correlacionar diretamente rastreamentos entre processos. Rastreamentos de processos diferentes, por exemplo, o cliente e o serviço, mas com a mesma ID de atividade são agrupados na mesma atividade. Portanto, um erro que ocorre no serviço que, em seguida, faz com que um erro no cliente ambos aparecerão na mesma exibição da atividade na ferramenta.  
   
--   **Gráfico** modo de exibição, em que as atividades são agrupadas por processos. Nessa exibição, um serviço com a mesma ID de atividade e o cliente tem seus rastreamentos em atividades diferentes. Para correlacionar atividades com a mesma ID de atividade em diferentes processos, a ferramenta mostra a fluxos de mensagens entre as atividades relacionadas.  
+- **Gráfico** modo de exibição, em que as atividades são agrupadas por processos. Nessa exibição, um serviço com a mesma ID de atividade e o cliente tem seus rastreamentos em atividades diferentes. Para correlacionar atividades com a mesma ID de atividade em diferentes processos, a ferramenta mostra a fluxos de mensagens entre as atividades relacionadas.  
   
  Para obter mais informações e para ver uma exibição gráfica da ferramenta do Visualizador de rastreamento de serviço, consulte [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) e [usando o Visualizador de rastreamento de serviço para exibir rastreamentos correlacionados e Solução de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 ## <a name="defining-the-scope-of-an-activity"></a>Definir o escopo de uma atividade  
  Uma atividade é definida em tempo de design e denota uma unidade lógica de trabalho. Os rastreamentos emitidos com o mesmo identificador de atividade estão diretamente relacionados, eles fazem parte da mesma atividade. Como uma atividade pode cruzar os limites do ponto de extremidade (uma solicitação), dois escopos para uma atividade são definidos.  
   
--   `Global` escopo, por aplicativo. Nesse escopo, a atividade é identificada por seu identificador de atividade exclusivo de 128 bits, o gAId. O gAid é o que é propagado entre pontos de extremidade.  
+- `Global` escopo, por aplicativo. Nesse escopo, a atividade é identificada por seu identificador de atividade exclusivo de 128 bits, o gAId. O gAid é o que é propagado entre pontos de extremidade.  
   
--   `Local` escopo, por ponto de extremidade. Nesse escopo, a atividade é identificada por seu gAId, juntamente com o nome de origem de rastreamento emitindo rastreamentos de atividade e o processo de identificação. Este triplet constitui a id de atividade local, apresentada. O apresentado é usado para definir os limites (locais) de uma atividade.  
+- `Local` escopo, por ponto de extremidade. Nesse escopo, a atividade é identificada por seu gAId, juntamente com o nome de origem de rastreamento emitindo rastreamentos de atividade e o processo de identificação. Este triplet constitui a id de atividade local, apresentada. O apresentado é usado para definir os limites (locais) de uma atividade.  
   
 ## <a name="trace-schema"></a>Esquema de rastreamento  
  Rastreamentos podem ser emitidos usando qualquer esquema e entre plataformas da Microsoft. "e2e" (para "ponta a ponta") é um esquema comumente usado. Esse esquema inclui um identificador de 128 bits (gAId), o nome da origem de rastreamento e a ID de processo. No código gerenciado, <xref:System.Diagnostics.XmlWriterTraceListener> emite rastreamentos no esquema de E2E.  
@@ -64,15 +64,15 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="activity-lifetime"></a>Tempo de vida de atividade  
  Em termos mais rígidos, evidências de uma atividade começa na primeira vez em que a ID de atividade é usada em um rastreamento emitido e termina na última vez em que ele é usado em um rastreamento emitido. Um conjunto predefinido de tipos de rastreamento são fornecidos pelo <xref:System.Diagnostics>, incluindo o início e parada, marcar explicitamente os limites de tempo de vida da atividade.  
   
--   Início: Indica o início de uma atividade. Um rastreamento "Start" fornece um registro do início de uma nova etapa de processamento. Ele contém uma nova ID de atividade para uma determinada origem em um determinado processo, exceto quando a ID de atividade for propagada entre pontos de extremidade, nesse caso, podemos ver um "Start" por ponto de extremidade. Exemplos de iniciar uma nova atividade incluem a criação de um novo thread para processamento, ou inserindo um novo método público.  
+- Início: Indica o início de uma atividade. Um rastreamento "Start" fornece um registro do início de uma nova etapa de processamento. Ele contém uma nova ID de atividade para uma determinada origem em um determinado processo, exceto quando a ID de atividade for propagada entre pontos de extremidade, nesse caso, podemos ver um "Start" por ponto de extremidade. Exemplos de iniciar uma nova atividade incluem a criação de um novo thread para processamento, ou inserindo um novo método público.  
   
--   Parar: Indica o final de uma atividade. Um rastreamento de "Parar" fornece um registro de encerramento de uma etapa de processamento existente. Ele contém uma ID de atividade existente para uma determinada origem em um determinado processo, exceto quando a ID de atividade for propagada entre pontos de extremidade, nesse caso, podemos ver um "Stop" por ponto de extremidade.  Encerrar um thread de processamento ou sair de um método cujo início foi marcado com um rastreamento "Start" são exemplos de parar uma atividade.  
+- Parar: Indica o final de uma atividade. Um rastreamento de "Parar" fornece um registro de encerramento de uma etapa de processamento existente. Ele contém uma ID de atividade existente para uma determinada origem em um determinado processo, exceto quando a ID de atividade for propagada entre pontos de extremidade, nesse caso, podemos ver um "Stop" por ponto de extremidade.  Encerrar um thread de processamento ou sair de um método cujo início foi marcado com um rastreamento "Start" são exemplos de parar uma atividade.  
   
--   Suspenda: Indica a suspensão de processamento de uma atividade. Um rastreamento de "Suspender" contém uma ID de atividade existente cujo processamento é esperado para retomar um momento posterior. Nenhum rastreamento é emitido com essa ID entre os eventos suspender e retomar da origem de rastreamento atual. Exemplos de pausar uma atividade durante uma chamada a uma função de biblioteca externa ou ao esperar em um recurso como uma porta de conclusão de e/s.  
+- Suspenda: Indica a suspensão de processamento de uma atividade. Um rastreamento de "Suspender" contém uma ID de atividade existente cujo processamento é esperado para retomar um momento posterior. Nenhum rastreamento é emitido com essa ID entre os eventos suspender e retomar da origem de rastreamento atual. Exemplos de pausar uma atividade durante uma chamada a uma função de biblioteca externa ou ao esperar em um recurso como uma porta de conclusão de e/s.  
   
--   Retomar: Indica a retomada do processamento de uma atividade. Um rastreamento de "Continuação" contém uma id de atividade existente cujo último rastreamento emitido da origem de rastreamento atual foi um rastreamento de "Suspender". Exemplos de retornar de uma chamada para uma função de biblioteca externa, ou quando sinalizado para retomar o processamento por um recurso, como uma porta de conclusão de e/s.  
+- Retomar: Indica a retomada do processamento de uma atividade. Um rastreamento de "Continuação" contém uma id de atividade existente cujo último rastreamento emitido da origem de rastreamento atual foi um rastreamento de "Suspender". Exemplos de retornar de uma chamada para uma função de biblioteca externa, ou quando sinalizado para retomar o processamento por um recurso, como uma porta de conclusão de e/s.  
   
--   Transferência: Como algumas atividades são causadas por outras pessoas, ou se relacionam com outras pessoas, as atividades podem estar relacionadas a outras atividades por meio de rastreamentos "Transferir". Uma transferência registra o relacionamento direcionado de uma atividade para outra  
+- Transferência: Como algumas atividades são causadas por outras pessoas, ou se relacionam com outras pessoas, as atividades podem estar relacionadas a outras atividades por meio de rastreamentos "Transferir". Uma transferência registra o relacionamento direcionado de uma atividade para outra  
   
  Iniciar e parar rastreamentos não são essenciais para a correlação. No entanto, eles podem ajudar a aumentar o desempenho, a criação de perfil e validação de escopo de atividades.  
   
@@ -85,17 +85,17 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="guidelines-for-using-activity-tracing"></a>Diretrizes para usar o rastreamento de atividades  
  A seguir está uma diretriz de uso ActivityTracing rastreamentos (Iniciar, parar, suspender, retomar e transferência).  
   
--   O rastreamento é um gráfico direcionado cíclico, não uma árvore. Você pode retornar o controle para uma atividade que é gerado de uma atividade.  
+- O rastreamento é um gráfico direcionado cíclico, não uma árvore. Você pode retornar o controle para uma atividade que é gerado de uma atividade.  
   
--   Uma atividade denota um limite de processamento que pode ser significativo para o administrador do sistema ou capacidade de suporte.  
+- Uma atividade denota um limite de processamento que pode ser significativo para o administrador do sistema ou capacidade de suporte.  
   
--   Cada método WCF, tanto no cliente e servidor, é limitado pela partir de uma nova atividade, depois (após o trabalho ser concluído) terminando a nova atividade e retornar para a atividade de ambiente.  
+- Cada método WCF, tanto no cliente e servidor, é limitado pela partir de uma nova atividade, depois (após o trabalho ser concluído) terminando a nova atividade e retornar para a atividade de ambiente.  
   
--   Longa em execução (contínua) atividades como ouvindo as conexões ou aguardando as mensagens são representadas por marcadores de início/parada correspondente.  
+- Longa em execução (contínua) atividades como ouvindo as conexões ou aguardando as mensagens são representadas por marcadores de início/parada correspondente.  
   
--   Atividades disparado pelo recebimento de mensagem ou processamento de uma mensagem são representadas pelos limites do rastreamento.  
+- Atividades disparado pelo recebimento de mensagem ou processamento de uma mensagem são representadas pelos limites do rastreamento.  
   
--   As atividades representam atividades, não necessariamente objetos. Uma atividade deve ser interpretada como "isso estava acontecendo quando. . . (emissão de rastreamento significativo ocorreu)."  
+- As atividades representam atividades, não necessariamente objetos. Uma atividade deve ser interpretada como "isso estava acontecendo quando. . . (emissão de rastreamento significativo ocorreu)."  
   
 ## <a name="see-also"></a>Consulte também
 

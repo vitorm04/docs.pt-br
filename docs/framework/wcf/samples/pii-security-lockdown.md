@@ -3,20 +3,20 @@ title: Bloqueio de segurança PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989645"
 ---
 # <a name="pii-security-lockdown"></a>Bloqueio de segurança PII
 Este exemplo demonstra como controlar vários recursos relacionados à segurança de um serviço do Windows Communication Foundation (WCF) por:  
   
--   Criptografar informações confidenciais no arquivo de configuração do serviço.  
+- Criptografar informações confidenciais no arquivo de configuração do serviço.  
   
--   Bloqueio de elementos no arquivo de configuração, de modo que aninhados subdiretórios de serviço não é possível substituir as configurações.  
+- Bloqueio de elementos no arquivo de configuração, de modo que aninhados subdiretórios de serviço não é possível substituir as configurações.  
   
--   Controlando o registro em log de pessoalmente identificáveis PII (informações) nos logs de rastreamento e a mensagem.  
+- Controlando o registro em log de pessoalmente identificáveis PII (informações) nos logs de rastreamento e a mensagem.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
@@ -124,9 +124,9 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
   
  Também é possível criptografar os elementos do arquivo de configuração usando DPAPI e RSA. Para obter mais informações, consulte os links a seguir:  
   
--   [Criação de aplicativos ASP.NET seguros: Autenticação, autorização e comunicação segura](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Criação de aplicativos ASP.NET seguros: Autenticação, autorização e comunicação segura](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Como: Criptografar seções de configuração no ASP.NET 2.0 usando o RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Como: Criptografar seções de configuração no ASP.NET 2.0 usando o RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar e executar o exemplo  
   

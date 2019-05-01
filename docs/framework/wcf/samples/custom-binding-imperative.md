@@ -3,11 +3,11 @@ title: Associação personalizada obrigatória
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
 ms.openlocfilehash: 6277fd258d44045958759132dcd3c6208c23a939
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002424"
 ---
 # <a name="custom-binding-imperative"></a>Associação personalizada obrigatória
 O exemplo demonstra como escrever código obrigatório para definir e usar associações personalizadas sem usar um arquivo de configuração ou um cliente do Windows Communication Foundation (WCF) gerado. Este exemplo combina os recursos fornecidos pelo transporte HTTP e o canal de sessão confiável para criar uma associação de baseado em HTTP confiável. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  

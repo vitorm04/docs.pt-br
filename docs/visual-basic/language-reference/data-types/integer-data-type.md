@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 ms.openlocfilehash: b0d24027f00c4ab4ba49f4948a9f5488a2eff3fd
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054400"
 ---
 # <a name="integer-data-type-visual-basic"></a>Tipo de dados inteiro (Visual Basic)
 Armazena inteiros de 32 bits (4 bytes) com sinal que variam em valor de -2.147.483.648 a 2.147.483.647.  
@@ -67,13 +67,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Dicas de programação
 
--   **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos Automation ou COM, lembre-se de que `Integer` tem uma largura de dados diferente (16 bits) em outros ambientes. Se você estiver passando um argumento de 16 bits para esse componente, declare-o como `Short` em vez de `Integer` no seu novo código do Visual Basic.  
+- **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos Automation ou COM, lembre-se de que `Integer` tem uma largura de dados diferente (16 bits) em outros ambientes. Se você estiver passando um argumento de 16 bits para esse componente, declare-o como `Short` em vez de `Integer` no seu novo código do Visual Basic.  
   
--   **Ampliação.** O tipo de dados `Integer` é ampliado para `Long`, `Decimal`, `Single` ou `Double`. Isso significa que você pode converter `Integer` em qualquer um desses tipos sem a ocorrência de um erro <xref:System.OverflowException?displayProperty=nameWithType>.  
+- **Ampliação.** O tipo de dados `Integer` é ampliado para `Long`, `Decimal`, `Single` ou `Double`. Isso significa que você pode converter `Integer` em qualquer um desses tipos sem a ocorrência de um erro <xref:System.OverflowException?displayProperty=nameWithType>.  
   
--   **Caracteres de tipo.** Acrescentar o caractere de tipo literal `I` a um literal o força ao tipo de dados `Integer`. Acrescentar o caractere de tipo identificador `%` a qualquer identificador o força ao tipo `Integer`.  
+- **Caracteres de tipo.** Acrescentar o caractere de tipo literal `I` a um literal o força ao tipo de dados `Integer`. Acrescentar o caractere de tipo identificador `%` a qualquer identificador o força ao tipo `Integer`.  
   
--   **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Int32?displayProperty=nameWithType>.  
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Int32?displayProperty=nameWithType>.  
   
 ## <a name="range"></a>Intervalo
 

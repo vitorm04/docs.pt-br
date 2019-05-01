@@ -3,11 +3,11 @@ title: Guia de interoperabilidade de protocolos de serviços
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 647212558b6be38e9b30239f7fb71213e6eb7d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050344"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guia de interoperabilidade de protocolos de serviços
 Windows Communication Foundation (WCF) implementa um número de protocolos de serviços da Web. Muitos desses protocolos incluem uma série de opções e os pontos de extensibilidade da esquerda para a critério do implementador. Este tópico fornece uma lista de protocolos de serviços Web que WCF implementa. Outros tópicos dentro desta seção fornecem detalhes de implementação para cada protocolo com suporte.  
@@ -76,29 +76,29 @@ Windows Communication Foundation (WCF) implementa um número de protocolos de se
   
  O <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter>, e <xref:System.ServiceModel.Description.MetadataResolver> classes oferecem suporte para as seguintes especificações de metadados:  
   
--   [Esquema XML parte 1: Segunda edição das estruturas](https://go.microsoft.com/fwlink/?LinkId=3536)  
+- [Esquema XML parte 1: Segunda edição das estruturas](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML Schema Part 2: Tipos de dados Second Edition](https://go.microsoft.com/fwlink/?LinkId=40138)  
+- [XML Schema Part 2: Tipos de dados Second Edition](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
+- [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
+- [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
+- [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
+- [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
+- [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [Obter do WS-Transfer para recuperação de metadados](https://go.microsoft.com/fwlink/?LinkId=96708)  
+- [Obter do WS-Transfer para recuperação de metadados](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
  Além disso, os seguintes perfis de interoperabilidade são implementados em WCF:  
   
--   [Perfil básico 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
+- [Perfil básico 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [SOAP Simple associação 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
+- [SOAP Simple associação 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [Criar o perfil de segurança básica 1.0 trabalho rascunho](https://go.microsoft.com/fwlink/?LinkId=96711)  
+- [Criar o perfil de segurança básica 1.0 trabalho rascunho](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Consulte também
 

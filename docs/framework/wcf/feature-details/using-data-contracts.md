@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050656"
 ---
 # <a name="using-data-contracts"></a>Usando contratos de dados
 Um *contrato de dados* é um contrato formal entre um serviço e um cliente que agrupa abstratamente descreve os dados a serem trocados. Ou seja, para se comunicar, o cliente e o serviço não precisa compartilhar os mesmos tipos, apenas os mesmos contratos de dados. Precisamente define um contrato de dados, para cada tipo de parâmetro ou retornado, quais dados são serializados (transformadas em XML) a ser trocado.  
@@ -38,21 +38,21 @@ Um *contrato de dados* é um contrato formal entre um serviço e um cliente que 
 ### <a name="notes"></a>Observações  
  As observações a seguir fornecem os itens a serem considerados durante a criação de contratos de dados:  
   
--   O <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> atributo será considerado somente quando usado com tipos desmarcados. Isso inclui tipos que não são marcados com um dos <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>, ou <xref:System.Runtime.Serialization.EnumMemberAttribute> atributos ou marcado como serializável por outros meios (como <xref:System.Xml.Serialization.IXmlSerializable>).  
+- O <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> atributo será considerado somente quando usado com tipos desmarcados. Isso inclui tipos que não são marcados com um dos <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>, ou <xref:System.Runtime.Serialization.EnumMemberAttribute> atributos ou marcado como serializável por outros meios (como <xref:System.Xml.Serialization.IXmlSerializable>).  
   
--   Você pode aplicar o <xref:System.Runtime.Serialization.DataMemberAttribute> para campos e propriedades de atributo.  
+- Você pode aplicar o <xref:System.Runtime.Serialization.DataMemberAttribute> para campos e propriedades de atributo.  
   
--   Níveis de acessibilidade de membro (internos, privados, protegidos ou públicos) não afetam o contrato de dados de qualquer forma.  
+- Níveis de acessibilidade de membro (internos, privados, protegidos ou públicos) não afetam o contrato de dados de qualquer forma.  
   
--   O <xref:System.Runtime.Serialization.DataMemberAttribute> atributo é ignorado se for aplicado a membros estáticos.  
+- O <xref:System.Runtime.Serialization.DataMemberAttribute> atributo é ignorado se for aplicado a membros estáticos.  
   
--   Durante a serialização, o código de propriedade get é chamado para membros de dados de propriedade obter o valor das propriedades a serem serializados.  
+- Durante a serialização, o código de propriedade get é chamado para membros de dados de propriedade obter o valor das propriedades a serem serializados.  
   
--   Durante a desserialização, primeiro é criado um objeto não inicializado, sem chamar nenhum construtor no tipo. Em seguida, todos os membros de dados são desserializados.  
+- Durante a desserialização, primeiro é criado um objeto não inicializado, sem chamar nenhum construtor no tipo. Em seguida, todos os membros de dados são desserializados.  
   
--   Durante a desserialização, o código do conjunto de propriedades é chamado para membros de dados de propriedade definir as propriedades para o valor que está sendo desserializado.  
+- Durante a desserialização, o código do conjunto de propriedades é chamado para membros de dados de propriedade definir as propriedades para o valor que está sendo desserializado.  
   
--   Para um contrato de dados seja válido, ele deve ser possível serializar todos os seus membros de dados. Para obter uma lista completa de tipos serializáveis, consulte [tipos com suporte pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+- Para um contrato de dados seja válido, ele deve ser possível serializar todos os seus membros de dados. Para obter uma lista completa de tipos serializáveis, consulte [tipos com suporte pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
      Tipos genéricos são tratados da mesma forma como os tipos não genéricos. Não há nenhum requisito especial para parâmetros genéricos. Por exemplo, considere o seguinte tipo.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053425"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Limitações de serialização de XamlWriter.Save
 O [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> pode ser usado para serializar o conteúdo de um [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativo como um [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] arquivo. No entanto, existem algumas limitações importantes em exatamente o que é serializado. Essas limitações e algumas considerações gerais são documentadas neste tópico.  
@@ -36,8 +36,8 @@ O [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:Syst
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Cenários realistas para uso de XAMLWriter.Save  
  Embora as limitações listadas aqui sejam bastante significativas, ainda há vários cenários apropriados para usar <xref:System.Windows.Markup.XamlWriter.Save%2A> para serialização.  
   
--   Saída vetorial ou gráfica: A saída da área de dados renderizados pode ser usada para reproduzir os mesmos vetores ou gráficos quando recarregada.  
+- Saída vetorial ou gráfica: A saída da área de dados renderizados pode ser usada para reproduzir os mesmos vetores ou gráficos quando recarregada.  
   
--   Documentos de fluxo e de texto avançados: Texto e todos os confinamento de formatação e o elemento do elemento dentro dele é preservado na saída. Isso pode ser útil para mecanismos que se aproximam de uma funcionalidade de área de transferência.  
+- Documentos de fluxo e de texto avançados: Texto e todos os confinamento de formatação e o elemento do elemento dentro dele é preservado na saída. Isso pode ser útil para mecanismos que se aproximam de uma funcionalidade de área de transferência.  
   
--   Preservando dados de objeto comercial: Se você tiver dados armazenados em elementos personalizados, como [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados, desde que seus objetos comerciais sigam básico [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] regras, como fornecer construtores personalizados e conversão para valores de propriedade por referência, esses objetos comerciais podem ser perpetuados por serialização.
+- Preservando dados de objeto comercial: Se você tiver dados armazenados em elementos personalizados, como [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados, desde que seus objetos comerciais sigam básico [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] regras, como fornecer construtores personalizados e conversão para valores de propriedade por referência, esses objetos comerciais podem ser perpetuados por serialização.

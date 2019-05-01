@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 480fc27bd41f7ca559ceee379b7f6f81c94da0ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989190"
 ---
 # <a name="icordebugdatatarget-interface"></a>Interface ICorDebugDataTarget
 Fornece uma interface de retorno de chamada que oferece acesso a um determinado processo de destino.  
@@ -37,13 +37,13 @@ Fornece uma interface de retorno de chamada que oferece acesso a um determinado 
 ## <a name="remarks"></a>Comentários  
  `ICorDebugDataTarget` e seus métodos têm as seguintes características:  
   
--   Os serviços de depuração chamar métodos nessa interface para acessar a memória e outros dados no processo de destino.  
+- Os serviços de depuração chamar métodos nessa interface para acessar a memória e outros dados no processo de destino.  
   
--   O cliente do depurador deve implementar essa interface conforme apropriado para o destino específico (por exemplo, um processo dinâmico ou um despejo de memória).  
+- O cliente do depurador deve implementar essa interface conforme apropriado para o destino específico (por exemplo, um processo dinâmico ou um despejo de memória).  
   
--   O `ICorDebugDataTarget` métodos podem ser chamados somente de dentro de métodos implementados em outros `ICorDebug*` interfaces. Isso garante que o cliente de depurador tem controle sobre qual thread é invocado e quando.  
+- O `ICorDebugDataTarget` métodos podem ser chamados somente de dentro de métodos implementados em outros `ICorDebug*` interfaces. Isso garante que o cliente de depurador tem controle sobre qual thread é invocado e quando.  
   
--   O `ICorDebugDataTarget` implementação deve sempre retornar informações atualizadas sobre o destino.  
+- O `ICorDebugDataTarget` implementação deve sempre retornar informações atualizadas sobre o destino.  
   
  O processo de destino deve ser interrompido e não é alterado de qualquer forma durante `ICorDebug*` interfaces (e, portanto, `ICorDebugDataTarget` métodos) estão sendo chamados. Se o destino é um processo dinâmico e as alterações de estado, o [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) método precisa ser chamado novamente para fornecer uma instância de ICorDebugProcess de substituição.  
   

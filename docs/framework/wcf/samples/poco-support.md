@@ -3,11 +3,11 @@ title: Suporte para POCO
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
 ms.openlocfilehash: 86ade3a6b045f6f7c57e4a95936b4f1574b51ff0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008014"
 ---
 # <a name="poco-support"></a>Suporte para POCO
 Este exemplo demonstra o suporte de serialização para tipos de desmarcados. ou seja, tipos aos quais atributos de serialização não foram aplicados, às vezes chamados de tipos Plain Old CLR Object (POCO). O <xref:System.Runtime.Serialization.DataContractSerializer> infere um contrato de dados para todos os tipos de desmarcados públicos que tem um construtor padrão. Contratos de dados permitem que você passe dados estruturados para e de serviços. Para obter mais informações sobre os tipos de desmarcados, consulte [tipos serializáveis](../../../../docs/framework/wcf/feature-details/serializable-types.md).  

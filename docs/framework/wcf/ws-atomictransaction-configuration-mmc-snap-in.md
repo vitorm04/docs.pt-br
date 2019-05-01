@@ -3,11 +3,11 @@ title: Snap-in do MMC de configuração de WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
 ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052554"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Snap-in do MMC de configuração de WS-AtomicTransaction
 O Snap-in do MMC de configuração WS-AtomicTransaction é usado para configurar uma parte das configurações WS-AtomicTransaction nos computadores locais e remoto.  
