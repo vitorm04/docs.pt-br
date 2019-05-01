@@ -2,14 +2,14 @@
 title: Criar um serviço WCF habilitado para AJAX e um cliente do ASP.NET no Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024604"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807881"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Como criar um serviço do WCF habilitado pelo AJAX em um cliente do ASP.NET que acessa o serviço
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Como: Criar um serviço WCF habilitado para AJAX e um cliente do ASP.NET que acessa o serviço
 
 Este tópico mostra como usar o Visual Studio para criar um serviço habilitado para AJAX Windows Communication Foundation (WCF) e um cliente do ASP.NET que acessa o serviço.
 
@@ -77,15 +77,15 @@ Este tópico mostra como usar o Visual Studio para criar um serviço habilitado 
 
 4. Volta a **fonte** exiba, adicione o seguinte código entre o  **\<ScriptManager >** marcas para especificar o caminho para o serviço WCF:
 
-    ```html
+    ```xml
     <Services>
        <asp:ServiceReference Path="~/CostService.svc" />
     </Services>
     ```
 
-1. Adicione o código para a função Javascript `Calculate()`. Coloque o seguinte código na **head** seção do formulário da web:
+5. Adicione o código para a função Javascript `Calculate()`. Coloque o seguinte código na **head** seção do formulário da web:
 
-    ```javascript
+    ```html
     <script type="text/javascript">
 
         function Calculate() {
@@ -106,7 +106,7 @@ Este tópico mostra como usar o Visual Studio para criar um serviço habilitado 
 
 Certifique-se de que *WebForm1.aspx* tem o foco e pressione **iniciar** botão para iniciar o cliente web. O botão tem um triângulo verde e diz algo como **IIS Express (Microsoft Edge)**. Ou, você pode pressionar **F5**. Clique o **preço de 3 pizzas** botão para gerar a saída esperada do "3,75".
 
-## <a name="example-code"></a>Exemplo de código
+## <a name="example-code"></a>Código de exemplo
 
 A seguir está o código completo na *CostService.svc.cs* arquivo:
 

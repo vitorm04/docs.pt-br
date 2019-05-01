@@ -8,12 +8,12 @@ helpviewer_keywords:
 - gradient brushes [Windows Forms], gamma correction
 - gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
-ms.openlocfilehash: 066ccc649105018d20cb86b6e576a1a238e0dc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e812e441233c1d29a67dac639048e20a659549f0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973260"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809487"
 ---
 # <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Como: aplicar correção gama em um gradiente
 Você pode habilitar a correção gama para um pincel de gradiente linear, definindo o pincel <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> propriedade para `true`. Você pode desativar a correção gama, definindo o <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> propriedade para `false`. A correção gama está desabilitada por padrão.  
@@ -24,7 +24,7 @@ O exemplo a seguir é um método que é chamado de um controle <xref:System.Wind
   
  A ilustração a seguir mostra os dois retângulos preenchidos. O cume do retângulo, que não tem a correção gama, aparece escuro no meio. O retângulo na parte inferior, que tem a correção gama, parece ter mais de intensidade uniforme.  
   
- ![Gradient](./media/gammagradient1.png "gammagradient1")  
+ ![Dois preenchido com gradiente retângulos, com e sem correção gama.](./media/how-to-apply-gamma-correction-to-a-gradient/two-rectangles-gamma-gradient.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingaGradientBrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  

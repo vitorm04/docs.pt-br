@@ -4,12 +4,12 @@ description: O Azure functions fornece funcionalidades sem servidor em vários i
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145157"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807904"
 ---
 # <a name="azure-functions"></a>Verificação de
 
@@ -25,7 +25,7 @@ Para obter mais informações, consulte [documentação do Azure Functions](http
 
 Há duas versões do tempo de execução do Azure Functions: 1.x e 2.x. Versão 1.x já está disponível (GA). Ele dá suporte ao desenvolvimento de .NET do portal ou as máquinas do Windows e usa o .NET Framework. 1.x dá suporte ao C#, JavaScript, e F#, com o suporte experimental para Python, PHP, TypeScript, Batch, Bash e PowerShell.
 
-Versão 2.x está em versão prévia. Ele aproveita o .NET Core e dá suporte ao desenvolvimento de plataforma cruzada em máquinas Linux, macOS e Windows. 2.x adiciona suporte de primeira classe para Java, mas não ainda suporta diretamente qualquer uma das linguagens experimentais. Versão 2.x usa um novo modelo de extensibilidade de associação que permite que extensões de terceiros para a plataforma, o controle de versão independente de associações, e uma mais simples de ambiente de execução.
+[Versão 2.x também está disponível agora](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). Ele aproveita o .NET Core e dá suporte ao desenvolvimento de plataforma cruzada em máquinas Linux, macOS e Windows. 2.x adiciona suporte de primeira classe para Java, mas não ainda suporta diretamente qualquer uma das linguagens experimentais. Versão 2.x usa um novo modelo de extensibilidade de associação que permite que extensões de terceiros para a plataforma, o controle de versão independente de associações, e uma mais simples de ambiente de execução.
 
 > **Há um problema conhecido no 1.x com [suporte de redirecionamento de associação](https://github.com/Azure/azure-functions-host/issues/992).** O problema é específico para o desenvolvimento de .NET. Projetos com dependências em bibliotecas que são uma versão diferente do que as bibliotecas incluídas no tempo de execução são afetados. A equipe de funções se comprometeu a progredindo concretas sobre o problema. A equipe abordará os redirecionamentos de associação no 2.x antes que ele fique em disponibilidade geral. A declaração oficial da equipe com correções sugeridas e soluções alternativas está disponível aqui: [Resolução de assembly no Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
@@ -35,7 +35,7 @@ Para obter mais informações, consulte [comparar 1.x e 2.x](https://docs.micros
 
 Os idiomas a seguir têm suporte em geral GA (disponibilidade), visualizar, ou experimental.
 
-|Idioma      |1. x         |2. x      |
+|Idioma      |1.x         |2.x      |
 |--------------|------------|---------|
 |**C#**        |GA          |Visualizar  |
 |**JavaScript**|GA          |Visualizar  |

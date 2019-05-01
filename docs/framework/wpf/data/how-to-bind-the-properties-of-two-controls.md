@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 332e8e0dfa30ff7aff27c95652f07446baf6511a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222050"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809532"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Como: Associar as propriedades de dois controles
 Este exemplo mostra como associar a propriedade de um controle instanciado a de outro usando o <xref:System.Windows.Data.Binding.ElementName%2A> propriedade.  
@@ -23,9 +23,10 @@ Este exemplo mostra como associar a propriedade de um controle instanciado a de 
   
  Quando este exemplo é renderizado, ele é semelhante ao seguinte:  
   
- ![Uma tela com um plano de fundo verde](./media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")  
-  
- **Observação** a propriedade de destino de associação (neste exemplo, o <xref:System.Windows.Controls.Panel.Background%2A> propriedade) deve ser uma propriedade de dependência. Para obter mais informações, consulte [Visão geral de vinculação de dados](data-binding-overview.md).  
+![Captura de tela mostrando uma caixa de combinação, caixa com o valor de verde e um quadrado verde.](./media/how-to-bind-the-properties-of-two-controls/data-binding-bind-background-canvas.png)
+
+> [!NOTE]
+> A propriedade de destino de associação (neste exemplo, o <xref:System.Windows.Controls.Panel.Background%2A> propriedade) deve ser uma propriedade de dependência. Para obter mais informações, consulte [Visão geral de vinculação de dados](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
 

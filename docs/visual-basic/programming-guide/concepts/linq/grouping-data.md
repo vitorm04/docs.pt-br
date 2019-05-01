@@ -2,19 +2,19 @@
 title: Agrupando dados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: c658ac5c46baec1bfa976074b78ac86d791b6515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842043"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808121"
 ---
 # <a name="grouping-data-visual-basic"></a>Agrupando dados (Visual Basic)
 O agrupamento refere-se à operação de colocação de dados em grupos, de modo que os elementos em cada grupo compartilhem um atributo comum.  
   
  A ilustração a seguir mostra os resultados do agrupamento de uma sequência de caracteres. A chave para cada grupo é o caractere.  
   
- ![Operações de agrupamento LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![Diagrama que mostra uma operação de agrupamento LINQ.](./media/grouping-data/linq-group-operation.png)  
   
  Os métodos do operador de consulta padrão que agrupam elementos de dados estão listados na seção a seguir.  
   

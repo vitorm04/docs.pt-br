@@ -2,12 +2,12 @@
 title: Política de autorização
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 50e868645d7e7ccbcf4be697f8bdb1814dd90e9c
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332670"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807976"
 ---
 # <a name="authorization-policy"></a>Política de autorização
 
@@ -18,17 +18,17 @@ Este exemplo demonstra como implementar uma política de autorização de declar
 
  Em resumo, este exemplo demonstra como:
 
--   O cliente pode ser autenticado usando uma senha de nome de usuário.
+- O cliente pode ser autenticado usando uma senha de nome de usuário.
 
--   O cliente pode ser autenticado usando um certificado X.509.
+- O cliente pode ser autenticado usando um certificado X.509.
 
--   O servidor valida as credenciais do cliente em relação a um personalizado `UsernamePassword` validador.
+- O servidor valida as credenciais do cliente em relação a um personalizado `UsernamePassword` validador.
 
--   O servidor é autenticado usando o certificado do servidor x. 509.
+- O servidor é autenticado usando o certificado do servidor x. 509.
 
--   O servidor pode usar <xref:System.ServiceModel.ServiceAuthorizationManager> para controlar o acesso a determinados métodos no serviço.
+- O servidor pode usar <xref:System.ServiceModel.ServiceAuthorizationManager> para controlar o acesso a determinados métodos no serviço.
 
--   Como implementar <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
+- Como implementar <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
 
 O serviço expõe dois pontos de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração App. config. Cada ponto de extremidade consiste em um endereço, uma ligação e um contrato. Uma associação está configurada com um padrão `wsHttpBinding` associação que usa a autenticação de nome de usuário do WS-Security e o cliente. A outra associação está configurada com um padrão `wsHttpBinding` associação que usa a autenticação de certificado do WS-Security e o cliente. O [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) Especifica que as credenciais do usuário devem ser usados para autenticação de serviço. O certificado do servidor deve conter o mesmo valor para o `SubjectName` a propriedade como o `findValue` atributo na [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -397,9 +397,9 @@ O arquivo em lotes de Setup. bat incluído com este exemplo permite que você co
 
 O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada:
 
--   Criando o certificado do servidor.
+- Criando o certificado do servidor.
 
-     As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. A variável % SERVER_NAME % Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O valor padrão é localhost.
+    As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. A variável % SERVER_NAME % Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O valor padrão é localhost.
 
     ```
     echo ************
@@ -411,19 +411,19 @@ O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalando o certificado do servidor no repositório de certificados confiáveis do cliente.
+- Instalando o certificado do servidor no repositório de certificados confiáveis do cliente.
 
-     As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados que são gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.
+    As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados que são gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Criando o certificado do cliente.
+- Criando o certificado do cliente.
 
-     As seguintes linhas do arquivo em lotes bat criam o certificado do cliente a ser usado. A variável % nome_do_usuário % Especifica o nome do servidor. Esse valor é definido como "test1", porque esse é o nome de `IAuthorizationPolicy` procura. Se você alterar o valor de % nome_do_usuário %, você deve alterar o valor correspondente no `IAuthorizationPolicy.Evaluate` método.
+    As seguintes linhas do arquivo em lotes bat criam o certificado do cliente a ser usado. A variável % nome_do_usuário % Especifica o nome do servidor. Esse valor é definido como "test1", porque esse é o nome de `IAuthorizationPolicy` procura. Se você alterar o valor de % nome_do_usuário %, você deve alterar o valor correspondente no `IAuthorizationPolicy.Evaluate` método.
 
-     O certificado é armazenado no repositório My (pessoal) sob o local do repositório CurrentUser.
+    O certificado é armazenado no repositório My (pessoal) sob o local do repositório CurrentUser.
 
     ```
     echo ************
@@ -432,9 +432,9 @@ O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   Instalando o certificado do cliente no repositório de certificados confiáveis do servidor.
+- Instalando o certificado do cliente no repositório de certificados confiáveis do servidor.
 
-     As seguintes linhas no arquivo em lotes bat copie o certificado do cliente para o armazenamento de pessoas confiáveis. Essa etapa é necessária porque os certificados que são gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do servidor. Se você já tiver um certificado que está enraizado em um certificado raiz confiável — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados do servidor com o certificado do cliente não é necessária.
+    As seguintes linhas no arquivo em lotes bat copie o certificado do cliente para o armazenamento de pessoas confiáveis. Essa etapa é necessária porque os certificados que são gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do servidor. Se você já tiver um certificado que está enraizado em um certificado raiz confiável — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados do servidor com o certificado do cliente não é necessária.
 
     ```
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
@@ -460,7 +460,7 @@ O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos
 
 1. Iniciar Client.exe partir *\Client\Bin*. Atividade do cliente é exibida no aplicativo de console do cliente.
 
-  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo em computadores
 
@@ -474,7 +474,7 @@ O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos
 
 5. No servidor, execute `setup.bat service` no Prompt de comando desenvolvedor para Visual Studio aberto com privilégios de administrador.
 
-   Executando `setup.bat` com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado *Service.cer*.
+    Executando `setup.bat` com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado *Service.cer*.
 
 6. Editar *Service.exe.config* para refletir o novo nome do certificado (na `findValue` de atributo no [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que é o mesmo que o nome de domínio totalmente qualificado do computador. Também alterar o **NomeDoComputador** na \<serviço > /\<baseAddresses > elemento do localhost como o nome totalmente qualificado do seu computador de serviço.
 
@@ -482,7 +482,7 @@ O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos
 
 8. No cliente, execute `setup.bat client` no Prompt de comando desenvolvedor para Visual Studio aberto com privilégios de administrador.
 
-   Executando `setup.bat` com o `client` argumento cria um certificado de cliente denominado **test1** e exporta o certificado do cliente para um arquivo chamado *cer*.
+    Executando `setup.bat` com o `client` argumento cria um certificado de cliente denominado **test1** e exporta o certificado do cliente para um arquivo chamado *cer*.
 
 9. No *Client.exe.config* file no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço. Para fazer isso, substituindo **localhost** com o nome de domínio totalmente qualificado do servidor.
 
@@ -490,17 +490,17 @@ O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos
 
 11. No cliente, execute *ImportServiceCert.bat* no Prompt de comando desenvolvedor para Visual Studio aberto com privilégios de administrador.
 
-   Este importa o certificado de serviço do arquivo Service.cer nos **CurrentUser - TrustedPeople** armazenar.
+    Este importa o certificado de serviço do arquivo Service.cer nos **CurrentUser - TrustedPeople** armazenar.
 
 12. No servidor, execute *ImportClientCert.bat* no Prompt de comando desenvolvedor para Visual Studio aberto com privilégios de administrador.
 
-   Isso importa o certificado do cliente do arquivo CER para o **LocalMachine - TrustedPeople** armazenar.
+    Isso importa o certificado do cliente do arquivo CER para o **LocalMachine - TrustedPeople** armazenar.
 
 13. No computador do servidor, inicie Service.exe da janela de prompt de comando.
 
 14. No computador cliente, inicie Client.exe em uma janela do prompt de comando.
 
-   Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+    Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="clean-up-after-the-sample"></a>Limpar após a amostra
 

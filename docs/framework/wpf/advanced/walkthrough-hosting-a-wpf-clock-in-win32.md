@@ -1,19 +1,19 @@
 ---
-title: 'Passo a passo: Hospedando um relógio do WPF no Win32'
+title: 'Passo a passo: hospedar um relógio do WPF no Win32'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494942"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808057"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Passo a passo: Hospedando um relógio do WPF no Win32
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Passo a passo: hospedar um relógio do WPF no Win32
 
 Para colocar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dentro de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplicativos, usam <xref:System.Windows.Interop.HwndSource>, que fornece o HWND que contém seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo. Primeiro, você cria o <xref:System.Windows.Interop.HwndSource>, dando a ele parâmetros semelhantes a CreateWindow. Em seguida, você informa o <xref:System.Windows.Interop.HwndSource> sobre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo que você deseja dentro dele. Finalmente, você obtém o HWND do <xref:System.Windows.Interop.HwndSource>. Este passo a passo ilustra como criar um misto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dentro de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplicativo que reimplementa o sistema operacional **Date and Time Properties** caixa de diálogo.
 
@@ -29,11 +29,11 @@ Este tutorial mostra as etapas importantes de produção de um aplicativo de int
 
 O gráfico a seguir mostra o produto final desejado deste tutorial:
 
-![Caixa de diálogo Propriedades de Data e Hora](./media/interoparch06.PNG "InteropArch06")
+![Captura de tela que mostra a caixa de diálogo Propriedades de data e hora.](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-Você pode recriar esta caixa de diálogo com a criação de C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] project no [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]e usando o editor de caixa de diálogo para criar o seguinte:
+Você pode recriar esta caixa de diálogo com a criação de um C++ projeto do Win32 no Visual Studio e usando o editor de caixa de diálogo para criar o seguinte:
 
-![Caixa de diálogo Propriedades de Data e Hora](./media/interoparch07.PNG "InteropArch07")
+![Caixa de diálogo de propriedades de data e hora recriada](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
 (Não é necessário usar [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] usar <xref:System.Windows.Interop.HwndSource>, e você não precisará usar C++ para escrever [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programas, mas isso é uma maneira bastante comum de fazê-lo e funciona bem para uma explicação do tutorial em passos).
 
@@ -229,7 +229,7 @@ E aqui está o code-behind que acompanha:
 
 O resultado final se parece com:
 
-![Caixa de diálogo Propriedades de Data e Hora](./media/interoparch08.PNG "InteropArch08")
+![Caixa de diálogo de propriedades de data e hora do resultado final](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 Para comparar seu resultado final com o código que produziu a captura de tela, consulte [exemplo de interoperação de relógio do Win32](https://go.microsoft.com/fwlink/?LinkID=160051).
 
