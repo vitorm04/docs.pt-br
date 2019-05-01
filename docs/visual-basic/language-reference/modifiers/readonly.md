@@ -11,11 +11,11 @@ helpviewer_keywords:
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
 ms.openlocfilehash: 6e361cbe89f4c51f28199b008de817c2d48ef326
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051852"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 Especifica que uma variável ou propriedade pode ser lido mas não gravada.  
@@ -24,11 +24,11 @@ Especifica que uma variável ou propriedade pode ser lido mas não gravada.
   
 ## <a name="rules"></a>Regras  
   
--   **Contexto da declaração.** Você pode usar `ReadOnly` apenas no nível de módulo. Isso significa que o contexto da declaração para um `ReadOnly` elemento deve ser uma classe, estrutura ou módulo e não pode ser um arquivo de origem, namespace ou procedimento.  
+- **Contexto da declaração.** Você pode usar `ReadOnly` apenas no nível de módulo. Isso significa que o contexto da declaração para um `ReadOnly` elemento deve ser uma classe, estrutura ou módulo e não pode ser um arquivo de origem, namespace ou procedimento.  
   
--   **Modificadores combinados.** Não é possível especificar `ReadOnly` junto com `Static` na mesma declaração.  
+- **Modificadores combinados.** Não é possível especificar `ReadOnly` junto com `Static` na mesma declaração.  
   
--   **Atribuir um valor.** Código consumindo um `ReadOnly` propriedade não é possível definir seu valor. Mas o código que tem acesso ao armazenamento subjacente pode atribuir ou alterar o valor a qualquer momento.  
+- **Atribuir um valor.** Código consumindo um `ReadOnly` propriedade não é possível definir seu valor. Mas o código que tem acesso ao armazenamento subjacente pode atribuir ou alterar o valor a qualquer momento.  
   
      Você pode atribuir um valor para um `ReadOnly` variável apenas em sua declaração ou no construtor de uma classe ou estrutura na qual ele está definido.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Margin property [WPF], setting
 ms.assetid: 70ebee01-6f87-4352-8dd4-402c65eaaed6
 ms.openlocfilehash: 3263810806b6b4bbec15eadfd1f1da3a57d12698
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052359"
 ---
 # <a name="how-to-set-margins-of-elements-and-controls"></a>Como: Definir margens de elementos e controles
 Este exemplo descreve como definir o <xref:System.Windows.FrameworkElement.Margin%2A> propriedade alterando qualquer valor de propriedade existente para a margem no code-behind. O <xref:System.Windows.FrameworkElement.Margin%2A> é uma propriedade do <xref:System.Windows.FrameworkElement> elemento base e, portanto, é herdada por uma variedade de controles e outros elementos.  

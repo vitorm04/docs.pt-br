@@ -11,20 +11,20 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052255"
 ---
 # <a name="dialog-boxes-overview"></a>Visão geral das caixas de diálogo
 Aplicativos autônomos geralmente têm uma janela principal que exibe os principais dados sobre os quais o aplicativo opera e expõe a funcionalidade para processar os dados por meio de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mecanismos, como barras de menus, barras de ferramentas e barras de status. Um aplicativo não trivial também pode exibir janelas adicionais para fazer o seguinte:  
   
--   Exibir informações específicas aos usuários.  
+- Exibir informações específicas aos usuários.  
   
--   Coletar informações de usuários.  
+- Coletar informações de usuários.  
   
--   Exibir e coletar informações.  
+- Exibir e coletar informações.  
   
  Esses tipos de janelas são conhecidos como *caixas de diálogo*, e há dois tipos: restrita e sem janela restrita.  
   
@@ -122,27 +122,27 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 #### <a name="configuring-a-modal-dialog-box"></a>Configurando uma caixa de diálogo modal  
  A interface do usuário de uma caixa de diálogo típica inclui o seguinte:  
   
--   Os vários controles que são necessários para coletar os dados desejados.  
+- Os vários controles que são necessários para coletar os dados desejados.  
   
--   Mostrando um **Okey** botão que os usuários clicam para fechar a caixa de diálogo, volte para a função e continuam o processamento.  
+- Mostrando um **Okey** botão que os usuários clicam para fechar a caixa de diálogo, volte para a função e continuam o processamento.  
   
--   Mostrando um **Cancelar** botão que os usuários clicam para fechar a caixa de diálogo e parar a processamento da função.  
+- Mostrando um **Cancelar** botão que os usuários clicam para fechar a caixa de diálogo e parar a processamento da função.  
   
--   Mostrando um **fechar** botão na barra de título.  
+- Mostrando um **fechar** botão na barra de título.  
   
--   A exibição de um ícone.  
+- A exibição de um ícone.  
   
--   Mostrando **minimizar**, **maximizar**, e **restaurar** botões.  
+- Mostrando **minimizar**, **maximizar**, e **restaurar** botões.  
   
--   Mostrando um **sistema** menu para minimizar, maximizar, restaurar e fechar a caixa de diálogo.  
+- Mostrando um **sistema** menu para minimizar, maximizar, restaurar e fechar a caixa de diálogo.  
   
--   A abertura acima e no centro da janela que abriu a caixa de diálogo.  
+- A abertura acima e no centro da janela que abriu a caixa de diálogo.  
   
--   As caixas de diálogo devem ser redimensionáveis sempre que possível; portanto, para impedir que a caixa de diálogo seja muito pequena e para fornecer ao usuário um tamanho padrão útil, você precisa definir as dimensões padrão e mínima, respectivamente.  
+- As caixas de diálogo devem ser redimensionáveis sempre que possível; portanto, para impedir que a caixa de diálogo seja muito pequena e para fornecer ao usuário um tamanho padrão útil, você precisa definir as dimensões padrão e mínima, respectivamente.  
   
--   Pressionar a tecla ESC deve ser configurado como um atalho de teclado que faz com que o **Cancelar** botão seja pressionado. Isso é feito definindo a <xref:System.Windows.Controls.Button.IsCancel%2A> propriedade do **Cancelar** botão para `true`.  
+- Pressionar a tecla ESC deve ser configurado como um atalho de teclado que faz com que o **Cancelar** botão seja pressionado. Isso é feito definindo a <xref:System.Windows.Controls.Button.IsCancel%2A> propriedade do **Cancelar** botão para `true`.  
   
--   Pressionar a tecla ENTER (ou RETURN) deve ser configurado como um atalho de teclado que faz com que o **Okey** botão seja pressionado. Isso é feito definindo a <xref:System.Windows.Controls.Button.IsDefault%2A> propriedade do **Okey** botão `true`.  
+- Pressionar a tecla ENTER (ou RETURN) deve ser configurado como um atalho de teclado que faz com que o **Okey** botão seja pressionado. Isso é feito definindo a <xref:System.Windows.Controls.Button.IsDefault%2A> propriedade do **Okey** botão `true`.  
   
  O código a seguir demonstra essa configuração.  
   
@@ -183,13 +183,13 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 #### <a name="validating-user-provided-data"></a>Validando dados fornecidos pelo usuário  
  Quando uma caixa de diálogo é aberta e o usuário fornece os dados necessários, uma caixa de diálogo é responsável por garantir que os dados fornecidos são válidos pelos seguintes motivos:  
   
--   De uma perspectiva de segurança, todas as informações devem ser validadas.  
+- De uma perspectiva de segurança, todas as informações devem ser validadas.  
   
--   De uma perspectiva específica ao domínio, a validação de dados impede que dados incorretos sejam processados pelo código, o que potencialmente poderá gerar exceções.  
+- De uma perspectiva específica ao domínio, a validação de dados impede que dados incorretos sejam processados pelo código, o que potencialmente poderá gerar exceções.  
   
--   De uma perspectiva da experiência do usuário, uma caixa de diálogo pode ajudar os usuários mostrando-lhes quais dados inseridos são inválidos.  
+- De uma perspectiva da experiência do usuário, uma caixa de diálogo pode ajudar os usuários mostrando-lhes quais dados inseridos são inválidos.  
   
--   De uma perspectiva do desempenho, a validação de dados em um aplicativo de várias camadas pode reduzir o número de viagens de ida e volta entre o cliente e as camadas do aplicativo, especialmente, quando o aplicativo é composto por serviços Web ou bancos de dados baseados em servidor.  
+- De uma perspectiva do desempenho, a validação de dados em um aplicativo de várias camadas pode reduzir o número de viagens de ida e volta entre o cliente e as camadas do aplicativo, especialmente, quando o aplicativo é composto por serviços Web ou bancos de dados baseados em servidor.  
   
  Para validar um controle associado no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], você precisa definir uma regra de validação e associá-la com a associação. Uma regra de validação é uma classe personalizada que derive de <xref:System.Windows.Controls.ValidationRule>. O exemplo a seguir mostra uma regra de validação `MarginValidationRule`, que verifica se um valor associado é um <xref:System.Double> e está dentro do intervalo especificado.  
   
@@ -329,11 +329,11 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 #### <a name="closing-a-modeless-dialog-box"></a>Fechando uma caixa de diálogo sem janela restrita  
  Porque <xref:System.Windows.Window.DialogResult%2A> não precisa ser definida, uma caixa de diálogo sem janela restrita pode ser fechada usando o sistema fornecem mecanismos, incluindo o seguinte:  
   
--   Clicar a **fechar** botão na barra de título.  
+- Clicar a **fechar** botão na barra de título.  
   
--   Pressionar ALT + F4.  
+- Pressionar ALT + F4.  
   
--   Escolhendo **feche** da **sistema** menu.  
+- Escolhendo **feche** da **sistema** menu.  
   
  Como alternativa, seu código pode chamar <xref:System.Windows.Window.Close%2A> quando o **fechar** botão é clicado.  
   

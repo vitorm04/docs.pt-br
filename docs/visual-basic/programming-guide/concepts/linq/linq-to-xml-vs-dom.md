@@ -3,11 +3,11 @@ title: LINQ to XML e DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
 ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051488"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML e DOM (Visual Basic)
 Esta seção descreve algumas das principais diferenças entre o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e a atual API de programação de XML predominante, o W3C DOM (Modelo de Objeto do Documento).  
@@ -79,11 +79,11 @@ Dim contacts = _
 ## <a name="working-directly-with-xml-elements"></a>Trabalhando diretamente com Elementos XML  
  Quando você programa com XML, o foco principal é geralmente em elementos XML e talvez em atributos. No [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você pode trabalhar diretamente com elementos e atributos XML. Por exemplo, você pode fazer o seguinte:  
   
--   Criar elementos XML sem usar nenhum objeto de documento. Isso simplifica a programação quando você tem que trabalhar com partes de árvores XML.  
+- Criar elementos XML sem usar nenhum objeto de documento. Isso simplifica a programação quando você tem que trabalhar com partes de árvores XML.  
   
--   Carregue objetos `T:System.Xml.Linq.XElement` diretamente de um arquivo XML.  
+- Carregue objetos `T:System.Xml.Linq.XElement` diretamente de um arquivo XML.  
   
--   Serialize objetos `T:System.Xml.Linq.XElement` para um arquivo ou fluxo.  
+- Serialize objetos `T:System.Xml.Linq.XElement` para um arquivo ou fluxo.  
   
  Compare isso para o W3C DOM, no qual o documento XML é usado como um contêiner lógico para a árvore XML. No DOM, os nós XML, incluindo elementos e atributos, devem ser criados no contexto de um documento XML. Aqui está um fragmento de código para criar um elemento de nome DOM:  
   

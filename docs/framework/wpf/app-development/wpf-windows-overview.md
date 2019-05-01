@@ -29,11 +29,11 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052723"
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
 Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) autônomo por meio do windows. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Autônomo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos fornecem suas próprias janelas usando o <xref:System.Windows.Window> classe. Este tópico apresenta <xref:System.Windows.Window> antes de abranger os fundamentos da criação e gerenciamento de janelas em aplicativos autônomos.  
@@ -51,29 +51,29 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  O *área não cliente* de uma janela é implementada pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e inclui as partes de uma janela que são comuns à maioria das janelas, incluindo o seguinte:  
   
--   Uma borda.  
+- Uma borda.  
   
--   Uma barra de título.  
+- Uma barra de título.  
   
--   Um ícone.  
+- Um ícone.  
   
--   Botões Minimizar, Maximizar e Restaurar.  
+- Botões Minimizar, Maximizar e Restaurar.  
   
--   Um botão Fechar.  
+- Um botão Fechar.  
   
--   Um menu Sistema com itens de menu que permitem aos usuários minimizar, maximizar, restaurar, mover, redimensionar e fechar uma janela.  
+- Um menu Sistema com itens de menu que permitem aos usuários minimizar, maximizar, restaurar, mover, redimensionar e fechar uma janela.  
   
  O *área de cliente* de uma janela é a área dentro de uma área da janela não-cliente e é usado por desenvolvedores para adicionar conteúdo específico do aplicativo, como barras de menus, barras de ferramentas e controles.  
   
  Na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], uma janela é encapsulada pela <xref:System.Windows.Window> classe que você pode usar para fazer o seguinte:  
   
--   Exibir uma janela.  
+- Exibir uma janela.  
   
--   Configurar o tamanho, posição e aparência de uma janela.  
+- Configurar o tamanho, posição e aparência de uma janela.  
   
--   Conteúdo específico do aplicativo host.  
+- Conteúdo específico do aplicativo host.  
   
--   Gerenciar o tempo de vida de uma janela.  
+- Gerenciar o tempo de vida de uma janela.  
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Implementar uma janela  
@@ -88,11 +88,11 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  Para habilitar um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de marcação e o arquivo code-behind funcionem juntos, é necessário o seguinte:  
   
--   Na marcação, o `Window` elemento deve incluir o `x:Class` atributo. Quando o aplicativo é compilado, a existência de `x:Class` na marcação arquivo faz com que [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] para criar um `partial` classe que deriva de <xref:System.Windows.Window> e tem o nome especificado pelo `x:Class` atributo. Isso exige a adição de um [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] declaração de namespace para o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] esquema ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Gerado `partial` classe implementa o `InitializeComponent` método, que é chamado para registrar os eventos e definir as propriedades que são implementadas na marcação.  
+- Na marcação, o `Window` elemento deve incluir o `x:Class` atributo. Quando o aplicativo é compilado, a existência de `x:Class` na marcação arquivo faz com que [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] para criar um `partial` classe que deriva de <xref:System.Windows.Window> e tem o nome especificado pelo `x:Class` atributo. Isso exige a adição de um [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] declaração de namespace para o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] esquema ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Gerado `partial` classe implementa o `InitializeComponent` método, que é chamado para registrar os eventos e definir as propriedades que são implementadas na marcação.  
   
--   No code-behind, a classe deve ser um `partial` classe com o mesmo nome que é especificado pelo `x:Class` atributo na marcação e deve derivar de <xref:System.Windows.Window>. Isso permite que o arquivo code-behind seja associado a `partial` classe que é gerada para o arquivo de marcação quando o aplicativo é compilado (consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md)).  
+- No code-behind, a classe deve ser um `partial` classe com o mesmo nome que é especificado pelo `x:Class` atributo na marcação e deve derivar de <xref:System.Windows.Window>. Isso permite que o arquivo code-behind seja associado a `partial` classe que é gerada para o arquivo de marcação quando o aplicativo é compilado (consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md)).  
   
--   No code-behind, o <xref:System.Windows.Window> classe deve implementar um construtor que chama o `InitializeComponent` método. `InitializeComponent` é implementado pela marcação gerada pelo arquivo `partial` classe para registrar eventos e definir propriedades que são definidas na marcação.  
+- No code-behind, o <xref:System.Windows.Window> classe deve implementar um construtor que chama o `InitializeComponent` método. `InitializeComponent` é implementado pela marcação gerada pelo arquivo `partial` classe para registrar eventos e definir propriedades que são definidas na marcação.  
   
 > [!NOTE]
 >  Quando você adiciona um novo <xref:System.Windows.Window> ao seu projeto usando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], o <xref:System.Windows.Window> é implementada usando marcação e code-behind e inclui a configuração necessária para criar a associação entre os arquivos de marcação e code-behind, como descrito aqui.  
@@ -108,9 +108,9 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configurar uma definição de janela para MSBuild  
  Como você implementa sua janela determina como ela é configurada para [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Para uma janela que é definida usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação e code-behind:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos de marcação são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` itens.  
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos de marcação são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` itens.  
   
--   Arquivos code-behind são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` itens.  
+- Arquivos code-behind são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` itens.  
   
  Isso é mostrado na seguinte [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] arquivo de projeto.  
   
@@ -163,9 +163,9 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
 #### <a name="window-ownership"></a>Posse de janela  
  Uma janela que é aberta usando o <xref:System.Windows.Window.Show%2A> método não tem uma relação implícita com a janela que a criou; os usuários podem interagir com qualquer janela independentemente da outra, o que significa que qualquer janela pode fazer o seguinte:  
   
--   Cobrir a outra (a menos que uma das janelas tenha sua <xref:System.Windows.Window.Topmost%2A> propriedade definida como `true`).  
+- Cobrir a outra (a menos que uma das janelas tenha sua <xref:System.Windows.Window.Topmost%2A> propriedade definida como `true`).  
   
--   Ser minimizada, maximizada e restaurada sem afetar a outra.  
+- Ser minimizada, maximizada e restaurada sem afetar a outra.  
   
  Algumas janelas requerem uma relação com a janela que as abre. Por exemplo, um [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] aplicativo pode abrir janelas de propriedade e janelas de ferramenta cujo comportamento típico é para cobrir a janela que as cria. Além disso, janelas desse tipo devem sempre fechar, minimizar, maximizar e restaurar em conjunto com a janela que as criou. Essa relação pode ser estabelecida tornando uma janela *próprio* outro e é feito definindo o <xref:System.Windows.Window.Owner%2A> propriedade do *janela propriedade* com uma referência para o *proprietário janela*. Isso é mostrado no exemplo a seguir.  
   
@@ -174,9 +174,9 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  Depois que a posse é estabelecida:  
   
--   A janela propriedade pode fazer referência a respectiva janela proprietária inspecionando o valor de seu <xref:System.Windows.Window.Owner%2A> propriedade.  
+- A janela propriedade pode fazer referência a respectiva janela proprietária inspecionando o valor de seu <xref:System.Windows.Window.Owner%2A> propriedade.  
   
--   A janela proprietária pode descobrir todas as janelas que possui inspecionando o valor de seu <xref:System.Windows.Window.OwnedWindows%2A> propriedade.  
+- A janela proprietária pode descobrir todas as janelas que possui inspecionando o valor de seu <xref:System.Windows.Window.OwnedWindows%2A> propriedade.  
   
 <a name="Preventing"></a>   
 #### <a name="preventing-window-activation"></a>Impedindo a ativação de janela  
@@ -184,21 +184,21 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  Se seu aplicativo tem uma janela que não deve ser ativada quando mostrada, você pode definir seus <xref:System.Windows.Window.ShowActivated%2A> propriedade para `false` antes de chamar o <xref:System.Windows.Window.Show%2A> método pela primeira vez. Como consequência disso:  
   
--   A janela não é ativada.  
+- A janela não é ativada.  
   
--   A janela <xref:System.Windows.Window.Activated> não é gerado.  
+- A janela <xref:System.Windows.Window.Activated> não é gerado.  
   
--   A janela ativada no momento permanece ativada.  
+- A janela ativada no momento permanece ativada.  
   
  A janela se tornará ativada, no entanto, assim que o usuário ativá-la clicando na área de cliente ou então na área não cliente. Nesse caso:  
   
--   A janela é ativada.  
+- A janela é ativada.  
   
--   A janela <xref:System.Windows.Window.Activated> é gerado.  
+- A janela <xref:System.Windows.Window.Activated> é gerado.  
   
--   A janela ativada anteriormente é desativada.  
+- A janela ativada anteriormente é desativada.  
   
--   A janela <xref:System.Windows.Window.Deactivated> e <xref:System.Windows.Window.Activated> eventos são acionados subsequentemente, conforme o esperado em resposta às ações do usuário.  
+- A janela <xref:System.Windows.Window.Deactivated> e <xref:System.Windows.Window.Activated> eventos são acionados subsequentemente, conforme o esperado em resposta às ações do usuário.  
   
 <a name="Window_Activation"></a>   
 ### <a name="window-activation"></a>Ativação de janela  
@@ -227,21 +227,21 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
 ### <a name="closing-a-window"></a>Fechar uma janela  
  O fim da vida de uma janela se começa a se aproximar quando um usuário a fecha. Uma janela pode ser fechada pelo uso de elementos na área de não cliente, incluindo o seguinte:  
   
--   O **feche** item da **sistema** menu.  
+- O **feche** item da **sistema** menu.  
   
--   Pressionar ALT + F4.  
+- Pressionar ALT + F4.  
   
--   Pressionar o **fechar** botão.  
+- Pressionar o **fechar** botão.  
   
  Você pode fornecer mecanismos adicionais à área de cliente para fechar uma janela, sendo que os mais comuns deles incluem os seguintes:  
   
--   Uma **Exit** item o **arquivo** menu, geralmente para janelas do aplicativo principal.  
+- Uma **Exit** item o **arquivo** menu, geralmente para janelas do aplicativo principal.  
   
--   Um **feche** item na **arquivo** menu, normalmente em uma janela do aplicativo secundário.  
+- Um **feche** item na **arquivo** menu, normalmente em uma janela do aplicativo secundário.  
   
--   Um **Cancelar** botão, normalmente em uma caixa de diálogo modal.  
+- Um **Cancelar** botão, normalmente em uma caixa de diálogo modal.  
   
--   Um **fechar** botão, normalmente em uma caixa de diálogo sem janela restrita.  
+- Um **fechar** botão, normalmente em uma caixa de diálogo sem janela restrita.  
   
  Para fechar uma janela em resposta a um desses mecanismos personalizados, você precisará chamar o <xref:System.Windows.Window.Close%2A> método. O exemplo a seguir implementa a capacidade de fechar uma janela, escolhendo a **Exit** sobre o **arquivo** menu.  
   
@@ -266,13 +266,13 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  Enquanto uma janela pode ser fechada explicitamente através de mecanismos fornecidos nas áreas não cliente e cliente, uma janela pode também ser implicitamente fechada como resultado de comportamento em outras partes do aplicativo ou [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], incluindo o seguinte:  
   
--   Um usuário efetua logoff ou desliga o Windows.  
+- Um usuário efetua logoff ou desliga o Windows.  
   
--   Proprietário de uma janela fecha (consulte <xref:System.Windows.Window.Owner%2A>).  
+- Proprietário de uma janela fecha (consulte <xref:System.Windows.Window.Owner%2A>).  
   
--   A janela principal do aplicativo é fechada e <xref:System.Windows.Application.ShutdownMode%2A> é <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
+- A janela principal do aplicativo é fechada e <xref:System.Windows.Application.ShutdownMode%2A> é <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   <xref:System.Windows.Application.Shutdown%2A> é chamado.  
+- <xref:System.Windows.Application.Shutdown%2A> é chamado.  
   
 > [!NOTE]
 >  Uma janela não pode ser reaberta depois que é fechada.  
@@ -293,11 +293,11 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  Você também pode especificar o local inicial de um <xref:System.Windows.Window> quando ele for exibido pela primeira vez, definindo o <xref:System.Windows.Window.WindowStartupLocation%2A> propriedade com um dos seguintes <xref:System.Windows.WindowStartupLocation> valores de enumeração:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (padrão)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner> (padrão)  
   
--   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
+- <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
--   <xref:System.Windows.WindowStartupLocation.Manual>  
+- <xref:System.Windows.WindowStartupLocation.Manual>  
   
  Se o local de inicialização é especificado como <xref:System.Windows.WindowStartupLocation.Manual>e o <xref:System.Windows.Window.Left%2A> e <xref:System.Windows.Window.Top%2A> propriedades não foram definidas, <xref:System.Windows.Window> solicitará que o Windows para um local sejam exibidos no.  
   
@@ -325,13 +325,13 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  Se você quiser que a largura e altura da janela para ter um tamanho que se ajusta ao tamanho da janela do conteúdo, você pode usar o <xref:System.Windows.Window.SizeToContent%2A> propriedade, que tem os seguintes valores:  
   
--   <xref:System.Windows.SizeToContent.Manual>. Sem efeito (padrão).  
+- <xref:System.Windows.SizeToContent.Manual>. Sem efeito (padrão).  
   
--   <xref:System.Windows.SizeToContent.Width>. Ajustar à largura do conteúdo, que tem o mesmo efeito que definir ambas <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> para a largura do conteúdo.  
+- <xref:System.Windows.SizeToContent.Width>. Ajustar à largura do conteúdo, que tem o mesmo efeito que definir ambas <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> para a largura do conteúdo.  
   
--   <xref:System.Windows.SizeToContent.Height>. Ajustar à altura do conteúdo, que tem o mesmo efeito que definir ambos <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> à altura do conteúdo.  
+- <xref:System.Windows.SizeToContent.Height>. Ajustar à altura do conteúdo, que tem o mesmo efeito que definir ambos <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> à altura do conteúdo.  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>. Ajustar à largura do conteúdo e a altura, que tem o mesmo efeito que definir ambas <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> para a altura do conteúdo e definir ambas <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> para a largura do conteúdo.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. Ajustar à largura do conteúdo e a altura, que tem o mesmo efeito que definir ambas <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> para a altura do conteúdo e definir ambas <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> para a largura do conteúdo.  
   
  O exemplo a seguir mostra uma janela que se dimensiona automaticamente para ajustar-se ao próprio conteúdo, verticalmente e horizontalmente, quando mostrada pela primeira vez.  
   
@@ -381,11 +381,11 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  O estado de uma janela pode ser configurado definindo sua <xref:System.Windows.Window.WindowState%2A> propriedade, que pode ter um dos seguintes <xref:System.Windows.WindowState> valores de enumeração:  
   
--   <xref:System.Windows.WindowState.Normal> (padrão)  
+- <xref:System.Windows.WindowState.Normal> (padrão)  
   
--   <xref:System.Windows.WindowState.Maximized>  
+- <xref:System.Windows.WindowState.Maximized>  
   
--   <xref:System.Windows.WindowState.Minimized>  
+- <xref:System.Windows.WindowState.Minimized>  
   
  O exemplo a seguir mostra como criar uma janela que é mostrada como maximizada quando é aberta.  
   
@@ -405,13 +405,13 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  Você pode configurar como uma janela é redimensionada definindo sua <xref:System.Windows.Window.ResizeMode%2A> propriedade, que pode ser um dos seguintes <xref:System.Windows.ResizeMode> valores de enumeração:  
   
--   <xref:System.Windows.ResizeMode.NoResize>  
+- <xref:System.Windows.ResizeMode.NoResize>  
   
--   <xref:System.Windows.ResizeMode.CanMinimize>  
+- <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (padrão)  
+- <xref:System.Windows.ResizeMode.CanResize> (padrão)  
   
--   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
+- <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
  Assim como acontece com <xref:System.Windows.Window.WindowStyle%2A>, o modo de redimensionamento de uma janela é improvável de ser alterado durante seu tempo de vida, o que significa que provavelmente irá defini-lo do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação.  
   
@@ -425,13 +425,13 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  Para controlar o tipo de borda de uma janela obtém, você define sua <xref:System.Windows.Window.WindowStyle%2A> propriedade com um dos seguintes valores da <xref:System.Windows.WindowStyle> enumeração:  
   
--   <xref:System.Windows.WindowStyle.None>  
+- <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (padrão)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow> (padrão)  
   
--   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
+- <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
--   <xref:System.Windows.WindowStyle.ToolWindow>  
+- <xref:System.Windows.WindowStyle.ToolWindow>  
   
  O efeito desses estilos de janela são ilustradas na figura a seguir:  
   

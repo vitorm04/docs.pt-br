@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
 author: KrzysztofCwalina
 ms.openlocfilehash: 0e5b33839372e303b96bd6b84949f9a82da2f689
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026296"
 ---
 # <a name="naming-parameters"></a>Parâmetros de nomeação
 Além do motivo óbvio de legibilidade, é importante seguir as diretrizes para nomes de parâmetro porque os parâmetros são exibidos na documentação e no designer quando ferramentas de design visual fornecem Intellisense e a funcionalidade de navegação de classe.  

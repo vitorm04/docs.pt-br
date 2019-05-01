@@ -3,11 +3,11 @@ title: Mapeamento de tipo SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037694"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapeamento de tipo SQL-CLR
 No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para um modelo de objeto que é expresso na linguagem de programação de sua escolha. Quando o aplicativo é executado, o LINQ to SQL converte consultas integradas à linguagem no modelo de objeto em SQL e as envia para o banco de dados para execução. Quando o banco de dados retorna os resultados, o LINQ to SQL converte os resultados de volta para os objetos com os quais você pode trabalhar em sua própria linguagem de programação.  
@@ -16,23 +16,23 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
   
  Este tópico aborda os seguintes pontos:  
   
--   [Mapeamento de tipo padrão](#DefaultTypeMapping)  
+- [Mapeamento de tipo padrão](#DefaultTypeMapping)  
   
--   [Matriz de comportamento de tempo de execução de mapeamento de tipo](#BehaviorMatrix)  
+- [Matriz de comportamento de tempo de execução de mapeamento de tipo](#BehaviorMatrix)  
   
--   [Diferenças de comportamento entre CLR e a execução de SQL](#BehaviorDiffs)  
+- [Diferenças de comportamento entre CLR e a execução de SQL](#BehaviorDiffs)  
   
--   [Mapeamento Enum](#EnumMapping)  
+- [Mapeamento Enum](#EnumMapping)  
   
--   [Mapeamento numérico](#NumericMapping)  
+- [Mapeamento numérico](#NumericMapping)  
   
--   [Mapeamento de texto e XML](#TextMapping)  
+- [Mapeamento de texto e XML](#TextMapping)  
   
--   [Data e hora do mapeamento](#DateMapping)  
+- [Data e hora do mapeamento](#DateMapping)  
   
--   [Mapeamento binário](#BinaryMapping)  
+- [Mapeamento binário](#BinaryMapping)  
   
--   [Mapeamento variado](#MiscMapping)  
+- [Mapeamento variado](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Mapeamento de tipo padrão  
@@ -58,21 +58,21 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
   
  Por exemplo, a seguir estão algumas diferenças de comportamento entre o CLR e o SQL Server:  
   
--   O SQL Server pede alguns tipos de dados de maneira diferente dos dados de tipo equivalente no CLR. Por exemplo, os dados do SQL Server do tipo `UNIQUEIDENTIFIER` são pedidos de maneira diferente dos dados CLR de tipo <xref:System.Guid?displayProperty=nameWithType>.  
+- O SQL Server pede alguns tipos de dados de maneira diferente dos dados de tipo equivalente no CLR. Por exemplo, os dados do SQL Server do tipo `UNIQUEIDENTIFIER` são pedidos de maneira diferente dos dados CLR de tipo <xref:System.Guid?displayProperty=nameWithType>.  
   
--   O SQL Server manipula algumas operações de comparação de cadeia de caracteres de maneira diferente do que no CLR. No SQL Server, o comportamento de comparação de cadeia de caracteres depende das configurações de ordenação no servidor. Para obter mais informações, consulte [trabalhando com agrupamentos](https://go.microsoft.com/fwlink/?LinkId=115330) nos Manuais Online do Microsoft SQL Server.  
+- O SQL Server manipula algumas operações de comparação de cadeia de caracteres de maneira diferente do que no CLR. No SQL Server, o comportamento de comparação de cadeia de caracteres depende das configurações de ordenação no servidor. Para obter mais informações, consulte [trabalhando com agrupamentos](https://go.microsoft.com/fwlink/?LinkId=115330) nos Manuais Online do Microsoft SQL Server.  
   
--   O SQL Server pode retornar valores diferentes para algumas funções mapeadas do CLR. Por exemplo, as funções de igualdade serão diferentes porque o SQL Server considera que duas cadeias de caracteres serão iguais se diferirem apenas no espaço em branco à direita, enquanto o CLR não as considera iguais.  
+- O SQL Server pode retornar valores diferentes para algumas funções mapeadas do CLR. Por exemplo, as funções de igualdade serão diferentes porque o SQL Server considera que duas cadeias de caracteres serão iguais se diferirem apenas no espaço em branco à direita, enquanto o CLR não as considera iguais.  
   
 <a name="EnumMapping"></a>   
 ## <a name="enum-mapping"></a>Mapeamento enum  
  O LINQ to SQL dá suporte a mapeamento do tipo <xref:System.Enum?displayProperty=nameWithType> CLR para tipos do SQL Server de duas maneiras:  
   
--   Mapeamento para tipos numéricos do SQL (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
+- Mapeamento para tipos numéricos do SQL (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
   
      Quando você mapeia um tipo <xref:System.Enum?displayProperty=nameWithType> CLR para um tipo numérico do SQL, mapeia o valor inteiro subjacente do <xref:System.Enum?displayProperty=nameWithType> CLR para o valor da coluna de banco de dados do SQL Server. Por exemplo, se um <xref:System.Enum?displayProperty=nameWithType> chamado `DaysOfWeek` contém um membro chamado `Tue` com um valor inteiro subjacente de 3, esse membro mapeia para um valor de banco de dados de 3.  
   
--   Mapeamento para tipos de texto do SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
+- Mapeamento para tipos de texto do SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
   
      Quando você mapeia um tipo <xref:System.Enum?displayProperty=nameWithType> CLR para um tipo de texto do SQL, o valor do banco de dados SQL é mapeado para os nomes dos membros do <xref:System.Enum?displayProperty=nameWithType> CLR. Por exemplo, se um <xref:System.Enum?displayProperty=nameWithType> chamado `DaysOfWeek` contém um membro chamado `Tue` com um valor inteiro subjacente de 3, esse membro mapeia para um valor de banco de dados de `Tue`.  
   
@@ -154,13 +154,13 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 ### <a name="xml-types"></a>Tipos XML  
  O tipo de dados `XML` do SQL Server está disponível a partir do Microsoft SQL Server 2005. Você pode mapear o tipo de dados `XML` do SQL Server para <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> ou <xref:System.String>. Se a coluna armazena os fragmentos XML que não podem ser lidos no <xref:System.Xml.Linq.XElement>, a coluna deverá ser mapeada para <xref:System.String> para evitar erros em tempo de execução. Os fragmentos XML que devem ser mapeados para <xref:System.String> incluem o seguinte:  
   
--   Uma sequência dos elementos XML  
+- Uma sequência dos elementos XML  
   
--   Atributos  
+- Atributos  
   
--   Identificadores públicos (PI)  
+- Identificadores públicos (PI)  
   
--   Comentários  
+- Comentários  
   
  Embora você possa mapear <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument> para o SQL Server, conforme mostrado na [matriz de comportamento do tempo de execução de mapeamento de tipo](#BehaviorMatrix), o <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> método não tem nenhum mapeamento de tipo de SQL Server padrão para esses tipos.  
   

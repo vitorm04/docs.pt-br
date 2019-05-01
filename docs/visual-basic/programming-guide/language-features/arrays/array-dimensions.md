@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
 ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053711"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensões de matriz no Visual Basic
 Um *dimensão* é uma direção na qual você pode variar a especificação de elementos uma matriz de. Uma matriz que contém as vendas total para cada dia do mês tem uma dimensão (o dia do mês). Uma matriz que contém as total de vendas por departamento para cada dia do mês tem duas dimensões (o número de departamento e o dia do mês). O número de dimensões que tem uma matriz é chamado de seu *classificação*.  

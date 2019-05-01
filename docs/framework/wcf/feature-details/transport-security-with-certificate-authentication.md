@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 ms.openlocfilehash: a348fb7989a83ec9ee7903bd38896bedcf86ce3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050734"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Segurança de transporte com autenticação de certificado
 Este tópico discute usando certificados X.509 para autenticação de cliente e servidor ao usar a segurança de transporte. Para obter mais informações sobre os certificados X.509, confira [Certificados de chave pública X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Certificados devem ser emitidos por uma autoridade de certificação, que é geralmente um emissor de terceiros de certificados. Em um domínio do Windows Server, Active Directory Certificate Services pode ser usado para emitir certificados para computadores cliente no domínio. Para obter mais informações, consulte [serviços de certificados do Windows 2008 R2](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). Nesse cenário, o serviço está hospedado em serviços de informações da Internet (IIS) que é configurado com Secure Sockets Layer (SSL). O serviço está configurado com um certificado SSL (X.509) para permitir que os clientes verificar a identidade do servidor. O cliente também é configurado com um certificado X.509 que permite que o serviço verificar a identidade do cliente. O certificado do servidor deve ser confiável pelo cliente e o certificado do cliente deve ser confiável pelo servidor. A mecânica real de como o serviço e o cliente verifica a identidade um do outro está além do escopo deste tópico. Para obter mais informações, consulte [Assinatura Digital na Wikipédia](https://go.microsoft.com/fwlink/?LinkId=253157).  

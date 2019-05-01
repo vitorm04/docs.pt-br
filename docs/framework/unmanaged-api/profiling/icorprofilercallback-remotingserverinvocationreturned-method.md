@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 00f5fd44d340a76200537871a9860f67601b66d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041914"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a>Método ICorProfilerCallback::RemotingServerInvocationReturned
 Notifica o criador de perfil que o processo foi concluído invocando um método em resposta a uma solicitação de invocação de método remoto.  

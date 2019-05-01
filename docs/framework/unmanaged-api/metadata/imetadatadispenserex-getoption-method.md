@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fe9bc9aea4ceb0f5b5c03416f43894b482c3294e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044285"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>Método IMetaDataDispenserEx::GetOption
 Obtém o valor da opção especificada para o escopo de metadados atual. A opção controla como as chamadas para o escopo de metadados atual são tratadas.  
@@ -46,19 +46,19 @@ HRESULT GetOption (
 ## <a name="remarks"></a>Comentários  
  A lista a seguir mostra os GUIDs que têm suporte para esse método. Para obter descrições, consulte o [imetadatadispenserex:: SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) método. Se `optionId` é não esteja na lista, esse método retornará o HRESULT `E_INVALIDARG`, indicando um parâmetro incorreto.  
   
--   MetaDataCheckDuplicatesFor  
+- MetaDataCheckDuplicatesFor  
   
--   MetaDataRefToDefCheck  
+- MetaDataRefToDefCheck  
   
--   MetaDataNotificationForTokenMovement  
+- MetaDataNotificationForTokenMovement  
   
--   MetaDataSetENC  
+- MetaDataSetENC  
   
--   MetaDataErrorIfEmitOutOfOrder  
+- MetaDataErrorIfEmitOutOfOrder  
   
--   MetaDataGenerateTCEAdapters  
+- MetaDataGenerateTCEAdapters  
   
--   MetaDataLinkerOptions  
+- MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Acessar os objetos de fuso horário UTC e local predefinidos'
+title: 'Como: acessar os objetos de fuso horário predefinidos UTC e local'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026591"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Como: Acessar os objetos de fuso horário UTC e local predefinidos
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Como: acessar os objetos de fuso horário predefinidos UTC e local
 
 O <xref:System.TimeZoneInfo> classe fornece duas propriedades, <xref:System.TimeZoneInfo.Utc%2A> e <xref:System.TimeZoneInfo.Local%2A>, que dão acesso de código para objetos de fuso horário predefinido. Este tópico discute como acessar os objetos <xref:System.TimeZoneInfo> retornados por essas propriedades.
 
@@ -53,7 +53,7 @@ Este exemplo requer:
 
 * Que uma referência à dll seja adicionada ao projeto.
 
-* Que o <xref:System> namespace sejam importados com o `using` instrução (necessária em código C#).
+* Que o <xref:System> namespace sejam importados com o `using` instrução (necessária em código c#).
 
 ## <a name="see-also"></a>Consulte também
 

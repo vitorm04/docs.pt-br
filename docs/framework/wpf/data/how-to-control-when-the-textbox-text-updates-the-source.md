@@ -10,11 +10,11 @@ helpviewer_keywords:
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
 ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051995"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Como: Controlar quando o texto de TextBox atualiza a origem
 Este tópico descreve como usar o <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriedade para controlar o tempo das atualizações de origem de associação. O tópico usa o <xref:System.Windows.Controls.TextBox> controle como um exemplo.  

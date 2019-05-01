@@ -10,34 +10,34 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053100"
 ---
 # <a name="table-overview"></a>Visão geral da tabela
 <xref:System.Windows.Documents.Table> é um elemento de nível de bloco que suporta a apresentação baseada em grade do conteúdo do documento de fluxo. A flexibilidade deste elemento o torna muito útil, mas também o deixa mais difícil de entender e usar corretamente.  
   
  Este tópico contém as seções a seguir.  
   
--   [Noções básicas sobre tabelas](#table_basics)  
+- [Noções básicas sobre tabelas](#table_basics)  
   
--   [De que modo a tabela difere da grade?](#table_vs_Grid)  
+- [De que modo a tabela difere da grade?](#table_vs_Grid)  
   
--   [Estrutura básica da tabela](#basic_table_structure)  
+- [Estrutura básica da tabela](#basic_table_structure)  
   
--   [Contenção de tabelas](#table_containment)  
+- [Contenção de tabelas](#table_containment)  
   
--   [Agrupamentos de linha](#row_groupings)  
+- [Agrupamentos de linha](#row_groupings)  
   
--   [Precedência de renderização em tela de fundo](#rendering_precedence)  
+- [Precedência de renderização em tela de fundo](#rendering_precedence)  
   
--   [Abrangendo linhas ou colunas](#spanning_rows_or_columns)  
+- [Abrangendo linhas ou colunas](#spanning_rows_or_columns)  
   
--   [Criar uma tabela com código](#building_a_table_with_code)  
+- [Criar uma tabela com código](#building_a_table_with_code)  
   
--   [Tópicos relacionados] 
+- [Tópicos relacionados] 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>Noções básicas sobre tabelas  
@@ -50,15 +50,15 @@ ms.locfileid: "59317656"
 ### <a name="basic-table-structure"></a>Estrutura básica da tabela  
  <xref:System.Windows.Documents.Table> Fornece uma apresentação baseada em grade consiste em colunas (representado por <xref:System.Windows.Documents.TableColumn> elementos) e linhas (representadas por <xref:System.Windows.Documents.TableRow> elementos). <xref:System.Windows.Documents.TableColumn> elementos não hospedam conteúdo; eles simplesmente definem colunas e características de colunas. <xref:System.Windows.Documents.TableRow> elementos devem ser hospedados em um <xref:System.Windows.Documents.TableRowGroup> elemento, que define um agrupamento de linhas da tabela. <xref:System.Windows.Documents.TableCell> elementos que contêm o conteúdo real a ser apresentado pela tabela, devem ser hospedados em um <xref:System.Windows.Documents.TableRow> elemento. <xref:System.Windows.Documents.TableCell> pode conter apenas elementos que derivam de <xref:System.Windows.Documents.Block>.  Elementos filho válidos de um <xref:System.Windows.Documents.TableCell> incluem.  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> elementos não podem hospedar diretamente conteúdo de texto. Para obter mais informações sobre as regras de confinamento para o fluxo de elementos de conteúdo, como <xref:System.Windows.Documents.TableCell>, consulte [Flow Document Overview](flow-document-overview.md).  
@@ -78,19 +78,19 @@ ms.locfileid: "59317656"
 ### <a name="table-containment"></a>Contenção de tabelas  
  <xref:System.Windows.Documents.Table> deriva de <xref:System.Windows.Documents.Block> elemento e está sujeito às regras comuns para <xref:System.Windows.Documents.Block> elementos de nível.  Um <xref:System.Windows.Documents.Table> elemento pode estar contido em qualquer um dos seguintes elementos:  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>Agrupamentos de linha  

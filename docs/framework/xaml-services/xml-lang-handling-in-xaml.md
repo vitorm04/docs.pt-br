@@ -8,11 +8,11 @@ helpviewer_keywords:
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
 ms.openlocfilehash: 6495e980beea8731c47a774589919f160b4551ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053594"
 ---
 # <a name="xmllang-handling-in-xaml"></a>Tratamento de xml:lang em XAML
 O `xml:lang` atributo é um [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]-atributo definido que declara as informações de idioma e cultura de um elemento no XML. Esse mesmo significado do atributo persiste no XAML; No entanto, algumas considerações adicionais se aplicam.  

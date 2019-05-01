@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
 ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011447"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Como: Criar uma tabela de pesquisa para um controle ComboBox, ListBox ou CheckedListBox do Windows Forms
 Às vezes, é útil exibir dados em um formato amigável em um formulário do Windows Forms, porém, armazene os dados em um formato que seja mais significativo para o programa. Por exemplo, um formulário de pedido de alimentos pode exibir os itens de menu por nome em uma caixa de listagem. No entanto, a tabela de dados que registra a ordem conteria os números de identificação exclusivos que representam os alimentos. As tabelas a seguir mostram um exemplo de como armazenar e exibir dados de formulários de pedidos de alimentos.  

@@ -3,11 +3,11 @@ title: Tratamento de mensagens suspeitas no MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052086"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Tratamento de mensagens suspeitas no MSMQ 4.0
 Este exemplo demonstra como executar manipulação em um serviço de mensagens suspeitas. Este exemplo se baseia a [transacionada de associação de MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemplo. Este exemplo usa `netMsmqBinding`. O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.
@@ -27,13 +27,13 @@ Este exemplo demonstra como executar manipulação em um serviço de mensagens s
 
  Depois que a mensagem é marcada como suspeita, a mensagem será abordada acordo com as configurações de <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> enumeração. Para reiterar os valores possíveis:
 
--   Falha (padrão): Para o ouvinte e também o host de serviço de falha.
+- Falha (padrão): Para o ouvinte e também o host de serviço de falha.
 
--   Remova: Para descartar a mensagem.
+- Remova: Para descartar a mensagem.
 
--   Mova: Para mover a mensagem para a subfila de mensagens suspeitas. Esse valor só está disponível na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Mova: Para mover a mensagem para a subfila de mensagens suspeitas. Esse valor só está disponível na [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
--   Rejeite: Para rejeitar a mensagem, enviando a mensagem de volta para a fila de mensagens mortas do remetente. Esse valor só está disponível na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Rejeite: Para rejeitar a mensagem, enviando a mensagem de volta para a fila de mensagens mortas do remetente. Esse valor só está disponível na [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  O exemplo demonstra como usar o `Move` disposição para a mensagem suspeita. `Move` faz com que a mensagem Mover para a subfila suspeita.
 
@@ -277,15 +277,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 2. Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
 
-    1.  Abra o Gerenciador de servidores no Visual Studio 2012.
+    1. Abra o Gerenciador de servidores no Visual Studio 2012.
 
-    2.  Expanda o **recursos** guia.
+    2. Expanda o **recursos** guia.
 
-    3.  Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.
+    3. Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.
 
-    4.  Verifique as **transacional** caixa.
+    4. Verifique as **transacional** caixa.
 
-    5.  Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
+    5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
 
 3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

@@ -3,11 +3,11 @@ title: Usando o WCF Moniker com clientes COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
 ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051605"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Usando o WCF Moniker com clientes COM
 Este exemplo demonstra como usar o moniker de serviço do Windows Communication Foundation (WCF) para integrar serviços da Web em ambientes de desenvolvimento baseado em COM, como o Microsoft Office Visual Basic for Applications (VBA do Office) ou Visual Basic 6.0. Esse exemplo consiste em um cliente do Windows Script Host (. vbs), uma biblioteca de cliente com suporte (. dll) e uma biblioteca de serviço (. dll) hospedado pelo Internet Information Services (IIS). O serviço é um serviço de Calculadora e o cliente COM chama operações matemáticas — adicionar, subtrair, multiplicar e dividir — no serviço. Atividade do cliente está visível nas janelas de caixa de mensagem.  
@@ -43,11 +43,11 @@ public interface ICalculator
   
  O exemplo demonstra as três abordagens alternativas para usar o moniker:  
   
--   Contrato tipado – o contrato é registrado como um tipo visível de COM no computador cliente.  
+- Contrato tipado – o contrato é registrado como um tipo visível de COM no computador cliente.  
   
--   Contrato WSDL – o contrato é fornecido na forma de um documento WSDL.  
+- Contrato WSDL – o contrato é fornecido na forma de um documento WSDL.  
   
--   Contrato de troca de metadados – o contrato é recuperado em tempo de execução de um ponto de extremidade de troca de metadados (MEX).  
+- Contrato de troca de metadados – o contrato é recuperado em tempo de execução de um ponto de extremidade de troca de metadados (MEX).  
   
 ## <a name="typed-contract"></a>Tipo de contrato  
  Para usar o moniker com um contrato com tipo de uso, tipos de atributo adequadamente para o contrato de serviço devem ser registrados com. Primeiro, um cliente deve ser gerado usando o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Execute o seguinte comando em um prompt de comando no diretório do cliente para gerar o proxy tipado.  
@@ -87,11 +87,11 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  Especificam os parâmetros usados pelo moniker:  
   
--   O endereço do ponto de extremidade de serviço.  
+- O endereço do ponto de extremidade de serviço.  
   
--   A associação que o cliente deve usar para se conectar com esse ponto de extremidade. Nesse caso, wsHttpBinding definida pelo sistema é usado, apesar de ligações personalizadas podem ser definidas em arquivos de configuração do cliente. Para uso com o Windows Script Host, a associação personalizada é definida em um arquivo de Cscript.exe.config no mesmo diretório que Cscript.exe.  
+- A associação que o cliente deve usar para se conectar com esse ponto de extremidade. Nesse caso, wsHttpBinding definida pelo sistema é usado, apesar de ligações personalizadas podem ser definidas em arquivos de configuração do cliente. Para uso com o Windows Script Host, a associação personalizada é definida em um arquivo de Cscript.exe.config no mesmo diretório que Cscript.exe.  
   
--   O tipo do contrato que tem suporte no ponto de extremidade. Esse é o tipo que foi gerado e registrado acima. Como o script do Visual Basic fornece um ambiente de COM rigidez de tipos, um identificador para o contrato deve ser especificado. Esse GUID é o `interfaceID` de CalcProxy.tlb, que podem ser exibido usando COM ferramentas como o Visualizador de objeto OLE/COM (OleView.exe). Para ambientes fortemente tipadas, como Office VBA ou Visual Basic 6.0, adicionando uma referência explícita à biblioteca de tipos e, em seguida, declarar o tipo do objeto proxy podem ser usados no lugar do parâmetro de contrato. Isso também oferece suporte ao IntelliSense durante o desenvolvimento de aplicativos cliente.  
+- O tipo do contrato que tem suporte no ponto de extremidade. Esse é o tipo que foi gerado e registrado acima. Como o script do Visual Basic fornece um ambiente de COM rigidez de tipos, um identificador para o contrato deve ser especificado. Esse GUID é o `interfaceID` de CalcProxy.tlb, que podem ser exibido usando COM ferramentas como o Visualizador de objeto OLE/COM (OleView.exe). Para ambientes fortemente tipadas, como Office VBA ou Visual Basic 6.0, adicionando uma referência explícita à biblioteca de tipos e, em seguida, declarar o tipo do objeto proxy podem ser usados no lugar do parâmetro de contrato. Isso também oferece suporte ao IntelliSense durante o desenvolvimento de aplicativos cliente.  
   
  Ter construído a instância do proxy com o moniker de serviço, o aplicativo cliente pode chamar métodos no proxy, o que resulta na infra-estrutura de moniker de serviço chamar as operações de serviço correspondentes.  
   
@@ -127,13 +127,13 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  Especificam os parâmetros usados pelo moniker:  
   
--   O endereço do ponto de extremidade de serviço.  
+- O endereço do ponto de extremidade de serviço.  
   
--   A associação que o cliente deve usar para se conectar com esse ponto de extremidade e o namespace no qual essa associação é definida. Nesse caso, o `wsHttpBinding_ICalculator` é usado.  
+- A associação que o cliente deve usar para se conectar com esse ponto de extremidade e o namespace no qual essa associação é definida. Nesse caso, o `wsHttpBinding_ICalculator` é usado.  
   
--   O WSDL que define o contrato. Nesse caso, isso é a cadeia de caracteres que foi lido do arquivo serviceWsdl.xml.  
+- O WSDL que define o contrato. Nesse caso, isso é a cadeia de caracteres que foi lido do arquivo serviceWsdl.xml.  
   
--   O nome e o namespace do contrato. Essa identificação é necessária porque a WSDL pode conter mais de um contrato.  
+- O nome e o namespace do contrato. Essa identificação é necessária porque a WSDL pode conter mais de um contrato.  
   
     > [!NOTE]
     >  Por padrão, o WCF services geram arquivos WSDL separados para cada namespace que o uso. Eles são vinculados com o uso da construção de importação WSDL. Porque o moniker espera que uma única definição de WSDL, o serviço deve usar um único namespace conforme demonstrado neste exemplo, ou os arquivos separados devem ser mesclados manualmente.  
@@ -165,13 +165,13 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  Especificam os parâmetros usados pelo moniker:  
   
--   O endereço do ponto de extremidade de troca de metadados de serviço.  
+- O endereço do ponto de extremidade de troca de metadados de serviço.  
   
--   O endereço do ponto de extremidade de serviço.  
+- O endereço do ponto de extremidade de serviço.  
   
--   A associação que o cliente deve usar para se conectar com esse ponto de extremidade e o namespace no qual essa associação é definida. Nesse caso, o `wsHttpBinding_ICalculator` é usado.  
+- A associação que o cliente deve usar para se conectar com esse ponto de extremidade e o namespace no qual essa associação é definida. Nesse caso, o `wsHttpBinding_ICalculator` é usado.  
   
--   O nome e o namespace do contrato. Essa identificação é necessária porque a WSDL pode conter mais de um contrato.  
+- O nome e o namespace do contrato. Essa identificação é necessária porque a WSDL pode conter mais de um contrato.  
   
  Ter construído a instância do proxy com o moniker de serviço, o aplicativo cliente pode chamar métodos no proxy, o que resulta na infra-estrutura de moniker de serviço chamar as operações de serviço correspondentes.  
   
@@ -235,4 +235,4 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
--   Para fins de segurança, remova a definição do diretório virtual e as permissões concedidas nas etapas de configuração quando tiver terminado com os exemplos.  
+- Para fins de segurança, remova a definição do diretório virtual e as permissões concedidas nas etapas de configuração quando tiver terminado com os exemplos.  

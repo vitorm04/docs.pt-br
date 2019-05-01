@@ -3,22 +3,22 @@ title: Configurando o Serviço de ativação de processos do Windows (WAS) para 
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
 ms.openlocfilehash: a4c331465087c6910cb67a71d2153e08f82a6cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039696"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Configurando o Serviço de ativação de processos do Windows (WAS) para utilizar com o Windows Communication Foundation
 Este tópico descreve as etapas necessárias para configurar o serviço de ativação de processos do Windows (também conhecido como WAS) no [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar o Windows Communication Foundation (WCF) protocolos de rede de serviços que não se comunicam por HTTP. As seções a seguir descrevem as etapas para essa configuração:  
   
--   Instalar (ou confirmar a instalação do) os componentes de ativação do WCF necessários.  
+- Instalar (ou confirmar a instalação do) os componentes de ativação do WCF necessários.  
   
--   Criar um site do WAS com as associações de protocolo de rede que você deseja usar, ou adicionar uma nova associação de protocolo para um site existente.  
+- Criar um site do WAS com as associações de protocolo de rede que você deseja usar, ou adicionar uma nova associação de protocolo para um site existente.  
   
--   Crie um aplicativo para hospedar seus serviços e permitir que o aplicativo use protocolos de rede necessários.  
+- Crie um aplicativo para hospedar seus serviços e permitir que o aplicativo use protocolos de rede necessários.  
   
--   Crie um serviço WCF que expõe um ponto de extremidade não-HTTP.  
+- Crie um serviço WCF que expõe um ponto de extremidade não-HTTP.  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Configurando um Site com associações não HTTP  
  Para usar uma associação não HTTP com WAS, a associação do site deve ser adicionada à configuração do WAS. O repositório de configuração para o WAS é o arquivo applicationHost. config, localizado no diretório %windir%\system32\inetsrv\config. Esse repositório de configuração é compartilhado pelo WAS e o IIS 7.0.  

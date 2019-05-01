@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a67e8ce19a2acf5b4ee1d114858e00d93cb183b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044123"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>Método IMetaDataEmit::DefineMethod
 Cria uma definição para um método ou uma função global com a assinatura especificada e retorna um token para essa definição de método.  
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>Definindo um método para PInvoke  
  Para cada função não gerenciada a ser chamado por meio do PInvoke, você deve definir um método gerenciado que representa a função de destino não gerenciado. Para definir o método gerenciado, use `DefineMethod` com alguns dos parâmetros definidos para determinados valores, dependendo de como o PInvoke é usado:  
   
--   Verdadeiro PInvoke - envolve a invocação de um método externo não gerenciado que reside em uma DLL não gerenciada.  
+- Verdadeiro PInvoke - envolve a invocação de um método externo não gerenciado que reside em uma DLL não gerenciada.  
   
--   PInvoke local - envolve a invocação de um método nativo não gerenciado que está incorporado no módulo gerenciado atual.  
+- PInvoke local - envolve a invocação de um método nativo não gerenciado que está incorporado no módulo gerenciado atual.  
   
  As configurações de parâmetro são fornecidas na tabela a seguir.  
   

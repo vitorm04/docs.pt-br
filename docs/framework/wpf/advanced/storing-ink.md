@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Ink Serialized Format (ISF)
 ms.assetid: a3f6d16b-d682-4680-9965-907332b4d2b8
 ms.openlocfilehash: 4089aa7942105c14eb628c75edb7f53ffacfaeb0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053361"
 ---
 # <a name="storing-ink"></a>Armazenando tinta
 O <xref:System.Windows.Ink.StrokeCollection.Save%2A> métodos oferecem suporte para armazenar a tinta em tinta serializada Format (ISF). Construtores para o <xref:System.Windows.Ink.StrokeCollection> classe dão suporte para a leitura de dados de tinta.  

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
 ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053867"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcando eventos roteados como manipulados e tratamento de classes
 Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados do evento. Efetivamente, a manipulação do evento reduzirá a rota. A manipulação de classes é um conceito de programação com suporte nos eventos roteados. Um manipulador de classes tem a oportunidade de manipular um evento roteado específico no nível de uma classe com um manipulador que é invocado antes de qualquer manipulador de instâncias em uma instância da classe.  
@@ -57,9 +57,9 @@ Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados
   
  Em um nível mais profundo que a rota de evento, potencialmente, também há vários manipuladores de classe atuando em determinada instância de uma classe. Isso ocorre porque o modelo de manipulação de classe para eventos roteados permite que todas as classes possíveis em uma hierarquia de classe registrem, individualmente, seu próprio manipulador de classes para cada evento roteado. Cada manipulador de classes é adicionado a um repositório interno e quando a rota de evento de um aplicativo é construída, os manipuladores de classe são todos adicionados à rota de evento. Os manipuladores de classe são adicionados à rota de forma que o manipulador da classe derivada é invocado primeiro e os manipuladores de cada classe base sucessiva são invocados em seguida. Em geral, os manipuladores de classe não são registrados, para que também respondam aos eventos roteados que já foram marcados como manipulados. Portanto, esse mecanismo de manipulação de classe possibilita uma das duas opções:  
   
--   As classes derivadas podem suplementar a manipulação de classe herdada da classe base adicionando um manipulador que não marca o evento roteado como manipulado, pois o manipulador da classe base será invocado algum tempo após o manipulador da classe derivada.  
+- As classes derivadas podem suplementar a manipulação de classe herdada da classe base adicionando um manipulador que não marca o evento roteado como manipulado, pois o manipulador da classe base será invocado algum tempo após o manipulador da classe derivada.  
   
--   As classes derivadas podem substituir a manipulação de classe da classe base adicionando um manipulador de classes que marca o evento roteado como manipulado. Você deve ter cuidado com essa abordagem, pois ela potencialmente altera o design de controle base pretendido em áreas como aparência visual, lógica de estado, manipulação de entrada e manipulação de comandos.  
+- As classes derivadas podem substituir a manipulação de classe da classe base adicionando um manipulador de classes que marca o evento roteado como manipulado. Você deve ter cuidado com essa abordagem, pois ela potencialmente altera o design de controle base pretendido em áreas como aparência visual, lógica de estado, manipulação de entrada e manipulação de comandos.  
   
 <a name="Class_Handling_of_Routed_Events"></a>   
 ## <a name="class-handling-of-routed-events-by-control-base-classes"></a>Manipulação de classe de eventos roteados por classes base de controle  

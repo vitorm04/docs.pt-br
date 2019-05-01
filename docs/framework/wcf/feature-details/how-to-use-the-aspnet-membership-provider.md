@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
 ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038708"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Como: usar o provedor de associação do ASP.NET
 O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação é um recurso que permite [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aos desenvolvedores criar sites da Web que permitem aos usuários criar combinações de nome e senha de usuário exclusivo. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e entrar para acesso exclusivo para o site e seus serviços. Isso é diferente de segurança do Windows, o que exige que os usuários têm contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação de nome/senha de usuário) pode usar o site e seus serviços.  

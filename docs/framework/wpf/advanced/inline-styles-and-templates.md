@@ -8,11 +8,11 @@ helpviewer_keywords:
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
 ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050999"
 ---
 # <a name="inline-styles-and-templates"></a>Estilos e modelos embutidos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fornece <xref:System.Windows.Style> objetos e objetos de modelo (<xref:System.Windows.FrameworkTemplate> subclasses) como uma maneira de definir a aparência visual de um elemento em recursos, para que eles podem ser usados várias vezes. Por esse motivo, os atributos no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que levam os tipos <xref:System.Windows.Style> e <xref:System.Windows.FrameworkTemplate> quase sempre fazem referências de recurso a estilos e modelos existentes em vez de definir novos embutidos.  

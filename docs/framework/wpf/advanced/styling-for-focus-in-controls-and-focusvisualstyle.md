@@ -7,11 +7,11 @@ helpviewer_keywords:
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
 ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053360"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Estilos para foco em controles e FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece dois mecanismos paralelos para alterar a aparência visual de um controle quando ele recebe o foco do teclado. O primeiro mecanismo é usar setters de propriedade para propriedades como <xref:System.Windows.UIElement.IsKeyboardFocused%2A> dentro do estilo ou modelo que é aplicado ao controle. O segundo mecanismo é fornecer um estilo separado como o valor do <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propriedade; o "estilo visual de foco" cria uma árvore visual separada para um adorno que é desenhado na parte superior do controle, em vez de alterar a árvore visual do controle ou outra interface de usuário elemento ao substituí-la. Este tópico aborda os cenários em que cada um desses mecanismos é apropriado.  

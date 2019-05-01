@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
 ms.openlocfilehash: e688e9a220e6c82caa2d107589b5ca9a1e59e72b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052151"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Como: Criar botões de alternância em controles ToolStrip
 Quando um usuário clica em um botão de alternância, ele é exibido em baixo-relevo e retém a aparência em baixo-relevo até que o usuário clica no botão novamente.  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>Para criar um alternância ToolStripButton  
   
--   Use um código como o exemplo de código a seguir. Esse código supõe que o formulário contém um <xref:System.Windows.Forms.ToolStrip> controle e que seus <xref:System.Windows.Forms.ToolStrip.Items%2A> coleção contém um <xref:System.Windows.Forms.ToolStripButton> chamado `toolStripButton1`. Ele também pressupõe que você tenha um manipulador de eventos chamado `toolStripButton1_CheckedChanged`.  
+- Use um código como o exemplo de código a seguir. Esse código supõe que o formulário contém um <xref:System.Windows.Forms.ToolStrip> controle e que seus <xref:System.Windows.Forms.ToolStrip.Items%2A> coleção contém um <xref:System.Windows.Forms.ToolStripButton> chamado `toolStripButton1`. Ele também pressupõe que você tenha um manipulador de eventos chamado `toolStripButton1_CheckedChanged`.  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  
