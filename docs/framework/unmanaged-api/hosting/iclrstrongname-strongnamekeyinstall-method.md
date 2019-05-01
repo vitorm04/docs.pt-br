@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 415df9928572e095c529119bf2e726fa383577b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992973"
 ---
-# <a name="iclrstrongnamestrongnamekeyinstall-method"></a><span data-ttu-id="abc8b-102">Método ICLRStrongName::StrongNameKeyInstall</span><span class="sxs-lookup"><span data-stu-id="abc8b-102">ICLRStrongName::StrongNameKeyInstall Method</span></span>
-<span data-ttu-id="abc8b-103">Importa um par de chaves públicas/privadas em um contêiner.</span><span class="sxs-lookup"><span data-stu-id="abc8b-103">Imports a public/private key pair into a container.</span></span>  
+# <a name="iclrstrongnamestrongnamekeyinstall-method"></a><span data-ttu-id="724f8-102">Método ICLRStrongName::StrongNameKeyInstall</span><span class="sxs-lookup"><span data-stu-id="724f8-102">ICLRStrongName::StrongNameKeyInstall Method</span></span>
+<span data-ttu-id="724f8-103">Importa um par de chaves públicas/privadas em um contêiner.</span><span class="sxs-lookup"><span data-stu-id="724f8-103">Imports a public/private key pair into a container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abc8b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="abc8b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="724f8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="724f8-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameKeyInstall (  
@@ -37,32 +37,32 @@ HRESULT StrongNameKeyInstall (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="abc8b-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="abc8b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="724f8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="724f8-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="abc8b-106">[in] O nome do contêiner de chave.</span><span class="sxs-lookup"><span data-stu-id="abc8b-106">[in] The name of the key container.</span></span> <span data-ttu-id="abc8b-107">`wszKeyContainer` deve ser uma cadeia de caracteres não vazia.</span><span class="sxs-lookup"><span data-stu-id="abc8b-107">`wszKeyContainer` must be a non-empty string.</span></span>  
+ <span data-ttu-id="724f8-106">[in] O nome do contêiner de chave.</span><span class="sxs-lookup"><span data-stu-id="724f8-106">[in] The name of the key container.</span></span> <span data-ttu-id="724f8-107">`wszKeyContainer` deve ser uma cadeia de caracteres não vazia.</span><span class="sxs-lookup"><span data-stu-id="724f8-107">`wszKeyContainer` must be a non-empty string.</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="abc8b-108">[in] O par de chaves binário.</span><span class="sxs-lookup"><span data-stu-id="abc8b-108">[in] The binary key pair.</span></span>  
+ <span data-ttu-id="724f8-108">[in] O par de chaves binário.</span><span class="sxs-lookup"><span data-stu-id="724f8-108">[in] The binary key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="abc8b-109">[in] O tamanho, em bytes, do `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="abc8b-109">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="724f8-109">[in] O tamanho, em bytes, do `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="724f8-109">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="abc8b-110">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="abc8b-110">Return Value</span></span>  
- <span data-ttu-id="abc8b-111">`S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).</span><span class="sxs-lookup"><span data-stu-id="abc8b-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="724f8-110">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="724f8-110">Return Value</span></span>  
+ <span data-ttu-id="724f8-111">`S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).</span><span class="sxs-lookup"><span data-stu-id="724f8-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="abc8b-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="abc8b-112">Remarks</span></span>  
- <span data-ttu-id="abc8b-113">Use o [iclrstrongname:: Strongnamekeydelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) método para excluir o contêiner de chave.</span><span class="sxs-lookup"><span data-stu-id="abc8b-113">Use the [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) method to delete the key container.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="724f8-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="724f8-112">Remarks</span></span>  
+ <span data-ttu-id="724f8-113">Use o [iclrstrongname:: Strongnamekeydelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) método para excluir o contêiner de chave.</span><span class="sxs-lookup"><span data-stu-id="724f8-113">Use the [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) method to delete the key container.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="abc8b-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="abc8b-114">Requirements</span></span>  
- <span data-ttu-id="abc8b-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="abc8b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="724f8-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="724f8-114">Requirements</span></span>  
+ <span data-ttu-id="724f8-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="724f8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="abc8b-116">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="abc8b-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="724f8-116">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="724f8-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="abc8b-117">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="abc8b-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="724f8-117">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="724f8-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="abc8b-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abc8b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="724f8-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="724f8-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abc8b-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="abc8b-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="724f8-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="724f8-119">See also</span></span>
 
-- [<span data-ttu-id="abc8b-120">Método StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="abc8b-120">StrongNameKeyDelete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
-- [<span data-ttu-id="abc8b-121">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="abc8b-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="724f8-120">Método StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="724f8-120">StrongNameKeyDelete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [<span data-ttu-id="724f8-121">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="724f8-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

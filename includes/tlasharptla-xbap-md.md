@@ -1,1 +1,9 @@
-<span data-ttu-id="f8019-101">XBAP (aplicativo de navegação XAML)</span><span class="sxs-lookup"><span data-stu-id="f8019-101">XAML browser application (XBAP)</span></span>
+---
+ms.openlocfilehash: 0a4c14c623348422541327c6a6b0e10b24862695
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696456"
+---
+<span data-ttu-id="39574-101">XBAP (aplicativo de navegação XAML)</span><span class="sxs-lookup"><span data-stu-id="39574-101">XAML browser application (XBAP)</span></span>

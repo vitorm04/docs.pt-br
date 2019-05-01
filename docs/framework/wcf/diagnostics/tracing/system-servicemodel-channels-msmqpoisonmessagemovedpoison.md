@@ -3,20 +3,20 @@ title: System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison
 ms.date: 03/30/2017
 ms.assetid: d5587606-f2f3-46f8-9e76-cb8ad83088bd
 ms.openlocfilehash: 35240208c749dde5658c8028d87925869fb72b9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997406"
 ---
-# <a name="systemservicemodelchannelsmsmqpoisonmessagemovedpoison"></a><span data-ttu-id="f1774-102">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span><span class="sxs-lookup"><span data-stu-id="f1774-102">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span></span>
-<span data-ttu-id="f1774-103">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span><span class="sxs-lookup"><span data-stu-id="f1774-103">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span></span>  
+# <a name="systemservicemodelchannelsmsmqpoisonmessagemovedpoison"></a><span data-ttu-id="dffab-102">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span><span class="sxs-lookup"><span data-stu-id="dffab-102">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span></span>
+<span data-ttu-id="dffab-103">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span><span class="sxs-lookup"><span data-stu-id="dffab-103">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f1774-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="f1774-104">Description</span></span>  
- <span data-ttu-id="f1774-105">Mensagens suspeitas é movido para a subfila suspeita.</span><span class="sxs-lookup"><span data-stu-id="f1774-105">Poison message moved to the poison sub-queue.</span></span>  
+## <a name="description"></a><span data-ttu-id="dffab-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="dffab-104">Description</span></span>  
+ <span data-ttu-id="dffab-105">Mensagens suspeitas é movido para a subfila suspeita.</span><span class="sxs-lookup"><span data-stu-id="dffab-105">Poison message moved to the poison sub-queue.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1774-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f1774-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dffab-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dffab-106">See also</span></span>
 
-- [<span data-ttu-id="f1774-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="f1774-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="f1774-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="f1774-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="f1774-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="f1774-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="dffab-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="dffab-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="dffab-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="dffab-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="dffab-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="dffab-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
