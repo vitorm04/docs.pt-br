@@ -3,25 +3,25 @@ title: System.ServiceModel.Channels.MsmqMessageDropped
 ms.date: 03/30/2017
 ms.assetid: 8b6e644d-fa68-4be7-abe9-3659671a37c1
 ms.openlocfilehash: 3fa5ec62c5e8ac83f3f81fb406499b7e596b3dac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969501"
 ---
-# <a name="systemservicemodelchannelsmsmqmessagedropped"></a><span data-ttu-id="8b6c2-102">System.ServiceModel.Channels.MsmqMessageDropped</span><span class="sxs-lookup"><span data-stu-id="8b6c2-102">System.ServiceModel.Channels.MsmqMessageDropped</span></span>
-<span data-ttu-id="8b6c2-103">A mensagem descartada do MSMQ.</span><span class="sxs-lookup"><span data-stu-id="8b6c2-103">MSMQ dropped the message.</span></span>  
+# <a name="systemservicemodelchannelsmsmqmessagedropped"></a><span data-ttu-id="0b5b0-102">System.ServiceModel.Channels.MsmqMessageDropped</span><span class="sxs-lookup"><span data-stu-id="0b5b0-102">System.ServiceModel.Channels.MsmqMessageDropped</span></span>
+<span data-ttu-id="0b5b0-103">A mensagem descartada do MSMQ.</span><span class="sxs-lookup"><span data-stu-id="0b5b0-103">MSMQ dropped the message.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8b6c2-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="8b6c2-104">Description</span></span>  
- <span data-ttu-id="8b6c2-105">O rastreamento indica que uma mensagem MSMQ foi descartada.</span><span class="sxs-lookup"><span data-stu-id="8b6c2-105">The trace indicates that an MSMQ message was dropped.</span></span> <span data-ttu-id="8b6c2-106">Mensagens MSMQ podem ser descartadas quando o Windows Communication Foundation (WCF) (usado com o NetMsmqBinding ou MsmqIntegrationBinding) não pode processá-los.</span><span class="sxs-lookup"><span data-stu-id="8b6c2-106">MSMQ messages can be dropped when Windows Communication Foundation (WCF) (used with either the NetMsmqBinding or MsmqIntegrationBinding) is unable to process them.</span></span> <span data-ttu-id="8b6c2-107">Essas mensagens são denominadas mensagens suspeitas.</span><span class="sxs-lookup"><span data-stu-id="8b6c2-107">Such messages are referred to as poison messages.</span></span>  
+## <a name="description"></a><span data-ttu-id="0b5b0-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="0b5b0-104">Description</span></span>  
+ <span data-ttu-id="0b5b0-105">O rastreamento indica que uma mensagem MSMQ foi descartada.</span><span class="sxs-lookup"><span data-stu-id="0b5b0-105">The trace indicates that an MSMQ message was dropped.</span></span> <span data-ttu-id="0b5b0-106">Mensagens MSMQ podem ser descartadas quando o Windows Communication Foundation (WCF) (usado com o NetMsmqBinding ou MsmqIntegrationBinding) não pode processá-los.</span><span class="sxs-lookup"><span data-stu-id="0b5b0-106">MSMQ messages can be dropped when Windows Communication Foundation (WCF) (used with either the NetMsmqBinding or MsmqIntegrationBinding) is unable to process them.</span></span> <span data-ttu-id="0b5b0-107">Essas mensagens são denominadas mensagens suspeitas.</span><span class="sxs-lookup"><span data-stu-id="0b5b0-107">Such messages are referred to as poison messages.</span></span>  
   
- <span data-ttu-id="8b6c2-108">Uma mensagem suspeita será removida quando o `ReceiveErrorHandling` sobre o NetMsmqBinding ou MsmqIntegrationBinding estiver definida como `Drop`.</span><span class="sxs-lookup"><span data-stu-id="8b6c2-108">A poison message is dropped when the `ReceiveErrorHandling` property on the NetMsmqBinding or MsmqIntegrationBinding is set to `Drop`.</span></span> <span data-ttu-id="8b6c2-109">Uma mensagem descartada é removida da fila e não é recuperável.</span><span class="sxs-lookup"><span data-stu-id="8b6c2-109">A dropped message is removed from the queue and is no longer recoverable.</span></span>  
+ <span data-ttu-id="0b5b0-108">Uma mensagem suspeita será removida quando o `ReceiveErrorHandling` sobre o NetMsmqBinding ou MsmqIntegrationBinding estiver definida como `Drop`.</span><span class="sxs-lookup"><span data-stu-id="0b5b0-108">A poison message is dropped when the `ReceiveErrorHandling` property on the NetMsmqBinding or MsmqIntegrationBinding is set to `Drop`.</span></span> <span data-ttu-id="0b5b0-109">Uma mensagem descartada é removida da fila e não é recuperável.</span><span class="sxs-lookup"><span data-stu-id="0b5b0-109">A dropped message is removed from the queue and is no longer recoverable.</span></span>  
   
- <span data-ttu-id="8b6c2-110">Ver [tratamento de mensagens suspeitas](https://go.microsoft.com/fwlink/?LinkID=99546) para obter mais detalhes sobre quando as mensagens se tornarão suspeitas e como configurar seu serviço para tratá-las adequadamente.</span><span class="sxs-lookup"><span data-stu-id="8b6c2-110">See [Poison-Message Handling](https://go.microsoft.com/fwlink/?LinkID=99546) for more details on when messages become poison and how to configure your service to handle them appropriately.</span></span>  
+ <span data-ttu-id="0b5b0-110">Ver [tratamento de mensagens suspeitas](https://go.microsoft.com/fwlink/?LinkID=99546) para obter mais detalhes sobre quando as mensagens se tornarão suspeitas e como configurar seu serviço para tratá-las adequadamente.</span><span class="sxs-lookup"><span data-stu-id="0b5b0-110">See [Poison-Message Handling](https://go.microsoft.com/fwlink/?LinkID=99546) for more details on when messages become poison and how to configure your service to handle them appropriately.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b6c2-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8b6c2-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b5b0-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0b5b0-111">See also</span></span>
 
-- [<span data-ttu-id="8b6c2-112">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="8b6c2-112">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="8b6c2-113">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="8b6c2-113">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="8b6c2-114">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="8b6c2-114">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [<span data-ttu-id="8b6c2-115">Manipulação de mensagens suspeitas</span><span class="sxs-lookup"><span data-stu-id="8b6c2-115">Poison-Message Handling</span></span>](https://go.microsoft.com/fwlink/?LinkID=99546)
+- [<span data-ttu-id="0b5b0-112">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="0b5b0-112">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="0b5b0-113">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="0b5b0-113">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="0b5b0-114">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="0b5b0-114">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="0b5b0-115">Manipulação de mensagens suspeitas</span><span class="sxs-lookup"><span data-stu-id="0b5b0-115">Poison-Message Handling</span></span>](https://go.microsoft.com/fwlink/?LinkID=99546)

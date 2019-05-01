@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
 ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008170"
 ---
-# <a name="shapes"></a><span data-ttu-id="fbdf2-102">Formas</span><span class="sxs-lookup"><span data-stu-id="fbdf2-102">Shapes</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="fbdf2-103">fornece suporte para desenhar formas básicas usando o <xref:System.Windows.Shapes.Shape> classe.</span><span class="sxs-lookup"><span data-stu-id="fbdf2-103">provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="fbdf2-104">Objetos de forma derivam <xref:System.Windows.FrameworkElement> e como tal, participam do sistema de layout e podem ser desenhados simplesmente usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fbdf2-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
+# <a name="shapes"></a><span data-ttu-id="309de-102">Formas</span><span class="sxs-lookup"><span data-stu-id="309de-102">Shapes</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="309de-103">fornece suporte para desenhar formas básicas usando o <xref:System.Windows.Shapes.Shape> classe.</span><span class="sxs-lookup"><span data-stu-id="309de-103">provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="309de-104">Objetos de forma derivam <xref:System.Windows.FrameworkElement> e como tal, participam do sistema de layout e podem ser desenhados simplesmente usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="309de-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fbdf2-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="fbdf2-105">In This Section</span></span>  
- [<span data-ttu-id="fbdf2-106">Visão geral de formas e desenho básico no WPF</span><span class="sxs-lookup"><span data-stu-id="fbdf2-106">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="fbdf2-107">Tópicos explicativos </span><span class="sxs-lookup"><span data-stu-id="fbdf2-107">How-to Topics</span></span>](shapes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="309de-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="309de-105">In This Section</span></span>  
+ [<span data-ttu-id="309de-106">Visão geral de formas e desenho básico no WPF</span><span class="sxs-lookup"><span data-stu-id="309de-106">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="309de-107">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="309de-107">How-to Topics</span></span>](shapes-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="fbdf2-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fbdf2-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="309de-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="309de-108">See also</span></span>
 
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="fbdf2-109">Elementos gráficos e geração de imagens 2D</span><span class="sxs-lookup"><span data-stu-id="fbdf2-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="fbdf2-110">Gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="fbdf2-110">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="309de-109">Elementos gráficos e geração de imagens 2D</span><span class="sxs-lookup"><span data-stu-id="309de-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="309de-110">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="309de-110">Graphics and Multimedia</span></span>](index.md)

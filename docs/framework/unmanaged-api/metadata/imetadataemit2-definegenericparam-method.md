@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: de8547ed0ee83bafe4612bdcd62607fc94fb3f69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043791"
 ---
-# <a name="imetadataemit2definegenericparam-method"></a><span data-ttu-id="c8f64-102">Método IMetaDataEmit2::DefineGenericParam</span><span class="sxs-lookup"><span data-stu-id="c8f64-102">IMetaDataEmit2::DefineGenericParam Method</span></span>
-<span data-ttu-id="c8f64-103">Cria uma definição para um parâmetro de tipo genérico e obtém um token para esse parâmetro de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="c8f64-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span></span>  
+# <a name="imetadataemit2definegenericparam-method"></a><span data-ttu-id="bb239-102">Método IMetaDataEmit2::DefineGenericParam</span><span class="sxs-lookup"><span data-stu-id="bb239-102">IMetaDataEmit2::DefineGenericParam Method</span></span>
+<span data-ttu-id="bb239-103">Cria uma definição para um parâmetro de tipo genérico e obtém um token para esse parâmetro de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="bb239-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8f64-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c8f64-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb239-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bb239-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineGenericParam (   
@@ -41,38 +41,38 @@ HRESULT DefineGenericParam (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c8f64-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c8f64-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bb239-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="bb239-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="c8f64-106">[in] Uma `mdTypeDef` ou `mdMethodDef` token que representa o método ou construtor para o qual definir um parâmetro genérico.</span><span class="sxs-lookup"><span data-stu-id="c8f64-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span></span>  
+ <span data-ttu-id="bb239-106">[in] Uma `mdTypeDef` ou `mdMethodDef` token que representa o método ou construtor para o qual definir um parâmetro genérico.</span><span class="sxs-lookup"><span data-stu-id="bb239-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="c8f64-107">[in] O índice do parâmetro genérico.</span><span class="sxs-lookup"><span data-stu-id="c8f64-107">[in] The index of the generic parameter.</span></span>  
+ <span data-ttu-id="bb239-107">[in] O índice do parâmetro genérico.</span><span class="sxs-lookup"><span data-stu-id="bb239-107">[in] The index of the generic parameter.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="c8f64-108">[in] Um valor igual a [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeração que descreve o tipo para o parâmetro genérico.</span><span class="sxs-lookup"><span data-stu-id="c8f64-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
+ <span data-ttu-id="bb239-108">[in] Um valor igual a [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeração que descreve o tipo para o parâmetro genérico.</span><span class="sxs-lookup"><span data-stu-id="bb239-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
   
  `szname`  
- <span data-ttu-id="c8f64-109">[in] O nome do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="c8f64-109">[in] The name of the parameter.</span></span>  
+ <span data-ttu-id="bb239-109">[in] O nome do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="bb239-109">[in] The name of the parameter.</span></span>  
   
  `reserved`  
- <span data-ttu-id="c8f64-110">[in] Esse parâmetro é reservado para extensibilidade futura.</span><span class="sxs-lookup"><span data-stu-id="c8f64-110">[in] This parameter is reserved for future extensibility.</span></span>  
+ <span data-ttu-id="bb239-110">[in] Esse parâmetro é reservado para extensibilidade futura.</span><span class="sxs-lookup"><span data-stu-id="bb239-110">[in] This parameter is reserved for future extensibility.</span></span>  
   
  `rtkConstraints`  
- <span data-ttu-id="c8f64-111">[in] Uma matriz terminada em zero de restrições de tipo.</span><span class="sxs-lookup"><span data-stu-id="c8f64-111">[in] A zero-terminated array of type constraints.</span></span> <span data-ttu-id="c8f64-112">Membros da matriz devem ser um `mdTypeDef`, `mdTypeRef`, ou `mdTypeSpec` token de metadados.</span><span class="sxs-lookup"><span data-stu-id="c8f64-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
+ <span data-ttu-id="bb239-111">[in] Uma matriz terminada em zero de restrições de tipo.</span><span class="sxs-lookup"><span data-stu-id="bb239-111">[in] A zero-terminated array of type constraints.</span></span> <span data-ttu-id="bb239-112">Membros da matriz devem ser um `mdTypeDef`, `mdTypeRef`, ou `mdTypeSpec` token de metadados.</span><span class="sxs-lookup"><span data-stu-id="bb239-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
   
  `pgp`  
- <span data-ttu-id="c8f64-113">[out] Um token que representa o parâmetro genérico.</span><span class="sxs-lookup"><span data-stu-id="c8f64-113">[out] A token that represents the generic parameter.</span></span>  
+ <span data-ttu-id="bb239-113">[out] Um token que representa o parâmetro genérico.</span><span class="sxs-lookup"><span data-stu-id="bb239-113">[out] A token that represents the generic parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c8f64-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c8f64-114">Requirements</span></span>  
- <span data-ttu-id="c8f64-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c8f64-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb239-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bb239-114">Requirements</span></span>  
+ <span data-ttu-id="bb239-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb239-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c8f64-116">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c8f64-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bb239-116">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bb239-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c8f64-117">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c8f64-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bb239-117">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="bb239-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c8f64-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8f64-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bb239-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb239-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8f64-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c8f64-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb239-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bb239-119">See also</span></span>
 
-- [<span data-ttu-id="c8f64-120">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="c8f64-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="c8f64-121">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="c8f64-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="bb239-120">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="bb239-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="bb239-121">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="bb239-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

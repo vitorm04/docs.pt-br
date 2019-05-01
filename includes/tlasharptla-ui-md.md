@@ -1,1 +1,9 @@
-<span data-ttu-id="70354-101">UI (interface do usuário)</span><span class="sxs-lookup"><span data-stu-id="70354-101">user interface (UI)</span></span>
+---
+ms.openlocfilehash: dd951d4c7ca140bc5e7767d5cdcc753c435c2b70
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050605"
+---
+<span data-ttu-id="8658c-101">UI (interface do usuário)</span><span class="sxs-lookup"><span data-stu-id="8658c-101">user interface (UI)</span></span>

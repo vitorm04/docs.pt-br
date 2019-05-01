@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36070d5374a11daf4b7800481c86d61057989631
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994442"
 ---
-# <a name="icordebugprocessgetthread-method"></a><span data-ttu-id="c2b4f-102">Método ICorDebugProcess::GetThread</span><span class="sxs-lookup"><span data-stu-id="c2b4f-102">ICorDebugProcess::GetThread Method</span></span>
-<span data-ttu-id="c2b4f-103">Obtém o thread desse processador que tem a ID do thread de sistema operacional especificado (SO).</span><span class="sxs-lookup"><span data-stu-id="c2b4f-103">Gets this process's thread that has the specified operating system (OS) thread ID.</span></span>  
+# <a name="icordebugprocessgetthread-method"></a><span data-ttu-id="3bcb2-102">Método ICorDebugProcess::GetThread</span><span class="sxs-lookup"><span data-stu-id="3bcb2-102">ICorDebugProcess::GetThread Method</span></span>
+<span data-ttu-id="3bcb2-103">Obtém o thread desse processador que tem a ID do thread de sistema operacional especificado (SO).</span><span class="sxs-lookup"><span data-stu-id="3bcb2-103">Gets this process's thread that has the specified operating system (OS) thread ID.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2b4f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c2b4f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3bcb2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3bcb2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThread(  
@@ -35,18 +35,18 @@ HRESULT GetThread(
     [out] ICorDebugThread **ppThread);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c2b4f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c2b4f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3bcb2-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3bcb2-105">Parameters</span></span>  
  `dwThreadId`  
- <span data-ttu-id="c2b4f-106">[in] O sistema operacional do thread ID do thread a ser recuperado.</span><span class="sxs-lookup"><span data-stu-id="c2b4f-106">[in] The OS thread ID of the thread to be retrieved.</span></span>  
+ <span data-ttu-id="3bcb2-106">[in] O sistema operacional do thread ID do thread a ser recuperado.</span><span class="sxs-lookup"><span data-stu-id="3bcb2-106">[in] The OS thread ID of the thread to be retrieved.</span></span>  
   
  `ppThread`  
- <span data-ttu-id="c2b4f-107">[out] Um ponteiro para o endereço de um objeto de ICorDebugThread que representa o thread.</span><span class="sxs-lookup"><span data-stu-id="c2b4f-107">[out] A pointer to the address of an ICorDebugThread object that represents the thread.</span></span>  
+ <span data-ttu-id="3bcb2-107">[out] Um ponteiro para o endereço de um objeto de ICorDebugThread que representa o thread.</span><span class="sxs-lookup"><span data-stu-id="3bcb2-107">[out] A pointer to the address of an ICorDebugThread object that represents the thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c2b4f-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c2b4f-108">Requirements</span></span>  
- <span data-ttu-id="c2b4f-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2b4f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3bcb2-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3bcb2-108">Requirements</span></span>  
+ <span data-ttu-id="3bcb2-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3bcb2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2b4f-110">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c2b4f-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3bcb2-110">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3bcb2-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c2b4f-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c2b4f-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3bcb2-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3bcb2-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c2b4f-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2b4f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="3bcb2-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3bcb2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

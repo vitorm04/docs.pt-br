@@ -1,1 +1,9 @@
-<span data-ttu-id="13eed-101">ActiveX</span><span class="sxs-lookup"><span data-stu-id="13eed-101">ActiveX</span></span>
+---
+ms.openlocfilehash: 60ecff1c0ed471641505601a5cd214b89f9ae3ef
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699212"
+---
+<span data-ttu-id="5108e-101">ActiveX</span><span class="sxs-lookup"><span data-stu-id="5108e-101">ActiveX</span></span>
