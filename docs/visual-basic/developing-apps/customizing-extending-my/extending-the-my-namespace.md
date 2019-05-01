@@ -9,32 +9,32 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
 ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014213"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Estendendo o namespace My no Visual Basic
 O `My` namespace no Visual Basic expõe propriedades e métodos que permitem que você facilmente aproveitar o poder do .NET Framework. O `My` namespace simplifica problemas comuns de programação, reduzindo frequentemente uma tarefa difícil para uma única linha de código. Além disso, o `My` namespace é totalmente extensível para que você possa personalizar o comportamento de `My` e adicionar novos serviços para sua hierarquia para se adaptar às necessidades do aplicativo específico. Este tópico descreve como personalizar membros existentes da `My` namespace e como adicionar suas próprias classes personalizadas para o `My` namespace.  
   
  **Conteúdo do tópico**  
   
--   [Personalizando o Meu Namespace membros existentes](#customizing)  
+- [Personalizando o Meu Namespace membros existentes](#customizing)  
   
--   [Adicionando membros a meus objetos](#addingtoobjects)  
+- [Adicionando membros a meus objetos](#addingtoobjects)  
   
--   [Adicionando objetos personalizados para o Meu Namespace](#addingcustom)  
+- [Adicionando objetos personalizados para o Meu Namespace](#addingcustom)  
   
--   [A adição de membros para o Meu Namespace](#addingtonamespace)  
+- [A adição de membros para o Meu Namespace](#addingtonamespace)  
   
--   [Adicionando eventos a objetos My personalizados](#addingevents)  
+- [Adicionando eventos a objetos My personalizados](#addingevents)  
   
--   [Diretrizes de design](#design)  
+- [Diretrizes de design](#design)  
   
--   [Criando bibliotecas de classes para meu](#designing)  
+- [Criando bibliotecas de classes para meu](#designing)  
   
--   [Empacotando e implantando extensões](#packaging)  
+- [Empacotando e implantando extensões](#packaging)  
   
 ## <a name="customizing"></a> Personalizando o Meu Namespace membros existentes  
  O `My` namespace em Visual Basic expõe usados com frequência as informações sobre seu aplicativo, seu computador e muito mais. Para obter uma lista completa dos objetos na `My` namespace, consulte [referência My](../../../visual-basic/language-reference/keywords/my-reference.md). Talvez você precise personalizar membros existentes do `My` namespace para que eles melhor atender às necessidades do seu aplicativo. Qualquer propriedade de um objeto no `My` namespace que não é somente leitura pode ser definido como um valor personalizado.  
@@ -76,22 +76,22 @@ O `My` namespace no Visual Basic expõe propriedades e métodos que permitem que
 ## <a name="design"></a> Diretrizes de design  
  Ao desenvolver extensões para o `My` namespace, use as seguintes diretrizes para ajudar a minimizar os custos de manutenção de seus componentes de extensão.  
   
--   **Inclua apenas a lógica da extensão.** A lógica incluída na `My` extensão do namespace deve incluir somente o código que é necessário para expor a funcionalidade necessária no `My` namespace. Como sua extensão será residem em projetos do usuário como código-fonte, atualizar o componente de extensão tem um custo de manutenção elevados e deve ser evitado se possível.  
+- **Inclua apenas a lógica da extensão.** A lógica incluída na `My` extensão do namespace deve incluir somente o código que é necessário para expor a funcionalidade necessária no `My` namespace. Como sua extensão será residem em projetos do usuário como código-fonte, atualizar o componente de extensão tem um custo de manutenção elevados e deve ser evitado se possível.  
   
--   **Minimize as suposições do projeto.** Quando você cria suas extensões do `My` namespace, não pressuponha que um conjunto de referências, imports de nível de projeto ou configurações de compilador específica (por exemplo, `Option Strict` off). Em vez disso, minimizar as dependências e qualificar totalmente todas as referências de tipo usando o `Global` palavra-chave. Além disso, certifique-se de que a extensão é compilado com `Option Strict` ativado para minimizar os erros na extensão.  
+- **Minimize as suposições do projeto.** Quando você cria suas extensões do `My` namespace, não pressuponha que um conjunto de referências, imports de nível de projeto ou configurações de compilador específica (por exemplo, `Option Strict` off). Em vez disso, minimizar as dependências e qualificar totalmente todas as referências de tipo usando o `Global` palavra-chave. Além disso, certifique-se de que a extensão é compilado com `Option Strict` ativado para minimizar os erros na extensão.  
   
--   **Isole o código de extensão.** Colocar o código em um único arquivo torna sua extensão facilmente implantáveis como um modelo de item do Visual Studio. Para obter mais informações, consulte "Extensões de empacotamento e implantação" mais adiante neste tópico. Colocando todo o `My` código de extensão do namespace em um único arquivo ou uma pasta separada em um projeto também ajudará os usuários localizar o `My` extensão do namespace.  
+- **Isole o código de extensão.** Colocar o código em um único arquivo torna sua extensão facilmente implantáveis como um modelo de item do Visual Studio. Para obter mais informações, consulte "Extensões de empacotamento e implantação" mais adiante neste tópico. Colocando todo o `My` código de extensão do namespace em um único arquivo ou uma pasta separada em um projeto também ajudará os usuários localizar o `My` extensão do namespace.  
   
 ## <a name="designing"></a> Criando bibliotecas de classes para meu  
  Como é o caso com a maioria dos modelos de objeto, alguns padrões de design funcionam bem no `My` namespace e outros não. Ao projetar uma extensão para o `My` namespace, considere os seguintes princípios:  
   
--   **Métodos sem monitoração de estado.** Métodos de `My` namespace deve fornecer uma solução completa para uma tarefa específica. Certifique-se de que os valores de parâmetro são passados para o método fornecem todas as entradas necessárias para concluir uma tarefa específica. Evite a criação de métodos que se baseiam no estado anterior, como conexões abertas para recursos.  
+- **Métodos sem monitoração de estado.** Métodos de `My` namespace deve fornecer uma solução completa para uma tarefa específica. Certifique-se de que os valores de parâmetro são passados para o método fornecem todas as entradas necessárias para concluir uma tarefa específica. Evite a criação de métodos que se baseiam no estado anterior, como conexões abertas para recursos.  
   
--   **Instâncias globais.** O único estado que é mantido no `My` namespace é global para o projeto. Por exemplo, `My.Application.Info` encapsula o estado é compartilhado em todo o aplicativo.  
+- **Instâncias globais.** O único estado que é mantido no `My` namespace é global para o projeto. Por exemplo, `My.Application.Info` encapsula o estado é compartilhado em todo o aplicativo.  
   
--   **Tipos de parâmetro simples.** Manter as coisas simples, evitando tipos complexos de parâmetro. Em vez disso, crie métodos não tomem nenhum parâmetro de entrada ou que levam tipos simples de entrada como cadeias de caracteres, tipos primitivos e assim por diante.  
+- **Tipos de parâmetro simples.** Manter as coisas simples, evitando tipos complexos de parâmetro. Em vez disso, crie métodos não tomem nenhum parâmetro de entrada ou que levam tipos simples de entrada como cadeias de caracteres, tipos primitivos e assim por diante.  
   
--   **Métodos de fábrica.** Alguns tipos são necessariamente difíceis de criar uma instância. Fornecer métodos de fábrica como extensões para o `My` namespace permite que você mais fácil descobrir e consumir tipos que se enquadram nessa categoria. Um exemplo de um método de fábrica que funciona bem é `My.Computer.FileSystem.OpenTextFileReader`. Há vários tipos de fluxo disponíveis no .NET Framework. Especificando arquivos de texto especificamente, o `OpenTextFileReader` ajuda o usuário a entender o fluxo a ser usado.  
+- **Métodos de fábrica.** Alguns tipos são necessariamente difíceis de criar uma instância. Fornecer métodos de fábrica como extensões para o `My` namespace permite que você mais fácil descobrir e consumir tipos que se enquadram nessa categoria. Um exemplo de um método de fábrica que funciona bem é `My.Computer.FileSystem.OpenTextFileReader`. Há vários tipos de fluxo disponíveis no .NET Framework. Especificando arquivos de texto especificamente, o `OpenTextFileReader` ajuda o usuário a entender o fluxo a ser usado.  
   
  Essas diretrizes não eliminam princípios gerais de design para bibliotecas de classes. Em vez disso, eles são recomendações que são otimizadas para os desenvolvedores que estão usando o Visual Basic e o `My` namespace. Para conhecer os princípios gerais de design para a criação de bibliotecas de classes, consulte [diretrizes de Design do Framework](../../../standard/design-guidelines/index.md).  
   

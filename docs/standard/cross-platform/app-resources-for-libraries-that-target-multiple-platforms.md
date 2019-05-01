@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055011"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Recursos do aplicativo para bibliotecas direcionadas a várias plataformas
 Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo para garantir que os recursos em suas bibliotecas de classe podem ser acessados em várias plataformas de projeto. Esse tipo de projeto está disponível no Visual Studio 2012 e tem como alvo o subconjunto portátil da biblioteca de classes do .NET Framework. Usar um [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garante que a biblioteca possa ser acessada de aplicativos da área de trabalho, Silverlight, Windows Phone e [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -35,7 +35,7 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
 
  O projeto do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] inclui os quatro membros <xref:System.Resources.ResourceManager> listados na tabela a seguir. Esses construtores e métodos permitem que você crie uma instância de um objeto <xref:System.Resources.ResourceManager> e recupere recursos de cadeia de caracteres.
 
-|Membro do `ResourceManager`|Descrição|
+|`ResourceManager` Membro|Descrição|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Cria uma instância de <xref:System.Resources.ResourceManager> para acessar o arquivo de recurso nomeado encontrado no assembly especificado.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Cria uma instância de <xref:System.Resources.ResourceManager> que corresponde ao tipo especificado.|

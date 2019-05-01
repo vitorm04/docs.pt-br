@@ -3,11 +3,11 @@ title: Usando a atividade de picareta
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004725"
 ---
 # <a name="using-the-pick-activity"></a>Usando a atividade de picareta
 Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statements.Pick> .
@@ -24,17 +24,17 @@ Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statemen
 
  Versão de designer o Designer de fluxo de trabalho de exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
 
--   Program.cs : Inclui o `Main` função que executa o fluxo de trabalho de exemplo.
+- Program.cs : Inclui o `Main` função que executa o fluxo de trabalho de exemplo.
 
--   ReadString.cs: Uma atividade personalizado que lê algumas entradas do console.
+- ReadString.cs: Uma atividade personalizado que lê algumas entradas do console.
 
--   Sequence1.xaml: Um fluxo de trabalho criado usando o designer que usa a picareta.
+- Sequence1.xaml: Um fluxo de trabalho criado usando o designer que usa a picareta.
 
  O fluxo de trabalho codificado a versão codificado de exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
 
--   Program.cs : Inclui o `Main` função que executa o fluxo de trabalho de exemplo.
+- Program.cs : Inclui o `Main` função que executa o fluxo de trabalho de exemplo.
 
--   ReadString.cs: Uma atividade personalizado que lê algumas entradas do console.
+- ReadString.cs: Uma atividade personalizado que lê algumas entradas do console.
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 

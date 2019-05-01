@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
 ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033508"
 ---
 # <a name="local-method-calls"></a>Chamadas de método locais
 Um chamada de método local é uma chamada que é executada dentro do modelo do objeto. Um chamada de método remoto é uma chamada que o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte no SQL e passa para o mecanismo de banco de dados para execução. Chamadas de método locais são necessários quando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não é possível converter a chamada no SQL. Caso contrário, um <xref:System.InvalidOperationException> será gerado.  

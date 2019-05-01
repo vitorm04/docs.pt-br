@@ -6,8 +6,8 @@ ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050760"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Mensagens em fila da solução de problemas
 Esta seção contém perguntas comuns e solução de problemas de ajuda para usar as filas no Windows Communication Foundation (WCF).  
@@ -29,11 +29,11 @@ Esta seção contém perguntas comuns e solução de problemas de ajuda para usa
   
  **R:** Os seguintes recursos estão disponíveis no MSMQ 4.0, mas não no MSMQ 3.0:  
   
--   Fila de mensagens mortas personalizada tem suporte apenas no MSMQ 4.0.  
+- Fila de mensagens mortas personalizada tem suporte apenas no MSMQ 4.0.  
   
--   O MSMQ 3.0 e 4.0 tratar mensagens suspeitas de maneira diferente.  
+- O MSMQ 3.0 e 4.0 tratar mensagens suspeitas de maneira diferente.  
   
--   Somente o MSMQ 4.0 oferece suporte à leitura transacionada remota.  
+- Somente o MSMQ 4.0 oferece suporte à leitura transacionada remota.  
   
  Para obter mais informações, consulte [diferenças nos recursos de enfileiramento de mensagens no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
@@ -60,19 +60,19 @@ Esta seção contém perguntas comuns e solução de problemas de ajuda para usa
   
  **R:** Para determinar a resposta, trabalhe com a lista de verificação a seguir:  
   
--   Verifique se os requisitos de fila transacional são compatíveis com as garantias especificadas. Observe os seguintes princípios:  
+- Verifique se os requisitos de fila transacional são compatíveis com as garantias especificadas. Observe os seguintes princípios:  
   
-    -   Você pode enviar mensagens duráveis (datagramas e sessões) com "exatamente uma vez" garantias (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) apenas para uma fila transacional.  
+    - Você pode enviar mensagens duráveis (datagramas e sessões) com "exatamente uma vez" garantias (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) apenas para uma fila transacional.  
   
-    -   Você pode enviar sessões somente com garantias de "exatamente uma vez".  
+    - Você pode enviar sessões somente com garantias de "exatamente uma vez".  
   
-    -   Uma transação é necessária para receber mensagens em uma sessão de uma fila transacional.  
+    - Uma transação é necessária para receber mensagens em uma sessão de uma fila transacional.  
   
-    -   Você pode enviar ou receber duráveis ou voláteis mensagens (datagramas) com nenhuma garantia (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) somente a uma fila não transacional.  
+    - Você pode enviar ou receber duráveis ou voláteis mensagens (datagramas) com nenhuma garantia (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) somente a uma fila não transacional.  
   
--   Verificar a fila de inatividade. Se você achar que as mensagens de lá, determine por que eles não foram entregues.  
+- Verificar a fila de inatividade. Se você achar que as mensagens de lá, determine por que eles não foram entregues.  
   
--   Verifique se as filas de saída para resolver problemas ou de conectividade.  
+- Verifique se as filas de saída para resolver problemas ou de conectividade.  
   
  **P:** Eu especifiquei uma fila de inatividade personalizada, mas quando eu iniciar o aplicativo de remetente, obtenho uma exceção que a fila de inatividade não for encontrada ou o aplicativo de envio não tem permissão para a fila de inatividade. Por que isso está acontecendo?  
   
@@ -184,17 +184,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **R:** Há três possíveis razões para isso:  
   
--   Se você estiver no modo de domínio, remoto transacionado receber requer acesso de rede Microsoft Distributed Transaction coordenador (MSDTC). Você pode habilitá-lo usando **Adicionar/remover componentes**.  
+- Se você estiver no modo de domínio, remoto transacionado receber requer acesso de rede Microsoft Distributed Transaction coordenador (MSDTC). Você pode habilitá-lo usando **Adicionar/remover componentes**.  
   
      ![Captura de tela que mostra a habilitação de DTC de rede acesso.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)  
   
--   Verifique o modo de autenticação para se comunicar com o Gerenciador de transações. Se você estiver no modo de grupo de trabalho, "Nenhuma autenticação necessária" deve ser selecionada. Se você estiver no modo de domínio, em seguida, "Autenticação mútua necessária" deve ser selecionada.  
+- Verifique o modo de autenticação para se comunicar com o Gerenciador de transações. Se você estiver no modo de grupo de trabalho, "Nenhuma autenticação necessária" deve ser selecionada. Se você estiver no modo de domínio, em seguida, "Autenticação mútua necessária" deve ser selecionada.  
   
      ![Habilitando transações XA](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   Certifique-se de que o MSDTC está na lista de exceções na **Firewall de Conexão com a Internet** configurações.  
+- Certifique-se de que o MSDTC está na lista de exceções na **Firewall de Conexão com a Internet** configurações.  
   
--   Certifique-se de que você está usando [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte à leitura transacionada remota. O MSMQ em versões anteriores do Windows não oferece suporte a leitura transacionada remota.  
+- Certifique-se de que você está usando [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte à leitura transacionada remota. O MSMQ em versões anteriores do Windows não oferece suporte a leitura transacionada remota.  
   
  **P:** Quando a leitura da fila de serviço é um serviço de rede, por exemplo, em uma Web host, por que obtenho uma exceção de acesso negado é gerado durante a leitura da fila?  
   

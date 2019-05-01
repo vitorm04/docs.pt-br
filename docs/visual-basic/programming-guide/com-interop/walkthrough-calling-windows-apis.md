@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
 ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022396"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Passo a passo: Chamando APIs do Windows (Visual Basic)
 APIs do Windows são bibliotecas de vínculo dinâmico (DLLs) que fazem parte do sistema operacional Windows. Você pode usá-los para executar tarefas quando é difícil escrever procedimentos equivalentes de sua preferência. Por exemplo, o Windows fornecem uma função chamada `FlashWindowEx` que permite que você faça a barra de título para um aplicativo alternativo entre tonalidades claras e escuras.  

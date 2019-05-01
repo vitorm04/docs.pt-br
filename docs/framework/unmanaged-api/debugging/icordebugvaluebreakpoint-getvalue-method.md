@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acdfddd015013215bba9039d871837a60ead1405
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986811"
 ---
 # <a name="icordebugvaluebreakpointgetvalue-method"></a>Método ICorDebugValueBreakpoint::GetValue
 Obtém um ponteiro de interface para um objeto de "ICorDebugValue" que representa o valor do objeto em que o ponto de interrupção está definido.  

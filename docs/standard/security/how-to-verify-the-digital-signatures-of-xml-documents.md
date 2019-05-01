@@ -17,11 +17,11 @@ ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19537fa3e3e27c3446d22f1f1a8cf2faf472158e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018561"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Como: verificar as assinaturas digitais de documentos XML
 Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para verificar os dados XML assinado com uma assinatura digital. As assinaturas digitais XML (XMLDSIG) permitem que você verifique se que os dados não foi alterados depois que ele foi assinado. Para obter mais informações sobre o padrão XMLDSIG, consulte a especificação do World Wide Web Consortium (W3C) em <https://www.w3.org/TR/xmldsig-core/>.
@@ -75,9 +75,9 @@ Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace 
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Para compilar este exemplo, você precisa incluir uma referência ao `System.Security.dll`.  
+- Para compilar este exemplo, você precisa incluir uma referência ao `System.Security.dll`.  
   
--   Inclua os seguintes namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>, e <xref:System.Security.Cryptography.Xml>.  
+- Inclua os seguintes namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>, e <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Nunca armazenar ou transferir a chave privada de um par de chaves assimétricas em texto não criptografado.  Para obter mais informações sobre chaves de criptografia simétricas e assimétricas, consulte [gerando chaves para criptografia e descriptografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
 ms.openlocfilehash: b690aa78a2cf07b0db5bdd28d7d71ed4a79fbf61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032078"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>Como: Pesquisar em uma cadeia de caracteres (Visual Basic)
 Este exemplo chama o <xref:System.String.IndexOf%2A> método em um <xref:System.String> objeto para relatar o índice da primeira ocorrência de uma subcadeia de caracteres.  
@@ -22,7 +22,7 @@ Este exemplo chama o <xref:System.String.IndexOf%2A> método em um <xref:System.
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Uma `Imports` instrução que especifica o <xref:System> namespace. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Uma `Imports` instrução que especifica o <xref:System> namespace. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Programação robusta  
  O <xref:System.String.IndexOf%2A> método relata o local do primeiro caractere da primeira ocorrência da subcadeia de caracteres. O índice é baseado em 0, o que significa que o primeiro caractere de uma cadeia de caracteres tem um índice de 0.  

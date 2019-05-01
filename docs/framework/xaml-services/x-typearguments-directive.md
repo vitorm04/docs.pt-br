@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982586"
 ---
 # <a name="xtypearguments-directive"></a>Diretiva x:TypeArguments
 Passa a restrição de tipo de argumentos de um genérico para o construtor do tipo genérico.  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Usos XAML genérico do XAML 2006 e o WPF  
  Para uso do XAML 2006 e XAML que é usado para aplicativos do WPF, existem as seguintes restrições para `x:TypeArguments` e usos de tipo genérico do XAML em geral:  
   
--   Apenas o elemento raiz de um arquivo XAML pode dar suporte a um uso genérico de XAML que faz referência a um tipo genérico.  
+- Apenas o elemento raiz de um arquivo XAML pode dar suporte a um uso genérico de XAML que faz referência a um tipo genérico.  
   
--   O elemento raiz deve mapear para um tipo genérico com pelo menos um argumento de tipo. Um exemplo é <xref:System.Windows.Navigation.PageFunction%601>. As funções de página são o cenário principal para suporte ao uso de genéricos de XAML no WPF.  
+- O elemento raiz deve mapear para um tipo genérico com pelo menos um argumento de tipo. Um exemplo é <xref:System.Windows.Navigation.PageFunction%601>. As funções de página são o cenário principal para suporte ao uso de genéricos de XAML no WPF.  
   
--   O elemento de objeto XAML de elemento raiz para o genérico também deve declarar uma classe parcial usando `x:Class`. Isso é verdadeiro mesmo se a ação de build definindo um WPF.  
+- O elemento de objeto XAML de elemento raiz para o genérico também deve declarar uma classe parcial usando `x:Class`. Isso é verdadeiro mesmo se a ação de build definindo um WPF.  
   
--   `x:TypeArguments` não é possível fazer referência a restrições genéricas aninhadas.  
+- `x:TypeArguments` não é possível fazer referência a restrições genéricas aninhadas.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 ou XAML 2006 sem 3.0 do WPF ou WPF 3.5 dependência  
  Em serviços de XAML .NET Framework para XAML 2006 ou XAML 2009, as restrições relacionadas a WPF no uso de genéricos XAML são reduzidas. Você pode instanciar um elemento de objeto genérico em qualquer posição na marcação XAML que o modelo de objeto e de sistema de tipo backup pode dar suporte.  

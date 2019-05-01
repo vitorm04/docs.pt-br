@@ -11,11 +11,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
 ms.openlocfilehash: a302b8bf978afcead5768fadeb6336c1ece986ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004115"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Como: desenhar com pincéis opacos e semitransparentes
 Ao preencher uma forma, você deve passar uma <xref:System.Drawing.Brush> objeto para um dos métodos de preenchimento do <xref:System.Drawing.Graphics> classe. O parâmetro do construtor de <xref:System.Drawing.SolidBrush.%23ctor%2A> construtor é um <xref:System.Drawing.Color> objeto. Para preencher uma forma opaca, defina o componente alfa da cor como 255. Para preencher uma forma semitransparente, defina o componente alfa para qualquer valor de 1 a 254.  

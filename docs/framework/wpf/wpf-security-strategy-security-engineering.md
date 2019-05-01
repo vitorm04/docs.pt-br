@@ -11,24 +11,24 @@ helpviewer_keywords:
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
 ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053828"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Estratégia de segurança do WPF - engenharia de segurança
 A Computação Confiável é uma iniciativa da Microsoft para garantir a produção de código seguro. Um elemento chave da iniciativa Computação Confiável é o [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. O [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] é uma prática de engenharia que é usada em conjunto com processos de engenharia padrão para facilitar o fornecimento de código seguro. O [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] consiste em dez fases que combinam melhores práticas com formalização, mensurabilidade e estruturas adicionais, incluindo:  
   
--   Análise de projeto de segurança  
+- Análise de projeto de segurança  
   
--   Verificações de qualidade baseadas em ferramenta  
+- Verificações de qualidade baseadas em ferramenta  
   
--   Testes de penetração  
+- Testes de penetração  
   
--   Análise final de segurança  
+- Análise final de segurança  
   
--   Gerenciamento de segurança do produto pós-lançamento  
+- Gerenciamento de segurança do produto pós-lançamento  
   
 ## <a name="wpf-specifics"></a>Aspectos específicos do WPF  
  A equipe de engenharia do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] aplica e estende o [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], a combinação dos quais inclui os seguintes aspectos principais:  
@@ -55,11 +55,11 @@ A Computação Confiável é uma iniciativa da Microsoft para garantir a produç
   
  A modelagem de ameaças é aplicada no [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] e inclui o seguinte:  
   
--   Como o analisador [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] lê arquivos, mapeia texto para classes de modelo de objeto correspondentes e cria o código real.  
+- Como o analisador [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] lê arquivos, mapeia texto para classes de modelo de objeto correspondentes e cria o código real.  
   
--   Como um identificador de janela (hWnd) é criado, envia mensagens e é usado para renderizar o conteúdo de uma janela.  
+- Como um identificador de janela (hWnd) é criado, envia mensagens e é usado para renderizar o conteúdo de uma janela.  
   
--   Como a vinculação de dados obtém recursos e interage com o sistema.  
+- Como a vinculação de dados obtém recursos e interage com o sistema.  
   
  Esses modelos de ameaças são importantes para identificar requisitos de design de segurança e reduções de ameaças durante o processo de desenvolvimento.  
   
@@ -67,23 +67,23 @@ A Computação Confiável é uma iniciativa da Microsoft para garantir a produç
 ### <a name="source-analysis-and-editing-tools"></a>Ferramentas de edição e análise de código-fonte  
  Além dos elementos manuais de revisão de código de segurança do [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], a equipe do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa várias ferramentas para análise do código-fonte e das edições associadas para diminuir as vulnerabilidades de segurança. Uma ampla variedade de ferramentas de código são usadas e incluem o seguinte:  
   
--   **FXCop**: Localiza problemas comuns de segurança no código gerenciado, variando de regras de herança ao uso de segurança de acesso do código como interoperar com segurança com código não gerenciado. Consulte [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
+- **FXCop**: Localiza problemas comuns de segurança no código gerenciado, variando de regras de herança ao uso de segurança de acesso do código como interoperar com segurança com código não gerenciado. Consulte [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
--   **Prefix/Prefast**: Localiza vulnerabilidades de segurança e problemas comuns de segurança no código não gerenciado, como saturações de buffer, problemas de cadeia de caracteres de formato e verificação de erros.  
+- **Prefix/Prefast**: Localiza vulnerabilidades de segurança e problemas comuns de segurança no código não gerenciado, como saturações de buffer, problemas de cadeia de caracteres de formato e verificação de erros.  
   
--   **APIs banidas**: Pesquisas de código para identificar usos acidentais de funções que são conhecidas por causar problemas de segurança, como de fonte `strcpy`. Após serem identificadas, essas funções são substituídas por alternativas mais seguras.  
+- **APIs banidas**: Pesquisas de código para identificar usos acidentais de funções que são conhecidas por causar problemas de segurança, como de fonte `strcpy`. Após serem identificadas, essas funções são substituídas por alternativas mais seguras.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Técnicas de teste  
  O [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa uma variedade de técnicas teste de segurança que incluem:  
   
--   **Testes caixa branca**: Testadores Exibir código-fonte e, em seguida, criam testes de exploração  
+- **Testes caixa branca**: Testadores Exibir código-fonte e, em seguida, criam testes de exploração  
   
--   **Testes caixa preta**: Os testadores tentam localizar falhas de segurança examinando as API e recursos e, em seguida, tentam atacar o produto.  
+- **Testes caixa preta**: Os testadores tentam localizar falhas de segurança examinando as API e recursos e, em seguida, tentam atacar o produto.  
   
--   **Problemas de regressão de segurança de outros produtos**: Quando for relevante, problemas de segurança de produtos relacionados são testados. Por exemplo, variantes apropriadas de cerca de sessenta problemas de segurança para [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] foram identificadas e sua aplicabilidade foi testada para [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+- **Problemas de regressão de segurança de outros produtos**: Quando for relevante, problemas de segurança de produtos relacionados são testados. Por exemplo, variantes apropriadas de cerca de sessenta problemas de segurança para [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] foram identificadas e sua aplicabilidade foi testada para [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
--   **Testes de penetração baseados em ferramentas de manipulação de arquivos**: Manipulação de arquivos é que a exploração de um leitor de arquivos do intervalo por meio de uma variedade de entradas de entrada. Um exemplo de uso dessa técnica no [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] é para verificar se há falhas no código de decodificação de imagens.  
+- **Testes de penetração baseados em ferramentas de manipulação de arquivos**: Manipulação de arquivos é que a exploração de um leitor de arquivos do intervalo por meio de uma variedade de entradas de entrada. Um exemplo de uso dessa técnica no [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] é para verificar se há falhas no código de decodificação de imagens.  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Gerenciamento de código crítico  

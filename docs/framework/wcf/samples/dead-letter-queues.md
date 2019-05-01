@@ -3,11 +3,11 @@ title: Filas de mensagens de inatividade
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051956"
 ---
 # <a name="dead-letter-queues"></a>Filas de mensagens de inatividade
 Este exemplo demonstra como manipular e processar as mensagens com falha na entrega. Ele se baseia a [associação de MSMQ transacionado](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemplo. Este exemplo usa o `netMsmqBinding` associação. O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.
@@ -24,15 +24,15 @@ Este exemplo demonstra como manipular e processar as mensagens com falha na entr
 
  Fila de inatividade no `NetMsmqBinding` associação é expresso nas seguintes propriedades:
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> propriedade para expressar o tipo de fila de inatividade exigido pelo cliente. Esta enumeração tem os seguintes valores:
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> propriedade para expressar o tipo de fila de inatividade exigido pelo cliente. Esta enumeração tem os seguintes valores:
 
--   `None`: Nenhuma fila de inatividade é exigida pelo cliente.
+- `None`: Nenhuma fila de inatividade é exigida pelo cliente.
 
--   `System`: A fila de inatividade do sistema é usada para armazenar mensagens de inatividade. A fila de inatividade do sistema é compartilhada por todos os aplicativos em execução no computador.
+- `System`: A fila de inatividade do sistema é usada para armazenar mensagens de inatividade. A fila de inatividade do sistema é compartilhada por todos os aplicativos em execução no computador.
 
--   `Custom`: Uma fila de inatividade personalizada especificada usando o <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriedade é usada para armazenar mensagens de inatividade. Esse recurso só está disponível em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso é usado quando o aplicativo deve usar sua própria fila de mensagens mortas, em vez de compartilhá-la com outros aplicativos em execução no mesmo computador.
+- `Custom`: Uma fila de inatividade personalizada especificada usando o <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriedade é usada para armazenar mensagens de inatividade. Esse recurso só está disponível em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso é usado quando o aplicativo deve usar sua própria fila de mensagens mortas, em vez de compartilhá-la com outros aplicativos em execução no mesmo computador.
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriedade para expressar a fila específica a ser usada como uma fila de inatividade. Isso está disponível apenas no [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriedade para expressar a fila específica a ser usada como uma fila de inatividade. Isso está disponível apenas no [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  Neste exemplo, o cliente envia um lote de mensagens para o serviço de dentro do escopo de uma transação e especifica um valor baixo arbitrariamente para "time-to-live" para essas mensagens (cerca de 2 segundos). O cliente também especifica uma fila mortas personalizada para usar a opção de enfileirar as mensagens que expiraram.
 
@@ -314,15 +314,15 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 2. Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
 
-    1.  Abra o Gerenciador de servidores no Visual Studio 2012.
+    1. Abra o Gerenciador de servidores no Visual Studio 2012.
 
-    2.  Expanda o **recursos** guia.
+    2. Expanda o **recursos** guia.
 
-    3.  Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.
+    3. Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.
 
-    4.  Verifique as **transacional** caixa.
+    4. Verifique as **transacional** caixa.
 
-    5.  Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
+    5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
 
 3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

@@ -6,8 +6,8 @@ ms.openlocfilehash: 72068002572ff82d2f166ffdd79e455cec7a2961
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051423"
 ---
 # <a name="service-identity-sample"></a>Exemplo de identidade de serviço
 Este exemplo de identidade de serviço demonstra como definir a identidade de um serviço. Em tempo de design, um cliente pode recuperar a identidade usando metadados do serviço e, em seguida, em tempo de execução, o cliente pode autenticar a identidade do serviço. O conceito de identidade de serviço é permitir que um cliente autenticar um serviço antes de chamar qualquer uma de suas operações, protegendo, assim, o cliente de chamadas não autenticadas. Em uma conexão segura o serviço também autentica as credenciais de um cliente antes de permitir acesso ele, mas isso não é o foco deste exemplo. Consulte os exemplos na [cliente](../../../../docs/framework/wcf/samples/client.md) que mostram a autenticação do servidor.
@@ -17,11 +17,11 @@ Este exemplo de identidade de serviço demonstra como definir a identidade de um
 
  Este exemplo ilustra os seguintes recursos:
 
--   Como definir os diferentes tipos de identidade em diferentes pontos de extremidade para um serviço. Cada tipo de identidade tem recursos diferentes. O tipo de identidade deve ser usada é dependente do tipo de credenciais de segurança usado na associação do ponto de extremidade.
+- Como definir os diferentes tipos de identidade em diferentes pontos de extremidade para um serviço. Cada tipo de identidade tem recursos diferentes. O tipo de identidade deve ser usada é dependente do tipo de credenciais de segurança usado na associação do ponto de extremidade.
 
--   Identidade pode ser definida declarativamente na configuração ou imperativa no código. Normalmente para o cliente e o serviço, você deve usar configuração para definir a identidade.
+- Identidade pode ser definida declarativamente na configuração ou imperativa no código. Normalmente para o cliente e o serviço, você deve usar configuração para definir a identidade.
 
--   Como definir uma identidade personalizada no cliente. Normalmente, uma identidade personalizada é uma personalização de um tipo existente de identidade que permite que o cliente examinar outras informações de declaração fornecidas nas credenciais do serviço para tomar decisões de autorização antes de chamar o serviço.
+- Como definir uma identidade personalizada no cliente. Normalmente, uma identidade personalizada é uma personalização de um tipo existente de identidade que permite que o cliente examinar outras informações de declaração fornecidas nas credenciais do serviço para tomar decisões de autorização antes de chamar o serviço.
 
     > [!NOTE]
     >  Este exemplo verifica a identidade de um certificado específico chamado identity.com e a chave RSA contido dentro deste certificado. Ao usar os tipos de identidade do certificado e RSA em configuração no cliente, uma maneira fácil de obter esses valores é inspecionar o WSDL para o serviço em que esses valores são serializados.
@@ -154,7 +154,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 ### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
--   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
+- Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
     > [!NOTE]
     >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

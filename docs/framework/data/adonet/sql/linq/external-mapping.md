@@ -3,31 +3,31 @@ title: Mapeamento externo
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037889"
 ---
 # <a name="external-mapping"></a>Mapeamento externo
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte a *mapeamento externo*, um processo pelo qual você deve usar um arquivo XML separado para especificar o mapeamento entre o modelo de dados do banco de dados e seu modelo de objeto. As vantagens de usar um arquivo de mapeamento externo incluem o seguinte:  
   
--   Você pode manter seu código de mapeamento fora de seu código do aplicativo. Essa abordagem reduz a confusão no código do aplicativo.  
+- Você pode manter seu código de mapeamento fora de seu código do aplicativo. Essa abordagem reduz a confusão no código do aplicativo.  
   
--   Você pode manipular um arquivo de mapeamento externo algo como um arquivo de configuração. Por exemplo, você pode atualizar como o aplicativo se comporta após enviar os binários apenas alternando para fora o arquivo de mapeamento externo.  
+- Você pode manipular um arquivo de mapeamento externo algo como um arquivo de configuração. Por exemplo, você pode atualizar como o aplicativo se comporta após enviar os binários apenas alternando para fora o arquivo de mapeamento externo.  
   
 ## <a name="requirements"></a>Requisitos  
  O arquivo de mapeamento deve ser um arquivo XML, e o arquivo deve validar contra um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] arquivo (. xsd) de definição de esquema.  
   
  As seguintes regras se aplicam:  
   
--   O arquivo de mapeamento deve ser um arquivo XML.  
+- O arquivo de mapeamento deve ser um arquivo XML.  
   
--   O arquivo de mapeamento de XML deve ser válido no arquivo de definição de esquema XML. Para obter mais informações, confira [Como: Validar DBML e arquivos de mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+- O arquivo de mapeamento de XML deve ser válido no arquivo de definição de esquema XML. Para obter mais informações, confira [Como: Validar DBML e arquivos de mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
--   As substituições externos de mapeamento atributos com o mapeamento. Ou seja quando você usa uma fonte externa de mapeamento para criar <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> ignora todos os atributos de mapeamento que você criou em classes. Esse comportamento é verdadeiro se a classe está incluída no arquivo de mapeamento externo.  
+- As substituições externos de mapeamento atributos com o mapeamento. Ou seja quando você usa uma fonte externa de mapeamento para criar <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> ignora todos os atributos de mapeamento que você criou em classes. Esse comportamento é verdadeiro se a classe está incluída no arquivo de mapeamento externo.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte ao uso híbrido das duas abordagens mapeando (com base em atributos e externos).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte ao uso híbrido das duas abordagens mapeando (com base em atributos e externos).  
   
 ## <a name="xml-schema-definition-file"></a>Arquivo de Definição de Esquema XML  
  O mapeamento externa em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deve ser válido com a seguinte definição de esquema XML.  

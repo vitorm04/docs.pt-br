@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 410fd7a702d3aa3812b4ea053c43fdaa507a474a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042504"
 ---
 # <a name="imetadataimportenumproperties-method"></a>Método IMetaDataImport::EnumProperties
 Enumera os tokens de PropertyDef que representa as propriedades do tipo referenciado pelo token de TypeDef especificado.  

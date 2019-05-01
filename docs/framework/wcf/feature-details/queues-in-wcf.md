@@ -5,22 +5,22 @@ helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
 ms.openlocfilehash: e28c91a8cc1798a4d0cd690f72e503b687af0108
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046437"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Filas no Windows Communication Foundation
 Os tópicos desta seção discutem o suporte do Windows Communication Foundation (WCF) para filas. O WCF fornece suporte para enfileiramento de mensagens por aproveitando Microsoft Message Queuing (anteriormente conhecido como MSMQ) como um transporte e permite os seguintes cenários:  
   
--   Aplicativos flexíveis. Aplicativos de envio podem enviar mensagens a filas sem a necessidade de saber se o aplicativo de recebimento está disponível para processar a mensagem. A fila fornece independência de processamento que permite que um aplicativo de envio enviar mensagens à fila em uma taxa que não depende de quão rápido os aplicativos de recebimento podem processar as mensagens. Em geral disponibilidade do sistema aumenta ao enviar mensagens para uma fila não está acoplada para processamento de mensagens.  
+- Aplicativos flexíveis. Aplicativos de envio podem enviar mensagens a filas sem a necessidade de saber se o aplicativo de recebimento está disponível para processar a mensagem. A fila fornece independência de processamento que permite que um aplicativo de envio enviar mensagens à fila em uma taxa que não depende de quão rápido os aplicativos de recebimento podem processar as mensagens. Em geral disponibilidade do sistema aumenta ao enviar mensagens para uma fila não está acoplada para processamento de mensagens.  
   
--   Isolamento de falha. Aplicativos de envio ou recebimento de mensagens para uma fila podem falhar sem afetar a outra. Se, por exemplo, o aplicativo de recebimento falhar, o aplicativo de envio pode continuar a enviar mensagens à fila. Quando o destinatário estiver funcionando novamente, ele pode processar as mensagens da fila. Isolamento de falha aumenta a disponibilidade e confiabilidade geral do sistema.  
+- Isolamento de falha. Aplicativos de envio ou recebimento de mensagens para uma fila podem falhar sem afetar a outra. Se, por exemplo, o aplicativo de recebimento falhar, o aplicativo de envio pode continuar a enviar mensagens à fila. Quando o destinatário estiver funcionando novamente, ele pode processar as mensagens da fila. Isolamento de falha aumenta a disponibilidade e confiabilidade geral do sistema.  
   
--   Nivelamento de carga. Aplicativos de envio podem sobrecarregar a aplicativos de recebimento com mensagens. As filas podem gerenciar taxas de produção e consumo de mensagens incompatíveis para que um destinatário não seja sobrecarregado.  
+- Nivelamento de carga. Aplicativos de envio podem sobrecarregar a aplicativos de recebimento com mensagens. As filas podem gerenciar taxas de produção e consumo de mensagens incompatíveis para que um destinatário não seja sobrecarregado.  
   
--   Operações desconectadas. Envio, recebimento e operações de processamento podem ser desconectados ao se comunicar por redes de alta latência ou disponibilidade limitada, como no caso de dispositivos móveis. As filas permitem que essas operações continuar, mesmo quando os pontos de extremidade são desconectados. Quando a conexão for restabelecida, a fila encaminha mensagens para o aplicativo de recebimento.  
+- Operações desconectadas. Envio, recebimento e operações de processamento podem ser desconectados ao se comunicar por redes de alta latência ou disponibilidade limitada, como no caso de dispositivos móveis. As filas permitem que essas operações continuar, mesmo quando os pontos de extremidade são desconectados. Quando a conexão for restabelecida, a fila encaminha mensagens para o aplicativo de recebimento.  
   
  Para usar o recurso de filas em um aplicativo WCF, você pode usar uma das associações padrão, ou você pode criar uma ligação personalizada, se uma das associações padrão não atender às suas necessidades. Para obter mais informações sobre associações padrão relevantes e como escolher um, consulte [como: Trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Para obter mais informações sobre como criar associações personalizadas, confira [Associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

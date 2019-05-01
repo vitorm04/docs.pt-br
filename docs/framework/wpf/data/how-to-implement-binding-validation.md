@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
 ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010326"
 ---
 # <a name="how-to-implement-binding-validation"></a>Como: Implementar a validação de associação
 Este exemplo mostra como usar um <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> e um gatilho de estilo para fornecer comentários visuais para informar ao usuário quando um valor inválido é inserido, com base em uma regra de validação personalizada.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - IScrollInfo interface [WPF]
 ms.assetid: d8700bef-a3f8-4c12-9de2-fc3b79f32cd3
 ms.openlocfilehash: 6ebd8268e1358b45709885c07e6b096d5f806ebb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051241"
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>Como: Rolar o conteúdo usando a interface IScrollInfo
 Este exemplo mostra como rolar conteúdo usando o <xref:System.Windows.Controls.Primitives.IScrollInfo> interface.  

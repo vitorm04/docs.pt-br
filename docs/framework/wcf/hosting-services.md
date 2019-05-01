@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051150"
 ---
 # <a name="hosting-services"></a>Serviços de hospedagem
 Para se tornar ativo, um serviço deve ser hospedado dentro de um ambiente de tempo de execução que cria e controla seu contexto e o tempo de vida. Serviços Windows Communication Foundation (WCF) são projetados para funcionar em qualquer processo do Windows que dá suporte a código gerenciado.  

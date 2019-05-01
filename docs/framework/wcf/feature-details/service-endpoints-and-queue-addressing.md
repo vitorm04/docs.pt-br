@@ -3,11 +3,11 @@ title: Pontos de extremidade de serviço e endereçamento de fila
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050383"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Pontos de extremidade de serviço e endereçamento de fila
 Este tópico discute como os clientes atendem serviços leiam de filas e como pontos de extremidade de serviço são mapeados para as filas. Como lembrete, a ilustração a seguir mostra clássico, implantação de aplicativo na fila do Windows Communication Foundation (WCF).  
@@ -34,11 +34,11 @@ Este tópico discute como os clientes atendem serviços leiam de filas e como po
   
  em que:  
   
--   \<*nome do host*> é o nome do computador que hospeda a fila de destino.  
+- \<*nome do host*> é o nome do computador que hospeda a fila de destino.  
   
--   [privada] é opcional. Ele é usado ao tratar de uma fila de destino que é uma fila particular. Para resolver uma fila pública, você deve especificar não privado. Observe que, ao contrário dos caminhos MSMQ, não há nenhuma "$" no formato URI WCF.  
+- [privada] é opcional. Ele é usado ao tratar de uma fila de destino que é uma fila particular. Para resolver uma fila pública, você deve especificar não privado. Observe que, ao contrário dos caminhos MSMQ, não há nenhuma "$" no formato URI WCF.  
   
--   \<*nome da fila*> é o nome da fila. O nome da fila também pode consultar uma subfila. Portanto, \< *nome da fila*> = \< *nome-da-fila*> [; *sub-queue-name*].  
+- \<*nome da fila*> é o nome da fila. O nome da fila também pode consultar uma subfila. Portanto, \< *nome da fila*> = \< *nome-da-fila*> [; *sub-queue-name*].  
   
  Exemplo 1: Para lidar com uma fila particular PurchaseOrders hospedados no computador abc atadatum.com, o URI seria net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
@@ -51,9 +51,9 @@ Este tópico discute como os clientes atendem serviços leiam de filas e como po
 ### <a name="multiple-contracts-in-a-queue"></a>Vários contratos em uma fila  
  Mensagens em uma fila podem implementar contratos diferentes. Nesse caso, é essencial que uma das seguintes opções é verdadeira para ler e processar todas as mensagens com êxito:  
   
--   Especifique um ponto de extremidade para um serviço que implementa todos os contratos. Essa é a abordagem recomendada.  
+- Especifique um ponto de extremidade para um serviço que implementa todos os contratos. Essa é a abordagem recomendada.  
   
--   Especificar vários pontos de extremidade com contratos diferentes, mas certifique-se de que todos os pontos de extremidade usem os mesmos `NetMsmqBinding` objeto. A lógica de expedição em ServiceModel usa uma bomba de mensagem que lê mensagens de fora o canal de transporte de expedição, o que, eventualmente, desprovisionar multiplexa as mensagens com base no contrato de pontos de extremidade diferentes. Uma bomba de mensagem é criada para um par de associação/URI de escuta. O endereço da fila é usado como o URI de escuta pelo ouvinte na fila. Todos os o uso de pontos de extremidade, que o mesmo objeto de associação garante que uma bomba de mensagem único é usada para ler a mensagem e demultiplexar aos pontos de extremidade relevantes com base no contrato.  
+- Especificar vários pontos de extremidade com contratos diferentes, mas certifique-se de que todos os pontos de extremidade usem os mesmos `NetMsmqBinding` objeto. A lógica de expedição em ServiceModel usa uma bomba de mensagem que lê mensagens de fora o canal de transporte de expedição, o que, eventualmente, desprovisionar multiplexa as mensagens com base no contrato de pontos de extremidade diferentes. Uma bomba de mensagem é criada para um par de associação/URI de escuta. O endereço da fila é usado como o URI de escuta pelo ouvinte na fila. Todos os o uso de pontos de extremidade, que o mesmo objeto de associação garante que uma bomba de mensagem único é usada para ler a mensagem e demultiplexar aos pontos de extremidade relevantes com base no contrato.  
   
 ### <a name="srmp-messaging"></a>Mensagens SRMP  
  Conforme discutido anteriormente, você pode usar o protocolo SRMP para transferências de fila para a fila. Isso é comumente usado quando um transporte HTTP transmite mensagens entre a fila de transmissão e a fila de destino.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 ms.openlocfilehash: 540c0fe5c4d06ea341b9cc8be9755cc67fe9bbc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039098"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Cliente e serviço sem segurança na Intranet
 A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF) simples desenvolvido para fornecer informações sobre uma rede privada segura para um aplicativo WCF. Segurança não é necessária porque os dados são de importância baixa, a rede deve ser inerentemente seguro ou a segurança é fornecida por uma camada abaixo a infraestrutura do WCF.  
@@ -30,9 +30,9 @@ A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF
 ## <a name="service"></a>Serviço  
  O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
   
--   Crie um serviço autônomo usando o código sem nenhuma configuração.  
+- Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
+- Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade sem segurança:  
@@ -73,9 +73,9 @@ A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF
 ## <a name="client"></a>Cliente  
  O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
   
--   Crie um cliente autônomo usando o código (e o código do cliente).  
+- Crie um cliente autônomo usando o código (e o código do cliente).  
   
--   Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:  
+- Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

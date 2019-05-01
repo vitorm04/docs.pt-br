@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 61a36ff23bf9deac25983f06387b2bbbfd49546b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041893"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>Método ICorProfilerCallback::RemotingClientSendingMessage
 Notifica o criador de perfil que o cliente está enviando uma solicitação ao servidor.  
@@ -39,11 +39,11 @@ HRESULT RemotingClientSendingMessage(
  `pCookie`  
  [in] Um valor que corresponde com o valor fornecido no [ICorProfilerCallback:: Remotingserverreceivingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) sob estas condições:  
   
--   Cookies GUID de comunicação remota estão ativos.  
+- Cookies GUID de comunicação remota estão ativos.  
   
--   O canal é bem-sucedida na transmissão de mensagem.  
+- O canal é bem-sucedida na transmissão de mensagem.  
   
--   Os cookies GUID são Active Directory sobre o processo do lado do servidor.  
+- Os cookies GUID são Active Directory sobre o processo do lado do servidor.  
   
  Isso permite que o emparelhamento fácil de chamadas de comunicação remota e a criação de uma pilha de chamadas lógicas.  
   

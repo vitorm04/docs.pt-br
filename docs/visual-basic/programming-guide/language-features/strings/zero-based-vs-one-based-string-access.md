@@ -5,11 +5,11 @@ helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
 ms.openlocfilehash: a6ceb10d4a3cb9463551d8c85375ddbbb607ffdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024450"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Acesso a cadeias de caracteres baseado em Acesso com base em uma cadeia de caracteres no Visual Basic
 Este tópico compara como o Visual Basic e o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] fornecem acesso aos caracteres em uma cadeia de caracteres. O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sempre fornece acesso baseado em zero para os caracteres em uma cadeia de caracteres, enquanto o Visual Basic fornece acesso baseado em zero e um, dependendo da função.  

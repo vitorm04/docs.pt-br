@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
 ms.openlocfilehash: d9b1c1242fe2686a66e41b777f904a71898159ea
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050643"
 ---
 # <a name="using-the-message-class"></a>Usando a classe de mensagens
 O <xref:System.ServiceModel.Channels.Message> classe é fundamental para o Windows Communication Foundation (WCF). Toda a comunicação entre clientes e serviços, por fim, resulta em <xref:System.ServiceModel.Channels.Message> instâncias que estão sendo enviadas e recebidas.  
   
  Normalmente, não interagiria com o <xref:System.ServiceModel.Channels.Message> classe diretamente. Em vez disso, construções de modelo de serviço do WCF, como contratos de dados, os contratos de mensagem e contratos de operação, são usadas para descrever as mensagens de entrada e saídas. No entanto, em alguns cenários avançados de você pode programar usando o <xref:System.ServiceModel.Channels.Message> classe diretamente. Por exemplo, talvez você queira usar o <xref:System.ServiceModel.Channels.Message> classe:  
   
--   Quando você precisa de uma maneira alternativa de criação de conteúdo da mensagem de saída (por exemplo, a criação de uma mensagem diretamente de um arquivo no disco), em vez de serializar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] objetos.  
+- Quando você precisa de uma maneira alternativa de criação de conteúdo da mensagem de saída (por exemplo, a criação de uma mensagem diretamente de um arquivo no disco), em vez de serializar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] objetos.  
   
--   Quando você precisa de uma maneira alternativa de usar o conteúdo da mensagem de entrada (por exemplo, quando você deseja aplicar uma transformação XSLT ao conteúdo XML bruto) em vez de desserialização em [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] objetos.  
+- Quando você precisa de uma maneira alternativa de usar o conteúdo da mensagem de entrada (por exemplo, quando você deseja aplicar uma transformação XSLT ao conteúdo XML bruto) em vez de desserialização em [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] objetos.  
   
--   Quando você precisa lidar com mensagens de maneira geral, independentemente do conteúdo da mensagem (por exemplo, quando rotear ou encaminhar mensagens ao compilar um roteador, o balanceador de carga ou publicar-assinar system).  
+- Quando você precisa lidar com mensagens de maneira geral, independentemente do conteúdo da mensagem (por exemplo, quando rotear ou encaminhar mensagens ao compilar um roteador, o balanceador de carga ou publicar-assinar system).  
   
  Antes de usar o <xref:System.ServiceModel.Channels.Message> da classe, você se familiarizar com a arquitetura de transferência de dados do WCF no [visão geral da arquitetura de transferência de dados](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
@@ -30,11 +30,11 @@ O <xref:System.ServiceModel.Channels.Message> classe é fundamental para o Windo
 ## <a name="using-the-message-class-in-operations"></a>Usando a classe de mensagem em operações  
  Você pode usar o <xref:System.ServiceModel.Channels.Message> classe como um parâmetro de entrada de uma operação, o valor retornado de uma operação, ou ambos. Se <xref:System.ServiceModel.Channels.Message> é usado em qualquer lugar em uma operação, as seguintes restrições se aplicam:  
   
--   A operação não pode ter quaisquer `out` ou `ref` parâmetros.  
+- A operação não pode ter quaisquer `out` ou `ref` parâmetros.  
   
--   Não é possível haver mais de um `input` parâmetro. Se o parâmetro estiver presente, ele deve ser a mensagem ou um tipo de contrato de mensagem.  
+- Não é possível haver mais de um `input` parâmetro. Se o parâmetro estiver presente, ele deve ser a mensagem ou um tipo de contrato de mensagem.  
   
--   O tipo de retorno deve ser `void`, `Message`, ou um tipo de contrato de mensagem.  
+- O tipo de retorno deve ser `void`, `Message`, ou um tipo de contrato de mensagem.  
   
  O exemplo de código a seguir contém um contrato de operação válida.  
   
@@ -78,11 +78,11 @@ O <xref:System.ServiceModel.Channels.Message> classe é fundamental para o Windo
 ## <a name="extracting-message-body-data"></a>Extração de dados do corpo de mensagem  
  O `Message` classe dá suporte a várias maneiras de extrair informações de seu corpo. Eles podem ser classificados nas seguintes categorias:  
   
--   Obtendo o corpo da mensagem inteira escrito ao mesmo tempo em um gravador de XML. Isso é conhecido como *gravar uma mensagem*.  
+- Obtendo o corpo da mensagem inteira escrito ao mesmo tempo em um gravador de XML. Isso é conhecido como *gravar uma mensagem*.  
   
--   Obtendo um leitor de XML sobre o corpo da mensagem. Isso permite que você acessa posteriormente a mensagem corpo--detalhadamente conforme necessário. Isso é conhecido como *lendo uma mensagem*.  
+- Obtendo um leitor de XML sobre o corpo da mensagem. Isso permite que você acessa posteriormente a mensagem corpo--detalhadamente conforme necessário. Isso é conhecido como *lendo uma mensagem*.  
   
--   A mensagem inteira, incluindo o corpo, pode ser copiada para um buffer de memória do <xref:System.ServiceModel.Channels.MessageBuffer> tipo. Isso é conhecido como *copiando uma mensagem*.  
+- A mensagem inteira, incluindo o corpo, pode ser copiada para um buffer de memória do <xref:System.ServiceModel.Channels.MessageBuffer> tipo. Isso é conhecido como *copiando uma mensagem*.  
   
  Você pode acessar o corpo de um `Message` apenas uma vez, independentemente de como ele é acessado. Um objeto de mensagem tem um `State` propriedade, que é inicialmente definida como Created. Os métodos de três acesso descritos na lista anterior definem o estado para Written, ler e copiados, respectivamente. Além disso, um `Close` método pode definir o estado fechado quando o conteúdo do corpo de mensagem não é mais necessário. O corpo da mensagem pode ser acessado apenas no estado Created, e não é possível voltar para o estado criado depois que o estado foi alterado.  
   
@@ -96,9 +96,9 @@ O <xref:System.ServiceModel.Channels.Message> classe é fundamental para o Windo
   
  Dois métodos auxiliares adicionais de gravação out determinadas marcas de elemento de início SOAP. Esses métodos não acessam o corpo da mensagem e, portanto, elas não alteram o estado da mensagem. Elas incluem:  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> grava o elemento de corpo de início, por exemplo, `<soap:Body>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> grava o elemento de corpo de início, por exemplo, `<soap:Body>`.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> grava o elemento do envelope de início, por exemplo, `<soap:Envelope>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> grava o elemento do envelope de início, por exemplo, `<soap:Envelope>`.  
   
  Para gravar marcas de elemento de fim correspondente, chamar `WriteEndElement` no gravador XML correspondente. Esses métodos raramente são chamados diretamente.  
   
@@ -138,15 +138,15 @@ O <xref:System.ServiceModel.Channels.Message> classe é fundamental para o Windo
 ## <a name="accessing-other-message-parts"></a>Acesso a outras partes da mensagem  
  Várias propriedades são fornecidas para acessar informações sobre a mensagem que não seja o seu conteúdo do corpo. No entanto, eles não podem ser chamados depois que a mensagem foi fechada:  
   
--   O <xref:System.ServiceModel.Channels.Message.Headers%2A> propriedade representa os cabeçalhos da mensagem. Consulte a seção "Trabalhando com cabeçalhos" neste tópico.  
+- O <xref:System.ServiceModel.Channels.Message.Headers%2A> propriedade representa os cabeçalhos da mensagem. Consulte a seção "Trabalhando com cabeçalhos" neste tópico.  
   
--   O <xref:System.ServiceModel.Channels.Message.Properties%2A> propriedade representa as propriedades de mensagem, que são partes de dados chamado anexados à mensagem de não geralmente obter emitido quando a mensagem é enviada. Consulte a seção em "Trabalhando com propriedades", mais adiante neste tópico.  
+- O <xref:System.ServiceModel.Channels.Message.Properties%2A> propriedade representa as propriedades de mensagem, que são partes de dados chamado anexados à mensagem de não geralmente obter emitido quando a mensagem é enviada. Consulte a seção em "Trabalhando com propriedades", mais adiante neste tópico.  
   
--   O <xref:System.ServiceModel.Channels.Message.Version%2A> propriedade indica a versão do SOAP e WS-Addressing associada à mensagem, ou `None` se SOAP estiver desabilitado.  
+- O <xref:System.ServiceModel.Channels.Message.Version%2A> propriedade indica a versão do SOAP e WS-Addressing associada à mensagem, ou `None` se SOAP estiver desabilitado.  
   
--   O <xref:System.ServiceModel.Channels.Message.IsFault%2A> propriedade retorna `true` se a mensagem for uma mensagem de falha SOAP.  
+- O <xref:System.ServiceModel.Channels.Message.IsFault%2A> propriedade retorna `true` se a mensagem for uma mensagem de falha SOAP.  
   
--   O <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> propriedade retorna `true` se a mensagem está vazia.  
+- O <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> propriedade retorna `true` se a mensagem está vazia.  
   
  Você pode usar o <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29> método para acessar um atributo específico no elemento de wrapper do corpo (por exemplo, `<soap:Body>`) identificada por um determinado nome e namespace. Se tal um atributo não for encontrado, `null` será retornado. Esse método pode ser chamado somente quando o `Message` está no estado criado (quando o corpo da mensagem ainda não tiver sido acessado).  
   

@@ -3,11 +3,11 @@ title: Resolvedor peer
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
 ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038695"
 ---
 # <a name="peer-resolvers"></a>Resolvedor peer
 Para se conectar a uma malha, um nó par exige que os endereços IP dos outros nós. Endereços IP são obtidos por entrar em contato com um serviço de resolvedor, que usa a ID de malha e retorna uma lista de endereços correspondentes a nós registrados com essa ID de malha. O resolvedor mantém uma lista de endereços registrados, que será criado, fazendo com que cada nó na malha registrar com o serviço.  

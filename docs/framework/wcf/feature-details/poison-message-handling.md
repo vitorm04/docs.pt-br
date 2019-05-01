@@ -3,11 +3,11 @@ title: Manuseio de mensagem suspeita
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046431"
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
 Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo de tentativas de entrega para o aplicativo. Essa situação pode ocorrer quando um aplicativo baseado em fila não pode processar uma mensagem devido a erros. Para atender às demandas de confiabilidade, um aplicativo na fila recebe mensagens em uma transação. Anulando a transação na qual uma mensagem na fila foi recebida deixa a mensagem na fila para que a mensagem é repetida em uma nova transação. Se o problema que causou a anulação da transação não for corrigido, o aplicativo de recebimento pode fique preso em um loop de recebimento e anulando a mesma mensagem até que o número máximo de tentativas de entrega foi excedido e resultados de uma mensagem suspeita.  
@@ -19,27 +19,27 @@ Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo d
 ## <a name="handling-poison-messages"></a>Manipular mensagens suspeitas  
  No WCF, manipulação de mensagens suspeitas fornece um mecanismo para um aplicativo de recebimento lidar com mensagens que não podem ser expedidas para o aplicativo ou mensagens que são expedidos para o aplicativo, mas que não conseguirem ser processadas por causa de específicos do aplicativo motivos. Manipulação de mensagens suspeitas está configurada pelas seguintes propriedades em cada uma das associações em fila disponíveis:  
   
--   `ReceiveRetryCount`. Um valor inteiro que indica o número máximo de tentativas de entrega de uma mensagem da fila de aplicativos para o aplicativo. O valor padrão é 5. Isso é suficiente em casos em que uma repetição imediata corrige o problema, como com um deadlock temporário em um banco de dados.  
+- `ReceiveRetryCount`. Um valor inteiro que indica o número máximo de tentativas de entrega de uma mensagem da fila de aplicativos para o aplicativo. O valor padrão é 5. Isso é suficiente em casos em que uma repetição imediata corrige o problema, como com um deadlock temporário em um banco de dados.  
   
--   `MaxRetryCycles`. Um valor inteiro que indica o número máximo de ciclos de repetição. Um ciclo de repetição consiste em transferir uma mensagem da fila de aplicativos para a subfila de repetição e, após um intervalo configurável, da subfila de mensagens de repetição volta para a fila de aplicativos tentarão novamente a entrega. O valor padrão é 2. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], a mensagem é tentada um máximo de (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) vezes. `MaxRetryCycles` é ignorado em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- `MaxRetryCycles`. Um valor inteiro que indica o número máximo de ciclos de repetição. Um ciclo de repetição consiste em transferir uma mensagem da fila de aplicativos para a subfila de repetição e, após um intervalo configurável, da subfila de mensagens de repetição volta para a fila de aplicativos tentarão novamente a entrega. O valor padrão é 2. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], a mensagem é tentada um máximo de (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) vezes. `MaxRetryCycles` é ignorado em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`. O tempo de espera entre os ciclos de repetição. O valor padrão é 30 minutos. `MaxRetryCycles` e `RetryCycleDelay` juntos fornecem um mecanismo para resolver o problema em que uma repetição após um intervalo periódico corrige o problema. Por exemplo, isso lida com uma linha bloqueada definida no SQL Server pendentes confirmação da transação.  
+- `RetryCycleDelay`. O tempo de espera entre os ciclos de repetição. O valor padrão é 30 minutos. `MaxRetryCycles` e `RetryCycleDelay` juntos fornecem um mecanismo para resolver o problema em que uma repetição após um intervalo periódico corrige o problema. Por exemplo, isso lida com uma linha bloqueada definida no SQL Server pendentes confirmação da transação.  
   
--   `ReceiveErrorHandling`. Uma enumeração que indica a ação a tomar para uma mensagem que falha na entrega depois que o número máximo de repetições foi tentado. Os valores podem ser falhas, Drop, rejeitar e mover. A opção padrão é falha.  
+- `ReceiveErrorHandling`. Uma enumeração que indica a ação a tomar para uma mensagem que falha na entrega depois que o número máximo de repetições foi tentado. Os valores podem ser falhas, Drop, rejeitar e mover. A opção padrão é falha.  
   
--   Falha. Essa opção envia uma falha para o ouvinte que causou o `ServiceHost` à falha. A mensagem deve ser removida da fila de aplicativos por algum mecanismo externo antes que o aplicativo possa continuar a processar mensagens da fila.  
+- Falha. Essa opção envia uma falha para o ouvinte que causou o `ServiceHost` à falha. A mensagem deve ser removida da fila de aplicativos por algum mecanismo externo antes que o aplicativo possa continuar a processar mensagens da fila.  
   
--   Descarte. Essa opção descarta a mensagem suspeita e a mensagem nunca é entregue ao aplicativo. Se a mensagem `TimeToLive` propriedade tiver expirado neste ponto, em seguida, a mensagem pode aparecer na fila de mensagens mortas do remetente. Caso contrário, a mensagem não aparecerá em lugar nenhum. Esta opção indica que o usuário não tiver especificado o que fazer se a mensagem será perdida.  
+- Descarte. Essa opção descarta a mensagem suspeita e a mensagem nunca é entregue ao aplicativo. Se a mensagem `TimeToLive` propriedade tiver expirado neste ponto, em seguida, a mensagem pode aparecer na fila de mensagens mortas do remetente. Caso contrário, a mensagem não aparecerá em lugar nenhum. Esta opção indica que o usuário não tiver especificado o que fazer se a mensagem será perdida.  
   
--   Rejeite. Essa opção está disponível apenas em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso instrui o enfileiramento de mensagens (MSMQ) para enviar uma confirmação negativa de volta para o Gerenciador de fila de envio que o aplicativo não pode receber a mensagem. A mensagem é colocada na fila de inatividade do Gerenciador de fila envio.  
+- Rejeite. Essa opção está disponível apenas em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso instrui o enfileiramento de mensagens (MSMQ) para enviar uma confirmação negativa de volta para o Gerenciador de fila de envio que o aplicativo não pode receber a mensagem. A mensagem é colocada na fila de inatividade do Gerenciador de fila envio.  
   
--   Mova. Essa opção está disponível apenas em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso move a mensagem suspeita para uma fila de mensagens suspeitas para processamento posterior por um aplicativo de tratamento de mensagens suspeitas. A fila de mensagens suspeitas é uma subfila da fila de aplicativos. Um aplicativo de tratamento de mensagens suspeitas pode ser um serviço WCF que lê mensagens de fila de mensagens suspeitas. Fila de mensagens suspeitas é uma subfila da fila de aplicativos e podem ser tratada como net.msmq://\<*nome da máquina*>/*applicationQueue*; suspeitas, onde  *nome da máquina* é o nome do computador no qual reside a fila e o *applicationQueue* é o nome da fila específica do aplicativo.  
+- Mova. Essa opção está disponível apenas em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso move a mensagem suspeita para uma fila de mensagens suspeitas para processamento posterior por um aplicativo de tratamento de mensagens suspeitas. A fila de mensagens suspeitas é uma subfila da fila de aplicativos. Um aplicativo de tratamento de mensagens suspeitas pode ser um serviço WCF que lê mensagens de fila de mensagens suspeitas. Fila de mensagens suspeitas é uma subfila da fila de aplicativos e podem ser tratada como net.msmq://\<*nome da máquina*>/*applicationQueue*; suspeitas, onde  *nome da máquina* é o nome do computador no qual reside a fila e o *applicationQueue* é o nome da fila específica do aplicativo.  
   
  A seguir estão o número máximo de tentativas da entrega feita para uma mensagem:  
   
--   ((ReceiveRetryCount+1) * (MaxRetryCycles + 1)) em [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+- ((ReceiveRetryCount+1) * (MaxRetryCycles + 1)) em [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
--   (ReceiveRetryCount + 1) no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- (ReceiveRetryCount + 1) no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 > [!NOTE]
 >  Sem novas tentativas são feitas para uma mensagem que é entregue com êxito.  
@@ -52,9 +52,9 @@ Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo d
   
  O WCF fornece duas ligações na fila padrão:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. Um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] associação adequada para a execução de comunicação baseada em fila com outros pontos de extremidade do WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>. Um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] associação adequada para a execução de comunicação baseada em fila com outros pontos de extremidade do WCF.  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Uma associação adequada para se comunicar com aplicativos de enfileiramento de mensagens existentes.  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Uma associação adequada para se comunicar com aplicativos de enfileiramento de mensagens existentes.  
   
 > [!NOTE]
 >  Você pode alterar propriedades nessas associações de acordo com as necessidades do seu serviço WCF. A mensagem suspeita toda mecanismo de tratamento é local para o aplicativo de recebimento. O processo é invisível para o aplicativo de envio, a menos que o aplicativo de recebimento, por fim, interrompe e envia uma confirmação negativa volta ao remetente. Nesse caso, a mensagem é movida para a fila de mensagens mortas do remetente.  
@@ -97,11 +97,11 @@ Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo d
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Diferenças do Windows XP, Windows Server 2003 e Windows Vista  
  Conforme observado anteriormente, nem todas as configurações de manipulação de mensagens suspeitas se aplicam a [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. A seguir as principais diferenças entre o enfileiramento de mensagens em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)], e [!INCLUDE[wv](../../../../includes/wv-md.md)] são relevantes para a manipulação de mensagens suspeitas:  
   
--   Mensagem de enfileiramento de mensagens no [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a subfilas, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não dão suporte a subfilas. Subfilas são usadas na manipulação de mensagens suspeitas. As filas de repetição e a fila de mensagens suspeitas são as subfilas para a fila do aplicativo é criado com base nas configurações de manipulação de mensagens suspeitas. O `MaxRetryCycles` determina quantos repetir as subfilas para criar. Portanto, quando em execução no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` são ignorados e `ReceiveErrorHandling.Move` não é permitido.  
+- Mensagem de enfileiramento de mensagens no [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a subfilas, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não dão suporte a subfilas. Subfilas são usadas na manipulação de mensagens suspeitas. As filas de repetição e a fila de mensagens suspeitas são as subfilas para a fila do aplicativo é criado com base nas configurações de manipulação de mensagens suspeitas. O `MaxRetryCycles` determina quantos repetir as subfilas para criar. Portanto, quando em execução no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` são ignorados e `ReceiveErrorHandling.Move` não é permitido.  
   
--   Mensagem de enfileiramento de mensagens no [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a negativo confirmação, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não fizer isso. Uma confirmação negativa de Gerenciador de fila de recebimento faz com que o Gerenciador de fila de envio colocar a mensagem rejeitada na fila de inatividade. Como tal, `ReceiveErrorHandling.Reject` não é permitido com [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Mensagem de enfileiramento de mensagens no [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a negativo confirmação, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não fizer isso. Uma confirmação negativa de Gerenciador de fila de recebimento faz com que o Gerenciador de fila de envio colocar a mensagem rejeitada na fila de inatividade. Como tal, `ReceiveErrorHandling.Reject` não é permitido com [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Mensagem de enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a uma propriedade de mensagem que mantém uma contagem do número de tempos de entrega de mensagens é tentada. Essa propriedade de contagem de anulação não está disponível no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não pode conter um valor preciso quando a mesma mensagem é lida por mais de um serviço WCF em um farm.  
+- Mensagem de enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a uma propriedade de mensagem que mantém uma contagem do número de tempos de entrega de mensagens é tentada. Essa propriedade de contagem de anulação não está disponível no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não pode conter um valor preciso quando a mesma mensagem é lida por mais de um serviço WCF em um farm.  
   
 ## <a name="see-also"></a>Consulte também
 

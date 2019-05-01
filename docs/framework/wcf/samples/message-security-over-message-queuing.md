@@ -3,11 +3,11 @@ title: Segurança de mensagem através do enfileiramento de mensagem
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 ms.openlocfilehash: 9e9067c38d86bb74c569b6d648d84c7c9ff6fac6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989801"
 ---
 # <a name="message-security-over-message-queuing"></a>Segurança de mensagem através do enfileiramento de mensagem
 Este exemplo demonstra como implementar um aplicativo que usa WS-Security com autenticação de certificado X.509v3 para o cliente e requer autenticação de servidor usando o certificado X.509v3 do servidor em relação ao MSMQ. Mensagem de segurança, às vezes, é mais desejável para garantir que as mensagens no armazenamento de MSMQ permanecem criptografadas e o aplicativo pode executar sua própria autenticação da mensagem.
@@ -20,15 +20,15 @@ Este exemplo demonstra como implementar um aplicativo que usa WS-Security com au
 
 2. Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
 
-    1.  Abra o Gerenciador de servidores no Visual Studio 2012.
+    1. Abra o Gerenciador de servidores no Visual Studio 2012.
 
-    2.  Expanda o **recursos** guia.
+    2. Expanda o **recursos** guia.
 
-    3.  Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.
+    3. Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.
 
-    4.  Verifique as **transacional** caixa.
+    4. Verifique as **transacional** caixa.
 
-    5.  Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
+    5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
 
 3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
@@ -77,7 +77,7 @@ Este exemplo demonstra como implementar um aplicativo que usa WS-Security com au
   
 ### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
--   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
+- Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
     > [!NOTE]
     >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
@@ -287,7 +287,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 ## <a name="comments"></a>Comentários
 
--   Criando o certificado do cliente.
+- Criando o certificado do cliente.
 
      A seguinte linha no arquivo de lote cria o certificado do cliente. O nome do cliente especificado é usado no nome da entidade do certificado criado. O certificado é armazenado no `My` armazenar cada a `CurrentUser` local do repositório.
 
@@ -298,7 +298,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   Instalando o certificado do cliente no repositório de certificados confiáveis do servidor.
+- Instalando o certificado do cliente no repositório de certificados confiáveis do servidor.
 
      A seguinte linha nas cópias do arquivo em lotes que o certificado do cliente em TrustedPeople do servidor armazenar para que o servidor possa fazer a relação de confiança relevante ou decisões de confiança não. Para um certificado instalado no repositório de TrustedPeople ser confiável por um serviço do Windows Communication Foundation (WCF), o modo de validação de certificado do cliente deve ser definido como `PeerOrChainTrust` ou `PeerTrust` valor. Consulte o exemplo de configuração de serviço anterior para saber como isso pode ser feito usando um arquivo de configuração.
 
@@ -309,7 +309,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Criando o certificado do servidor.
+- Criando o certificado do servidor.
 
      As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado:
 
@@ -325,7 +325,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
      A variável % SERVER_NAME % Especifica o nome do servidor. O certificado é armazenado no repositório de LocalMachine. Se o arquivo de lote é executado com um argumento de serviço (como, `setup.bat service`) % % SERVER_NAME contém o nome de domínio totalmente qualificado do computador. Caso contrário, o padrão é localhost
 
--   Instalar o certificado do servidor no repositório de certificados confiáveis do cliente.
+- Instalar o certificado do servidor no repositório de certificados confiáveis do cliente.
 
      A linha a seguir copia o certificado do servidor para o repositório de pessoas confiáveis do cliente. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado emitido Microsoft — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024684"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Como a cultura afeta cadeias de caracteres no Visual Basic
 Esta página de Ajuda discute como o Visual Basic usa informações de cultura para executar comparações e conversões de cadeia de caracteres.  
@@ -29,9 +29,9 @@ Esta página de Ajuda discute como o Visual Basic usa informações de cultura p
   
  O `Str` (converte números em cadeias de caracteres) e `Val` funções (converte cadeias de caracteres em números) não usa informações de cultura do aplicativo ao converter entre cadeias de caracteres e números. Em vez disso, eles reconhecem somente o ponto (.) como separador decimal válido. As semelhanças culturalmente ciente dessas funções são:  
   
--   **Conversões que usam a cultura atual.** O `CStr` e `Format` funções de convertem um número em uma cadeia de caracteres e o `CDbl` e `CInt` funções convertem uma cadeia de caracteres em um número.  
+- **Conversões que usam a cultura atual.** O `CStr` e `Format` funções de convertem um número em uma cadeia de caracteres e o `CDbl` e `CInt` funções convertem uma cadeia de caracteres em um número.  
   
--   **Conversões que usam uma cultura específica.** Cada objeto number tem um `ToString(IFormatProvider)` método que converte um número em uma cadeia de caracteres, e um `Parse(String, IFormatProvider)` método que converte uma cadeia de caracteres em um número. Por exemplo, o `Double` tipo fornece a <xref:System.Double.ToString%28System.IFormatProvider%29> e <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> métodos.  
+- **Conversões que usam uma cultura específica.** Cada objeto number tem um `ToString(IFormatProvider)` método que converte um número em uma cadeia de caracteres, e um `Parse(String, IFormatProvider)` método que converte uma cadeia de caracteres em um número. Por exemplo, o `Double` tipo fornece a <xref:System.Double.ToString%28System.IFormatProvider%29> e <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> métodos.  
   
  Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Conversion.Str%2A> e <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
@@ -52,9 +52,9 @@ Esta página de Ajuda discute como o Visual Basic usa informações de cultura p
 ## <a name="comparing-strings"></a>Comparando cadeias de caracteres  
  Há duas situações importantes em que as comparações de cadeia de caracteres são necessários:  
   
--   **Classificação de dados para exibição ao usuário.** Use as operações com base na cultura atual para que as cadeias de caracteres adequadamente classificado.  
+- **Classificação de dados para exibição ao usuário.** Use as operações com base na cultura atual para que as cadeias de caracteres adequadamente classificado.  
   
--   **Determinar se duas cadeias de caracteres de aplicativo interno corresponderem exatamente (normalmente para fins de segurança).** Use as operações que desconsiderar a cultura atual.  
+- **Determinar se duas cadeias de caracteres de aplicativo interno corresponderem exatamente (normalmente para fins de segurança).** Use as operações que desconsiderar a cultura atual.  
   
  Você pode executar os dois tipos de comparações com o Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> função. Especifique o valor opcional `Compare` argumento para controlar o tipo de comparação: `Text` para a maioria das entrada e saída `Binary` para determinar correspondências exatas.  
   

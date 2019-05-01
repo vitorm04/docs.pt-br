@@ -13,11 +13,11 @@ ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000422"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurando um ambiente de criação de perfil
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "59098176"
   
  Quando um processo gerenciado (aplicativo ou serviço) é iniciado, ele carrega o common language runtime (CLR). Quando o CLR é inicializado, ele avalia as duas variáveis de ambiente a seguir para decidir se o processo deve se conectar a um criador de perfil:  
   
--   COR_ENABLE_PROFILING: O CLR se conecta a um criador de perfil somente se essa variável de ambiente existe e estiver definida como 1.  
+- COR_ENABLE_PROFILING: O CLR se conecta a um criador de perfil somente se essa variável de ambiente existe e estiver definida como 1.  
   
--   COR_PROFILER: Se do COR_ENABLE_PROFILING verificar passa, o CLR se conecta ao criador de perfil que tem este CLSID ou ProgID, que deve ter sido armazenado anteriormente no registro. A variável de ambiente COR_PROFILER é definida como uma cadeia de caracteres, conforme mostrado nos dois exemplos a seguir.  
+- COR_PROFILER: Se do COR_ENABLE_PROFILING verificar passa, o CLR se conecta ao criador de perfil que tem este CLSID ou ProgID, que deve ter sido armazenado anteriormente no registro. A variável de ambiente COR_PROFILER é definida como uma cadeia de caracteres, conforme mostrado nos dois exemplos a seguir.  
   
     ```  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
@@ -45,23 +45,23 @@ ms.locfileid: "59098176"
 ## <a name="environment-variable-scope"></a>Escopo de variáveis de ambiente  
  Como você pode definir as variáveis de ambiente COR_ENABLE_PROFILING e COR_PROFILER determinará seu escopo de influência. Você pode definir essas variáveis em uma das seguintes maneiras:  
   
--   Se você definir as variáveis em uma [icordebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) chamada, elas se aplicarão apenas para o aplicativo que você está executando no momento. (Eles também serão aplicadas a outros aplicativos iniciados por esse aplicativo que herda o ambiente.)  
+- Se você definir as variáveis em uma [icordebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) chamada, elas se aplicarão apenas para o aplicativo que você está executando no momento. (Eles também serão aplicadas a outros aplicativos iniciados por esse aplicativo que herda o ambiente.)  
   
--   Se você definir as variáveis em uma janela de Prompt de comando, elas se aplicarão a todos os aplicativos que são iniciados a partir dessa janela.  
+- Se você definir as variáveis em uma janela de Prompt de comando, elas se aplicarão a todos os aplicativos que são iniciados a partir dessa janela.  
   
--   Se você definir as variáveis no nível do usuário, elas se aplicarão a todos os aplicativos que você comece com o Explorador de arquivos. Uma janela de Prompt de comando que você abrir depois de definir as variáveis terão essas configurações de ambiente, e assim será qualquer aplicativo que você iniciar a partir dessa janela. Para definir variáveis de ambiente no nível do usuário, clique com botão direito **meu computador**, clique em **Properties**, clique no **avançado** , clique em **ambiente Variáveis**e adicione as variáveis para o **variáveis de usuário** lista.  
+- Se você definir as variáveis no nível do usuário, elas se aplicarão a todos os aplicativos que você comece com o Explorador de arquivos. Uma janela de Prompt de comando que você abrir depois de definir as variáveis terão essas configurações de ambiente, e assim será qualquer aplicativo que você iniciar a partir dessa janela. Para definir variáveis de ambiente no nível do usuário, clique com botão direito **meu computador**, clique em **Properties**, clique no **avançado** , clique em **ambiente Variáveis**e adicione as variáveis para o **variáveis de usuário** lista.  
   
--   Se você definir as variáveis no nível do computador, elas se aplicarão a todos os aplicativos que são iniciados no computador. Uma janela de Prompt de comando que você abre no computador terá essas configurações de ambiente e assim será qualquer aplicativo que você iniciar a partir dessa janela. Isso significa que cada processo gerenciado no computador será iniciado com seu criador de perfil. Para definir variáveis de ambiente no nível do computador, clique com botão direito **meu computador**, clique em **Properties**, clique no **avançado** , clique em **ambiente Variáveis**, adicione as variáveis para o **variáveis de sistema** lista e, em seguida, reinicie o computador. Após a reinicialização, as variáveis ficarão disponíveis em todo o sistema.  
+- Se você definir as variáveis no nível do computador, elas se aplicarão a todos os aplicativos que são iniciados no computador. Uma janela de Prompt de comando que você abre no computador terá essas configurações de ambiente e assim será qualquer aplicativo que você iniciar a partir dessa janela. Isso significa que cada processo gerenciado no computador será iniciado com seu criador de perfil. Para definir variáveis de ambiente no nível do computador, clique com botão direito **meu computador**, clique em **Properties**, clique no **avançado** , clique em **ambiente Variáveis**, adicione as variáveis para o **variáveis de sistema** lista e, em seguida, reinicie o computador. Após a reinicialização, as variáveis ficarão disponíveis em todo o sistema.  
   
  Se você estiver criando o perfil de um serviço do Windows, você deve reiniciar seu computador depois de definir as variáveis de ambiente e registrar a DLL do criador de perfil. Para obter mais informações sobre essas considerações, consulte a seção [criação de perfil de um serviço Windows](#windows_service).  
   
 ## <a name="additional-considerations"></a>Considerações adicionais  
   
--   A classe do criador de perfis implementa o [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfaces. No .NET Framework versão 2.0, um criador de perfis deve implementar `ICorProfilerCallback2`. Se não estiver, `ICorProfilerCallback2` não será carregado.  
+- A classe do criador de perfis implementa o [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfaces. No .NET Framework versão 2.0, um criador de perfis deve implementar `ICorProfilerCallback2`. Se não estiver, `ICorProfilerCallback2` não será carregado.  
   
--   Somente um criador de perfis pode analisar um processo ao mesmo tempo em um determinado ambiente. Você pode registrar dois criadores de perfis diferentes em diferentes ambientes, mas cada um deve criar o perfil de processos separados. O criador de perfil deve ser implementado como um servidor em processo COM DLL, que é mapeado no espaço de endereço do processo que está sendo analisado. Isso significa que o criador de perfil é executado em processo. O .NET Framework não oferece suporte a qualquer outro tipo de servidor COM. Por exemplo, se um criador de perfis desejar monitorar aplicativos de um computador remoto, ele deve implementar agentes coletores em cada computador. Esses agentes serão os resultados em lote e comunicá-los para o computador de coleta de dados central.  
+- Somente um criador de perfis pode analisar um processo ao mesmo tempo em um determinado ambiente. Você pode registrar dois criadores de perfis diferentes em diferentes ambientes, mas cada um deve criar o perfil de processos separados. O criador de perfil deve ser implementado como um servidor em processo COM DLL, que é mapeado no espaço de endereço do processo que está sendo analisado. Isso significa que o criador de perfil é executado em processo. O .NET Framework não oferece suporte a qualquer outro tipo de servidor COM. Por exemplo, se um criador de perfis desejar monitorar aplicativos de um computador remoto, ele deve implementar agentes coletores em cada computador. Esses agentes serão os resultados em lote e comunicá-los para o computador de coleta de dados central.  
   
--   Como o criador de perfil é um objeto COM que é instanciado em processo, cada aplicativo analisado terá sua própria cópia do criador de perfil. Portanto, não tem uma instância única do criador de perfil lidar com dados de vários aplicativos. No entanto, você terá que adicionar lógica ao código de registro em log do criador de perfil para impedir que o arquivo de log é substituído por outros aplicativos de criação de perfil.  
+- Como o criador de perfil é um objeto COM que é instanciado em processo, cada aplicativo analisado terá sua própria cópia do criador de perfil. Portanto, não tem uma instância única do criador de perfil lidar com dados de vários aplicativos. No entanto, você terá que adicionar lógica ao código de registro em log do criador de perfil para impedir que o arquivo de log é substituído por outros aplicativos de criação de perfil.  
   
 ## <a name="initializing-the-profiler"></a>Inicializando o Profiler  
  Quando ambas as verificações da variável de ambiente passam, o CLR cria uma instância do criador de perfil de maneira semelhante para o COM `CoCreateInstance` função. O criador de perfil não foi carregado por meio de uma chamada direta para `CoCreateInstance`. Portanto, uma chamada para `CoInitialize`, que requer a definição do modelo de threading, é evitada. O CLR, em seguida, chama o [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) método no criador de perfil. A assinatura desse método é da seguinte maneira.  

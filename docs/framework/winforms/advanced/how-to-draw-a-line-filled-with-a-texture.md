@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
 ms.openlocfilehash: c0f90c298f48aeb96893bb09241faddc08d8a49d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004271"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>Como: desenhar uma linha preenchida com uma textura
 Em vez de desenhar uma linha com uma cor sólida, você pode desenhar uma linha com uma textura. Para desenhar linhas e curvas com uma textura, crie uma <xref:System.Drawing.TextureBrush> do objeto e passá-lo <xref:System.Drawing.TextureBrush> do objeto para um <xref:System.Drawing.Pen.%23ctor%2A> construtor. O bitmap associado ao pincel de textura é usado para organizar lado a lado o plano (modo invisível) e quando a caneta desenha uma linha ou curva, o traço de caneta revela determinados pixels da textura lado a lado.  

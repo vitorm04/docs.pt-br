@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bfec360dc7817864c57ae99c9d1648c805f524b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989088"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a>Método ICorDebugEditAndContinueSnapshot::GetRoDataRVA
 `GetRoDataRVA` é obsoleto. Não chame este método.  

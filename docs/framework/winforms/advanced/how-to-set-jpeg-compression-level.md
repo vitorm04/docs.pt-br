@@ -9,11 +9,11 @@ helpviewer_keywords:
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
 ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003880"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Como: definir o nível de compactação de JPEG
 É possível modificar os parâmetros de uma imagem ao salvar a imagem em disco para minimizar o tamanho do arquivo ou melhorar sua qualidade. Você pode ajustar a qualidade de uma imagem JPEG modificando seu nível de compactação. Para especificar o nível de compactação quando você salva uma imagem JPEG, você deve criar uma <xref:System.Drawing.Imaging.EncoderParameters> do objeto e passá-lo para o <xref:System.Drawing.Image.Save%2A> método o <xref:System.Drawing.Image> classe. Inicializar o <xref:System.Drawing.Imaging.EncoderParameters> objeto para que ele tenha uma matriz que consiste em uma <xref:System.Drawing.Imaging.EncoderParameter>. Quando você cria o <xref:System.Drawing.Imaging.EncoderParameter>, especifique o <xref:System.Drawing.Imaging.Encoder.Quality> codificador e o nível de compactação desejado.  
@@ -123,11 +123,11 @@ End Function
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Um aplicativo Windows Forms.  
+- Um aplicativo Windows Forms.  
   
--   Um <xref:System.Windows.Forms.PaintEventArgs>, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+- Um <xref:System.Windows.Forms.PaintEventArgs>, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
--   Um arquivo de imagem chamado `TestPhoto.jpg` e localizado em **c:\\**.  
+- Um arquivo de imagem chamado `TestPhoto.jpg` e localizado em **c:\\**.  
   
 ## <a name="see-also"></a>Consulte também
 

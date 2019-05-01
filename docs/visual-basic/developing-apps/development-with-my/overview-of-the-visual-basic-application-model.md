@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
 ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014136"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visão geral do modelo de aplicativo do Visual Basic
 Visual Basic fornece um modelo bem definido para controlar o comportamento de aplicativos Windows Forms: o modelo de aplicativo do Visual Basic. Esse modelo inclui eventos para lidar com o aplicativo inicialização e desligamento, bem como eventos para capturar exceções não manipuladas. Ele também fornece suporte para o desenvolvimento de aplicativos de única instância. O modelo de aplicativo é extensível, para que os desenvolvedores que precisam de mais controle podem personalizar seus métodos substituíveis.  
@@ -22,9 +22,9 @@ Visual Basic fornece um modelo bem definido para controlar o comportamento de ap
   
  Um aplicativo de instância única inicia e verifica se ele é a primeira instância ou uma instância subsequente do aplicativo:  
   
--   Se for a primeira instância, ele começa como de costume.  
+- Se for a primeira instância, ele começa como de costume.  
   
--   Cada tentativa subsequente para iniciar o aplicativo, enquanto a primeira instância é executada, resulta em um comportamento muito diferente. A tentativa subsequente notifica a primeira instância sobre os argumentos de linha de comando e, em seguida, sai imediatamente. A primeira instância manipula o `StartupNextInstance` evento para determinar quais argumentos de linha de comando da instância subsequente foram e continuará a ser executado.  
+- Cada tentativa subsequente para iniciar o aplicativo, enquanto a primeira instância é executada, resulta em um comportamento muito diferente. A tentativa subsequente notifica a primeira instância sobre os argumentos de linha de comando e, em seguida, sai imediatamente. A primeira instância manipula o `StartupNextInstance` evento para determinar quais argumentos de linha de comando da instância subsequente foram e continuará a ser executado.  
   
      Este diagrama mostra como uma instância subsequente sinaliza a primeira ocorrência:  
   
@@ -35,21 +35,21 @@ Visual Basic fornece um modelo bem definido para controlar o comportamento de ap
 ## <a name="events-in-the-application-model"></a>Eventos no modelo de aplicativo  
  Os seguintes eventos são encontrados no modelo de aplicativo:  
   
--   **Inicialização do aplicativo**. A aplicativo gera o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> eventos quando ele é iniciado. Ao manipular esse evento, você pode adicionar código que inicializa o aplicativo antes que o formulário principal é carregado. O `Startup` evento também fornece para cancelar a execução do aplicativo durante essa fase do processo de inicialização, se desejado.  
+- **Inicialização do aplicativo**. A aplicativo gera o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> eventos quando ele é iniciado. Ao manipular esse evento, você pode adicionar código que inicializa o aplicativo antes que o formulário principal é carregado. O `Startup` evento também fornece para cancelar a execução do aplicativo durante essa fase do processo de inicialização, se desejado.  
   
      Você pode configurar o aplicativo para mostrar uma tela inicial, enquanto o código de inicialização do aplicativo é executado. Por padrão, o modelo de aplicativo suprime na tela inicial de tela quando tanto o `/nosplash` ou `-nosplash` argumento de linha de comando é usado.  
   
--   **Aplicativos de única instância**. O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> é gerado quando uma instância subsequente de um aplicativo de instância única é iniciado. O evento passa os argumentos de linha de comando da instância subsequente.  
+- **Aplicativos de única instância**. O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> é gerado quando uma instância subsequente de um aplicativo de instância única é iniciado. O evento passa os argumentos de linha de comando da instância subsequente.  
   
--   **Exceções sem tratamento**. Se o aplicativo encontra uma exceção sem tratamento, ele gera o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> eventos. O manipulador para o evento pode examinar a exceção e determinar se deve continuar a execução.  
+- **Exceções sem tratamento**. Se o aplicativo encontra uma exceção sem tratamento, ele gera o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> eventos. O manipulador para o evento pode examinar a exceção e determinar se deve continuar a execução.  
   
      O `UnhandledException` evento não é gerado em algumas circunstâncias. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
   
--   **Alterações de conectividade de rede**. Se a disponibilidade da rede do computador for alterado, o aplicativo aciona o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> eventos.  
+- **Alterações de conectividade de rede**. Se a disponibilidade da rede do computador for alterado, o aplicativo aciona o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> eventos.  
   
      O `NetworkAvailabilityChanged` evento não é gerado em algumas circunstâncias. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
--   **Aplicativo encerrado**. O aplicativo fornece o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> evento para sinalizar quando ele está prestes a ser desligado. Nesse evento manipulador, você pode garantir que as operações de seu aplicativo precisa executar — fechar e salvar, por exemplo — são concluídas. Você pode configurar seu aplicativo a ser desligado quando o formulário principal fecha ou desligar somente quando todos os formulários fecham.  
+- **Aplicativo encerrado**. O aplicativo fornece o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> evento para sinalizar quando ele está prestes a ser desligado. Nesse evento manipulador, você pode garantir que as operações de seu aplicativo precisa executar — fechar e salvar, por exemplo — são concluídas. Você pode configurar seu aplicativo a ser desligado quando o formulário principal fecha ou desligar somente quando todos os formulários fecham.  
   
 ## <a name="availability"></a>Disponibilidade  
  Por padrão, o modelo de aplicativo do Visual Basic está disponível para projetos do Windows Forms. Se você configurar o aplicativo para usar um objeto de inicialização diferente, ou iniciar o código do aplicativo com um personalizado `Sub Main`, então esse objeto ou talvez seja necessário fornecer uma implementação da classe a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe usar o modelo de aplicativo. Para obter informações sobre como alterar o objeto de inicialização, consulte [página de aplicativo, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  

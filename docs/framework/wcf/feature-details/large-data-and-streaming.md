@@ -3,11 +3,11 @@ title: Dados grandes e streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038594"
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
 Windows Communication Foundation (WCF) é uma infra-estrutura de comunicações baseadas em XML. Porque os dados XML geralmente são codificados no formato de texto padrão definido na [especificação XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)e conectadas arquitetos e desenvolvedores de sistemas normalmente estão preocupados a superfície eletrônica (ou tamanho) de mensagens enviadas entre a rede e a codificação baseada em texto do XML apresenta desafios para a transferência eficiente de dados binários.  
@@ -48,11 +48,11 @@ Windows Communication Foundation (WCF) é uma infra-estrutura de comunicações 
   
  O cenário mais comum onde ocorrem essas grandes transferências de conteúdo de dados são as transferências de objetos de dados binários que:  
   
--   Não podem ser divididos facilmente em uma sequência de mensagens.  
+- Não podem ser divididos facilmente em uma sequência de mensagens.  
   
--   Devem ser entregues em tempo hábil.  
+- Devem ser entregues em tempo hábil.  
   
--   Não estão totalmente disponíveis quando a transferência é iniciada.  
+- Não estão totalmente disponíveis quando a transferência é iniciada.  
   
  Para dados que não têm essas restrições, normalmente é melhor enviar sequências de mensagens no escopo de uma sessão do que uma grande mensagem. Para obter mais informações, consulte a seção "Dados de Streaming" mais adiante neste tópico.  
   
@@ -112,9 +112,9 @@ class MyData
   
  Ao usar o MTOM, o contrato de dados anterior é serializado de acordo com as seguintes regras:  
   
--   Se `binaryBuffer` não for `null` e individualmente contiver dados suficientes para justificar a sobrecarga de exteriorização do MTOM (cabeçalhos MIME etc.) quando comparado com a codificação Base64, os dados serão exteriorizados e transportados com a mensagem como uma parte MIME binária. Se o limite não for excedido, os dados serão codificados como Base64.  
+- Se `binaryBuffer` não for `null` e individualmente contiver dados suficientes para justificar a sobrecarga de exteriorização do MTOM (cabeçalhos MIME etc.) quando comparado com a codificação Base64, os dados serão exteriorizados e transportados com a mensagem como uma parte MIME binária. Se o limite não for excedido, os dados serão codificados como Base64.  
   
--   A cadeia de caracteres (e todos os outros tipos que não sejam binários) sempre é representada como uma cadeia de caracteres no corpo da mensagem, independentemente do tamanho.  
+- A cadeia de caracteres (e todos os outros tipos que não sejam binários) sempre é representada como uma cadeia de caracteres no corpo da mensagem, independentemente do tamanho.  
   
  O efeito na codificação MTOM será o mesmo se você usar um contrato de dados explícito, conforme mostrado no exemplo anterior, usar uma lista de parâmetros em uma operação, tiver contratos de dados aninhados ou transferir um objeto do contrato de dados em uma coleção. Matrizes de bytes são sempre candidatas à otimização e serão otimizadas se os limites de otimização estiverem sendo atendidos.  
   
@@ -129,21 +129,21 @@ class MyData
 ### <a name="restrictions"></a>Restrições  
  Quando o streaming está habilitado, você não pode usar um número significativo de recursos do WCF:  
   
--   As assinaturas digitais do corpo da mensagem não podem ser executadas porque exigem a computação de um hash sobre o conteúdo da mensagem inteira. No streaming, o conteúdo não está totalmente disponível quando os cabeçalhos da mensagem são construídos e enviados e, portanto, uma assinatura digital não pode ser computada.  
+- As assinaturas digitais do corpo da mensagem não podem ser executadas porque exigem a computação de um hash sobre o conteúdo da mensagem inteira. No streaming, o conteúdo não está totalmente disponível quando os cabeçalhos da mensagem são construídos e enviados e, portanto, uma assinatura digital não pode ser computada.  
   
--   A criptografia depende das assinaturas digitais para verificar se os dados foram reconstruídos corretamente.  
+- A criptografia depende das assinaturas digitais para verificar se os dados foram reconstruídos corretamente.  
   
--   As sessões confiáveis devem armazenar as mensagens enviadas em buffer no cliente para nova entrega no caso de uma mensagem ser perdida na transferência e devem manter as mensagens no serviço antes de entregá-las para a implementação do serviço para preservar a ordem das mensagens no caso de as mensagens serem recebidas fora da sequência.  
+- As sessões confiáveis devem armazenar as mensagens enviadas em buffer no cliente para nova entrega no caso de uma mensagem ser perdida na transferência e devem manter as mensagens no serviço antes de entregá-las para a implementação do serviço para preservar a ordem das mensagens no caso de as mensagens serem recebidas fora da sequência.  
   
  Devido a essas restrições funcionais, você pode usar somente opções de segurança em nível de transporte para streaming e não pode ativar sessões confiáveis. O streaming está disponível somente com as seguintes associações definidas pelo sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>  
+- <xref:System.ServiceModel.BasicHttpBinding>  
   
--   <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.NetTcpBinding>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>  
+- <xref:System.ServiceModel.NetNamedPipeBinding>  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
  Como os transportes subjacentes de <xref:System.ServiceModel.NetTcpBinding> e <xref:System.ServiceModel.NetNamedPipeBinding> têm entrega confiável inerente e suporte à sessão com base na conexão, ao contrário do HTTP, na prática, essas duas associações são afetadas somente minimamente por essas restrições.  
   
@@ -160,11 +160,11 @@ class MyData
 ### <a name="enabling-streaming"></a>Habilitando o streaming  
  Você pode habilitar o streaming das seguintes maneiras:  
   
--   Enviar e aceitar solicitações no modo de streaming e aceitar e retornar respostas no modo com buffer (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
+- Enviar e aceitar solicitações no modo de streaming e aceitar e retornar respostas no modo com buffer (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
   
--   Enviar e aceitar solicitações no modo com buffer e aceitar e retornar respostas no modo streaming (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
+- Enviar e aceitar solicitações no modo com buffer e aceitar e retornar respostas no modo streaming (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
   
--   Enviar e receber solicitações e respostas no modo streaming nas duas direções. (<xref:System.ServiceModel.TransferMode.Streamed>).  
+- Enviar e receber solicitações e respostas no modo streaming nas duas direções. (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
  Você pode desabilitar o streaming definindo o modo de transferência como <xref:System.ServiceModel.TransferMode.Buffered>, que é a configuração padrão em todas as associações. O código a seguir mostra como definir o modo de transferência na configuração.  
   

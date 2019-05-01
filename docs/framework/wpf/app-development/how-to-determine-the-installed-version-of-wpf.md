@@ -5,11 +5,11 @@ helpviewer_keywords:
 - version [WPF], finding
 ms.assetid: 99971cef-e218-4f9f-a4c1-350332741860
 ms.openlocfilehash: ffbd9a4c7f66dff9c8773dff4259551e20aa963d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052450"
 ---
 # <a name="how-to-determine-the-installed-version-of-wpf"></a>Como: Determinar a versão instalada do WPF
 O número de versão para a versão instalada atual do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está localizado em de **registro**.  

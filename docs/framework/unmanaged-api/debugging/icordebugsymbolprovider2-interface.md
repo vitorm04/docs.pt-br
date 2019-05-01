@@ -5,11 +5,11 @@ ms.assetid: 1c9c3d92-f0de-4d4d-87f1-0c702a4808af
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b787302902779695c48df6e02e2ee00b28f44cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994104"
 ---
 # <a name="icordebugsymbolprovider2-interface"></a>Interface ICorDebugSymbolProvider2
 Estende logicamente a [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) interface para recuperar informações de símbolo de depuração adicionais.  

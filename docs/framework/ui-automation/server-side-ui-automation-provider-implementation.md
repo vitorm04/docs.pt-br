@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033183"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementação do provedor de automação de interface do usuário no lado do servidor
 > [!NOTE]
@@ -37,11 +37,11 @@ ms.locfileid: "59320041"
   
  Seu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] projeto provedor deve referenciar os seguintes assemblies:  
   
--   UIAutomationProviders.dll  
+- UIAutomationProviders.dll  
   
--   UIAutomationTypes.dll  
+- UIAutomationTypes.dll  
   
--   WindowsBase.dll  
+- WindowsBase.dll  
 
 <a name="Provider_Interfaces"></a>   
 ### <a name="provider-interfaces"></a>Interfaces de provedor  
@@ -81,25 +81,25 @@ ms.locfileid: "59320041"
   
  Provedores de controles baseados em HWND geralmente não precisa fornecer as seguintes propriedades (identificadas pelos valores de campo):  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.ProcessIdProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.ProcessIdProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.ClassNameProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.ClassNameProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.HasKeyboardFocusProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.HasKeyboardFocusProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.IsPasswordProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.IsPasswordProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
   
 > [!NOTE]
 >  O <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> de um elemento simples ou fragmento raiz hospedado em uma janela é obtido da janela; no entanto, os elementos de fragmento abaixo da raiz (por exemplo, itens de lista em uma caixa de listagem) devem fornecer seus próprios identificadores. Para obter mais informações, consulte <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.  

@@ -3,11 +3,11 @@ title: Funções
 description: Saiba mais sobre funções em F# e como F# dá suporte a construções de programação funcionais comuns.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996782"
 ---
 # <a name="functions"></a>Funções
 

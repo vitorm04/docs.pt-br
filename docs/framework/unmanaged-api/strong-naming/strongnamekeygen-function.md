@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8ebecce4078ba6c2b59e6bfba2d54300ba0c4ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000253"
 ---
 # <a name="strongnamekeygen-function"></a>Função StrongNameKeyGen
 Cria um novo par de chaves públicas/privadas para uso de nome forte.  
@@ -46,9 +46,9 @@ BOOLEAN StrongNameKeyGen (
  `dwFlags`  
  [in] Especifica se é necessário deixar a chave registrada. Há suporte para os seguintes valores:  
   
--   0x00000000 - usado quando `wszKeyContainer` é nula para gerar um nome de contêiner de chave temporária.  
+- 0x00000000 - usado quando `wszKeyContainer` é nula para gerar um nome de contêiner de chave temporária.  
   
--   0x00000001 (`SN_LEAVE_KEY`)-Especifica que a chave deve ser registrada para a esquerda.  
+- 0x00000001 (`SN_LEAVE_KEY`)-Especifica que a chave deve ser registrada para a esquerda.  
   
  `ppbKeyBlob`  
  [out] O par de chaves pública/privada retornado.  

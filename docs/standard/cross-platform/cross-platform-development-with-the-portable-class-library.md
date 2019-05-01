@@ -10,11 +10,11 @@ ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afaa8e118bb21e5c1e4f1c53b1d0d29ca6bb3bf5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055050"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Desenvolvimento de plataforma cruzada com a biblioteca de classes portátil
 
@@ -50,13 +50,13 @@ Se você quiser avaliar a portabilidade de seus assemblies antes de fazer altera
 
 Os tipos e membros disponíveis em projetos da Biblioteca de Classes Portátil são restritos por vários fatores de compatibilidade:
 
--   Eles devem ser compartilhados entre os destinos selecionados.
+- Eles devem ser compartilhados entre os destinos selecionados.
 
--   Eles devem se comportar de forma semelhante nesses destinos.
+- Eles devem se comportar de forma semelhante nesses destinos.
 
--   Eles não devem ser candidatos à substituição.
+- Eles não devem ser candidatos à substituição.
 
--   Eles devem fazer sentido em um ambiente portátil, especialmente quando os membros de suporte não são portáveis.
+- Eles devem fazer sentido em um ambiente portátil, especialmente quando os membros de suporte não são portáveis.
 
 Se houver suporte a um membro na Biblioteca de Classes Portátil e aos destinos selecionados, isso aparecerá no projeto no IntelliSense. Porém, lembre-se de que uma API pode ter suporte na Biblioteca de Classes Portátil, mas sua capacidade de usá-la dependerá dos destinos selecionados.
 
@@ -78,9 +78,9 @@ Quando você cria um aplicativo Windows Universal que referencia um assembly de 
 
 Ao implantar o aplicativo do .NET Framework que faça referência a um assembly da Biblioteca de Classes Portátil, você deve especificar uma dependência na versão correta do .NET Framework. Ao especificar essa dependência, você garante que a versão requisitada seja instalada com seu aplicativo.
 
--   Para criar uma dependência com a implantação do ClickOnce: no **Gerenciador de soluções**, escolha o nó do projeto para o projeto que você deseja publicar. (Esse projeto faz referência ao projeto da Biblioteca de Classes Portátil.) Na barra de menus, escolha **Project** > **as propriedades**e, em seguida, escolha o **publicar** guia. Sobre o **Publish** , escolha **pré-requisitos**. Selecione a versão necessária do .NET Framework como um pré-requisito.
+- Para criar uma dependência com a implantação do ClickOnce: Na **Gerenciador de soluções**, escolha o nó do projeto para o projeto que você deseja publicar. (Esse projeto faz referência ao projeto da Biblioteca de Classes Portátil.) Na barra de menus, escolha **Project** > **as propriedades**e, em seguida, escolha o **publicar** guia. Sobre o **Publish** , escolha **pré-requisitos**. Selecione a versão necessária do .NET Framework como um pré-requisito.
 
--   Para criar uma dependência com um projeto de instalação: nos **Gerenciador de soluções**, escolha o projeto de instalação. Na barra de menus, escolha **Project** > **as propriedades** > **pré-requisitos**. Selecione a versão necessária do .NET Framework como um pré-requisito.
+- Para criar uma dependência com um projeto de instalação: Na **Gerenciador de soluções**, escolha o projeto de instalação. Na barra de menus, escolha **Project** > **as propriedades** > **pré-requisitos**. Selecione a versão necessária do .NET Framework como um pré-requisito.
 
 Para obter mais informações sobre como implantar aplicativos do .NET Framework, consulte [guia de implantação para os desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 

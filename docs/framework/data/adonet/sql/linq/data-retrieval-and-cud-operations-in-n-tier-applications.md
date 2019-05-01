@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037915"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recuperação de dados e operações de COMIDA RUMINADA em aplicativos de n camadas (LINQ to SQL)
 Quando você serializa objetos de entidade como clientes ou pedidos para um cliente em uma rede, essas entidades são desanexadas de seu contexto de dados. O contexto de dados não controla as alterações ou suas associações com outros objetos. Isso não é um problema que os clientes estão lê apenas os dados. Também é relativamente simples permitir que clientes para adicionar novas linhas em uma base de dados. No entanto, se seu aplicativo requer que os clientes possam atualizar ou excluir dados, você deve anexar as entidades a um novo contexto de dados antes de chamar <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Além disso, se você estiver usando uma verificação de simultaneidade otimista com valores originais, então você também precisará de uma maneira de fornecer a base de dados a entidade original e a entidade como modificada. Os métodos de `Attach` são fornecidos para permite que você coloque entidades em um novo contexto de dados depois que foram separados.  
@@ -85,9 +85,9 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ### <a name="middle-tier-implementation"></a>Implementação de camada intermediária  
  O exemplo a seguir mostra uma implementação do método de interface na camada intermediária. A seguir estão as duas problemas básicas para a observação:  
   
--   <xref:System.Data.Linq.DataContext> é declarado no escopo do método.  
+- <xref:System.Data.Linq.DataContext> é declarado no escopo do método.  
   
--   O método retorna uma coleção de <xref:System.Collections.IEnumerable> de resultados reais. O serializador executar a consulta para enviar os resultados de volta para o cliente/camada de apresentação. Para acessar localmente os resultados da consulta na camada intermediária, você pode forçar a execução chamando `ToList` ou `ToArray` na variável de consulta. Você pode então retornar a lista ou matriz como `IEnumerable`.  
+- O método retorna uma coleção de <xref:System.Collections.IEnumerable> de resultados reais. O serializador executar a consulta para enviar os resultados de volta para o cliente/camada de apresentação. Para acessar localmente os resultados da consulta na camada intermediária, você pode forçar a execução chamando `ToList` ou `ToArray` na variável de consulta. Você pode então retornar a lista ou matriz como `IEnumerable`.  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -210,11 +210,11 @@ public void DeleteOrder(Order order)
 ## <a name="updating-data"></a>Atualizando dados  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] suporta atualizações nesses cenários que envolvem concorrência otimista:  
   
--   Concorrência otimista com base em carimbos de data/hora ou em números de RowVersion.  
+- Concorrência otimista com base em carimbos de data/hora ou em números de RowVersion.  
   
--   Concorrência otimista com base em valores originais de um subconjunto de propriedades de entidade.  
+- Concorrência otimista com base em valores originais de um subconjunto de propriedades de entidade.  
   
--   Concorrência otimista com base nas entidades originais e modificadas completos.  
+- Concorrência otimista com base nas entidades originais e modificadas completos.  
   
  Você também pode executar atualizações e exclusões em uma entidade junto com suas relações, por exemplo um cliente e uma coleção de seus objetos associados de ordem. Quando você faz alterações no cliente a um gráfico de objetos de entidade e das coleções filho (de`EntitySet`), e as verificações de simultaneidade otimista exigem valores originais, o cliente deve fornecer os valores originais para cada entidade e objeto de <xref:System.Data.Linq.EntitySet%601> . Se você deseja permitir que clientes para fazer um conjunto de atualizações, de exclusões, e de inserções relacionadas em uma única chamada de método, você deve fornecer o cliente uma maneira para indicar que tipo de operação para executar em cada entidade. Na camada intermediária, então você deve chamar o método apropriado e então <xref:System.Data.Linq.ITable.Attach%2A>de <xref:System.Data.Linq.ITable.InsertOnSubmit%2A> , <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>, ou <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (sem `Attach`, porque inserções) para cada entidade antes de chamar <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Não recuperar dados de base de dados como uma maneira para obter valores originais antes de tentar atualizações.  
   
@@ -379,11 +379,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="expected-entity-members"></a>Membros esperados de entidade  
  Conforme observado anteriormente, somente certos membros do objeto de entidade são necessários ser definidos antes de chamar os métodos de `Attach` . Membros de entidade que são necessários devem ser definidos atender aos seguintes critérios:  
   
--   É parte da identidade de entidade.  
+- É parte da identidade de entidade.  
   
--   É esperado ser alterado.  
+- É esperado ser alterado.  
   
--   É um carimbo de data/hora ou tem o atributo de <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> definido como algo além de `Never`.  
+- É um carimbo de data/hora ou tem o atributo de <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> definido como algo além de `Never`.  
   
  Se uma tabela usa um carimbo de data/hora ou número de versão para uma verificação de simultaneidade otimista, você deve definir esses membros antes de chamar <xref:System.Data.Linq.ITable.Attach%2A>. Um membro é dedicado para concorrência otimista verificando quando a propriedade de <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> é definida para retificar no atributo de coluna. Todas as atualizações solicitadas serão enviadas somente se os valores de número de versão ou de carimbo de data/hora são os mesmos na base de dados.  
   

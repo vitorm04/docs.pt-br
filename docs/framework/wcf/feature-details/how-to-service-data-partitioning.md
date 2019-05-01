@@ -3,11 +3,11 @@ title: 'Como: fornecer particionamento de dados'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
 ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047523"
 ---
 # <a name="how-to-service-data-partitioning"></a>Como: fornecer particionamento de dados
 Este tópico descreve as etapas básicas necessárias para mensagens de partição em várias instâncias do mesmo serviço de destino. Particionamento de dados de serviço é normalmente usados quando você precisar dimensionar um serviço a fim de fornecer a melhor qualidade de serviço, ou quando você precisa lidar com solicitações de clientes diferentes de uma maneira específica. Por exemplo, mensagens de alto valor ou clientes de "Ouro" talvez precise ser processadas em uma prioridade mais alta do que as mensagens de um cliente padrão.  

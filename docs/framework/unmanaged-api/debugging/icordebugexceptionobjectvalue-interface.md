@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5328442ceaee05b3f81466b785f04a361d456a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995911"
 ---
 # <a name="icordebugexceptionobjectvalue-interface"></a>Interface ICorDebugExceptionObjectValue
 Estende a interface "ICorDebugObjectValue" para fornecer informações de rastreamento de pilha de um objeto de exceção gerenciada.  

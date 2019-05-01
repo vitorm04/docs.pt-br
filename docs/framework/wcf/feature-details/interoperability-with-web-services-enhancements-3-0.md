@@ -3,11 +3,11 @@ title: Interoperabilidade com Web Services Enhancements 3.0
 ms.date: 03/30/2017
 ms.assetid: e8e589d2-12c6-4794-8a11-1ee90b47dfaa
 ms.openlocfilehash: 19786393a09610b4bd6c593f89beece8b9a0d3f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038643"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Interoperabilidade com Web Services Enhancements 3.0
 Os clientes do Windows Communication Foundation (WCF) e serviços são compatíveis com o nível de transmissão com Web Services aprimoramentos 3.0 para clientes do Microsoft .NET (WSE) e serviços quando os clientes do WCF e serviços estão configurados para usar a versão de agosto de 2004 das Especificação de WS-Addressing.  

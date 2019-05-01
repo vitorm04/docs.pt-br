@@ -7,11 +7,11 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032976"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informações de privacidade do Windows Communication Foundation
 A Microsoft está comprometida em proteger a privacidade dos usuários finais. Quando você compila um aplicativo usando o Windows Communication Foundation (WCF), versão 3.0, seu aplicativo pode afetar a privacidade de seus usuários finais. Por exemplo, seu aplicativo explicitamente poderá coletar informações de contato do usuário, ou ele pode solicitar ou enviar informações pela Internet para seu site da Web. Se você incorporar tecnologia da Microsoft em seu aplicativo, o que a tecnologia pode ter seu próprio comportamento que pode afetar a privacidade. WCF não enviar todas as informações à Microsoft do seu aplicativo, a menos que você ou o usuário final optar por enviá-los para nós.  
@@ -38,9 +38,9 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  Autenticação é realizada pela transmissão de credenciais entre os clientes e serviços. A autenticação pode ser por meio da segurança de nível de transporte ou por meio de SOAP mensagem de nível de segurança, da seguinte maneira:  
   
--   Na segurança de mensagem SOAP, a autenticação é realizada por meio de credenciais, como nome de usuário/senhas, certificados x. 509, tíquetes Kerberos e os tokens SAML, que podem conter informações pessoais, dependendo do emissor.  
+- Na segurança de mensagem SOAP, a autenticação é realizada por meio de credenciais, como nome de usuário/senhas, certificados x. 509, tíquetes Kerberos e os tokens SAML, que podem conter informações pessoais, dependendo do emissor.  
   
--   Usando a segurança de transporte, a autenticação é feita por meio de mecanismos de autenticação do transporte tradicionais, como esquemas de autenticação HTTP (básica, Digest, Negotiate, NTLM, None, a autorização integrada do Windows e anônima) e a autenticação de formulário.  
+- Usando a segurança de transporte, a autenticação é feita por meio de mecanismos de autenticação do transporte tradicionais, como esquemas de autenticação HTTP (básica, Digest, Negotiate, NTLM, None, a autorização integrada do Windows e anônima) e a autenticação de formulário.  
   
  A autenticação pode resultar em uma sessão segura estabelecida entre os pontos de extremidade de comunicação. A sessão é identificada por um GUID que dura o tempo de vida da sessão de segurança. A tabela a seguir mostra o que é mantido e onde.  
   

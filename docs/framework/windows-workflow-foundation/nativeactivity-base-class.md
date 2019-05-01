@@ -3,11 +3,11 @@ title: Classe base de NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
 ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009975"
 ---
 # <a name="nativeactivity-base-class"></a>Classe base de NativeActivity
 
@@ -16,21 +16,21 @@ ms.locfileid: "59296583"
 ## <a name="using-nativeactivitycontext"></a>Usando NativeActivityContext
  Recursos de tempo de execução de fluxo de trabalho podem ser acessados de dentro do método de <xref:System.Activities.NativeActivity.Execute%2A> usando membros de parâmetro de `context` , do tipo <xref:System.Activities.NativeActivityContext>. Os recursos <xref:System.Activities.NativeActivityContext> direto disponível incluem o seguinte:
 
--   Obter e definir os argumentos e variáveis.
+- Obter e definir os argumentos e variáveis.
 
--   Atividades filhos de programação com <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
+- Atividades filhos de programação com <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
 
--   Anulando a execução da atividade usando <xref:System.Activities.NativeActivityContext.Abort%2A>.
+- Anulando a execução da atividade usando <xref:System.Activities.NativeActivityContext.Abort%2A>.
 
--   Cancelando a execução filho usando <xref:System.Activities.NativeActivityContext.CancelChild%2A> e <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.
+- Cancelando a execução filho usando <xref:System.Activities.NativeActivityContext.CancelChild%2A> e <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.
 
--   Acesso aos indicadores de atividade usando métodos como <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, e <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.
+- Acesso aos indicadores de atividade usando métodos como <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, e <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.
 
--   Recursos personalizados de rastreamento que usam <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Recursos personalizados de rastreamento que usam <xref:System.Activities.CodeActivityContext.Track%2A>.
 
--   Acesso às propriedades de execução da atividade e propriedades de valor usando <xref:System.Activities.CodeActivityContext.GetProperty%2A> e <xref:System.Activities.NativeActivityContext.GetValue%2A>.
+- Acesso às propriedades de execução da atividade e propriedades de valor usando <xref:System.Activities.CodeActivityContext.GetProperty%2A> e <xref:System.Activities.NativeActivityContext.GetValue%2A>.
 
--   Ações e funções de atividade de programação usando o <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> e o <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.
+- Ações e funções de atividade de programação usando o <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> e o <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Para criar uma atividade personalizado que herda de NativeActivity
 

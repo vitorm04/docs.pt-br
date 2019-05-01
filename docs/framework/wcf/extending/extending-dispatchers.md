@@ -5,11 +5,11 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967604"
 ---
 # <a name="extending-dispatchers"></a>Estendendo distribuidores
 Distribuidores são responsáveis por puxando as mensagens recebidas fora de canais subjacentes, convertendo-os em invocações de método no código do aplicativo e enviar os resultados para o chamador. Extensões de Dispatcher permitem que você modifique esse processamento.  Você pode implementar os inspetores de mensagem ou de parâmetro que inspecionam ou modificar o conteúdo de mensagens ou parâmetros.  Você pode alterar o modo como as mensagens são roteadas para operações ou fornecem algumas outras funcionalidades.  
@@ -40,37 +40,37 @@ Distribuidores são responsáveis por puxando as mensagens recebidas fora de can
 ## <a name="scenarios"></a>Cenários  
  Há uma série de motivos para estender o dispatcher:  
   
--   Validação de mensagem personalizada. Os usuários podem impor que uma mensagem é válida para um determinado esquema. Isso pode ser feito ao implementar as interfaces de interceptador de mensagem. Por exemplo, consulte [inspetores de mensagem](../../../../docs/framework/wcf/samples/message-inspectors.md).  
+- Validação de mensagem personalizada. Os usuários podem impor que uma mensagem é válida para um determinado esquema. Isso pode ser feito ao implementar as interfaces de interceptador de mensagem. Por exemplo, consulte [inspetores de mensagem](../../../../docs/framework/wcf/samples/message-inspectors.md).  
   
--   Registro em log de mensagem personalizada. Os usuários podem inspecionar e um conjunto de mensagens de aplicativo por meio de um ponto de extremidade de fluxo de log. Isso também pode ser feito com as interfaces de interceptador de mensagem.  
+- Registro em log de mensagem personalizada. Os usuários podem inspecionar e um conjunto de mensagens de aplicativo por meio de um ponto de extremidade de fluxo de log. Isso também pode ser feito com as interfaces de interceptador de mensagem.  
   
--   Transformações de mensagens personalizadas. Os usuários podem aplicar determinadas transformações para a mensagem no tempo de execução (por exemplo, para controle de versão). Isso pode ser feito, novamente, com as interfaces de interceptador de mensagem.  
+- Transformações de mensagens personalizadas. Os usuários podem aplicar determinadas transformações para a mensagem no tempo de execução (por exemplo, para controle de versão). Isso pode ser feito, novamente, com as interfaces de interceptador de mensagem.  
   
--   Modelo de dados personalizado. Os usuários podem ter um modelo de serialização de dados não suportados por padrão no WCF (ou seja, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>e mensagens brutas). Isso pode ser feito por implementar as interfaces de formatador de mensagem. Por exemplo, consulte [formatador de operação e seletor de operação](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+- Modelo de dados personalizado. Os usuários podem ter um modelo de serialização de dados não suportados por padrão no WCF (ou seja, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>e mensagens brutas). Isso pode ser feito por implementar as interfaces de formatador de mensagem. Por exemplo, consulte [formatador de operação e seletor de operação](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
--   Validação de parâmetro personalizado. Os usuários podem impor que os parâmetros de tipo são válidos (em vez de XML). Isso pode ser feito usando as interfaces do Inspetor de parâmetro.  
+- Validação de parâmetro personalizado. Os usuários podem impor que os parâmetros de tipo são válidos (em vez de XML). Isso pode ser feito usando as interfaces do Inspetor de parâmetro.  
   
--   Expedição de operação personalizado. Os usuários podem implementar a expedição em algo diferente de ação – por exemplo, no elemento body ou em uma propriedade de mensagem personalizada. Isso pode ser feito usando o <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interface. Por exemplo, consulte [formatador de operação e seletor de operação](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+- Expedição de operação personalizado. Os usuários podem implementar a expedição em algo diferente de ação – por exemplo, no elemento body ou em uma propriedade de mensagem personalizada. Isso pode ser feito usando o <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interface. Por exemplo, consulte [formatador de operação e seletor de operação](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
--   Ao pool de objetos. Os usuários podem o pool de instâncias em vez de alocar um novo para cada chamada. Isso pode ser implementado usando as interfaces de provedor de instância. Por exemplo, consulte [Pooling](../../../../docs/framework/wcf/samples/pooling.md).  
+- Ao pool de objetos. Os usuários podem o pool de instâncias em vez de alocar um novo para cada chamada. Isso pode ser implementado usando as interfaces de provedor de instância. Por exemplo, consulte [Pooling](../../../../docs/framework/wcf/samples/pooling.md).  
   
--   Instância de concessão. Os usuários podem implementar um padrão de concessão, por exemplo tempo de vida, semelhante de comunicação remota do .NET Framework. Isso pode ser feito usando as interfaces de tempo de vida do contexto de instância.  
+- Instância de concessão. Os usuários podem implementar um padrão de concessão, por exemplo tempo de vida, semelhante de comunicação remota do .NET Framework. Isso pode ser feito usando as interfaces de tempo de vida do contexto de instância.  
   
--   Tratamento de erros personalizado. Os usuários podem controlar como os dois erros locais são processados e como as falhas serão comunicadas aos clientes. Isso pode ser implementado usando o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfaces.  
+- Tratamento de erros personalizado. Os usuários podem controlar como os dois erros locais são processados e como as falhas serão comunicadas aos clientes. Isso pode ser implementado usando o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfaces.  
   
--   Comportamentos de autorização personalizado. Os usuários podem implementar o controle de acesso personalizadas estendendo as partes de tempo de execução do contrato ou de operação e adicionando as verificações de segurança com base em tokens presentes na mensagem. Isso pode ser feito usando o interceptador de mensagem ou interfaces de interceptor de parâmetro. Para obter exemplos, consulte [extensibilidade de segurança](../../../../docs/framework/wcf/samples/security-extensibility.md).  
+- Comportamentos de autorização personalizado. Os usuários podem implementar o controle de acesso personalizadas estendendo as partes de tempo de execução do contrato ou de operação e adicionando as verificações de segurança com base em tokens presentes na mensagem. Isso pode ser feito usando o interceptador de mensagem ou interfaces de interceptor de parâmetro. Para obter exemplos, consulte [extensibilidade de segurança](../../../../docs/framework/wcf/samples/security-extensibility.md).  
   
     > [!CAUTION]
     >  Como alterar as propriedades de segurança tem o potencial de comprometer a segurança de aplicativos do WCF, é altamente recomendável que você empreender relacionadas à segurança modificações com cuidado e testar minuciosamente antes da implantação.  
   
--   Validadores de tempo de execução do WCF personalizados. Você pode instalar validadores personalizados que examinam os serviços, contratos e associações para impor políticas de nível empresarial em relação a aplicativos WCF. (Por exemplo, consulte [como: Bloquear pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
+- Validadores de tempo de execução do WCF personalizados. Você pode instalar validadores personalizados que examinam os serviços, contratos e associações para impor políticas de nível empresarial em relação a aplicativos WCF. (Por exemplo, consulte [como: Bloquear pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
   
 ### <a name="using-the-dispatchruntime-class"></a>Usando a classe DispatchRuntime  
  Use o <xref:System.ServiceModel.Dispatcher.DispatchRuntime> classe para modificar o comportamento padrão de um serviço ou um ponto de extremidade individual ou inserir objetos que implementam modificações personalizadas para um ou ambos os seguintes processos de serviço (ou processos de cliente no caso de um cliente duplex):  
   
--   A transformação de mensagens de entrada em objetos e liberar esses objetos como invocações de método em um objeto de serviço.  
+- A transformação de mensagens de entrada em objetos e liberar esses objetos como invocações de método em um objeto de serviço.  
   
--   A transformação de objetos recebidos de resposta para uma invocação de operação de serviço para as mensagens de saída.  
+- A transformação de objetos recebidos de resposta para uma invocação de operação de serviço para as mensagens de saída.  
   
  O <xref:System.ServiceModel.Dispatcher.DispatchRuntime> lhe permite interceptar e estender o dispatcher do canal ou ponto de extremidade para todas as mensagens em um contrato específico, mesmo quando uma mensagem não é reconhecida. Quando chega uma mensagem que não corresponde a nenhum declarado no contrato que ela seja expedida para a operação retornada pelo <xref:System.ServiceModel.Dispatcher.DispatchRuntime.UnhandledDispatchOperation%2A> propriedade. Para interceptar ou estender em todas as mensagens de uma determinada operação, consulte o <xref:System.ServiceModel.Dispatcher.DispatchOperation> classe.  
   
@@ -84,17 +84,17 @@ Distribuidores são responsáveis por puxando as mensagens recebidas fora de can
   
 4. Componentes de segurança podem usar as seguintes propriedades:  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> indica onde os eventos de auditoria são gravados.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> indica onde os eventos de auditoria são gravados.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Controla se o serviço tentará representar usando as credenciais fornecidas pela mensagem de entrada.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Controla se o serviço tentará representar usando as credenciais fornecidas pela mensagem de entrada.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> Controla se os eventos de autenticação de mensagem bem-sucedida são gravados no log de eventos especificado pelo <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> Controla se os eventos de autenticação de mensagem bem-sucedida são gravados no log de eventos especificado pelo <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> controles como o <xref:System.Threading.Thread.CurrentPrincipal%2A> propriedade está definida.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> controles como o <xref:System.Threading.Thread.CurrentPrincipal%2A> propriedade está definida.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Especifica como a auditoria de eventos de autorização é executada.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Especifica como a auditoria de eventos de autorização é executada.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Especifica se deve ser suprimida exceções não críticas que ocorrem durante o processo de registro em log.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Especifica se deve ser suprimida exceções não críticas que ocorrem durante o processo de registro em log.  
   
  Normalmente, os objetos de extensão personalizada são atribuídos a um <xref:System.ServiceModel.Dispatcher.DispatchRuntime> propriedade ou inseridos em uma coleção por um comportamento de serviço (um objeto que implementa <xref:System.ServiceModel.Description.IServiceBehavior>), um comportamento de contrato (um objeto que implementa <xref:System.ServiceModel.Description.IContractBehavior>), ou um ponto de extremidade comportamento (um objeto que implementa <xref:System.ServiceModel.Description.IEndpointBehavior>). Em seguida, o objeto de comportamento de instalação é adicionado à coleção apropriada dos comportamentos de forma programática ou pela implementação de uma <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> objeto para habilitar o comportamento a ser inserido usando um arquivo de configuração do aplicativo.  
   
@@ -109,23 +109,23 @@ Distribuidores são responsáveis por puxando as mensagens recebidas fora de can
   
  As seguintes propriedades controlam a execução de tempo de execução no nível da operação:  
   
--   O <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A>, e <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> as propriedades obtêm os respectivos valores para a operação.  
+- O <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A>, e <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> as propriedades obtêm os respectivos valores para a operação.  
   
--   O <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> e <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> especificam o comportamento de transação.  
+- O <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> e <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> especificam o comportamento de transação.  
   
--   O <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> e <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> propriedades controlam o tempo de vida do objeto de serviço definido pelo usuário relativo a <xref:System.ServiceModel.InstanceContext>.  
+- O <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> e <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> propriedades controlam o tempo de vida do objeto de serviço definido pelo usuário relativo a <xref:System.ServiceModel.InstanceContext>.  
   
--   O <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>e o <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> propriedades permitem o controle explícito sobre a conversão de mensagens em objetos e às mensagens.  
+- O <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>e o <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> propriedades permitem o controle explícito sobre a conversão de mensagens em objetos e às mensagens.  
   
--   O <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> propriedade especifica o nível de representação de operação.  
+- O <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> propriedade especifica o nível de representação de operação.  
   
--   O <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> propriedade insere extensões de contexto de chamada personalizadas para a operação.  
+- O <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> propriedade insere extensões de contexto de chamada personalizadas para a operação.  
   
--   O <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> propriedade controla quando objetos de parâmetro são destruídos.  
+- O <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> propriedade controla quando objetos de parâmetro são destruídos.  
   
--   O <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> propriedade para inserir um objeto chamador personalizado.  
+- O <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> propriedade para inserir um objeto chamador personalizado.  
   
--   O <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> propriedade permite que você insira um Inspetor de parâmetro personalizado que você pode usar para inspecionar ou modificar os parâmetros e valores de retorno.  
+- O <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> propriedade permite que você insira um Inspetor de parâmetro personalizado que você pode usar para inspecionar ou modificar os parâmetros e valores de retorno.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
 ms.openlocfilehash: 236f4ff5bfd709426975c7a8c1d828eb8b3fe89b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032286"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle MenuItem
 

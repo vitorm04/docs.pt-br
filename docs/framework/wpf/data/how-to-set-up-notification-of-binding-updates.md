@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
 ms.openlocfilehash: 4185198312ed98f9aaa1388626600d9f21abae55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051982"
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>Como: Configurar notificação das atualizações de associação
 Este exemplo mostra como configurar para ser notificado quando o destino de associação (destino) ou a origem da associação (origem) de uma associação foi atualizada.  

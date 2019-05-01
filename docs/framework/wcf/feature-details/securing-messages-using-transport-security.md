@@ -3,11 +3,11 @@ title: Mensagens de segurança que usam a segurança de transporte
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990958"
 ---
 # <a name="securing-messages-using-transport-security"></a>Mensagens de segurança que usam a segurança de transporte
 Esta seção aborda a segurança de transporte de enfileiramento de mensagens (MSMQ) que você pode usar para proteger as mensagens enviadas para uma fila.  
@@ -25,11 +25,11 @@ Esta seção aborda a segurança de transporte de enfileiramento de mensagens (M
   
  Segurança de transporte usando <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> afeta como mensagens MSMQ são protegidas em trânsito entre a fila de transmissão e a fila de destino onde protegido implica:  
   
--   Assinar a mensagem para assegurar que ele não seja violado.  
+- Assinar a mensagem para assegurar que ele não seja violado.  
   
--   Criptografar a mensagem para garantir que não podem ser visto ou violado. Isso é opcional mas recomendado.  
+- Criptografar a mensagem para garantir que não podem ser visto ou violado. Isso é opcional mas recomendado.  
   
--   O Gerenciador de fila de destino que identifica o remetente da mensagem de não-repúdio.  
+- O Gerenciador de fila de destino que identifica o remetente da mensagem de não-repúdio.  
   
  No MSMQ, independente de autenticação, a fila de destino tem uma lista de controle de acesso (ACL) para verificar se o cliente tem permissão para enviar a mensagem à fila de destino. O aplicativo de recebimento também é verificado para a permissão receber a mensagem da fila de destino.  
   

@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034392"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Criar um DataTable de um DataView
 Depois de recuperar dados de uma fonte de dados e preencher um <xref:System.Data.DataTable> com os dados, talvez você queira classificar, filtrar ou limitar os dados retornados de outra maneira sem recuperá-los novamente. O <xref:System.Data.DataView> classe torna isso possível. Além disso, se você precisar criar um novo <xref:System.Data.DataTable> do <xref:System.Data.DataView>, você pode usar o <xref:System.Data.DataView.ToTable%2A> método para copiar todas as linhas e colunas ou um subconjunto dos dados em um novo <xref:System.Data.DataTable>. O <xref:System.Data.DataView.ToTable%2A> método fornece sobrecargas para:  
   
--   Criar uma <xref:System.Data.DataTable> que contém as colunas que são um subconjunto das colunas no <xref:System.Data.DataView>.  
+- Criar uma <xref:System.Data.DataTable> que contém as colunas que são um subconjunto das colunas no <xref:System.Data.DataView>.  
   
--   Criar uma <xref:System.Data.DataTable> que inclui somente linhas distintas do <xref:System.Data.DataView>, forma análoga à palavra-chave DISTINCT em Transact-SQL.  
+- Criar uma <xref:System.Data.DataTable> que inclui somente linhas distintas do <xref:System.Data.DataView>, forma análoga à palavra-chave DISTINCT em Transact-SQL.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de aplicativo de console a seguir cria uma <xref:System.Data.DataTable> que contém dados do **Person. Contact** na tabela do **AdventureWorks** banco de dados de exemplo. Em seguida, o exemplo cria um classificada e filtrada <xref:System.Data.DataView> com base no <xref:System.Data.DataTable>. Depois de exibir o conteúdo do <xref:System.Data.DataTable> e o <xref:System.Data.DataView>, o exemplo cria uma nova <xref:System.Data.DataTable> da <xref:System.Data.DataView> chamando o <xref:System.Data.DataView.ToTable%2A> método, selecionando apenas um subconjunto de colunas disponíveis. Por fim, o exemplo exibe o conteúdo do novo <xref:System.Data.DataTable>.  

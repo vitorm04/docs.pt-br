@@ -6,8 +6,8 @@ ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003087"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensagem personalizado: Codificador de compactação
 Este exemplo demonstra como implementar um codificador personalizado usando a plataforma do Windows Communication Foundation (WCF).  
@@ -29,13 +29,13 @@ Este exemplo demonstra como implementar um codificador personalizado usando a pl
   
  O exemplo demonstra como criar e integrar um codificador de mensagem personalizado em um aplicativo WCF. A biblioteca GZipEncoder.dll é implantada com o cliente e o serviço. Este exemplo também demonstra o impacto da compactação de mensagens. O código GZipEncoder.dll demonstra o seguinte:  
   
--   Criação de um codificador personalizado e a fábrica de codificador.  
+- Criação de um codificador personalizado e a fábrica de codificador.  
   
--   Desenvolvendo um elemento de associação para um codificador personalizado.  
+- Desenvolvendo um elemento de associação para um codificador personalizado.  
   
--   Usando a configuração de ligação personalizada para a integração de elementos de associação personalizados.  
+- Usando a configuração de ligação personalizada para a integração de elementos de associação personalizados.  
   
--   Desenvolvendo um manipulador de configuração personalizadas para permitir a configuração de arquivo de um elemento de associação personalizado.  
+- Desenvolvendo um manipulador de configuração personalizadas para permitir a configuração de arquivo de um elemento de associação personalizado.  
   
  Como indicado anteriormente, há várias camadas que são implementadas em um codificador personalizado. Para ilustrar melhor a relação entre cada uma dessas camadas, uma ordem simplificada de eventos de inicialização do serviço está na lista a seguir:  
   
@@ -43,13 +43,13 @@ Este exemplo demonstra como implementar um codificador personalizado usando a pl
   
 2. As informações de configuração é lido.  
   
-    1.  A configuração do serviço registra o manipulador de configuração personalizada.  
+    1. A configuração do serviço registra o manipulador de configuração personalizada.  
   
-    2.  O host de serviço é criado e aberto.  
+    2. O host de serviço é criado e aberto.  
   
-    3.  O elemento de configuração personalizada cria e retorna o elemento de associação personalizado.  
+    3. O elemento de configuração personalizada cria e retorna o elemento de associação personalizado.  
   
-    4.  O elemento de associação personalizada cria e retorna uma fábrica de codificador de mensagem.  
+    4. O elemento de associação personalizada cria e retorna uma fábrica de codificador de mensagem.  
   
 3. Uma mensagem é recebida.  
   

@@ -4,11 +4,11 @@ description: Baixe os bancos de dados do exemplo do SQL Server usados nos exempl
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 ms.openlocfilehash: 5580f06f3d28ed6d70f75b619498ac8de7bc3326
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037928"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>Obter os bancos de dados de exemplo para exemplos de código do ADO.NET
 

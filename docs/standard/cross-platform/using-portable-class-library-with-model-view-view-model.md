@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050487"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Usando a Biblioteca de Classes Portátil com Modelo MVVM
 Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) para implementar o padrão Model-View-View modelo (MVVM) e compartilhar assemblies entre várias plataformas.
@@ -32,27 +32,27 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
 ## <a name="classes-that-support-mvvm"></a>Classes que dão suporte ao MVVM
  Quando você seleciona os [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight ou Windows Phone 7.5 para o seu [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projeto, as classes a seguir estão disponíveis para implementar o padrão MVVM:
 
--   Classe <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
+- Classe <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
 
--   Classe <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
+- Classe <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
 
--   Classe <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>
+- Classe <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>
 
--   Classe <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>
+- Classe <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>
 
--   Classe <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>
+- Classe <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>
 
--   Classe <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>
+- Classe <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>
 
--   Classe <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>
+- Classe <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>
 
--   Classe <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>
+- Classe <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>
 
--   Classe <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>
+- Classe <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>
 
--   Classe <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
+- Classe <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
 
--   Todas as classes no <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> namespace
+- Todas as classes no <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> namespace
 
 ## <a name="implementing-mvvm"></a>Implementação do MVVM
  Para implementar o MVVM, você normalmente cria o modelo e o modelo de exibição em uma [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projeto, porque um [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projeto não pode fazer referência a um projeto não portátil. O modelo e o modelo de exibição podem ser no mesmo projeto ou em projetos separados. Se você usar projetos separados, adicione uma referência do projeto de modelo de exibição para o projeto de modelo.

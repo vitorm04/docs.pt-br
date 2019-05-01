@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], using StringBuilder
 ms.assetid: 9c042880-aa16-432e-9ccb-cd00abda9ae3
 ms.openlocfilehash: 00fefcc138164288d872cd339f165dc6ffc0131a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032117"
 ---
 # <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Como: Criar cadeias de caracteres usando StringBuilder no Visual Basic
 Esse exemplo constrói uma cadeia de caracteres de várias cadeias menores utilizando o <xref:System.Text.StringBuilder> classe. O <xref:System.Text.StringBuilder> classe é mais eficiente do que o `&=` operador para concatenar várias cadeias de caracteres.  

@@ -3,20 +3,20 @@ title: Orientação de migração
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: a36108e8c711b9e5d5253b19a9122373fc513855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009988"
 ---
 # <a name="migration-guidance"></a>Orientação de migração
 No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft está lançando a segunda versão principal do Windows Workflow Foundation (WF). O [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi liberado no [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (isso inclui os tipos nos namespaces System.Workflow.*; agora referido como WF3) e aprimorado no [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 também é parte do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], mas existe ao lado da nova tecnologia de fluxo de trabalho (os tipos em System. Activities.\* namespaces; chamada como WF4). Ao considerar quando adotar o WF4, é importante primeiro reconhecer que você controla o tempo.  
   
--   O WF3 tem suporte completo do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
+- O WF3 tem suporte completo do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
--   Os aplicativos WF3 são executados no [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] sem alteração e continua tendo suporte total.  
+- Os aplicativos WF3 são executados no [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] sem alteração e continua tendo suporte total.  
   
--   Novos aplicativos WF3 podem ser criados e seus aplicativos existentes podem ser editados no Visual Studio 2012 e são totalmente compatíveis.  
+- Novos aplicativos WF3 podem ser criados e seus aplicativos existentes podem ser editados no Visual Studio 2012 e são totalmente compatíveis.  
   
  Portanto, a decisão de adotar o .NET Framework 4 é separada da sua decisão de migrar para o WF4 (Activities) do WF3 (Workflow.\*). Este tópico fornece links para a orientação de migração do WF que fornece informações sobre como trabalhar com WF3 e WF4.  
   

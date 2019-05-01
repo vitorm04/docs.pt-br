@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033222"
 ---
 # <a name="accessibility-best-practices"></a>Práticas recomendadas de Acessibilidade
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074229"
   
  Aplicativos devem fornecer as interfaces de teclado a seguir:  
   
--   paradas de tabulação para todos os controles que o usuário pode interagir com, como caixas de listagem, botões ou links  
+- paradas de tabulação para todos os controles que o usuário pode interagir com, como caixas de listagem, botões ou links  
   
--   ordem de tabulação lógica  
+- ordem de tabulação lógica  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>Mostrar o foco do teclado  
@@ -90,11 +90,11 @@ ms.locfileid: "59074229"
   
  Aplicativos devem fazer o seguinte com foco do teclado:  
   
--   um item sempre deve ter o foco do teclado  
+- um item sempre deve ter o foco do teclado  
   
--   o foco do teclado deve estar visível e óbvia  
+- o foco do teclado deve estar visível e óbvia  
   
--   seleções de e/ou itens com foco devem ser visualmente realçados  
+- seleções de e/ou itens com foco devem ser visualmente realçados  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Suporte a padrões de navegação e esquemas de navegação poderosa  
@@ -102,11 +102,11 @@ ms.locfileid: "59074229"
   
  Aplicativos devem fornecer as interfaces de teclado a seguir:  
   
--   teclas de atalho e chaves de acesso sublinhada para todos os comandos, menus e controles  
+- teclas de atalho e chaves de acesso sublinhada para todos os comandos, menus e controles  
   
--   atalhos de teclado para links importantes  
+- atalhos de teclado para links importantes  
   
--   todos os itens de menu tem uma chave de acesso; todos os botões têm teclas de aceleração, todos os comandos têm uma tecla de aceleração.  
+- todos os itens de menu tem uma chave de acesso; todos os botões têm teclas de aceleração, todos os comandos têm uma tecla de aceleração.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Não permita que o Mouse local interferir com navegação do teclado  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
 ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039072"
 ---
 # <a name="metadata"></a>Metadados
 O Windows Communication Foundation (WCF) fornece uma infraestrutura para exportar, publicando, recuperando e importação de metadados de serviço. Os serviços WCF usam metadados para descrever como interagir com pontos de extremidade do serviço para que as ferramentas, como Svcutil.exe, podem gerar automaticamente o código do cliente para acessar o serviço.  

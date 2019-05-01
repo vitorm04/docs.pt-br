@@ -3,24 +3,24 @@ title: Consultas de agregação
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
 ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032546"
 ---
 # <a name="aggregate-queries"></a>Consultas de agregação
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte aos operadores de agregação `Average`, `Count`, `Max`, `Min` e `Sum`. Observe as seguintes características dos operadores de agregação no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
--   As consultas de agregação são executadas imediatamente.  
+- As consultas de agregação são executadas imediatamente.  
   
      Para obter mais informações, consulte [Introdução a Consultas de LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
--   As consultas de agregação geralmente retornam um número em vez de uma coleção.  
+- As consultas de agregação geralmente retornam um número em vez de uma coleção.  
   
      Para obter mais informações, consulte [operações de agregação](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
--   Você não pode chamar agregações em tipos anônimos.  
+- Você não pode chamar agregações em tipos anônimos.  
   
  Os exemplos nos seguintes tópicos derivam do banco de dados de exemplo Northwind. Para obter mais informações, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   

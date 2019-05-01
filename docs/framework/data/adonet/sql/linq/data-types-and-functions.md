@@ -3,11 +3,11 @@ title: Tipos de dados e funções
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032658"
 ---
 # <a name="data-types-and-functions"></a>Tipos de dados e funções
 Os tópicos listados na tabela a seguir descrevem o suporte LINQ to SQL para membros, construções e conversões do CLR (Common Language Runtime). Os membros e as construções com suporte estão disponíveis para uso em suas consultas LINQ to SQL.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
 ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021430"
 ---
 # <a name="data-templating-overview"></a>Visão geral de modelagem dos dados
 O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir a apresentação dos dados. Os controles do WPF têm uma funcionalidade interna para dar suporte à personalização da apresentação de dados. Primeiro, este tópico demonstra como definir um <xref:System.Windows.DataTemplate> e, em seguida, apresenta outros recursos de modelagem de dados, como a seleção de modelos com base em lógica personalizada e o suporte para a exibição de dados hierárquicos.  
@@ -134,7 +134,7 @@ O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir 
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>O que pertence a um DataTemplate?  
 
-No exemplo anterior, colocamos o gatilho dentro do <xref:System.Windows.DataTemplate> usando o <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> propriedade. O <xref:System.Windows.Setter> do gatilho define o valor de uma propriedade de um elemento (o <xref:System.Windows.Controls.Border> elemento) que está dentro do <xref:System.Windows.DataTemplate>. No entanto, se as propriedades que seu `Setters` estão preocupados com não são propriedades de elementos que estão dentro do atual <xref:System.Windows.DataTemplate>, talvez seja mais adequado definir as propriedades usando uma <xref:System.Windows.Style> que é para o <xref:System.Windows.Controls.ListBoxItem> classe (se a Você está associando o controle é um <xref:System.Windows.Controls.ListBox>). Por exemplo, se você quiser que seu <xref:System.Windows.Trigger> animar o <xref:System.Windows.UIElement.Opacity%2A> valor do item quando um mouse aponta para um item, você pode definir gatilhos dentro de um <xref:System.Windows.Controls.ListBoxItem> estilo. Para ver um exemplo, consulte a [Amostra de introdução a estilo e modelagem](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
+No exemplo anterior, colocamos o gatilho dentro do <xref:System.Windows.DataTemplate> usando o <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> property. O <xref:System.Windows.Setter> do gatilho define o valor de uma propriedade de um elemento (o <xref:System.Windows.Controls.Border> elemento) que está dentro do <xref:System.Windows.DataTemplate>. No entanto, se as propriedades que seu `Setters` estão preocupados com não são propriedades de elementos que estão dentro do atual <xref:System.Windows.DataTemplate>, talvez seja mais adequado definir as propriedades usando uma <xref:System.Windows.Style> que é para o <xref:System.Windows.Controls.ListBoxItem> classe (se a Você está associando o controle é um <xref:System.Windows.Controls.ListBox>). Por exemplo, se você quiser que seu <xref:System.Windows.Trigger> animar o <xref:System.Windows.UIElement.Opacity%2A> valor do item quando um mouse aponta para um item, você pode definir gatilhos dentro de um <xref:System.Windows.Controls.ListBoxItem> estilo. Para ver um exemplo, consulte a [Amostra de introdução a estilo e modelagem](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
   
  Em geral, tenha em mente que o <xref:System.Windows.DataTemplate> está sendo aplicada a cada um dos gerado <xref:System.Windows.Controls.ListBoxItem> (para obter mais informações sobre como e onde ele realmente é aplicado, consulte o <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> página.). Seu <xref:System.Windows.DataTemplate> se preocupa com apenas a apresentação e a aparência dos objetos de dados. Na maioria dos casos, todos os outros aspectos da apresentação, como a aparência de um item é semelhante quando ele é selecionado ou como o <xref:System.Windows.Controls.ListBox> dispõe os itens, não pertencem a definição de um <xref:System.Windows.DataTemplate>. Para ver um exemplo, consulte a seção [Estilo e modelagem de um ItemsControl](#DataTemplating_ItemsControl).  
   
@@ -146,7 +146,7 @@ No exemplo anterior, colocamos o gatilho dentro do <xref:System.Windows.DataTemp
   
  [!code-xaml[DataTemplatingIntro_snip#ImportantTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#importanttemplate)]  
   
- Observe que este exemplo usa o <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> propriedade. Os recursos definidos nessa seção são compartilhados pelos elementos dentro de <xref:System.Windows.DataTemplate>.  
+ Observe que este exemplo usa o <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> property. Os recursos definidos nessa seção são compartilhados pelos elementos dentro de <xref:System.Windows.DataTemplate>.  
   
  Para fornecer a lógica para escolher quais <xref:System.Windows.DataTemplate> usar com base em de `Priority` valor do objeto de dados, criar uma subclasse de <xref:System.Windows.Controls.DataTemplateSelector> e substitua o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método. No exemplo a seguir, o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método fornece lógica para retornar o modelo apropriado com base no valor da `Priority` propriedade. O modelo a ser retornado é encontrado nos recursos do envolvente <xref:System.Windows.Window> elemento.  
   

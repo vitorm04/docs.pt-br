@@ -3,11 +3,11 @@ title: Formatador de operação e seletor de operação
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 ms.openlocfilehash: 45b489aeb88f57fe442cef9ffed1a2ee079b75e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989684"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formatador de operação e seletor de operação
 Este exemplo demonstra como pontos de extensibilidade do Windows Communication Foundation (WCF) podem ser usados para permitir que os dados de mensagem em um formato diferente daquele que espera WCF. Por padrão, formatadores do WCF esperam parâmetros do método a ser incluído no `soap:body` elemento. O exemplo mostra como implementar um formatador de operação personalizada que analisa dados de parâmetro de uma cadeia de caracteres de consulta HTTP GET em vez disso e invoca métodos usando esses dados.  
@@ -16,15 +16,15 @@ Este exemplo demonstra como pontos de extensibilidade do Windows Communication F
   
  Para fazer isso, o exemplo fornece o seguinte:  
   
--   `QueryStringFormatter`, que implementa <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> e <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> para o cliente e servidor, respectivamente e processa os dados na cadeia de caracteres de consulta.  
+- `QueryStringFormatter`, que implementa <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> e <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> para o cliente e servidor, respectivamente e processa os dados na cadeia de caracteres de consulta.  
   
--   `UriOperationSelector`, que implementa <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> no servidor para executar a expedição da operação com base no nome da operação na solicitação GET.  
+- `UriOperationSelector`, que implementa <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> no servidor para executar a expedição da operação com base no nome da operação na solicitação GET.  
   
--   `EnableHttpGetRequestsBehavior` ponto de extremidade comportamento (e a configuração correspondente), que adiciona o seletor de operação necessária para o tempo de execução.  
+- `EnableHttpGetRequestsBehavior` ponto de extremidade comportamento (e a configuração correspondente), que adiciona o seletor de operação necessária para o tempo de execução.  
   
--   Mostra como inserir um novo formatador de operação no tempo de execução.  
+- Mostra como inserir um novo formatador de operação no tempo de execução.  
   
--   Neste exemplo, o cliente e o serviço são aplicativos de console (.exe).  
+- Neste exemplo, o cliente e o serviço são aplicativos de console (.exe).  
   
 > [!NOTE]
 >  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
@@ -36,15 +36,15 @@ Este exemplo demonstra como pontos de extensibilidade do Windows Communication F
   
  Solicitação:  
   
--   O exemplo usa o <xref:System.ComponentModel.TypeConverter> classe para converter dados de parâmetro na mensagem de solicitação em cadeias de caracteres. Se um <xref:System.ComponentModel.TypeConverter> não está disponível para um tipo específico, o gera de formatador de exemplo uma exceção.  
+- O exemplo usa o <xref:System.ComponentModel.TypeConverter> classe para converter dados de parâmetro na mensagem de solicitação em cadeias de caracteres. Se um <xref:System.ComponentModel.TypeConverter> não está disponível para um tipo específico, o gera de formatador de exemplo uma exceção.  
   
--   No `IClientMessageFormatter.SerializeRequest` método no cliente, o formatador cria um URI com o endereço apropriado e anexa o nome da operação como um sufixo. Esse nome é usado para o qual expedir a operação apropriada no servidor. Em seguida, usa a matriz de objetos de parâmetro e serializa os dados de parâmetro para a cadeia de caracteres de consulta URI usando nomes de parâmetro e os valores convertidos pelo <xref:System.ComponentModel.TypeConverter> classe. O <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> e <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> propriedades são definidas para esse URI. <xref:System.ServiceModel.Channels.MessageProperties> é acessado por meio de <xref:System.ServiceModel.Channels.Message.Properties%2A> propriedade.  
+- No `IClientMessageFormatter.SerializeRequest` método no cliente, o formatador cria um URI com o endereço apropriado e anexa o nome da operação como um sufixo. Esse nome é usado para o qual expedir a operação apropriada no servidor. Em seguida, usa a matriz de objetos de parâmetro e serializa os dados de parâmetro para a cadeia de caracteres de consulta URI usando nomes de parâmetro e os valores convertidos pelo <xref:System.ComponentModel.TypeConverter> classe. O <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> e <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> propriedades são definidas para esse URI. <xref:System.ServiceModel.Channels.MessageProperties> é acessado por meio de <xref:System.ServiceModel.Channels.Message.Properties%2A> propriedade.  
   
--   No `IDispatchMessageFormatter.DeserializeRequest` método no servidor, o formatador recupera o `Via` URI nas propriedades de mensagem de solicitação de entrada. Ele analisa os pares nome-valor na cadeia de caracteres de consulta URI em valores e nomes de parâmetro e usa os valores e nomes de parâmetro para preencher a matriz de parâmetros passados para o método. Observe que a expedição da operação já ocorreu, portanto, o sufixo de nome de operação é ignorado nesse método.  
+- No `IDispatchMessageFormatter.DeserializeRequest` método no servidor, o formatador recupera o `Via` URI nas propriedades de mensagem de solicitação de entrada. Ele analisa os pares nome-valor na cadeia de caracteres de consulta URI em valores e nomes de parâmetro e usa os valores e nomes de parâmetro para preencher a matriz de parâmetros passados para o método. Observe que a expedição da operação já ocorreu, portanto, o sufixo de nome de operação é ignorado nesse método.  
   
  Resposta:  
   
--   Neste exemplo, HTTP GET é usado somente para a solicitação. O formatador delega o envio da resposta para o formatador original que seria usado para gerar uma mensagem XML. Um dos objetivos deste exemplo é mostrar como tal um formatador de delegação pode ser implementado.  
+- Neste exemplo, HTTP GET é usado somente para a solicitação. O formatador delega o envio da resposta para o formatador original que seria usado para gerar uma mensagem XML. Um dos objetivos deste exemplo é mostrar como tal um formatador de delegação pode ser implementado.  
   
 ### <a name="uripathsuffixoperationselector-class"></a>Classe UriPathSuffixOperationSelector  
  O <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interface permite que os usuários implementar sua própria lógica para qual operação deve ser expedida uma mensagem específica.  
@@ -94,16 +94,16 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
  No servidor:  
   
--   O <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interface deve ser implementada para que ele pode ler as solicitações HTTP GET e delegar para o formatador original para gravação de respostas. Isso é feito chamando o mesmo `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` método auxiliar que o cliente (consulte o exemplo de código anterior).  
+- O <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interface deve ser implementada para que ele pode ler as solicitações HTTP GET e delegar para o formatador original para gravação de respostas. Isso é feito chamando o mesmo `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` método auxiliar que o cliente (consulte o exemplo de código anterior).  
   
--   Isso deve ser feito antes de <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> é chamado. Neste exemplo, vamos mostrar como o formatador manualmente é modificado antes de chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Outra maneira de atingir a mesma coisa é derivar uma classe de <xref:System.ServiceModel.ServiceHost> que faz as chamadas para `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` antes de abrir (consulte documentação e exemplos para obter exemplos de hospedagem).  
+- Isso deve ser feito antes de <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> é chamado. Neste exemplo, vamos mostrar como o formatador manualmente é modificado antes de chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Outra maneira de atingir a mesma coisa é derivar uma classe de <xref:System.ServiceModel.ServiceHost> que faz as chamadas para `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` antes de abrir (consulte documentação e exemplos para obter exemplos de hospedagem).  
   
 ### <a name="user-experience"></a>Experiência do usuário  
  No servidor:  
   
--   O servidor `ICalculator` implementação não precisa alterar.  
+- O servidor `ICalculator` implementação não precisa alterar.  
   
--   App. config para o serviço deve usar uma ligação personalizada POX que define o `messageVersion` atributo o `textMessageEncoding` elemento a ser `None`.  
+- App. config para o serviço deve usar uma ligação personalizada POX que define o `messageVersion` atributo o `textMessageEncoding` elemento a ser `None`.  
   
     ```xml  
     <bindings>  
@@ -116,7 +116,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   O App. config para o serviço também deve especificar personalizado `EnableHttpGetRequestsBehavior` adicionando-o para a seção de extensões de comportamento e usá-lo.  
+- O App. config para o serviço também deve especificar personalizado `EnableHttpGetRequestsBehavior` adicionando-o para a seção de extensões de comportamento e usá-lo.  
   
     ```xml  
     <behaviors>  
@@ -136,13 +136,13 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </extensions>  
     ```  
   
--   Adicionar operação formatadores antes de chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>.  
+- Adicionar operação formatadores antes de chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>.  
   
  No cliente:  
   
--   A implementação do cliente não precisa alterar.  
+- A implementação do cliente não precisa alterar.  
   
--   App. config para o cliente deve usar uma ligação personalizada POX que define o `messageVersion` atributo o `textMessageEncoding` elemento a ser `None`. Uma diferença do serviço é que o cliente deve habilitar o endereçamento manual para que o endereço de saída pode ser modificada.  
+- App. config para o cliente deve usar uma ligação personalizada POX que define o `messageVersion` atributo o `textMessageEncoding` elemento a ser `None`. Uma diferença do serviço é que o cliente deve habilitar o endereçamento manual para que o endereço de saída pode ser modificada.  
   
     ```xml  
     <bindings>  
@@ -155,9 +155,9 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   O App. config para o cliente deve especificar o mesmo personalizado `EnableHttpGetRequestsBehavior` como o servidor.  
+- O App. config para o cliente deve especificar o mesmo personalizado `EnableHttpGetRequestsBehavior` como o servidor.  
   
--   Adicionar operação formatadores antes de chamar <xref:System.ServiceModel.ChannelFactory%601.CreateChannel>.  
+- Adicionar operação formatadores antes de chamar <xref:System.ServiceModel.ChannelFactory%601.CreateChannel>.  
   
  Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Todas as quatro operações (Adicionar, subtrair, multiplicar e dividir) deve ter êxito.  
   

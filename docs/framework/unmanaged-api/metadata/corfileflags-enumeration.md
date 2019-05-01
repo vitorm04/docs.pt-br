@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 076d5de3e9d1925e3a030fee4a06a89862105897
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045858"
 ---
 # <a name="corfileflags-enumeration"></a>Enumeração CorFileFlags
 Contém valores que descrevem o tipo de arquivo definido em uma chamada para [imetadataassemblyemit:: Definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  

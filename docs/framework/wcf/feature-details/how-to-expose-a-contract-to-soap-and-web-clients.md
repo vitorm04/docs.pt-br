@@ -1,20 +1,20 @@
 ---
-title: Como expor um contrato para clientes SOAP e da Web
+title: 'Como: expor um contrato para clientes SOAP e da Web'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
 ms.openlocfilehash: d82c5e3fc33528eadc3c404cca59a3dcf905e0e2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000916"
 ---
-# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Como expor um contrato para clientes SOAP e da Web
+# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Como: expor um contrato para clientes SOAP e da Web
 
-Por padrão, o Windows Communication Foundation (WCF) torna os pontos de extremidade disponíveis somente para clientes SOAP. Na [como: criar um serviço de Web HTTP WCF básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), um ponto de extremidade é disponibilizado para os clientes não SOAP. Pode haver ocasiões quando quiser disponibilizar o mesmo contrato de duas maneiras, como um ponto de extremidade da Web e como um ponto de extremidade SOAP. Este tópico mostra um exemplo de como fazer isso.
+Por padrão, o Windows Communication Foundation (WCF) torna os pontos de extremidade disponíveis somente para clientes SOAP. No [como: Criar um serviço de Web HTTP WCF básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), um ponto de extremidade é disponibilizado para os clientes não SOAP. Pode haver ocasiões quando quiser disponibilizar o mesmo contrato de duas maneiras, como um ponto de extremidade da Web e como um ponto de extremidade SOAP. Este tópico mostra um exemplo de como fazer isso.
 
 ## <a name="to-define-the-service-contract"></a>Para definir o contrato de serviço
 

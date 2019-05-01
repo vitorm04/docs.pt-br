@@ -7,11 +7,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
 ms.openlocfilehash: b5da5895b39412052f83cb0a89c3852d28f264bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011301"
 ---
 # <a name="helpprovider-component-windows-forms"></a>Componente HelpProvider (Windows Forms)
 Os formulários do Windows `HelpProvider` componente é usado para associar um arquivo de ajuda a Ajuda HTML 1.x (um arquivo. chm, produzido com o HTML Help Workshop, ou um arquivo. htm) com seu aplicativo baseado em Windows.  

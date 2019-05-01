@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eefcd4436a28fdf52cbe55da5d4bb7eea4449463
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041705"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>Método ICorProfilerCallback::ThreadAssignedToOSThread
 Notifica o criador de perfil que um thread gerenciado está sendo implementado usando um thread de sistema operacional específico.  

@@ -1,18 +1,18 @@
 ---
-title: 'Como: Atualizar a definição de uma instância de fluxo de trabalho em execução'
+title: 'Como: atualizar a definição de uma instância de fluxo de trabalho em execução'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
 ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969475"
 ---
-# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Como: Atualizar a definição de uma instância de fluxo de trabalho em execução
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Como: atualizar a definição de uma instância de fluxo de trabalho em execução
 
 A atualização dinâmica fornece um mecanismo para que os desenvolvedores de aplicativos de fluxo de trabalho atualizem a definição de fluxo de trabalho de uma instância do fluxo de trabalho persistida. A alteração necessária pode ser implementar uma correção de bug, novos requisitos ou acomodar alterações inesperadas. Esta etapa no tutorial demonstra como usar a atualização dinâmica para modificar instâncias persistidas do `v1` número de fluxo de trabalho de adivinhação para coincidir com a nova funcionalidade introduzida na [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 

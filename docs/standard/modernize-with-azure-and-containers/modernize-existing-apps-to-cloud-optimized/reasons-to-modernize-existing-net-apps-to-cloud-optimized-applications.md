@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012017"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Motivos para modernizar aplicativos existentes do .NET para aplicativos otimizados para a nuvem
 
@@ -33,13 +33,13 @@ Para alcançar a agilidade, você também precisa de processos automatizados de 
 
 A lista a seguir descreve os principais princípios ou práticas recomendadas para aplicativos otimizados para a nuvem. Observe que você pode adotar uma todos ou apenas alguns desses princípios, uma abordagem progressiva ou incremental:
 
--   **Contêineres**. Contêineres oferecem a capacidade de incluir as dependências de aplicativo com o aplicativo em si. Uso de contêineres reduz significativamente o número de problemas que você pode encontrar quando você implantar em ambientes de produção ou de teste em ambientes de preparo. Por fim, contêineres de melhorar a agilidade da entrega de aplicativos.
+- **Contêineres**. Contêineres oferecem a capacidade de incluir as dependências de aplicativo com o aplicativo em si. Uso de contêineres reduz significativamente o número de problemas que você pode encontrar quando você implantar em ambientes de produção ou de teste em ambientes de preparo. Por fim, contêineres de melhorar a agilidade da entrega de aplicativos.
 
--   **Nuvem flexível e escalável**. A nuvem fornece uma plataforma que é gerenciado, Elástico, escalonáveis e resilientes. Essas características são fundamentais para obter melhorias de custo e enviar altamente disponíveis e confiáveis de aplicativos em uma entrega contínua. Serviços gerenciados, como bancos de dados gerenciados, gerenciados armazenar em cache como um serviço (CaaS) e armazenamento gerenciado são partes fundamentais no diminuindo os custos de manutenção do seu aplicativo.
+- **Nuvem flexível e escalável**. A nuvem fornece uma plataforma que é gerenciado, Elástico, escalonáveis e resilientes. Essas características são fundamentais para obter melhorias de custo e enviar altamente disponíveis e confiáveis de aplicativos em uma entrega contínua. Serviços gerenciados, como bancos de dados gerenciados, gerenciados armazenar em cache como um serviço (CaaS) e armazenamento gerenciado são partes fundamentais no diminuindo os custos de manutenção do seu aplicativo.
 
--   **Monitoramento**. Você não pode ter um aplicativo confiável sem a necessidade de uma boa maneira de detectar e diagnosticar exceções e problemas de desempenho do aplicativo. Você precisa obter insights acionáveis por meio do gerenciamento de desempenho do aplicativo e análises instantâneas.
+- **Monitoramento**. Você não pode ter um aplicativo confiável sem a necessidade de uma boa maneira de detectar e diagnosticar exceções e problemas de desempenho do aplicativo. Você precisa obter insights acionáveis por meio do gerenciamento de desempenho do aplicativo e análises instantâneas.
 
--   **DevOps a entrega contínua e cultura**. Adotar práticas de DevOps exige uma mudança cultural em que as equipes não trabalham em silos independentes. Pipelines de CI/CD são possíveis somente quando há uma maior colaboração entre desenvolvimento e as equipes de operações de TI, com suporte por contêineres e ferramentas de CI/CD.
+- **DevOps a entrega contínua e cultura**. Adotar práticas de DevOps exige uma mudança cultural em que as equipes não trabalham em silos independentes. Pipelines de CI/CD são possíveis somente quando há uma maior colaboração entre desenvolvimento e as equipes de operações de TI, com suporte por contêineres e ferramentas de CI/CD.
 
 Figura 4-2 mostra os pilares principais opcionais de um aplicativo de otimização para nuvem. Os pilares mais implementar, readier de seu aplicativo tenha êxito atender às expectativas de seus clientes.
 
@@ -55,13 +55,13 @@ Sua organização pode adotar gradualmente essas tecnologias e abordagens. Você
 
 Você pode obter os seguintes benefícios ao converter um aplicativo existente para um aplicativo de otimização para nuvem (sem rearquitetura ou de codificação):
 
--   **Redução de custos, porque a infraestrutura gerenciada é tratada pelo provedor de nuvem**. Otimização para nuvem aplicativos obtém os benefícios da nuvem usando a alta disponibilidade, dimensionamento automático e elasticidade de out-of-the-box da nuvem. Benefícios relacionados não apenas para os recursos de computação (VMs e contêineres), mas também dependem de recursos na nuvem, como DBaaS, CaaS e qualquer infraestrutura de um aplicativo talvez seja necessária.
+- **Redução de custos, porque a infraestrutura gerenciada é tratada pelo provedor de nuvem**. Otimização para nuvem aplicativos obtém os benefícios da nuvem usando a alta disponibilidade, dimensionamento automático e elasticidade de out-of-the-box da nuvem. Benefícios relacionados não apenas para os recursos de computação (VMs e contêineres), mas também dependem de recursos na nuvem, como DBaaS, CaaS e qualquer infraestrutura de um aplicativo talvez seja necessária.
 
--   **Aplicativo resiliente e infraestrutura**. Quando você migra para a nuvem, você precisa adotar falhas transitórias; falhas ocorrerão na nuvem. Além disso, hardware e infraestrutura de nuvem são "substituíveis," que aumenta as oportunidades de tempo de inatividade temporário. Ao mesmo tempo, recursos de nuvem interna e determinadas técnicas de desenvolvimento de aplicativo que implementam a resiliência e automatizam a recuperação tornam muito mais fácil para se recuperar de falhas inesperadas na nuvem.
+- **Aplicativo resiliente e infraestrutura**. Quando você migra para a nuvem, você precisa adotar falhas transitórias; falhas ocorrerão na nuvem. Além disso, hardware e infraestrutura de nuvem são "substituíveis," que aumenta as oportunidades de tempo de inatividade temporário. Ao mesmo tempo, recursos de nuvem interna e determinadas técnicas de desenvolvimento de aplicativo que implementam a resiliência e automatizam a recuperação tornam muito mais fácil para se recuperar de falhas inesperadas na nuvem.
 
--   **Desempenho do aplicativo insights mais aprofundados**. Ferramentas de monitoramento, como Azure Application Insights fornecem visualização para gerenciamento de saúde, registro em log e notificações de nuvem. Os logs de auditoria tornam os aplicativos mais fácil depurar e auditoria, fundamentais para um aplicativo de nuvem confiáveis.
+- **Desempenho do aplicativo insights mais aprofundados**. Ferramentas de monitoramento, como Azure Application Insights fornecem visualização para gerenciamento de saúde, registro em log e notificações de nuvem. Os logs de auditoria tornam os aplicativos mais fácil depurar e auditoria, fundamentais para um aplicativo de nuvem confiáveis.
 
--   **Portabilidade do aplicativo, com implantações do agile**. Contêineres (contêineres Linux ou Windows, com base no mecanismo do Docker) oferecem a melhor solução para evitar um aplicativo bloqueado de nuvem. Ao usar orquestradores de várias nuvens, hosts do Docker e contêineres, você pode facilmente mover de um ambiente ou na nuvem para outro. Contêineres de eliminam a fricção que normalmente ocorre em implantações em qualquer ambiente (estágio/teste/produção).
+- **Portabilidade do aplicativo, com implantações do agile**. Contêineres (contêineres Linux ou Windows, com base no mecanismo do Docker) oferecem a melhor solução para evitar um aplicativo bloqueado de nuvem. Ao usar orquestradores de várias nuvens, hosts do Docker e contêineres, você pode facilmente mover de um ambiente ou na nuvem para outro. Contêineres de eliminam a fricção que normalmente ocorre em implantações em qualquer ambiente (estágio/teste/produção).
 
 Todos esses benefícios, por fim, fornecem reduções de custo de chave para seu ciclo de vida do aplicativo de ponta a ponta.
 

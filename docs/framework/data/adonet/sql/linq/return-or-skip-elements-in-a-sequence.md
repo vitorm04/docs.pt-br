@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033456"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Elementos Return ou Skip em uma sequência
 Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número específico de elementos em uma sequência e ignorar o restante.  
@@ -22,9 +22,9 @@ Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número esp
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduz <xref:System.Linq.Queryable.Skip%2A> por meio de uma subconsulta com o SQL `NOT EXISTS` cláusula. Essa conversão apresenta as seguintes limitações:  
   
--   O argumento deve ser um conjunto. Não há suporte para vários conjuntos, mesmo se ordenados.  
+- O argumento deve ser um conjunto. Não há suporte para vários conjuntos, mesmo se ordenados.  
   
--   A consulta gerada pode ser muito mais complexa do que a consulta gerada para a consulta base em que <xref:System.Linq.Queryable.Skip%2A> é aplicado. Essa complexidade pode reduzir o desempenho ou até mesmo causar um tempo limite.  
+- A consulta gerada pode ser muito mais complexa do que a consulta gerada para a consulta base em que <xref:System.Linq.Queryable.Skip%2A> é aplicado. Essa complexidade pode reduzir o desempenho ou até mesmo causar um tempo limite.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa `Take` para selecionar os primeiros cinco `Employees` contratados. Observe que a coleção é classificada primeiro por `HireDate`.  

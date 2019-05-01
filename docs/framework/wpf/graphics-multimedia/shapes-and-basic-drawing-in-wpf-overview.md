@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008280"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Visão geral de formas e desenho básico no WPF
 Este tópico fornece uma visão geral de como desenhar com <xref:System.Windows.Shapes.Shape> objetos. Um <xref:System.Windows.Shapes.Shape> é um tipo de <xref:System.Windows.UIElement> que permite que você desenhe uma forma na tela. Como eles são elementos de interface do usuário <xref:System.Windows.Shapes.Shape> objetos que podem ser usados dentro de <xref:System.Windows.Controls.Panel> elementos e a maioria dos controles.  
@@ -28,13 +28,13 @@ Este tópico fornece uma visão geral de como desenhar com <xref:System.Windows.
 ## <a name="shape-objects"></a>Objetos de forma  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece uma série de prontos para uso <xref:System.Windows.Shapes.Shape> objetos.  Todos os objetos de forma herdam a <xref:System.Windows.Shapes.Shape> classe. Objetos de forma disponíveis incluem <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, e <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> objetos compartilham as propriedades comuns a seguir.  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>: Descreve como o contorno da forma é pintado.  
+- <xref:System.Windows.Shapes.Shape.Stroke%2A>: Descreve como o contorno da forma é pintado.  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Descreve a espessura do contorno da forma.  
+- <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Descreve a espessura do contorno da forma.  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>: Descreve como o interior da forma é pintado.  
+- <xref:System.Windows.Shapes.Shape.Fill%2A>: Descreve como o interior da forma é pintado.  
   
--   Propriedades de dados para especificar as coordenadas e vértices, medido em pixels independentes de dispositivo.  
+- Propriedades de dados para especificar as coordenadas e vértices, medido em pixels independentes de dispositivo.  
   
  Porque eles derivam de <xref:System.Windows.UIElement>, objetos de forma podem ser usados dentro de painéis e a maioria dos controles. O <xref:System.Windows.Controls.Canvas> painel é uma opção particularmente boa para criar desenhos complexos porque ele dá suporte ao posicionamento absoluto de seus objetos filho.  
   
@@ -154,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  A propriedade Stretch usa um dos seguintes valores:  
   
--   <xref:System.Windows.Media.Stretch.None>: O <xref:System.Windows.Shapes.Shape> conteúdo do objeto não é alongado.  
+- <xref:System.Windows.Media.Stretch.None>: O <xref:System.Windows.Shapes.Shape> conteúdo do objeto não é alongado.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: O <xref:System.Windows.Shapes.Shape> conteúdo do objeto é alongado para preencher o espaço de layout.  A taxa de proporção não é preservada.  
+- <xref:System.Windows.Media.Stretch.Fill>: O <xref:System.Windows.Shapes.Shape> conteúdo do objeto é alongado para preencher o espaço de layout.  A taxa de proporção não é preservada.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: O <xref:System.Windows.Shapes.Shape> conteúdo do objeto é alongado tanto quanto possível para preencher o espaço de layout enquanto preserva sua taxa de proporção original.  
+- <xref:System.Windows.Media.Stretch.Uniform>: O <xref:System.Windows.Shapes.Shape> conteúdo do objeto é alongado tanto quanto possível para preencher o espaço de layout enquanto preserva sua taxa de proporção original.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: O <xref:System.Windows.Shapes.Shape> conteúdo do objeto é alongado para preencher completamente o espaço de layout enquanto preserva sua taxa de proporção original.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: O <xref:System.Windows.Shapes.Shape> conteúdo do objeto é alongado para preencher completamente o espaço de layout enquanto preserva sua taxa de proporção original.  
   
  Observe que, quando um <xref:System.Windows.Shapes.Shape> conteúdo do objeto é alongado, o <xref:System.Windows.Shapes.Shape> contorno do objeto é pintado após o alongamento.  
   

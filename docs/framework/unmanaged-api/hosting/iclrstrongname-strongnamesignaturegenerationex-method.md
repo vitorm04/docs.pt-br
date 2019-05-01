@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5d2539bc732cdc41c7514fd5d81c449ed8f17a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992882"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>Método ICLRStrongName::StrongNameSignatureGenerationEx
 Gera uma assinatura de nome forte para o assembly especificado, de acordo com os sinalizadores especificados.  
@@ -69,9 +69,9 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Um ou mais dos seguintes valores:  
   
--   `SN_SIGN_ALL_FILES` (0x00000001) - recalcular os hashes de todos os módulos vinculado.  
+- `SN_SIGN_ALL_FILES` (0x00000001) - recalcular os hashes de todos os módulos vinculado.  
   
--   `SN_TEST_SIGN` (0x00000002) - teste-assinar o assembly.  
+- `SN_TEST_SIGN` (0x00000002) - teste-assinar o assembly.  
   
 ## <a name="return-value"></a>Valor de retorno  
  `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  

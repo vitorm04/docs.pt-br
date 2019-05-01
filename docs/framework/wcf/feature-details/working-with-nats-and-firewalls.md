@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050357"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabalhando com NATs e firewalls
 O cliente e o servidor de uma conexão de rede com frequência não têm uma conexão direta e abrir o caminho para a comunicação. Pacotes são filtradas, roteadas, analisados e transformados em máquinas de ponto de extremidade e pelas máquinas intermediárias na rede. Conversões de endereço de rede (NATs) e firewalls são exemplos comuns de aplicativos intermediários que podem participar da comunicação de rede.  
@@ -45,11 +45,11 @@ O cliente e o servidor de uma conexão de rede com frequência não têm uma con
   
  Uma topologia comuns para aplicativos cliente-servidor é que os clientes que estão atrás de um NAT sem Teredo com um firewall apenas de saída e um servidor que está diretamente endereçável com um firewall de alta segurança. Neste cenário, o transporte TCP com um MEP duplex e um transporte HTTP com uma solicitação-resposta MEP funcionar muito bem. Uma topologia comuns para aplicativos ponto a ponto é que ambos os pontos de extremidade atrás de NATs e firewalls. Nesse cenário e em cenários em que a topologia de rede é desconhecida, considere as seguintes recomendações:  
   
--   Não use transportes duplos. Um transporte duplo abre mais conexões, o que reduz as chances de se conectar com êxito.  
+- Não use transportes duplos. Um transporte duplo abre mais conexões, o que reduz as chances de se conectar com êxito.  
   
--   Suporte a estabelecer canais de back sobre a conexão de origem. Usar back canais, como em TCP/IP duplex, abre menos conexões, o que aumenta as chances de se conectar com êxito.  
+- Suporte a estabelecer canais de back sobre a conexão de origem. Usar back canais, como em TCP/IP duplex, abre menos conexões, o que aumenta as chances de se conectar com êxito.  
   
--   Emprega um serviço acessível para registrar pontos de extremidade ou retransmitir o tráfego. Usando um serviço de conexão pode ser acessado globalmente, como um servidor Teredo, aumenta a chance de se conectar com êxito quando a topologia de rede é restritiva ou desconhecido.  
+- Emprega um serviço acessível para registrar pontos de extremidade ou retransmitir o tráfego. Usando um serviço de conexão pode ser acessado globalmente, como um servidor Teredo, aumenta a chance de se conectar com êxito quando a topologia de rede é restritiva ou desconhecido.  
   
  As tabelas a seguir examinam o unidirecional, solicitação-resposta e duplex MEPs e TCP padrão, TCP com Teredo, e os transportes de HTTP padrão e dupla no WCF.  
   

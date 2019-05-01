@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_WideNarrowNotApplicable
 ms.assetid: 5811098c-b124-4caf-8a2b-f81f12f1d5f5
 ms.openlocfilehash: 94326565a032f2a7a7c7f4e70447427ac0b0e46a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022487"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-are-not-applicable-to-the-locale-specified"></a>VbStrConv. Wide e VbStrConv. Narrow não são aplicáveis à localidade especificada
 O aplicativo está tentando usar o `VbStrConv` membros de enumeração `Wide` ou `Narrow`, que não são aplicáveis para a localidade especificada.  

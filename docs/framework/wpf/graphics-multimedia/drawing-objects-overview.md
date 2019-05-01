@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020391"
 ---
 # <a name="drawing-objects-overview"></a>Visão geral dos objetos de desenho
 Este tópico apresenta <xref:System.Windows.Media.Drawing> objetos e descreve como usá-los para desenhar formas, bitmaps, texto e mídia de forma eficiente. Use <xref:System.Windows.Media.Drawing> objetos ao criar clip-art, pintar com um <xref:System.Windows.Media.DrawingBrush>, ou use <xref:System.Windows.Media.Visual> objetos.  
@@ -23,25 +23,25 @@ Este tópico apresenta <xref:System.Windows.Media.Drawing> objetos e descreve co
 ## <a name="what-is-a-drawing-object"></a>O que é um objeto de desenho?  
  Um <xref:System.Windows.Media.Drawing> objeto descreve o conteúdo visível, como uma forma, bitmap, vídeo ou uma linha de texto. Diferentes tipos de desenhos descrevem diferentes tipos de conteúdo. A seguir está uma lista dos diferentes tipos de objetos de desenho.  
   
--   <xref:System.Windows.Media.GeometryDrawing> – Desenha uma forma.  
+- <xref:System.Windows.Media.GeometryDrawing> – Desenha uma forma.  
   
--   <xref:System.Windows.Media.ImageDrawing> – Desenha uma imagem.  
+- <xref:System.Windows.Media.ImageDrawing> – Desenha uma imagem.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – Desenha texto.  
+- <xref:System.Windows.Media.GlyphRunDrawing> – Desenha texto.  
   
--   <xref:System.Windows.Media.VideoDrawing> – Reproduz um arquivo de áudio ou vídeo.  
+- <xref:System.Windows.Media.VideoDrawing> – Reproduz um arquivo de áudio ou vídeo.  
   
--   <xref:System.Windows.Media.DrawingGroup> – Desenha outros desenhos. Use um grupo de desenhos para combinar outros desenhos em um único desenho composto.  
+- <xref:System.Windows.Media.DrawingGroup> – Desenha outros desenhos. Use um grupo de desenhos para combinar outros desenhos em um único desenho composto.  
   
  <xref:System.Windows.Media.Drawing> os objetos são versáteis; Há várias maneiras que você pode usar um <xref:System.Windows.Media.Drawing> objeto.  
   
--   Você pode exibi-lo como uma imagem usando uma <xref:System.Windows.Media.DrawingImage> e um <xref:System.Windows.Controls.Image> controle.  
+- Você pode exibi-lo como uma imagem usando uma <xref:System.Windows.Media.DrawingImage> e um <xref:System.Windows.Controls.Image> controle.  
   
--   Você pode usá-lo com um <xref:System.Windows.Media.DrawingBrush> pintar um objeto, como o <xref:System.Windows.Controls.Page.Background%2A> de um <xref:System.Windows.Controls.Page>.  
+- Você pode usá-lo com um <xref:System.Windows.Media.DrawingBrush> pintar um objeto, como o <xref:System.Windows.Controls.Page.Background%2A> de um <xref:System.Windows.Controls.Page>.  
   
--   Você pode usá-lo para descrever a aparência de um <xref:System.Windows.Media.DrawingVisual>.  
+- Você pode usá-lo para descrever a aparência de um <xref:System.Windows.Media.DrawingVisual>.  
   
--   Você pode usá-lo para enumerar o conteúdo de um <xref:System.Windows.Media.Visual>.  
+- Você pode usá-lo para enumerar o conteúdo de um <xref:System.Windows.Media.Visual>.  
   
  O WPF fornece outros tipos de objetos que são capazes de desenhar formas, bitmaps, texto e mídia. Por exemplo, você também pode usar <xref:System.Windows.Shapes.Shape> objetos para desenhar formas e o <xref:System.Windows.Controls.MediaElement> controle fornece outra maneira de adicionar vídeo ao seu aplicativo. Portanto, quando você deve usar <xref:System.Windows.Media.Drawing> objetos? Quando você pode sacrificar características de nível de framework para ganhar benefícios de desempenho ou quando você precisar <xref:System.Windows.Freezable> recursos. Porque <xref:System.Windows.Media.Drawing> objetos não têm suporte para [Layout](../advanced/layout.md), entrada e foco, eles fornecem benefícios de desempenho que os tornam ideais para descrever telas de fundo, clip-arts e para desenho de baixo nível com <xref:System.Windows.Media.Visual> objetos.  
   

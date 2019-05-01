@@ -15,11 +15,11 @@ helpviewer_keywords:
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013524"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Precedência do operador no Visual Basic
 Quando várias operações ocorrem em uma expressão, cada parte é avaliado e resolvido em uma ordem predeterminada chamada *precedência do operador*.  
@@ -27,13 +27,13 @@ Quando várias operações ocorrem em uma expressão, cada parte é avaliado e r
 ## <a name="precedence-rules"></a>Regras de precedência  
  Quando as expressões contêm operadores de mais de uma categoria, eles são avaliados de acordo com as regras a seguir:  
   
--   Os operadores aritméticos e concatenação têm a ordem de precedência descrita na seção a seguir, e todas têm precedência maior do que a comparação, lógicos e operadores bit a bit.  
+- Os operadores aritméticos e concatenação têm a ordem de precedência descrita na seção a seguir, e todas têm precedência maior do que a comparação, lógicos e operadores bit a bit.  
   
--   Todos os operadores de comparação têm precedência igual e todos têm precedência maior do que os operadores lógicos e bit a bit, mas menor precedência que os operadores aritméticos e concatenação.  
+- Todos os operadores de comparação têm precedência igual e todos têm precedência maior do que os operadores lógicos e bit a bit, mas menor precedência que os operadores aritméticos e concatenação.  
   
--   Os operadores lógicos e bit a bit tem a ordem de precedência descrita na seção a seguir, e todas têm precedência menor que a aritmética, concatenação e operadores de comparação.  
+- Os operadores lógicos e bit a bit tem a ordem de precedência descrita na seção a seguir, e todas têm precedência menor que a aritmética, concatenação e operadores de comparação.  
   
--   Operadores com a mesma precedência são avaliados da esquerda para a direita na ordem em que aparecem na expressão.  
+- Operadores com a mesma precedência são avaliados da esquerda para a direita na ordem em que aparecem na expressão.  
   
 ## <a name="precedence-order"></a>Ordem de precedência  
  Operadores são avaliados na seguinte ordem de precedência:  

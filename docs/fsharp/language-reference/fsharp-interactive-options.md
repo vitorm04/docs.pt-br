@@ -3,11 +3,11 @@ title: Opções do F# Interativo
 description: Saiba mais sobre as opções de linha de comando com suporte pelo F# fsi.exe interativos.
 ms.date: 05/16/2016
 ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996795"
 ---
 # <a name="f-interactive-options"></a>Opções do F# Interativo
 
@@ -34,24 +34,24 @@ Onde as listas aparecem em F# argumentos de opção interativa, elementos de lis
 |------|-----------|
 |**--**|Usado para instruir o F# interativo para manipular argumentos restantes como argumentos de linha de comando para o F# programa ou script, que pode ser acessado no código usando a lista **CommandLineArgs**.|
 |**--checked**[**+**&#124;**-**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
-|**-codepage:&lt;int&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
+|**--codepage:&lt;int&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--consolecolors**[**+**&#124;**-**]|Saídas de aviso e mensagens de erro na cor.|
 |**--crossoptimize**[**+**&#124;**-**]|Habilitar ou desabilitar as otimizações de módulo cruzado.|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g**[**completa**&#124;**pdbonly**&#124;**portátil**&#124;**embedded**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--define:&lt;string&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--deterministic**[**+**&#124;**-**]|Produz um assembly determinístico (incluindo o GUID da versão do módulo e o carimbo de hora).|
 |**--exec**|Instrui o F# interativo a sair após o carregamento de arquivos ou executar o arquivo de script fornecido na linha de comando.|
 |**--fullpaths**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--gui**[**+**&#124;**-**]|Habilita ou desabilita o loop de eventos do Windows Forms. O padrão é habilitado.|
 |**--help**<br /><br />**-?**|Usado para exibir a sintaxe de linha de comando e uma breve descrição de cada opção.|
-|**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;lista de pastas&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
+|**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;folder-list&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--load:&lt;filename&gt;**|Compila o código-fonte fornecido na inicialização e carrega compilado F# constrói para a sessão. Se a fonte de destino contiver diretivas de script como **#use** ou **#load**, em seguida, você deve usar **– use** ou **#use** em vez de **– carregar** ou **#load**.|
 |**--mlcompatibility**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--noframework**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [opções do compilador](compiler-options.md)|
 |**--nologo**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--nowarn:&lt;warning-list&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
 |**--optimize**[**+**&#124;**-**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).|
-|**-preferreduilang:&lt;lang&gt;**| Especifica o nome de cultura do idioma preferencial de saída (por exemplo, es-ES, ja-JP). |
+|**--preferreduilang:&lt;lang&gt;**| Especifica o nome de cultura do idioma preferencial de saída (por exemplo, es-ES, ja-JP). |
 |**--quiet**|Suprimir F# saída de interativo para o **stdout** stream.|
 |**--quotations-debug**|Especifica que informações de depuração adicionais devem ser emitidas para expressões que são derivadas de F# literais de aspas duplas e definições refletidas. As informações de depuração são adicionadas para os atributos personalizados de um F# nó de árvore de expressão. Ver [citações de código](code-quotations.md) e [expr. customattributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
 |**--readline**[**+**&#124;**-**]|Habilitar ou desabilitar o preenchimento com tab no modo interativo.|

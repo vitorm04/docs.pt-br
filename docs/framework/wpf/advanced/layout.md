@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054349"
 ---
 # <a name="layout"></a>Layout
 Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Entender como e quando ocorrem os cálculos de layout é essencial para a criação de interfaces do usuário no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Esse tópico contém as seguintes seções:  
   
--   [Caixas delimitadoras de elementos](#LayoutSystem_BoundingBox)  
+- [Caixas delimitadoras de elementos](#LayoutSystem_BoundingBox)  
   
--   [O sistema de layout](#LayoutSystem_Overview)  
+- [O sistema de layout](#LayoutSystem_Overview)  
   
--   [Medindo e organizando filhos](#LayoutSystem_Measure_Arrange)  
+- [Medindo e organizando filhos](#LayoutSystem_Measure_Arrange)  
   
--   [Elementos de painel e comportamentos de layout personalizados](#LayoutSystem_PanelsCustom)  
+- [Elementos de painel e comportamentos de layout personalizados](#LayoutSystem_PanelsCustom)  
   
--   [Considerações sobre desempenho de layout](#LayoutSystem_Performance)  
+- [Considerações sobre desempenho de layout](#LayoutSystem_Performance)  
   
--   [Renderização subpixel e arredondamento de layout](#LayoutSystem_LayoutRounding)  
+- [Renderização subpixel e arredondamento de layout](#LayoutSystem_LayoutRounding)  
   
--   [Novidades](#LayoutSystem_whatsnext)  
+- [Novidades](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Caixas delimitadoras de elementos  
@@ -120,19 +120,19 @@ Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../
 ## <a name="layout-performance-considerations"></a>Considerações sobre desempenho de layout  
  O layout é um processo recursivo. Cada elemento filho em um <xref:System.Windows.Controls.Panel.Children%2A> coleção é processada durante cada chamada do sistema de layout. Como resultado, disparar o sistema de layout deve ser evitado quando não for necessário. As considerações a seguir podem ajudá-lo a melhorar o desempenho.  
   
--   Esteja ciente de quais alterações de valor da propriedade forçarão uma atualização recursiva realizada pelo sistema de layout.  
+- Esteja ciente de quais alterações de valor da propriedade forçarão uma atualização recursiva realizada pelo sistema de layout.  
   
      As propriedades de dependência cujos valores podem fazer com que o sistema de layout seja inicializado são marcadas com sinalizadores públicos. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> e <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> fornecem dicas úteis sobre qual propriedade alterações de valor forçará uma recursiva atualizar pelo sistema de layout. Em geral, qualquer propriedade que pode afetar o tamanho da caixa delimitadora de um elemento deve ter um <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> o sinalizador será definido como true. Para obter mais informações, consulte [Visão geral sobre propriedades de dependência](dependency-properties-overview.md).  
   
--   Quando possível, use uma <xref:System.Windows.UIElement.RenderTransform%2A> em vez de um <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- Quando possível, use uma <xref:System.Windows.UIElement.RenderTransform%2A> em vez de um <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
      Um <xref:System.Windows.FrameworkElement.LayoutTransform%2A> pode ser uma maneira muito útil para afetar o conteúdo de um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. No entanto, se o efeito da transformação não precisa afetar a posição dos outros elementos, é melhor usar um <xref:System.Windows.UIElement.RenderTransform%2A> em vez disso, porque <xref:System.Windows.UIElement.RenderTransform%2A> não invoca o sistema de layout. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> aplica sua transformação e força uma atualização recursiva de layout para levar em conta a nova posição do elemento afetado.  
   
--   Evite chamadas desnecessárias a <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- Evite chamadas desnecessárias a <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
      O <xref:System.Windows.UIElement.UpdateLayout%2A> método força uma atualização recursiva de layout e não é necessário com frequência. A menos que você tenha certeza de que uma atualização completa é necessária, confie no sistema de layout para chamar esse método para você.  
   
--   Ao trabalhar com um grande <xref:System.Windows.Controls.Panel.Children%2A> coleta, considere o uso de um <xref:System.Windows.Controls.VirtualizingStackPanel> em vez de uma expressão <xref:System.Windows.Controls.StackPanel>.  
+- Ao trabalhar com um grande <xref:System.Windows.Controls.Panel.Children%2A> coleta, considere o uso de um <xref:System.Windows.Controls.VirtualizingStackPanel> em vez de uma expressão <xref:System.Windows.Controls.StackPanel>.  
   
      Virtualizando a coleção de filhos, o <xref:System.Windows.Controls.VirtualizingStackPanel> mantém apenas os objetos na memória que estão dentro do visor do pai. Como resultado, o desempenho é significativamente melhorado na maioria dos cenários.  
   

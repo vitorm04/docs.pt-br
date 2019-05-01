@@ -5,14 +5,14 @@ helpviewer_keywords:
 - clauses [Visual Basic]
 ms.assetid: 5e89f5f3-d129-4ed1-8857-30cd71cff95e
 ms.openlocfilehash: a77a95879bd556b1dfb1503c4648d04629052189
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051800"
 ---
 # <a name="clauses-visual-basic"></a>Cláusulas (Visual Basic)
-Os tópicos nesta seção documentam cláusulas de tempo de execução do Visual Basic.  
+Os tópicos nesta seção documentam as cláusulas de tempo de execução do Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  

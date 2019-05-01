@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
 ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034301"
 ---
 # <a name="handling-datatable-events"></a>Manipulação de eventos de DataTable
 O <xref:System.Data.DataTable> objeto fornece uma série de eventos que podem ser processadas por um aplicativo. A tabela a seguir descreve `DataTable` eventos.  

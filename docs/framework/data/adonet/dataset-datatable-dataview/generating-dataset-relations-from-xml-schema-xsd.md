@@ -3,20 +3,20 @@ title: Gerar relações de DataSet do esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034314"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Gerar relações de DataSet do esquema XML (XSD)
 Em um <xref:System.Data.DataSet>, você forma uma associação entre dois ou mais colunas, criando uma relação pai-filho. Há três maneiras de representar uma **conjunto de dados** relação dentro de um esquema XSD (linguagem) de definição de esquema XML:  
   
--   Especifica tipos complexos aninhados.  
+- Especifica tipos complexos aninhados.  
   
--   Use o **msdata:Relationship** anotação.  
+- Use o **msdata:Relationship** anotação.  
   
--   Especifique um **xs: keyref** sem o **msdata:ConstraintOnly** anotação.  
+- Especifique um **xs: keyref** sem o **msdata:ConstraintOnly** anotação.  
   
 ## <a name="nested-complex-types"></a>Tipos complexos aninhados  
  Definições de tipo complexo aninhado em um esquema indicam as relações pai-filho dos elementos. O fragmento de esquema XML a seguir mostra que **OrderDetail** é um elemento filho do **ordem** elemento.  

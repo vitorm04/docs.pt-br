@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
 ms.openlocfilehash: 274ec2e8ef16190da53061bb197bc3b1a1fadcf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024039"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Passo a passo: Exibir dados de um banco de dados do SQL Server em um controle DataGrid
 
@@ -23,9 +23,9 @@ Neste passo a passo, você pode recuperar dados de um banco de dados do SQL Serv
 
 Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
 
--   Visual Studio.
+- Visual Studio.
 
--   Acesso a uma instância em execução do SQL Server ou SQL Server Express que tem o banco de dados de exemplo AdventureWorks anexado a ele. Você pode baixar o banco de dados AdventureWorks a [GitHub](https://github.com/Microsoft/sql-server-samples/releases).
+- Acesso a uma instância em execução do SQL Server ou SQL Server Express que tem o banco de dados de exemplo AdventureWorks anexado a ele. Você pode baixar o banco de dados AdventureWorks a [GitHub](https://github.com/Microsoft/sql-server-samples/releases).
 
 ## <a name="create-entity-classes"></a>Criar classes de entidade
 

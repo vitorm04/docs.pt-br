@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
 ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003932"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Imagens, bitmaps e metarquivos
 A classe base `Image` é abstrata e fornece métodos para trabalhar com imagens de varredura (bitmaps) e imagens vetoriais (metarquivos). O `Bitmap` classe e o <xref:System.Drawing.Imaging.Metafile> classe ambos herdam o `Image` classe. A classe `Bitmap` expande os recursos da classe `Image` fornecendo métodos adicionais para carregar, salvar e manipular imagens de varredura. O <xref:System.Drawing.Imaging.Metafile> classe expande os recursos da `Image` classe fornecendo métodos adicionais para gravar e examinar imagens vetoriais.  

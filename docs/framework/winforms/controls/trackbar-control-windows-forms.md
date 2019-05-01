@@ -7,11 +7,11 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms]
 ms.assetid: 37d6aee3-7e8a-4a10-a99c-3a6e09199553
 ms.openlocfilehash: adeb796b0411473d8e17f164f2f87bdf6ed7ae0e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009235"
 ---
 # <a name="trackbar-control-windows-forms"></a>Controle TrackBar (Windows Forms)
 Os formulários do Windows `TrackBar` controle (também chamado de um controle de "controle deslizante") é usado para navegar por uma grande quantidade de informações ou para ajustar visualmente um ajuste numérico. O `TrackBar` controle tem duas partes: o elevador, também conhecido como um controle deslizante e as marcas de escala. O elevador é parte que pode ser ajustada. Sua posição corresponde à <xref:System.Windows.Forms.TrackBar.Value%2A> propriedade. As marcas de escala são indicadores visuais espaçados em intervalos regulares. A barra de faixa move em incrementos especificados e podem ser alinhados horizontalmente ou verticalmente. Um exemplo de uso de uma barra de faixa seria para a configuração de mouse ou taxa de intermitência do cursor.  

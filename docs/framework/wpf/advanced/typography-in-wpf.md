@@ -5,11 +5,11 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031311"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem melhor qualidade e desempenho de renderização de texto, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] suporte a tipografia, texto internacional aperfeiçoado, suporte de fonte aperfeiçoado e APIs (interfaces de programação de aplicativo).  
@@ -45,39 +45,39 @@ Texto com suavização da direção y do ClearType
 ## <a name="enhanced-international-text-support"></a>Suporte a texto internacional melhorado  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece suporte a texto internacional melhorado fornecendo os seguintes recursos:  
   
--   Espaçamento automático em todos os sistemas de escrita, utilizando medida adaptativa.  
+- Espaçamento automático em todos os sistemas de escrita, utilizando medida adaptativa.  
   
--   Amplo suporte a texto internacional. Para obter mais informações, consulte [globalização do WPF](globalization-for-wpf.md).  
+- Amplo suporte a texto internacional. Para obter mais informações, consulte [globalização do WPF](globalization-for-wpf.md).  
   
--   Quebra de linha orientada pelo idioma, hifenização e justificação.  
+- Quebra de linha orientada pelo idioma, hifenização e justificação.  
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>Suporte a fonte melhorado  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece suporte a fonte melhorado fornecendo os seguintes recursos:  
   
--   Unicode para todo o texto. Comportamento de fonte e a seleção não requerem charset ou codepage.  
+- Unicode para todo o texto. Comportamento de fonte e a seleção não requerem charset ou codepage.  
   
--   Comportamento de fonte independente de configurações globais, como localidade do sistema.  
+- Comportamento de fonte independente de configurações globais, como localidade do sistema.  
   
--   Separado <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, e <xref:System.Windows.FontStyle> tipos para definir um <xref:System.Windows.Media.FontFamily>. Isso fornece maior flexibilidade do que na programação [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], em que as combinações boolianas de negrito e itálico são utilizadas para definir uma família de fontes.  
+- Separado <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, e <xref:System.Windows.FontStyle> tipos para definir um <xref:System.Windows.Media.FontFamily>. Isso fornece maior flexibilidade do que na programação [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], em que as combinações boolianas de negrito e itálico são utilizadas para definir uma família de fontes.  
   
--   Direção de escrita (horizontal versus vertical) manipulada de forma independente do nome da fonte.  
+- Direção de escrita (horizontal versus vertical) manipulada de forma independente do nome da fonte.  
   
--   Vinculação e Fallback de fonte em um arquivo portátil [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], usando a tecnologia de fonte composta. Fontes compostas permitem a construção de fontes multilíngue de alcance completo. Fontes compostas também fornecem um mecanismo que evita exibir glifos que faltam. Para obter mais informações, consulte os comentários no <xref:System.Windows.Media.FontFamily> classe.  
+- Vinculação e Fallback de fonte em um arquivo portátil [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], usando a tecnologia de fonte composta. Fontes compostas permitem a construção de fontes multilíngue de alcance completo. Fontes compostas também fornecem um mecanismo que evita exibir glifos que faltam. Para obter mais informações, consulte os comentários no <xref:System.Windows.Media.FontFamily> classe.  
   
--   Fontes internacionais criadas por meio de fontes compostas, utilizando um grupo de fontes de único idioma. Isso economiza recurso ao desenvolver fontes para múltiplos idiomas.  
+- Fontes internacionais criadas por meio de fontes compostas, utilizando um grupo de fontes de único idioma. Isso economiza recurso ao desenvolver fontes para múltiplos idiomas.  
   
--   Fontes compostas inseridas em um documento, fornecendo assim portabilidade ao documento. Para obter mais informações, consulte os comentários no <xref:System.Windows.Media.FontFamily> classe.  
+- Fontes compostas inseridas em um documento, fornecendo assim portabilidade ao documento. Para obter mais informações, consulte os comentários no <xref:System.Windows.Media.FontFamily> classe.  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Novas Interfaces de programação de aplicativo texto (APIs)  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece vários textos [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] para desenvolvedores utilizarem ao incluir texto em seus aplicativos. Estes [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] são agrupados em três categorias:  
   
--   **Layout e interface do usuário**. Controles de texto comuns para o [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
+- **Layout e interface do usuário**. Controles de texto comuns para o [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
   
--   **Desenho de texto leve**. Permite que você desenhe texto diretamente a objetos.  
+- **Desenho de texto leve**. Permite que você desenhe texto diretamente a objetos.  
   
--   **Formatação de texto avançada**. Permite que você implemente um mecanismo de texto personalizado.  
+- **Formatação de texto avançada**. Permite que você implemente um mecanismo de texto personalizado.  
   
 ### <a name="layout-and-user-interface"></a>Layout e interface do usuário  
  No nível mais alto de funcionalidade, o texto [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] comum de fornecer [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controles como <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, e <xref:System.Windows.Controls.TextBox>. Esses controles fornecem os elementos básicos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dentro de um aplicativo e oferecem uma maneira fácil de apresentar e interagir com texto. Controles como <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.PasswordBox> habilitar mais avançado ou especializado de manipulação de texto. E classes como <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, e <xref:System.Windows.Documents.TextPointer> habilitar a manipulação de texto útil. Eles [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] controles fornecem propriedades tais como <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, e <xref:System.Windows.Controls.Control.FontStyle%2A>, que permitem que você controle a fonte que é usada para renderizar o texto.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
 ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025451"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Visão geral de conversores de tipo para XAML
 Lógica de fornecimento de conversores de tipo para um gravador de objeto que converte uma cadeia de caracteres na marcação XAML em objetos específicos em um grafo de objeto. Nos serviços de XAML do .NET Framework, o conversor de tipo deve ser uma classe que deriva de <xref:System.ComponentModel.TypeConverter>. Além disso, alguns conversores dão suporte a XAML caminho de salvamento e podem ser usados para serializar um objeto em um formulário de cadeia de caracteres na marcação de serialização. Este tópico descreve como e quando são invocados conversores de tipo em XAML e fornece conselhos de implementação para o método substituições de <xref:System.ComponentModel.TypeConverter>.  
@@ -45,13 +45,13 @@ Lógica de fornecimento de conversores de tipo para um gravador de objeto que co
   
  <xref:System.ComponentModel.TypeConverter> define quatro membros que são relevantes para converter a cadeia de caracteres e de cadeia de caracteres para fins de processamento de XAML:  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  Esses membros, o método mais importante é <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>, que converte a cadeia de caracteres de entrada para o tipo de objeto necessário. O <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> método pode ser implementado para converter uma maior variedade de tipos para o tipo de destino pretendido do conversor. Portanto, ele pode servir finalidades que vão além do XAML, como oferecer suporte a conversões de tempo de execução. No entanto, para uso em XAML, apenas o caminho do código que pode processar um <xref:System.String> entrada é importante.  
   

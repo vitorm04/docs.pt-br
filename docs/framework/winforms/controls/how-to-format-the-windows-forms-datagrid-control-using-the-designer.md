@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013368"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Como: Formatar o controle DataGrid do Windows Forms usando o Designer
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333568"
   
  Há três aspectos básicos de formatação a <xref:System.Windows.Forms.DataGrid> controle:  
   
--   Você pode definir as propriedades para estabelecer um estilo padrão no qual os dados são exibidos.  
+- Você pode definir as propriedades para estabelecer um estilo padrão no qual os dados são exibidos.  
   
--   Com base nisso, você pode então personalizar a maneira como determinadas tabelas são exibidas no tempo de execução.  
+- Com base nisso, você pode então personalizar a maneira como determinadas tabelas são exibidas no tempo de execução.  
   
--   Por fim, você pode modificar quais colunas são exibidas na grade de dados, bem como as cores e outras formatações mostradas.  
+- Por fim, você pode modificar quais colunas são exibidas na grade de dados, bem como as cores e outras formatações mostradas.  
   
  Como etapa inicial em uma grade de dados de formatação, você pode definir as propriedades do <xref:System.Windows.Forms.DataGrid> em si. Essas opções de cor e formato formam a base da qual você pode fazer alterações dependendo das tabelas de dados e colunas exibidas.  
   

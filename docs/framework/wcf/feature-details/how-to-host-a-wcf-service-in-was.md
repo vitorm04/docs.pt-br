@@ -3,11 +3,11 @@ title: 'Como: hospedar um serviço WCF no WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039085"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Como: hospedar um serviço WCF no WAS
 Este tópico descreve as etapas básicas necessárias para criar um serviços de ativação de processo do Windows (também conhecido como WAS) hospedado o serviço Windows Communication Foundation (WCF). FOI é o novo serviço de ativação de processo é uma generalização dos recursos de serviços de informações da Internet (IIS) que funcionam com protocolos de transporte não HTTP. O WCF usa o adaptador de escuta para comunicar as solicitações de ativação recebidas pelos protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e enfileiramento de mensagens.  
@@ -19,19 +19,19 @@ Este tópico descreve as etapas básicas necessárias para criar um serviços de
   
  Quando um serviço WCF é hospedado no WAS, as ligações padrão são usadas como de costume. No entanto, ao usar o <xref:System.ServiceModel.NetTcpBinding> e o <xref:System.ServiceModel.NetNamedPipeBinding> para configurar um serviço hospedado do WAS, uma restrição deve ser atendida. Quando diferentes pontos de extremidade usam o mesmo transporte, as configurações de ligação tem que corresponder as sete propriedades a seguir:  
   
--   ConnectionBufferSize  
+- ConnectionBufferSize  
   
--   ChannelInitializationTimeout  
+- ChannelInitializationTimeout  
   
--   MaxPendingConnections  
+- MaxPendingConnections  
   
--   MaxOutputDelay  
+- MaxOutputDelay  
   
--   MaxPendingAccepts  
+- MaxPendingAccepts  
   
--   ConnectionPoolSettings.IdleTimeout  
+- ConnectionPoolSettings.IdleTimeout  
   
--   ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
+- ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
   
  Caso contrário, o ponto de extremidade que é inicializado pela primeira vez sempre determina os valores dessas propriedades e os pontos de extremidade adicionados posteriormente lançar um <xref:System.ServiceModel.ServiceActivationException> se eles não corresponderem a essas configurações.  
   

@@ -3,11 +3,11 @@ title: Host de serviço do WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
 ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052606"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host de serviço do WCF (WcfSvcHost.exe)
 Host de serviço do Windows Communication Foundation (WCF) (WcfSvcHost.exe) permite que você iniciar o depurador do Visual Studio (F5) para hospedar automaticamente e testar um serviço que você implementou. Em seguida, você pode testar o serviço usando o cliente de teste do WCF (WcfTestClient.exe) ou seu próprio cliente, para encontrar e corrigir os erros em potencial.  
@@ -72,32 +72,32 @@ Host de serviço do Windows Communication Foundation (WCF) (WcfSvcHost.exe) perm
   
  O **Host de serviço WCF** janela principal contém dois menus:  
   
--   **Arquivo**: Contém o **feche** e **sair** comandos. Quando você clica em **feche**, o **Host de serviço WCF** caixa de diálogo é fechada, mas os serviços continuarão a ser hospedado. Quando você clica em **Exit**, Host de serviço WCF também é desligado. Isso também interrompe todos os serviços hospedados.  
+- **Arquivo**: Contém o **feche** e **sair** comandos. Quando você clica em **feche**, o **Host de serviço WCF** caixa de diálogo é fechada, mas os serviços continuarão a ser hospedado. Quando você clica em **Exit**, Host de serviço WCF também é desligado. Isso também interrompe todos os serviços hospedados.  
   
--   **Ajudar a**: Contém o **sobre** comando que contém informações de versão. Ele também contém o **ajudar** comando que pode abrir um arquivo de Ajuda.  
+- **Ajudar a**: Contém o **sobre** comando que contém informações de versão. Ele também contém o **ajudar** comando que pode abrir um arquivo de Ajuda.  
   
  A principal **Host de serviço WCF** janela contém duas áreas:  
   
--   É a primeira área **serviço**. Ele contém uma lista que exibe informações básicas de todos os serviços. As informações incluem:  
+- É a primeira área **serviço**. Ele contém uma lista que exibe informações básicas de todos os serviços. As informações incluem:  
   
-    -   **Serviço**: Lista todos os serviços.  
+    - **Serviço**: Lista todos os serviços.  
   
-    -   **status**: Lista o status do serviço. Valores válidos são "Iniciado", "Stopped" e "Error".  
+    - **status**: Lista o status do serviço. Valores válidos são "Iniciado", "Stopped" e "Error".  
   
-    -   **Endereço de metadados**: Exibe o endereço de metadados dos serviços.  
+    - **Endereço de metadados**: Exibe o endereço de metadados dos serviços.  
   
--   A segunda área é **informações adicionais**. Ele exibe uma explicação detalhada sobre o status do serviço quando a linha de serviço específica for selecionada na **serviço** área. Se o status de erro, você pode exibir a mensagem de erro completa na tela.  
+- A segunda área é **informações adicionais**. Ele exibe uma explicação detalhada sobre o status do serviço quando a linha de serviço específica for selecionada na **serviço** área. Se o status de erro, você pode exibir a mensagem de erro completa na tela.  
   
 ## <a name="stopping-wcf-service-host"></a>Parando o Host de serviço do WCF  
  Você pode desligar o Host de serviço WCF das quatro seguintes maneiras:  
   
--   Pare a sessão de depuração no Visual Studio.  
+- Pare a sessão de depuração no Visual Studio.  
   
--   Selecione **Exit** da **arquivo** menu no **Host de serviço WCF** janela.  
+- Selecione **Exit** da **arquivo** menu no **Host de serviço WCF** janela.  
   
--   Selecione **Exit** no menu de contexto do ícone de bandeja do Host de serviço WCF na área de notificação do sistema.  
+- Selecione **Exit** no menu de contexto do ícone de bandeja do Host de serviço WCF na área de notificação do sistema.  
   
--   Saia do cliente de teste do WCF se ele está sendo usado.  
+- Saia do cliente de teste do WCF se ele está sendo usado.  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>Usando o Host de serviço sem privilégio de administrador  
  Para permitir que usuários sem privilégios de administrador desenvolver serviços WCF, uma ACL (lista de controle de acesso) é criada para o namespace "http://+:8731/Design_Time_Addresses" durante a instalação do Visual Studio. A ACL é definida como (UI), que inclui todos os usuários interativos, conectados à máquina. Os administradores podem adicionar ou remover usuários dessa ACL ou abrir portas adicionais. Essa ACL permite que os usuários usem o Host de automático de serviço do WCF (wcfSvcHost.exe) sem conceder privilégios de administrador.  

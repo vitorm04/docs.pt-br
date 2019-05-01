@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032327"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Passo a passo: hospedar um controle Win32 no WPF
 Windows Presentation Foundation (WPF) fornece um ambiente rico para a criação de aplicativos. No entanto, quando você tem um investimento substancial em código Win32, pode ser mais eficiente reutilizar pelo menos parte desse código em seu aplicativo WPF em vez de reescrevê-lo completamente. O WPF fornece um mecanismo simples para hospedar uma janela do Win32, em uma página do WPF.  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) fornece um ambiente rico para a criação 
   
 6. Manipule as mensagens selecionadas enviadas à janela de host, como notificações dos controles filho. Há duas formas de fazer isso.  
   
-    -   Se você preferir manipular as mensagens na classe de hospedagem, substitua os <xref:System.Windows.Interop.HwndHost.WndProc%2A> método da <xref:System.Windows.Interop.HwndHost> classe.  
+    - Se você preferir manipular as mensagens na classe de hospedagem, substitua os <xref:System.Windows.Interop.HwndHost.WndProc%2A> método da <xref:System.Windows.Interop.HwndHost> classe.  
   
-    -   Se você preferir que o WPF manipular as mensagens, lidar com o <xref:System.Windows.Interop.HwndHost> classe <xref:System.Windows.Interop.HwndHost.MessageHook> eventos em seu code-behind. Esse evento ocorre para cada mensagem recebida pela janela hospedada. Se você escolher essa opção, você ainda precisará substituir <xref:System.Windows.Interop.HwndHost.WndProc%2A>, mas você só precisa de uma implementação mínima.  
+    - Se você preferir que o WPF manipular as mensagens, lidar com o <xref:System.Windows.Interop.HwndHost> classe <xref:System.Windows.Interop.HwndHost.MessageHook> eventos em seu code-behind. Esse evento ocorre para cada mensagem recebida pela janela hospedada. Se você escolher essa opção, você ainda precisará substituir <xref:System.Windows.Interop.HwndHost.WndProc%2A>, mas você só precisa de uma implementação mínima.  
   
 7. Substituir a <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> e <xref:System.Windows.Interop.HwndHost.WndProc%2A> métodos de <xref:System.Windows.Interop.HwndHost>. Você deve substituir esses métodos para satisfazer o <xref:System.Windows.Interop.HwndHost> contrato, mas você só precisará fornecer uma implementação mínima.  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) fornece um ambiente rico para a criação 
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Implementar comunicação entre o controle e a página  
  Você pode manipular o controle, enviando-as mensagens do Windows. Para notificar você de que o usuário interagiu com ele, o controle envia notificações para a janela de host. O [hospedando um controle Win32 ListBox no WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) exemplo inclui uma interface do usuário que fornece vários exemplos de como isso funciona:  
   
--   Acrescentar um novo item à lista.  
+- Acrescentar um novo item à lista.  
   
--   Excluir o item selecionado da lista  
+- Excluir o item selecionado da lista  
   
--   Exibir o texto do item selecionado atualmente.  
+- Exibir o texto do item selecionado atualmente.  
   
--   Exibir o número de itens na lista.  
+- Exibir o número de itens na lista.  
   
  O usuário também pode selecionar um item na caixa de listagem clicando sobre ele, como faria para um aplicativo Win32 convencional. Os dados exibidos são atualizados sempre que o usuário altera o estado da caixa de listagem ao selecionar, adicionar ou acrescentar um item.  
   

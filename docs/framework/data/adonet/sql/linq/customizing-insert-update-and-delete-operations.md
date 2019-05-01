@@ -3,17 +3,17 @@ title: Personalizando a inserção, atualiazação, e as operações de exclusã
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
 ms.openlocfilehash: b4578a030300872bf4e0bab30b8daf12544be0cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032756"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>Personalizando a inserção, atualiazação, e as operações de exclusão
 Por padrão, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gerencia dinâmico SQL para implementar à leitura, inserção, atualiazação, e as operações de exclusão. Na prática, no entanto, você personaliza normalmente seu aplicativo atender às suas necessidades comerciais.  
   
 > [!NOTE]
->  Se você estiver usando o Visual Studio, você pode usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para personalizar a inserção, atualização e exclusão de ações.  
+>  Se você estiver usando o Visual Studio, você pode usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para personalizar a inserir, atualizar e excluir ações.  
   
  Tópicos desta seção descreve as técnicas que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece personalizando à leitura, inserção, atualiazação, e as operações de exclusão em seu aplicativo.  
   

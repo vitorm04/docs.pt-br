@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031298"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Introdução ao objeto GlyphRun e ao elemento de glifos
 Este tópico descreve o <xref:System.Windows.Media.GlyphRun> objeto e o <xref:System.Windows.Documents.Glyphs> elemento.  
@@ -27,13 +27,13 @@ Este tópico descreve o <xref:System.Windows.Media.GlyphRun> objeto e o <xref:Sy
   
 2. Cenários de impressão.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] como uma linguagem de impressora do dispositivo.  
+    - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] como uma linguagem de impressora do dispositivo.  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
-    -   A saída de drivers de impressão anteriores é de aplicativos [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] para o formato fixo.  
+    - A saída de drivers de impressão anteriores é de aplicativos [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] para o formato fixo.  
   
-    -   Formato do spool de impressão.  
+    - Formato do spool de impressão.  
   
 3. Representação de documentos de formato fixo, incluindo clientes de versões anteriores do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e outros dispositivos de computação.  
   
@@ -67,15 +67,15 @@ Este tópico descreve o <xref:System.Windows.Media.GlyphRun> objeto e o <xref:Sy
 ### <a name="indices-property"></a>Propriedade de índices  
  O <xref:System.Windows.Documents.Glyphs.Indices%2A> propriedade é uma cadeia de caracteres de especificações de glifo. Quando uma sequência de glifos forma um único cluster, a especificação do primeiro glifo no cluster será precedida por uma especificação de quantos glifos e quantos pontos de código se combinam para formar o cluster. O <xref:System.Windows.Documents.Glyphs.Indices%2A> propriedade coleta em uma cadeia de caracteres, as propriedades a seguir.  
   
--   Índices de glifo  
+- Índices de glifo  
   
--   Larguras de avanço de glifo  
+- Larguras de avanço de glifo  
   
--   Combinando vetores de anexo de glifo  
+- Combinando vetores de anexo de glifo  
   
--   Mapeamento de cluster de pontos de código para glifos  
+- Mapeamento de cluster de pontos de código para glifos  
   
--   Sinalizadores de glifo  
+- Sinalizadores de glifo  
   
  Cada especificação de glifo tem o seguinte formato.  
   

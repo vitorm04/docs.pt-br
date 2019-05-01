@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009383"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Visão geral da pintura com cores sólidas e gradientes
 Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, e <xref:System.Windows.Media.RadialGradientBrush> objetos para pintar com cores sólidas, gradientes lineares e gradientes radiais.  
@@ -27,15 +27,15 @@ Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xr
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>Usando um SolidColorBrush em "XAML"  
  Para pintar uma área com uma cor sólida em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use uma das opções a seguir.  
   
--   Selecione um pincel de cor sólida predefinida pelo nome.  Por exemplo, você pode definir um botão <xref:System.Windows.Controls.Control.Background%2A> "Vermelho" ou "MediumBlue".  Para obter uma lista das outras predefinidas pincéis de cores sólidas, consulte as propriedades estáticas do <xref:System.Windows.Media.Brushes> classe. Confira o exemplo abaixo.  
+- Selecione um pincel de cor sólida predefinida pelo nome.  Por exemplo, você pode definir um botão <xref:System.Windows.Controls.Control.Background%2A> "Vermelho" ou "MediumBlue".  Para obter uma lista das outras predefinidas pincéis de cores sólidas, consulte as propriedades estáticas do <xref:System.Windows.Media.Brushes> classe. Confira o exemplo abaixo.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Escolha uma cor da paleta de cores de 32 bits, especificando as quantidades de vermelho, verde e azul para combinar em uma única cor sólida.  O formato para especificar uma cor da paleta de 32 bits é "*#rrggbb*", em que *rr* é um número hexadecimal de dois dígitos que especifica a quantidade relativa de vermelho, *gg* especifica a quantidade de verde e *bb* especifica a quantidade de azul.  Além disso, a cor pode ser especificada como "#*aarrggbb*" em que *aa* especifica o valor *alfa*, ou a transparência, da cor. Essa abordagem permite que você crie cores parcialmente transparentes.  No exemplo a seguir, o <xref:System.Windows.Controls.Control.Background%2A> de um <xref:System.Windows.Controls.Button> é definido como vermelho totalmente opaco usando notação hexadecimal.  
+- Escolha uma cor da paleta de cores de 32 bits, especificando as quantidades de vermelho, verde e azul para combinar em uma única cor sólida.  O formato para especificar uma cor da paleta de 32 bits é "*#rrggbb*", em que *rr* é um número hexadecimal de dois dígitos que especifica a quantidade relativa de vermelho, *gg* especifica a quantidade de verde e *bb* especifica a quantidade de azul.  Além disso, a cor pode ser especificada como "#*aarrggbb*" em que *aa* especifica o valor *alfa*, ou a transparência, da cor. Essa abordagem permite que você crie cores parcialmente transparentes.  No exemplo a seguir, o <xref:System.Windows.Controls.Control.Background%2A> de um <xref:System.Windows.Controls.Button> é definido como vermelho totalmente opaco usando notação hexadecimal.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   Usar a sintaxe de marca de propriedade para descrever um <xref:System.Windows.Media.SolidColorBrush>. Essa sintaxe é mais detalhada, mas permite que você especifique configurações adicionais, como a opacidade do pincel. No exemplo a seguir, o <xref:System.Windows.Controls.Control.Background%2A> propriedades de dois <xref:System.Windows.Controls.Button> elementos serão definidos como vermelho totalmente opaco. A primeira cor do pincel é descrita usando um nome de cor predefinido. A segunda cor do pincel é descrita usando notação hexadecimal.  
+- Usar a sintaxe de marca de propriedade para descrever um <xref:System.Windows.Media.SolidColorBrush>. Essa sintaxe é mais detalhada, mas permite que você especifique configurações adicionais, como a opacidade do pincel. No exemplo a seguir, o <xref:System.Windows.Controls.Control.Background%2A> propriedades de dois <xref:System.Windows.Controls.Button> elementos serão definidos como vermelho totalmente opaco. A primeira cor do pincel é descrita usando um nome de cor predefinido. A segunda cor do pincel é descrita usando notação hexadecimal.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xr
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>Pintando com um SolidColorBrush no código  
  Para pintar uma área com uma cor sólida no código, use uma das opções a seguir.  
   
--   Use um dos pincéis predefinidos fornecidos pelo <xref:System.Windows.Media.Brushes> classe. No exemplo a seguir, o <xref:System.Windows.Controls.Control.Background%2A> de um <xref:System.Windows.Controls.Button> é definido como <xref:System.Windows.Media.Brushes.Red%2A>.  
+- Use um dos pincéis predefinidos fornecidos pelo <xref:System.Windows.Media.Brushes> classe. No exemplo a seguir, o <xref:System.Windows.Controls.Control.Background%2A> de um <xref:System.Windows.Controls.Button> é definido como <xref:System.Windows.Media.Brushes.Red%2A>.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   Criar uma <xref:System.Windows.Media.SolidColorBrush> e defina sua <xref:System.Windows.Media.SolidColorBrush.Color%2A> propriedade usando um <xref:System.Windows.Media.Color> estrutura. Você pode usar uma cor predefinida na <xref:System.Windows.Media.Colors> classe, ou você pode criar um <xref:System.Windows.Media.Color> usando o estático <xref:System.Windows.Media.Color.FromArgb%2A> método.  
+- Criar uma <xref:System.Windows.Media.SolidColorBrush> e defina sua <xref:System.Windows.Media.SolidColorBrush.Color%2A> propriedade usando um <xref:System.Windows.Media.Color> estrutura. Você pode usar uma cor predefinida na <xref:System.Windows.Media.Colors> classe, ou você pode criar um <xref:System.Windows.Media.Color> usando o estático <xref:System.Windows.Media.Color.FromArgb%2A> método.  
   
      O exemplo a seguir mostra como definir a <xref:System.Windows.Media.SolidColorBrush.Color%2A> propriedade de um <xref:System.Windows.Media.SolidColorBrush> usando uma cor predefinida.  
   
@@ -81,9 +81,9 @@ Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xr
   
  O <xref:System.Windows.Media.GradientStop> é o bloco de construção básico de um pincel de gradiente.  Uma parada de gradiente Especifica um <xref:System.Windows.Media.GradientStop.Color%2A> em um <xref:System.Windows.Media.GradientStop.Offset%2A> ao longo do eixo de gradiente.  
   
--   A parada de gradiente <xref:System.Windows.Media.GradientStop.Color%2A> propriedade especifica a cor da marca de gradiente. Você pode definir a cor usando uma cor predefinida (fornecida pelo <xref:System.Windows.Media.Colors> classe) ou especificando valores de ScRGB ou ARGB. Em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], você também pode usar a notação hexadecimal para descrever uma cor. Para obter mais informações, consulte o <xref:System.Windows.Media.Color> estrutura.  
+- A parada de gradiente <xref:System.Windows.Media.GradientStop.Color%2A> propriedade especifica a cor da marca de gradiente. Você pode definir a cor usando uma cor predefinida (fornecida pelo <xref:System.Windows.Media.Colors> classe) ou especificando valores de ScRGB ou ARGB. Em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], você também pode usar a notação hexadecimal para descrever uma cor. Para obter mais informações, consulte o <xref:System.Windows.Media.Color> estrutura.  
   
--   A parada de gradiente <xref:System.Windows.Media.GradientStop.Offset%2A> propriedade especifica a posição da cor da parada de gradiente no eixo do gradiente. O deslocamento é um <xref:System.Double> que varia de 0 a 1. Quanto mais próximo de 0 for o valor de deslocamento da marca de gradiente, mais próxima a cor estará do início do gradiente. Quanto mais próximo de 1 for o valor de deslocamento da marca do gradiente, mais próxima a cor estará do final do gradiente.  
+- A parada de gradiente <xref:System.Windows.Media.GradientStop.Offset%2A> propriedade especifica a posição da cor da parada de gradiente no eixo do gradiente. O deslocamento é um <xref:System.Double> que varia de 0 a 1. Quanto mais próximo de 0 for o valor de deslocamento da marca de gradiente, mais próxima a cor estará do início do gradiente. Quanto mais próximo de 1 for o valor de deslocamento da marca do gradiente, mais próxima a cor estará do final do gradiente.  
   
  A cor de cada ponto entre as marcas de gradiente é interpolada linearmente como uma combinação da cor especificada pelas duas marcas de gradiente delimitadoras. A ilustração a seguir realça as marcas de gradiente do exemplo anterior. Os círculos marcam a posição das marcas de gradiente e uma linha tracejada mostra o eixo do gradiente.  
   

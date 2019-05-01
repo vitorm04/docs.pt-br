@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034418"
 ---
 # <a name="copying-dataset-contents"></a>Copiando conteúdo do DataSet
 Você pode criar uma cópia de um <xref:System.Data.DataSet> para que você possa trabalhar com dados sem afetar os dados originais ou trabalhar com um subconjunto dos dados de um **conjunto de dados**. Ao copiar um **conjunto de dados**, você pode:  
   
--   Criar uma cópia exata do **conjunto de dados**, incluindo o esquema, dados, informações de estado de linha e versões de linha.  
+- Criar uma cópia exata do **conjunto de dados**, incluindo o esquema, dados, informações de estado de linha e versões de linha.  
   
--   Criar uma **DataSet** que contém o esquema de existente **conjunto de dados**, mas somente as linhas que foram modificadas. Você pode retornar todas as linhas que foram modificadas ou especificar um determinado **DataRowState**. Para obter mais informações sobre estados de linha, consulte [estados de linha e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+- Criar uma **DataSet** que contém o esquema de existente **conjunto de dados**, mas somente as linhas que foram modificadas. Você pode retornar todas as linhas que foram modificadas ou especificar um determinado **DataRowState**. Para obter mais informações sobre estados de linha, consulte [estados de linha e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
--   Copie o esquema ou estrutura relacional, do **conjunto de dados** somente, sem copiar nenhuma linha. As linhas podem ser importadas em um <xref:System.Data.DataTable> existente usando o <xref:System.Data.DataTable.ImportRow%2A>.  
+- Copie o esquema ou estrutura relacional, do **conjunto de dados** somente, sem copiar nenhuma linha. As linhas podem ser importadas em um <xref:System.Data.DataTable> existente usando o <xref:System.Data.DataTable.ImportRow%2A>.  
   
  Para criar uma cópia exata do **DataSet** que inclua o esquema e os dados, use o <xref:System.Data.DataSet.Copy%2A> método da **conjunto de dados**. O exemplo de código a seguir mostra como criar uma cópia exata do **conjunto de dados**.  
   

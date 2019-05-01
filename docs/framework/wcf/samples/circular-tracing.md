@@ -3,11 +3,11 @@ title: Rastreamento circular
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
 ms.openlocfilehash: cd1a0c85dd42a7f064e75c7efdacb9ea46ef445d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002398"
 ---
 # <a name="circular-tracing"></a>Rastreamento circular
 Este exemplo demonstra a implementação de um ouvinte de rastreamento de buffer circular. Um cenário comum para serviços de produção é ter serviços que estão disponíveis por longos períodos de tempo e tem o log de rastreamento habilitado em um nível baixo. Esses serviços consumam muito espaço em disco. Ao solucionar problemas de um serviço, os dados mais recentes no log de rastreamento são relevantes para resolver um problema. Este exemplo demonstra uma implementação de um ouvinte de rastreamento circular buffer no qual somente os rastreamentos mais recentes são mantidos em disco até um período configurável de dados. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e inclui um ouvinte de rastreamento personalizado.  

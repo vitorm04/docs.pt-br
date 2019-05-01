@@ -5,11 +5,11 @@ ms.assetid: a226737a-cb99-4e97-bd94-9a37094ded41
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 550cb6379ef0d5d17a3446b3f21120208b5a3dad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989155"
 ---
 # <a name="icordebugdebugevent-interface"></a>Interface ICorDebugDebugEvent
 Define a interface base da qual derivam todos os eventos de depuração `ICorDebug`.  
@@ -24,9 +24,9 @@ Define a interface base da qual derivam todos os eventos de depuração `ICorDeb
 ## <a name="remarks"></a>Comentários  
  As seguintes interfaces são derivadas de `ICorDebugDebugEvent` interface:  
   
--   [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
+- [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
   
--   [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
+- [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
   
 > [!NOTE]
 >  A interface só está disponível com o .NET Native. A tentativa de chamar `QueryInterface` recuperar um ponteiro de interface retorna `E_NOINTERFACE` para cenários de ICorDebug fora do .NET Native.  

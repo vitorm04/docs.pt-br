@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010144"
 ---
 # <a name="custom-animations-overview"></a>Visão geral de animações personalizadas
 Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de animação criando quadros-chave personalizados, classes de animação ou utilizando callback por quadro para contorná-lo.  
@@ -28,11 +28,11 @@ Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../
 ## <a name="extending-the-animation-system"></a>Estendendo o sistema de animação  
  Há várias maneiras de estender o sistema de animação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], dependendo do nível de funcionalidade interna que você deseja usar.  Há três pontos principais de extensibilidade no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mecanismo de animação:  
   
--   Criar um objeto de quadro-chave personalizado herdando de uma da  *\<tipo >* classes de quadro-chave, como <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Essa abordagem utiliza a maior parte da funcionalidade interna do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mecanismo de animação.  
+- Criar um objeto de quadro-chave personalizado herdando de uma da  *\<tipo >* classes de quadro-chave, como <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Essa abordagem utiliza a maior parte da funcionalidade interna do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mecanismo de animação.  
   
--   Criar sua própria classe de animação herdando <xref:System.Windows.Media.Animation.AnimationTimeline> ou um dos  *\<tipo >* classes AnimationBase.  
+- Criar sua própria classe de animação herdando <xref:System.Windows.Media.Animation.AnimationTimeline> ou um dos  *\<tipo >* classes AnimationBase.  
   
--   Use o callback por quadro para gerar animações por quadro. Essa abordagem ignora completamente a animação e o sistema de tempo.  
+- Use o callback por quadro para gerar animações por quadro. Essa abordagem ignora completamente a animação e o sistema de tempo.  
   
  A tabela a seguir descreve alguns dos cenários para estender o sistema de animação.  
   
@@ -47,11 +47,11 @@ Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../
 ## <a name="create-a-custom-key-frame"></a>Criar um quadro-chave personalizado  
  Criar uma classe de quadro-chave personalizado é a maneira mais simples para estender o sistema de animação. Use essa abordagem para um método de interpolação diferente para uma animação de quadro-chave.  Conforme descrito na [Visão geral de animações de quadro-chave](key-frame-animations-overview.md), uma animação de quadro-chave utiliza objetos de quadro-chave para gerar seus valores de saída. Cada objeto de quadro-chave realiza três funções:  
   
--   Especifica um valor de destino usando seu <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriedade.  
+- Especifica um valor de destino usando seu <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriedade.  
   
--   Especifica a hora em que esse valor deve ser alcançado usando sua <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriedade.  
+- Especifica a hora em que esse valor deve ser alcançado usando sua <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriedade.  
   
--   Interpola entre o valor do quadro chave anterior e seu próprio valor implementando o método InterpolateValueCore.  
+- Interpola entre o valor do quadro chave anterior e seu próprio valor implementando o método InterpolateValueCore.  
   
  **Instruções de implementação**  
   
@@ -87,13 +87,13 @@ Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../
   
  Derivar o <xref:System.Windows.Media.Animation.AnimationTimeline> de classe e substituir os seguintes membros:  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> – Se sua nova classe é concreta, você deve substituir <xref:System.Windows.Freezable.CreateInstanceCore%2A> para retornar uma nova instância da sua classe.  
+- <xref:System.Windows.Freezable.CreateInstanceCore%2A> – Se sua nova classe é concreta, você deve substituir <xref:System.Windows.Freezable.CreateInstanceCore%2A> para retornar uma nova instância da sua classe.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – Substitua este método para retornar o valor atual da sua animação. Ele usa três parâmetros: um valor de origem padrão, um valor de destino padrão e um <xref:System.Windows.Media.Animation.AnimationClock>. Use o <xref:System.Windows.Media.Animation.AnimationClock> para obter o tempo atual ou o progresso da animação. Você pode optar por usar os valores padrão de origem e destino.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – Substitua este método para retornar o valor atual da sua animação. Ele usa três parâmetros: um valor de origem padrão, um valor de destino padrão e um <xref:System.Windows.Media.Animation.AnimationClock>. Use o <xref:System.Windows.Media.Animation.AnimationClock> para obter o tempo atual ou o progresso da animação. Você pode optar por usar os valores padrão de origem e destino.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – Substituir essa propriedade para indicar se sua animação utiliza o valor de destino padrão especificado pelo <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> método.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – Substituir essa propriedade para indicar se sua animação utiliza o valor de destino padrão especificado pelo <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> método.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Substituir essa propriedade para indicar o <xref:System.Type> da saída de sua animação produz.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Substituir essa propriedade para indicar o <xref:System.Type> da saída de sua animação produz.  
   
  Se a classe não usar propriedades de dependência para armazenar seus dados ou requer inicialização extra após a criação, talvez seja necessário substituir métodos adicionais; Consulte a [Visão geral de objetos congeláveis](../advanced/freezable-objects-overview.md) para obter mais informações.  
   

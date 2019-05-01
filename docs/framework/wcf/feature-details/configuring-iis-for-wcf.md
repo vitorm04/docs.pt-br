@@ -3,11 +3,11 @@ title: Configurando os Serviços de informação da internet 7.0 para o Windows 
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 ms.openlocfilehash: 53ba48d47d30bd94ae5544920041cd430526223b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039761"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation
 
@@ -22,11 +22,11 @@ Serviços de informações da Internet (IIS) 7.0 tem um design modular que permi
 
  Esse recurso tem os seguintes subcomponentes:
 
--   Ambiente .NET
+- Ambiente .NET
 
--   APIs de configuração
+- APIs de configuração
 
--   Modelo de processo
+- Modelo de processo
 
  Se você selecionar o nó raiz do WAS, somente o **modelo de processo** subnó é marcada por padrão. Observe que a instalação você está instalando WAS, apenas porque não há suporte para um servidor Web.
 

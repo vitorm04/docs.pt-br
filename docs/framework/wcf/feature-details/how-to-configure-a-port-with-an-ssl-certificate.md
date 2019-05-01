@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047952"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Como: configurar uma porta com um certificado SSL
 Ao criar um serviço Windows Communication Foundation (WCF) auto-hospedado com o <xref:System.ServiceModel.WSHttpBinding> classe que usa segurança de transporte, você também deve configurar uma porta com um certificado X.509. Se você estiver criando um serviço auto-hospedado, você poderá hospedá-lo serviço no IIS (Serviços de Informações da Internet). Para obter mais informações, consulte [segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -27,15 +27,15 @@ Ao criar um serviço Windows Communication Foundation (WCF) auto-hospedado com o
   
  Este tópico descreve como executar vários procedimentos:  
   
--   Determinar a configuração atual da porta de um computador.  
+- Determinar a configuração atual da porta de um computador.  
   
--   Obter impressão digital de um certificado (necessário para os próximos dois procedimentos).  
+- Obter impressão digital de um certificado (necessário para os próximos dois procedimentos).  
   
--   Associar um certificado SSL a uma configuração de porta.  
+- Associar um certificado SSL a uma configuração de porta.  
   
--   Associar um certificado SSL a uma configuração de porta e dar suporte a certificados do cliente.  
+- Associar um certificado SSL a uma configuração de porta e dar suporte a certificados do cliente.  
   
--   Excluir um certificado SSL de um número de porta.  
+- Excluir um certificado SSL de um número de porta.  
   
  Observe que a modificação de certificados armazenados no computador requer privilégios administrativos.  
   
@@ -71,9 +71,9 @@ Ao criar um serviço Windows Communication Foundation (WCF) auto-hospedado com o
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   O **-i** switch tem a sintaxe `IP`:`port` e instrui a ferramenta para definir o certificado para a porta 8012 do computador. Opcionalmente, os quatro zeros que precedem o número também podem ser substituídos pelo endereço IP real do computador.  
+    - O **-i** switch tem a sintaxe `IP`:`port` e instrui a ferramenta para definir o certificado para a porta 8012 do computador. Opcionalmente, os quatro zeros que precedem o número também podem ser substituídos pelo endereço IP real do computador.  
   
-    -   O **-h** opção especifica a impressão digital do certificado.  
+    - O **-h** opção especifica a impressão digital do certificado.  
   
 2. No [!INCLUDE[wv](../../../../includes/wv-md.md)], use a ferramenta Netsh.exe, conforme mostrado no exemplo a seguir.  
   
@@ -81,11 +81,11 @@ Ao criar um serviço Windows Communication Foundation (WCF) auto-hospedado com o
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   O **certhash** parâmetro especifica a impressão digital do certificado.  
+    - O **certhash** parâmetro especifica a impressão digital do certificado.  
   
-    -   O **ipport** parâmetro especifica o endereço IP e porta e funções exatamente como o **-i** switch da ferramenta Httpcfg.exe descrita.  
+    - O **ipport** parâmetro especifica o endereço IP e porta e funções exatamente como o **-i** switch da ferramenta Httpcfg.exe descrita.  
   
-    -   O **appid** parâmetro é um GUID que pode ser usado para identificar o aplicativo proprietário.  
+    - O **appid** parâmetro é um GUID que pode ser usado para identificar o aplicativo proprietário.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Para associar um certificado SSL a um número de porta e dar suporte a certificados do cliente  
   

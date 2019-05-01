@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050708"
 ---
 # <a name="transport-quotas"></a>Cotas de transporte
 Cotas de transporte são um mecanismo de política para decidir quando uma conexão está consumindo recursos excessivos. Uma cota é um limite rígido que impede o uso de recursos adicionais depois que o valor da cota é excedido. Cotas de transporte impedir mal-intencionados ou não intencionais ataques de negação de serviço.  
@@ -19,11 +19,11 @@ Cotas de transporte são um mecanismo de política para decidir quando uma conex
 ## <a name="types-of-transport-quotas"></a>Tipos de cotas de transporte  
  Transportes WCF têm três tipos de cotas:  
   
--   *Tempos limite* atenuar ataques negação de serviço que dependem de prender os recursos por um longo período de tempo.  
+- *Tempos limite* atenuar ataques negação de serviço que dependem de prender os recursos por um longo período de tempo.  
   
--   *Limites de alocação de memória* impedir que uma única conexão de esgotamento de memória do sistema e negação de serviço para outras conexões.  
+- *Limites de alocação de memória* impedir que uma única conexão de esgotamento de memória do sistema e negação de serviço para outras conexões.  
   
--   *Limites de tamanho da coleção* associado o consumo de recursos que indiretamente alocar memória ou que estão em quantidades limitadas.  
+- *Limites de tamanho da coleção* associado o consumo de recursos que indiretamente alocar memória ou que estão em quantidades limitadas.  
   
 ## <a name="transport-quota-descriptions"></a>Descrições de cota de transporte  
  Esta seção descreve as cotas de transporte disponíveis para os transportes WCF padrão: HTTP (S), TCP/IP e pipes nomeados. Transportes personalizados podem expor seus próprios cotas configuráveis que não são incluídas nessa lista. Consulte a documentação para um transporte personalizado saber mais sobre suas cotas.  

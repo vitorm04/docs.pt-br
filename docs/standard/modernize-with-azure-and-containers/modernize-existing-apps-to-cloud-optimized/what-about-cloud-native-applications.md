@@ -1,17 +1,17 @@
 ---
-title: E quanto aos aplicativos nativos de nuvem?
+title: E quanto aos aplicativos nativos na nuvem?
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | E quanto aos aplicativos nativos de nuvem?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012063"
 ---
-# <a name="what-about-cloud-native-applications"></a>E quanto aos aplicativos nativos de nuvem?
+# <a name="what-about-cloud-native-applications"></a>E quanto aos aplicativos nativos na nuvem?
 
 Embora [nativos de nuvem](https://azure.microsoft.com/overview/cloudnative/) aplicativos não são o foco principal deste guia, é útil ter uma compreensão desse nível de maturidade de modernização e distingui-lo de aplicativos otimizados para a nuvem.
 

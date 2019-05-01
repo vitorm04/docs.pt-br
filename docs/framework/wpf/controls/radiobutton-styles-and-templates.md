@@ -10,11 +10,11 @@ helpviewer_keywords:
 - parts [WPF], RadioButton
 ms.assetid: 9acf93f7-dd2f-4010-8ce0-1edd81c52ae2
 ms.openlocfilehash: f11a8338c96d14c3c518713865061e4095ff23b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031831"
 ---
 # <a name="radiobutton-styles-and-templates"></a>Estilos e modelos RadioButton
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.RadioButton> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

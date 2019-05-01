@@ -6,11 +6,11 @@ helpviewer_keywords:
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
 ms.openlocfilehash: 17dd8e0c02d71fc7e72800fc578866188d03060e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053243"
 ---
 # <a name="merged-resource-dictionaries"></a>Dicionários de recursos mesclados
 Os recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dão suporte a um recurso de dicionário de recursos mesclados. Esse recurso fornece uma maneira de definir a parte de recursos de um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fora do aplicativo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilado. Os recursos podem ser compartilhados entre aplicativos e são também isolados de modo mais conveniente para localização.  

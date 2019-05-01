@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999252"
 ---
 # <a name="event-logging-in-wcf"></a>Registro de eventos em log no WCF
 Windows Communication Foundation (WCF) rastreia eventos internos no log de eventos do Windows.  
@@ -20,19 +20,19 @@ Windows Communication Foundation (WCF) rastreia eventos internos no log de event
 ### <a name="application-event-log"></a>Log de Eventos do Aplicativo  
  O **Log de eventos do aplicativo** contém a maioria dos eventos gerados pelo WCF. A maioria das entradas indica que um determinado recurso não foi inicializado para um aplicativo. Os exemplos incluem:  
   
--   Registro em log/rastreamento de mensagem: WCF grava um evento no log de eventos quando a falha de rastreamento e registro em log de mensagem. No entanto, nem toda falha de rastreamento dispara um evento. Para impedir que o log de eventos que estão sendo totalmente preenchido com falhas de rastreamentos, o WCF implementa um período de indisponibilidade de 10 minutos para tal evento. Isso significa que se WCF grava uma falha de rastreamento no log de eventos, ele não executará novamente pelo menos 10 minutos.  
+- Registro em log/rastreamento de mensagem: WCF grava um evento no log de eventos quando a falha de rastreamento e registro em log de mensagem. No entanto, nem toda falha de rastreamento dispara um evento. Para impedir que o log de eventos que estão sendo totalmente preenchido com falhas de rastreamentos, o WCF implementa um período de indisponibilidade de 10 minutos para tal evento. Isso significa que se WCF grava uma falha de rastreamento no log de eventos, ele não executará novamente pelo menos 10 minutos.  
   
--   Ouvinte compartilhado: O serviço de compartilhamento de porta de TCP do WCF registra um evento quando ele falha ao iniciar.  
+- Ouvinte compartilhado: O serviço de compartilhamento de porta de TCP do WCF registra um evento quando ele falha ao iniciar.  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Logs de eventos quando o serviço não for iniciado.  
+- [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Logs de eventos quando o serviço não for iniciado.  
   
--   Eventos críticos e de erro, como falhas de inicialização ou falhas  
+- Eventos críticos e de erro, como falhas de inicialização ou falhas  
   
--   Log de mensagem ativado: Logs de eventos quando o log de mensagem está ativado. Isso serve para notificar o administrador que informações confidenciais, específicos do aplicativo podem ser registradas no corpo e cabeçalhos de mensagem.  
+- Log de mensagem ativado: Logs de eventos quando o log de mensagem está ativado. Isso serve para notificar o administrador que informações confidenciais, específicos do aplicativo podem ser registradas no corpo e cabeçalhos de mensagem.  
   
--   Um evento é registrado quando o `enableLoggingKnownPII` de atributo na `machineSettings` elemento da `machine.config` arquivo está definido. Esse atributo especifica se qualquer aplicativo em execução no computador tem permissão para efetuar o conhecido informações de identificação pessoal (PII).  
+- Um evento é registrado quando o `enableLoggingKnownPII` de atributo na `machineSettings` elemento da `machine.config` arquivo está definido. Esse atributo especifica se qualquer aplicativo em execução no computador tem permissão para efetuar o conhecido informações de identificação pessoal (PII).  
   
--   Se o `logKnownPii` atributo em qualquer um a `app.config` ou `web.config` arquivo é definido como `true` para um aplicativo específico ativar o registro em log o PII, mas o `enableLoggingKnownPII` atributo no `machineSettings` elemento do `machine.config` arquivo é definido para `false`, um evento é registrado. Além disso, se os dois `logKnownPii` e `enableLoggingKnownPII` são definidos como `true`, e o evento é registrado. Para obter mais informações sobre essas definições de configuração, consulte a seção de segurança de [Configurando o log de mensagens](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) tópico.  
+- Se o `logKnownPii` atributo em qualquer um a `app.config` ou `web.config` arquivo é definido como `true` para um aplicativo específico ativar o registro em log o PII, mas o `enableLoggingKnownPII` atributo no `machineSettings` elemento do `machine.config` arquivo é definido para `false`, um evento é registrado. Além disso, se os dois `logKnownPii` e `enableLoggingKnownPII` são definidos como `true`, e o evento é registrado. Para obter mais informações sobre essas definições de configuração, consulte a seção de segurança de [Configurando o log de mensagens](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) tópico.  
   
 ### <a name="security-event-log"></a>Log de eventos de segurança  
  O **Log de eventos de segurança** contém eventos de auditoria de segurança que são registrados em log pelo WCF.  

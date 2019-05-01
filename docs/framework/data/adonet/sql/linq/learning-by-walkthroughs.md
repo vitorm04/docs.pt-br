@@ -3,11 +3,11 @@ title: Aprendendo com explicações passo a passo
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033521"
 ---
 # <a name="learning-by-walkthroughs"></a>Aprendendo com explicações passo a passo
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação fornece várias explicações passo a passo. Este tópico aborda alguns problemas gerais da explicação passo a passo (incluindo solução de problemas) e fornece links para várias explicações passo a passo para iniciantes aprenderem sobre o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -30,20 +30,20 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta�
 ## <a name="general"></a>Geral  
  Em geral, as seguintes informações aplicam-se a essas explicações passo a passo:  
   
--   Ambiente: Cada [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] passo a passo usa o Visual Studio como ambiente de desenvolvimento integrado (IDE).  
+- Ambiente: Cada [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] passo a passo usa o Visual Studio como ambiente de desenvolvimento integrado (IDE).  
   
--   Mecanismos SQL: Essa explicações passo a passo é escrita para serem implementados usando o SQL Server Express. Se você não tiver o SQL Server Express, poderá baixá-lo gratuitamente. Para obter mais informações, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- Mecanismos SQL: Essa explicações passo a passo é escrita para serem implementados usando o SQL Server Express. Se você não tiver o SQL Server Express, poderá baixá-lo gratuitamente. Para obter mais informações, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
     >  As explicações passo a passo do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usam um nome de arquivo como uma cadeia de conexão. Simplesmente especificar um nome de arquivo é uma conveniência que o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece para usuários do SQL Server Express. Sempre preste atenção aos problemas de segurança. Para obter mais informações, consulte [segurança em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] instruções passo a passo geralmente exige o banco de dados de exemplo Northwind. Para obter mais informações, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] instruções passo a passo geralmente exige o banco de dados de exemplo Northwind. Para obter mais informações, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   As caixas de diálogo e comandos de menu que você vê no passo a passo podem diferir dos descritos na Ajuda, dependendo de suas configurações ativas ou edição do Visual Studio. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+- As caixas de diálogo e comandos de menu que você vê no passo a passo podem diferir dos descritos na Ajuda, dependendo de suas configurações ativas ou edição do Visual Studio. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
--   Para as explicações passo a passo que abordam cenários de várias camadas, um servidor deve estar localizado em um computador que seja diferente do computador de desenvolvimento, e você deve ter as permissões apropriadas para acessar o servidor.  
+- Para as explicações passo a passo que abordam cenários de várias camadas, um servidor deve estar localizado em um computador que seja diferente do computador de desenvolvimento, e você deve ter as permissões apropriadas para acessar o servidor.  
   
--   O nome da classe que normalmente representa a tabela Orders no banco de dados de exemplo Northwind é `[Order]`. O escape é necessário porque `Order` é uma palavra-chave no Visual Basic.  
+- O nome da classe que normalmente representa a tabela Orders no banco de dados de exemplo Northwind é `[Order]`. O escape é necessário porque `Order` é uma palavra-chave no Visual Basic.  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
  Erros em tempo de execução podem ocorrer porque você não tem permissões suficientes para acessar os bancos de dados usados nessas explicações passo a passo. Consulte as seguintes etapas para ajudar a resolver os problemas mais comuns.  

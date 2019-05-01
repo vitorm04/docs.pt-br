@@ -3,11 +3,11 @@ title: 'Passo a passo: consultar entre relações (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
 ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033391"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Passo a passo: consultar entre relações (C#)
 Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associações* para representar as relações de chave estrangeira no banco de dados.  
@@ -22,18 +22,18 @@ Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../in
 ## <a name="overview"></a>Visão geral  
  Este passo a passo consiste em três tarefas principais:  
   
--   Adicionando uma classe de entidade para representar a tabela Orders no banco de dados de exemplo Northwind.  
+- Adicionando uma classe de entidade para representar a tabela Orders no banco de dados de exemplo Northwind.  
   
--   Suplementando anotações à classe `Customer` para aprimorar a relação entre as classes `Customer` e `Order`.  
+- Suplementando anotações à classe `Customer` para aprimorar a relação entre as classes `Customer` e `Order`.  
   
--   Criando e executando uma consulta para testar a obtenção de informações de `Order` usando a classe `Customer`.  
+- Criando e executando uma consulta para testar a obtenção de informações de `Order` usando a classe `Customer`.  
   
 ## <a name="mapping-relationships-across-tables"></a>Relações de mapeamento entre tabelas  
  Depois de definir a classe `Customer`, crie a definição da classe de entidade `Order` que inclui o código a seguir, que indica que `Order.Customer` se relaciona como uma chave estrangeira a `Customer.CustomerID`.  
   
 #### <a name="to-add-the-order-entity-class"></a>Para adicionar a classe de entidade Order  
   
--   Digite ou cole o código a seguir depois da classe `Customer`:  
+- Digite ou cole o código a seguir depois da classe `Customer`:  
   
      [!code-csharp[DLinqWalk2CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#1)]  
   
@@ -42,7 +42,7 @@ Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../in
   
 #### <a name="to-annotate-the-customer-class"></a>Para anotar a classe Customer  
   
--   Digite ou cole o código a seguir na classe `Customer`:  
+- Digite ou cole o código a seguir na classe `Customer`:  
   
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050045"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Método IMetaDataEmit::SetClassLayout
 Conclui o layout dos campos para uma classe que foi definido por uma chamada anterior ao [método DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  No entanto, convém os campos dispostos de acordo com a organização não gerenciadas de código usa. Nesse caso, escolha o layout explícito ou sequencial e chame `SetClassLayout` para concluir o layout dos campos:  
   
--   Layout sequencial: Especifique o tamanho de empacotamento. Um campo é alinhado de acordo com seu tamanho natural ou o tamanho de empacotamento, seja qual for o resultados no deslocamento do campo menor. Definir `rFieldOffsets` e `ulClassSize` como zero.  
+- Layout sequencial: Especifique o tamanho de empacotamento. Um campo é alinhado de acordo com seu tamanho natural ou o tamanho de empacotamento, seja qual for o resultados no deslocamento do campo menor. Definir `rFieldOffsets` e `ulClassSize` como zero.  
   
--   Layout explícito: Especifique o deslocamento de cada campo ou especificar o tamanho de classe e o tamanho de empacotamento.  
+- Layout explícito: Especifique o deslocamento de cada campo ou especificar o tamanho de classe e o tamanho de empacotamento.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

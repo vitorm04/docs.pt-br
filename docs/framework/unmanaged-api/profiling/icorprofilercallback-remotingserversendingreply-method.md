@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 024b1f3f7e08dc21582789de7f3899e8e44d5e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041828"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>Método ICorProfilerCallback::RemotingServerSendingReply
 Notifica o criador de perfil que o processo terminou de processar uma solicitação de invocação de método remoto e está prestes a transmitir a resposta por meio de um canal.  
@@ -39,11 +39,11 @@ HRESULT RemotingServerSendingReply(
  `pCookie`  
  [in] Um ponteiro para um GUID que irá corresponder com o valor fornecido no [ICorProfilerCallback:: Remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) sob estas condições:  
   
--   Cookies GUID de comunicação remota estão ativos.  
+- Cookies GUID de comunicação remota estão ativos.  
   
--   O canal é bem-sucedida na transmissão de mensagem.  
+- O canal é bem-sucedida na transmissão de mensagem.  
   
--   Os cookies GUID são Active Directory sobre o processo do lado do cliente.  
+- Os cookies GUID são Active Directory sobre o processo do lado do cliente.  
   
  Isso permite que o emparelhamento fácil de chamadas de comunicação remota e a criação de uma pilha de chamadas lógicas.  
   

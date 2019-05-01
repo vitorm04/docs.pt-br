@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050214"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Otimizando desempenho: Layout e design
 O design de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode afetar o desempenho criando sobrecarga desnecessária no cálculo de layout e validando referências de objetos. A construção de objetos, particularmente no tempo de execução, pode afetar as características de desempenho do seu aplicativo.  
@@ -26,25 +26,25 @@ O design de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tl
   
  O sistema de layout completa dois cálculos para cada membro filho em uma coleção: um cálculo de medição e um cálculo de organização. Cada objeto filho oferece sua própria implementação substituída do <xref:System.Windows.UIElement.Measure%2A> e <xref:System.Windows.UIElement.Arrange%2A> métodos para fornecer seu próprio comportamento específico de layout. Em sua forma mais simples, o layout é um sistema recursivo que leva a um elemento a ser dimensionado, posicionado e desenhado na tela.  
   
--   Um filho <xref:System.Windows.UIElement> objeto começa o processo de layout primeiro tendo suas propriedades principais medidas.  
+- Um filho <xref:System.Windows.UIElement> objeto começa o processo de layout primeiro tendo suas propriedades principais medidas.  
   
--   O objeto <xref:System.Windows.FrameworkElement> as propriedades relacionadas ao tamanho, como <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A>, são avaliadas.  
+- O objeto <xref:System.Windows.FrameworkElement> as propriedades relacionadas ao tamanho, como <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A>, são avaliadas.  
   
--   <xref:System.Windows.Controls.Panel>-lógica específica é aplicada, como o <xref:System.Windows.Controls.DockPanel.Dock%2A> propriedade do <xref:System.Windows.Controls.DockPanel>, ou o <xref:System.Windows.Controls.StackPanel.Orientation%2A> propriedade do <xref:System.Windows.Controls.StackPanel>.  
+- <xref:System.Windows.Controls.Panel>-lógica específica é aplicada, como o <xref:System.Windows.Controls.DockPanel.Dock%2A> propriedade do <xref:System.Windows.Controls.DockPanel>, ou o <xref:System.Windows.Controls.StackPanel.Orientation%2A> propriedade do <xref:System.Windows.Controls.StackPanel>.  
   
--   O conteúdo é organizado, ou posicionado, após a medição de todos os objetos filho.  
+- O conteúdo é organizado, ou posicionado, após a medição de todos os objetos filho.  
   
--   A coleção de objetos filho é desenhada na tela.  
+- A coleção de objetos filho é desenhada na tela.  
   
  O processo de cálculo de layout será invocado novamente se qualquer uma das ações a seguir ocorrer:  
   
--   Um objeto filho é adicionado à coleção.  
+- Um objeto filho é adicionado à coleção.  
   
--   Um <xref:System.Windows.FrameworkElement.LayoutTransform%2A> é aplicada ao objeto filho.  
+- Um <xref:System.Windows.FrameworkElement.LayoutTransform%2A> é aplicada ao objeto filho.  
   
--   O <xref:System.Windows.UIElement.UpdateLayout%2A> método é chamado para o objeto filho.  
+- O <xref:System.Windows.UIElement.UpdateLayout%2A> método é chamado para o objeto filho.  
   
--   Quando ocorre uma alteração ao valor da propriedade de dependência marcada com metadados que afetam a medida ou cálculos da organização.  
+- Quando ocorre uma alteração ao valor da propriedade de dependência marcada com metadados que afetam a medida ou cálculos da organização.  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Usar o painel mais eficiente quando possível  
  A complexidade do processo de layout é baseada diretamente no comportamento de layout do <xref:System.Windows.Controls.Panel>-derivados de elementos que você usar. Por exemplo, uma <xref:System.Windows.Controls.Grid> ou <xref:System.Windows.Controls.StackPanel> controle fornece muito mais funcionalidade do que um <xref:System.Windows.Controls.Canvas> controle. O preço para esse aumento de funcionalidade é um aumento maior nos custos de desempenho. No entanto, se você não precisar da funcionalidade que um <xref:System.Windows.Controls.Grid> fornece controle, você deve usar as alternativas menos dispendiosas, como um <xref:System.Windows.Controls.Canvas> ou um painel personalizado.  

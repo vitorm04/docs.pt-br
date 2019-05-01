@@ -3,11 +3,11 @@ title: 'Como: hospedar um serviço de fluxo de trabalho com o Windows Server App
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
 ms.openlocfilehash: d1042aca7e4127c39e59bf0bf400974f0cecb1e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039489"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Como: hospedar um serviço de fluxo de trabalho com o Windows Server App Fabric
 Hospedagem de serviços de fluxo de trabalho na tela do aplicativo é semelhante ao hospedarmos no IIS / WAS. A única diferença é que as ferramentas que do App Fabric fornece para implantação, monitoramento e gerenciamento de serviços de fluxo de trabalho. Este tópico usa o serviço de fluxo de trabalho criado a [criando um serviço de fluxo de trabalho de longa execução](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Esse tópico orientará você pela criação de um serviço de fluxo de trabalho. Este tópico explica como hospedar o serviço de fluxo de trabalho usando a malha de aplicativos. Para obter mais informações sobre o Windows Server AppFabric, consulte [documentação do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Antes de concluir as etapas a seguir, certifique-se de que ter o Windows Server App Fabric instalado.  Para fazer isso, abra os serviços de informações da Internet (inetmgr.exe), clique no nome de servidor na **conexões** exibir, clique em Sites e clique em **Default Web Site**. No lado direito da tela, você deve ver uma seção chamada **App Fabric**. Se você não vir essa seção (vai estar na parte superior do painel à direita) não tem malha de aplicativos instalada. Para obter mais informações sobre como instalar o Windows Server AppFabric, consulte [instalando o Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136).  

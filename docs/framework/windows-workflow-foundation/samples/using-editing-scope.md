@@ -3,11 +3,11 @@ title: Usando o escopo de edição
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004764"
 ---
 # <a name="using-editing-scope"></a>Usando o escopo de edição
 Este exemplo demonstra como em lotes um conjunto de alterações de modo que eles possam ser desfeitos em uma única unidade atômica. Por padrão, as ações executadas por um autor do designer de atividade automaticamente são integradas desfazer/refazem o sistema.  
@@ -28,9 +28,9 @@ Este exemplo demonstra como em lotes um conjunto de alterações de modo que ele
   
 2. Clique em **abrir o escopo de edição**.  
   
-    1.  Este comando chama <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> que cria um escopo e envia de edição ele na pilha de edição.  
+    1. Este comando chama <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> que cria um escopo e envia de edição ele na pilha de edição.  
   
-    2.  Três atividades são adicionadas a <xref:System.Activities.Presentation.Model.ModelItem>selecionado. Observe que se o escopo de edição não tivesse sido aberto com <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, três novas atividades apareceriam na tela de designer. Porque esta operação ainda está pendente dentro de <xref:System.Activities.Presentation.Model.EditingScope>, o designer não é atualizada ainda.  
+    2. Três atividades são adicionadas a <xref:System.Activities.Presentation.Model.ModelItem>selecionado. Observe que se o escopo de edição não tivesse sido aberto com <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, três novas atividades apareceriam na tela de designer. Porque esta operação ainda está pendente dentro de <xref:System.Activities.Presentation.Model.EditingScope>, o designer não é atualizada ainda.  
   
 3. Pressione **próximo escopo de edição** para confirmar o escopo de edição. Três atividades aparecem no designer.  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032305"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automação da Interface do Usuário e Escala da Tela
 > [!NOTE]
@@ -44,15 +44,15 @@ ms.locfileid: "59332671"
 ## <a name="scaling-in-ui-automation-clients"></a>Dimensionamento em clientes de automação de interface do usuário  
  O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] não usa coordenadas lógicas. Os métodos e propriedades a seguir retornam coordenadas físicas ou levá-los como parâmetros.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetClickablePoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetClickablePoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>  
+- <xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>  
   
--   <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
+- <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
   
  Por padrão, um aplicativo de cliente de automação de interface do usuário em execução em um não-96 - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ambiente não poderá obter resultados corretos esses métodos e propriedades. Por exemplo, como a posição do cursor está em coordenadas lógicas, o cliente não pode simplesmente passar essas coordenadas para <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> para obter o elemento que está sob o cursor. Além disso, o aplicativo não poderá posicionar corretamente janelas fora de sua área de cliente.  
   

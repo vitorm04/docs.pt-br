@@ -3,11 +3,11 @@ title: Canal de agrupamento
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002348"
 ---
 # <a name="chunking-channel"></a>Canal de agrupamento
 Ao enviar mensagens grandes usando o Windows Communication Foundation (WCF), geralmente é desejável para limitar a quantidade de memória usada para armazenar em buffer as mensagens. Uma solução possível é transmitir o corpo da mensagem (supondo que a maior parte dos dados está no corpo). No entanto, alguns protocolos exigem armazenamento em buffer da mensagem inteira. Sistema de mensagens confiável e segurança são dois exemplos de tais. Outra solução possível é dividir a mensagem grande em mensagens menores chamado partes, enviar partes de uma dessas partes por vez e reconstituir a mensagem grande no lado de recepção. O aplicativo em si pode fazer esse agrupamento e desprovisionamento de agrupamento ou use um canal personalizado para fazê-lo. O exemplo de agrupamento de canal mostra como um protocolo personalizado ou o canal em camadas pode ser usado para fazer a eliminação da divisão de mensagens arbitrariamente grandes e o agrupamento.  
@@ -240,30 +240,30 @@ interface ITestService
   
  Alguns detalhes que vale a pena observar:  
   
--   Enviar primeiro chama `ThrowIfDisposedOrNotOpened` para garantir que o `CommunicationState` é aberto.  
+- Enviar primeiro chama `ThrowIfDisposedOrNotOpened` para garantir que o `CommunicationState` é aberto.  
   
--   Enviando é sincronizada para que somente uma mensagem possa ser enviada por vez para cada sessão. Há um `ManualResetEvent` chamado `sendingDone` que é redefinido quando uma mensagem em partes que está sendo enviada. Depois que a mensagem de bloco final é enviada, esse evento é definido. O método de envio aguarda para este evento a ser definido antes de tentar enviar a mensagem de saída.  
+- Enviando é sincronizada para que somente uma mensagem possa ser enviada por vez para cada sessão. Há um `ManualResetEvent` chamado `sendingDone` que é redefinido quando uma mensagem em partes que está sendo enviada. Depois que a mensagem de bloco final é enviada, esse evento é definido. O método de envio aguarda para este evento a ser definido antes de tentar enviar a mensagem de saída.  
   
--   Bloqueios de enviar o `CommunicationObject.ThisLock` evitar sincronizado as alterações de estado durante o envio. Consulte a <xref:System.ServiceModel.Channels.CommunicationObject> documentação para obter mais informações sobre <xref:System.ServiceModel.Channels.CommunicationObject> estados e a máquina de estado.  
+- Bloqueios de enviar o `CommunicationObject.ThisLock` evitar sincronizado as alterações de estado durante o envio. Consulte a <xref:System.ServiceModel.Channels.CommunicationObject> documentação para obter mais informações sobre <xref:System.ServiceModel.Channels.CommunicationObject> estados e a máquina de estado.  
   
--   O tempo limite passado para o envio é usado como o tempo limite para a operação de envio inteira que inclui o envio de todos os fragmentos.  
+- O tempo limite passado para o envio é usado como o tempo limite para a operação de envio inteira que inclui o envio de todos os fragmentos.  
   
--   Personalizado <xref:System.Xml.XmlDictionaryWriter> design foi escolhido para evitar o armazenamento em buffer o corpo da mensagem original inteira. Se tivéssemos uma <xref:System.Xml.XmlDictionaryReader> sobre como usar o corpo `message.GetReaderAtBodyContents` buffer de todo o corpo. Em vez disso, temos um personalizado <xref:System.Xml.XmlDictionaryWriter> que é passado para `message.WriteBodyContents`. Como a mensagem chamadas WriteBase64 no gravador, o gravador de partes em mensagens de pacotes e as envia usando o canal interno. Blocos de WriteBase64 até que a parte seja enviada.  
+- Personalizado <xref:System.Xml.XmlDictionaryWriter> design foi escolhido para evitar o armazenamento em buffer o corpo da mensagem original inteira. Se tivéssemos uma <xref:System.Xml.XmlDictionaryReader> sobre como usar o corpo `message.GetReaderAtBodyContents` buffer de todo o corpo. Em vez disso, temos um personalizado <xref:System.Xml.XmlDictionaryWriter> que é passado para `message.WriteBodyContents`. Como a mensagem chamadas WriteBase64 no gravador, o gravador de partes em mensagens de pacotes e as envia usando o canal interno. Blocos de WriteBase64 até que a parte seja enviada.  
   
 ## <a name="implementing-the-receive-operation"></a>Implementando a operação de recebimento  
  Em um alto nível, a operação de recebimento primeiro verifica se a mensagem de entrada não é `null` e que sua ação é o `ChunkingAction`. Se ele não atender a ambos os critérios, a mensagem é retornada inalterada de recebimento. Caso contrário, o recebimento cria um novo `ChunkingReader` e uma nova `ChunkingMessage` encapsulado em torno dele (chamando `GetNewChunkingMessage`). Antes de retornar que novos `ChunkingMessage`, Receive usa um thread de pool de threads para executar `ReceiveChunkLoop`, que chama `innerChannel.Receive` em um loop e entrega o partes para o `ChunkingReader` até que a mensagem de bloco final é recebida ou o tempo limite de recebimento for atingido.  
   
  Alguns detalhes que vale a pena observar:  
   
--   Como enviar, receber chamadas primeiro `ThrowIfDisposedOrNotOepned` para garantir que o `CommunicationState` é aberto.  
+- Como enviar, receber chamadas primeiro `ThrowIfDisposedOrNotOepned` para garantir que o `CommunicationState` é aberto.  
   
--   Receba também são sincronizados para que somente uma mensagem pode ser recebida por vez da sessão. Isso é especialmente importante, porque depois que uma mensagem de bloco de início for recebida, todas as mensagens recebidas subsequentes devem ser partes dentro essa nova sequência de bloco até que uma mensagem de bloco final seja recebida. Receber não pode extrair mensagens do canal interno até que todas as partes que pertencem à mensagem atualmente desprovisionar sendo em partes são recebidas. Para fazer isso, receber usa um `ManualResetEvent` denominado `currentMessageCompleted`, que é definido quando a mensagem de bloco final é recebida e redefinir quando uma nova mensagem de bloco de início é recebida.  
+- Receba também são sincronizados para que somente uma mensagem pode ser recebida por vez da sessão. Isso é especialmente importante, porque depois que uma mensagem de bloco de início for recebida, todas as mensagens recebidas subsequentes devem ser partes dentro essa nova sequência de bloco até que uma mensagem de bloco final seja recebida. Receber não pode extrair mensagens do canal interno até que todas as partes que pertencem à mensagem atualmente desprovisionar sendo em partes são recebidas. Para fazer isso, receber usa um `ManualResetEvent` denominado `currentMessageCompleted`, que é definido quando a mensagem de bloco final é recebida e redefinir quando uma nova mensagem de bloco de início é recebida.  
   
--   Ao contrário de envio, recebimento não impede que as transições de estado sincronizado durante a recepção. Por exemplo, fechar pode ser chamado durante o recebimento e aguarda até que o recebimento pendente da mensagem original é concluído ou o valor de tempo limite especificado for atingido.  
+- Ao contrário de envio, recebimento não impede que as transições de estado sincronizado durante a recepção. Por exemplo, fechar pode ser chamado durante o recebimento e aguarda até que o recebimento pendente da mensagem original é concluído ou o valor de tempo limite especificado for atingido.  
   
--   O tempo limite passado para o recebimento é usado como o tempo limite para toda a operação, que inclui o recebimento de todas as partes de recebimento.  
+- O tempo limite passado para o recebimento é usado como o tempo limite para toda a operação, que inclui o recebimento de todas as partes de recebimento.  
   
--   Se a camada que consome a mensagem está consumindo o corpo da mensagem a uma taxa menor do que a taxa de bloco de mensagens de entrada, o `ChunkingReader` buffers essas partes de entrada até o limite especificado pela `ChunkingBindingElement.MaxBufferedChunks`. Quando esse limite é atingido, não há mais blocos são extraídos da camada inferior até que uma parte em buffer é consumida ou o tempo limite de recebimento for atingido.  
+- Se a camada que consome a mensagem está consumindo o corpo da mensagem a uma taxa menor do que a taxa de bloco de mensagens de entrada, o `ChunkingReader` buffers essas partes de entrada até o limite especificado pela `ChunkingBindingElement.MaxBufferedChunks`. Quando esse limite é atingido, não há mais blocos são extraídos da camada inferior até que uma parte em buffer é consumida ou o tempo limite de recebimento for atingido.  
   
 ## <a name="communicationobject-overrides"></a>Substituições de CommunicationObject  
   

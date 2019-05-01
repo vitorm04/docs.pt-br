@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
 ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051813"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 Especifica que uma propriedade pode ser gravada, mas não lido.  
@@ -34,15 +34,15 @@ Especifica que uma propriedade pode ser gravada, mas não lido.
 > [!IMPORTANT]
 >  Quando você define e usa um `WriteOnly` propriedade, considere as seguintes medidas de proteção adicionais:  
   
--   **Substituindo.** Se a propriedade for um membro de uma classe, permitir que ele seja o padrão [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)e não o declare `Overridable` ou `MustOverride`. Isso impede que uma classe derivada tornando o acesso indesejado por meio de uma substituição.  
+- **Substituindo.** Se a propriedade for um membro de uma classe, permitir que ele seja o padrão [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)e não o declare `Overridable` ou `MustOverride`. Isso impede que uma classe derivada tornando o acesso indesejado por meio de uma substituição.  
   
--   **Nível de acesso.** Se você mantiver dados confidenciais a propriedade em uma ou mais variáveis, declará-los [privada](../../../visual-basic/language-reference/modifiers/private.md) para que nenhum outro código possa acessá-los.  
+- **Nível de acesso.** Se você mantiver dados confidenciais a propriedade em uma ou mais variáveis, declará-los [privada](../../../visual-basic/language-reference/modifiers/private.md) para que nenhum outro código possa acessá-los.  
   
--   **Criptografia.** Store todos os dados confidenciais em formato criptografado em vez de em texto sem formatação. Se alguma forma, código mal-intencionado obtiver acesso a área da memória, é mais difícil fazer uso dos dados. A criptografia também é útil se for necessário serializar os dados confidenciais.  
+- **Criptografia.** Store todos os dados confidenciais em formato criptografado em vez de em texto sem formatação. Se alguma forma, código mal-intencionado obtiver acesso a área da memória, é mais difícil fazer uso dos dados. A criptografia também é útil se for necessário serializar os dados confidenciais.  
   
--   **A redefinição.** Quando a classe, estrutura ou módulo definindo a propriedade está sendo finalizado, redefina os dados confidenciais para os valores padrão ou outros valores sem sentido. Isso proporciona proteção extra, quando a área da memória é liberada para acesso geral.  
+- **A redefinição.** Quando a classe, estrutura ou módulo definindo a propriedade está sendo finalizado, redefina os dados confidenciais para os valores padrão ou outros valores sem sentido. Isso proporciona proteção extra, quando a área da memória é liberada para acesso geral.  
   
--   **Persistência.** Não mantêm todos os dados confidenciais, por exemplo, no disco, se você puder evitá-lo. Além disso, não escreva quaisquer dados confidenciais na área de transferência.  
+- **Persistência.** Não mantêm todos os dados confidenciais, por exemplo, no disco, se você puder evitá-lo. Além disso, não escreva quaisquer dados confidenciais na área de transferência.  
   
  O `WriteOnly` modificador pode ser usado neste contexto:  
   

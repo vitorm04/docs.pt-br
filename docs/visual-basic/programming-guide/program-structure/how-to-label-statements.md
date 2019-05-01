@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
 ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050423"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Como: Rótulo de instruções (Visual Basic)
 Blocos de instrução são compostos de linhas de código delimitado por vírgulas. Linhas de código precedida por um inteiro ou cadeia de caracteres de identificação são consideradas *rotulado*. Rótulos de instrução são usados para marcar uma linha de código para identificá-lo para uso com instruções de como `On Error Goto`.  
@@ -28,7 +28,7 @@ Blocos de instrução são compostos de linhas de código delimitado por vírgul
   
 ### <a name="to-label-a-line-of-code"></a>Para rotular uma linha de código  
   
--   Coloque um identificador, seguido por dois-pontos, no início da linha de código-fonte.  
+- Coloque um identificador, seguido por dois-pontos, no início da linha de código-fonte.  
   
      Por exemplo, as seguintes linhas de código são rotuladas com `Jump` e `120`, respectivamente:  
   

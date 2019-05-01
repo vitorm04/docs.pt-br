@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967775"
 ---
 # <a name="serverless-architecture"></a>Arquitetura sem servidor
 
@@ -19,7 +19,7 @@ Hosts sem servidor geralmente usam um existentes baseados em contêiner ou a cam
 
 ![Arquitetura de funções do Azure](./media/azure-functions-architecture.png)
 
-O núcleo de trabalhos Web fornece um contexto de execução para a função. O tempo de execução de linguagem executa scripts, executa a bibliotecas e hospeda a estrutura para o idioma de destino. Por exemplo, Node. js é usado para executar funções do JavaScript e o .NET Framework é usado para executar funções do C#. Você aprenderá mais sobre as opções de idioma e plataforma neste capítulo.
+O núcleo de trabalhos Web fornece um contexto de execução para a função. O tempo de execução de linguagem executa scripts, executa a bibliotecas e hospeda a estrutura para o idioma de destino. Por exemplo, Node. js é usado para executar funções do JavaScript e o .NET Framework é usado para executar funções do c#. Você aprenderá mais sobre as opções de idioma e plataforma neste capítulo.
 
 Alguns projetos podem se beneficiar de adotar uma abordagem "totalmente em" para o sem servidor. Aplicativos que dependem muito de microsserviços podem implementar todos os microsserviços usando a tecnologia sem servidor. A maioria dos aplicativos são híbridas, seguindo um design de N camadas e usando sem servidor para os componentes que fazem sentido porque os componentes são modular e escalonável de maneira independente. Para ajudar a dar sentido a esses cenários, esta seção orienta por meio de alguns exemplos comuns de arquitetura que usar sem servidor.
 

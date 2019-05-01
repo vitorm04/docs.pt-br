@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
 ms.openlocfilehash: 5b26a091dc8eb7415702c3c2853a569324def7d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013498"
 ---
 # <a name="sub-expression-visual-basic"></a>Subexpressão (Visual Basic)
 Declara os parâmetros e o código que define uma expressão lambda de sub-rotina.  
@@ -40,17 +40,17 @@ End Sub
 ## <a name="lambda-expression-syntax"></a>Sintaxe da expressão lambda  
  A sintaxe de uma expressão lambda lembra a de uma sub-rotina padrão. As diferenças são da seguinte maneira:  
   
--   Uma expressão lambda não tem um nome.  
+- Uma expressão lambda não tem um nome.  
   
--   Uma expressão lambda não pode ter um modificador, tais como `Overloads` ou `Overrides`.  
+- Uma expressão lambda não pode ter um modificador, tais como `Overloads` ou `Overrides`.  
   
--   O corpo de uma expressão lambda de linha única deve ser uma instrução, não é uma expressão. O corpo pode consistir de uma chamada para um procedimento sub, mas não uma chamada para um procedimento function.  
+- O corpo de uma expressão lambda de linha única deve ser uma instrução, não é uma expressão. O corpo pode consistir de uma chamada para um procedimento sub, mas não uma chamada para um procedimento function.  
   
--   Em uma expressão lambda, ou todos os parâmetros devem ter especificado todos os parâmetros ou tipos de dados devem ser inferidos.  
+- Em uma expressão lambda, ou todos os parâmetros devem ter especificado todos os parâmetros ou tipos de dados devem ser inferidos.  
   
--   Opcional e `ParamArray` parâmetros não são permitidos em expressões lambda.  
+- Opcional e `ParamArray` parâmetros não são permitidos em expressões lambda.  
   
--   Parâmetros genéricos não são permitidos em expressões lambda.  
+- Parâmetros genéricos não são permitidos em expressões lambda.  
   
 ## <a name="example"></a>Exemplo  
  A seguir está um exemplo de uma expressão lambda que grava um valor no console. O exemplo mostra os dois a sintaxe da expressão lambda de linha única e várias linhas de uma sub-rotina. Para obter mais exemplos, consulte [expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  

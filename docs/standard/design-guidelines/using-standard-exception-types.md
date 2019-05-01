@@ -1,5 +1,5 @@
 ---
-title: Usando tipos de exceção padrão
+title: Usar tipos de exceção padrão
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: KrzysztofCwalina
 ms.openlocfilehash: b947c7cce057c060b1ab5054d1227f5703ccbf89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026324"
 ---
-# <a name="using-standard-exception-types"></a>Usando tipos de exceção padrão
+# <a name="using-standard-exception-types"></a>Usar tipos de exceção padrão
 Esta seção descreve as exceções padrão fornecidas pela estrutura e os detalhes de uso. A lista não é exaustiva. Consulte a documentação de referência do .NET Framework para o uso de outros tipos de exceção do Framework.  
   
 ## <a name="exception-and-systemexception"></a>Exceção e SystemException  

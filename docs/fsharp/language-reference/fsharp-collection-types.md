@@ -1,35 +1,35 @@
 ---
 title: Tipos de coleção de F#
-description: 'Saiba mais sobre os tipos de coleção do F # e como eles diferem de tipos de coleção no .NET Framework.'
+description: Saiba mais sobre F# tipos de coleção e como eles diferem de tipos de coleção no .NET Framework.
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996808"
 ---
 # <a name="f-collection-types"></a>Tipos de coleção de F#
 
-Ao revisar este tópico, você pode determinar que F # tipo de coleção melhor se ajusta a uma necessidade específica. Esses tipos de coleção diferem dos tipos de coleção no .NET Framework, como aqueles no `System.Collections.Generic` namespace, em que os tipos de coleção do F # destinam-se de uma perspectiva de programação funcional em vez de uma perspectiva orientada a objeto. Mais especificamente, apenas a coleção de matriz tem elementos mutáveis. Portanto, quando você modifica uma coleção, você cria uma instância da coleção modificada em vez de alterar a coleção original.
+Ao revisar este tópico, você pode determinar que F# tipo de coleção mais adequado a uma necessidade específica. Esses tipos de coleção diferem dos tipos de coleção no .NET Framework, como aqueles na `System.Collections.Generic` namespace, em que o F# tipos de coleção são criados de uma perspectiva de programação funcional em vez de um orientada a objeto Perspectiva. Mais especificamente, apenas a coleção de matriz tem elementos mutáveis. Portanto, quando você modifica uma coleção, você cria uma instância da coleção modificada em vez de alterar a coleção original.
 
 Tipos de coleção também diferem no tipo de estrutura de dados no qual os objetos são armazenados. Estruturas de dados como tabelas de hash, listas vinculadas e matrizes têm diferentes características de desempenho e um conjunto diferente de operações disponíveis.
 
 ## <a name="f-collection-types"></a>Tipos de coleção de F#
 
-A tabela a seguir mostra os tipos de coleção do F #.
+A tabela a seguir mostra F# tipos de coleção.
 
 |Tipo|Descrição|Links relacionados|
 |----|-----------|-------------|
 |[List](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Uma série imutável, ordenada, de elementos do mesmo tipo. Implementado como uma lista vinculada.|[Listas](lists.md)<br /><br />[Módulo List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
 |[matriz](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Uma coleção de tamanho fixo, com base em zero, mutável de elementos de dados consecutivos que são todos do mesmo tipo.|[Matrizes](arrays.md)<br /><br />[Módulo array](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Módulo Array2D](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Módulo Array3D](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[SEQ](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Uma série de lógica de elementos que são todos de um tipo. As sequências são particularmente úteis quando você tiver uma grande coleção ordenada de dados, mas não necessariamente pretende usar todos os elementos. Individual sequência de elementos são computados apenas como necessários, portanto, uma sequência pode executar melhor do que uma lista se não todos os elementos são usados. As sequências são representadas pela `seq<'T>` tipo, que é um alias para `IEnumerable<T>`. Portanto, qualquer tipo .NET Framework que implementa `System.Collections.Generic.IEnumerable<'T>` pode ser usado como uma sequência.|[Sequências](sequences.md)<br /><br />[Módulo SEQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
+|[seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Uma série de lógica de elementos que são todos de um tipo. As sequências são particularmente úteis quando você tiver uma grande coleção ordenada de dados, mas não necessariamente pretende usar todos os elementos. Individual sequência de elementos são computados apenas como necessários, portanto, uma sequência pode executar melhor do que uma lista se não todos os elementos são usados. As sequências são representadas pela `seq<'T>` tipo, que é um alias para `IEnumerable<T>`. Portanto, qualquer tipo .NET Framework que implementa `System.Collections.Generic.IEnumerable<'T>` pode ser usado como uma sequência.|[Sequências](sequences.md)<br /><br />[Módulo SEQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[mapa](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Um dicionário imutável de elementos. Elementos são acessados por chave.|[Módulo de mapa](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Um conjunto imutável que se baseia em árvores binárias, onde a comparação é a função de comparação estrutural F #, que usa a implementações de potencialmente o `System.IComparable` interface em valores de chave.|[Definir módulo](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Um conjunto imutável que se baseia em árvores binárias, onde a comparação é o F# função de comparação estrutural, que potencialmente usa implementações do `System.IComparable` interface em valores de chave.|[Definir módulo](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Tabela de funções
 
-Esta seção compara as funções que estão disponíveis em tipos de coleção do F #. Dada a complexidade computacional da função, onde N é o tamanho da primeira coleção, e M é o tamanho da segunda coleção, se houver. Um traço (-) indica que essa função não está disponível na coleção. Como as sequências são avaliadas lentamente, uma função como SEQ. DISTINCT talvez (1) porque ele retorna imediatamente, embora ela ainda afeta o desempenho da sequência de quando enumerada.
+Esta seção compara as funções que estão disponíveis no F# tipos de coleção. Dada a complexidade computacional da função, onde N é o tamanho da primeira coleção, e M é o tamanho da segunda coleção, se houver. Um traço (-) indica que essa função não está disponível na coleção. Como as sequências são avaliadas lentamente, uma função como SEQ. DISTINCT talvez (1) porque ele retorna imediatamente, embora ela ainda afeta o desempenho da sequência de quando enumerada.
 
 |Função|Matriz|Lista|Sequência|Mapa|Set|Descrição|
 |--------|-----|----|--------|---|---|-----------|
@@ -66,15 +66,15 @@ Esta seção compara as funções que estão disponíveis em tipos de coleção 
 |fold2|(N)|(N)|-|-|-|Aplica uma função aos elementos correspondentes de duas coleções, threading um argumento acumulador por meio da computação. As coleções devem ter tamanhos idênticos. Se a função de entrada é f e os elementos são i0... no e... j0 jN, esta função calcula f (... (f s i0 j0)...) Em jN.|
 |foldBack|(N)|(N)|-|(N)|(N)|Aplica uma função a cada elemento da coleção, um argumento acumulador por meio da computação de threading. Se a função de entrada é f e os elementos são i0... no, esta função calcula i0 f (... (f em s)).|
 |foldBack2|(N)|(N)|-|-|-|Aplica uma função aos elementos correspondentes de duas coleções, threading um argumento acumulador por meio da computação. As coleções devem ter tamanhos idênticos. Se a função de entrada é f e os elementos são i0... no e... j0 jN, esta função calcula f i0 j0 (... (f em jN s)).|
-|ForAll|(N)|(N)|(N)|(N)|(N)|Testa se todos os elementos da coleção satisfazem o predicado em questão.|
+|forall|(N)|(N)|(N)|(N)|(N)|Testa se todos os elementos da coleção satisfazem o predicado em questão.|
 |forall2|(N)|(N)|(N)|-|-|Testa se todos os elementos correspondentes da coleção satisfazem o predicado em questão pairwise.|
 |obter / enésimo|O(1)|(N)|(N)|-|-|Retorna um elemento da coleção devida à sua indexação.|
 |Head|-|O(1)|O(1)|-|-|Retorna o primeiro elemento da coleção.|
-|Init|(N)|(N)|O(1)|-|-|Cria uma coleção de dada a dimensão e uma função geradora para calcular os elementos.|
+|init|(N)|(N)|O(1)|-|-|Cria uma coleção de dada a dimensão e uma função geradora para calcular os elementos.|
 |initInfinite|-|-|O(1)|-|-|Gera uma sequência que, quando iteradas, retorna elementos sucessivos chamando a função determinada.|
-|Se cruzam|-|-|-|-|O (log N &#42; log M)|Calcula a interseção de dois conjuntos.|
+|intersect|-|-|-|-|O (log N &#42; log M)|Calcula a interseção de dois conjuntos.|
 |intersectMany|-|-|-|-|S (N1 &AMP;#42; N2...)|Calcula a interseção de uma sequência de conjuntos. A sequência não deve ficar vazia.|
-|IsEmpty|O(1)|O(1)|O(1)|O(1)|-|Retorna `true` se a coleção está vazia.|
+|isEmpty|O(1)|O(1)|O(1)|O(1)|-|Retorna `true` se a coleção está vazia.|
 |isProperSubset|-|-|-|-|O (M &#42; log N)|Retorna `true` se todos os elementos do primeiro conjunto estão no segundo conjunto, e pelo menos um elemento do segundo conjunto não está no primeiro conjunto.|
 |isProperSuperset|-|-|-|-|O (M &#42; log N)|Retorna `true` se todos os elementos do segundo conjunto estiverem no primeiro conjunto, e pelo menos um elemento do primeiro conjunto não está no segundo conjunto.|
 |isSubset|-|-|-|-|O (M &#42; log N)|Retorna `true` se todos os elementos do primeiro conjunto estiverem no segundo conjunto.|
@@ -87,7 +87,7 @@ Esta seção compara as funções que estão disponíveis em tipos de coleção 
 |map|(N)|(N)|O(1)|-|-|Cria uma coleção cujos elementos são os resultados da aplicação da função fornecida para cada elemento da matriz.|
 |map2|(N)|(N)|O(1)|-|-|Cria uma coleção cujos elementos são os resultados da aplicação da função fornecida para os elementos correspondentes das duas coleções de pares. As duas matrizes de entrada devem ter o mesmo tamanho.|
 |map3|-|(N)|-|-|-|Cria uma coleção cujos elementos são os resultados da aplicação da função fornecida para os elementos correspondentes das três coleções simultaneamente.|
-|MAPI|(N)|(N)|(N)|-|-|Cria uma matriz cujos elementos são os resultados da aplicação da função fornecida para cada elemento da matriz. O índice de inteiro que é passado para a função indica o índice do elemento que está sendo transformado.|
+|mapi|(N)|(N)|(N)|-|-|Cria uma matriz cujos elementos são os resultados da aplicação da função fornecida para cada elemento da matriz. O índice de inteiro que é passado para a função indica o índice do elemento que está sendo transformado.|
 |mapi2|(N)|(N)|-|-|-|Cria uma coleção cujos elementos são os resultados da aplicação da função fornecida para os elementos correspondentes das duas coleções emparelhadas, também passando o índice dos elementos. As duas matrizes de entrada devem ter o mesmo tamanho.|
 |max|(N)|(N)|(N)|-|-|Retorna o maior elemento na coleção, comparada usando o [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) operador.|
 |maxBy|(N)|(N)|(N)|-|-|Retorna o maior elemento na coleção, em comparação com o uso [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) no resultado da função.|
@@ -107,7 +107,7 @@ Esta seção compara as funções que estão disponíveis em tipos de coleção 
 |reduceBack|(N)|(N)|-|-|-|Aplica uma função a cada elemento da coleção, um argumento acumulador por meio da computação de threading. Se a função de entrada é f e os elementos são i0... no, esta função calcula i0 f (... (f em-1)).|
 |remove|-|-|-|O (log N)|O (log N)|Remove um elemento de domínio do mapa. Nenhuma exceção é gerada se o elemento não estiver presente.|
 |replicar|-|(N)|-|-|-|Cria uma lista de um comprimento especificado com cada elemento definido como o valor especificado.|
-|Rev|(N)|(N)|-|-|-|Retorna uma nova lista com os elementos na ordem inversa.|
+|rev|(N)|(N)|-|-|-|Retorna uma nova lista com os elementos na ordem inversa.|
 |verificação|(N)|(N)|(N)|-|-|Aplica uma função a cada elemento da coleção, um argumento acumulador por meio da computação de threading. Essa operação se aplica a função para o segundo argumento e o primeiro elemento da lista. A operação, em seguida, passa esse resultado em uma função, juntamente com o segundo elemento, e assim por diante. Por fim, a operação retorna a lista de resultados intermediários e o resultado final.|
 |scanBack|(N)|(N)|-|-|-|É semelhante a operação foldBack, mas retorna os resultados intermediários e finais.|
 |singleton|-|-|O(1)|-|O(1)|Retorna uma sequência que produz apenas um item.|
@@ -125,9 +125,9 @@ Esta seção compara as funções que estão disponíveis em tipos de coleção 
 |sumBy|(N)|(N)|(N)|-|-|Retorna a soma dos resultados gerados pela aplicação da função para cada elemento da coleção.|
 |Parte final|-|O(1)|-|-|-|Retorna a lista sem o primeiro elemento.|
 |Take|-|-|(N)|-|-|Retorna os elementos da sequência de até uma contagem especificada.|
-|TakeWhile|-|-|O(1)|-|-|Retorna uma sequência que, quando iteradas, produz elementos da sequência subjacente enquanto o determinado retorna predicado `true` e, em seguida, não retorna mais nenhum elemento.|
-|ToArray|-|(N)|(N)|(N)|(N)|Cria uma matriz de determinada coleção.|
-|ToList|(N)|-|(N)|(N)|(N)|Cria uma lista da coleção fornecida.|
+|takeWhile|-|-|O(1)|-|-|Retorna uma sequência que, quando iteradas, produz elementos da sequência subjacente enquanto o determinado retorna predicado `true` e, em seguida, não retorna mais nenhum elemento.|
+|toArray|-|(N)|(N)|(N)|(N)|Cria uma matriz de determinada coleção.|
+|toList|(N)|-|(N)|(N)|(N)|Cria uma lista da coleção fornecida.|
 |toSeq|O(1)|O(1)|-|O(1)|O(1)|Cria uma sequência de determinada coleção.|
 |Truncar|-|-|O(1)|-|-|Retorna uma sequência que, quando enumerada, retorna não mais do que elementos N seguintes.|
 |tryFind|(N)|(N)|(N)|O (log N)|-|Pesquisa um elemento que satisfaz um predicado em questão.|
@@ -140,7 +140,7 @@ Esta seção compara as funções que estão disponíveis em tipos de coleção 
 |unzip|(N)|(N)|(N)|-|-|Divide uma lista de pares em duas listas.|
 |unzip3|(N)|(N)|(N)|-|-|Divide uma lista de triplos em três listas.|
 |em janelas|-|-|(N)|-|-|Retorna uma sequência que gera janelas deslizantes do que contém elementos que são obtidos de sequência de entrada. Cada janela é retornada como uma nova matriz.|
-|ZIP|(N)|(N)|(N)|-|-|Combina duas coleções em uma lista de pares. As duas listas devem ter tamanhos iguais.|
+|zip|(N)|(N)|(N)|-|-|Combina duas coleções em uma lista de pares. As duas listas devem ter tamanhos iguais.|
 |zip3|(N)|(N)|(N)|-|-|Combina três coleções em uma lista de triplos. As listas devem ter tamanhos iguais.|
 
 ## <a name="see-also"></a>Consulte também
