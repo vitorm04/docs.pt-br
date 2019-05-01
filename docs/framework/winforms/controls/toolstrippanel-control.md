@@ -9,11 +9,11 @@ helpviewer_keywords:
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
 ms.openlocfilehash: 8dc45e1cedca6a4c73ada057168e0d3194bef741
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009302"
 ---
 # <a name="toolstrippanel-control"></a>Controle ToolStripPanel
 `ToolStripPanel` controle habilita o compartilhamento de espaço horizontal ou vertical dentro da área de ferramenta quando encaixado e disposição das <xref:System.Windows.Forms.ToolStrip> controla quando você não precisa de quatro painéis e no painel central de um <xref:System.Windows.Forms.ToolStripContainer>.  

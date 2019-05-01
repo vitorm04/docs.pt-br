@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051631"
 ---
 # <a name="drag-and-drop-overview"></a>Visão geral de arrastar e soltar
 Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e soltar" em aplicativos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Normalmente, o recurso do tipo "arrastar e soltar" se refere a um método de transferência de dados que envolve o uso de um mouse (ou algum outro dispositivo apontador) para selecionar um ou mais objetos, arrastá-los sobre um destino de soltar desejado na [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e soltá-los.  
@@ -41,11 +41,11 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
 ## <a name="data-transfer"></a>Transferência de dados  
  Arrastar e soltar faz parte da área de transferência de dados mais geral. A transferência de dados inclui operações do tipo "arrastar e soltar" e copiar e colar. Uma operação do tipo "arrastar e soltar" é análoga a uma operação de copiar e colar ou de recortar e colar, que é usada para transferir dados de um objeto ou aplicativo para outro usando a área de transferência do sistema. Os dois tipos de operações exigem:  
   
--   Um objeto de origem que fornece os dados.  
+- Um objeto de origem que fornece os dados.  
   
--   Uma maneira de armazenar temporariamente os dados transferidos.  
+- Uma maneira de armazenar temporariamente os dados transferidos.  
   
--   Um objeto de destino que recebe os dados.  
+- Um objeto de destino que recebe os dados.  
   
  Em uma operação de copiar e colar, a área de transferência do sistema é usada para armazenar temporariamente os dados transferidos; em uma operação de arrastar e soltar, um <xref:System.Windows.DataObject> é usado para armazenar os dados. Conceitualmente, um objeto de dados consiste em um ou mais pares de um <xref:System.Object> que contém os dados reais e um identificador de formato de dados correspondente.  
   
@@ -94,31 +94,31 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
   
  Para implementar uma operação básica do tipo "arrastar e soltar", você realizará as seguintes tarefas:  
   
--   Identificar o elemento que será uma origem do arrasto. Uma origem do arrasto pode ser um <xref:System.Windows.UIElement> ou um <xref:System.Windows.ContentElement>.  
+- Identificar o elemento que será uma origem do arrasto. Uma origem do arrasto pode ser um <xref:System.Windows.UIElement> ou um <xref:System.Windows.ContentElement>.  
   
--   Criar um manipulador de eventos na origem do arrasto que iniciará a operação do tipo "arrastar e soltar". O evento é geralmente o <xref:System.Windows.UIElement.MouseMove> eventos.  
+- Criar um manipulador de eventos na origem do arrasto que iniciará a operação do tipo "arrastar e soltar". O evento é geralmente o <xref:System.Windows.UIElement.MouseMove> eventos.  
   
--   No manipulador de eventos do código-fonte de arrastar, chame o <xref:System.Windows.DragDrop.DoDragDrop%2A> método para iniciar a operação de arrastar e soltar. No <xref:System.Windows.DragDrop.DoDragDrop%2A> chamar, especifique a origem do arrasto, os dados a serem transferidos e os efeitos permitidos.  
+- No manipulador de eventos do código-fonte de arrastar, chame o <xref:System.Windows.DragDrop.DoDragDrop%2A> método para iniciar a operação de arrastar e soltar. No <xref:System.Windows.DragDrop.DoDragDrop%2A> chamar, especifique a origem do arrasto, os dados a serem transferidos e os efeitos permitidos.  
   
--   Identificar o elemento que será um destino de soltar. Um destino de soltar pode ser <xref:System.Windows.UIElement> ou um <xref:System.Windows.ContentElement>.  
+- Identificar o elemento que será um destino de soltar. Um destino de soltar pode ser <xref:System.Windows.UIElement> ou um <xref:System.Windows.ContentElement>.  
   
--   No destino de soltar, defina as <xref:System.Windows.UIElement.AllowDrop%2A> propriedade para `true`.  
+- No destino de soltar, defina as <xref:System.Windows.UIElement.AllowDrop%2A> propriedade para `true`.  
   
--   No destino de soltar, crie um <xref:System.Windows.DragDrop.Drop> manipulador de eventos para processar os dados soltos.  
+- No destino de soltar, crie um <xref:System.Windows.DragDrop.Drop> manipulador de eventos para processar os dados soltos.  
   
--   No <xref:System.Windows.DragDrop.Drop> manipulador de eventos, extrair os dados de <xref:System.Windows.DragEventArgs> usando o <xref:System.Windows.DataObject.GetDataPresent%2A> e <xref:System.Windows.DataObject.GetData%2A> métodos.  
+- No <xref:System.Windows.DragDrop.Drop> manipulador de eventos, extrair os dados de <xref:System.Windows.DragEventArgs> usando o <xref:System.Windows.DataObject.GetDataPresent%2A> e <xref:System.Windows.DataObject.GetData%2A> métodos.  
   
--   No <xref:System.Windows.DragDrop.Drop> manipulador de eventos, use os dados para executar a operação de arrastar e soltar desejada.  
+- No <xref:System.Windows.DragDrop.Drop> manipulador de eventos, use os dados para executar a operação de arrastar e soltar desejada.  
   
  Você pode aprimorar sua implementação de arrastar e soltar, criando um personalizado <xref:System.Windows.DataObject> e pela manipulação opcional arraste a origem e soltar eventos de destino, conforme mostrado nas seguintes tarefas:  
   
--   Para transferir dados personalizados ou vários itens de dados, criar uma <xref:System.Windows.DataObject> para passar para o <xref:System.Windows.DragDrop.DoDragDrop%2A> método.  
+- Para transferir dados personalizados ou vários itens de dados, criar uma <xref:System.Windows.DataObject> para passar para o <xref:System.Windows.DragDrop.DoDragDrop%2A> método.  
   
--   Para executar ações adicionais durante uma operação de arrastar, lidar com o <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver>, e <xref:System.Windows.DragDrop.DragLeave> eventos no destino de soltar.  
+- Para executar ações adicionais durante uma operação de arrastar, lidar com o <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver>, e <xref:System.Windows.DragDrop.DragLeave> eventos no destino de soltar.  
   
--   Para alterar a aparência do ponteiro do mouse, manipule o <xref:System.Windows.DragDrop.GiveFeedback> eventos na origem do arrasto.  
+- Para alterar a aparência do ponteiro do mouse, manipule o <xref:System.Windows.DragDrop.GiveFeedback> eventos na origem do arrasto.  
   
--   Para alterar como a operação de arrastar e soltar é cancelada, manipule o <xref:System.Windows.DragDrop.QueryContinueDrag> eventos na origem do arrasto.  
+- Para alterar como a operação de arrastar e soltar é cancelada, manipule o <xref:System.Windows.DragDrop.QueryContinueDrag> eventos na origem do arrasto.  
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Exemplo de operação do tipo "arrastar e soltar"  
@@ -129,13 +129,13 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Habilitando um elemento a ser uma origem do arrasto  
  Um objeto que é uma origem do arrasto é responsável por:  
   
--   Identificar quando ocorre uma operação de arrastar.  
+- Identificar quando ocorre uma operação de arrastar.  
   
--   Iniciar a operação do tipo "arrastar e soltar".  
+- Iniciar a operação do tipo "arrastar e soltar".  
   
--   Identificar os dados a serem transferidos.  
+- Identificar os dados a serem transferidos.  
   
--   Especificar os efeitos que a operação do tipo "arrastar e soltar" tem permissão para ter sobre os dados transferidos.  
+- Especificar os efeitos que a operação do tipo "arrastar e soltar" tem permissão para ter sobre os dados transferidos.  
   
  A origem do arrasto também pode fornecer comentários ao usuário sobre as ações permitidas (mover, copiar, nenhuma) e pode cancelar a operação do tipo "arrastar e soltar" de acordo com a entrada adicional do usuário, como pressionar a tecla ESC durante a operação de arrastar.  
   
@@ -146,11 +146,11 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
   
  Dentro do <xref:System.Windows.UIElement.MouseMove> manipulador de eventos, chame o <xref:System.Windows.DragDrop.DoDragDrop%2A> método para iniciar a operação de arrastar e soltar. O <xref:System.Windows.DragDrop.DoDragDrop%2A> método assume três parâmetros:  
   
--   `dragSource` – Uma referência ao objeto de dependência que é a origem dos dados transferidos; Isso normalmente é a origem do <xref:System.Windows.UIElement.MouseMove> eventos.  
+- `dragSource` – Uma referência ao objeto de dependência que é a origem dos dados transferidos; Isso normalmente é a origem do <xref:System.Windows.UIElement.MouseMove> eventos.  
   
--   `data` -Um objeto que contém os dados transferidos, encapsulados em um <xref:System.Windows.DataObject>.  
+- `data` -Um objeto que contém os dados transferidos, encapsulados em um <xref:System.Windows.DataObject>.  
   
--   `allowedEffects` -Pode ser o <xref:System.Windows.DragDropEffects> valores de enumeração que especifica os efeitos permitidos da operação de arrastar e soltar.  
+- `allowedEffects` -Pode ser o <xref:System.Windows.DragDropEffects> valores de enumeração que especifica os efeitos permitidos da operação de arrastar e soltar.  
   
  Qualquer objeto serializável pode ser passado no parâmetro `data`. Se os dados não estiverem encapsulados em um <xref:System.Windows.DataObject>, ele será automaticamente encapsulado em um novo <xref:System.Windows.DataObject>. Para passar vários itens de dados, você deve criar o <xref:System.Windows.DataObject> por conta própria e passá-lo para o <xref:System.Windows.DragDrop.DoDragDrop%2A> método. Para obter mais informações, consulte [Dados e objetos de dados](data-and-data-objects.md).  
   
@@ -171,13 +171,13 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Habilitando um elemento a ser um destino de soltar  
  Um objeto que é um destino de soltar é responsável por:  
   
--   Especificar se ele é um destino de soltar válido.  
+- Especificar se ele é um destino de soltar válido.  
   
--   Responder à origem do arrasto quando ele é arrastado para o destino.  
+- Responder à origem do arrasto quando ele é arrastado para o destino.  
   
--   Verificar se os dados transferidos estão em um formato que pode ser recebido.  
+- Verificar se os dados transferidos estão em um formato que pode ser recebido.  
   
--   Processar os dados soltos.  
+- Processar os dados soltos.  
   
  Para especificar que um elemento é um destino de soltar, defina suas <xref:System.Windows.UIElement.AllowDrop%2A> propriedade para `true`. Em seguida, os eventos de destino de soltar serão acionados no elemento, para que você possa manipulá-los. Durante uma operação do tipo "arrastar e soltar", ocorre a seguinte sequência de eventos no destino de soltar:  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022344"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introdução à interoperabilidade COM (Visual Basic)
 O modelo de objeto de componente (COM) permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Embora os objetos COM tenham sido fundamentais para o Windows por muitos anos de programação, os aplicativos projetados para o common language runtime (CLR) oferecem várias vantagens.  
@@ -28,15 +28,15 @@ O modelo de objeto de componente (COM) permite que um objeto exponha sua funcion
 ## <a name="type-libraries-and-assembly-manifests"></a>Bibliotecas de tipos de manifestos de Assembly  
  Bibliotecas de tipo descrevem as características de objetos COM, como nomes de membros e tipos de dados. Manifestos de assembly executam a mesma função para [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicativos. Eles incluem informações sobre o seguinte:  
   
--   Identidade do assembly, versão, cultura e assinatura digital.  
+- Identidade do assembly, versão, cultura e assinatura digital.  
   
--   Arquivos que compõem a implementação do assembly.  
+- Arquivos que compõem a implementação do assembly.  
   
--   Tipos e recursos que compõem o assembly. Isso inclui aqueles que são exportados a partir dele.  
+- Tipos e recursos que compõem o assembly. Isso inclui aqueles que são exportados a partir dele.  
   
--   Dependências de tempo de compilação em outros assemblies.  
+- Dependências de tempo de compilação em outros assemblies.  
   
--   Permissões necessárias para o assembly ser executado corretamente.  
+- Permissões necessárias para o assembly ser executado corretamente.  
   
  Para obter mais informações sobre assemblies de manifestos de assembly, consulte [Assemblies no .NET](../../../standard/assembly/index.md).  
   

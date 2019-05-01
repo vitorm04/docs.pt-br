@@ -3,11 +3,11 @@ title: Windows Communication Foundation para enfileiramento de mensagens
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 ms.openlocfilehash: 1551ab407049e871a9275d148b1c84dc2791ccad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007533"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation para enfileiramento de mensagens
 Este exemplo demonstra como um aplicativo do Windows Communication Foundation (WCF) pode enviar uma mensagem a um aplicativo de enfileiramento de mensagens (MSMQ). O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila. O serviço e o cliente não precisa estar em execução ao mesmo tempo.
@@ -138,15 +138,15 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 2. Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.  
   
-    1.  Abra o Gerenciador de servidores no Visual Studio 2012.  
+    1. Abra o Gerenciador de servidores no Visual Studio 2012.  
   
-    2.  Expanda o **recursos** guia.  
+    2. Expanda o **recursos** guia.  
   
-    3.  Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.  
+    3. Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.  
   
-    4.  Verifique as **transacional** caixa.  
+    4. Verifique as **transacional** caixa.  
   
-    5.  Insira `ServiceModelSamplesTransacted` como o nome da nova fila.  
+    5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.  
   
 3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

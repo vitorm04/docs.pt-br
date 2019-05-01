@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030363"
 ---
 # <a name="multimedia-overview"></a>Visão geral de multimídia
 Recursos de multimídia no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permitem a integração de áudio e vídeo em seus aplicativos para aprimorar a experiência do usuário. Este tópico apresenta os recursos de multimídia do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -37,11 +37,11 @@ Recursos de multimídia no [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 ### <a name="independent-mode"></a>Modo independente  
  No modo independente, o conteúdo de mídia conduz a reprodução de mídia. Modo independente permite as seguintes opções:  
   
--   Da mídia <xref:System.Uri> pode ser especificada diretamente.  
+- Da mídia <xref:System.Uri> pode ser especificada diretamente.  
   
--   Reprodução de mídia pode ser controlada diretamente.  
+- Reprodução de mídia pode ser controlada diretamente.  
   
--   Da mídia <xref:System.Windows.Controls.MediaElement.Position%2A> e <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> propriedades podem ser modificadas.  
+- Da mídia <xref:System.Windows.Controls.MediaElement.Position%2A> e <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> propriedades podem ser modificadas.  
   
  Mídia é carregada Configurando o <xref:System.Windows.Controls.MediaElement> do objeto <xref:System.Windows.Controls.MediaElement.Source%2A> propriedade ou chamando a <xref:System.Windows.Media.MediaPlayer> do objeto <xref:System.Windows.Media.MediaPlayer.Open%2A> método.  
   
@@ -52,11 +52,11 @@ Recursos de multimídia no [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 ### <a name="clock-mode"></a>Modo relógio  
  No modo relógio, uma <xref:System.Windows.Media.MediaTimeline> reprodução de mídia de unidades. O modo relógio tem as seguintes características:  
   
--   Da mídia <xref:System.Uri> é definido indiretamente por meio de um <xref:System.Windows.Media.MediaTimeline>.  
+- Da mídia <xref:System.Uri> é definido indiretamente por meio de um <xref:System.Windows.Media.MediaTimeline>.  
   
--   Reprodução de mídia pode ser controlada pelo relógio. Métodos de controle do objeto de mídia não podem ser usados.  
+- Reprodução de mídia pode ser controlada pelo relógio. Métodos de controle do objeto de mídia não podem ser usados.  
   
--   Mídia é carregada, definindo uma <xref:System.Windows.Media.MediaTimeline> do objeto <xref:System.Windows.Media.MediaTimeline.Source%2A> propriedade, criando o relógio da linha do tempo e atribuindo o relógio para o objeto de mídia. Mídia é carregada dessa forma, também quando um <xref:System.Windows.Media.MediaTimeline> dentro de um <xref:System.Windows.Media.Animation.Storyboard> destinos um <xref:System.Windows.Controls.MediaElement>.  
+- Mídia é carregada, definindo uma <xref:System.Windows.Media.MediaTimeline> do objeto <xref:System.Windows.Media.MediaTimeline.Source%2A> propriedade, criando o relógio da linha do tempo e atribuindo o relógio para o objeto de mídia. Mídia é carregada dessa forma, também quando um <xref:System.Windows.Media.MediaTimeline> dentro de um <xref:System.Windows.Media.Animation.Storyboard> destinos um <xref:System.Windows.Controls.MediaElement>.  
   
  Para controlar a reprodução de mídia no modo relógio, o <xref:System.Windows.Media.Animation.ClockController> métodos de controle devem ser usados. Um <xref:System.Windows.Media.Animation.ClockController> é obtida a <xref:System.Windows.Media.Animation.ClockController> propriedade do <xref:System.Windows.Media.MediaClock>. Se você tentar usar os métodos de controle de um <xref:System.Windows.Controls.MediaElement> ou <xref:System.Windows.Media.MediaPlayer> do objeto no modo relógio, uma <xref:System.InvalidOperationException> será lançada.  
   

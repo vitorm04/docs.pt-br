@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047003"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM
 Windows Communication Foundation (WCF) oferece ao desenvolvedor de código gerenciado com um ambiente rico para a criação de aplicativos conectados. No entanto, se você tiver um investimento substancial em código não gerenciado COM base em com e não deseja migrar, você pode ainda integrar os serviços Web WCF diretamente em seu código existente usando o moniker de serviço do WCF. O moniker de serviço pode ser usado em ambientes um amplo intervalo de COM base em desenvolvimento, como Office VBA, Visual Basic 6.0 ou Visual C++ 6.0.  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) oferece ao desenvolvedor de código geren
   
  Em comum com outros clientes do WCF, ao usar o identificador de origem, os aplicativos especificam o endereço, ligação e contrato para se comunicar com um serviço. O contrato pode ser especificado em uma das seguintes maneiras:  
   
--   Contrato tipado – o contrato é registrado como um tipo visível do COM o computador cliente.  
+- Contrato tipado – o contrato é registrado como um tipo visível do COM o computador cliente.  
   
--   Contrato WSDL – o contrato é fornecido na forma de um documento WSDL.  
+- Contrato WSDL – o contrato é fornecido na forma de um documento WSDL.  
   
--   Contrato MEX – o contrato é recuperado em tempo de execução de um ponto de extremidade de troca de metadados (MEX).  
+- Contrato MEX – o contrato é recuperado em tempo de execução de um ponto de extremidade de troca de metadados (MEX).  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>Parâmetros compatíveis com o Moniker de serviço  
  A tabela a seguir mostra os parâmetros que são compatíveis com o moniker de serviço.  

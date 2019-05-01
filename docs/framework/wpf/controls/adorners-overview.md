@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019069"
 ---
 # <a name="adorners-overview"></a>Visão geral de adornos
 Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado para fornecer dicas visuais para um usuário. Entre outros usos, adornos podem ser usados para adicionar alças funcionais a elementos ou para fornecer informações de estado sobre um controle.  
@@ -23,13 +23,13 @@ Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado p
   
  Aplicações comuns de adornos incluem:  
   
--   Adicione identificadores funcionais a um <xref:System.Windows.UIElement> que permitem ao usuário manipular o elemento de alguma forma (redimensionar, girar, reposicionar etc.).  
+- Adicione identificadores funcionais a um <xref:System.Windows.UIElement> que permitem ao usuário manipular o elemento de alguma forma (redimensionar, girar, reposicionar etc.).  
   
--   Fornecer comentários visuais para indicar vários estados ou em resposta a vários eventos.  
+- Fornecer comentários visuais para indicar vários estados ou em resposta a vários eventos.  
   
--   Sobrepor decorações visuais em um <xref:System.Windows.UIElement>.  
+- Sobrepor decorações visuais em um <xref:System.Windows.UIElement>.  
   
--   Visualmente mascarar ou substituir parte ou todo um <xref:System.Windows.UIElement>.  
+- Visualmente mascarar ou substituir parte ou todo um <xref:System.Windows.UIElement>.  
   
  O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece uma estrutura básica para o adorno de elementos visuais. A tabela a seguir lista os tipos primários usados ao adornar objetos e sua finalidade. A seguir, são apresentados vários exemplos de uso.  
   

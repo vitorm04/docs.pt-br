@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009520"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Visão geral do controle ToolStrip (Windows Forms)
 Os formulários do Windows <xref:System.Windows.Forms.ToolStrip> controle e suas classes associadas fornecem uma estrutura comum para combinar elementos de interface do usuário em barras de ferramentas, barras de status e menus. <xref:System.Windows.Forms.ToolStrip> controles oferecem uma experiência avançada de tempo de design que inclui a ativação no local e de edição, layout personalizado e reposicionamento, que é a capacidade de compartilhar espaço horizontal ou vertical das barras de ferramentas.  
@@ -24,19 +24,19 @@ Os formulários do Windows <xref:System.Windows.Forms.ToolStrip> controle e suas
 ## <a name="features-of-the-toolstrip-controls"></a>Recursos dos controles ToolStrip  
  Use o <xref:System.Windows.Forms.ToolStrip> o controle para:  
   
--   Apresente uma interface do usuário comum entre contêineres.  
+- Apresente uma interface do usuário comum entre contêineres.  
   
--   Crie facilmente personalizado, comumente usadas com barras de ferramentas que dão suporte a avançados recursos de layout e interface do usuário, como encaixe, reposicionamento, botões com texto e imagens, botões de menu e controles, botões de estouro e reordenação de tempo de execução de <xref:System.Windows.Forms.ToolStrip> itens.  
+- Crie facilmente personalizado, comumente usadas com barras de ferramentas que dão suporte a avançados recursos de layout e interface do usuário, como encaixe, reposicionamento, botões com texto e imagens, botões de menu e controles, botões de estouro e reordenação de tempo de execução de <xref:System.Windows.Forms.ToolStrip> itens.  
   
--   Dê suporte a reordenação de item de tempo de execução e estouro. O recurso de estouro move itens para um menu suspenso quando não há espaço suficiente para exibi-los em um <xref:System.Windows.Forms.ToolStrip>.  
+- Dê suporte a reordenação de item de tempo de execução e estouro. O recurso de estouro move itens para um menu suspenso quando não há espaço suficiente para exibi-los em um <xref:System.Windows.Forms.ToolStrip>.  
   
--   Dê suporte à aparência e ao comportamento típicos do sistema operacional por meio de um modelo comum de renderização.  
+- Dê suporte à aparência e ao comportamento típicos do sistema operacional por meio de um modelo comum de renderização.  
   
--   Manipule eventos de forma consistente em todos os contêineres e os itens contidos da mesma forma que você manipula eventos para outros controles.  
+- Manipule eventos de forma consistente em todos os contêineres e os itens contidos da mesma forma que você manipula eventos para outros controles.  
   
--   Arraste itens de uma <xref:System.Windows.Forms.ToolStrip> para outra ou em um <xref:System.Windows.Forms.ToolStrip>.  
+- Arraste itens de uma <xref:System.Windows.Forms.ToolStrip> para outra ou em um <xref:System.Windows.Forms.ToolStrip>.  
   
--   Criar editores de tipo de interface de usuário e controles de lista suspensa com layouts avançados em um <xref:System.Windows.Forms.ToolStripDropDown>.  
+- Criar editores de tipo de interface de usuário e controles de lista suspensa com layouts avançados em um <xref:System.Windows.Forms.ToolStripDropDown>.  
   
  Use o <xref:System.Windows.Forms.ToolStripControlHost> classe usar outros controles em um <xref:System.Windows.Forms.ToolStrip> e obter <xref:System.Windows.Forms.ToolStrip> funcionalidade para eles.  
   

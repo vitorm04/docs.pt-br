@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009104"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Passo a passo: Organizar controles nos Windows Forms usando um TableLayoutPanel
 Alguns aplicativos exigem um formulário com um layout que se organiza adequadamente à medida que o formulário é redimensionado ou conforme o tamanho do conteúdo é alterado. Quando você precisa de um layout dinâmico e não deseja manipular <xref:System.Windows.Forms.Control.Layout> eventos explicitamente no seu código, considere o uso de um painel de layout.  
@@ -28,21 +28,21 @@ Alguns aplicativos exigem um formulário com um layout que se organiza adequadam
   
  As tarefas ilustradas neste passo a passo incluem:  
   
--   Criação de um projeto dos Windows Forms  
+- Criação de um projeto dos Windows Forms  
   
--   Organização de controles em linhas e colunas  
+- Organização de controles em linhas e colunas  
   
--   Configuração de propriedades de linha e coluna  
+- Configuração de propriedades de linha e coluna  
   
--   Extensão de linhas e colunas com um controle  
+- Extensão de linhas e colunas com um controle  
   
--   Manipulação automática de estouros  
+- Manipulação automática de estouros  
   
--   Inserindo controles ao clicar duas vezes neles na caixa de ferramentas  
+- Inserindo controles ao clicar duas vezes neles na caixa de ferramentas  
   
--   Inserindo um controle ao desenhar seu contorno  
+- Inserindo um controle ao desenhar seu contorno  
   
--   Reatribuição de controles existentes a um pai diferente  
+- Reatribuição de controles existentes a um pai diferente  
   
  Ao terminar, você terá um entendimento da função desempenhada por esses importantes recursos de layout.  
   
@@ -158,25 +158,25 @@ Alguns aplicativos exigem um formulário com um layout que se organiza adequadam
   
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>Para demonstrar que vários controles dentro de células não são permitidos  
   
--   Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** no <xref:System.Windows.Forms.TableLayoutPanel> controlar e solte-o em uma das células ocupadas. Observe que o <xref:System.Windows.Forms.TableLayoutPanel> controle não permite que você remover o <xref:System.Windows.Forms.Button> controle na célula ocupada.  
+- Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** no <xref:System.Windows.Forms.TableLayoutPanel> controlar e solte-o em uma das células ocupadas. Observe que o <xref:System.Windows.Forms.TableLayoutPanel> controle não permite que você remover o <xref:System.Windows.Forms.Button> controle na célula ocupada.  
   
 ## <a name="swapping-controls"></a>Trocando controles  
  O <xref:System.Windows.Forms.TableLayoutPanel> controle permite que você troque os controles que ocupam duas células diferentes.  
   
 #### <a name="to-swap-controls"></a>Para trocar controles  
   
--   Arraste um do <xref:System.Windows.Forms.Button> controles de uma célula ocupada e solte para outra célula ocupada. Observe que os dois controles são movidos de uma célula para a outra.  
+- Arraste um do <xref:System.Windows.Forms.Button> controles de uma célula ocupada e solte para outra célula ocupada. Observe que os dois controles são movidos de uma célula para a outra.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Você pode obter um layout complexo usando uma combinação de controles e painéis de layout. Sugestões para exploração adicional incluem:  
   
--   Tente redimensionar um do <xref:System.Windows.Forms.Button> controles para um tamanho maior e observe o efeito no layout.  
+- Tente redimensionar um do <xref:System.Windows.Forms.Button> controles para um tamanho maior e observe o efeito no layout.  
   
--   Cole uma seleção de vários controles para o <xref:System.Windows.Forms.TableLayoutPanel> controlar e observe como os controles são inseridos.  
+- Cole uma seleção de vários controles para o <xref:System.Windows.Forms.TableLayoutPanel> controlar e observe como os controles são inseridos.  
   
--   Os painéis de layout podem conter outros painéis de layout. Experimente soltar um <xref:System.Windows.Forms.TableLayoutPanel> controle no controle existente.  
+- Os painéis de layout podem conter outros painéis de layout. Experimente soltar um <xref:System.Windows.Forms.TableLayoutPanel> controle no controle existente.  
   
--   Encaixe o <xref:System.Windows.Forms.TableLayoutPanel> controle ao formulário pai. Redimensione o formulário e observe o efeito no layout.  
+- Encaixe o <xref:System.Windows.Forms.TableLayoutPanel> controle ao formulário pai. Redimensione o formulário e observe o efeito no layout.  
   
 ## <a name="see-also"></a>Consulte também
 

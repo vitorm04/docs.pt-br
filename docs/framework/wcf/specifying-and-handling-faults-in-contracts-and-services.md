@@ -5,11 +5,11 @@ helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
 ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006384"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificando e lidando com falhas em contratos e serviços
 Aplicativos do Windows Communication Foundation (WCF) lidar com situações de erro, mapeando objetos de exceção gerenciada para objetos de falhas SOAP e objetos de falhas SOAP em objetos de exceção gerenciada. Os tópicos desta seção discutem como criar contratos para expor o erro condições como falhas SOAP personalizadas, como retornar essas falhas como parte da implementação de serviço e como os clientes capturar essas falhas.  
@@ -25,9 +25,9 @@ Aplicativos do Windows Communication Foundation (WCF) lidar com situações de e
   
  Normalmente, os serviços (e os clientes duplex) execute as seguintes etapas para se integrar com êxito em seus aplicativos de tratamento de erros:  
   
--   Condições de exceção são mapeados para as falhas SOAP personalizadas.  
+- Condições de exceção são mapeados para as falhas SOAP personalizadas.  
   
--   Os clientes e serviços enviar e recebem falhas SOAP como exceções.  
+- Os clientes e serviços enviar e recebem falhas SOAP como exceções.  
   
  Além disso, serviços e clientes do WCF podem usar as falhas de soap não declarado para fins de depuração e podem estender o comportamento de erro padrão. As seções a seguir discutem esses conceitos e tarefas.  
   

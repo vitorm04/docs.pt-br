@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
 ms.openlocfilehash: 9cb67a30ca5453142f906be918b891ac959cdaf2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039774"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hospedagem no Internet Information Services
 É uma opção para hospedar os serviços do Windows Communication Foundation (WCF) dentro de um aplicativo de serviços de informações da Internet (IIS). Esse modelo de hospedagem é semelhante ao modelo usado pelo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e serviços Web (ASMX) de serviços Web do ASP.NET.  
@@ -17,39 +17,39 @@ ms.locfileid: "59180006"
 ## <a name="versions-of-iis"></a>Versões do IIS  
  O WCF pode ser hospedado nas seguintes versões do IIS nos seguintes sistemas operacionais:  
   
--   O IIS 5.1 no [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]. Esse ambiente é útil para o design e desenvolvimento de aplicativos hospedados no IIS que são posteriormente implantados em um sistema operacional de servidor, como [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+- O IIS 5.1 no [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]. Esse ambiente é útil para o design e desenvolvimento de aplicativos hospedados no IIS que são posteriormente implantados em um sistema operacional de servidor, como [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
--   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] Fornece um modelo de processo avançado que oferece melhor escalabilidade, confiabilidade e isolamento de aplicativos. Esse ambiente é adequado para a implantação de produção de serviços do WCF que usam comunicação HTTP exclusivamente.  
+- [!INCLUDE[iis601](../../../../includes/iis601-md.md)] em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] Fornece um modelo de processo avançado que oferece melhor escalabilidade, confiabilidade e isolamento de aplicativos. Esse ambiente é adequado para a implantação de produção de serviços do WCF que usam comunicação HTTP exclusivamente.  
   
--   O IIS 7.0 no [!INCLUDE[wv](../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. O IIS 7.0 fornece o mesmo modelo de processo avançado que [!INCLUDE[iis601](../../../../includes/iis601-md.md)], mas usa o serviço de ativação de processos do Windows (WAS) para permitir a comunicação de rede e de ativação por meio de protocolos diferentes de HTTP. Esse ambiente é adequado para o desenvolvimento de serviços WCF que se comunicam através de qualquer protocolo de rede com suporte do WCF (incluindo HTTP, NET. TCP, NET. pipe e NET. MSMQ). Para obter mais informações sobre o WAS, consulte [hospedagem no serviço de ativação de processos do Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+- O IIS 7.0 no [!INCLUDE[wv](../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. O IIS 7.0 fornece o mesmo modelo de processo avançado que [!INCLUDE[iis601](../../../../includes/iis601-md.md)], mas usa o serviço de ativação de processos do Windows (WAS) para permitir a comunicação de rede e de ativação por meio de protocolos diferentes de HTTP. Esse ambiente é adequado para o desenvolvimento de serviços WCF que se comunicam através de qualquer protocolo de rede com suporte do WCF (incluindo HTTP, NET. TCP, NET. pipe e NET. MSMQ). Para obter mais informações sobre o WAS, consulte [hospedagem no serviço de ativação de processos do Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
--   [O Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) funciona com [!INCLUDE[iisver](../../../../includes/iisver-md.md)] e o Windows o serviço de ativação de processos (WAS) para fornecer um ambiente de serviços NET4 WCF e WF de hospedagem de aplicativos avançados. Esses benefícios incluem gerenciamento de ciclo de vida do processo, reciclagem de processo, hospedagem compartilhada, proteção rápida contra falha, órfão de processo, ativação e sob demanda e monitoramento de integridade. Para obter informações detalhadas, consulte [recursos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494) e [conceitos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).  
+- [O Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) funciona com [!INCLUDE[iisver](../../../../includes/iisver-md.md)] e o Windows o serviço de ativação de processos (WAS) para fornecer um ambiente de serviços NET4 WCF e WF de hospedagem de aplicativos avançados. Esses benefícios incluem gerenciamento de ciclo de vida do processo, reciclagem de processo, hospedagem compartilhada, proteção rápida contra falha, órfão de processo, ativação e sob demanda e monitoramento de integridade. Para obter informações detalhadas, consulte [recursos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494) e [conceitos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).  
   
 ## <a name="benefits-of-iis-hosting"></a>Benefícios de hospedagem do IIS  
  Hospedando serviços WCF no IIS tem vários benefícios:  
   
--   Os serviços WCF hospedados no IIS são implantados e gerenciados como qualquer outro tipo de aplicativo do IIS, incluindo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativos e ASMX.  
+- Os serviços WCF hospedados no IIS são implantados e gerenciados como qualquer outro tipo de aplicativo do IIS, incluindo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativos e ASMX.  
   
--   O IIS fornece ativação de processos, gerenciamento de saúde e recursos de reciclagem para aumentar a confiabilidade dos aplicativos hospedados.  
+- O IIS fornece ativação de processos, gerenciamento de saúde e recursos de reciclagem para aumentar a confiabilidade dos aplicativos hospedados.  
   
--   Como o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], serviços WCF hospedados no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] podem aproveitar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modelo de hospedagem compartilhado onde vários aplicativos residem em um processo de trabalho comuns de densidade de aprimorada de servidores e escalabilidade.  
+- Como o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], serviços WCF hospedados no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] podem aproveitar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modelo de hospedagem compartilhado onde vários aplicativos residem em um processo de trabalho comuns de densidade de aprimorada de servidores e escalabilidade.  
   
--   Os serviços WCF hospedados no IIS usam o mesmo modelo de compilação dinâmica como [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], que simplifica o desenvolvimento e implantação dos serviços hospedados.  
+- Os serviços WCF hospedados no IIS usam o mesmo modelo de compilação dinâmica como [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], que simplifica o desenvolvimento e implantação dos serviços hospedados.  
   
  Ao decidir hospedar serviços do WCF no IIS, é importante lembrar-se de que o IIS 5.1 e [!INCLUDE[iis601](../../../../includes/iis601-md.md)] são limitadas a apenas a comunicação HTTP. Para obter mais informações sobre como escolher um ambiente de hospedagem, consulte [serviços de hospedagem](../../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="deploying-an-iis-hosted-wcf-service"></a>Implantando um serviço WCF hospedado no IIS  
  Desenvolvendo e implantando um serviço WCF hospedado no IIS consiste as seguintes tarefas:  
   
--   Certifique-se de que o IIS, ASP.NET, WCF e o componente de ativação de HTTP do WCF estão corretamente instalados e registrados.  
+- Certifique-se de que o IIS, ASP.NET, WCF e o componente de ativação de HTTP do WCF estão corretamente instalados e registrados.  
   
--   Criar um novo aplicativo do IIS ou reutilizar um existente do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- Criar um novo aplicativo do IIS ou reutilizar um existente do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
--   Crie um arquivo. svc para o serviço WCF.  
+- Crie um arquivo. svc para o serviço WCF.  
   
--   Implantar a implementação do serviço para o aplicativo do IIS.  
+- Implantar a implementação do serviço para o aplicativo do IIS.  
   
--   Configure o serviço do WCF.  
+- Configure o serviço do WCF.  
   
  Para uma discussão sobre cada uma dessas tarefas, consulte [Implantando um serviço do WCF Internet Information Services-Hosted](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   

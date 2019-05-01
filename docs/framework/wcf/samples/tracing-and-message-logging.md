@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 079decb76b45566f354418d671145f0c284628c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007728"
 ---
 # <a name="tracing-and-message-logging"></a>Registro de mensagem e rastreamento
 Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem. Os rastreamentos resultantes e logs de mensagem são exibidos usando o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -52,11 +52,11 @@ Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem. O
   
  É possível estender o rastreamento que é fornecido pelo ServiceModel Criando rastreamentos de atividade definida pelo usuário. Rastreamento de atividades definidos pelo usuário permite ao usuário criar atividades de rastreamento para:  
   
--   Rastreamentos de grupo em unidades lógicas de trabalho.  
+- Rastreamentos de grupo em unidades lógicas de trabalho.  
   
--   Correlacione atividades por meio de transferências e propagação.  
+- Correlacione atividades por meio de transferências e propagação.  
   
--   Diminui o custo de desempenho de rastreamento do WCF (por exemplo, o custo de espaço em disco de um arquivo de log).  
+- Diminui o custo de desempenho de rastreamento do WCF (por exemplo, o custo de espaço em disco de um arquivo de log).  
   
  Para obter mais informações sobre rastreamento de atividade definida pelo usuário, consulte o [estendendo rastreamento](../../../../docs/framework/wcf/samples/extending-tracing.md) exemplo.  
   

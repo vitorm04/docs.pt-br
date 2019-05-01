@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032368"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementação de Provedor de Automação de Interface de Usuário do Lado do Cliente
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59224450"
   
  Provedores implementados no código do cliente são registrados usando <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>. Esse método aceita como um argumento de uma matriz de <xref:System.Windows.Automation.ClientSideProviderDescription> estruturas, cada um deles especifica as propriedades a seguir:  
   
--   Uma função de retorno de chamada que cria o objeto de provedor.  
+- Uma função de retorno de chamada que cria o objeto de provedor.  
   
--   O nome da classe dos controles que o provedor servirá.  
+- O nome da classe dos controles que o provedor servirá.  
   
--   O nome da imagem do aplicativo (normalmente, o nome completo do arquivo executável) que o provedor servirá.  
+- O nome da imagem do aplicativo (normalmente, o nome completo do arquivo executável) que o provedor servirá.  
   
--   Sinalizadores que determinam como o nome da classe é comparado com classes de janela encontradas no aplicativo de destino.  
+- Sinalizadores que determinam como o nome da classe é comparado com classes de janela encontradas no aplicativo de destino.  
   
  Os dois últimos parâmetros são opcionais. O cliente pode especificar o nome da imagem do aplicativo de destino quando desejar usar provedores diferentes para diferentes aplicativos. Por exemplo, o cliente pode usar um provedor para um [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] lista de controle de exibição em um aplicativo conhecido que suporta o padrão de exibição de vários e outro para um controle semelhante em outro aplicativo conhecido que não.  
   

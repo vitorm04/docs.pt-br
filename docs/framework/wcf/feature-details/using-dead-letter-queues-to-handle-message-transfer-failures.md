@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050695"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha
 Mensagens em fila podem falhar de entrega. Essas mensagens com falha são registradas em uma fila de inatividade. Falha na entrega pode ser causado por motivos como falhas de rede, uma fila excluída, uma fila cheia, falha de autenticação ou uma falha ao entregar no prazo.  
@@ -30,18 +30,18 @@ Mensagens em fila podem falhar de entrega. Essas mensagens com falha são regist
   
  A associação tem as seguintes propriedades de fila de inatividade:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Leitura de mensagens da fila de inatividade  
  Um aplicativo que lê mensagens fora de uma fila de inatividade é semelhante a um serviço WCF que lê de uma fila de aplicativos, exceto para as pequenas diferenças a seguir:  
   
--   Para ler mensagens de uma fila mortas transacional do sistema, o identificador de recurso uniforme (URI) deve estar no formato: $ net.msmq://localhost/system; DeadXact.  
+- Para ler mensagens de uma fila mortas transacional do sistema, o identificador de recurso uniforme (URI) deve estar no formato: $ net.msmq://localhost/system; DeadXact.  
   
--   Para ler mensagens de uma fila de inatividade não-transacional do sistema, o URI deve estar no formato: $ net.msmq://localhost/system; mensagens mortas.  
+- Para ler mensagens de uma fila de inatividade não-transacional do sistema, o URI deve estar no formato: $ net.msmq://localhost/system; mensagens mortas.  
   
--   Para ler mensagens de uma fila de inatividade personalizada, o URI deve ser de que o formulário: net.msmq://localhost/private/\<*dlq-personalizado-name*> onde *nome de personalizado dlq* é o nome de personalizado fila de inatividade.  
+- Para ler mensagens de uma fila de inatividade personalizada, o URI deve ser de que o formulário: net.msmq://localhost/private/\<*dlq-personalizado-name*> onde *nome de personalizado dlq* é o nome de personalizado fila de inatividade.  
   
  Para obter mais informações sobre como as filas de endereço, consulte [pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   

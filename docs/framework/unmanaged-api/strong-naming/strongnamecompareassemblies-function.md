@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000318"
 ---
 # <a name="strongnamecompareassemblies-function"></a>Função StrongNameCompareAssemblies
 Determina se dois assemblies diferem somente por suas assinaturas de nome forte.  
@@ -48,11 +48,11 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Um dos seguintes valores:  
   
--   `SN_CMP_DIFFERENT` (0) – Especifica que os assemblies contêm dados diferentes.  
+- `SN_CMP_DIFFERENT` (0) – Especifica que os assemblies contêm dados diferentes.  
   
--   `SN_CMP_IDENTICAL` (1) - Especifica que os assemblies são exatamente os mesmos, incluindo suas assinaturas e a soma de verificação.  
+- `SN_CMP_IDENTICAL` (1) - Especifica que os assemblies são exatamente os mesmos, incluindo suas assinaturas e a soma de verificação.  
   
--   `SN_CMP_SIGONLY` (2) - Especifica que os assemblies diferem somente por assinatura e a soma de verificação.  
+- `SN_CMP_SIGONLY` (2) - Especifica que os assemblies diferem somente por assinatura e a soma de verificação.  
   
 ## <a name="return-value"></a>Valor de retorno  
  `true` Após a conclusão bem-sucedida; Caso contrário, `false`.  

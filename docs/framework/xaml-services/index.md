@@ -7,11 +7,11 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
 ms.openlocfilehash: 37fdd96c0666bc6ecda0f46daa5ca6271a8666ab
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007416"
 ---
 # <a name="xaml-services"></a>Serviços XAML
 Este tópico descreve os recursos de um conjunto de tecnologia serviços conhecidos como XAML do .NET Framework. A maioria dos serviços e APIs descritas estão localizados no assembly System. XAML, que é um assembly introduzido com o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] conjunto de assemblies do .NET core. Os serviços incluem leitores e gravadores, classes de esquema e o suporte de esquema, fábricas, atribuição de classes, suporte intrínseco de linguagem XAML e outros recursos da linguagem XAML.  
@@ -19,19 +19,19 @@ Este tópico descreve os recursos de um conjunto de tecnologia serviços conheci
 ## <a name="about-this-documentation"></a>Sobre esta documentação  
  Documentação conceitual para serviços de XAML do .NET Framework pressupõe que você tenha experiência anterior com a linguagem XAML e como ele pode se aplicar a uma estrutura específica, por exemplo [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ou Windows Workflow Foundation, ou um recurso de tecnologia específica área, por exemplo de personalização da compilação recursos em <xref:Microsoft.Build.Framework.XamlTypes>. Esta documentação não tenta explicar os conceitos básicos do XAML como uma linguagem de marcação, terminologia de sintaxe XAML ou outro material introdutório. Em vez disso, essa documentação se concentra em especificamente usando os serviços de XAML do .NET Framework que estão habilitados na biblioteca do assembly System. XAML. A maioria dessas APIs é para cenários de integração de linguagem XAML e extensibilidade. Isso pode incluir qualquer um dos seguintes:  
   
--   Estendendo os recursos da base leitores XAML ou gravadores XAML (processando o fluxo do nó XAML diretamente; derivar seu próprio leitor XAML ou o gravador XAML).  
+- Estendendo os recursos da base leitores XAML ou gravadores XAML (processando o fluxo do nó XAML diretamente; derivar seu próprio leitor XAML ou o gravador XAML).  
   
--   Definindo tipos personalizados utilizável de XAML que não têm dependências de estrutura específica e atribuir os tipos para transmitir seu XAML tipo características do sistema para serviços de XAML do .NET Framework.  
+- Definindo tipos personalizados utilizável de XAML que não têm dependências de estrutura específica e atribuir os tipos para transmitir seu XAML tipo características do sistema para serviços de XAML do .NET Framework.  
   
--   Hospedando os leitores XAML ou gravadores XAML como um componente de um aplicativo, como um designer visual ou um editor interativo para fontes de marcação XAML.  
+- Hospedando os leitores XAML ou gravadores XAML como um componente de um aplicativo, como um designer visual ou um editor interativo para fontes de marcação XAML.  
   
--   Gravando conversores de valor XAML (extensões de marcação; conversores de tipo para tipos personalizados).  
+- Gravando conversores de valor XAML (extensões de marcação; conversores de tipo para tipos personalizados).  
   
--   Definindo um contexto de esquema XAML personalizado (usando técnicas de carregamento de assemblies alternativas para fontes do tipo de backup; usando técnicas de pesquisa de tipos conhecidos em vez de sempre refletindo assemblies; usando os conceitos de assembly carregado que não usam o CLR `AppDomain` e seu modelo de segurança associadas).  
+- Definindo um contexto de esquema XAML personalizado (usando técnicas de carregamento de assemblies alternativas para fontes do tipo de backup; usando técnicas de pesquisa de tipos conhecidos em vez de sempre refletindo assemblies; usando os conceitos de assembly carregado que não usam o CLR `AppDomain` e seu modelo de segurança associadas).  
   
--   Estendendo o sistema de tipo base do XAML.  
+- Estendendo o sistema de tipo base do XAML.  
   
--   Usando o `Lookup` ou `Invoker` técnicas para influenciar o XAML de tipo de sistema e como o tipo de pendências são avaliadas.  
+- Usando o `Lookup` ou `Invoker` técnicas para influenciar o XAML de tipo de sistema e como o tipo de pendências são avaliadas.  
   
  Se você estiver procurando por material introdutório em XAML como uma linguagem, você pode tentar [visão geral de XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md). Esse tópico discute XAML para um público que há de novo para [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] e também ao uso de marcação XAML e recursos de linguagem XAML. Outro documento útil é o material introdutório a [especificação da linguagem XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -45,50 +45,50 @@ Este tópico descreve os recursos de um conjunto de tecnologia serviços conheci
 ## <a name="xaml-node-streams-xaml-readers-and-xaml-writers"></a>Fluxos de nós XAML, leitores de XAML e gravadores XAML  
  Para entender a função Serviços de XAML do .NET Framework na relação entre a linguagem XAML e tecnologias específicas que usam XAML como uma linguagem, é útil entender o conceito de um fluxo do nó XAML e como a API de formas desse conceito e terminologia. O fluxo do nó XAML é um intermediário conceitual entre uma representação de linguagem XAML e o grafo de objeto que representa o XAML ou o define.  
   
--   Um leitor XAML é uma entidade que processa XAML de alguma forma e produz um fluxo do nó XAML. Na API, um leitor XAML é representado pela classe base <xref:System.Xaml.XamlReader>.  
+- Um leitor XAML é uma entidade que processa XAML de alguma forma e produz um fluxo do nó XAML. Na API, um leitor XAML é representado pela classe base <xref:System.Xaml.XamlReader>.  
   
--   Um gravador XAML é uma entidade que processa um fluxo do nó XAML e produz algo diferente. Na API, um gravador XAML é representado pela classe base <xref:System.Xaml.XamlWriter>.  
+- Um gravador XAML é uma entidade que processa um fluxo do nó XAML e produz algo diferente. Na API, um gravador XAML é representado pela classe base <xref:System.Xaml.XamlWriter>.  
   
  Os dois cenários mais comuns que envolvem XAML estão carregando XAML para criar uma instância de um gráfico de objeto e salvar um gráfico de objeto de um aplicativo ou uma ferramenta e produzir uma representação de XAML (normalmente na forma de marcação salva como arquivo de texto). Carregar o XAML e criar um gráfico de objeto geralmente é chamado nesta documentação como o caminho de carregamento. Salvar ou serializar um grafo de objeto existente para o XAML é conhecido nesta documentação como salvar caminho.  
   
  O tipo mais comum de caminho de carregamento pode ser descrito da seguinte maneira:  
   
--   Começar com uma representação de XAML, em formato XML codificado em UTF- e salvo como um arquivo de texto.  
+- Começar com uma representação de XAML, em formato XML codificado em UTF- e salvo como um arquivo de texto.  
   
--   Carregar esse XAML em <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> é um <xref:System.Xaml.XamlReader> subclasse.  
+- Carregar esse XAML em <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> é um <xref:System.Xaml.XamlReader> subclasse.  
   
--   O resultado é um fluxo do nó XAML. Você pode acessar nós individuais no fluxo de nó XAML usando <xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> API. A operação mais comum aqui é para percorrer o fluxo do nó XAML, processamento de cada nó usando um "registro atual" metáfora.  
+- O resultado é um fluxo do nó XAML. Você pode acessar nós individuais no fluxo de nó XAML usando <xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> API. A operação mais comum aqui é para percorrer o fluxo do nó XAML, processamento de cada nó usando um "registro atual" metáfora.  
   
--   Passe os nós resultantes do fluxo de nó XAML para um <xref:System.Xaml.XamlObjectWriter> API. <xref:System.Xaml.XamlObjectWriter> é um <xref:System.Xaml.XamlWriter> subclasse.  
+- Passe os nós resultantes do fluxo de nó XAML para um <xref:System.Xaml.XamlObjectWriter> API. <xref:System.Xaml.XamlObjectWriter> é um <xref:System.Xaml.XamlWriter> subclasse.  
   
--   O <xref:System.Xaml.XamlObjectWriter> grava um grafo de objeto, um objeto por vez, de acordo com o andamento por meio do fluxo de nó XAML de origem. Isso é feito com o auxílio de um contexto de esquema XAML e uma implementação que pode acessar os assemblies e tipos de uma estrutura e o sistema de tipo de backup.  
+- O <xref:System.Xaml.XamlObjectWriter> grava um grafo de objeto, um objeto por vez, de acordo com o andamento por meio do fluxo de nó XAML de origem. Isso é feito com o auxílio de um contexto de esquema XAML e uma implementação que pode acessar os assemblies e tipos de uma estrutura e o sistema de tipo de backup.  
   
--   Chamar <xref:System.Xaml.XamlObjectWriter.Result%2A> no final do fluxo de nó XAML para obter o objeto raiz do grafo do objeto.  
+- Chamar <xref:System.Xaml.XamlObjectWriter.Result%2A> no final do fluxo de nó XAML para obter o objeto raiz do grafo do objeto.  
   
  O tipo mais comum de caminho de salvamento pode ser descrito da seguinte maneira:  
   
--   Comece com o gráfico do objeto de um tempo de execução do aplicativo inteiro, o conteúdo de interface do usuário e estado de um tempo de execução ou um segmento menor de representação do objeto do aplicativo geral em tempo de execução.  
+- Comece com o gráfico do objeto de um tempo de execução do aplicativo inteiro, o conteúdo de interface do usuário e estado de um tempo de execução ou um segmento menor de representação do objeto do aplicativo geral em tempo de execução.  
   
--   De um objeto lógico de início, como uma raiz do aplicativo ou a raiz do documento, carregar os objetos em <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader> é um <xref:System.Xaml.XamlReader> subclasse.  
+- De um objeto lógico de início, como uma raiz do aplicativo ou a raiz do documento, carregar os objetos em <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader> é um <xref:System.Xaml.XamlReader> subclasse.  
   
--   O resultado é um fluxo do nó XAML. Você pode acessar nós individuais no fluxo de nó XAML usando <xref:System.Xaml.XamlObjectReader> e <xref:System.Xaml.XamlReader> API. A operação mais comum aqui é para percorrer o fluxo do nó XAML, processamento de cada nó usando um "registro atual" metáfora.  
+- O resultado é um fluxo do nó XAML. Você pode acessar nós individuais no fluxo de nó XAML usando <xref:System.Xaml.XamlObjectReader> e <xref:System.Xaml.XamlReader> API. A operação mais comum aqui é para percorrer o fluxo do nó XAML, processamento de cada nó usando um "registro atual" metáfora.  
   
--   Passe os nós resultantes do fluxo de nó XAML para um <xref:System.Xaml.XamlXmlWriter> API. <xref:System.Xaml.XamlXmlWriter> é um <xref:System.Xaml.XamlWriter> subclasse.  
+- Passe os nós resultantes do fluxo de nó XAML para um <xref:System.Xaml.XamlXmlWriter> API. <xref:System.Xaml.XamlXmlWriter> é um <xref:System.Xaml.XamlWriter> subclasse.  
   
--   O <xref:System.Xaml.XamlXmlWriter> grava XAML em uma UTF XML de codificação. Você pode salvar isso como um arquivo de texto, como um fluxo ou em outros formulários.  
+- O <xref:System.Xaml.XamlXmlWriter> grava XAML em uma UTF XML de codificação. Você pode salvar isso como um arquivo de texto, como um fluxo ou em outros formulários.  
   
--   Chamar <xref:System.Xaml.XamlXmlWriter.Flush%2A> para obter a saída final.  
+- Chamar <xref:System.Xaml.XamlXmlWriter.Flush%2A> para obter a saída final.  
   
  Para obter mais informações sobre os conceitos de fluxo de nó XAML, consulte [Noções básicas sobre XAML Stream estruturas e conceitos nó](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ### <a name="the-xamlservices-class"></a>A classe XamlServices  
  Nem sempre é necessário lidar com um fluxo do nó XAML. Se você quiser um caminho de carga básico ou o caminho de salvamento básico, você pode usar APIs no <xref:System.Xaml.XamlServices> classe.  
   
--   Várias assinaturas de <xref:System.Xaml.XamlServices.Load%2A> implementar um caminho de carga. Você pode carregar um arquivo ou fluxo ou pode carregar uma <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> ou <xref:System.Xaml.XamlReader> que encapsulam a entrada XAML Carregando com APIs desse leitor.  
+- Várias assinaturas de <xref:System.Xaml.XamlServices.Load%2A> implementar um caminho de carga. Você pode carregar um arquivo ou fluxo ou pode carregar uma <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> ou <xref:System.Xaml.XamlReader> que encapsulam a entrada XAML Carregando com APIs desse leitor.  
   
--   Várias assinaturas do <xref:System.Xaml.XamlServices.Save%2A> salvar um gráfico de objeto e produzir uma saída como um fluxo, arquivo, ou <xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter> instância.  
+- Várias assinaturas do <xref:System.Xaml.XamlServices.Save%2A> salvar um gráfico de objeto e produzir uma saída como um fluxo, arquivo, ou <xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter> instância.  
   
--   <xref:System.Xaml.XamlServices.Transform%2A> Converte a XAML vinculando um caminho de carga e de salvar caminho como uma única operação. Um contexto de esquema diferente ou o sistema de tipos de backup diferente pode ser usado para <xref:System.Xaml.XamlReader> e <xref:System.Xaml.XamlWriter>, que é o que influenciará como o XAML resultante é transformado.  
+- <xref:System.Xaml.XamlServices.Transform%2A> Converte a XAML vinculando um caminho de carga e de salvar caminho como uma única operação. Um contexto de esquema diferente ou o sistema de tipos de backup diferente pode ser usado para <xref:System.Xaml.XamlReader> e <xref:System.Xaml.XamlWriter>, que é o que influenciará como o XAML resultante é transformado.  
   
  Para obter mais informações sobre como usar <xref:System.Xaml.XamlServices>, consulte [classe de serviços e leitura básicas de XAML ou escrevendo](xamlservices-class-and-basic-xaml-reading-or-writing.md).  
   

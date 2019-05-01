@@ -3,11 +3,11 @@ title: Integração de componentes transacionais de Enterprise Services
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 ms.openlocfilehash: 33e09eab1d7ad24dc234cfff21e352611e0b2ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047029"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integração de componentes transacionais de Enterprise Services
 Windows Communication Foundation (WCF) fornece um mecanismo automático para a integração com o Enterprise Services (consulte [integração de aplicativos COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). No entanto, convém a flexibilidade para desenvolver serviços que usam internamente componentes transacionais hospedados em serviços corporativos. Como o recurso de transações do WCF é compilado com o <xref:System.Transactions> infra-estrutura, o processo para a integração do Enterprise Services com o WCF é idêntico ao que, para especificar a interoperabilidade entre <xref:System.Transactions> e os serviços corporativos, conforme descrito na [Interoperabilidade com serviços da empresa e transações COM+](https://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -17,9 +17,9 @@ Windows Communication Foundation (WCF) fornece um mecanismo automático para a i
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>A integração do Enterprise Services com uma operação de serviço  
  O código a seguir demonstra uma operação, com fluxo de transação permitido, que cria um <xref:System.Transactions.TransactionScope> com o <xref:System.Transactions.EnterpriseServicesInteropOption.Full> opção. As seguintes condições se aplicam nesse cenário:  
   
--   Se o cliente flua de uma transação, a operação, incluindo a chamada para o componente de serviços corporativos, é executada dentro do escopo da transação. Usando o <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garante que a transação esteja sincronizada com o <xref:System.EnterpriseServices> contexto, o que significa que a transação de ambiente para <xref:System.Transactions> e o <xref:System.EnterpriseServices> é o mesmo.  
+- Se o cliente flua de uma transação, a operação, incluindo a chamada para o componente de serviços corporativos, é executada dentro do escopo da transação. Usando o <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garante que a transação esteja sincronizada com o <xref:System.EnterpriseServices> contexto, o que significa que a transação de ambiente para <xref:System.Transactions> e o <xref:System.EnterpriseServices> é o mesmo.  
   
--   Se o cliente não fluir uma transação, a configuração <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> para `true` cria um novo escopo de transação para a operação. Da mesma forma, usando <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garante que a transação da operação é o mesmo que a transação usada dentro de <xref:System.EnterpriseServices> contexto do componente.  
+- Se o cliente não fluir uma transação, a configuração <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> para `true` cria um novo escopo de transação para a operação. Da mesma forma, usando <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garante que a transação da operação é o mesmo que a transação usada dentro de <xref:System.EnterpriseServices> contexto do componente.  
   
  Quaisquer chamadas de método adicional também ocorrem dentro do escopo da transação da mesma operação.  
   

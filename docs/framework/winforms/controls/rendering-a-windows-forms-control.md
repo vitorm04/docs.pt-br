@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012471"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Renderizando um controle dos Windows Forms
 Renderização se refere ao processo de criar uma representação visual na tela do usuário. O Windows Forms usa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (a nova biblioteca de gráficos do Windows) para renderização. As classes gerenciadas que fornecem acesso aos [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] estão no <xref:System.Drawing?displayProperty=nameWithType> namespace e seus subnamespaces.  
   
  Os elementos a seguir estão envolvidos na renderização de controles:  
   
--   A funcionalidade de desenho fornecida pela classe base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+- A funcionalidade de desenho fornecida pela classe base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
--   Os elementos essenciais da biblioteca de gráficos [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+- Os elementos essenciais da biblioteca de gráficos [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
   
--   A geometria da região de desenho.  
+- A geometria da região de desenho.  
   
--   O procedimento para liberar recursos gráficos.  
+- O procedimento para liberar recursos gráficos.  
   
 ## <a name="drawing-functionality-provided-by-control"></a>Funcionalidade de desenho fornecida pelo controle  
  A classe base <xref:System.Windows.Forms.Control> fornece a funcionalidade de desenho por meio de seu <xref:System.Windows.Forms.Control.Paint> eventos. Um controle gera o <xref:System.Windows.Forms.Control.Paint> evento sempre que precisa atualizar sua exibição. Para obter mais informações sobre os eventos no .NET Framework, consulte [Tratando e gerando eventos](../../../standard/events/index.md).  

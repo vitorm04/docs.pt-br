@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Timelines [WPF], AutoReverse property
 ms.assetid: 1648dd90-1bee-409a-ac69-ac729867f557
 ms.openlocfilehash: 0fe2d337d8afa5197475e5b9ee40950226596e8b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024658"
 ---
 # <a name="how-to-specify-whether-a-timeline-automatically-reverses"></a>Como: Especificar se uma linha do tempo é revertida automaticamente
 Uma linha do tempo <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> propriedade determina se ele executa em ordem inversa após ele concluir uma iteração. O exemplo a seguir mostra várias animações com duração e valores de destino idênticos, mas com diferentes <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> configurações. Para demonstrar como o <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> propriedade comporta-se com diferentes <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> configurações, algumas animações são definidas para repetir. A última animação mostra como o <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> propriedade funciona em cronogramas aninhados.  

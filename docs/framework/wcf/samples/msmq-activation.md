@@ -3,11 +3,11 @@ title: Ativação de MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
 ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051475"
 ---
 # <a name="msmq-activation"></a>Ativação de MSMQ
 Este exemplo demonstra como hospedar aplicativos no serviço de ativação de processos para Windows (WAS) que são lidos a partir de uma fila de mensagens. Este exemplo usa o `netMsmqBinding` e se baseia o [comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md) exemplo. Nesse caso, o serviço é um aplicativo hospedado na Web e o cliente é auto-hospedado e gera como saída para o console para observar o status das ordens de compra enviado.  
@@ -219,15 +219,15 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Além disso, você deve instalar os componentes de ativação não HTTP do WCF:  
   
-    1.  No menu **Iniciar**, selecione **Painel de Controle**.  
+    1. No menu **Iniciar**, selecione **Painel de Controle**.  
   
-    2.  Selecione **programas e recursos**.  
+    2. Selecione **programas e recursos**.  
   
-    3.  Clique em **ativar ou desativar recursos do Windows**.  
+    3. Clique em **ativar ou desativar recursos do Windows**.  
   
-    4.  Sob **resumo de recursos**, clique em **adicionar recursos**.  
+    4. Sob **resumo de recursos**, clique em **adicionar recursos**.  
   
-    5.  Expanda o **Microsoft .NET Framework 3.0** nó e verifique se o **ativação não HTTP do Windows Communication Foundation** recurso.  
+    5. Expanda o **Microsoft .NET Framework 3.0** nó e verifique se o **ativação não HTTP do Windows Communication Foundation** recurso.  
   
 3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -235,21 +235,21 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 5. O serviço de ativação MSMQ é executado como serviço de rede por padrão. Portanto, a fila que é usada para ativar o aplicativo deve ter receber e inspecionar permissões para serviço de rede. Isso pode ser adicionado usando o MMC de enfileiramento de mensagens:  
   
-    1.  Do **inicie** menu, clique em **executar**, em seguida, digite `Compmgmt.msc` e pressione ENTER.  
+    1. Do **inicie** menu, clique em **executar**, em seguida, digite `Compmgmt.msc` e pressione ENTER.  
   
-    2.  Sob **aplicativos e serviços**, expanda **enfileiramento**.  
+    2. Sob **aplicativos e serviços**, expanda **enfileiramento**.  
   
-    3.  Clique em **privativas**.  
+    3. Clique em **privativas**.  
   
-    4.  A fila (servicemodelsamples/Service.svc) com o botão direito e escolha **propriedades**.  
+    4. A fila (servicemodelsamples/Service.svc) com o botão direito e escolha **propriedades**.  
   
-    5.  Sobre o **segurança** , clique em **Add** e dar a inspeção e receber permissões para serviço de rede.  
+    5. Sobre o **segurança** , clique em **Add** e dar a inspeção e receber permissões para serviço de rede.  
   
 6. Configure o Windows processo Activation Service (WAS) para dar suporte à ativação de MSMQ.  
   
      Como uma conveniência, as etapas a seguir são implementadas em um arquivo em lotes chamado AddMsmqSiteBinding.cmd localizado no diretório de exemplo.  
   
-    1.  Para dar suporte à ativação de NET. MSMQ, site da Web padrão primeiro deve ser associado ao protocolo NET. MSMQ. Isso pode ser feito usando appcmd.exe, que é instalado com o [!INCLUDE[iisver](../../../../includes/iisver-md.md)] conjunto de ferramentas de gerenciamento. Em um prompt de comando com privilégios elevados (administrador), execute o comando a seguir.  
+    1. Para dar suporte à ativação de NET. MSMQ, site da Web padrão primeiro deve ser associado ao protocolo NET. MSMQ. Isso pode ser feito usando appcmd.exe, que é instalado com o [!INCLUDE[iisver](../../../../includes/iisver-md.md)] conjunto de ferramentas de gerenciamento. Em um prompt de comando com privilégios elevados (administrador), execute o comando a seguir.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -261,7 +261,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          Este comando adiciona uma associação de site do NET. MSMQ ao site da Web padrão.  
   
-    2.  Embora todos os aplicativos dentro de um site compartilham uma associação de NET. MSMQ comuns, cada aplicativo pode habilitar o suporte do NET. MSMQ individualmente. Para habilitar o NET. MSMQ para o aplicativo /servicemodelsamples, execute o seguinte comando em um prompt de comando elevado.  
+    2. Embora todos os aplicativos dentro de um site compartilham uma associação de NET. MSMQ comuns, cada aplicativo pode habilitar o suporte do NET. MSMQ individualmente. Para habilitar o NET. MSMQ para o aplicativo /servicemodelsamples, execute o seguinte comando em um prompt de comando elevado.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq  
@@ -284,7 +284,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      Como uma conveniência, as etapas a seguir são implementadas em um arquivo em lotes chamado RemoveMsmqSiteBinding.cmd localizado no diretório de exemplo:  
   
-    1.  Remova o NET. MSMQ da lista de protocolos habilitados, executando o seguinte comando em um prompt de comando elevado.  
+    1. Remova o NET. MSMQ da lista de protocolos habilitados, executando o seguinte comando em um prompt de comando elevado.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
@@ -293,7 +293,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  Esse comando é uma única linha de texto.  
   
-    2.  Remova a associação de site do NET. MSMQ, executando o seguinte comando em um prompt de comando elevado.  
+    2. Remova a associação de site do NET. MSMQ, executando o seguinte comando em um prompt de comando elevado.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.msmq',bindingInformation='localhost']  
@@ -330,17 +330,17 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      Para alterar a identidade que o processo de trabalho é executado:  
   
-    1.  Run Inetmgr.exe.  
+    1. Run Inetmgr.exe.  
   
-    2.  Sob **Pools de aplicativos**, clique com botão direito do **AppPool** (normalmente **DefaultAppPool**) e escolha **definir padrões do Pool de aplicativos...** .  
+    2. Sob **Pools de aplicativos**, clique com botão direito do **AppPool** (normalmente **DefaultAppPool**) e escolha **definir padrões do Pool de aplicativos...** .  
   
-    3.  Altere as propriedades de identidade para usar a conta de usuário específico.  
+    3. Altere as propriedades de identidade para usar a conta de usuário específico.  
   
      Para alterar a identidade que o serviço de ativação é executado:  
   
-    1.  Execute Services. msc.  
+    1. Execute Services. msc.  
   
-    2.  Clique com botão direito do **Net.MsmqListener adaptador**e escolha **propriedades**.  
+    2. Clique com botão direito do **Net.MsmqListener adaptador**e escolha **propriedades**.  
   
 4. Alterar a conta de **LogOn** guia.  
   

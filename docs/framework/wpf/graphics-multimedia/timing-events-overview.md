@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002385"
 ---
 # <a name="timing-events-overview"></a>Visão geral dos eventos de tempo
 Este tópico descreve como usar os cinco eventos de tempo disponíveis no <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> objetos.  
@@ -23,11 +23,11 @@ Este tópico descreve como usar os cinco eventos de tempo disponíveis no <xref:
   
  Há várias maneiras de animar propriedades no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Usando objetos de storyboard** (marcação e código): Você pode usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar e distribuir animações para um ou mais objetos. Por exemplo, consulte [animar uma propriedade usando um Storyboard](how-to-animate-a-property-by-using-a-storyboard.md).  
+- **Usando objetos de storyboard** (marcação e código): Você pode usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar e distribuir animações para um ou mais objetos. Por exemplo, consulte [animar uma propriedade usando um Storyboard](how-to-animate-a-property-by-using-a-storyboard.md).  
   
--   **Usando animações locais** (somente código): Você pode aplicar <xref:System.Windows.Media.Animation.AnimationTimeline> objetos diretamente para as propriedades que eles animam. Para obter um exemplo, consulte [Animar uma propriedade sem usar um storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
+- **Usando animações locais** (somente código): Você pode aplicar <xref:System.Windows.Media.Animation.AnimationTimeline> objetos diretamente para as propriedades que eles animam. Para obter um exemplo, consulte [Animar uma propriedade sem usar um storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
--   **Usando relógios** (somente código): Explicitamente, você pode gerenciar a criação de relógios e distribuir os relógios de animação por conta própria.  Por exemplo, consulte [animar uma propriedade usando um AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
+- **Usando relógios** (somente código): Explicitamente, você pode gerenciar a criação de relógios e distribuir os relógios de animação por conta própria.  Por exemplo, consulte [animar uma propriedade usando um AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
   
  Porque você pode usá-los na marcação e código, os exemplos nesta visão geral usam <xref:System.Windows.Media.Animation.Storyboard> objetos. No entanto, os conceitos descritos podem ser aplicados aos outros métodos de animação de propriedades.  
   

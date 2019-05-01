@@ -5,11 +5,11 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048264"
 ---
 # <a name="auditing-security-events"></a>Auditoria de eventos de segurança
 Os aplicativos criados com o Windows Communication Foundation (WCF) podem registrar eventos de segurança (êxito, falha ou ambos) com o recurso de auditoria. Os eventos são gravados no log de eventos do sistema Windows e podem ser examinados usando o Visualizador de eventos.  
@@ -21,9 +21,9 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
 ## <a name="audit-level-and-behavior"></a>Nível de auditoria e o comportamento  
  Existem dois níveis de auditorias de segurança:  
   
--   Nível de autorização de serviço, em que um chamador está autorizado.  
+- Nível de autorização de serviço, em que um chamador está autorizado.  
   
--   Nível de mensagem, em que o WCF verifica a validade da mensagem e autentica o chamador.  
+- Nível de mensagem, em que o WCF verifica a validade da mensagem e autentica o chamador.  
   
  Você pode verificar os dois níveis para o êxito ou falha, o que é conhecida como de auditoria a *comportamento de auditoria*.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
 ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032182"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Passo a passo: hospedar um controle composto do Windows Forms no WPF
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento substancial em [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] código, ele pode ser mais eficiente reutilizar pelo menos parte desse código em seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo em vez de reescrevê-la a partir do zero. O cenário mais comum é quando você tem controles Windows Forms existentes. Em alguns casos, talvez você não tenha nem acesso ao código-fonte desses controles. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece um procedimento simples para hospedar esses controles em um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo. Por exemplo, você pode usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para a maioria da sua programação enquanto hospeda seus especializado <xref:System.Windows.Forms.DataGridView> controles.  
@@ -24,9 +24,9 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  As tarefas ilustradas neste passo a passo incluem:  
   
--   Implementação do controle de composição dos Windows Forms.  
+- Implementação do controle de composição dos Windows Forms.  
   
--   Implementação do aplicativo host do WPF.  
+- Implementação do aplicativo host do WPF.  
   
  Para obter uma listagem de código completa das tarefas ilustradas neste passo a passo, consulte [hospedando um controle composto do Windows Forms no WPF de exemplo](https://go.microsoft.com/fwlink/?LinkID=159999).  
   
@@ -58,32 +58,32 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  Seu projeto deve ter referências às seguintes DLLs de sistema. Se qualquer uma dessas DLLs não estiver incluída por padrão, adicione-as ao projeto.  
   
--   Sistema  
+- Sistema  
   
--   System.Data  
+- System.Data  
   
--   System.Drawing  
+- System.Drawing  
   
--   System.Windows.Forms  
+- System.Windows.Forms  
   
--   System.Xml  
+- System.Xml  
   
 ### <a name="adding-controls-to-the-form"></a>Adicionando controles ao formulário  
  Para adicionar controles ao formulário:  
   
--   Abra `MyControl1` no designer.  
+- Abra `MyControl1` no designer.  
   
  Adicione cinco <xref:System.Windows.Forms.Label> controles e suas respectivas <xref:System.Windows.Forms.TextBox> controles, dimensionados e organizados como na ilustração anterior, no formulário. No exemplo, o <xref:System.Windows.Forms.TextBox> controles são nomeados:  
   
--   `txtName`  
+- `txtName`  
   
--   `txtAddress`  
+- `txtAddress`  
   
--   `txtCity`  
+- `txtCity`  
   
--   `txtState`  
+- `txtState`  
   
--   `txtZip`  
+- `txtZip`  
   
  Adicione duas <xref:System.Windows.Forms.Button> controles rotulados **Okey** e **Cancelar**. No exemplo, os nomes dos botões são `btnOK` e `btnCancel`, respectivamente.  
   
@@ -159,11 +159,11 @@ A imagem a seguir mostra o aplicativo completo, incluindo o controle inserido no
 ### <a name="implementing-the-basic-layout"></a>Implementando o layout básico
  O [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do host do aplicativo é implementado no MainWindow. XAML. Esse arquivo contém [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] marcação que define o layout e hospeda o controle Windows Forms. O aplicativo é dividido em três regiões:
 
--   O **propriedades do controle** painel, que contém uma coleção de botões de opção que você pode usar para modificar diversas propriedades do controle hospedado.
+- O **propriedades do controle** painel, que contém uma coleção de botões de opção que você pode usar para modificar diversas propriedades do controle hospedado.
 
--   O **dados de controle** painel, que contém vários <xref:System.Windows.Controls.TextBlock> elementos que exibem os dados retornados do controle hospedado.
+- O **dados de controle** painel, que contém vários <xref:System.Windows.Controls.TextBlock> elementos que exibem os dados retornados do controle hospedado.
 
--   O próprio controle hospedado.
+- O próprio controle hospedado.
 
  O layout básico é mostrado no seguinte XAML. A marcação que é necessário para hospedar `MyControl1` é omitido neste exemplo, mas será abordado posteriormente.
 
@@ -183,18 +183,18 @@ A imagem a seguir mostra o aplicativo completo, incluindo o controle inserido no
 
  Dois elementos no XAML manipulam a hospedagem:
 
--   `WindowsFormsHost` representa o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento que permite que você hospede um controle Windows Forms em um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo.
+- `WindowsFormsHost` representa o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento que permite que você hospede um controle Windows Forms em um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo.
 
--   `mcl:MyControl1`, que representa `MyControl1`, é adicionado para o <xref:System.Windows.Forms.Integration.WindowsFormsHost> coleção de filhos do elemento. Como resultado, esse controle Windows Forms é renderizado como parte do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] janela e você pode se comunicar com o controle do aplicativo.
+- `mcl:MyControl1`, que representa `MyControl1`, é adicionado para o <xref:System.Windows.Forms.Integration.WindowsFormsHost> coleção de filhos do elemento. Como resultado, esse controle Windows Forms é renderizado como parte do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] janela e você pode se comunicar com o controle do aplicativo.
 
 ### <a name="implementing-the-code-behind-file"></a>Implementando o arquivo code-behind
  O arquivo code-behind,. XAML. vb ou MainWindow.xaml.cs, contém o código procedural que implementa a funcionalidade do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] discutidos na seção anterior. As tarefas principais são:
 
--   Anexando um manipulador de eventos `MyControl1`do `OnButtonClick` eventos.
+- Anexando um manipulador de eventos `MyControl1`do `OnButtonClick` eventos.
 
--   Modificar diversas propriedades de `MyControl1`, com base em como a coleção de botões de opção é definida.
+- Modificar diversas propriedades de `MyControl1`, com base em como a coleção de botões de opção é definida.
 
--   Exibir os dados coletados pelo controle.
+- Exibir os dados coletados pelo controle.
 
 #### <a name="initializing-the-application"></a>Inicializando o aplicativo
  O código de inicialização está contido em um manipulador de eventos da janela <xref:System.Windows.FrameworkElement.Loaded> eventos e anexa um manipulador de eventos para o controle `OnButtonClick` eventos.

@@ -3,11 +3,11 @@ title: Critérios de localização personalizados
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006363"
 ---
 # <a name="custom-find-criteria"></a>Critérios de localização personalizados
 Este exemplo demonstra como criar uma correspondência de escopo personalizado usando a lógica e como implementar um serviço de descoberta personalizada. Clientes usam a funcionalidade de correspondência de escopo personalizado para refinar e se baseiam ainda mais a funcionalidade de localização fornecidos pelo sistema de descoberta do WCF. O cenário que abrange esse exemplo é da seguinte maneira:  
@@ -20,9 +20,9 @@ Este exemplo demonstra como criar uma correspondência de escopo personalizado u
   
 ## <a name="demonstrates"></a>Demonstra  
   
--   Criando um serviço de descoberta personalizada.  
+- Criando um serviço de descoberta personalizada.  
   
--   Implementando uma correspondência de escopo personalizado pelo algoritmo.  
+- Implementando uma correspondência de escopo personalizado pelo algoritmo.  
   
 ## <a name="discussion"></a>Discussão  
  O cliente está procurando por tipo de "Ou" critérios de correspondência. Um serviço responde novamente se os escopos em seus pontos de extremidade correspondem a nenhum dos escopos fornecidos pelo cliente. Nesse caso, o cliente está procurando um serviço de calculadora que tenha qualquer um dos escopos na lista a seguir:  

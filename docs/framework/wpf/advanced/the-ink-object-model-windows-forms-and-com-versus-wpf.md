@@ -1,5 +1,5 @@
 ---
-title: 'O modelo de objeto Ink: Windows Forms e COM versus WPF'
+title: 'Modelo de objeto de tinta: Windows Forms e COM versus WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
 ms.openlocfilehash: 68003943041fe0ba405eff1236c43a8e7e9c2b71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051670"
 ---
-# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>O modelo de objeto Ink: Windows Forms e COM versus WPF
+# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Modelo de objeto de tinta: Windows Forms e COM versus WPF
 
 Há basicamente três plataformas que dão suporte à tinta digital: a plataforma Tablet PC Windows Forms, a plataforma Tablet PC COM e a plataforma Windows Presentation Foundation (WPF).  As plataformas Windows Forms e COM compartilham um modelo de objeto semelhante, mas o modelo de objeto para a plataforma [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é significativamente diferente.  Este tópico discute as diferenças em um alto nível para que os desenvolvedores que trabalharam com um modelo de objetos possam entender o outro.  
   

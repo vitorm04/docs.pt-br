@@ -3,11 +3,11 @@ title: Especificação do manifesto do provedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033990"
 ---
 # <a name="provider-manifest-specification"></a>Especificação do manifesto do provedor
 Esta seção discute como um provedor de armazenamento de dados pode suportar os tipos e funções no armazenamento de dados.  
@@ -45,18 +45,18 @@ Esta seção discute como um provedor de armazenamento de dados pode suportar os
   
  Você escreve um arquivo XML que tem duas seções:  
   
--   Uma lista de tipos de provedor expressos em termos de “de EDM contrapartes” de um tipo ou uma função de armazenamento. Os tipos de Store têm tipos de EDM de correspondentes. Funções de Store têm correspondentes funções de EDM. Por exemplo, varchar é um tipo SQL Server mas o tipo correspondente de EDM é cadeia de caracteres.  
+- Uma lista de tipos de provedor expressos em termos de “de EDM contrapartes” de um tipo ou uma função de armazenamento. Os tipos de Store têm tipos de EDM de correspondentes. Funções de Store têm correspondentes funções de EDM. Por exemplo, varchar é um tipo SQL Server mas o tipo correspondente de EDM é cadeia de caracteres.  
   
--   Uma lista de funções suportadas pelo provedor onde o parâmetro e tipos de retorno são expressos em termos de EDM.  
+- Uma lista de funções suportadas pelo provedor onde o parâmetro e tipos de retorno são expressos em termos de EDM.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Escrevendo um provedor com mapeamento assimétrico de tipo  
  Ao escrever um provedor de armazenamento de dados para [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], o mapeamento de tipo de EDM-à- provedor para qualquer tipo pode ser diferente de mapeamento de tipo de provedor-à- EDM. Por exemplo, EDM ilimitado PrimitiveTypeKind.String pode mapear a nvarchar (4000) no provedor, quando (4000) mapas nvarchar a EDM PrimitiveTypeKind.String (MaxLength=4000).  
   
  Você escreve um arquivo XML que tem duas seções:  
   
--   Uma lista de tipos de provedor expressos em termos do EDM e definir o mapeamento para ambos direção: EDM-à-provedor e provedor-à-EDM.  
+- Uma lista de tipos de provedor expressos em termos do EDM e definir o mapeamento para ambos direção: EDM-à-provedor e provedor-à-EDM.  
   
--   Uma lista de funções suportadas pelo provedor onde o parâmetro e tipos de retorno são expressos em termos de EDM.  
+- Uma lista de funções suportadas pelo provedor onde o parâmetro e tipos de retorno são expressos em termos de EDM.  
   
 ## <a name="provider-manifest-discoverability"></a>Descoberta manifesto provedor  
  O manifesto é usado por vários serviços indiretamente componentes de entidade dos tipos (por exemplo ferramentas ou consulta) mas aproveitado mais diretamente por metadados com o uso do carregador de metadados do armazenamento de dados.  

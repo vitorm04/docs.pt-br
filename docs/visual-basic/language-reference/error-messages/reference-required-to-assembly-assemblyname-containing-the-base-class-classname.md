@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
 ms.openlocfilehash: 54848fdbd2547fe021f0386843f9666760396cb0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013771"
 ---
 # <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>Referência obrigatória ao assembly '\<assemblyname >' que contém a classe base\<classname >'
 Referência obrigatória ao assembly '\<assemblyname >' que contém a classe base\<classname >'. Adicione uma ao seu projeto.  
@@ -23,7 +23,7 @@ Referência obrigatória ao assembly '\<assemblyname >' que contém a classe bas
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Inclua o nome da DLL ou assembly não referenciado em suas referências do projeto.  
+- Inclua o nome da DLL ou assembly não referenciado em suas referências do projeto.  
   
 ## <a name="see-also"></a>Consulte também
 

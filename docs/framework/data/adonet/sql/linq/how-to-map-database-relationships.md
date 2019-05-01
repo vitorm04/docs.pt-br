@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033716"
 ---
 # <a name="how-to-map-database-relationships"></a>Como: mapear relações de banco de dados
 Você pode codificar como referências de propriedade em sua classe de entidade todas as relações de dados que serão sempre as mesmas. No banco de dados de exemplo Northwind, por exemplo, como os clientes geralmente fazem os pedidos, há sempre uma relação no modelo entre os clientes e seus pedidos.  
@@ -22,11 +22,11 @@ Você pode codificar como referências de propriedade em sua classe de entidade 
   
  A maioria da relações são um-para-muitos, como no exemplo mais adiante neste tópico. Você também pode representar relações um-para-um e muitos-para-muitos da seguinte maneira:  
   
--   -Para-um: Representa esse tipo de relação incluindo <xref:System.Data.Linq.EntitySet%601> em ambos os lados.  
+- -Para-um: Representa esse tipo de relação incluindo <xref:System.Data.Linq.EntitySet%601> em ambos os lados.  
   
      Por exemplo, considere uma `Customer` - `SecurityCode` relação, criada para que o código de segurança do cliente não será encontrado no `Customer` de tabela e pode ser acessado somente por pessoas autorizadas.  
   
--   Muitos-para-muitos: Em relações muitos-para-muitos, a chave primária da tabela de link (também chamado de *junção* tabela) é formada geralmente por uma composição das chaves estrangeiras das outras duas tabelas.  
+- Muitos-para-muitos: Em relações muitos-para-muitos, a chave primária da tabela de link (também chamado de *junção* tabela) é formada geralmente por uma composição das chaves estrangeiras das outras duas tabelas.  
   
      Por exemplo, considere uma `Employee` - `Project` formado de relação muitos-para-muitos usando a tabela de link `EmployeeProject`. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exige que essa relação seja modelada por meio de três classes: `Employee`, `Project` e `EmployeeProject`. Nesse caso, alterar a relação entre um `Employee` e um `Project` pode parecer exigir uma atualização da chave primária `EmployeeProject`. No entanto, essa situação é melhor modelada como excluindo um `EmployeeProject` existente e criando um novo `EmployeeProject`.  
   

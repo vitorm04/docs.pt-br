@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
 ms.openlocfilehash: 5de918f71f4361af3409c8382781844824747c83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002450"
 ---
 # <a name="concurrency"></a>Concorrência
 O exemplo de simultaneidade demonstra como usar o <xref:System.ServiceModel.ServiceBehaviorAttribute> com o <xref:System.ServiceModel.ConcurrencyMode> enumeração, que controla se uma instância de um serviço processa mensagens consecutivamente ou simultaneamente. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Este exemplo define um novo contrato, `ICalculatorConcurrency`, que herda de `ICalculator`, fornecendo duas operações adicionais para inspecionar o estado de simultaneidade de serviço. Alterando a configuração de simultaneidade, você pode observar a alteração no comportamento executando o cliente.  
@@ -22,11 +22,11 @@ O exemplo de simultaneidade demonstra como usar o <xref:System.ServiceModel.Serv
   
  Há três modos de simultaneidade disponíveis:  
   
--   `Single`: Cada instância de serviço processa uma mensagem por vez. Este é o modo de simultaneidade padrão.  
+- `Single`: Cada instância de serviço processa uma mensagem por vez. Este é o modo de simultaneidade padrão.  
   
--   `Multiple`: Cada instância de serviço processa várias mensagens simultaneamente. A implementação do serviço deve ser thread-safe para usar esse modo de simultaneidade.  
+- `Multiple`: Cada instância de serviço processa várias mensagens simultaneamente. A implementação do serviço deve ser thread-safe para usar esse modo de simultaneidade.  
   
--   `Reentrant`: Cada instância de serviço processa uma mensagem por vez, mas aceita chamadas reentrantes. O serviço aceita somente essas chamadas quando ela é chamada. Reentrante é demonstrada na [Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) exemplo.  
+- `Reentrant`: Cada instância de serviço processa uma mensagem por vez, mas aceita chamadas reentrantes. O serviço aceita somente essas chamadas quando ela é chamada. Reentrante é demonstrada na [Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) exemplo.  
   
  O uso de simultaneidade está relacionado ao modo de instanciação. No <xref:System.ServiceModel.InstanceContextMode.PerCall> instanciamento, simultaneidade não for relevante, porque cada mensagem é processada por uma nova instância de serviço. Na <xref:System.ServiceModel.InstanceContextMode.Single> instanciamento, tanto <xref:System.ServiceModel.ConcurrencyMode.Single> ou <xref:System.ServiceModel.ConcurrencyMode.Multiple> simultaneidade é relevante, dependendo se a instância única processa mensagens consecutivamente ou simultaneamente. Em <xref:System.ServiceModel.InstanceContextMode.PerSession> de instanciação, qualquer um dos modos de simultaneidade podem ser relevantes.  
   

@@ -1,15 +1,15 @@
 ---
-title: 'Como: Criar uma associação de sessão confiável personalizada com HTTPS'
+title: 'Como: criar uma associação de sessão confiável personalizada com HTTPS'
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
 ms.openlocfilehash: f39325829cf4b548482a6a570a5aa1fd65e61a1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039527"
 ---
-# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Como: Criar uma associação de sessão confiável personalizada com HTTPS
+# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Como: criar uma associação de sessão confiável personalizada com HTTPS
 
 Este tópico demonstra o uso da segurança de transporte de Secure Sockets Layer (SSL) com sessões confiáveis. Para usar uma sessão confiável por HTTPS, você deve criar uma associação personalizada que usa uma sessão confiável e o transporte HTTPS. Você habilitar a sessão confiável imperativamente por meio de código ou declarativamente no arquivo de configuração. Este procedimento usa os arquivos de configuração do cliente e o serviço para habilitar a sessão confiável e o [  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) elemento.
 

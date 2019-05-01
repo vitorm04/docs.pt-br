@@ -5,18 +5,18 @@ helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
 ms.openlocfilehash: 2677c57c825675c884d057827e065f05d7c8bf30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039137"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Como: instalar e configurar componentes de ativação do WCF
 Este tópico descreve as etapas necessárias para configurar o serviço de ativação de processos do Windows (também conhecido como WAS) em [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar o Windows Communication Foundation (WCF) protocolos de rede de serviços que não se comunicam por HTTP. As seções a seguir descrevem as etapas para essa configuração:  
   
--   Instalar (ou confirmar a instalação do) os componentes de ativação do WCF.  
+- Instalar (ou confirmar a instalação do) os componentes de ativação do WCF.  
   
--   Configure o WAS para dar suporte a um protocolo não HTTP. O procedimento a seguir configura [!INCLUDE[wv](../../../../includes/wv-md.md)] para ativação de TCP.  
+- Configure o WAS para dar suporte a um protocolo não HTTP. O procedimento a seguir configura [!INCLUDE[wv](../../../../includes/wv-md.md)] para ativação de TCP.  
   
  Depois de instalar e configurar o WAS, consulte [como: Hospedar um serviço WCF no WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) para os procedimentos para criar um serviço WCF que expõe um ponto de extremidade HTTP não emprega o WAS.  
   
@@ -57,7 +57,7 @@ Este tópico descreve as etapas necessárias para configurar o serviço de ativa
   
      Como uma conveniência, as duas etapas a seguir são implementadas em um arquivo em lotes chamado RemoveNetTcpSiteBinding.cmd localizado no diretório de exemplo.  
   
-    1.  Remova o NET. TCP da lista de protocolos habilitados, executando o seguinte comando em uma janela de Prompt de comando com nível de administrador.  
+    1. Remova o NET. TCP da lista de protocolos habilitados, executando o seguinte comando em uma janela de Prompt de comando com nível de administrador.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -67,7 +67,7 @@ Este tópico descreve as etapas necessárias para configurar o serviço de ativa
         > [!NOTE]
         >  Esse comando é uma única linha de texto.  
   
-    2.  Remova a associação do site NET. TCP, executando o seguinte comando em uma janela elevada de Prompt de comando:  
+    2. Remova a associação do site NET. TCP, executando o seguinte comando em uma janela elevada de Prompt de comando:  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

@@ -3,11 +3,11 @@ title: Olá Mundo com o serviço de roteamento
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
 ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006597"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Olá Mundo com o serviço de roteamento
 Este exemplo demonstra o serviço de roteamento do Windows Communication Foundation (WCF). O serviço de roteamento é um componente do WCF que torna mais fácil incluir um roteador baseado em conteúdo em seu aplicativo. Este exemplo se adapta a amostragem de calculadora padrão do WCF para se comunicar usando o serviço de roteamento. Neste exemplo, o cliente de calculadora é configurado para enviar mensagens para um ponto de extremidade exposto pelo roteador. O serviço de roteamento está configurado para aceitar todas as mensagens enviadas a ele e encaminhá-las a um ponto de extremidade que corresponde ao serviço de calculadora. Portanto, as mensagens enviadas do cliente são recebidas pelo roteador e roteadas para o serviço da Calculadora real. Mensagens do serviço de calculadora são enviadas de volta para o roteador, que por sua vez passa de volta para o cliente de calculadora.
@@ -21,9 +21,9 @@ Este exemplo demonstra o serviço de roteamento do Windows Communication Foundat
     > [!NOTE]
     >  Se você pressionar F5, o cliente de calculadora é iniciado automaticamente. Se você pressionar CTRL + SHIFT + B (build), você deve iniciar as seguir aplicativos por conta própria.
     >
-    > 1.  Cliente de Calculadora (./CalculatorClient/bin/client.exe
-    > 2.  Serviço da Calculadora (. / CalculatorService/bin/service.exe)
-    > 3.  Serviço de roteamento (. / RoutingService/bin/RoutingService.exe)
+    > 1. Cliente de Calculadora (./CalculatorClient/bin/client.exe
+    > 2. Serviço da Calculadora (. / CalculatorService/bin/service.exe)
+    > 3. Serviço de roteamento (. / RoutingService/bin/RoutingService.exe)
 
 3. Pressione ENTER para iniciar o cliente.
 

@@ -3,11 +3,11 @@ title: Práticas recomendadas de persistência
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
 ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005622"
 ---
 # <a name="persistence-best-practices"></a>Práticas recomendadas de persistência
 Este documento aborda as práticas recomendadas para o design e a configuração de fluxo de trabalho relacionados à persistência de fluxo de trabalho.  
@@ -26,34 +26,34 @@ Este documento aborda as práticas recomendadas para o design e a configuração
 ## <a name="configuration-of-scalability-parameters"></a>Configuração de parâmetros de escalabilidade  
  Os requisitos de escalabilidade e desempenho determinam as configurações dos seguintes parâmetros:  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
+- <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
   
  Esses parâmetros devem ser definidos como segue, de acordo com o cenário atual.  
   
 ### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Cenário: Um pequeno número de instâncias de fluxo de trabalho que exigem o tempo de resposta ótimo  
  Nesse cenário, todas as instâncias de fluxo de trabalho devem permanecer carregadas quando se tornam ociosos. Definir <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> para um valor grande. O uso dessa configuração impede que uma instância de fluxo de trabalho se mover entre computadores. Use essa configuração somente se um ou mais dos seguintes condições forem verdadeiras:  
   
--   Uma instância de fluxo de trabalho recebe uma única mensagem em seu tempo de vida.  
+- Uma instância de fluxo de trabalho recebe uma única mensagem em seu tempo de vida.  
   
--   Todas as instâncias de fluxo de trabalho executadas em um único computador  
+- Todas as instâncias de fluxo de trabalho executadas em um único computador  
   
--   Todas as mensagens que são recebidas por uma instância de fluxo de trabalho são recebidas pelo mesmo computador.  
+- Todas as mensagens que são recebidas por uma instância de fluxo de trabalho são recebidas pelo mesmo computador.  
   
  Use atividades de <xref:System.Activities.Statements.Persist> ou <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> definido como 0 para ativar a recuperação de sua instância de fluxo de trabalho depois que falhas de host ou do computador de serviço.  
   
-### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Cenário: As instâncias de fluxo de trabalho são ociosos por longos períodos de tempo  
+### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Cenário: Instâncias de fluxo de trabalho são ociosos por longos períodos de tempo  
  Nesse cenário, defina <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> a 0 para liberar o mais rápido possível recursos.  
   
-### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Cenário: As instâncias de fluxo de trabalho vários recebem mensagens em um curto período de tempo  
+### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Cenário: Instâncias de fluxo de trabalho vários recebem mensagens em um curto período de tempo  
  Nesse cenário, defina <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> como 60 segundos se essas mensagens são recebidas pelo mesmo computador. Isso evita uma sequência rápida de unload e carregar de uma instância de fluxo de trabalho. Isso também não mantém a instância na memória durante o suficiente tiempo.  
   
  Definir <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> a 0, e o conjunto <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> a BasicRetry ou a AggressiveRetry se essas mensagens podem ser recebidas por diferentes computadores. Isso permite que a instância de fluxo de trabalho é carregada por outro computador.  
   
-### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Cenário: Atividades de atraso dos usos de fluxo de trabalho com durações curtas  
+### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Cenário: Fluxo de trabalho usa atividades de atraso com durações curtas  
  Nesse cenário, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> sonda regularmente o base de dados de persistência para as instâncias que devem ser carregadas devido a uma atividade expirada de <xref:System.Activities.Statements.Delay> . Se <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> encontrar um timer que expirou no intervalo de pesquisa seguir, a instância Store de fluxo de trabalho do SQL diminuirá o intervalo de pesquisa. A votação seguir ocorrerá em right após o timer expirou. Essa maneira, a instância Store de fluxo de trabalho do SQL obtém uma alta precisão de temporizadores que executam mais tempo do intervalo de pesquisa, que é definido por <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A>. Para ativar o processamento hábil de um atrasos mais curtas, a instância de fluxo de trabalho deve permanecer na memória pelo menos um intervalo de pesquisa.  
   
  Definir <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> a 0 para escrever o tempo de expiração a base de dados de persistência.  

@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026413"
 ---
 # <a name="extension-methods"></a>Métodos de extensão
 Métodos de extensão são um recurso de linguagem que permite que os métodos estáticos a ser chamado usando a sintaxe de chamada de método de instância. Esses métodos devem ter pelo menos um parâmetro, que representa a instância que o método é no qual operar.  
@@ -22,9 +22,9 @@ Métodos de extensão são um recurso de linguagem que permite que os métodos e
   
  **✓ CONSIDER** usando métodos de extensão em qualquer um dos seguintes cenários:  
   
--   Para fornecer auxiliar funcionalidade relevante para cada implementação de uma interface, disse que a funcionalidade pode ser escrita em termos de interface principal. Isso ocorre porque as implementações concretas, caso contrário, não podem ser atribuídas às interfaces. Por exemplo, o `LINQ to Objects` operadores são implementados como métodos de extensão para todos os <xref:System.Collections.Generic.IEnumerable%601> tipos. Portanto, qualquer `IEnumerable<>` implementação é automaticamente habilitado para LINQ.  
+- Para fornecer auxiliar funcionalidade relevante para cada implementação de uma interface, disse que a funcionalidade pode ser escrita em termos de interface principal. Isso ocorre porque as implementações concretas, caso contrário, não podem ser atribuídas às interfaces. Por exemplo, o `LINQ to Objects` operadores são implementados como métodos de extensão para todos os <xref:System.Collections.Generic.IEnumerable%601> tipos. Portanto, qualquer `IEnumerable<>` implementação é automaticamente habilitado para LINQ.  
   
--   Quando um método de instância introduziria uma dependência em algum tipo, mas tal dependência interrompe as regras de gerenciamento de dependência. Por exemplo, uma dependência de <xref:System.String> à <xref:System.Uri?displayProperty=nameWithType> provavelmente não é desejável e, portanto `String.ToUri()` retornando do método de instância `System.Uri` seria um design incorreto de uma perspectiva de gerenciamento de dependência. Um método de extensão estático `Uri.ToUri(this string str)` retornando `System.Uri` seria um design muito melhor.  
+- Quando um método de instância introduziria uma dependência em algum tipo, mas tal dependência interrompe as regras de gerenciamento de dependência. Por exemplo, uma dependência de <xref:System.String> à <xref:System.Uri?displayProperty=nameWithType> provavelmente não é desejável e, portanto `String.ToUri()` retornando do método de instância `System.Uri` seria um design incorreto de uma perspectiva de gerenciamento de dependência. Um método de extensão estático `Uri.ToUri(this string str)` retornando `System.Uri` seria um design muito melhor.  
   
  **X AVOID** definir métodos de extensão em <xref:System.Object?displayProperty=nameWithType>.  
   

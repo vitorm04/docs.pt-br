@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010534"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedência do valor de propriedade da dependência
 <a name="introduction"></a> Este tópico explica como o funcionamento do sistema de propriedades do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode afetar o valor de uma propriedade de dependência e descreve a precedência pela qual os aspectos do sistema de propriedades são aplicados ao valor efetivo de uma propriedade.  
@@ -47,9 +47,9 @@ ms.locfileid: "59315680"
   
 4. **Propriedades de modelo TemplatedParent.** Um elemento tem um <xref:System.Windows.FrameworkElement.TemplatedParent%2A> se ele foi criado como parte de um modelo (um <xref:System.Windows.Controls.ControlTemplate> ou <xref:System.Windows.DataTemplate>). Para obter detalhes sobre quando isso se aplica, consulte [TemplatedParent](#templatedparent) mais adiante neste tópico. No modelo, a seguinte precedência se aplica:  
   
-    1.  Dispara a partir de <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modelo.  
+    1. Dispara a partir de <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modelo.  
   
-    2.  Conjuntos de propriedades (normalmente por meio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atributos) na <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modelo.  
+    2. Conjuntos de propriedades (normalmente por meio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atributos) na <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modelo.  
   
 5. **Estilo implícito.** Aplicável somente à propriedade `Style`. A propriedade `Style` é preenchida por qualquer recurso de estilo com uma chave que corresponde ao tipo desse elemento. Esse recurso de estilo deve existir na página ou no aplicativo; a pesquisa de um recurso de estilo implícito não continua nos temas.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "59315680"
   
 9. **Estilo (tema) padrão.** Para obter detalhes sobre quando isso se aplica e como os estilos de tema se relacionam com os modelos nos estilos de tema, consulte [Estilos (tema) padrão](#themestyles) mais adiante neste tópico. Em um estilo padrão, a seguinte ordem de precedência se aplica:  
   
-    1.  Gatilhos ativos no estilo de tema.  
+    1. Gatilhos ativos no estilo de tema.  
   
-    2.  Setters no estilo de tema.  
+    2. Setters no estilo de tema.  
   
 10. **Herança.** Algumas propriedades de dependência herdam seus valores do elemento pai para os elementos filho, de modo que elas não precisam ser definidas especificamente em cada elemento em todo o aplicativo. Para obter detalhes, consulte [Herança do valor da propriedade](property-value-inheritance.md).  
   
@@ -77,11 +77,11 @@ ms.locfileid: "59315680"
 ## <a name="the-style-property"></a>A propriedade de estilo  
  A ordem de pesquisa descrita anteriormente se aplica a todas as possíveis propriedades de dependência, exceto um: o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. O <xref:System.Windows.FrameworkElement.Style%2A> propriedade é o única que não pode ser ele próprio estilizado, portanto, não se aplicam os itens de precedência de 5 a 8. Além disso, animação ou coerção <xref:System.Windows.FrameworkElement.Style%2A> não é recomendável (e animação <xref:System.Windows.FrameworkElement.Style%2A> exigiria uma classe de animação personalizada). Isso deixa três maneiras que o <xref:System.Windows.FrameworkElement.Style%2A> propriedade pode ser definida:  
   
--   **Estilo explícito.** O <xref:System.Windows.FrameworkElement.Style%2A> propriedade é definida diretamente. Na maioria dos cenários, o estilo não é definido embutido, mas referenciado como um recurso, por chave explícita. Nesse caso, a própria propriedade Estilo atua como se fosse um valor local, conforme o item de precedência 3.  
+- **Estilo explícito.** O <xref:System.Windows.FrameworkElement.Style%2A> propriedade é definida diretamente. Na maioria dos cenários, o estilo não é definido embutido, mas referenciado como um recurso, por chave explícita. Nesse caso, a própria propriedade Estilo atua como se fosse um valor local, conforme o item de precedência 3.  
   
--   **Estilo implícito.** O <xref:System.Windows.FrameworkElement.Style%2A> propriedade não é definida diretamente. No entanto, o <xref:System.Windows.FrameworkElement.Style%2A> existe em algum nível na sequência de pesquisa de recurso (página, aplicativo) e é inserido com uma chave de recurso que corresponde ao tipo que o estilo deve ser aplicada ao. Nesse caso, o <xref:System.Windows.FrameworkElement.Style%2A> própria propriedade funciona por uma precedência identificada na sequência como o item 5. Essa condição pode ser detectada usando <xref:System.Windows.DependencyPropertyHelper> em relação a <xref:System.Windows.FrameworkElement.Style%2A> propriedade e procurando <xref:System.Windows.BaseValueSource.ImplicitStyleReference> nos resultados.  
+- **Estilo implícito.** O <xref:System.Windows.FrameworkElement.Style%2A> propriedade não é definida diretamente. No entanto, o <xref:System.Windows.FrameworkElement.Style%2A> existe em algum nível na sequência de pesquisa de recurso (página, aplicativo) e é inserido com uma chave de recurso que corresponde ao tipo que o estilo deve ser aplicada ao. Nesse caso, o <xref:System.Windows.FrameworkElement.Style%2A> própria propriedade funciona por uma precedência identificada na sequência como o item 5. Essa condição pode ser detectada usando <xref:System.Windows.DependencyPropertyHelper> em relação a <xref:System.Windows.FrameworkElement.Style%2A> propriedade e procurando <xref:System.Windows.BaseValueSource.ImplicitStyleReference> nos resultados.  
   
--   **Estilo padrão**, também conhecido como **estilo de tema.** O <xref:System.Windows.FrameworkElement.Style%2A> propriedade não é definida diretamente e, na verdade, será lida como `null` até o tempo de execução. Nesse caso, o estilo é obtido da avaliação de tema em tempo de execução que faz parte do mecanismo de apresentação do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- **Estilo padrão**, também conhecido como **estilo de tema.** O <xref:System.Windows.FrameworkElement.Style%2A> propriedade não é definida diretamente e, na verdade, será lida como `null` até o tempo de execução. Nesse caso, o estilo é obtido da avaliação de tema em tempo de execução que faz parte do mecanismo de apresentação do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Para estilos implícitos que não estão em temas, o tipo deve corresponder exatamente - uma `MyButton` `Button`-classe derivada não usará implicitamente um estilo para `Button`.  
   

@@ -10,30 +10,30 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051020"
 ---
 # <a name="panels-overview"></a>Visão geral de painéis
 <xref:System.Windows.Controls.Panel> elementos são componentes que controlam a renderização de elementos – seu tamanho e as dimensões, sua posição e a disposição de seu conteúdo filho. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece uma série de predefinido <xref:System.Windows.Controls.Panel> elementos, bem como a capacidade de construir personalizado <xref:System.Windows.Controls.Panel> elementos.  
   
  Este tópico contém as seções a seguir.  
   
--   [A classe do painel](#Panels_view_from_10000_feet)  
+- [A classe do painel](#Panels_view_from_10000_feet)  
   
--   [Membros comuns do elemento de painel](#Panels_declared_members)  
+- [Membros comuns do elemento de painel](#Panels_declared_members)  
   
--   [Elementos de painel derivados](#Panels_derived_elements)  
+- [Elementos de painel derivados](#Panels_derived_elements)  
   
--   [Painéis de interface do usuário](#Panels_main_UI_elements)  
+- [Painéis de interface do usuário](#Panels_main_UI_elements)  
   
--   [Elementos de painel aninhados](#Panels_nested_panel_elements)  
+- [Elementos de painel aninhados](#Panels_nested_panel_elements)  
   
--   [Elementos de painel personalizados](#Panels_custom_panel_elements)  
+- [Elementos de painel personalizados](#Panels_custom_panel_elements)  
   
--   [Suporte à localização/globalização](#Panels_global_localization)  
+- [Suporte à localização/globalização](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>A classe do painel  

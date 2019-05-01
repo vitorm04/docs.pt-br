@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
 ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039722"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Diferenças de recursos em fila no Windows Vista, Windows Server 2003, e no Windows XP
 Este tópico resume as diferenças entre o recurso de filas do Windows Communication Foundation (WCF) entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -26,11 +26,11 @@ Este tópico resume as diferenças entre o recurso de filas do Windows Communica
   
  As principais diferenças entre o enfileiramento de mensagens (MSMQ) em [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] que são relevantes para a manipulação de suspeita incluem o seguinte:  
   
--   MSMQ no [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a subfilas, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não dão suporte a subfilas. Subfilas são usadas na manipulação de mensagens suspeitas. As filas de repetição e a fila de mensagens suspeitas são as subfilas para a fila do aplicativo é criado com base nas configurações de manipulação de mensagens suspeitas. O `MaxRetryCycles` determina quantos repetir as subfilas para criar. Portanto, quando em execução no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` são ignorados e `ReceiveErrorHandling.Move` não é permitido.  
+- MSMQ no [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a subfilas, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não dão suporte a subfilas. Subfilas são usadas na manipulação de mensagens suspeitas. As filas de repetição e a fila de mensagens suspeitas são as subfilas para a fila do aplicativo é criado com base nas configurações de manipulação de mensagens suspeitas. O `MaxRetryCycles` determina quantos repetir as subfilas para criar. Portanto, quando em execução no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` são ignorados e `ReceiveErrorHandling.Move` não é permitido.  
   
--   MSMQ no [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a negativo confirmação, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não fizer isso. Uma confirmação negativa de Gerenciador de fila de recebimento faz com que o Gerenciador de fila de envio colocar a mensagem rejeitada na fila de inatividade. Como tal, `ReceiveErrorHandling.Reject` não é permitido com [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- MSMQ no [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a negativo confirmação, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não fizer isso. Uma confirmação negativa de Gerenciador de fila de recebimento faz com que o Gerenciador de fila de envio colocar a mensagem rejeitada na fila de inatividade. Como tal, `ReceiveErrorHandling.Reject` não é permitido com [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   O MSMQ em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a uma propriedade de mensagem que mantém uma contagem do número de tempos de entrega de mensagens é tentada. Essa propriedade de contagem de anulação não está disponível no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não pode conter um valor preciso quando a mesma mensagem é lida por mais de um serviço WCF em uma Web farm.  
+- O MSMQ em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a uma propriedade de mensagem que mantém uma contagem do número de tempos de entrega de mensagens é tentada. Essa propriedade de contagem de anulação não está disponível no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não pode conter um valor preciso quando a mesma mensagem é lida por mais de um serviço WCF em uma Web farm.  
   
 ## <a name="remote-transactional-read"></a>Leitura transacional remota  
  MSMQ em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a leituras transacionais remotas. Isso permite que um aplicativo que está lendo de uma fila para ser hospedado em um computador diferente do computador no qual a fila está hospedada. Isso garante a capacidade de ter um farm de serviços de leitura de uma fila central, o que aumenta a produtividade geral do sistema. Ela também garante que, se ocorrer uma falha ao ler e processar a mensagem, a transação será revertida e a mensagem permanecerá na fila para processamento posterior.  

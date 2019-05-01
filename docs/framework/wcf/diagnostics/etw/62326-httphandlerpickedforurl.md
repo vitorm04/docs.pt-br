@@ -3,11 +3,11 @@ title: 62326 - HttpHandlerPickedForUrl
 ms.date: 03/30/2017
 ms.assetid: edb9fb88-dfb0-486c-971d-26735d80dc0d
 ms.openlocfilehash: a40835d0a9b33301a89bb804dee5326a4e8cfd02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33468791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999468"
 ---
 # <a name="62326---httphandlerpickedforurl"></a>62326 - HttpHandlerPickedForUrl
 ## <a name="properties"></a>Propriedades  
@@ -20,9 +20,9 @@ ms.locfileid: "33468791"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando o manipulador HTTP está selecionado para atender a todas as solicitações feitas a esse URL.  
+ Esse evento é emitido quando o manipulador HTTP é escolhido para atender a todas as solicitações feitas para essa URL.  
   
 ## <a name="message"></a>Mensagem  
- O url '%1' hospeda o documento XAML com o elemento raiz de tipo '%2'. O tipo de manipulador HTTP '%3' está selecionado para atender a todas as solicitações feitas a esse url.  
+ O documento XAML de hosts de url '%1' com o elemento raiz de tipo '%2'. O tipo de manipulador HTTP '%3' é escolhido para atender a todas as solicitações feitas para essa url.  
   
 ## <a name="details"></a>Detalhes

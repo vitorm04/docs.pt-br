@@ -3,11 +3,11 @@ title: Usando Windows Management Instrumentation para diagnóstico
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048273"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
 Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço em tempo de execução através de um provedor de instrumentação de gerenciamento do Windows (WMI) do WCF.  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço
   
      Este script do PowerShell usa SDDL Security Descriptor Definition Language () para conceder o acesso de grupo interno usuários para o namespace do WMI "raiz/servicemodel". Especifica as seguintes ACLs:  
   
-    -   Administrador interno (BA) - já tinham acesso.  
+    - Administrador interno (BA) - já tinham acesso.  
   
-    -   (NS) - serviço de rede já tinha acesso.  
+    - (NS) - serviço de rede já tinha acesso.  
   
-    -   Sistema local (LS) - já tinham acesso.  
+    - Sistema local (LS) - já tinham acesso.  
   
-    -   Usuários internos - o grupo para conceder acesso a.  
+    - Usuários internos - o grupo para conceder acesso a.  
   
 #### <a name="to-grant-provider-registration-access"></a>Para conceder o provedor de registro de acesso  
   

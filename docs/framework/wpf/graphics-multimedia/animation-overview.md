@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054322"
 ---
 # <a name="animation-overview"></a>Visão geral da animação
 <a name="introduction"></a>
@@ -27,13 +27,13 @@ ms.locfileid: "59337728"
   
  A animação em um computador é semelhante. Por exemplo, um programa que cria um desenho de um retângulo que desaparece pode funcionar conforme descrito a seguir.  
   
--   O programa cria um temporizador.  
+- O programa cria um temporizador.  
   
--   O programa verifica o temporizador em intervalos definidos para ver quanto tempo transcorreu.  
+- O programa verifica o temporizador em intervalos definidos para ver quanto tempo transcorreu.  
   
--   Cada vez que o programa verifica o temporizador, ele calcula o valor de opacidade atual para o retângulo com base em quanto tempo transcorreu.  
+- Cada vez que o programa verifica o temporizador, ele calcula o valor de opacidade atual para o retângulo com base em quanto tempo transcorreu.  
   
--   O programa então atualiza o retângulo com o novo valor e o redesenha.  
+- O programa então atualiza o retângulo com o novo valor e o redesenha.  
   
  Anteriores ao [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] os desenvolvedores tinham de criar e gerenciar seus próprios sistemas de temporização ou usar bibliotecas personalizadas especiais. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui um sistema eficiente de temporização que é exposto por meio de código gerenciado e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e que está profundamente integrado ao [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. A animação do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] facilita a animação de controles e outros objetos gráficos.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59337728"
   
  Para uma propriedade ter capacidade de animação, ela deve atender aos três requisitos a seguir:  
   
--   Ela deve ser uma propriedade de dependência.  
+- Ela deve ser uma propriedade de dependência.  
   
--   Ele deverá pertencer a uma classe que herda de <xref:System.Windows.DependencyObject> e implementa o <xref:System.Windows.Media.Animation.IAnimatable> interface.  
+- Ele deverá pertencer a uma classe que herda de <xref:System.Windows.DependencyObject> e implementa o <xref:System.Windows.Media.Animation.IAnimatable> interface.  
   
--   Deve haver um tipo de animação compatível disponível. (Se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não fornecer um, você pode criar seus próprios. Consulte a [visão geral de animações personalizadas](custom-animations-overview.md).)  
+- Deve haver um tipo de animação compatível disponível. (Se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não fornecer um, você pode criar seus próprios. Consulte a [visão geral de animações personalizadas](custom-animations-overview.md).)  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contém muitos objetos que têm <xref:System.Windows.Media.Animation.IAnimatable> propriedades. Controles como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TabControl>e também <xref:System.Windows.Controls.Panel> e <xref:System.Windows.Shapes.Shape> objetos herdam <xref:System.Windows.DependencyObject>. A maioria de suas propriedades são propriedades de dependência.  
   
@@ -183,27 +183,27 @@ ms.locfileid: "59337728"
 ## <a name="animation-types"></a>Tipos de animação  
  Já que as animações geram valores de propriedade, existem diferentes tipos de animação para diferentes tipos de propriedades. Para animar uma propriedade que utiliza um <xref:System.Double>, como o <xref:System.Windows.FrameworkElement.Width%2A> propriedade de um elemento, use uma animação que produz <xref:System.Double> valores. Para animar uma propriedade que utiliza um <xref:System.Windows.Point>, use uma animação que produz <xref:System.Windows.Point> valores e assim por diante. Por causa do número de diferentes tipos de propriedades, há várias classes de animação no <xref:System.Windows.Media.Animation> namespace. Felizmente, elas seguem uma convenção de nomenclatura estrita que facilita a diferenciação entre elas:  
   
--   \<*Tipo*> animação  
+- \<*Tipo*> animação  
   
      Conhecida como "de/para/por" ou animação "básica", ela anima entre um valor inicial e outro de destino, ou então pela adição de um valor de deslocamento ao seu valor inicial.  
   
-    -   Para especificar um valor inicial, defina a propriedade De da animação.  
+    - Para especificar um valor inicial, defina a propriedade De da animação.  
   
-    -   Para especificar um valor final, defina a propriedade Para da animação.  
+    - Para especificar um valor final, defina a propriedade Para da animação.  
   
-    -   Para especificar um valor de deslocamento, defina a propriedade Por da animação.  
+    - Para especificar um valor de deslocamento, defina a propriedade Por da animação.  
   
      Os exemplos nesta visão geral usam essas animações porque elas são mais simples de usar. Animações de/para/por são descritas detalhadamente na visão geral de animações de From/To/By.  
   
--   \<*Type*>AnimationUsingKeyFrames  
+- \<*Type*>AnimationUsingKeyFrames  
   
      Animações de quadro chave são mais avançadas que animações de/para/por porque você pode especificar qualquer número de valores de destino e até mesmo controlar seu método de interpolação. Alguns tipos só podem ser animados com animações de quadro chave. Animações de quadro-chave são descritas detalhadamente os [visão geral de animações de quadro-chave](key-frame-animations-overview.md).  
   
--   \<*Type*>AnimationUsingPath  
+- \<*Type*>AnimationUsingPath  
   
      Animações de caminho permitem que você use um caminho geométrico para produzir valores animados.  
   
--   \<*Type*>AnimationBase  
+- \<*Type*>AnimationBase  
   
      Classe abstrata que, quando você implementa, anima uma \< *tipo*> valor. Esta classe serve como a classe base para \< *tipo*> animação e \< *tipo*> AnimationUsingKeyFrames de classes. Você só precisará lidar diretamente com essas classes se quiser criar suas próprias animações personalizadas. Caso contrário, use uma \< *tipo*> Animation ou KeyFrame\<*tipo*> animação.  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59337728"
   
  Atribuir um nome a um <xref:System.Windows.FrameworkElement> é diferente de atribuir um nome para um <xref:System.Windows.Freezable> objeto. A maioria dos controles e painéis são elementos framework; no entanto, a maioria dos objetos puramente gráficos como pincéis, transformações e geometrias são objetos congeláveis. Se você não tiver certeza se um tipo é um <xref:System.Windows.FrameworkElement> ou um <xref:System.Windows.Freezable>, consulte o **hierarquia de herança** seção da sua documentação de referência.  
   
--   Para fazer uma <xref:System.Windows.FrameworkElement> um destino de animação, você dê um nome, definindo seu <xref:System.Windows.FrameworkElement.Name%2A> propriedade. No código, você também deve usar o <xref:System.Windows.FrameworkElement.RegisterName%2A> método para registrar o nome do elemento com a página à qual ele pertence.  
+- Para fazer uma <xref:System.Windows.FrameworkElement> um destino de animação, você dê um nome, definindo seu <xref:System.Windows.FrameworkElement.Name%2A> propriedade. No código, você também deve usar o <xref:System.Windows.FrameworkElement.RegisterName%2A> método para registrar o nome do elemento com a página à qual ele pertence.  
   
--   Para fazer uma <xref:System.Windows.Freezable> objeto um destino de animação no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], você usa o [X:Name Directive](../../xaml-services/x-name-directive.md) para atribuir um nome. No código, que você acabou de usar o <xref:System.Windows.FrameworkElement.RegisterName%2A> método para registrar o objeto com a página à qual ele pertence.  
+- Para fazer uma <xref:System.Windows.Freezable> objeto um destino de animação no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], você usa o [X:Name Directive](../../xaml-services/x-name-directive.md) para atribuir um nome. No código, que você acabou de usar o <xref:System.Windows.FrameworkElement.RegisterName%2A> método para registrar o objeto com a página à qual ele pertence.  
   
  As seções a seguir fornecem um exemplo de nomeação de um elemento em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e código. Para obter informações mais detalhadas sobre nomeação e direcionamento, consulte o [visão geral de Storyboards](storyboards-overview.md).  
   
@@ -318,11 +318,11 @@ ms.locfileid: "59337728"
 ## <a name="animation-samples"></a>Amostras de animação  
  As amostras a seguir podem ajudá-lo a começar a adicionar animações a seus aplicativos.  
   
--   [Amostra de valores de destino de animação De, Para e Por](https://go.microsoft.com/fwlink/?LinkID=159988)  
+- [Amostra de valores de destino de animação De, Para e Por](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      Demonstra diferentes configurações De/Para/Por.  
   
--   [Amostra de comportamento de tempo da animação](https://go.microsoft.com/fwlink/?LinkID=159970)  
+- [Amostra de comportamento de tempo da animação](https://go.microsoft.com/fwlink/?LinkID=159970)  
   
      Demonstra as diferentes maneiras em que você pode controlar o comportamento de temporização de uma animação. Essa amostra também demonstra como associar o valor de destino de uma animação a dados.  
   

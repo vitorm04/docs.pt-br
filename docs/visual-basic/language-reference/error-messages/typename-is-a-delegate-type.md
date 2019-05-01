@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
 ms.openlocfilehash: c308805f5e73d740ff18a40d95b9cc2576ac95fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013589"
 ---
 # <a name="typename-is-a-delegate-type"></a>'\<typename >' é um tipo delegado
 '\<typename >' é um tipo delegado. A construção Delegate permite apenas uma única expressão AddressOf como uma lista de argumentos. Geralmente, uma expressão de AddressOf pode ser usada em vez de uma construção de delegado.  
@@ -27,7 +27,7 @@ ms.locfileid: "58841232"
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Usar uma única `AddressOf` expressão na lista de argumentos para a classe de delegado no `New` cláusula.  
+- Usar uma única `AddressOf` expressão na lista de argumentos para a classe de delegado no `New` cláusula.  
   
 ## <a name="see-also"></a>Consulte também
 

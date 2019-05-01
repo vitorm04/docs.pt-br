@@ -3,22 +3,22 @@ title: Informações gerais
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
 ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033781"
 ---
 # <a name="background-information"></a>Informações gerais
 Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que estendem além dos fundamentos sobre o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  Siga estas etapas para localizar exemplos adicionais de código e aplicativos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
--   Pesquisa de Microsoft Docs para problemas específicos.  
+- Pesquisa de Microsoft Docs para problemas específicos.  
   
--   Participar de [Fórum do LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), onde você pode discutir tópicos mais complexos detalhadamente com especialistas.  
+- Participar de [Fórum do LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), onde você pode discutir tópicos mais complexos detalhadamente com especialistas.  
   
--   Estude o white paper que detalha [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, com exemplos de código em Visual Basic e C#. Para obter mais informações, consulte [LINQ to SQL: consulta integrada para dados relacionais](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Estude o white paper que detalha [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, com exemplos de código em Visual Basic e C#. Para obter mais informações, consulte [LINQ to SQL: consulta integrada para dados relacionais](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [ADO.NET e LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  

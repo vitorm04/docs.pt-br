@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049330"
 ---
 # <a name="loadtypelibwithresolver-function"></a>Função LoadTypeLibWithResolver
 Carrega uma biblioteca de tipos e usa fornecido [interface ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) para resolver quaisquer bibliotecas de tipos referenciados internamente.  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in] Um [enumeração REGKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) sinalizador que controla como a biblioteca de tipos é registrada. Seus valores possíveis são:  
   
--   `REGKIND_DEFAULT`: Use o comportamento de registro padrão.  
+- `REGKIND_DEFAULT`: Use o comportamento de registro padrão.  
   
--   `REGKIND_REGISTER`: Registre a biblioteca de tipos.  
+- `REGKIND_REGISTER`: Registre a biblioteca de tipos.  
   
--   `REGKIND_NONE`: Não registre esta biblioteca de tipos.  
+- `REGKIND_NONE`: Não registre esta biblioteca de tipos.  
   
  `pTlbResolver`  
  [in] Um ponteiro para a implementação de [interface ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  

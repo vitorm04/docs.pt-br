@@ -3,34 +3,34 @@ title: Serviço de roteamento
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991031"
 ---
 # <a name="routing-service"></a>Serviço de roteamento
 O serviço de roteamento é um intermediário SOAP genérico que atua como um roteador de mensagem. A principal funcionalidade do serviço de roteamento é a capacidade para rotear mensagens com base no conteúdo da mensagem, que permite que uma mensagem a ser encaminhada para um ponto de extremidade do cliente com base em um valor dentro da mensagem em si, no cabeçalho ou no corpo da mensagem.  
   
  O <xref:System.ServiceModel.Routing.RoutingService> é implementado como um serviço do Windows Communication Foundation (WCF) na <xref:System.ServiceModel.Routing> namespace. O serviço de roteamento expõe um ou mais pontos de extremidade que recebem mensagens e, em seguida, roteia cada mensagem para um ou mais pontos de extremidade de cliente com base no conteúdo da mensagem. O serviço oferece os seguintes recursos:  
   
--   Roteamento baseado em conteúdo  
+- Roteamento baseado em conteúdo  
   
-    -   Agregação de serviço  
+    - Agregação de serviço  
   
-    -   Controle de versão do serviço  
+    - Controle de versão do serviço  
   
-    -   Roteamento de prioridade  
+    - Roteamento de prioridade  
   
-    -   Configuração dinâmica  
+    - Configuração dinâmica  
   
--   Ponte de protocolo  
+- Ponte de protocolo  
   
--   Processamento SOAP  
+- Processamento SOAP  
   
--   Tratamento avançado de erros  
+- Tratamento avançado de erros  
   
--   Pontos de extremidade de backup  
+- Pontos de extremidade de backup  
   
  Embora seja possível criar um serviço intermediário que realiza um ou mais dessas metas, muitas vezes tal implementação está vinculada a um cenário específico ou uma solução e não pode ser prontamente aplicada a novos aplicativos.  
   
@@ -48,13 +48,13 @@ O serviço de roteamento é um intermediário SOAP genérico que atua como um ro
   
  O agrupamento de filtros de mensagem em tabelas de filtro, por meio de lógica de roteamento pode ser construída que permite que você manipule vários cenários de roteamento, como:  
   
--   Agregação de serviço  
+- Agregação de serviço  
   
--   Controle de versão do serviço  
+- Controle de versão do serviço  
   
--   Roteamento de prioridade  
+- Roteamento de prioridade  
   
--   Configuração dinâmica  
+- Configuração dinâmica  
   
  Para obter mais informações sobre tabelas de filtro e filtros de mensagem, consulte [roteamento de Introdução](../../../../docs/framework/wcf/feature-details/routing-introduction.md) e [filtros de mensagem](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
@@ -97,13 +97,13 @@ O serviço de roteamento é um intermediário SOAP genérico que atua como um ro
 ## <a name="streaming"></a>Streaming  
  O serviço de roteamento com êxito pode transmitir mensagens, se você definir a associação para dar suporte a streaming.  No entanto, há algumas condições sob as quais as mensagens talvez precise em buffer:  
   
--   Multicast (buffer para criar cópias adicionais da mensagem)  
+- Multicast (buffer para criar cópias adicionais da mensagem)  
   
--   Failover (buffer caso que a mensagem precisa ser enviada para um backup)  
+- Failover (buffer caso que a mensagem precisa ser enviada para um backup)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly for false (buffer para apresentar o MessageFilterTable com MessageBuffer, de modo que os filtros podem inspecionar o corpo)  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly for false (buffer para apresentar o MessageFilterTable com MessageBuffer, de modo que os filtros podem inspecionar o corpo)  
   
--   Configuração dinâmica  
+- Configuração dinâmica  
   
 ## <a name="see-also"></a>Consulte também
 

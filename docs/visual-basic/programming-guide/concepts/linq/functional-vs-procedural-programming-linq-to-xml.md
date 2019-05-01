@@ -3,30 +3,30 @@ title: Programação funcional versus Programação procedural (LINQ to XML) (Vi
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
 ms.openlocfilehash: 892c6b7113fe1efdb8e855749c86ac5f9da8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028389"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Programação funcional versus Programação procedural (LINQ to XML) (Visual Basic)
 Há vários tipos de aplicativos XML:  
   
--   Alguns aplicativos utilizam documentos XML de origem e geram novos documentos XML que estão em um formato diferente do que os documentos de origem.  
+- Alguns aplicativos utilizam documentos XML de origem e geram novos documentos XML que estão em um formato diferente do que os documentos de origem.  
   
--   Alguns aplicativos utilizam documentos XML de origem e produzem documentos de resultado em um formato totalmente diferente, como arquivos de texto HTML ou CSV.  
+- Alguns aplicativos utilizam documentos XML de origem e produzem documentos de resultado em um formato totalmente diferente, como arquivos de texto HTML ou CSV.  
   
--   Alguns aplicativos utilizam documentos XML de origem e inserem registros em um banco de dados.  
+- Alguns aplicativos utilizam documentos XML de origem e inserem registros em um banco de dados.  
   
--   Alguns aplicativos utilizam dados de outra origem, como um banco de dados e criam documentos XML a partir deles.  
+- Alguns aplicativos utilizam dados de outra origem, como um banco de dados e criam documentos XML a partir deles.  
   
  Esses não são todos os tipos de aplicativos XML, mas são um conjunto representativo de tipos de funcionalidade que um programador XML tem que implementar.  
   
  Com todos esses tipos de aplicativos, há duas abordagens contrastantes que um desenvolvedor pode utilizar:  
   
--   Construção funcional usando uma abordagem declarativa.  
+- Construção funcional usando uma abordagem declarativa.  
   
--   Modificação da árvore XML na memória usando código procedural.  
+- Modificação da árvore XML na memória usando código procedural.  
   
  O LINQ to XML oferece suporte às duas abordagens.  
   

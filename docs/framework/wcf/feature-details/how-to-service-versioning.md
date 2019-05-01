@@ -3,11 +3,11 @@ title: 'Como: Controle de versão de serviço'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
 ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047471"
 ---
 # <a name="how-to-service-versioning"></a>Como: Controle de versão de serviço
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que roteia mensagens para diferentes versões do mesmo serviço. Neste exemplo, as mensagens são roteadas para duas versões diferentes de um serviço de calculadora `roundingCalc` (v1) e `regularCalc` (v2). Ambas as implementações de suportam as mesmas operações; No entanto o serviço mais antigo, `roundingCalc`, Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deseja usar o mais recente `regularCalc` service.  
@@ -17,13 +17,13 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
   
  As operações expostas por ambos os serviços são:  
   
--   Adicionar  
+- Adicionar  
   
--   Subtração  
+- Subtração  
   
--   Multiplicar  
+- Multiplicar  
   
--   Divisão  
+- Divisão  
   
  Como ambas as implementações de serviço lidar com as mesmas operações e são essencialmente idênticas diferentes dos dados que eles retornam, os dados base contidos nas mensagens enviadas de aplicativos cliente não são exclusivos o suficiente para que você possa determinar como rotear o solicitação. Por exemplo, os filtros de ação não podem ser usados porque as ações padrão para ambos os serviços são os mesmos.  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003971"
 ---
 # <a name="how-to-print-a-windows-form"></a>Como: imprimir um Windows Form
 Como parte do processo de desenvolvimento, você geralmente desejará imprimir uma cópia do seu Windows Form. O exemplo de código a seguir mostra como imprimir uma cópia do formulário atual, usando o <xref:System.Drawing.Graphics.CopyFromScreen%2A> método.  
@@ -30,9 +30,9 @@ Como parte do processo de desenvolvimento, você geralmente desejará imprimir u
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   Você não tem permissão para acessar a impressora.  
+- Você não tem permissão para acessar a impressora.  
   
--   Não há nenhuma impressora instalada.  
+- Não há nenhuma impressora instalada.  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Para executar este exemplo de código, você deve ter permissão para acessar a impressora que você usa com o seu computador.  

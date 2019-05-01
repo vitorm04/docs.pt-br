@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025426"
 ---
 # <a name="white-space-processing-in-xaml"></a>Processamento de espaço em branco em XAML
 As regras da linguagem XAML de estado que o espaço em branco significativo devem ser processado por um [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementação do processador. Este tópico documenta essas regras da linguagem XAML. Ele também documenta o tratamento de espaço em branco que é definido pela [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementação do processador XAML e o gravador XAML para serialização.  
@@ -41,13 +41,13 @@ As regras da linguagem XAML de estado que o espaço em branco significativo deve
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>Espaço em branco no texto interno e os primitivos de cadeia de caracteres  
  As regras de normalização anterior se aplicam ao texto interno que é encontrado dentro de elementos XAML. Após a normalização, um processador XAML Converte qualquer texto interno em um tipo apropriado, da seguinte maneira:  
   
--   Se o tipo da propriedade não é uma coleção, mas não é diretamente um <xref:System.Object> tipo, o processador XAML tenta converter para aquele tipo usando seu conversor de tipo. Uma falha de conversão aqui causa um erro de tempo de compilação.  
+- Se o tipo da propriedade não é uma coleção, mas não é diretamente um <xref:System.Object> tipo, o processador XAML tenta converter para aquele tipo usando seu conversor de tipo. Uma falha de conversão aqui causa um erro de tempo de compilação.  
   
--   Se o tipo da propriedade é uma coleção e o texto interno for contíguo (nenhum elemento de marcas intervenientes), o texto interno é analisado como um único <xref:System.String>. Se o tipo de coleção não pode aceitar <xref:System.String>, isso também faz com que um erro de tempo de compilação.  
+- Se o tipo da propriedade é uma coleção e o texto interno for contíguo (nenhum elemento de marcas intervenientes), o texto interno é analisado como um único <xref:System.String>. Se o tipo de coleção não pode aceitar <xref:System.String>, isso também faz com que um erro de tempo de compilação.  
   
--   Se o tipo da propriedade for <xref:System.Object>, o texto interno é analisado como um único <xref:System.String>. Se existirem marcas de elemento intervenientes, isso causa um erro de tempo de compilação porque o <xref:System.Object> tipo implica um único objeto (<xref:System.String> ou de outra forma).  
+- Se o tipo da propriedade for <xref:System.Object>, o texto interno é analisado como um único <xref:System.String>. Se existirem marcas de elemento intervenientes, isso causa um erro de tempo de compilação porque o <xref:System.Object> tipo implica um único objeto (<xref:System.String> ou de outra forma).  
   
--   Se o tipo da propriedade é uma coleção e o texto interno não é contíguo, a primeira subcadeia de caracteres é convertida em um <xref:System.String> e adicionado como um item da coleção, o elemento intermediárias é adicionado como um item da coleção, e finalmente é a subcadeia de caracteres à direita (se houver) adicionado à coleção como um terceiro <xref:System.String> item.  
+- Se o tipo da propriedade é uma coleção e o texto interno não é contíguo, a primeira subcadeia de caracteres é convertida em um <xref:System.String> e adicionado como um item da coleção, o elemento intermediárias é adicionado como um item da coleção, e finalmente é a subcadeia de caracteres à direita (se houver) adicionado à coleção como um terceiro <xref:System.String> item.  
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>Preservar espaço em branco  

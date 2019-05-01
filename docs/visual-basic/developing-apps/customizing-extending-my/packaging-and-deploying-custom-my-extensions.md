@@ -7,15 +7,15 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014187"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Empacotar e implantar personalizado extensões My (Visual Basic)
 
-Visual Basic fornece uma maneira fácil para você implantar o personalizado `My` extensões do namespace usando modelos do Visual Studio. Se você estiver criando um modelo de projeto para o qual sua `My` extensões são parte integrante do novo tipo de projeto, você pode apenas incluir seu personalizado `My` código de extensão com o projeto quando você exporta o modelo. Para obter mais informações sobre como exportar modelos de projeto, consulte [como: criar modelos de projeto](/visualstudio/ide/how-to-create-project-templates).
+Visual Basic fornece uma maneira fácil para você implantar o personalizado `My` extensões do namespace usando modelos do Visual Studio. Se você estiver criando um modelo de projeto para o qual sua `My` extensões são parte integrante do novo tipo de projeto, você pode apenas incluir seu personalizado `My` código de extensão com o projeto quando você exporta o modelo. Para obter mais informações sobre como exportar modelos de projeto, consulte [como: Criar modelos de projeto](/visualstudio/ide/how-to-create-project-templates).
 
 Se seu personalizado `My` extensão está em um arquivo de código único, você pode exportar o arquivo como um modelo de item que os usuários podem adicionar a qualquer tipo de projeto do Visual Basic. Em seguida, você pode personalizar o modelo de item para habilitar recursos adicionais e o comportamento para o personalizado `My` extensão em um projeto do Visual Basic. Esses recursos incluem o seguinte:
 
@@ -33,7 +33,7 @@ A primeira etapa na criação de um pacote de implantação personalizado `My` e
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Exportar uma extensão My namespace como um modelo de item
 
-Depois que você tiver um arquivo de código que inclui seu `My` extensão do namespace, você pode exportar o arquivo de código como um modelo de item do Visual Studio. Para obter instruções sobre como exportar um arquivo como um modelo de item do Visual Studio, consulte [como: criar modelos de Item](/visualstudio/ide/how-to-create-item-templates).
+Depois que você tiver um arquivo de código que inclui seu `My` extensão do namespace, você pode exportar o arquivo de código como um modelo de item do Visual Studio. Para obter instruções sobre como exportar um arquivo como um modelo de item do Visual Studio, consulte [como: Criar modelos de Item](/visualstudio/ide/how-to-create-item-templates).
 
 > [!NOTE]
 > Se sua `My` extensão do namespace tem uma dependência em um assembly específico, você pode personalizar seu modelo de item para instalar automaticamente seu `My` quando uma referência a esse assembly é adicionada a extensão do namespace. Como resultado, você desejará excluir essa referência de assembly quando você exportar o arquivo de código como um modelo de item do Visual Studio.

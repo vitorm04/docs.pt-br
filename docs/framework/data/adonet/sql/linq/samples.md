@@ -3,11 +3,11 @@ title: Exemplos
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
 ms.openlocfilehash: d06fe74280b713130142d6d7a881c97849598ce4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033404"
 ---
 # <a name="samples"></a>Exemplos
 Este tópico fornece links para as soluções do Visual Basic e c# que contêm [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código de exemplo.  
@@ -21,11 +21,11 @@ Este tópico fornece links para as soluções do Visual Basic e c# que contêm [
   
  Siga estas etapas para localizar exemplos adicionais de código e aplicativos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
--   Procurar problemas específicos no Microsoft Docs.  
+- Procurar problemas específicos no Microsoft Docs.  
   
--   Participar de [Fórum do LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), onde você pode discutir tópicos mais complexos detalhadamente com especialistas.  
+- Participar de [Fórum do LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), onde você pode discutir tópicos mais complexos detalhadamente com especialistas.  
   
--   Estude o white paper que detalha [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, com exemplos de código em Visual Basic e C#. Para obter mais informações, consulte [LINQ to SQL: consulta integrada para dados relacionais](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Estude o white paper que detalha [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, com exemplos de código em Visual Basic e C#. Para obter mais informações, consulte [LINQ to SQL: consulta integrada para dados relacionais](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="see-also"></a>Consulte também
 

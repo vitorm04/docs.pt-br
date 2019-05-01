@@ -15,11 +15,11 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050527"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentários no código (Visual Basic)
 À medida que você lê os exemplos de código, você encontra geralmente o símbolo de comentário (`'`). Esse símbolo diz ao compilador do Visual Basic para ignorar o texto a seguir, ou o *comentário*. Os comentários são uma breve explicação e/ou anotações adicionadas ao código para o benefício de quem os lê.  
@@ -48,11 +48,11 @@ ms.locfileid: "59343006"
   
  Lembre-se dos seguintes pontos:  
   
--   Cada declaração de variável importante deve ser precedida por um comentário sobre o uso da variável sendo declarada.  
+- Cada declaração de variável importante deve ser precedida por um comentário sobre o uso da variável sendo declarada.  
   
--   Variáveis, controles e procedimentos devem ser chamados claramente o bastante para que os comentários sejam necessários somente para detalhes de implementação complexos.  
+- Variáveis, controles e procedimentos devem ser chamados claramente o bastante para que os comentários sejam necessários somente para detalhes de implementação complexos.  
   
--   Os comentários não podem seguir uma sequência de continuação de linha na mesma linha.  
+- Os comentários não podem seguir uma sequência de continuação de linha na mesma linha.  
   
  Você pode adicionar ou remover símbolos de comentário de um bloco de código, selecionando uma ou mais linhas de código e escolhendo a **comentário** (![botão o comentário do Visual Basic no Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) e **Remover comentário**  (![Botão descomente o do Visual Basic no Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) botões a **editar** barra de ferramentas.  
   

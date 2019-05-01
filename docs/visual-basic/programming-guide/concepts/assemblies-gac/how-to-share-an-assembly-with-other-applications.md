@@ -3,11 +3,11 @@ title: 'Como: Compartilhar um Assembly com outros aplicativos (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
 ms.openlocfilehash: 520fe69d30ca55251ae7a19dcd7a1ea0c11e7bd5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022175"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Como: Compartilhar um Assembly com outros aplicativos (Visual Basic)
 Os assemblies podem ser particulares ou compartilhados: por padrão, a maioria dos programas simples consistem em um assembly particular porque eles não se destinam a serem usados por outros aplicativos.  

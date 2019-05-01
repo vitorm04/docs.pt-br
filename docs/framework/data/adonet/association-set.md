@@ -3,11 +3,11 @@ title: conjunto de associações
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034588"
 ---
 # <a name="association-set"></a>conjunto de associações
 Uma *conjunto de associações* é um contêiner lógico para [associação](../../../../docs/framework/data/adonet/association-type.md) instâncias do mesmo tipo. Um conjunto de associações não é um dados que modelam a compilação; isto é, não descreve a estrutura de dados ou relações. Em vez disso, um conjunto de associações fornece uma compilação para um ambiente de hospedagem ou de armazenamento (como Common Language Runtime ou um base de dados SQL Server) às instâncias de associação do grupo de modo que eles possam ser mapeadas em um armazenamento de dados.  
@@ -16,11 +16,11 @@ Uma *conjunto de associações* é um contêiner lógico para [associação](../
   
  Uma definição de um conjunto de associações contém as informações a seguir:  
   
--   O nome de conjunto de associações. (Necessário)  
+- O nome de conjunto de associações. (Necessário)  
   
--   A associação de que irá conter instâncias. (Necessário)  
+- A associação de que irá conter instâncias. (Necessário)  
   
--   Duas [termina do conjunto de associações](../../../../docs/framework/data/adonet/association-set-end.md).  
+- Duas [termina do conjunto de associações](../../../../docs/framework/data/adonet/association-set-end.md).  
   
 ## <a name="example"></a>Exemplo  
  O diagrama a seguir mostra um modelo conceitual com duas associações: `PublishedBy`, e `WrittenBy`. Embora informações sobre conjuntos de associações não é transmitida no diagrama, o diagrama a seguir mostra um exemplo de conjuntos de associações e conjuntos de entidades baseados nesse modelo.  

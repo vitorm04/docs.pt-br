@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022318"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Passo a passo: Implementando a herança com objetos COM (Visual Basic)
 Você pode derivar classes de Visual Basic de `Public` classes em objetos COM, mesmo aqueles criados em versões anteriores do Visual Basic. As propriedades e métodos das classes herdadas de objetos COM a podem ser substituídos ou sobrecarregados assim como as propriedades e métodos de qualquer outra classe base podem ser substituídos ou sobrecarregados. Herança de objetos COM é útil quando você tiver uma biblioteca de classe existente que você não deseja recompilar.  
@@ -125,9 +125,9 @@ Você pode derivar classes de Visual Basic de `Public` classes em objetos COM, m
   
  As propriedades e métodos herdados de classes COM podem ser substituídos, que significa que você pode declarar uma propriedade local ou um método que substitui uma propriedade ou método herdado de uma classe base do COM. As regras para a substituição COM as propriedades herdadas são semelhantes às regras para a substituição de outras propriedades e métodos com as seguintes exceções:  
   
--   Se você substituir qualquer propriedade ou método herdado de uma classe COM, você deve substituir todas as outras propriedades herdadas e métodos.  
+- Se você substituir qualquer propriedade ou método herdado de uma classe COM, você deve substituir todas as outras propriedades herdadas e métodos.  
   
--   As propriedades que usam `ByRef` parâmetros não podem ser substituídos.  
+- As propriedades que usam `ByRef` parâmetros não podem ser substituídos.  
   
 ## <a name="see-also"></a>Consulte também
 

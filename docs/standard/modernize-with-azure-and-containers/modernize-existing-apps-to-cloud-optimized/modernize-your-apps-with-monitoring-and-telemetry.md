@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012058"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizar seus aplicativos com o monitoramento e telemetria
 
@@ -35,15 +35,15 @@ Você pode acessar o Log Analytics por meio do portal do OMS ou portal do Azure,
 
 O [solução de monitoramento de contêiner](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) no Log Analytics ajuda você pode exibir e gerenciar os hosts do Docker e o contêiner do Windows em um único local. A solução mostra quais contêineres estão em execução, qual imagem de contêiner estiverem em execução e, em que os contêineres estão em execução. Você pode exibir informações detalhadas de auditoria, incluindo comandos que estão sendo usados com contêineres. Você também pode solucionar problemas de contêineres exibindo e pesquisando logs centralizados, sem precisar exibir remotamente os hosts do Docker ou do Windows. Você pode encontrar contêineres que podem estar com ruídos e consumindo recursos em excesso em um host. Além disso, você pode exibir centralizadas de CPU, memória, armazenamento e o uso da rede e informações de desempenho, para contêineres. Em computadores com Windows, você pode centralizar e comparar os logs do Windows Server, Hyper-V e contêineres do Docker. A solução dá suporte aos orquestradores de contêiner a seguir:
 
--   Docker Swarm
+- Docker Swarm
 
--   DC/OS
+- DC/OS
 
--   Kubernetes
+- Kubernetes
 
--   Service Fabric
+- Service Fabric
 
--   Red Hat OpenShift
+- Red Hat OpenShift
 
 Figura 4-11 mostra as relações entre vários hosts de contêiner e agentes e o OMS.
 
@@ -53,45 +53,45 @@ Figura 4-11 mostra as relações entre vários hosts de contêiner e agentes e o
 
 Você pode usar a solução de monitoramento de contêiner do Log Analytics para:
 
--   Ver informações sobre todos os hosts de contêiner em um único local.
+- Ver informações sobre todos os hosts de contêiner em um único local.
 
--   Saber quais contêineres estão em execução, qual imagem estiverem em execução e onde elas estão em execução.
+- Saber quais contêineres estão em execução, qual imagem estiverem em execução e onde elas estão em execução.
 
--   Consulte uma trilha de auditoria para ações em contêineres.
+- Consulte uma trilha de auditoria para ações em contêineres.
 
--   Solucionar problemas exibindo e pesquisando logs centralizados sem logon remoto para os hosts do Docker.
+- Solucionar problemas exibindo e pesquisando logs centralizados sem logon remoto para os hosts do Docker.
 
--   Encontre contêineres que podem ser "vizinhos barulhentos" e consumindo recursos em excesso em um host.
+- Encontre contêineres que podem ser "vizinhos barulhentos" e consumindo recursos em excesso em um host.
 
--   Exiba centralizadas de CPU, memória, armazenamento e o uso da rede e informações de desempenho, para contêineres.
+- Exiba centralizadas de CPU, memória, armazenamento e o uso da rede e informações de desempenho, para contêineres.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Visão geral do monitoramento no Microsoft Azure**
+- **Visão geral do monitoramento no Microsoft Azure**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **O que é o Application Insights?**
+- **O que é o Application Insights?**
 
 <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
--   **O que é o Log Analytics?**
+- **O que é o Log Analytics?**
 
 <https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Solução de monitoramento de contêiner no Azure Monitor**
+- **Solução de monitoramento de contêiner no Azure Monitor**
 
 <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
--   **Visão geral do Monitor do Azure**
+- **Visão geral do Monitor do Azure**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **O que é Operations Management Suite (OMS)?**
+- **O que é Operations Management Suite (OMS)?**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
--   **Monitoramento de contêineres do Windows Server no Service Fabric com o OMS**
+- **Monitoramento de contêineres do Windows Server no Service Fabric com o OMS**
 
 <https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 

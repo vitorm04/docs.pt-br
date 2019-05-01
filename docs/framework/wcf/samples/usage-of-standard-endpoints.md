@@ -6,8 +6,8 @@ ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006302"
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso de pontos de extremidade padrão
 
@@ -143,13 +143,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. Habilite vários projetos de inicialização.
 
-    1.  Na **Gerenciador de soluções**, a solução de pontos de extremidade padrão com o botão direito e, em seguida, selecione **propriedades**.
+    1. Na **Gerenciador de soluções**, a solução de pontos de extremidade padrão com o botão direito e, em seguida, selecione **propriedades**.
 
-    2.  Na **propriedades comuns**, selecione **projeto de inicialização**e, em seguida, clique em **vários projetos de inicialização**.
+    2. Na **propriedades comuns**, selecione **projeto de inicialização**e, em seguida, clique em **vários projetos de inicialização**.
 
-    3.  Mover o projeto de serviço para o início da lista, com o **ação** definido como **iniciar**.
+    3. Mover o projeto de serviço para o início da lista, com o **ação** definido como **iniciar**.
 
-    4.  Mover o projeto do cliente após o projeto de serviço, também com o **ação** definido como **iniciar**.
+    4. Mover o projeto do cliente após o projeto de serviço, também com o **ação** definido como **iniciar**.
 
          Isso especifica que o projeto do cliente é executado após o projeto de serviço.
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012679"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Visão geral do controle de painel (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Panel> controles são usados para fornecer um agrupamento identificável para outros controles. Normalmente, você usa painéis para subdividir um formulário por função. Por exemplo, você pode ter um formulário de pedido que especifica as opções de mala direta, como qual carrier noturna usar. Agrupar todas as opções em um painel fornece ao usuário uma indicação visual lógica. No tempo de design todos os controles podem ser movidos facilmente — quando você move o <xref:System.Windows.Forms.Panel> controlar todos os seus controles contidos se movem também. Os controles agrupados em um painel podem ser acessados por meio de seu <xref:System.Windows.Forms.Control.Controls%2A> propriedade. Essa propriedade retorna uma coleção de <xref:System.Windows.Forms.Control> instâncias, portanto, você geralmente precisará converter um controle recuperado dessa forma para seu tipo específico.  

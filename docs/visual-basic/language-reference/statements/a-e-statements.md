@@ -3,11 +3,11 @@ title: Instruções a-E (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
 ms.openlocfilehash: 4135f7154a73823400d8b1698421e138650d4854
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054335"
 ---
 # <a name="a-e-statements"></a>Instruções A-E
 A tabela a seguir contém uma lista de instruções de linguagem do Visual Basic.  

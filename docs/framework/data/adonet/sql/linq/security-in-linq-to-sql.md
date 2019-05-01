@@ -3,11 +3,11 @@ title: Segurança em LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036992"
 ---
 # <a name="security-in-linq-to-sql"></a>Segurança em LINQ to SQL
 Os riscos de segurança são sempre presentes em que você se conecta a um base de dados. Embora LINQ to SQL pode incluir algumas novas maneiras de trabalhar com dados no SQL Server, não fornece os mecanismos de segurança adicionais.  
@@ -25,13 +25,13 @@ Os riscos de segurança são sempre presentes em que você se conecta a um base 
   
  Na ausência de segurança integrado, uma senha de texto não será necessária na cadeia de conexão. A melhor maneira para ajudar a proteger a cadeia de conexão, na ordem crescente de risco, é a seguinte:  
   
--   Use segurança integrada.  
+- Use segurança integrada.  
   
--   Proteger cadeias de conexão com senhas e minimizar passar ao redor de cadeias de conexão.  
+- Proteger cadeias de conexão com senhas e minimizar passar ao redor de cadeias de conexão.  
   
--   Use uma classe de <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> em vez de uma cadeia de conexão já que limita a duração de exibição. A classe LINQ to SQL <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> pode ser instanciada usando <xref:System.Data.SqlClient.SqlConnection>.  
+- Use uma classe de <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> em vez de uma cadeia de conexão já que limita a duração de exibição. A classe LINQ to SQL <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> pode ser instanciada usando <xref:System.Data.SqlClient.SqlConnection>.  
   
--   Minimize o tempo de vida e toque em pontos para todas as cadeias de conexão.  
+- Minimize o tempo de vida e toque em pontos para todas as cadeias de conexão.  
   
 ## <a name="see-also"></a>Consulte também
 

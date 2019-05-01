@@ -5,18 +5,18 @@ f1_keywords:
 - vbrArgument_ArrayDimensionsDontMatch
 ms.assetid: 71809e3b-8147-4314-9c4c-e4a5bc9a5530
 ms.openlocfilehash: f9bff653e180d137a51cb4207c5f8d6ea0178e6e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58027365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977064"
 ---
 # <a name="array-dimensions-do-not-match-those-specified-in-the-vbfixedarray-attribute"></a>Dimensões de matriz não correspondem àquelas especificadas no atributo 'VBFixedArray'
 Suas dimensões de matriz não coincidem com as dimensões que você especificou no `VBFixedArray` atributo.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Verifique as dimensões de matriz na matriz `Dim` instrução corresponde as dimensões especificadas pela `VBFixedArray` atributo.  
+- Verifique as dimensões de matriz na matriz `Dim` instrução corresponde as dimensões especificadas pela `VBFixedArray` atributo.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009117"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel
 Alguns aplicativos exigem um formulário com um layout que se organiza adequadamente à medida que o formulário é redimensionado ou conforme o tamanho do conteúdo é alterado. Quando você precisa de um layout dinâmico e não deseja manipular <xref:System.Windows.Forms.Control.Layout> eventos explicitamente no seu código, considere o uso de um painel de layout.  
@@ -23,23 +23,23 @@ Alguns aplicativos exigem um formulário com um layout que se organiza adequadam
   
  O <xref:System.Windows.Forms.FlowLayoutPanel> organiza seu conteúdo em uma direção específica de fluxo: horizontal ou vertical. Seu conteúdo pode ser encapsulado de uma linha à outra ou de uma coluna à próxima. Como alternativa, seu conteúdo pode ser recortado, em vez de encapsulado. As tarefas ilustradas neste passo a passo incluem:  
   
--   Criação de um projeto dos Windows Forms  
+- Criação de um projeto dos Windows Forms  
   
--   Organizando controles horizontalmente e verticalmente  
+- Organizando controles horizontalmente e verticalmente  
   
--   Alterando a direção do fluxo  
+- Alterando a direção do fluxo  
   
--   Inserindo quebras de fluxo  
+- Inserindo quebras de fluxo  
   
--   Organizando controles usando preenchimento e margens  
+- Organizando controles usando preenchimento e margens  
   
--   Inserindo controles ao clicar duas vezes neles na caixa de ferramentas  
+- Inserindo controles ao clicar duas vezes neles na caixa de ferramentas  
   
--   Inserindo um controle ao desenhar seu contorno  
+- Inserindo um controle ao desenhar seu contorno  
   
--   Inserindo controles usando o sinal de interpolação  
+- Inserindo controles usando o sinal de interpolação  
   
--   Reatribuição de controles existentes a um pai diferente  
+- Reatribuição de controles existentes a um pai diferente  
   
  Ao terminar, você terá um entendimento da função desempenhada por esses importantes recursos de layout.  
   
@@ -179,13 +179,13 @@ Alguns aplicativos exigem um formulário com um layout que se organiza adequadam
 ## <a name="next-steps"></a>Próximas etapas  
  Você pode obter um layout complexo usando uma combinação de controles e painéis de layout. Sugestões para exploração adicional incluem:  
   
--   Redimensione um do <xref:System.Windows.Forms.Button> controles para um tamanho maior e observe o efeito no layout.  
+- Redimensione um do <xref:System.Windows.Forms.Button> controles para um tamanho maior e observe o efeito no layout.  
   
--   Os painéis de layout podem conter outros painéis de layout. Experimente soltar um <xref:System.Windows.Forms.TableLayoutPanel> controle no controle existente.  
+- Os painéis de layout podem conter outros painéis de layout. Experimente soltar um <xref:System.Windows.Forms.TableLayoutPanel> controle no controle existente.  
   
--   Encaixe o <xref:System.Windows.Forms.FlowLayoutPanel> controle ao formulário pai. Redimensione o formulário e observe o efeito no layout.  
+- Encaixe o <xref:System.Windows.Forms.FlowLayoutPanel> controle ao formulário pai. Redimensione o formulário e observe o efeito no layout.  
   
--   Defina as <xref:System.Windows.Forms.Control.Visible%2A> propriedade de um dos controles para `false` e observe como o <xref:System.Windows.Forms.FlowLayoutPanel> reflui em resposta.  
+- Defina as <xref:System.Windows.Forms.Control.Visible%2A> propriedade de um dos controles para `false` e observe como o <xref:System.Windows.Forms.FlowLayoutPanel> reflui em resposta.  
   
 ## <a name="see-also"></a>Consulte também
 

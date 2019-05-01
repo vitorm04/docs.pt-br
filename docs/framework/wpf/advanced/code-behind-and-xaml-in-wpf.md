@@ -6,26 +6,26 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010664"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-behind e XAML no WPF
 <a name="introduction"></a> Code-behind é um termo usado para descrever o código unido a objetos definidos com marcação quando uma página [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é compilada com marcação. Este tópico descreve os requisitos para code-behind, bem como um mecanismo de código embutido alternativo para o código em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Esse tópico contém as seguintes seções:  
   
--   [Pré-requisitos](#Prerequisites)  
+- [Pré-requisitos](#Prerequisites)  
   
--   [Code-Behind e a linguagem XAML](#codebehind_and_the_xaml_language)  
+- [Code-Behind e a linguagem XAML](#codebehind_and_the_xaml_language)  
   
--   [Code-behind, manipulador de eventos e requisitos de classe parcial no WPF](#Code_behind__Event_Handler__and_Partial_Class)  
+- [Code-behind, manipulador de eventos e requisitos de classe parcial no WPF](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x:Code](#x_Code)  
+- [x:Code](#x_Code)  
   
--   [Limitações de código embutido](#Inline_Code_Limitations)  
+- [Limitações de código embutido](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
@@ -38,15 +38,15 @@ ms.locfileid: "59088554"
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Code-behind, manipulador de eventos e requisitos de classe parcial no WPF  
   
--   A classe parcial deve derivar do tipo que sustenta o elemento raiz.  
+- A classe parcial deve derivar do tipo que sustenta o elemento raiz.  
   
--   Observe que, sob o comportamento padrão das ações de build de compilação de marcação, você pode deixar a derivação em branco na definição de classe parcial no lado da lógica. O resultado compilado assumirá o tipo de suporte da raiz da página para ser a base para a classe parcial, mesmo se não for especificado. No entanto, contar com esse comportamento não é uma prática recomendada.  
+- Observe que, sob o comportamento padrão das ações de build de compilação de marcação, você pode deixar a derivação em branco na definição de classe parcial no lado da lógica. O resultado compilado assumirá o tipo de suporte da raiz da página para ser a base para a classe parcial, mesmo se não for especificado. No entanto, contar com esse comportamento não é uma prática recomendada.  
   
--   Os manipuladores de eventos que você escreve no code-behind devem ser métodos de instância e não podem ser métodos estáticos. Esses métodos devem ser definidos pela classe parcial dentro do namespace CLR identificado por `x:Class`. Você não pode qualificar o nome de um manipulador de eventos para instruir um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para procurar por um manipulador de eventos para fiação de evento em um escopo de classe diferente.  
+- Os manipuladores de eventos que você escreve no code-behind devem ser métodos de instância e não podem ser métodos estáticos. Esses métodos devem ser definidos pela classe parcial dentro do namespace CLR identificado por `x:Class`. Você não pode qualificar o nome de um manipulador de eventos para instruir um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para procurar por um manipulador de eventos para fiação de evento em um escopo de classe diferente.  
   
--   O manipulador deve corresponder ao delegado para o evento apropriado no sistema de tipo de suporte.  
+- O manipulador deve corresponder ao delegado para o evento apropriado no sistema de tipo de suporte.  
   
--   Para o idioma do Microsoft Visual Basic, especificamente, você pode usar específicos do idioma `Handles` palavra-chave para associar manipuladores com instâncias e eventos na declaração do manipulador, em vez de anexar manipuladores com atributos em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. No entanto, essa técnica tem algumas limitações, uma vez que a palavra-chave `Handles` não pode dar suporte a todos os recursos específicos do sistema de eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], como determinados cenários de evento roteado ou eventos anexados. Para obter detalhes, consulte [Visual Basic e manipulação de eventos WPF](visual-basic-and-wpf-event-handling.md).  
+- Para o idioma do Microsoft Visual Basic, especificamente, você pode usar específicos do idioma `Handles` palavra-chave para associar manipuladores com instâncias e eventos na declaração do manipulador, em vez de anexar manipuladores com atributos em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. No entanto, essa técnica tem algumas limitações, uma vez que a palavra-chave `Handles` não pode dar suporte a todos os recursos específicos do sistema de eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], como determinados cenários de evento roteado ou eventos anexados. Para obter detalhes, consulte [Visual Basic e manipulação de eventos WPF](visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  

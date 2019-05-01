@@ -18,20 +18,20 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032247"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Arquivos de recurso, conteúdo e dados do aplicativo WPF
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplicativos geralmente dependem de arquivos que contêm dados não executáveis, tais como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imagens, vídeo e áudio. Windows Presentation Foundation (WPF) oferece suporte especial para configurar, identificar e usar esses tipos de arquivos de dados, que são chamados de arquivos de dados do aplicativo. Esse suporte gira em torno de um conjunto específico de tipos de arquivo de dados do aplicativo, incluindo:  
   
--   **Arquivos de recurso**: Arquivos de dados que são compilados em um executável ou biblioteca [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+- **Arquivos de recurso**: Arquivos de dados que são compilados em um executável ou biblioteca [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
   
--   **Arquivos de conteúdo**: Arquivos de dados independentes que têm uma associação explícita com um executável [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+- **Arquivos de conteúdo**: Arquivos de dados independentes que têm uma associação explícita com um executável [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
   
--   **Site de arquivos de origem**: Arquivos de dados independentes que não têm uma associação com um executável [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+- **Site de arquivos de origem**: Arquivos de dados independentes que não têm uma associação com um executável [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
   
  Uma distinção importante a se fazer entre esses três tipos de arquivos é que os arquivos de recurso e os arquivos de conteúdo são conhecidos em tempo de build; um assembly tem o conhecimento explícito sobre eles. Para arquivos de site de origem, no entanto, um assembly não pode ter nenhum conhecimento sobre eles, ou conhecimento implícito por meio de um pacote [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] referência; no caso do último, não há nenhuma garantia de que o local referenciado do arquivo de origem realmente existe.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59211914"
   
  Você deve usar arquivos de recurso quando:  
   
--   Você não precisa atualizar o conteúdo do arquivo de recurso depois que ele é compilado em um assembly.  
+- Você não precisa atualizar o conteúdo do arquivo de recurso depois que ele é compilado em um assembly.  
   
--   Você deseja simplificar a complexidade da distribuição de aplicativos, reduzindo o número de dependências de arquivo.  
+- Você deseja simplificar a complexidade da distribuição de aplicativos, reduzindo o número de dependências de arquivo.  
   
--   O arquivo de dados do aplicativo precisa ser localizável (consulte [visão geral de localização e globalização do WPF](../advanced/wpf-globalization-and-localization-overview.md)).  
+- O arquivo de dados do aplicativo precisa ser localizável (consulte [visão geral de localização e globalização do WPF](../advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
 >  Os arquivos de recurso descritos nesta seção são diferentes do que os arquivos de recurso descrito em [recursos XAML](../advanced/xaml-resources.md) e diferentes dos recursos inseridos ou vinculados descritos [gerenciar recursos de aplicativo (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
@@ -175,13 +175,13 @@ ms.locfileid: "59211914"
 ## <a name="site-of-origin-files"></a>Arquivos de site de origem  
  Arquivos de recurso têm um relacionamento explícito com os assemblies que eles são distribuídos junto com, conforme definido pelo <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>. Mas, às vezes você deseja estabelecer um relacionamento implícito ou inexistente entre um assembly e um arquivo de dados do aplicativo, como quando:  
   
--   Não existe um arquivo em tempo de compilação.  
+- Não existe um arquivo em tempo de compilação.  
   
--   Você não sabe quais arquivos seu assembly vai requerer até o tempo de execução.  
+- Você não sabe quais arquivos seu assembly vai requerer até o tempo de execução.  
   
--   Você deseja ser capaz de atualizar os arquivos sem recompilar o assembly ao qual eles estão associados.  
+- Você deseja ser capaz de atualizar os arquivos sem recompilar o assembly ao qual eles estão associados.  
   
--   O aplicativo usa arquivos de dados grandes, como áudio e vídeo, e você só deseja que os usuários os baixem caso desejem.  
+- O aplicativo usa arquivos de dados grandes, como áudio e vídeo, e você só deseja que os usuários os baixem caso desejem.  
   
  É possível carregar esses tipos de arquivos usando tradicionais [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] esquemas, tais como esquemas file:/// e http://.  
   

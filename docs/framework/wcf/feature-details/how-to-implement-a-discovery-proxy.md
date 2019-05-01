@@ -3,22 +3,22 @@ title: 'Como: implementar um proxy de descoberta'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000903"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Como: implementar um proxy de descoberta
 Este tópico explica como implementar um proxy de descoberta. Para obter mais informações sobre o recurso de descoberta no Windows Communication Foundation (WCF), consulte [visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Um proxy de descoberta pode ser implementado com a criação de uma classe que estende o <xref:System.ServiceModel.Discovery.DiscoveryProxy> classe abstrata. Há uma série de outras classes de suporte definidos e usados neste exemplo. `OnResolveAsyncResult`, `OnFindAsyncResult` e `AsyncResult`. Essas classes implementam o <xref:System.IAsyncResult> interface. Para obter mais informações sobre <xref:System.IAsyncResult> ver [interface System. IAsyncResult](xref:System.IAsyncResult).
 
  Implementar um proxy de descoberta é dividido em três partes principais neste tópico:
 
--   Defina uma classe que contém um armazenamento de dados e estende abstrata <xref:System.ServiceModel.Discovery.DiscoveryProxy> classe.
+- Defina uma classe que contém um armazenamento de dados e estende abstrata <xref:System.ServiceModel.Discovery.DiscoveryProxy> classe.
 
--   Implementar o auxiliar `AsyncResult` classe.
+- Implementar o auxiliar `AsyncResult` classe.
 
--   Hospede o Proxy de descoberta.
+- Hospede o Proxy de descoberta.
 
 ### <a name="to-create-a-new-console-application-project"></a>Para criar um novo projeto de aplicativo de console
 
@@ -28,9 +28,9 @@ Este tópico explica como implementar um proxy de descoberta. Para obter mais in
 
 3. Adicione as seguintes referências ao projeto
 
-    1.  System.ServiceModel.dll
+    1. System.ServiceModel.dll
 
-    2.  System.Servicemodel.Discovery.dll
+    2. System.Servicemodel.Discovery.dll
 
     > [!CAUTION]
     >  Certifique-se de que você referencie a versão 4.0 ou superior desses assemblies.

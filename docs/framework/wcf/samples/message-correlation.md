@@ -3,11 +3,11 @@ title: Correlação de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989762"
 ---
 # <a name="message-correlation"></a>Correlação de mensagem
 Este exemplo demonstra como um aplicativo de enfileiramento de mensagens (MSMQ) pode enviar uma mensagem MSMQ a um serviço do Windows Communication Foundation (WCF) e como as mensagens podem ser correlacionadas entre remetente e destinatário aplicativos em um cenário de solicitação/resposta. Este exemplo usa a associação msmqIntegrationBinding. Nesse caso, o serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço que recebe de mensagens na fila. k  
@@ -275,15 +275,15 @@ static void DisplayOrderStatus()
 
 2. Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
 
-    1.  Abra o Gerenciador de servidores no Visual Studio 2012.
+    1. Abra o Gerenciador de servidores no Visual Studio 2012.
 
-    2.  Expanda o **recursos** guia.
+    2. Expanda o **recursos** guia.
 
-    3.  Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.
+    3. Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.
 
-    4.  Verifique as **transacional** caixa.
+    4. Verifique as **transacional** caixa.
 
-    5.  Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
+    5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
 
 3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

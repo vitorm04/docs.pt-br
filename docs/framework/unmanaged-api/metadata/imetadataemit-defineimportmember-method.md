@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043206"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>Método IMetaDataEmit::DefineImportMember
 Cria uma referência ao membro de um módulo que é definido fora do escopo atual e define um token para essa referência ou tipo especificado.  
@@ -72,11 +72,11 @@ HRESULT DefineImportMember (
   
  Em geral, antes de usar o `DefineImportMember` método, você deve criar, no escopo atual, uma referência de tipo ou a referência de módulo para módulo, interface ou classe pai do membro de destino. O token de metadados para essa referência é passado, em seguida, o `tkParent` argumento. Você não precisará criar uma referência ao pai do membro de destino se ele será resolvido posteriormente pelo compilador ou vinculador. Para resumir:  
   
--   Se o membro de destino é um campo ou método, use o [imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) ou o [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) método para criar uma referência de tipo no escopo atual, para o a classe pai ou interface pai do membro.  
+- Se o membro de destino é um campo ou método, use o [imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) ou o [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) método para criar uma referência de tipo no escopo atual, para o a classe pai ou interface pai do membro.  
   
--   Se o membro de destino é uma função global de variável ou global (ou seja, não é membro de uma classe ou interface), use o [imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) método para criar uma referência de módulo, no escopo atual para o pai do membro módulo.  
+- Se o membro de destino é uma função global de variável ou global (ou seja, não é membro de uma classe ou interface), use o [imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) método para criar uma referência de módulo, no escopo atual para o pai do membro módulo.  
   
--   Se o pai do membro de destino será resolvido posteriormente pelo compilador ou vinculador, em seguida, passe `mdTokenNil` em `tkParent`. O único cenário em que isso se aplica é quando uma função global ou variável global que está sendo importada de um arquivo. obj que, por fim, será vinculado no módulo atual e os metadados mesclagem.  
+- Se o pai do membro de destino será resolvido posteriormente pelo compilador ou vinculador, em seguida, passe `mdTokenNil` em `tkParent`. O único cenário em que isso se aplica é quando uma função global ou variável global que está sendo importada de um arquivo. obj que, por fim, será vinculado no módulo atual e os metadados mesclagem.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

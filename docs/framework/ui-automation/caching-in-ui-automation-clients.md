@@ -6,11 +6,11 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032351"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Armazenando em cache em clientes de automação de interface do usuário
 > [!NOTE]
@@ -64,9 +64,9 @@ ms.locfileid: "59175819"
 ## <a name="retrieving-cached-properties"></a>Recuperando propriedades em cache  
  Você pode recuperar as propriedades armazenadas em cache de um elemento por meio de métodos e propriedades a seguir.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  Uma exceção é gerada se a propriedade solicitada não está no cache.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "59175819"
 ## <a name="retrieving-cached-control-patterns"></a>Recuperando armazenados em cache os padrões de controle  
  Você pode recuperar os padrões de controle em cache de um elemento por meio dos métodos a seguir.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  Se o padrão não está no cache, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> gera uma exceção, e <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> retorna `false`.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036225"
 ---
 # <a name="localization-attributes-and-comments"></a>Atributos de localização e comentários
 Os comentários de localização de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] são propriedades, dentro do código-fonte [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], fornecidas pelos desenvolvedores para conceder as regras e dar dicas de localização. Os comentários de localização de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contêm dois conjuntos de informações: atributos de possibilidade de localização e comentários de localização de forma livre. Os atributos de possibilidade de localização são usados pela API de localização [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para indicar quais recursos devem ser localizados. Os comentários de forma livre são todas as informações que o criador do aplicativo desejar incluir.  
@@ -27,11 +27,11 @@ Os comentários de localização de [!INCLUDE[TLA#tla_winclient](../../../../inc
   
 3. Os valores que podem ser atribuídos são:  
   
-    -   **None** – os comentários e atributos permanecem dentro do assembly e nenhum arquivo separado é gerado.  
+    - **None** – os comentários e atributos permanecem dentro do assembly e nenhum arquivo separado é gerado.  
   
-    -   **CommentsOnly** – remove somente os comentários do assembly e os coloca em um LocFile separado.  
+    - **CommentsOnly** – remove somente os comentários do assembly e os coloca em um LocFile separado.  
   
-    -   **All** – remove os comentários e os atributos do assembly e os coloca em um LocFile separado.  
+    - **All** – remove os comentários e os atributos do assembly e os coloca em um LocFile separado.  
   
 4. Quando os recursos localizáveis são extraídos do [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], os atributos de possibilidade de localização são respeitados pela API de localização [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)].  
   
@@ -74,11 +74,11 @@ Os comentários de localização de [!INCLUDE[TLA#tla_winclient](../../../../inc
   
  Há três tipos de atributos:  
   
--   **Categoria**. Especifica se um valor deve ser modificável de uma ferramenta do localizador. Consulte <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+- **Categoria**. Especifica se um valor deve ser modificável de uma ferramenta do localizador. Consulte <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
--   **Legibilidade**. Especifica se uma ferramenta do localizador deve ler (e exibir) um valor. Consulte <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+- **Legibilidade**. Especifica se uma ferramenta do localizador deve ler (e exibir) um valor. Consulte <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
--   **Modificabilidade**. Especifica se uma ferramenta do localizador permite que um valor seja modificado. Consulte <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+- **Modificabilidade**. Especifica se uma ferramenta do localizador permite que um valor seja modificado. Consulte <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
   
  Esses atributos podem ser especificados em qualquer ordem delimitada por um espaço. No caso de atributos duplicados serem especificados, o último atributo substituirá os antigos. Por exemplo, Localization.Attributes = "Modificável não modificável" define Modificabilidade como Modificável porque é o último valor.  
   

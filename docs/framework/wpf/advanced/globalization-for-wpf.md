@@ -8,11 +8,11 @@ helpviewer_keywords:
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
 ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031325"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
 Este tópico apresenta os problemas que você deve estar ciente ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização são definidos no [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] em `System.Globalization`.
@@ -69,59 +69,59 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
  Os scripts a seguir tem suporte atualmente:
 
--   Árabe
+- Árabe
 
--   Bengali
+- Bengali
 
--   Devanágari
+- Devanágari
 
--   Cirílico
+- Cirílico
 
--   Grego
+- Grego
 
--   Guzerate
+- Guzerate
 
--   Gurmukhi
+- Gurmukhi
 
--   Hebraico
+- Hebraico
 
--   Scripts ideográficos
+- Scripts ideográficos
 
--   canarim
+- canarim
 
--   Lao
+- Lao
 
--   Latim
+- Latim
 
--   Malaiala
+- Malaiala
 
--   Mongol
+- Mongol
 
--   Odia
+- Odia
 
--   Siríaco
+- Siríaco
 
--   Tâmil
+- Tâmil
 
--   Telugu
+- Telugu
 
--   Thaana
+- Thaana
 
--   Tailandês*
+- Tailandês*
 
--   Tibetano
+- Tibetano
 
  * Nesta versão, a exibição e edição de texto em tailandês tem suporte; quebra de palavras não tem suporte.
 
  Os scripts a seguir não têm suporte atualmente:
 
--   Khmer
+- Khmer
 
--   Hangul antigo coreano
+- Hangul antigo coreano
 
--   Myanmar
+- Myanmar
 
--   Sinhala
+- Sinhala
 
  Suporte a mecanismos de sistema de escrita [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] fontes podem incluir o [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tabelas de layout que permitem que os criadores de fonte projetar fontes tipográficas melhor internacionais e high-end. O [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tabelas de layout de fonte contêm informações sobre substituições de glifos, posicionamento de glifo, justificação e posicionamento de linha de base, permitindo que os aplicativos de processamento de texto melhorem o layout de texto.
 
@@ -133,9 +133,9 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 ### <a name="international-layout"></a>Layout internacional
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece uma forma muito conveniente de dar suporte para layouts horizontais, bidirecionais e verticais. No framework de apresentação o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade pode ser usada para definir o layout. Os padrões de direção de fluxo são:
 
--   *LeftToRight* -layout horizontal para latim, Leste Asiático e assim por diante.
+- *LeftToRight* -layout horizontal para latim, Leste Asiático e assim por diante.
 
--   *RightToLeft* -bidirecional para árabe, hebraico e assim por diante.
+- *RightToLeft* -bidirecional para árabe, hebraico e assim por diante.
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>Desenvolver aplicativos localizáveis

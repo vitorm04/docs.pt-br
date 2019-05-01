@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d97f536d54ac1cb77c5d0413d2437508374ac7f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042907"
 ---
 # <a name="imetadataemit2savedelta-method"></a>Método IMetaDataEmit2::SaveDelta
 Salva as alterações da sessão atual de editar e continuar para o arquivo especificado.  

@@ -3,11 +3,11 @@ title: conjunto de entidades
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
 ms.openlocfilehash: 7fcaa2cb9bac02271940a712d4d044df25d7d4cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033950"
 ---
 # <a name="entity-set"></a>conjunto de entidades
 Uma *conjunto de entidades* é um contêiner lógico para instâncias de uma [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) e instâncias de qualquer tipo derivado desse tipo de entidade. (Para obter informações sobre tipos derivados, consulte [modelo de dados de entidade: Herança](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) A relação entre um tipo de entidade e um conjunto de entidades é análoga a relação entre uma linha e uma tabela no banco de dados relacional: Como uma linha, um tipo de entidade descreve a estrutura de dados e, como uma tabela, um conjunto de entidades contém instâncias de uma determinada estrutura. Um conjunto de entidades não é um dados que modelam a compilação; não descreve a estrutura de dados. Em vez disso, um conjunto de entidades fornece uma compilação para um ambiente de hospedagem ou de armazenamento (como Common Language Runtime ou um base de dados do SQL Server) instâncias de tipo de entidade do grupo de modo que eles possam ser mapeadas em um armazenamento de dados.  
@@ -16,11 +16,11 @@ Uma *conjunto de entidades* é um contêiner lógico para instâncias de uma [ti
   
  Para uma instância do tipo de entidade existe em um conjunto de entidades, o seguinte deve ser verdadeira:  
   
--   O tipo de qualquer instância é o mesmo como o tipo de objeto no qual o conjunto de entidades é baseado, ou o tipo de instância é um subtipo do tipo de objeto.  
+- O tipo de qualquer instância é o mesmo como o tipo de objeto no qual o conjunto de entidades é baseado, ou o tipo de instância é um subtipo do tipo de objeto.  
   
--   O [chave de entidade](../../../../docs/framework/data/adonet/entity-key.md) para a instância é exclusiva dentro do conjunto de entidades.  
+- O [chave de entidade](../../../../docs/framework/data/adonet/entity-key.md) para a instância é exclusiva dentro do conjunto de entidades.  
   
--   A instância não existir em qualquer outro conjunto de entidades.  
+- A instância não existir em qualquer outro conjunto de entidades.  
   
     > [!NOTE]
     >  Os vários conjuntos de entidades podem ser definidos usando o mesmo tipo de entidade, mas uma instância de um tipo de dado entidade só pode existir em um conjunto de entidades.  

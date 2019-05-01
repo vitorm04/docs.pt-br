@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018124"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Passo a passo: Criar um botão usando o Microsoft Expression Blend
 Estas instruções passo a passo demonstram o processo de criação de um botão personalizado [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando o Microsoft Expression Blend.  
@@ -117,17 +117,17 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
 10. **Verifique o glassCube aparência de vidro:** Defina o <xref:System.Windows.Shapes.Shape.Fill%2A> uma aparência vítrea ao usando um gradiente linear que seja 75% opaco e alterna entre as cores branco e transparente 6 aproximadamente uniformemente espaçados a intervalos. As marcas de gradiente devem ser definidas como:  
   
-    -   Parada de gradiente 1: Branco com valor alfa de 75%  
+    - Parada de gradiente 1: Branco com valor alfa de 75%  
   
-    -   Parada de gradiente 2: Transparente  
+    - Parada de gradiente 2: Transparente  
   
-    -   Parada de gradiente 3: Branco com valor alfa de 75%  
+    - Parada de gradiente 3: Branco com valor alfa de 75%  
   
-    -   Parada de gradiente 4: Transparente  
+    - Parada de gradiente 4: Transparente  
   
-    -   Parada de gradiente 5: Branco com valor alfa de 75%  
+    - Parada de gradiente 5: Branco com valor alfa de 75%  
   
-    -   Parada de gradiente 6: Transparente  
+    - Parada de gradiente 6: Transparente  
   
      É criada uma aparência de vidro “ondulada”.  
   
@@ -173,9 +173,9 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
 6. **Crie gatilho de propriedade para IsFocused:** Usando o mesmo procedimento para <xref:System.Windows.UIElement.IsMouseOver%2A> (consulte a primeira etapa desta seção), crie outro gatilho de propriedade para o <xref:System.Windows.UIElement.IsFocused%2A> propriedade. Enquanto o **registro de gatilho estiver ativado**, adicione as ações a seguir ao gatilho:  
   
-    -   **glassCube** obtém um <xref:System.Windows.UIElement.Opacity%2A> de 100%.  
+    - **glassCube** obtém um <xref:System.Windows.UIElement.Opacity%2A> de 100%.  
   
-    -   **outerRectangle** obtém um <xref:System.Windows.Shapes.Shape.Stroke%2A> valor de expressão personalizada de "{DynamicResource {X:Static Highlightbrushkey}}".  
+    - **outerRectangle** obtém um <xref:System.Windows.Shapes.Shape.Stroke%2A> valor de expressão personalizada de "{DynamicResource {X:Static Highlightbrushkey}}".  
   
  Como etapa final deste passo a passo, adicionaremos animações ao botão. Essas animações serão disparadas por eventos — especificamente, o <xref:System.Windows.UIElement.MouseEnter> e <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
@@ -208,19 +208,19 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
 5. **Crie outro gatilho de evento e associe uma animação diferente ele:** Vamos adicionar mais uma animação. Use um procedimento semelhante ao que você usou para criar a animação anterior do gatilho de evento:  
   
-    1.  Criar um novo gatilho de evento usando o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+    1. Criar um novo gatilho de evento usando o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
-    2.  Associar uma nova linha do tempo com o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+    2. Associar uma nova linha do tempo com o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
      ![Como criar uma nova linha do tempo](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  Para essa linha do tempo, crie dois quadros chave, em 0,0 segundos e, o segundo, em 0,3 segundos.  
+    1. Para essa linha do tempo, crie dois quadros chave, em 0,0 segundos e, o segundo, em 0,3 segundos.  
   
-    2.  Com o quadro chave destacado em 0,3 segundos, defina o **ângulo de transformação de giro** como 360 graus.  
+    2. Com o quadro chave destacado em 0,3 segundos, defina o **ângulo de transformação de giro** como 360 graus.  
   
      ![Como criar uma transformação de giro](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
   
-    1.  Pressione F5 para executar o aplicativo. Clique no botão. Observe que a camada do vidro vai girar.  
+    1. Pressione F5 para executar o aplicativo. Clique no botão. Observe que a camada do vidro vai girar.  
   
 ## <a name="conclusion"></a>Conclusão  
  Você concluiu um botão personalizado. Para fazer isso, utilizou um modelo de botão que foi aplicado a todos os botões no aplicativo. Se você sair do modo de edição de modelo (consulte a figura a seguir) e criar mais botões, verá que a aparência e o comportamento deles são semelhantes aos do botão personalizado, não ao botão padrão.  
@@ -237,15 +237,15 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
   
  Para concluir, durante o processo de personalização de um modelo de botão, você aprendeu a fazer o seguinte no Microsoft Expression Blend:  
   
--   Personalize a aparência de um controle.  
+- Personalize a aparência de um controle.  
   
--   Defina gatilhos de propriedade. Os gatilhos de propriedade são muito úteis, porque podem ser utilizados na maioria dos objetos, não apenas em controles.  
+- Defina gatilhos de propriedade. Os gatilhos de propriedade são muito úteis, porque podem ser utilizados na maioria dos objetos, não apenas em controles.  
   
--   Defina gatilhos de evento. Os gatilhos de evento são muito úteis, porque podem ser utilizados na maioria dos objetos, não apenas em controles.  
+- Defina gatilhos de evento. Os gatilhos de evento são muito úteis, porque podem ser utilizados na maioria dos objetos, não apenas em controles.  
   
--   Crie animações.  
+- Crie animações.  
   
--   Diversos: crie gradientes, adicione BitmapEffects, use transformações e defina as propriedades básicas dos objetos.  
+- Diversos: crie gradientes, adicione BitmapEffects, use transformações e defina as propriedades básicas dos objetos.  
   
 ## <a name="see-also"></a>Consulte também
 

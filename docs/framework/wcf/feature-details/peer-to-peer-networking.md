@@ -3,11 +3,11 @@ title: Rede peer-to-peer
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
 ms.openlocfilehash: 388f6659602276cd3f356da2af63e4d31b5e22d6
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046392"
 ---
 # <a name="peer-to-peer-networking"></a>Rede peer-to-peer
 Canal par é uma entre vários participantes, ponto a ponto (P2P) tecnologia de comunicação no Windows Communication Foundation (WCF). Ele fornece um seguro e escalonável com base em mensagem P2P canal de comunicação para os desenvolvedores de aplicativos. Um exemplo comum de um aplicativo com vários participantes que pode se beneficiar de canal par é um aplicativo de colaboração, como bate-papo, em que um grupo de pessoas bate-papo entre si de maneira peer-to-peer sem servidores. Canal par permite Colaboração P2P, distribuição de conteúdo, balanceamento de carga e processamento distribuído para cenários de consumidor e empresariais.  

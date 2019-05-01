@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052671"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo de '\<variablename >' não pode ser inferido porque os limites do loop e a variável step não são ampliados para o mesmo tipo
 Você escreveu uma `For...Next` loop em que o compilador não é possível inferir um tipo de dados para a variável de controle de loop porque as seguintes condições forem verdadeiras:  
   
--   O tipo de dados da variável de controle de loop não é especificado com um `As` cláusula.  
+- O tipo de dados da variável de controle de loop não é especificado com um `As` cláusula.  
   
--   Os limites do loop e a variável step contêm pelo menos dois tipos de dados.  
+- Os limites do loop e a variável step contêm pelo menos dois tipos de dados.  
   
--   Não há nenhuma conversão padrão entre os tipos de dados.  
+- Não há nenhuma conversão padrão entre os tipos de dados.  
   
  Portanto, o compilador não pode inferir o tipo de dados da variável de controle de um loop.  
   
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Altere os tipos de limites do loop e a variável step conforme necessário para que pelo menos um deles é um tipo que os outros ampliam. No exemplo anterior, altere o tipo de `stepVar` para `Integer`.  
+- Altere os tipos de limites do loop e a variável step conforme necessário para que pelo menos um deles é um tipo que os outros ampliam. No exemplo anterior, altere o tipo de `stepVar` para `Integer`.  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   Use funções de conversão explícitas para converter os limites do loop e a variável de etapa para os tipos apropriados. No exemplo anterior, se aplicam a `Val` função `stepVar`.  
+- Use funções de conversão explícitas para converter os limites do loop e a variável de etapa para os tipos apropriados. No exemplo anterior, se aplicam a `Val` função `stepVar`.  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  

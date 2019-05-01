@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023774"
 ---
 # <a name="binding-sources-overview"></a>Visão geral das fontes de associação
 Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados. Este tópico discute os tipos de objetos que você pode usar como a origem da associação.  
@@ -42,13 +42,13 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
 ### <a name="other-characteristics"></a>Outras características  
  A lista a seguir fornece outros pontos importantes a serem observados:  
   
--   Se você deseja criar o objeto no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a classe deve ter um construtor padrão. Em alguns [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] linguagens, como C#, o construtor padrão pode ser criado para você.  
+- Se você deseja criar o objeto no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a classe deve ter um construtor padrão. Em alguns [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] linguagens, como C#, o construtor padrão pode ser criado para você.  
   
--   As propriedades que você usa como propriedades de origem da associação para uma associação devem ser propriedades públicas da sua classe. As propriedades de interface definidas explicitamente não podem ser acessadas para fins de associação, nem podem ser propriedades protegidas, particulares, internas ou virtuais que não têm implementação de base.  
+- As propriedades que você usa como propriedades de origem da associação para uma associação devem ser propriedades públicas da sua classe. As propriedades de interface definidas explicitamente não podem ser acessadas para fins de associação, nem podem ser propriedades protegidas, particulares, internas ou virtuais que não têm implementação de base.  
   
--   Não é possível associar a campos públicos.  
+- Não é possível associar a campos públicos.  
   
--   O tipo da propriedade declarado na sua classe é o tipo que é passado para a associação. No entanto, o tipo usado pela associação depende, em última análise, do tipo da propriedade de destino da associação e não da propriedade da origem da associação. Caso haja uma diferença de tipo, talvez você queira escrever um conversor para manipular como a propriedade personalizada será inicialmente passada para a associação. Para obter mais informações, consulte <xref:System.Windows.Data.IValueConverter>.  
+- O tipo da propriedade declarado na sua classe é o tipo que é passado para a associação. No entanto, o tipo usado pela associação depende, em última análise, do tipo da propriedade de destino da associação e não da propriedade da origem da associação. Caso haja uma diferença de tipo, talvez você queira escrever um conversor para manipular como a propriedade personalizada será inicialmente passada para a associação. Para obter mais informações, consulte <xref:System.Windows.Data.IValueConverter>.  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>Usando objetos inteiros como uma origem da associação  
@@ -80,11 +80,11 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
   
  Essa tabela descreve os seguintes pontos importantes sobre requisitos de permissão na associação de dados:  
   
--   Para propriedades do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], a associação de dados funciona enquanto o mecanismo de associação é capaz de acessar a propriedade da origem da associação usando reflexão. Caso contrário, o mecanismo de associação emitirá um aviso de que a propriedade não pôde ser encontrada e usará o valor de fallback ou o valor padrão, se estiver disponível.  
+- Para propriedades do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], a associação de dados funciona enquanto o mecanismo de associação é capaz de acessar a propriedade da origem da associação usando reflexão. Caso contrário, o mecanismo de associação emitirá um aviso de que a propriedade não pôde ser encontrada e usará o valor de fallback ou o valor padrão, se estiver disponível.  
   
--   Você pode associar a propriedades em objetos dinâmicos que são definidos em tempo de execução ou tempo de compilação.  
+- Você pode associar a propriedades em objetos dinâmicos que são definidos em tempo de execução ou tempo de compilação.  
   
--   Você sempre pode associar a propriedades de dependência.  
+- Você sempre pode associar a propriedades de dependência.  
   
  O requisito de permissão para a associação [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] é semelhante. Em uma área restrita de confiança parcial, <xref:System.Windows.Data.XmlDataProvider> falha quando ele não tem permissões para acessar os dados especificados.  
   

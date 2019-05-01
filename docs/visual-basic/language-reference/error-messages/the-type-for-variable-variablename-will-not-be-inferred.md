@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013641"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>O tipo da variável '\<variablename >' não será inferido porque está associado a um campo em um escopo delimitador
 O tipo da variável '\<variablename >' não será inferido porque está associado a um campo em um escopo delimitador. Altere o nome do '\<variablename >', ou use o nome totalmente qualificado (por exemplo, 'Me.variablename' ou 'MyBase.variablename').  
@@ -44,19 +44,19 @@ End Class
   
 ### <a name="to-address-this-warning"></a>Para resolver este aviso  
   
--   Verifique a variável de controle de loop local, alterando seu nome para um identificador que também não é o nome de um campo da classe.  
+- Verifique a variável de controle de loop local, alterando seu nome para um identificador que também não é o nome de um campo da classe.  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   Esclarecer o que a variável de controle de loop é associado ao campo de classe, prefixando `Me.` ao nome da variável.  
+- Esclarecer o que a variável de controle de loop é associado ao campo de classe, prefixando `Me.` ao nome da variável.  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   Em vez de depender de inferência de tipo local, use um `As` cláusula para especificar um tipo para a variável de controle de loop.  
+- Em vez de depender de inferência de tipo local, use um `As` cláusula para especificar um tipo para a variável de controle de loop.  
   
     ```  
     For Index As Integer = 1 To 10  

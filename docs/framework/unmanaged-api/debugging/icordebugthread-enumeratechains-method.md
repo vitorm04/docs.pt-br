@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994039"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>Método ICorDebugThread::EnumerateChains
 Obtém um ponteiro de interface para um enumerador de ICorDebugChainEnum que contém todas as cadeias de pilha neste objeto ICorDebugThread.  
@@ -42,11 +42,11 @@ HRESULT EnumerateChains (
 ## <a name="remarks"></a>Comentários  
  A cadeia da pilha representa a pilha de chamadas física para o thread. As circunstâncias a seguir criar um limite de cadeia de pilha:  
   
--   Uma transição para gerenciado ou não gerenciado para gerenciado.  
+- Uma transição para gerenciado ou não gerenciado para gerenciado.  
   
--   A alternância de contexto.  
+- A alternância de contexto.  
   
--   Um sequestro de um thread de usuário do depurador.  
+- Um sequestro de um thread de usuário do depurador.  
   
  No caso mais simples para um thread que está executando código puramente gerenciado em um único contexto, uma correspondência direta existirá entre os threads e cadeias de pilha.  
   

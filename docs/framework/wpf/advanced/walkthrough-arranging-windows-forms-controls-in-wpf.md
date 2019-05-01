@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007156"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Passo a passo: organizar controles do Windows Forms no WPF
 Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] recursos de layout para organizar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles em um aplicativo híbrido.  
   
  As tarefas ilustradas neste passo a passo incluem:  
   
--   Criar o projeto.  
+- Criar o projeto.  
   
--   Usando as configurações padrão de layout.  
+- Usando as configurações padrão de layout.  
   
--   Dimensionando o conteúdo.  
+- Dimensionando o conteúdo.  
   
--   Usando o posicionamento absoluto.  
+- Usando o posicionamento absoluto.  
   
--   Especificando o tamanho explicitamente.  
+- Especificando o tamanho explicitamente.  
   
--   Definindo propriedades de layout.  
+- Definindo propriedades de layout.  
   
--   Noções básicas sobre limitações da ordem z.  
+- Noções básicas sobre limitações da ordem z.  
   
--   Encaixe.  
+- Encaixe.  
   
--   Definindo a visibilidade.  
+- Definindo a visibilidade.  
   
--   Hospedando um controle que não se alonga.  
+- Hospedando um controle que não se alonga.  
   
--   Dimensionamento.  
+- Dimensionamento.  
   
--   Girando.  
+- Girando.  
   
--   Margens e preenchimento de configuração.  
+- Margens e preenchimento de configuração.  
   
--   Usando contêineres de layout dinâmico.  
+- Usando contêineres de layout dinâmico.  
   
  Para obter uma listagem de código completa das tarefas ilustradas neste passo a passo, consulte [Organizando controles do Windows Forms no WPF de exemplo](https://go.microsoft.com/fwlink/?LinkID=159971).  
   
@@ -64,11 +64,11 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
   
 2. No Gerenciador de Soluções, adicione referências aos assemblies a seguir.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. Clique duas vezes em MainWindow.xaml para abri-lo no modo de exibição XAML.  
   

@@ -3,11 +3,11 @@ title: 'Transporte: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007715"
 ---
 # <a name="transport-udp"></a>Transporte: UDP
 O exemplo de transporte UDP demonstra como implementar UDP unicast e multicast como um transporte personalizado do Windows Communication Foundation (WCF). O exemplo descreve o procedimento recomendado para a criação de um transporte personalizado no WCF, usando a estrutura de canais e seguir as práticas recomendadas do WCF. As etapas para criar um transporte personalizado são da seguinte maneira:  
@@ -32,15 +32,15 @@ O exemplo de transporte UDP demonstra como implementar UDP unicast e multicast c
 ## <a name="message-exchange-patterns"></a>Padrões de troca de mensagem  
  A primeira etapa ao escrever um transporte personalizado é decidir quais padrões de troca de mensagens (MEPs) são necessários para o transporte. Há três MEPs à sua escolha:  
   
--   Datagrama (IInputChannel/IOutputChannel)  
+- Datagrama (IInputChannel/IOutputChannel)  
   
      Ao usar um datagrama MEP, um cliente envia uma mensagem usando uma troca de "disparar e esquecer". A disparar e esquecer exchange é aquela que requer a confirmação de out-of-band de entrega bem-sucedida. A mensagem poderá ser perdida em trânsito e nunca alcançar o serviço. Se a operação de envio for concluído com êxito no lado do cliente, ele não garante que o ponto de extremidade remoto recebeu a mensagem. O datagrama é um bloco de construção fundamental para mensagens, como você pode criar seus próprios protocolos nela — incluindo protocolos confiáveis e segura. Implementam canais de datagrama de cliente a <xref:System.ServiceModel.Channels.IOutputChannel> canais de datagrama de interface e o serviço de implementam o <xref:System.ServiceModel.Channels.IInputChannel> interface.  
   
--   Solicitação-resposta (IRequestChannel/IReplyChannel)  
+- Solicitação-resposta (IRequestChannel/IReplyChannel)  
   
      Neste MEP, uma mensagem é enviada e uma resposta é recebida. O padrão consiste em pares de solicitação-resposta. Exemplos de chamadas de solicitação-resposta são chamadas de procedimento remoto (RPC) e o navegador obtém. Esse padrão também é conhecido como Half-Duplex. Este MEP, canais de cliente implementam <xref:System.ServiceModel.Channels.IRequestChannel> e implementam canais de serviço <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
--   Duplex (IDuplexChannel)  
+- Duplex (IDuplexChannel)  
   
      O MEP duplex permite que um número arbitrário de mensagens a serem enviadas por um cliente e recebidos em qualquer ordem. O MEP duplex é como uma conversa de telefone, em que cada palavra que está sendo falada é uma mensagem. Porque ambos os lados podem enviar e receber essa MEP, a interface implementada por canais de cliente e o serviço é <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
@@ -52,17 +52,17 @@ O exemplo de transporte UDP demonstra como implementar UDP unicast e multicast c
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Ciclo de vida do objeto de ICommunicationObject e o WCF  
  O WCF possui uma máquina de estado comum que é usada para gerenciar o ciclo de vida de objetos, como <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, e <xref:System.ServiceModel.Channels.IChannelListener> que são usados para comunicação. Há cinco estados em que esses objetos de comunicação podem existir. Esses estados são representados pelo <xref:System.ServiceModel.CommunicationState> enumeração e são da seguinte maneira:  
   
--   Criado: Este é o estado de um <xref:System.ServiceModel.ICommunicationObject> quando ela é instanciada pela primeira vez. Nenhuma entrada/saída (e/s) ocorre nesse estado.  
+- Criado: Este é o estado de um <xref:System.ServiceModel.ICommunicationObject> quando ela é instanciada pela primeira vez. Nenhuma entrada/saída (e/s) ocorre nesse estado.  
   
--   Ao abrir: Transição de objetos a esse estado quando <xref:System.ServiceModel.ICommunicationObject.Open%2A> é chamado. Neste momento as propriedades são transformadas em imutáveis e podem começar a entrada/saída. Essa transição é válida somente do estado criado.  
+- Ao abrir: Transição de objetos a esse estado quando <xref:System.ServiceModel.ICommunicationObject.Open%2A> é chamado. Neste momento as propriedades são transformadas em imutáveis e podem começar a entrada/saída. Essa transição é válida somente do estado criado.  
   
--   Aberto: Transição de objetos nesse estado quando o processo de abertura é concluída. Essa transição é válida somente do estado de abertura. Neste ponto, o objeto é totalmente pode ser usado para transferência.  
+- Aberto: Transição de objetos nesse estado quando o processo de abertura é concluída. Essa transição é válida somente do estado de abertura. Neste ponto, o objeto é totalmente pode ser usado para transferência.  
   
--   Fechamento: Transição de objetos a esse estado quando <xref:System.ServiceModel.ICommunicationObject.Close%2A> é chamado para um desligamento normal. Essa transição é válida somente de estado aberto.  
+- Fechamento: Transição de objetos a esse estado quando <xref:System.ServiceModel.ICommunicationObject.Close%2A> é chamado para um desligamento normal. Essa transição é válida somente de estado aberto.  
   
--   Fechado: No fechado objetos de estado não são mais utilizáveis. Em geral, mais alta configuração ainda será acessível para inspeção, mas nenhuma comunicação pode ocorrer. Esse estado é equivalente ao que está sendo descartado.  
+- Fechado: No fechado objetos de estado não são mais utilizáveis. Em geral, mais alta configuração ainda será acessível para inspeção, mas nenhuma comunicação pode ocorrer. Esse estado é equivalente ao que está sendo descartado.  
   
--   Com falha: No estado com falha, os objetos são acessíveis para inspeção, mas não é mais utilizável. Quando ocorre um erro não recuperável, o objeto faz a transição para esse estado. A transição válida apenas desse estado é para o `Closed` estado.  
+- Com falha: No estado com falha, os objetos são acessíveis para inspeção, mas não é mais utilizável. Quando ocorre um erro não recuperável, o objeto faz a transição para esse estado. A transição válida apenas desse estado é para o `Closed` estado.  
   
  Há eventos que são disparados para cada transição de estado. O <xref:System.ServiceModel.ICommunicationObject.Abort%2A> método pode ser chamado a qualquer momento e faz com que o objeto para fazer a transição imediata do estado atual para o estado fechado. Chamar <xref:System.ServiceModel.ICommunicationObject.Abort%2A> encerra qualquer trabalho não concluído.  
   
@@ -70,13 +70,13 @@ O exemplo de transporte UDP demonstra como implementar UDP unicast e multicast c
 ## <a name="channel-factory-and-channel-listener"></a>Fábrica de canais e ouvinte de canais  
  A próxima etapa na escrita de um transporte personalizado é criar uma implementação de <xref:System.ServiceModel.Channels.IChannelFactory> canais de cliente e de <xref:System.ServiceModel.Channels.IChannelListener> para canais de serviço. A camada de canais usa um padrão de fábrica para a construção de canais. O WCF fornece auxiliares da classe base para esse processo.  
   
--   O <xref:System.ServiceModel.Channels.CommunicationObject> implementos de classe <xref:System.ServiceModel.ICommunicationObject> e impõe a máquina de estado descrita anteriormente na etapa 2. 
+- O <xref:System.ServiceModel.Channels.CommunicationObject> implementos de classe <xref:System.ServiceModel.ICommunicationObject> e impõe a máquina de estado descrita anteriormente na etapa 2. 
 
--   O <xref:System.ServiceModel.Channels.ChannelManagerBase> classe implementa <xref:System.ServiceModel.Channels.CommunicationObject> e fornece uma classe base unificada para <xref:System.ServiceModel.Channels.ChannelFactoryBase> e <xref:System.ServiceModel.Channels.ChannelListenerBase>. O <xref:System.ServiceModel.Channels.ChannelManagerBase> classe funciona em conjunto com <xref:System.ServiceModel.Channels.ChannelBase>, que é uma classe base que implementa <xref:System.ServiceModel.Channels.IChannel>.  
+- O <xref:System.ServiceModel.Channels.ChannelManagerBase> classe implementa <xref:System.ServiceModel.Channels.CommunicationObject> e fornece uma classe base unificada para <xref:System.ServiceModel.Channels.ChannelFactoryBase> e <xref:System.ServiceModel.Channels.ChannelListenerBase>. O <xref:System.ServiceModel.Channels.ChannelManagerBase> classe funciona em conjunto com <xref:System.ServiceModel.Channels.ChannelBase>, que é uma classe base que implementa <xref:System.ServiceModel.Channels.IChannel>.  
   
--   O <xref:System.ServiceModel.Channels.ChannelFactoryBase> classe implementa <xref:System.ServiceModel.Channels.ChannelManagerBase> e <xref:System.ServiceModel.Channels.IChannelFactory> e consolida os `CreateChannel` sobrecargas em uma `OnCreateChannel` método abstrato.  
+- O <xref:System.ServiceModel.Channels.ChannelFactoryBase> classe implementa <xref:System.ServiceModel.Channels.ChannelManagerBase> e <xref:System.ServiceModel.Channels.IChannelFactory> e consolida os `CreateChannel` sobrecargas em uma `OnCreateChannel` método abstrato.  
   
--   O <xref:System.ServiceModel.Channels.ChannelListenerBase> classe implementa <xref:System.ServiceModel.Channels.IChannelListener>. Ele cuida do gerenciamento de estado básica.  
+- O <xref:System.ServiceModel.Channels.ChannelListenerBase> classe implementa <xref:System.ServiceModel.Channels.IChannelListener>. Ele cuida do gerenciamento de estado básica.  
   
  Neste exemplo, a implementação de fábrica está contida em UdpChannelFactory.cs e a implementação do ouvinte está contida no UdpChannelListener.cs. O <xref:System.ServiceModel.Channels.IChannel> implementações estão em UdpOutputChannel.cs e UdpInputChannel.cs.  
   
@@ -255,9 +255,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Adicionar uma associação padrão  
  Nosso elemento de associação pode ser usado de duas maneiras a seguir:  
   
--   Por meio de uma ligação personalizada: Uma associação personalizada permite ao usuário criar sua próprias associação com base em um conjunto arbitrário de elementos de associação.  
+- Por meio de uma ligação personalizada: Uma associação personalizada permite ao usuário criar sua próprias associação com base em um conjunto arbitrário de elementos de associação.  
   
--   Usando uma associação fornecida pelo sistema que inclui nosso elemento de associação. O WCF fornece uma série dessas associações definidas pelo sistema, como `BasicHttpBinding`, `NetTcpBinding`, e `WsHttpBinding`. Cada uma dessas vinculações está associada um perfil bem definido.  
+- Usando uma associação fornecida pelo sistema que inclui nosso elemento de associação. O WCF fornece uma série dessas associações definidas pelo sistema, como `BasicHttpBinding`, `NetTcpBinding`, e `WsHttpBinding`. Cada uma dessas vinculações está associada um perfil bem definido.  
   
  O exemplo implementa a associação de perfil em `SampleProfileUdpBinding`, que é derivada de <xref:System.ServiceModel.Channels.Binding>. O `SampleProfileUdpBinding` contém até quatro elementos de associação dentro dele: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement`, e `ReliableSessionBindingElement`.  
   

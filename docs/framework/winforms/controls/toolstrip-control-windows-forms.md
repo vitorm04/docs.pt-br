@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
 ms.openlocfilehash: 1a5378665d29e02799dd732d17705e462f40a2b1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009494"
 ---
 # <a name="toolstrip-control-windows-forms"></a>Controle ToolStrip (Windows Forms)
 <xref:System.Windows.Forms.ToolStrip> os controles são barras de ferramentas que podem hospedar menus, controles e controles de usuário em seus aplicativos do Windows Forms.  
@@ -73,13 +73,13 @@ ms.locfileid: "57721457"
  [Como: Implementar um ToolStripRenderer personalizado](how-to-implement-a-custom-toolstriprenderer.md)  
  Descreve como personalizar a aparência de um <xref:System.Windows.Forms.ToolStrip> controle implementando uma classe que deriva de <xref:System.Windows.Forms.ToolStripRenderer>.  
   
--   [Como: Criar um ToolStrip de formulários do Windows básico com itens padrão usando o Designer](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
+- [Como: Criar um ToolStrip de formulários do Windows básico com itens padrão usando o Designer](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
--   [Como: Remover um ToolStrip de um ToolStripContainer para um formulário](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
+- [Como: Remover um ToolStrip de um ToolStripContainer para um formulário](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [Passo a passo: Criando um controle ToolStrip com estilo profissional](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
+- [Passo a passo: Criando um controle ToolStrip com estilo profissional](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [Passo a passo: Criando um formulário MDI com mesclagem de Menu e controles ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+- [Passo a passo: Criando um formulário MDI com mesclagem de Menu e controles ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
 ## <a name="reference"></a>Referência  
  Classe <xref:System.Windows.Forms.ToolStrip>  

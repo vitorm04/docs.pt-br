@@ -5,11 +5,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032052"
 ---
 # <a name="base-elements-overview"></a>Visão geral de elementos base
 Um alto percentual de classes em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] são derivadas de quatro classes que são normalmente referenciadas no [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] documentação como classes de elemento base. Essas classes são <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, e <xref:System.Windows.FrameworkContentElement>. O <xref:System.Windows.DependencyObject> classe também é relacionada, porque ele é uma classe base comum de ambos <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement>  
@@ -31,49 +31,49 @@ Um alto percentual de classes em [!INCLUDE[TLA#tla_winclient](../../../../includ
   
  Se você criar uma classe que deriva de <xref:System.Windows.DependencyObject>, você herdará a seguinte funcionalidade:  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> suporte e o suporte do sistema de propriedade geral.  
+- <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> suporte e o suporte do sistema de propriedade geral.  
   
--   Capacidade de usar propriedades de dependência e propriedades anexadas que são implementadas como propriedades de dependência.  
+- Capacidade de usar propriedades de dependência e propriedades anexadas que são implementadas como propriedades de dependência.  
   
  Se você criar uma classe que deriva de <xref:System.Windows.UIElement>, você herdará a seguinte funcionalidade além fornecida pelo <xref:System.Windows.DependencyObject>:  
   
--   Suporte básico para valores de propriedade animados. Para obter mais informações, consulte [Visão geral de animação](../graphics-multimedia/animation-overview.md).  
+- Suporte básico para valores de propriedade animados. Para obter mais informações, consulte [Visão geral de animação](../graphics-multimedia/animation-overview.md).  
   
--   Suporte básico de eventos de entrada e comando. Para obter mais informações, consulte [visão geral de entrada](input-overview.md) e [visão geral do comando](commanding-overview.md).  
+- Suporte básico de eventos de entrada e comando. Para obter mais informações, consulte [visão geral de entrada](input-overview.md) e [visão geral do comando](commanding-overview.md).  
   
--   Métodos virtuais que podem ser substituídos para fornecer informações em um sistema de layout.  
+- Métodos virtuais que podem ser substituídos para fornecer informações em um sistema de layout.  
   
  Se você criar uma classe que deriva de <xref:System.Windows.FrameworkElement>, você herdará a seguinte funcionalidade além fornecida pelo <xref:System.Windows.UIElement>:  
   
--   Suporte a estilos e storyboards. Para obter mais informações, consulte <xref:System.Windows.Style> e [visão geral de Storyboards](../graphics-multimedia/storyboards-overview.md).  
+- Suporte a estilos e storyboards. Para obter mais informações, consulte <xref:System.Windows.Style> e [visão geral de Storyboards](../graphics-multimedia/storyboards-overview.md).  
   
--   Suporte para a vinculação de dados. Para obter mais informações, consulte [Visão geral de vinculação de dados](../data/data-binding-overview.md).  
+- Suporte para a vinculação de dados. Para obter mais informações, consulte [Visão geral de vinculação de dados](../data/data-binding-overview.md).  
   
--   Suporte para referências a recursos dinâmicos. Para obter mais informações, consulte [Recursos XAML](xaml-resources.md).  
+- Suporte para referências a recursos dinâmicos. Para obter mais informações, consulte [Recursos XAML](xaml-resources.md).  
   
--   Suporte à herança de valor da propriedade e outros sinalizadores nos metadados, que ajudam a relatar condições sobre propriedades para serviços do framework, como vinculação de dados, estilos ou a implementação da estrutura de layout. Para obter mais informações, consulte [metadados de propriedade do Framework](framework-property-metadata.md).  
+- Suporte à herança de valor da propriedade e outros sinalizadores nos metadados, que ajudam a relatar condições sobre propriedades para serviços do framework, como vinculação de dados, estilos ou a implementação da estrutura de layout. Para obter mais informações, consulte [metadados de propriedade do Framework](framework-property-metadata.md).  
   
--   O conceito de árvore lógica. Para obter mais informações, consulte [Árvores no WPF](trees-in-wpf.md).  
+- O conceito de árvore lógica. Para obter mais informações, consulte [Árvores no WPF](trees-in-wpf.md).  
   
--   Suporte para a implementação de nível de framework WPF prática do sistema de layout, incluindo um <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> substituição que pode detectar alterações em propriedades que influenciam o layout.  
+- Suporte para a implementação de nível de framework WPF prática do sistema de layout, incluindo um <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> substituição que pode detectar alterações em propriedades que influenciam o layout.  
   
  Se você criar uma classe que deriva de <xref:System.Windows.ContentElement>, você herdará a seguinte funcionalidade além fornecida pelo <xref:System.Windows.DependencyObject>:  
   
--   Suporte para animações. Para obter mais informações, consulte [Visão geral de animação](../graphics-multimedia/animation-overview.md).  
+- Suporte para animações. Para obter mais informações, consulte [Visão geral de animação](../graphics-multimedia/animation-overview.md).  
   
--   Suporte básico de eventos de entrada e comando. Para obter mais informações, consulte [visão geral de entrada](input-overview.md) e [visão geral do comando](commanding-overview.md).  
+- Suporte básico de eventos de entrada e comando. Para obter mais informações, consulte [visão geral de entrada](input-overview.md) e [visão geral do comando](commanding-overview.md).  
   
  Se você criar uma classe que deriva de <xref:System.Windows.FrameworkContentElement>, você obtém a seguinte funcionalidade além fornecida pelo <xref:System.Windows.ContentElement>:  
   
--   Suporte a estilos e storyboards. Para obter mais informações, consulte <xref:System.Windows.Style> e [visão geral da animação](../graphics-multimedia/animation-overview.md).  
+- Suporte a estilos e storyboards. Para obter mais informações, consulte <xref:System.Windows.Style> e [visão geral da animação](../graphics-multimedia/animation-overview.md).  
   
--   Suporte para a vinculação de dados. Para obter mais informações, consulte [Visão geral de vinculação de dados](../data/data-binding-overview.md).  
+- Suporte para a vinculação de dados. Para obter mais informações, consulte [Visão geral de vinculação de dados](../data/data-binding-overview.md).  
   
--   Suporte para referências a recursos dinâmicos. Para obter mais informações, consulte [Recursos XAML](xaml-resources.md).  
+- Suporte para referências a recursos dinâmicos. Para obter mais informações, consulte [Recursos XAML](xaml-resources.md).  
   
--   Suporte à herança de valor da propriedade e outros sinalizadores nos metadados, que ajudam a relatar condições sobre propriedades para serviços do framework, como a vinculação de dados, estilos ou a implementação da estrutura de layout. Para obter mais informações, consulte [metadados de propriedade do Framework](framework-property-metadata.md).  
+- Suporte à herança de valor da propriedade e outros sinalizadores nos metadados, que ajudam a relatar condições sobre propriedades para serviços do framework, como a vinculação de dados, estilos ou a implementação da estrutura de layout. Para obter mais informações, consulte [metadados de propriedade do Framework](framework-property-metadata.md).  
   
--   Você não herda acesso a modificações no sistema de layout (como <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Implementações do sistema de layout só estão disponíveis em <xref:System.Windows.FrameworkElement>. No entanto, você herda um <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> substituição que pode detectar alterações às propriedades que influenciam o layout e reportá-las para os hosts de conteúdo.  
+- Você não herda acesso a modificações no sistema de layout (como <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Implementações do sistema de layout só estão disponíveis em <xref:System.Windows.FrameworkElement>. No entanto, você herda um <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> substituição que pode detectar alterações às propriedades que influenciam o layout e reportá-las para os hosts de conteúdo.  
   
  Modelos de conteúdo estão documentados para uma variedade de classes. O modelo de conteúdo de uma classe é um fator que você deve considerar se você deseja localizar uma classe adequada para derivar dela. Para obter mais informações, consulte [Modelo de conteúdo do WPF](../controls/wpf-content-model.md).  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023948"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Passo a passo: Criar um botão usando XAML
 O objetivo deste passo a passo é aprender a criar um botão animado para uso em um aplicativo do Windows Presentation Foundation (WPF). Este passo a passo usa estilos e um modelo para criar um recurso de botão personalizado que permite a reutilização de código e separação da lógica do botão da declaração do botão. Este passo a passo é escrito inteiramente em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -421,15 +421,15 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
 ## <a name="summary"></a>Resumo  
  Neste passo a passo, você realizou os seguintes exercícios:  
   
--   Direcionada uma <xref:System.Windows.Style> para um tipo de objeto (<xref:System.Windows.Controls.Button>).  
+- Direcionada uma <xref:System.Windows.Style> para um tipo de objeto (<xref:System.Windows.Controls.Button>).  
   
--   Controlou propriedades básicas dos botões em todo o aplicativo usando o <xref:System.Windows.Style>.  
+- Controlou propriedades básicas dos botões em todo o aplicativo usando o <xref:System.Windows.Style>.  
   
--   Criou recursos como gradientes a ser usado para valores de propriedade do <xref:System.Windows.Style> setters.  
+- Criou recursos como gradientes a ser usado para valores de propriedade do <xref:System.Windows.Style> setters.  
   
--   Personalizou a aparência dos botões em todo o aplicativo, aplicando um modelo aos botões.  
+- Personalizou a aparência dos botões em todo o aplicativo, aplicando um modelo aos botões.  
   
--   Personalizou comportamento para os botões em resposta às ações do usuário (como <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, e <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) que incluiu efeitos de animação.  
+- Personalizou comportamento para os botões em resposta às ações do usuário (como <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, e <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) que incluiu efeitos de animação.  
   
 ## <a name="see-also"></a>Consulte também
 

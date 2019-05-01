@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009208"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Solucionando problemas de criação do controle e do componente
 Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver componentes e controles. Para obter mais informações, consulte [Programando com componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
--   Não é possível adicionar o controle à caixa de ferramentas  
+- Não é possível adicionar o controle à caixa de ferramentas  
   
--   Não é possível depurar o componente nem o controle de usuário do Windows Forms  
+- Não é possível depurar o componente nem o controle de usuário do Windows Forms  
   
--   O evento é gerado duas vezes no componente ou no controle herdado  
+- O evento é gerado duas vezes no componente ou no controle herdado  
   
--   Erro de tempo de design: "Falha ao criar o componente '*nome do componente*'"  
+- Erro de tempo de design: "Falha ao criar o componente '*nome do componente*'"  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   O ícone do componente não aparece na caixa de ferramentas  
+- O ícone do componente não aparece na caixa de ferramentas  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Não é possível adicionar o controle à caixa de ferramentas  
  Se você quiser adicionar um controle personalizado criado em outro projeto ou um controle de terceiros à **Caixa de Ferramentas**, faça isso manualmente. Se o projeto atual contiver seu controle ou componente, ele deverá aparecer na **Caixa de Ferramentas** automaticamente. Para obter mais informações, confira [Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
@@ -42,11 +42,11 @@ Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver
   
 2. Na caixa de diálogo **Escolher Itens da Caixa de Ferramentas**, adicione o componente:  
   
-    -   Se você quiser adicionar um controle ou um componente do .NET Framework, clique na guia **Componentes do .NET Framework**.  
+    - Se você quiser adicionar um controle ou um componente do .NET Framework, clique na guia **Componentes do .NET Framework**.  
   
          – ou –  
   
-    -   Se você quiser adicionar um componente COM ou um controle ActiveX, clique na guia **Componentes COM**.  
+    - Se você quiser adicionar um componente COM ou um controle ActiveX, clique na guia **Componentes COM**.  
   
 3. Se o controle estiver listado na caixa de diálogo, confirme que ele está selecionado e, em seguida, clique em **OK**.  
   
@@ -54,15 +54,15 @@ Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver
   
 4. Se seu controle não estiver listado na caixa de diálogo, faça o seguinte:  
   
-    1.  Clique no botão **Procurar**.  
+    1. Clique no botão **Procurar**.  
   
-    2.  Navegue até a pasta que contém o arquivo .dll com o controle.  
+    2. Navegue até a pasta que contém o arquivo .dll com o controle.  
   
-    3.  Selecione o arquivo .dll e clique em **Abrir**.  
+    3. Selecione o arquivo .dll e clique em **Abrir**.  
   
          Seu controle aparece na caixa de diálogo.  
   
-    4.  Confirme que o controle está selecionado e, em seguida, clique em **OK**.  
+    4. Confirme que o controle está selecionado e, em seguida, clique em **OK**.  
   
          Seu controle é adicionado à **Caixa de Ferramentas**.  
   
