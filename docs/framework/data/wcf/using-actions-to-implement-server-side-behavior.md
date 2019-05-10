@@ -2,12 +2,12 @@
 title: Usando as ações implementar o comportamento do lado do servidor
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875245"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063170"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Usando as ações implementar o comportamento do lado do servidor
 
@@ -46,7 +46,7 @@ As ações OData fornecem uma maneira de implementar um comportamento que age me
   
 3. Armazenar os resultados de Invoke() para que eles possam ser recuperados usando GetResult()  
   
- Os parâmetros podem ser passados como tokens. Isso ocorre porque é possível escrever um provedor de serviços de dados que funcione com os tokens que representam recursos. Se for esse o caso, você precisará converter (realizar marshaling) esses tokens em recursos reais antes de distribuir para a ação real. Depois que tiver sido realizado o marshaling do parâmetro, ele deverá estar em um estado editável de forma que as alterações ao recurso que ocorram quando a ação é invocada sejam salvas e gravadas em disco.  
+ Os parâmetros podem ser passados como tokens. Isso ocorre porque é possível escrever um provedor de serviços de dados que funcione com os tokens que representam recursos. Se for esse o caso, você precisará converter (realizar marshaling) esses tokens em recursos reais antes de distribuir para a ação real. Depois que o parâmetro passado por marshaling, ele deve ser em um estado editável para que as alterações para o recurso que ocorrem quando a ação é invocada serão salvo e gravado em disco.  
   
  Essa interface requer dois métodos: Invoke e GetResult adequados. Invoke chama o representante que implementa o comportamento da ação e GetResult retorna o resultado da ação.  
   

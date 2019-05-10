@@ -2,12 +2,12 @@
 title: Etapas comuns de uso do LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876962"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063007"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Etapas comuns de uso do LINQ to SQL
 Para implementar um aplicativo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], siga as etapas descritas mais adiante neste tópico. Observe que várias etapas são opcionais. É muito provável que você possa usar o modelo de objeto em seu estado padrão.  
@@ -20,32 +20,32 @@ Para implementar um aplicativo [!INCLUDE[vbtecdlinq](../../../../../../includes/
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Selecione uma ferramenta para criar o modelo.  
  Três ferramentas estão disponíveis para criar o modelo.  
   
--   O [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+- O [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      Esse designer fornece uma interface de usuário perfeita para criar um modelo de objeto a partir de um banco de dados existente. Essa ferramenta faz parte do IDE do Visual Studio e é ideal para bancos de dados de pequenos ou médios.  
   
--   A ferramenta de geração de código SQLMetal  
+- A ferramenta de geração de código SQLMetal  
   
      Esse utilitário de linha de comando fornece um conjunto ligeiramente diferente de opções do [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. A modelagem de grandes bancos de dados é mais bem efetuada com essa ferramenta. Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
--   Um editor de código  
+- Um editor de código  
   
      Você pode escrever seu próprio código usando o editor de código do Visual Studio ou outro editor. Não recomendamos essa abordagem, que pode gerar erros, quando você tem um banco de dados e pode usar o [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] ou a ferramenta SQLMetal. Entretanto, o editor de códigos pode ser útil para refinar ou modificar o código que você já gerou usando outras ferramentas. Para obter mais informações, confira [Como: Personalizar Classes de entidade usando o Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Selecione o tipo de código que você deseja gerar.  
   
--   Um C# ou arquivo de código de origem do Visual Basic para o mapeamento de atributo.  
+- Um C# ou arquivo de código de origem do Visual Basic para o mapeamento de atributo.  
   
      Você, em seguida, inclua esse arquivo de código em seu projeto do Visual Studio. Para obter mais informações, consulte [mapeamento baseado em atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
--   Um arquivo XML para mapeamento externo.  
+- Um arquivo XML para mapeamento externo.  
   
      Usando essa abordagem, você pode manter os metadados de mapeamento fora de seu código de aplicativo. Para obter mais informações, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
     > [!NOTE]
     >  O [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] não oferece suporte à geração de arquivos de mapeamento externos. Você deve usar a ferramenta SQLMetal para implementar esse recurso.  
   
--   Um arquivo DBML, que você pode modificar antes de gerar um arquivo de código final.  
+- Um arquivo DBML, que você pode modificar antes de gerar um arquivo de código final.  
   
      Esse é um recurso avançado.  
   
@@ -55,7 +55,7 @@ Para implementar um aplicativo [!INCLUDE[vbtecdlinq](../../../../../../includes/
 ## <a name="using-the-object-model"></a>Usando o modelo de objeto  
  A ilustração a seguir mostra a relação entre o desenvolvedor e os dados em um cenário de duas camadas. Para outros cenários, consulte [de N camadas e aplicativos remotos com o LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![Captura de tela que mostra o modelo de objeto do Linq.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  Agora que você tem o modelo de objeto, você descreve as solicitações de informações e manipula dados dentro desse modelo. Você pensa em termos de objetos e propriedades no seu modelo de objeto e não em termos de linhas e colunas do banco de dados. Você não lida diretamente com o banco de dados.  
   

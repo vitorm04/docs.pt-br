@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdce2181490d32212cd2629e98267e43bbe0d334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 416a00eb6966a9c5f83427182d9a12c4bbb20810
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673993"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592658"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > elemento
 Especifica se as exceções de tarefas sem tratamento devem encerrar um processo em execução.  
@@ -69,9 +69,9 @@ Especifica se as exceções de tarefas sem tratamento devem encerrar um processo
   
  Você também pode especificar o comportamento de exceção em uma das seguintes maneiras:  
   
--   Definindo a variável de ambiente `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
+- Definindo a variável de ambiente `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
--   Definindo o DWORD do registro valor ThrowUnobservedTaskExceptions = 1 em que a chave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Chave NETFramework.  
+- Definindo o DWORD do registro valor ThrowUnobservedTaskExceptions = 1 em que a chave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Chave NETFramework.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como habilitar a geração de exceções em tarefas usando um arquivo de configuração do aplicativo.  

@@ -4,12 +4,12 @@ description: Aprenda a terminologia básica que tenha usado todos os dias, ao tr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d465065341bc58295c965853f4178b05b12a3d9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785587"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591219"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 
@@ -33,7 +33,7 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Registro**: Um serviço que fornece acesso aos repositórios. O registro padrão para as imagens mais públicas é o [Docker Hub](https://hub.docker.com/) (propriedade da Docker como uma organização). Um registro geralmente contém repositórios de várias equipes. As empresas geralmente têm registros privados para armazenar e gerenciar as imagens que criaram. O Registro de Contêiner do Azure é outro exemplo.
 
-**Imagem de vários arcos**: Para arquitetura de várias é um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma onde Docker está em execução, por exemplo, quando um Dockerfile solicita uma imagem de base **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** do registro Na verdade, ele obtém **`2.1-nanoserver-1709`**, **`2.1-nanoserver-1803`**, **`2.1-nanoserver-1809`** ou **`2.1-stretch`**, Dependendo do sistema operacional e versão em que o Docker está sendo executado.
+**Imagem de vários arcos**: Para arquitetura de várias é um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma onde Docker está em execução, por exemplo, quando um Dockerfile solicita uma imagem de base **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** do registro Na verdade, ele obtém **`2.2-nanoserver-1709`**, **`2.2-nanoserver-1803`**, **`2.2-nanoserver-1809`** ou **`2.2-stretch`**, Dependendo do sistema operacional e versão em que o Docker está sendo executado.
 
 **Hub do Docker**: Um registro público para fazer upload de imagens e trabalhar com elas. O Docker Hub hospeda imagens do Docker, registros públicos ou privados, cria gatilhos e ganchos da Web e integra-se com o GitHub e o Bitbucket.
 

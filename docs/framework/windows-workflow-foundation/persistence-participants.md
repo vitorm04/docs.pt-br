@@ -2,12 +2,12 @@
 title: Participantes de persistência
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73799fd66dd619d2573a1d334a6dbd23a9ff5b4e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672647"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592143"
 ---
 # <a name="persistence-participants"></a>Participantes de persistência
 Um participante de persistência pode participar em uma operação de persistência (salvar) ou carregamento disparada por um aplicativo host. O [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] vem com duas classes abstratas, **PersistenceParticipant** e **PersistenceIOParticipant**, que você pode usar para criar um participante de persistência. Um participante de persistência deriva de uma dessas classes, implementa-se os métodos de interesse, e então adiciona uma instância da classe à coleção de <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> em <xref:System.ServiceModel.Activities.WorkflowServiceHost> . O aplicativo host pode procurar essas extensões de fluxo de trabalho para manter uma instância de fluxo de trabalho e chama métodos apropriados nos participantes de persistência em momentos apropriadas.  
@@ -48,17 +48,17 @@ Um participante de persistência pode participar em uma operação de persistên
   
  Ao carregar uma instância de fluxo de trabalho o provedor de persistência cria um bloqueio nessa instância. Isso impede que a instância é carregada por mais de um host em um cenário com vários nós. Se você tentar carregar uma instância de fluxo de trabalho que foi bloqueada, você verá uma exceção semelhante ao seguinte: A exceção "System.ServiceModel.Persistence.InstanceLockException: A operação solicitada não pôde ser concluída porque o bloqueio por exemplo ' 00000000-0000-0000-0000-000000000000' não foi possível adquirir ". Esse erro é causado quando ocorre um destes procedimentos:  
   
--   Em um cenário com vários nós a instância é carregada por outro host.  Há algumas maneiras diferentes para resolver esses tipos de conflitos: encaminhar o processamento para o nó que possui o bloqueio e a nova tentativa, ou forçar a carga que fará com que o outro host é possível de salvar seu trabalho.  
+- Em um cenário com vários nós a instância é carregada por outro host.  Há algumas maneiras diferentes para resolver esses tipos de conflitos: encaminhar o processamento para o nó que possui o bloqueio e a nova tentativa, ou forçar a carga que fará com que o outro host é possível de salvar seu trabalho.  
   
--   Em um cenário de único nó e no host falhou.  Quando o host inicia anterior novamente (um processo reciclar ou criando uma nova factory do provedor de persistência) o novo host tenta carregar uma instância que é bloqueada ainda pelo host antigo porque o bloqueio ainda não expirou.  
+- Em um cenário de único nó e no host falhou.  Quando o host inicia anterior novamente (um processo reciclar ou criando uma nova factory do provedor de persistência) o novo host tenta carregar uma instância que é bloqueada ainda pelo host antigo porque o bloqueio ainda não expirou.  
   
--   Em um cenário de único nó e na instância em questão foi anuladas em algum ponto e uma nova instância do provedor de persistência é criada que tenha uma identificação diferente do host  
+- Em um cenário de único nó e na instância em questão foi anuladas em algum ponto e uma nova instância do provedor de persistência é criada que tenha uma identificação diferente do host  
   
  O valor de tempo limite de bloqueio tem um valor padrão de 5 minutos, você pode especificar um valor de tempo limite diferente ao chamar <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Como: Criar um participante personalizado de persistência](how-to-create-a-custom-persistence-participant.md)  
+- [Como: Criar um participante personalizado de persistência](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Consulte também
 

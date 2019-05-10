@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 563f4a9fefe86b58f0dc6f0a4aec5cb285630616
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017797"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593400"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizando a aparência de um controle existente criando um ControlTemplate
 <a name="introduction"></a> Um <xref:System.Windows.Controls.ControlTemplate> Especifica a estrutura visual e o comportamento visual de um controle. Você pode personalizar a aparência de um controle, fornecendo uma nova <xref:System.Windows.Controls.ControlTemplate>. Quando você cria um <xref:System.Windows.Controls.ControlTemplate>, substitua a aparência de um controle existente sem alterar sua funcionalidade. Por exemplo, você pode tornar os botões em seu aplicativo redondos em vez da forma quadrada padrão, mas o botão ainda gerará o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
@@ -64,11 +64,11 @@ Uma caixa de seleção que usa um modelo de controle personalizado
   
  Neste exemplo, a estrutura visual consiste das seguintes partes:  
   
--   Um <xref:System.Windows.Controls.Border> nomeado `RootElement` que serve como a raiz do modelo <xref:System.Windows.FrameworkElement>.  
+- Um <xref:System.Windows.Controls.Border> nomeado `RootElement` que serve como a raiz do modelo <xref:System.Windows.FrameworkElement>.  
   
--   Um <xref:System.Windows.Controls.Grid> que é um filho de `RootElement`.  
+- Um <xref:System.Windows.Controls.Grid> que é um filho de `RootElement`.  
   
--   Um <xref:System.Windows.Controls.ContentPresenter> que exibe o conteúdo do botão. O <xref:System.Windows.Controls.ContentPresenter> permite que qualquer tipo de objeto a ser exibido.  
+- Um <xref:System.Windows.Controls.ContentPresenter> que exibe o conteúdo do botão. O <xref:System.Windows.Controls.ContentPresenter> permite que qualquer tipo de objeto a ser exibido.  
   
  [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
@@ -85,9 +85,9 @@ Uma caixa de seleção que usa um modelo de controle personalizado
   
  O <xref:System.Windows.Controls.Control> classe define várias propriedades que devem ser usadas pelo modelo de controle para ter um efeito no controle quando eles são definidos. Como o <xref:System.Windows.Controls.ControlTemplate> usa a propriedade depende da propriedade. O <xref:System.Windows.Controls.ControlTemplate> deve usar a propriedade em uma das seguintes maneiras:  
   
--   Um elemento no <xref:System.Windows.Controls.ControlTemplate> modelo associado à propriedade.  
+- Um elemento no <xref:System.Windows.Controls.ControlTemplate> modelo associado à propriedade.  
   
--   Um elemento de <xref:System.Windows.Controls.ControlTemplate> herda a propriedade de um pai <xref:System.Windows.FrameworkElement>.  
+- Um elemento de <xref:System.Windows.Controls.ControlTemplate> herda a propriedade de um pai <xref:System.Windows.FrameworkElement>.  
   
  A tabela a seguir lista as propriedades visuais herdadas por um controle a partir de <xref:System.Windows.Controls.Control> classe. Ele também indica se o modelo de controle padrão de um controle usa o valor da propriedade herdada ou se ele deve teu seu modelo associado.  
   
@@ -167,11 +167,11 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
   
  Você pode especificar a quantidade de tempo que leva para ocorrer para uma transição suave de um controle de um estado para outro, adicionando uma animação <xref:System.Windows.VisualTransition> objetos para o <xref:System.Windows.Controls.ControlTemplate>. Quando você cria um <xref:System.Windows.VisualTransition>, especifique um ou mais das seguintes opções:  
   
--   O tempo que leva para que uma transição entre estados ocorra.  
+- O tempo que leva para que uma transição entre estados ocorra.  
   
--   Alterações adicionais na aparência do controle que ocorrem durante a transição.  
+- Alterações adicionais na aparência do controle que ocorrem durante a transição.  
   
--   Quais estados as <xref:System.Windows.VisualTransition> é aplicado a.  
+- Quais estados as <xref:System.Windows.VisualTransition> é aplicado a.  
   
 ### <a name="specifying-the-duration-of-a-transition"></a>Especificar a duração de uma transição  
  Você pode especificar quanto tempo uma transição dura definindo a <xref:System.Windows.VisualTransition.GeneratedDuration%2A> propriedade. O exemplo anterior tem um <xref:System.Windows.VisualState> que especifica que a borda do botão se torna transparente quando o botão é pressionado, mas a animação leva muito tempo para ser perceptível caso o botão é pressionado e liberado de rapidamente. Você pode usar um <xref:System.Windows.VisualTransition> para especificar a quantidade de tempo ele leva o controle para fazer a transição para o estado pressionado. O exemplo a seguir especifica que o controle utiliza um centésimo de segundo para ir para o estado pressionado.  
@@ -201,13 +201,13 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
   
  A exemplo a seguir mostra a <xref:System.Windows.VisualStateGroup> para o `CommonStates`. O exemplo define um <xref:System.Windows.VisualTransition> para cada uma das seguintes do botão faz a transição.  
   
--   Para o estado `Pressed`.  
+- Para o estado `Pressed`.  
   
--   Para o estado `MouseOver`.  
+- Para o estado `MouseOver`.  
   
--   Do estado `Pressed` para o estado `MouseOver`.  
+- Do estado `Pressed` para o estado `MouseOver`.  
   
--   Do estado `MouseOver` para o estado `Normal`.  
+- Do estado `MouseOver` para o estado `Normal`.  
   
  [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
@@ -217,11 +217,11 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
   
  Um contrato de controle contém três elementos:  
   
--   Os elementos visuais usados pela lógica do controle.  
+- Os elementos visuais usados pela lógica do controle.  
   
--   Os estados do controle e o grupo ao qual cada estado pertence.  
+- Os estados do controle e o grupo ao qual cada estado pertence.  
   
--   As propriedades públicas que afetam o controle visualmente.  
+- As propriedades públicas que afetam o controle visualmente.  
   
 ### <a name="visual-elements-in-the-control-contract"></a>Elementos visuais no contrato de controle  
  Às vezes, a lógica do controle interage com um <xref:System.Windows.FrameworkElement> que é o <xref:System.Windows.Controls.ControlTemplate>. Por exemplo, o controle pode manipular um evento de um de seus elementos. Quando um controle espera encontrar um determinado <xref:System.Windows.FrameworkElement> no <xref:System.Windows.Controls.ControlTemplate>, ele deve transmitir essas informações para o <xref:System.Windows.Controls.ControlTemplate> autor. O controle usa o <xref:System.Windows.TemplatePartAttribute> para transmitir o tipo de elemento que é esperado e qual deve ser o nome do elemento. O <xref:System.Windows.Controls.Button> não tem <xref:System.Windows.FrameworkElement> partes em seu contrato de controle, mas outros controles, como o <xref:System.Windows.Controls.ComboBox>, fazer.  
@@ -250,9 +250,9 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
   
  Ao criar uma <xref:System.Windows.Controls.ControlTemplate>, geralmente é mais fácil começar com um <xref:System.Windows.Controls.ControlTemplate> e fazer alterações nele. Você pode fazer uma das opções a seguir para alterar um existente <xref:System.Windows.Controls.ControlTemplate>:  
   
--   Usar um designer como o Expression Blend, que fornece uma interface do usuário gráfica para criar modelos de controle. Para obter mais informações, consulte [Definir o estilo de um controle que dá suporte a modelos](https://go.microsoft.com/fwlink/?LinkId=161153).  
+- Usar um designer como o Expression Blend, que fornece uma interface do usuário gráfica para criar modelos de controle. Para obter mais informações, consulte [Definir o estilo de um controle que dá suporte a modelos](https://go.microsoft.com/fwlink/?LinkId=161153).  
   
--   Obter o padrão <xref:System.Windows.Controls.ControlTemplate> e editá-lo. Para localizar os modelos de controle padrão que estão inclusos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Temas padrão do WPF](https://go.microsoft.com/fwlink/?LinkID=158252).  
+- Obter o padrão <xref:System.Windows.Controls.ControlTemplate> e editá-lo. Para localizar os modelos de controle padrão que estão inclusos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Temas padrão do WPF](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Exemplo completo  

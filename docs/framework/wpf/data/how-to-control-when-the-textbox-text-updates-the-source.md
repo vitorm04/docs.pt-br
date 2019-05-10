@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f7770db59c346f0981dd89a9995f11e41d17a1d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051995"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063487"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Como: Controlar quando o texto de TextBox atualiza a origem
 Este tópico descreve como usar o <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriedade para controlar o tempo das atualizações de origem de associação. O tópico usa o <xref:System.Windows.Controls.TextBox> controle como um exemplo.  
@@ -28,7 +28,7 @@ Este tópico descreve como usar o <xref:System.Windows.Data.Binding.UpdateSource
   
  Como resultado, o <xref:System.Windows.Controls.TextBlock> mostra o mesmo texto (porque a origem é alterada) enquanto o usuário insere o texto para o <xref:System.Windows.Controls.TextBox>, conforme ilustrado pela seguinte captura de tela da amostra:  
   
- ![Captura de tela de exemplo de associação simples de dados](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Captura de tela que mostra a associação de dados simples.](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
  Se você tiver uma caixa de diálogo ou um formulário editável pelo usuário e desejar adiar atualizações de origem até que o usuário terminou a edição de campos e clicar em "Okey", você pode definir as <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor das suas associações para <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, conforme mostrado no exemplo a seguir:  
   

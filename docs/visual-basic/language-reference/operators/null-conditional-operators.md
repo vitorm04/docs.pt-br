@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: b83435b8448b53eca63aac0519e9eed2f7dfa9f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4815fe7ad337634cfb56127fbd24a47a37fdd74b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028685"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062935"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. e? operadores nulo-condicional de () (Visual Basic)
 
@@ -37,6 +37,24 @@ Dim length As Integer
 If customers IsNot Nothing Then
    length = customers.Length
 End If
+```
+
+Às vezes você precisa executar uma ação em um objeto que pode ser nulo, com base no valor de um membro booleano naquele objeto (como a propriedade booliana `IsAllowedFreeShipping` no exemplo a seguir):
+
+```vb
+  Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+  
+  If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
+   ApplyFreeShippingToOrders(customer)
+  End If
+```
+
+Você pode reduzir o seu código e evitar manualmente a verificação de null, usando o operador nulo condicional da seguinte maneira:
+
+```vb
+ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+ 
+ If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
 Os operadores condicionais nulos estão entrando em curto-circuito.  Se uma operação em uma cadeia de operações de índice e acesso de membro condicionais retornar `Nothing`, o restante das paradas de execução da cadeia.  No exemplo a seguir `C(E)` não é avaliado se `A`, `B`, ou `C` for avaliada como `Nothing`.

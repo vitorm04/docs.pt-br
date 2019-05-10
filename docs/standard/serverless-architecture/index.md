@@ -3,13 +3,13 @@ title: 'Aplicativos sem servidor: Arquitetura, padrões e implementação no Azu
 description: Guia para arquitetura sem servidor. Saiba quando, por que e como implementar uma arquitetura sem servidor [em vez de uma IaaS (infraestrutura como serviço) ou uma PaaS (plataforma como serviço)] em seus aplicativos empresariais.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 6/26/2018
-ms.openlocfilehash: a44af1fc76b54ec9be0d8e3b3ba2e54f3e3b220b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 06/26/2018
+ms.openlocfilehash: 148a79e39c047897719e4f97efd84676b1b92636
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054205"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062702"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicativos sem servidor: Arquitetura, padrões e implementação no Azure
 

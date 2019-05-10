@@ -2,12 +2,12 @@
 title: Arquitetura do ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e85100733e20b69cf6b8c52c58d250be869971cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880081"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592636"
 ---
 # <a name="adonet-architecture"></a>Arquitetura do ADO.NET
 Antigamente, o processamento de dados dependia basicamente de um modelo de duas camadas baseado em conexão. Como o processamento de dados usa cada vez mais arquiteturas de várias camadas, os programadores estão adotando uma abordagem desconectada para fornecer melhor escalabilidade a seus aplicativos.  
@@ -29,13 +29,13 @@ Arquitetura do ADO.NET
 ### <a name="choosing-a-datareader-or-a-dataset"></a>Escolhendo um DataReader ou um DataSet  
  Quando você decidir se seu aplicativo deve usar um `DataReader` (consulte [recuperando dados usando um DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) ou uma `DataSet` (consulte [DataSets, DataTables e DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)), considere o tipo de funcionalidade de que seu aplicativo requer. Use um `DataSet` para fazer o seguinte:  
   
--   Armazenar dados em cache localmente no aplicativo para que você possa manipulá-lo. Se você precisar ler somente os resultados de uma consulta, o `DataReader` será a melhor opção.  
+- Armazenar dados em cache localmente no aplicativo para que você possa manipulá-lo. Se você precisar ler somente os resultados de uma consulta, o `DataReader` será a melhor opção.  
   
--   Estabelecer a comunicação remota dos dados entre camadas ou em um serviço Web XML.  
+- Estabelecer a comunicação remota dos dados entre camadas ou em um serviço Web XML.  
   
--   Interagir com os dados dinamicamente, por exemplo, fazendo a associação a um controle do Windows Forms ou combinando e relacionando dados de várias fontes.  
+- Interagir com os dados dinamicamente, por exemplo, fazendo a associação a um controle do Windows Forms ou combinando e relacionando dados de várias fontes.  
   
--   Executar um processamento extensivo nos dados sem precisar de uma conexão aberta com a fonte de dados, o que libera a conexão a ser usada por outros clientes.  
+- Executar um processamento extensivo nos dados sem precisar de uma conexão aberta com a fonte de dados, o que libera a conexão a ser usada por outros clientes.  
   
  Se você não precisar da funcionalidade fornecida pelo `DataSet`, poderá melhorar o desempenho do aplicativo usando o `DataReader` para retornar os dados apenas para encaminhamento e somente leitura. Embora o `DataAdapter` usa o `DataReader` para preencher o conteúdo de um `DataSet` (consulte [populando um DataSet a partir de um DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)), usando o `DataReader`, você pode melhorar o desempenho porque economizará a memória que poderia ser consumido pela `DataSet`e evitar o processamento que é necessário para criar e preencher o conteúdo do `DataSet`.  
   

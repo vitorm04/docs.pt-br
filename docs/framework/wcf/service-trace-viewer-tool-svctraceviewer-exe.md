@@ -2,12 +2,12 @@
 title: Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a15024c0d2308da8cf2cc0d72d79c9f585f2912
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051749"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606008"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo WCF. Visualizador de rastreamento de serviço fornece uma maneira de mesclar facilmente, exibir e filtrar as mensagens de rastreamento no log de forma que você possa diagnosticar, reparar e verificar problemas de serviço do WCF.  
@@ -62,11 +62,11 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Abrindo e exibindo arquivos de rastreamento do WCF  
  O Visualizador de Rastreamento de Serviço oferece suporte a três tipos de arquivos:  
   
--   O arquivo (. svclog) de rastreamento do WCF  
+- O arquivo (. svclog) de rastreamento do WCF  
   
--   Arquivo de rastreamento de eventos (.etl)  
+- Arquivo de rastreamento de eventos (.etl)  
   
--   Arquivo de rastreamento Crimson  
+- Arquivo de rastreamento Crimson  
   
  O Visualizador de Rastreamento de Serviço permite que você abra qualquer arquivo de rastreamento com suporte, adicione e integre arquivos de rastreamento adicionais, ou abra e mescle um grupo de arquivos de rastreamento simultaneamente.  
   
@@ -106,9 +106,9 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
   
  Há duas maneiras de gerenciar projetos:  
   
--   No **arquivo** menu, você pode abrir, salvar e fechar projetos.  
+- No **arquivo** menu, você pode abrir, salvar e fechar projetos.  
   
--   No **projeto** guia, você pode adicionar arquivos a um projeto.  
+- No **projeto** guia, você pode adicionar arquivos a um projeto.  
   
 ### <a name="viewing-wcf-traces"></a>Exibindo rastreamentos do WCF  
  WCF emite rastreamentos usando o formato de rastreamento de atividade. No modelo de rastreamento de atividade, os rastreamentos individuais são agrupados em atividades de acordo com sua finalidade. O fluxo de controle lógico é transferido entre atividades. Por exemplo, durante o tempo de vida de um aplicativo, muitas "atividades de envio de mensagens" aparecem e desaparecem. Para obter mais informações sobre como exibir os rastreamentos e atividades e a interface do usuário do Visualizador de rastreamento de serviço muito, consulte [usando o Visualizador de rastreamento de serviço para exibir rastreamentos correlacionados e soluções de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
@@ -116,13 +116,13 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 #### <a name="switching-to-different-views"></a>Alternando entre diferentes exibições  
  O Visualizador de Rastreamento de Serviço fornece as exibições a seguir. Eles são exibidos como guias no painel à esquerda do visualizador e também podem ser acessados a partir de **exibição** menu.  
   
--   Exibição de atividade  
+- Exibição de atividade  
   
--   Exibição de projeto  
+- Exibição de projeto  
   
--   Exibição de mensagem  
+- Exibição de mensagem  
   
--   Exibição de gráfico  
+- Exibição de gráfico  
   
 ##### <a name="activity-view"></a>Exibição de atividade  
  Depois que os arquivos de rastreamento são abertos, você pode ver os rastreamentos agrupados em atividades e exibido na **atividade** exibição no painel esquerdo.  
@@ -144,9 +144,12 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
   
 ##### <a name="project-view"></a>Exibição de projeto  
  Esta exibição permite gerenciar arquivos de rastreamento no projeto atual. Consulte a seção Gerenciando projetos para obter mais detalhes.  
-  
+
+##### <a name="message-view"></a>Exibição de mensagem
+ Essa exibição permite exibir o log de todas as mensagens rastreamentos, incluindo o processo de ação, data/hora, Acivity de/para e navegue até os detalhes de rastreamento de log a mensagem associada. Você pode agrupar os rastreamentos de log de mensagem pelo limite de atividade, processo/Thread, ou Send e Receive para facilitar a navegação de fluxo de mensagens.
+ 
 ##### <a name="graph-view"></a>Exibição de gráfico  
- Um dos recursos mais poderosos do Visualizador de rastreamento de serviço é o **Graph** exibição, que exibe os dados de rastreamento para uma determinada atividade na forma de gráfico. A forma de gráfico permite que você veja as etapas de execução de eventos e as inter-relações entre várias atividades à medida que os dados se movem entre elas.  
+ Este modo de exibição exibe os dados de rastreamento para uma determinada atividade na forma de gráfico. A forma de gráfico permite que você veja as etapas de execução de eventos e as inter-relações entre várias atividades à medida que os dados se movem entre elas.  
   
  Para alternar para o **Graph** exibir, selecione uma atividade na **atividade** exibir e clique no **atividade** guia ou um rastreamento de log de mensagem no **mensagem**Modo de exibição. Se vários arquivos de rastreamento forem carregados e a atividade envolver rastreamentos de mais de um arquivo, todos os rastreamentos relevantes aparecerão na exibição de gráfico. Clicar duas vezes em atividades e rastreamentos de log de mensagens também levam você para o **Graph** modo de exibição.  
   
@@ -192,9 +195,9 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 ###### <a name="options"></a>Opções  
  Você pode selecionar duas opções do **opção** menu no modo de exibição gráfico.  
   
--   Mostrar Rastreamentos de Limite de Atividade, que, quando desmarcada, ignora os rastreamentos de limite de atividade no gráfico.  
+- Mostrar Rastreamentos de Limite de Atividade, que, quando desmarcada, ignora os rastreamentos de limite de atividade no gráfico.  
   
--   Mostrar Rastreamentos Detalhados que Não Sejam de Mensagens, que, quando desmarcada, ignora rastreamentos de nível de detalhe, exceto para rastreamentos de mensagens. Na maioria dos casos, os rastreamentos de nível de detalhe são menos importantes para análise. Essa opção é útil quando você não quer analisar rastreamentos de nível de detalhe e quer apenas se concentrar em rastreamentos mais importantes.  
+- Mostrar Rastreamentos Detalhados que Não Sejam de Mensagens, que, quando desmarcada, ignora rastreamentos de nível de detalhe, exceto para rastreamentos de mensagens. Na maioria dos casos, os rastreamentos de nível de detalhe são menos importantes para análise. Essa opção é útil quando você não quer analisar rastreamentos de nível de detalhe e quer apenas se concentrar em rastreamentos mais importantes.  
   
 ###### <a name="layout-mode"></a>Modo de layout  
  O visualizador possui dois modos de Layout: **Processo** e **Thread**. Essa configuração define a maior unidade de organização. O padrão é o modo de Layout **processo**, o que significa que as atividades são agrupadas por processos no gráfico.  
@@ -222,22 +225,22 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 ### <a name="filtering-wcf-traces"></a>Filtrando rastreamentos do WCF  
  Para facilitar a análise de rastreamentos, você pode filtrá-los da seguinte maneira:  
   
--   A barra de ferramentas de filtro fornece acesso a filtros predefinidos e personalizados. Ele pode ser habilitado por meio de **exibição** menu.  
+- A barra de ferramentas de filtro fornece acesso a filtros predefinidos e personalizados. Ele pode ser habilitado por meio de **exibição** menu.  
   
--   O filtro predefinido do visualizador pode ser usado para filtrar seletivamente partes dos rastreamentos do WCF. Por padrão, ele é definido para permitir a passagem de todos os rastreamentos de infraestrutura. As configurações desse filtro são definidas na **opções de filtro** submenu **exibição** menu.  
+- O filtro predefinido do visualizador pode ser usado para filtrar seletivamente partes dos rastreamentos do WCF. Por padrão, ele é definido para permitir a passagem de todos os rastreamentos de infraestrutura. As configurações desse filtro são definidas na **opções de filtro** submenu **exibição** menu.  
   
--   Os filtros XPath personalizados oferecem aos usuários controle total sobre a filtragem. Eles podem ser definidos na **filtro personalizado** sob **exibição** menu.  
+- Os filtros XPath personalizados oferecem aos usuários controle total sobre a filtragem. Eles podem ser definidos na **filtro personalizado** sob **exibição** menu.  
   
  Somente os rastreamentos que passam por todos os filtros são exibidos.  
   
 #### <a name="using-the-filter-toolbar"></a>Usando a barra de ferramentas de filtro  
  A barra de ferramentas de filtro aparece na parte superior da ferramenta. Se não estiver presente, você pode ativá-la na **exibição** menu. A barra possui três componentes:  
   
--   Procurar: **Procure** define o assunto a ser procurado na operação de filtro. Por exemplo, se você desejar localizar todos os rastreamentos que foram emitidos no contexto do processo X, defina esse campo como X e o **pesquisar em** campo do nome do processo. Esse campo muda para um controle seletor DateTime quando um filtro baseado em hora é selecionado.  
+- Procurar: **Procure** define o assunto a ser procurado na operação de filtro. Por exemplo, se você desejar localizar todos os rastreamentos que foram emitidos no contexto do processo X, defina esse campo como X e o **pesquisar em** campo do nome do processo. Esse campo muda para um controle seletor DateTime quando um filtro baseado em hora é selecionado.  
   
--   Pesquise em: Este campo define o tipo de filtro a ser aplicado.  
+- Pesquise em: Este campo define o tipo de filtro a ser aplicado.  
   
--   Nível: Essa configuração define o nível de rastreamento mínimo permitido pelo filtro. Por exemplo, se o nível for definido como Erro e Acima, somente rastreamentos dos níveis Erro e Crítico serão exibidos. Esse filtro é combinado aos critérios especificados por Procurar e Pesquisar em.  
+- Nível: Essa configuração define o nível de rastreamento mínimo permitido pelo filtro. Por exemplo, se o nível for definido como Erro e Acima, somente rastreamentos dos níveis Erro e Crítico serão exibidos. Esse filtro é combinado aos critérios especificados por Procurar e Pesquisar em.  
   
  O **filtrar agora** botão inicia a operação de filtro. Alguns filtros, principalmente quando são aplicados a um grande conjunto de dados, demoram para serem concluídos. Você pode cancelar a operação de filtro pressionando o **pare** botão que aparece na barra de status na **operações** menu.  
   
@@ -321,27 +324,27 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 ### <a name="finding-data"></a>Localizando dados  
  O visualizador oferece as seguintes maneiras de localizar dados:  
   
--   A barra de ferramentas de localização fornece um acesso rápido às opções de localização mais comuns.  
+- A barra de ferramentas de localização fornece um acesso rápido às opções de localização mais comuns.  
   
--   A caixa de diálogo de localização fornece mais opções de localização. Ele pode ser acessado por meio de **editar** menu, ou o atalho de teclado Ctrl + F.  
+- A caixa de diálogo de localização fornece mais opções de localização. Ele pode ser acessado por meio de **editar** menu, ou o atalho de teclado Ctrl + F.  
   
  A barra de ferramentas de localização aparece na parte superior do visualizador. Se não estiver presente, você pode ativá-la na **exibição** menu. A barra possui dois componentes:  
   
--   Localize: Permite que você insira a palavra-chave de pesquisa.  
+- Localize: Permite que você insira a palavra-chave de pesquisa.  
   
--   Procure em: Permite que você insira o escopo da pesquisa. Você pode selecionar se deseja pesquisar em todas as atividades ou somente na atividade atual.  
+- Procure em: Permite que você insira o escopo da pesquisa. Você pode selecionar se deseja pesquisar em todas as atividades ou somente na atividade atual.  
   
  A caixa de diálogo de localização fornece duas opções adicionais:  
   
--   Localizar destino:  
+- Localizar destino:  
   
-    -   A opção de "dados de log brutos" pesquisa a palavra-chave em todos os dados brutos.  
+    - A opção de "dados de log brutos" pesquisa a palavra-chave em todos os dados brutos.  
   
-    -   As opções "Texto XML" e "Atributo XML" pesquisam somente em elementos XML.  
+    - As opções "Texto XML" e "Atributo XML" pesquisam somente em elementos XML.  
   
-    -   A opção "Mensagem registrada" pesquisa a palavra-chave somente nas mensagens.  
+    - A opção "Mensagem registrada" pesquisa a palavra-chave somente nas mensagens.  
   
--   Ignore atividade raiz: A pesquisa ignora os rastreamentos na atividade "000000000000". Isso melhora o desempenho em grandes arquivos de rastreamento quando a atividade raiz tem milhares de rastreamentos, dos quais a maioria são transferências.  
+- Ignore atividade raiz: A pesquisa ignora os rastreamentos na atividade "000000000000". Isso melhora o desempenho em grandes arquivos de rastreamento quando a atividade raiz tem milhares de rastreamentos, dos quais a maioria são transferências.  
   
 ### <a name="navigating-traces"></a>Navegando em rastreamentos  
  Como os rastreamentos são registrados passo a passo durante o tempo de execução do aplicativo, a navegação em rastreamentos pode ajudá-lo a depurar seu aplicativo. O Visualizador de Rastreamento de Serviço fornece várias maneiras de navegar em rastreamentos.  
@@ -349,9 +352,9 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 #### <a name="step-forward-or-backward"></a>Avançar ou retroceder  
  Se você considerar cada rastreamento como uma linha de código do programa, avanço é muito semelhante à "Depuração parcial" no IDE do Visual Studio Integrated Development ambiente (). A diferença é que você também pode retroceder nos rastreamentos. Avançar significa mover-se para o próximo rastreamento da atividade.  
   
--   Avançar: Use o **atividade** menus ou pressione "F10". Você também pode usar a tecla de direção "para baixo" no painel de rastreamento.  
+- Avançar: Use o **atividade** menus ou pressione "F10". Você também pode usar a tecla de direção "para baixo" no painel de rastreamento.  
   
--   Etapa com versões anteriores: Use o **atividade** menus ou pressione "F9". Você também pode usar a tecla de direção "para cima" no painel de rastreamento.  
+- Etapa com versões anteriores: Use o **atividade** menus ou pressione "F9". Você também pode usar a tecla de direção "para cima" no painel de rastreamento.  
   
 > [!NOTE]
 >  Isso pode levar você a uma atividade ocorrendo em um processo diferente ou mesmo em um computador diferente, pois as mensagens do WCF podem transportar IDs de atividade que abrangem computadores.  
@@ -363,9 +366,9 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
   
  Há duas maneiras de seguir uma transferência: pelo mouse ou pelo teclado:  
   
--   Pelo Mouse: Clique duas vezes o rastreamento de transferência no painel de rastreamento.  
+- Pelo Mouse: Clique duas vezes o rastreamento de transferência no painel de rastreamento.  
   
--   Pelo teclado: Selecione um rastreamento de transferência e use "Seguir transferência" no **atividade** menus ou pressione "F11"  
+- Pelo teclado: Selecione um rastreamento de transferência e use "Seguir transferência" no **atividade** menus ou pressione "F11"  
   
 > [!NOTE]
 >  Em muitos casos, quando a atividade A transfere para a atividade B, a atividade A aguarda até que a atividade B transfira de volta à atividade A. Isso significa que a atividade A tem nenhum rastreamento registrado durante o período de quando a atividade B está ativamente rastreando. Entretanto, também é possível que a Atividade A não aguarde e continue a registrar rastreamentos. Também é possível que atividade B transfira de volta à atividade A. Portanto, as transferências de atividades são ainda diferentes de chamadas de função nesse sentido. Você pode entender melhor as transferências de atividades na exibição Gráfico.  
@@ -373,9 +376,9 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 #### <a name="jump-to-next-or-previous-transfer"></a>Passar para a próxima transferência ou a anterior  
  Ao analisar a atividade atual, ou as atividades selecionadas quando várias atividades são selecionadas, você talvez queira localizar as atividades para as quais ela transfere. "Passar para a próxima transferência" permite que você localize o próximo rastreamento de transferência na atividade. Depois de encontrar o rastreamento de transferência, você pode usar "Seguir transferência" Step into a próxima atividade.  
   
--   Ir para próxima transferência: Use o **atividade** menus ou pressione "Ctrl + F10".  
+- Ir para próxima transferência: Use o **atividade** menus ou pressione "Ctrl + F10".  
   
--   Ir para a transferência anterior: Use o **atividade** menu, ou pressione "Ctrl + F9".  
+- Ir para a transferência anterior: Use o **atividade** menu, ou pressione "Ctrl + F9".  
   
 #### <a name="navigate-in-graph-view"></a>Navegar na exibição de gráfico  
  Embora seja semelhante à depuração navegando no painel de atividade e o painel de rastreamento, usando **Graph** exibição fornece uma melhor experiência no painel de navegação. Consulte a seção "Modo de exibição de gráfico" para obter mais informações.  

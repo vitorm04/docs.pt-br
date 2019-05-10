@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Windows Forms, handling keyboard input
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
-ms.openlocfilehash: fbb6587dde53592a94887c1ea19562e06c15afe3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e346c5b69c507307d459f6246e26a6a96bb9e24
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803249"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591305"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Como: manipular a entrada do teclado no nível do formulário
 Os Windows Forms proporcionam a capacidade de manipular mensagens de teclado no nível do formulário, antes que as mensagens cheguem a um controle. Este tópico mostra como realizar essa tarefa.  
   
 ### <a name="to-handle-a-keyboard-message-at-the-form-level"></a>Como manipular uma mensagem do teclado no nível do formulário  
   
--   Lidar com o <xref:System.Windows.Forms.Control.KeyPress> ou <xref:System.Windows.Forms.Control.KeyDown> evento do formulário de inicialização e defina as <xref:System.Windows.Forms.Form.KeyPreview%2A> propriedade do formulário para `true` para que as mensagens do teclado são recebidas pelo formulário antes que elas atinjam os controles no formulário. O seguinte código de exemplo manipula o <xref:System.Windows.Forms.Control.KeyPress> eventos, detectando todas as teclas numéricas e consumindo '1', '4' e '7'.  
+- Lidar com o <xref:System.Windows.Forms.Control.KeyPress> ou <xref:System.Windows.Forms.Control.KeyDown> evento do formulário de inicialização e defina as <xref:System.Windows.Forms.Form.KeyPreview%2A> propriedade do formulário para `true` para que as mensagens do teclado são recebidas pelo formulário antes que elas atinjam os controles no formulário. O seguinte código de exemplo manipula o <xref:System.Windows.Forms.Control.KeyPress> eventos, detectando todas as teclas numéricas e consumindo '1', '4' e '7'.  
   
      [!code-cpp[System.Windows.Forms.KeyboardInputForm#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInputForm/cpp/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.KeyboardInputForm#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInputForm/CS/form1.cs#10)]
@@ -38,7 +38,7 @@ Os Windows Forms proporcionam a capacidade de manipular mensagens de teclado no 
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
+- Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
 

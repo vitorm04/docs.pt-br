@@ -2,12 +2,12 @@
 title: Desempenho do Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006755"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592154"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Desempenho do Windows Workflow Foundation 4
 
@@ -376,25 +376,25 @@ public class Workflow1 : Activity
 
  Observe que o provedor de persistência WF4 SQL executa mais trabalho na camada de base de dados.  O base de dados SQL pode se tornar um gargalo portanto é importante monitorar existem o uso da CPU e o disco.  Certifique-se de incluir os seguintes contadores de desempenho de base de dados SQL quando aplicativos de fluxo de trabalho de teste de desempenho:
 
--   PhysicalDisk\\tempo de leitura do disco %
+- PhysicalDisk\\tempo de leitura do disco %
 
--   PhysicalDisk\\% tempo de disco
+- PhysicalDisk\\% tempo de disco
 
--   PhysicalDisk\\hora de gravação do disco %
+- PhysicalDisk\\hora de gravação do disco %
 
--   PhysicalDisk\\% média Comprimento da fila de disco
+- PhysicalDisk\\% média Comprimento da fila de disco
 
--   PhysicalDisk \ Avg. Comprimento da fila de leitura de disco
+- PhysicalDisk \ Avg. Comprimento da fila de leitura de disco
 
--   PhysicalDisk \ Avg. Comprimento da fila de gravação de disco
+- PhysicalDisk \ Avg. Comprimento da fila de gravação de disco
 
--   PhysicalDisk \ comprimento atual da fila de disco
+- PhysicalDisk \ comprimento atual da fila de disco
 
--   Informações do processador\\% tempo do processador
+- Informações do processador\\% tempo do processador
 
--   SQLServer: Travas \ tempo de espera trava de média (ms)
+- SQLServer: Travas \ tempo de espera trava de média (ms)
 
--   SQLServer: Travas \ espera por de trava/s
+- SQLServer: Travas \ espera por de trava/s
 
 ### <a name="tracking"></a>Acompanhamento
  O rastreamento de fluxo de trabalho pode ser usado para acompanhar o progresso de um fluxo de trabalho.  Informações que está incluída em eventos de rastreamento é determinada por um perfil de rastreamento.  Mais complexo o perfil de rastreamento, mais caro o rastreamento fica.
@@ -407,13 +407,13 @@ public class Workflow1 : Activity
 
  As vantagens de usar a abordagem ETW para controlar em vez do SQL incluem:
 
--   A coleção de eventos de rastreamento pode ser separada para outro processo.  Isso proporciona maior flexibilidade de como os eventos são gravados.
+- A coleção de eventos de rastreamento pode ser separada para outro processo.  Isso proporciona maior flexibilidade de como os eventos são gravados.
 
--   Eventos de rastreamento de ETW são combinados facilmente com os eventos ETW de WCF ou outros provedores ETW, como um provedor de kernel ou o SQL Server.
+- Eventos de rastreamento de ETW são combinados facilmente com os eventos ETW de WCF ou outros provedores ETW, como um provedor de kernel ou o SQL Server.
 
--   Os autores de fluxo de trabalho não precisam modificar um fluxo de trabalho melhor para trabalhar com uma implementação específica de rastreamento, como o modo em lotes de serviço de rastreamento de WF3 SQL.
+- Os autores de fluxo de trabalho não precisam modificar um fluxo de trabalho melhor para trabalhar com uma implementação específica de rastreamento, como o modo em lotes de serviço de rastreamento de WF3 SQL.
 
--   Um administrador pode girar de acompanhar ou sem reciclar o processo host.
+- Um administrador pode girar de acompanhar ou sem reciclar o processo host.
 
  Os benefícios de desempenho ao rastreamento de ETW vêm com um desvantagem.  Os eventos de ETW podem ser perdidas se o sistema está sob a pressão intensa de recurso.  O processamento de eventos não serve bloquear a execução do programa normal e portanto não se garante que todos os eventos de ETW serão passados para seus assinantes.  Isso torna acompanhar de ETW grande para o monitoramento da integridade mas não para fazer auditoria em apropriado.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcf43040e9cbbcb2a59b1e1cf8c1f58951d5d87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827938"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610472"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Diferenças entre sombreamento e sobreposição (Visual Basic)
 Quando você define uma classe que herda de uma classe base, às vezes você deseja redefinir uma ou mais dos elementos de classe base na classe derivada. Sombreamento e sobreposição estão disponíveis para essa finalidade.  
@@ -41,15 +41,15 @@ Quando você define uma classe que herda de uma classe base, às vezes você des
 ## <a name="guidelines"></a>Diretrizes  
  Você normalmente usa substituindo nos seguintes casos:  
   
--   Você está definindo classes derivadas polimórficas.  
+- Você está definindo classes derivadas polimórficas.  
   
--   Você deseja que a segurança de fazer com que o compilador impor o mesmo tipo de elemento e a sequência de chamada.  
+- Você deseja que a segurança de fazer com que o compilador impor o mesmo tipo de elemento e a sequência de chamada.  
   
  Você normalmente usa sombreamento nos seguintes casos:  
   
--   Você prevê que sua classe base pode ser modificado e define um elemento usando o mesmo nome que o seu.  
+- Você prevê que sua classe base pode ser modificado e define um elemento usando o mesmo nome que o seu.  
   
--   Você quer a liberdade de alterar o tipo de elemento ou sequência de chamada.  
+- Você quer a liberdade de alterar o tipo de elemento ou sequência de chamada.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -4,44 +4,44 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e4d3d7bc574dd27aaea0d43ee6f507dd0c413f2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867088"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063813"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrando seu aplicativo da Windows Store para .NET Nativo
 .NET native fornece compilação estática dos aplicativos na Store do Windows ou no computador do desenvolvedor. Isso difere da compilação dinâmica realizada para Aplicativos da Windows Store pelo compilador JIT (just-in-time) ou o [Gerador de Imagem Nativa (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) no dispositivo. Apesar das diferenças, o .NET Native tenta manter a compatibilidade com o [aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). Na maior parte, as coisas que funcionam em aplicativos do .NET para Windows Store também funcionam com o .NET Native.  No entanto, em alguns casos, você pode encontrar alterações de comportamento. Este documento aborda essas diferenças entre os aplicativos padrão do .NET para Windows Store e o .NET nativo nas seguintes áreas:  
   
--   [Diferenças de tempo de execução geral](#Runtime)  
+- [Diferenças de tempo de execução geral](#Runtime)  
   
--   [Diferenças de programação dinâmica](#Dynamic)  
+- [Diferenças de programação dinâmica](#Dynamic)  
   
--   [Outras diferenças relacionadas à reflexão](#Reflection)  
+- [Outras diferenças relacionadas à reflexão](#Reflection)  
   
--   [Cenários e APIs sem suporte](#Unsupported)  
+- [Cenários e APIs sem suporte](#Unsupported)  
   
--   [Diferenças do Visual Studio](#VS)  
+- [Diferenças do Visual Studio](#VS)  
   
 <a name="Runtime"></a>   
 ## <a name="general-runtime-differences"></a>Diferenças de tempo de execução geral  
   
--   Exceções, como <xref:System.TypeLoadException>, que são geradas pelo compilador JIT quando um aplicativo é executado sobre o common language runtime (CLR), geralmente resulta em erros de tempo de compilação quando processados por .NET Native.  
+- Exceções, como <xref:System.TypeLoadException>, que são geradas pelo compilador JIT quando um aplicativo é executado sobre o common language runtime (CLR), geralmente resulta em erros de tempo de compilação quando processados por .NET Native.  
   
--   Não chame o método <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> de um thread de interface do usuário do aplicativo. Isso pode resultar em um deadlock no .NET Native.  
+- Não chame o método <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> de um thread de interface do usuário do aplicativo. Isso pode resultar em um deadlock no .NET Native.  
   
--   Não conte com ordenação de invocação do construtor de classe estática. No .NET Native, a ordem de invocação é diferente da ordem de execução padrão. (Mesmo com o tempo de execução padrão, você não deve confiar na ordem de execução de construtores de classe estáticos.)  
+- Não conte com ordenação de invocação do construtor de classe estática. No .NET Native, a ordem de invocação é diferente da ordem de execução padrão. (Mesmo com o tempo de execução padrão, você não deve confiar na ordem de execução de construtores de classe estáticos.)  
   
--   Loops infinitos sem fazer uma chamada (por exemplo, `while(true);`) em qualquer thread interromper o aplicativo. Da mesma forma, esperas grandes ou infinitas podem interromper o aplicativo.  
+- Loops infinitos sem fazer uma chamada (por exemplo, `while(true);`) em qualquer thread interromper o aplicativo. Da mesma forma, esperas grandes ou infinitas podem interromper o aplicativo.  
   
--   Certos ciclos de inicialização genéricos não geram exceções no .NET Native. Por exemplo, o código a seguir gera uma exceção <xref:System.TypeLoadException> no CLR padrão. No .NET Native, ele não sabe.  
+- Certos ciclos de inicialização genéricos não geram exceções no .NET Native. Por exemplo, o código a seguir gera uma exceção <xref:System.TypeLoadException> no CLR padrão. No .NET Native, ele não sabe.  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
--   Em alguns casos, o .NET Native fornece diferentes implementações das bibliotecas de classes do .NET Framework. Um objeto retornado de um método sempre implementará os membros do tipo retornado. No entanto, desde que sua implementação de backup seja diferente, você não poderá convertê-lo para o mesmo conjunto de tipos como realizado em outras plataformas .NET Framework. Por exemplo, em alguns casos, você não poderá converter o objeto de interface <xref:System.Collections.Generic.IEnumerable%601> retornado por métodos como <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> ou <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> para `T[]`.  
+- Em alguns casos, o .NET Native fornece diferentes implementações das bibliotecas de classes do .NET Framework. Um objeto retornado de um método sempre implementará os membros do tipo retornado. No entanto, desde que sua implementação de backup seja diferente, você não poderá convertê-lo para o mesmo conjunto de tipos como realizado em outras plataformas .NET Framework. Por exemplo, em alguns casos, você não poderá converter o objeto de interface <xref:System.Collections.Generic.IEnumerable%601> retornado por métodos como <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> ou <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> para `T[]`.  
   
--   O cache de WinInet não é habilitado por padrão em aplicativos .NET para Windows Store, mas é sobre o .NET Native. Isso melhora o desempenho, mas tem implicações de conjunto de trabalho. Nenhuma ação do desenvolvedor é necessária.  
+- O cache de WinInet não é habilitado por padrão em aplicativos .NET para Windows Store, mas é sobre o .NET Native. Isso melhora o desempenho, mas tem implicações de conjunto de trabalho. Nenhuma ação do desenvolvedor é necessária.  
   
 <a name="Dynamic"></a>   
 ## <a name="dynamic-programming-differences"></a>Diferenças de programação dinâmica  
@@ -58,9 +58,9 @@ ms.locfileid: "61867088"
   
  A configuração padrão do .NET Native é suficiente para a maioria dos desenvolvedores, mas alguns desenvolvedores talvez queira ajustar suas configurações usando um diretivas de tempo de execução (. RD. xml) arquivos. Além disso, em alguns casos, o compilador do .NET nativo é não é possível determinar quais metadados devem estar disponíveis para reflexão e depende de dicas, particularmente nos seguintes casos:  
   
--   Algumas construções <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> e <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> não podem ser determinadas estaticamente.  
+- Algumas construções <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> e <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> não podem ser determinadas estaticamente.  
   
--   Como o compilador não pode determinar as instanciações, um tipo genérico sobre o qual você deseja refletir deverá ser especificado por diretivas de tempo de execução. Isso não é apenas porque todo o código deve ser incluído, mas sim porque a reflexão em tipos genéricos pode formar um ciclo infinito (por exemplo, quando um método genérico é invocado em um tipo genérico).  
+- Como o compilador não pode determinar as instanciações, um tipo genérico sobre o qual você deseja refletir deverá ser especificado por diretivas de tempo de execução. Isso não é apenas porque todo o código deve ser incluído, mas sim porque a reflexão em tipos genéricos pode formar um ciclo infinito (por exemplo, quando um método genérico é invocado em um tipo genérico).  
   
 > [!NOTE]
 >  Diretivas de tempo de execução são definidas em um arquivo de diretivas de tempo de execução (.rd.xml). Para obter mais informações sobre como usar essa arquivo, consulte [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md). Para obter informações sobre as diretivas de tempo de execução, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
@@ -73,67 +73,67 @@ ms.locfileid: "61867088"
   
  No .NET Native:  
   
--   Não há suporte para reflexão privada sobre tipos e membros da biblioteca de classes do .NET Framework. No entanto, é possível refletir sobre seus próprios tipos e membros privados, bem como tipos e membros em bibliotecas de terceiros.  
+- Não há suporte para reflexão privada sobre tipos e membros da biblioteca de classes do .NET Framework. No entanto, é possível refletir sobre seus próprios tipos e membros privados, bem como tipos e membros em bibliotecas de terceiros.  
   
--   A propriedade <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> retorna `false` corretamente para um objeto <xref:System.Reflection.ParameterInfo> que representa um valor de retorno. Nos aplicativos .NET para Windows Store, ele retorna `true`. A Linguagem intermediária (IL) não oferece suporte a isso diretamente e interpretações são deixada para a linguagem.  
+- A propriedade <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> retorna `false` corretamente para um objeto <xref:System.Reflection.ParameterInfo> que representa um valor de retorno. Nos aplicativos .NET para Windows Store, ele retorna `true`. A Linguagem intermediária (IL) não oferece suporte a isso diretamente e interpretações são deixada para a linguagem.  
   
--   Membros públicos nas estruturas <xref:System.RuntimeFieldHandle> e <xref:System.RuntimeMethodHandle> não são suportadas. Esses tipos são suportados apenas para LINQ, árvores de expressão e inicialização de matriz estática.  
+- Membros públicos nas estruturas <xref:System.RuntimeFieldHandle> e <xref:System.RuntimeMethodHandle> não são suportadas. Esses tipos são suportados apenas para LINQ, árvores de expressão e inicialização de matriz estática.  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> e <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> incluem membros ocultos em classes base e, portanto, podem ser substituídos sem substituições explícitas. Isso também é verdadeiro para outros métodos [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions).  
+- <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> e <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> incluem membros ocultos em classes base e, portanto, podem ser substituídos sem substituições explícitas. Isso também é verdadeiro para outros métodos [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions).  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> e <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> não falham quando você tentar criar certas combinações (por exemplo, uma matriz de byrefs).  
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> e <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> não falham quando você tentar criar certas combinações (por exemplo, uma matriz de byrefs).  
   
--   Você não pode usar reflexão para invocar os membros que têm parâmetros de ponteiro.  
+- Você não pode usar reflexão para invocar os membros que têm parâmetros de ponteiro.  
   
--   Você não pode usar reflexão para obter ou definir um campo de ponteiro.  
+- Você não pode usar reflexão para obter ou definir um campo de ponteiro.  
   
--   Quando a contagem de argumentos está errada e o tipo de um dos argumentos está incorreto, o .NET Native gera uma <xref:System.ArgumentException> em vez de um <xref:System.Reflection.TargetParameterCountException>.  
+- Quando a contagem de argumentos está errada e o tipo de um dos argumentos está incorreto, o .NET Native gera uma <xref:System.ArgumentException> em vez de um <xref:System.Reflection.TargetParameterCountException>.  
   
--   A serialização binária de exceções geralmente não é suportada. Como resultado, objetos não serializáveis não podem ser adicionados ao dicionário <xref:System.Exception.Data%2A?displayProperty=nameWithType>.  
+- A serialização binária de exceções geralmente não é suportada. Como resultado, objetos não serializáveis não podem ser adicionados ao dicionário <xref:System.Exception.Data%2A?displayProperty=nameWithType>.  
   
 <a name="Unsupported"></a>   
 ## <a name="unsupported-scenarios-and-apis"></a>Cenários e APIs sem suporte  
  As seções a seguir listam cenários não suportados e APIs de desenvolvimento geral, interoperabilidade e tecnologias como HTTPClient e Windows Communication Foundation (WCF):  
   
--   [Desenvolvimento geral](#General)  
+- [Desenvolvimento geral](#General)  
   
--   [HttpClient](#HttpClient)  
+- [HttpClient](#HttpClient)  
   
--   [Interoperabilidade](#Interop)  
+- [Interoperabilidade](#Interop)  
   
--   [APIs sem suporte](#APIs)  
+- [APIs sem suporte](#APIs)  
   
 <a name="General"></a>   
 ### <a name="general-development-differences"></a>Diferenças de desenvolvimento geral  
  **Tipos de valor**  
   
--   Se você substituir os métodos <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> e <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> para um tipo de valor, não chame as implementações de classe base. Em aplicativos .NET para Windows Store, esses métodos dependem de reflexão. Em tempo de compilação, o .NET Native gera uma implementação que não depende de reflexão de tempo de execução. Isso significa que se você não substituir esses dois métodos, eles funcionarão conforme o esperado, porque o .NET Native gera a implementação em tempo de compilação. No entanto, substituir esses métodos, mas chamar a implementação de classe base, resulta em uma exceção.  
+- Se você substituir os métodos <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> e <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> para um tipo de valor, não chame as implementações de classe base. Em aplicativos .NET para Windows Store, esses métodos dependem de reflexão. Em tempo de compilação, o .NET Native gera uma implementação que não depende de reflexão de tempo de execução. Isso significa que se você não substituir esses dois métodos, eles funcionarão conforme o esperado, porque o .NET Native gera a implementação em tempo de compilação. No entanto, substituir esses métodos, mas chamar a implementação de classe base, resulta em uma exceção.  
   
--   Não há suporte para tipos de valor maior do que um megabyte.  
+- Não há suporte para tipos de valor maior do que um megabyte.  
   
--   Tipos de valor não podem ter um construtor padrão no .NET Native. (C# e Visual Basic proíbem construtores padrão em tipos de valor. No entanto, eles podem ser criados em IL.)  
+- Tipos de valor não podem ter um construtor padrão no .NET Native. (C# e Visual Basic proíbem construtores padrão em tipos de valor. No entanto, eles podem ser criados em IL.)  
   
  **Matrizes**  
   
--   Não há suporte para matrizes com um limite inferior diferente de zero. Normalmente, esses conjuntos são criados ao chamar a sobrecarga <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType>.  
+- Não há suporte para matrizes com um limite inferior diferente de zero. Normalmente, esses conjuntos são criados ao chamar a sobrecarga <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType>.  
   
--   A criação dinâmica de matrizes multidimensionais não tem suporte. Essas matrizes geralmente são criados chamando uma sobrecarga do método <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> que inclui um parâmetro `lengths` ou chamando o método <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType>.  
+- A criação dinâmica de matrizes multidimensionais não tem suporte. Essas matrizes geralmente são criados chamando uma sobrecarga do método <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> que inclui um parâmetro `lengths` ou chamando o método <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType>.  
   
--   Não há suporte para matrizes multidimensionais com quatro ou mais dimensões, ou seja, com valor da propriedade <xref:System.Array.Rank%2A?displayProperty=nameWithType> quatro ou superior. Use [matrizes denteadas](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (uma matriz de matrizes) em vez disso. Por exemplo, `array[x,y,z]` é inválido, mas `array[x][y][z]` não é.  
+- Não há suporte para matrizes multidimensionais com quatro ou mais dimensões, ou seja, com valor da propriedade <xref:System.Array.Rank%2A?displayProperty=nameWithType> quatro ou superior. Use [matrizes denteadas](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (uma matriz de matrizes) em vez disso. Por exemplo, `array[x,y,z]` é inválido, mas `array[x][y][z]` não é.  
   
--   Variação de matrizes multidimensionais não é suportada e causa uma exceção <xref:System.InvalidCastException> no tempo de execução.  
+- Variação de matrizes multidimensionais não é suportada e causa uma exceção <xref:System.InvalidCastException> no tempo de execução.  
   
  **Genéricos**  
   
--   A expansão do tipo genérico infinito resulta em um erro do compilador. Por exemplo, esse código falha ao compilar:  
+- A expansão do tipo genérico infinito resulta em um erro do compilador. Por exemplo, esse código falha ao compilar:  
   
      [!code-csharp[ProjectN#9](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat2.cs#9)]  
   
  **Ponteiros**  
   
--   Não há suporte para matrizes de ponteiros.  
+- Não há suporte para matrizes de ponteiros.  
   
--   Você não pode usar reflexão para obter ou definir um campo de ponteiro.  
+- Você não pode usar reflexão para obter ou definir um campo de ponteiro.  
   
  **Serialização**  
   
@@ -149,19 +149,19 @@ ms.locfileid: "61867088"
   
  **APIs diversas**  
   
--   O [TypeInfo.GUID](xref:System.Type.GUID) propriedade gera um <xref:System.PlatformNotSupportedException> exceção se um <xref:System.Runtime.InteropServices.GuidAttribute> atributo não é aplicado ao tipo. O GUID é usado principalmente para suporte a COM.  
+- O [TypeInfo.GUID](xref:System.Type.GUID) propriedade gera um <xref:System.PlatformNotSupportedException> exceção se um <xref:System.Runtime.InteropServices.GuidAttribute> atributo não é aplicado ao tipo. O GUID é usado principalmente para suporte a COM.  
   
--   O <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> método analisa corretamente as cadeias de caracteres que contêm datas curtas em .NET Native. Contudo, ele não mantém a compatibilidade com as alterações na análise de data e hora descritas no artigos da Base de Dados de Conhecimento Microsoft [KB2803771](https://support.microsoft.com/kb/2803771) e [KB2803755](https://support.microsoft.com/kb/2803755).  
+- O <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> método analisa corretamente as cadeias de caracteres que contêm datas curtas em .NET Native. Contudo, ele não mantém a compatibilidade com as alterações na análise de data e hora descritas no artigos da Base de Dados de Conhecimento Microsoft [KB2803771](https://support.microsoft.com/kb/2803771) e [KB2803755](https://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` é arredondado corretamente em .NET Native. Em algumas versões do CLR, a cadeia de caracteres de resultado é truncada em vez de arredondada.  
+- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` é arredondado corretamente em .NET Native. Em algumas versões do CLR, a cadeia de caracteres de resultado é truncada em vez de arredondada.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Diferenças do HttpClient  
  No .NET Native, o <xref:System.Net.Http.HttpClientHandler> classe usa internamente WinINet (por meio de <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> classe) em vez da <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> classes usadas nos aplicativos .NET para Windows Store.  O WinINet não oferece suporte a todas as opções de configuração que a classe <xref:System.Net.Http.HttpClientHandler> suporta.  Portanto:  
   
--   Algumas das propriedades do recurso em <xref:System.Net.Http.HttpClientHandler> retornar `false` sobre o .NET Native, considerando que retornam `true` nos aplicativos .NET para Windows Store.  
+- Algumas das propriedades do recurso em <xref:System.Net.Http.HttpClientHandler> retornar `false` sobre o .NET Native, considerando que retornam `true` nos aplicativos .NET para Windows Store.  
   
--   Alguns da propriedade de configuração `get` acessadores sempre retornam um valor fixo no .NET nativo que é diferente do valor configurável de padrão em aplicativos .NET para Windows Store.  
+- Alguns da propriedade de configuração `get` acessadores sempre retornam um valor fixo no .NET nativo que é diferente do valor configurável de padrão em aplicativos .NET para Windows Store.  
   
  Algumas diferenças comportamentais adicionais são abrangidas nas subseções a seguir.  
   
@@ -189,13 +189,13 @@ ms.locfileid: "61867088"
   
  No .NET Native:  
   
--   O valor da propriedade <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> sempre é <xref:System.Net.Http.ClientCertificateOption.Automatic>.  Em aplicativos .NET para Windows Store, o padrão é <xref:System.Net.Http.ClientCertificateOption.Manual>.  
+- O valor da propriedade <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> sempre é <xref:System.Net.Http.ClientCertificateOption.Automatic>.  Em aplicativos .NET para Windows Store, o padrão é <xref:System.Net.Http.ClientCertificateOption.Manual>.  
   
--   A propriedade <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> não é configurável.  
+- A propriedade <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> não é configurável.  
   
--   A propriedade <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> sempre é `true`.  Em aplicativos .NET para Windows Store, o padrão é `false`.  
+- A propriedade <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> sempre é `true`.  Em aplicativos .NET para Windows Store, o padrão é `false`.  
   
--   O cabeçalho `SetCookie2` em respostas será ignorado como obsoleto.  
+- O cabeçalho `SetCookie2` em respostas será ignorado como obsoleto.  
   
 <a name="Interop"></a>   
 ### <a name="interop-differences"></a>Diferenças de interoperabilidade  
@@ -245,7 +245,7 @@ Outros recursos de interoperabilidade sem suporte incluem:
 - <xref:System.Runtime.InteropServices.UnmanagedType.AsAny?displayProperty=fullName>  
 - <xref:System.Runtime.InteropServices.UnmanagedType.CustomMarshaler?displayProperty=fullName>  
   
- APIs de marshalling raramente usadas:  
+ Raramente usado APIs de empacotamento:  
   
 - <xref:System.Runtime.InteropServices.Marshal.ReadByte%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
 - <xref:System.Runtime.InteropServices.Marshal.ReadInt16%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
@@ -262,59 +262,59 @@ Outros recursos de interoperabilidade sem suporte incluem:
   
  Invocação de plataforma a maioria das e cenários de interoperabilidade COM ainda são suportados no .NET Native. Em especial, toda a interoperabilidade com APIs do Tempo de Execução do Windows (WinRT) APIs e todo o marshaling necessário para o Tempo de Execução do Windows são suportados. Isso inclui suporte a marshaling para:  
   
--   Matrizes (incluindo <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)  
+- Matrizes (incluindo <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)  
   
--   `BStr`  
+- `BStr`  
   
--   Delegados  
+- Delegados  
   
--   Cadeias de caracteres (Unicode, Ansi e HSTRING)  
+- Cadeias de caracteres (Unicode, Ansi e HSTRING)  
   
--   Estruturas (`byref` e `byval`)  
+- Estruturas (`byref` e `byval`)  
   
--   Uniões  
+- Uniões  
   
--   Identificadores do Win32  
+- Identificadores do Win32  
   
--   Todos os constructos do WinRT  
+- Todos os constructos do WinRT  
   
--   Suporte parcial aos tipos variantes de marshaling. Há suporte para os seguintes recursos:  
+- Suporte parcial aos tipos variantes de marshaling. Há suporte para os seguintes recursos:  
   
-    -   <xref:System.Boolean>  
+    - <xref:System.Boolean>  
   
-    -   <xref:System.Byte>  
+    - <xref:System.Byte>  
   
-    -   <xref:System.Decimal>  
+    - <xref:System.Decimal>  
   
-    -   <xref:System.Double>  
+    - <xref:System.Double>  
   
-    -   <xref:System.Int16>  
+    - <xref:System.Int16>  
   
-    -   <xref:System.Int32>  
+    - <xref:System.Int32>  
   
-    -   <xref:System.Int64>  
+    - <xref:System.Int64>  
   
-    -   <xref:System.SByte>  
+    - <xref:System.SByte>  
   
-    -   <xref:System.Single>  
+    - <xref:System.Single>  
   
-    -   <xref:System.UInt16>  
+    - <xref:System.UInt16>  
   
-    -   <xref:System.UInt32>  
+    - <xref:System.UInt32>  
   
-    -   <xref:System.UInt64>  
+    - <xref:System.UInt64>  
   
-    -   `BStr`  
+    - `BStr`  
   
-    -   [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
+    - [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
   
  No entanto, o .NET Native não oferece suporte a seguir:  
   
--   Usando os eventos clássicos do COM  
+- Usando os eventos clássicos do COM  
   
--   Implementando a interface <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> em um tipo gerenciado  
+- Implementando a interface <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> em um tipo gerenciado  
   
--   Implementando a interface [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) em um tipo gerenciado por meio do atributo <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>. No entanto, observe que você não pode chamar objetos COM por meio de `IDispatch`, e o objeto gerenciado não pode implementar `IDispatch`.  
+- Implementando a interface [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) em um tipo gerenciado por meio do atributo <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>. No entanto, observe que você não pode chamar objetos COM por meio de `IDispatch`, e o objeto gerenciado não pode implementar `IDispatch`.  
   
  Usar reflexão para invocar um método de invocação de plataforma não é suportado. Você pode contornar essa limitação envolvendo a chamada de método em outro método e usando reflexão para chamar o wrapper em vez disso.  
   
@@ -568,57 +568,57 @@ Outros recursos de interoperabilidade sem suporte incluem:
 ### <a name="differences-in-serializers"></a>Diferenças nos serializadores  
  As seguintes diferenças envolvem serialização e desserialização com e classes <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Xml.Serialization.XmlSerializer>:  
   
--   No .NET Native <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> falham ao serializar ou desserializar uma classe derivada que tem um membro de classe base cujo tipo não é um tipo de serialização de raiz. Por exemplo, no código a seguir, tentar serializar ou desserializar `Y` resulta em um erro:  
+- No .NET Native <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> falham ao serializar ou desserializar uma classe derivada que tem um membro de classe base cujo tipo não é um tipo de serialização de raiz. Por exemplo, no código a seguir, tentar serializar ou desserializar `Y` resulta em um erro:  
   
      [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]  
   
      O tipo `InnerType` não é conhecido pelo serializador, pois os membros da classe base não são percorridos durante a serialização.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> não conseguem serializar uma classe ou estrutura que implementa a interface <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, os seguintes tipos falham ao serializar ou desserializar:  
+- <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> não conseguem serializar uma classe ou estrutura que implementa a interface <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, os seguintes tipos falham ao serializar ou desserializar:  
 
--   <xref:System.Xml.Serialization.XmlSerializer> falha ao serializar o valor de objeto a seguir, porque não sabe o tipo exato de objeto a ser serializado:  
+- <xref:System.Xml.Serialization.XmlSerializer> falha ao serializar o valor de objeto a seguir, porque não sabe o tipo exato de objeto a ser serializado:  
 
--   <xref:System.Xml.Serialization.XmlSerializer> falha ao serializar ou desserializar se o tipo do objeto serializado é <xref:System.Xml.XmlQualifiedName>.  
+- <xref:System.Xml.Serialization.XmlSerializer> falha ao serializar ou desserializar se o tipo do objeto serializado é <xref:System.Xml.XmlQualifiedName>.  
   
--   Todos os serializadores (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Xml.Serialization.XmlSerializer>) falham ao gerar o código de serialização para tipo <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> ou para um tipo que contém <xref:System.Xml.Linq.XElement>. Eles exibem erros de tempo de compilação em vez disso.  
+- Todos os serializadores (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Xml.Serialization.XmlSerializer>) falham ao gerar o código de serialização para tipo <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> ou para um tipo que contém <xref:System.Xml.Linq.XElement>. Eles exibem erros de tempo de compilação em vez disso.  
   
--   Não há garantia que os seguintes construtores dos tipos de serialização funcionem conforme o esperado:  
+- Não há garantia que os seguintes construtores dos tipos de serialização funcionem conforme o esperado:  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   O <xref:System.Xml.Serialization.XmlSerializer> falha ao gerar o código para um tipo que tem métodos atribuídos com qualquer um dos seguintes atributos:  
+- O <xref:System.Xml.Serialization.XmlSerializer> falha ao gerar o código para um tipo que tem métodos atribuídos com qualquer um dos seguintes atributos:  
   
-    -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+    - <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+    - <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+    - <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+    - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   O <xref:System.Xml.Serialization.XmlSerializer> não aceita a interface de serialização personalizada <xref:System.Xml.Serialization.IXmlSerializable>. Se você tiver uma classe que implementa essa interface, <xref:System.Xml.Serialization.XmlSerializer> considera o tipo como um objeto CLR (POCO) antigo simples, serializando apenas suas propriedades públicas.  
+- O <xref:System.Xml.Serialization.XmlSerializer> não aceita a interface de serialização personalizada <xref:System.Xml.Serialization.IXmlSerializable>. Se você tiver uma classe que implementa essa interface, <xref:System.Xml.Serialization.XmlSerializer> considera o tipo como um objeto CLR (POCO) antigo simples, serializando apenas suas propriedades públicas.  
   
--   Serializando uma sem formatação <xref:System.Exception> objeto não funciona bem com <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
+- Serializando uma sem formatação <xref:System.Exception> objeto não funciona bem com <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
 
 <a name="VS"></a>   
 ## <a name="visual-studio-differences"></a>Diferenças do Visual Studio  
@@ -626,9 +626,9 @@ Outros recursos de interoperabilidade sem suporte incluem:
   
  Quando você estiver executando aplicativos compilados usando o .NET Native no depurador, exceções de primeira chance são habilitadas para os seguintes tipos de exceção:  
   
--   <xref:System.MemberAccessException>  
+- <xref:System.MemberAccessException>  
   
--   <xref:System.TypeAccessException>  
+- <xref:System.TypeAccessException>  
   
  **Criando aplicativos**  
   
@@ -636,11 +636,11 @@ Outros recursos de interoperabilidade sem suporte incluem:
   
  **Criadores de perfil**  
   
--   O criador de perfil de CPU do Visual Studio e o criador de perfil de memória XAML não exibem o Just-My-Code corretamente.  
+- O criador de perfil de CPU do Visual Studio e o criador de perfil de memória XAML não exibem o Just-My-Code corretamente.  
   
--   O gerador de perfil de memória XAML não exibe corretamente os dados da pilha gerenciada.  
+- O gerador de perfil de memória XAML não exibe corretamente os dados da pilha gerenciada.  
   
--   O gerador de perfil de CPU não identifica corretamente módulos e exibe nomes de função de prefixo.  
+- O gerador de perfil de CPU não identifica corretamente módulos e exibe nomes de função de prefixo.  
   
  **Projetos da biblioteca de teste de unidade**  
   
