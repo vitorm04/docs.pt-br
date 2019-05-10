@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2f64faab6df678182fb39174c8a558b298a8748
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858072"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584979"
 ---
 # <a name="best-practices-for-queued-communication"></a>Práticas recomendadas para comunicação em fila
 Este tópico fornece as práticas recomendadas para a comunicação em fila no Windows Communication Foundation (WCF). As seções a seguir discutem as práticas recomendadas de uma perspectiva de cenário.  
@@ -48,11 +48,11 @@ Este tópico fornece as práticas recomendadas para a comunicação em fila no W
 ## <a name="achieving-high-throughput"></a>Alcança alto rendimento  
  Para obter alta taxa de transferência em um único ponto de extremidade, use o seguinte:  
   
--   Envio em lote transacionado. O lote transacionado garante que muitas mensagens podem ser lidos em uma única transação. Isso otimiza as confirmações de transações, aumentando o desempenho geral. O custo do envio em lote é que, se ocorrer uma falha em uma única mensagem dentro de um lote, em seguida, o lote inteiro será revertido e as mensagens devem ser processados um de cada vez até que seja seguro para o lote novamente. Na maioria dos casos, as mensagens suspeitas são raras, portanto, o envio em lote é a maneira preferencial para aumentar o desempenho do sistema, especialmente quando você tiver outros gerenciadores de recursos que participam da transação. Para obter mais informações, consulte [mensagens de envio em lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+- Envio em lote transacionado. O lote transacionado garante que muitas mensagens podem ser lidos em uma única transação. Isso otimiza as confirmações de transações, aumentando o desempenho geral. O custo do envio em lote é que, se ocorrer uma falha em uma única mensagem dentro de um lote, em seguida, o lote inteiro será revertido e as mensagens devem ser processados um de cada vez até que seja seguro para o lote novamente. Na maioria dos casos, as mensagens suspeitas são raras, portanto, o envio em lote é a maneira preferencial para aumentar o desempenho do sistema, especialmente quando você tiver outros gerenciadores de recursos que participam da transação. Para obter mais informações, consulte [mensagens de envio em lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Simultaneidade. Simultaneidade aumenta a taxa de transferência, mas a contenção para recursos compartilhados também afeta a simultaneidade. Para obter mais informações, consulte [simultaneidade](../../../../docs/framework/wcf/samples/concurrency.md).  
+- Simultaneidade. Simultaneidade aumenta a taxa de transferência, mas a contenção para recursos compartilhados também afeta a simultaneidade. Para obter mais informações, consulte [simultaneidade](../../../../docs/framework/wcf/samples/concurrency.md).  
   
--   A limitação. Para otimizar o desempenho, limite o número de mensagens no pipeline do dispatcher. Para obter um exemplo de como fazer isso, consulte [limitação](../../../../docs/framework/wcf/samples/throttling.md).  
+- A limitação. Para otimizar o desempenho, limite o número de mensagens no pipeline do dispatcher. Para obter um exemplo de como fazer isso, consulte [limitação](../../../../docs/framework/wcf/samples/throttling.md).  
   
  Ao usar o envio em lote, lembre-se de que a simultaneidade e a limitação convertem a lotes simultâneos.  
   
@@ -75,11 +75,11 @@ Este tópico fornece as práticas recomendadas para a comunicação em fila no W
   
  Ao usar `MsmqIntegrationBinding`, esteja ciente das seguintes opções:  
   
--   Um corpo de mensagem do WCF não é igual a um corpo de mensagem do MSMQ. Ao enviar uma mensagem do WCF usando uma associação enfileirada, o corpo da mensagem do WCF é colocado dentro de uma mensagem MSMQ. A infraestrutura do MSMQ é alheia a essas informações extras; ele vê apenas a mensagem do MSMQ.  
+- Um corpo de mensagem do WCF não é igual a um corpo de mensagem do MSMQ. Ao enviar uma mensagem do WCF usando uma associação enfileirada, o corpo da mensagem do WCF é colocado dentro de uma mensagem MSMQ. A infraestrutura do MSMQ é alheia a essas informações extras; ele vê apenas a mensagem do MSMQ.  
   
--   `MsmqIntegrationBinding` dá suporte a tipos de serialização populares. Com base no tipo de serialização, o tipo do corpo da mensagem genérica, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, usa os parâmetros de tipo diferente. Por exemplo, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requer `MsmqMessage\<byte[]>` e <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> requer `MsmqMessage<Stream>`.  
+- `MsmqIntegrationBinding` dá suporte a tipos de serialização populares. Com base no tipo de serialização, o tipo do corpo da mensagem genérica, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, usa os parâmetros de tipo diferente. Por exemplo, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requer `MsmqMessage\<byte[]>` e <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> requer `MsmqMessage<Stream>`.  
   
--   Com a serialização de XML, você pode especificar o tipo conhecido usando o `KnownTypes` atributo o [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento que é usado para determinar como desserializar a mensagem XML.  
+- Com a serialização de XML, você pode especificar o tipo conhecido usando o `KnownTypes` atributo o [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento que é usado para determinar como desserializar a mensagem XML.  
   
 ## <a name="see-also"></a>Consulte também
 

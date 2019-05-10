@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827150"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600889"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversões de Widening e Narrowing (Visual Basic)
 Uma consideração importante com uma conversão de tipo é se o resultado da conversão é dentro do intervalo do tipo de dados de destino.  
@@ -68,15 +68,15 @@ Uma consideração importante com uma conversão de tipo é se o resultado da co
 ## <a name="narrowing-conversions"></a>Conversões de redução  
  As conversões de estreitamento padrão incluem o seguinte:  
   
--   As direções inversas das conversões ampliadoras anteriormente na tabela (exceto pelo fato de cada tipo amplia a mesmo)  
+- As direções inversas das conversões ampliadoras anteriormente na tabela (exceto pelo fato de cada tipo amplia a mesmo)  
   
--   Conversões em ambas as direções entre [Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) e qualquer tipo numérico  
+- Conversões em ambas as direções entre [Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) e qualquer tipo numérico  
   
--   Conversões de qualquer tipo numérico para qualquer tipo de enumerado (`Enum`)  
+- Conversões de qualquer tipo numérico para qualquer tipo de enumerado (`Enum`)  
   
--   Conversões em ambas as direções entre [cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md) e qualquer tipo numérico, `Boolean`, ou [data](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- Conversões em ambas as direções entre [cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md) e qualquer tipo numérico, `Boolean`, ou [data](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   As conversões de um tipo de dados ou objeto de tipo para um tipo derivado dele  
+- As conversões de um tipo de dados ou objeto de tipo para um tipo derivado dele  
   
  Conversões de estreitamento nem sempre ter êxito em tempo de execução e pode falhar ou causar a perda de dados. Ocorrerá um erro se o tipo de dados de destino não puder receber o valor que está sendo convertido. Por exemplo, uma conversão numérica pode resultar em um estouro. O compilador não permite que você execute conversões redutoras implicitamente, a menos que o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) define o tipo de verificação de alternar para `Off`.  
   
@@ -89,9 +89,9 @@ Uma consideração importante com uma conversão de tipo é se o resultado da co
 ## <a name="exceptions-during-conversion"></a>Exceções durante conversão  
  Como conversões ampliadoras sempre ter êxito, eles não geram exceções. Conversões de redução, quando ocorre uma falha, mais comumente lançam as seguintes exceções:  
   
--   <xref:System.InvalidCastException> — Se nenhuma conversão é definida entre os dois tipos  
+- <xref:System.InvalidCastException> — Se nenhuma conversão é definida entre os dois tipos  
   
--   <xref:System.OverflowException> — (tipos integral somente) se o valor convertido for muito grande para o tipo de destino  
+- <xref:System.OverflowException> — (tipos integral somente) se o valor convertido for muito grande para o tipo de destino  
   
  Se uma classe ou estrutura define um [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para servir como um operador de conversão para ou de classe ou estrutura, que `CType` pode lançar qualquer exceção que achar apropriado. Além disso, que `CType` pode chamar funções do Visual Basic ou [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos, que por sua vez, podem acionar uma variedade de exceções.  
   

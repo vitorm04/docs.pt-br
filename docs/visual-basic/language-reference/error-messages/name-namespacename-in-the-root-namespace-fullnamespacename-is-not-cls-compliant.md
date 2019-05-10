@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faed46eaf21513945ef4eb0c76d36780e960d380
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918353"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592032"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Nome da \<namespacename > no namespace raiz \<fullnamespacename > não é compatível com CLS
 Um assembly é marcado como `<CLSCompliant(True)>`, mas um elemento do nome do namespace raiz começa com um sublinhado (`_`).  
@@ -29,9 +29,9 @@ Um assembly é marcado como `<CLSCompliant(True)>`, mas um elemento do nome do n
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Se você precisar de conformidade com CLS, altere o nome do namespace raiz para que nenhum de seus elementos começa com um sublinhado.  
+- Se você precisar de conformidade com CLS, altere o nome do namespace raiz para que nenhum de seus elementos começa com um sublinhado.  
   
--   Se você precisar que o nome do namespace permanecem inalterados, em seguida, remova os <xref:System.CLSCompliantAttribute> do assembly ou marcá-la como `<CLSCompliant(False)>`.  
+- Se você precisar que o nome do namespace permanecem inalterados, em seguida, remova os <xref:System.CLSCompliantAttribute> do assembly ou marcá-la como `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43f7af1a1b540dd630cc2f228f1e5a6018d7c5d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61829654"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610454"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Como: Acessar uma variável ocultada por uma classe derivada (Visual Basic)
 Quando o código em uma classe derivada acessa uma variável, o compilador resolve normalmente a referência para a versão mais acessível, ou seja, a versão acessível as menor número etapas derivacionais com versões anteriores da classe de acesso. Se a variável é definida na classe derivada, o código normalmente acessa essa definição.  
@@ -23,7 +23,7 @@ Quando o código em uma classe derivada acessa uma variável, o compilador resol
   
 ### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Para acessar uma variável ocultada por uma classe derivada da classe base  
   
--   Em uma expressão ou instrução de atribuição, preceda o nome da variável com o `MyBase` palavra-chave e um período (`.`).  
+- Em uma expressão ou instrução de atribuição, preceda o nome da variável com o `MyBase` palavra-chave e um período (`.`).  
   
      O compilador resolve a referência para a versão da classe base da variável.  
   

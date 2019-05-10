@@ -2,25 +2,25 @@
 title: Extensibilidade de sindicalização
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 688b31f3c87b7c9ad4842cfe6834b0dbc9e5b85b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915558"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585946"
 ---
 # <a name="syndication-extensibility"></a>Extensibilidade de sindicalização
 A API de distribuição foi projetado para fornecer um modelo de programação em formato neutro que permite que o conteúdo agregado a ser gravado para a transmissão em uma variedade de formatos. O modelo de dados abstrato consiste as seguintes classes:  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  Essas classes são mapeadas em conjunto para as construções definidas na especificação do Atom 1.0, embora alguns dos nomes sejam diferentes.  
   
@@ -32,17 +32,17 @@ A API de distribuição foi projetado para fornecer um modelo de programação e
 ## <a name="deriving-a-new-class"></a>Derivar uma nova classe  
  Você pode derivar uma nova classe de qualquer uma das classes de modelo de dados abstrato existente. Faça isso ao implementar um aplicativo no qual a maioria dos feeds que você está trabalhando com tem uma extensão específica. Neste tópico, a maioria dos feeds que o programa funcione com contém um `MyExtension` extensão. Para fornecer uma experiência aprimorada de programação, execute as seguintes etapas:  
   
--   Crie uma classe para manter os dados de extensão. Nesse caso, crie uma classe chamada MyExtension.  
+- Crie uma classe para manter os dados de extensão. Nesse caso, crie uma classe chamada MyExtension.  
   
--   Derive uma classe chamada MyExtensionItem de <xref:System.ServiceModel.Syndication.SyndicationItem> para expor uma propriedade do tipo MyExtension para fins de programação.  
+- Derive uma classe chamada MyExtensionItem de <xref:System.ServiceModel.Syndication.SyndicationItem> para expor uma propriedade do tipo MyExtension para fins de programação.  
   
--   Substituir <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> na classe MyExtensionItem para criar uma nova instância de MyExtension quando um MyExtension é lida.  
+- Substituir <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> na classe MyExtensionItem para criar uma nova instância de MyExtension quando um MyExtension é lida.  
   
--   Substituir <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> na classe MyExtensionItem para gravar o conteúdo da propriedade MyExtension um gravador de XML.  
+- Substituir <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> na classe MyExtensionItem para gravar o conteúdo da propriedade MyExtension um gravador de XML.  
   
--   Derive uma classe chamada MyExtensionFeed de <xref:System.ServiceModel.Syndication.SyndicationFeed>.  
+- Derive uma classe chamada MyExtensionFeed de <xref:System.ServiceModel.Syndication.SyndicationFeed>.  
   
--   Substituir <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> na classe MyExtensionFeed para instanciar um MyExtensionItem em vez do padrão <xref:System.ServiceModel.Syndication.SyndicationItem>. Uma série de métodos são definidos no <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> que pode criar <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, e <xref:System.ServiceModel.Syndication.SyndicationPerson> objetos (por exemplo, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, e <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Todos os quais podem ser substituídos para criar uma classe derivada personalizada.  
+- Substituir <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> na classe MyExtensionFeed para instanciar um MyExtensionItem em vez do padrão <xref:System.ServiceModel.Syndication.SyndicationItem>. Uma série de métodos são definidos no <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> que pode criar <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, e <xref:System.ServiceModel.Syndication.SyndicationPerson> objetos (por exemplo, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, e <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Todos os quais podem ser substituídos para criar uma classe derivada personalizada.  
   
 ## <a name="see-also"></a>Consulte também
 

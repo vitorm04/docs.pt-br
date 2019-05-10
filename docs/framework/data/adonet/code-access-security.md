@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ee633e2488611417f72a9d51ab6b0fe2d9ddfa27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174103"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583561"
 ---
 # <a name="code-access-security-and-adonet"></a>Segurança de acesso do código e o ADO.NET
 O .NET Framework oferece segurança baseada em função e segurança de acesso de código (CAS), ambas são implementadas por meio de uma infraestrutura comum fornecida pelo CLR (Common Language Runtime). No mundo do código não gerenciado, a maioria dos aplicativos é executada com as permissões do usuário ou da entidade de segurança. Como resultado, é possível que os sistemas de computador sejam danificados e os dados particulares sejam comprometidos quando um software mal-intencionado ou com erro for executado por um usuário com privilégios elevados.  
@@ -27,11 +27,11 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
   
  Existem três tipos de permissões de acesso de código:  
   
--   As `Code access permissions` são derivadas da classe <xref:System.Security.CodeAccessPermission>. São necessárias permissões para acessar recursos protegidos, como arquivos e variáveis de ambiente, e executar operações protegidas, como acessar código não gerenciado.  
+- As `Code access permissions` são derivadas da classe <xref:System.Security.CodeAccessPermission>. São necessárias permissões para acessar recursos protegidos, como arquivos e variáveis de ambiente, e executar operações protegidas, como acessar código não gerenciado.  
   
--   As `Identity permissions` representam características que identificam um assembly. As permissões são concedidas a um assembly com base em evidências, o que pode incluir itens como uma assinatura digital ou a origem do código. As permissões de identidade também são derivadas da classe base <xref:System.Security.CodeAccessPermission>.  
+- As `Identity permissions` representam características que identificam um assembly. As permissões são concedidas a um assembly com base em evidências, o que pode incluir itens como uma assinatura digital ou a origem do código. As permissões de identidade também são derivadas da classe base <xref:System.Security.CodeAccessPermission>.  
   
--   As `Role-based security permissions` são baseadas no fato de uma entidade de segurança ter uma identidade especificada ou ser membro de uma função especificada. A classe <xref:System.Security.Permissions.PrincipalPermission> permite verificações de permissões declarativas e imperativas na entidade de segurança ativa.  
+- As `Role-based security permissions` são baseadas no fato de uma entidade de segurança ter uma identidade especificada ou ser membro de uma função especificada. A classe <xref:System.Security.Permissions.PrincipalPermission> permite verificações de permissões declarativas e imperativas na entidade de segurança ativa.  
   
  Para determinar se o código está autorizado a acessar um recurso ou executar uma operação, o sistema de segurança do tempo de execução atravessa a pilha de chamadas, comparando as permissões concedidas de cada chamador com a permissão que está sendo exigida. Se algum chamador na pilha de chamadas não tiver a permissão exigida, uma <xref:System.Security.SecurityException> será gerada e o acesso será recusado.  
   

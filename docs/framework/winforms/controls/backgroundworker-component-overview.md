@@ -17,27 +17,27 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da1d87464ef30fb549a2c201170e81c45cbdf6fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011808"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587732"
 ---
 # <a name="backgroundworker-component-overview"></a>Visão geral do componente BackgroundWorker
 Há muitas operações realizadas com frequência que podem levar muito tempo para serem executadas. Por exemplo:  
   
--   Downloads de imagens  
+- Downloads de imagens  
   
--   Invocações de serviço Web  
+- Invocações de serviço Web  
   
--   Downloads e uploads de arquivos (inclusive de aplicativos ponto a ponto)  
+- Downloads e uploads de arquivos (inclusive de aplicativos ponto a ponto)  
   
--   Cálculos locais complexos  
+- Cálculos locais complexos  
   
--   Transações de banco de dados  
+- Transações de banco de dados  
   
--   Acesso ao disco local, dada a sua baixa velocidade em relação ao acesso à memória  
+- Acesso ao disco local, dada a sua baixa velocidade em relação ao acesso à memória  
   
  Operações como essas podem fazer com que a sua interface de usuário pare de responder enquanto elas estiverem em execução. Se você quer uma interface que responda com agilidade e está enfrentando longos atrasos associados a essas operações, o componente <xref:System.ComponentModel.BackgroundWorker> fornece uma solução conveniente.  
   

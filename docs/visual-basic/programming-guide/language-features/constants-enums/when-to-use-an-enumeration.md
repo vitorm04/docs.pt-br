@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a43c55d4ad6a895957b53ae18c3641c5383a24ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907303"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585069"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Quando usar uma enumeração (Visual Basic)
 Enumerações oferecem uma maneira fácil de trabalhar com conjuntos de constantes relacionadas. Uma enumeração, ou `Enum`, é um nome simbólico para um conjunto de valores. Enumerações são tratadas como tipos de dados, e você pode usá-los para criar conjuntos de constantes para uso com variáveis e propriedades.  
@@ -19,13 +19,13 @@ Enumerações oferecem uma maneira fácil de trabalhar com conjuntos de constant
   
  Os benefícios de usar enumerações incluem:  
   
--   Reduz erros causados por Transpor ou números de erros de digitação.  
+- Reduz erros causados por Transpor ou números de erros de digitação.  
   
--   Torna mais fácil alterar os valores no futuro.  
+- Torna mais fácil alterar os valores no futuro.  
   
--   Torna o código mais fácil de ler, que significa que é menos provável que os erros serão surgir nele.  
+- Torna o código mais fácil de ler, que significa que é menos provável que os erros serão surgir nele.  
   
--   Garante a compatibilidade com versões posteriores. Com enumerações, seu código tem menos probabilidade de falhar se futuramente alguém altera os valores correspondentes aos nomes de membros.  
+- Garante a compatibilidade com versões posteriores. Com enumerações, seu código tem menos probabilidade de falhar se futuramente alguém altera os valores correspondentes aos nomes de membros.  
   
 ## <a name="naming-enumerations"></a>Enumerações de nomenclatura  
  Use uma convenção de nomenclatura para os membros de enumeração. Quando o Visual Basic encontra um nome de membro de enumeração, uma exceção pode ser lançada se outras bibliotecas de tipo referenciado contêm o mesmo nome. Use um prefixo exclusivo que identifica os valores do seu aplicativo ou componente.  
