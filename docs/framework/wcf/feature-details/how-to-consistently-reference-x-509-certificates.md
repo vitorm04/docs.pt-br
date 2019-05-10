@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
-ms.openlocfilehash: bd911b1586f7f4a4816efa32480ef99ca12404f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2214517784d311cbd0fe487fd6db2cbf48189955
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662795"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>Como: fazer referência de forma consistente aos certificados X.509
 Você pode identificar um certificado de várias maneiras: pelo hash do certificado, o emissor e número de série ou pelo identificador de chave de assunto (SKI). O SKI fornece uma identificação exclusiva para chave pública do assunto do certificado e geralmente é usado ao trabalhar com a assinatura digital XML. O valor de ESQUI geralmente é parte do certificado X.509 como uma *extensão de certificado x. 509*. Windows Communication Foundation (WCF) tem um padrão *referenciando estilo* se a extensão de ESQUI está ausente no certificado que usa o emissor e número de série. Se o certificado contém a extensão de ESQUI, o padrão de estilo de referência usa o SKI para apontar para o certificado. Se a forma intermediário por meio do desenvolvimento de um aplicativo, você alterna o uso de certificados que não usam a extensão de ESQUI a certificados que usam a extensão de ESQUI, também altera o estilo de referência usado em mensagens geradas pelo WCF.  

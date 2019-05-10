@@ -12,12 +12,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: a174b6ae60f87e91e6f97e8fa7f8ad3892ef017a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bee16a388d823f74bc9c88bc34b510d2a5907393
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913465"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649229"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>Como: Navegar até uma URL com o controle WebBrowser
 O exemplo de código a seguir demonstra como navegar o <xref:System.Windows.Forms.WebBrowser> controle a uma URL específica.  
@@ -37,9 +37,9 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Um controle <xref:System.Windows.Forms.WebBrowser> chamado `webBrowser1`.  
+- Um controle <xref:System.Windows.Forms.WebBrowser> chamado `webBrowser1`.  
   
--   Referências aos assemblies `System` e `System.Windows.Forms`.  
+- Referências aos assemblies `System` e `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: 13fe07d1521832ed12ba5770e0bd069ff9b917d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c29b3e3d5eff426ac573ddf5224259f0a6c28e53
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043570"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664921"
 ---
 # <a name="channel-model-overview"></a>Visão geral de modelo de canal
 A pilha de canais do Windows Communication Foundation (WCF) é uma pilha de comunicação em camadas com um ou mais canais que processam mensagens. Na parte inferior da pilha é um canal de transporte que é responsável pela adaptação a pilha de canais de transporte subjacente (por exemplo, TCP, HTTP, SMTP e outros tipos de transporte.). Canais fornecem um modelo de programação de nível baixo para enviar e receber mensagens. Esse modelo de programação se baseia em várias interfaces e outros tipos conhecidos coletivamente como o modelo de canal WCF. Este tópico discute as formas de canal, a construção de um ouvinte de canais básica (no serviço) e a fábrica de canais (no cliente).  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: 4fe79c74b6ff634223a4f10d8c5dc54bb77571cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b78dfed1d615ba865f136365eac1c9c131ed5a5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921141"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661944"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>Resolução de associação tardia; poderiam ocorrer erros de tempo de execução
 Um objeto é atribuído a uma variável declarada com o [tipo de dados do objeto](../../../visual-basic/language-reference/data-types/object-data-type.md).  
@@ -27,7 +27,7 @@ Um objeto é atribuído a uma variável declarada com o [tipo de dados do objeto
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Se possível, declare a variável para ser de um tipo específico.  
+- Se possível, declare a variável para ser de um tipo específico.  
   
 ## <a name="see-also"></a>Consulte também
 

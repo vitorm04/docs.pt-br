@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5415fc173be10834f73b5959481951407bcee0b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050357"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637335"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabalhando com NATs e firewalls
 O cliente e o servidor de uma conexão de rede com frequência não têm uma conexão direta e abrir o caminho para a comunicação. Pacotes são filtradas, roteadas, analisados e transformados em máquinas de ponto de extremidade e pelas máquinas intermediárias na rede. Conversões de endereço de rede (NATs) e firewalls são exemplos comuns de aplicativos intermediários que podem participar da comunicação de rede.  

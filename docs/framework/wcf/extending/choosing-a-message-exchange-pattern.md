@@ -2,12 +2,12 @@
 title: Escolhendo um padrão de troca de mensagens
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2d39164944207d73fdfe418a30326fb40462db72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922833"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664905"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Escolhendo um padrão de troca de mensagens
 A primeira etapa ao escrever um transporte personalizado é decidir qual *padrões de troca de mensagem* (ou MEPs) são necessários para o canal que você está desenvolvendo. Este tópico descreve as opções disponíveis e discute os vários requisitos. Isso é a primeira tarefa na lista de tarefas de desenvolvimento canal descrita em [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).  
