@@ -2,25 +2,25 @@
 title: Designer ReHosting
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c67bdc5715a95e3f4252fc9ab0c7b151ddddc6cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005219"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583706"
 ---
 # <a name="designer-rehosting"></a>Alterar a hospedagem do designer
 O designer que rehosting é um cenário comum que se refere hospedar a tela de design de fluxo de trabalho em um aplicativo personalizado. O aplicativo que hospedando a maioria de pessoas estão familiarizados com é Visual Studio entanto, há um número de cenários onde mostrar o designer de fluxo de trabalho em um aplicativo pode ser útil:  
   
--   Monitorando aplicativos (que permitem que um usuário final visualizem o processo, bem como os dados em tempo de execução sobre o processo como o estado atualmente ativa, os dados agregados de tempo de execução, ou outras informações sobre uma instância de fluxo de trabalho).  
+- Monitorando aplicativos (que permitem que um usuário final visualizem o processo, bem como os dados em tempo de execução sobre o processo como o estado atualmente ativa, os dados agregados de tempo de execução, ou outras informações sobre uma instância de fluxo de trabalho).  
   
--   Aplicativos que permitem que um usuário personalizar o processo com um conjunto limitado de atividades.  
+- Aplicativos que permitem que um usuário personalizar o processo com um conjunto limitado de atividades.  
   
  Para oferecer suporte a esses tipos de aplicativos, os vem do designer de fluxo de trabalho dentro do .NET Framework, e podem ser hospedados em um aplicativo de WPF, ou em um aplicativo de WinForms com WPF apropriado que hospeda o código. Este exemplo demonstra:  
   
--   Rehosting o designer de WF.  
+- Rehosting o designer de WF.  
   
--   Usando a caixa de ferramentas e a grade rehosted de propriedade também.  
+- Usando a caixa de ferramentas e a grade rehosted de propriedade também.  
   
 ## <a name="rehosting-the-designer"></a>Rehosting o designer  
  Este exemplo mostra como criar o layout de WPF para conter o designer, mostrado no seguinte layout de grade (código da caixa de ferramentas omitido para interesses de espaço). Observe a nomeação das bordas que contêm o designer e a grade de propriedade.  

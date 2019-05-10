@@ -13,12 +13,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 - examples [Windows Forms], sounds
 ms.assetid: afb206ff-4824-4804-a8d4-185bf5ad8e7c
-ms.openlocfilehash: d85d8cd40ff2b32cb3f2a79cf9a8221964f186c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 765021875767a754e62e3ec11e56487e4de91e93
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913283"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602772"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Como: Reproduzir um som do sistema de um Windows Form
 O código a seguir exemplo reproduz o `Exclamation` som do sistema em tempo de execução. Para obter mais informações sobre os sons do sistema, consulte <xref:System.Media.SystemSounds>.  
@@ -41,7 +41,7 @@ public void playExclamation()
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Uma referência para o <xref:System.Media?displayProperty=nameWithType> namespace.  
+- Uma referência para o <xref:System.Media?displayProperty=nameWithType> namespace.  
   
 ## <a name="see-also"></a>Consulte também
 

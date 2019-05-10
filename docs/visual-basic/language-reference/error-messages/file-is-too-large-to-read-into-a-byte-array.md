@@ -2,12 +2,12 @@
 title: O arquivo é muito grande para ser lido em um array de bytes
 ms.date: 07/20/2015
 ms.assetid: 686630a6-a439-46c7-8d7b-34613ae4c5d8
-ms.openlocfilehash: 0c7d35e08eeb42e35c4c40e47434a64393d829b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a842205e9184355e4ea750ea2eb32e4bcf05a14d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800874"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665110"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a>O arquivo é muito grande para ser lido em um array de bytes
 O tamanho do arquivo que você está tentando ler em uma matriz de bytes excede 4 GB. O `My.Computer.FileSystem.ReadAllBytes` método não é possível ler um arquivo que excede esse tamanho.  

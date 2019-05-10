@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 39c54c5d91c38e43fd7d0b1205537948e84a0782
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787667"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587525"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Como: criar um serviço de token de segurança
 Um serviço de token de segurança implementa o protocolo definido na especificação WS-Trust. Esse protocolo define os formatos de mensagem e padrões de troca de mensagem para a emissão, renovação, cancelando e validando tokens de segurança. Um serviço de token de segurança fornece uma ou mais desses recursos. Este tópico é o cenário mais comum: implementação de emissão de token.  

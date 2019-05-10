@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a517dc4e143b561a17bb3715b69be393bee2b21e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596772"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585020"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Mensagens de lote em uma transação
 Aplicativos em fila usam transações para garantir a correção e entrega confiável de mensagens. Transações, no entanto, são operações caras e podem reduzir drasticamente a taxa de transferência de mensagem. Uma maneira para melhorar a taxa de transferência de mensagem é ter um aplicativo de ler e processar várias mensagens em uma única transação. A compensação está entre desempenho e recuperação: conforme aumenta o número de mensagens em um lote, aumenta a quantidade de trabalho de recuperação que necessário se as transações serão revertidas. É importante observar a diferença entre o envio em lote de mensagens em uma transação e sessões. Um *sessão* é um agrupamento de mensagens relacionadas que são processados por um único aplicativo e confirmado como uma única unidade. Sessões geralmente são usadas quando um grupo de mensagens relacionadas deve ser processado em conjunto. Um exemplo disso é um site de compra online. *Lotes* são usados para processar vários, não relacionados a mensagens de forma que a taxa de transferência de mensagem aumenta. Para obter mais informações sobre as sessões, consulte [mensagens na fila de agrupamento em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Mensagens em um lote também são processadas por um único aplicativo e confirmadas como uma única unidade, mas não pode haver nenhuma relação entre as mensagens no lote. Mensagens em lote em uma transação são uma otimização que não são alterados como o aplicativo é executado.  

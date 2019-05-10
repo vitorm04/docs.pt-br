@@ -2,12 +2,12 @@
 title: Rastreamento
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3520d2aca07f988c45d65d5d8113d05292a37638
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664956"
 ---
 # <a name="tracing"></a>Rastreamento
 Windows Communication Foundation (WCF) fornece instrumentação de aplicativos e dados de diagnóstico para análise e monitoramento de falhas. Você pode usar o rastreamento em vez de um depurador para entender como um aplicativo está se comportando ou por que ela faz. Também é possível correlacionar falhas e processamento entre os componentes para fornecer uma experiência de ponta a ponta.  
