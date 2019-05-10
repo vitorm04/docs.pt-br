@@ -3,30 +3,30 @@ title: Agrupando dados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
 ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808121"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754468"
 ---
-# <a name="grouping-data-visual-basic"></a><span data-ttu-id="8f87a-102">Agrupando dados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f87a-102">Grouping Data (Visual Basic)</span></span>
-<span data-ttu-id="8f87a-103">O agrupamento refere-se à operação de colocação de dados em grupos, de modo que os elementos em cada grupo compartilhem um atributo comum.</span><span class="sxs-lookup"><span data-stu-id="8f87a-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  
+# <a name="grouping-data-visual-basic"></a><span data-ttu-id="101ac-102">Agrupando dados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="101ac-102">Grouping Data (Visual Basic)</span></span>
+<span data-ttu-id="101ac-103">O agrupamento refere-se à operação de colocação de dados em grupos, de modo que os elementos em cada grupo compartilhem um atributo comum.</span><span class="sxs-lookup"><span data-stu-id="101ac-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  
   
- <span data-ttu-id="8f87a-104">A ilustração a seguir mostra os resultados do agrupamento de uma sequência de caracteres.</span><span class="sxs-lookup"><span data-stu-id="8f87a-104">The following illustration shows the results of grouping a sequence of characters.</span></span> <span data-ttu-id="8f87a-105">A chave para cada grupo é o caractere.</span><span class="sxs-lookup"><span data-stu-id="8f87a-105">The key for each group is the character.</span></span>  
+ <span data-ttu-id="101ac-104">A ilustração a seguir mostra os resultados do agrupamento de uma sequência de caracteres.</span><span class="sxs-lookup"><span data-stu-id="101ac-104">The following illustration shows the results of grouping a sequence of characters.</span></span> <span data-ttu-id="101ac-105">A chave para cada grupo é o caractere.</span><span class="sxs-lookup"><span data-stu-id="101ac-105">The key for each group is the character.</span></span>  
   
  ![Diagrama que mostra uma operação de agrupamento LINQ.](./media/grouping-data/linq-group-operation.png)  
   
- <span data-ttu-id="8f87a-107">Os métodos do operador de consulta padrão que agrupam elementos de dados estão listados na seção a seguir.</span><span class="sxs-lookup"><span data-stu-id="8f87a-107">The standard query operator methods that group data elements are listed in the following section.</span></span>  
+ <span data-ttu-id="101ac-107">Os métodos do operador de consulta padrão que agrupam elementos de dados estão listados na seção a seguir.</span><span class="sxs-lookup"><span data-stu-id="101ac-107">The standard query operator methods that group data elements are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8f87a-108">Métodos</span><span class="sxs-lookup"><span data-stu-id="8f87a-108">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="101ac-108">Métodos</span><span class="sxs-lookup"><span data-stu-id="101ac-108">Methods</span></span>  
   
-|<span data-ttu-id="8f87a-109">Nome do método</span><span class="sxs-lookup"><span data-stu-id="8f87a-109">Method Name</span></span>|<span data-ttu-id="8f87a-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="8f87a-110">Description</span></span>|<span data-ttu-id="8f87a-111">Sintaxe de expressão de consulta do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8f87a-111">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="8f87a-112">Mais informações</span><span class="sxs-lookup"><span data-stu-id="8f87a-112">More Information</span></span>|  
+|<span data-ttu-id="101ac-109">Nome do método</span><span class="sxs-lookup"><span data-stu-id="101ac-109">Method Name</span></span>|<span data-ttu-id="101ac-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="101ac-110">Description</span></span>|<span data-ttu-id="101ac-111">Sintaxe de expressão de consulta do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="101ac-111">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="101ac-112">Mais informações</span><span class="sxs-lookup"><span data-stu-id="101ac-112">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|<span data-ttu-id="8f87a-113">GroupBy</span><span class="sxs-lookup"><span data-stu-id="8f87a-113">GroupBy</span></span>|<span data-ttu-id="8f87a-114">Agrupa elementos que compartilham um atributo comum.</span><span class="sxs-lookup"><span data-stu-id="8f87a-114">Groups elements that share a common attribute.</span></span> <span data-ttu-id="8f87a-115">Cada grupo é representado por um objeto <xref:System.Linq.IGrouping%602>.</span><span class="sxs-lookup"><span data-stu-id="8f87a-115">Each group is represented by an <xref:System.Linq.IGrouping%602> object.</span></span>|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="8f87a-116">ToLookup</span><span class="sxs-lookup"><span data-stu-id="8f87a-116">ToLookup</span></span>|<span data-ttu-id="8f87a-117">Insere os elementos em um <xref:System.Linq.Lookup%602> (um dicionário one-to-many) com base em uma função de seletor de chave.</span><span class="sxs-lookup"><span data-stu-id="8f87a-117">Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span>|<span data-ttu-id="8f87a-118">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="8f87a-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="101ac-113">GroupBy</span><span class="sxs-lookup"><span data-stu-id="101ac-113">GroupBy</span></span>|<span data-ttu-id="101ac-114">Agrupa elementos que compartilham um atributo comum.</span><span class="sxs-lookup"><span data-stu-id="101ac-114">Groups elements that share a common attribute.</span></span> <span data-ttu-id="101ac-115">Cada grupo é representado por um objeto <xref:System.Linq.IGrouping%602>.</span><span class="sxs-lookup"><span data-stu-id="101ac-115">Each group is represented by an <xref:System.Linq.IGrouping%602> object.</span></span>|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="101ac-116">ToLookup</span><span class="sxs-lookup"><span data-stu-id="101ac-116">ToLookup</span></span>|<span data-ttu-id="101ac-117">Insere os elementos em um <xref:System.Linq.Lookup%602> (um dicionário one-to-many) com base em uma função de seletor de chave.</span><span class="sxs-lookup"><span data-stu-id="101ac-117">Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span>|<span data-ttu-id="101ac-118">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="101ac-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a><span data-ttu-id="8f87a-119">Exemplo de sintaxe de expressão de consulta</span><span class="sxs-lookup"><span data-stu-id="8f87a-119">Query Expression Syntax Example</span></span>  
- <span data-ttu-id="8f87a-120">O seguinte exemplo de código usa a cláusula `Group By` para agrupar inteiros em uma lista de acordo com se eles são pares ou ímpares.</span><span class="sxs-lookup"><span data-stu-id="8f87a-120">The following code example uses the `Group By` clause to group integers in a list according to whether they are even or odd.</span></span>  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="101ac-119">Exemplo de sintaxe de expressão de consulta</span><span class="sxs-lookup"><span data-stu-id="101ac-119">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="101ac-120">O seguinte exemplo de código usa a cláusula `Group By` para agrupar inteiros em uma lista de acordo com se eles são pares ou ímpares.</span><span class="sxs-lookup"><span data-stu-id="101ac-120">The following code example uses the `Group By` clause to group integers in a list according to whether they are even or odd.</span></span>  
   
 ```vb  
 Dim numbers As New System.Collections.Generic.List(Of Integer)(  
@@ -63,10 +63,10 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8f87a-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8f87a-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="101ac-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="101ac-121">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="8f87a-122">Visão geral de operadores de consulta padrão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f87a-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="8f87a-123">Cláusula Group By</span><span class="sxs-lookup"><span data-stu-id="8f87a-123">Group By Clause</span></span>](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [<span data-ttu-id="8f87a-124">Como: Agrupar arquivos por extensão (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f87a-124">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [<span data-ttu-id="8f87a-125">Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f87a-125">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [<span data-ttu-id="101ac-122">Visão geral de operadores de consulta padrão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="101ac-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="101ac-123">Cláusula Group By</span><span class="sxs-lookup"><span data-stu-id="101ac-123">Group By Clause</span></span>](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [<span data-ttu-id="101ac-124">Como: Agrupar arquivos por extensão (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="101ac-124">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [<span data-ttu-id="101ac-125">Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="101ac-125">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

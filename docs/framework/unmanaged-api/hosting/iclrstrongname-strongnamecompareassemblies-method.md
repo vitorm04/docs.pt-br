@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63d4b885b6968b800bc965a9be1ec6b795a42220
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8cdc59228ff9913be808d3909ca3fe9e38a7c72f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771495"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584317"
 ---
-# <a name="iclrstrongnamestrongnamecompareassemblies-method"></a><span data-ttu-id="0f33a-102">Método ICLRStrongName::StrongNameCompareAssemblies</span><span class="sxs-lookup"><span data-stu-id="0f33a-102">ICLRStrongName::StrongNameCompareAssemblies Method</span></span>
-<span data-ttu-id="0f33a-103">Determina se dois assemblies diferem somente por suas assinaturas de nome forte.</span><span class="sxs-lookup"><span data-stu-id="0f33a-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
+# <a name="iclrstrongnamestrongnamecompareassemblies-method"></a><span data-ttu-id="1c257-102">Método ICLRStrongName::StrongNameCompareAssemblies</span><span class="sxs-lookup"><span data-stu-id="1c257-102">ICLRStrongName::StrongNameCompareAssemblies Method</span></span>
+<span data-ttu-id="1c257-103">Determina se dois assemblies diferem somente por suas assinaturas de nome forte.</span><span class="sxs-lookup"><span data-stu-id="1c257-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f33a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0f33a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c257-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1c257-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameCompareAssemblies (  
@@ -37,37 +37,37 @@ HRESULT StrongNameCompareAssemblies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0f33a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="0f33a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1c257-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1c257-105">Parameters</span></span>  
  `wszAssembly1`  
- <span data-ttu-id="0f33a-106">[in] O caminho para o assembly primeiro.</span><span class="sxs-lookup"><span data-stu-id="0f33a-106">[in] The path to the first assembly.</span></span>  
+ <span data-ttu-id="1c257-106">[in] O caminho para o assembly primeiro.</span><span class="sxs-lookup"><span data-stu-id="1c257-106">[in] The path to the first assembly.</span></span>  
   
  `wszAssembly2`  
- <span data-ttu-id="0f33a-107">[in] O caminho para o segundo conjunto.</span><span class="sxs-lookup"><span data-stu-id="0f33a-107">[in] The path to the second assembly.</span></span>  
+ <span data-ttu-id="1c257-107">[in] O caminho para o segundo conjunto.</span><span class="sxs-lookup"><span data-stu-id="1c257-107">[in] The path to the second assembly.</span></span>  
   
  `pdwResult`  
- <span data-ttu-id="0f33a-108">[out] Um dos seguintes valores:</span><span class="sxs-lookup"><span data-stu-id="0f33a-108">[out] One of the following values:</span></span>  
+ <span data-ttu-id="1c257-108">[out] Um dos seguintes valores:</span><span class="sxs-lookup"><span data-stu-id="1c257-108">[out] One of the following values:</span></span>  
   
-- <span data-ttu-id="0f33a-109">`SN_CMP_DIFFERENT` (0) – Especifica que os assemblies contêm dados diferentes.</span><span class="sxs-lookup"><span data-stu-id="0f33a-109">`SN_CMP_DIFFERENT` (0) - Specifies that the assemblies contain different data.</span></span>  
+- <span data-ttu-id="1c257-109">`SN_CMP_DIFFERENT` (0) – Especifica que os assemblies contêm dados diferentes.</span><span class="sxs-lookup"><span data-stu-id="1c257-109">`SN_CMP_DIFFERENT` (0) - Specifies that the assemblies contain different data.</span></span>  
   
-- <span data-ttu-id="0f33a-110">`SN_CMP_IDENTICAL` (1) - Especifica que os assemblies são exatamente os mesmos, incluindo suas assinaturas e a soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="0f33a-110">`SN_CMP_IDENTICAL` (1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
+- <span data-ttu-id="1c257-110">`SN_CMP_IDENTICAL` (1) - Especifica que os assemblies são exatamente os mesmos, incluindo suas assinaturas e a soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="1c257-110">`SN_CMP_IDENTICAL` (1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
   
-- <span data-ttu-id="0f33a-111">`SN_CMP_SIGONLY` (2) - Especifica que os assemblies diferem somente por assinatura e a soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="0f33a-111">`SN_CMP_SIGONLY` (2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
+- <span data-ttu-id="1c257-111">`SN_CMP_SIGONLY` (2) - Especifica que os assemblies diferem somente por assinatura e a soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="1c257-111">`SN_CMP_SIGONLY` (2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0f33a-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="0f33a-112">Return Value</span></span>  
- <span data-ttu-id="0f33a-113">`S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).</span><span class="sxs-lookup"><span data-stu-id="0f33a-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1c257-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="1c257-112">Return Value</span></span>  
+ <span data-ttu-id="1c257-113">`S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).</span><span class="sxs-lookup"><span data-stu-id="1c257-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0f33a-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0f33a-114">Requirements</span></span>  
- <span data-ttu-id="0f33a-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f33a-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c257-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1c257-114">Requirements</span></span>  
+ <span data-ttu-id="1c257-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1c257-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0f33a-116">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="0f33a-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="1c257-116">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="1c257-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="0f33a-117">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="0f33a-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1c257-117">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="1c257-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0f33a-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f33a-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="1c257-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c257-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0f33a-119">Comentários</span><span class="sxs-lookup"><span data-stu-id="0f33a-119">Remarks</span></span>  
- <span data-ttu-id="0f33a-120">A assinatura de um assembly de nome forte consiste em nome de texto, versão, cultura e token de chave pública do assembly.</span><span class="sxs-lookup"><span data-stu-id="0f33a-120">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1c257-119">Comentários</span><span class="sxs-lookup"><span data-stu-id="1c257-119">Remarks</span></span>  
+ <span data-ttu-id="1c257-120">A assinatura de um assembly de nome forte consiste em nome de texto, versão, cultura e token de chave pública do assembly.</span><span class="sxs-lookup"><span data-stu-id="1c257-120">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f33a-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0f33a-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c257-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1c257-121">See also</span></span>
 
-- [<span data-ttu-id="0f33a-122">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="0f33a-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="1c257-122">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="1c257-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
