@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: ca2ed1fcf113e06535c8900e5836eb64f9b23958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed32cb7d1c9da8a98333bc7eddd3e5707e4664ff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875572"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660874"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Como: Especifique as credenciais do cliente para um serviço de dados de solicitação (WCF Data Services)
 Por padrão, a biblioteca de cliente não fornece credenciais ao enviar uma solicitação para um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service. No entanto, você pode especificar que credenciais enviadas para autenticar solicitações ao serviço de dados, fornecendo uma <xref:System.Net.NetworkCredential> para o <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> propriedade do <xref:System.Data.Services.Client.DataServiceContext>. Para obter mais informações, consulte [protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). O exemplo neste tópico mostra como fornecer explicitamente as credenciais que são usadas pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] cliente ao solicitar dados do serviço de dados.  
@@ -44,11 +44,11 @@ Por padrão, a biblioteca de cliente não fornece credenciais ao enviar uma soli
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  As seguintes considerações de segurança se aplicam ao exemplo neste tópico:  
   
--   Para verificar que as credenciais fornecidas nesta amostra funcionem, o serviço de dados Northwind deve usar um esquema de autenticação que não seja o acesso anônimo. Caso contrário, o site que hospeda o serviço de dados não solicitará as credenciais.  
+- Para verificar que as credenciais fornecidas nesta amostra funcionem, o serviço de dados Northwind deve usar um esquema de autenticação que não seja o acesso anônimo. Caso contrário, o site que hospeda o serviço de dados não solicitará as credenciais.  
   
--   As credenciais do usuário devem ser solicitadas somente durante a execução e não devem ser armazenados em cache. As credenciais devem sempre ser armazenadas com segurança.  
+- As credenciais do usuário devem ser solicitadas somente durante a execução e não devem ser armazenados em cache. As credenciais devem sempre ser armazenadas com segurança.  
   
--   Os dados enviados com a Autenticação Básica e Digest não são criptografados e, portanto, os dados podem ser vistos por um adversário. Além disso, as credenciais de autenticação básica (nome de usuário e senha) são enviadas em texto não criptografado e podem ser interceptadas.  
+- Os dados enviados com a Autenticação Básica e Digest não são criptografados e, portanto, os dados podem ser vistos por um adversário. Além disso, as credenciais de autenticação básica (nome de usuário e senha) são enviadas em texto não criptografado e podem ser interceptadas.  
   
  Para obter mais informações, consulte [protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
   
