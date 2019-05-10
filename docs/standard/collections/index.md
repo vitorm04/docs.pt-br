@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba780692d59157438da1e04f3bdc3577a3eaef65
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909124"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664569"
 ---
 # <a name="collections-and-data-structures"></a>Coleções e estruturas de dados
 Dados semelhantes podem normalmente ser tratados com mais eficiência quando armazenados e manipulados como uma coleção. Você pode usar a classe ou as classes <xref:System.Array?displayProperty=nameWithType> nos namespaces <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable para adicionar, remover e modificar elementos individuais ou um intervalo de elementos em uma coleção.  
@@ -30,17 +30,17 @@ Dados semelhantes podem normalmente ser tratados com mais eficiência quando arm
 ## <a name="common-collection-features"></a>Recursos comuns de coleção  
  Todas as coleções fornecem métodos para adicionar, remover ou localizar itens na coleção. Além disso, todas as coleções que direta ou indiretamente implementam a interface <xref:System.Collections.ICollection> ou a interface <xref:System.Collections.Generic.ICollection%601> compartilham estes recursos:  
   
--   **A capacidade de enumerar a coleção**  
+- **A capacidade de enumerar a coleção**  
   
      Coleções do .NET Framework implementam <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> para permitir a iteração da coleção por meio dela. Um enumerador pode ser considerado um ponteiro móvel para qualquer elemento da coleção. A instrução [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) e a [Instrução For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) usam o enumerador exposto pelo método <xref:System.Collections.IEnumerable.GetEnumerator%2A> e ocultam a complexidade de manipulação do enumerador. Além disso, qualquer coleção que implementa <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> é considerada um *tipo passível de consulta* e pode ser consultada com LINQ. Consultas LINQ fornecem um padrão comum para o acesso de dados. Elas são geralmente mais concisas e legíveis que loops `foreach` padrão e fornecem filtragem, classificação e agrupamento de recursos. Consultas LINQ também podem melhorar o desempenho. Para obter mais informações, consulte [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [Introdução a consultas LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) e [Operações básicas de consulta (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
--   **A capacidade de copiar o conteúdo da coleção para uma matriz**  
+- **A capacidade de copiar o conteúdo da coleção para uma matriz**  
   
      Todas as coleções podem ser copiadas para uma matriz usando o método **CopyTo**; no entanto, a ordem dos elementos na nova matriz se baseia na sequência na qual o enumerador os retorna. A matriz resultante é sempre unidimensional com um limite inferior de zero.  
   
  Além disso, muitas classes de coleção contêm os seguintes recursos:  
   
--   **Propriedades de capacidade e contagem**  
+- **Propriedades de capacidade e contagem**  
   
      A capacidade de uma coleção é o número de elementos que ela pode conter. A contagem de uma coleção é o número de elementos que ela realmente contém. Algumas coleções ocultam a capacidade ou a contagem ou ambas.  
   
@@ -48,11 +48,11 @@ Dados semelhantes podem normalmente ser tratados com mais eficiência quando arm
   
      Uma <xref:System.Collections.BitArray> é um caso especial; sua capacidade é a mesma que seu comprimento, que é o mesmo de sua contagem.  
   
--   **Um limite inferior consistente**  
+- **Um limite inferior consistente**  
   
      O limite inferior de uma coleção é o índice do seu primeiro elemento. Todas as coleções indexadas nos namespaces <xref:System.Collections> têm um limite inferior de zero, indicando que são indexados em 0. <xref:System.Array> tem um limite inferior de zero por padrão, mas um limite inferior diferente pode ser definido ao criar uma instância da classe **Matriz** usando <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
   
--   **Sincronização para acesso de vários threads** (<xref:System.Collections> somente classes).  
+- **Sincronização para acesso de vários threads** (<xref:System.Collections> somente classes).  
   
      Tipos de coleção não genérica no namespace <xref:System.Collections> oferecem algum acesso thread-safe com sincronização; geralmente exposto por meio dos membros <xref:System.Collections.ICollection.SyncRoot%2A> e <xref:System.Collections.ICollection.IsSynchronized%2A>. Essas coleções são não thread-safe por padrão. Se você precisar de acesso com multithread escalável e eficiente para uma coleção, use uma das classes no namespace <xref:System.Collections.Concurrent> ou considere usar uma coleção imutável. Para obter mais informações, veja [Coleções thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
   

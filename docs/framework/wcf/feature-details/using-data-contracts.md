@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f33bdc006c6b965ba60257637f3cef182555d7d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050656"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637717"
 ---
 # <a name="using-data-contracts"></a>Usando contratos de dados
 Um *contrato de dados* é um contrato formal entre um serviço e um cliente que agrupa abstratamente descreve os dados a serem trocados. Ou seja, para se comunicar, o cliente e o serviço não precisa compartilhar os mesmos tipos, apenas os mesmos contratos de dados. Precisamente define um contrato de dados, para cada tipo de parâmetro ou retornado, quais dados são serializados (transformadas em XML) a ser trocado.  

@@ -2,12 +2,12 @@
 title: Contexto de instância durável
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7c5b102313cc61b623d33056649c56fc236c9e79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990251"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650092"
 ---
 # <a name="durable-instance-context"></a>Contexto de instância durável
 Este exemplo demonstra como personalizar o tempo de execução do Windows Communication Foundation (WCF) para permitir que os contextos de instância durável. Ele usa o SQL Server 2005 como seu armazenamento de backup (SQL Server 2005 Express neste caso). No entanto, ele também fornece uma maneira de acessar os mecanismos de armazenamento personalizado.  

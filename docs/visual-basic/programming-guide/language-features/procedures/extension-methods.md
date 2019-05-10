@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48a2609a1931e55d24d98cd2b336fc16c520c948
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864332"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649645"
 ---
 # <a name="extension-methods-visual-basic"></a>Métodos de extensão (Visual Basic)
 Métodos de extensão permitem que os desenvolvedores adicionem funcionalidades personalizadas aos tipos de dados que já estão definidos sem criar um novo tipo derivado. Métodos de extensão tornam possível escrever um método que pode ser chamado como se fosse um método de instância do tipo existente.  
@@ -93,19 +93,19 @@ End Module
 ## <a name="types-that-can-be-extended"></a>Tipos que podem ser estendidos  
  Você pode definir um método de extensão na maioria dos tipos que podem ser representados em uma lista de parâmetros do Visual Basic, incluindo o seguinte:  
   
--   Classes (tipos de referência)  
+- Classes (tipos de referência)  
   
--   Estruturas (tipos de valor)  
+- Estruturas (tipos de valor)  
   
--   Interfaces  
+- Interfaces  
   
--   Delegados  
+- Delegados  
   
--   Argumentos ByRef e ByVal  
+- Argumentos ByRef e ByVal  
   
--   Parâmetros de método genérico  
+- Parâmetros de método genérico  
   
--   Matrizes  
+- Matrizes  
   
  Como o primeiro parâmetro especifica o tipo de dados que o método de extensão estende, ele é obrigatório e não pode ser opcional. Por esse motivo, `Optional` parâmetros e `ParamArray` parâmetros não podem ser o primeiro parâmetro na lista de parâmetros.  
   
@@ -118,15 +118,15 @@ End Module
   
  Mais geralmente, os métodos de extensão que você adiciona a tipos que não possuem são mais vulneráveis que métodos de extensão adicionados aos tipos que você controla. Várias coisas que podem ocorrer em classes que você não possui e que podem interferir com seus métodos de extensão.  
   
--   Se qualquer membro de instância acessível que tem uma assinatura que é compatível com os argumentos na instrução de chamada, com nenhuma conversões redutoras necessárias de argumento para o parâmetro existir, será usado o método de instância em preferência a qualquer método de extensão. Portanto, se um método de instância apropriado for adicionado a uma classe em algum momento, um membro de extensão existente que dependem de você pode se tornar inacessível.  
+- Se qualquer membro de instância acessível que tem uma assinatura que é compatível com os argumentos na instrução de chamada, com nenhuma conversões redutoras necessárias de argumento para o parâmetro existir, será usado o método de instância em preferência a qualquer método de extensão. Portanto, se um método de instância apropriado for adicionado a uma classe em algum momento, um membro de extensão existente que dependem de você pode se tornar inacessível.  
   
--   O autor de um método de extensão não pode impedir que outros programadores escrever métodos de extensão conflitantes que possam ter precedência sobre a extensão original.  
+- O autor de um método de extensão não pode impedir que outros programadores escrever métodos de extensão conflitantes que possam ter precedência sobre a extensão original.  
   
--   Você pode aumentar a robustez colocando métodos de extensão em seu próprio namespace. Os consumidores da sua biblioteca podem incluir um namespace ou excluí-lo ou selecionar entre namespaces, separadamente do restante da biblioteca.  
+- Você pode aumentar a robustez colocando métodos de extensão em seu próprio namespace. Os consumidores da sua biblioteca podem incluir um namespace ou excluí-lo ou selecionar entre namespaces, separadamente do restante da biblioteca.  
   
--   Ele pode ser mais seguro estender as interfaces de é estender classes, especialmente se você não possui a interface ou classe. Uma alteração em uma interface afeta todas as classes que a implementa. Portanto, o autor pode ser menos provável adicionar ou alterar os métodos em uma interface. No entanto, se uma classe implementa duas interfaces que têm os métodos de extensão com a mesma assinatura, nenhum método de extensão é visível.  
+- Ele pode ser mais seguro estender as interfaces de é estender classes, especialmente se você não possui a interface ou classe. Uma alteração em uma interface afeta todas as classes que a implementa. Portanto, o autor pode ser menos provável adicionar ou alterar os métodos em uma interface. No entanto, se uma classe implementa duas interfaces que têm os métodos de extensão com a mesma assinatura, nenhum método de extensão é visível.  
   
--   Estenda o tipo mais específico, que você pode. Em uma hierarquia de tipos, se você selecionar um tipo do qual muitos outros tipos são derivados, existem inúmeras possibilidades para a introdução de métodos de instância ou outros métodos de extensão que podem interferir com as suas.  
+- Estenda o tipo mais específico, que você pode. Em uma hierarquia de tipos, se você selecionar um tipo do qual muitos outros tipos são derivados, existem inúmeras possibilidades para a introdução de métodos de instância ou outros métodos de extensão que podem interferir com as suas.  
   
 ## <a name="extension-methods-instance-methods-and-properties"></a>Métodos de extensão, métodos de instância e propriedades  
  Quando um método de instância dentro do escopo tem uma assinatura que é compatível com os argumentos de uma instrução de chamada, o método de instância é escolhido em preferência a qualquer método de extensão. O método de instância terá precedência mesmo se o método de extensão é uma correspondência melhor. No exemplo a seguir `ExampleClass` contém um método de instância nomeado `ExampleMethod` que tem um parâmetro de tipo `Integer`. Método de extensão `ExampleMethod` estende `ExampleClass`, e tem um parâmetro de tipo `Long`.  

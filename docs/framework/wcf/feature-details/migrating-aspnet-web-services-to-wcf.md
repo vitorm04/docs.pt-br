@@ -2,12 +2,12 @@
 title: Migrando serviços Web do ASP.NET para o WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8102b91ba14b75ec9cbd2a683b68c3723a77aed0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948090"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649430"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrando serviços Web do ASP.NET para o WCF
 ASP.NET fornece ferramentas e bibliotecas de classes do .NET Framework para criar serviços Web, bem como recursos para hospedar serviços dentro do Internet Information Services (IIS). Windows Communication Foundation (WCF) fornece bibliotecas de classes do .NET Framework, ferramentas e recursos de hospedagem para habilitar a entidades de software se comunique usando todos os protocolos, incluindo aqueles usados pelo Web services.  Migrando serviços de Web do ASP.NET para o WCF permite que seus aplicativos para tirar proveito dos novos recursos e aprimoramentos que são exclusivos para o WCF.  

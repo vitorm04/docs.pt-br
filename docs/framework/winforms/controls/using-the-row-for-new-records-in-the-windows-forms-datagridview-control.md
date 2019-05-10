@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009157"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651533"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Usando a linha para novos registros no controle DataGridView dos Windows Forms
 Quando você usa um <xref:System.Windows.Forms.DataGridView> para editar dados em seu aplicativo, você geralmente desejará dar aos usuários a capacidade de adicionar novas linhas de dados para o armazenamento de dados. O <xref:System.Windows.Forms.DataGridView> controle dá suporte a essa funcionalidade fornecendo uma linha para novos registros, que sempre é exibida como a última linha. Ela é marcada com um símbolo de asterisco (*) em seu cabeçalho de linha. As seções a seguir tratam de algumas coisas que você deve considerar quando programar com a linha de novos registros habilitada.  

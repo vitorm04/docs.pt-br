@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 48e6177e7098f8131d2a0fd62bda9c505fa8bcc9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857929"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662811"
 ---
 # <a name="extending-clients"></a>Estendendo clientes
 Em um aplicativo de chamada, a camada de modelo de serviço é responsável por converter as invocações de método no código do aplicativo em mensagens de saída, enviá-los para os canais subjacentes, converter os resultados de volta em valores de retorno e parâmetros out em o código do aplicativo e retornando os resultados de volta ao chamador. Extensões do modelo de serviço modificarem ou implementam a execução ou o comportamento de comunicação e recursos que envolvem a funcionalidade de cliente ou dispatcher, comportamentos personalizados, mensagem e interceptação de parâmetro e outras funcionalidades de extensibilidade.  

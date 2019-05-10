@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1484d50df51ea85a94da0aad1ebaab54b80a6ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 014af254d299d357c22a898357a533d650715500
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866789"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650523"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Medindo o aprimoramento da inicialização com o .NET Nativo
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] melhora significativamente o tempo de inicialização dos aplicativos. Esse aprimoramento é particularmente perceptível em dispositivos portáteis, de baixa energia e com aplicativos complexos. Este tópico ajuda você a começar a trabalhar com a instrumentação básica necessária para medir essa melhoria de inicialização.  
   
  Para facilitar a investigações de desempenho, o .NET Framework e o Windows usam uma estrutura de evento chamada ETW (Rastreamento de Eventos para Windows) que permite que seu aplicativo notifique as ferramentas quando eventos ocorrerem. Em seguida, você pode usar uma ferramenta chamada PerfView para exibir e analisar eventos de ETW facilmente. Este tópico explica como:  
   
--   Usar a classe <xref:System.Diagnostics.Tracing.EventSource> para emitir eventos.  
+- Usar a classe <xref:System.Diagnostics.Tracing.EventSource> para emitir eventos.  
   
--   Usar o PerfView para coletar tais eventos.  
+- Usar o PerfView para coletar tais eventos.  
   
--   Usar o PerfView para coletar tais eventos.  
+- Usar o PerfView para coletar tais eventos.  
   
 ## <a name="using-eventsource-to-emit-events"></a>Usando o EventSource para emitir eventos  
  O <xref:System.Diagnostics.Tracing.EventSource> fornece uma classe base da qual criar um provedor de eventos personalizado. Em geral, você pode criar uma subclasse de <xref:System.Diagnostics.Tracing.EventSource> e os métodos `Write*` com seus próprios métodos de evento. Um padrão singleton geralmente é usado para cada <xref:System.Diagnostics.Tracing.EventSource>.  
   
  Por exemplo, a classe no exemplo a seguir pode ser usada para medir duas características de desempenho:  
   
--   O tempo até que o construtor de classe `App` foi chamado.  
+- O tempo até que o construtor de classe `App` foi chamado.  
   
--   O tempo até que o construtor `MainPage` foi chamado.  
+- O tempo até que o construtor `MainPage` foi chamado.  
   
  [!code-csharp[ProjectN_ETW#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
   
@@ -39,13 +39,13 @@ ms.locfileid: "61866789"
   
  Por exemplo, suponha que você está criando um leitor de RSS. Alguns locais interessantes para registrar um evento são:  
   
--   Quando a página principal é processada pela primeira vez.  
+- Quando a página principal é processada pela primeira vez.  
   
--   Quando os textos de RSS antigos são desserializados do armazenamento local.  
+- Quando os textos de RSS antigos são desserializados do armazenamento local.  
   
--   Quando seu aplicativo começa a sincronização de novos textos.  
+- Quando seu aplicativo começa a sincronização de novos textos.  
   
--   Quando seu aplicativo concluir a sincronização dos textos novos.  
+- Quando seu aplicativo concluir a sincronização dos textos novos.  
   
  Instrumentação de um aplicativo é simples: Basta chame o método apropriado na classe derivada. Usando o `AppEventSource` do exemplo anterior, você pode instrumentar um aplicativo da seguinte maneira:  
   
@@ -78,20 +78,20 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Execute o aplicativo após iniciar o PerfView. Há algumas coisas a lembrar quando ao executar seu aplicativo:  
   
--   Use uma compilação de versão, não uma compilação de depuração. Compilações de depuração normalmente contêm códigos de verificação e manuseio de erros extras que pode fazer com que o aplicativo seja executado mais lentamente do que o esperado.  
+- Use uma compilação de versão, não uma compilação de depuração. Compilações de depuração normalmente contêm códigos de verificação e manuseio de erros extras que pode fazer com que o aplicativo seja executado mais lentamente do que o esperado.  
   
--   Executar seu aplicativo com o depurador anexado afetará o desempenho do aplicativo.  
+- Executar seu aplicativo com o depurador anexado afetará o desempenho do aplicativo.  
   
--   O Windows usa várias estratégias de caching em cache para agilizar os tempos de inicialização do aplicativo. Se seu aplicativo estiver armazenado em cache na memória e não precisar ser carregado do disco, ele será iniciado mais rapidamente. Para garantir a consistência, inicie e feche seu aplicativo algumas vezes antes de medi-lo.  
+- O Windows usa várias estratégias de caching em cache para agilizar os tempos de inicialização do aplicativo. Se seu aplicativo estiver armazenado em cache na memória e não precisar ser carregado do disco, ele será iniciado mais rapidamente. Para garantir a consistência, inicie e feche seu aplicativo algumas vezes antes de medi-lo.  
   
  Ao executar o aplicativo para que o PerfView possa coletar eventos emitidos, escolha o botão **Parar Coleta**. Em geral, você deve interromper a coleta antes de fechar o aplicativo para que não ocorram eventos estranhos. No entanto, se você medir o desempenho de desligamento ou suspensão, é recomendável continuar a coleta.  
   
 ## <a name="displaying-the-events"></a>Exibir os eventos  
  Para exibir os eventos que já foram coletados, use o PerfView para abrir o arquivo .etl ou .etl.zip criado e escolha **Eventos**. O ETW irá coletar informações sobre um grande número de eventos, incluindo eventos de outros processos. Para restringir sua investigação, preencha as seguintes caixas de texto no modo de exibição de eventos:  
   
--   Na caixa **Filtro do Processo**, especifique o nome do aplicativo (sem ".exe").  
+- Na caixa **Filtro do Processo**, especifique o nome do aplicativo (sem ".exe").  
   
--   Na caixa **Filtro de Tipos de Evento**, especifique `Process/Start | MyCompany-MyApp`. Isso define um filtro para eventos de MyApp-MyCompany e o evento Windows Kernel/Processo/Início.  
+- Na caixa **Filtro de Tipos de Evento**, especifique `Process/Start | MyCompany-MyApp`. Isso define um filtro para eventos de MyApp-MyCompany e o evento Windows Kernel/Processo/Início.  
   
  Selecione todos os eventos listados no painel à esquerda (Ctrl-A) e pressione a tecla **Enter**. Agora, você poderá ver as marcações de tempo de cada evento. Essas marcações de tempo são relativas ao início do rastreamento, portanto você precisa subtrair o horário de cada evento da hora de início do processo para identificar o tempo decorrido desde a inicialização. Se você usar Ctrl+Clique para selecionar duas marcações de tempo, verá que a diferença entre eles é exibida na barra de status na parte inferior da página. Isso facilita ver o tempo decorrido entre dois eventos em exibição (incluindo o início do processo). Você pode abrir o menu de atalho para o modo de exibição e selecionar diversas opções úteis, como exportar para arquivos CSV ou abrir o Microsoft Excel para salvar ou processar os dados.  
   
