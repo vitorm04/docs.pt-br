@@ -2,12 +2,12 @@
 title: Convertendo tipos de dados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: ad9594cabe0e2382ae4e19f2541eec4aa74ccd75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 866b30d3d65add8714f2088169b0769c340f264e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968851"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641977"
 ---
 # <a name="converting-data-types-visual-basic"></a>Convertendo tipos de dados (Visual Basic)
 Os métodos de conversão alteram o tipo dos objetos de entrada.  
