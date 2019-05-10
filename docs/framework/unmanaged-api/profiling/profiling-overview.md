@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 889a9b74bf0b2f2ef029dd622c7ddbbd9b844fa0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654088"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651182"
 ---
 # <a name="profiling-overview"></a>Visão geral da criação de perfil
 <a name="top"></a> Um criador de perfil é uma ferramenta que monitora a execução de outro aplicativo. Um criador de perfil de runtime (CLR) de linguagem comum é uma biblioteca de vínculo dinâmico (DLL) que consiste em funções que recebem mensagens de e enviam mensagens para o CLR usando a API de criação de perfil. A DLL do criador de perfil é carregada pelo CLR no tempo de execução.  
@@ -47,25 +47,25 @@ ms.locfileid: "58654088"
   
  Esta visão geral é composta pelas seguintes seções:  
   
--   [A API de criação de perfil](#profiling_api)  
+- [A API de criação de perfil](#profiling_api)  
   
--   [Recursos com suporte](#support)  
+- [Recursos com suporte](#support)  
   
--   [Threads de notificação](#notification_threads)  
+- [Threads de notificação](#notification_threads)  
   
--   [Segurança](#security)  
+- [Segurança](#security)  
   
--   [Combinar o código gerenciado e em um código Profiler](#combining_managed_unmanaged)  
+- [Combinar o código gerenciado e em um código Profiler](#combining_managed_unmanaged)  
   
--   [Criação de perfil de código não gerenciado](#unmanaged)  
+- [Criação de perfil de código não gerenciado](#unmanaged)  
   
--   [Usando COM](#com)  
+- [Usando COM](#com)  
   
--   [Pilhas de chamadas](#call_stacks)  
+- [Pilhas de chamadas](#call_stacks)  
   
--   [Retornos de chamada e profundidade da pilha](#callbacks)  
+- [Retornos de chamada e profundidade da pilha](#callbacks)  
   
--   [Tópicos relacionados](#related_topics)  
+- [Tópicos relacionados](#related_topics)  
   
 <a name="profiling_api"></a>   
 ## <a name="the-profiling-api"></a>A API de criação de perfil  
@@ -96,33 +96,33 @@ ms.locfileid: "58654088"
   
  A API de criação de perfil recupera informações sobre as seguintes ações e eventos que ocorrem no CLR:  
   
--   Eventos de inicialização e desligamento do CLR.  
+- Eventos de inicialização e desligamento do CLR.  
   
--   Aplicativo desligamento e criação eventos de domínio.  
+- Aplicativo desligamento e criação eventos de domínio.  
   
--   Assembly de carregamento e descarregamento de eventos.  
+- Assembly de carregamento e descarregamento de eventos.  
   
--   Módulo de carregamento e descarregamento de eventos.  
+- Módulo de carregamento e descarregamento de eventos.  
   
--   Vtable criação e destruição eventos COM.  
+- Vtable criação e destruição eventos COM.  
   
--   Just-in-time (JIT) compilação e lançamento de eventos.  
+- Just-in-time (JIT) compilação e lançamento de eventos.  
   
--   Eventos de carregamento e descarregamento de classe.  
+- Eventos de carregamento e descarregamento de classe.  
   
--   Eventos de criação e destruição de threads.  
+- Eventos de criação e destruição de threads.  
   
--   Eventos de entrada e saída da função.  
+- Eventos de entrada e saída da função.  
   
--   Exceções.  
+- Exceções.  
   
--   Faz a transição entre a execução de código gerenciado e não gerenciado.  
+- Faz a transição entre a execução de código gerenciado e não gerenciado.  
   
--   Faz a transição entre contextos de tempo de execução diferente.  
+- Faz a transição entre contextos de tempo de execução diferente.  
   
--   Informações sobre suspensões de tempo de execução.  
+- Informações sobre suspensões de tempo de execução.  
   
--   Informações sobre a atividade de coleta de tempo de execução memória heap e o lixo.  
+- Informações sobre a atividade de coleta de tempo de execução memória heap e o lixo.  
   
  A API de criação de perfil pode ser chamada por qualquer linguagem de compatível COM (não gerenciados).  
   
@@ -133,19 +133,19 @@ ms.locfileid: "58654088"
 ### <a name="unsupported-functionality"></a>Funcionalidade sem suporte  
  A API de criação de perfil não oferece suporte a seguinte funcionalidade:  
   
--   Código não gerenciado, que deve ser o perfil criado usando os métodos Win32 convencionais. No entanto, o criador de perfil CLR inclui eventos de transição para determinar os limites entre código gerenciado e.  
+- Código não gerenciado, que deve ser o perfil criado usando os métodos Win32 convencionais. No entanto, o criador de perfil CLR inclui eventos de transição para determinar os limites entre código gerenciado e.  
   
--   Aplicativos automodificáveis que alteram seus próprios códigos para fins como programação orientada a aspecto.  
+- Aplicativos automodificáveis que alteram seus próprios códigos para fins como programação orientada a aspecto.  
   
--   Limita a verificação, pois a API de criação de perfil não fornece essas informações. O CLR fornece suporte intrínseco para verificar os limites de todo o código gerenciado.  
+- Limita a verificação, pois a API de criação de perfil não fornece essas informações. O CLR fornece suporte intrínseco para verificar os limites de todo o código gerenciado.  
   
--   Criação de perfil remota, que não é suportada pelos seguintes motivos:  
+- Criação de perfil remota, que não é suportada pelos seguintes motivos:  
   
-    -   Criação de perfil remota estende o tempo de execução. Quando você usa as interfaces de criação de perfil, você deve minimizar o tempo de execução para que os resultados de criação de perfil será não sejam afetada indevidamente. Isso é especialmente verdadeiro quando o desempenho de execução está sendo monitorado. No entanto, criação de perfil remota não é uma limitação quando as interfaces de criação de perfil são usadas para monitorar o uso de memória ou para obter informações de tempo de execução sobre quadros de pilha, objetos e assim por diante.  
+    - Criação de perfil remota estende o tempo de execução. Quando você usa as interfaces de criação de perfil, você deve minimizar o tempo de execução para que os resultados de criação de perfil será não sejam afetada indevidamente. Isso é especialmente verdadeiro quando o desempenho de execução está sendo monitorado. No entanto, criação de perfil remota não é uma limitação quando as interfaces de criação de perfil são usadas para monitorar o uso de memória ou para obter informações de tempo de execução sobre quadros de pilha, objetos e assim por diante.  
   
-    -   O criador de perfil de código do CLR deve registrar uma ou mais interfaces de retorno de chamada com o tempo de execução no computador local que está executando o aplicativo perfilado. Isso limita a capacidade de criar um criador de perfil remota de código.  
+    - O criador de perfil de código do CLR deve registrar uma ou mais interfaces de retorno de chamada com o tempo de execução no computador local que está executando o aplicativo perfilado. Isso limita a capacidade de criar um criador de perfil remota de código.  
   
--   Criação de perfil em ambientes de produção com requisitos de alta disponibilidade. A API de criação de perfil foi criada para dar suporte a diagnóstico de tempo de desenvolvimento. Ele não passou por testes rigorosos necessários para dar suporte a ambientes de produção.  
+- Criação de perfil em ambientes de produção com requisitos de alta disponibilidade. A API de criação de perfil foi criada para dar suporte a diagnóstico de tempo de desenvolvimento. Ele não passou por testes rigorosos necessários para dar suporte a ambientes de produção.  
   
  [Voltar ao início](#top)  
   
@@ -185,9 +185,9 @@ ms.locfileid: "58654088"
 ## <a name="profiling-unmanaged-code"></a>Criação de perfil de código não gerenciado  
  O common language runtime (CLR) API de criação de perfil fornece suporte mínimo para a criação de perfil de código não gerenciado. A seguinte funcionalidade é fornecida:  
   
--   Enumeração de cadeias de pilha. Esse recurso permite que um criador de perfil de código determinar o limite entre código gerenciado e código não gerenciado.  
+- Enumeração de cadeias de pilha. Esse recurso permite que um criador de perfil de código determinar o limite entre código gerenciado e código não gerenciado.  
   
--   Determinação se uma cadeia de pilha corresponde ao código gerenciado ou código nativo.  
+- Determinação se uma cadeia de pilha corresponde ao código gerenciado ou código nativo.  
   
  Nas versões do .NET Framework 1.0 e 1.1, esses métodos estão disponíveis por meio do subconjunto em processo de API de depuração CLR. Eles são definidos no arquivo Cordebug IDL.  
   

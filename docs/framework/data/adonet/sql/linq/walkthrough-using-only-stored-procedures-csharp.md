@@ -2,12 +2,12 @@
 title: 'Passo a passo: usar somente procedimentos armazenados (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: e5497c1c6bfe032ba272c911217adaa3bd7f4f4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876519"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655122"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Passo a passo: usar somente procedimentos armazenados (C#)
 Este passo a passo fornece um cenário completo do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para acessar dados executando somente procedimentos armazenados. Essa abordagem é frequentemente usada por administradores de banco de dados para limitar como o repositório de dados é acessado.  
@@ -26,13 +26,13 @@ Este passo a passo fornece um cenário completo do [!INCLUDE[vbtecdlinq](../../.
 ## <a name="prerequisites"></a>Pré-requisitos  
  Este passo a passo requer o seguinte:  
   
--   Este passo a passo usa uma pasta dedicada ("c:\linqtest7") para armazenar arquivos. Crie essa pasta antes de iniciar o passo a passo.  
+- Este passo a passo usa uma pasta dedicada ("c:\linqtest7") para armazenar arquivos. Crie essa pasta antes de iniciar o passo a passo.  
   
--   O banco de dados de exemplo Northwind.  
+- O banco de dados de exemplo Northwind.  
   
      Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Depois de baixar o banco de dados, copie o arquivo northwnd.mdf para a pasta c:\linqtest7.  
   
--   Um arquivo de código C# gerado no banco de dados Northwind.  
+- Um arquivo de código C# gerado no banco de dados Northwind.  
   
      Este passo a passo foi escrito usando a ferramenta SqlMetal com a seguinte linha de comando:  
   
@@ -43,17 +43,17 @@ Este passo a passo fornece um cenário completo do [!INCLUDE[vbtecdlinq](../../.
 ## <a name="overview"></a>Visão geral  
  Este passo a passo consiste em seis tarefas principais:  
   
--   Configurando o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solução no Visual Studio.  
+- Configurando o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solução no Visual Studio.  
   
--   Adicionar o assembly System.Data.Linq ao projeto.  
+- Adicionar o assembly System.Data.Linq ao projeto.  
   
--   Adicionar o arquivo do código de banco de dados ao projeto.  
+- Adicionar o arquivo do código de banco de dados ao projeto.  
   
--   Criar uma conexão com o banco de dados.  
+- Criar uma conexão com o banco de dados.  
   
--   Configurar a interface do usuário.  
+- Configurar a interface do usuário.  
   
--   Executar e testar o aplicativo.  
+- Executar e testar o aplicativo.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Criando uma solução LINQ to SQL  
  A primeira tarefa, você cria uma solução do Visual Studio que contém as referências necessárias para compilar e executar um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto.  

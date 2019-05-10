@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9fa0844f4508906ae30b936e41fb4392b74d1437
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955500"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648727"
 ---
 # <a name="visual-basic-limitations"></a>Limitações do Visual Basic
 Versões anteriores do Visual Basic aplicadas limites no código, como o comprimento de nomes de variável, o número de coluna não são permitidos em módulos e o tamanho do módulo. No Visual Basic .NET, essas restrições têm foi abrandadas, dando a você maior liberdade de escrever e organizar seu código.  

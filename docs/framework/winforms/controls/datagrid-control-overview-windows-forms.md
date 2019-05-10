@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8deb151572b8a83396e4204378783304b66216c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904407"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648138"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Visão geral do controle DataGrid (Windows Forms)
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "61904407"
   
  Fontes de dados válidos para o <xref:System.Windows.Forms.DataGrid> incluem:  
   
--   Classe <xref:System.Data.DataTable>  
+- Classe <xref:System.Data.DataTable>  
   
--   Classe <xref:System.Data.DataView>  
+- Classe <xref:System.Data.DataView>  
   
--   Classe <xref:System.Data.DataSet>  
+- Classe <xref:System.Data.DataSet>  
   
--   Classe <xref:System.Data.DataViewManager>  
+- Classe <xref:System.Data.DataViewManager>  
   
  Se a fonte for um conjunto de dados, ele poderá ser um objeto no formulário ou um objeto passado para o formulário por um serviço Web XML. É possível associar a conjuntos de dados tipados ou não tipados.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "61904407"
   
  Será possível se associar às estruturas a seguir se seus elementos expuserem propriedades públicas:  
   
--   Qualquer componente que implementa o <xref:System.Collections.IList> interface. Isso inclui matrizes de dimensão única.  
+- Qualquer componente que implementa o <xref:System.Collections.IList> interface. Isso inclui matrizes de dimensão única.  
   
--   Qualquer componente que implementa o <xref:System.ComponentModel.IListSource> interface.  
+- Qualquer componente que implementa o <xref:System.ComponentModel.IListSource> interface.  
   
--   Qualquer componente que implementa o <xref:System.ComponentModel.IBindingList> interface.  
+- Qualquer componente que implementa o <xref:System.ComponentModel.IBindingList> interface.  
   
  Para obter mais informações sobre possíveis fontes de dados, consulte [Fontes de dados com suporte dos Windows Forms](../data-sources-supported-by-windows-forms.md).  
   

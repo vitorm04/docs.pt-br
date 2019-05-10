@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d3656b924ebaca67c90dc602701c4cef9ce088b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955617"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648785"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Como: Quebrar e combinar instruções no código (Visual Basic)
 Ao escrever seu código, às vezes você pode criar a instruções longas que necessitem de rolagem horizontal no Editor de códigos. Embora isso não afeta a maneira como seu código é executado, ele torna difícil para você ou outra pessoa ler o código como ele aparece no monitor. Nesses casos, você deve considerar dividir a única instrução longa em várias linhas.  

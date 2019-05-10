@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb9b61f0c0b787a2de0a39a0d47c5767acad9cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876272"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645887"
 ---
 # <a name="sql-server-express-user-instances"></a>Instâncias de usuário do SQL Server Express
 O Microsoft SQL Server Express Edition (SQL Server Express) dá suporte ao recurso de instância de usuário, que somente está disponível quando é usado o Provedor de Dados .NET Framework para SQL Server (`SqlClient`). Uma instância de usuário é uma instância separada do Mecanismo de Banco de Dados SQL Server Express que é gerado por uma instância pai. As instâncias de usuário permitem que usuários que não são administradores em seus computadores locais anexem e conectem-se aos bancos de dados SQL Server Express. Cada instância é executada no contexto de segurança do usuário individual, uma instância por usuário.  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  Observe o seguinte sobre a cadeia de conexão no exemplo mostrado abaixo:  
   
--   A palavra-chave `Data Source` refere-se à instância pai do SQL Server Express que está gerando a instância do usuário. A instância padrão é. \sqlexpress.  
+- A palavra-chave `Data Source` refere-se à instância pai do SQL Server Express que está gerando a instância do usuário. A instância padrão é. \sqlexpress.  
   
--   `Integrated Security` é definido como `true`. Para se conectar a uma instância de usuário, a Autenticação do Windows é necessária; os logons do SQL Server não têm suporte.  
+- `Integrated Security` é definido como `true`. Para se conectar a uma instância de usuário, a Autenticação do Windows é necessária; os logons do SQL Server não têm suporte.  
   
--   A `User Instance` é definida como `true`, o que invoca uma instância de usuário. (O padrão é `false`.)  
+- A `User Instance` é definida como `true`, o que invoca uma instância de usuário. (O padrão é `false`.)  
   
--   A palavra-chave de cadeia de conexão `AttachDbFileName` é usada para anexar o arquivo de banco de dados primário (.mdf), que deve incluir o nome do caminho completo. `AttachDbFileName` também corresponde às chaves "extended properties" e "initial file name" dentro de uma cadeia de conexão <xref:System.Data.SqlClient.SqlConnection>.  
+- A palavra-chave de cadeia de conexão `AttachDbFileName` é usada para anexar o arquivo de banco de dados primário (.mdf), que deve incluir o nome do caminho completo. `AttachDbFileName` também corresponde às chaves "extended properties" e "initial file name" dentro de uma cadeia de conexão <xref:System.Data.SqlClient.SqlConnection>.  
   
--   A cadeia de caracteres de substituição `|DataDirectory|` incluída nos símbolos pipe refere-se ao diretório de dados do aplicativo que abre a conexão e fornece um caminho relativo que indica o local do banco de dados .mdf e .ldf e dos arquivos de log. Se você deseja localizar esses arquivos em outro lugar, deverá fornecer o caminho completo para os arquivos.  
+- A cadeia de caracteres de substituição `|DataDirectory|` incluída nos símbolos pipe refere-se ao diretório de dados do aplicativo que abre a conexão e fornece um caminho relativo que indica o local do banco de dados .mdf e .ldf e dos arquivos de log. Se você deseja localizar esses arquivos em outro lugar, deverá fornecer o caminho completo para os arquivos.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  Os cenários de instância de usuário incluem:  
   
--   Qualquer aplicativo de usuário único onde compartilhar dados não é necessário.  
+- Qualquer aplicativo de usuário único onde compartilhar dados não é necessário.  
   
--   Implantação do ClickOnce. Se o .NET Framework 2.0 (ou posterior) e o SQL Server Express já estiver instalado no computador de destino, o pacote de instalação baixado como resultado de uma ação de ClickOnce poderá ser instalado e usado por usuários não administrativos. Observe que um administrador deve instalar o SQL Server Express se isso for parte da instalação. Para obter mais informações, consulte [implantação de ClickOnce para o Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- Implantação do ClickOnce. Se o .NET Framework 2.0 (ou posterior) e o SQL Server Express já estiver instalado no computador de destino, o pacote de instalação baixado como resultado de uma ação de ClickOnce poderá ser instalado e usado por usuários não administrativos. Observe que um administrador deve instalar o SQL Server Express se isso for parte da instalação. Para obter mais informações, consulte [implantação de ClickOnce para o Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
--   ASP.NET dedicado hospedado usando a Autenticação do Windows. Uma única instância do SQL Server Express pode ser hospedada em uma intranet. O aplicativo conecta-se usando a conta ASPNET do Windows, não usando representação. As instâncias de usuário não devem ser usadas para os cenários de hospedagem compartilhados ou de terceiros onde todos os aplicativos compartilhariam a mesma instância de usuário e não permanecessem isolados entre si.  
+- ASP.NET dedicado hospedado usando a Autenticação do Windows. Uma única instância do SQL Server Express pode ser hospedada em uma intranet. O aplicativo conecta-se usando a conta ASPNET do Windows, não usando representação. As instâncias de usuário não devem ser usadas para os cenários de hospedagem compartilhados ou de terceiros onde todos os aplicativos compartilhariam a mesma instância de usuário e não permanecessem isolados entre si.  
   
 ## <a name="see-also"></a>Consulte também
 

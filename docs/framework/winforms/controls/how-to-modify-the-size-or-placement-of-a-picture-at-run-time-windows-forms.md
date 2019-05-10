@@ -11,23 +11,23 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 695abf51870ef9164e4543a91b3183e801eee55f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913725"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649250"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Como: Modificar o tamanho ou a colocação de uma imagem em tempo de execução (Windows Forms)
 Se você usar o Windows Forms <xref:System.Windows.Forms.PictureBox> controle em um formulário, você pode definir o <xref:System.Windows.Forms.PictureBox.SizeMode%2A> propriedade nele para:  
   
--   Alinhe o canto superior esquerdo da imagem com o canto superior esquerdo do controle  
+- Alinhe o canto superior esquerdo da imagem com o canto superior esquerdo do controle  
   
--   Centralize a imagem no controle  
+- Centralize a imagem no controle  
   
--   Ajuste o tamanho do controle para se adaptar à imagem exibida  
+- Ajuste o tamanho do controle para se adaptar à imagem exibida  
   
--   Alongue qualquer imagem exibida para se ajustar ao controle  
+- Alongue qualquer imagem exibida para se ajustar ao controle  
   
  Ampliar uma imagem (especialmente em formato bitmap) pode causar perda na qualidade. Metarquivos, que são listas de instruções gráficas para desenho de imagens em tempo de execução, são mais adequados para ampliar do que os bitmaps.  
   
