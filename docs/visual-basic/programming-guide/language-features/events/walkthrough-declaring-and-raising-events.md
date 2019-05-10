@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fe96e54e92c09cf65c312306214e4460550c685d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973084"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626451"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Passo a passo: Declarando e acionando eventos (Visual Basic)
 Este passo a passo demonstra como declarar e acionar eventos para uma classe chamada `Widget`. Depois de concluir as etapas, você talvez queira ler o tópico [passo a passo: Manipulação de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), que mostra como usar eventos de `Widget` objetos para fornecer informações de status em um aplicativo.  

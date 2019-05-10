@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a25186f6283f01ef56b1c684c4a43b9a60fb6d64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877117"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619674"
 ---
 # <a name="remote-vs-local-execution"></a>Remoto vs. Execução de local
 Você pode decidir executando remotamente (isto é, o mecanismo de base de dados executa a consulta na base de dados) ou localmente suas consultas ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] executa a consulta em um cache local).  
@@ -23,18 +23,18 @@ Você pode decidir executando remotamente (isto é, o mecanismo de base de dados
   
  Se seu base de dados tem milhares de linhas de pedidos, você não deseja recuperá-los todos para processar um subconjunto pequeno. Em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], a classe de <xref:System.Data.Linq.EntitySet%601> implementa a interface de <xref:System.Linq.IQueryable> . Essa abordagem certifique-se de que essas consultas podem ser executadas remotamente. Dois benefícios principais fluem dessa técnica:  
   
--   Os dados desnecessários não são recuperados.  
+- Os dados desnecessários não são recuperados.  
   
--   Uma consulta executada pelo mecanismo de base de dados geralmente é mais eficiente devido aos índices de base de dados.  
+- Uma consulta executada pelo mecanismo de base de dados geralmente é mais eficiente devido aos índices de base de dados.  
   
 ## <a name="local-execution"></a>Execução de local  
  Em outras situações, convém ter o conjunto completo de entidades relacionadas no cache local. Essa finalidade, <xref:System.Data.Linq.EntitySet%601> fornece o método de <xref:System.Data.Linq.EntitySet%601.Load%2A> para carregar explicitamente todos os membros de <xref:System.Data.Linq.EntitySet%601>.  
   
  Se <xref:System.Data.Linq.EntitySet%601> é carregado já, consultas subsequentes são executadas localmente. Essa abordagem ajuda em duas maneiras:  
   
--   Se o conjunto completo deve ser usado localmente ou várias vezes, você pode evitar consultas e remotos latências associados.  
+- Se o conjunto completo deve ser usado localmente ou várias vezes, você pode evitar consultas e remotos latências associados.  
   
--   A entidade pode ser serializada como uma entidade completo.  
+- A entidade pode ser serializada como uma entidade completo.  
   
  O fragmento de código a seguir ilustra como execução local pode ser obtida:  
   

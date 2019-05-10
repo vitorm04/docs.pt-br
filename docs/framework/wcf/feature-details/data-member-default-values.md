@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f92fc78aa7645abb742fdb38c360ac6641b1591d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857110"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627055"
 ---
 # <a name="data-member-default-values"></a>Valores padrões de membro de dados
 No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tipos têm um conceito de *valores padrão*. Por exemplo, para qualquer tipo de referência, o valor padrão é `null`, e para um tipo inteiro é zero. É desejável, ocasionalmente, para omitir um membro de dados dos dados serializados quando ela é definida como seu valor padrão. Como o membro tem um valor padrão, um valor real não precisa ser serializado; Isso tem uma vantagem de desempenho.  
@@ -50,9 +50,9 @@ No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tipos têm u
 ### <a name="schema-representation"></a>Representação de esquema  
  Os detalhes de que a representação de esquema XSD (linguagem) de definição do esquema XML de membros de dados quando o `EmitDefaultValue` estiver definida como `false` são discutidos em [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). No entanto, veja a seguir uma breve visão geral:  
   
--   Quando o <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> é definido como `false`, ela é representada no esquema como uma anotação específica para o Windows Communication Foundation (WCF). Não há nenhuma maneira interoperável para representar essas informações. Em particular, o atributo "default" no esquema não é usado para essa finalidade, o `minOccurs` atributo será afetado somente pela <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> definindo e o `nillable` atributo é afetado somente por tipo de membro de dados.  
+- Quando o <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> é definido como `false`, ela é representada no esquema como uma anotação específica para o Windows Communication Foundation (WCF). Não há nenhuma maneira interoperável para representar essas informações. Em particular, o atributo "default" no esquema não é usado para essa finalidade, o `minOccurs` atributo será afetado somente pela <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> definindo e o `nillable` atributo é afetado somente por tipo de membro de dados.  
   
--   O valor padrão real a ser usado não está presente no esquema. É até o ponto de extremidade de recebimento para interpretar corretamente um elemento ausente.  
+- O valor padrão real a ser usado não está presente no esquema. É até o ponto de extremidade de recebimento para interpretar corretamente um elemento ausente.  
   
  Na importação de esquema, o <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> propriedade é definida automaticamente como `false` sempre que a anotação específicas do WCF mencionada anteriormente é detectada. Ele também é definido como `false` para tipos de referência que têm o `nillable` propriedade definida como `false` para dar suporte a cenários específicos de interoperabilidade que costumam ocorrerem durante o consumo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviços Web.  
   

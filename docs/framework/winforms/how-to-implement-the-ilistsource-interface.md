@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 718514c843bbfc0fcc56e89ca0b60bd3ec65b3cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801758"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630652"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Como: implementar a interface IListSource
 Implementar o <xref:System.ComponentModel.IListSource> interface para criar uma classe vinculável que não implementa <xref:System.Collections.IList> , mas em vez disso, fornece uma lista de outro local.  
@@ -36,7 +36,7 @@ Implementar o <xref:System.ComponentModel.IListSource> interface para criar uma 
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Referências aos assemblies System.Drawing e System.Windows.Forms.  
+- Referências aos assemblies System.Drawing e System.Windows.Forms.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 65fbba9689ae01d8156bd0b3e2efeb6b75bd79e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799177"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625951"
 ---
 # <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' requer operandos que tenham tipos de referência, mas este operando tem o tipo de valor '\<typename >'
 O `Is` operador de comparação que determina se duas variáveis de objeto se referem à mesma instância. Essa comparação não está definida para tipos de valor.  

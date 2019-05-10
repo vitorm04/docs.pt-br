@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344657"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625860"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Como: Criar uma política de editor
 Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma versão mais recente de um assembly, incluindo um arquivo de política do publicador com o assembly atualizado. O arquivo de política de publicador Especifica as configurações de base de código e redirecionamento de assembly e usa o mesmo formato que o arquivo de configuração do aplicativo. O arquivo de política de publicador é compilado em um assembly e colocado no cache de assembly global.  
@@ -57,15 +57,15 @@ Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma v
   
      Neste comando:  
   
-    -   O *publisherPolicyFile* argumento é o nome do arquivo de política de publicador.  
+    - O *publisherPolicyFile* argumento é o nome do arquivo de política de publicador.  
   
-    -   O *publisherPolicyAssemblyFile* argumento é o nome do assembly da diretiva de editor que é o resultado desse comando. O nome de arquivo do assembly deve seguir o formato:  
+    - O *publisherPolicyAssemblyFile* argumento é o nome do assembly da diretiva de editor que é o resultado desse comando. O nome de arquivo do assembly deve seguir o formato:  
   
          **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
-    -   O *keyPairFile* argumento é o nome do arquivo que contém o par de chaves. Você deve assinar o assembly e o assembly de política do publicador com o mesmo par de chaves.  
+    - O *keyPairFile* argumento é o nome do arquivo que contém o par de chaves. Você deve assinar o assembly e o assembly de política do publicador com o mesmo par de chaves.  
   
-    -   O *processorArchitecture* argumento identifica a plataforma de destino por um assembly específico do processador.  
+    - O *processorArchitecture* argumento identifica a plataforma de destino por um assembly específico do processador.  
   
         > [!NOTE]
         >  A capacidade de direcionar uma arquitetura de processador específico é nova no .NET Framework versão 2.0.  

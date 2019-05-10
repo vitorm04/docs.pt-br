@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a9f04f6da4dc4024f4c9ece19f045eb8e3775e6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098774"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620881"
 ---
 # <a name="use-automatic-layout-overview"></a>Visão geral do uso de layout automático
 Este tópico apresenta diretrizes para desenvolvedores sobre como escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos com localizáveis [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. No passado, a localização de uma interface do usuário era um processo demorado. A interface do usuário foi adaptado para cada idioma necessário um ajuste pixel por pixel. Hoje, com o design e o direito de padrões de codificação, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] pode ser criado para que os localizadores tenham menos redimensionamento e reposicionamento. A abordagem para escrever aplicativos que podem ser mais facilmente redimensionados e reposicionados é chamada de layout automático e pode ser obtida usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] design do aplicativo.  
@@ -19,15 +19,15 @@ Este tópico apresenta diretrizes para desenvolvedores sobre como escrever [!INC
 ## <a name="advantages-of-using-automatic-layout"></a>Vantagens de usar o layout automático  
  Porque o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de apresentação é poderoso e flexível, ele fornece a capacidade de dispor os elementos em um aplicativo que pode ser ajustada para atender às necessidades de diferentes idiomas. A lista a seguir destaca algumas das vantagens do layout automático.  
 
--   Interface do usuário exibe bem em qualquer idioma.  
+- Interface do usuário exibe bem em qualquer idioma.  
 
--   Reduz a necessidade de reajustar a posição e o tamanho dos controles após o texto ser traduzido.  
+- Reduz a necessidade de reajustar a posição e o tamanho dos controles após o texto ser traduzido.  
   
--   Reduz a necessidade de reajustar o tamanho da janela.  
+- Reduz a necessidade de reajustar o tamanho da janela.  
 
--   Layout da interface do usuário é renderizada corretamente em qualquer idioma.  
+- Layout da interface do usuário é renderizada corretamente em qualquer idioma.  
 
--   A localização pode ser reduzida a tal ponto que é pouco mais do que uma tradução de cadeia de caracteres.  
+- A localização pode ser reduzida a tal ponto que é pouco mais do que uma tradução de cadeia de caracteres.  
   
 <a name="autolayout_controls"></a>   
 ## <a name="automatic-layout-and-controls"></a>Layout automático e controles  

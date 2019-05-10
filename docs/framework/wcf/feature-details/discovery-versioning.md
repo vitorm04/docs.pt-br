@@ -2,12 +2,12 @@
 title: Controle de versão de descoberta
 ms.date: 03/30/2017
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
-ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f90fc5183e974b9045c156e0ae74099abfbc41a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856642"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626960"
 ---
 # <a name="discovery-versioning"></a>Controle de versão de descoberta
 Este tópico fornece uma visão geral da implementação de alguns novos recursos de descoberta. Ele também fornece uma visão geral sobre como selecionar a versão de descoberta para usar.  
@@ -17,13 +17,13 @@ Este tópico fornece uma visão geral da implementação de alguns novos recurso
   
  As seguintes classes de descoberta agora tem um <xref:System.ServiceModel.Discovery.DiscoveryVersion> propriedade e tomar uma <xref:System.ServiceModel.Discovery.DiscoveryVersion> argumento em seus construtores:  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 ### <a name="discoveryversionwsdiscoveryapril2005"></a>DiscoveryVersion.WSDiscoveryApril2005  
  Fornecendo <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005> como um construtor parâmetro torna a implementação a usar a versão April2005 do protocolo WS-Discovery. Esta versão corresponde à versão publicada de especificação do protocolo WS-Discovery. Esta versão deve ser usada para interoperar com aplicativos herdados, utilizando a versão de April2005 do WS-Discovery.  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 401803229c54a2b38af08c0418b9efd4c64d9d60
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856578"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627037"
 ---
 # <a name="data-transfer-architectural-overview"></a>Visão geral da arquitetura de transferência de dados
 Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura de mensagens. Ele pode receber mensagens, processá-los e distribuí-los para o código de usuário para outra ação, ou pode construir mensagens de dados fornecidos pelo código do usuário e enviá-las para um destino. Este tópico, que é destinado a desenvolvedores avançados, descreve a arquitetura para lidar com mensagens e os dados contidos. Para uma exibição mais simples e orientada a tarefas de como enviar e receber dados, consulte [especificando a transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura 
 ### <a name="getting-data-from-a-message-body"></a>Obtendo dados de um corpo de mensagem  
  Você pode extrair os dados armazenados em um corpo de mensagem de duas maneiras principais:  
   
--   Você pode obter o corpo da mensagem inteira ao mesmo tempo, chamando o <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> método e passar um gravador de XML. O corpo da mensagem completa for escrito neste gravador. Também é chamado de obter o corpo da mensagem inteira de uma só vez *gravar uma mensagem*. Gravação é feita principalmente pela pilha de canais ao enviar mensagens — alguma parte da pilha de canais geralmente será obter acesso ao corpo da mensagem inteira, codificá-lo e enviá-lo.  
+- Você pode obter o corpo da mensagem inteira ao mesmo tempo, chamando o <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> método e passar um gravador de XML. O corpo da mensagem completa for escrito neste gravador. Também é chamado de obter o corpo da mensagem inteira de uma só vez *gravar uma mensagem*. Gravação é feita principalmente pela pilha de canais ao enviar mensagens — alguma parte da pilha de canais geralmente será obter acesso ao corpo da mensagem inteira, codificá-lo e enviá-lo.  
   
--   Outra maneira de obter informações fora do corpo da mensagem é chamar <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> e obtenha um leitor de XML. O corpo da mensagem, em seguida, pode ser acessado sequencialmente conforme necessário chamando métodos no leitor. Também é chamado de obter a mensagem corpo--detalhadamente *lendo uma mensagem*. Ler a mensagem é usado principalmente pela estrutura de serviço ao receber mensagens. Por exemplo, quando o <xref:System.Runtime.Serialization.DataContractSerializer> está em uso, a estrutura de serviço têm um leitor de XML sobre o corpo e passá-lo para o mecanismo de desserialização, que será iniciado, em seguida, ler o mensagem elemento por elemento e construir o gráfico do objeto correspondente.  
+- Outra maneira de obter informações fora do corpo da mensagem é chamar <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> e obtenha um leitor de XML. O corpo da mensagem, em seguida, pode ser acessado sequencialmente conforme necessário chamando métodos no leitor. Também é chamado de obter a mensagem corpo--detalhadamente *lendo uma mensagem*. Ler a mensagem é usado principalmente pela estrutura de serviço ao receber mensagens. Por exemplo, quando o <xref:System.Runtime.Serialization.DataContractSerializer> está em uso, a estrutura de serviço têm um leitor de XML sobre o corpo e passá-lo para o mecanismo de desserialização, que será iniciado, em seguida, ler o mensagem elemento por elemento e construir o gráfico do objeto correspondente.  
   
  Um corpo de mensagem pode ser recuperado apenas uma vez. Isso torna possível trabalhar com fluxos somente encaminhamento. Por exemplo, você pode escrever uma <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> substituição que lê de um <xref:System.IO.FileStream> e retorna os resultados como um XML Infoset. Você nunca precisará "retroceder" para o início do arquivo.  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura 
 ### <a name="the-istreamprovider-interface"></a>A Interface IStreamProvider  
  Ao gravar uma mensagem de saída que contém um corpo de streaming em um gravador XML, o <xref:System.ServiceModel.Channels.Message> usa uma sequência de chamadas semelhantes ao seguinte no seu <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> implementação:  
   
--   Grave as informações necessárias que precede o fluxo (por exemplo, a marca de abertura XML).  
+- Grave as informações necessárias que precede o fluxo (por exemplo, a marca de abertura XML).  
   
--   Gravar o fluxo.  
+- Gravar o fluxo.  
   
--   Grave todas as informações a seguir o fluxo (por exemplo, o marcação XML de fechamento).  
+- Grave todas as informações a seguir o fluxo (por exemplo, o marcação XML de fechamento).  
   
  Isso funciona bem com codificações que são semelhantes a codificação XML textual. No entanto, algumas codificações não coloque informações Infoset XML (por exemplo, tags para iniciar e terminar a elementos XML) junto com os dados contidos em elementos. Por exemplo, na codificação de MTOM, a mensagem é dividida em várias partes. Uma parte contém o Infoset XML, que pode conter referências a outras partes de conteúdo do elemento real. O XML Infoset é normalmente pequeno em comparação com o conteúdo em fluxo, portanto, faz sentido armazenar em buffer o Infoset, grave-out e, em seguida, gravar o conteúdo de uma forma em fluxo. Isso significa que, no momento o fechamento marca de elemento é escrita, o fluxo deve não tenha sido escrito ainda.  
   

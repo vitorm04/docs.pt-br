@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9da37d2fb9797c9074765326df1e6eca2469607
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005635"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622468"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Designer de compostos personalizados - apresentador de itens de fluxo de trabalho
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> é um principal no modelo de programação do designer de WF que permite a edição de uma coleção de elementos contidos. Este exemplo mostra como criar um designer de atividade que surija uma coleção tão editável.
 
  Este exemplo demonstra:
 
--   Criando um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
+- Criando um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
 
--   Criando um designer de atividade com um modo de exibição "recolheu" e "expandiu".
+- Criando um designer de atividade com um modo de exibição "recolheu" e "expandiu".
 
--   Substituindo um designer padrão em um aplicativo rehosted.
+- Substituindo um designer padrão em um aplicativo rehosted.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
@@ -32,15 +32,15 @@ ms.locfileid: "62005635"
 ## <a name="sample-highlights"></a>Realces de exemplo
  O código para esse exemplo mostra o seguinte:
 
--   A atividade um designer é compilada para:  `Parallel`
+- A atividade um designer é compilada para:  `Parallel`
 
--   A criação de um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Algumas coisas para indicar:
+- A criação de um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Algumas coisas para indicar:
 
-    -   Observe o uso de associação de dados de WPF associar a `ModelItem.Branches`. `ModelItem` é a propriedade em `WorkflowElementDesigner` que refere-se ao objeto subjacente que o designer está sendo usado para, nesse caso, nosso `Parallel`.
+    - Observe o uso de associação de dados de WPF associar a `ModelItem.Branches`. `ModelItem` é a propriedade em `WorkflowElementDesigner` que refere-se ao objeto subjacente que o designer está sendo usado para, nesse caso, nosso `Parallel`.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> pode ser usado para colocar um visual para exibir entre os itens individuais na coleção.
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> pode ser usado para colocar um visual para exibir entre os itens individuais na coleção.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> é um modelo que pode ser fornecido para determinar o layout dos itens na coleção. Nesse caso, um painel horizontal de pilha é usado.
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> é um modelo que pode ser fornecido para determinar o layout dos itens na coleção. Nesse caso, um painel horizontal de pilha é usado.
 
  Esse código de exemplo a seguir mostra isso.
 
@@ -60,9 +60,9 @@ ms.locfileid: "62005635"
   </sad:WorkflowItemsPresenter>
 ```
 
--   Executar uma associação de `DesignerAttribute` para o tipo de `Parallel` e então saída que atributos relataram.
+- Executar uma associação de `DesignerAttribute` para o tipo de `Parallel` e então saída que atributos relataram.
 
-    -   Primeiro, para todos os designers padrão.
+    - Primeiro, para todos os designers padrão.
 
  A seguir está o exemplo de código.
 
@@ -80,7 +80,7 @@ metadata.Register()
 RegisterCustomMetadata()
 ```
 
-    -   Em seguida, substituir a paralela no método de `RegisterCustomMetadata` .
+    - Em seguida, substituir a paralela no método de `RegisterCustomMetadata` .
 
  O código a seguir mostra esse em C# e Visual Basic.
 
@@ -101,7 +101,7 @@ Sub RegisterCustomMetadata()
 End Sub
 ```
 
--   Finalmente, observe o uso de modelos e disparadores de diferentes de dados selecione o modelo apropriado com base na propriedade de `IsRootDesigner` .
+- Finalmente, observe o uso de modelos e disparadores de diferentes de dados selecione o modelo apropriado com base na propriedade de `IsRootDesigner` .
 
  A seguir está o exemplo de código.
 

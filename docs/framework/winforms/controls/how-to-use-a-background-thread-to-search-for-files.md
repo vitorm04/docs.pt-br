@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4a247bdb90780a22d90bf338eef52830c82907fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785847"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630672"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Como: Usar um thread em segundo plano para pesquisar arquivos
 O <xref:System.ComponentModel.BackgroundWorker> componente substitui e adiciona funcionalidade para o <xref:System.Threading> namespace; no entanto, o <xref:System.Threading> é mantido para compatibilidade com versões anteriores e uso futuro, se você escolher. Para obter mais informações, consulte [Visão Geral do Componente BackgroundWorker](backgroundworker-component-overview.md).  

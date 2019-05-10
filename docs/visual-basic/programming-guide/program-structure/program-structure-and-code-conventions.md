@@ -13,21 +13,21 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: b79e339ebe81a7228a02837e5c0c23c80a8132e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dbe8fe977b2aa11573ab7a1ac1d79be0b5204af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916936"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624326"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Estrutura do programa e convenções de código (Visual Basic)
 Esta seção apresenta a estrutura do programa Visual Basic típica, fornece um programa simples do Visual Basic, "Hello, World" e discute as convenções de código do Visual Basic. Convenções de código são sugestões que se centram não em uma lógica do programa, mas em sua estrutura física e aparência. Segui-las torna mais fácil de ler, compreender e manter seu código. Convenções de código podem incluir, entre outros:  
   
--   Formatos padronizados para rotulagem e comentando o código.  
+- Formatos padronizados para rotulagem e comentando o código.  
   
--   Diretrizes para espaçamento, formatação e recuo do código.  
+- Diretrizes para espaçamento, formatação e recuo do código.  
   
--   Convenções de nomenclatura para objetos, variáveis e procedimentos.  
+- Convenções de nomenclatura para objetos, variáveis e procedimentos.  
   
  Os tópicos a seguir apresentam um conjunto de diretrizes de programação para programas em Visual Basic, junto com exemplos de bom uso.  
   

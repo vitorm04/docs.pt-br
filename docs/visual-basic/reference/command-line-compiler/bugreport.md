@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ff9aa23fb6d7dee5c245ed174318f6589e7d245
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624313"
 ---
 # <a name="-bugreport"></a>-bugreport
 Cria um arquivo que você pode usar quando você arquiva um relatório de bugs.  
@@ -31,17 +31,17 @@ Cria um arquivo que você pode usar quando você arquiva um relatório de bugs.
 ## <a name="remarks"></a>Comentários  
  As informações a seguir são adicionadas ao `file`:  
   
--   Uma cópia de todos os arquivos de código-fonte na compilação.  
+- Uma cópia de todos os arquivos de código-fonte na compilação.  
   
--   Uma lista das opções do compilador usado na compilação.  
+- Uma lista das opções do compilador usado na compilação.  
   
--   Informações de versão sobre seu compilador, o common language runtime e o sistema operacional.  
+- Informações de versão sobre seu compilador, o common language runtime e o sistema operacional.  
   
--   Saída do compilador, se houver.  
+- Saída do compilador, se houver.  
   
--   Uma descrição do problema, para o qual você será solicitado.  
+- Uma descrição do problema, para o qual você será solicitado.  
   
--   Uma descrição de como você acha que o problema deve ser corrigida, para o qual você será solicitado.  
+- Uma descrição de como você acha que o problema deve ser corrigida, para o qual você será solicitado.  
   
  Como uma cópia de todos os arquivos de código-fonte está incluída no `file`, talvez você queira reproduzir o defeito do código (suspeito) no programa mais curto possível.  
   
