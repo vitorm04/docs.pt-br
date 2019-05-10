@@ -2,12 +2,12 @@
 title: Processo de compra corporativo
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005388"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665935"
 ---
 # <a name="corporate-purchase-process"></a>Processo de compra corporativo
 Este exemplo mostra como criar uma solicitação bem básico para o processo com base (RFP) de compra de propostas com a melhor seleção automático de proposta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, e <xref:System.Activities.Statements.ForEach%601> e uma atividade personalizado para criar um fluxo de trabalho que representa o processo.
@@ -16,27 +16,27 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 
 ## <a name="requirements"></a>Requisitos
 
--   Visual Studio 2012.
+- Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>Demonstra
 
--   Atividades personalizados.
+- Atividades personalizados.
 
--   Composição de atividades.
+- Composição de atividades.
 
--   Indexadores.
+- Indexadores.
 
--   Persistência.
+- Persistência.
 
--   Persistência esquematizada.
+- Persistência esquematizada.
 
--   Rastreamento.
+- Rastreamento.
 
--   Controlar.
+- Controlar.
 
--   Hospedando [!INCLUDE[wf1](../../../../includes/wf1-md.md)] em diferentes clientes (aplicativos de aplicativos da Web e de WinForms de[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ).
+- Hospedando [!INCLUDE[wf1](../../../../includes/wf1-md.md)] em diferentes clientes (aplicativos de aplicativos da Web e de WinForms de[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ).
 
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
@@ -52,21 +52,21 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
   
 1. Um funcionário da empresa X cria um aplicativo de propostas (RFP).  
   
-    1.  O funcionário no título e a descrição de RFP.  
+    1. O funcionário no título e a descrição de RFP.  
   
-    2.  O funcionário seleciona fornecedores que deseja convidar para enviar propostas.  
+    2. O funcionário seleciona fornecedores que deseja convidar para enviar propostas.  
   
 2. O funcionário envia a proposta.  
   
-    1.  Uma instância de fluxo de trabalho é criada.  
+    1. Uma instância de fluxo de trabalho é criada.  
   
-    2.  O fluxo de trabalho está aguardando todos os editores para enviar suas propostas.  
+    2. O fluxo de trabalho está aguardando todos os editores para enviar suas propostas.  
   
 3. As propostas são recebidas completos, o fluxo de trabalho itera com todas as propostas recebidas e selecione melhor.  
   
-    1.  Cada fornecedor tem uma reputação (este exemplo armazena a lista de reputação em VendorRepository.cs).  
+    1. Cada fornecedor tem uma reputação (este exemplo armazena a lista de reputação em VendorRepository.cs).  
   
-    2.  Total de valor proposta é determinado por (o valor tipado no fornecedor) (*) escrita de reputação de fornecedor/100.  
+    2. Total de valor proposta é determinado por (o valor tipado no fornecedor) (*) escrita de reputação de fornecedor/100.  
   
 4. O solicitador original pode ver todas as propostas enviadas. A melhor proposta é apresentada em uma seção especial no relatório.  
   
@@ -155,20 +155,20 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
   
 ### <a name="web-client-options"></a>Opções de cliente web  
   
--   **Criar um novo RFP&lt;1**: Cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
+- **Criar um novo RFP&lt;1**: Cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
   
--   **Atualizar**: Atualiza a lista de RFPs ativo e concluído na janela principal.  
+- **Atualizar**: Atualiza a lista de RFPs ativo e concluído na janela principal.  
   
--   **Exibir**: Mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não for concluído.)  
+- **Exibir**: Mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não for concluído.)  
   
--   Exiba como: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.  
+- Exiba como: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.  
   
 ### <a name="winforms-client-options"></a>Opções de cliente de WinForms  
   
--   **Criar RFP**: Cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
+- **Criar RFP**: Cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
   
--   **Atualizar**: Atualiza a lista de RFPs ativo e concluído na janela principal.  
+- **Atualizar**: Atualiza a lista de RFPs ativo e concluído na janela principal.  
   
--   **Exibir RFP**: Mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não é concluído)  
+- **Exibir RFP**: Mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não é concluído)  
   
--   **Conectar-se como**: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.
+- **Conectar-se como**: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.

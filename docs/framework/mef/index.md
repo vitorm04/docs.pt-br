@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872840"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648491"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF (Managed Extensibility Framework)
 
@@ -475,11 +475,11 @@ public class Mod : SimpleCalculator.IOperation
 ## <a name="conclusion"></a>Conclusão
  Este tópico abordou os conceitos básicos do MEF.
 
--   Peças, catálogos e o contêiner de composição
+- Peças, catálogos e o contêiner de composição
 
      Peças e o contêiner de composição são pilares essenciais de um aplicativo MEF. Uma peça é qualquer objeto que importa ou exporta um valor, até e incluindo a si mesmo. Um catálogo fornece um conjunto de peças de uma fonte específica. O contêiner de composição usa as peças fornecidas por um catálogo para executar a composição, a associação de importações a exportações.
 
--   Importações e exportações
+- Importações e exportações
 
      Importações e exportações são o modo pelo qual os componentes se comunicam. Com uma importação, o componente especifica uma necessidade por um determinado valor ou objeto e com uma exportação ele especifica a disponibilidade de um valor. Cada importação é compatível com uma lista dos exportações por meio do seu contrato.
 

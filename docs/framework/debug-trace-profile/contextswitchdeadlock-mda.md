@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874998"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660317"
 ---
 # <a name="contextswitchdeadlock-mda"></a>MDA contextSwitchDeadlock
 
@@ -39,11 +39,11 @@ Por padrão, STA é o modelo de threading para o thread principal dos aplicativo
 
 É possível que esse MDA seja ativado erroneamente quando todas as condições a seguir forem atendidas:
 
--   Um aplicativo cria componentes COM de threads de STA direta ou indiretamente por meio das bibliotecas.
+- Um aplicativo cria componentes COM de threads de STA direta ou indiretamente por meio das bibliotecas.
 
--   O aplicativo foi interrompido no depurador e o usuário continuou o aplicativo ou realizou uma operação de etapa.
+- O aplicativo foi interrompido no depurador e o usuário continuou o aplicativo ou realizou uma operação de etapa.
 
--   A depuração não gerenciada não está habilitada.
+- A depuração não gerenciada não está habilitada.
 
 Para determinar se o MDA está sendo ativado erroneamente, desabilite todos os pontos de interrupção, reinicie o aplicativo e permita que ele seja executado sem parar. Se o MDA não for ativado, é provável que a ativação inicial era falsa. Nesse caso, desabilite o MDA para evitar interferências na sessão de depuração.
 

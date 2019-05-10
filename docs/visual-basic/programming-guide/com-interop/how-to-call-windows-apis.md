@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: e7b76495b83cb9a1dfe7629a1d82695d2046eac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3769da28e1c9a27c8363b0d6ec639cedaf0f03be
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818710"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624849"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Como: Chamar APIs do Windows (Visual Basic)
 Este exemplo define e chama o `MessageBox` função na User32. dll e, em seguida, passa uma cadeia de caracteres para ele.  
@@ -23,16 +23,16 @@ Este exemplo define e chama o `MessageBox` função na User32. dll e, em seguida
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Uma referência para o <xref:System> namespace.  
+- Uma referência para o <xref:System> namespace.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   O método não é estático, é abstrato ou foi definido anteriormente. O tipo pai é uma interface ou o comprimento da *nome* ou *dllName* é zero. (<xref:System.ArgumentException>)  
+- O método não é estático, é abstrato ou foi definido anteriormente. O tipo pai é uma interface ou o comprimento da *nome* ou *dllName* é zero. (<xref:System.ArgumentException>)  
   
--   O *nome* ou *dllName* é `Nothing`. (<xref:System.ArgumentNullException>)  
+- O *nome* ou *dllName* é `Nothing`. (<xref:System.ArgumentNullException>)  
   
--   O tipo recipiente foi criado anteriormente usando `CreateType`. (<xref:System.InvalidOperationException>)  
+- O tipo recipiente foi criado anteriormente usando `CreateType`. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Consulte também
 

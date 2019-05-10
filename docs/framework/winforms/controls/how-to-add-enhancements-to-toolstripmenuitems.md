@@ -24,54 +24,54 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 458347df7e17aabc1e9e21d66ad1b5a96200fe28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 2aa2315667b34ac448ac34cd29402e39d59e79dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198550"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624095"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Como: Adicionar melhorias a ToolStripMenuItems
 Você pode aprimorar a usabilidade dos <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.ContextMenuStrip> controles das seguintes maneiras:  
   
--   Adicione marcas de seleção para designar se um recurso está ativado ou desativado, como se uma régua é exibida ao longo da margem de um aplicativo de processamento de texto ou para indicar qual arquivo em uma lista de arquivos está sendo exibido, como em um menu **Janela**.  
+- Adicione marcas de seleção para designar se um recurso está ativado ou desativado, como se uma régua é exibida ao longo da margem de um aplicativo de processamento de texto ou para indicar qual arquivo em uma lista de arquivos está sendo exibido, como em um menu **Janela**.  
   
--   Adicione imagens que representem visualmente os comandos de menu.  
+- Adicione imagens que representem visualmente os comandos de menu.  
   
--   Exiba teclas de atalho para oferecer uma alternativa de teclado ao mouse para executar comandos. Por exemplo, pressionar CTRL+C executa o comando **Copiar**.  
+- Exiba teclas de atalho para oferecer uma alternativa de teclado ao mouse para executar comandos. Por exemplo, pressionar CTRL+C executa o comando **Copiar**.  
   
--   Exiba chaves de acesso para oferecer uma alternativa de teclado ao mouse para navegação de menu. Por exemplo, pressionar ALT+F escolhe o menu **Arquivo**.  
+- Exiba chaves de acesso para oferecer uma alternativa de teclado ao mouse para navegação de menu. Por exemplo, pressionar ALT+F escolhe o menu **Arquivo**.  
   
--   Mostre barras de separação para agrupar comandos relacionados e tornar os menus mais legíveis.  
+- Mostre barras de separação para agrupar comandos relacionados e tornar os menus mais legíveis.  
   
 ### <a name="to-display-a-check-mark-on-a-menu-command"></a>Para exibir uma marca de seleção em um comando de menu  
   
--   Defina suas <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> propriedade para `true`.  
+- Defina suas <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> propriedade para `true`.  
   
      Isso também define o <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> propriedade para `true`. Use este procedimento somente se desejar que o comando de menu apareça como marcado por padrão, independentemente de estar selecionado.  
   
 ### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a>Para exibir uma marca de seleção que altere o estado de cada clique  
   
--   Definir o comando de menu <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> propriedade para `true`.  
+- Definir o comando de menu <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> propriedade para `true`.  
   
 ### <a name="to-add-an-image-to-a-menu-command"></a>Para adicionar uma imagem a um comando de menu  
   
--   Definir o comando de menu <xref:System.Windows.Forms.ToolStripItem.Image%2A> propriedade para o nome da imagem. Se o <xref:System.Windows.Forms.ToolStripItemDisplayStyle> propriedade desse comando de menu é definida como <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> ou <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, a imagem não pode ser exibida.  
+- Definir o comando de menu <xref:System.Windows.Forms.ToolStripItem.Image%2A> propriedade para o nome da imagem. Se o <xref:System.Windows.Forms.ToolStripItemDisplayStyle> propriedade desse comando de menu é definida como <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> ou <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, a imagem não pode ser exibida.  
   
 > [!NOTE]
 >  A margem de imagem também poderá mostrar uma marca de seleção se você quiser. Além disso, você pode definir as <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> propriedades da imagem a ser `true`, e a imagem será exibida com uma borda hachurada ao redor dele em tempo de execução.  
   
 ### <a name="to-display-a-shortcut-key-for-a-menu-command"></a>Para exibir uma tecla de atalho para um comando de menu  
   
--   Definir o comando de menu <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> propriedade para a combinação de teclado desejada, como CTRL + A para o **aberto** comando de menu e um conjunto a <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> propriedade para `true`.  
+- Definir o comando de menu <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> propriedade para a combinação de teclado desejada, como CTRL + A para o **aberto** comando de menu e um conjunto a <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> propriedade para `true`.  
   
 ### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a>Para exibir teclas de atalho personalizadas para um comando de menu  
   
--   Definir o comando de menu <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> propriedade para a combinação de teclado desejada, como CTRL + SHIFT + O, em vez de CTRL + SHIFT + O e conjunto de <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> propriedade para `true`.  
+- Definir o comando de menu <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> propriedade para a combinação de teclado desejada, como CTRL + SHIFT + O, em vez de CTRL + SHIFT + O e conjunto de <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> propriedade para `true`.  
   
 ### <a name="to-display-an-access-key-for-a-menu-command"></a>Para exibir uma chave de acesso para um comando de menu  
   
--   Quando você define o <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade para o comando de menu, digite um e comercial (&) antes da letra que você deseja que a chave de acesso sublinhada. Por exemplo, digitar `&Open` como o <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade de um item de menu resulta em um comando de menu que aparece como <u>s</u>caneta.
+- Quando você define o <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade para o comando de menu, digite um e comercial (&) antes da letra que você deseja que a chave de acesso sublinhada. Por exemplo, digitar `&Open` como o <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade de um item de menu resulta em um comando de menu que aparece como <u>s</u>caneta.
   
      Para navegar para esse comando de menu, pressione a tecla ALT para dar o foco para o <xref:System.Windows.Forms.MenuStrip>e pressione a tecla de acesso do nome do menu. Quando o menu é aberto e mostra os itens com chaves de acesso, basta pressionar a tecla de acesso para selecionar o comando de menu.  
   
@@ -80,7 +80,7 @@ Você pode aprimorar a usabilidade dos <xref:System.Windows.Forms.MenuStrip> e <
   
 ### <a name="to-display-a-separator-bar-between-menu-commands"></a>Para exibir uma barra separadora entre os comandos de menu  
   
--   Depois de definir seu <xref:System.Windows.Forms.MenuStrip> e os itens que ele conterá, use o <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> ou <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> método para adicionar os comandos de menu e <xref:System.Windows.Forms.ToolStripSeparator> controles para o <xref:System.Windows.Forms.MenuStrip> na ordem desejada.  
+- Depois de definir seu <xref:System.Windows.Forms.MenuStrip> e os itens que ele conterá, use o <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> ou <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> método para adicionar os comandos de menu e <xref:System.Windows.Forms.ToolStripSeparator> controles para o <xref:System.Windows.Forms.MenuStrip> na ordem desejada.  
   
     ```vb  
     ' This code adds a top-level File menu to the MenuStrip.  

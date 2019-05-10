@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703680"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652111"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Visão geral de associações do Windows Communication Foundation
 Associações são objetos que são usados para especificar os detalhes de comunicação que são necessárias para se conectar ao ponto de extremidade de um serviço do Windows Communication Foundation (WCF). Cada ponto de extremidade em um serviço WCF requer uma associação a ser bem especificado. Este tópico descreve os tipos dos detalhes de comunicação que definem as associações, os elementos de uma associação, quais associações são incluídas no WCF e como uma associação pode ser especificada para um ponto de extremidade.  
@@ -32,13 +32,13 @@ Associações são objetos que são usados para especificar os detalhes de comun
 ## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema  
  As informações em uma associação podem ser complexas, e algumas configurações podem não ser compatíveis com outras pessoas. Por esse motivo, o WCF inclui um conjunto de associações fornecidas pelo sistema. Essas associações são projetadas para abranger a maioria dos requisitos do aplicativo. As classes a seguir representam alguns exemplos das associações fornecidas pelo sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Um protocolo HTTP adequado para se conectar a serviços Web de associação que está em conformidade com o WS-eu especificação do Basic Profile (por exemplo, a serviços baseados em serviços da Web do ASP.NET).  
+- <xref:System.ServiceModel.BasicHttpBinding>: Um protocolo HTTP adequado para se conectar a serviços Web de associação que está em conformidade com o WS-eu especificação do Basic Profile (por exemplo, a serviços baseados em serviços da Web do ASP.NET).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Uma associação interoperável adequada para se conectar a pontos de extremidade que estão em conformidade com o WS-* protocolos.  
+- <xref:System.ServiceModel.WSHttpBinding>: Uma associação interoperável adequada para se conectar a pontos de extremidade que estão em conformidade com o WS-* protocolos.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Usa o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para se conectar a outros pontos de extremidade do WCF no mesmo computador.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para se conectar a outros pontos de extremidade do WCF no mesmo computador.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Usa o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] criar conexões de mensagem na fila com outros pontos de extremidade do WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Usa o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] criar conexões de mensagem na fila com outros pontos de extremidade do WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Esta associação oferece um desempenho mais alto que associações HTTP e é ideal para uso em uma rede local.
   
