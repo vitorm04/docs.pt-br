@@ -10,12 +10,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a906db44a548361df2822efa24d1dd1849cb5a24
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954880"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063731"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Como: Organizar lado a lado uma forma com uma imagem
 Da mesma forma que blocos podem ser colocados lado a lado para recobrir um piso, imagens retangulares podem ser colocadas umas ao lado das outras para preencher (organizar lado a lado) uma forma. Para organizar o interior de uma forma lado a lado, use um pincel de textura. Quando você constrói uma <xref:System.Drawing.TextureBrush> do objeto, um dos argumentos passados para o construtor é um <xref:System.Drawing.Image> objeto. Quando você usa o pincel de textura para pintar o interior de uma forma, ela será preenchida com repetidas cópias dessa imagem.  
@@ -26,11 +26,11 @@ Da mesma forma que blocos podem ser colocados lado a lado para recobrir um piso,
   
 - Este exemplo usa a imagem de 75 × 75 a seguir para organização lado a lado em um retângulo de 200 × 200.  
   
- ![Bloco 1](./media/tile1.gif "tile1")  
+ ![A imagem de bloco que mostra uma casa vermelha e uma árvore.](./media/how-to-tile-a-shape-with-an-image/rectangle-tile-200x200.gif)  
   
 - A ilustração a seguir mostra como o retângulo é organizado lado a lado com a imagem. Observe que todos os blocos têm a mesma orientação; não há nenhum inversão.  
   
- ![Bloco 2](./media/tile2.gif "tile2")  
+ ![Um retângulo lado a lado com a imagem usando a mesma orientação para todos os blocos.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-no-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingABrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
@@ -39,7 +39,7 @@ Da mesma forma que blocos podem ser colocados lado a lado para recobrir um piso,
   
 - Este exemplo usa a mesma imagem de 75 × 75 para preencher um retângulo 200 × 200. O modo de encapsulamento é definido para inverter a imagem horizontalmente. A ilustração a seguir mostra como o retângulo é organizado lado a lado com a imagem. Observe que, ao mudar de um bloco para o próximo em uma determinada linha, a imagem é invertida horizontalmente.  
   
- ![Bloco 3](./media/tile3.gif "tile3")  
+ ![Um retângulo lado a lado com a imagem é invertida horizontalmente.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.UsingABrush#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
@@ -55,7 +55,7 @@ Da mesma forma que blocos podem ser colocados lado a lado para recobrir um piso,
   
 - Este exemplo usa a mesma imagem de 75 × 75 para organizar lado a lado um retângulo de 200 × 200. O modo de encapsulamento é definido para inverter a imagem tanto horizontalmente quanto verticalmente. A ilustração a seguir mostra como o retângulo é organizado lado a lado pela imagem. Observe que, ao mudar de um bloco para o próximo em uma determinada linha, a imagem é invertida horizontalmente e, ao mudar de um bloco para o próximo em uma determinada coluna, a imagem é invertida verticalmente.  
   
- ![Bloco 5](./media/tile5.gif "tile5")  
+ ![Um retângulo lado a lado com a imagem invertida horizontalmente e verticalmente.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-vertical-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  

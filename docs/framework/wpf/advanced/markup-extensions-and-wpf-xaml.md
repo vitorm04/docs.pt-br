@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4acb7bd60c6087b5d0052dd15540e700fa2e46cd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804579"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598680"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensões de marcação e XAML WPF
 Este tópico apresenta o conceito de extensões de marcação para XAML, incluindo regras de sintaxe, finalidade e o modelo de objeto de classe subjacente. As extensões de marcação são um recurso geral da linguagem XAML e da implementação .NET de serviços XAML. Este tópico detalha, especificamente, as extensões de marcação para uso em XAML do WPF.  
@@ -41,13 +41,13 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 ## <a name="xaml-defined-markup-extensions"></a>Extensões de marcação definidas de XAML  
  Existem várias extensões de marcação que não são específicas à implementação de XAML do WPF, mas que são implementações de intrínsecos ou recursos de XAML como linguagem. Essas extensões de marcação são implementadas no assembly System.Xaml como parte dos serviços de XAML gerais do .NET Framework XAML e ficam dentro do namespace de XAML de linguagem XAML. Em termos de uso de marcação comum, essas extensões de marcação normalmente podem ser identificadas pelo prefixo `x:` no uso. O <xref:System.Windows.Markup.MarkupExtension> classe base (também definida em System. XAML) fornece o padrão de todas as extensões de marcação devem usar para ter suporte em leitores XAML e gravadores XAML, incluindo em WPF XAML.  
   
--   `x:Type` fornece o <xref:System.Type> objeto para o tipo nomeado. Esse recurso é usado com mais frequência em estilos e modelos. Para ver os detalhes, consulte [Extensão de marcação x:Type](../../xaml-services/x-type-markup-extension.md).  
+- `x:Type` fornece o <xref:System.Type> objeto para o tipo nomeado. Esse recurso é usado com mais frequência em estilos e modelos. Para ver os detalhes, consulte [Extensão de marcação x:Type](../../xaml-services/x-type-markup-extension.md).  
   
--   O `x:Static` produz valores estáticos. Os valores vêm de entidades de código de tipo de valor que não são, diretamente, o tipo de valor de uma propriedade de destino, mas podem ser avaliados para esse tipo. Para ver os detalhes, consulte [Extensão de marcação x:Static](../../xaml-services/x-static-markup-extension.md).  
+- O `x:Static` produz valores estáticos. Os valores vêm de entidades de código de tipo de valor que não são, diretamente, o tipo de valor de uma propriedade de destino, mas podem ser avaliados para esse tipo. Para ver os detalhes, consulte [Extensão de marcação x:Static](../../xaml-services/x-static-markup-extension.md).  
   
--   O `x:Null` especifica `null` como um valor para uma propriedade e pode ser utilizado para atributos ou valores de elemento de propriedade. Para ver os detalhes, consulte [Extensão de marcação x:Null](../../xaml-services/x-null-markup-extension.md).  
+- O `x:Null` especifica `null` como um valor para uma propriedade e pode ser utilizado para atributos ou valores de elemento de propriedade. Para ver os detalhes, consulte [Extensão de marcação x:Null](../../xaml-services/x-null-markup-extension.md).  
   
--   O `x:Array` fornece suporte para a criação de matrizes gerais na sintaxe XAML, para casos em que o suporte da coleção oferecido por modelos de controle e elementos base do WPF não é usado deliberadamente. Para ver os detalhes, consulte [Extensão de marcação x:Array](../../xaml-services/x-array-markup-extension.md).  
+- O `x:Array` fornece suporte para a criação de matrizes gerais na sintaxe XAML, para casos em que o suporte da coleção oferecido por modelos de controle e elementos base do WPF não é usado deliberadamente. Para ver os detalhes, consulte [Extensão de marcação x:Array](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
 >  O prefixo `x:` é utilizado para o mapeamento típico do namespace de XAML dos intrínsecos da linguagem XAML, no elemento raiz de uma produção ou arquivo XAML. Por exemplo, modelos do Visual Studio para aplicativos do WPF iniciam um arquivo XAML usando este `x:` mapeamento. Você poderia escolher um token de prefixo diferente no seu próprio mapeamento do namespace de XAML; porém, essa documentação assumirá o mapeamento padrão do `x:` como meio para identificar as entidades que são uma parte definida do namespace de XAML para a linguagem XAML, ao contrário do namespace padrão do WPF ou de outros namespaces XAML não relacionados a uma estrutura específica.  
@@ -56,19 +56,19 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 ## <a name="wpf-specific-markup-extensions"></a>Extensões de marcação específicas do WPF  
  As extensões de marcação mais comuns usadas na programação do WPF são aquelas que dão suporte a referências de recurso (`StaticResource` e `DynamicResource`) e aquelas que dão suporte à vinculação de dados (`Binding`).  
   
--   O `StaticResource` fornece um valor para uma propriedade ao substituir o valor de um recurso já definido. Por fim, uma avaliação do `StaticResource` é feita no tempo de carregamento do XAML e não tem acesso ao grafo de objeto no tempo de execução. Para ver os detalhes, consulte [Extensão de marcação StaticResource](staticresource-markup-extension.md).  
+- O `StaticResource` fornece um valor para uma propriedade ao substituir o valor de um recurso já definido. Por fim, uma avaliação do `StaticResource` é feita no tempo de carregamento do XAML e não tem acesso ao grafo de objeto no tempo de execução. Para ver os detalhes, consulte [Extensão de marcação StaticResource](staticresource-markup-extension.md).  
   
--   O `DynamicResource` fornece um valor para uma propriedade ao adiar esse valor para ser uma referência de tempo de execução a um recurso. Uma referência de recurso dinâmico força uma nova pesquisa sempre que tal recurso é acessado e tem acesso ao grafo de objeto no tempo de execução. Para obter esse acesso, o conceito do `DynamicResource` tem suporte por propriedades de dependência no sistema de propriedade do WPF, bem como por expressões avaliadas. Portanto, o `DynamicResource` pode ser usado somente para um destino de propriedade de dependência. Para ver os detalhes, consulte [Extensão de marcação DynamicResource](dynamicresource-markup-extension.md).  
+- O `DynamicResource` fornece um valor para uma propriedade ao adiar esse valor para ser uma referência de tempo de execução a um recurso. Uma referência de recurso dinâmico força uma nova pesquisa sempre que tal recurso é acessado e tem acesso ao grafo de objeto no tempo de execução. Para obter esse acesso, o conceito do `DynamicResource` tem suporte por propriedades de dependência no sistema de propriedade do WPF, bem como por expressões avaliadas. Portanto, o `DynamicResource` pode ser usado somente para um destino de propriedade de dependência. Para ver os detalhes, consulte [Extensão de marcação DynamicResource](dynamicresource-markup-extension.md).  
   
--   O `Binding` fornece um valor associado a dados para uma propriedade, usando o contexto de dados que se aplica ao objeto pai no tempo de execução. Essa extensão de marcação é relativamente complexa, porque possibilita uma sintaxe substancial embutida para especificar uma vinculação de dados. Para ver os detalhes, consulte [Extensão de marcação Binding](binding-markup-extension.md).  
+- O `Binding` fornece um valor associado a dados para uma propriedade, usando o contexto de dados que se aplica ao objeto pai no tempo de execução. Essa extensão de marcação é relativamente complexa, porque possibilita uma sintaxe substancial embutida para especificar uma vinculação de dados. Para ver os detalhes, consulte [Extensão de marcação Binding](binding-markup-extension.md).  
   
--   `RelativeSource` Fornece informações de origem para um <xref:System.Windows.Data.Binding> que pode navegar várias relações possíveis na árvore de objetos de tempo de execução. São oferecidas fontes especializadas para associações criadas em modelos multiuso ou criadas em código sem conhecimento completo da árvore de objetos adjacente. Para ver os detalhes, consulte [RelativeSource MarkupExtension](relativesource-markupextension.md).  
+- `RelativeSource` Fornece informações de origem para um <xref:System.Windows.Data.Binding> que pode navegar várias relações possíveis na árvore de objetos de tempo de execução. São oferecidas fontes especializadas para associações criadas em modelos multiuso ou criadas em código sem conhecimento completo da árvore de objetos adjacente. Para ver os detalhes, consulte [RelativeSource MarkupExtension](relativesource-markupextension.md).  
   
--   O `TemplateBinding` permite que um modelo de controle use valores para propriedades modeladas que vêm de propriedades definidas pelo modelo de objeto da classe que usará o modelo. Em outras palavras, a propriedade dentro da definição de modelo pode acessar um contexto que existe somente depois que o modelo é aplicado. Para ver os detalhes, consulte [Extensão de marcação TemplateBinding](templatebinding-markup-extension.md). Para obter mais informações sobre o uso prático de `TemplateBinding`, consulte [Estilos com a amostra ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+- O `TemplateBinding` permite que um modelo de controle use valores para propriedades modeladas que vêm de propriedades definidas pelo modelo de objeto da classe que usará o modelo. Em outras palavras, a propriedade dentro da definição de modelo pode acessar um contexto que existe somente depois que o modelo é aplicado. Para ver os detalhes, consulte [Extensão de marcação TemplateBinding](templatebinding-markup-extension.md). Para obter mais informações sobre o uso prático de `TemplateBinding`, consulte [Estilos com a amostra ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
--   O `ColorConvertedBitmap` dá suporte a um cenário relativamente avançado de geração de imagens. Para ver os detalhes, consulte [Extensão de marcação ColorConvertedBitmap](colorconvertedbitmap-markup-extension.md).  
+- O `ColorConvertedBitmap` dá suporte a um cenário relativamente avançado de geração de imagens. Para ver os detalhes, consulte [Extensão de marcação ColorConvertedBitmap](colorconvertedbitmap-markup-extension.md).  
   
--   O `ComponentResourceKey` e o `ThemeDictionary` dão suporte a aspectos da pesquisa de recursos, especialmente para recursos e temas empacotados com controles personalizados. Para obter mais informações, consulte [Extensão de marcação ComponentResourceKey](componentresourcekey-markup-extension.md), [Extensão de marcação ThemeDictionary](themedictionary-markup-extension.md) ou [Visão geral de criação do controle](../controls/control-authoring-overview.md).  
+- O `ComponentResourceKey` e o `ThemeDictionary` dão suporte a aspectos da pesquisa de recursos, especialmente para recursos e temas empacotados com controles personalizados. Para obter mais informações, consulte [Extensão de marcação ComponentResourceKey](componentresourcekey-markup-extension.md), [Extensão de marcação ThemeDictionary](themedictionary-markup-extension.md) ou [Visão geral de criação do controle](../controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>*Classes de extensão  
@@ -83,18 +83,18 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 ### <a name="extension-class-interpretation-of-initialization-text"></a>Interpretação de classe de extensão do texto de inicialização  
  Os tokens de cadeia de caracteres após o nome da extensão de marcação e ainda dentro de chaves são interpretados pelo processador XAML em uma das seguintes maneiras:  
   
--   Uma vírgula sempre representa o separador ou delimitador de tokens individuais.  
+- Uma vírgula sempre representa o separador ou delimitador de tokens individuais.  
   
--   Se os tokens individuais separados não contiverem nenhum sinal de igual, cada token será tratado como um argumento do construtor. Cada parâmetro de construtor deve ser fornecido como o tipo esperado por essa assinatura e na ordem correta esperada por ela.  
+- Se os tokens individuais separados não contiverem nenhum sinal de igual, cada token será tratado como um argumento do construtor. Cada parâmetro de construtor deve ser fornecido como o tipo esperado por essa assinatura e na ordem correta esperada por ela.  
   
     > [!NOTE]
     >  Um processador XAML deve chamar o construtor que corresponde à contagem de argumento do número de pares. Por esse motivo, se você estiver implementando uma extensão de marcação personalizada, não forneça vários construtores com a mesma contagem de argumento. O comportamento de um processador XAML se existir mais de um caminho do construtor de extensão de marcação com a mesma contagem de parâmetros não é definido, mas você deverá prever que um processador XAML está autorizado a lançar uma exceção em uso caso tal situação exista nas definições do tipo de extensão de marcação.  
   
--   Se os tokens individuais separados contiverem sinais de igual, um processador XAML chamará primeiramente o construtor padrão para a extensão de marcação. A seguir, cada par name=value será interpretado como um nome de propriedade que existe na extensão de marcação e um valor para designar à propriedade.  
+- Se os tokens individuais separados contiverem sinais de igual, um processador XAML chamará primeiramente o construtor padrão para a extensão de marcação. A seguir, cada par name=value será interpretado como um nome de propriedade que existe na extensão de marcação e um valor para designar à propriedade.  
   
--   Se houver um resultado paralelo entre o comportamento do construtor e o comportamento de configuração da propriedade em uma extensão de marcação, não importará qual comportamento será utilizado. O mais comum é usar os pares *property*`=`*value* para extensões de marcação que têm mais de uma propriedade configurável, pelo menos porque torna a marcação mais intencional e diminui a probabilidade de transpor acidentalmente os parâmetros do construtor. (Quando pares property=value são especificados, as propriedades poderão ficar em qualquer ordem.) Além disso, não há nenhuma garantia de que uma extensão de marcação fornecerá um parâmetro do construtor que defina cada uma das propriedades configuráveis. Por exemplo, <xref:System.Windows.Data.Binding> é uma extensão de marcação, com muitas propriedades que são configuráveis por meio da extensão no *propriedade*`=`*valor* formulário, mas <xref:System.Windows.Data.Binding> só dá suporte a dois construtores: um construtor padrão e um que define um caminho inicial.  
+- Se houver um resultado paralelo entre o comportamento do construtor e o comportamento de configuração da propriedade em uma extensão de marcação, não importará qual comportamento será utilizado. O mais comum é usar os pares *property*`=`*value* para extensões de marcação que têm mais de uma propriedade configurável, pelo menos porque torna a marcação mais intencional e diminui a probabilidade de transpor acidentalmente os parâmetros do construtor. (Quando pares property=value são especificados, as propriedades poderão ficar em qualquer ordem.) Além disso, não há nenhuma garantia de que uma extensão de marcação fornecerá um parâmetro do construtor que defina cada uma das propriedades configuráveis. Por exemplo, <xref:System.Windows.Data.Binding> é uma extensão de marcação, com muitas propriedades que são configuráveis por meio da extensão no *propriedade*`=`*valor* formulário, mas <xref:System.Windows.Data.Binding> só dá suporte a dois construtores: um construtor padrão e um que define um caminho inicial.  
   
--   Uma vírgula literal não pode ser passada para uma extensão de marcação sem escape.  
+- Uma vírgula literal não pode ser passada para uma extensão de marcação sem escape.  
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Sequências de escape e extensões de marcação  

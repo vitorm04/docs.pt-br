@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800172"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211777"
 ---
 # <a name="windows-forms-overview"></a>Visão geral dos Windows Forms
 
@@ -32,7 +32,7 @@ A visão geral a seguir descreve as vantagens dos aplicativos cliente inteligent
 
  O Windows Forms tem controles avançados de interface do usuário que emulam recursos em aplicativos de alta tecnologia, como o Microsoft Office. Quando você usa o <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.MenuStrip> controle, você pode criar barras de ferramentas e menus que contenham texto e imagens, exibem submenus e hospedam outros controles como caixas de texto e caixas de combinação.
 
- Com o Visual Studio arrastar-e-soltar **Designer de formulários do Windows**, você pode criar facilmente aplicativos de formulários do Windows. Basta selecionar os controles com o seu cursor e adicioná-los no local do formulário desejado. O designer oferece ferramentas como linhas de grade e linhas de alinhamento para facilitar o alinhamento dos controles. E se você usa o Visual Studio ou compilar na linha de comando, você pode usar o <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> e <xref:System.Windows.Forms.SplitContainer> controles avançados de criar layouts de formulários em menos tempo.
+ Com o arrastar e soltar **Designer de formulários do Windows** no Visual Studio, você pode criar facilmente aplicativos de formulários do Windows. Basta selecionar os controles com o seu cursor e adicioná-los no local do formulário desejado. O designer oferece ferramentas como linhas de grade e linhas de alinhamento para facilitar o alinhamento dos controles. E se você usa o Visual Studio ou compilar na linha de comando, você pode usar o <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> e <xref:System.Windows.Forms.SplitContainer> controles avançados de criar layouts de formulários em menos tempo.
 
  Por fim, se for necessário criar seus próprios elementos personalizados da interface do usuário, o <xref:System.Drawing> namespace contém uma grande seleção de classes para renderizar linhas, círculos e outras formas diretamente em um formulário.
 

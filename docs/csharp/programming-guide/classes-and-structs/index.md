@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c26b8deb6036c13a9a61d8929b4cabba5f3ef67
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646326"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584534"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Classes e structs (Guia de Programação em C#)
 Classes e structs são duas das construções básicas do Common Type System no .NET Framework. Cada um é, essencialmente, uma estrutura de dados que encapsula um conjunto de dados e os comportamentos que são uma unidade lógica. Os dados e os comportamentos são os *membros* da classe ou struct, e eles incluem seus métodos, propriedades e eventos, e etc., conforme listado neste tópico.  
@@ -44,25 +44,25 @@ Classes e structs são duas das construções básicas do Common Type System no 
 ### <a name="members"></a>Membros  
  Todos os métodos, campos, constantes, propriedades e eventos devem ser declarados em um tipo. Eles são chamados de *membros* do tipo. No C#, não existem variáveis globais ou métodos como em algumas das outras linguagens. Até mesmo um ponto de entrada de um programa, o método `Main`, deve ser declarado em uma classe ou struct. A lista a seguir inclui todos os vários tipos de membros que podem ser declarados em uma classe ou struct.  
   
--   [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
--   [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)  
+- [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
--   [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Eventos](../../../csharp/programming-guide/events/index.md)  
+- [Eventos](../../../csharp/programming-guide/events/index.md)  
   
--   [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [Indexadores](../../../csharp/programming-guide/indexers/index.md)  
+- [Indexadores](../../../csharp/programming-guide/indexers/index.md)  
   
--   [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
--   [Tipos aninhados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [Tipos aninhados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>Acessibilidade  
  Alguns métodos e propriedades devem ser chamados ou acessado pelo código fora de sua classe ou struct, também conhecido como *código de cliente*. Outros métodos e propriedades podem ser usados apenas na classe ou struct em si. É importante limitar o acessibilidade do código para que somente o código do cliente desejado possa fazer contato. É possível especificar quão acessível seus tipos e seus membros são para o código do cliente usando os modificadores de acesso [público](../../../csharp/language-reference/keywords/public.md), [protegido](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), [interno protegido](../../../csharp/language-reference/keywords/protected-internal.md), [privado](../../../csharp/language-reference/keywords/private.md) e [privado protegido](../../../csharp/language-reference/keywords/private-protected.md). A acessibilidade padrão é `private`. Para obter mais informações, consulte [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937626"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063760"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Como: criar imagens em miniatura
 Uma imagem em miniatura é uma versão pequena de uma imagem. Você pode criar uma imagem em miniatura chamando o <xref:System.Drawing.Image.GetThumbnailImage%2A> método de um <xref:System.Drawing.Image> objeto.  
@@ -21,9 +21,9 @@ Uma imagem em miniatura é uma versão pequena de uma imagem. Você pode criar u
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir constrói um <xref:System.Drawing.Image> objeto de um arquivo JPG. A imagem original tem uma largura de 640 pixels e uma altura de 479 pixels. O código cria uma imagem em miniatura que tem uma largura de 100 pixels e uma altura de 100 pixels.  
   
- A ilustração a seguir mostra a imagem em miniatura.  
+ A ilustração a seguir mostra a imagem em miniatura:  
   
- ![Thumbnail Image](./media/thumbnail1.png "Thumbnail1")  
+ ![Captura de tela que mostra a miniatura de saída.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
 >  Neste exemplo, um método de retorno de chamada é declarado, mas nunca usado. Isso dá suporte a todas as versões do GDI+.  

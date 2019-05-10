@@ -1,17 +1,17 @@
 ---
-title: Criar aplicativos ASP.NET Core 2.1 implantados como contêineres do Linux em clusters AKS/Kubernetes
+title: Criar aplicativos ASP.NET Core 2.2 implantados como contêineres do Linux em clusters AKS/Kubernetes
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 28d2f557e4434ef7e5c2c3f8d17d6d3d6a80ce2a
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052737"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452781"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Criar aplicativos ASP.NET Core 2.1 implantados como contêineres do Linux em um orquestrador AKS/Kubernetes
+# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Criar aplicativos ASP.NET Core 2.2 implantados como contêineres do Linux em um orquestrador AKS/Kubernetes
 
 Serviços de Kubernetes do Azure (AKS) é gerenciado Kubernetes orquestrações os serviços do Azure que simplificam o gerenciamento e implantação de contêiner.
 
@@ -23,13 +23,13 @@ Principais recursos do AKS são:
 - Dimensionamento configuráveis do usuário
 - Uma experiência de usuário mais simples para desenvolvedores e operadores do cluster.
 
-Os exemplos a seguir explorar a criação de um aplicativo ASP.NET Core 2.1 é executado no Linux e implanta um Cluster AKS no Azure, enquanto o desenvolvimento é feito usando o Visual Studio 2017.
+Os exemplos a seguir explorar a criação de um aplicativo ASP.NET Core 2.2 é executado no Linux e implanta um Cluster AKS no Azure, enquanto o desenvolvimento é feito usando o Visual Studio 2017.
 
-## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Criando o projeto do ASP.NET Core 2.1 usando o Visual Studio 2017
+## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a>Criando o projeto do ASP.NET Core 2.2 usando o Visual Studio 2017
 
 ASP.NET Core é uma plataforma de desenvolvimento de uso geral mantida pela Microsoft e pela comunidade .NET no GitHub. Ele é multiplataforma, que dão suporte a Windows, macOS e Linux e pode ser usado em cenários inseridos/IoT, nuvem e dispositivo.
 
-Este exemplo usa um projeto simples com base em um modelo de API de Web do Visual Studio, que exige qualquer conhecimento adicional para criar o exemplo. Você só precisará criar o projeto usando um modelo padrão que inclui todos os elementos para executar um pequeno projeto com uma API REST, usando a tecnologia ASP.NET Core 2.1.
+Este exemplo usa um projeto simples com base em um modelo de API de Web do Visual Studio, que exige qualquer conhecimento adicional para criar o exemplo. Você só precisará criar o projeto usando um modelo padrão que inclui todos os elementos para executar um pequeno projeto com uma API REST, usando a tecnologia ASP.NET Core 2.2.
 
 ![Adicione janela novo projeto no Visual Studio, selecionando o aplicativo Web ASP.NET Core.](media/create-aspnet-core-application.png)
 
@@ -39,13 +39,13 @@ Para criar o projeto de exemplo no Visual Studio, selecione **arquivo** > **New*
 
 Visual Studio contém modelos para projetos web. Para nosso exemplo, selecione **API** para criar um aplicativo de API Web ASP.NET.
 
-Verifique se que você tenha selecionado o ASP.NET Core 2.1 como a estrutura. .NET core 2.1 está incluído na última versão do Visual Studio 2017 e é automaticamente instalado e configurado para você quando você instala o Visual Studio 2017.
+Verifique se que você tenha selecionado o ASP.NET Core 2.2 como a estrutura. 2.2 do .NET core é incluído na última versão do Visual Studio 2017 e é automaticamente instalado e configurado para você quando você instala o Visual Studio 2017.
 
 ![Visual Studio caixa de diálogo para selecionar o tipo de um aplicativo Web do ASP.NET Core com a opção de API selecionada.](media/create-web-api-application.png)
 
-**Figura 4-37**. Tipo de projeto do ASP.NET CORE 2.1 selecionando e API da Web
+**Figura 4-37**. Tipo de projeto do ASP.NET CORE 2.2 selecionando e API da Web
 
-Se você tiver qualquer versão anterior do .NET Core, você pode baixar e instalar a versão 2.1 do <https://www.microsoft.com/net/download/core#/sdk>.
+Se você tiver qualquer versão anterior do .NET Core, você pode baixar e instalar a versão 2.2 do <https://www.microsoft.com/net/download/core#/sdk>.
 
 Você pode adicionar suporte ao Docker ao criar o projeto ou posteriormente, portanto, você pode "colocar no Docker" seu projeto a qualquer momento. Para adicionar suporte ao Docker após a criação do projeto, clique com botão direito no nó do projeto no Gerenciador de soluções e selecione **Add** > **suporte ao Docker** no menu de contexto.
 
@@ -59,7 +59,7 @@ Para concluir a adição de suporte ao Docker, você pode escolher Windows ou Li
 
 **Figura 4-39**. Selecionando os contêineres do Linux.
 
-Com estas etapas simples, você precisa de seu aplicativo ASP.NET Core 2.1 em execução em um contêiner do Linux.
+Com estas etapas simples, você precisa de seu aplicativo ASP.NET Core 2.2 em execução em um contêiner do Linux.
 
 Como você pode ver, a integração entre o Visual Studio 2017 e o Docker é totalmente orientada à produtividade do desenvolvedor.
 
@@ -125,6 +125,12 @@ Depois de executar o `docker tag` de comando, liste as imagens com o `docker ima
 
 ### <a name="push-the-image-into-the-azure-acr"></a>A imagem por push o ACR do Azure
 
+Faça logon no registro de contêiner do Azure
+
+```console
+az acr login --name mssampleacr
+```
+
 Envie a imagem no ACR do Azure, usando o seguinte comando:
 
 ```console
@@ -158,7 +164,7 @@ spec:
         app: mssample-kub-app
     spec:
       containers:
-        - mane: mssample-services-app
+        - name: mssample-services-app
           image: mssampleacr.azurecr.io/mssampleaksapplication:v1
           ports:
             - containerPort: 80
