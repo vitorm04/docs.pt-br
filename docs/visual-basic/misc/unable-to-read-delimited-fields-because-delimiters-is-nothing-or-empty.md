@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_DelimitersNothing
 ms.assetid: 94f64c48-8e17-449d-b92a-0426efec879c
-ms.openlocfilehash: a431c8df582a3d02c8bfc9ac259725087aacb05e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 83e5c460f4395f2effe190e7d83299f9f7ab986d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668933"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619953"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>Não é possível ler campos delimitados porque Delimiters é Nothing ou vazio
 O `TextFieldParser` não é capaz de ler o arquivo porque o `Delimiters` estiver definida como `Nothing` ou está vazio.  
