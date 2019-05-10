@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ff89f2d5ffa177b9413f6a2925bb05729e053a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876350"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592905"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento de instantâneo no SQL Server
 O isolamento de instantâneo melhora a simultaneidade para aplicativos de OLTP.  
@@ -41,35 +41,35 @@ SET READ_COMMITTED_SNAPSHOT ON
   
  Quatro níveis de isolamento definidos no padrão SQL-92 tinham suporte em versões anteriores do SQL Server:  
   
--   READ UNCOMMITTED é o nível de isolamento menos restritivo, porque ignora os bloqueios colocados por outras transações. As transações que são executadas com READ UNCOMMITTED podem ler os valores de dados modificados que ainda não foram confirmados por outras transações; eles são chamados de leituras “sujas”.  
+- READ UNCOMMITTED é o nível de isolamento menos restritivo, porque ignora os bloqueios colocados por outras transações. As transações que são executadas com READ UNCOMMITTED podem ler os valores de dados modificados que ainda não foram confirmados por outras transações; eles são chamados de leituras “sujas”.  
   
--   READ COMMITTED é o nível de isolamento padrão para o SQL Server. Ele impede as leitura sujas especificando que as instruções não podem ler os valores de dados que foram modificados, mas ainda não foram confirmados por outras transações. Outras transações ainda podem modificar, inserir ou excluir dados entre execuções de instruções individuais dentro da transação atual, resultando em leituras não repetíveis, ou dados “fantasma”.  
+- READ COMMITTED é o nível de isolamento padrão para o SQL Server. Ele impede as leitura sujas especificando que as instruções não podem ler os valores de dados que foram modificados, mas ainda não foram confirmados por outras transações. Outras transações ainda podem modificar, inserir ou excluir dados entre execuções de instruções individuais dentro da transação atual, resultando em leituras não repetíveis, ou dados “fantasma”.  
   
--   REPEATABLE READ é um nível de isolamento mais restritivo do que READ COMMITTED. Ele abrange READ COMMITTED e especifica adicionalmente que nenhuma outra transação pode modificar ou excluir dados que foram lidos pela transação atual até a transação atual ser confirmada. A simultaneidade é menor do que para READ COMMITTED porque os bloqueios compartilhados em dados lidos são mantidos para a duração da transação em vez de serem lançados no final da cada instrução.  
+- REPEATABLE READ é um nível de isolamento mais restritivo do que READ COMMITTED. Ele abrange READ COMMITTED e especifica adicionalmente que nenhuma outra transação pode modificar ou excluir dados que foram lidos pela transação atual até a transação atual ser confirmada. A simultaneidade é menor do que para READ COMMITTED porque os bloqueios compartilhados em dados lidos são mantidos para a duração da transação em vez de serem lançados no final da cada instrução.  
   
--   SERIALIZABLE é o nível de isolamento mais restritivo, porque bloqueia intervalos inteiros de chaves e mantém os bloqueios até que a transação seja concluída. Ele abrange REPEATABLE READ e adiciona a restrição que outras transações não podem inserir novas linhas em intervalos que foram lidos pela transação até que a transação seja concluída.  
+- SERIALIZABLE é o nível de isolamento mais restritivo, porque bloqueia intervalos inteiros de chaves e mantém os bloqueios até que a transação seja concluída. Ele abrange REPEATABLE READ e adiciona a restrição que outras transações não podem inserir novas linhas em intervalos que foram lidos pela transação até que a transação seja concluída.  
   
  Para obter mais informações, consulte o [guia de controle de versão de linha e bloqueio de transação](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Extensões de nível de isolamento de instantâneo  
  O SQL Server introduziu extensões nos níveis de isolamento SQL-92 com a introdução do nível de isolamento do SNAPSHOT e uma implementação adicional de READ COMMITTED. O nível de isolamento READ_COMMITTED_SNAPSHOT pode substituir de modo transparente READ COMMITTED para todas as transações.  
   
--   O isolamento de SNAPSHOT especifica que os dados lidos dentro de uma transação nunca refletirá as alterações feitas por outras transações simultâneas. A transação usa as versões da linha de dados que existem quando a transação começa. Nenhum bloqueio é colocado nos dados quando são lidos. Portanto, as transações de SNAPSHOT não bloqueiam outras transações de gravar dados. As transações que gravam dados não bloqueiam as transações de instantâneo de ler dados. Você precisa habilitar o isolamento de instantâneo configurando a opção do banco de dados ALLOW_SNAPSHOT_ISOLATION para usá-lo.  
+- O isolamento de SNAPSHOT especifica que os dados lidos dentro de uma transação nunca refletirá as alterações feitas por outras transações simultâneas. A transação usa as versões da linha de dados que existem quando a transação começa. Nenhum bloqueio é colocado nos dados quando são lidos. Portanto, as transações de SNAPSHOT não bloqueiam outras transações de gravar dados. As transações que gravam dados não bloqueiam as transações de instantâneo de ler dados. Você precisa habilitar o isolamento de instantâneo configurando a opção do banco de dados ALLOW_SNAPSHOT_ISOLATION para usá-lo.  
   
--   A opção de banco de dados READ_COMMITTED_SNAPSHOT determina o comportamento do nível de isolamento READ COMMITTED padrão quando o isolamento de instantâneo é habilitado em um banco de dados. Se você não especificar explicitamente READ_COMMITTED_SNAPSHOT ON, READ COMMITTED será aplicado a todas as transações implícitas. Isso gerará o mesmo comportamento que configurar READ_COMMITTED_SNAPSHOT OFF (o padrão). Quando READ_COMMITTED_SNAPSHOT OFF está em vigor, o mecanismo de banco de dados usa bloqueios compartilhados para impor o nível de isolamento padrão. Se você definir a opção de banco de dados READ_COMMITTED_SNAPSHOT como ON, o mecanismo de banco de dados usará o controle de versão de linhas e o isolamento de instantâneo como o padrão, em vez de usar bloqueios para proteger os dados.  
+- A opção de banco de dados READ_COMMITTED_SNAPSHOT determina o comportamento do nível de isolamento READ COMMITTED padrão quando o isolamento de instantâneo é habilitado em um banco de dados. Se você não especificar explicitamente READ_COMMITTED_SNAPSHOT ON, READ COMMITTED será aplicado a todas as transações implícitas. Isso gerará o mesmo comportamento que configurar READ_COMMITTED_SNAPSHOT OFF (o padrão). Quando READ_COMMITTED_SNAPSHOT OFF está em vigor, o mecanismo de banco de dados usa bloqueios compartilhados para impor o nível de isolamento padrão. Se você definir a opção de banco de dados READ_COMMITTED_SNAPSHOT como ON, o mecanismo de banco de dados usará o controle de versão de linhas e o isolamento de instantâneo como o padrão, em vez de usar bloqueios para proteger os dados.  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>Como funcionam o isolamento de instantâneo e o controle de versão de linha  
  Quando o nível de isolamento de instantâneo está habilitado, sempre que uma linha é atualizada, o mecanismo de banco de dados do SQL Server armazena uma cópia da linha original em **tempdb**e adiciona um número de sequência de transação à linha. Veja a seguir a sequência de eventos que ocorre:  
   
--   Uma nova transação é iniciada, e é atribuído um número de sequência de transação.  
+- Uma nova transação é iniciada, e é atribuído um número de sequência de transação.  
   
--   O mecanismo de banco de dados lê uma linha dentro da transação e recupera a versão de linha de **tempdb** cujo número de sequência está próximo e menor do que o número de sequência da transação.  
+- O mecanismo de banco de dados lê uma linha dentro da transação e recupera a versão de linha de **tempdb** cujo número de sequência está próximo e menor do que o número de sequência da transação.  
   
--   O Mecanismo de Banco de Dados verifica se o número de sequência de transação não está na lista de números de sequência de transações não confirmadas como ativas quando a transação de instantâneo iniciou.  
+- O Mecanismo de Banco de Dados verifica se o número de sequência de transação não está na lista de números de sequência de transações não confirmadas como ativas quando a transação de instantâneo iniciou.  
   
--   A transação lê a versão da linha de **tempdb** que era atual a partir do início da transação. Ela não verá as novas linhas inseridas após a transação ter sido iniciada porque os valores do número de sequência serão superiores ao valor do número de sequência da transação.  
+- A transação lê a versão da linha de **tempdb** que era atual a partir do início da transação. Ela não verá as novas linhas inseridas após a transação ter sido iniciada porque os valores do número de sequência serão superiores ao valor do número de sequência da transação.  
   
--   A transação atual verá linhas que foram excluídas depois que a transação iniciou, porque haverá uma versão de linha na **tempdb** com um valor de número de sequência mais baixo.  
+- A transação atual verá linhas que foram excluídas depois que a transação iniciou, porque haverá uma versão de linha na **tempdb** com um valor de número de sequência mais baixo.  
   
  O efeito líquido do isolamento de instantâneo é que a transação vê todos os dados como existiam no início de transação, sem honrar ou colocar os bloqueios nas tabelas subjacentes. Isso pode resultar em melhorias de desempenho em situações onde há conflito.  
   
@@ -93,15 +93,15 @@ SqlTransaction sqlTran =
   
  O código conecta-se para o **AdventureWorks** de exemplo do banco de dados no SQL Server e cria uma tabela denominada **TestSnapshot** e insere uma linha de dados. O código usa a instrução ALTER DATABASE Transact-SQL para ativar o isolamento de instantâneo para o banco de dados, mas não define a opção READ_COMMITTED_SNAPSHOT, deixando o comportamento padrão de nível de isolamento READ COMMITTED em vigor. O código, em seguida, executa as seguintes ações:  
   
--   Ele inicia, mas não for conclui o sqlTransaction1, que usa o nível de isolamento SERIALIZABLE para iniciar uma transação de atualização. Isso tem o efeito de bloquear a tabela.  
+- Ele inicia, mas não for conclui o sqlTransaction1, que usa o nível de isolamento SERIALIZABLE para iniciar uma transação de atualização. Isso tem o efeito de bloquear a tabela.  
   
--   Abre uma segunda conexão e inicia uma segunda transação usando o nível de isolamento SNAPSHOT para ler os dados do **TestSnapshot** tabela. Como o isolamento de instantâneo está habilitado, esta transação pode ler os dados que existiam antes de sqlTransaction1 iniciar.  
+- Abre uma segunda conexão e inicia uma segunda transação usando o nível de isolamento SNAPSHOT para ler os dados do **TestSnapshot** tabela. Como o isolamento de instantâneo está habilitado, esta transação pode ler os dados que existiam antes de sqlTransaction1 iniciar.  
   
--   Abre uma terceira conexão e inicia uma transação usando o nível de isolamento READ COMMITTED para tentar ler os dados na tabela. Nesse caso, o código não pode ler os dados porque não pode ler depois que os bloqueios são colocados na tabela na primeira transação e o tempo é esgotado. O mesmo resultado ocorreria se os níveis de isolamento REPEATABLE READ e SERIALIZABLE tivessem sido usados, porque esses níveis de isolamento também não podem ler depois que os bloqueios são colocados na primeira transação.  
+- Abre uma terceira conexão e inicia uma transação usando o nível de isolamento READ COMMITTED para tentar ler os dados na tabela. Nesse caso, o código não pode ler os dados porque não pode ler depois que os bloqueios são colocados na tabela na primeira transação e o tempo é esgotado. O mesmo resultado ocorreria se os níveis de isolamento REPEATABLE READ e SERIALIZABLE tivessem sido usados, porque esses níveis de isolamento também não podem ler depois que os bloqueios são colocados na primeira transação.  
   
--   Ele abre uma quarta conexão e inicia uma transação usando o nível de isolamento READ UNCOMMITTED, que executa uma leitura suja do valor não confirmado em sqlTransaction1. Esse valor poderá nunca realmente existir no banco de dados se a primeira transação não for confirmada.  
+- Ele abre uma quarta conexão e inicia uma transação usando o nível de isolamento READ UNCOMMITTED, que executa uma leitura suja do valor não confirmado em sqlTransaction1. Esse valor poderá nunca realmente existir no banco de dados se a primeira transação não for confirmada.  
   
--   Ele reverte a transação primeiro e limpa excluindo a **TestSnapshot** tabela e desativando isolamento de instantâneo para o **AdventureWorks** banco de dados.  
+- Ele reverte a transação primeiro e limpa excluindo a **TestSnapshot** tabela e desativando isolamento de instantâneo para o **AdventureWorks** banco de dados.  
   
 > [!NOTE]
 >  Os exemplos a seguir usam a mesma cadeia de conexão com o pool de conexões desativado. Se uma conexão estiver agrupada, redefinir seu nível de isolamento não redefine o nível de isolamento no servidor. Como resultado, conexões subsequentes que usam a mesma conexão interna agrupado iniciam com os níveis de isolamento definidos para a conexão agrupada. Uma alternativa para desativar o pool de conexões é definir explicitamente o nível de isolamento para cada conexão.  
@@ -112,19 +112,19 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra o comportamento do isolamento de instantâneo quando os dados estão sendo modificados. O código executa as seguintes ações:  
   
--   Conecta-se ao **AdventureWorks** de exemplo do banco de dados e habilita o isolamento de instantâneo.  
+- Conecta-se ao **AdventureWorks** de exemplo do banco de dados e habilita o isolamento de instantâneo.  
   
--   Cria uma tabela denominada **TestSnapshotUpdate** e insere três linhas de dados de exemplo.  
+- Cria uma tabela denominada **TestSnapshotUpdate** e insere três linhas de dados de exemplo.  
   
--   Inicia, mas não conclui, sqlTransaction1 usando o isolamento de SNAPSHOT. Três linhas de dados são selecionadas na transação.  
+- Inicia, mas não conclui, sqlTransaction1 usando o isolamento de SNAPSHOT. Três linhas de dados são selecionadas na transação.  
   
--   Cria um segundo **SqlConnection** à **AdventureWorks** e cria uma segunda transação usando o nível de isolamento READ COMMITTED que atualiza um valor em uma das linhas selecionadas em sqlTransaction1.  
+- Cria um segundo **SqlConnection** à **AdventureWorks** e cria uma segunda transação usando o nível de isolamento READ COMMITTED que atualiza um valor em uma das linhas selecionadas em sqlTransaction1.  
   
--   Confirma sqlTransaction2.  
+- Confirma sqlTransaction2.  
   
--   Retorna para sqlTransaction1 e tenta atualizar a mesma linha que sqlTransaction1 já confirmou. O erro 3960 é gerado e sqlTransaction1 é revertido automaticamente. O **SqlException. Number** e **SqlException. Message** são exibidos na janela do Console.  
+- Retorna para sqlTransaction1 e tenta atualizar a mesma linha que sqlTransaction1 já confirmou. O erro 3960 é gerado e sqlTransaction1 é revertido automaticamente. O **SqlException. Number** e **SqlException. Message** são exibidos na janela do Console.  
   
--   Executa o código de limpeza para desativar o isolamento de instantâneo no **AdventureWorks** e excluir os **TestSnapshotUpdate** tabela.  
+- Executa o código de limpeza para desativar o isolamento de instantâneo no **AdventureWorks** e excluir os **TestSnapshotUpdate** tabela.  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  

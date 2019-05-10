@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c346b23bd49abaabde9cc4adfdeb134c4267cbf8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64657194"
 ---
 # <a name="application-element-net-native"></a>\<Aplicativo > (.NET nativo)
 Serve como um contêiner para tipos em todo o aplicativo e membros de tipo cujos metadados estão disponível para reflexão no tempo de execução e aplica-se à política de reflexão no tempo de execução a todos os elementos de programa em um aplicativo.  
@@ -81,9 +81,9 @@ Elemento \<Application> (rd.xml)
   
  O elemento `<Application>` pode ser usado em uma de duas formas:  
   
--   Como um contêiner para definir os elementos do programa cujos metadados são necessários no tempo de execução. Nesse caso, o elemento `<Application>` não precisa ter todos os atributos. No tempo de compilação, as ferramentas do compilador pesquisam todas as bibliotecas, incluindo bibliotecas principais do .NET Framework, buscando elementos do programa identificados por elementos filhos do elemento `<Application>`. Por outro lado, as ferramentas do compilador pesquisam somente a biblioteca designada pelo elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) em busca de elementos do programa identificados pelos elementos filhos de [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+- Como um contêiner para definir os elementos do programa cujos metadados são necessários no tempo de execução. Nesse caso, o elemento `<Application>` não precisa ter todos os atributos. No tempo de compilação, as ferramentas do compilador pesquisam todas as bibliotecas, incluindo bibliotecas principais do .NET Framework, buscando elementos do programa identificados por elementos filhos do elemento `<Application>`. Por outro lado, as ferramentas do compilador pesquisam somente a biblioteca designada pelo elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) em busca de elementos do programa identificados pelos elementos filhos de [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
--   Como um elemento que define a política de todo o aplicativo para reflexão, serialização e interoperabilidade. Os atributos do elemento `<Application>` definem a política de todo o aplicativo, que pode ser substituída pelos elementos filhos definidos pelo elemento `<Application>` ou [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+- Como um elemento que define a política de todo o aplicativo para reflexão, serialização e interoperabilidade. Os atributos do elemento `<Application>` definem a política de todo o aplicativo, que pode ser substituída pelos elementos filhos definidos pelo elemento `<Application>` ou [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
 ## <a name="see-also"></a>Consulte também
 

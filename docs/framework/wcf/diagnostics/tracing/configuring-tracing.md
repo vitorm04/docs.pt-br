@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c8d4e45035a49a35c32f334895eeae27a1f02a1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912568"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656201"
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar origens de rastreamento para emitir rastreamentos e definir níveis de rastreamento, rastreamento de atividades do conjunto e propagação para dar suporte à correlação de rastreamento de ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  
@@ -22,9 +22,9 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar orige
 ## <a name="enabling-tracing"></a>A habilitação do rastreamento  
  Windows Communication Foundation (WCF) gera os seguintes dados para o rastreamento de diagnóstico:  
   
--   Rastreamentos para as etapas do processo em todos os componentes de aplicativos, como chamadas de operação, o código exceções, avisos e outros eventos de processamento significativo.  
+- Rastreamentos para as etapas do processo em todos os componentes de aplicativos, como chamadas de operação, o código exceções, avisos e outros eventos de processamento significativo.  
   
--   Eventos de erro do Windows quando o recurso de rastreamento funciona incorretamente. Ver [log de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+- Eventos de erro do Windows quando o recurso de rastreamento funciona incorretamente. Ver [log de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
  Rastreamento do WCF baseia-se na parte superior da <xref:System.Diagnostics>. Para usar o rastreamento, você deve definir fontes de rastreamento no arquivo de configuração ou no código. O WCF define uma origem de rastreamento para cada assembly do WCF. O `System.ServiceModel` origem de rastreamento é a origem de rastreamento do WCF mais geral e registra as etapas de processamento em toda a pilha de comunicação do WCF de transporte entrar/sair para inserir/deixar o código do usuário. O `System.ServiceModel.MessageLogging` origem de rastreamento registra todas as mensagens que fluem através do sistema.  
   
@@ -58,19 +58,19 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar orige
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurando fontes de rastreamento para emitir rastreamentos  
  O WCF define uma origem de rastreamento para cada assembly. Rastreamentos gerados dentro de um assembly são acessados pelos ouvintes definidos para essa fonte. As seguintes fontes de rastreamento são definidas:  
   
--   System.ServiceModel: Registra todos os estágios do processamento de WCF, sempre que a configuração é lida, uma mensagem é processada no transporte, segurança de processamento, uma mensagem é enviada no código do usuário e assim por diante.  
+- System.ServiceModel: Registra todos os estágios do processamento de WCF, sempre que a configuração é lida, uma mensagem é processada no transporte, segurança de processamento, uma mensagem é enviada no código do usuário e assim por diante.  
   
--   System.ServiceModel.MessageLogging: Registra todas as mensagens que fluem através do sistema.  
+- System.ServiceModel.MessageLogging: Registra todas as mensagens que fluem através do sistema.  
   
--   System.IdentityModel.  
+- System.IdentityModel.  
   
--   System.ServiceModel.Activation.  
+- System.ServiceModel.Activation.  
   
--   System.IO.Log: Registro em log para a interface do .NET Framework para o Common Log arquivo CLFS (sistema).  
+- System.IO.Log: Registro em log para a interface do .NET Framework para o Common Log arquivo CLFS (sistema).  
   
--   System.Runtime.Serialization: Logs quando objetos são lidos ou gravados.  
+- System.Runtime.Serialization: Logs quando objetos são lidos ou gravados.  
   
--   CardSpace.  
+- CardSpace.  
   
  Você pode configurar cada origem de rastreamento para usar o mesmo ouvinte (compartilhado), conforme indicado no exemplo de configuração a seguir.  
   

@@ -2,12 +2,12 @@
 title: Filtragem
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46716d1a96da6ddc729992b546be56c2aec0bf5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856694"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593497"
 ---
 # <a name="filtering"></a>Filtragem
 O Windows Communication Foundation (WCF) filtragem de sistema pode usar filtros declarativos para corresponder as mensagens e tomar decisões operacionais. Você pode usar filtros para determinar o que fazer com uma mensagem, examinando a parte da mensagem. Um processo de enfileiramento de mensagens, por exemplo, pode usar uma consulta XPath 1.0 para verificar o elemento de prioridade de um cabeçalho conhecido para determinar se deseja mover uma mensagem para o início da fila.  
@@ -36,9 +36,9 @@ O Windows Communication Foundation (WCF) filtragem de sistema pode usar filtros 
 ### <a name="endpoint-address-filters"></a>Filtros de endereço do ponto de extremidade  
  O <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtra as mensagens e buffers de mensagens com base em um endereço de ponto de extremidade, conforme representado em sua coleção de cabeçalho. Para uma mensagem passar um filtro, as seguintes condições devem ser atendidas:  
   
--   Endereço do filtro identificador de recurso uniforme (URI) deve ser o mesmo que aquele em que a mensagem de cabeçalho.  
+- Endereço do filtro identificador de recurso uniforme (URI) deve ser o mesmo que aquele em que a mensagem de cabeçalho.  
   
--   Cada parâmetro de ponto de extremidade no endereço do filtro (`address.Headers` coleção) deve localizar um cabeçalho na mensagem para mapear no. Cabeçalhos adicionais na mensagem ou buffer de mensagem são aceitáveis para a correspondência permaneça `true`.  
+- Cada parâmetro de ponto de extremidade no endereço do filtro (`address.Headers` coleção) deve localizar um cabeçalho na mensagem para mapear no. Cabeçalhos adicionais na mensagem ou buffer de mensagem são aceitáveis para a correspondência permaneça `true`.  
   
 ### <a name="prefix-endpoint-address-filters"></a>Filtros de endereço do ponto de extremidade de prefixo  
   
@@ -79,9 +79,9 @@ O Windows Communication Foundation (WCF) filtragem de sistema pode usar filtros 
 ### <a name="de-multiplexing"></a>Demultiplexação  
  Quando vários pontos de extremidade realizar fan-out do mesmo `ServiceListener` transmissão, a única maneira de cancelar multiplexar as mensagens e saber se eles pertencem a um determinado endereço de ponto de extremidade, é usar <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>s, que seleciona mensagens para pontos de extremidade registrados pelo executando uma pesquisa sobre as informações armazenadas nos cabeçalhos. Esses filtros, somente as mensagens que passam tem todos os cabeçalhos necessários que correspondem a ambas:  
   
--   O URI no `EndpointAddress`.  
+- O URI no `EndpointAddress`.  
   
--   O restante dos parâmetros no ponto de extremidade a `EndpointAddress` conforme especificado no <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
+- O restante dos parâmetros no ponto de extremidade a `EndpointAddress` conforme especificado no <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Consulte também
 

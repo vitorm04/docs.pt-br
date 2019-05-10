@@ -2,25 +2,25 @@
 title: chave de entidade
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf8ab7ffacd7565e408e4851ed0f1ef4636b5d80
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879172"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599653"
 ---
 # <a name="entity-key"></a>chave de entidade
 Uma *chave de entidade* é um [propriedade](../../../../docs/framework/data/adonet/property.md) ou um conjunto de propriedades de um [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) que são usados para determinar a identidade. As propriedades que compõem uma chave de entidade são escolhidas em tempo de design. Os valores das propriedades de chave de entidade devem identificar exclusivamente uma instância do tipo de entidade dentro de um [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) em tempo de execução. As propriedades que compõem uma chave de entidade devem ser escolhidas para garantir a exclusividade de instâncias em um conjunto de entidades.  
   
  A seguir estão os requisitos para um conjunto de propriedades ser uma chave de entidade:  
   
--   Nenhuma chave de duas entidades em um conjunto de entidades pode ser idêntica. Ou seja, para as duas entidades em um conjunto de entidades, os valores para todas as propriedades que constituem uma chave não podem ser os mesmos. No entanto, alguns (mas não todos os valores) que compõem uma chave de entidade podem ser os mesmos.  
+- Nenhuma chave de duas entidades em um conjunto de entidades pode ser idêntica. Ou seja, para as duas entidades em um conjunto de entidades, os valores para todas as propriedades que constituem uma chave não podem ser os mesmos. No entanto, alguns (mas não todos os valores) que compõem uma chave de entidade podem ser os mesmos.  
   
--   Uma chave de entidade deve consistir em um conjunto de não-nulo, imutável, [propriedades do tipo primitivo](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
+- Uma chave de entidade deve consistir em um conjunto de não-nulo, imutável, [propriedades do tipo primitivo](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
   
--   As propriedades que compõem uma chave de entidade para um tipo de dado entidade não pode ser alterado. Você não pode permitir mais de uma chave possível de entidade para um tipo de dado; entidade as chaves substitutas não são suportadas.  
+- As propriedades que compõem uma chave de entidade para um tipo de dado entidade não pode ser alterado. Você não pode permitir mais de uma chave possível de entidade para um tipo de dado; entidade as chaves substitutas não são suportadas.  
   
--   Quando uma entidade é empacotada em uma hierarquia de herança, a entidade raiz deve conter todas as propriedades que compõem a chave de entidade, e a chave de entidade deve ser definida no tipo de entidade raiz. Para obter mais informações, consulte [modelo de dados de entidade: Herança](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
+- Quando uma entidade é empacotada em uma hierarquia de herança, a entidade raiz deve conter todas as propriedades que compõem a chave de entidade, e a chave de entidade deve ser definida no tipo de entidade raiz. Para obter mais informações, consulte [modelo de dados de entidade: Herança](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
   
 ## <a name="example"></a>Exemplo  
  O diagrama a seguir mostra um modelo conceitual com três tipos de entidade: `Book`, `Publisher`, e `Author`. As propriedades de cada tipo de entidade que compõem sua chave de entidade são denotadas com chave (“”). Observe que o tipo de entidade de `Author` tem uma chave de entidade que consiste em duas propriedades, `Name` e `Address`.  

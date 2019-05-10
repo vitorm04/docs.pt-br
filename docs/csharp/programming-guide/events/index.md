@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: df16b74d7d3ad34850ae9a0e3b7be282e4dfc003
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8089219bc569e6c03a221871356bc70b0f1e57bb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61681332"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595271"
 ---
 # <a name="events-c-programming-guide"></a>Eventos (Guia de Programação em C#)
 Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/class.md) ou objeto notifique outras classes ou objetos quando algo interessante ocorre. A classe que envia (ou *aciona*) o evento é chamada de *editor* e as classes que recebem (ou *manipulam*) os eventos são chamadas *assinantes*.  
@@ -22,32 +22,32 @@ Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/cl
 ## <a name="events-overview"></a>Visão geral sobre eventos  
  Os eventos têm as seguintes propriedades:  
   
--   O editor determina quando um evento é acionado. Os assinantes determinam a ação que é executada em resposta ao evento.  
+- O editor determina quando um evento é acionado. Os assinantes determinam a ação que é executada em resposta ao evento.  
   
--   Um evento pode ter vários assinantes. Um assinante pode manipular vários eventos de vários publicadores.  
+- Um evento pode ter vários assinantes. Um assinante pode manipular vários eventos de vários publicadores.  
   
--   Eventos que não têm assinantes nunca são acionados.  
+- Eventos que não têm assinantes nunca são acionados.  
   
--   Normalmente, os eventos são usados para sinalizar ações do usuário, como cliques de botão ou seleções de menu em interfaces gráficas do usuário.  
+- Normalmente, os eventos são usados para sinalizar ações do usuário, como cliques de botão ou seleções de menu em interfaces gráficas do usuário.  
   
--   Quando um evento tem vários assinantes, os manipuladores de eventos são invocados sincronicamente quando um evento é acionado. Para invocar eventos de forma assíncrona, consulte [Chamando métodos síncronos assincronamente](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+- Quando um evento tem vários assinantes, os manipuladores de eventos são invocados sincronicamente quando um evento é acionado. Para invocar eventos de forma assíncrona, consulte [Chamando métodos síncronos assincronamente](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
   
--   Na biblioteca de classes do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], os eventos são baseados no delegado <xref:System.EventHandler> e na classe base <xref:System.EventArgs>.  
+- Na biblioteca de classes do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], os eventos são baseados no delegado <xref:System.EventHandler> e na classe base <xref:System.EventArgs>.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  Para obter mais informações, consulte:  
   
--   [Como: realizar e cancelar a assinatura de eventos](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
+- [Como: realizar e cancelar a assinatura de eventos](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
   
--   [Como: publicar eventos em conformidade com as diretrizes do .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [Como: publicar eventos em conformidade com as diretrizes do .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
   
--   [Como: acionar eventos de classe base em classes derivadas](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
+- [Como: acionar eventos de classe base em classes derivadas](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
   
--   [Como:  implementar eventos de interface](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
+- [Como:  implementar eventos de interface](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
   
--   [Como: usar um dicionário para armazenar instâncias de eventos](../../../csharp/programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)  
+- [Como: usar um dicionário para armazenar instâncias de eventos](../../../csharp/programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)  
   
--   [Como: implementar acessadores de eventos personalizados](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
+- [Como: implementar acessadores de eventos personalizados](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 

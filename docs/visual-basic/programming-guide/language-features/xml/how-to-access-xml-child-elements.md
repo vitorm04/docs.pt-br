@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
-ms.openlocfilehash: cd1b0db5305c7879d89cfdfff6cd458d6dea14f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3c00166e471b7c6d69bd7f6fc3bda87b651d7d46
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973024"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598662"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Como: Acessar elementos de filho XML (Visual Basic)
 Este exemplo mostra como usar um filho de propriedade de eixo para acessar todos os elementos filho XML que têm um nome especificado em um elemento XML. Em particular, ele usa o <xref:System.Xml.Linq.XElement.Value%2A> propriedade para obter o valor do primeiro elemento na coleção que o `name` retorna de propriedade de eixo filho. O `name` propriedade de eixo filho obtém todos os elementos filho chamados `phone` no `contact` objeto. Este exemplo também usa o `phone` propriedade de eixo filho para acessar todos os elementos filho chamados `phone` que estão contidos no `contact` objeto.  
