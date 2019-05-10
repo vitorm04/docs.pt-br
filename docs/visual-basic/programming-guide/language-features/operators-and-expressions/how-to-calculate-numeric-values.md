@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e367a10a3e703241c7417d3ea17068018becb5a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864663"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649726"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Como: Calcular valores numéricos (Visual Basic)
 Você pode calcular valores numéricos com o uso de expressões numéricas. Um *expressão numérica* é uma expressão que contém os literais, constantes e variáveis que representam valores numéricos e operadores que atuam nesses valores.  
@@ -25,7 +25,7 @@ Você pode calcular valores numéricos com o uso de expressões numéricas. Um *
   
 #### <a name="to-calculate-a-numeric-value"></a>Para calcular um valor numérico  
   
--   Combine um ou mais literais numéricos, constantes e variáveis em uma expressão numérica. O exemplo a seguir mostra algumas expressões de numéricos válidos.  
+- Combine um ou mais literais numéricos, constantes e variáveis em uma expressão numérica. O exemplo a seguir mostra algumas expressões de numéricos válidos.  
   
      `93.217`  
   
@@ -41,7 +41,7 @@ Você pode calcular valores numéricos com o uso de expressões numéricas. Um *
   
 #### <a name="to-store-a-numeric-value"></a>Para armazenar um valor numérico  
   
--   Você pode usar uma instrução de atribuição para atribuir o valor representado por uma expressão numérica a uma variável, como demonstra o exemplo a seguir.  
+- Você pode usar uma instrução de atribuição para atribuir o valor representado por uma expressão numérica a uma variável, como demonstra o exemplo a seguir.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
@@ -54,7 +54,7 @@ Você pode calcular valores numéricos com o uso de expressões numéricas. Um *
   
 #### <a name="to-override-normal-operator-precedence"></a>Para substituir a precedência do operador normal  
   
--   Use parênteses para delimitar as operações que devem ser executadas pela primeira vez. O exemplo a seguir mostra dois resultados diferentes com o mesmo operandos e operadores.  
+- Use parênteses para delimitar as operações que devem ser executadas pela primeira vez. O exemplo a seguir mostra dois resultados diferentes com o mesmo operandos e operadores.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   

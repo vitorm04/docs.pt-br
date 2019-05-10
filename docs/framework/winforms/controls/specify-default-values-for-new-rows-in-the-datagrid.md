@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: 8a90cbef7032fd3753a6c9ec0b856a4e2ea1db27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 879c035366c4686ceff3250a63c6ae8d8d3cfec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009728"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651957"
 ---
 # <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Como: Especificar valores padrão para novas linhas no controle DataGridView do Windows Forms
 Você pode fazer mais conveniente a entrada de dados quando o aplicativo em default preenche os valores para linhas recém-adicionadas. Com o <xref:System.Windows.Forms.DataGridView> classe, você pode preencher em default valores com o <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> eventos. Esse evento é gerado quando o usuário insere a linha para novos registros. Quando seu código manipula esse evento, você pode preencher desejadas células com valores de sua escolha.  

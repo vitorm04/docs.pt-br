@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fd24369380e5f8ccf8de939c36ba72a12dc872e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864385"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649610"
 ---
 # <a name="function-procedures-visual-basic"></a>Procedimentos de função (Visual Basic)
 Um `Function` procedimento é uma série de instruções do Visual Basic entre o `Function` e `End Function` instruções. O `Function` procedimento executa uma tarefa e, em seguida, retorna o controle para o código de chamada. Quando ele retorna o controle, ele também retorna um valor para o código de chamada.  
@@ -54,7 +54,7 @@ End Function
 ## <a name="returning-values"></a>Retornando valores  
  O valor de uma `Function` procedimento envia de volta para o código de chamada é chamada seu valor de retorno. O procedimento retorna esse valor em uma das duas maneiras:  
   
--   Ele usa o `Return` instrução para especificar o valor de retorno e retorna o controle imediatamente para o programa de chamada. O exemplo a seguir ilustra essa situação.  
+- Ele usa o `Return` instrução para especificar o valor de retorno e retorna o controle imediatamente para o programa de chamada. O exemplo a seguir ilustra essa situação.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
--   Ele atribui um valor para o seu próprio nome de função em uma ou mais instruções do procedimento. O controle retorna para o programa de chamada até que um `Exit Function` ou `End Function` instrução é executada. O exemplo a seguir ilustra essa situação.  
+- Ele atribui um valor para o seu próprio nome de função em uma ou mais instruções do procedimento. O controle retorna para o programa de chamada até que um `Exit Function` ou `End Function` instrução é executada. O exemplo a seguir ilustra essa situação.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  

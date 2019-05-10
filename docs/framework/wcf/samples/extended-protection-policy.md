@@ -2,12 +2,12 @@
 title: Política de proteção estendida
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2a79798569e308c37bd66bf0bdf8dee0cfa6951
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990165"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650053"
 ---
 # <a name="extended-protection-policy"></a>Política de proteção estendida
 Proteção estendida é uma iniciativa de segurança para proteger contra ataques man-in-the-middle (MITM). Um ataque MITM é uma ameaça de segurança no qual um MITM usa credenciais do cliente e os encaminha para um servidor.  
@@ -34,9 +34,9 @@ Proteção estendida é uma iniciativa de segurança para proteger contra ataque
   
 4. Este exemplo requer que o cliente estabelecer um canal seguro com o servidor, portanto, ele exige a presença de um certificado de servidor que pode ser instalado do Gerenciador de serviços de informações da Internet (IIS).  
   
-    1.  Abra o Gerenciador do IIS. Abra **certificados de servidor**, que aparece na **modo de exibição de recurso** guia quando o nó raiz (nome da máquina) é selecionado.  
+    1. Abra o Gerenciador do IIS. Abra **certificados de servidor**, que aparece na **modo de exibição de recurso** guia quando o nó raiz (nome da máquina) é selecionado.  
   
-    2.  Para fins de teste neste exemplo, crie um certificado autoassinado. Se não desejar o Internet Explorer para avisá-lo sobre o certificado não ser seguro, instale o certificado no repositório de autoridade de certificado de raiz confiável.  
+    2. Para fins de teste neste exemplo, crie um certificado autoassinado. Se não desejar o Internet Explorer para avisá-lo sobre o certificado não ser seguro, instale o certificado no repositório de autoridade de certificado de raiz confiável.  
   
 5. Abra o **ações** painel para o site da Web padrão. Clique em **Editar Site**, **associações**. Adicionar HTTPS como um tipo se não estiver presente, com o número da porta 443. Atribua o certificado SSL criado na etapa anterior.  
   

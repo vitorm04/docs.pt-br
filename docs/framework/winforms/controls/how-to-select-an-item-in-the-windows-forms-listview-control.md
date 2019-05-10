@@ -10,12 +10,12 @@ helpviewer_keywords:
 - selection [Windows Forms], in list views
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
-ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41a30ba6c242d0587e98b458e41ca213e8885bca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013355"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638198"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Como: Selecionar um item no controle ListView do Windows Forms
 Este exemplo demonstra como selecionar programaticamente um item em um Windows Forms <xref:System.Windows.Forms.ListView> controle. Selecionar um item por meio de programação não altera automaticamente o foco para o <xref:System.Windows.Forms.ListView> controle. Por esse motivo, você normalmente também desejará definir o item focados ao selecionar um item.  
@@ -27,9 +27,9 @@ Este exemplo demonstra como selecionar programaticamente um item em um Windows F
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Um <xref:System.Windows.Forms.ListView> controle chamado `listView1` que contém pelo menos um item.  
+- Um <xref:System.Windows.Forms.ListView> controle chamado `listView1` que contém pelo menos um item.  
   
--   Referências aos namespaces <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- Referências aos namespaces <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3b24ef892e1fe3dd28fee4ce8fa44f7373c7c01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921934"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645486"
 ---
 # <a name="load-balancing"></a>Balanceamento de carga
 Uma maneira de aumentar a capacidade de aplicativos do Windows Communication Foundation (WCF) é dimensioná-los, implantá-los em um farm de servidores com balanceamento de carga. Os aplicativos do WCF podem ser usando técnicas, incluindo os balanceadores de carga de software, como balanceamento de carga de rede do Windows de balanceamento de carga padrão, bem como soluções de balanceamento de carga com base em hardware de balanceamento de carga.  
@@ -82,9 +82,9 @@ Uma maneira de aumentar a capacidade de aplicativos do Windows Communication Fou
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Balanceamento de carga com a associação de WSHttp e a associação de WSDualHttp  
  Tanto a <xref:System.ServiceModel.WSHttpBinding> e o <xref:System.ServiceModel.WSDualHttpBinding> pode ser com balanceamento de carga usando técnicas de balanceamento de carga HTTP fornecido várias modificações são feitas para a configuração de associação padrão.  
   
--   Desativar o estabelecimento de contexto de segurança: isso pode ser feito pela configuração de <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propriedade no <xref:System.ServiceModel.WSHttpBinding> para `false`. Como alternativa, se as sessões de segurança forem necessárias, é possível usar sessões de segurança com monitoração de estado, conforme descrito na [proteger sessões](../../../docs/framework/wcf/feature-details/secure-sessions.md) tópico. Sessões de segurança com monitoração de estado habilitam o serviço permaneça sem monitoração de estado, como todo o estado da sessão de segurança são transmitidos com cada solicitação como parte do token de segurança de proteção. Observe que para habilitar uma sessão de segurança com monitoração de estado, é necessário usar um <xref:System.ServiceModel.Channels.CustomBinding> ou definido pelo usuário <xref:System.ServiceModel.Channels.Binding> como a configuração necessária configurações não são expostas na <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.WSDualHttpBinding> que são fornecidas pelo sistema.  
+- Desativar o estabelecimento de contexto de segurança: isso pode ser feito pela configuração de <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propriedade no <xref:System.ServiceModel.WSHttpBinding> para `false`. Como alternativa, se as sessões de segurança forem necessárias, é possível usar sessões de segurança com monitoração de estado, conforme descrito na [proteger sessões](../../../docs/framework/wcf/feature-details/secure-sessions.md) tópico. Sessões de segurança com monitoração de estado habilitam o serviço permaneça sem monitoração de estado, como todo o estado da sessão de segurança são transmitidos com cada solicitação como parte do token de segurança de proteção. Observe que para habilitar uma sessão de segurança com monitoração de estado, é necessário usar um <xref:System.ServiceModel.Channels.CustomBinding> ou definido pelo usuário <xref:System.ServiceModel.Channels.Binding> como a configuração necessária configurações não são expostas na <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.WSDualHttpBinding> que são fornecidas pelo sistema.  
   
--   Não use sessões confiáveis. Esse recurso está desativado por padrão.  
+- Não use sessões confiáveis. Esse recurso está desativado por padrão.  
   
 ## <a name="load-balancing-the-nettcp-binding"></a>A associação de NET. TCP de balanceamento de carga  
  O <xref:System.ServiceModel.NetTcpBinding> pode ser com balanceamento de carga usando técnicas de balanceamento de carga de camada IP. No entanto, o <xref:System.ServiceModel.NetTcpBinding> pools de conexões de TCP por padrão para reduzir a latência de conexão. Essa é uma otimização que interfere com o mecanismo básico de balanceamento de carga. O valor de configuração primário para otimizar o <xref:System.ServiceModel.NetTcpBinding> é o tempo limite de concessão, que é parte das configurações de Pool de Conexão. Pooling de Conexão faz com que as conexões de cliente para se tornarem associados a servidores específicos dentro do farm. Como o tempo de vida dessas conexões aumente (um fator controlado pela configuração de tempo limite de concessão), a distribuição de carga entre vários servidores no farm fica desequilibrada. Como resultado, a média chamar aumentos de tempo. Portanto, ao usar o <xref:System.ServiceModel.NetTcpBinding> em cenários de balanceamento de carga, considere reduzir o tempo limite de concessão padrão usado pela associação. Um tempo limite de concessão de 30 segundos é um ponto de partida razoável para cenários de balanceamento de carga, embora o valor ideal depende do aplicativo. Para obter mais informações sobre o tempo de limite de concessão de canal e outras cotas de transporte, consulte [cotas de transporte](../../../docs/framework/wcf/feature-details/transport-quotas.md).  

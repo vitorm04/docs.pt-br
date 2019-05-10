@@ -2,12 +2,12 @@
 title: Provedor de tokens emitidos duráveis
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7f204fcb2c1b72a73e091ecf37c2921f7575516
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990204"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650082"
 ---
 # <a name="durable-issued-token-provider"></a>Provedor de tokens emitidos duráveis
 Este exemplo demonstra como implementar uma provedor de token emitida personalizadas do cliente.  
@@ -15,21 +15,21 @@ Este exemplo demonstra como implementar uma provedor de token emitida personaliz
 ## <a name="discussion"></a>Discussão  
  Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriado as credenciais para que a infraestrutura de segurança pode proteger a mensagem. O WCF é fornecido com um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provedor de token. Provedores de token personalizados são úteis nos seguintes casos:  
   
--   Se você tiver um repositório de credenciais que o provedor de token interno não pode operar com.  
+- Se você tiver um repositório de credenciais que o provedor de token interno não pode operar com.  
   
--   Se você quiser fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando o cliente WCF usa as credenciais.  
+- Se você quiser fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando o cliente WCF usa as credenciais.  
   
--   Se você estiver criando um token personalizado.  
+- Se você estiver criando um token personalizado.  
   
  Este exemplo mostra como criar um provedor de token personalizado que armazena em cache os tokens emitidos por um Security Token Service (STS).  
   
  Para resumir, este exemplo demonstra o seguinte:  
   
--   Como um cliente pode ser configurado com um provedor de token personalizado.  
+- Como um cliente pode ser configurado com um provedor de token personalizado.  
   
--   Como os tokens emitidos podem ser armazenados em cache e fornecidos para o cliente do WCF.  
+- Como os tokens emitidos podem ser armazenados em cache e fornecidos para o cliente do WCF.  
   
--   Como o servidor é autenticado pelo cliente usando o certificado do servidor x. 509.  
+- Como o servidor é autenticado pelo cliente usando o certificado do servidor x. 509.  
   
  Esse exemplo consiste em um programa de console de cliente (Client.exe), um programa de console do serviço de token de segurança (Securitytokenservice.exe) e um programa de console de serviço (Service.exe). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido o `ICalculator` interface, que expõe operações matemáticas (Adicionar, subtrair, multiplicar e dividir). O cliente obtém uma token de segurança do Security Token Service (STS) e faz solicitações síncronas para o serviço para uma operação matemática determinado e as respostas de serviço com o resultado. Atividade do cliente está visível na janela do console.  
   

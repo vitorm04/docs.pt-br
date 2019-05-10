@@ -2,41 +2,41 @@
 title: Modelo de objeto de programação HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096004"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648403"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modelo de objeto de programação HTTP Web do WCF
 O modelo de programação WCF WEB HTTP permite que os desenvolvedores a expor serviços Web do Windows Communication Foundation (WCF) por meio de solicitações HTTP básicos sem a necessidade de SOAP. O modelo de programação WCF WEB HTTP é criado sobre o modelo de extensibilidade do WCF existente. Ele define as classes a seguir:  
   
  **Modelo de programação:**  
   
--   <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
+- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
   
--   <xref:System.ServiceModel.Web.WebGetAttribute>  
+- <xref:System.ServiceModel.Web.WebGetAttribute>  
   
--   <xref:System.ServiceModel.Web.WebInvokeAttribute>  
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
   
--   <xref:System.ServiceModel.Web.WebServiceHost>  
+- <xref:System.ServiceModel.Web.WebServiceHost>  
   
  **Canais e infra-estrutura de Dispatcher:**  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
--   <xref:System.ServiceModel.Description.WebHttpBehavior>  
+- <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
  **Classes de utilitário e pontos de extensibilidade:**  
   
--   <xref:System.UriTemplate>  
+- <xref:System.UriTemplate>  
   
--   <xref:System.UriTemplateTable>  
+- <xref:System.UriTemplateTable>  
   
--   <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+- <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
--   <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
   
 ## <a name="aspnetcacheprofileattribute"></a>AspNetCacheProfileAttribute  
  O <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, quando aplicado a uma operação de serviço, indica o ASP.NET gerar o perfil de cache no arquivo de configuração que deve ser usado por em cache as respostas da operação no Cache de saída do ASP.NET. Esta propriedade usa apenas um parâmetro, o nome do perfil de cache que especifica as configurações de cache no arquivo de configuração.  

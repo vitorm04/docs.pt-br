@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4577609c78271ac91e011b20ef6a8b4066072428
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864306"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649668"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propriedades autoimplementadas (Visual Basic)
 *Propriedades autoimplementadas* permitem que você especifique uma propriedade de uma classe rapidamente sem a necessidade de escrever código para as propriedades `Get` e `Set` . uando você escreve código criando uma propriedade implementada automaticamente, o compilador do Visual Basic cria automaticamente um campo *private* para armazenar a variável de propriedade, além de criar os procedimentos `Get` e `Set` associados.  
@@ -52,13 +52,13 @@ End Class
   
  O campo de suporte também tem as seguintes características:  
   
--   O modificador de acesso para o campo de suporte é sempre `Private`, mesmo quando a própria propriedade tem um nível de acesso diferentes, como `Public`.  
+- O modificador de acesso para o campo de suporte é sempre `Private`, mesmo quando a própria propriedade tem um nível de acesso diferentes, como `Public`.  
   
--   Se a propriedade é marcada como `Shared`, o campo de suporte também é compartilhado.  
+- Se a propriedade é marcada como `Shared`, o campo de suporte também é compartilhado.  
   
--   Atributos especificados para a propriedade não se aplicam ao campo de suporte.  
+- Atributos especificados para a propriedade não se aplicam ao campo de suporte.  
   
--   O campo de suporte pode ser acessado do código dentro da classe e de ferramentas de depuração, como a janela de inspeção. No entanto, o campo de suporte não aparece na lista de conclusão do IntelliSense word.  
+- O campo de suporte pode ser acessado do código dentro da classe e de ferramentas de depuração, como a janela de inspeção. No entanto, o campo de suporte não aparece na lista de conclusão do IntelliSense word.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>Inicializando uma propriedade implementada automaticamente  
  Qualquer expressão que pode ser usada para inicializar um campo é válida para a inicialização de uma propriedade implementada automaticamente. Quando você inicializa uma propriedade implementada automaticamente, a expressão é avaliada e passada para o `Set` procedimento para a propriedade. Os exemplos de código a seguir mostram algumas propriedades autoimplementadas que incluem valores iniciais.  
@@ -78,17 +78,17 @@ End Class
   
  Você precisa usar a sintaxe de definição de propriedade expandido se você quiser fazer qualquer um dos seguintes:  
   
--   Adicione código para o `Get` ou `Set` procedimento de uma propriedade, como o código para validar valores de entrada no `Set` procedimento. Por exemplo, você talvez queira verificar se uma cadeia de caracteres que representa um número de telefone contém o número necessário de numerais antes de definir o valor da propriedade.  
+- Adicione código para o `Get` ou `Set` procedimento de uma propriedade, como o código para validar valores de entrada no `Set` procedimento. Por exemplo, você talvez queira verificar se uma cadeia de caracteres que representa um número de telefone contém o número necessário de numerais antes de definir o valor da propriedade.  
   
--   Especificar a acessibilidade diferente para o `Get` e `Set` procedimento. Por exemplo, você talvez queira fazer a `Set` procedimento `Private` e o `Get` procedimento `Public`.  
+- Especificar a acessibilidade diferente para o `Get` e `Set` procedimento. Por exemplo, você talvez queira fazer a `Set` procedimento `Private` e o `Get` procedimento `Public`.  
   
--   Criar propriedades que são `WriteOnly`.  
+- Criar propriedades que são `WriteOnly`.  
   
--   Usar propriedades parametrizadas (incluindo `Default` propriedades). Você deve declarar uma propriedade expandida para especificar um parâmetro para a propriedade, ou para especificar parâmetros adicionais para o `Set` procedimento.  
+- Usar propriedades parametrizadas (incluindo `Default` propriedades). Você deve declarar uma propriedade expandida para especificar um parâmetro para a propriedade, ou para especificar parâmetros adicionais para o `Set` procedimento.  
   
--   Colocar um atributo no campo de suporte, ou alterar o nível de acesso do campo de backup.  
+- Colocar um atributo no campo de suporte, ou alterar o nível de acesso do campo de backup.  
   
--   Fornece comentários XML para o campo de suporte.  
+- Fornece comentários XML para o campo de suporte.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Expandindo uma propriedade implementada automaticamente  
  Se você precisar converter uma propriedade implementada automaticamente a uma propriedade expandida que contém um `Get` ou `Set` procedimento, o Editor de código do Visual Basic pode gerar automaticamente o `Get` e `Set` eprocedimentos`End Property`instrução para a propriedade. O código é gerado se você colocar o cursor em uma linha em branco após o `Property` instrução, digite um `G` (para `Get`) ou uma `S` (para `Set`) e pressione ENTER. Editor de código do Visual Basic gera automaticamente a `Get` ou `Set` procedimento para propriedades somente leitura e somente gravação ao pressionar ENTER no final de um `Property` instrução.  

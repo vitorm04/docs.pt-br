@@ -2,12 +2,12 @@
 title: Personalizando permissões com representação no SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d44e410727924260640f0f50aea5ea41f264f3af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877897"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650338"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizando permissões com representação no SQL Server
 Muitos aplicativos usam procedimentos armazenados para acessar os dados, dependendo do encadeamento de propriedade para restringir o acesso a tabelas base. Você pode conceder permissões EXECUTE em procedimentos armazenados, revogando ou negando permissões nas tabelas base. O SQL Server não verifica as permissões do chamador se o procedimento armazenado e as tabelas têm o mesmo proprietário. No entanto, o encadeamento de propriedades não funcionará se os objetos tiverem proprietários diferentes ou no caso de SQL dinâmico.  
@@ -59,11 +59,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="specifying-the-execution-context"></a>Especificando o contexto de execução  
  Além de especificar um usuário, você também poderá usar EXECUTE AS com qualquer uma das palavras-chave a seguir.  
   
--   CALLER. Executar como CALLER é o padrão; se nenhuma outra opção for especificada, o procedimento será executado no contexto de segurança do chamador.  
+- CALLER. Executar como CALLER é o padrão; se nenhuma outra opção for especificada, o procedimento será executado no contexto de segurança do chamador.  
   
--   OWNER. Executar como OWNER executa o procedimento no contexto do proprietário do procedimento. Se o procedimento for criado em um esquema de propriedade do `dbo` ou pelo proprietário do banco de dados, o procedimento será executado com permissões ilimitadas.  
+- OWNER. Executar como OWNER executa o procedimento no contexto do proprietário do procedimento. Se o procedimento for criado em um esquema de propriedade do `dbo` ou pelo proprietário do banco de dados, o procedimento será executado com permissões ilimitadas.  
   
--   SELF. Executar como SELF executa no contexto de segurança do criador do procedimento armazenado. Isso é equivalente a executar como usuário especificado, onde o usuário especificado é a pessoa que cria ou altera o procedimento.  
+- SELF. Executar como SELF executa no contexto de segurança do criador do procedimento armazenado. Isso é equivalente a executar como usuário especificado, onde o usuário especificado é a pessoa que cria ou altera o procedimento.  
   
 ## <a name="see-also"></a>Consulte também
 

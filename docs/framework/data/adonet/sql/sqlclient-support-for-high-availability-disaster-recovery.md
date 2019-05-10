@@ -2,12 +2,12 @@
 title: Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2cc63cb0b9118da6eb3c381e853165f800fe61f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645913"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para recuperação de desastres de alta disponibilidade – grupos de disponibilidade AlwaysOn.  O recurso de grupos de disponibilidade AlwaysOn foi adicionado ao SQL Server 2012. Para obter mais informações sobre grupos de disponibilidade AlwaysOn, consulte os Manuais Online do SQL Server.  
@@ -21,9 +21,9 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
  As seguintes propriedades de conexão foram adicionadas ao SqlClient no [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  Você pode modificar essas palavras-chave de cadeia de caracteres de conexão por meio de programação com:  
   
@@ -45,17 +45,17 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
  Use as diretrizes a seguir para se conectar a um servidor em um grupo de disponibilidade ou instância de Cluster de Failover do SQL Server 2012:  
   
--   Use a propriedade de conexão `MultiSubnetFailover` ao conectar-se a uma sub-rede única ou a várias. Isso melhora o desempenho para ambos os casos.  
+- Use a propriedade de conexão `MultiSubnetFailover` ao conectar-se a uma sub-rede única ou a várias. Isso melhora o desempenho para ambos os casos.  
   
--   Para conectar-se a um grupo de disponibilidade, especifique o ouvinte de grupo de disponibilidade do grupo de disponibilidade como servidor na cadeia de caracteres de conexão.  
+- Para conectar-se a um grupo de disponibilidade, especifique o ouvinte de grupo de disponibilidade do grupo de disponibilidade como servidor na cadeia de caracteres de conexão.  
   
--   Conectando a um servidor SQL instância configurada com mais de 64 endereços IP causará uma falha de conexão.  
+- Conectando a um servidor SQL instância configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
--   Comportamento de um aplicativo que usa o `MultiSubnetFailover` propriedade de conexão não é afetada com base no tipo de autenticação: Autenticação do SQL Server, a autenticação Kerberos ou autenticação do Windows.  
+- Comportamento de um aplicativo que usa o `MultiSubnetFailover` propriedade de conexão não é afetada com base no tipo de autenticação: Autenticação do SQL Server, a autenticação Kerberos ou autenticação do Windows.  
   
--   Aumente o valor de `Connect Timeout` para compensar o tempo de failover e reduzir as tentativas de conexão do aplicativo.  
+- Aumente o valor de `Connect Timeout` para compensar o tempo de failover e reduzir as tentativas de conexão do aplicativo.  
   
--   Não há suporte para transações distribuídas.  
+- Não há suporte para transações distribuídas.  
   
  Se o roteamento de somente leitura não estiver em vigor, conectar-se a um local de réplica secundário falhará nas seguintes situações:  
   
