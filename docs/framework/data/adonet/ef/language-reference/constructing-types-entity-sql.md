@@ -2,12 +2,12 @@
 title: Criando tipos (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d43793b1d514b9dd81f524a30cd5bf1622aa5258
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605816"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64632218"
 ---
 # <a name="constructing-types-entity-sql"></a>Criando tipos (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornece três tipos dos construtores: construtores, nomeados construtores de tipo e construtores de coleção de linhas.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: baf65340e390c7439e8639e334819fb0bf60f952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856752"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662620"
 ---
 # <a name="federation"></a>Federação
 Este tópico fornece uma visão geral do conceito de segurança federada. Ele também descreve o suporte do Windows Communication Foundation (WCF) para implantação de arquiteturas de segurança federada. Para um aplicativo de exemplo que demonstra a federação, consulte [exemplo de Federação](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -44,17 +44,17 @@ Este tópico fornece uma visão geral do conceito de segurança federada. Ele ta
   
  Normalmente, a organização B requer que um usuário de uma organização a fornecer alguma forma válida de autenticação antes de acessar o serviço. Além disso, a organização também pode exigir que o usuário seja autorizado a acessar o recurso específico em questão. Uma maneira de resolver esse problema e permitir que os usuários na organização A acessar o recurso na organização B é da seguinte maneira:  
   
--   Os usuários de uma organização a registrar suas credenciais (um nome de usuário e senha) a organização B.  
+- Os usuários de uma organização a registrar suas credenciais (um nome de usuário e senha) a organização B.  
   
--   Durante o acesso aos recursos, os usuários de uma organização a apresentam suas credenciais para a organização B e são autenticados antes de acessar o recurso.  
+- Durante o acesso aos recursos, os usuários de uma organização a apresentam suas credenciais para a organização B e são autenticados antes de acessar o recurso.  
   
  Essa abordagem tem três desvantagens significativas:  
   
--   Organização B deve gerenciar as credenciais para usuários de uma organização, além de gerenciar as credenciais de seus usuários locais.  
+- Organização B deve gerenciar as credenciais para usuários de uma organização, além de gerenciar as credenciais de seus usuários locais.  
   
--   Os usuários em uma organização precisam manter um conjunto adicional de credenciais (ou seja, lembre-se um nome adicional do usuário e senha) além das credenciais que normalmente usam para obter acesso aos recursos dentro da organização A. Geralmente, isso incentiva a prática de usar o mesmo nome de usuário e senha em vários sites de serviço, que é uma medida de segurança fraca.  
+- Os usuários em uma organização precisam manter um conjunto adicional de credenciais (ou seja, lembre-se um nome adicional do usuário e senha) além das credenciais que normalmente usam para obter acesso aos recursos dentro da organização A. Geralmente, isso incentiva a prática de usar o mesmo nome de usuário e senha em vários sites de serviço, que é uma medida de segurança fraca.  
   
--   A arquitetura não é dimensionado à medida que mais organizações percebem o recurso na organização B como sendo de algum valor.  
+- A arquitetura não é dimensionado à medida que mais organizações percebem o recurso na organização B como sendo de algum valor.  
   
  Uma abordagem alternativa, que trata das desvantagens mencionadas anteriormente, é empregar segurança federada. Nessa abordagem, as organizações A e B estabelecer uma relação de confiança em empregam o serviço de Token de segurança (STS) para habilitar o agente da relação de confiança estabelecida.  
   
@@ -76,13 +76,13 @@ Este tópico fornece uma visão geral do conceito de segurança federada. Ele ta
 ### <a name="phase-1-design-phase"></a>Fase 1: Fase de design  
  Durante a fase de design, o cliente usa o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para ler a política que expõe o ponto de extremidade de serviço e para coletar os requisitos de autenticação e autorização do serviço. Os proxies apropriados são construídos para criar o seguinte padrão de comunicação de segurança federada no cliente:  
   
--   Obter um token de segurança do STS no território de confiança do cliente.  
+- Obter um token de segurança do STS no território de confiança do cliente.  
   
--   Apresente o token para o STS no território de confiança do serviço.  
+- Apresente o token para o STS no território de confiança do serviço.  
   
--   Obter um token de segurança do STS no território de confiança do serviço.  
+- Obter um token de segurança do STS no território de confiança do serviço.  
   
--   Apresente o token para o serviço para acessar o serviço.  
+- Apresente o token para o serviço para acessar o serviço.  
   
 ### <a name="phase-2-run-time-phase"></a>Fase 2: Fase de tempo de execução  
  Durante a fase de tempo de execução, o cliente cria uma instância de um objeto da classe de cliente WCF e faz uma chamada usando o cliente do WCF. A estrutura subjacente do WCF manipula as etapas mencionadas anteriormente o padrão de comunicação de segurança federada e permite que o cliente consumir diretamente o serviço.  
