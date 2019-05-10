@@ -2,19 +2,19 @@
 title: Não é possível renomear a pasta raiz
 ms.date: 07/20/2015
 ms.assetid: 325eb73c-d5fe-4b65-8926-5dabff007277
-ms.openlocfilehash: 0482a6eccf587a18be05f263949b65cda743d1f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d673776042e6e68018d24ce2566f108f1994a76
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62023021"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592377"
 ---
 # <a name="root-folder-cannot-be-renamed"></a>Não é possível renomear a pasta raiz
 Tentativa de renomear o diretório raiz. Isso pode ser um resultado de um caminho de arquivo analisado incorretamente.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Verifique o caminho do arquivo para certificar-se de que ele está correto.  
+- Verifique o caminho do arquivo para certificar-se de que ele está correto.  
   
 ## <a name="see-also"></a>Consulte também
 

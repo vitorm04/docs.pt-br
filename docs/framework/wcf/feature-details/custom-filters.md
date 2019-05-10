@@ -2,12 +2,12 @@
 title: Filtros personalizados
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ef94d95737fb743af56f411bcc0f39ceea679a0
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857214"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912679"
 ---
 # <a name="custom-filters"></a>Filtros personalizados
 Filtros personalizados permitem que você defina a lógica de correspondência que não pode ser realizada usando os filtros de mensagem fornecida pelo sistema. Por exemplo, você pode criar um filtro personalizado que faz o hash de um elemento de mensagem específica e, em seguida, examina o valor para determinar se o filtro deve retornar true ou false.  
@@ -46,11 +46,11 @@ public class MyMessageFilter: MessageFilter
   
  Em geral, você deve evitar o seguinte ao implementar um filtro personalizado:  
   
--   E/s, como salvar dados em disco ou um banco de dados.  
+- E/s, como salvar dados em disco ou um banco de dados.  
   
--   Desnecessária de processamento, como looping através de vários registros em um documento.  
+- Desnecessária de processamento, como looping através de vários registros em um documento.  
   
--   Operações de bloqueio, como chamadas que envolvem a obtenção de um bloqueio em recursos compartilhados ou realização de pesquisas em relação a um banco de dados.  
+- Operações de bloqueio, como chamadas que envolvem a obtenção de um bloqueio em recursos compartilhados ou realização de pesquisas em relação a um banco de dados.  
   
  Antes de usar um filtro personalizado em um ambiente de produção, você deve executar testes de desempenho para determinar a duração média de tempo que o filtro usa para avaliar uma mensagem. Quando combinado com o tempo médio de processamento dos filtros usados na tabela de filtros, isso permitirá que você determine com precisão o valor de tempo limite máximo deve ser especificado pelo aplicativo cliente.  
   

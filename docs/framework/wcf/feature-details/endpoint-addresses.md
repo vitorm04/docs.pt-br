@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a59e47e529a5002c806e37dba7267b2cf8318a35
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856617"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912708"
 ---
 # <a name="endpoint-addresses"></a>Endereços do ponto de extremidade
 Cada ponto de extremidade tem um endereço associado a ele, que é usado para localizar e identificar o ponto de extremidade. Esse endereço consiste principalmente de um identificador de URI (Uniform Resource), que especifica o local do ponto de extremidade. O endereço do ponto de extremidade é representado no modelo de programação pelo Windows Communication Foundation (WCF) a <xref:System.ServiceModel.EndpointAddress> classe, que contém um recurso opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade que permite a autenticação do ponto de extremidade por outros pontos de extremidade que trocar mensagens com ele e um conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedades que definem outros cabeçalhos SOAP exigidos para alcançar o serviço. Os cabeçalhos opcionais fornecem adicionais e informações de endereçamento para identificar ou interagir com o ponto de extremidade de serviço mais detalhadas. O endereço de um ponto de extremidade é representado na transmissão como uma referência de ponto de extremidade WS-Addressing (EPR).  
@@ -19,13 +19,13 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
 ## <a name="uri-structure-of-an-address"></a>Estrutura de um endereço de URI  
  O endereço URI para a maioria dos transportes tem quatro partes. Por exemplo, as quatro partes do URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` podem ser discriminados da seguinte maneira:  
   
--   Esquema: `http:`
+- Esquema: `http:`
   
--   Computador: `www.fabrikam.com`  
+- Computador: `www.fabrikam.com`  
   
--   (opcional) Porta: 322  
+- (opcional) Porta: 322  
   
--   Path: /mathservice.svc/secureEndpoint  
+- Path: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Definindo um endereço para um serviço  
  O endereço do ponto de extremidade para um serviço pode ser especificado com o modo imperativo usando código ou declarativamente com a configuração. Definir pontos de extremidade no código geralmente não é prático porque as associações e endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Em geral, é mais prático definir pontos de extremidade de serviço usando a configuração em vez de código. Informações fora do código de endereçamento e manter a associação permite que eles alterem os sem ter que recompilar ou reimplantar o aplicativo.  
@@ -46,9 +46,9 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
  O exemplo a seguir mostra os componentes que podem estar presentes em uma associação do IIS:  
   
--   Protocolo de associação: HTTP  
+- Protocolo de associação: HTTP  
   
--   Informações de associação: Endereço IP, porta, cabeçalho de Host  
+- Informações de associação: Endereço IP, porta, cabeçalho de Host  
   
  O IIS pode especificar várias associações para cada site, o que resulta em vários endereços de base para cada esquema. Anteriores ao [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], o WCF não oferecia suporte a vários endereços para um esquema e, se tiverem sido especificados, lançou um <xref:System.ArgumentException> durante a ativação.  
   
@@ -100,15 +100,15 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
 ## <a name="extending-addressing-in-wcf-services"></a>Estendendo o endereçamento nos serviços do WCF  
  O padrão de modelo de serviços WCF de endereçamento usa o URI de endereço do ponto de extremidade para as seguintes finalidades:  
   
--   Para especificar o endereço de escuta do serviço, o local no qual o ponto de extremidade de escuta de mensagens,  
+- Para especificar o endereço de escuta do serviço, o local no qual o ponto de extremidade de escuta de mensagens,  
   
--   Para especificar o filtro de endereço SOAP, o endereço de um ponto de extremidade espera como um cabeçalho SOAP.  
+- Para especificar o filtro de endereço SOAP, o endereço de um ponto de extremidade espera como um cabeçalho SOAP.  
   
  Os valores para cada uma das seguintes finalidades podem ser especificados separadamente, permitindo que várias extensões de endereçamento que abrange cenários de úteis:  
   
--   Intermediários de SOAP: uma mensagem enviada por um cliente atravessa um ou mais serviços adicionais que processam a mensagem antes de atingir seu destino final. Intermediários SOAP podem executar várias tarefas, como a validação de armazenamento em cache, roteamento, balanceamento de carga ou esquema nas mensagens. Esse cenário é feito enviando mensagens para um endereço físico separado (`via`) que tem como alvo o intermediário em vez de apenas para um endereço lógico (`wsa:To`) que tem como alvo o destino final.  
+- Intermediários de SOAP: uma mensagem enviada por um cliente atravessa um ou mais serviços adicionais que processam a mensagem antes de atingir seu destino final. Intermediários SOAP podem executar várias tarefas, como a validação de armazenamento em cache, roteamento, balanceamento de carga ou esquema nas mensagens. Esse cenário é feito enviando mensagens para um endereço físico separado (`via`) que tem como alvo o intermediário em vez de apenas para um endereço lógico (`wsa:To`) que tem como alvo o destino final.  
   
--   O endereço de escuta do ponto de extremidade é um URI privado e é definido como um valor diferente de seu `listenURI` propriedade.  
+- O endereço de escuta do ponto de extremidade é um URI privado e é definido como um valor diferente de seu `listenURI` propriedade.  
   
  O transporte de endereço que o `via` Especifica o local para o qual uma mensagem deve ser enviada inicialmente em seu caminho para outro endereço remoto é especificado pelo `to` parâmetro no qual o serviço está localizado. Na maioria dos cenários de Internet, o `via` URI é o mesmo que o <xref:System.ServiceModel.EndpointAddress.Uri%2A> propriedade final `to` endereço do serviço. Você somente pode distinguir entre esses dois endereços quando você deve fazer roteamento manual.  
   
@@ -117,9 +117,9 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
  Você pode definir os cabeçalhos de endereço personalizado de duas maneiras — usando código ou na configuração:  
   
--   No código, crie os cabeçalhos de endereço personalizado usando o <xref:System.ServiceModel.Channels.AddressHeader> de classe e, em seguida, usada na construção de um <xref:System.ServiceModel.EndpointAddress>.  
+- No código, crie os cabeçalhos de endereço personalizado usando o <xref:System.ServiceModel.Channels.AddressHeader> de classe e, em seguida, usada na construção de um <xref:System.ServiceModel.EndpointAddress>.  
   
--   Na configuração, personalizada [ \<cabeçalhos >](../../configure-apps/file-schema/wcf/headers.md) são especificados como filhos do [ \<ponto de extremidade >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento.  
+- Na configuração, personalizada [ \<cabeçalhos >](../../configure-apps/file-schema/wcf/headers.md) são especificados como filhos do [ \<ponto de extremidade >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento.  
   
  Configuração, geralmente é preferível ao código, pois permite que você altere os cabeçalhos após a implantação.  
   
@@ -128,9 +128,9 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
  Você pode especificar um endereço de escutando personalizado usando código ou na configuração:  
   
--   No código, especifique um endereço de escutando personalizado adicionando um <xref:System.ServiceModel.Description.ClientViaBehavior> classe à coleção de comportamentos do ponto de extremidade.  
+- No código, especifique um endereço de escutando personalizado adicionando um <xref:System.ServiceModel.Description.ClientViaBehavior> classe à coleção de comportamentos do ponto de extremidade.  
   
--   Em configuração, especifique um endereço de escutando personalizado com o `ListenUri` atributo do serviço [ \<ponto de extremidade >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento.  
+- Em configuração, especifique um endereço de escutando personalizado com o `ListenUri` atributo do serviço [ \<ponto de extremidade >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento.  
   
 ### <a name="custom-soap-address-filter"></a>Filtro de endereço SOAP personalizado  
  O <xref:System.ServiceModel.EndpointAddress.Uri%2A> é usado em conjunto com qualquer <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedade para definir o filtro de endereço SOAP de um ponto de extremidade (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Por padrão, esse filtro verifica se uma mensagem de entrada tem um `To` cabeçalho da mensagem que corresponde ao ponto de extremidade do URI e se todos os cabeçalhos de ponto de extremidade necessários estão presentes na mensagem.  

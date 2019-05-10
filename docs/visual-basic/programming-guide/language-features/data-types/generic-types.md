@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c8ccf2404c4d8fd6e71f7aa41445c3d26ef5da7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906771"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601079"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos no Visual Basic (Visual Basic)
 Um *tipo genérico* é um único elemento de programação que se adapta ao executar a mesma funcionalidade para uma variedade de tipos de dados. Quando você define uma classe genérica ou um procedimento, você não precisa definir uma versão separada para cada tipo de dados para os quais você talvez queira executar essa funcionalidade.  
@@ -89,19 +89,19 @@ Um *tipo genérico* é um único elemento de programação que se adapta ao exec
   
  Um tipo genérico tem as seguintes vantagens sobre essas alternativas:  
   
--   **Segurança de tipo.** Tipos genéricos impõem a verificação de tipo em tempo de compilação. Tipos baseados em `Object` aceitar qualquer tipo de dados, e você deve escrever código para verificar se um tipo de dados de entrada é aceitável. Com tipos genéricos, o compilador pode detectar incompatibilidades de tipo antes do tempo de execução.  
+- **Segurança de tipo.** Tipos genéricos impõem a verificação de tipo em tempo de compilação. Tipos baseados em `Object` aceitar qualquer tipo de dados, e você deve escrever código para verificar se um tipo de dados de entrada é aceitável. Com tipos genéricos, o compilador pode detectar incompatibilidades de tipo antes do tempo de execução.  
   
--   **Desempenho.** Tipos genéricos não é necessário *caixa de* e *conversão unboxing* dados, porque cada um deles é especializado para um tipo de dados. Operações com base em `Object` deve caixa tipos de dados de entrada para convertê-las para `Object` e conversão unboxing dados destinados à saída. Conversões boxing e unboxing reduzem o desempenho.  
+- **Desempenho.** Tipos genéricos não é necessário *caixa de* e *conversão unboxing* dados, porque cada um deles é especializado para um tipo de dados. Operações com base em `Object` deve caixa tipos de dados de entrada para convertê-las para `Object` e conversão unboxing dados destinados à saída. Conversões boxing e unboxing reduzem o desempenho.  
   
      Tipos baseados em `Object` são também de associação tardia, o que significa que acessar seus membros requer código extra em tempo de execução. Isso também reduz o desempenho.  
   
--   **Código de consolidação.** O código em um tipo genérico deve ser definido apenas uma vez. Um conjunto de versões de tipo específico de um tipo deve replicar o mesmo código em cada versão, com a única diferença é o tipo de dados específico para essa versão. Com tipos genéricos, as versões específicas do tipo são todas geradas a partir do tipo genérico original.  
+- **Código de consolidação.** O código em um tipo genérico deve ser definido apenas uma vez. Um conjunto de versões de tipo específico de um tipo deve replicar o mesmo código em cada versão, com a única diferença é o tipo de dados específico para essa versão. Com tipos genéricos, as versões específicas do tipo são todas geradas a partir do tipo genérico original.  
   
--   **Reutilização de código.** Código que não depende de um determinado tipo de dados pode ser reutilizado com vários tipos de dados se ele for genérico. Geralmente, você pode reutilizá-lo mesmo com um tipo de dados que você não originalmente prevê.  
+- **Reutilização de código.** Código que não depende de um determinado tipo de dados pode ser reutilizado com vários tipos de dados se ele for genérico. Geralmente, você pode reutilizá-lo mesmo com um tipo de dados que você não originalmente prevê.  
   
--   **Suporte do IDE.** Quando você usa um tipo construído declarado de um tipo genérico, o ambiente de desenvolvimento integrado (IDE) pode lhe dar mais suporte enquanto você estiver desenvolvendo seu código. Por exemplo, o IntelliSense pode mostrar as opções de tipo específico para um argumento para um construtor ou método.  
+- **Suporte do IDE.** Quando você usa um tipo construído declarado de um tipo genérico, o ambiente de desenvolvimento integrado (IDE) pode lhe dar mais suporte enquanto você estiver desenvolvendo seu código. Por exemplo, o IntelliSense pode mostrar as opções de tipo específico para um argumento para um construtor ou método.  
   
--   **Algoritmos genéricos.** Abstratos algoritmos que são independentes de tipo são bons candidatos para tipos genéricos. Por exemplo, um procedimento genérico que classifica os itens que usam o <xref:System.IComparable> interface pode ser usado com qualquer tipo de dados que implemente <xref:System.IComparable>.  
+- **Algoritmos genéricos.** Abstratos algoritmos que são independentes de tipo são bons candidatos para tipos genéricos. Por exemplo, um procedimento genérico que classifica os itens que usam o <xref:System.IComparable> interface pode ser usado com qualquer tipo de dados que implemente <xref:System.IComparable>.  
   
 ## <a name="constraints"></a>Restrições  
  Embora o código em uma definição de tipo genérico deve ser tão independente de tipo quanto possível, você precisa exigir uma determinada capacidade de qualquer tipo de dados fornecido para o tipo genérico. Por exemplo, se você quiser comparar dois itens com a finalidade de classificação ou agrupamento, o tipo de dados deve implementar o <xref:System.IComparable> interface. Você pode aplicar esse requisito, adicionando um *restrição* para o parâmetro de tipo.  
@@ -116,13 +116,13 @@ Um *tipo genérico* é um único elemento de programação que se adapta ao exec
 ### <a name="types-of-constraints"></a>Tipos de restrições  
  A restrição pode especificar os requisitos a seguir em qualquer combinação:  
   
--   O argumento de tipo deve implementar uma ou mais interfaces  
+- O argumento de tipo deve implementar uma ou mais interfaces  
   
--   O argumento de tipo deve ser do tipo de, ou herdar de, no máximo uma classe  
+- O argumento de tipo deve ser do tipo de, ou herdar de, no máximo uma classe  
   
--   O argumento de tipo deve expor um construtor sem parâmetros acessível para o código que cria objetos a partir dele  
+- O argumento de tipo deve expor um construtor sem parâmetros acessível para o código que cria objetos a partir dele  
   
--   O argumento de tipo deve ser um *tipo de referência*, ou deve ser um *tipo de valor*  
+- O argumento de tipo deve ser um *tipo de referência*, ou deve ser um *tipo de valor*  
   
  Se você precisar de mais de um requisito de impor, use uma separada por vírgulas *lista de restrições* entre chaves (`{ }`). Para exigir um construtor acessível, você inclui o [novo operador](../../../../visual-basic/language-reference/operators/new-operator.md) palavra-chave na lista. Para exigir um tipo de referência, você deve incluir a `Class` palavra-chave; para exigir um tipo de valor, você incluir o `Structure` palavra-chave.  
   
@@ -136,15 +136,15 @@ Um *tipo genérico* é um único elemento de programação que se adapta ao exec
 ## <a name="important-terms"></a>Termos importantes  
  Tipos genéricos apresentam e usam os seguintes termos:  
   
--   *Tipo genérico*. Uma definição de classe, estrutura, interface, procedimento ou delegado para o qual você fornecer pelo menos um tipo de dados quando você declará-la.  
+- *Tipo genérico*. Uma definição de classe, estrutura, interface, procedimento ou delegado para o qual você fornecer pelo menos um tipo de dados quando você declará-la.  
   
--   *Parâmetro de tipo*. Em uma definição de tipo genérico, um espaço reservado para um tipo de dados você fornece ao declarar o tipo.  
+- *Parâmetro de tipo*. Em uma definição de tipo genérico, um espaço reservado para um tipo de dados você fornece ao declarar o tipo.  
   
--   *O argumento de tipo*. Um tipo de dados específico que substitui um parâmetro de tipo quando você declara um tipo construído de um tipo genérico.  
+- *O argumento de tipo*. Um tipo de dados específico que substitui um parâmetro de tipo quando você declara um tipo construído de um tipo genérico.  
   
--   *Restrição*. Uma condição em um parâmetro de tipo que restringe o argumento de tipo que você pode fornecer para ele. Uma restrição pode exigir que o argumento de tipo deve implementar uma interface específica, ser ou herdar de uma determinada classe, ter um construtor sem parâmetros acessível ou ser um tipo de referência ou um tipo de valor. Você pode combinar essas restrições, mas você pode especificar no máximo uma classe.  
+- *Restrição*. Uma condição em um parâmetro de tipo que restringe o argumento de tipo que você pode fornecer para ele. Uma restrição pode exigir que o argumento de tipo deve implementar uma interface específica, ser ou herdar de uma determinada classe, ter um construtor sem parâmetros acessível ou ser um tipo de referência ou um tipo de valor. Você pode combinar essas restrições, mas você pode especificar no máximo uma classe.  
   
--   *Tipo construído*. Uma classe, estrutura, interface, procedimento ou delegado declarado de um tipo genérico, fornecendo argumentos de tipo para seus parâmetros de tipo.  
+- *Tipo construído*. Uma classe, estrutura, interface, procedimento ou delegado declarado de um tipo genérico, fornecendo argumentos de tipo para seus parâmetros de tipo.  
   
 ## <a name="see-also"></a>Consulte também
 

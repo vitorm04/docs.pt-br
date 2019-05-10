@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680149"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596118"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexadores (Guia de Programação em C#)
 
@@ -40,29 +40,29 @@ Começando do C# 7.0, os acessadores get e set podem ser implementados como memb
   
 ## <a name="indexers-overview"></a>Visão Geral dos Indexadores  
   
--   Os indexadores permitem que objetos sejam indexados de maneira semelhante às matrizes.  
+- Os indexadores permitem que objetos sejam indexados de maneira semelhante às matrizes.  
   
--   Um acessador `get` retorna um valor. Um acessador `set` atribui um valor.  
+- Um acessador `get` retorna um valor. Um acessador `set` atribui um valor.  
   
--   A palavra-chave [this](../../../csharp/language-reference/keywords/this.md) é usada para definir o indexador.  
+- A palavra-chave [this](../../../csharp/language-reference/keywords/this.md) é usada para definir o indexador.  
   
--   A palavra-chave [value](../../../csharp/language-reference/keywords/value.md) é usada para definir o valor que está sendo atribuído pelo indexador `set`.  
+- A palavra-chave [value](../../../csharp/language-reference/keywords/value.md) é usada para definir o valor que está sendo atribuído pelo indexador `set`.  
   
--   Os indexadores não precisam ser indexados por um valor inteiro. Você deve definir o mecanismo de pesquisa específico.  
+- Os indexadores não precisam ser indexados por um valor inteiro. Você deve definir o mecanismo de pesquisa específico.  
   
--   Os indexadores podem ser sobrecarregados.  
+- Os indexadores podem ser sobrecarregados.  
   
--   Os indexadores podem ter mais de um parâmetro formal, por exemplo, ao acessar uma matriz bidimensional.  
+- Os indexadores podem ter mais de um parâmetro formal, por exemplo, ao acessar uma matriz bidimensional.  
   
 ## <a name="BKMK_RelatedSections"></a> Seções relacionadas  
   
--   [Usando indexadores](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [Usando indexadores](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [Indexadores em interfaces](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [Indexadores em interfaces](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [Comparação entre propriedades e indexadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Comparação entre propriedades e indexadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Restringindo a acessibilidade ao acessador](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Restringindo a acessibilidade ao acessador](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 

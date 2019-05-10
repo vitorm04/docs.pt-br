@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d3b77a506186166c9ad76490ef47f8759c704eb
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710076"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452726"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (Guia de Programação em C#)
 
@@ -48,12 +48,11 @@ Os namespaces têm as seguintes propriedades:
   
 ## <a name="see-also"></a>Consulte também
 
+- [Guia de Programação em C#](../index.md)
 - [Usando namespaces](using-namespaces.md)
 - [Como: usar o alias de namespace global](how-to-use-the-global-namespace-alias.md)
 - [Como: usar o My Namespace](how-to-use-the-my-namespace.md)
-- [Guia de Programação em C#](../index.md)
 - [Nomes de identificadores](../inside-a-program/identifier-names.md)
 - [Palavras-chave de namespace](../../language-reference/keywords/namespace-keywords.md)
 - [Diretiva using](../../language-reference/keywords/using-directive.md)
 - [:: ??](../../language-reference/operators/namespace-alias-qualifer.md)
-- [. ??](../../language-reference/operators/member-access-operator.md)
