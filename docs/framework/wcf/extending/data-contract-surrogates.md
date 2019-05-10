@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858020"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587502"
 ---
 # <a name="data-contract-surrogates"></a>Substitutos de contrato de dados
 O contrato de dados *substituto* é um recurso avançado, criado sobre o modelo de contrato de dados. Esse recurso destina-se a ser usado para o tipo de personalização e substituição em situações em que os usuários quiserem alterar como um tipo é serializado, desserializados ou projetado em metadados. Alguns cenários onde um substituto pode ser usado é quando um contrato de dados não foi especificado para o tipo, campos e propriedades não são marcadas com o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo ou usuários desejarem criar dinamicamente as variações de esquema.  
@@ -37,13 +37,13 @@ O contrato de dados *substituto* é um recurso avançado, criado sobre o modelo 
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
--   Na serialização, o mapeamento retornado por esse método é usado posteriormente para transformar a instância original para uma instância surrogated chamando o <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> método.  
+- Na serialização, o mapeamento retornado por esse método é usado posteriormente para transformar a instância original para uma instância surrogated chamando o <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> método.  
   
--   Na desserialização, o mapeamento retornado por esse método é usado pelo serializador para desserializar em uma instância do tipo substituto. Ele chama subsequentemente <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> para transformar a instância surrogated em uma instância do tipo original.  
+- Na desserialização, o mapeamento retornado por esse método é usado pelo serializador para desserializar em uma instância do tipo substituto. Ele chama subsequentemente <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> para transformar a instância surrogated em uma instância do tipo original.  
   
--   Na exportação, o tipo de substitutos retornado por esse método é refletido para obter o contrato de dados a ser usado para geração de metadados.  
+- Na exportação, o tipo de substitutos retornado por esse método é refletido para obter o contrato de dados a ser usado para geração de metadados.  
   
--   Na importação, o tipo inicial é alterado para um tipo substituto que é refletido para obter o contrato de dados a ser usado para fins como a referenciação a suporte.  
+- Na importação, o tipo inicial é alterado para um tipo substituto que é refletido para obter o contrato de dados a ser usado para fins como a referenciação a suporte.  
   
  O <xref:System.Type> parâmetro é o tipo do objeto que está sendo serializado desserializado, importado ou exportado. O <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> método deve retornar o tipo de entrada se o substituto não manipular o tipo. Caso contrário, retorne o tipo surrogated apropriado. Se existem vários tipos de substitutos, vários mapeamentos podem ser definidos nesse método.  
   

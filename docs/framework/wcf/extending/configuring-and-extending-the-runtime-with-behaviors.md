@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 297a951e4678e05da73193133bd6050360b041ff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923273"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587344"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configurando e estendendo o tempo de execução com comportamentos
 Comportamentos que você possa modificar o comportamento padrão e adicionar extensões personalizadas que inspecionem e validar a configuração de serviço ou modificam o comportamento de tempo de execução em aplicativos de cliente e o serviço do Windows Communication Foundation (WCF). Este tópico descreve as interfaces de comportamento, como implementá-los e como adicioná-los para a descrição do serviço (em um aplicativo de serviço) ou o ponto de extremidade (em um aplicativo de cliente) por meio de programação ou em um arquivo de configuração. Para obter mais informações sobre como usar os comportamentos fornecidos pelo sistema, consulte [especificando comportamento de tempo de execução do serviço](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) e [especificando comportamento de tempo de execução do cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -20,11 +20,11 @@ Comportamentos que você possa modificar o comportamento padrão e adicionar ext
 ### <a name="behavior-methods"></a>Métodos de comportamento  
  Todos os comportamentos têm uma `AddBindingParameters` método, uma `ApplyDispatchBehavior` método, um `Validate` método e um `ApplyClientBehavior` método com uma exceção: Porque <xref:System.ServiceModel.Description.IServiceBehavior> não é possível executar em um cliente, ele não implementa `ApplyClientBehavior`.  
   
--   Use o `AddBindingParameters` método para modificar ou adicionar objetos personalizados a uma coleção de ligações personalizadas podem acessar para uso quando o tempo de execução é construído. Por exemplo, isso como os requisitos de proteção são especificados, que afetam a maneira que o canal é criado, mas não são conhecidos pelo desenvolvedor do canal.  
+- Use o `AddBindingParameters` método para modificar ou adicionar objetos personalizados a uma coleção de ligações personalizadas podem acessar para uso quando o tempo de execução é construído. Por exemplo, isso como os requisitos de proteção são especificados, que afetam a maneira que o canal é criado, mas não são conhecidos pelo desenvolvedor do canal.  
   
--   Use o `Validate` método para examinar a árvore de descrição e o objeto correspondente do tempo de execução para verificar se ele está em conformidade com um conjunto de critérios.  
+- Use o `Validate` método para examinar a árvore de descrição e o objeto correspondente do tempo de execução para verificar se ele está em conformidade com um conjunto de critérios.  
   
--   Use o `ApplyDispatchBehavior` e `ApplyClientBehavior` métodos para examinar a descrição de árvore e modificar o tempo de execução para um escopo específico no serviço ou no cliente. Você também pode inserir objetos de extensão também.  
+- Use o `ApplyDispatchBehavior` e `ApplyClientBehavior` métodos para examinar a descrição de árvore e modificar o tempo de execução para um escopo específico no serviço ou no cliente. Você também pode inserir objetos de extensão também.  
   
     > [!NOTE]
     >  Embora uma árvore de descrição é fornecida nesses métodos, é apenas para exame. Se uma árvore de descrição for modificada, o comportamento será indefinido.  
@@ -38,13 +38,13 @@ Comportamentos que você possa modificar o comportamento padrão e adicionar ext
   
  Há quatro tipos de comportamentos do WCF:  
   
--   Comportamentos de serviço (<xref:System.ServiceModel.Description.IServiceBehavior> tipos) permitem a personalização do tempo de execução de todo o serviço, incluindo <xref:System.ServiceModel.ServiceHostBase>.  
+- Comportamentos de serviço (<xref:System.ServiceModel.Description.IServiceBehavior> tipos) permitem a personalização do tempo de execução de todo o serviço, incluindo <xref:System.ServiceModel.ServiceHostBase>.  
   
--   Comportamentos de ponto de extremidade (<xref:System.ServiceModel.Description.IEndpointBehavior> tipos) permitem a personalização de pontos de extremidade de serviço e seus respectivos <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> objetos.  
+- Comportamentos de ponto de extremidade (<xref:System.ServiceModel.Description.IEndpointBehavior> tipos) permitem a personalização de pontos de extremidade de serviço e seus respectivos <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> objetos.  
   
--   Comportamentos de contrato (<xref:System.ServiceModel.Description.IContractBehavior> tipos) permitem a personalização de ambos os <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchRuntime> classes no cliente e aplicativos de serviço, respectivamente.  
+- Comportamentos de contrato (<xref:System.ServiceModel.Description.IContractBehavior> tipos) permitem a personalização de ambos os <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchRuntime> classes no cliente e aplicativos de serviço, respectivamente.  
   
--   Comportamentos de operação (<xref:System.ServiceModel.Description.IOperationBehavior> tipos) permitem a personalização do <xref:System.ServiceModel.Dispatcher.ClientOperation> e <xref:System.ServiceModel.Dispatcher.DispatchOperation> classes, novamente, no cliente e o serviço.  
+- Comportamentos de operação (<xref:System.ServiceModel.Description.IOperationBehavior> tipos) permitem a personalização do <xref:System.ServiceModel.Dispatcher.ClientOperation> e <xref:System.ServiceModel.Dispatcher.DispatchOperation> classes, novamente, no cliente e o serviço.  
   
  Você pode adicionar esses comportamentos para os vários objetos de descrição com a implementação de atributos personalizados, usando arquivos de configuração de aplicativo, ou diretamente ao adicioná-los à coleção de comportamentos no objeto de descrição apropriada. Deve, no entanto, ser adicionado a uma descrição do serviço ou objeto de descrição do ponto de extremidade de serviço antes de chamar <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> sobre o <xref:System.ServiceModel.ServiceHost> ou um <xref:System.ServiceModel.ChannelFactory%601>.  
   
