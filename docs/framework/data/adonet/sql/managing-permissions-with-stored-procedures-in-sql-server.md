@@ -2,12 +2,12 @@
 title: Gerenciando permissões com procedimentos armazenados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 0688157b45892cacb73f858dffb93836da9fc91d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a057ed88c792dfdeb89227d6cf1957f74b6d7a1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923117"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623421"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gerenciando permissões com procedimentos armazenados no SQL Server
 Um método de criar várias linhas de defesa em torno do banco de dados é implementar todo o acesso a dados usando procedimentos armazenados ou funções definidas pelo usuário. Você revogar ou nega todas as permissões para objetos subjacentes, como tabelas, e concede permissões EXECUTE em procedimentos armazenados. Isso cria efetivamente um perímetro de segurança em torno dos dados e objetos de banco de dados.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6175e60b1dbdbdb31500f484da24b0f94990b2d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770871"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663337"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Como: implementar validação com o controle DataGrid
 O <xref:System.Windows.Controls.DataGrid> controle permite que você executar a validação no nível de linha e célula. Com a validação no nível da célula, você valida propriedades individuais de um objeto com associação de dados quando um usuário atualiza um valor. Com a validação no nível da linha, você valida objetos de dados inteiros quando um usuário confirma alterações em uma linha. Você também pode fornecer comentários visuais personalizados para erros de validação, ou usar os comentários visuais padrão que o <xref:System.Windows.Controls.DataGrid> fornece controle.  

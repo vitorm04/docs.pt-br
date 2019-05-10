@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b29585eabcc2549876f4b50e6b6e55a7f8ef2eee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621335"
 ---
 # <a name="one-way-services"></a>Serviços unidirecionais
 O comportamento padrão de uma operação de serviço é o padrão de solicitação-resposta. Em um padrão de solicitação-resposta, o cliente aguarda a mensagem de resposta, mesmo se a operação de serviço é representada no código como um `void` método. Com uma operação unidirecional, apenas uma mensagem é transmitida. O receptor não envia uma mensagem de resposta, nem faz o remetente espera um.  

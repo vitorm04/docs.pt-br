@@ -2,12 +2,12 @@
 title: Rastreamento personalizada
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fff88c50dd2004d4491e050258ef760c033f6de5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622558"
 ---
 # <a name="custom-tracking"></a>Rastreamento personalizada
 Este exemplo demonstra como criar um participante personalizado de rastreamento e gravar o conteúdo dos dados de acompanhamento no console. Além disso, o exemplo demonstra como emitir os objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> preenchido com dados definidos pelo usuário. O participante controlando console- base filtra os objetos de <xref:System.Activities.Tracking.TrackingRecord> emissores pelo fluxo de trabalho usando um objeto de perfil de rastreamento criado em código.
@@ -110,9 +110,9 @@ invoker.Extensions.Add(customTrackingParticipant);
 ### <a name="emitting-custom-tracking-records"></a>Emitindo registros de rastreamento personalizadas
  Este exemplo também demonstra a capacidade de emitir objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> de uma atividade personalizado de fluxo de trabalho:
 
--   Os objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> são criados e preenchido com dados definidos pelo usuário que são desejados ser emitidos com o registro.
+- Os objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> são criados e preenchido com dados definidos pelo usuário que são desejados ser emitidos com o registro.
 
--   O <xref:System.Activities.Tracking.CustomTrackingRecord> é emitida chamando o método de controle do <xref:System.Activities.ActivityContext>.
+- O <xref:System.Activities.Tracking.CustomTrackingRecord> é emitida chamando o método de controle do <xref:System.Activities.ActivityContext>.
 
  O exemplo a seguir demonstra como emitir objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> dentro de uma atividade personalizado.
 

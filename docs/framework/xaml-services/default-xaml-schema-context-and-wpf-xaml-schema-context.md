@@ -2,12 +2,12 @@
 title: Contexto do esquema XML padrão e contexto do esquema XAML WPF
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f29d9eb481903b06ee1f35424baeb055a396b7c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689392"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663259"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexto do esquema XML padrão e contexto do esquema XAML WPF
 Um contexto de esquema XAML é uma entidade conceitual que qualifica como uma produção de XAML que usa um vocabulário específico do XAML interage com o objeto de comportamento, incluindo como resolve o mapeamento de tipo, como assemblies são carregados, como determinado leitor e gravador de gravação as configurações são interpretadas. Este tópico descreve os recursos de serviços de XAML do .NET Framework e o contexto do esquema XAML padrão associados, que se baseia no sistema de tipos CLR. Este tópico também descreve o contexto do esquema XAML que é usado para o WPF.  

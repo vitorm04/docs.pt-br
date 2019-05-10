@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8851b3090685b19c4a7ef711d5adab232e46872e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043206"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665045"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>Método IMetaDataEmit::DefineImportMember
 Cria uma referência ao membro de um módulo que é definido fora do escopo atual e define um token para essa referência ou tipo especificado.  

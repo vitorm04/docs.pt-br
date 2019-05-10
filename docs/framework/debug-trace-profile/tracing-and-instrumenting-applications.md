@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614236"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469528"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Rastreamento e instrumentação de aplicativos
 O rastreamento é uma maneira de monitorar a execução do aplicativo enquanto ele está em execução. É possível adicionar a instrumentação de rastreamento e depuração ao aplicativo do .NET Framework durante seu desenvolvimento e usar essa instrumentação enquanto você estiver desenvolvendo o aplicativo e depois de implantá-lo. É possível usar as classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar informações sobre erros e a execução do aplicativo em logs, arquivos de texto ou outros dispositivos para análise posterior.  
@@ -134,7 +134,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Produza resultados personalizados implementando seu próprio ouvinte. Um ouvinte de rastreamento personalizado pode, por exemplo, exibir as mensagens em uma caixa de mensagem ou se conectar a um banco de dados para adicionar mensagens a uma tabela. Todos os ouvintes personalizados devem dar suporte aos seis métodos mencionados acima. Para obter mais informações sobre como criar ouvintes definidos pelo desenvolvedor, consulte <xref:System.Diagnostics.TraceListener> na referência do .NET Framework.  
   
 > [!NOTE]
->  No [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], os métodos **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine** e **Debug.WriteLineIf** substituíram o método **Debug.Print** que estava disponível em versões anteriores do Visual Basic.  
+>  No Visual Basic, o **Debug. Write**, **Debug. WriteIf**, **Debug. WriteLine**, e **Debug. WriteLineIf** métodos substituíram o **Debug. Print** método que estava disponível em versões anteriores do Visual Basic.  
   
  Os métodos **Write** e **WriteLine** sempre gravam o texto especificado. **Assert**, **WriteIf** e **WriteLineIf** exigem um argumento booliano que controla se eles gravam o texto especificado; eles gravam o texto especificado somente se a expressão é **true** (para **WriteIf** e **WriteLineIf**) ou **false** (para **Assert**). O método **Fail** sempre grava o texto especificado. Para obter mais informações, confira [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) e a referência do .NET Framework.  
   

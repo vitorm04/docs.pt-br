@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09079c8847b7cb995d97a4577d03982602bbadfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d97d75eb5fab396530a6f48314e96c8d47d06439
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969891"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656482"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>Método ICLRControl::GetCLRManager
 Obtém um ponteiro de interface para uma instância de qualquer um dos tipos de Gerenciador que o host pode usar para configurar o common language runtime (CLR).  

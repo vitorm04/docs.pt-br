@@ -2,12 +2,12 @@
 title: Proteção estendida para visão geral de autenticação
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c166ae4795a64983c0df81629669c9cbf5b0d97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856717"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665947"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Proteção estendida para visão geral de autenticação
 Proteção estendida para autenticação ajuda a proteger contra ataques de (MITM) man-in-the-middle, nos quais um invasor intercepta as credenciais de um cliente e encaminha-as para um servidor.  
@@ -24,11 +24,11 @@ Proteção estendida para autenticação ajuda a proteger contra ataques de (MIT
   
  O servidor pode ter os seguintes níveis de proteção:  
   
--   nenhuma. Nenhuma validação de associação de canal é executada. Esse é o comportamento de todos os servidores que não foram atualizados.  
+- nenhuma. Nenhuma validação de associação de canal é executada. Esse é o comportamento de todos os servidores que não foram atualizados.  
   
--   Parcial. Todos os clientes que foram atualizados devem fornecer informações de associação de canal para o servidor. Os clientes que não foram atualizados não é necessário fazê-lo. Isso é uma opção intermediária que permite a compatibilidade de aplicativos.  
+- Parcial. Todos os clientes que foram atualizados devem fornecer informações de associação de canal para o servidor. Os clientes que não foram atualizados não é necessário fazê-lo. Isso é uma opção intermediária que permite a compatibilidade de aplicativos.  
   
--   Completo. Todos os clientes devem fornecer informações de associação de canal. O servidor rejeita solicitações de autenticação de clientes que não faça isso.  
+- Completo. Todos os clientes devem fornecer informações de associação de canal. O servidor rejeita solicitações de autenticação de clientes que não faça isso.  
   
  Para obter mais informações, consulte o exemplo de proteção de CBT/estendida Win7.  
   

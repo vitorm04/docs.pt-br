@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877260"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623860"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Como: criar um banco de dados dinamicamente
 No LINQ to SQL, um modelo de objeto é mapeado para um banco de dados relacional. O mapeamento é habilitado usando o mapeamento baseado em atributo ou um arquivo de mapeamento externo para descrever a estrutura do banco de dados relacional. Em ambos os cenários, há informações suficientes sobre o banco de dados relacional para que você possa criar uma nova instância do banco de dados usando o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
@@ -19,9 +19,9 @@ No LINQ to SQL, um modelo de objeto é mapeado para um banco de dados relacional
   
  Você pode usar o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> em diversos cenários, especialmente se um provedor de dados conhecido como o Microsoft SQL Server 2008 estiver disponível. Os cenários comuns são os seguintes:  
   
--   Você está criando um aplicativo que se instala automaticamente em um sistema de cliente.  
+- Você está criando um aplicativo que se instala automaticamente em um sistema de cliente.  
   
--   Você está criando um aplicativo cliente que precisa de um banco de dados local para salvar seu estado offline.  
+- Você está criando um aplicativo cliente que precisa de um banco de dados local para salvar seu estado offline.  
   
  Você também pode usar o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> com o SQL Server usando um arquivo .mdf ou um nome de catálogo, dependendo da cadeia de conexão. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa a cadeia de conexão para definir o banco de dados a ser criado e em qual servidor o banco de dados será criado.  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: 9f7f878649d8b96f050b56d5b878eb3d67e027ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ab8028062402e33b787a5a8649d93d975918393
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918214"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665700"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Inferência de tipo que permite valor nulo não suportada neste contexto
 Tipos de valor e estruturas podem ser declaradas que permitem valor nulas.  
@@ -34,7 +34,7 @@ Dim b As Integer?
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Use um `As` cláusula para declarar a variável como anulável.  
+- Use um `As` cláusula para declarar a variável como anulável.  
   
 ## <a name="see-also"></a>Consulte também
 

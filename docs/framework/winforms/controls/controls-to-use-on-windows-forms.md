@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011743"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469521"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controles a serem usados nos Windows Forms
 Esta é uma lista alfabética de controles e componentes que podem ser usados nos Windows Forms. Além dos controles dos Windows Forms abordados nesta seção, você pode adicionar ActiveX e controles personalizados ao Windows Forms. Se não encontrar o controle necessário listado aqui, você poderá criar seus próprios. Para mais detalhes, consulte [Desenvolvendo controles dos Windows Forms no tempo de design](developing-windows-forms-controls-at-design-time.md). Para mais informações sobre como escolher o controle necessário, consulte [Controles dos Windows Forms por função](windows-forms-controls-by-function.md).  
@@ -229,7 +229,7 @@ Esta é uma lista alfabética de controles e componentes que podem ser usados no
  Fornece links para tópicos passo a passo, recomendações sobre qual tipo de controle criar e outras informações sobre como criar seu próprio controle.  
   
  [Controles e objetos programáveis comparados em diversas linguagens e bibliotecas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Fornece uma tabela que mapeia os controles no Visual Basic 6.0 para o controle correspondente em [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Observe que os controles agora são classes em [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Fornece uma tabela que mapeia os controles no Visual Basic 6.0 para o controle correspondente no Visual Basic. Observe que os controles agora são classes no .NET Framework.  
   
  [Como: Adicionar controles ActiveX ao Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  Descreve como usar controles ActiveX em Windows Forms.

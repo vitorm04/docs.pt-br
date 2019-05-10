@@ -2,12 +2,12 @@
 title: 'Como: Ler dados de objeto de um arquivo XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1e9033d7aba8b4f423f29cd4fb4f7efbbe17a29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907342"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624351"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Como: Ler dados de objeto de um arquivo XML (Visual Basic)
 Este exemplo lê dados de objeto que foram previamente gravados em um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -39,11 +39,11 @@ End Sub
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   A classe que está sendo serializada não tem um construtor público sem parâmetros.  
+- A classe que está sendo serializada não tem um construtor público sem parâmetros.  
   
--   Os dados no arquivo não representam dados da classe a ser desserializada.  
+- Os dados no arquivo não representam dados da classe a ser desserializada.  
   
--   O arquivo não existe (<xref:System.IO.IOException>).  
+- O arquivo não existe (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Sempre verifique as entradas e nunca desserialize dados de uma fonte não confiável. O objeto recriado é executado em um computador local com as permissões do código que o desserializou. Verifique todas as entradas antes de usar os dados no seu aplicativo.  

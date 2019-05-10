@@ -2,12 +2,12 @@
 title: Designer de compostos personalizados - apresentador de item de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0eb2ce0ca7e5d2ffd7ddd9a3d582783b4610427a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005220"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622619"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Designer de compostos personalizados - apresentador de item de fluxo de trabalho
 O <xref:System.Activities.Presentation.WorkflowItemPresenter> é um tipo de chave no WF designer modelo de programação que permite a criação de um "soltar" onde uma atividade arbitrária pode ser colocada. Este exemplo mostra como criar um designer de atividade que surija tal uma "zona de descarte."

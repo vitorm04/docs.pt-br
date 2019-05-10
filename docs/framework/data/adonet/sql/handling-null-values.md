@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 45b123e7b0db4832a1629f8ec0224729ff20f689
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032468"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623456"
 ---
 # <a name="handling-null-values"></a>Manipulando valores nulos
 Um valor nulo em um banco de dados relacional é usado quando o valor em uma coluna é desconhecido ou ausente. Um nulo não é uma cadeia de caracteres vazia (para os tipos de dados character ou datetime) nem um valor zero (para tipos de dados numéricos). A especificação ANSI SQL-92 indica que um valor nulo deve ser o mesmo para todos os tipos de dados, para que todos os nulos sejam tratados consistentemente. O namespace <xref:System.Data.SqlTypes> fornece uma semântica nula implementando a interface <xref:System.Data.SqlTypes.INullable>. Cada um dos tipos de dados no <xref:System.Data.SqlTypes> tem sua própria propriedade `IsNull` e um valor `Null` que pode ser atribuído a uma instância desse tipo de dados.  

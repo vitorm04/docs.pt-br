@@ -2,12 +2,12 @@
 title: Gerar relações de DataSet do esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2cf6d2ed949a3efa39c0f1c049bc03e7a5b0eb0b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034314"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621075"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Gerar relações de DataSet do esquema XML (XSD)
 Em um <xref:System.Data.DataSet>, você forma uma associação entre dois ou mais colunas, criando uma relação pai-filho. Há três maneiras de representar uma **conjunto de dados** relação dentro de um esquema XSD (linguagem) de definição de esquema XML:  

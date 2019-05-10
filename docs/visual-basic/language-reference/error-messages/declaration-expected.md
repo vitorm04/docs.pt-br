@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803825"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619538"
 ---
 # <a name="declaration-expected"></a>Declaração esperada
 Uma instrução nondeclarative, como uma atribuição ou uma instrução de loop ocorre fora de qualquer procedimento. Apenas declarações são permitidas procedimentos externos.  
@@ -23,11 +23,11 @@ Uma instrução nondeclarative, como uma atribuição ou uma instrução de loop
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Mova a instrução nondeclarative para o corpo de um procedimento.  
+- Mova a instrução nondeclarative para o corpo de um procedimento.  
   
--   Inicie a declaração com uma palavra-chave de declaração adequado.  
+- Inicie a declaração com uma palavra-chave de declaração adequado.  
   
--   Certifique-se de que não está escrito incorretamente uma palavra-chave de declaração.  
+- Certifique-se de que não está escrito incorretamente uma palavra-chave de declaração.  
   
 ## <a name="see-also"></a>Consulte também
 

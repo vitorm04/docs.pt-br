@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca21911f3d16b79887b9d6d8185f8fab17651321
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 550b85474c1ccd7e125549e86df906439caf410e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672985"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621493"
 ---
 # <a name="icordebugfunction-interface"></a>Interface ICorDebugFunction
 
@@ -45,9 +45,9 @@ Representa uma função ou um método gerenciado.
   
  A relação entre o token de metadados de um método `mdMethodDef`e um método `ICorDebugFunction` objeto é dependente de editar e continuar é permitida na função:  
   
--   Se editar e continuar não é permitida na função, existe uma relação um para um entre o `ICorDebugFunction` objeto e o `mdMethodDef` token. Ou seja, a função tem um `ICorDebugFunction` objeto e um `mdMethodDef` token.  
+- Se editar e continuar não é permitida na função, existe uma relação um para um entre o `ICorDebugFunction` objeto e o `mdMethodDef` token. Ou seja, a função tem um `ICorDebugFunction` objeto e um `mdMethodDef` token.  
   
--   Se editar e continuar é permitida na função, existe uma relação de muitos-para-um entre o `ICorDebugFunction` objeto e o `mdMethodDef` token. Ou seja, a função pode ter muitas instâncias do `ICorDebugFunction`, um para cada versão da função, mas somente um `mdMethodDef` token.  
+- Se editar e continuar é permitida na função, existe uma relação de muitos-para-um entre o `ICorDebugFunction` objeto e o `mdMethodDef` token. Ou seja, a função pode ter muitas instâncias do `ICorDebugFunction`, um para cada versão da função, mas somente um `mdMethodDef` token.  
   
 > [!NOTE]
 >  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  

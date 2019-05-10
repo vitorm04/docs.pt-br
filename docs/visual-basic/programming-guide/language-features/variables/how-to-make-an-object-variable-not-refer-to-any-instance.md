@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 820d4cb9d17bf467d257bfbba5f43f07228c0b4f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769051"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663554"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Como: Fazer um objeto variável não se referir a qualquer instância (Visual Basic)
 Você pode desassociar uma variável de objeto de qualquer instância do objeto definindo-a para [nada](../../../../visual-basic/language-reference/nothing.md).  

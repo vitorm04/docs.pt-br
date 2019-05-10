@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602457"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469490"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estendendo o modelo de aplicativo do Visual Basic
 Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Overridable` os membros de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Essa técnica permite que você personalize o comportamento do modelo de aplicativo e adicionar chamadas para seus próprios métodos quando o aplicativo é inicializado e desligado.  
@@ -76,10 +76,10 @@ Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Ove
   
  Se o aplicativo é um aplicativo de instância única e o aplicativo já está em execução, a instância subsequente do aplicativo chama o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> método na instância original do aplicativo e, em seguida, sai.  
  
- O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> construtor chama o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade para determinar qual mecanismo de renderização de texto a ser usado para formulários do aplicativo. Por padrão, o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade retorna `False`, indicando que o mecanismo de renderização de texto GDI usados, que é o padrão em [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Você pode substituir a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade para retornar `True`, indicando que o mecanismo de renderização de texto GDI+ ser usada, que é o padrão no Visual Basic .NET 2002 e Visual Basic .NET 2003.  
+ O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> construtor chama o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade para determinar qual mecanismo de renderização de texto a ser usado para formulários do aplicativo. Por padrão, o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade retorna `False`, indicando que o mecanismo de renderização de texto GDI usados, que é o padrão no Visual Basic 2005 e versões posteriores. Você pode substituir a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade para retornar `True`, indicando que o mecanismo de renderização de texto GDI+ ser usada, que é o padrão no Visual Basic .NET 2002 e Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Configurando o aplicativo  
- Como parte do modelo de aplicativo do Visual Basic, o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> classe fornece propriedades protegidas que configuram o aplicativo. Essas propriedades devem ser definidas no construtor da classe de implementação.  
+ Como parte do modelo de aplicativo do Visual Basic, o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe fornece propriedades protegidas que configuram o aplicativo. Essas propriedades devem ser definidas no construtor da classe de implementação.  
   
  Em um projeto do Windows Forms, o **Designer de projeto** cria código para definir as propriedades com as configurações de designer. As propriedades são usadas somente quando o aplicativo está sendo iniciado; defini-los depois que o aplicativo é iniciado não tem nenhum efeito.  
   

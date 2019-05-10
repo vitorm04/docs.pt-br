@@ -4,12 +4,12 @@ description: Obtenha saber as ofertas da Microsoft para dar suporte ao ciclo de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdaac06ffd907783c7ebe9b62ecd726158a02484
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934649"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664388"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introdução à plataforma Microsoft e ferramentas para aplicativos em contêineres
 
@@ -31,7 +31,7 @@ A Tabela 3-1 demonstra que a intenção do Microsoft DevOps com relação aos ap
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Plataforma para aplicativos do Docker   | • Microsoft Visual Studio e Visual Studio Code<br /> • .NET<br /> • Serviço de Contêiner do Microsoft Azure<br /> • Azure Service Fabric<br /> • Registro de Contêiner do Azure<br /> | • Qualquer editor de código (por exemplo, Sublime)<br /> • Qualquer linguagem (Node.js, Java, Go, etc.)<br /> • Qualquer orquestrador e agendador<br /> • Qualquer registro do Docker<br /> |
 | DevOps para aplicativos do Docker     | • Serviços do DevOps do azure<br /> • Microsoft Team Foundation Server<br /> • Serviço de Contêiner do Azure<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes, etc. local<br /> |
-| Gerenciamento e monitoramento  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon, Chronos, etc.<br />
+| Gerenciamento e monitoramento  | • Azure Monitor | • Marathon, Chronos, etc.<br />|
 
 A plataforma Microsoft e ferramentas para aplicativos em contêineres do Docker, conforme definido na tabela 3-1, incluem os seguintes componentes:
 

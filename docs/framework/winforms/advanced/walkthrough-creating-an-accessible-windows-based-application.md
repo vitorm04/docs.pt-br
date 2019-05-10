@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c324e4956d6db29e4de12bd7639a69daaf65d872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747532"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665925"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Passo a passo: criar um aplicativo baseado no Windows acessível
 A criação de um aplicativo acessível tem implicações importantes nos negócios. Muitos órgãos governamentais tem regulamentos de acessibilidade para a compra de software. O logotipo Certified for Windows inclui requisitos de acessibilidade. Estima-se que 30 milhões de moradores, apenas dos EUA, muitos deles clientes potenciais, são afetados pela acessibilidade do software.  
   
  Este passo a passo abordará os cinco requisitos de acessibilidade para o logotipo Certified for Windows. De acordo com a esses requisitos, um aplicativo acessível:  
   
--   Dará suporte às configurações de tamanho, cor, fonte e de entrada do Painel de Controle. A barra de menus, a barra de título, as bordas e a barra de status serão todas redimensionadas quando o usuário alterar as configurações do painel de controle. Nenhuma alteração adicional aos controles ou ao código será necessária neste aplicativo.  
+- Dará suporte às configurações de tamanho, cor, fonte e de entrada do Painel de Controle. A barra de menus, a barra de título, as bordas e a barra de status serão todas redimensionadas quando o usuário alterar as configurações do painel de controle. Nenhuma alteração adicional aos controles ou ao código será necessária neste aplicativo.  
   
--   Dará suporte ao modo de alto contraste.  
+- Dará suporte ao modo de alto contraste.  
   
--   Fornecerá acesso ao teclado documentado a todos os recursos.  
+- Fornecerá acesso ao teclado documentado a todos os recursos.  
   
--   Exporá o local do foco do teclado visualmente e programaticamente.  
+- Exporá o local do foco do teclado visualmente e programaticamente.  
   
--   Evitará a transmissão de informações importantes apenas através do som.  
+- Evitará a transmissão de informações importantes apenas através do som.  
   
  Para obter mais informações, consulte [Recursos para projetar aplicativos acessíveis](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
@@ -41,29 +41,29 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
   
 #### <a name="to-begin-making-the-application"></a>Para começar a criar o aplicativo  
   
--   Criar um novo aplicativo do Windows no Visual Basic ou Visual C#. Nomeie o projeto como **PizzaOrder**. (Para obter detalhes, consulte [Criando novas soluções e projetos](/visualstudio/ide/creating-solutions-and-projects)).  
+- Criar um novo aplicativo do Windows no Visual Basic ou Visual C#. Nomeie o projeto como **PizzaOrder**. (Para obter detalhes, consulte [Criando novas soluções e projetos](/visualstudio/ide/creating-solutions-and-projects)).  
   
 ## <a name="adding-the-controls-to-the-form"></a>Adicionando os controles ao formulário  
  Ao adicionar controles a um formulário, tenha em mente as seguintes diretrizes para criar um aplicativo acessível:  
   
--   Defina as <xref:System.Windows.Forms.Control.AccessibleDescription%2A> e <xref:System.Windows.Forms.Control.AccessibleName%2A> propriedades. Neste exemplo, a configuração padrão para o <xref:System.Windows.Forms.Control.AccessibleRole%2A> é suficiente. Para obter mais informações sobre as propriedades de acessibilidade, consulte [Fornecendo informações de acessibilidade para controles em um Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
+- Defina as <xref:System.Windows.Forms.Control.AccessibleDescription%2A> e <xref:System.Windows.Forms.Control.AccessibleName%2A> propriedades. Neste exemplo, a configuração padrão para o <xref:System.Windows.Forms.Control.AccessibleRole%2A> é suficiente. Para obter mais informações sobre as propriedades de acessibilidade, consulte [Fornecendo informações de acessibilidade para controles em um Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
   
--   Defina o tamanho da fonte como 10 pontos ou mais.  
+- Defina o tamanho da fonte como 10 pontos ou mais.  
   
     > [!NOTE]
     >  Se você definir o tamanho da fonte do formulário como 10 ao iniciar, todos os controles adicionados posteriormente ao formulário terão um tamanho da fonte de 10.  
   
--   Certifique-se de que qualquer controle de rótulo que descreve um controle TextBox venha logo antes do controle TextBox na ordem de tabulação.  
+- Certifique-se de que qualquer controle de rótulo que descreve um controle TextBox venha logo antes do controle TextBox na ordem de tabulação.  
   
--   Adicione uma chave de acesso, usando o caractere "&", para o <xref:System.Windows.Forms.Control.Text%2A> propriedade de qualquer controle que o usuário deseja navegar.  
+- Adicione uma chave de acesso, usando o caractere "&", para o <xref:System.Windows.Forms.Control.Text%2A> propriedade de qualquer controle que o usuário deseja navegar.  
   
--   Adicione uma chave de acesso, usando o caractere "&", para o <xref:System.Windows.Forms.Control.Text%2A> propriedade do rótulo que precede um controle que o usuário poderá navegar para. Definir rótulos <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriedade para `true`, de modo que o foco é definido para o próximo controle na ordem de tabulação quando o usuário pressiona a tecla de acesso.  
+- Adicione uma chave de acesso, usando o caractere "&", para o <xref:System.Windows.Forms.Control.Text%2A> propriedade do rótulo que precede um controle que o usuário poderá navegar para. Definir rótulos <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriedade para `true`, de modo que o foco é definido para o próximo controle na ordem de tabulação quando o usuário pressiona a tecla de acesso.  
   
--   Adicione chaves de acesso a todos os itens de menu.  
+- Adicione chaves de acesso a todos os itens de menu.  
   
 #### <a name="to-make-your-windows-application-accessible"></a>Para tornar seu aplicativo do Windows acessível  
   
--   Adicione os controles ao formulário e defina as propriedades conforme descrito abaixo. Veja a imagem no final da tabela para um modelo de como organizar os controles no formulário.  
+- Adicione os controles ao formulário e defina as propriedades conforme descrito abaixo. Veja a imagem no final da tabela para um modelo de como organizar os controles no formulário.  
   
     |Objeto|Propriedade|Valor|  
     |------------|--------------|-----------|  
@@ -137,20 +137,20 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
     |MenuItem|Nome|exitApp|  
     ||Texto|Sa&ir|
     
-      Seu formulário será algo parecido com a imagem a seguir:
+      Your form will look something like the following image:
     
-      ![O formulário de pedido de pizza com uma seleção de nome de caixa de texto e o tamanho e ingredientes.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+      ![The pizza order form with a name textbox, and size and toppings selection.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
 ## <a name="supporting-high-contrast-mode"></a>Suporte ao modo de alto contraste  
  O modo de Alto Contraste é uma configuração de sistema do Windows que melhora a legibilidade, usando cores contrastantes e tamanhos de fonte que são benéficos para usuários com deficiências visuais. O <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> é fornecida para determinar se o modo de alto contraste está definido.  
   
  Se SystemInformation.HighContrast for `true`, o aplicativo deverá:  
   
--   Exibir todos os elementos de interface do usuário usando o esquema de cores do sistema  
+- Exibir todos os elementos de interface do usuário usando o esquema de cores do sistema  
   
--   Transmitir, por dicas visuais ou por som, quaisquer informações que são transmitidas por meio de cor. Por exemplo, se determinados itens de lista estão realçados com uma fonte vermelha, você também pode adicionar negrito à fonte para que o usuário tenha uma dica diferente das cores de que os itens estão realçados.  
+- Transmitir, por dicas visuais ou por som, quaisquer informações que são transmitidas por meio de cor. Por exemplo, se determinados itens de lista estão realçados com uma fonte vermelha, você também pode adicionar negrito à fonte para que o usuário tenha uma dica diferente das cores de que os itens estão realçados.  
   
--   Omitir imagens ou padrões por trás do texto  
+- Omitir imagens ou padrões por trás do texto  
   
  O aplicativo deve verificar a configuração da <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> quando o aplicativo é iniciado e responder ao evento de sistema <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. O <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> é gerado sempre que o valor de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> alterações.  
   

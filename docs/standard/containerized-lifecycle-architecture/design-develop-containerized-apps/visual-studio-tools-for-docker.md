@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795524"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664367"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Use as ferramentas do Docker no Visual Studio 2017 no Windows
 
@@ -79,7 +79,7 @@ A tabela a seguir pode ajudá-lo a decidir como definir essas opções.
 | Extrair automaticamente as imagens necessárias do Docker no carregamento do projeto | On | Docker Compose | Para melhorar o desempenho durante o carregamento de projetos, o Visual Studio será iniciado uma operação de pull do Docker em segundo plano para que quando você estiver pronto para executar seu código, a imagem é baixada já ou no processo de download. Se você estiver apenas carregar projetos e navegação de código, você pode desativar isso para evitar o download de imagens de contêiner, que você não precisa. |
 | Iniciar automaticamente os contêineres em segundo plano | On | Docker Compose | Novamente para melhorar o desempenho, o Visual Studio cria um contêiner com montagens de volume pronto para quando você compila e executar seu contêiner. Se você desejar controlar quando o contêiner é criado, desative essa opção. |
 | Fechar automaticamente os contêineres kill na solução | On | Docker Compose | Desative essa opção se você desejar contêineres para sua solução continuar a executar após fechar a solução ou fechar o Visual Studio. |
-| Não solicitar certificado SSL localhost confiável | Off | Projetos do ASP.NET Core 2.1 | Se o certificado SSL do localhost não for confiável, Visual Studio solicitará que toda vez que você execute seu projeto, a menos que essa caixa de seleção está marcada. |
+| Não solicitar certificado SSL localhost confiável | Off | Projetos do ASP.NET Core 2.2 | Se o certificado SSL do localhost não for confiável, Visual Studio solicitará que toda vez que você execute seu projeto, a menos que essa caixa de seleção está marcada. |
 
 > [!WARNING]
 > Se o certificado SSL do localhost não é confiável e você marcar a caixa para suprimir a solicitação, solicitações da web HTTPS podem falhar em tempo de execução em seu aplicativo ou serviço. Nesse caso, desmarque a **não solicitar** caixa de seleção, execute seu projeto e indicar confiança no prompt de.

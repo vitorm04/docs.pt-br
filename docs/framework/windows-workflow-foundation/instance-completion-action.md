@@ -2,12 +2,12 @@
 title: Ação de conclusão da instância
 ms.date: 03/30/2017
 ms.assetid: 90cc99d2-9fef-42fd-bcbf-a56917993721
-ms.openlocfilehash: 646015fbcdb7c734ae8584c7ca3979d64b81339f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d68f41a586e44f96c9ca26cf8a142a2782adaa36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791112"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662971"
 ---
 # <a name="instance-completion-action"></a>Ação de conclusão da instância
 O **ação de conclusão da instância** propriedade de Store de instância de fluxo de trabalho do SQL permite que você especifique se os dados e metadados de instâncias de fluxo de trabalho é excluído do banco de dados de persistência depois que as instâncias são concluídas. Os valores permitidos para essa propriedade são **DeleteAll** e **DeleteNothing**. A lista a seguir descreve as opções:  

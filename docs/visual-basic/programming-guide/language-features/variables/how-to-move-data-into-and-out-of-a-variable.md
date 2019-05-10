@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 033d1cb0116b78ca9e3677c920ee5745117573d2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756592"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663526"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Como: Mover dados dentro e fora de uma variável (Visual Basic)
 Você pode armazenar um valor em uma variável, colocando o nome da variável no lado esquerdo de uma instrução de atribuição.  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: dec42a19f3e265f440ec03164ebc1ece9b6d5ce3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 47c320b6d458ff1220808cacfb334e380b1edbc4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793478"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622740"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurando o serviço de dados (WCF Data Services)
 Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode criar serviços de dados que expõem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Os dados nesses feeds podem vir de uma variedade de fontes de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa provedores de dados para expor esses dados como um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Esses provedores incluem um provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], um provedor de reflexão e um conjunto de interfaces personalizadas de provedor de serviços de dados. A implementação do provedor define o modelo de dados para o serviço. Para obter mais informações, consulte [provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  

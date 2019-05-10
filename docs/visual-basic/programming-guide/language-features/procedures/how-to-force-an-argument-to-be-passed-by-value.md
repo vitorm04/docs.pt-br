@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 540271c414ac295c419533a4622657d60d123796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863617"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665389"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Como: Forçar um argumento a ser passado por valor (Visual Basic)
 A declaração de procedimento determina o mecanismo de passagem. Se um parâmetro for declarado [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic espera passar o argumento correspondente por referência. Isso permite que o procedimento para alterar o valor do elemento de programação subjacente do argumento no código de chamada. Se você desejar proteger o elemento subjacente contra alteração, você pode substituir o `ByRef` mecanismo de passagem no procedimento chame colocando o nome do argumento entre parênteses. São esses parênteses, além de parênteses que incluem a lista de argumentos na chamada.  
@@ -28,9 +28,9 @@ A declaração de procedimento determina o mecanismo de passagem. Se um parâmet
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>Para forçar um argumento a ser passado por valor  
   
--   Se o parâmetro correspondente é declarado `ByVal` no procedimento, você não precisa executar etapas adicionais. Visual Basic já espera passar o argumento por valor.  
+- Se o parâmetro correspondente é declarado `ByVal` no procedimento, você não precisa executar etapas adicionais. Visual Basic já espera passar o argumento por valor.  
   
--   Se o parâmetro correspondente é declarado `ByRef` no procedimento, coloque o argumento entre parênteses na chamada de procedimento.  
+- Se o parâmetro correspondente é declarado `ByRef` no procedimento, coloque o argumento entre parênteses na chamada de procedimento.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir substitui um `ByRef` declaração de parâmetro. Na chamada de força `ByVal`, observe os dois níveis de parênteses.  

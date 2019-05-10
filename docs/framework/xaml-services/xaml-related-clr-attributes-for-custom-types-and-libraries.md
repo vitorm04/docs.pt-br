@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0984028e0a09c9939f68ae64be8c401182b57274
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938756"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622908"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas
 Este tópico descreve os atributos de runtime (CLR) de linguagem comuns que são definidos por serviços XAML do .NET Framework. Ele também descreve outros atributos CLR que são definidos no .NET Framework que têm um cenário relacionados a XAML para o aplicativo para assemblies ou tipos. Atribuição de assemblies, tipos ou membros com esses atributos CLR fornece relacionadas aos seus tipos de informações do sistema de tipo XAML. Informações são fornecidas para qualquer consumidor XAML que usa serviços de XAML do .NET Framework para processar o fluxo do nó XAML diretamente ou por meio dos leitores XAML e gravadores XAML.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bd1a52f1ce0f656af79928a20e3badc73661e89a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773016"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635300"
 ---
 # <a name="how-to-enable-streaming"></a>Como: habilitar a transmissão
 Windows Communication Foundation (WCF) pode enviar mensagens usando transferências em buffer ou transmitidas. No modo de transferência em buffer padrão, uma mensagem deve ser entregue completamente antes de um destinatário possa lê-lo. No modo de transferência de streaming, o receptor pode começar a processar a mensagem antes que seja entregue completamente. O modo de streaming é útil quando as informações que são passadas são demoradas e podem ser processadas em série. Modo de streaming também é útil quando a mensagem é muito grande para ser totalmente armazenada em buffer.  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2dc7793a837c588b98365a97ada58c67dc07fa03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052671"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664259"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo de '\<variablename >' não pode ser inferido porque os limites do loop e a variável step não são ampliados para o mesmo tipo
 Você escreveu uma `For...Next` loop em que o compilador não é possível inferir um tipo de dados para a variável de controle de loop porque as seguintes condições forem verdadeiras:  

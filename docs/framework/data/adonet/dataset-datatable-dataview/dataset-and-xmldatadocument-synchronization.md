@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7763e7065e74d99ee5521ea1e4f48fa0108f235a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879808"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623392"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Sincronização de DataSet e XmlDataDocument
 O ADO.NET <xref:System.Data.DataSet> fornece uma representação de dados relacional. Para obter acesso a dados hierárquicos, você pode usar as classes XML disponíveis no .NET Framework. Historicamente, essas duas representações de dados foram usadas separadamente. No entanto, o .NET Framework permite acesso síncrono em tempo real às representações relacionais e hierárquicas de dados por meio de **DataSet** objeto e o <xref:System.Xml.XmlDataDocument> do objeto, respectivamente.  
@@ -19,7 +19,7 @@ O ADO.NET <xref:System.Data.DataSet> fornece uma representação de dados relaci
   
  Há várias maneiras que você pode sincronizar uma **DataSet** com um **XmlDataDocument**. Você pode:  
   
--   Preencher uma **DataSet** com o esquema (ou seja, uma estrutura relacional) e os dados e, em seguida, sincronizá-lo com uma nova **XmlDataDocument**. Isso fornece uma exibição hierárquica de dados relacionais existentes. Por exemplo:  
+- Preencher uma **DataSet** com o esquema (ou seja, uma estrutura relacional) e os dados e, em seguida, sincronizá-lo com uma nova **XmlDataDocument**. Isso fornece uma exibição hierárquica de dados relacionais existentes. Por exemplo:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,7 +37,7 @@ O ADO.NET <xref:System.Data.DataSet> fornece uma representação de dados relaci
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   Preencher uma **conjunto de dados** somente com esquema (como fortemente tipado **DataSet**), sincronizá-lo com um **XmlDataDocument**e, em seguida, carregue o  **XmlDataDocument** de um documento XML. Isso fornece uma exibição relacional de dados hierárquicos existentes. Os nomes de tabela e nomes de coluna em sua **conjunto de dados** esquema deve corresponder aos nomes dos elementos XML que você deseja que eles sincronizados com o. Essa correspondência diferencia maiúsculas de minúsculas.  
+- Preencher uma **conjunto de dados** somente com esquema (como fortemente tipado **DataSet**), sincronizá-lo com um **XmlDataDocument**e, em seguida, carregue o  **XmlDataDocument** de um documento XML. Isso fornece uma exibição relacional de dados hierárquicos existentes. Os nomes de tabela e nomes de coluna em sua **conjunto de dados** esquema deve corresponder aos nomes dos elementos XML que você deseja que eles sincronizados com o. Essa correspondência diferencia maiúsculas de minúsculas.  
   
      Observe que o esquema do **conjunto de dados** somente precisa corresponder os elementos XML que você deseja expor na sua exibição relacional. Dessa maneira, você pode ter um documento XML muito grande e uma "janela" relacional muito pequena nesse documento. O **XmlDataDocument** preserva todo o documento XML, embora o **conjunto de dados** expõe apenas uma pequena parte dele. (Para obter um exemplo detalhado disso, consulte [sincronizando um conjunto de dados com um XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).)  
   
@@ -63,7 +63,7 @@ O ADO.NET <xref:System.Data.DataSet> fornece uma representação de dados relaci
   
      Você não pode carregar uma **XmlDataDocument** se ele estiver sincronizado com um **conjunto de dados** que contém os dados. Uma exceção será gerada.  
   
--   Criar um novo **XmlDataDocument** e carregá-lo de um documento XML e, em seguida, acessar a exibição relacional dos dados usando o **DataSet** propriedade do **XmlDataDocument**. Você precisa definir o esquema do **DataSet** antes de exibir os dados no **XmlDataDocument** usando o **conjunto de dados**. Novamente, os nomes de tabela e das colunas em sua **conjunto de dados** esquema deve corresponder aos nomes dos elementos XML que você deseja que eles sincronizados com o. Essa correspondência diferencia maiúsculas de minúsculas.  
+- Criar um novo **XmlDataDocument** e carregá-lo de um documento XML e, em seguida, acessar a exibição relacional dos dados usando o **DataSet** propriedade do **XmlDataDocument**. Você precisa definir o esquema do **DataSet** antes de exibir os dados no **XmlDataDocument** usando o **conjunto de dados**. Novamente, os nomes de tabela e das colunas em sua **conjunto de dados** esquema deve corresponder aos nomes dos elementos XML que você deseja que eles sincronizados com o. Essa correspondência diferencia maiúsculas de minúsculas.  
   
      O exemplo de código a seguir mostra como acessar a exibição relacional dos dados em um **XmlDataDocument**.  
   
