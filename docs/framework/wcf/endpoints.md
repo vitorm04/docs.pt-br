@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a18e2ab31998b7759803e023151892694757119
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923182"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613389"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Pontos de extremidade do Windows Communication Foundation
 Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade de fornecem aos clientes acesso à funcionalidade que oferece um serviço WCF.  
   
  Para obter uma visão geral sobre como criar um ponto de extremidade, consulte [visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md). Cada ponto de extremidade contém:  
   
--   Um endereço que indica onde encontrar o ponto de extremidade.  
+- Um endereço que indica onde encontrar o ponto de extremidade.  
   
--   Uma associação que especifica como um cliente pode se comunicar com o ponto de extremidade.  
+- Uma associação que especifica como um cliente pode se comunicar com o ponto de extremidade.  
   
--   Um contrato que identifica os métodos disponíveis.  
+- Um contrato que identifica os métodos disponíveis.  
   
  Para obter descrições sobre como especificar essas partes individuais de um ponto de extremidade, consulte:  
   
--   [Especificando um endereço do ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+- [Especificando um endereço do ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
   
--   [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+- [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
   
--   [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+- [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md)  

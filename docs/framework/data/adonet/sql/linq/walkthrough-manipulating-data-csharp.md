@@ -2,12 +2,12 @@
 title: 'Passo a passo: Manipular dados (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7bac370ae8dc260ca4b665fd51680a80fd9846fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330773"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618035"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Passo a passo: Manipular dados (C#)
 Essa explicação passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para adicionar, modificar e excluir dados em um banco de dados. Você usará uma cópia do banco de dados de exemplo Northwind para adicionar um cliente, alterar o nome de um cliente e excluir um pedido.  
@@ -19,13 +19,13 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
 ## <a name="prerequisites"></a>Pré-requisitos  
  Este passo a passo requer o seguinte:  
   
--   Este passo a passo usa uma pasta dedicada ("c:\linqtest6") para armazenar arquivos. Crie essa pasta antes de iniciar o passo a passo.  
+- Este passo a passo usa uma pasta dedicada ("c:\linqtest6") para armazenar arquivos. Crie essa pasta antes de iniciar o passo a passo.  
   
--   O banco de dados de exemplo Northwind.  
+- O banco de dados de exemplo Northwind.  
   
      Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Depois de baixar o banco de dados, copie o arquivo northwnd.mdf para a pasta c:\linqtest6.  
   
--   Um arquivo de código C# gerado no banco de dados Northwind.  
+- Um arquivo de código C# gerado no banco de dados Northwind.  
   
      Você pode gerar esse arquivo usando o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ou a ferramenta SQLMetal. Este passo a passo foi escrito usando a ferramenta SQLMetal com a seguinte linha de comando:  
   
@@ -36,17 +36,17 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
 ## <a name="overview"></a>Visão geral  
  Este passo a passo consiste em seis tarefas principais:  
   
--   Criando o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solução no Visual Studio.  
+- Criando o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solução no Visual Studio.  
   
--   Adicionar o arquivo do código de banco de dados ao projeto.  
+- Adicionar o arquivo do código de banco de dados ao projeto.  
   
--   Criar um novo objeto do cliente.  
+- Criar um novo objeto do cliente.  
   
--   Alterar o nome de contato de um cliente.  
+- Alterar o nome de contato de um cliente.  
   
--   Excluir um pedido.  
+- Excluir um pedido.  
   
--   Enviar essas alterações para o banco de dados Northwind.  
+- Enviar essas alterações para o banco de dados Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Criando uma solução LINQ to SQL  
  A primeira tarefa, você cria uma solução do Visual Studio que contém as referências necessárias para compilar e executar um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto.  
@@ -126,7 +126,7 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 #### <a name="to-change-the-name-of-a-customer"></a>Para alterar o nome de um cliente  
   
--   Adicione o seguinte código acima de `Console.ReadLine();`:  
+- Adicione o seguinte código acima de `Console.ReadLine();`:  
   
      [!code-csharp[DLinqWalk3CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#4)]  
   
@@ -137,7 +137,7 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 #### <a name="to-delete-a-row"></a>Para excluir uma linha  
   
--   Adicione o seguinte código bem acima de `Console.ReadLine();`:  
+- Adicione o seguinte código bem acima de `Console.ReadLine();`:  
   
      [!code-csharp[DLinqWalk3CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#5)]  
   

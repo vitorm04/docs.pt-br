@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f4c62ff551ac66c4b7192a4e978db0a9f443f3f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916403"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613694"
 ---
 # <a name="wcf-performance-counters"></a>Contadores de desempenho do WCF
 Windows Communication Foundation (WCF) inclui um grande conjunto de contadores de desempenho para ajudá-lo a medir o desempenho do seu aplicativo.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) inclui um grande conjunto de contadores d
   
  O `performanceCounters` atributo pode ser definido para habilitar um tipo específico de contadores de desempenho. Os valores válidos são  
   
--   Todos os: Todos os contadores de categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation) estão habilitados.  
+- Todos os: Todos os contadores de categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation) estão habilitados.  
   
--   ServiceOnly: Somente os contadores de categoria ServiceModelService estão habilitados. Este é o valor padrão.  
+- ServiceOnly: Somente os contadores de categoria ServiceModelService estão habilitados. Este é o valor padrão.  
   
--   Off: Contadores de desempenho ServiceModel * estão desabilitados.  
+- Off: Contadores de desempenho ServiceModel * estão desabilitados.  
   
  Se você quiser habilitar os contadores de desempenho para todos os aplicativos do WCF, você pode colocar as definições de configuração no arquivo Machine. config.  Consulte a **aumentando o tamanho de memória para contadores de desempenho** seção abaixo para obter mais informações sobre como configurar a memória suficiente para contadores de desempenho em seu computador.  
   
@@ -63,11 +63,11 @@ config.Save();
   
  Você pode alterar a quantidade de memória do contador de desempenho para as categorias WCF no registro. Para fazer isso, você precisará adicionar um novo valor DWORD chamado `FileMappingSize` para os três locais a seguir e defina-o como o valor desejado em bytes. Reinicie o computador para que essas alterações são levadas em efeito.  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
   
  Quando um grande número de objetos (por exemplo, o ServiceHost) sejam descartado, mas esperando para ser coletado como lixo, o `PrivateBytes` contador de desempenho serão registrados em um número extraordinariamente alto. Para resolver esse problema, você pode adicionar seus próprios contadores específicos do aplicativo, ou usar o `performanceCounters` atributo para habilitar os contadores apenas do nível de serviço.  
   
@@ -76,11 +76,11 @@ config.Save();
   
  Você pode usar o WMI para recuperar o nome de uma instância do contador de desempenho. Por exemplo,  
   
--   Nome de instância do contador de serviço pode ser obtido por meio do WMI [serviço](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) propriedade de "CounterInstanceName" da instância.  
+- Nome de instância do contador de serviço pode ser obtido por meio do WMI [serviço](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) propriedade de "CounterInstanceName" da instância.  
   
--   Nome de instância de contador do ponto de extremidade pode ser obtido por meio do WMI [ponto de extremidade](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) propriedade de "CounterInstanceName" da instância.  
+- Nome de instância de contador do ponto de extremidade pode ser obtido por meio do WMI [ponto de extremidade](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) propriedade de "CounterInstanceName" da instância.  
   
--   Nome de instância do contador de operação pode ser obtido por meio do WMI [ponto de extremidade](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) "GetOperationCounterInstanceName" de método instância do.  
+- Nome de instância do contador de operação pode ser obtido por meio do WMI [ponto de extremidade](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) "GetOperationCounterInstanceName" de método instância do.  
   
  Para obter mais informações sobre WMI, consulte [usando o Windows Management Instrumentation para diagnóstico](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
@@ -126,15 +126,15 @@ ServiceName@ServiceBaseAddress
 ## <a name="programming-the-wcf-performance-counters"></a>Os contadores de desempenho do WCF de programação  
  Vários arquivos são instalados na pasta de instalação do SDK para que você possa acessar os contadores de desempenho do WCF por meio de programação. Esses arquivos são listados a seguir.  
   
--   _ServiceModelEndpointPerfCounters.vrg  
+- _ServiceModelEndpointPerfCounters.vrg  
   
--   _ServiceModelOperationPerfCounters.vrg  
+- _ServiceModelOperationPerfCounters.vrg  
   
--   _ServiceModelServicePerfCounters.vrg  
+- _ServiceModelServicePerfCounters.vrg  
   
--   _SMSvcHostPerfCounters.vrg  
+- _SMSvcHostPerfCounters.vrg  
   
--   _TransactionBridgePerfCounters.vrg  
+- _TransactionBridgePerfCounters.vrg  
   
  Para obter mais informações sobre como acessar os contadores de forma programática, consulte [arquitetura de programação de contador de desempenho](https://go.microsoft.com/fwlink/?LinkId=95179).  
   

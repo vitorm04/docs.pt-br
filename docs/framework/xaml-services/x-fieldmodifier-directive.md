@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0394522b8a006d6b187219c8ef7dfccd6556ffca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971855"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617075"
 ---
 # <a name="xfieldmodifier-directive"></a>Diretiva x:FieldModifier
 Modifica o comportamento de compilação de XAML para que os campos para referências de objeto nomeado são definidos com <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> acessar em vez do <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> comportamento padrão.  

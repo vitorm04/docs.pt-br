@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b3d0f5c77ebf8527e4854d4edf12d6fa8a4b5f0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340393"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614637"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Como: Manipular o evento ContextMenuOpening
 O <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento pode ser tratado em um aplicativo para ajustar um menu de contexto existente antes para exibir ou suprimir o menu que seria exibido, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade `true` nos dados do evento. A razão típica para configuração <xref:System.Windows.RoutedEventArgs.Handled%2A> à `true` no evento dados são substituir o menu completamente com um novo <xref:System.Windows.Controls.ContextMenu> do objeto, que requer, às vezes, o cancelamento da operação e inicie uma nova abertura. Se você escrever manipuladores para o <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento, você deve conhecer os problemas de tempo entre um <xref:System.Windows.Controls.ContextMenu> controle e o serviço que é responsável pela abertura e posicionamento dos menus de contexto para controles em geral. Este tópico ilustra algumas das técnicas de código para vários cenários de abertura do menu de contexto e ilustra um caso em que ocorre um problema de sincronismo.  
   
  Há vários cenários para a manipulação de <xref:System.Windows.FrameworkElement.ContextMenuOpening> eventos:  
   
--   Ajustar os itens de menu antes da exibição.  
+- Ajustar os itens de menu antes da exibição.  
   
--   Substituir o menu inteiro antes da exibição.  
+- Substituir o menu inteiro antes da exibição.  
   
--   Suprimir completamente qualquer menu de contexto existente e não exibir nenhum menu de contexto.  
+- Suprimir completamente qualquer menu de contexto existente e não exibir nenhum menu de contexto.  
   
 ## <a name="example"></a>Exemplo  
   

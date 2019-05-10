@@ -2,23 +2,23 @@
 title: Gerando um cliente do WCF de metadados de serviço
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9a72228ddb32786f39585083d62e1f3f028763c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855992"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613377"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Gerando um cliente do WCF de metadados de serviço
 Este tópico descreve como usar as várias opções no Svcutil.exe para gerar os clientes de documentos de metadados.  
   
  Documentos de metadados podem estar em um armazenamento durável ou serem recuperados online. Recuperação online segue o protocolo WS-MetadataExchange ou o protocolo descoberta do Microsoft (DISCO). Svcutil.exe emite as seguintes solicitações de metadados para recuperar metadados simultaneamente:  
   
--   Solicitação do WS-MetadataExchange (MEX) para o endereço fornecido.  
+- Solicitação do WS-MetadataExchange (MEX) para o endereço fornecido.  
   
--   Solicitação de MEX para o endereço fornecido com `/mex` acrescentado.  
+- Solicitação de MEX para o endereço fornecido com `/mex` acrescentado.  
   
--   Solicitação de DISCO (usando o [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) do ASP.NET Web services) para o endereço fornecido.  
+- Solicitação de DISCO (usando o [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) do ASP.NET Web services) para o endereço fornecido.  
   
  Svcutil.exe gera o cliente com base no arquivo de descrição de linguagem WSDL (Web Services) ou a política recebido do serviço. O nome de usuário principal (UPN) é gerado concatenando o nome de usuário com "\@" e, em seguida, adicionar um nome de domínio totalmente qualificado (FQDN). No entanto, para os usuários registrados no Active Directory, esse formato não é válido e o UPN gerado pela ferramenta causa uma falha na autenticação Kerberos com a seguinte mensagem de erro: **Falha na tentativa de logon.** Para resolver esse problema, corrigi manualmente o arquivo do cliente que gerou a ferramenta.  
   

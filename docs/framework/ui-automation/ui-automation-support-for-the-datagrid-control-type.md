@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 45eaa66396049b619c9164b20eed798505d478a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161025"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607045"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle DataGrid
 > [!NOTE]
@@ -61,13 +61,13 @@ ms.locfileid: "59161025"
   
  Itens de dados dentro dos contêineres de grade de dados serão compatível com no mínimo:  
   
--   Padrão de controle de Item de seleção (se a grade de dados é selecionável)  
+- Padrão de controle de Item de seleção (se a grade de dados é selecionável)  
   
--   Role o padrão de controle de Item (se a grade de dados for rolável)  
+- Role o padrão de controle de Item (se a grade de dados for rolável)  
   
--   Padrão de controle de Item de grade  
+- Padrão de controle de Item de grade  
   
--   padrão de controle Item de Tabela  
+- padrão de controle Item de Tabela  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação de interface do usuário necessária  

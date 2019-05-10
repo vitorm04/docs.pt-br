@@ -2,21 +2,21 @@
 title: Visão geral de modelo de programação HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a5438857114fba890aac78565ef128bfc5ea95f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613058"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Visão geral de modelo de programação HTTP Web do WCF
 O modelo de programação WEB do Windows Communication Foundation (WCF) HTTP fornece os elementos básicos necessários para compilar serviços WEB HTTP com WCF. Serviços WCF WEB HTTP são projetados para ser acessado por mais ampla gama de possíveis clientes, incluindo navegadores da Web e têm os seguintes requisitos exclusivos:  
   
--   **URIs e processamento de URI** URIs desempenham um papel central no design de serviços WEB HTTP. Os usos do modelo de programação WCF WEB HTTP a <xref:System.UriTemplate> e <xref:System.UriTemplateTable> classes para fornecer recursos de processamento do URI.  
+- **URIs e processamento de URI** URIs desempenham um papel central no design de serviços WEB HTTP. Os usos do modelo de programação WCF WEB HTTP a <xref:System.UriTemplate> e <xref:System.UriTemplateTable> classes para fornecer recursos de processamento do URI.  
   
--   **Suporte para operações GET e POST** serviços WEB HTTP fazem uso do verbo GET para recuperação de dados, além de vários invocar verbos para modificação de dados e invocação remota. Os usos do modelo de programação WCF WEB HTTP a <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> para associar operações de serviço com GET e outros verbos HTTP como PUT, POST e excluir.  
+- **Suporte para operações GET e POST** serviços WEB HTTP fazem uso do verbo GET para recuperação de dados, além de vários invocar verbos para modificação de dados e invocação remota. Os usos do modelo de programação WCF WEB HTTP a <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> para associar operações de serviço com GET e outros verbos HTTP como PUT, POST e excluir.  
   
--   **Vários formatos de dados** serviços no estilo Web processam muitos tipos de dados, além de mensagens SOAP. Os usos do modelo de programação WCF WEB HTTP a <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior> para dar suporte a muitos formatos de dados diferentes, incluindo documentos XML, o objeto de dados JSON e fluxos de conteúdo binário, como imagens, arquivos de vídeo ou texto sem formatação.  
+- **Vários formatos de dados** serviços no estilo Web processam muitos tipos de dados, além de mensagens SOAP. Os usos do modelo de programação WCF WEB HTTP a <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior> para dar suporte a muitos formatos de dados diferentes, incluindo documentos XML, o objeto de dados JSON e fluxos de conteúdo binário, como imagens, arquivos de vídeo ou texto sem formatação.  
   
  O modelo de programação WCF WEB HTTP amplia o alcance do WCF para cobrir os cenários de estilo da Web que incluem serviços WEB HTTP, os serviços AJAX e JSON e feeds de Sindicalização ATOM/RSS (). Para obter mais informações sobre os serviços AJAX e JSON, consulte [integração de AJAX e suporte a JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Para obter mais informações sobre a distribuição, consulte [visão geral de Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
@@ -33,23 +33,23 @@ O modelo de programação WEB do Windows Communication Foundation (WCF) HTTP for
   
  Este modelo descreve URIs semelhante ao seguinte:  
   
--   a/x/c  
+- a/x/c  
   
--   a/y/c  
+- a/y/c  
   
--   a/z/c  
+- a/z/c  
   
--   e assim por diante.  
+- e assim por diante.  
   
  Neste modelo, a notação de chave de abertura ("{segmento}") indica um segmento de variável em vez de um valor literal.  
   
  .NET framework fornece uma API para trabalhar com modelos URI chamado <xref:System.UriTemplate>. `UriTemplates` permite que você faça o seguinte:  
   
--   Você pode chamar um dos `Bind` métodos com um conjunto de parâmetros para produzir uma *totalmente fechados URI* que corresponde ao modelo. Isso significa que todas as variáveis dentro do modelo URI são substituídas por valores reais.  
+- Você pode chamar um dos `Bind` métodos com um conjunto de parâmetros para produzir uma *totalmente fechados URI* que corresponde ao modelo. Isso significa que todas as variáveis dentro do modelo URI são substituídas por valores reais.  
   
--   Você pode chamar `Match`() com um candidato do URI, que usa um modelo para dividir um candidato a partes de URI em seus constituintes e retorna um dicionário que contém as diferentes partes do URI rotulados de acordo com as variáveis no modelo.  
+- Você pode chamar `Match`() com um candidato do URI, que usa um modelo para dividir um candidato a partes de URI em seus constituintes e retorna um dicionário que contém as diferentes partes do URI rotulados de acordo com as variáveis no modelo.  
   
--   `Bind`() e `Match`() são o inverso uma para que você possa chamar `Match`( `Bind`(x)) e volte com o mesmo ambiente que você iniciou com.  
+- `Bind`() e `Match`() são o inverso uma para que você possa chamar `Match`( `Bind`(x)) e volte com o mesmo ambiente que você iniciou com.  
   
  Há muitas vezes (especialmente no servidor, em que é necessário ao expedir uma solicitação para uma operação de serviço com base no URI) que você deseja manter o controle de um conjunto de <xref:System.UriTemplate> objetos em uma estrutura de dados que podem resolver independentemente de cada uma independente modelos. <xref:System.UriTemplateTable> representa um conjunto de modelos URI e seleciona a melhor correspondência, dada um conjunto de modelos e um URI candidato. Isso não está afiliado qualquer pilha de rede específica (incluído ao WCF) para que você pode usá-lo sempre que necessário.  
   
@@ -127,11 +127,11 @@ interface ICustomer
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Formatos e o modelo de programação WCF WEB HTTP  
  O modelo de programação WCF WEB HTTP tem novos recursos para trabalhar com vários formatos de dados diferentes. Na camada de associação, o <xref:System.ServiceModel.WebHttpBinding> pode ler e gravar os diferentes tipos de dados a seguir:  
   
--   XML  
+- XML  
   
--   JSON  
+- JSON  
   
--   Fluxos binários opacos  
+- Fluxos binários opacos  
   
  Isso significa que o modelo de programação WCF WEB HTTP pode lidar com qualquer tipo de dados, mas você pode ser programar <xref:System.IO.Stream>.  
   

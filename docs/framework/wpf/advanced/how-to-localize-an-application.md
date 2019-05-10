@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298312"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614618"
 ---
 # <a name="how-to-localize-an-application"></a>Como: Localizar um aplicativo
 Esse tutorial explica como criar um aplicativo localizado usando a ferramenta LocBaml.  
@@ -91,21 +91,21 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 4. As opções que você pode especificar ao executar a LocBaml são as seguintes:  
   
-    -   **Analisar** ou **-p:** Analisa Baml, recursos ou [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] arquivos para gerar um arquivo. csv ou. txt.  
+    - **Analisar** ou **-p:** Analisa Baml, recursos ou [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] arquivos para gerar um arquivo. csv ou. txt.  
   
-    -   **Gerar** ou **-g:** Gera um arquivo binário localizado usando um arquivo traduzido.  
+    - **Gerar** ou **-g:** Gera um arquivo binário localizado usando um arquivo traduzido.  
   
-    -   **-out** ou **-o** {*filedirectory*] **:** Nome do arquivo de saída.  
+    - **-out** ou **-o** {*filedirectory*] **:** Nome do arquivo de saída.  
   
-    -   **cultura** ou **- cul** {*cultura*] **:** Localidade dos assemblies de saída.  
+    - **cultura** ou **- cul** {*cultura*] **:** Localidade dos assemblies de saída.  
   
-    -   **translation** or **-trans** {*translation.csv*] **:** Arquivo traduzido ou localizado.  
+    - **translation** or **-trans** {*translation.csv*] **:** Arquivo traduzido ou localizado.  
   
-    -   **asmpath** ou **- asmpath:** {*filedirectory*] **:** Se sua [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] código contém controles personalizados, você deve fornecer o **asmpath** para o assembly de controle personalizado.  
+    - **asmpath** ou **- asmpath:** {*filedirectory*] **:** Se sua [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] código contém controles personalizados, você deve fornecer o **asmpath** para o assembly de controle personalizado.  
   
-    -   **nologo:** Não exibe nenhuma informação de logotipo ou direitos autorais.  
+    - **nologo:** Não exibe nenhuma informação de logotipo ou direitos autorais.  
   
-    -   **verbose:** Exibe informações sobre o modo detalhado.  
+    - **verbose:** Exibe informações sobre o modo detalhado.  
   
     > [!NOTE]
     >  Se você precisar obter uma lista das opções quando você estiver executando a ferramenta, digite **LocBaml.exe** e pressione ENTER.  
@@ -133,19 +133,19 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 
    Os sete campos são:  
   
-   1.  **Nome BAML**. O nome do recurso BAML em relação ao assembly satélite do idioma de origem.  
+   1. **Nome BAML**. O nome do recurso BAML em relação ao assembly satélite do idioma de origem.  
   
-   2.  **Chave de recurso**. O identificador do recurso localizado.  
+   2. **Chave de recurso**. O identificador do recurso localizado.  
   
-   3.  **Categoria**. O tipo de valor. Ver [atributos de localização e comentários](localization-attributes-and-comments.md).  
+   3. **Categoria**. O tipo de valor. Ver [atributos de localização e comentários](localization-attributes-and-comments.md).  
   
-   4.  **Legibilidade**. Se o valor pode ser lido por um localizador. Ver [atributos de localização e comentários](localization-attributes-and-comments.md).  
+   4. **Legibilidade**. Se o valor pode ser lido por um localizador. Ver [atributos de localização e comentários](localization-attributes-and-comments.md).  
   
-   5.  **Modificabilidade**. Se o valor pode ser modificado por um localizador. Ver [atributos de localização e comentários](localization-attributes-and-comments.md).  
+   5. **Modificabilidade**. Se o valor pode ser modificado por um localizador. Ver [atributos de localização e comentários](localization-attributes-and-comments.md).  
   
-   6.  **Comentários**. Descrição adicional do valor para ajudar a determinar como um valor é localizado. Ver [atributos de localização e comentários](localization-attributes-and-comments.md).  
+   6. **Comentários**. Descrição adicional do valor para ajudar a determinar como um valor é localizado. Ver [atributos de localização e comentários](localization-attributes-and-comments.md).  
   
-   7.  **Valor**. O valor de texto a traduzir para a cultura desejada.  
+   7. **Valor**. O valor de texto a traduzir para a cultura desejada.  
   
    A tabela a seguir mostra como esses campos são mapeados para os valores delimitados do arquivo .csv:  
   
@@ -188,9 +188,9 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 7. Para testar o novo assembly satélite, você precisa alterar a cultura na qual o aplicativo será executado. Você pode fazer isso de duas maneiras:  
   
-    -   Alterar as configurações regionais do seu sistema operacional (**inicie** &#124; **painel de controle** &#124; **opções regionais e idiomas**).  
+    - Alterar as configurações regionais do seu sistema operacional (**inicie** &#124; **painel de controle** &#124; **opções regionais e idiomas**).  
   
-    -   Em seu aplicativo, adicione o seguinte código em App.xaml.cs:  
+    - Em seu aplicativo, adicione o seguinte código em App.xaml.cs:  
   
    [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
    [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
@@ -199,11 +199,11 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>Algumas dicas para usar a LocBaml  
   
--   Todos os assemblies dependentes que definem controles personalizados devem ser copiados para o diretório local da LocBaml ou instalados no GAC. Isso é necessário porque a API de localização deve ter acesso aos assemblies dependentes quando ele lê o [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
+- Todos os assemblies dependentes que definem controles personalizados devem ser copiados para o diretório local da LocBaml ou instalados no GAC. Isso é necessário porque a API de localização deve ter acesso aos assemblies dependentes quando ele lê o [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
   
--   Se o assembly principal é assinado, a DLL de recurso gerado também deve ser assinada para que seja carregada.  
+- Se o assembly principal é assinado, a DLL de recurso gerado também deve ser assinada para que seja carregada.  
   
--   A versão da DLL de recurso localizado precisa ser sincronizada com o assembly principal.  
+- A versão da DLL de recurso localizado precisa ser sincronizada com o assembly principal.  
   
 <a name="Whats_Next"></a>   
 ## <a name="whats-next"></a>Novidades  
