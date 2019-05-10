@@ -8,23 +8,23 @@ helpviewer_keywords:
 - scenes [WPF], 3-D
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a431b78993d197dac99f0b6e365823acb295f0b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910176"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611648"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>Como: Criar uma cena 3D
 Este exemplo mostra como criar um objeto 3D parecido com uma folha de papel que foi girada. Um <xref:System.Windows.Controls.Viewport3D> juntamente com os seguintes componentes são usados para criar esta cena 3D simples:  
   
--   Uma câmera é criada usando um <xref:System.Windows.Media.Media3D.PerspectiveCamera>. A câmera especifica qual parte da cena 3D é visível.  
+- Uma câmera é criada usando um <xref:System.Windows.Media.Media3D.PerspectiveCamera>. A câmera especifica qual parte da cena 3D é visível.  
   
--   Uma malha é criada para especificar a forma do objeto 3D (folha de papel) usando o <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> propriedade de <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+- Uma malha é criada para especificar a forma do objeto 3D (folha de papel) usando o <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> propriedade de <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
   
--   Um material é especificado para ser exibido na superfície do objeto (gradiente linear neste exemplo) usando o <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propriedade de <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+- Um material é especificado para ser exibido na superfície do objeto (gradiente linear neste exemplo) usando o <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propriedade de <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
   
--   A luz é criada para brilhar sobre o objeto usando <xref:System.Windows.Media.Media3D.DirectionalLight>.  
+- A luz é criada para brilhar sobre o objeto usando <xref:System.Windows.Media.Media3D.DirectionalLight>.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra como criar uma cena 3D em XAML.  

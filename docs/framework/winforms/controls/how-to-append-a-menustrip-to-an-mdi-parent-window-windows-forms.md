@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: a335531b090983de4e2b3daccc9f956930cbad6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d70418c6d8a626fd3ef54161086b24655037b086
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011019"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612834"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Como: Acrescentar um MenuStrip a uma janela pai do MDI (Windows Forms)
 Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos) filho pode ser diferente da janela MDI pai. Por exemplo, a MDI pai pode ser uma planilha e a MDI filho pode ser um gráfico. Nesse caso, é recomendável atualizar o conteúdo do menu da MDI pai com o conteúdo do menu da MDI filho, visto que janelas MDI filho de tipos diferentes são ativadas.  
@@ -82,8 +82,8 @@ Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Duas <xref:System.Windows.Forms.Form> controles denominados `Form1` e `Form2`.  
+- Duas <xref:System.Windows.Forms.Form> controles denominados `Form1` e `Form2`.  
   
--   Um <xref:System.Windows.Forms.MenuStrip> control em `Form1` denominado `menuStrip1`e uma <xref:System.Windows.Forms.MenuStrip> control em `Form2` chamado `menuStrip2`.  
+- Um <xref:System.Windows.Forms.MenuStrip> control em `Form1` denominado `menuStrip1`e uma <xref:System.Windows.Forms.MenuStrip> control em `Form2` chamado `menuStrip2`.  
   
--   Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.
+- Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.

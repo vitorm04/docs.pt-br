@@ -2,12 +2,12 @@
 title: Solução de problemas
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917623"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613753"
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 As seguintes informações expostas alguns problemas que você pode encontrar em seus aplicativos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , e oferece sugestões para evitar ou reduzir de outra maneira o efeito desses problemas.  
@@ -31,9 +31,9 @@ As seguintes informações expostas alguns problemas que você pode encontrar em
 ## <a name="cascade-delete"></a>Excluir em cascata  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte ou reconhece operações cascade-delete. Se você deseja excluir uma linha em uma tabela que possui restrições nele, você deve fazer:  
   
--   Defina a regra `ON DELETE CASCADE` na restrição de chave estrangeira no banco de dados.  
+- Defina a regra `ON DELETE CASCADE` na restrição de chave estrangeira no banco de dados.  
   
--   Use seu próprio código para excluir primeiro os objetos filho que impedem que o objeto pai seja excluído.  
+- Use seu próprio código para excluir primeiro os objetos filho que impedem que o objeto pai seja excluído.  
   
  Se não, uma exceção é lançada de <xref:System.Data.SqlClient.SqlException> .  
   
@@ -42,11 +42,11 @@ As seguintes informações expostas alguns problemas que você pode encontrar em
 ## <a name="expression-not-queryable"></a>Expressão não Queryable  
  Se você receber a "expressão [expressão] não é passível de consulta; está faltando uma referência de assembly?" erro, certifique-se das seguintes opções:  
   
--   Seu aplicativo está definido [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+- Seu aplicativo está definido [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
   
--   Você tem uma referência a `System.Core.dll` e a `System.Data.Linq.dll`.  
+- Você tem uma referência a `System.Core.dll` e a `System.Data.Linq.dll`.  
   
--   Você tem um `Imports` (Visual Basic) ou `using` (c#) a diretiva para <xref:System.Linq> e <xref:System.Data.Linq>.  
+- Você tem um `Imports` (Visual Basic) ou `using` (c#) a diretiva para <xref:System.Linq> e <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Durante a depuração um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto, você pode percorrer as relações da entidade. Isso traz para esses itens no cache, e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fica ciente de sua presença. Se você tentar então executar <xref:System.Data.Linq.Table%601.Attach%2A> ou <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> ou método semelhante que gerencia as várias linhas que têm a mesma chave, <xref:System.Data.Linq.DuplicateKeyException> é lançada.  

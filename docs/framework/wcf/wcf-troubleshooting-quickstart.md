@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6d631d51cc4f40b5be91b6579039a8b8dffa3dee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780816"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613207"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Início rápido de solução de problemas do WCF
 Este tópico lista diversos problemas conhecidos, os clientes têm executado até ao desenvolver clientes WCF e serviços. Se o problema que está ocorrendo não estiver nessa lista, é recomendável que configurar o rastreamento para seu serviço. Isso irá gerar um arquivo de rastreamento que você pode exibir com o Visualizador do arquivo de rastreamento e obter informações detalhadas sobre exceções que possam estar ocorrendo dentro do serviço. Para obter mais informações sobre como configurar o rastreamento, consulte: [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Para obter mais informações sobre o Visualizador do arquivo de rastreamento, consulte: [Ferramenta de Visualizador de rastreamento (SvcTraceViewer.exe) de serviço](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  

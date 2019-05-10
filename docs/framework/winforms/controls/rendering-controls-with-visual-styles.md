@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903429"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614654"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderizando controles com estilos visuais
 O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à renderização de controles e outros elementos da interface do usuário do Windows usando estilos visuais em sistemas operacionais que dão suporte a eles. Este tópico discute os vários níveis de suporte no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para renderizar controles e outros elementos da interface do usuário com o estilo visual atual do sistema operacional.  
@@ -27,27 +27,27 @@ O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à
   
  Algumas dessas classes foram projetadas para desenhar o controle relacionado independentemente de estilos visuais estarem disponíveis. Se os estilos visuais estiverem habilitados, os membros da classe desenharão o controle relacionado com estilos visuais. Se os estilos visuais estiverem desabilitados, os membros da classe desenharão o controle no estilo clássico do Windows. Essas classes incluem:  
   
--   <xref:System.Windows.Forms.ButtonRenderer>  
+- <xref:System.Windows.Forms.ButtonRenderer>  
   
--   <xref:System.Windows.Forms.CheckBoxRenderer>  
+- <xref:System.Windows.Forms.CheckBoxRenderer>  
   
--   <xref:System.Windows.Forms.GroupBoxRenderer>  
+- <xref:System.Windows.Forms.GroupBoxRenderer>  
   
--   <xref:System.Windows.Forms.RadioButtonRenderer>  
+- <xref:System.Windows.Forms.RadioButtonRenderer>  
   
  Outras classes só podem desenhar o controle relacionado quando os estilos visuais estiverem disponíveis e seus membros lançarão uma exceção se os estilos visuais estiverem desabilitados. Essas classes incluem:  
   
--   <xref:System.Windows.Forms.ComboBoxRenderer>  
+- <xref:System.Windows.Forms.ComboBoxRenderer>  
   
--   <xref:System.Windows.Forms.ProgressBarRenderer>  
+- <xref:System.Windows.Forms.ProgressBarRenderer>  
   
--   <xref:System.Windows.Forms.ScrollBarRenderer>  
+- <xref:System.Windows.Forms.ScrollBarRenderer>  
   
--   <xref:System.Windows.Forms.TabRenderer>  
+- <xref:System.Windows.Forms.TabRenderer>  
   
--   <xref:System.Windows.Forms.TextBoxRenderer>  
+- <xref:System.Windows.Forms.TextBoxRenderer>  
   
--   <xref:System.Windows.Forms.TrackBarRenderer>  
+- <xref:System.Windows.Forms.TrackBarRenderer>  
   
  Para obter mais informações sobre como usar essas classes para desenhar um controle, consulte [como: Usar um classe de renderização do controle](how-to-use-a-control-rendering-class.md).  
   

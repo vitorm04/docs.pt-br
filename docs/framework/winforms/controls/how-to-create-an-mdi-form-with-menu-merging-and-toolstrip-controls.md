@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 64992ed9-44af-4baf-b45f-863e6ab35711
-ms.openlocfilehash: a67298614b1985152c42577de14d2c5d295f672f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3e2c85486144a5009f08c7b6ecfd056c7cd86fcf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746609"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612003"
 ---
 # <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Como: Criar um formulário MDI com mesclagem de menu e controles ToolStrip
 O <xref:System.Windows.Forms?displayProperty=nameWithType> namespace oferece suporte a vários aplicativos MDI (interface MDI) de documento e o <xref:System.Windows.Forms.MenuStrip> controle dá suporte à mesclagem de menu. Formulários MDI também podem <xref:System.Windows.Forms.ToolStrip> controles.  

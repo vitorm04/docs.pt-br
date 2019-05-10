@@ -2,12 +2,12 @@
 title: Mapear restrições de esquema XML (XSD) keyref para restrições de DataSet
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604030"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapear restrições de esquema XML (XSD) keyref para restrições de DataSet
 O **keyref** elemento permite estabelecer links entre elementos dentro de um documento. Isso é semelhante a uma relação de chave estrangeira no banco de dados relacional. Se um esquema Especifica a **keyref** elemento, o elemento é convertido durante o processo de mapeamento de esquema para uma restrição de chave estrangeira correspondente nas colunas nas tabelas da <xref:System.Data.DataSet>. Por padrão, o **keyref** elemento também gera uma relação com o **ParentTable**, **ChildTable**, **ParentColumn**e  **ChildColumn** propriedades especificadas na relação.  

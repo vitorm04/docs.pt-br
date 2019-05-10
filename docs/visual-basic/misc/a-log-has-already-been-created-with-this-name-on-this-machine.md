@@ -2,12 +2,12 @@
 title: Um log já foi criado com este nome neste computador
 ms.date: 07/20/2015
 ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
-ms.openlocfilehash: b3a488b668c00b8e9e77f6db6d99ea5b3f82c070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 72f71b02702c69d26a1a7cb9f35666cadcba4e71
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940719"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609376"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>Um log já foi criado com este nome neste computador
 Tentativa de criar um log com um nome que já está em uso.  

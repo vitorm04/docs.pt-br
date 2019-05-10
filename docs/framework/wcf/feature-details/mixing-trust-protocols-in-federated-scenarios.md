@@ -2,12 +2,12 @@
 title: Misturando protocolos confiáveis em cenários federados
 ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
-ms.openlocfilehash: ce5c3a1875d84d98068dcc78d8346a88bc0b28f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18f486b9de83db48e186bb3856aff6cc6ccb56b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046678"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606505"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Misturando protocolos confiáveis em cenários federados
 Pode haver situações em que os clientes federados se comunicar com um serviço e um serviço de Token de segurança (STS) que não têm a mesma versão de confiança. O serviço WSDL pode conter um `RequestSecurityTokenTemplate` asserção com elementos de WS-Trust que são de versões diferentes do que o STS. Nesses casos, um cliente do Windows Communication Foundation (WCF) converte os elementos de WS-Trust proveniente do `RequestSecurityTokenTemplate` para coincidir com o STS confiar versão. WCF trata versões incompatíveis confiança apenas para associações padrão. Todos os parâmetros de algoritmo padrão que são reconhecidos por WCF fazem parte da associação padrão. Este tópico descreve o comportamento do WCF com várias configurações de confiança entre o serviço e o STS.  

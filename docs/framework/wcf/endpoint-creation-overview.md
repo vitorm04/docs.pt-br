@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa6486db483c004430e0e8ed75c75a6b25c05d6b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858448"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613578"
 ---
 # <a name="endpoint-creation-overview"></a>Visão geral de criação de ponto de extremidade
 Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade fornecem os clientes acessem a funcionalidade que oferece um serviço WCF. Esta seção descreve a estrutura de um ponto de extremidade e descreve como definir um ponto de extremidade na configuração e no código.  
@@ -20,11 +20,11 @@ Toda a comunicação com um serviço do Windows Communication Foundation (WCF) o
 ## <a name="the-structure-of-an-endpoint"></a>A estrutura de um ponto de extremidade  
  Cada ponto de extremidade contém um endereço que indica onde encontrar o ponto de extremidade, uma associação que especifica como um cliente pode se comunicar com o ponto de extremidade e um contrato que identifica os métodos disponíveis.  
   
--   **Endereço**. O endereço identifica o ponto de extremidade exclusivamente e informa à consumidores em potencial em que o serviço está localizado. Ele é representado no modelo de objeto WCF pelo <xref:System.ServiceModel.EndpointAddress> endereço, que contém um identificador de recurso uniforme (URI) e as propriedades de endereço que incluem uma identidade, alguns elementos de descrição linguagem WSDL (Web Services) e uma coleção de opcional cabeçalhos. Os cabeçalhos opcionais fornecem informações adicionais de endereçamento detalhadas para identificar ou interagir com o ponto de extremidade. Para obter mais informações, consulte [especificação de um endereço de ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+- **Endereço**. O endereço identifica o ponto de extremidade exclusivamente e informa à consumidores em potencial em que o serviço está localizado. Ele é representado no modelo de objeto WCF pelo <xref:System.ServiceModel.EndpointAddress> endereço, que contém um identificador de recurso uniforme (URI) e as propriedades de endereço que incluem uma identidade, alguns elementos de descrição linguagem WSDL (Web Services) e uma coleção de opcional cabeçalhos. Os cabeçalhos opcionais fornecem informações adicionais de endereçamento detalhadas para identificar ou interagir com o ponto de extremidade. Para obter mais informações, consulte [especificação de um endereço de ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   **Associação**. A associação especifica como se comunicar com o ponto de extremidade. A associação especifica como o ponto de extremidade se comunica com o mundo, incluindo qual protocolo de transporte usar (por exemplo, TCP ou HTTP), codificação a ser usada para as mensagens (por exemplo, texto ou binário), e quais requisitos de segurança são necessários (para exemplo, Secure Sockets Layer [SSL] ou segurança de mensagem SOAP). Para obter mais informações, consulte [usando associações para configurar os serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+- **Associação**. A associação especifica como se comunicar com o ponto de extremidade. A associação especifica como o ponto de extremidade se comunica com o mundo, incluindo qual protocolo de transporte usar (por exemplo, TCP ou HTTP), codificação a ser usada para as mensagens (por exemplo, texto ou binário), e quais requisitos de segurança são necessários (para exemplo, Secure Sockets Layer [SSL] ou segurança de mensagem SOAP). Para obter mais informações, consulte [usando associações para configurar os serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
--   **Contrato de serviço**. O contrato de serviço descreve qual funcionalidade que o ponto de extremidade expõe para o cliente. Um contrato especifica as operações que um cliente pode chamar, o formulário da mensagem e o tipo de dados necessários para chamar a operação e o tipo de processamento ou o cliente pode esperar de mensagem de resposta ou parâmetros de entrada. Três tipos básicos de contratos correspondem aos padrões de troca de mensagens básicas (MEPs): datagrama (unidirecional), solicitação/resposta e duplex (bidirecional). O contrato de serviço também pode empregar os contratos de dados e a mensagem em exigem tipos de dados específicos e formatos de mensagem quando acessados. Para obter mais informações sobre como definir um contrato de serviço, consulte [Criando contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md). Observe que um cliente também pode ser necessário para implementar um contrato de serviço definido, chamado de um contrato de retorno de chamada, receber mensagens do serviço em um MEP duplex. Para obter mais informações, consulte [serviços Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+- **Contrato de serviço**. O contrato de serviço descreve qual funcionalidade que o ponto de extremidade expõe para o cliente. Um contrato especifica as operações que um cliente pode chamar, o formulário da mensagem e o tipo de dados necessários para chamar a operação e o tipo de processamento ou o cliente pode esperar de mensagem de resposta ou parâmetros de entrada. Três tipos básicos de contratos correspondem aos padrões de troca de mensagens básicas (MEPs): datagrama (unidirecional), solicitação/resposta e duplex (bidirecional). O contrato de serviço também pode empregar os contratos de dados e a mensagem em exigem tipos de dados específicos e formatos de mensagem quando acessados. Para obter mais informações sobre como definir um contrato de serviço, consulte [Criando contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md). Observe que um cliente também pode ser necessário para implementar um contrato de serviço definido, chamado de um contrato de retorno de chamada, receber mensagens do serviço em um MEP duplex. Para obter mais informações, consulte [serviços Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
  O ponto de extremidade para um serviço pode ser especificado imperativamente por meio de código ou declarativamente por meio da configuração. Se nenhum ponto de extremidade forem especificados, em seguida, o tempo de execução fornece pontos de extremidade padrão com a adição de um ponto de extremidade padrão para cada endereço base para cada contrato de serviço implementado pelo serviço. Definir pontos de extremidade no código geralmente não é prático porque as associações e endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Em geral, é mais prático definir pontos de extremidade de serviço usando a configuração em vez de código. Informações fora do código de endereçamento e manter a associação permite que eles alterem os sem ter que recompilar e reimplantar o aplicativo.  
   
@@ -34,13 +34,13 @@ Toda a comunicação com um serviço do Windows Communication Foundation (WCF) o
 ## <a name="defining-endpoints-in-code"></a>Definir pontos de extremidade no código  
  O exemplo a seguir ilustra como especificar um ponto de extremidade no código com o seguinte:  
   
--   Definir um contrato para um `IEcho` tipo de serviço que aceita o nome e o eco com a resposta de alguém "Hello \<nome >!".  
+- Definir um contrato para um `IEcho` tipo de serviço que aceita o nome e o eco com a resposta de alguém "Hello \<nome >!".  
   
--   Implementar uma `Echo` serviço do tipo definido pelo `IEcho` contrato.  
+- Implementar uma `Echo` serviço do tipo definido pelo `IEcho` contrato.  
   
--   Especifique um endereço de ponto de extremidade de `http://localhost:8000/Echo` para o serviço.  
+- Especifique um endereço de ponto de extremidade de `http://localhost:8000/Echo` para o serviço.  
   
--   Configurar o `Echo` usando um <xref:System.ServiceModel.WSHttpBinding> associação.  
+- Configurar o `Echo` usando um <xref:System.ServiceModel.WSHttpBinding> associação.  
   
 ```csharp  
 Namespace Echo  

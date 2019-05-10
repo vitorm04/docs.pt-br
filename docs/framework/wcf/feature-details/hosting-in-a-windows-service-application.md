@@ -2,12 +2,12 @@
 title: Hospedando um aplicativo de serviço do Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5167e61bd825ce56905149237dae05ebb44b134
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855945"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613300"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedando um aplicativo de serviço do Windows
 Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) fornecem um processo modelo particularmente adequado para aplicativos que devem residir em um executável de longa execução e não exibem nenhuma forma de interface do usuário. O tempo de vida de um aplicativo de serviço é gerenciado pelo Gerenciador de controle de serviços (SCM), que permite que você inicie, de Windows parar e pausar os aplicativos de serviço do Windows. Você pode configurar um processo de serviço do Windows para iniciar automaticamente quando o computador é iniciado, tornando-o um ambiente de hospedagem adequado para aplicativos "always on". Para obter mais informações sobre aplicativos de serviço do Windows, consulte [aplicativos de serviço do Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -16,11 +16,11 @@ Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) for
   
  Muitas vezes, os desenvolvedores do WCF devem decidir se deseja hospedar seus aplicativos WCF dentro de um aplicativo de serviço do Windows ou dentro do ambiente de hospedagem de serviços de informações da Internet (IIS) ou o serviço de ativação de processos do Windows (WAS). Considere o uso de aplicativos de serviço do Windows sob as seguintes condições:  
   
--   Seu aplicativo requer ativação explícita. Por exemplo, você deve usar os serviços do Windows quando seu aplicativo deve iniciar automaticamente quando o servidor for iniciado, em vez de serem iniciados dinamicamente em resposta à mensagem de entrada primeiro.  
+- Seu aplicativo requer ativação explícita. Por exemplo, você deve usar os serviços do Windows quando seu aplicativo deve iniciar automaticamente quando o servidor for iniciado, em vez de serem iniciados dinamicamente em resposta à mensagem de entrada primeiro.  
   
--   O processo que hospeda seu aplicativo deve permanecer em execução depois de iniciadas. Uma vez iniciada, um processo de serviço do Windows permanece em execução, a menos que explicitamente desligamento por um administrador de servidor usando o Gerenciador de controle de serviço. Aplicativos hospedados no IIS ou WAS podem ser iniciados e interrompidos dinamicamente para fazer o melhor uso de recursos do sistema. Aplicativos que exigem o controle explícito sobre o tempo de vida do seu processo de hospedagem devem usar os serviços do Windows em vez de IIS ou WAS.  
+- O processo que hospeda seu aplicativo deve permanecer em execução depois de iniciadas. Uma vez iniciada, um processo de serviço do Windows permanece em execução, a menos que explicitamente desligamento por um administrador de servidor usando o Gerenciador de controle de serviço. Aplicativos hospedados no IIS ou WAS podem ser iniciados e interrompidos dinamicamente para fazer o melhor uso de recursos do sistema. Aplicativos que exigem o controle explícito sobre o tempo de vida do seu processo de hospedagem devem usar os serviços do Windows em vez de IIS ou WAS.  
   
--   Seu serviço WCF deve ser executado no Windows Server 2003 e usam transportes diferentes de HTTP. No Windows Server 2003, o [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ambiente de hospedagem é restrito apenas a comunicação HTTP. Aplicativos de serviço do Windows não estão sujeitos a essa restrição e podem usar qualquer transporte WCF dá suporte a, incluindo NET. TCP, NET. pipe e NET. MSMQ.  
+- Seu serviço WCF deve ser executado no Windows Server 2003 e usam transportes diferentes de HTTP. No Windows Server 2003, o [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ambiente de hospedagem é restrito apenas a comunicação HTTP. Aplicativos de serviço do Windows não estão sujeitos a essa restrição e podem usar qualquer transporte WCF dá suporte a, incluindo NET. TCP, NET. pipe e NET. MSMQ.  
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>Para hospedar o WCF dentro de um aplicativo de serviço do Windows  
   
@@ -28,11 +28,11 @@ Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) for
   
 2. Vincule o tempo de vida dos serviços do WCF para o tempo de vida do aplicativo do Windows. Geralmente, você deseja que os serviços WCF hospedados em um aplicativo de serviço do Windows para se tornar ativo quando o serviço de hospedagem é iniciado, interromper a escuta para mensagens quando o serviço de hospedagem for interrompido e desligar o processo de hospedagem quando o serviço WCF encontra um erro. Isso pode ser feito da seguinte maneira:  
   
-    -   Substituir <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> para abrir uma ou mais instâncias de <xref:System.ServiceModel.ServiceHost>. Um único aplicativo de serviço do Windows pode hospedar vários serviços do WCF que iniciam e param como um grupo.  
+    - Substituir <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> para abrir uma ou mais instâncias de <xref:System.ServiceModel.ServiceHost>. Um único aplicativo de serviço do Windows pode hospedar vários serviços do WCF que iniciam e param como um grupo.  
   
-    -   Substituir <xref:System.ServiceProcess.ServiceBase.OnStop%2A> chamar <xref:System.ServiceModel.Channels.CommunicationObject.Closed> sobre o <xref:System.ServiceModel.ServiceHost> quaisquer serviços WCF em execução que foram iniciados durante <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>.  
+    - Substituir <xref:System.ServiceProcess.ServiceBase.OnStop%2A> chamar <xref:System.ServiceModel.Channels.CommunicationObject.Closed> sobre o <xref:System.ServiceModel.ServiceHost> quaisquer serviços WCF em execução que foram iniciados durante <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>.  
   
-    -   Assine a <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> eventos de <xref:System.ServiceModel.ServiceHost> e use o <xref:System.ServiceProcess.ServiceController> classe para desligar o aplicativo de serviço do Windows em caso de erro.  
+    - Assine a <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> eventos de <xref:System.ServiceModel.ServiceHost> e use o <xref:System.ServiceProcess.ServiceController> classe para desligar o aplicativo de serviço do Windows em caso de erro.  
   
      Aplicativos de serviço do Windows que hospedam serviços do WCF são implantados e gerenciados da mesma forma, como aplicativos de serviço do Windows que não fazem usam do WCF.  
   

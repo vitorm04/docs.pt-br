@@ -2,12 +2,12 @@
 title: Mapeamento de restrições de esquema XML (XSD) para restrições de DataSet
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdbfba96c4cfe52cfbd58246be60842540a84754
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607885"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603995"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapeamento de restrições de esquema XML (XSD) para restrições de DataSet
 A linguagem de definição de esquema XML (XSD) permite que as restrições sejam especificadas em elementos e atributos que ela define. Ao mapear um esquema XML para esquema relacional em uma <xref:System.Data.DataSet>, as restrições de esquema XML são mapeadas para restrições relacionais apropriadas nas tabelas e colunas dentro de **conjunto de dados**.  

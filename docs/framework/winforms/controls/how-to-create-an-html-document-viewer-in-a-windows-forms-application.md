@@ -9,12 +9,12 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4118f526af1e02982f181dba9e86f8ce5b806fbb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746948"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612167"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Como: Criar um visualizador de documento HTML em um Aplicativo do Windows Forms
 Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para exibir e imprimir documentos HTML sem fornecer a funcionalidade completa do Internet Explorer. Isso é útil quando você quer aproveitar os recursos de formatação de HTML, mas não quer que os usuários carreguem páginas da Web arbitrárias que podem conter controles de Web não confiáveis ou código de script potencialmente mal-intencionado. Você talvez queira restringir a capacidade do <xref:System.Windows.Forms.WebBrowser> controlar dessa maneira, por exemplo, para usá-lo como um visualizador de email HTML ou para fornecer ajuda formatado em HTML em seu aplicativo.  

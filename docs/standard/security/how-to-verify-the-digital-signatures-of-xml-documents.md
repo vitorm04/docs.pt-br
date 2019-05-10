@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19537fa3e3e27c3446d22f1f1a8cf2faf472158e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8be946a7d4937a00b8c1738735362c7cc0ecb163
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018561"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602552"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Como: verificar as assinaturas digitais de documentos XML
 Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para verificar os dados XML assinado com uma assinatura digital. As assinaturas digitais XML (XMLDSIG) permitem que você verifique se que os dados não foi alterados depois que ele foi assinado. Para obter mais informações sobre o padrão XMLDSIG, consulte a especificação do World Wide Web Consortium (W3C) em <https://www.w3.org/TR/xmldsig-core/>.

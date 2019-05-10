@@ -2,12 +2,12 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16dacee89576b4ede0f2f80255ba8a0dcbc8c0dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788395"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610183"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia para um transporte particular. Se esse elemento estiver vazio, o tipo padrão é usado. Esse elemento só pode ser usado no aplicativo ou arquivos de configuração de nível de máquina.  

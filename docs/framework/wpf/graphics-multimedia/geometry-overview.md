@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3c26b08dd7ec70a1763fce89b34376350b985fb5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762789"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615384"
 ---
 # <a name="geometry-overview"></a>Visão geral da geometria
 Esta visão geral descreve como usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> classes para descrever formas. Este tópico também contrasta as diferenças entre <xref:System.Windows.Media.Geometry> objetos e <xref:System.Windows.Shapes.Shape> elementos.  
