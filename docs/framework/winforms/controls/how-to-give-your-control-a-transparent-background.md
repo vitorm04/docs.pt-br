@@ -6,29 +6,29 @@ helpviewer_keywords:
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8a03d9afec5340cd77af465c4470b7484b8926be
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941330"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609711"
 ---
-# <a name="how-to-give-your-control-a-transparent-background"></a><span data-ttu-id="d3852-102">Como: Dar ao controle um segundo plano transparente</span><span class="sxs-lookup"><span data-stu-id="d3852-102">How to: Give Your Control a Transparent Background</span></span>
-<span data-ttu-id="d3852-103">Em versões anteriores do .NET Framework, controles não oferece suporte à configuração backcolors transparente sem primeiro definir o <xref:System.Windows.Forms.Control.SetStyle%2A> método no construtor de formulários.</span><span class="sxs-lookup"><span data-stu-id="d3852-103">In earlier versions of the .NET Framework, controls didn't support setting transparent backcolors without first setting the <xref:System.Windows.Forms.Control.SetStyle%2A> method in the forms's constructor.</span></span> <span data-ttu-id="d3852-104">Na versão atual do framework, a cor de fundo para a maioria dos controles pode ser definido como <xref:System.Drawing.Color.Transparent%2A> no **propriedades** janela em tempo de design ou no código no construtor do formulário.</span><span class="sxs-lookup"><span data-stu-id="d3852-104">In the current framework version, the backcolor for most controls can be set to <xref:System.Drawing.Color.Transparent%2A> in the **Properties** window at design time, or in code in the form's constructor.</span></span>  
+# <a name="how-to-give-your-control-a-transparent-background"></a><span data-ttu-id="14ada-102">Como: Dar ao controle um segundo plano transparente</span><span class="sxs-lookup"><span data-stu-id="14ada-102">How to: Give Your Control a Transparent Background</span></span>
+<span data-ttu-id="14ada-103">Em versões anteriores do .NET Framework, controles não oferece suporte à configuração backcolors transparente sem primeiro definir o <xref:System.Windows.Forms.Control.SetStyle%2A> método no construtor de formulários.</span><span class="sxs-lookup"><span data-stu-id="14ada-103">In earlier versions of the .NET Framework, controls didn't support setting transparent backcolors without first setting the <xref:System.Windows.Forms.Control.SetStyle%2A> method in the forms's constructor.</span></span> <span data-ttu-id="14ada-104">Na versão atual do framework, a cor de fundo para a maioria dos controles pode ser definido como <xref:System.Drawing.Color.Transparent%2A> no **propriedades** janela em tempo de design ou no código no construtor do formulário.</span><span class="sxs-lookup"><span data-stu-id="14ada-104">In the current framework version, the backcolor for most controls can be set to <xref:System.Drawing.Color.Transparent%2A> in the **Properties** window at design time, or in code in the form's constructor.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d3852-105">Controles de formulários do Windows não têm suporte para a verdadeira transparência.</span><span class="sxs-lookup"><span data-stu-id="d3852-105">Windows Forms controls do not support true transparency.</span></span> <span data-ttu-id="d3852-106">O plano de fundo de um controle Windows Forms transparente é pintado pelo pai.</span><span class="sxs-lookup"><span data-stu-id="d3852-106">The background of a transparent Windows Forms control is painted by its parent.</span></span>  
+>  <span data-ttu-id="14ada-105">Controles de formulários do Windows não têm suporte para a verdadeira transparência.</span><span class="sxs-lookup"><span data-stu-id="14ada-105">Windows Forms controls do not support true transparency.</span></span> <span data-ttu-id="14ada-106">O plano de fundo de um controle Windows Forms transparente é pintado pelo pai.</span><span class="sxs-lookup"><span data-stu-id="14ada-106">The background of a transparent Windows Forms control is painted by its parent.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d3852-107">O <xref:System.Windows.Controls.Button> controle não dá suporte a um backcolor transparente, mesmo quando o <xref:System.Windows.Forms.ButtonBase.BackColor%2A> estiver definida como <xref:System.Drawing.Color.Transparent%2A>.</span><span class="sxs-lookup"><span data-stu-id="d3852-107">The <xref:System.Windows.Controls.Button> control doesn't support a transparent backcolor even when the <xref:System.Windows.Forms.ButtonBase.BackColor%2A> property is set to <xref:System.Drawing.Color.Transparent%2A>.</span></span>  
+>  <span data-ttu-id="14ada-107">O <xref:System.Windows.Controls.Button> controle não dá suporte a um backcolor transparente, mesmo quando o <xref:System.Windows.Forms.ButtonBase.BackColor%2A> estiver definida como <xref:System.Drawing.Color.Transparent%2A>.</span><span class="sxs-lookup"><span data-stu-id="14ada-107">The <xref:System.Windows.Controls.Button> control doesn't support a transparent backcolor even when the <xref:System.Windows.Forms.ButtonBase.BackColor%2A> property is set to <xref:System.Drawing.Color.Transparent%2A>.</span></span>  
   
-### <a name="to-give-your-control-a-transparent-backcolor"></a><span data-ttu-id="d3852-108">Para dar ao controle uma backcolor transparente</span><span class="sxs-lookup"><span data-stu-id="d3852-108">To give your control a transparent backcolor</span></span>  
+### <a name="to-give-your-control-a-transparent-backcolor"></a><span data-ttu-id="14ada-108">Para dar ao controle uma backcolor transparente</span><span class="sxs-lookup"><span data-stu-id="14ada-108">To give your control a transparent backcolor</span></span>  
   
-- <span data-ttu-id="d3852-109">Na janela Propriedades, escolha o <xref:System.Windows.Forms.ButtonBase.BackColor%2A> propriedade e defina-o como <xref:System.Drawing.Color.Transparent%2A></span><span class="sxs-lookup"><span data-stu-id="d3852-109">In the Properties window, choose the <xref:System.Windows.Forms.ButtonBase.BackColor%2A> property and set it to <xref:System.Drawing.Color.Transparent%2A></span></span>  
+- <span data-ttu-id="14ada-109">Na janela Propriedades, escolha o <xref:System.Windows.Forms.ButtonBase.BackColor%2A> propriedade e defina-o como <xref:System.Drawing.Color.Transparent%2A></span><span class="sxs-lookup"><span data-stu-id="14ada-109">In the Properties window, choose the <xref:System.Windows.Forms.ButtonBase.BackColor%2A> property and set it to <xref:System.Drawing.Color.Transparent%2A></span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3852-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d3852-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14ada-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="14ada-110">See also</span></span>
 
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [<span data-ttu-id="d3852-111">Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="d3852-111">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="d3852-112">Usando Classes de Elementos Gráficos Gerenciadas</span><span class="sxs-lookup"><span data-stu-id="d3852-112">Using Managed Graphics Classes</span></span>](../advanced/using-managed-graphics-classes.md)
-- [<span data-ttu-id="d3852-113">Como: Desenhar linhas opacas e semitransparentes</span><span class="sxs-lookup"><span data-stu-id="d3852-113">How to: Draw Opaque and Semitransparent Lines</span></span>](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [<span data-ttu-id="14ada-111">Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="14ada-111">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="14ada-112">Usando Classes de Elementos Gráficos Gerenciadas</span><span class="sxs-lookup"><span data-stu-id="14ada-112">Using Managed Graphics Classes</span></span>](../advanced/using-managed-graphics-classes.md)
+- [<span data-ttu-id="14ada-113">Como: Desenhar linhas opacas e semitransparentes</span><span class="sxs-lookup"><span data-stu-id="14ada-113">How to: Draw Opaque and Semitransparent Lines</span></span>](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
