@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856384"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753047"
 ---
 # <a name="elevation-of-privilege"></a>Elevação de privilégio
 *Elevação de privilégio* resulta da dando uma autorização invasor permissões além desses inicialmente concedido. Por exemplo, um invasor com um conjunto de privilégios de permissões "somente leitura" de alguma forma eleva o conjunto para incluir a "leitura e gravação."  
@@ -25,13 +25,13 @@ ms.locfileid: "61856384"
   
  Quando uma conexão é estabelecida entre um cliente e servidor, a identidade do cliente não é alterada, exceto em uma situação: depois que o cliente do WCF é aberto, se todas as seguintes condições forem verdadeiras:  
   
--   Os procedimentos para estabelecer um contexto de segurança (usando uma sessão ou a sessão de segurança de mensagem de segurança do transporte) é desligada (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> estiver definida como `false` no caso de segurança de mensagem ou não capaz de estabelecer a segurança de transporte sessões é usado no caso de segurança de transporte. HTTPS é um exemplo de tal transporte).  
+- Os procedimentos para estabelecer um contexto de segurança (usando uma sessão ou a sessão de segurança de mensagem de segurança do transporte) é desligada (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> estiver definida como `false` no caso de segurança de mensagem ou não capaz de estabelecer a segurança de transporte sessões é usado no caso de segurança de transporte. HTTPS é um exemplo de tal transporte).  
   
--   Você está usando a autenticação do Windows.  
+- Você está usando a autenticação do Windows.  
   
--   Você não definir explicitamente a credencial.  
+- Você não definir explicitamente a credencial.  
   
--   Você está chamando o serviço sob o contexto de segurança representado.  
+- Você está chamando o serviço sob o contexto de segurança representado.  
   
  Se essas condições forem verdadeiras, a identidade usada para autenticar o cliente para o serviço pode ser alterado (ele pode não ser a identidade representada, mas a identidade do processo em vez disso) depois que o cliente do WCF é aberto. Isso ocorre porque a credencial do Windows usada para autenticar o cliente para o serviço é transmitida com cada mensagem e a credencial usada para a autenticação é obtida da identidade do Windows do thread atual. Se a identidade do Windows do thread atual for alterado (por exemplo, ao representar um chamador diferente), também pode alterar a credencial que é anexada à mensagem e usada para autenticar o cliente para o serviço.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "61856384"
   
  Isso também ocorre quando você cria ligações personalizadas, usando um dos seguintes métodos:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
   
  Para atenuar isso, a política de autorização deve verificar a ação e o tempo de expiração de cada política de autorização.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "61856384"
   
  Isso pode ocorrer nas seguintes circunstâncias:  
   
--   O cliente assina digitalmente uma mensagem usando um certificado X.509 e não anexar o certificado X.509 para a mensagem, mas em vez disso, simplesmente referencia o certificado usando seu identificador de chave de assunto.  
+- O cliente assina digitalmente uma mensagem usando um certificado X.509 e não anexar o certificado X.509 para a mensagem, mas em vez disso, simplesmente referencia o certificado usando seu identificador de chave de assunto.  
   
--   Computador do serviço contém dois ou mais certificados com a mesma chave pública, mas eles contêm informações diferentes.  
+- Computador do serviço contém dois ou mais certificados com a mesma chave pública, mas eles contêm informações diferentes.  
   
--   O serviço recupera um certificado que corresponde ao identificador de chave da entidade, mas ele não é o cliente pretende usar. Quando o WCF recebe a mensagem e verifica a assinatura, o WCF mapeia as informações no certificado x. 509 não intencional a um conjunto de declarações que são diferentes e potencialmente com privilégios elevados do que o cliente esperava.  
+- O serviço recupera um certificado que corresponde ao identificador de chave da entidade, mas ele não é o cliente pretende usar. Quando o WCF recebe a mensagem e verifica a assinatura, o WCF mapeia as informações no certificado x. 509 não intencional a um conjunto de declarações que são diferentes e potencialmente com privilégios elevados do que o cliente esperava.  
   
  Para atenuar isso, outra maneira, como o uso de certificado de referência a x. 509 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: 1024cf6f2c1fa112db29cb710eef190a5022d3af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3e2902da7fe9d8fa2194db681df098f0148cbbaf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013628"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584254"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Não foi possível inferir argumentos de tipo a partir do delegado
 Usa uma instrução de atribuição `AddressOf` para atribuir o endereço de um genérico o procedimento para um delegado, mas ele não fornece quaisquer argumentos de tipo para o procedimento genérico.  

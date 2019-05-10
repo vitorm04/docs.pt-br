@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71d5bbf7eb2df4065362031f30840635062a9298
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877676"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583498"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitando vários conjuntos de resultados ativos
 O Multiple Active Result Sets (MARS) é um recurso que funciona com o SQL Server para permitir a execução de vários lotes em uma única conexão. Quando MARS está ativado para uso com o SQL Server, cada objeto de comando usado adiciona uma sessão à conexão.  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  O ambiente de execução em lotes inclui os seguintes componentes:  
   
--   Opções de conjunto (por exemplo, ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
+- Opções de conjunto (por exemplo, ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
   
--   Contexto de segurança (usuário/função do aplicativo)  
+- Contexto de segurança (usuário/função do aplicativo)  
   
--   Contexto de banco de dados (o banco de dados atual)  
+- Contexto de banco de dados (o banco de dados atual)  
   
--   Variáveis de estado de execução (por exemplo, @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
+- Variáveis de estado de execução (por exemplo, @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
   
--   Tabelas temporárias de nível superior  
+- Tabelas temporárias de nível superior  
   
  Com o MARS, um ambiente padrão de execução está associado a uma conexão. Cada novo lote que inicia sendo executado em uma determinada conexão recebe uma cópia do ambiente padrão. Sempre que o código é executado em um determinado lote, todas as alterações feitas ao ambiente são do escopo do lote específico. Quando a execução estiver concluída, as configurações de execução serão copiadas no ambiente padrão. No caso de um único lote que emite vários comandos para serem executados em sequência na mesma transação, a semântica é a mesma que as expostas por conexões que envolvem clientes ou servidores anteriores.  
   

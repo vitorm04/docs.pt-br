@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cde26250db0b3d11c51a18b7ebd378953ae0958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704824"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754668"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > elemento
 
-Especifica se é necessário desabilitar rotação-aguardando uma seção crítica quando sustentados. \ 
+Especifica se é necessário desabilitar rotação-aguardando uma seção crítica quando sustentados.  
   
  \<configuration>  
 \<runtime>  
@@ -36,14 +36,14 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|**enabled**|Especifica se a espera de rotação para seções críticas está habilitada quando eles são sustentados.|  
+|**enabled**|Especifica se a espera de rotação para seções críticas quando eles são sustentados está desabilitada.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|1|Espera de rotação é habilitada.|  
-|0|Espera de rotação está desabilitada. Esse é o padrão|  
+|1|Desabilite espera de rotação quando não é possível adquirir uma seção crítica.|  
+|0|Não desabilite espera de rotação quando não é possível adquirir uma seção crítica. Este é o valor padrão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  

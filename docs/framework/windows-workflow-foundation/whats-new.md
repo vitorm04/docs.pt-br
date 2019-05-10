@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 5ab1419a29dd77ac276681bb49dc529fc05d5b15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5c08ec3f5618abc601c17cf0d32d583bf21db683
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656103"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Novidades no Windows Foundation Workflow
 Windows Workflow Foundation (WF) no [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] altera vários paradigma de desenvolvimento de versões anteriores. Fluxos de trabalho agora são mais fáceis de criar, executar e manter, e implementam um host da nova funcionalidade. Para obter mais informações sobre como migrar aplicativos de fluxo de trabalho de .NET 3.0 e 3.5 do .NET para usar a versão mais recente, consulte [diretrizes de migração](migration-guidance.md).  

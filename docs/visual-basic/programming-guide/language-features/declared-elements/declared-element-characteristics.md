@@ -13,23 +13,23 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0ec2c56403e43f2ce04b394a1a4a59eafaa7311
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61830161"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912983"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Características do elemento declarado (Visual Basic)
 Um *característica* de um elemento declarado é um aspecto do elemento que afeta como o código pode interagir com ele. Cada elemento declarado tem um ou mais das seguintes características associadas a ele:  
   
--   *Tipo de dados* — os valores de elemento pode conter e como ela armazena esses valores. Para obter mais informações, veja [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md).  
+- *Tipo de dados* — os valores de elemento pode conter e como ela armazena esses valores. Para obter mais informações, veja [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md).  
   
--   *Tempo de vida* — o período de tempo de execução durante o qual o elemento está disponível para uso. Para obter mais informações, consulte [tempo de vida no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *Tempo de vida* — o período de tempo de execução durante o qual o elemento está disponível para uso. Para obter mais informações, consulte [tempo de vida no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Escopo* — o conjunto de todo o código que pode se referir ao elemento sem qualificar seu nome. Para obter mais informações, confira [Como: Controlar o escopo de uma variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *Escopo* — o conjunto de todo o código que pode se referir ao elemento sem qualificar seu nome. Para obter mais informações, confira [Como: Controlar o escopo de uma variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Nível de acesso* — a permissão para o código fazer uso do elemento. Para obter mais informações, confira [Como: Controlar a disponibilidade de uma variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *Nível de acesso* — a permissão para o código fazer uso do elemento. Para obter mais informações, confira [Como: Controlar a disponibilidade de uma variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Características dos elementos  
  A tabela a seguir mostra os elementos declarados e as características que se aplicam a cada um deles.  

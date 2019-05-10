@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 49aacdc7db6bc9e8b951f69bcd880835bb9182f2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857409"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654516"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configurando associações fornecidas pelo sistema
 As associações especificam o mecanismo de comunicação a ser usado ao se comunicar com um ponto de extremidade e indicam como se conectar a um ponto de extremidade. Associações consistem em elementos que definem como os canais do Windows Communication Foundation (WCF) são camados para fornecer os recursos de comunicação necessária. Uma associação contém três tipos de elementos:  

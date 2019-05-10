@@ -3,11 +3,11 @@ title: Tutoriais do C#
 description: Explore estes tutoriais do c# para aprender a criar programas em c# e conhecer os recursos da linguagem c#.
 ms.date: 10/25/2018
 ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63773901"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755779"
 ---
 # <a name="c-tutorials"></a>Tutoriais do C#
 

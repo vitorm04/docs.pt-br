@@ -3,11 +3,11 @@ title: Programação assíncrona
 description: Saiba como F# programação assíncrona é realizada por meio de um modelo de programação de nível de linguagem que é o idioma natural e fácil de usar.
 ms.date: 06/20/2016
 ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808220"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753597"
 ---
 # <a name="async-programming-in-f"></a>Programação assíncrona em F\#
 
