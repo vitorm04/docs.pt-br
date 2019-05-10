@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 501e23656b3a31dc14e0b2213252ef52c598140f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683126"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622636"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizando e localizando aplicativos do .NET
 
@@ -38,9 +38,9 @@ Essa etapa envolve a personalização de um aplicativo para culturas ou regiões
 
 Seguir estas três etapas oferece duas vantagens:
 
--   Libera você de ter que readaptar um aplicativo projetado para uma única cultura, como inglês dos EUA, para oferecer suporte a culturas adicionais.
+- Libera você de ter que readaptar um aplicativo projetado para uma única cultura, como inglês dos EUA, para oferecer suporte a culturas adicionais.
 
--   Isso resulta em aplicativos localizados que são mais estáveis e possuem menos bugs.
+- Isso resulta em aplicativos localizados que são mais estáveis e possuem menos bugs.
 
 O .NET fornece suporte abrangente ao desenvolvimento de aplicativos preparados para o mundo e localizados. Em particular, muitos membros de tipos na biblioteca de classes do .NET auxiliam na globalização ao retornarem valores que refletem as convenções da cultura do usuário atual ou de uma cultura específica. Além disso, o .NET Framework dá suporte a assemblies satélites que facilitam o processo de localizar um aplicativo.
 

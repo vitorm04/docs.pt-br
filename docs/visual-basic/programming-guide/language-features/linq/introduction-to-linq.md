@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780998"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633492"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introdução a LINQ no Visual Basic
 Consulta integrada à linguagem (LINQ) adiciona recursos de consulta para o Visual Basic e fornece recursos simples e eficientes quando você trabalha com todos os tipos de dados. Em vez de enviar uma consulta para um banco de dados a serem processados ou trabalhar com diferentes sintaxes de consulta para cada tipo de dados que você está procurando, o LINQ apresenta consultas como parte da linguagem Visual Basic. Ele usa uma sintaxe unificada independentemente do tipo de dados.  

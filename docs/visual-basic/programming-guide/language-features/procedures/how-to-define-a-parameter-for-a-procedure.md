@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863695"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665374"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Como: Definir um parâmetro para um procedimento (Visual Basic)
 Um *parâmetro* permite que o código de chamada passar um valor para o procedimento quando ele a chama. Você declara cada parâmetro para um procedimento da mesma maneira que você declare uma variável, especificando seu nome e tipo de dados. Você também especificar o mecanismo de passagem, e se o parâmetro é opcional.  
@@ -46,11 +46,11 @@ Um *parâmetro* permite que o código de chamada passar um valor para o procedim
   
      Especificar tipos de dados para todos os elementos de programação é conhecido como *tipagem forte*. Quando você define `Option Strict On`, Visual Basic impõe tipagem forte. Isso é altamente recomendado, pelos seguintes motivos:  
   
-    -   Ele permite que o suporte ao IntelliSense para suas variáveis e parâmetros. Isso permite que você veja suas propriedades e outros membros conforme você digita em seu código.  
+    - Ele permite que o suporte ao IntelliSense para suas variáveis e parâmetros. Isso permite que você veja suas propriedades e outros membros conforme você digita em seu código.  
   
-    -   Ele permite que o compilador execute a verificação de tipo. Isso ajuda a resolver as instruções que podem falhar em tempo de execução devido a erros, como estouro. Ela também captura chamadas para métodos em objetos que não dão suporte a eles.  
+    - Ele permite que o compilador execute a verificação de tipo. Isso ajuda a resolver as instruções que podem falhar em tempo de execução devido a erros, como estouro. Ela também captura chamadas para métodos em objetos que não dão suporte a eles.  
   
-    -   Isso resulta em uma execução mais rápida do seu código. Um motivo para isso é que se você não especificar um tipo de dados para um elemento de programação, o compilador do Visual Basic atribui a ele o `Object` tipo. Seu código compilado talvez seja necessário converter entre `Object` e outros tipos de dados, o que reduz o desempenho.  
+    - Isso resulta em uma execução mais rápida do seu código. Um motivo para isso é que se você não especificar um tipo de dados para um elemento de programação, o compilador do Visual Basic atribui a ele o `Object` tipo. Seu código compilado talvez seja necessário converter entre `Object` e outros tipos de dados, o que reduz o desempenho.  
   
 ## <a name="see-also"></a>Consulte também
 
