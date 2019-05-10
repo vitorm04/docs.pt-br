@@ -2,12 +2,12 @@
 title: propriedade
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97bb41305bd9b736fd67b51d77ee15ad9efa3f29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645231"
 ---
 # <a name="property"></a>propriedade
 *As propriedades* são os blocos de construção fundamentais [tipos de entidade](../../../../docs/framework/data/adonet/entity-type.md) e [tipos complexos](../../../../docs/framework/data/adonet/complex-type.md). As propriedades definem a forma e as características de dados que uma instância do tipo de entidade ou a instância do tipo complexo conterão. As propriedades em um modelo conceitual são análogas as propriedades definidas em uma classe. Da mesma forma que as propriedades em uma classe definem a forma da classe e transportam informações sobre objetos, as propriedades em um modelo conceitual definem a forma de um tipo de entidade e transportam informações sobre as instâncias dos tipos de entidade.  
@@ -17,11 +17,11 @@ ms.locfileid: "61879029"
   
  Uma definição de propriedade contém as informações a seguir:  
   
--   Um nome de propriedade. (Necessário)  
+- Um nome de propriedade. (Necessário)  
   
--   Um tipo de propriedade. (Necessário)  
+- Um tipo de propriedade. (Necessário)  
   
--   Um conjunto de [facetas](../../../../docs/framework/data/adonet/facet.md). (Opcional)  
+- Um conjunto de [facetas](../../../../docs/framework/data/adonet/facet.md). (Opcional)  
   
  Uma propriedade pode conter dados primitivos (como uma cadeia de caracteres, um número inteiro ou um valor booliano) ou dados estruturados (como um tipo complexo). As propriedades que são do tipo primitivo também são chamadas propriedades escalares. Para obter mais informações, consulte [modelo de dados de entidade: Tipos de dados primitivos](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
   

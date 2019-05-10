@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875726"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645526"
 ---
 # <a name="securing-wcf-data-services"></a>Protegendo o WCF Data Services
 Este tópico descreve considerações de segurança que são específicas para desenvolver, implantar e executar o WCF Data Services e aplicativos que serviços de acesso que dão suporte a Open Data Protocol (OData). Você também deve seguir as recomendações para criar aplicativos seguros do .NET Framework.  
