@@ -7,35 +7,33 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a184312b1df7c0736fa9c6b6ef787451add0465e
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010963"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211803"
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a><span data-ttu-id="c7f38-102">Como: Alinhar vários controles nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c7f38-102">How to: Align Multiple Controls on Windows Forms</span></span>
-<span data-ttu-id="c7f38-103">Para padronizar o layout da interface do usuário (UI) de seu aplicativo baseado em Windows, você pode posicionar os grupos de controles com um único comando.</span><span class="sxs-lookup"><span data-stu-id="c7f38-103">To standardize the layout of the user interface (UI) of your Windows-based application, you can position groups of controls with a single command.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="c7f38-104">As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas.</span><span class="sxs-lookup"><span data-stu-id="c7f38-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="c7f38-105">Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**.</span><span class="sxs-lookup"><span data-stu-id="c7f38-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="c7f38-106">Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="c7f38-106">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-### <a name="to-align-multiple-controls-on-a-form"></a><span data-ttu-id="c7f38-107">Para alinhar vários controles em um formulário</span><span class="sxs-lookup"><span data-stu-id="c7f38-107">To align multiple controls on a form</span></span>  
-  
-1. <span data-ttu-id="c7f38-108">Abra o formulário que contém os controles que você deseja posicionar na **Designer de formulários do Windows**.</span><span class="sxs-lookup"><span data-stu-id="c7f38-108">Open the form containing the controls you want to position in the **Windows Forms Designer**.</span></span>  
-  
-2. <span data-ttu-id="c7f38-109">Selecione os controles que você deseja alinhar para que o primeiro controle selecionado é o controle principal para o qual os outros devem ser alinhados.</span><span class="sxs-lookup"><span data-stu-id="c7f38-109">Select the controls you want to align so that the first control you select is the primary control to which the others should be aligned.</span></span>  
-  
-3. <span data-ttu-id="c7f38-110">Sobre o **formato** , aponte para **alinhar**e, em seguida, clique em uma das sete opções disponíveis.</span><span class="sxs-lookup"><span data-stu-id="c7f38-110">On the **Format** menu, point to **Align**, and then click one of the seven choices available.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="c7f38-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c7f38-111">See also</span></span>
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a><span data-ttu-id="f48ed-102">Como: Alinhar vários controles nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f48ed-102">How to: Align Multiple Controls on Windows Forms</span></span>
 
-- [<span data-ttu-id="c7f38-112">Controles dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c7f38-112">Windows Forms Controls</span></span>](index.md)
-- [<span data-ttu-id="c7f38-113">Como: Adicionar controles ao Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c7f38-113">How to: Add Controls to Windows Forms</span></span>](how-to-add-controls-to-windows-forms.md)
-- [<span data-ttu-id="c7f38-114">Organizando Controles nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c7f38-114">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
-- [<span data-ttu-id="c7f38-115">Controles a serem usados nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c7f38-115">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
-- [<span data-ttu-id="c7f38-116">Controles dos Windows Forms por função</span><span class="sxs-lookup"><span data-stu-id="c7f38-116">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)
-- [<span data-ttu-id="c7f38-117">Passo a passo: Organizando controles nos formulários do Windows usando guias de alinhamento</span><span class="sxs-lookup"><span data-stu-id="c7f38-117">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [<span data-ttu-id="c7f38-118">Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="c7f38-118">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [<span data-ttu-id="c7f38-119">Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="c7f38-119">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [<span data-ttu-id="c7f38-120">Como: Reatribuir controles existentes a um pai diferente</span><span class="sxs-lookup"><span data-stu-id="c7f38-120">How to: Reassign Existing Controls to a Different Parent</span></span>](how-to-reassign-existing-controls-to-a-different-parent.md)
+<span data-ttu-id="f48ed-103">Para padronizar o layout da interface do usuário (UI) de seu aplicativo baseado em Windows, você pode posicionar os grupos de controles com um único comando.</span><span class="sxs-lookup"><span data-stu-id="f48ed-103">To standardize the layout of the user interface (UI) of your Windows-based application, you can position groups of controls with a single command.</span></span>
+
+### <a name="to-align-multiple-controls-on-a-form"></a><span data-ttu-id="f48ed-104">Para alinhar vários controles em um formulário</span><span class="sxs-lookup"><span data-stu-id="f48ed-104">To align multiple controls on a form</span></span>
+
+1. <span data-ttu-id="f48ed-105">No Visual Studio, abra o formulário que contém os controles que você deseja posicionar na **Designer de formulários do Windows**.</span><span class="sxs-lookup"><span data-stu-id="f48ed-105">In Visual Studio, open the form containing the controls you want to position in the **Windows Forms Designer**.</span></span>
+
+2. <span data-ttu-id="f48ed-106">Selecione os controles que você deseja alinhar para que o primeiro controle selecionado é o controle principal para o qual os outros devem ser alinhados.</span><span class="sxs-lookup"><span data-stu-id="f48ed-106">Select the controls you want to align so that the first control you select is the primary control to which the others should be aligned.</span></span>
+
+3. <span data-ttu-id="f48ed-107">Sobre o **formato** , aponte para **alinhar**e, em seguida, clique em uma das sete opções disponíveis.</span><span class="sxs-lookup"><span data-stu-id="f48ed-107">On the **Format** menu, point to **Align**, and then click one of the seven choices available.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="f48ed-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f48ed-108">See also</span></span>
+
+- [<span data-ttu-id="f48ed-109">Controles dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f48ed-109">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="f48ed-110">Como: Adicionar controles ao Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f48ed-110">How to: Add Controls to Windows Forms</span></span>](how-to-add-controls-to-windows-forms.md)
+- [<span data-ttu-id="f48ed-111">Organizando Controles nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f48ed-111">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
+- [<span data-ttu-id="f48ed-112">Controles a serem usados nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f48ed-112">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="f48ed-113">Controles dos Windows Forms por função</span><span class="sxs-lookup"><span data-stu-id="f48ed-113">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)
+- [<span data-ttu-id="f48ed-114">Passo a passo: Organizando controles nos formulários do Windows usando guias de alinhamento</span><span class="sxs-lookup"><span data-stu-id="f48ed-114">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [<span data-ttu-id="f48ed-115">Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="f48ed-115">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [<span data-ttu-id="f48ed-116">Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="f48ed-116">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [<span data-ttu-id="f48ed-117">Como: Reatribuir controles existentes a um pai diferente</span><span class="sxs-lookup"><span data-stu-id="f48ed-117">How to: Reassign Existing Controls to a Different Parent</span></span>](how-to-reassign-existing-controls-to-a-different-parent.md)
