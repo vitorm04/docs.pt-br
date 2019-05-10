@@ -17,51 +17,51 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b3cc158c48e8bb9f833429bbddaa74ed459f1b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a6552bde30bf3363f1a5a25788fba99e473975c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930267"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616253"
 ---
-# <a name="icordebugprocess5enumeratehandles-method"></a><span data-ttu-id="76b82-102">Método ICorDebugProcess5::EnumerateHandles</span><span class="sxs-lookup"><span data-stu-id="76b82-102">ICorDebugProcess5::EnumerateHandles Method</span></span>
-<span data-ttu-id="76b82-103">Obtém um enumerador para os identificadores de objeto em um processo.</span><span class="sxs-lookup"><span data-stu-id="76b82-103">Gets an enumerator for object handles in a process.</span></span>  
+# <a name="icordebugprocess5enumeratehandles-method"></a><span data-ttu-id="e35e6-102">Método ICorDebugProcess5::EnumerateHandles</span><span class="sxs-lookup"><span data-stu-id="e35e6-102">ICorDebugProcess5::EnumerateHandles Method</span></span>
+<span data-ttu-id="e35e6-103">Obtém um enumerador para os identificadores de objeto em um processo.</span><span class="sxs-lookup"><span data-stu-id="e35e6-103">Gets an enumerator for object handles in a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="76b82-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="76b82-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e35e6-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e35e6-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateHandles(     [in] CorGCReferenceType types,  
     [out] ICorDebugGCReferenceEnum **ppEnum);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="76b82-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="76b82-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e35e6-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e35e6-105">Parameters</span></span>  
  `types`  
- <span data-ttu-id="76b82-106">[in] Uma combinação bit a bit de [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) valores que especifica o tipo de identificadores para incluir na coleção.</span><span class="sxs-lookup"><span data-stu-id="76b82-106">[in] A bitwise combination of [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) values that specifies the type of handles to include in the collection.</span></span>  
+ <span data-ttu-id="e35e6-106">[in] Uma combinação bit a bit de [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) valores que especifica o tipo de identificadores para incluir na coleção.</span><span class="sxs-lookup"><span data-stu-id="e35e6-106">[in] A bitwise combination of [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) values that specifies the type of handles to include in the collection.</span></span>  
   
  `ppENum`  
- <span data-ttu-id="76b82-107">[out] Um ponteiro para o endereço de um [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que é um enumerador para os objetos a ser coletado como lixo.</span><span class="sxs-lookup"><span data-stu-id="76b82-107">[out] A pointer to the address of an [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) that is an enumerator for the objects to be garbage-collected.</span></span>  
+ <span data-ttu-id="e35e6-107">[out] Um ponteiro para o endereço de um [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que é um enumerador para os objetos a ser coletado como lixo.</span><span class="sxs-lookup"><span data-stu-id="e35e6-107">[out] A pointer to the address of an [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) that is an enumerator for the objects to be garbage-collected.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="76b82-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="76b82-108">Remarks</span></span>  
- <span data-ttu-id="76b82-109">`EnumerateHandles` é uma função auxiliar que dá suporte a inspeção da tabela de identificador.</span><span class="sxs-lookup"><span data-stu-id="76b82-109">`EnumerateHandles` is a helper function that supports inspection of the handle table.</span></span> <span data-ttu-id="76b82-110">É semelhante ao [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) método, exceto que, em vez de preencher uma [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) coleção com todos os objetos a ser coletado como lixo, ele inclui apenas os objetos que têm identificadores da tabela de identificador.</span><span class="sxs-lookup"><span data-stu-id="76b82-110">It is similar to the [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) method, except that rather than populating an [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) collection with all objects to be garbage-collected, it includes only objects that have handles from the handle table.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e35e6-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="e35e6-108">Remarks</span></span>  
+ <span data-ttu-id="e35e6-109">`EnumerateHandles` é uma função auxiliar que dá suporte a inspeção da tabela de identificador.</span><span class="sxs-lookup"><span data-stu-id="e35e6-109">`EnumerateHandles` is a helper function that supports inspection of the handle table.</span></span> <span data-ttu-id="e35e6-110">É semelhante ao [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) método, exceto que, em vez de preencher uma [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) coleção com todos os objetos a ser coletado como lixo, ele inclui apenas os objetos que têm identificadores da tabela de identificador.</span><span class="sxs-lookup"><span data-stu-id="e35e6-110">It is similar to the [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) method, except that rather than populating an [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) collection with all objects to be garbage-collected, it includes only objects that have handles from the handle table.</span></span>  
   
- <span data-ttu-id="76b82-111">O `types` parâmetro especifica os tipos de identificador para incluir na coleção.</span><span class="sxs-lookup"><span data-stu-id="76b82-111">The `types` parameter specifies the handle types to include in the collection.</span></span> <span data-ttu-id="76b82-112">`types` pode ser qualquer um dos seguintes três membros do [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeração:</span><span class="sxs-lookup"><span data-stu-id="76b82-112">`types` can be any of the following three members of the [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeration:</span></span>  
+ <span data-ttu-id="e35e6-111">O `types` parâmetro especifica os tipos de identificador para incluir na coleção.</span><span class="sxs-lookup"><span data-stu-id="e35e6-111">The `types` parameter specifies the handle types to include in the collection.</span></span> <span data-ttu-id="e35e6-112">`types` pode ser qualquer um dos seguintes três membros do [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeração:</span><span class="sxs-lookup"><span data-stu-id="e35e6-112">`types` can be any of the following three members of the [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeration:</span></span>  
   
-- <span data-ttu-id="76b82-113">`CorHandleStrongOnly` (as alças para apenas referências fortes).</span><span class="sxs-lookup"><span data-stu-id="76b82-113">`CorHandleStrongOnly` (handles to strong references only).</span></span>  
+- <span data-ttu-id="e35e6-113">`CorHandleStrongOnly` (as alças para apenas referências fortes).</span><span class="sxs-lookup"><span data-stu-id="e35e6-113">`CorHandleStrongOnly` (handles to strong references only).</span></span>  
   
-- <span data-ttu-id="76b82-114">`CorHandleWeakOnly` (as alças para referências fracas apenas).</span><span class="sxs-lookup"><span data-stu-id="76b82-114">`CorHandleWeakOnly` (handles to weak references only).</span></span>  
+- <span data-ttu-id="e35e6-114">`CorHandleWeakOnly` (as alças para referências fracas apenas).</span><span class="sxs-lookup"><span data-stu-id="e35e6-114">`CorHandleWeakOnly` (handles to weak references only).</span></span>  
   
-- <span data-ttu-id="76b82-115">`CorHandleAll` (todos os identificadores).</span><span class="sxs-lookup"><span data-stu-id="76b82-115">`CorHandleAll` (all handles).</span></span>  
+- <span data-ttu-id="e35e6-115">`CorHandleAll` (todos os identificadores).</span><span class="sxs-lookup"><span data-stu-id="e35e6-115">`CorHandleAll` (all handles).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="76b82-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="76b82-116">Requirements</span></span>  
- <span data-ttu-id="76b82-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="76b82-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e35e6-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e35e6-116">Requirements</span></span>  
+ <span data-ttu-id="e35e6-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e35e6-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="76b82-118">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="76b82-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e35e6-118">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e35e6-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="76b82-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="76b82-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e35e6-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e35e6-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="76b82-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76b82-120">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="e35e6-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e35e6-120">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="76b82-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="76b82-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e35e6-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e35e6-121">See also</span></span>
 
-- [<span data-ttu-id="76b82-122">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="76b82-122">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="76b82-123">Depuração</span><span class="sxs-lookup"><span data-stu-id="76b82-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="e35e6-122">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="e35e6-122">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="e35e6-123">Depuração</span><span class="sxs-lookup"><span data-stu-id="e35e6-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
