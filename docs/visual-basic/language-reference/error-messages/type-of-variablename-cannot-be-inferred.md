@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2dc7793a837c588b98365a97ada58c67dc07fa03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052671"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664259"
 ---
-# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a><span data-ttu-id="48677-102">Tipo de '\<variablename >' não pode ser inferido porque os limites do loop e a variável step não são ampliados para o mesmo tipo</span><span class="sxs-lookup"><span data-stu-id="48677-102">Type of '\<variablename>' cannot be inferred because the loop bounds and the step variable do not widen to the same type</span></span>
-<span data-ttu-id="48677-103">Você escreveu uma `For...Next` loop em que o compilador não é possível inferir um tipo de dados para a variável de controle de loop porque as seguintes condições forem verdadeiras:</span><span class="sxs-lookup"><span data-stu-id="48677-103">You have written a `For...Next` loop in which the compiler cannot infer a data type for the loop control variable because the following conditions are true:</span></span>  
+# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a><span data-ttu-id="a39ef-102">Tipo de '\<variablename >' não pode ser inferido porque os limites do loop e a variável step não são ampliados para o mesmo tipo</span><span class="sxs-lookup"><span data-stu-id="a39ef-102">Type of '\<variablename>' cannot be inferred because the loop bounds and the step variable do not widen to the same type</span></span>
+<span data-ttu-id="a39ef-103">Você escreveu uma `For...Next` loop em que o compilador não é possível inferir um tipo de dados para a variável de controle de loop porque as seguintes condições forem verdadeiras:</span><span class="sxs-lookup"><span data-stu-id="a39ef-103">You have written a `For...Next` loop in which the compiler cannot infer a data type for the loop control variable because the following conditions are true:</span></span>  
   
-- <span data-ttu-id="48677-104">O tipo de dados da variável de controle de loop não é especificado com um `As` cláusula.</span><span class="sxs-lookup"><span data-stu-id="48677-104">The data type of the loop control variable is not specified with an `As` clause.</span></span>  
+- <span data-ttu-id="a39ef-104">O tipo de dados da variável de controle de loop não é especificado com um `As` cláusula.</span><span class="sxs-lookup"><span data-stu-id="a39ef-104">The data type of the loop control variable is not specified with an `As` clause.</span></span>  
   
-- <span data-ttu-id="48677-105">Os limites do loop e a variável step contêm pelo menos dois tipos de dados.</span><span class="sxs-lookup"><span data-stu-id="48677-105">The loop bounds and step variable contain at least two data types.</span></span>  
+- <span data-ttu-id="a39ef-105">Os limites do loop e a variável step contêm pelo menos dois tipos de dados.</span><span class="sxs-lookup"><span data-stu-id="a39ef-105">The loop bounds and step variable contain at least two data types.</span></span>  
   
-- <span data-ttu-id="48677-106">Não há nenhuma conversão padrão entre os tipos de dados.</span><span class="sxs-lookup"><span data-stu-id="48677-106">No standard conversions exist between the data types.</span></span>  
+- <span data-ttu-id="a39ef-106">Não há nenhuma conversão padrão entre os tipos de dados.</span><span class="sxs-lookup"><span data-stu-id="a39ef-106">No standard conversions exist between the data types.</span></span>  
   
- <span data-ttu-id="48677-107">Portanto, o compilador não pode inferir o tipo de dados da variável de controle de um loop.</span><span class="sxs-lookup"><span data-stu-id="48677-107">Therefore, the compiler cannot infer the data type of a loop's control variable.</span></span>  
+ <span data-ttu-id="a39ef-107">Portanto, o compilador não pode inferir o tipo de dados da variável de controle de um loop.</span><span class="sxs-lookup"><span data-stu-id="a39ef-107">Therefore, the compiler cannot infer the data type of a loop's control variable.</span></span>  
   
- <span data-ttu-id="48677-108">No exemplo a seguir, a variável step é um caractere e os limites do loop são ambos inteiros.</span><span class="sxs-lookup"><span data-stu-id="48677-108">In the following example, the step variable is a character and the loop bounds are both integers.</span></span> <span data-ttu-id="48677-109">Como não há nenhuma conversão padrão entre caracteres e inteiros, esse erro é relatado.</span><span class="sxs-lookup"><span data-stu-id="48677-109">Because there is no standard conversion between characters and integers, this error is reported.</span></span>  
+ <span data-ttu-id="a39ef-108">No exemplo a seguir, a variável step é um caractere e os limites do loop são ambos inteiros.</span><span class="sxs-lookup"><span data-stu-id="a39ef-108">In the following example, the step variable is a character and the loop bounds are both integers.</span></span> <span data-ttu-id="a39ef-109">Como não há nenhuma conversão padrão entre caracteres e inteiros, esse erro é relatado.</span><span class="sxs-lookup"><span data-stu-id="a39ef-109">Because there is no standard conversion between characters and integers, this error is reported.</span></span>  
   
 ```vb  
 Dim stepVar = "1"c  
@@ -38,23 +38,23 @@ Dim n = 20
 ' Next  
 ```  
   
- <span data-ttu-id="48677-110">**ID do erro:** BC30982</span><span class="sxs-lookup"><span data-stu-id="48677-110">**Error ID:** BC30982</span></span>  
+ <span data-ttu-id="a39ef-110">**ID do erro:** BC30982</span><span class="sxs-lookup"><span data-stu-id="a39ef-110">**Error ID:** BC30982</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="48677-111">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="48677-111">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a39ef-111">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="a39ef-111">To correct this error</span></span>  
   
-- <span data-ttu-id="48677-112">Altere os tipos de limites do loop e a variável step conforme necessário para que pelo menos um deles é um tipo que os outros ampliam.</span><span class="sxs-lookup"><span data-stu-id="48677-112">Change the types of the loop bounds and step variable as necessary so that at least one of them is a type that the others widen to.</span></span> <span data-ttu-id="48677-113">No exemplo anterior, altere o tipo de `stepVar` para `Integer`.</span><span class="sxs-lookup"><span data-stu-id="48677-113">In the preceding example, change the type of `stepVar` to `Integer`.</span></span>  
+- <span data-ttu-id="a39ef-112">Altere os tipos de limites do loop e a variável step conforme necessário para que pelo menos um deles é um tipo que os outros ampliam.</span><span class="sxs-lookup"><span data-stu-id="a39ef-112">Change the types of the loop bounds and step variable as necessary so that at least one of them is a type that the others widen to.</span></span> <span data-ttu-id="a39ef-113">No exemplo anterior, altere o tipo de `stepVar` para `Integer`.</span><span class="sxs-lookup"><span data-stu-id="a39ef-113">In the preceding example, change the type of `stepVar` to `Integer`.</span></span>  
   
     ```  
     Dim stepVar = 1  
     ```  
   
-     <span data-ttu-id="48677-114">—ou—</span><span class="sxs-lookup"><span data-stu-id="48677-114">—or—</span></span>  
+     <span data-ttu-id="a39ef-114">—ou—</span><span class="sxs-lookup"><span data-stu-id="a39ef-114">—or—</span></span>  
   
     ```  
     Dim stepVar As Integer = 1  
     ```  
   
-- <span data-ttu-id="48677-115">Use funções de conversão explícitas para converter os limites do loop e a variável de etapa para os tipos apropriados.</span><span class="sxs-lookup"><span data-stu-id="48677-115">Use explicit conversion functions to convert the loop bounds and step variable to the appropriate types.</span></span> <span data-ttu-id="48677-116">No exemplo anterior, se aplicam a `Val` função `stepVar`.</span><span class="sxs-lookup"><span data-stu-id="48677-116">In the preceding example, apply the `Val` function to `stepVar`.</span></span>  
+- <span data-ttu-id="a39ef-115">Use funções de conversão explícitas para converter os limites do loop e a variável de etapa para os tipos apropriados.</span><span class="sxs-lookup"><span data-stu-id="a39ef-115">Use explicit conversion functions to convert the loop bounds and step variable to the appropriate types.</span></span> <span data-ttu-id="a39ef-116">No exemplo anterior, se aplicam a `Val` função `stepVar`.</span><span class="sxs-lookup"><span data-stu-id="a39ef-116">In the preceding example, apply the `Val` function to `stepVar`.</span></span>  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  
@@ -62,12 +62,12 @@ Dim n = 20
     Next  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="48677-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="48677-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a39ef-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a39ef-117">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
-- [<span data-ttu-id="48677-118">Instrução For...Next</span><span class="sxs-lookup"><span data-stu-id="48677-118">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [<span data-ttu-id="48677-119">Conversões Implícitas e Explícitas</span><span class="sxs-lookup"><span data-stu-id="48677-119">Implicit and Explicit Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [<span data-ttu-id="48677-120">Inferência de Tipo de Variável Local</span><span class="sxs-lookup"><span data-stu-id="48677-120">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [<span data-ttu-id="48677-121">Instrução Option Infer</span><span class="sxs-lookup"><span data-stu-id="48677-121">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [<span data-ttu-id="48677-122">Funções de Conversão do Tipo</span><span class="sxs-lookup"><span data-stu-id="48677-122">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="48677-123">Conversões de Widening e Narrowing</span><span class="sxs-lookup"><span data-stu-id="48677-123">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [<span data-ttu-id="a39ef-118">Instrução For...Next</span><span class="sxs-lookup"><span data-stu-id="a39ef-118">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [<span data-ttu-id="a39ef-119">Conversões Implícitas e Explícitas</span><span class="sxs-lookup"><span data-stu-id="a39ef-119">Implicit and Explicit Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [<span data-ttu-id="a39ef-120">Inferência de Tipo de Variável Local</span><span class="sxs-lookup"><span data-stu-id="a39ef-120">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [<span data-ttu-id="a39ef-121">Instrução Option Infer</span><span class="sxs-lookup"><span data-stu-id="a39ef-121">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [<span data-ttu-id="a39ef-122">Funções de Conversão do Tipo</span><span class="sxs-lookup"><span data-stu-id="a39ef-122">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="a39ef-123">Conversões de Widening e Narrowing</span><span class="sxs-lookup"><span data-stu-id="a39ef-123">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

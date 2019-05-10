@@ -8,26 +8,26 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], creating
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
-ms.openlocfilehash: 3acaf18afa621a182c26f00c0594516ac573e281
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3027f87cb56d1fca7756e14ae03e04e31804b6a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937729"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624217"
 ---
-# <a name="how-to-create-a-bitmap-at-run-time"></a><span data-ttu-id="ac39a-102">Como: criar um bitmap em tempo de execução</span><span class="sxs-lookup"><span data-stu-id="ac39a-102">How to: Create a Bitmap at Run Time</span></span>
-<span data-ttu-id="ac39a-103">Este exemplo cria e desenha uma <xref:System.Drawing.Bitmap> do objeto e o exibe em um formulários existentes do Windows <xref:System.Windows.Forms.PictureBox> controle.</span><span class="sxs-lookup"><span data-stu-id="ac39a-103">This example creates and draws in a <xref:System.Drawing.Bitmap> object and displays it in an existing Windows Forms <xref:System.Windows.Forms.PictureBox> control.</span></span>  
+# <a name="how-to-create-a-bitmap-at-run-time"></a><span data-ttu-id="7145b-102">Como: criar um bitmap em tempo de execução</span><span class="sxs-lookup"><span data-stu-id="7145b-102">How to: Create a Bitmap at Run Time</span></span>
+<span data-ttu-id="7145b-103">Este exemplo cria e desenha uma <xref:System.Drawing.Bitmap> do objeto e o exibe em um formulários existentes do Windows <xref:System.Windows.Forms.PictureBox> controle.</span><span class="sxs-lookup"><span data-stu-id="7145b-103">This example creates and draws in a <xref:System.Drawing.Bitmap> object and displays it in an existing Windows Forms <xref:System.Windows.Forms.PictureBox> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ac39a-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ac39a-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7145b-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7145b-104">Example</span></span>  
  [!code-csharp[System.Drawing.CreateBitmapAtRuntime#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CreateBitmapAtRuntime/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.CreateBitmapAtRuntime#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CreateBitmapAtRuntime/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ac39a-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="ac39a-105">Compiling the Code</span></span>  
- <span data-ttu-id="ac39a-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="ac39a-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="7145b-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="7145b-105">Compiling the Code</span></span>  
+ <span data-ttu-id="7145b-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="7145b-106">This example requires:</span></span>  
   
-- <span data-ttu-id="ac39a-107">Um formulário do Windows que importa os assemblies System, System. Drawing e System.</span><span class="sxs-lookup"><span data-stu-id="ac39a-107">A Windows Form that imports the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="7145b-107">Um formulário do Windows que importa os assemblies System, System. Drawing e System.</span><span class="sxs-lookup"><span data-stu-id="7145b-107">A Windows Form that imports the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac39a-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ac39a-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7145b-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7145b-108">See also</span></span>
 
 - <xref:System.Drawing.Bitmap>
-- [<span data-ttu-id="ac39a-109">Imagens, bitmaps e metarquivos</span><span class="sxs-lookup"><span data-stu-id="ac39a-109">Images, Bitmaps, and Metafiles</span></span>](images-bitmaps-and-metafiles.md)
+- [<span data-ttu-id="7145b-109">Imagens, bitmaps e metarquivos</span><span class="sxs-lookup"><span data-stu-id="7145b-109">Images, Bitmaps, and Metafiles</span></span>](images-bitmaps-and-metafiles.md)
