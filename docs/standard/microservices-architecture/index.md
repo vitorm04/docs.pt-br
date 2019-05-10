@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos do .NET em 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 8497f5cbd15fae6e289791393ea779833be27be6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1b36f5a6ddc2176e344dfe2a216429190dcc1dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818295"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615135"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microsserviços do .NET: Arquitetura de aplicativos .NET em contêineres
 
@@ -57,7 +57,7 @@ Este guia não se concentra no ciclo de vida do aplicativo, em DevOps, nos pipel
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Ciclo de vida do aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft** (livro eletrônico para download)  
+- **Ciclo de vida do aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft** (livro eletrônico para download)  
     <https://aka.ms/dockerlifecycleebook>
 
 ## <a name="who-should-use-this-guide"></a>Quem deve usar este guia

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c1c1e050cfef36aa53b83a764c0b7e308783394
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857772"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619610"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Como: criar uma declaração personalizada
 A infraestrutura de modelo de identidade no Windows Communication Foundation (WCF) fornece um conjunto de tipos de declaração interna e direitos com as funções auxiliares para a criação de <xref:System.IdentityModel.Claims.Claim> instâncias com esses tipos e direitos. Essas declarações internas são projetadas para informações sobre o modelo encontrado em tipos de credencial de cliente WCF oferece suporte por padrão. Em muitos casos, as declarações internas são suficientes; No entanto, alguns aplicativos podem exigir declarações personalizadas. Uma declaração consiste o tipo de declaração, o recurso para o qual a declaração aplica-se a e à direita que é declarada por esse recurso. Este tópico descreve como criar uma declaração personalizada.  
@@ -19,15 +19,15 @@ A infraestrutura de modelo de identidade no Windows Communication Foundation (WC
   
 1. Criar uma declaração personalizada, passando o tipo de declaração, o valor do recurso e o direito do <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> construtor.  
   
-    1.  Escolha um valor exclusivo para o tipo de declaração.  
+    1. Escolha um valor exclusivo para o tipo de declaração.  
   
          O tipo de declaração é um identificador de cadeia de caracteres exclusiva. É responsabilidade do designer de declaração personalizada para garantir que o identificador de cadeia de caracteres que é usado para o tipo de declaração é exclusivo. Para obter uma lista dos tipos de declaração que são definidas pelo WCF, consulte o <xref:System.IdentityModel.Claims.ClaimTypes> classe.  
   
-    2.  Escolha o tipo de dados primitivo e o valor para o recurso.  
+    2. Escolha o tipo de dados primitivo e o valor para o recurso.  
   
          Um recurso é um objeto. O tipo CLR do recurso pode ser um primitivo, tal como <xref:System.String> ou <xref:System.Int32>, ou qualquer tipo serializável. O tipo CLR do recurso deve ser serializável, porque as declarações são serializadas em vários pontos pelo WCF. Tipos primitivos são serializáveis.  
   
-    3.  Escolha um direito que é definido pelo WCF ou um valor exclusivo para um direito personalizado.  
+    3. Escolha um direito que é definido pelo WCF ou um valor exclusivo para um direito personalizado.  
   
          Um direito é um identificador de cadeia de caracteres exclusiva. Os direitos que são definidos pelo WCF são definidos na <xref:System.IdentityModel.Claims.Rights> classe.  
   
@@ -42,11 +42,11 @@ A infraestrutura de modelo de identidade no Windows Communication Foundation (WC
   
 1. Criar uma declaração personalizada, passando o tipo de declaração, o valor do recurso e o direito do <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> construtor.  
   
-    1.  Escolha um valor exclusivo para o tipo de declaração.  
+    1. Escolha um valor exclusivo para o tipo de declaração.  
   
          O tipo de declaração é um identificador de cadeia de caracteres exclusiva. É responsabilidade do designer de declaração personalizada para garantir que o identificador de cadeia de caracteres que é usado para o tipo de declaração é exclusivo. Para obter uma lista dos tipos de declaração que são definidas pelo WCF, consulte o <xref:System.IdentityModel.Claims.ClaimTypes> classe.  
   
-    2.  Escolha ou definir um tipo não primitivo serializável para o recurso.  
+    2. Escolha ou definir um tipo não primitivo serializável para o recurso.  
   
          Um recurso é um objeto. O tipo CLR do recurso deve ser serializável, porque as declarações são serializadas em vários pontos pelo WCF. Tipos primitivos já são serializáveis.  
   
@@ -57,7 +57,7 @@ A infraestrutura de modelo de identidade no Windows Communication Foundation (WC
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  Escolha um direito que é definido pelo WCF ou um valor exclusivo para um direito personalizado.  
+    3. Escolha um direito que é definido pelo WCF ou um valor exclusivo para um direito personalizado.  
   
          Um direito é um identificador de cadeia de caracteres exclusiva. Os direitos que são definidos pelo WCF são definidos na <xref:System.IdentityModel.Claims.Rights> classe.  
   

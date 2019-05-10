@@ -13,19 +13,19 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8275961a8f11332a04f89561fac779f4cdf9f8d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013225"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609411"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Como: Definir imagens em tempo de execução (Windows Forms)
 Você pode definir programaticamente a imagem exibida por um Windows Forms <xref:System.Windows.Forms.PictureBox> controle.  
   
 ### <a name="to-set-a-picture-programmatically"></a>Para definir uma imagem de forma programática  
   
--   Definir o <xref:System.Windows.Forms.PictureBox.Image%2A> propriedade usando o <xref:System.Drawing.Image.FromFile%2A> método o <xref:System.Drawing.Image> classe.  
+- Definir o <xref:System.Windows.Forms.PictureBox.Image%2A> propriedade usando o <xref:System.Drawing.Image.FromFile%2A> método o <xref:System.Drawing.Image> classe.  
   
      No exemplo abaixo, o caminho definido para o local da imagem é a pasta Meus Documentos. Isso acontece porque presumimos que a maioria dos computadores rodando o sistema operacional Windows vai incluir este diretório. Isso também permite que usuários com níveis mínimos de acesso ao sistema executem com segurança o aplicativo. O exemplo a seguir supõe um formulário com um <xref:System.Windows.Forms.PictureBox> controle já adicionado.  
   
@@ -67,7 +67,7 @@ Você pode definir programaticamente a imagem exibida por um Windows Forms <xref
   
 ### <a name="to-clear-a-graphic"></a>Para desmarcar um elemento gráfico  
   
--   Primeiro, liberar a memória que está sendo usada pela imagem e, em seguida, desmarque o elemento gráfico. Coleta de lixo liberará a memória mais tarde se o gerenciamento de memória se torna um problema.  
+- Primeiro, liberar a memória que está sendo usada pela imagem e, em seguida, desmarque o elemento gráfico. Coleta de lixo liberará a memória mais tarde se o gerenciamento de memória se torna um problema.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  

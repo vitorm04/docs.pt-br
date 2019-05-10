@@ -2,12 +2,12 @@
 title: 'Sobre o CustomPeerResolverService: registros de clientes'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3d1e1c6493da54bc3ae0e74a33985da59382ea52
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972543"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619776"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Sobre o CustomPeerResolverService: registros de clientes
 Cada nó na malha publica suas informações de ponto de extremidade para o serviço de resolvedor por meio de `Register` função. O serviço de resolvedor armazena essas informações como uma gravação de registro. Esse registro contém um identificador exclusivo (RegistrationID) e informações de ponto de extremidade (PeerNodeAddress) para o nó.  

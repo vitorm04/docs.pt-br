@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 719e24652ea40d601523e32ecbdb58ce5d4fa645
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787966"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616592"
 ---
 # <a name="constrained-execution-regions"></a>Regiões de execução restrita
 Uma CER (região de execução restrita) faz parte de um mecanismo para a criação de código gerenciado confiável. A CER define uma área na qual o CLR (Common Language Runtime) é restrito de gerar exceções fora de banda que possam impedir que o código na área seja executado em sua totalidade. Nessa região, o código do usuário é restrito de executar um código que poderá resultar na geração de exceções fora de banda. O método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> deve preceder imediatamente um bloco `try` e marca os blocos `catch`, `finally` e `fault` como regiões de execução restrita. Depois de marcado como uma região restrita, o código deverá chamar apenas outro código com contratos de confiabilidade forte e o código não deverá alocar nem fazer chamadas virtuais a métodos não preparados ou não confiáveis, a menos que o código esteja preparado para manipular falhas. O CLR atrasa as anulações de thread do código que está sendo executado em uma CER.  

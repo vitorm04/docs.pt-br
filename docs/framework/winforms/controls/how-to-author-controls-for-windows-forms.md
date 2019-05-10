@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8adc9644f987166729c43b79a6891960978341dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340328"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612723"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Como: Criar Controles para o Windows Forms
 Um controle representa um link gráfico entre o usuário e o programa. Um controle pode fornecer ou processar dados, aceitar a entrada do usuário, responder a eventos ou executar quaisquer outras funções que conectam o usuário ao aplicativo. Como um controle é essencialmente um componente com uma interface gráfica, ele pode cumprir qualquer função realizada por um componente, além de oferecer interação ao usuário. Os controles são criados para atender a objetivos específicos e a criação de controles é apenas outra tarefa de programação. Com isso em mente, as etapas a seguir representam uma visão geral do processo de criação de controles. Os links fornecem informações adicionais sobre as etapas individuais.  
@@ -25,13 +25,13 @@ Um controle representa um link gráfico entre o usuário e o programa. Um contro
   
 1. Determine o que o controle deverá realizar ou qual será o papel executado por ele no aplicativo. Os fatores a serem considerados incluem:  
   
-    -   Que tipo de interface gráfica será necessária?  
+    - Que tipo de interface gráfica será necessária?  
   
-    -   Quais as interações específicas do usuário esse controle manipulará?  
+    - Quais as interações específicas do usuário esse controle manipulará?  
   
-    -   A funcionalidade necessária é fornecida por algum dos controles existentes?  
+    - A funcionalidade necessária é fornecida por algum dos controles existentes?  
   
-    -   É possível obter a funcionalidade necessária combinando vários controles do Windows Forms?  
+    - É possível obter a funcionalidade necessária combinando vários controles do Windows Forms?  
   
 2. Caso seja necessário um modelo de objeto para o controle, determine como a funcionalidade será distribuída ao longo do modelo de objeto e divida-a entre o controle e os subobjetos. Um modelo de objeto poderá ser útil se você estiver planejando um controle complexo ou desejar incorporar várias funcionalidades.  
   

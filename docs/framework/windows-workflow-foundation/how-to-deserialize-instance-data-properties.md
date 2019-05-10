@@ -2,12 +2,12 @@
 title: 'Como: desserializar propriedades de dados de instância'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: badea2b9731b1144a727a5d5b83c92072027e1f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a53c8ceea2a2bf9840b92dc7119e681902da893e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761436"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619689"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Como: desserializar propriedades de dados de instância
 Pode haver situações quando um usuário ou um administrador de fluxo de trabalho podem querer inspecione manualmente o estado de uma instância persistentes de fluxo de trabalho. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> fornece uma exibição na tabela de instâncias que expõe as seguintes quatro colunas:  
