@@ -2,12 +2,12 @@
 title: Criando atividades personalizados de controle de fluxo
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
-ms.openlocfilehash: 2be47281335066def5c1d267cd709db5a8ff1187
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f457e6f8cefd7183ca20cb449adf1ac15d7bde79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774056"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647145"
 ---
 # <a name="creating-custom-flow-control-activities"></a>Criando atividades personalizados de controle de fluxo
 O .NET Framework contém uma variedade de atividades de controle de fluxo que funcionam da mesma forma para abstrair as estruturas de programação (como <xref:System.Activities.Statements.Flowchart>) ou para as instruções de programação padrão (como <xref:System.Activities.Statements.If>). Este tópico discute a arquitetura de um dos projetos de exemplo, [não genérico ForEach](./samples/non-generic-foreach.md).  

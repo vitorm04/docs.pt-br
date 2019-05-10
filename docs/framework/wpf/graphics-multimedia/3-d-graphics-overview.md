@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2021a1bf706233e6361848a95f512262c1c16b6f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053686"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647112"
 ---
 # <a name="3-d-graphics-overview"></a>Visão geral de elementos gráficos 3D
 <a name="introduction"></a> A funcionalidade [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permite aos desenvolvedores desenhar, transformar e animar elementos gráficos 3D na marcação e no código de procedimento. Os desenvolvedores podem combinar elementos gráficos [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] e [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] para criar controles sofisticados, fornecer ilustrações complexas de dados ou melhorar a experiência do usuário de uma interface do aplicativo. O suporte de [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não foi projetado para fornecer uma plataforma completa de desenvolvimento de jogos. Este tópico fornece uma visão geral da funcionalidade [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] do sistema de elementos gráficos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5cb2d983427c51d8d96de7b73c2dca8f7877425e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866952"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651854"
 ---
 # <a name="reflection-and-net-native"></a>Reflexão e .NET Nativo
 No .NET Framework, o desenvolvimento gerenciado oferece suporte à metaprogramação por meio da API de reflexão. A reflexão permite inspecionar objetos em um aplicativo, chamar métodos em objetos descobertos por meio de inspeção, gerar novos tipos no tempo de execução e oferece suporte a muitos outros cenários de código dinâmico. Ele também oferece suporte à serialização e desserialização, o que permite que os valores do campo do objeto sejam mantidos e restaurados posteriormente. Todos esses cenários exigem o compilador do .NET Framework JIT (just-in-time) para gerar código nativo com base em metadados disponíveis.  
   
  O tempo de execução do [!INCLUDE[net_native](../../../includes/net-native-md.md)] não inclui um compilador JIT. Como resultado, todo o código nativo necessário deve ser gerado com antecedência. Um conjunto de heurística é usado para determinar qual código deve ser gerado, mas esses heurística não pode abranger todos os cenários de metaprogramação possíveis.  Portanto, você deve fornecer dicas para esses cenários metaprogramação usando [diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Se o código de implementação ou de metadados necessário não está disponível em tempo de execução, seu aplicativo gerará uma exceção [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) ou [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md). Estão disponíveis duas soluções de problemas que gerarão a entrada apropriada para seu arquivo de diretivas de tempo de execução, a qual elimina a exceção:  
   
--   A [solução de problemas MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) para tipos.  
+- A [solução de problemas MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) para tipos.  
   
--   A [solução de problemas MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) para métodos.  
+- A [solução de problemas MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) para métodos.  
   
 > [!NOTE]
 >  Para obter uma visão geral do processo de compilação do .NET Native que fornece informações de contexto sobre a necessidade de ter um arquivo das diretivas de tempo de execução, consulte [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md).  
@@ -27,11 +27,11 @@ No .NET Framework, o desenvolvimento gerenciado oferece suporte à metaprograma�
   
  Os tópicos a seguir fornecem a documentação conceitual e de referência necessária para oferecer suporte à reflexão e serialização nos seus aplicativos:  
   
--   [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+- [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   
--   [Referência da API de reflexão](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
+- [Referência da API de reflexão](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
--   [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>Consulte também
 

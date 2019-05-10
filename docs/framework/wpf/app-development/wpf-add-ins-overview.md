@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 93fa26927a6afc9d9f7a96198abeef6f45fc35b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971308"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651912"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 <a name="Introduction"></a> O .NET Framework inclui um modelo de suplemento que os desenvolvedores podem usar para criar aplicativos que dão suporte à extensibilidade de suplementos. Esse modelo permite a criação de suplementos que integram e estendem a funcionalidade do aplicativo. Em alguns cenários, os aplicativos também precisam exibam interfaces de usuário que são fornecidas pelos suplementos. Este tópico mostra como o WPF aumenta a modelo suplemento do .NET Framework para habilitar estes cenários, a arquitetura por trás, seus benefícios e suas limitações.  

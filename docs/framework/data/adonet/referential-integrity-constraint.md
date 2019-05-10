@@ -2,12 +2,12 @@
 title: restrição de integridade referencial
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b442e15c75554e1b06e9ff89c7224430a0605f9c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665281"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649634"
 ---
 # <a name="referential-integrity-constraint"></a>restrição de integridade referencial
 Um *restrição de integridade referencial* no modelo de dados de entidade (EDM) é semelhante a uma restrição de integridade referencial em um banco de dados relacional. Da mesma forma que uma coluna (ou colunas) de uma tabela de banco de dados podem fazer referência a chave primária de outra tabela, uma [propriedade](../../../../docs/framework/data/adonet/property.md) (ou propriedades) de um [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) pode fazer referência a [chave de entidade ](../../../../docs/framework/data/adonet/entity-key.md) de outro tipo de entidade. O tipo de entidade que é referenciado é chamado de *final principal* da restrição. O tipo de entidade que faz referência a extremidade de entidade é chamado de *final dependente* da restrição.  

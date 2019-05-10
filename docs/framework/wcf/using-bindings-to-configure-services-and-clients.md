@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f01fefc46cbc2cddaef9b025d59db8e2f734d9f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791372"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645134"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Usando associações para configurar serviços e clientes
 Associações são objetos que especificam os detalhes de comunicação necessários para se conectar a um ponto de extremidade. Mais especificamente, as associações contêm informações de configuração que são usadas para criar o tempo de execução do cliente ou serviço, definindo as especificidades de transportes, formatos de transmissão (codificação de mensagens) e de protocolo para o canal de cliente ou de ponto de extremidade do respectivo. Para criar um serviço Windows Communication Foundation (WCF) ativo, cada ponto de extremidade no serviço requer uma associação. Este tópico explica o que são associações, como elas são definidas e como uma ligação específica é especificada para um ponto de extremidade.  

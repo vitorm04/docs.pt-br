@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 75df256f852b45af4bc6cf519c13ccd62ae1d689
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654765"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Visão geral do controle ToolStrip (Windows Forms)
 Os formulários do Windows <xref:System.Windows.Forms.ToolStrip> controle e suas classes associadas fornecem uma estrutura comum para combinar elementos de interface do usuário em barras de ferramentas, barras de status e menus. <xref:System.Windows.Forms.ToolStrip> controles oferecem uma experiência avançada de tempo de design que inclui a ativação no local e de edição, layout personalizado e reposicionamento, que é a capacidade de compartilhar espaço horizontal ou vertical das barras de ferramentas.  
