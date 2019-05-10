@@ -2,17 +2,17 @@
 title: Reflexão (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: d2ad8957d308aa98935c862ec1864b6682be904b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8a784f3b8647a74e21299e84e04eb7bda60b9cb6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627469"
 ---
-# <a name="reflection-visual-basic"></a><span data-ttu-id="7c4ea-102">Reflexão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7c4ea-102">Reflection (Visual Basic)</span></span>
-<span data-ttu-id="7c4ea-103">A reflexão fornece objetos (do tipo <xref:System.Type>) que descrevem assemblies, módulos e tipos.</span><span class="sxs-lookup"><span data-stu-id="7c4ea-103">Reflection provides objects (of type <xref:System.Type>) that describe assemblies, modules and types.</span></span> <span data-ttu-id="7c4ea-104">É possível usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente e invocar seus métodos ou acessar suas propriedades e campos.</span><span class="sxs-lookup"><span data-stu-id="7c4ea-104">You can use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties.</span></span> <span data-ttu-id="7c4ea-105">Se você estiver usando atributos em seu código, a reflexão permite acessá-los.</span><span class="sxs-lookup"><span data-stu-id="7c4ea-105">If you are using attributes in your code, reflection enables you to access them.</span></span> <span data-ttu-id="7c4ea-106">Para obter mais informações, consulte [Atributos](../../../standard/attributes/index.md).</span><span class="sxs-lookup"><span data-stu-id="7c4ea-106">For more information, see [Attributes](../../../standard/attributes/index.md).</span></span>  
+# <a name="reflection-visual-basic"></a><span data-ttu-id="d8ef2-102">Reflexão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d8ef2-102">Reflection (Visual Basic)</span></span>
+<span data-ttu-id="d8ef2-103">A reflexão fornece objetos (do tipo <xref:System.Type>) que descrevem assemblies, módulos e tipos.</span><span class="sxs-lookup"><span data-stu-id="d8ef2-103">Reflection provides objects (of type <xref:System.Type>) that describe assemblies, modules and types.</span></span> <span data-ttu-id="d8ef2-104">É possível usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente e invocar seus métodos ou acessar suas propriedades e campos.</span><span class="sxs-lookup"><span data-stu-id="d8ef2-104">You can use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties.</span></span> <span data-ttu-id="d8ef2-105">Se você estiver usando atributos em seu código, a reflexão permite acessá-los.</span><span class="sxs-lookup"><span data-stu-id="d8ef2-105">If you are using attributes in your code, reflection enables you to access them.</span></span> <span data-ttu-id="d8ef2-106">Para obter mais informações, consulte [Atributos](../../../standard/attributes/index.md).</span><span class="sxs-lookup"><span data-stu-id="d8ef2-106">For more information, see [Attributes](../../../standard/attributes/index.md).</span></span>  
   
- <span data-ttu-id="7c4ea-107">Veja um exemplo simples de reflexão usando o método estático `GetType` – herdado por todos os tipos da classe base `Object` – para obter o tipo de uma variável:</span><span class="sxs-lookup"><span data-stu-id="7c4ea-107">Here's a simple example of reflection using the static method `GetType` - inherited by all types from the `Object` base class - to obtain the type of a variable:</span></span>  
+ <span data-ttu-id="d8ef2-107">Veja um exemplo simples de reflexão usando o método estático `GetType` – herdado por todos os tipos da classe base `Object` – para obter o tipo de uma variável:</span><span class="sxs-lookup"><span data-stu-id="d8ef2-107">Here's a simple example of reflection using the static method `GetType` - inherited by all types from the `Object` base class - to obtain the type of a variable:</span></span>  
   
 ```vb  
 ' Using GetType to obtain type information:  
@@ -21,11 +21,11 @@ Dim type As System.Type = i.GetType()
 System.Console.WriteLine(type)  
 ```  
   
- <span data-ttu-id="7c4ea-108">A saída é:</span><span class="sxs-lookup"><span data-stu-id="7c4ea-108">The output is:</span></span>  
+ <span data-ttu-id="d8ef2-108">A saída é:</span><span class="sxs-lookup"><span data-stu-id="d8ef2-108">The output is:</span></span>  
   
  `System.Int32`  
   
- <span data-ttu-id="7c4ea-109">O exemplo a seguir usa a reflexão para obter o nome completo do assembly carregado.</span><span class="sxs-lookup"><span data-stu-id="7c4ea-109">The following example uses reflection to obtain the full name of the loaded assembly.</span></span>  
+ <span data-ttu-id="d8ef2-109">O exemplo a seguir usa a reflexão para obter o nome completo do assembly carregado.</span><span class="sxs-lookup"><span data-stu-id="d8ef2-109">The following example uses reflection to obtain the full name of the loaded assembly.</span></span>  
   
 ```vb  
 ' Using Reflection to get information from an Assembly:  
@@ -33,35 +33,35 @@ Dim info As System.Reflection.Assembly = GetType(System.Int32).Assembly
 System.Console.WriteLine(info)  
 ```  
   
- <span data-ttu-id="7c4ea-110">A saída é:</span><span class="sxs-lookup"><span data-stu-id="7c4ea-110">The output is:</span></span>  
+ <span data-ttu-id="d8ef2-110">A saída é:</span><span class="sxs-lookup"><span data-stu-id="d8ef2-110">The output is:</span></span>  
   
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
-## <a name="reflection-overview"></a><span data-ttu-id="7c4ea-111">Visão geral da reflexão</span><span class="sxs-lookup"><span data-stu-id="7c4ea-111">Reflection Overview</span></span>  
- <span data-ttu-id="7c4ea-112">A reflexão é útil nas seguintes situações:</span><span class="sxs-lookup"><span data-stu-id="7c4ea-112">Reflection is useful in the following situations:</span></span>  
+## <a name="reflection-overview"></a><span data-ttu-id="d8ef2-111">Visão geral da reflexão</span><span class="sxs-lookup"><span data-stu-id="d8ef2-111">Reflection Overview</span></span>  
+ <span data-ttu-id="d8ef2-112">A reflexão é útil nas seguintes situações:</span><span class="sxs-lookup"><span data-stu-id="d8ef2-112">Reflection is useful in the following situations:</span></span>  
   
-- <span data-ttu-id="7c4ea-113">Quando você precisa acessar atributos nos metadados do seu programa.</span><span class="sxs-lookup"><span data-stu-id="7c4ea-113">When you have to access attributes in your program's metadata.</span></span> <span data-ttu-id="7c4ea-114">Para obter mais informações, consulte [Recuperando informações armazenadas em atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="7c4ea-114">For more information, see [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md).</span></span>  
+- <span data-ttu-id="d8ef2-113">Quando você precisa acessar atributos nos metadados do seu programa.</span><span class="sxs-lookup"><span data-stu-id="d8ef2-113">When you have to access attributes in your program's metadata.</span></span> <span data-ttu-id="d8ef2-114">Para obter mais informações, consulte [Recuperando informações armazenadas em atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="d8ef2-114">For more information, see [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md).</span></span>  
   
-- <span data-ttu-id="7c4ea-115">Para examinar e instanciar tipos em um assembly.</span><span class="sxs-lookup"><span data-stu-id="7c4ea-115">For examining and instantiating types in an assembly.</span></span>  
+- <span data-ttu-id="d8ef2-115">Para examinar e instanciar tipos em um assembly.</span><span class="sxs-lookup"><span data-stu-id="d8ef2-115">For examining and instantiating types in an assembly.</span></span>  
   
-- <span data-ttu-id="7c4ea-116">Para criar novos tipos em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="7c4ea-116">For building new types at runtime.</span></span> <span data-ttu-id="7c4ea-117">Usar as classes em <xref:System.Reflection.Emit>.</span><span class="sxs-lookup"><span data-stu-id="7c4ea-117">Use classes in <xref:System.Reflection.Emit>.</span></span>  
+- <span data-ttu-id="d8ef2-116">Para criar novos tipos em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="d8ef2-116">For building new types at runtime.</span></span> <span data-ttu-id="d8ef2-117">Usar as classes em <xref:System.Reflection.Emit>.</span><span class="sxs-lookup"><span data-stu-id="d8ef2-117">Use classes in <xref:System.Reflection.Emit>.</span></span>  
   
-- <span data-ttu-id="7c4ea-118">Para executar a associação tardia, acessar métodos em tipos criados em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="7c4ea-118">For performing late binding, accessing methods on types created at run time.</span></span> <span data-ttu-id="7c4ea-119">Consulte o tópico [Carregando e usando tipos dinamicamente](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).</span><span class="sxs-lookup"><span data-stu-id="7c4ea-119">See the topic [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).</span></span>  
+- <span data-ttu-id="d8ef2-118">Para executar a associação tardia, acessar métodos em tipos criados em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="d8ef2-118">For performing late binding, accessing methods on types created at run time.</span></span> <span data-ttu-id="d8ef2-119">Consulte o tópico [Carregando e usando tipos dinamicamente](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).</span><span class="sxs-lookup"><span data-stu-id="d8ef2-119">See the topic [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="7c4ea-120">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="7c4ea-120">Related Sections</span></span>  
- <span data-ttu-id="7c4ea-121">Para saber mais:</span><span class="sxs-lookup"><span data-stu-id="7c4ea-121">For more information:</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="d8ef2-120">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="d8ef2-120">Related Sections</span></span>  
+ <span data-ttu-id="d8ef2-121">Para saber mais:</span><span class="sxs-lookup"><span data-stu-id="d8ef2-121">For more information:</span></span>  
   
-- [<span data-ttu-id="7c4ea-122">Reflexão</span><span class="sxs-lookup"><span data-stu-id="7c4ea-122">Reflection</span></span>](../../../framework/reflection-and-codedom/reflection.md)  
+- [<span data-ttu-id="d8ef2-122">Reflexão</span><span class="sxs-lookup"><span data-stu-id="d8ef2-122">Reflection</span></span>](../../../framework/reflection-and-codedom/reflection.md)  
   
-- [<span data-ttu-id="7c4ea-123">Exibindo informações de tipo</span><span class="sxs-lookup"><span data-stu-id="7c4ea-123">Viewing Type Information</span></span>](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+- [<span data-ttu-id="d8ef2-123">Exibindo informações de tipo</span><span class="sxs-lookup"><span data-stu-id="d8ef2-123">Viewing Type Information</span></span>](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
-- [<span data-ttu-id="7c4ea-124">Reflexão e tipos genéricos</span><span class="sxs-lookup"><span data-stu-id="7c4ea-124">Reflection and Generic Types</span></span>](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [<span data-ttu-id="d8ef2-124">Reflexão e tipos genéricos</span><span class="sxs-lookup"><span data-stu-id="d8ef2-124">Reflection and Generic Types</span></span>](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
 - <xref:System.Reflection.Emit>  
   
-- [<span data-ttu-id="7c4ea-125">Recuperando informações armazenadas em atributos</span><span class="sxs-lookup"><span data-stu-id="7c4ea-125">Retrieving Information Stored in Attributes</span></span>](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [<span data-ttu-id="d8ef2-125">Recuperando informações armazenadas em atributos</span><span class="sxs-lookup"><span data-stu-id="d8ef2-125">Retrieving Information Stored in Attributes</span></span>](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7c4ea-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7c4ea-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8ef2-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d8ef2-126">See also</span></span>
 
-- [<span data-ttu-id="7c4ea-127">Guia de programação do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7c4ea-127">Visual Basic Programming Guide</span></span>](../../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="7c4ea-128">Assemblies no Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="7c4ea-128">Assemblies in the Common Language Runtime</span></span>](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [<span data-ttu-id="d8ef2-127">Guia de programação do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d8ef2-127">Visual Basic Programming Guide</span></span>](../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="d8ef2-128">Assemblies no Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="d8ef2-128">Assemblies in the Common Language Runtime</span></span>](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)

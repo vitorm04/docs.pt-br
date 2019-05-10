@@ -5,44 +5,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9da37d2fb9797c9074765326df1e6eca2469607
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005635"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622468"
 ---
-# <a name="custom-composite-designers---workflow-items-presenter"></a><span data-ttu-id="fc8ae-102">Designer de compostos personalizados - apresentador de itens de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="fc8ae-102">Custom Composite Designers - Workflow Items Presenter</span></span>
-<span data-ttu-id="fc8ae-103"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> é um principal no modelo de programação do designer de WF que permite a edição de uma coleção de elementos contidos.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-103">The <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> is a key type in the WF designer programming model that allows for the editing of a collection of contained elements.</span></span> <span data-ttu-id="fc8ae-104">Este exemplo mostra como criar um designer de atividade que surija uma coleção tão editável.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-104">This sample shows how to build an activity designer that surfaces such an editable collection.</span></span>
+# <a name="custom-composite-designers---workflow-items-presenter"></a><span data-ttu-id="818e6-102">Designer de compostos personalizados - apresentador de itens de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="818e6-102">Custom Composite Designers - Workflow Items Presenter</span></span>
+<span data-ttu-id="818e6-103"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> é um principal no modelo de programação do designer de WF que permite a edição de uma coleção de elementos contidos.</span><span class="sxs-lookup"><span data-stu-id="818e6-103">The <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> is a key type in the WF designer programming model that allows for the editing of a collection of contained elements.</span></span> <span data-ttu-id="818e6-104">Este exemplo mostra como criar um designer de atividade que surija uma coleção tão editável.</span><span class="sxs-lookup"><span data-stu-id="818e6-104">This sample shows how to build an activity designer that surfaces such an editable collection.</span></span>
 
- <span data-ttu-id="fc8ae-105">Este exemplo demonstra:</span><span class="sxs-lookup"><span data-stu-id="fc8ae-105">This sample demonstrates:</span></span>
+ <span data-ttu-id="818e6-105">Este exemplo demonstra:</span><span class="sxs-lookup"><span data-stu-id="818e6-105">This sample demonstrates:</span></span>
 
--   <span data-ttu-id="fc8ae-106">Criando um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-106">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span>
+- <span data-ttu-id="818e6-106">Criando um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="818e6-106">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span>
 
--   <span data-ttu-id="fc8ae-107">Criando um designer de atividade com um modo de exibição "recolheu" e "expandiu".</span><span class="sxs-lookup"><span data-stu-id="fc8ae-107">Creating an activity designer with a "collapsed" and "expanded" view.</span></span>
+- <span data-ttu-id="818e6-107">Criando um designer de atividade com um modo de exibição "recolheu" e "expandiu".</span><span class="sxs-lookup"><span data-stu-id="818e6-107">Creating an activity designer with a "collapsed" and "expanded" view.</span></span>
 
--   <span data-ttu-id="fc8ae-108">Substituindo um designer padrão em um aplicativo rehosted.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-108">Overriding a default designer in a rehosted application.</span></span>
+- <span data-ttu-id="818e6-108">Substituindo um designer padrão em um aplicativo rehosted.</span><span class="sxs-lookup"><span data-stu-id="818e6-108">Overriding a default designer in a rehosted application.</span></span>
 
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="fc8ae-109">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="fc8ae-109">To set up, build, and run the sample</span></span>
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="818e6-109">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="818e6-109">To set up, build, and run the sample</span></span>
 
-1. <span data-ttu-id="fc8ae-110">Abra o **Usingworkflowitemspresenter** solução de exemplo para c# ou VB no Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-110">Open the **UsingWorkflowItemsPresenter.sln** sample solution for C# or for VB in Visual Studio 2010.</span></span>
+1. <span data-ttu-id="818e6-110">Abra o **Usingworkflowitemspresenter** solução de exemplo para c# ou VB no Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="818e6-110">Open the **UsingWorkflowItemsPresenter.sln** sample solution for C# or for VB in Visual Studio 2010.</span></span>
 
-2. <span data-ttu-id="fc8ae-111">Criar e executar a solução.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-111">Build and run the solution.</span></span> <span data-ttu-id="fc8ae-112">Um aplicativo rehosted de designer de fluxo de trabalho deve abrir, e você pode arrastar atividades na tela.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-112">A rehosted workflow designer application should open, and you can drag activities onto the canvas.</span></span>
+2. <span data-ttu-id="818e6-111">Criar e executar a solução.</span><span class="sxs-lookup"><span data-stu-id="818e6-111">Build and run the solution.</span></span> <span data-ttu-id="818e6-112">Um aplicativo rehosted de designer de fluxo de trabalho deve abrir, e você pode arrastar atividades na tela.</span><span class="sxs-lookup"><span data-stu-id="818e6-112">A rehosted workflow designer application should open, and you can drag activities onto the canvas.</span></span>
 
-## <a name="sample-highlights"></a><span data-ttu-id="fc8ae-113">Realces de exemplo</span><span class="sxs-lookup"><span data-stu-id="fc8ae-113">Sample Highlights</span></span>
- <span data-ttu-id="fc8ae-114">O código para esse exemplo mostra o seguinte:</span><span class="sxs-lookup"><span data-stu-id="fc8ae-114">The code for this sample shows the following:</span></span>
+## <a name="sample-highlights"></a><span data-ttu-id="818e6-113">Realces de exemplo</span><span class="sxs-lookup"><span data-stu-id="818e6-113">Sample Highlights</span></span>
+ <span data-ttu-id="818e6-114">O código para esse exemplo mostra o seguinte:</span><span class="sxs-lookup"><span data-stu-id="818e6-114">The code for this sample shows the following:</span></span>
 
--   <span data-ttu-id="fc8ae-115">A atividade um designer é compilada para:  `Parallel`</span><span class="sxs-lookup"><span data-stu-id="fc8ae-115">The activity a designer is built for:  `Parallel`</span></span>
+- <span data-ttu-id="818e6-115">A atividade um designer é compilada para:  `Parallel`</span><span class="sxs-lookup"><span data-stu-id="818e6-115">The activity a designer is built for:  `Parallel`</span></span>
 
--   <span data-ttu-id="fc8ae-116">A criação de um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-116">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span> <span data-ttu-id="fc8ae-117">Algumas coisas para indicar:</span><span class="sxs-lookup"><span data-stu-id="fc8ae-117">A few things to point out:</span></span>
+- <span data-ttu-id="818e6-116">A criação de um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="818e6-116">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span> <span data-ttu-id="818e6-117">Algumas coisas para indicar:</span><span class="sxs-lookup"><span data-stu-id="818e6-117">A few things to point out:</span></span>
 
-    -   <span data-ttu-id="fc8ae-118">Observe o uso de associação de dados de WPF associar a `ModelItem.Branches`.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-118">Note the use of WPF data binding to bind to `ModelItem.Branches`.</span></span> <span data-ttu-id="fc8ae-119">`ModelItem` é a propriedade em `WorkflowElementDesigner` que refere-se ao objeto subjacente que o designer está sendo usado para, nesse caso, nosso `Parallel`.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-119">`ModelItem` is the property on `WorkflowElementDesigner` that refers to the underlying object the designer is being used for, in this case, our `Parallel`.</span></span>
+    - <span data-ttu-id="818e6-118">Observe o uso de associação de dados de WPF associar a `ModelItem.Branches`.</span><span class="sxs-lookup"><span data-stu-id="818e6-118">Note the use of WPF data binding to bind to `ModelItem.Branches`.</span></span> <span data-ttu-id="818e6-119">`ModelItem` é a propriedade em `WorkflowElementDesigner` que refere-se ao objeto subjacente que o designer está sendo usado para, nesse caso, nosso `Parallel`.</span><span class="sxs-lookup"><span data-stu-id="818e6-119">`ModelItem` is the property on `WorkflowElementDesigner` that refers to the underlying object the designer is being used for, in this case, our `Parallel`.</span></span>
 
-    -   <span data-ttu-id="fc8ae-120"><xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> pode ser usado para colocar um visual para exibir entre os itens individuais na coleção.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-120">The <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> can be used to put a visual to display between the individual items in the collection.</span></span>
+    - <span data-ttu-id="818e6-120"><xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> pode ser usado para colocar um visual para exibir entre os itens individuais na coleção.</span><span class="sxs-lookup"><span data-stu-id="818e6-120">The <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> can be used to put a visual to display between the individual items in the collection.</span></span>
 
-    -   <span data-ttu-id="fc8ae-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> é um modelo que pode ser fornecido para determinar o layout dos itens na coleção.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> is a template that can be provided to determine the layout of the items in the collection.</span></span> <span data-ttu-id="fc8ae-122">Nesse caso, um painel horizontal de pilha é usado.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-122">In this case, a horizontal stack panel is used.</span></span>
+    - <span data-ttu-id="818e6-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> é um modelo que pode ser fornecido para determinar o layout dos itens na coleção.</span><span class="sxs-lookup"><span data-stu-id="818e6-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> is a template that can be provided to determine the layout of the items in the collection.</span></span> <span data-ttu-id="818e6-122">Nesse caso, um painel horizontal de pilha é usado.</span><span class="sxs-lookup"><span data-stu-id="818e6-122">In this case, a horizontal stack panel is used.</span></span>
 
- <span data-ttu-id="fc8ae-123">Esse código de exemplo a seguir mostra isso.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-123">This following example code shows this.</span></span>
+ <span data-ttu-id="818e6-123">Esse código de exemplo a seguir mostra isso.</span><span class="sxs-lookup"><span data-stu-id="818e6-123">This following example code shows this.</span></span>
 
 ```xaml
 <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
@@ -60,11 +60,11 @@ ms.locfileid: "62005635"
   </sad:WorkflowItemsPresenter>
 ```
 
--   <span data-ttu-id="fc8ae-124">Executar uma associação de `DesignerAttribute` para o tipo de `Parallel` e então saída que atributos relataram.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-124">Perform an association of the `DesignerAttribute` to the `Parallel` type and then output the attributes reported.</span></span>
+- <span data-ttu-id="818e6-124">Executar uma associação de `DesignerAttribute` para o tipo de `Parallel` e então saída que atributos relataram.</span><span class="sxs-lookup"><span data-stu-id="818e6-124">Perform an association of the `DesignerAttribute` to the `Parallel` type and then output the attributes reported.</span></span>
 
-    -   <span data-ttu-id="fc8ae-125">Primeiro, para todos os designers padrão.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-125">First, register all of the default designers.</span></span>
+    - <span data-ttu-id="818e6-125">Primeiro, para todos os designers padrão.</span><span class="sxs-lookup"><span data-stu-id="818e6-125">First, register all of the default designers.</span></span>
 
- <span data-ttu-id="fc8ae-126">A seguir está o exemplo de código.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-126">The following is the code example.</span></span>
+ <span data-ttu-id="818e6-126">A seguir está o exemplo de código.</span><span class="sxs-lookup"><span data-stu-id="818e6-126">The following is the code example.</span></span>
 
 ```csharp
 // register metadata
@@ -80,9 +80,9 @@ metadata.Register()
 RegisterCustomMetadata()
 ```
 
-    -   <span data-ttu-id="fc8ae-127">Em seguida, substituir a paralela no método de `RegisterCustomMetadata` .</span><span class="sxs-lookup"><span data-stu-id="fc8ae-127">Then, override the parallel in `RegisterCustomMetadata` method.</span></span>
+    - <span data-ttu-id="818e6-127">Em seguida, substituir a paralela no método de `RegisterCustomMetadata` .</span><span class="sxs-lookup"><span data-stu-id="818e6-127">Then, override the parallel in `RegisterCustomMetadata` method.</span></span>
 
- <span data-ttu-id="fc8ae-128">O código a seguir mostra esse em C# e Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-128">The following code shows this in C# and Visual Basic.</span></span>
+ <span data-ttu-id="818e6-128">O código a seguir mostra esse em C# e Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="818e6-128">The following code shows this in C# and Visual Basic.</span></span>
 
 ```csharp
 void RegisterCustomMetadata()
@@ -101,9 +101,9 @@ Sub RegisterCustomMetadata()
 End Sub
 ```
 
--   <span data-ttu-id="fc8ae-129">Finalmente, observe o uso de modelos e disparadores de diferentes de dados selecione o modelo apropriado com base na propriedade de `IsRootDesigner` .</span><span class="sxs-lookup"><span data-stu-id="fc8ae-129">Finally, note the use of differing data templates and triggers to select the appropriate template based on the `IsRootDesigner` property.</span></span>
+- <span data-ttu-id="818e6-129">Finalmente, observe o uso de modelos e disparadores de diferentes de dados selecione o modelo apropriado com base na propriedade de `IsRootDesigner` .</span><span class="sxs-lookup"><span data-stu-id="818e6-129">Finally, note the use of differing data templates and triggers to select the appropriate template based on the `IsRootDesigner` property.</span></span>
 
- <span data-ttu-id="fc8ae-130">A seguir está o exemplo de código.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-130">The following is the code example.</span></span>
+ <span data-ttu-id="818e6-130">A seguir está o exemplo de código.</span><span class="sxs-lookup"><span data-stu-id="818e6-130">The following is the code example.</span></span>
 
 ```xaml
 <sad:ActivityDesigner x:Class="Microsoft.Samples.CustomParallelDesigner"
@@ -149,15 +149,15 @@ End Sub
 ```
 
 > [!IMPORTANT]
->  <span data-ttu-id="fc8ae-131">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="fc8ae-132">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-132">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="818e6-131">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="818e6-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="818e6-132">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="818e6-132">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="fc8ae-133">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="fc8ae-134">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="fc8ae-134">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="818e6-133">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="818e6-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="818e6-134">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="818e6-134">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
-## <a name="see-also"></a><span data-ttu-id="fc8ae-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fc8ae-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="818e6-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="818e6-135">See also</span></span>
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
-- [<span data-ttu-id="fc8ae-136">Desenvolvendo aplicativos com o Designer de Fluxo de Trabalho</span><span class="sxs-lookup"><span data-stu-id="fc8ae-136">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [<span data-ttu-id="818e6-136">Desenvolvendo aplicativos com o Designer de Fluxo de Trabalho</span><span class="sxs-lookup"><span data-stu-id="818e6-136">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
