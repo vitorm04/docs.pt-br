@@ -2,21 +2,21 @@
 title: Não é possível excluir algumas subchaves
 ms.date: 07/20/2015
 ms.assetid: 14562137-af43-4972-84c1-a380a90f7d6c
-ms.openlocfilehash: c1dd54f9905585c7c16b9a23fa58de04631e7a63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 40cca5b555d493ac894f75564d22ede2a9671a5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013693"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593288"
 ---
-# <a name="some-subkeys-cannot-be-deleted"></a><span data-ttu-id="6c98d-102">Não é possível excluir algumas subchaves</span><span class="sxs-lookup"><span data-stu-id="6c98d-102">Some subkeys cannot be deleted</span></span>
-<span data-ttu-id="6c98d-103">Foi feita uma tentativa para excluir uma chave do registro, mas a operação falhou porque não não possível excluir algumas subchaves.</span><span class="sxs-lookup"><span data-stu-id="6c98d-103">An attempt has been made to delete a registry key, but the operation failed because some subkeys cannot be deleted.</span></span> <span data-ttu-id="6c98d-104">Normalmente, isso é devido à falta de permissões.</span><span class="sxs-lookup"><span data-stu-id="6c98d-104">Usually this is due to a lack of permissions.</span></span>  
+# <a name="some-subkeys-cannot-be-deleted"></a><span data-ttu-id="333fe-102">Não é possível excluir algumas subchaves</span><span class="sxs-lookup"><span data-stu-id="333fe-102">Some subkeys cannot be deleted</span></span>
+<span data-ttu-id="333fe-103">Foi feita uma tentativa para excluir uma chave do registro, mas a operação falhou porque não não possível excluir algumas subchaves.</span><span class="sxs-lookup"><span data-stu-id="333fe-103">An attempt has been made to delete a registry key, but the operation failed because some subkeys cannot be deleted.</span></span> <span data-ttu-id="333fe-104">Normalmente, isso é devido à falta de permissões.</span><span class="sxs-lookup"><span data-stu-id="333fe-104">Usually this is due to a lack of permissions.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6c98d-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="6c98d-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="333fe-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="333fe-105">To correct this error</span></span>  
   
-- <span data-ttu-id="6c98d-106">Verifique se que você tem permissões suficientes para excluir as subchaves especificadas.</span><span class="sxs-lookup"><span data-stu-id="6c98d-106">Make sure you have sufficient permissions to delete the specified subkeys.</span></span>  
+- <span data-ttu-id="333fe-106">Verifique se que você tem permissões suficientes para excluir as subchaves especificadas.</span><span class="sxs-lookup"><span data-stu-id="333fe-106">Make sure you have sufficient permissions to delete the specified subkeys.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c98d-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6c98d-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="333fe-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="333fe-107">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
