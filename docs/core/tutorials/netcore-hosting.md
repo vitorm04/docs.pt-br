@@ -4,12 +4,12 @@ description: Saiba como hospedar o tempo de execução do .NET Core a partir do 
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 0ebd5b1532af77c082a2d8cd6508a83e969b325e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481139"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587050"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escreva um host personalizado do .NET Core para controlar o tempo de execução do .NET a partir de seu código nativo
 
@@ -68,13 +68,11 @@ Antes de iniciar o tempo de execução, é necessário preparar algumas propried
 
 As propriedades comuns incluem:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  Essa é uma lista de caminhos de assembly (delimitada por ";" no Windows e por ":" no Linux) que o tempo de execução poderá resolver por padrão. Alguns hosts têm manifestos embutidos em código que listam os assemblies que eles podem carregar. Outros usuários colocarão uma biblioteca em determinados locais (próximos a *coreclr.dll*, por exemplo) nessa lista.
-* `APP_PATHS`
-  Essa é uma lista de caminhos a serem investigados quanto a um assembly se ele não for encontrado na lista de TPA (assemblies de plataforma confiáveis). Como o host tem mais controle sobre quais assemblies são carregados usando a lista de TPA, uma prática recomendada para hosts é determinar quais assemblies eles esperam carregar e listá-los explicitamente. No entanto, se for necessária uma investigação no tempo de execução, essa propriedade poderá permitir esse cenário.
-*  `APP_NI_PATHS` Essa lista é semelhante à APP_PATHS, exceto que ela foi projetada para conter os caminhos que serão investigados para imagens nativas.
-*  `NATIVE_DLL_SEARCH_DIRECTORIES` Essa propriedade é uma lista de caminhos que o carregador deverá investigar ao procurar bibliotecas nativas chamadas por meio de p/invoke.
-*  `PLATFORM_RESOURCE_ROOTS` Essa lista inclui caminhos a serem investigados quanto a assemblies satélite de recursos (em subdiretórios específicos à cultura).
+* `TRUSTED_PLATFORM_ASSEMBLIES` Essa é uma lista de caminhos de assembly (delimitada por ";" no Windows e por ":" no Linux) que o tempo de execução poderá resolver por padrão. Alguns hosts têm manifestos embutidos em código que listam os assemblies que eles podem carregar. Outros usuários colocarão uma biblioteca em determinados locais (próximos a *coreclr.dll*, por exemplo) nessa lista.
+* `APP_PATHS` Essa é uma lista de caminhos a serem investigados quanto a um assembly se ele não for encontrado na lista de TPA (assemblies de plataforma confiáveis). Como o host tem mais controle sobre quais assemblies são carregados usando a lista de TPA, uma prática recomendada para hosts é determinar quais assemblies eles esperam carregar e listá-los explicitamente. No entanto, se for necessária uma investigação no tempo de execução, essa propriedade poderá permitir esse cenário.
+* `APP_NI_PATHS` Essa lista é semelhante à APP_PATHS, exceto que ela foi projetada para conter os caminhos que serão investigados para imagens nativas.
+* `NATIVE_DLL_SEARCH_DIRECTORIES` Essa propriedade é uma lista de caminhos que o carregador deverá investigar ao procurar bibliotecas nativas chamadas por meio de p/invoke.
+* `PLATFORM_RESOURCE_ROOTS` Essa lista inclui caminhos a serem investigados quanto a assemblies satélite de recursos (em subdiretórios específicos à cultura).
 
 Neste host de exemplo, a lista de TPA é construída simplesmente listando todas as bibliotecas no diretório atual:
 
@@ -166,13 +164,11 @@ Depois de decidir quais sinalizadores AppDomain serão usados, as propriedades d
 
 As propriedades comuns de AppDomain incluem:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  Essa é uma lista de caminhos de assembly (delimitada por `;` no Windows e por `:` no Linux/Mac) para os quais o AppDomain deverá priorizar o carregamento e fornecer confiança total (mesmo em domínios de confiança parcial). Essa lista deve conter assemblies “Framework” e outros módulos confiáveis, semelhante ao GAC em cenários do .NET Framework. Alguns hosts colocarão uma biblioteca próxima a *coreclr.dll* nesta lista, enquanto outros têm manifestos embutidos em código que listam os assemblies confiáveis para suas finalidades.
-* `APP_PATHS`
-  Essa é uma lista de caminhos a serem investigados quanto a um assembly se ele não for encontrado na lista de TPA (assemblies de plataforma confiáveis). Como o host tem mais controle sobre quais assemblies são carregados usando a lista de TPA, uma prática recomendada para hosts é determinar quais assemblies eles esperam carregar e listá-los explicitamente. No entanto, se for necessária uma investigação no tempo de execução, essa propriedade poderá permitir esse cenário.
-*  `APP_NI_PATHS` Essa lista é muito semelhante a APP_PATHS, com exceção de que foi projetada para serem caminhos que serão investigados quanto a imagens nativas.
-*  `NATIVE_DLL_SEARCH_DIRECTORIES` Essa propriedade é uma lista de caminhos que o carregador deverá investigar ao procurar DLLs nativas chamadas por meio de p/invoke.
-*  `PLATFORM_RESOURCE_ROOTS` Essa lista inclui caminhos a serem investigados quanto a assemblies satélite de recursos (em subdiretórios específicos à cultura).
+* `TRUSTED_PLATFORM_ASSEMBLIES` Essa é uma lista de caminhos de assembly (delimitada por `;` no Windows e por `:` no Linux/Mac) para os quais o AppDomain deverá priorizar o carregamento e fornecer confiança total (mesmo em domínios de confiança parcial). Essa lista deve conter assemblies “Framework” e outros módulos confiáveis, semelhante ao GAC em cenários do .NET Framework. Alguns hosts colocarão uma biblioteca próxima a *coreclr.dll* nesta lista, enquanto outros têm manifestos embutidos em código que listam os assemblies confiáveis para suas finalidades.
+* `APP_PATHS` Essa é uma lista de caminhos a serem investigados quanto a um assembly se ele não for encontrado na lista de TPA (assemblies de plataforma confiáveis). Como o host tem mais controle sobre quais assemblies são carregados usando a lista de TPA, uma prática recomendada para hosts é determinar quais assemblies eles esperam carregar e listá-los explicitamente. No entanto, se for necessária uma investigação no tempo de execução, essa propriedade poderá permitir esse cenário.
+* `APP_NI_PATHS` Essa lista é muito semelhante a APP_PATHS, com exceção de que foi projetada para serem caminhos que serão investigados quanto a imagens nativas.
+* `NATIVE_DLL_SEARCH_DIRECTORIES` Essa propriedade é uma lista de caminhos que o carregador deverá investigar ao procurar DLLs nativas chamadas por meio de p/invoke.
+* `PLATFORM_RESOURCE_ROOTS` Essa lista inclui caminhos a serem investigados quanto a assemblies satélite de recursos (em subdiretórios específicos à cultura).
 
 Em nosso [host de exemplo simples](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree), essas propriedades são configuradas da seguinte maneira:
 

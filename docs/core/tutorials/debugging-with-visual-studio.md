@@ -3,16 +3,16 @@ title: Depurar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017
 description: Saiba como depurar um aplicativo Olá, Mundo escrito em C# ou no Visual Basic com o Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610711"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063083"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Depure seu aplicativo Olá, Mundo do .NET Core em C# ou Visual Basic usando Visual Studio 2017
 
-Até agora, você seguiu as etapas em [Build a C# Hello World Application with .NET Core in Visual Studio 2017](with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017) ou [Build a Visual Basic Hello World Application with .NET Core in Visual Studio 2017](vb-with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017) para criar e executar um aplicativo de console simples. Após escrever e compilar seu aplicativo, você pode começar a testá-lo. O Visual Studio inclui um conjunto abrangente de ferramentas de depuração que você pode usar ao testar e solucionar problemas de seu aplicativo.
+Até agora, você seguiu as etapas em [Build a C# Hello World Application with .NET Core in Visual Studio 2017](with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017) ou [Build a Visual Basic Hello World Application with .NET Core in Visual Studio 2017](vb-with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017) para criar e executar um aplicativo de console simples. Após escrever e compilar seu aplicativo, você pode começar a testá-lo. O Visual Studio inclui um conjunto abrangente de ferramentas de depuração que você pode usar ao testar e solucionar problemas de seu aplicativo. 
 
 ## <a name="debugging-in-debug-mode"></a>Depurando no modo de depuração
 
