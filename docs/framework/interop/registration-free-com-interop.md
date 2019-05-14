@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300990"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648518"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidade COM sem registro
 A interoperabilidade COM sem registro ativa um componente sem usar o Registro do Windows para armazenar informações de assembly. Em vez de registrar um componente em um computador durante a implantação, você pode criar arquivos de manifesto estilo Win32 em tempo de design que contêm informações sobre associação e a ativação. Esses arquivos de manifesto, em vez de chaves do Registro, direcionam a ativação de um objeto.  
   
  Usar a ativação sem registro dos assemblies em vez de registrá-los durante a implantação oferece duas vantagens:  
   
--   Você pode controlar qual versão DLL é ativada quando mais de uma versão é instalada em um computador.  
+- Você pode controlar qual versão DLL é ativada quando mais de uma versão é instalada em um computador.  
   
--   Os usuários finais podem usar XCOPY ou FTP para copiar seu aplicativo para um diretório apropriado no computador deles. Assim, o aplicativo pode ser executado nesse diretório.  
+- Os usuários finais podem usar XCOPY ou FTP para copiar seu aplicativo para um diretório apropriado no computador deles. Assim, o aplicativo pode ser executado nesse diretório.  
   
  Esta seção descreve os dois tipos de manifestos necessários para a interoperação COM sem registro: manifestos de aplicativo e de componente. Esses manifestos são arquivos XML. Um manifesto de aplicativo, que é criado por um desenvolvedor de aplicativos, contém metadados que descrevem os assemblies e as dependências de assembly. Um manifesto do componente, criado por um desenvolvedor de componente, contém informações que residem no Registro do Windows.  
   

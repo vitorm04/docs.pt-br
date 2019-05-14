@@ -2,12 +2,12 @@
 title: Caches PNRP
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3ed3e11e702c8933b500421de5654b212cdd80d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182475"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622988"
 ---
 # <a name="pnrp-caches"></a>Caches PNRP
 Caches de protocolo PNRP são coleções locais de pontos de extremidade de par selecionados de maneira algorítmica mantidos no par.  
@@ -15,9 +15,9 @@ Caches de protocolo PNRP são coleções locais de pontos de extremidade de par 
 ## <a name="pnrp-cache-initialization"></a>Inicialização do cache PNRP  
  Para inicializar o cache PNRP ou a coleção de registro de nome de nó par, quando um nó par é iniciado, um nó pode usar os seguintes métodos:  
   
--   Entradas de cache persistente que estavam presentes quando o nó foi desligado são carregadas do armazenamento de disco rígido.  
+- Entradas de cache persistente que estavam presentes quando o nó foi desligado são carregadas do armazenamento de disco rígido.  
   
--   Se um aplicativo usa a infraestrutura de colaboração P2P, informações de colaboração estão disponíveis no Gerenciador de Contatos desse nó.  
+- Se um aplicativo usa a infraestrutura de colaboração P2P, informações de colaboração estão disponíveis no Gerenciador de Contatos desse nó.  
   
 ## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>Colocação em escala da resolução de nomes de par com um cache multinível  
  Para manter os tamanhos dos caches PNRP pequenos, nós pares usam um cache multinível, em que cada nível contém um número máximo de entradas. Cada nível no cache representa uma parte menor equivalente a um décimo do espaço do número de identificação de PNRP (2<sup>256</sup>). O nível mais baixo no cache contém uma ID de PNRP registrada localmente e outras IDs de PNRP numericamente próximas a ela. Conforme um nível de cache é preenchido com um máximo de 20 entradas, um novo nível inferior é criado. O número máximo de níveis no cache é na ordem de log10(número total de IDs de PNRP na nuvem). Por exemplo, para uma nuvem global com 100 milhões de IDs de PNRP, há não mais do que 8 (=log10(100.000.000)) níveis em cache e um número semelhante de saltos para resolver uma ID de PNRP durante a resolução de nome. Esse mecanismo permite uma tabela de hash distribuída para a qual uma ID de PNRP arbitrária pode ser resolvida pelo encaminhamento de mensagens de solicitação PNRP para o par mais próximo até o par com o CPA correspondente ser encontrado.  
