@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c694a9d0ba0d6c7d41a9ce3b932b88519fcddfeb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076154"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626329"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshaling padrão para objetos
 Os parâmetros e os campos tipados como <xref:System.Object?displayProperty=nameWithType> podem ser expostos para um código não gerenciado como um dos seguintes tipos:  
   
--   Uma variante quando o objeto é um parâmetro.  
+- Uma variante quando o objeto é um parâmetro.  
   
--   Uma interface quando o objeto é um campo de estrutura.  
+- Uma interface quando o objeto é um campo de estrutura.  
   
  Somente a interoperabilidade COM dá suporte ao marshaling de tipos de objeto. O comportamento padrão é realizar marshaling de objetos para variantes COM. Essas regras se aplicam somente ao tipo **Object** e não se aplicam a objetos fortemente tipados derivados da classe **Object**.  
   
@@ -120,11 +120,11 @@ struct ObjectHolder {
 ## <a name="marshaling-object-to-variant"></a>Realizando marshaling de objeto para variante  
  Quando um objeto tem o marshaling realizado como uma variante, o tipo de variante interno é determinado em tempo de execução, de acordo com as seguintes regras:  
   
--   Se a referência de objeto for nula (**Nothing** no Visual Basic), o objeto terá o marshaling realizado como uma variante do tipo **VT_EMPTY**.  
+- Se a referência de objeto for nula (**Nothing** no Visual Basic), o objeto terá o marshaling realizado como uma variante do tipo **VT_EMPTY**.  
   
--   Se o objeto for uma instância de qualquer tipo listado na tabela a seguir, o tipo de variante resultante será determinado pelas regras internas do marshaler e mostrado na tabela.  
+- Se o objeto for uma instância de qualquer tipo listado na tabela a seguir, o tipo de variante resultante será determinado pelas regras internas do marshaler e mostrado na tabela.  
   
--   Outros objetos que precisam controlar explicitamente o comportamento de marshaling podem implementar a interface <xref:System.IConvertible>. Nesse caso, o tipo de variante é determinado pelo código do tipo retornado do método <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>. Caso contrário, o objeto terá o marshaling realizado como uma variante do tipo **VT_UNKNOWN**.  
+- Outros objetos que precisam controlar explicitamente o comportamento de marshaling podem implementar a interface <xref:System.IConvertible>. Nesse caso, o tipo de variante é determinado pelo código do tipo retornado do método <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>. Caso contrário, o objeto terá o marshaling realizado como uma variante do tipo **VT_UNKNOWN**.  
   
 ### <a name="marshaling-system-types-to-variant"></a>Realizando marshaling de tipos do sistema para variante  
  A tabela a seguir mostra os tipos de objeto gerenciados e seus tipos de variante COM correspondentes. Esses tipos são convertidos somente quando a assinatura do método que está sendo chamado é do tipo <xref:System.Object?displayProperty=nameWithType>.  
@@ -281,26 +281,26 @@ Variantes passadas por valor e por referência
   
  **Comportamento padrão de marshaling de objetos e variantes por valor**  
   
--   Ao passar objetos do código gerenciado para o COM, o conteúdo do objeto é copiado para uma nova variante criada pelo marshaler, usando as regras definidas em [Realizando marshaling de objeto para variante](#marshaling-object-to-variant). As alterações feitas na variante no lado não gerenciado não são propagadas novamente para o objeto original após o retorno da chamada.  
+- Ao passar objetos do código gerenciado para o COM, o conteúdo do objeto é copiado para uma nova variante criada pelo marshaler, usando as regras definidas em [Realizando marshaling de objeto para variante](#marshaling-object-to-variant). As alterações feitas na variante no lado não gerenciado não são propagadas novamente para o objeto original após o retorno da chamada.  
   
--   Ao passar variantes do COM para o código gerenciado, o conteúdo da variante é copiado para um objeto recém-criado, usando as regras definidas em [Realizando marshaling de variante para objeto](#marshaling-variant-to-object). As alterações feitas no objeto no lado gerenciado não são propagadas novamente para a variante original após o retorno da chamada.  
+- Ao passar variantes do COM para o código gerenciado, o conteúdo da variante é copiado para um objeto recém-criado, usando as regras definidas em [Realizando marshaling de variante para objeto](#marshaling-variant-to-object). As alterações feitas no objeto no lado gerenciado não são propagadas novamente para a variante original após o retorno da chamada.  
   
  **Comportamento padrão de marshaling de objetos e variantes por referência**  
   
  Para propagar as alterações novamente para o chamador, os parâmetros devem ser passados por referência. Por exemplo, use a palavra-chave **ref** no C# (ou **ByRef** no código gerenciado do Visual Basic) para passar parâmetros por referência. No COM, os parâmetros de referência são passados usando um ponteiro, como uma **variante \***.  
   
--   Ao passar um objeto para o COM por referência, o marshaler cria uma nova variante e copia o conteúdo da referência de objeto para a variante antes que a chamada seja feita. A variante é passada para a função não gerenciada, na qual o usuário é livre para alterar o conteúdo da variante. Após o retorno da chamada, todas as alterações feitas na variante no lado não gerenciado são propagadas novamente para o objeto original. Se o tipo da variante for diferente do tipo da variante passada para a chamada, as alterações serão propagadas novamente para um objeto de um tipo diferente. Ou seja, o tipo do objeto passado para a chamada pode ser diferente do tipo do objeto retornado da chamada.  
+- Ao passar um objeto para o COM por referência, o marshaler cria uma nova variante e copia o conteúdo da referência de objeto para a variante antes que a chamada seja feita. A variante é passada para a função não gerenciada, na qual o usuário é livre para alterar o conteúdo da variante. Após o retorno da chamada, todas as alterações feitas na variante no lado não gerenciado são propagadas novamente para o objeto original. Se o tipo da variante for diferente do tipo da variante passada para a chamada, as alterações serão propagadas novamente para um objeto de um tipo diferente. Ou seja, o tipo do objeto passado para a chamada pode ser diferente do tipo do objeto retornado da chamada.  
   
--   Ao passar uma variante para um código gerenciado por referência, o marshaler cria um novo objeto e copia o conteúdo da variante para o objeto antes de fazer a chamada. Uma referência ao objeto é passada para a função gerenciada, em que o usuário é livre para alterar o objeto. Após o retorno da chamada, todas as alterações feitas no objeto referenciado são propagadas novamente para a variante original. Se o tipo do objeto for diferente do tipo do objeto passado para a chamada, o tipo da variante original será alterado e o valor será propagado novamente para a variante. Novamente, o tipo da variante passado para a chamada pode ser diferente do tipo da variante retornado da chamada.  
+- Ao passar uma variante para um código gerenciado por referência, o marshaler cria um novo objeto e copia o conteúdo da variante para o objeto antes de fazer a chamada. Uma referência ao objeto é passada para a função gerenciada, em que o usuário é livre para alterar o objeto. Após o retorno da chamada, todas as alterações feitas no objeto referenciado são propagadas novamente para a variante original. Se o tipo do objeto for diferente do tipo do objeto passado para a chamada, o tipo da variante original será alterado e o valor será propagado novamente para a variante. Novamente, o tipo da variante passado para a chamada pode ser diferente do tipo da variante retornado da chamada.  
   
  **Comportamento padrão de marshaling de uma variante com o sinalizador VT_BYREF definido**  
   
--   Uma variante que está sendo passada para o código gerenciado por valor pode ter o sinalizador **VT_BYREF** definido para indicar que a variante contém uma referência, em vez de um valor. Nesse caso, a variante ainda tem o marshaling realizado para um objeto porque a variante está sendo passada por valor. O marshaler desreferencia automaticamente o conteúdo da variante e o copia para um objeto recém-criado antes de fazer a chamada. Em seguida, o objeto é passado para a função gerenciada; no entanto, após o retorno da chamada, o objeto não é propagado novamente para a variante original. As alterações feitas no objeto gerenciado são perdidas.  
+- Uma variante que está sendo passada para o código gerenciado por valor pode ter o sinalizador **VT_BYREF** definido para indicar que a variante contém uma referência, em vez de um valor. Nesse caso, a variante ainda tem o marshaling realizado para um objeto porque a variante está sendo passada por valor. O marshaler desreferencia automaticamente o conteúdo da variante e o copia para um objeto recém-criado antes de fazer a chamada. Em seguida, o objeto é passado para a função gerenciada; no entanto, após o retorno da chamada, o objeto não é propagado novamente para a variante original. As alterações feitas no objeto gerenciado são perdidas.  
   
     > [!CAUTION]
     >  Não há nenhuma maneira de alterar o valor de uma variante passada por valor, mesmo se a variante tiver um sinalizador **VT_BYREF** definido.  
   
--   Uma variante que está sendo passada para o código gerenciado por referência também pode ter o sinalizador **VT_BYREF** definido para indicar que a variante contém outra referência. Nesse caso, a variante tem o marshaling realizado para um objeto **ref** porque a variante está sendo passada por referência. O marshaler desreferencia automaticamente o conteúdo da variante e o copia para um objeto recém-criado antes de fazer a chamada. Após o retorno da chamada, o valor do objeto é propagado novamente para a referência dentro da variante original somente se o objeto é do mesmo tipo do objeto passado. Ou seja, a propagação não altera o tipo de uma variante com o sinalizador **VT_BYREF** definido. Se o tipo do objeto for alterado durante a chamada, ocorrerá uma <xref:System.InvalidCastException> após o retorno da chamada.  
+- Uma variante que está sendo passada para o código gerenciado por referência também pode ter o sinalizador **VT_BYREF** definido para indicar que a variante contém outra referência. Nesse caso, a variante tem o marshaling realizado para um objeto **ref** porque a variante está sendo passada por referência. O marshaler desreferencia automaticamente o conteúdo da variante e o copia para um objeto recém-criado antes de fazer a chamada. Após o retorno da chamada, o valor do objeto é propagado novamente para a referência dentro da variante original somente se o objeto é do mesmo tipo do objeto passado. Ou seja, a propagação não altera o tipo de uma variante com o sinalizador **VT_BYREF** definido. Se o tipo do objeto for alterado durante a chamada, ocorrerá uma <xref:System.InvalidCastException> após o retorno da chamada.  
   
  A tabela a seguir resume as regras de propagação para variantes e objetos.  
   

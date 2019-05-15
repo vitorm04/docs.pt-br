@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410518"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664673"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguagem de expressões regulares – referência rápida
  Uma expressão regular é um padrão ao qual o mecanismo de expressões regulares tenta corresponder no texto de entrada. Um padrão consiste em um ou mais literais de caracteres, operadores ou constructos.  Para ver uma breve introdução, confira [Expressões regulares no .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -170,9 +170,9 @@ ms.locfileid: "58410518"
   
  É possível especificar uma opção embutida de duas formas:  
   
--   Usando o [constructo diverso](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, em que um sinal de subtração (-) antes de uma opção ou um conjunto de opções desativa essas opções. Por exemplo, `(?i-mn)` ativa a correspondência sem diferenciação de maiúsculas e minúsculas (`i`), desativa o modo de várias linhas (`m`) e desativa capturas de grupo sem nome (`n`). A opção se aplica ao padrão de expressão regular no ponto em que a opção é definida e entra em vigor no final do padrão ou no ponto em que outro constructo inverte a opção.  
+- Usando o [constructo diverso](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, em que um sinal de subtração (-) antes de uma opção ou um conjunto de opções desativa essas opções. Por exemplo, `(?i-mn)` ativa a correspondência sem diferenciação de maiúsculas e minúsculas (`i`), desativa o modo de várias linhas (`m`) e desativa capturas de grupo sem nome (`n`). A opção se aplica ao padrão de expressão regular no ponto em que a opção é definida e entra em vigor no final do padrão ou no ponto em que outro constructo inverte a opção.  
   
--   Usando o [construtor de agrupamento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpressão*`)`, que define opções somente para o grupo especificado.  
+- Usando o [construtor de agrupamento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpressão*`)`, que define opções somente para o grupo especificado.  
   
  O mecanismo de expressões regulares do .NET dá suporte às opções embutidas a seguir.  
   
