@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying data without binding to a data source
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
-ms.openlocfilehash: 193e5228df8587dfc384d8ed97ee5e4e6c005215
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c488d0221080454a82e4c80f89964df0ee62f068
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611989"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591642"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>Como: Criar um controle não associado DataGridView do Windows Forms
 O exemplo de código a seguir demonstra como preencher um <xref:System.Windows.Forms.DataGridView> controle programaticamente sem associação a uma fonte de dados. Isso é útil quando você tem uma pequena quantidade de dados que você deseja exibir em um formato de tabela.  
@@ -30,8 +30,6 @@ O exemplo de código a seguir demonstra como preencher um <xref:System.Windows.F
   
 - Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
-
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>

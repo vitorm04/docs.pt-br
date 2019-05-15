@@ -2,12 +2,12 @@
 title: Tipos serializáveis
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: df00623ba45b356561d4d80d970fdf36ee6a377f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586148"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591668"
 ---
 # <a name="serializable-types"></a>Tipos serializáveis
 Por padrão, o <xref:System.Runtime.Serialization.DataContractSerializer> serializa todos os tipos visíveis publicamente. Todas as propriedades de leitura/gravação pública e campos do tipo são serializados.  
@@ -36,7 +36,7 @@ Por padrão, o <xref:System.Runtime.Serialization.DataContractSerializer> serial
 - Para "opt out" do processo de serialização para os membros públicos, propriedades ou campos, aplicar o <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> a esse membro de atributo.  
   
 ## <a name="inheritance"></a>Herança  
- Tipos desmarcados (tipos sem o <xref:System.Runtime.Serialization.DataContractAttribute> atributo) podem herdar de tipos que têm esse atributo; no entanto, o inverso não é permitido: tipos com o atributo não podem herdar de tipos desmarcados. Essa regra é aplicada principalmente para garantir a compatibilidade com versões anteriores com o código escrito em versões anteriores do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Tipos desmarcados (tipos sem o <xref:System.Runtime.Serialization.DataContractAttribute> atributo) podem herdar de tipos que têm esse atributo; no entanto, o inverso não é permitido: tipos com o atributo não podem herdar de tipos desmarcados. Essa regra é imposta principalmente para garantir a compatibilidade com versões anteriores com o código escrito em versões anteriores do .NET Framework.  
   
 ## <a name="see-also"></a>Consulte também
 
