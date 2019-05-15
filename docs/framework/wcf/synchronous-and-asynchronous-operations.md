@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3f76d51ce5cc167e71e2f3f5e7944dae2e3265d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2e6a955a151e0e11bcf189085dc24e7815fb747
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645192"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582737"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operações síncronas e assíncronas
 Este tópico discute como implementar e chamar as operações de serviço assíncronas.  
@@ -110,7 +110,7 @@ public class AsyncExample
  Para saber mais sobre o padrão assíncrono baseado em eventos, confira [O padrão assíncrono baseado em eventos](https://go.microsoft.com/fwlink/?LinkId=232515).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>O padrão assíncrono IAsyncResult  
- Uma operação de serviço pode ser implementada de uma forma assíncrona usando o padrão e a marcação de programação assíncrona do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e marcando o método `<Begin>` com a propriedade <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> definida como `true`. Nesse caso, a operação assíncrona é exposta nos metadados da mesma forma que uma operação síncrona: Ele é exposto como uma única operação com uma mensagem de solicitação e uma mensagem de resposta correlacionada. Os modelos de programação do cliente têm uma opção. Podem representar esse padrão como uma operação síncrona ou assíncrona, desde que, quando o serviço for chamado, ocorra uma troca de mensagens de solicitação de resposta.  
+ Uma operação de serviço pode ser implementada de forma assíncrona usando o padrão de programação assíncrono do .NET Framework e marcar os `<Begin>` método com o <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> propriedade definida como `true`. Nesse caso, a operação assíncrona é exposta nos metadados da mesma forma que uma operação síncrona: Ele é exposto como uma única operação com uma mensagem de solicitação e uma mensagem de resposta correlacionada. Os modelos de programação do cliente têm uma opção. Podem representar esse padrão como uma operação síncrona ou assíncrona, desde que, quando o serviço for chamado, ocorra uma troca de mensagens de solicitação de resposta.  
   
  Em geral, com a natureza assíncrona dos sistemas, você não deve usar uma dependência nos threads.  A maneira mais confiável de transmitir dados para vários estágios do processamento da expedição da operação é usar extensões.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
-ms.openlocfilehash: 93cf9844a1c5b9d6eb052c94c2309cbff1f4ad56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab088e3f34f3f03be2073864a440006259fe5679
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612384"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591334"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Como: Associar um controle do Windows Forms a um tipo
 Quando estiver criando controles que interagem com os dados, às vezes, achará necessário associar um controle a um tipo, em vez de um objeto. Essa situação ocorre especialmente em tempo de design, quando os dados podem não estar disponíveis, mas seus controles ligados a dados ainda precisam exibir informações da interface pública de um tipo. Por exemplo, você pode associar uma <xref:System.Windows.Forms.DataGridView> controlar a um objeto exposto por um serviço Web e deseja que o <xref:System.Windows.Forms.DataGridView> controle para nomes de rótulo suas colunas em tempo de design com o membro de um tipo personalizado.  
@@ -31,8 +31,6 @@ Quando estiver criando controles que interagem com os dados, às vezes, achará 
  Este exemplo requer:  
   
 - Referências aos assemblies Sistema e System.Windows.Forms.  
-  
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
 
