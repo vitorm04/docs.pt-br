@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
-ms.openlocfilehash: 7d52aa1b6049007928c4045ad52c982b16cd7a00
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 90a80ba421698a108cd7a358f89b64810b06efc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630459"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591623"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Como: Definir o renderizador ToolStrip em tempo de execução
 Você pode personalizar a aparência de sua <xref:System.Windows.Forms.ToolStrip> controle criando um personalizado `ProfessionalColorTable` classe.  
@@ -47,8 +47,6 @@ Você pode personalizar a aparência de sua <xref:System.Windows.Forms.ToolStrip
  Este exemplo requer:  
   
 - Referências aos assemblies System.Design, System.Drawing e System.Windows.Forms.  
-  
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
 

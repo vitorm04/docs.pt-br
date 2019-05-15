@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8241485d75932cd0b8be85d231897b0bc199f0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048737"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592108"
 ---
 # <a name="analytic-tracing-overview"></a>Visão geral de rastreamento analítico
 Rastreamento analítico em [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] é um alto desempenho e o recurso de rastreamento de baixo nível de detalhes definida sobre rastreamento de eventos para Windows (ETW). ETW é executado no nível do kernel para reduzir significativamente a sobrecarga de operações de rastreamento. Com eficiência ele armazena em buffer os eventos de modo de usuário e kernel e permite habilitando dinâmico de registro em log sem a necessidade de reinicialização do serviço. Os dados de rastreamento estão disponíveis no caso de logs depois que ele foi emitido e recebidas.  
@@ -47,4 +47,4 @@ Rastreamento analítico em [!INCLUDE[netfx_current_long](../../../../../includes
  Para obter mais informações sobre como habilitar o rastreamento de fluxo de mensagem, consulte [Configurando o rastreamento de fluxo de mensagem](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Palavras-chave  
- Palavras-chave são usadas para filtrar as mensagens de rastreamento e definir qual componente do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitiu o evento. Para obter mais informações, consulte [dinamicamente habilitando analítica rastreamento](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).
+ Palavras-chave são usadas para filtrar as mensagens de rastreamento e definir qual componente do .NET Framework emitiu o evento. Para obter mais informações, consulte [dinamicamente habilitando analítica rastreamento](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

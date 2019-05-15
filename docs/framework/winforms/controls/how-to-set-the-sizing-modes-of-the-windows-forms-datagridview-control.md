@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], setting sizing modes
 - DataGridView control [Windows Forms], sizing modes
 ms.assetid: e9ad15e6-b4bb-44aa-a767-3738e9db1651
-ms.openlocfilehash: 542fda99aa16b6687b3b820bd5ff1a42ff99632a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76d71a7c3c37f53854cf4fd9c6d8300831572d51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620805"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591634"
 ---
 # <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Como: Definir os modos de dimensionamento do controle DataGridView do Windows Forms
 Os procedimentos a seguir demonstram alguns cenários comuns que personalizam ou combinam as opções de dimensionamento disponíveis para o <xref:System.Windows.Forms.DataGridView> controle e para colunas específicas em um controle.  
@@ -55,8 +55,6 @@ Os procedimentos a seguir demonstram alguns cenários comuns que personalizam ou
  Este exemplo requer:  
   
 - Referências aos assemblies Sistema e System.Windows.Forms.  
-  
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
 

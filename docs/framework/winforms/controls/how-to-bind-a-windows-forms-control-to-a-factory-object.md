@@ -11,12 +11,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: 61ed671b48fd07559c8403b9f5761dbaee3a66ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b64545528746e50d00f88d626a07ac98839e926c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612575"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589729"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Como: Associar um controle do Windows Forms a um objeto de alocador
 Quando você estiver criando controles que interagem com os dados, às vezes, será necessário associar um controle a um objeto ou método que gere outros objetos. Esse objeto ou método é chamado de alocador. A fonte de dados pode ser, por exemplo, o valor retornado de uma chamada de método, em vez de um objeto na memória ou um tipo. Você pode associar um controle a esse tipo de fonte de dados desde que a fonte retorne uma coleção.  
@@ -34,8 +34,6 @@ Quando você estiver criando controles que interagem com os dados, às vezes, se
  Este exemplo requer:  
   
 - Referências aos assemblies System, System.Data, System.Drawing e System.Windows.Forms.  
-  
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
 

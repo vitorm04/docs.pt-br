@@ -2,12 +2,12 @@
 title: 'Como: Consultar metadados de um Assembly com reflexão (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: b5b74e27d4cfeb4360d9c743d16c16dc82134038
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cea1469e6f0acc9c958be9247d7d3d750d881afe
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644597"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586363"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>Como: Consultar metadados de um Assembly com reflexão (LINQ) (Visual Basic)
 O exemplo a seguir mostra como o LINQ pode ser usado com a reflexão para recuperar metadados específicos sobre os métodos que correspondem a um critério de pesquisa especificado. Nesse caso, a consulta localizará os nomes de todos os métodos no assembly que retornam tipos enumeráveis como matrizes.  
@@ -49,7 +49,7 @@ End Module
  O exemplo usa o método <xref:System.Reflection.Assembly.GetTypes%2A> para retornar uma matriz de tipos no assembly especificado. O [cláusula Where](../../../../visual-basic/language-reference/queries/where-clause.md) filtro é aplicado para que somente os tipos públicos sejam retornados. Para cada tipo de público, uma subconsulta é gerada usando a matriz <xref:System.Reflection.MethodInfo> que é retornada da chamada <xref:System.Type.GetMethods%2A>. Esses resultados são filtrados para retornar apenas os métodos cujo tipo de retorno é uma matriz ou um tipo que implementa <xref:System.Collections.Generic.IEnumerable%601>. Por fim, esses resultados são agrupados usando o nome do tipo como uma chave.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior com uma referência a System.Core.dll e uma instrução `Imports` para o namespace System.Linq.  
+Criar um projeto de aplicativo do console do VB.NET, com um `Imports` instrução para o namespace System. Linq.
   
 ## <a name="see-also"></a>Consulte também
 

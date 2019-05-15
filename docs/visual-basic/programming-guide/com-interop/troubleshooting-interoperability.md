@@ -16,18 +16,18 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: af28ba1a167415a59b8e2a4db860497122a5c2c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60a61dfa7302611800c0b808a31a386e46304756
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624807"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592157"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Solucionando problemas de interoperabilidade (Visual Basic)
-Quando você interoperar entre o código gerenciado do e COM o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], você pode encontrar um ou mais dos seguintes problemas comuns.  
+Ao interoperar entre COM e o código gerenciado do .NET Framework, você pode encontrar um ou mais dos seguintes problemas comuns.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor1"></a> Marshaling de interoperabilidade  
- Às vezes, você talvez precise usar tipos de dados que não são parte do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Assemblies de interoperabilidade lidar com a maioria do trabalho para objetos COM, mas talvez você precise controlar os tipos de dados que são usados quando os objetos gerenciados são expostos COM. Por exemplo, as estruturas em bibliotecas de classe devem especificar o `BStr` tipo em cadeias de caracteres enviados para objetos COM criados pelo Visual Basic 6.0 e versões anteriores não gerenciado. Nesses casos, você pode usar o <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo para fazer com que tipos gerenciados deve ser exposta como tipos não gerenciados.  
+ Às vezes, talvez você precise usar tipos de dados que não fazem parte do .NET Framework. Assemblies de interoperabilidade lidar com a maioria do trabalho para objetos COM, mas talvez você precise controlar os tipos de dados que são usados quando os objetos gerenciados são expostos COM. Por exemplo, as estruturas em bibliotecas de classe devem especificar o `BStr` tipo em cadeias de caracteres enviados para objetos COM criados pelo Visual Basic 6.0 e versões anteriores não gerenciado. Nesses casos, você pode usar o <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo para fazer com que tipos gerenciados deve ser exposta como tipos não gerenciados.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor2"></a> Exportando cadeias de caracteres de comprimento fixo para código não gerenciado  
  No Visual Basic 6.0 e versões anteriores, as cadeias de caracteres são exportadas para objetos COM como sequências de bytes sem um caractere de terminação nula. Para compatibilidade com outras linguagens, o Visual Basic .NET inclui um caractere de terminação ao exportar as cadeias de caracteres. A melhor maneira de resolver essa incompatibilidade é exportar cadeias de caracteres que não têm o caractere de encerramento como matrizes de `Byte` ou `Char`.  
@@ -55,7 +55,7 @@ Quando você interoperar entre o código gerenciado do e COM o [!INCLUDE[dnprdns
  Diferentemente das classes em assemblies padrão, as classes COM são expostas em assemblies de interoperabilidade como uma interface e uma classe que representa a classe COM. Nome da interface é idêntica da classe COM. O nome da classe interoperabilidade é o mesmo da classe COM original, mas com a palavra "Class" acrescentado. Por exemplo, suponha que você tenha um projeto com uma referência a um assembly de interoperabilidade para um objeto COM. Se o nome da classe COM `MyComClass`, IntelliSense e o Pesquisador de objetos mostram uma interface denominada `MyComClass` e uma classe chamada `MyComClassClass`.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor6"></a> Criação de instâncias de uma classe do .NET Framework  
- Em geral, você cria uma instância de um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classe usando o `New` instrução com um nome de classe. Ter uma classe COM representado por um assembly de interoperabilidade é o único caso em que você pode usar o `New` instrução com uma interface. A menos que você estiver usando a classe COM um `Inherits` instrução, você pode usar a interface exatamente como faria com uma classe. O código a seguir demonstra como criar um `Command` objeto em um projeto que tem uma referência para o objeto de objetos de dados do Microsoft ActiveX 2.8 biblioteca COM:  
+ Em geral, você cria uma instância de uma classe do .NET Framework usando o `New` instrução com um nome de classe. Ter uma classe COM representado por um assembly de interoperabilidade é o único caso em que você pode usar o `New` instrução com uma interface. A menos que você estiver usando a classe COM um `Inherits` instrução, você pode usar a interface exatamente como faria com uma classe. O código a seguir demonstra como criar um `Command` objeto em um projeto que tem uma referência para o objeto de objetos de dados do Microsoft ActiveX 2.8 biblioteca COM:  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
@@ -67,7 +67,7 @@ Quando você interoperar entre o código gerenciado do e COM o [!INCLUDE[dnprdns
 >  Assemblies de interoperabilidade implicitamente implementam interfaces que representam classes COM. Você não deve tentar usar o `Implements` resultará instrução para implementar essas interfaces ou um erro.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor7"></a> Tipos de dados para parâmetros e valores de retorno  
- Ao contrário de membros de assemblies padrão, os membros do assembly de interoperabilidade podem ter tipos de dados que são diferentes daqueles usados na declaração do objeto original. Embora os assemblies de interoperabilidade se convertem implicitamente tipos COM compatível tipos common language runtime, você deve prestar atenção aos tipos de dados que são usados por ambos os lados para evitar erros de tempo de execução. Por exemplo, em objetos COM criados no Visual Basic 6.0 e versões anteriores, os valores do tipo `Integer` supor que o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] tipo equivalente, `Short`. É recomendável que você use o Pesquisador de objetos para examinar as características de membros importados antes de você usá-los.  
+ Ao contrário de membros de assemblies padrão, os membros do assembly de interoperabilidade podem ter tipos de dados que são diferentes daqueles usados na declaração do objeto original. Embora os assemblies de interoperabilidade se convertem implicitamente tipos COM compatível tipos common language runtime, você deve prestar atenção aos tipos de dados que são usados por ambos os lados para evitar erros de tempo de execução. Por exemplo, em objetos COM criados no Visual Basic 6.0 e versões anteriores, os valores do tipo `Integer` supor que o tipo equivalente do .NET Framework, `Short`. É recomendável que você use o Pesquisador de objetos para examinar as características de membros importados antes de você usá-los.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor8"></a> Métodos de COM de nível de módulo  
  A maioria dos objetos COM são usadas, criando uma instância de uma classe de COM usando o `New` palavra-chave e, em seguida, chamar métodos do objeto. Uma exceção a essa regra envolve a objetos COM que contêm `AppObj` ou `GlobalMultiUse` classes COM. Essas classes são semelhantes a métodos de nível de módulo em classes do Visual Basic .NET. Visual Basic 6.0 e versões anteriores implicitamente criar instâncias desses objetos para você na primeira vez que você chame um dos seus métodos. Por exemplo, no Visual Basic 6.0 você pode adicionar uma referência ao objeto de biblioteca do Microsoft DAO 3.6 e chame o `DBEngine` método sem primeiro criar uma instância:  

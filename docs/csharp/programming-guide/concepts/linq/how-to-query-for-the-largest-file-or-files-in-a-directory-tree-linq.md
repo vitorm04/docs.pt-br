@@ -2,25 +2,25 @@
 title: 'Como: Consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 20453c754c792d4f5c59fde481e1fec56dcd0e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 134183da58b490635284699de2f1721dda5422dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564117"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597066"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Como: Consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)
 Este exemplo mostra cinco consultas relacionadas ao tamanho do arquivo em bytes:  
   
--   Como recuperar o tamanho em bytes do maior arquivo.  
+- Como recuperar o tamanho em bytes do maior arquivo.  
   
--   Como recuperar o tamanho em bytes do menor arquivo.  
+- Como recuperar o tamanho em bytes do menor arquivo.  
   
--   Como recuperar o maior ou menor arquivo do objeto <xref:System.IO.FileInfo> de uma ou mais pastas em uma pasta raiz especificada.  
+- Como recuperar o maior ou menor arquivo do objeto <xref:System.IO.FileInfo> de uma ou mais pastas em uma pasta raiz especificada.  
   
--   Como recuperar uma sequência, como os 10 maiores arquivos.  
+- Como recuperar uma sequência, como os 10 maiores arquivos.  
   
--   Como ordenar os arquivos em grupos com base no tamanho do arquivo em bytes, ignorando arquivos menores do que um tamanho especificado.  
+- Como ordenar os arquivos em grupos com base no tamanho do arquivo em bytes, ignorando arquivos menores do que um tamanho especificado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir contém cinco consultas separadas que mostram como consultar e agrupar arquivos, dependendo do tamanho do arquivo em bytes. Você pode modificar facilmente esses exemplos para basear a consulta em outra propriedade do objeto <xref:System.IO.FileInfo>.  

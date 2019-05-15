@@ -2,21 +2,21 @@
 title: 'Como: Comparar o conteúdo de duas pastas (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543036"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597100"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Como: Comparar o conteúdo de duas pastas (LINQ) (C#)
 Este exemplo demonstra três modos de se comparar duas listagens de arquivo:  
   
--   Consultando um valor booliano que especifica se as duas listas de arquivos são idênticas.  
+- Consultando um valor booliano que especifica se as duas listas de arquivos são idênticas.  
   
--   Consultando a interseção para recuperar os arquivos que estão em ambas as pastas.  
+- Consultando a interseção para recuperar os arquivos que estão em ambas as pastas.  
   
--   Consultando a diferença de conjunto para recuperar os arquivos que estão em uma pasta, mas não na outra.  
+- Consultando a diferença de conjunto para recuperar os arquivos que estão em uma pasta, mas não na outra.  
   
     > [!NOTE]
     >  As técnicas mostradas aqui podem ser adaptadas para comparar sequências de objetos de qualquer tipo.  

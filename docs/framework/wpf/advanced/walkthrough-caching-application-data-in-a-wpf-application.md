@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630781"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591200"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Passo a passo: armazenar dados de aplicativo em cache em um aplicativo WPF
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.
 
- O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornece classes que permitem que você use o cache em aplicativos do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Essas classes estão localizadas no <xref:System.Runtime.Caching> namespace.
+ O .NET Framework fornece classes que permitem que você usar o cache em aplicativos do .NET Framework. Essas classes estão localizadas no <xref:System.Runtime.Caching> namespace.
 
 > [!NOTE]
->  O <xref:System.Runtime.Caching> namespace é novo no [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Esse namespace torna o cache disponível para todos os aplicativos do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Nas versões anteriores do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], o cache estava disponível apenas no namespace <xref:System.Web> e, portanto, exigia uma dependência das classes do ASP.NET.
+>  O <xref:System.Runtime.Caching> namespace é novo no [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Esse namespace torna o caching está disponível para todos os aplicativos do .NET Framework. Nas versões anteriores do .NET Framework, estava disponível apenas no armazenamento em cache o <xref:System.Web> namespace e, portanto, exigia uma dependência das classes do ASP.NET.
 
- Este passo a passo mostra como usar a funcionalidade de cache que está disponível no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] como parte de um aplicativo do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. No passo a passo, você armazenará em cache o conteúdo de um arquivo de texto.
+ Este passo a passo mostra como usar a funcionalidade de cache que está disponível no .NET Framework como parte de um [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativo. No passo a passo, você armazenará em cache o conteúdo de um arquivo de texto.
 
  As tarefas ilustradas nesta explicação passo a passo incluem o seguinte:
 
@@ -67,7 +67,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 4. Na caixa de diálogo **Novo Projeto**, selecione **Aplicativo WPF**.
 
     > [!NOTE]
-    >  Se você não vir o modelo do **Aplicativo WPF**, verifique se tem como destino uma versão do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que dá suporte ao WPF. Na caixa de diálogo **Novo Projeto**, selecione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] na lista.
+    >  Se você não vir as **aplicativo WPF** modelo, certifique-se de que você está buscando uma versão do .NET Framework que suporta o WPF. Na caixa de diálogo **Novo Projeto**, selecione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] na lista.
 
 5. Na caixa de texto **Nome**, insira um nome para o projeto. Por exemplo, você pode inserir **WPFCaching**.
 

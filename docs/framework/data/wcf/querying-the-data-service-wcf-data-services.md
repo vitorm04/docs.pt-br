@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: ce019e97e54781976736dd5bd6e6d7e134322f65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2eb6d8f8bb7886e4615438e463aeea3c3825662
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916858"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582635"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Consultando o serviço de dados (WCF Data Services)
 
-A biblioteca de cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite executar consultas em um serviço de dados usando os padrões familiares de programação [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], incluindo LINK (consulta integrada à linguagem). A biblioteca de cliente converte uma consulta, que é definida no cliente como uma instância da classe <xref:System.Data.Services.Client.DataServiceQuery%601>, em uma mensagem de solicitação HTTP GET. A biblioteca recebe a mensagem de resposta e o converte em instâncias de classes de serviço de dados do cliente. Essas classes são rastreadas pelo <xref:System.Data.Services.Client.DataServiceContext> ao qual o <xref:System.Data.Services.Client.DataServiceQuery%601> pertence.
+O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca cliente permite que você executar consultas em um serviço de dados usando o .NET Framework familiar, padrões de programação, incluindo o uso de consulta integrada à linguagem (LINQ). A biblioteca de cliente converte uma consulta, que é definida no cliente como uma instância da classe <xref:System.Data.Services.Client.DataServiceQuery%601>, em uma mensagem de solicitação HTTP GET. A biblioteca recebe a mensagem de resposta e o converte em instâncias de classes de serviço de dados do cliente. Essas classes são rastreadas pelo <xref:System.Data.Services.Client.DataServiceContext> ao qual o <xref:System.Data.Services.Client.DataServiceQuery%601> pertence.
 
 ## <a name="data-service-queries"></a>Consultas de serviço de dados
 
 A classe genérica <xref:System.Data.Services.Client.DataServiceQuery%601> representa uma consulta que retorna uma coleção de zero ou mais instâncias de tipos de entidades. Uma consulta do serviço de dados sempre pertence a um contexto de serviço de dados existente. Esse contexto mantém as informações do URI de serviço e de metadados necessárias para compor e executar a consulta.
 
-Quando você usa o **adicionar referência de serviço** caixa de diálogo para adicionar um serviço de dados para um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-cliente baseado em aplicativo, uma classe de contêiner de entidade é criado que herda o <xref:System.Data.Services.Client.DataServiceContext> classe. Essa classe inclui as propriedades que retornam instâncias <xref:System.Data.Services.Client.DataServiceQuery%601> tipadas. Existe uma propriedade para cada conjunto de entidades que o serviço de dados expõe. Essas propriedades facilitam a criação de uma instância <xref:System.Data.Services.Client.DataServiceQuery%601>tipada.
+Quando você usa o **adicionar referência de serviço** caixa de diálogo para adicionar um serviço de dados a um aplicativo cliente baseado no .NET Framework, uma classe de contêiner de entidade é criada que herda o <xref:System.Data.Services.Client.DataServiceContext> classe. Essa classe inclui as propriedades que retornam instâncias <xref:System.Data.Services.Client.DataServiceQuery%601> tipadas. Existe uma propriedade para cada conjunto de entidades que o serviço de dados expõe. Essas propriedades facilitam a criação de uma instância <xref:System.Data.Services.Client.DataServiceQuery%601>tipada.
 
 Uma consulta é executada nos seguintes cenários:
 

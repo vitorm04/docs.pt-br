@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: ee6de112dcf92b1780fd331b581e6794d61f9406
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6425b0df5735c2469079e1c5a07a1ddd3be414a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654443"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588810"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de coleção em contratos de dados
-Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], essas listas podem ser representadas usando matrizes ou uma variedade de outros tipos (lista genérico, genéricos <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, ou <xref:System.Collections.ArrayList>). Por exemplo, uma coleção pode conter uma lista de endereços para um determinado cliente. Essas coleções são chamadas *listar coleções*, independentemente de seu tipo real.  
+Um *coleção* é uma lista de itens de um determinado tipo. No .NET Framework, essas listas podem ser representadas usando matrizes ou uma variedade de outros tipos (lista genérica e genérica <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, ou <xref:System.Collections.ArrayList>). Por exemplo, uma coleção pode conter uma lista de endereços para um determinado cliente. Essas coleções são chamadas *listar coleções*, independentemente de seu tipo real.  
   
- Uma forma especial de coleção existe que representa uma associação entre um item (a "chave") e outro (o "valor"). No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], esses são representados por tipos como <xref:System.Collections.Hashtable> e o dicionário genérico. Por exemplo, uma coleção de associação pode mapear uma cidade ("chave") para sua população ("valor"). Essas coleções são chamadas *coleções de dicionário*, independentemente de seu tipo real.  
+ Uma forma especial de coleção existe que representa uma associação entre um item (a "chave") e outro (o "valor"). No .NET Framework, esses são representados por tipos como <xref:System.Collections.Hashtable> e o dicionário genérico. Por exemplo, uma coleção de associação pode mapear uma cidade ("chave") para sua população ("valor"). Essas coleções são chamadas *coleções de dicionário*, independentemente de seu tipo real.  
   
  Coleções recebem o tratamento especial no modelo de contrato de dados.  
   

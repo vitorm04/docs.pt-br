@@ -2,12 +2,12 @@
 title: Rastreamento de dados no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 8f9388d084e9e598e43c0f871b21d05c053e77ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608002"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583771"
 ---
 # <a name="data-tracing-in-adonet"></a>Rastreamento de dados no ADO.NET
 
@@ -31,7 +31,7 @@ Para obter mais informações sobre a configuração e configurando o rastreamen
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessar informações de diagnóstico no Log de eventos estendidos
 
-No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedor de dados para o SQL Server, rastreamento de acesso a dados ([rastreamento de acesso a dados](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) foi atualizado para facilitar a mais fácil correlacionar eventos de cliente com informações de diagnóstico, tais como falhas de conexão das informações de desempenho de buffer e o aplicativo no log de eventos estendidos de anéis de conectividade do servidor. Para obter informações sobre como ler o log de eventos estendidos, consulte [exibir dados de sessão de evento](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
+Em que o .NET Framework Data Provider para SQL Server, o rastreamento de acesso a dados ([rastreamento do acesso a dados](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) foi atualizado para facilitar a mais fácil correlacionar eventos de cliente com informações de diagnóstico, tais como falhas de conexão das informações de desempenho de buffer e o aplicativo no log de eventos estendidos de anéis de conectividade do servidor. Para obter informações sobre como ler o log de eventos estendidos, consulte [exibir dados de sessão de evento](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
 Para operações de conexão ADO.NET enviará um cliente de ID de conexão. Se a conexão falhar, você pode acessar o buffer de anéis de conectividade ([solução de problemas de conectividade no SQL Server 2008 com o Buffer de anéis de conectividade](https://go.microsoft.com/fwlink/?LinkId=207752)) e encontre o `ClientConnectionID` do campo e obter informações de diagnóstico o Falha na conexão. IDs de conexão de cliente são registradas no buffer de anéis somente se ocorrer um erro. (Se uma conexão falhar antes de enviar o pacote anterior ao logon, uma ID de conexão do cliente não será ser gerada.) A ID de conexão do cliente é um GUID de 16 bytes. Você também pode encontrar a conexão de cliente ID na saída de destino de eventos estendidos, se o `client_connection_id` ação for adicionada a eventos em uma sessão de eventos estendidos. Você pode habilitar o rastreamento de acesso de dados e execute novamente o comando de conexão e observar o `ClientConnectionID` campo no rastreamento de acesso a dados, se você precisar de mais assistência de diagnóstico de driver do cliente.
 

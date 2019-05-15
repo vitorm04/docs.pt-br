@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309219"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595784"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Passo a passo: Escrevendo consultas em C# (LINQ)
 Essas instruções passo a passo demonstram os recursos de linguagem C# que são usados para gravar expressões de consulta LINQ.  
@@ -41,17 +41,17 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
 ## <a name="create-an-in-memory-data-source"></a>Criar uma Fonte de Dados na Memória  
  A fonte de dados para as consultas é uma lista simples de objetos `Student`. Cada registro `Student` tem um nome, sobrenome e uma matriz de inteiros que representa seus resultados de testes na classe. Copie este código no seu projeto. Observe as seguintes características:  
   
--   A classe `Student` consiste em propriedades autoimplementadas.  
+- A classe `Student` consiste em propriedades autoimplementadas.  
   
--   Cada aluno na lista é inicializado com um inicializador de objeto.  
+- Cada aluno na lista é inicializado com um inicializador de objeto.  
   
--   A lista em si é inicializada com um inicializador de coleção.  
+- A lista em si é inicializada com um inicializador de coleção.  
   
  Essa estrutura de dados inteira será inicializada e instanciada sem chamadas explícitas para nenhum construtor ou acesso de membro explícito. Para obter mais informações sobre esses novos recursos, consulte [Propriedades autoimplementadas](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) e [Inicializadores de objeto e coleção](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>Para adicionar a fonte de dados  
   
--   Adicione a classe `Student` e a lista inicializada de alunos à classe `Program` em seu projeto.  
+- Adicione a classe `Student` e a lista inicializada de alunos à classe `Program` em seu projeto.  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 #### <a name="to-create-a-simple-query"></a>Para criar uma consulta simples  
   
--   No método `Main` do aplicativo, crie uma consulta simples que, quando for executada, produzirá uma lista de todos os alunos cuja pontuação no primeiro teste foi superior a 90. Observe que como o objeto `Student` todo está selecionado, o tipo da consulta é `IEnumerable<Student>`. Embora o código também possa usar a tipagem implícita usando a palavra-chave [var](../../../../csharp/language-reference/keywords/var.md), a tipagem explícita é usada para ilustrar claramente os resultados. (Para obter mais informações sobre `var`, consulte [Variáveis locais de tipo implícito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
+- No método `Main` do aplicativo, crie uma consulta simples que, quando for executada, produzirá uma lista de todos os alunos cuja pontuação no primeiro teste foi superior a 90. Observe que como o objeto `Student` todo está selecionado, o tipo da consulta é `IEnumerable<Student>`. Embora o código também possa usar a tipagem implícita usando a palavra-chave [var](../../../../csharp/language-reference/keywords/var.md), a tipagem explícita é usada para ilustrar claramente os resultados. (Para obter mais informações sobre `var`, consulte [Variáveis locais de tipo implícito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Observe também que a variável de intervalo da consulta, `student`, também funciona como uma referência para cada `Student` na fonte, fornecendo acesso ao membro para cada objeto.  
   
@@ -75,9 +75,9 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 1. Agora escreva o loop `foreach` que fará com que a consulta seja executada. Observe o seguinte sobre o código:  
   
-    -   Cada elemento na sequência retornada é acessado pela variável de iteração no loop `foreach`.  
+    - Cada elemento na sequência retornada é acessado pela variável de iteração no loop `foreach`.  
   
-    -   O tipo dessa variável é `Student` e o tipo da variável de consulta é compatível, `IEnumerable<Student>`.  
+    - O tipo dessa variável é `Student` e o tipo da variável de consulta é compatível, `IEnumerable<Student>`.  
   
 2. Após você ter adicionado esse código, compile e execute o aplicativo para ver os resultados na janela **Console**.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-ms.openlocfilehash: 2b2eb26aa6c4cf5c4c790fbdc28f58bf44275fc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 110422000fad3d52d936302cca7a3d635f44b917
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591441"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591400"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Como: Trabalhar com colunas de imagem no controle DataGridView do Windows Forms
 O exemplo de código a seguir mostra como usar o <xref:System.Windows.Forms.DataGridView> colunas em uma interface interativa do usuário (IU) da imagem. O exemplo também demonstra as possibilidades de dimensionamento e layout de imagem com o <xref:System.Windows.Forms.DataGridViewImageColumn>.  
@@ -29,8 +29,6 @@ O exemplo de código a seguir mostra como usar o <xref:System.Windows.Forms.Data
  Este exemplo requer:  
   
 - Referências aos assemblies Sistema e System.Windows.Forms.  
-  
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
 

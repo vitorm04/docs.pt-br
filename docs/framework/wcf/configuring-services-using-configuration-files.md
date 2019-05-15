@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9f1ddf7691c9c00c3a4a7a20fc81d2f42f5830f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f1392a6ee2e8f5b3f85650ee91e20e7ec3436fa
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652096"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592218"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurando serviços usando arquivos de configuração
 Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo de configuração fornece a flexibilidade de fornecer o ponto de extremidade e os dados de comportamento de serviço no ponto de implantação, em vez de em tempo de design. Este tópico descreve as principais técnicas disponíveis.  
   
- Um serviço WCF é configurável usando o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tecnologia de configuração. Mais comumente, os elementos XML são adicionados ao arquivo Web. config para um site de serviços de informações da Internet (IIS) que hospeda um serviço WCF. Os elementos permitem que você altere detalhes, como os endereços de ponto de extremidade (endereços reais usados para comunicação com o serviço) de cada computador. Além disso, o WCF inclui vários elementos fornecidos pelo sistema que permitem selecionar rapidamente os recursos mais básicos para um serviço. Começando com [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], o WCF é fornecido com um novo modelo de configuração padrão que simplifica os requisitos de configuração do WCF. Se você não fornecer nenhuma configuração do WCF para um serviço específico, o tempo de execução configura automaticamente o seu serviço com alguns pontos de extremidade padrão e o comportamento da associação padrão. Na prática, gravar a configuração é a principal parte da programação de aplicativos do WCF.  
+ Um serviço WCF é configurável usando a tecnologia de configuração do .NET Framework. Mais comumente, os elementos XML são adicionados ao arquivo Web. config para um site de serviços de informações da Internet (IIS) que hospeda um serviço WCF. Os elementos permitem que você altere detalhes, como os endereços de ponto de extremidade (endereços reais usados para comunicação com o serviço) de cada computador. Além disso, o WCF inclui vários elementos fornecidos pelo sistema que permitem selecionar rapidamente os recursos mais básicos para um serviço. Começando com [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], o WCF é fornecido com um novo modelo de configuração padrão que simplifica os requisitos de configuração do WCF. Se você não fornecer nenhuma configuração do WCF para um serviço específico, o tempo de execução configura automaticamente o seu serviço com alguns pontos de extremidade padrão e o comportamento da associação padrão. Na prática, gravar a configuração é a principal parte da programação de aplicativos do WCF.  
   
  Para obter mais informações, consulte [configurando associações para serviços](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Para obter uma lista dos mais usados com frequência elementos, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md). Para obter mais informações sobre pontos de extremidade, associações e comportamentos padrão, confira [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [Configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
@@ -22,7 +22,7 @@ Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo 
 >  Ao implantar os cenários lado a lado onde duas versões diferentes de um serviço são implantadas, é necessário especificar nomes parciais de assemblies referenciados em arquivos de configuração. Isso ocorre porque o arquivo de configuração é compartilhado entre todas as versões de um serviço e pode estar em execução em versões diferentes do .NET Framework.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web. config e App. config  
- O WCF usa o sistema de configuração do System. Configuration de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ O WCF usa o sistema de configuração do .NET Framework System. Configuration.  
   
  Ao configurar um serviço no Visual Studio, use um arquivo Web. config ou um arquivo App. config para especificar as configurações. A escolha do nome do arquivo de configuração é determinada pelo ambiente de hospedagem que você escolhe para o serviço. Se você estiver usando o IIS para hospedar o serviço, use um arquivo Web.config. Se você estiver usando qualquer outro ambiente de hospedagem, use um arquivo App.config.  
   

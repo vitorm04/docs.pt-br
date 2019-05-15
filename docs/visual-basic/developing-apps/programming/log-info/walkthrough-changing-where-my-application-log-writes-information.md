@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cba90119fa6f26946e72ce097074f275178ff33b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327640"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593346"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Passo a passo: Alterar o local em que My.Application.Log grava informações (Visual Basic)
 É possível usar os objetos `My.Application.Log` e `My.Log` para registrar em log as informações sobre eventos que ocorrem em seu aplicativo. Este passo a passo mostra como substituir as configurações padrão e fazer com que o objeto `Log` grave em outros ouvintes de log.  
@@ -28,11 +28,11 @@ ms.locfileid: "59327640"
   
      Se não houver nenhum arquivo app.config:  
   
-    1.  No menu **Projeto**, escolha **Adicionar Novo Item**.  
+    1. No menu **Projeto**, escolha **Adicionar Novo Item**.  
   
-    2.  Na caixa de diálogo **Adicionar Novo Item**, selecione **Arquivo de Configuração de Aplicativo**.  
+    2. Na caixa de diálogo **Adicionar Novo Item**, selecione **Arquivo de Configuração de Aplicativo**.  
   
-    3.  Clique em **Adicionar**.  
+    3. Clique em **Adicionar**.  
   
 2. Localize a seção `<listeners>`, na seção `<source>` com o `name` atributo "DefaultSource", na seção `<sources>`. A seção `<sources>` está na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
   
@@ -153,13 +153,13 @@ ms.locfileid: "59327640"
   
      Alguns tipos que você pode usar são:  
   
-    -   Um ouvinte <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, que grava em um arquivo de log.  
+    - Um ouvinte <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, que grava em um arquivo de log.  
   
-    -   O ouvinte <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> que grava informações no log de eventos do computador especificado pelo parâmetro `initializeData`.  
+    - O ouvinte <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> que grava informações no log de eventos do computador especificado pelo parâmetro `initializeData`.  
   
-    -   Os ouvintes <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, que gravam no arquivo especificado no parâmetro `initializeData`.  
+    - Os ouvintes <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, que gravam no arquivo especificado no parâmetro `initializeData`.  
   
-    -   Um ouvinte <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, que grava no console da linha de comando.  
+    - Um ouvinte <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, que grava no console da linha de comando.  
   
      Para obter informações sobre onde outros tipos de ouvintes de log gravam informações, consulte a documentação daquele tipo.  
   

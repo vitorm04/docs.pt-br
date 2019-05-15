@@ -6,15 +6,15 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: 44bc619c489fdff36f0b595f7d8934689b859adb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b707899c845b6b08e008fe229497f682c930044a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789019"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588853"
 ---
 # <a name="-noconfig"></a>-noconfig
-Especifica que o compilador não deve automaticamente referenciar os comumente usados [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies ou importar os `System` e `Microsoft.VisualBasic` namespaces.  
+Especifica que o compilador deve referenciar os assemblies do .NET Framework usados ou importar automaticamente o `System` e `Microsoft.VisualBasic` namespaces.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -23,7 +23,7 @@ Especifica que o compilador não deve automaticamente referenciar os comumente u
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O `-noconfig` opção informa o compilador não deve compilar com o arquivo Vbc. rsp, localizado no mesmo diretório que o arquivo Vbc.exe. O arquivo Vbc. rsp referencia os comumente usados [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies e importações a `System` e `Microsoft.VisualBasic` namespaces. O compilador implicitamente referencia o assembly System. dll, a menos que o `-nostdlib` opção for especificada. O `-nostdlib` opção informa o compilador não deve compilar com Vbc ou automaticamente fazer referência ao assembly System. dll.  
+ O `-noconfig` opção informa o compilador não deve compilar com o arquivo Vbc. rsp, localizado no mesmo diretório que o arquivo Vbc.exe. O arquivo Vbc. rsp referencia assemblies do .NET Framework comumente usados e importa o `System` e `Microsoft.VisualBasic` namespaces. O compilador implicitamente referencia o assembly System. dll, a menos que o `-nostdlib` opção for especificada. O `-nostdlib` opção informa o compilador não deve compilar com Vbc ou automaticamente fazer referência ao assembly System. dll.  
   
 > [!NOTE]
 >  Os assemblies de mscorlib. dll e VisualBasic são sempre referenciados.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 19506d051442dc841a28c14f212addf66af71cf5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750818"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583611"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Criando o aplicativo cliente do .NET Framework (Início rápido do WCF Data Services)
 
@@ -84,7 +84,7 @@ Esta é a tarefa final do início rápido WCF Data Services. Nesta tarefa, você
 
 Você criou com êxito o aplicativo cliente que acessa o feed Northwind OData de exemplo. Você concluiu o guia de início rápido do WCF Data Services também!
 
-Para obter mais informações sobre como acessar um OData feed de um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicativo, consulte [biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
+Para obter mais informações sobre como acessar um OData feed de um aplicativo do .NET Framework, consulte [biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
 
 ## <a name="see-also"></a>Consulte também
 

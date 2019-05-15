@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: c761a4a866aed3f8d42b28cdc8a360cd4923a7fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 14565c3e73618a4290166d89f0ae6c2c9150f3b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616676"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586184"
 ---
 # <a name="caching-in-net-framework-applications"></a>Armazenamento em cache em aplicativos do .NET Framework
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.  
@@ -19,7 +19,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
  O .NET Framework fornece a funcionalidade de cache, que pode ser usada para melhorar o desempenho e a escalabilidade dos aplicativos cliente e de servidor do Windows, incluindo o ASP.NET.  
   
 > [!NOTE]
->  No [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] e em versões anteriores, o ASP.NET fornecia uma implementação de cache na memória no namespace <xref:System.Web.Caching>. Nas versões anteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], o cache estava disponível apenas no namespace <xref:System.Web> e, portanto, exigia uma dependência das classes do ASP.NET. No .NET Framework 4, o namespace <xref:System.Runtime.Caching> contém APIs projetadas para aplicativos Web e não Web.  
+>  No [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] e em versões anteriores, o ASP.NET fornecia uma implementação de cache na memória no namespace <xref:System.Web.Caching>. Nas versões anteriores do .NET Framework, estava disponível apenas no armazenamento em cache o <xref:System.Web> namespace e, portanto, exigia uma dependência das classes do ASP.NET. No .NET Framework 4, o namespace <xref:System.Runtime.Caching> contém APIs projetadas para aplicativos Web e não Web.  
   
 ## <a name="caching-data"></a>Armazenando dados em cache  
  É possível armazenar as informações em cache usando classes no namespace <xref:System.Runtime.Caching>. As classes de cache desse namespace fornecem os seguintes recursos:  
