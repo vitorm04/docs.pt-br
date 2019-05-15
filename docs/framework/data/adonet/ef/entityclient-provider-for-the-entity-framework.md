@@ -2,12 +2,12 @@
 title: Provedor EntityClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607068"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583699"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Provedor EntityClient para Entity Framework
 O provedor EntityClient é um provedor de dados usado por aplicativos Entity Framework para acessar dados descritos em um modelo conceitual. Para obter informações sobre modelos conceituais, consulte [modelagem e mapeamento](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). O EntityClient usa outros provedores de dados .NET Framework para acessar a fonte de dados. Por exemplo, o EntityClient usa o Provedor de Dados .NET Framework para SQL Server (SqlClient) ao acessar um banco de dados do SQL Server. Para obter informações sobre o provedor SqlClient, consulte [SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). O provedor EntityClient é implementado no namespace <xref:System.Data.EntityClient>.  
@@ -32,7 +32,7 @@ cmd.CommandText = @"SELECT VALUE p
 ```
   
 ## <a name="executing-queries"></a>Executando consultas  
- Quando uma consulta é executada, ela é analisada e convertida em uma árvore de comandos canônica. Todo processamento subsequente é executado na árvore de comandos. A árvore de comandos é o meio de comunicação entre <xref:System.Data.EntityClient> e o provedor de dados [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] subjacente, como <xref:System.Data.SqlClient>.  
+ Quando uma consulta é executada, ela é analisada e convertida em uma árvore de comandos canônica. Todo processamento subsequente é executado na árvore de comandos. A árvore de comando é o meio de comunicação entre o <xref:System.Data.EntityClient> e o provedor de dados subjacente do .NET Framework, tais como <xref:System.Data.SqlClient>.  
   
  O <xref:System.Data.EntityClient.EntityDataReader> expõe os resultados da execução de um <xref:System.Data.EntityClient.EntityCommand> em relação a um modelo conceitual. Para executar o comando que retorna <xref:System.Data.EntityClient.EntityDataReader>, chame <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>. O <xref:System.Data.EntityClient.EntityDataReader> implementa <xref:System.Data.IExtendedDataRecord> para descrever resultados estruturados avançados.  
   

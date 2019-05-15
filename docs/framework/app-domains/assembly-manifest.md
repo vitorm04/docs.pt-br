@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e87fdd31a4dfb9b595f165225f7b86d5e88ea7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087528"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607749"
 ---
 # <a name="assembly-manifest"></a>Manifesto de um assembly
 Cada assembly, seja estático ou dinâmico, contém uma coleção de dados que descreve como os elementos do assembly se relacionam. O manifesto do assembly contém esses metadados do assembly. O manifesto de um assembly contém todos os metadados necessários para especificar os requisitos de versão e a identidade de segurança, além de todos os metadados necessários para definir o escopo do assembly e resolver referências a recursos e classes. O manifesto do assembly pode ser armazenado em um arquivo PE (.exe ou .dll) com código MSIL (Microsoft Intermediate Language) ou em um arquivo PE autônomo que contém somente informações do manifesto do assembly.  
@@ -28,15 +28,15 @@ Cada assembly, seja estático ou dinâmico, contém uma coleção de dados que d
   
  Cada manifesto de um assembly executa as seguintes funções:  
   
--   Enumera os arquivos que compõem o assembly.  
+- Enumera os arquivos que compõem o assembly.  
   
--   Determina como as referências a tipos e recursos do assembly são mapeadas para arquivos que contenham suas declarações e implementações.  
+- Determina como as referências a tipos e recursos do assembly são mapeadas para arquivos que contenham suas declarações e implementações.  
   
--   Enumera outros assemblies dos quais o assembly depende.  
+- Enumera outros assemblies dos quais o assembly depende.  
   
--   Fornece um nível de indireção entre consumidores do assembly e detalhes da implementação do assembly.  
+- Fornece um nível de indireção entre consumidores do assembly e detalhes da implementação do assembly.  
   
--   Renderiza o assembly autodescritivo.  
+- Renderiza o assembly autodescritivo.  
   
 ## <a name="assembly-manifest-contents"></a>Conteúdo do manifesto do assembly  
  A tabela a seguir mostra as informações contidas no manifesto do assembly. Os primeiros quatro itens — informações sobre o nome, o número de versão, a cultura e o nome forte do assembly — compõem a identidade do assembly.  

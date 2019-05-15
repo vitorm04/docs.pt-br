@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204556"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607523"
 ---
 # <a name="shadow-copying-assemblies"></a>Criando cópias de sombra de assemblies
 A criação de cópias de sombra permite que os assemblies usados em um domínio de aplicativo sejam atualizados sem descarregar o domínio de aplicativo. Isso é particularmente útil para aplicativos que devem estar disponíveis continuamente, como sites do ASP.NET.  
@@ -30,21 +30,21 @@ A criação de cópias de sombra permite que os assemblies usados em um domínio
   
  Este artigo contém as seguintes seções:  
   
--   [Habilitar e usar cópias de sombra](#EnablingAndUsing) descreve o uso básico e as opções disponíveis para cópia de sombra.  
+- [Habilitar e usar cópias de sombra](#EnablingAndUsing) descreve o uso básico e as opções disponíveis para cópia de sombra.  
   
--   [Desempenho de inicialização](#StartupPerformance) descreve as alterações feitas na cópia de sombra no [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] para melhorar o desempenho de inicialização, e como reverter para o comportamento de versões anteriores.  
+- [Desempenho de inicialização](#StartupPerformance) descreve as alterações feitas na cópia de sombra no [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] para melhorar o desempenho de inicialização, e como reverter para o comportamento de versões anteriores.  
   
--   [Métodos obsoletos](#ObsoleteMethods) descreve as alterações feitas nas propriedades e métodos que controlam a cópia de sombra no [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
+- [Métodos obsoletos](#ObsoleteMethods) descreve as alterações feitas nas propriedades e métodos que controlam a cópia de sombra no [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>Habilitando e Usando Cópias de Sombra  
  Você pode usar as propriedades da classe <xref:System.AppDomainSetup> da seguinte forma para configurar um domínio do aplicativo para a cópia de sombra:  
   
--   Habilite a cópia de sombra definindo a propriedade <xref:System.AppDomainSetup.ShadowCopyFiles%2A> com o valor de cadeia de caracteres `"true"`.  
+- Habilite a cópia de sombra definindo a propriedade <xref:System.AppDomainSetup.ShadowCopyFiles%2A> com o valor de cadeia de caracteres `"true"`.  
   
      Por padrão, essa configuração faz com que todos os assemblies no caminho do aplicativo sejam copiados para um cache de download antes de serem carregados. Esse é o mesmo cache mantido pelo common language runtime para armazenar os arquivos baixados de outros computadores, e o common language runtime exclui automaticamente os arquivos quando eles não são mais necessários.  
   
--   Opcionalmente, defina um local personalizado para os arquivos da cópia de sombra usando as propriedades <xref:System.AppDomainSetup.CachePath%2A> e <xref:System.AppDomainSetup.ApplicationName%2A>.  
+- Opcionalmente, defina um local personalizado para os arquivos da cópia de sombra usando as propriedades <xref:System.AppDomainSetup.CachePath%2A> e <xref:System.AppDomainSetup.ApplicationName%2A>.  
   
      O caminho base para o local é formado pela concatenação da propriedade <xref:System.AppDomainSetup.ApplicationName%2A> para a propriedade <xref:System.AppDomainSetup.CachePath%2A> como um subdiretório. Assemblies passam por cópia de sombra para subpastas nesse caminho, e não para o caminho base em si.  
   
@@ -55,7 +55,7 @@ A criação de cópias de sombra permite que os assemblies usados em um domínio
   
      Há alguns motivos para você definir um local personalizado para arquivos de cópia de sombra. Talvez você queira definir um local personalizado para os arquivos de cópia de sombra se o aplicativo gerar uma grande quantidade de cópias. O cache de download tem um limite de tamanho, não de tempo de vida, portanto, é possível que o common language runtime tente excluir um arquivo que ainda está em uso. Outro motivo para definir um local personalizado é quando os usuários que estão executando seu aplicativo não tiverem acesso de gravação ao local do diretório usado pelo common language runtime para o cache de download.  
   
--   Opcionalmente, limite os assemblies dos quais é realizada a cópia de sombra usando a propriedade <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>.  
+- Opcionalmente, limite os assemblies dos quais é realizada a cópia de sombra usando a propriedade <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>.  
   
      Quando você habilita a cópia de sombra para um domínio do aplicativo, o padrão é copiar todos os assemblies no caminho do aplicativo — ou seja, nos diretórios especificados pelas propriedades <xref:System.AppDomainSetup.ApplicationBase%2A> e <xref:System.AppDomainSetup.PrivateBinPath%2A>. Você pode limitar a cópia aos diretórios selecionados criando uma cadeia de caracteres que contém apenas os diretórios dos quais deseja realizar a cópia de sombra e atribuindo a cadeia de caracteres à propriedade <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>. Separe os diretórios com ponto e vírgula. Os únicos assemblies dos quais são feitas cópias de sombra são aqueles nas pastas selecionadas.  
   

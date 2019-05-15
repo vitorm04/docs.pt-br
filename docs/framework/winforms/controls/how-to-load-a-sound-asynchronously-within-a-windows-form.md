@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 3901166bb8d84f776eb24305a4c648ae0b6ca181
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f533d82fcca07a2b64bdbbfb160a7b2a23ce540
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649316"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592375"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Como: Carregar um som de forma assíncrona dentro de um Windows Form
 O exemplo de código a seguir carrega um som de forma assíncrona de uma URL e é reproduzido em um novo thread.  
@@ -29,8 +29,6 @@ O exemplo de código a seguir carrega um som de forma assíncrona de uma URL e �
 - Referências aos assemblies Sistema e System.Windows.Forms.  
   
 - Se você substituir o nome de arquivo `"http://www.tailspintoys.com/sounds/stop.wav"` com um nome de arquivo válido.  
-  
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Operações de arquivo devem ser incluídas dentro de blocos de tratamento de exceção apropriados.  

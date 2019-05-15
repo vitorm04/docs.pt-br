@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 3c701d1b65d31315ba931cca729e465ba7d766b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 680f488a98d6e7e31b3d077843514fd12f75481c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620869"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586434"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Como: Classificar uma matriz no Visual Basic
 Este exemplo declara uma matriz de `String` objetos nomeados `zooAnimals`, preenche-o e, em seguida, classifica-os em ordem alfabética.  
@@ -32,7 +32,7 @@ End Sub
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
-- Acesso ao mscorlib. dll e o <xref:System> namespace.  
+- Acesso a <xref:System> namespace.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  

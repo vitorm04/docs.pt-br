@@ -10,12 +10,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: bc3cf7775f68237f8b3393f867b81fcf020e52fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e14d9de2326234b86c1f24b227e86f822fbfdb71
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649285"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592364"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Como: Fazer Loop de um Som Tocado em um Formulário do Windows
 O exemplo de código a seguir toca um som repetidamente. Quando o código a `stopPlayingButton_Click` manipulador de eventos é executado, nenhum som é interrompido em reprodução no momento. Se nenhum som estiver em execução, nada acontece.  
@@ -30,8 +30,6 @@ O exemplo de código a seguir toca um som repetidamente. Quando o código a `sto
 - Referências aos assemblies Sistema e System.Windows.Forms.  
   
 - Se você substituir o nome de arquivo `"c:\Windows\Media\chimes.wav"` com um nome de arquivo válido.  
-  
- Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Operações de arquivo devem ser incluídas dentro de blocos de tratamento de exceção apropriados.  

@@ -2,12 +2,12 @@
 title: 'Como: Agrupar arquivos por extensão (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f36be784641d45aaae447097ae2bebb5fd650034
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778073"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593483"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Como: Agrupar arquivos por extensão (LINQ) (Visual Basic)
 Este exemplo mostra como o LINQ pode ser usado para realizar operações avançadas de classificação e agrupamento em listas de arquivos ou pastas. Ele também mostra como paginar a saída na janela do console usando os métodos <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.  
@@ -94,7 +94,7 @@ End Module
  A saída desse programa pode ser longa, dependendo dos detalhes do sistema de arquivos local e o que está definido em `startFolder`. Para habilitar a exibição de todos os resultados, este exemplo mostra como paginá-los. As mesmas técnicas podem ser aplicadas a aplicativos do Windows e aplicativos Web. Observe que, como o código dispõe os itens em um grupo, é necessário um loop `For Each` aninhado. Há também alguma lógica adicional para calcular a posição atual na lista e para permitir que o usuário interrompa a paginação e saia do programa. Nesse caso específico, a consulta de paginação é executada nos resultados da consulta original armazenados em cache. Em outros contextos, como LINQ to SQL, esse cache não é necessário.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou posterior com uma referência à dll e um `Imports` instrução para o namespace System. Linq.  
+Criar um projeto de aplicativo do console do VB.NET, com um `Imports` instrução para o namespace System. Linq.
   
 ## <a name="see-also"></a>Consulte também
 

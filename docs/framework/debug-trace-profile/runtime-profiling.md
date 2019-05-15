@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874231"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582817"
 ---
 # <a name="runtime-profiling"></a>Criação de perfil do tempo de execução
 Criação de perfil é um método de coleta de dados de desempenho em qualquer cenário de desenvolvimento ou de implantação. Esta seção é para desenvolvedores e administradores de sistema que desejam coletar informações sobre o desempenho do aplicativo.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Acompanhamento de desempenho usando o Monitor de Desempenho (Perfmon.exe)  
- O Monitor de Desempenho é a ferramenta mais fácil de usar para criar o perfil de seu aplicativo [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. O Monitor de Desempenho representa graficamente os dados encontrados nos contadores de desempenho do .NET Framework que são instalados com o Common Language Runtime e o [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Esses contadores podem ser usados para monitorar tudo, desde o gerenciamento de memória até o desempenho de compilador JIT (Just-In-Time). Eles informam sobre os recursos que seu aplicativo usa, o que é uma medida indireta do desempenho desse aplicativo. Use esses contadores para entender como o aplicativo funciona internamente.  
+ O Monitor de desempenho é a ferramenta mais fácil de usar para criar o perfil de aplicativo do .NET Framework. O Monitor de Desempenho representa graficamente os dados encontrados nos contadores de desempenho do .NET Framework que são instalados com o Common Language Runtime e o [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Esses contadores podem ser usados para monitorar tudo, desde o gerenciamento de memória até o desempenho de compilador JIT (Just-In-Time). Eles informam sobre os recursos que seu aplicativo usa, o que é uma medida indireta do desempenho desse aplicativo. Use esses contadores para entender como o aplicativo funciona internamente.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Para executar Perfmon.exe no Windows Vista e versões posteriores  
   
@@ -57,7 +57,7 @@ Criação de perfil é um método de coleta de dados de desempenho em qualquer c
 >  Em sistemas em que o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] é instalado, o Monitor de Desempenho poderá não exibir os dados dos contadores de desempenho em algumas categorias, tais como **Dados do .NET CLR** e **Rede do .NET CLR**, para aplicativos que foram desenvolvidos usando o [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]. Se esse for o caso, você pode configurar o Monitor de Desempenho para exibir esses dados, adicionando o elemento [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) ao arquivo de configuração do aplicativo.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Ler e criar contadores de desempenho de forma programática  
- O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece classes que você pode usar para acessar de forma programática as mesmas informações de desempenho que estão disponíveis no console de desempenho. Você também pode usar essas classes para criar contadores de desempenho personalizados. A tabela a seguir descreve algumas das classes de monitoramento de desempenho que são fornecidas no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ O .NET Framework fornece classes que você pode usar para acessar de forma programática as mesmas informações de desempenho estão disponíveis no console de desempenho. Você também pode usar essas classes para criar contadores de desempenho personalizados. A tabela a seguir descreve algumas das classes que são fornecidas no .NET Framework de monitoramento de desempenho.  
   
 |Classe|Descrição|  
 |-----------|-----------------|  

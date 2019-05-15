@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: ae2305e0f5d3ca4de386d8e7933a1107450e0be4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5a00820b01ee0ac78715efa0140e2a5aef28bef8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341498"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592795"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opções do compilador C#)
 Especifica qual versão do CLR (Common Language Runtime) pode executar o assembly.  
@@ -30,29 +30,29 @@ Especifica qual versão do CLR (Common Language Runtime) pode executar o assembl
   
 ## <a name="remarks"></a>Comentários  
   
--   O **anycpu** (padrão) compila seu assembly para que ele seja executado em qualquer plataforma. Seu aplicativo será executado como um processo de 64 bits sempre que possível e realizará fallback para 32 bits quando apenas esse modo estiver disponível.  
+- O **anycpu** (padrão) compila seu assembly para que ele seja executado em qualquer plataforma. Seu aplicativo será executado como um processo de 64 bits sempre que possível e realizará fallback para 32 bits quando apenas esse modo estiver disponível.  
   
--   **anycpu32bitpreferred** compila seu assembly para que ele seja executado em qualquer plataforma. Seu aplicativo é executado no modo 32 bits em sistemas que dão suporte para aplicativos de 32 bits e 64 bits. É possível especificar essa opção apenas para projetos que definem como destino o .NET Framework 4.5.  
+- **anycpu32bitpreferred** compila seu assembly para que ele seja executado em qualquer plataforma. Seu aplicativo é executado no modo 32 bits em sistemas que dão suporte para aplicativos de 32 bits e 64 bits. É possível especificar essa opção apenas para projetos que definem como destino o .NET Framework 4.5.  
   
--   O **ARM** compila seu assembly para que ele seja executado em um computador que tem um processador ARM (Advanced RISC Machine).  
+- O **ARM** compila seu assembly para que ele seja executado em um computador que tem um processador ARM (Advanced RISC Machine).  
   
--   **ARM64** compila o assembly para execução pelo CLR de 64 bits em um computador que tem um processador ARM (Máquina RISC Avançada) que dá suporte ao conjunto de instruções A64.  
+- **ARM64** compila o assembly para execução pelo CLR de 64 bits em um computador que tem um processador ARM (Máquina RISC Avançada) que dá suporte ao conjunto de instruções A64.  
 
--   **x64** compila o assembly para ser executado pelo CLR de 64 bits em um computador que dá suporte ao conjunto de instruções AMD64 ou EM64T.  
+- **x64** compila o assembly para ser executado pelo CLR de 64 bits em um computador que dá suporte ao conjunto de instruções AMD64 ou EM64T.  
   
--   **x86** compila o assembly para ser executado pelo CLR compatível com x86 de 32 bits.  
+- **x86** compila o assembly para ser executado pelo CLR compatível com x86 de 32 bits.  
   
--   **Itanium** compila o assembly para ser executado pelo CLR de 64 bits em um computador com um processador Itanium.  
+- **Itanium** compila o assembly para ser executado pelo CLR de 64 bits em um computador com um processador Itanium.  
   
  Em um sistema operacional do Windows de 64 bits:  
   
--   Os assemblies compilados com **-platform:x86** são executados no CLR de 32 bits em execução no WOW64.  
+- Os assemblies compilados com **-platform:x86** são executados no CLR de 32 bits em execução no WOW64.  
   
--   Uma DLL compilada com o **-platform:anycpu** é executada no mesmo CLR que o processo no qual ela é carregada.  
+- Uma DLL compilada com o **-platform:anycpu** é executada no mesmo CLR que o processo no qual ela é carregada.  
   
--   Os executáveis compilados com **-platform:anycpu** são executados no CLR de 64 bits.  
+- Os executáveis compilados com **-platform:anycpu** são executados no CLR de 64 bits.  
   
--   Os executáveis compilados com **-platform:anycpu32bitpreferred** são executados no CLR de 32 bits.  
+- Os executáveis compilados com **-platform:anycpu32bitpreferred** são executados no CLR de 32 bits.  
   
  A configuração **anycpu32bitpreferred** é válida apenas para arquivos .EXE (executáveis) e requer o .NET Framework 4.5.  
   

@@ -2,12 +2,12 @@
 title: 'Como: Consultar o número Total de Bytes em um conjunto de pastas (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: 9aa098ddca2e3ad300913b207c9db5a4976eded7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e69acbd42e703cdaca1d91f4597c980e6fd8508
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051397"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593276"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Como: Consultar o número Total de Bytes em um conjunto de pastas (LINQ) (Visual Basic)
 Este exemplo mostra como recuperar o número total de bytes usado por todos os arquivos em uma pasta especificada e todas as suas subpastas.  
@@ -72,7 +72,7 @@ End Module
  A consulta chama um método separado para obter o tamanho de arquivo. Ela faz isso para consumir a possível exceção que será gerada se o arquivo tiver sido excluído em outro thread após o objeto <xref:System.IO.FileInfo> ter sido criado na chamada para `GetFiles`. Embora o objeto <xref:System.IO.FileInfo> já tenha sido criado, a exceção poderá ocorrer porque um objeto <xref:System.IO.FileInfo> tentará atualizar sua propriedade <xref:System.IO.FileInfo.Length%2A> com o tamanho mais atual na primeira vez que a propriedade foi acessada. Ao colocar essa operação em um bloco try-catch fora da consulta, o código segue a regra de evitar operações em consultas que podem causar efeitos colaterais. Em geral, deve-se ter muito cuidado ao consumir exceções para garantir que um aplicativo não seja deixado em um estado desconhecido.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou posterior com uma referência à dll e um `Imports` instrução para o namespace System. Linq.  
+Criar um projeto de aplicativo do console do VB.NET, com um `Imports` instrução para o namespace System. Linq.
   
 ## <a name="see-also"></a>Consulte também
 

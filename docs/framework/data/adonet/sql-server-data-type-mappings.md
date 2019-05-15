@@ -2,17 +2,17 @@
 title: Mapeamentos de tipos de dados do SQL Server
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a3bbd9ba18b30a24b425888cce78597deb068a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664084"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583726"
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapeamentos de tipos de dados do SQL Server
 O SQL Server e o .NET Framework baseiam-se em diferentes sistemas de tipo. Por exemplo, a estrutura <xref:System.Decimal> do .NET Framework tem uma escala máxima de 28, enquanto os tipos de dados decimais e numéricos do SQL Server têm uma escala máximo de 38. Para manter a integridade dos dados ao ler e gravar dados, o <xref:System.Data.SqlClient.SqlDataReader> expõe métodos acessadores tipados específicos do SQL Server que retornam objetos de <xref:System.Data.SqlTypes>, bem como métodos acessadores que retornam tipos do .NET Framework. Os tipos do SQL Server e do .NET Framework também são representados por enumerações nas classes <xref:System.Data.DbType> e <xref:System.Data.SqlDbType>, que você pode usar ao especificar tipos de dados <xref:System.Data.SqlClient.SqlParameter>.  
   
- A tabela a seguir mostra o tipo inferido do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], as enumerações <xref:System.Data.DbType> e <xref:System.Data.SqlDbType>, e os métodos acessadores do <xref:System.Data.SqlClient.SqlDataReader>.  
+ A tabela a seguir mostra o tipo inferido do .NET Framework, o <xref:System.Data.DbType> e <xref:System.Data.SqlDbType> enumerações e os métodos de acessador para o <xref:System.Data.SqlClient.SqlDataReader>.  
   
 |Tipo do Mecanismo de Banco de Dados do SQL Server|Tipo do .NET Framework|Enumeração SqlDbType|Acessador tipado SqlTypes de SqlDataReader|Enumeração DbType|Acessador tipado DbType de SqlDataReader|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  

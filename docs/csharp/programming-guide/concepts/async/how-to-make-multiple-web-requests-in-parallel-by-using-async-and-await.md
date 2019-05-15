@@ -2,12 +2,12 @@
 title: 'Como: Fazer várias solicitações da Web em paralelo usando async e await (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 3ea41c1fa0fce3a35635e069061f1953c6395406
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 57c40626fcaf0c52d09fa3a2c8b74ba8b7816677
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335414"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600238"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Como: Fazer várias solicitações da Web em paralelo usando async e await (C#)
 Em um método assíncrono, as tarefas são iniciadas quando elas são criadas. O operador [await](../../../../csharp/language-reference/keywords/await.md) é aplicado à tarefa no ponto do método em que o processamento não pode continuar até que a tarefa seja concluída. Geralmente, uma tarefa é aguardada assim que ela é criada, como mostrado no exemplo a seguir.  
@@ -45,11 +45,11 @@ var result = await myTask;
   
 1. Para configurar um aplicativo WPF, complete as etapas a seguir. Encontre instruções detalhadas para essas etapas em [Passo a passo: Acessando a Web usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Crie um aplicativo WPF que contenha uma caixa de texto e um botão. Dê o nome `startButton` para o botão e `resultsTextBox`, para a caixa de texto.  
+    - Crie um aplicativo WPF que contenha uma caixa de texto e um botão. Dê o nome `startButton` para o botão e `resultsTextBox`, para a caixa de texto.  
   
-    -   Adicione uma referência para <xref:System.Net.Http>.  
+    - Adicione uma referência para <xref:System.Net.Http>.  
   
-    -   No arquivo MainWindow.xaml.cs, adicione uma diretiva `using` para `System.Net.Http`.  
+    - No arquivo MainWindow.xaml.cs, adicione uma diretiva `using` para `System.Net.Http`.  
   
 ### <a name="to-add-the-code"></a>Para adicionar o código  
   
@@ -67,9 +67,9 @@ var result = await myTask;
   
 3. Adicione os seguintes métodos de suporte ao projeto:  
   
-    -   O `ProcessURLAsync` usa um método <xref:System.Net.Http.HttpClient> para baixar o conteúdo de um site como uma matriz de bytes. Em seguida, o método de suporte `ProcessURLAsync` exibe e retorna o comprimento da matriz.  
+    - O `ProcessURLAsync` usa um método <xref:System.Net.Http.HttpClient> para baixar o conteúdo de um site como uma matriz de bytes. Em seguida, o método de suporte `ProcessURLAsync` exibe e retorna o comprimento da matriz.  
   
-    -   O `DisplayResults` exibe o número de bytes na matriz de bytes para cada URL. Essa exibição mostra quando cada tarefa termina o download.  
+    - O `DisplayResults` exibe o número de bytes na matriz de bytes para cada URL. Essa exibição mostra quando cada tarefa termina o download.  
   
      Copie os seguintes métodos e cole-os depois do manipulador de eventos `startButton_Click` em MainWindow.xaml.cs.  
   
@@ -95,13 +95,13 @@ var result = await myTask;
   
 4. Finalmente, defina o método `CreateMultipleTasksAsync`, que executa as seguintes etapas.  
   
-    -   O método declara um objeto `HttpClient`, que você precisa para acessar o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> em `ProcessURLAsync`.  
+    - O método declara um objeto `HttpClient`, que você precisa para acessar o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> em `ProcessURLAsync`.  
   
-    -   O método cria e inicia três tarefas do tipo <xref:System.Threading.Tasks.Task%601>, em que `TResult` é um inteiro. Conforme cada tarefa termina, `DisplayResults` exibe a URL da tarefa e o comprimento do conteúdo baixado. Como as tarefas estão em execução de maneira assíncrona, a ordem na qual os resultados são exibidos pode diferir da ordem na qual elas foram declaradas.  
+    - O método cria e inicia três tarefas do tipo <xref:System.Threading.Tasks.Task%601>, em que `TResult` é um inteiro. Conforme cada tarefa termina, `DisplayResults` exibe a URL da tarefa e o comprimento do conteúdo baixado. Como as tarefas estão em execução de maneira assíncrona, a ordem na qual os resultados são exibidos pode diferir da ordem na qual elas foram declaradas.  
   
-    -   O método aguarda a conclusão de cada tarefa. Cada operador `await` suspende a execução de `CreateMultipleTasksAsync` até que a tarefa aguardada seja concluída. O operador também recupera o valor retornado da chamada ao `ProcessURLAsync` de cada tarefa concluída.  
+    - O método aguarda a conclusão de cada tarefa. Cada operador `await` suspende a execução de `CreateMultipleTasksAsync` até que a tarefa aguardada seja concluída. O operador também recupera o valor retornado da chamada ao `ProcessURLAsync` de cada tarefa concluída.  
   
-    -   Quando as tarefas forem concluídas e os valores inteiros forem recuperados, o método somará os comprimentos dos sites e exibirá o resultado.  
+    - Quando as tarefas forem concluídas e os valores inteiros forem recuperados, o método somará os comprimentos dos sites e exibirá o resultado.  
   
      Copie o seguinte método e cole-o em sua solução.  
   

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801173"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583428"
 ---
 # <a name="windows-forms"></a>Windows Forms
-Como os formulários são a unidade base do seu aplicativo, é essencial dedicar certo planejamento às suas funções e design. Um formulário é basicamente uma tela em branco que você, como desenvolvedor, aprimora com controles para criar uma interface do usuário e com código para manipular os dados. Para esse fim, o Visual Studio fornece um ambiente de desenvolvimento integrado (IDE) para ajudar a escrever código, bem como um controle sofisticado conjunto escrito com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Complementando a funcionalidade desses controles com seu código, você poderá desenvolver as soluções que precisa com rapidez e facilidade.  
+Como os formulários são a unidade base do seu aplicativo, é essencial dedicar certo planejamento às suas funções e design. Um formulário é basicamente uma tela em branco que você, como desenvolvedor, aprimora com controles para criar uma interface do usuário e com código para manipular os dados. Para esse fim, o Visual Studio fornece um ambiente de desenvolvimento integrado (IDE) para ajudar a escrever código, bem como um controle sofisticado conjunto escrito com o .NET Framework. Complementando a funcionalidade desses controles com seu código, você poderá desenvolver as soluções que precisa com rapidez e facilidade.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Guia de introdução ao Windows Forms](getting-started-with-windows-forms.md)  

@@ -2,15 +2,15 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 14d07fcb1d97a4e71747d6517f63fbc4108493da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641177"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583508"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
-Este tópico descreve considerações de segurança específicas para desenvolver, implantar e executar aplicativos [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você também deve seguir as recomendações para criar aplicativos seguros do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [visão geral de segurança](../../../../../docs/framework/data/adonet/security-overview.md).  
+Este tópico descreve considerações de segurança específicas para desenvolver, implantar e executar aplicativos [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você também deve seguir as recomendações para criar aplicativos seguros do .NET Framework. Para obter mais informações, consulte [visão geral de segurança](../../../../../docs/framework/data/adonet/security-overview.md).  
   
 ## <a name="general-security-considerations"></a>Considerações gerais de segurança  
  As considerações de segurança a seguir se aplicam a todos os aplicativos que usam o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -63,7 +63,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  Um administrador de fonte de dados deve conceder somente as permissões necessárias aos usuários. Embora [!INCLUDE[esql](../../../../../includes/esql-md.md)] não dê suporte a instruções DML que modificam dados, como INSERT, UPDATE ou DELETE, os usuários ainda podem acessar a conexão com a fonte de dados. Um usuário mal-intencionado pode usar essa conexão para executar instruções DML na linguagem nativa da fonte de dados.  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>Execute aplicativos com as permissões mínimas.  
- Quando você permite que um aplicativo gerenciado seja executado com permissão de confiança total, o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] não limita o acesso do aplicativo ao seu computador. Isso pode tornar vulnerável a segurança do seu aplicativo e comprometer o sistema inteiro. Para usar a segurança de acesso do código e outros mecanismos de segurança no [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], você deve executar aplicativos usando permissões de confiança parcial, com o conjunto mínimo de permissões necessárias para permitir o funcionamento do aplicativo. As seguintes permissões de acesso do código são as permissões mínimas que seu aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] precisa:  
+ Quando você permite que um aplicativo gerenciado ser executado com permissão de confiança total, o .NET Framework não limita o acesso do aplicativo em seu computador. Isso pode tornar vulnerável a segurança do seu aplicativo e comprometer o sistema inteiro. Para usar a segurança de acesso do código e outros mecanismos de segurança no .NET Framework, você deve executar aplicativos usando permissões de confiança parcial e com o conjunto mínimo de permissões que são necessárias para habilitar o aplicativo funcione. As seguintes permissões de acesso do código são as permissões mínimas que seu aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] precisa:  
   
 - <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> para abrir os arquivos de metadados especificados ou <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> para pesquisar arquivos de metadados em um diretório.  
   

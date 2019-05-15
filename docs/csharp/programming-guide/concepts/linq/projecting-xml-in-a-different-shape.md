@@ -2,12 +2,12 @@
 title: Projetando XML em uma forma diferente (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac9c6e05b366c9d34f82c6da9bf154d741840b3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723778"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596808"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projetando XML em uma forma diferente (C#)
 Este tópico mostra um exemplo de projetar XML que está em uma forma diferente do XML fonte.  
@@ -233,7 +233,7 @@ class Program
 ## <a name="next-steps"></a>Próximas etapas  
  No exemplo a seguir, você consultará para localizar todo o texto em um documento do Word:  
   
--   [Localizando texto em documentos do Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Localizando texto em documentos do Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Consulte também
 

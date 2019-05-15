@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a057f872d15ca1fcd49d86d08606776a0c0bea0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315758"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063325"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  Por exemplo, o marshaler determina que o wrapper de classe deve ser usado para encapsular a interface que foi passada para o código gerenciado. Quando a interface é passada pelo marshaler pela primeira vez, o marshaler verifica se a interface está sendo recebida de um objeto conhecido. Essa verificação ocorre em duas situações:  
   
--   Uma interface está sendo implementada por outro objeto gerenciado que foi passado para o COM em outro lugar. O marshaler pode identificar prontamente as interfaces expostas pelos objetos gerenciados e pode fazer a correspondência da interface com o objeto gerenciado que fornece a implementação. Em seguida, o objeto gerenciado é passado para o método e nenhum wrapper é necessário.  
+- Uma interface está sendo implementada por outro objeto gerenciado que foi passado para o COM em outro lugar. O marshaler pode identificar prontamente as interfaces expostas pelos objetos gerenciados e pode fazer a correspondência da interface com o objeto gerenciado que fornece a implementação. Em seguida, o objeto gerenciado é passado para o método e nenhum wrapper é necessário.  
   
--   Um objeto que já foi encapsulado está implementando a interface. Para determinar se esse é o caso, o marshaler consulta o objeto em busca de sua interface **IUnknown** e compara a interface retornada com as interfaces de outros objetos que já estão encapsulados. Se a interface for a mesma de outro wrapper, os objetos terão a mesma identidade e o wrapper existente será passado para o método.  
+- Um objeto que já foi encapsulado está implementando a interface. Para determinar se esse é o caso, o marshaler consulta o objeto em busca de sua interface **IUnknown** e compara a interface retornada com as interfaces de outros objetos que já estão encapsulados. Se a interface for a mesma de outro wrapper, os objetos terão a mesma identidade e o wrapper existente será passado para o método.  
   
  Se uma interface não for de um objeto conhecido, o marshaler fará o seguinte:  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>Marshaling padrão para representantes  
  Um representante gerenciado tem o marshaling realizado como uma interface COM ou como um ponteiro de função, com base no mecanismo de chamada:  
   
--   Para a invocação de plataforma, um representante tem o marshaling realizado como um ponteiro de função não gerenciada, por padrão.  
+- Para a invocação de plataforma, um representante tem o marshaling realizado como um ponteiro de função não gerenciada, por padrão.  
   
--   Para a interoperabilidade COM, um representante tem o marshaling realizado como uma interface COM do tipo **_Delegate**, por padrão. A interface **_Delegate** é definida na biblioteca de tipos Mscorlib.tlb e contém o método <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>, que permite chamar o método referenciado pelo representante.  
+- Para a interoperabilidade COM, um representante tem o marshaling realizado como uma interface COM do tipo **_Delegate**, por padrão. A interface **_Delegate** é definida na biblioteca de tipos Mscorlib.tlb e contém o método <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>, que permite chamar o método referenciado pelo representante.  
   
  A tabela a seguir mostra as opções de marshaling para o tipo de dados do representante gerenciado. O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornece vários valores de enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para realizar marshaling de representantes.  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  Esta seção fornece informações sobre os seguintes tipos de valor formatados:  
   
--   [Tipos de valor usados na invocação de plataforma](#value-types-used-in-platform-invoke)  
+- [Tipos de valor usados na invocação de plataforma](#value-types-used-in-platform-invoke)  
   
--   [Tipos de valor usados na interoperabilidade COM](#value-types-used-in-com-interop)  
+- [Tipos de valor usados na interoperabilidade COM](#value-types-used-in-com-interop)  
   
  Além de descrever os tipos formatados, este tópico identifica os [tipos de valor do sistema](#system-value-types) que têm um comportamento de marshaling incomum.  
   
  Um tipo formatado é um tipo complexo que contém informações que controlam explicitamente o layout de seus membros na memória. As informações de layout de membro são fornecidas usando o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. O layout pode ser um dos seguintes valores de enumeração <xref:System.Runtime.InteropServices.LayoutKind>:  
   
--   **LayoutKind.Automatic**  
+- **LayoutKind.Automatic**  
   
      Indica que o Common Language Runtime está livre para reordenar os membros do tipo para eficiência. No entanto, quando um tipo de valor é passado para um código não gerenciado, o layout dos membros é previsível. Uma tentativa de realizar marshaling de uma estrutura como essa causa uma exceção automaticamente.  
   
--   **LayoutKind.Sequential**  
+- **LayoutKind.Sequential**  
   
      Indica que os membros do tipo devem ser dispostos na memória não gerenciada na mesma ordem em que aparecem na definição de tipo gerenciado.  
   
--   **LayoutKind.Explicit**  
+- **LayoutKind.Explicit**  
   
      Indica que os membros são dispostos de acordo com o <xref:System.Runtime.InteropServices.FieldOffsetAttribute> fornecido com cada campo.  
   
@@ -229,14 +229,14 @@ BOOL PtInRect(const RECT *lprc, POINT pt);
  Passe estruturas usando a seguinte definição de invocação de plataforma:  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function PtInRect Lib "User32.dll" (
         ByRef r As Rect, p As Point) As Boolean
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("User32.dll")]
    internal static extern bool PtInRect(ref Rect r, Point p);
@@ -291,14 +291,14 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  A definição equivalente de invocação de plataforma para **GetSystemTime** é a seguinte:  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         ByVal sysTime As SystemTime)
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
    internal static extern void GetSystemTime(SystemTime st);

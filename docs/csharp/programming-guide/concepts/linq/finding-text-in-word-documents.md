@@ -2,12 +2,12 @@
 title: Localizando texto em documentos do Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 59d224307808edefbbb7e7ffc848f40fbe2880ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d421916335f4cf163a449bc7b0c7c7bb30179a5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720779"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596624"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Localizando texto em documentos do Word (C#)
 Este tópico estende as consultas anteriores para fazer algo útil: localizar todas as ocorrências de uma cadeia de caracteres no documento.  
@@ -325,7 +325,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Próximas etapas  
  A próxima seção fornece informações sobre documentos de WordprocessingML:  
   
--   [Detalhes de documentos do Office Open XML WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [Detalhes de documentos do Office Open XML WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>Consulte também
 

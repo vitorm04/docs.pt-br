@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625769"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592771"
 ---
 # <a name="application-settings-architecture"></a>Arquitetura das configurações do aplicativo
 Este tópico descreve como a arquitetura das configurações de aplicativo funciona e explora recursos avançados da arquitetura, como as configurações agrupadas e as chaves de configurações.  
@@ -44,7 +44,7 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
 ## <a name="settings-persistence"></a>Persistência das configurações  
  O <xref:System.Configuration.ApplicationSettingsBase> classe não próprio persistir ou carregar configurações; este trabalho recai sobre o provedor de configurações, uma classe que deriva de <xref:System.Configuration.SettingsProvider>. Se uma classe derivada de <xref:System.Configuration.ApplicationSettingsBase> não especifica um provedor de configurações por meio de <xref:System.Configuration.SettingsProviderAttribute>, em seguida, o provedor padrão, <xref:System.Configuration.LocalFileSettingsProvider>, é usado.  
   
- O sistema de configuração, que foi originalmente lançado com o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], dá suporte ao fornecimento de dados de configuração estática do aplicativo por meio do arquivo machine.config do computador local ou em um arquivo `app.`exe.config que você implanta com seu aplicativo. O <xref:System.Configuration.LocalFileSettingsProvider> classe expande esse suporte nativo das seguintes maneiras:  
+ O sistema de configuração que foi originalmente lançado com o .NET Framework dá suporte ao fornecimento de dados de configuração estática do aplicativo por meio do arquivo Machine. config de qualquer um dos locais do computador ou em um `app.`arquivo exe. config que você implanta com seu aplicativo. O <xref:System.Configuration.LocalFileSettingsProvider> classe expande esse suporte nativo das seguintes maneiras:  
   
 - As configurações de escopo do aplicativo podem ser armazenadas nos arquivos machine.config ou `app.`exe.config. O machine.config é sempre somente leitura, enquanto que o `app`.exe.config é restrito, por considerações de segurança, como somente leitura para a maioria dos aplicativos.  
   

@@ -2,12 +2,12 @@
 title: Dados FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032476"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582713"
 ---
 # <a name="filestream-data"></a>Dados FILESTREAM
 
@@ -20,7 +20,7 @@ A especificação do atributo FILESTREAM em uma coluna varbinary(max) faz com qu
 
 ## <a name="sqlclient-support-for-filestream"></a>Suporte do SqlClient para FILESTREAM
 
-O [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] provedor de dados para o SQL Server <xref:System.Data.SqlClient>, dá suporte à leitura e gravação em dados FILESTREAM usando o <xref:System.Data.SqlTypes.SqlFileStream> classe definida no <xref:System.Data.SqlTypes> namespace. O `SqlFileStream` herda da classe <xref:System.IO.Stream>, que fornece métodos para a leitura e a gravação em fluxos de dados. A leitura de um fluxo transfere os dados do fluxo para uma estrutura de dados, como uma matriz de bytes. A gravação transfere os dados da estrutura de dados para um fluxo.
+O .NET Framework Data Provider para SQL Server <xref:System.Data.SqlClient>, dá suporte à leitura e gravação em dados FILESTREAM usando o <xref:System.Data.SqlTypes.SqlFileStream> classe definida no <xref:System.Data.SqlTypes> namespace. O `SqlFileStream` herda da classe <xref:System.IO.Stream>, que fornece métodos para a leitura e a gravação em fluxos de dados. A leitura de um fluxo transfere os dados do fluxo para uma estrutura de dados, como uma matriz de bytes. A gravação transfere os dados da estrutura de dados para um fluxo.
 
 ### <a name="creating-the-sql-server-table"></a>Criando a tabela SQL Server
 

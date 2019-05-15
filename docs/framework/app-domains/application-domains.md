@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674575"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607914"
 ---
 # <a name="application-domains"></a>Domínios de aplicativo
 
@@ -41,18 +41,18 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  O isolamento fornecido pelos domínios de aplicativo possui os seguintes benefícios:  
   
--   Falhas em um aplicativo não podem afetar outros aplicativos. Como um código fortemente tipado não pode causar falhas de memória, usar domínios de aplicativo garante que o código em execução em um domínio não possa afetar outros aplicativos no processo.  
+- Falhas em um aplicativo não podem afetar outros aplicativos. Como um código fortemente tipado não pode causar falhas de memória, usar domínios de aplicativo garante que o código em execução em um domínio não possa afetar outros aplicativos no processo.  
   
--   Aplicativos individuais podem ser interrompidos sem interromper o processo inteiro. Usar domínios de aplicativo permite que você descarregue o código em execução em um único aplicativo.  
+- Aplicativos individuais podem ser interrompidos sem interromper o processo inteiro. Usar domínios de aplicativo permite que você descarregue o código em execução em um único aplicativo.  
   
     > [!NOTE]
     >  Você não pode descarregar assemblies ou tipos individuais. Apenas um domínio completo pode ser descarregado.  
   
--   O código em execução em um aplicativo não pode diretamente acessar o código ou os recursos de outro aplicativo. O Common Language Runtime impõe esse isolamento, impedindo chamadas diretas entre objetos em domínios de aplicativo diferentes. Objetos que passam entre domínios são copiados ou acessados pelo proxy. Se o objeto for copiado, a chamada para o objeto será local. Ou seja, tanto o chamador quanto o objeto referenciado estão no mesmo domínio de aplicativo. Se o objeto for acessado por meio de um proxy, a chamada para o objeto será remota. Nesse caso, o chamador e o objeto referenciado estão em domínios diferentes. Chamadas entre domínios usam a mesma infraestrutura de chamada remota entre dois processos ou entre dois computadores. Assim, os metadados para o objeto referenciado devem estar disponíveis para ambos os domínios de aplicativo para permitir que a chamada de método seja compilada corretamente por JIT. Se o domínio de chamada não tiver acesso aos metadados do objeto que está sendo chamado, a compilação poderá falhar com uma exceção do tipo <xref:System.IO.FileNotFoundException>. Para obter mais informações, confira [Objetos remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). O mecanismo para determinar como objetos podem ser acessados em domínios é determinado pelo objeto. Para obter mais informações, consulte <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- O código em execução em um aplicativo não pode diretamente acessar o código ou os recursos de outro aplicativo. O Common Language Runtime impõe esse isolamento, impedindo chamadas diretas entre objetos em domínios de aplicativo diferentes. Objetos que passam entre domínios são copiados ou acessados pelo proxy. Se o objeto for copiado, a chamada para o objeto será local. Ou seja, tanto o chamador quanto o objeto referenciado estão no mesmo domínio de aplicativo. Se o objeto for acessado por meio de um proxy, a chamada para o objeto será remota. Nesse caso, o chamador e o objeto referenciado estão em domínios diferentes. Chamadas entre domínios usam a mesma infraestrutura de chamada remota entre dois processos ou entre dois computadores. Assim, os metadados para o objeto referenciado devem estar disponíveis para ambos os domínios de aplicativo para permitir que a chamada de método seja compilada corretamente por JIT. Se o domínio de chamada não tiver acesso aos metadados do objeto que está sendo chamado, a compilação poderá falhar com uma exceção do tipo <xref:System.IO.FileNotFoundException>. Para obter mais informações, confira [Objetos remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). O mecanismo para determinar como objetos podem ser acessados em domínios é determinado pelo objeto. Para obter mais informações, consulte <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
--   O escopo do comportamento do código é dado pelo aplicativo no qual ele é executado. Em outras palavras, o domínio do aplicativo fornece definições de configuração, como as políticas de versão do aplicativo, o local de qualquer assembly remoto acessado e informações sobre onde localizar assemblies carregados no domínio.  
+- O escopo do comportamento do código é dado pelo aplicativo no qual ele é executado. Em outras palavras, o domínio do aplicativo fornece definições de configuração, como as políticas de versão do aplicativo, o local de qualquer assembly remoto acessado e informações sobre onde localizar assemblies carregados no domínio.  
   
--   Permissões concedidas ao código podem ser controladas pelo domínio do aplicativo no qual o código está sendo executado.  
+- Permissões concedidas ao código podem ser controladas pelo domínio do aplicativo no qual o código está sendo executado.  
   
 ## <a name="application-domains-and-assemblies"></a>Domínios de aplicativo e assemblies
 
@@ -60,9 +60,9 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  A maneira como um assembly é carregado determina se o seu código compilado por JIT (just-in-time) pode ser compartilhado por vários domínios de aplicativo no processo e se o assembly pode ser descarregado do processo.  
   
--   Se um assembly for carregado em domínio neutro, todos os domínios de aplicativo que compartilharem o mesmo conjunto de concessões de segurança poderão compartilhar o mesmo código compilado por JIT, o que reduz a memória exigida pelo aplicativo. No entanto, o assembly jamais pode ser descarregado do processo.  
+- Se um assembly for carregado em domínio neutro, todos os domínios de aplicativo que compartilharem o mesmo conjunto de concessões de segurança poderão compartilhar o mesmo código compilado por JIT, o que reduz a memória exigida pelo aplicativo. No entanto, o assembly jamais pode ser descarregado do processo.  
   
--   Se um assembly não for carregado em domínio neutro, ele deverá ser compilado por JIT em cada domínio de aplicativo no qual ele for carregado. No entanto, o assembly pode ser descarregado do processo descarregando-se todos os domínios de aplicativo em que ele está carregado.  
+- Se um assembly não for carregado em domínio neutro, ele deverá ser compilado por JIT em cada domínio de aplicativo no qual ele for carregado. No entanto, o assembly pode ser descarregado do processo descarregando-se todos os domínios de aplicativo em que ele está carregado.  
   
  O host de tempo de execução decidirá se é necessário carregar os assemblies como neutros com relação ao domínio quando ele carregar o tempo de execução em um processo. Para aplicativos gerenciados, aplique o atributo <xref:System.LoaderOptimizationAttribute> ao método de ponto de entrada do processo e especifique um valor da enumeração <xref:System.LoaderOptimization> associada. Para aplicativos não gerenciados que hospedam o Common Language Runtime, especifique o sinalizador apropriado ao chamar o método [CorBindToRuntimeEx Function](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  
   
@@ -84,9 +84,9 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  Ao decidir se deve carregar assemblies como neutros em relação ao domínio, você deve fazer uma escolha entre reduzir o uso de memória e outros fatores de desempenho.  
   
--   O acesso a dados e métodos estáticos é mais lento para assemblies neutros em relação ao domínio devido à necessidade de isolamento dos assemblies. Cada domínio do aplicativo que acessa o assembly deve ter uma cópia separada dos dados estáticos, para evitar que referências a objetos em campos estáticos cruzem os limites do domínio. Como resultado, o tempo de execução contém a lógica adicional para direcionar um chamador para a cópia apropriada de dados estáticos ou método. Essa lógica extra retarda a chamada.  
+- O acesso a dados e métodos estáticos é mais lento para assemblies neutros em relação ao domínio devido à necessidade de isolamento dos assemblies. Cada domínio do aplicativo que acessa o assembly deve ter uma cópia separada dos dados estáticos, para evitar que referências a objetos em campos estáticos cruzem os limites do domínio. Como resultado, o tempo de execução contém a lógica adicional para direcionar um chamador para a cópia apropriada de dados estáticos ou método. Essa lógica extra retarda a chamada.  
   
--   Todas as dependências de um assembly deverão estar localizadas e carregadas quando o assembly for carregado como neutro em relação ao domínio, porque uma dependência que não puder ser carregada como neutra em relação ao domínio impedirá que o assembly seja carregado como neutro em relação ao domínio.  
+- Todas as dependências de um assembly deverão estar localizadas e carregadas quando o assembly for carregado como neutro em relação ao domínio, porque uma dependência que não puder ser carregada como neutra em relação ao domínio impedirá que o assembly seja carregado como neutro em relação ao domínio.  
   
 ## <a name="application-domains-and-threads"></a>Domínios do aplicativo e threads
 
@@ -100,9 +100,9 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
 
  A cultura, que é representada por um objeto <xref:System.Globalization.CultureInfo>, está associada a threads. Você pode obter a cultura associada ao thread em execução no momento usando a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> e obter ou definir a cultura associada ao thread em execução no momento usando a propriedade <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Se a cultura associada a um thread tiver sido definida explicitamente usando-se a propriedade <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, ela continuará sendo associada a esse thread quando ele cruzar os limites de domínio do aplicativo. Do contrário, a cultura associada ao thread em um dado momento é determinada pelo valor da propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> no domínio do aplicativo no qual o thread está sendo executado:  
   
--   Se o valor da propriedade não for `null`, a cultura retornada pela propriedade estará associada ao thread (e, assim, retornada pelas propriedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
+- Se o valor da propriedade não for `null`, a cultura retornada pela propriedade estará associada ao thread (e, assim, retornada pelas propriedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
   
--   Se o valor da propriedade for `null`, a cultura do sistema atual estará associada ao thread.  
+- Se o valor da propriedade for `null`, a cultura do sistema atual estará associada ao thread.  
   
 ## <a name="programming-with-application-domains"></a>Programação com domínios do aplicativo
 
@@ -138,9 +138,9 @@ COMPLUS_LoaderOptimization = 1
   
  A maneira que o assembly é carregado determina se o seu código compilado por JIT (just-in-time) pode ser compartilhado por vários domínios de aplicativo no processo.  
   
--   Se um assembly for carregado em domínio neutro, todos os domínios de aplicativo que compartilhem o mesmo conjunto de concessão de segurança poderão compartilhar o mesmo código compilado por JIT. Isso reduz a memória exigida pelo aplicativo.  
+- Se um assembly for carregado em domínio neutro, todos os domínios de aplicativo que compartilhem o mesmo conjunto de concessão de segurança poderão compartilhar o mesmo código compilado por JIT. Isso reduz a memória exigida pelo aplicativo.  
   
--   Se um assembly não for carregado em domínio neutro, ele deverá ser compilado por JIT em cada domínio de aplicativo em que for carregado e o carregador não deverá compartilhar recursos internos entre domínios de aplicativo.  
+- Se um assembly não for carregado em domínio neutro, ele deverá ser compilado por JIT em cada domínio de aplicativo em que for carregado e o carregador não deverá compartilhar recursos internos entre domínios de aplicativo.  
   
  Quando definido como 1, o sinalizador de ambiente COMPLUS_LoaderOptimization força o host do tempo de execução a carregar todos os assemblies de maneira de domínio não neutro, conhecido como SingleDomain. SingleDomain não carrega assemblies como neutros em relação ao domínio, exceto Mscorlib, que é sempre carregado como neutro em relação ao domínio. Essa configuração é chamada de domínio único, porque ela normalmente é usada quando o host está executando apenas um único aplicativo no processo.  
   

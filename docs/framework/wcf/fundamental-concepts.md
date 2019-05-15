@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 05e61a33005cd0458c5bcdde758f3b1a9cc3869c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 429e019d87800c9487f73ebf37c4d7870835b323
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637262"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591943"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceitos fundamentais do Windows Communication Foundation
 Este documento fornece uma visão geral da arquitetura do Windows Communication Foundation (WCF). Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um serviço WCF e um cliente, consulte [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md). Para aprender a programação de WCF, consulte [programação WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -126,7 +126,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Uma implementação concreta de um elemento de associação. A associação representa a configuração e o canal é a implementação associada com essa configuração. Portanto, há um canal associado com cada elemento de associação. O canais empilham-se uns sobre os outros para criar a implementação concreta da associação: a pilha do canal.  
   
  Cliente de WCF  
- Uma construção de aplicativo cliente que expõe as operações de serviço como métodos (na linguagem de programação de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de sua escolha, como Visual Basic ou Visual C#). Qualquer aplicativo pode hospedar um cliente de WCF, incluindo um aplicativo que hospeda um serviço. Portanto, é possível criar um serviço que inclui clientes de WCF de outros serviços.  
+ Uma construção de aplicativo cliente que expõe as operações de serviço como métodos (no .NET Framework, linguagem de programação de sua escolha, como Visual Basic ou Visual C#). Qualquer aplicativo pode hospedar um cliente de WCF, incluindo um aplicativo que hospeda um serviço. Portanto, é possível criar um serviço que inclui clientes de WCF de outros serviços.  
   
  Um cliente WCF pode ser automaticamente gerado usando o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) e apontá-lo em um serviço em execução que publica metadados.  
   

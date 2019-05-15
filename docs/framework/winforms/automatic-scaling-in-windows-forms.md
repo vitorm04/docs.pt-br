@@ -5,18 +5,18 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4902cd8ab97771f75e5421a9de7ed1150a7443a8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640502"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586592"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Dimensionamento automático no Windows Forms
 
-Dimensionamento automático permite que um formulário e seus controles, criados em uma máquina com uma determinada exibição resolução ou sistema fonte, a ser exibida corretamente em outro computador com uma fonte de sistema ou resolução de exibição diferente. Ele garante que o formulário e seus controles de forma inteligente serão redimensionado para ser consistente com nativos do windows e outros aplicativos em computadores de usuários e outros desenvolvedores. O suporte a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para o dimensionamento automático e estilos visuais permite que [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplicativos para manter uma aparência consistente em comparação com aplicativos nativos do Windows na máquina de cada usuário.
+Dimensionamento automático permite que um formulário e seus controles, criados em uma máquina com uma determinada exibição resolução ou sistema fonte, a ser exibida corretamente em outro computador com uma fonte de sistema ou resolução de exibição diferente. Ele garante que o formulário e seus controles de forma inteligente serão redimensionado para ser consistente com nativos do windows e outros aplicativos em computadores de usuários e outros desenvolvedores. O suporte do .NET Framework para o dimensionamento automático e estilos visuais permite que os aplicativos do .NET Framework manter uma aparência consistente em comparação com aplicativos nativos do Windows na máquina de cada usuário.
 
-Na maior parte, o dimensionamento automático funciona conforme o esperado em [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versão 2.0 e posterior. No entanto, alterações de esquema de fonte podem ser problemáticas. Para obter um exemplo de como resolver esse problema, consulte [como: Responder a alterações de esquema de fontes em um aplicativo do Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+Na maior parte, automático de colocação em escala funciona como esperado no .NET Framework versão 2.0 e posterior. No entanto, alterações de esquema de fonte podem ser problemáticas. Para obter um exemplo de como resolver esse problema, consulte [como: Responder a alterações de esquema de fontes em um aplicativo do Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>Necessidade de dimensionamento automático
 
@@ -24,11 +24,11 @@ Sem o dimensionamento automático, um aplicativo desenvolvido para resolução d
 
 Uma situação semelhante ocorre quando um aplicativo foi projetado para uma determinada resolução de vídeo. A resolução de vídeo mais comum é 96 pontos por polegada (DPI), que é igual a 100% dimensionamento da exibição, mas exibe de resolução mais alta que dão suporte a 125%, 150%, 200% (que 120 igual, respectivamente, 144 e 192 DPI) e superiores estão se tornando mais comum. Sem ajuste, um aplicativo, especialmente com base em elementos gráficos um, projetado para uma resolução aparecerá muito grande ou muito pequeno quando executado em outra resolução.
 
-O dimensionamento automático procura contornar estes problemas redimensionando automaticamente o formulário e seus controles filho acordo com o tamanho da fonte relativa ou resolução de vídeo. O sistema operacional Windows dá suporte a dimensionamento automático das caixas de diálogo usando uma unidade de medida chamada unidades de diálogo relativa. Uma unidade de caixa de diálogo é baseada na fonte do sistema e sua relação com pixels pode ser determinada, no entanto, a função do SDK do Win32 `GetDialogBaseUnits`. Quando um usuário altera o tema usado pelo Windows, todas as caixas de diálogo são ajustadas automaticamente adequadamente. Além disso, o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] oferece suporte ao dimensionamento automático de acordo com a fonte padrão do sistema ou a resolução de vídeo. Opcionalmente, o dimensionamento automático pode ser desabilitado em um aplicativo.
+O dimensionamento automático procura contornar estes problemas redimensionando automaticamente o formulário e seus controles filho acordo com o tamanho da fonte relativa ou resolução de vídeo. O sistema operacional Windows dá suporte a dimensionamento automático das caixas de diálogo usando uma unidade de medida chamada unidades de diálogo relativa. Uma unidade de caixa de diálogo é baseada na fonte do sistema e sua relação com pixels pode ser determinada, no entanto, a função do SDK do Win32 `GetDialogBaseUnits`. Quando um usuário altera o tema usado pelo Windows, todas as caixas de diálogo são ajustadas automaticamente adequadamente. Além disso, o .NET Framework dá suporte a dimensionamento automático de acordo com a fonte padrão do sistema ou a resolução de vídeo. Opcionalmente, o dimensionamento automático pode ser desabilitado em um aplicativo.
 
 ## <a name="original-support-for-automatic-scaling"></a>Suporte original para dimensionamento automático
 
-As versões 1.0 e 1.1 do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] suporte para dimensionamento automático de uma maneira simples que era dependente da fonte padrão do Windows usada para a interface do usuário, representada pelo valor do SDK do Win32 **DEFAULT_GUI_FONT**. Essa fonte normalmente é alterada somente quando a resolução de vídeo é alterado. O mecanismo a seguir foi usado para implementar o dimensionamento automático:
+As versões 1.0 e 1.1 do .NET Framework com suporte ao dimensionamento automático de uma maneira simples que era dependente da fonte padrão do Windows usada para a interface do usuário, representada pelo valor do SDK do Win32 **DEFAULT_GUI_FONT**. Essa fonte normalmente é alterada somente quando a resolução de vídeo é alterado. O mecanismo a seguir foi usado para implementar o dimensionamento automático:
 
 1. Em tempo de design, o <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> propriedade (que agora foi preterida) foi definida como a altura e largura da fonte padrão do sistema no computador de desenvolvedor.
 
@@ -46,18 +46,18 @@ Embora esse mecanismo era suficiente para a maioria das finalidades, ele sofria 
 
 - Formulários e seus controles filho podem apenas ser criados simultaneamente por vários desenvolvedores se suas soluções de máquina eram os mesmos. Da mesma forma ela também torna a herança de um formulário depende da resolução associada ao formulário pai.
 
-- Não é compatível com os gerentes de layout mais recentes introduzidos com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versão 2.0, tais como <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>.
+- Não é compatível com os gerentes de layout mais recentes introduzidos com o .NET Framework versão 2.0, como <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>.
 
 - Ele não oferecia suporte ao dimensionamento baseado diretamente na resolução de vídeo que é necessária para compatibilidade com o [!INCLUDE[compact](../../../includes/compact-md.md)].
 
-Embora esse mecanismo é preservado no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versão 2.0 para manter a compatibilidade com versões anteriores, ela foi substituída pelo mecanismo de dimensionamento mais robusto descrito a seguir. Como consequência, o <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>e certos <xref:System.Windows.Forms.Control.Scale%2A> sobrecargas são marcadas como obsoletas.
+Embora esse mecanismo é preservado no .NET Framework versão 2.0 para manter a compatibilidade com versões anteriores, ela foi substituída pelo mecanismo de dimensionamento mais robusto descrito a seguir. Como consequência, o <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>e certos <xref:System.Windows.Forms.Control.Scale%2A> sobrecargas são marcadas como obsoletas.
 
 > [!NOTE]
-> Você pode excluir com segurança as referências a esses membros quando você atualiza seu código herdado para o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versão 2.0.
+> Você pode excluir com segurança as referências a esses membros quando você atualiza seu código herdado para o .NET Framework versão 2.0.
 
 ## <a name="current-support-for-automatic-scaling"></a>Suporte atual para o dimensionamento automático
 
-O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versão 2.0 supera as limitações anteriores, introduzindo as seguintes alterações para o dimensionamento automático de formulários do Windows:
+O .NET Framework versão 2.0 supera as limitações anteriores, introduzindo as seguintes alterações para o dimensionamento automático de formulários do Windows:
 
 - Suporte básico para dimensionamento foi movido para o <xref:System.Windows.Forms.ContainerControl> de classe para que os formulários, controles compostos nativos e controles de usuário recebam suporte de colocação em escala uniforme. Os novos membros <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> e <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> foram adicionados.
 

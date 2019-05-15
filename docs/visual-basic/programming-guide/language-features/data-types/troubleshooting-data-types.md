@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906952"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591104"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Solucionando problemas de tipos de dados (Visual Basic)
 Esta página lista alguns problemas comuns que podem ocorrer quando você executa operações em tipos de dados intrínseco.  
@@ -66,7 +66,7 @@ Esta página lista alguns problemas comuns que podem ocorrer quando você execut
  Observe que não é suficiente para declarar `decimalRemainder` como `Decimal`. Você também deve forçar os literais para `Decimal`, ou eles usam `Double` por padrão e `decimalRemainder` recebe o mesmo valor como `doubleRemainder`.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Tipo booliano não converte em tipo numérico com precisão  
- [Tipo de dados Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) valores não são armazenados como números e os valores armazenados não pretendem ser equivalentes aos números. Para compatibilidade com versões anteriores, o Visual Basic fornece as palavras-chave de conversão ([função CType](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`e assim por diante) para converter entre `Boolean` e tipos numéricos. No entanto, outras linguagens, às vezes, executam essas conversões de forma diferente, como faz o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos.  
+ [Tipo de dados Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) valores não são armazenados como números e os valores armazenados não pretendem ser equivalentes aos números. Para compatibilidade com versões anteriores, o Visual Basic fornece as palavras-chave de conversão ([função CType](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`e assim por diante) para converter entre `Boolean` e tipos numéricos. No entanto, outras linguagens, às vezes, executam essas conversões de maneira diferente, como fazem os métodos do .NET Framework.  
   
  Você nunca deve gravar códigos que contem com valores numéricos equivalentes para `True` e `False`. Sempre que possível, você deve restringir o uso de `Boolean` variáveis para os valores lógicos para que elas são criadas. Se você deve combinar `Boolean` e valores numéricos, certifique-se de que você entende o método de conversão que você selecionar.  
   
@@ -96,7 +96,7 @@ Esta página lista alguns problemas comuns que podem ocorrer quando você execut
 ## <a name="string-conversion-fails-at-run-time"></a>Conversão de cadeia de caracteres falhará em tempo de execução  
  O [tipo de dados de cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md) participa de poucas conversões ampliadoras. `String` amplia somente a mesmo e `Object`e só `Char` e `Char()` (uma `Char` array) se estendem ao `String`. Isso ocorre porque `String` variáveis e constantes podem conter valores que outros tipos de dados não podem conter.  
   
- Quando a verificação de tipo muda ([instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) é `On`, o compilador não permite todas as conversões de estreitamento implícitas. Isso inclui aquelas envolvendo `String`. O código ainda pode usar palavras-chave de conversão, como `CStr` e [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md), quais direta a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] a tentar a conversão.  
+ Quando a verificação de tipo muda ([instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) é `On`, o compilador não permite todas as conversões de estreitamento implícitas. Isso inclui aquelas envolvendo `String`. O código ainda pode usar palavras-chave de conversão, como `CStr` e [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md), que direcionam o .NET Framework para tentar a conversão.  
   
 > [!NOTE]
 >  O erro de conversão de estreitamento será suprimido para conversões de elementos em um `For Each…Next` coleção para a variável de controle de loop. Para obter mais informações e exemplos, consulte a seção "Conversões de estreitamento" [para cada um... Próxima instrução](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  

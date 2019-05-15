@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772015"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583415"
 ---
 # <a name="oracle-and-adonet"></a>Oracle e ADO.NET
 > [!NOTE]
 >  Os tipos em <xref:System.Data.OracleClient> são preteridos. Os tipos permanecem com suporte na versão atual do .NET Framework, mas serão removidos em uma versão futura. A Microsoft recomenda que você use um provedor Oracle de terceiros.  
   
- Esta seção descreve os recursos e os comportamentos que são específicos ao Provedor de Dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle.  
+ Esta seção descreve os recursos e comportamentos que são específicos para o .NET Framework Data Provider for Oracle.  
   
- O Provedor de Dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle fornece acesso a um banco de dados Oracle usando a interface OCI (Oracle Call Interface), fornecida pelo software cliente Oracle. A funcionalidade do provedor de dados foi projetada para ser semelhante do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedores de dados do SQL Server, OLE DB e ODBC.  
+ O provedor de dados do .NET Framework para Oracle fornece acesso a um banco de dados Oracle usando a Interface OCI (Oracle Call), conforme fornecido pelo software cliente Oracle. A funcionalidade do provedor de dados foi projetada para ser semelhante dos provedores de dados .NET Framework para SQL Server, OLE DB e ODBC.  
   
- Para usar o Provedor de Dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle, um aplicativo deve fazer referência ao namespace <xref:System.Data.OracleClient> como a seguir:  
+ Para usar o provedor de dados do .NET Framework para Oracle, um aplicativo deve fazer referência a <xref:System.Data.OracleClient> namespace da seguinte maneira:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Requisitos do sistema](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Descreve requisitos de uso do Provedor de Dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle, além de uma série de questões a serem consideradas ao usá-lo.  
+ Descreve os requisitos para usar o .NET Framework Data Provider for Oracle e descreve alguns dos problemas a serem consideradas ao usá-lo.  
   
  [Oracle BFILEs](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Descreve a classe <xref:System.Data.OracleClient.OracleBFile>, que é usada no trabalho com o tipo de dados Oracle BFILE.  

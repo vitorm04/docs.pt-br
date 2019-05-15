@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876857"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582725"
 ---
 # <a name="sql-clr-type-mismatches"></a>Incompatibilidade de SQL-CLR
 
@@ -39,7 +39,7 @@ Os seguintes tipos não têm correspondentes razoáveis.
   - **TimeSpan**. Este tipo representa a diferença entre dois valores de `DateTime` e não corresponde a `timestamp` SQL Server. CLR <xref:System.TimeSpan?displayProperty=nameWithType> também pode mapear ao SQL Server `TIME` o tipo em alguns casos. O tipo do SQL Server `TIME` foi pretendido representar somente valores positivos menos de 24 horas. CLR <xref:System.TimeSpan> tem um intervalo muito maior.
 
   > [!NOTE]
-  > Específicas do SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] tipos no <xref:System.Data.SqlTypes> não estão incluídos nessa comparação.
+  > Tipos do SQL Server específica do .NET Framework no <xref:System.Data.SqlTypes> não estão incluídos nessa comparação.
 
 - Incompatíveis no SQL Server:
 
@@ -167,7 +167,7 @@ Os operadores e funções que são essencialmente comparáveis têm a semântica
 
   - Uma conversão fraca a `AND` / `OR` pode causar erros inesperados se o C# expressão depende da avaliação o segundo operando sendo baseado no resultado da avaliação do primeiro operando.
 
-- a função de`Round()` tem a semântica diferente em [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] e em T-SQL.
+- `Round()` função tem semânticas diferentes no .NET Framework e no T-SQL.
 
 - Iniciar o índice para cadeias de caracteres é 0 em CLR mas 1 no SQL. Portanto, qualquer função que tem a conversão de índice das necessidades de índice.
 
@@ -194,7 +194,7 @@ Os operadores e funções que são essencialmente comparáveis têm a semântica
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- O SQL arredondamento executa aritmética simétrico quando usar [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] de arredondamento bancário. Consulte o artigo 196652 da knowledgebase para obter detalhes adicionais.
+- SQL executa o arredondamento aritmético simétrico enquanto o .NET Framework usa arredondamento bancário. Consulte o artigo 196652 da knowledgebase para obter detalhes adicionais.
 
 - Por padrão, para localidades comuns, as comparações de cadeia de caracteres não diferenciam maiúsculas de minúsculas no SQL. No Visual Basic e C#, diferenciam maiúsculas de minúsculas. Por exemplo, `s == "Food"` (`s = "Food"` no Visual Basic) e `s == "Food"` pode produzir resultados diferentes se `s` é `food`.
 

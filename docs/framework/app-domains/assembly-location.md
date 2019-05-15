@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c638531bd54f14c7e4b04a093deaec729db404ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c736b4fe2a4bc38d4345413fa00d4cf7e5a80be7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129630"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607733"
 ---
 # <a name="assembly-location"></a>Local de um assembly
 O local de um assembly determina se o Common Language Runtime pode localizá-lo quando referenciado, bem como pode determinar se o assembly pode ser compartilhado com outros assemblies. Você pode implantar um assembly nos seguintes locais:  
   
--   No diretório ou subdiretórios do aplicativo.  
+- No diretório ou subdiretórios do aplicativo.  
   
      Esse é o local mais comum para implantar um assembly. Os subdiretórios do diretório raiz de um aplicativo podem ser baseados na linguagem ou cultura. Se um assembly tiver informações no atributo de cultura, ele deverá estar em um subdiretório no diretório do aplicativo com o nome dessa cultura.  
   
--   O cache de assembly global.  
+- O cache de assembly global.  
   
      Esse é um cache de código da máquina toda que é instalado sempre que o Common Language Runtime é instalado. Na maioria das vezes, se você pretende compartilhar um assembly com vários aplicativos, é preciso implantá-lo no cache de assembly global.  
   
--   Em um servidor HTTP.  
+- Em um servidor HTTP.  
   
      Um assembly implantado em um servidor HTTP deve ter um nome forte; você aponta para o assembly na seção de base de código do arquivo de configuração de aplicativo.  
   

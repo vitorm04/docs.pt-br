@@ -2,12 +2,12 @@
 title: Refatoração em funções puras (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497125"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596892"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refatoração em funções puras (C#)
 
@@ -18,9 +18,9 @@ Um aspecto importante de transformações e puras é aprender como o código do 
   
  Conforme observado anteriormente nesta seção, uma função pura tem duas características úteis:  
   
--   Não tem efeito colateral. A função não altera quaisquer variáveis ou os dados de qualquer tipo fora da função.  
+- Não tem efeito colateral. A função não altera quaisquer variáveis ou os dados de qualquer tipo fora da função.  
   
--   É consistente. Dado o mesmo conjunto de dados de entrada, sempre retornará o mesmo valor de saída.  
+- É consistente. Dado o mesmo conjunto de dados de entrada, sempre retornará o mesmo valor de saída.  
   
  Uma maneira de fazer a transição para programação funcional é o código existente do refatorar para eliminar efeitos colaterais desnecessários e dependências externas. Dessa maneira, você pode criar versões puras de função do código existente.  
   

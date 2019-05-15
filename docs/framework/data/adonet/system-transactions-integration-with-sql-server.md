@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033365"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583509"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integração de System.Transactions com o SQL Server
-O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versão 2.0 introduziu uma estrutura de transação que pode ser acessada por meio de <xref:System.Transactions> namespace. Essa estrutura expõe transações de forma que está totalmente integrada a [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], incluindo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+O .NET Framework versão 2.0 introduziu uma estrutura de transação que pode ser acessada por meio de <xref:System.Transactions> namespace. Essa estrutura expõe transações de forma que é totalmente integrado no .NET Framework, incluindo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Além de aprimoramentos de programabilidade <xref:System.Transactions> e [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] podem trabalhar juntos para coordenar as otimizações, quando você trabalha com transações. Uma transação passível de promoção é uma transação leve (local) que pode ser elevada automaticamente a uma transação totalmente distribuída em uma base conforme necessário.  
   
  Começando com [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> dá suporte a transações passíveis de promoção ao trabalhar com o SQL Server. Uma transação passível de promoção não chama a sobrecarga adicional de uma transação distribuída a menos que a sobrecarga adicional seja necessária. Transações passíveis de promoção são automáticas e não exigem intervenção do desenvolvedor.  
   
- Transações passíveis de promoção só estão disponíveis quando você usa o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider para SQL Server (`SqlClient`) com o SQL Server.  
+ Transações passíveis de promoção só estão disponíveis quando você usa o .NET Framework Data Provider para SQL Server (`SqlClient`) com o SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Criando transações passíveis de promoção  
- O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider para SQL Server fornece suporte para transações passíveis de promoção, que são manipuladas pelas classes na [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> namespace. Transações passíveis de promoção otimizam transações distribuídas, adiando a criação de uma transação distribuída até que ele seja necessário. Se houver apenas um Gerenciador de recursos necessário, nenhuma transação distribuída ocorre.  
+ O provedor do .NET Framework para SQL Server fornece suporte para transações passíveis de promoção, que são tratadas por meio das classes no .NET Framework <xref:System.Transactions> namespace. Transações passíveis de promoção otimizam transações distribuídas, adiando a criação de uma transação distribuída até que ele seja necessário. Se houver apenas um Gerenciador de recursos necessário, nenhuma transação distribuída ocorre.  
   
 > [!NOTE]
 >  Em um cenário parcialmente confiável, o <xref:System.Transactions.DistributedTransactionPermission> é necessário quando uma transação é promovida a uma transação distribuída.  
