@@ -2,12 +2,12 @@
 title: 'Como: Consultar sentenças que contenham um conjunto especificado de palavras (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 9e48d44a1cd27b63d4bb5e34eb1e554a7b4a19b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a88171d86ad820870ee72d224415d96931066abe
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756657"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593291"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Como: Consultar sentenças que contenham um conjunto especificado de palavras (LINQ) (Visual Basic)
 Este exemplo mostra como localizar frases em um arquivo de texto que contenham correspondências para cada conjunto de palavras especificado. Embora a matriz de termos de pesquisa esteja embutida em código neste exemplo, ela também poderia ser populada dinamicamente em tempo de execução. Neste exemplo, a consulta retorna as frases que contêm as palavras "Historically", "data" e "integrated".  
@@ -63,7 +63,7 @@ End Class
  Na chamada para <xref:System.String.Split%2A>, as marcas de pontuação são usadas como separadores para removê-las da cadeia de caracteres. Se não fizer isso, por exemplo, você poderia ter uma cadeia de caracteres "Historically" que não corresponderia a "Historically" na matriz `wordsToMatch`. Talvez você precise usar separadores adicionais, dependendo dos tipos de pontuação encontrados no texto de origem.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior com uma referência a System.Core.dll e uma instrução `Imports` para o namespace System.Linq.  
+Criar um projeto de aplicativo do console do VB.NET, com um `Imports` instrução para o namespace System. Linq.
   
 ## <a name="see-also"></a>Consulte também
 

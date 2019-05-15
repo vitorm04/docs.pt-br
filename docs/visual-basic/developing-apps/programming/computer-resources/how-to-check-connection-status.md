@@ -7,12 +7,12 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: fd618852c2d0650f168edf8dac53931216fc3a9b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1a03b181c2e363c3380c4f9858b629713641f2c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826256"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620681"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>Como: Verificar o status da conexão no Visual Basic
 A propriedade <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> pode ser usada para determinar se o computador tem uma rede ou conexão de Internet em funcionamento.  
@@ -21,7 +21,7 @@ A propriedade <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> pode ser 
   
 ### <a name="to-check-whether-a-computer-has-a-working-connection"></a>Para verificar se um computador tem uma conexão em funcionamento  
   
--   Determine se a propriedade `IsAvailable` é `True` ou `False`. O código a seguir verifica e informa o status da propriedade:  
+- Determine se a propriedade `IsAvailable` é `True` ou `False`. O código a seguir verifica e informa o status da propriedade:  
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   

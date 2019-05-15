@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329512"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591521"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizador do Log de Associações de Assembly)
 O Visualizador de Log de Associação do Assembly exibe detalhes das associações de assembly. Essas informações ajudam a diagnosticar por que o .NET Framework não pode localizar um assembly no tempo de execução. Essas falhas normalmente são o resultado de um assembly implantado no local incorreto, de uma imagem nativa que não é mais válida ou de uma incompatibilidade em números de versão ou culturas. A falha no Common Language Runtime em localizar um assembly costuma aparecer como um <xref:System.TypeLoadException> em seu aplicativo.  
@@ -51,17 +51,17 @@ fuslogvw
   
      A ferramenta exibe os seguintes detalhes sobre a falha de associação selecionada:  
   
-    -   Um motivo específico para a falha na associação como, por exemplo, "arquivo não encontrado" ou "incompatibilidade versão".  
+    - Um motivo específico para a falha na associação como, por exemplo, "arquivo não encontrado" ou "incompatibilidade versão".  
   
-    -   Informações sobre o aplicativo que iniciou a associação, incluindo seu nome, o diretório raiz do aplicativo (AppBase) e uma descrição do caminho de pesquisa privado, se houver uma.  
+    - Informações sobre o aplicativo que iniciou a associação, incluindo seu nome, o diretório raiz do aplicativo (AppBase) e uma descrição do caminho de pesquisa privado, se houver uma.  
   
-    -   A identidade do assembly que a ferramenta está procurando.  
+    - A identidade do assembly que a ferramenta está procurando.  
   
-    -   Uma descrição de qualquer política da versão Aplicativo, Editor ou Administrador aplicada.  
+    - Uma descrição de qualquer política da versão Aplicativo, Editor ou Administrador aplicada.  
   
-    -   Se o assembly estava ou não no [cache de assembly global](../../../docs/framework/app-domains/gac.md).  
+    - Se o assembly estava ou não no [cache de assembly global](../../../docs/framework/app-domains/gac.md).  
   
-    -   Uma lista de todas as URLs de sondagem.  
+    - Uma lista de todas as URLs de sondagem.  
   
  A entrada do log de exemplo a seguir mostra informações detalhadas sobre uma associação do assembly com falha.  
   
@@ -105,26 +105,26 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Para excluir todas as entradas do log  
   
--   Clique no botão **Excluir Tudo**.  
+- Clique no botão **Excluir Tudo**.  
   
 ### <a name="to-refresh-the-user-interface"></a>Para atualizar a interface do usuário  
   
--   Clique no botão **Atualizar**. O visualizador não detecta automaticamente novas entradas de log durante a execução. Você deve usar o botão **Atualizar** para exibi-las.  
+- Clique no botão **Atualizar**. O visualizador não detecta automaticamente novas entradas de log durante a execução. Você deve usar o botão **Atualizar** para exibi-las.  
   
 ### <a name="to-change-the-log-settings"></a>Para alterar as configurações de log.  
   
--   Clique no botão **Configurações** para abrir a caixa de diálogo **Configurações de Log**.  
+- Clique no botão **Configurações** para abrir a caixa de diálogo **Configurações de Log**.  
   
 ### <a name="to-view-the-about-dialog"></a>Para exibir a caixa de diálogo Sobre  
   
--   Clique no botão **Sobre**.  
+- Clique no botão **Sobre**.  
   
 ## <a name="binding-logs-for-native-images"></a>Associando Logs para Imagens Nativas  
  Por padrão, Fuslogvw.exe registra em log solicitações de associação normais. Também é possível registrar em log associações de assembly para imagens nativas criadas usando o [Ngen.exe (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>Para registrar em log associações de assembly para imagens nativas  
   
--   No grupo **Categorias de Log**, selecione o botão de opção **Imagens Nativas**.  
+- No grupo **Categorias de Log**, selecione o botão de opção **Imagens Nativas**.  
   
  O log a seguir mostra uma falha causada por uma dependência que não existia quando a imagem nativa foi criada para o aplicativo. Se as dependências no tempo de execução forem diferentes das dependências durante a execução de Ngen.exe, a associação a uma imagem nativa não será permitida.  
   
@@ -185,23 +185,23 @@ Discarding native image.
   
 #### <a name="to-disable-logging"></a>Para desabilitar o registro em log  
   
--   Selecione o botão de opção **Log desabilitado**.  Essa opção não permanece selecionada por padrão.  
+- Selecione o botão de opção **Log desabilitado**.  Essa opção não permanece selecionada por padrão.  
   
 #### <a name="to-log-assembly-binds-in-exceptions"></a>Para registrar em log associações de assembly em exceções  
   
--   Selecione o botão de opção **Registrar em log o texto de exceção**. Apenas as informações de log da fusão menos detalhadas são registradas em log em texto de exceção. Para exibir informações completas, use uma das outras configurações.  
+- Selecione o botão de opção **Registrar em log o texto de exceção**. Apenas as informações de log da fusão menos detalhadas são registradas em log em texto de exceção. Para exibir informações completas, use uma das outras configurações.  
   
      Consulte a observação Importante a respeito de assemblies carregados como tendo domínio neutro.  
   
 #### <a name="to-log-assembly-bind-failures"></a>Para registrar em log falhas na associação do assembly  
   
--   Selecione o botão de opção **Registrar falhas na associação em disco**.  
+- Selecione o botão de opção **Registrar falhas na associação em disco**.  
   
      Consulte a observação Importante a respeito de assemblies carregados como tendo domínio neutro.  
   
 #### <a name="to-log-all-assembly-binds"></a>Para registrar em log todas as associações de assembly  
   
--   Selecione o botão de opção **Registrar todas as associações em disco**.  
+- Selecione o botão de opção **Registrar todas as associações em disco**.  
   
      Consulte a observação Importante a respeito de assemblies carregados como tendo domínio neutro.  
   

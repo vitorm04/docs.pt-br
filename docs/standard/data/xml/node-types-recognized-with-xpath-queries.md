@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19aeab232f366818291bd682ab9c063a75be6687
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa004f0def04c7efe2ba7450050a899760b0bbcd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724493"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590200"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>Tipos de nós reconhecidos com consultas XPath
 Os tipos de nós reconhecidas em uma consulta XPath não são os mesmos tipos de nós localizados em Document Object Model (DOM).  
@@ -18,25 +18,25 @@ Os tipos de nós reconhecidas em uma consulta XPath não são os mesmos tipos de
 ## <a name="w3c-xpath-node-types"></a>Tipos de nós XPath W3C  
  Os tipos de nós reconhecidas em uma consulta XPath não são tipos de nós localizados em Document Object Model (DOM). A seguir estão os tipos de nós XPath representados pela enumeração de <xref:System.Xml.XPath.XPathNodeType> .  
   
--   <xref:System.Xml.XPath.XPathNodeType.All>  
+- <xref:System.Xml.XPath.XPathNodeType.All>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Attribute>  
+- <xref:System.Xml.XPath.XPathNodeType.Attribute>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Comment>  
+- <xref:System.Xml.XPath.XPathNodeType.Comment>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Element>  
+- <xref:System.Xml.XPath.XPathNodeType.Element>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Namespace>  
+- <xref:System.Xml.XPath.XPathNodeType.Namespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>  
+- <xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Root>  
+- <xref:System.Xml.XPath.XPathNodeType.Root>  
   
--   <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>  
+- <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Text>  
+- <xref:System.Xml.XPath.XPathNodeType.Text>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
+- <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
   
  Esses tipos de nós são baseados no modelo de dados XPath, onde os nós são derivados do conjunto de informações XML. Os tipos de nós de <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> e de <xref:System.Xml.XPath.XPathNodeType.Whitespace> são extensões do Microsoft .NET Framework para tipos de nós de base descritos no modelo de dados XPath.  
   

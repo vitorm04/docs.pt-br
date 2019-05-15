@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4d1d5602ff224c1c8f3e0948fc93c9200b9661e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8e2b6ca8ef04ad6ff637a59f03f3b4cf04cb06ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189070"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615359"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator Envio- de validação
 A classe de <xref:System.Xml.Schema.XmlSchemaValidator> fornece um mecanismo eficiente, de alto desempenho validar dados XML com esquemas XML de uma maneira envio- base. Por exemplo, a classe de <xref:System.Xml.Schema.XmlSchemaValidator> permite que você valide um infoset XML no local sem ter que para serializá-lo como um documento XML e então um nova análise o documento usando um leitor validando XML.  
@@ -76,9 +76,9 @@ A classe de <xref:System.Xml.Schema.XmlSchemaValidator> fornece um mecanismo efi
 ### <a name="initializing-validation"></a>Inicializando a validação  
  Depois que um objeto de <xref:System.Xml.Schema.XmlSchemaValidator> foi construído, há dois métodos sobrecarregados de <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> usados para inicializar o estado do objeto de <xref:System.Xml.Schema.XmlSchemaValidator> . Estes são os dois métodos de <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> .  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
   
  O método de <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> de opção inicializa um objeto de <xref:System.Xml.Schema.XmlSchemaValidator> ao seu estado inicial, e o método sobrecarregado de <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> que leva <xref:System.Xml.Schema.XmlSchemaObject> como um parâmetro inicializa um objeto de <xref:System.Xml.Schema.XmlSchemaValidator> ao seu estado inicial para a validação parcial.  
   
@@ -171,11 +171,11 @@ validator.ValidateEndElement(null);
   
  Os seguintes métodos da classe <xref:System.Xml.Schema.XmlSchemaValidator> aceitam <xref:System.Xml.Schema.XmlValueGetter>`delegate` como um parâmetro.  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>  
   
  A seguir está um exemplo <xref:System.Xml.Schema.XmlValueGetter>`delegate` extraído do exemplo de classe de <xref:System.Xml.Schema.XmlSchemaValidator> na introdução. <xref:System.Xml.Schema.XmlValueGetter>`delegate` retorna o valor de um atributo como um objeto de <xref:System.DateTime> . Para validar este objeto de <xref:System.DateTime> retornado por <xref:System.Xml.Schema.XmlValueGetter>, converte o objeto de <xref:System.Xml.Schema.XmlSchemaValidator> ele para o primeiro ValueType (ValueType é CLR padrão que mapeia para o tipo XSD) para o tipo de dados de atributo e então verifica facetas o valor convertido.  
   
@@ -216,21 +216,21 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
   
  Os seguintes métodos da classe <xref:System.Xml.Schema.XmlSchemaValidator> aceitar um objeto de <xref:System.Xml.Schema.XmlSchemaInfo> como um parâmetro de saída.  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>  
   
  Para um exemplo completo da classe de <xref:System.Xml.Schema.XmlSchemaInfo> , consulte o exemplo na introdução. Para obter mais informações sobre a classe de <xref:System.Xml.Schema.XmlSchemaInfo> , consulte a documentação de referência da classe <xref:System.Xml.Schema.XmlSchemaInfo> .  
   

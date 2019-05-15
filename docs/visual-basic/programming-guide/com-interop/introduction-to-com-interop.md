@@ -5,28 +5,28 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 1eebdf4bee09f2a568092f275b57416c3def9ebc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5eb862d75f8870da40af4cd817fa32a3d2781f38
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624825"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592727"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introdução à interoperabilidade COM (Visual Basic)
 O modelo de objeto de componente (COM) permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Embora os objetos COM tenham sido fundamentais para o Windows por muitos anos de programação, os aplicativos projetados para o common language runtime (CLR) oferecem várias vantagens.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicativos eventualmente substituirão aqueles desenvolvidos com. Até lá, talvez você precise usar ou criar objetos COM usando o Visual Studio. Interoperabilidade com, ou *interoperabilidade*, permite que você use objetos COM existentes ao fazer a transição para o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] em seu próprio ritmo.  
+ Aplicativos do .NET framework eventualmente substituirão aqueles desenvolvidos com. Até lá, talvez você precise usar ou criar objetos COM usando o Visual Studio. Interoperabilidade com, ou *interoperabilidade COM*, permite que você use objetos COM existentes ao fazer a transição para o .NET Framework em seu próprio ritmo.  
   
- Usando o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para criar componentes COM, você pode usar a interoperabilidade COM sem registro. Isso lhe permite controlar qual versão DLL é ativada quando mais de uma versão é instalada em um computador e permite que os usuários finais usar XCOPY ou FTP para copiar seu aplicativo para um diretório apropriado no computador onde ele pode ser executado. Para obter mais informações, consulte [interoperabilidade COM sem registro](../../../framework/interop/registration-free-com-interop.md).  
+ Usando o .NET Framework para criar componentes COM, você pode usar a interoperabilidade COM sem registro. Isso lhe permite controlar qual versão DLL é ativada quando mais de uma versão é instalada em um computador e permite que os usuários finais usar XCOPY ou FTP para copiar seu aplicativo para um diretório apropriado no computador onde ele pode ser executado. Para obter mais informações, consulte [interoperabilidade COM sem registro](../../../framework/interop/registration-free-com-interop.md).  
   
 ## <a name="managed-code-and-data"></a>O código gerenciado e dados  
- O código desenvolvido para o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] é chamado de *código gerenciado*e contém metadados que é usado pelo CLR. Dados usados pelo [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicativos é chamado *dados gerenciados* porque o tempo de execução gerencia tarefas relacionadas a dados, como alocar e recuperar memória e executar verificação de tipo. Por padrão, o Visual Basic .NET usa código gerenciado e dados, mas você pode acessar o código não gerenciado e os dados de objetos COM usando assemblies de interoperabilidade (descritos posteriormente nesta página).  
+ O código desenvolvido para o .NET Framework é chamado de *código gerenciado*e contém metadados que é usado pelo CLR. Dados usados por aplicativos do .NET Framework são chamados *dados gerenciados* porque o tempo de execução gerencia tarefas relacionadas a dados, como alocar e recuperar memória e executar verificação de tipo. Por padrão, o Visual Basic .NET usa código gerenciado e dados, mas você pode acessar o código não gerenciado e os dados de objetos COM usando assemblies de interoperabilidade (descritos posteriormente nesta página).  
   
 ## <a name="assemblies"></a>Assemblies  
- Um assembly é o principal bloco de construção de um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicativo. É uma coleção de funcionalidade que é criado, com controle de versão e implantados como uma unidade única implementação que contém um ou mais arquivos. Cada assembly contém um manifesto do assembly.  
+ Um assembly é o principal bloco de construção de um aplicativo .NET Framework. É uma coleção de funcionalidade que é criado, com controle de versão e implantados como uma unidade única implementação que contém um ou mais arquivos. Cada assembly contém um manifesto do assembly.  
   
 ## <a name="type-libraries-and-assembly-manifests"></a>Bibliotecas de tipos de manifestos de Assembly  
- Bibliotecas de tipo descrevem as características de objetos COM, como nomes de membros e tipos de dados. Manifestos de assembly executam a mesma função para [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicativos. Eles incluem informações sobre o seguinte:  
+ Bibliotecas de tipo descrevem as características de objetos COM, como nomes de membros e tipos de dados. Manifestos de assembly executam a mesma função para aplicativos .NET Framework. Eles incluem informações sobre o seguinte:  
   
 - Identidade do assembly, versão, cultura e assinatura digital.  
   
@@ -41,15 +41,15 @@ O modelo de objeto de componente (COM) permite que um objeto exponha sua funcion
  Para obter mais informações sobre assemblies de manifestos de assembly, consulte [Assemblies no .NET](../../../standard/assembly/index.md).  
   
 ### <a name="importing-and-exporting-type-libraries"></a>Importando e exportando as bibliotecas de tipos  
- O Visual Studio contém um utilitário, Tlbimp, que lhe permite importar informações de uma biblioteca de tipos em um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicativo. Você pode gerar bibliotecas de tipos de assemblies usando o utilitário Tlbexp.  
+ O Visual Studio contém um utilitário, Tlbimp, que lhe permite importar informações de uma biblioteca de tipos para um aplicativo .NET Framework. Você pode gerar bibliotecas de tipos de assemblies usando o utilitário Tlbexp.  
   
  Para obter informações sobre como Tlbimp e Tlbexp, consulte [Tlbimp.exe (importador da biblioteca)](../../../framework/tools/tlbimp-exe-type-library-importer.md) e [Tlbexp.exe (exportador da biblioteca)](../../../framework/tools/tlbexp-exe-type-library-exporter.md).  
   
 ## <a name="interop-assemblies"></a>Assemblies de interoperabilidade  
- Assemblies de interoperabilidade são [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies que a ponte entre gerenciados e de código, membros de objeto COM mapeamento equivalente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] gerenciados membros. Assemblies de interoperabilidade criados pelo Visual Basic .NET lidar com muitos dos detalhes de como trabalhar com objetos COM, como o marshaling de interoperabilidade.  
+ Assemblies de interoperabilidade são assemblies do .NET Framework que a ponte entre gerenciado e código não gerenciado, mapeando os membros do objeto COM para equivalentes do .NET Framework gerenciados membros. Assemblies de interoperabilidade criados pelo Visual Basic .NET lidar com muitos dos detalhes de como trabalhar com objetos COM, como o marshaling de interoperabilidade.  
   
 ## <a name="interoperability-marshaling"></a>Marshaling de interoperabilidade  
- Todos os [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicativos compartilham um conjunto de tipos comuns que permitem a interoperabilidade de objetos, independentemente da linguagem de programação que é usado. Os parâmetros e valores de retorno de objetos COM, às vezes, use tipos de dados que diferem daqueles usados no código gerenciado. *Marshaling de interoperabilidade* é o processo de compactação parâmetros e valores de retorno em tipos de dados equivalentes quando eles passam para e de objetos COM. Para obter mais informações, consulte [Marshaling de interoperabilidade](../../../framework/interop/interop-marshaling.md).  
+ Todos os aplicativos do .NET Framework compartilham um conjunto de tipos comuns que permitem a interoperabilidade de objetos, independentemente da linguagem de programação que é usado. Os parâmetros e valores de retorno de objetos COM, às vezes, use tipos de dados que diferem daqueles usados no código gerenciado. *Marshaling de interoperabilidade* é o processo de compactação parâmetros e valores de retorno em tipos de dados equivalentes quando eles passam para e de objetos COM. Para obter mais informações, consulte [Marshaling de interoperabilidade](../../../framework/interop/interop-marshaling.md).  
   
 ## <a name="see-also"></a>Consulte também
 

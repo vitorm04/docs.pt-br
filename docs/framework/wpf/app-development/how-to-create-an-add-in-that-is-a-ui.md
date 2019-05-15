@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625365"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592655"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Como: Criar um suplemento que seja uma interface do usuário
 Este exemplo mostra como criar um suplemento que é um Windows Presentation Foundation (WPF) que é hospedado por um aplicativo autônomo do WPF.  
@@ -81,7 +81,7 @@ Este exemplo mostra como criar um suplemento que é um Windows Presentation Foun
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Implementando o aplicativo host  
- Com o adaptador do lado do host e o modo de host criados, o aplicativo host pode usar o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelo de suplemento para abrir o pipeline e adquirir um modo de host do suplemento. Essas etapas são mostradas no código a seguir.  
+ Com o adaptador do lado do host e o modo de host criados, o aplicativo host pode usar o modelo de suplemento do .NET Framework para abrir o pipeline e adquirir um modo de host do suplemento. Essas etapas são mostradas no código a seguir.  
 
  O aplicativo host usa o código de modelo de suplemento do .NET Framework típico para ativar o suplemento, que implicitamente retorna o modo de exibição de host para o aplicativo host. O aplicativo host posteriormente mostra a exibição de host (que é um <xref:System.Windows.Controls.UserControl>) de um <xref:System.Windows.Controls.Grid>.  
   

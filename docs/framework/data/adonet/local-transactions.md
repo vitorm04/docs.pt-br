@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1897116389aaa1b4c953612364c7302e9ca2f35a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878508"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584461"
 ---
 # <a name="local-transactions"></a>Transações locais
 As transações no [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] são usadas quando o usuário deseja associar várias tarefas para que possam ser executadas como uma unidade de trabalho. Por exemplo, imagine que um aplicativo executa duas tarefas. Primeiro, ele atualiza uma tabela com informações sobre pedidos. Em seguida, ele atualiza uma tabela que contém informações de inventário, debitando os itens pedidos. Se qualquer tarefa falhar, em seguida, as duas atualizações serão revertidas.  
@@ -18,7 +18,7 @@ As transações no [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sã
 ## <a name="determining-the-transaction-type"></a>Determinando o tipo de transação  
  Uma transação é considerada uma transação local quando é monofásica e é tratada diretamente pelo banco de dados. Uma transação é considerada uma transação distribuída quando ele é coordenado por um monitor de transação e usa mecanismos à prova de falhas (como confirmação de duas fases) para a resolução de transação.  
   
- Cada provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tem seu próprio objeto `Transaction` para executar transações locais. Se você precisar executar uma transação em um banco de dados do SQL Server, selecione uma transação <xref:System.Data.SqlClient>. Para uma transação Oracle, use o provedor <xref:System.Data.OracleClient>. Além disso, há um <xref:System.Data.Common.DbTransaction> classe que está disponível para escrever código independente de provedor que exige transações.  
+ Cada um dos provedores de dados .NET Framework tem seu próprio `Transaction` objeto para executar transações locais. Se você precisar executar uma transação em um banco de dados do SQL Server, selecione uma transação <xref:System.Data.SqlClient>. Para uma transação Oracle, use o provedor <xref:System.Data.OracleClient>. Além disso, há um <xref:System.Data.Common.DbTransaction> classe que está disponível para escrever código independente de provedor que exige transações.  
   
 > [!NOTE]
 > As transações são mais eficientes quando elas forem executadas no servidor. Se você estiver trabalhando com um banco de dados do SQL Server que faz uso extensivo de transações explícitas, considere criá-las como procedimentos armazenados usando a instrução Transact-SQL BEGIN TRANSACTION.

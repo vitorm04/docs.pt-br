@@ -2,12 +2,12 @@
 title: 'Como: Criar e usar Assemblies usando a linha de comando (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: d58109dfbb03b752f4a46f895fa1093e4f37df71
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a30d4b3ea203a8b4d3ba621fc7b0310477ddf10d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624776"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592689"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Como: Criar e usar Assemblies usando a linha de comando (Visual Basic)
 Um assembly ou uma DLL (biblioteca de vínculo dinâmico), está vinculada ao seu programa em tempo de execução. Para demonstrar a compilação e uso de uma DLL, considere o seguinte cenário:  
@@ -97,25 +97,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
  Para executar o programa, digite o nome do arquivo EXE, seguido de dois números, da seguinte maneira:  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>Compilando o código  
- Para criar o arquivo `MathLibrary.DLL`, compile os arquivos `Add` e `Mult` usando a seguinte linha de comando.  
-  
-```console  
-vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
-```  
-  
- O [-target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) opção de compilador informa ao compilador para gerar uma DLL em vez de um arquivo EXE. O [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) opção de compilador seguida por um nome de arquivo é usada para especificar o nome do arquivo DLL. Caso contrário, o compilador usará o primeiro arquivo (`Add.vb`) como o nome da DLL.  
-  
- Para compilar o arquivo executável `TestCode.exe`, use a seguinte linha de comando:  
-  
-```console  
-vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
-```  
-  
- O **-out** opção de compilador informa ao compilador para gerar um arquivo EXE e especifica o nome do arquivo de saída (`TestCode.exe`). Essa opção do compilador é opcional. O [-referência (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opção do compilador Especifica o arquivo DLL ou os arquivos que esse programa usa.  
-  
- Para obter mais informações sobre a compilação da linha de comando, consulte e [compilando da linha de comando](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Consulte também
 

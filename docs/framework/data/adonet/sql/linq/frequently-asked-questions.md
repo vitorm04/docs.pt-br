@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657053"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583507"
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 As seções a seguir respondem a alguns problemas comuns que você pode encontrar ao implementar o [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -168,7 +168,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="aptca"></a>APTCA  
  P. O System.Data.Linq está marcado para ser usado pelo código parcialmente confiável?  
   
- R. Sim, o conjunto System.Data.Linq.dll está entre os assemblies do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] marcados com o atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Sem esta marcação, os assemblies no [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] são destinados para o uso somente pelo código totalmente confiável.  
+ R. Sim, o assembly System está entre os assemblies do .NET Framework marcados com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo. Sem esta marcação, assemblies do .NET Framework se destinam ao uso somente pelo código totalmente confiável.  
   
  O principal cenário no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para permitir que parcialmente confiável é permitir que os chamadores a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly para ser acessado de aplicativos da Web, em que o *confiança* configuração é médio.  
   

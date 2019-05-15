@@ -2,12 +2,12 @@
 title: Criando atividades assíncrono em WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 5d8659ee57f9bb576cd7066652a294717811432f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b990631d6efdb4644274c8a4606af07495b1979c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945880"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592967"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Criando atividades assíncrono em WF
 fornece<xref:System.Activities.AsyncCodeActivity> autores de atividade de uma classe base para usar que permite atividades derivados para implementar a lógica assíncrona de execução. Isso é útil para as atividades personalizados que devem realizar o trabalho assíncrona sem armazenar o segmento de agendador de fluxo de trabalho e bloquear quaisquer atividades que podem ser capaz executar paralelamente. Este tópico fornece uma visão geral sobre como criar atividades assíncronos personalizados usando <xref:System.Activities.AsyncCodeActivity>.  
@@ -31,7 +31,7 @@ fornece<xref:System.Activities.AsyncCodeActivity> autores de atividade de uma cl
  [!code-csharp[CFX_ActivityExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>Chamando métodos assíncronos em uma classe  
- Muitas das classes em [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornecem a funcionalidade assíncrono, e essa funcionalidade pode de forma assíncrona ser chamada usando uma atividade com base <xref:System.Activities.AsyncCodeActivity> . No exemplo a seguir, uma atividade é criada que cria de maneira assíncrona um arquivo usando o <xref:System.IO.FileStream> classe.  
+ Muitas das classes no .NET Framework fornecem funcionalidade assíncrona, e essa funcionalidade pode ser invocada de forma assíncrona usando um <xref:System.Activities.AsyncCodeActivity> com base em atividade. No exemplo a seguir, uma atividade é criada que cria de maneira assíncrona um arquivo usando o <xref:System.IO.FileStream> classe.  
   
  [!code-csharp[CFX_ActivityExample#12](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   

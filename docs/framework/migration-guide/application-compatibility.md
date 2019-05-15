@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176248"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623785"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidade de aplicativos no .NET Framework
 
@@ -42,11 +42,11 @@ O Diagnóstico de Compatibilidade do .NET são analisadores capacitados pelo Ros
 
 Cada problema inclui as seguintes informações:
 
--   A descrição do que mudou em relação a uma versão anterior.
+- A descrição do que mudou em relação a uma versão anterior.
 
--   Como a alteração afeta os clientes e se alguma solução alternativa está disponível para preservar a compatibilidade entre versões.
+- Como a alteração afeta os clientes e se alguma solução alternativa está disponível para preservar a compatibilidade entre versões.
 
--   Uma avaliação da importância da alteração. O problema de compatibilidade de aplicativos é categorizado como se segue:
+- Uma avaliação da importância da alteração. O problema de compatibilidade de aplicativos é categorizado como se segue:
 
     |   |   |
     |---|---|
@@ -55,18 +55,18 @@ Cada problema inclui as seguintes informações:
     |Caso de borda|Uma alteração que afeta aplicativos em cenários muito específicos que não são comuns.|
     |Transparente|Uma alteração que não afeta visivelmente o desenvolvedor nem o usuário do aplicativo.|
 
--   A versão indica quando a alteração aparece pela primeira vez na estrutura. Algumas alterações são introduzidas em uma versão específica e revertidas em uma versão posterior; isso também é indicado.
+- A versão indica quando a alteração aparece pela primeira vez na estrutura. Algumas alterações são introduzidas em uma versão específica e revertidas em uma versão posterior; isso também é indicado.
 
--   O tipo de alteração:
+- O tipo de alteração:
 
     |   |   |
     |---|---|
     |Redirecionando|A alteração afeta aplicativos que são recompilados para uma nova versão do .NET Framework.|
     |Tempo de execução|A alteração afeta um aplicativo existente que se destina a uma versão anterior do .NET Framework, mas é executado em uma versão posterior.|
 
--   As APIs afetadas, se houver.
+- As APIs afetadas, se houver.
 
--   As IDs do diagnóstico disponível
+- As IDs do diagnóstico disponível
 
 ## <a name="usage"></a>Uso
 Para começar, selecione o tipo de alteração de compatibilidade abaixo:

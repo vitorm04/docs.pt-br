@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342331"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613972"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Como o tempo de execução localiza assemblies
 Para implantar seu aplicativo .NET Framework com êxito, você deve entender como o Common Language Runtime localiza e associa aos assemblies que compõem seu aplicativo. Por padrão, o tempo de execução tenta associar com a versão exata de um assembly com o qual o aplicativo foi criado. Esse comportamento padrão pode ser substituído pelas configurações do arquivo de configuração.  
@@ -51,11 +51,11 @@ Para implantar seu aplicativo .NET Framework com êxito, você deve entender com
   
 4. [Investiga o assembly](#step4) usando as seguintes etapas:  
   
-    1.  Se a política do publicador e a configuração não afetam a referência original e se a solicitação de associação foi criada usando o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, o tempo de execução procura dicas de localização.  
+    1. Se a política do publicador e a configuração não afetam a referência original e se a solicitação de associação foi criada usando o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, o tempo de execução procura dicas de localização.  
   
-    2.  Se uma base de código for encontrada nos arquivos de configuração, o tempo de execução verificará apenas esse local. Se essa investigação falhar, o tempo de execução determinará que a solicitação de associação falhou e não ocorrem outras investigações.  
+    2. Se uma base de código for encontrada nos arquivos de configuração, o tempo de execução verificará apenas esse local. Se essa investigação falhar, o tempo de execução determinará que a solicitação de associação falhou e não ocorrem outras investigações.  
   
-    3.  Investiga o assembly usando a heurística descrita na [seção de investigação](#step4). Se o assembly não for encontrado após a investigação, o tempo de execução solicitará que o Windows Installer forneça o assembly. Isso funciona como um recurso de instalação sob demanda.  
+    3. Investiga o assembly usando a heurística descrita na [seção de investigação](#step4). Se o assembly não for encontrado após a investigação, o tempo de execução solicitará que o Windows Installer forneça o assembly. Isso funciona como um recurso de instalação sob demanda.  
   
         > [!NOTE]
         >  Não há nenhuma verificação de versão para os assemblies sem nomes fortes e o tempo de execução não faz o check-in do cache de assembly global se há assemblies sem nomes fortes.  
@@ -64,11 +64,11 @@ Para implantar seu aplicativo .NET Framework com êxito, você deve entender com
 ## <a name="step-1-examining-the-configuration-files"></a>Etapa 1: Examinando os arquivos de configuração  
  O comportamento de associação do assembly pode ser configurado em diferentes níveis com base em três arquivos XML:  
   
--   Arquivo de configuração de aplicativo.  
+- Arquivo de configuração de aplicativo.  
   
--   Arquivo de política do publicador.  
+- Arquivo de política do publicador.  
   
--   Arquivo de configuração do computador.  
+- Arquivo de configuração do computador.  
   
  Esses arquivos seguem a mesma sintaxe e fornecem informações como redirecionamentos de associação, o local do código e modos de associação para assemblies específicos. Cada arquivo de configuração pode conter um [elemento \<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) que redireciona o processo de associação. Os elementos filho do [elemento \<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) incluem o [elemento \<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md). Os filhos do [elemento \<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) incluem o [elemento \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), o [elemento \<bindingRedirect>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) e o [elemento \<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>Localizando o assembly por meio de investigação  
  Se não houver nenhum elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) no arquivo de configuração de aplicativo, o tempo de execução investigará o assembly usando quatro critérios:  
   
--   Base de aplicativo, que é o local da raiz em que o aplicativo está sendo executado.  
+- Base de aplicativo, que é o local da raiz em que o aplicativo está sendo executado.  
   
--   Cultura, que é o atributo de cultura do assembly que está sendo referenciado.  
+- Cultura, que é o atributo de cultura do assembly que está sendo referenciado.  
   
--   Nome, que é o nome do assembly referenciado.  
+- Nome, que é o nome do assembly referenciado.  
   
--   O atributo `privatePath` do elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), que é a lista de subdiretórios definidos pelo usuário no local raiz. Esse local pode ser especificado no arquivo de configuração de aplicativo e no código gerenciado usando a propriedade <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> para um domínio do aplicativo. Quando especificado no código gerenciado, o código gerenciado `privatePath` é analisado primeiro, seguido pelo caminho especificado no arquivo de configuração de aplicativo.  
+- O atributo `privatePath` do elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), que é a lista de subdiretórios definidos pelo usuário no local raiz. Esse local pode ser especificado no arquivo de configuração de aplicativo e no código gerenciado usando a propriedade <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> para um domínio do aplicativo. Quando especificado no código gerenciado, o código gerenciado `privatePath` é analisado primeiro, seguido pelo caminho especificado no arquivo de configuração de aplicativo.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Investigando a base de aplicativo e os diretórios de cultura  
  O tempo de execução sempre começa investigando a base do aplicativo, que pode ser uma URL ou diretório da raiz do aplicativo em um computador. Se o assembly referenciado não for encontrado na base de aplicativo e nenhuma informação de cultura for fornecida, o tempo de execução pesquisará todos os subdiretórios com o nome do assembly. Os diretórios investigados incluem:  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>Exemplos de investigação  
  Considerando as seguintes informações:  
   
--   Nome do assembly referenciado: myAssembly  
+- Nome do assembly referenciado: myAssembly  
   
--   Diretório raiz do aplicativo: `http://www.code.microsoft.com`  
+- Diretório raiz do aplicativo: `http://www.code.microsoft.com`  
   
--   Elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) especifica no arquivo de configuração especifica: bin  
+- Elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) especifica no arquivo de configuração especifica: bin  
   
--   Cultura: de  
+- Cultura: de  
   
  O tempo de execução investiga as seguintes URLs:  
   

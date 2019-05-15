@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 30d9517c404dc76cdc0f8206599cacdb430a1ae9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141252"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613985"
 ---
 # <a name="in-process-side-by-side-execution"></a>Execução lado a lado em processo
 Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você pode usar a hospedagem lado a lado em processos para executar várias versões do CLR (Common Language Runtime) em um único processo. Por padrão, os componentes COM gerenciados são executados com a versão do .NET Framework com a qual eles foram criados, independentemente da versão do .NET Framework carregada para o processo.  
@@ -22,19 +22,19 @@ Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você po
   
  O [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] fornece uma nova abordagem para hospedagem lado a lado que garante o seguinte:  
   
--   Instalar uma nova versão do .NET Framework não tem nenhum efeito em aplicativos existentes.  
+- Instalar uma nova versão do .NET Framework não tem nenhum efeito em aplicativos existentes.  
   
--   Os aplicativos são executados na versão do .NET Framework com a qual foram criados. Eles não usar a nova versão do .NET Framework, exceto quando expressamente determinado para fazer isso. No entanto, é mais fácil para os aplicativos fazerem a transição para usar uma nova versão do .NET Framework.  
+- Os aplicativos são executados na versão do .NET Framework com a qual foram criados. Eles não usar a nova versão do .NET Framework, exceto quando expressamente determinado para fazer isso. No entanto, é mais fácil para os aplicativos fazerem a transição para usar uma nova versão do .NET Framework.  
   
 ## <a name="effects-on-users-and-developers"></a>Efeitos em usuários e desenvolvedores  
   
--   **Usuários finais e administradores de sistema**. Esses usuários agora podem ter uma confiança maior de que quando instalarem uma nova versão do tempo de execução, independentemente ou com um aplicativo, ela não terá impacto em seus computadores. Os aplicativos existentes continuarão a ser executados como eram antes.  
+- **Usuários finais e administradores de sistema**. Esses usuários agora podem ter uma confiança maior de que quando instalarem uma nova versão do tempo de execução, independentemente ou com um aplicativo, ela não terá impacto em seus computadores. Os aplicativos existentes continuarão a ser executados como eram antes.  
   
--   **Desenvolvedores de aplicativos**. A hospedagem lado a lado quase não tem efeito sobre os desenvolvedores de aplicativos. Por padrão, os aplicativos sempre são executados na versão do .NET Framework em que foram criados, isso não mudou. No entanto, os desenvolvedores podem substituir esse comportamento e direcionar o aplicativo para ser executado em uma versão mais recente do .NET Framework (consulte o [cenário 2](#scenarios)).  
+- **Desenvolvedores de aplicativos**. A hospedagem lado a lado quase não tem efeito sobre os desenvolvedores de aplicativos. Por padrão, os aplicativos sempre são executados na versão do .NET Framework em que foram criados, isso não mudou. No entanto, os desenvolvedores podem substituir esse comportamento e direcionar o aplicativo para ser executado em uma versão mais recente do .NET Framework (consulte o [cenário 2](#scenarios)).  
   
--   **Desenvolvedores de bibliotecas e consumidores**. A hospedagem lado a lado não resolve os problemas de compatibilidade que os desenvolvedores de bibliotecas enfrentam. Uma biblioteca que é carregada diretamente por um aplicativo, por meio de uma referência direta ou uma chamada <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, continua a usar o tempo de execução do <xref:System.AppDomain> em que foi carregada. Você deve testar suas bibliotecas em todas as versões do .NET Framework para as quais você deseja dar suporte. Se um aplicativo for compilado usando o tempo de execução [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], mas incluir uma biblioteca que foi criada usando um tempo de execução anterior, essa biblioteca usará o tempo de execução [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] também. No entanto, se você tiver um aplicativo que foi criado usando um tempo de execução mais recente e a biblioteca que foi criada usando o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], será necessário forçar o aplicativo a também usar o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (consulte o [cenário 3](#scenarios)).  
+- **Desenvolvedores de bibliotecas e consumidores**. A hospedagem lado a lado não resolve os problemas de compatibilidade que os desenvolvedores de bibliotecas enfrentam. Uma biblioteca que é carregada diretamente por um aplicativo, por meio de uma referência direta ou uma chamada <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, continua a usar o tempo de execução do <xref:System.AppDomain> em que foi carregada. Você deve testar suas bibliotecas em todas as versões do .NET Framework para as quais você deseja dar suporte. Se um aplicativo for compilado usando o tempo de execução [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], mas incluir uma biblioteca que foi criada usando um tempo de execução anterior, essa biblioteca usará o tempo de execução [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] também. No entanto, se você tiver um aplicativo que foi criado usando um tempo de execução mais recente e a biblioteca que foi criada usando o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], será necessário forçar o aplicativo a também usar o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (consulte o [cenário 3](#scenarios)).  
   
--   **Desenvolvedores de componente COM gerenciado**. No passado, componentes COM gerenciados eram executados automaticamente usando a versão mais recente do tempo de execução instalado no computador. Agora você pode executar componentes COM na versão do tempo de execução em que eles foram criados.  
+- **Desenvolvedores de componente COM gerenciado**. No passado, componentes COM gerenciados eram executados automaticamente usando a versão mais recente do tempo de execução instalado no computador. Agora você pode executar componentes COM na versão do tempo de execução em que eles foram criados.  
   
      Conforme mostrado pela tabela a seguir, os componentes que foram criados com o .NET Framework versão 1.1 podem ser executados lado a lado com os componentes da versão 4, mas não podem ser executados com componentes da versão 2.0, 3.0 ou 3.5, pois a hospedagem lado a lado não está disponível para essas versões.  
   
@@ -50,13 +50,13 @@ Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você po
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>Cenários comuns de hospedagem lado a lado  
   
--   **Cenário 1:** Aplicativo nativo que usa componentes COM criados com versões anteriores do .NET Framework.  
+- **Cenário 1:** Aplicativo nativo que usa componentes COM criados com versões anteriores do .NET Framework.  
   
      Versões do .NET Framework instaladas: O [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e todas as outras versões do .NET Framework usadas pelos componentes COM.  
   
      O que fazer: Nesse cenário, não faça nada. Os componentes COM serão executados com a versão do .NET Framework com a qual foram registrados.  
   
--   **Cenário 2**: Aplicativo gerenciado criado com o [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que você prefere executar com o [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], mas está disposto a executar no [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] caso a versão 2.0 não esteja presente.  
+- **Cenário 2**: Aplicativo gerenciado criado com o [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que você prefere executar com o [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], mas está disposto a executar no [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] caso a versão 2.0 não esteja presente.  
   
      Versões do .NET Framework instaladas: Uma versão anterior do .NET Framework e o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
@@ -71,7 +71,7 @@ Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você po
     </configuration>  
     ```  
   
--   **Cenário 3:** Aplicativo nativo que usa componentes COM criados com versões anteriores do .NET Framework que você deseja executar com o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+- **Cenário 3:** Aplicativo nativo que usa componentes COM criados com versões anteriores do .NET Framework que você deseja executar com o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
      Versões do .NET Framework instaladas: O [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   

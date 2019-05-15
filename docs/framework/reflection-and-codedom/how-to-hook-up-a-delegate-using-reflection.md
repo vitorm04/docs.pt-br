@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7c2956a222a47cea36abbc2f21da2d7e2061e09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8bc4b4df6829f5b86dff400c5cd7cbd3d86f5507
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314523"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591538"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Como: Conectar um delegado usando a reflexão
 Quando você usa a reflexão para carregar e executar assemblies, não pode usar recursos de linguagem como o operador `+=` do C# ou a [instrução AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) do Visual Basic para conectar eventos. Os procedimentos a seguir mostram como conectar um método existente a um evento obtendo todos os tipos necessários por meio de reflexão e como criar um método dinâmico usando a emissão de reflexão e conectá-lo a um evento.  
@@ -107,11 +107,11 @@ Quando você usa a reflexão para carregar e executar assemblies, não pode usar
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   O código contém as instruções `using` C# (`Imports` no Visual Basic) necessárias para a compilação.  
+- O código contém as instruções `using` C# (`Imports` no Visual Basic) necessárias para a compilação.  
   
--   Não é necessária nenhuma referência de assembly adicional para compilar da linha de comando. No Visual Studio, você deve adicionar uma referência System.Windows.Forms.dll porque esse exemplo é um aplicativo de console.  
+- Não é necessária nenhuma referência de assembly adicional para compilar da linha de comando. No Visual Studio, você deve adicionar uma referência System.Windows.Forms.dll porque esse exemplo é um aplicativo de console.  
   
--   Compile o código na linha de comando usando csc.exe, vbc.exe ou cl.exe. Para compilar o código no Visual Studio, coloque-o em um modelo de projeto de aplicativo do console.  
+- Compile o código na linha de comando usando csc.exe, vbc.exe ou cl.exe. Para compilar o código no Visual Studio, coloque-o em um modelo de projeto de aplicativo do console.  
   
 ## <a name="see-also"></a>Consulte também
 

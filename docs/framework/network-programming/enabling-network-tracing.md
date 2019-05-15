@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 50ad01376f3de9cda26f6b00e2d32fc8d3dabdcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169702"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624630"
 ---
 # <a name="enabling-network-tracing"></a>Habilitando o rastreamento de rede
 O rastreamento de rede fornece acesso a informações sobre invocações de método e o tráfego de rede gerados por um aplicativo gerenciado. Você deve concluir as seguintes tarefas para habilitar o rastreamento de rede no aplicativo:  
   
--   Compile o código com o rastreamento habilitado. Confira [Como Compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) para obter mais informações sobre as opções do compilador necessárias para habilitar o rastreamento.  
+- Compile o código com o rastreamento habilitado. Confira [Como Compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) para obter mais informações sobre as opções do compilador necessárias para habilitar o rastreamento.  
   
--   Especifique um destino para a saída de rastreamento.  
+- Especifique um destino para a saída de rastreamento.  
   
--   Configure o comportamento do rastreamento de rede. Confira [Como Configurar o rastreamento de rede](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) para obter informações detalhadas.  
+- Configure o comportamento do rastreamento de rede. Confira [Como Configurar o rastreamento de rede](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) para obter informações detalhadas.  
   
  Os destinos de rastreamento mais comuns, também conhecidos como ouvintes de rastreamento, são o ouvinte padrão e o arquivo de log.  
   

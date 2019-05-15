@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29b030708f2174b55386b13931f1088d15f4eb4f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669675"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582701"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)
 
@@ -107,7 +107,7 @@ Para um serviço com um ponto de extremidade BasicHttpContextBinding *Svcutil.ex
 |/serializer:Auto|Selecione automaticamente o serializador. Isso tenta usar o serializador de contrato de dados e usa o XmlSerializer, se isso falhar.<br /><br /> Forma abreviada: `/ser`|
 |/serializer:DataContractSerializer|Gera os tipos de dados que usam o serializador Contrato de Dados para serialização e desserialização.<br /><br /> Forma abreviada: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|Gera os tipos de dados que usam o <xref:System.Xml.Serialization.XmlSerializer> para serialização e desserialização.<br /><br /> Forma abreviada: `/ser:XmlSerializer`|
-|/targetClientVersion|Especificar para qual versão do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] o aplicativo está definido. Os valores válidos são `Version30` e `Version35`. O valor padrão é `Version30`.<br /><br /> Forma abreviada: `/tcv`<br /><br /> `Version30`: Use `/tcv:Version30` se você estiver gerando o código para clientes que usam [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Use `/tcv:Version35` se você estiver gerando o código para clientes que usam [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Ao usar `/tcv:Version35` com a opção `/async`, os métodos assíncronos baseados em evento e baseados em retorno de chamada/representante são gerados. Além disso, o suporte para DataSets habilitados para LINQ e <xref:System.DateTimeOffset> está habilitado.|
+|/targetClientVersion|Especifique qual versão do .NET Framework em que o aplicativo se destina. Os valores válidos são `Version30` e `Version35`. O valor padrão é `Version30`.<br /><br /> Forma abreviada: `/tcv`<br /><br /> `Version30`: Use `/tcv:Version30` se você estiver gerando o código para clientes que usam [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Use `/tcv:Version35` se você estiver gerando o código para clientes que usam [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Ao usar `/tcv:Version35` com a opção `/async`, os métodos assíncronos baseados em evento e baseados em retorno de chamada/representante são gerados. Além disso, o suporte para DataSets habilitados para LINQ e <xref:System.DateTimeOffset> está habilitado.|
 |/wrapped|Controla se a diferença entre maiúsculas e minúsculas é usada para documentos de estilo literal com parâmetros encapsulados. Use o **/ encapsulado** alternar com o [ferramenta Utilitário de metadados de modelo do serviço (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ferramenta para especificar maiusculas e minúsculas normais.|
 
 > [!NOTE]

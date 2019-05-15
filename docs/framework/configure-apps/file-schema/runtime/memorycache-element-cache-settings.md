@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 9ed3c290c3d4836eb783348b559cab46a38b2063
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 872084dabc5d345d10a39f0933ff2ef30ca40355
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592682"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584485"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > (configurações de Cache)
 Define um elemento usado para configurar um cache baseado na classe <xref:System.Runtime.Caching.MemoryCache>. O <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> classe define um [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) elemento que você pode usar para configurar o cache. Várias instâncias do <xref:System.Runtime.Caching.MemoryCache> classe pode ser usada em um único aplicativo. Cada `memoryCache` elemento no arquivo de configuração pode conter configurações para uma nomeada <xref:System.Runtime.Caching.MemoryCache> instância.  
@@ -55,7 +55,7 @@ Define um elemento usado para configurar um cache baseado na classe <xref:System
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Contém tipos que permitem implementar o cache de saída em aplicativos que integram o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
+|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Contém tipos que permitem implementar o cache de saída em aplicativos que são criados no .NET Framework.|  
   
 ## <a name="remarks"></a>Comentários  
  O <xref:System.Runtime.Caching.MemoryCache> classe é uma implementação concreta do resumo <xref:System.Runtime.Caching.ObjectCache> classe. Instâncias do <xref:System.Runtime.Caching.MemoryCache> classe pode ser fornecido com informações de configuração de arquivos de configuração do aplicativo. O [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) seção de configuração contém um `namedCaches` coleção de configuração.  

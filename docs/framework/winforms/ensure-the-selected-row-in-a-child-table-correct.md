@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: bbebd9f040c60016305a861abee3723450a7456b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1047958a5600d8e6ee0ba461305e09395151ab14
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651976"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592277"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Como: assegurar que a linha selecionada em uma tabela filho permaneça na posição correta
 Muitas vezes, ao trabalhar com a vinculação de dados nos Windows Forms, você exibirá dados no que é chamado de modo de exibição pai/filho ou detalhes/mestre. Isso se refere a um cenário de associação de dados em que os dados da mesma fonte são exibidos em dois controles. Alterar a seleção em um controle faz com que os dados exibidos no segundo controle mudem. Por exemplo, o primeiro controle pode conter uma lista de clientes e o segundo, uma lista de pedidos relacionada ao cliente selecionado no primeiro controle.  
@@ -80,8 +80,6 @@ Muitas vezes, ao trabalhar com a vinculação de dados nos Windows Forms, você 
  Este exemplo requer:  
   
 - Referência aos assemblies System, System.Data, System.Drawing, System.Windows.Forms e System.XML.  
-  
- Para obter informações sobre como criar este exemplo da linha de comando do Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [construção de linha de comando com csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
 

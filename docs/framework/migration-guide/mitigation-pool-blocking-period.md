@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f97650099aed0be7e1983f759cd0f38fc568f857
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f4f51cf554c60a2ff8ed319faa95397d2a0bb48b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082757"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623956"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigação: Período de bloqueio do pool
 O pool de conexão no período de bloqueio foi removido para conexões com bancos de dados SQL do Azure.  
@@ -25,11 +25,11 @@ O pool de conexão no período de bloqueio foi removido para conexões com banco
 ## <a name="mitigation"></a>Redução  
  Para aplicativos que são afetados negativamente por essa alteração, o período de bloqueio do pool de conexões pode ser configurado pela definição da nova propriedade <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A?displayProperty=nameWithType>.  O valor da propriedade é membro da enumeração <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType> que pode assumir um dos três valores:  
   
--   <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>
   
--   <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto?displayProperty=nameWithType>
   
--   <xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock?displayProperty=nameWithType>
   
  É possível restaurar o comportamento anterior definindo a propriedade <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> como <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>.  
   

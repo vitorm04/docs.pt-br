@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 0fb9b50fdbc0a1e11992baac684c5e2e8c081f5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129305"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613844"
 ---
 # <a name="time-based-cache-policies"></a>Políticas de cache baseadas em tempo
 Uma política de cache baseada em tempo define a atualização das entradas armazenadas em cache usando a hora em que o recurso foi recuperado, os cabeçalhos retornados com o recurso e a hora atual. Ao definir uma política de cache baseada em tempo, é possível usar a política baseada em tempo de <xref:System.Net.Cache.HttpRequestCacheLevel.Default> ou criar uma política baseada em tempo personalizada. Ao usar a política baseada em tempo padrão para os recursos obtidos com o uso do protocolo HTTP, o comportamento de cache exato é determinado pelos cabeçalhos incluídos na resposta armazenada em cache e pelos comportamentos especificados nas seções 13 e 14 do RFC 2616, disponível no site da [IETF (Internet Engineering Task Force)](https://www.ietf.org/). Para obter um exemplo de código que demonstra como definir a política baseada em tempo padrão para recursos HTTP, confira [Como: Definir uma política de cache baseada em tempo padrão para um aplicativo](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Para obter exemplos de código que demonstram como criar e usar políticas de cache, consulte [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -30,13 +30,13 @@ Uma política de cache baseada em tempo define a atualização das entradas arma
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Critérios para determinar a atualização das entradas armazenadas em cache  
  Para personalizar uma política de cache baseada em tempo, especifique o uso de um ou mais dos seguintes critérios para determinar a atualização das entradas armazenadas em cache:  
   
--   Idade máxima  
+- Idade máxima  
   
--   Desatualização máxima  
+- Desatualização máxima  
   
--   Atualização mínima  
+- Atualização mínima  
   
--   Data de sincronização do cache  
+- Data de sincronização do cache  
   
 > [!NOTE]
 >  O uso da política de cache baseada em tempo padrão não deve ser confundido com a configuração de uma política de cache padrão para o aplicativo. A política baseada em tempo padrão é uma política específica que pode ser usada no nível da solicitação ou do aplicativo. A política de cache padrão do aplicativo é uma política (baseada na localização ou em tempo) que entra em vigor quando nenhuma política é definida em uma solicitação. Para obter detalhes sobre como definir uma política de cache padrão para o aplicativo, consulte <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
@@ -57,9 +57,9 @@ Uma política de cache baseada em tempo define a atualização das entradas arma
   
  Os seguintes tópicos fornecem informações sobre os efeitos da combinação de critérios da política de cache baseada em tempo:  
   
--   [Interação da política de cache – idade máxima e desatualização máxima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+- [Interação da política de cache – idade máxima e desatualização máxima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
--   [Interação da política de cache – idade máxima e atualização mínima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+- [Interação da política de cache – idade máxima e atualização mínima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Consulte também
 

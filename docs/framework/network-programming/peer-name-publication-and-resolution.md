@@ -2,12 +2,12 @@
 title: Resolução e publicação de nome de par
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a0787972a61f5700d1e8728be96db8ef9ee749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769483"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623196"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Resolução e publicação de nome de par
 
@@ -15,9 +15,9 @@ ms.locfileid: "59769483"
 
  Para publicar uma nova ID de PNRP, um par executa o seguinte:  
   
--   Envia mensagens de publicação PNRP para seus vizinhos de cache (os pares que registraram as IDs de PNRP no nível mais baixo do cache) para propagar os caches deles.  
+- Envia mensagens de publicação PNRP para seus vizinhos de cache (os pares que registraram as IDs de PNRP no nível mais baixo do cache) para propagar os caches deles.  
   
--   Escolhe nós aleatórios na nuvem que não são vizinhos dele e envia solicitações de resolução de nome PNRP para sua própria ID de P2P. O processo de determinação do ponto de extremidade resultante propaga os caches de nós aleatórios na nuvem com a ID de PNRP do par que realiza a publicação.  
+- Escolhe nós aleatórios na nuvem que não são vizinhos dele e envia solicitações de resolução de nome PNRP para sua própria ID de P2P. O processo de determinação do ponto de extremidade resultante propaga os caches de nós aleatórios na nuvem com a ID de PNRP do par que realiza a publicação.  
   
 Nós de versão 2 do PNRP não publicam IDs de PNRP se eles estão apenas resolvendo outras IDs de P2P. O valor de Registro HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 (tipo REG_DWORD) especifica que os pares só usam PNRP para resolução de nome, nunca para publicação de nome. Esse valor de Registro também pode ser configurado por meio da Política de Grupo.  
   
@@ -37,11 +37,11 @@ Nós de versão 2 do PNRP não publicam IDs de PNRP se eles estão apenas resolv
   
  Para executar a resolução de nomes PNRP, o par examina as entradas no seu próprio cache em busca de uma entrada que corresponde à ID de PNRP de destino. Se encontra essa entrada, o par envia uma mensagem de solicitação de PNRP para o par e aguarda uma resposta. Se uma entrada para a ID de PNRP não é encontrada, o par envia uma mensagem de solicitação de PNRP para o par que corresponde à entrada que tem uma ID de PNRP que melhor corresponde à ID de PNRP de destino. O nó que recebe a mensagem de solicitação de PNRP examina o seu próprio cache e faz o seguinte:  
   
--   Se a ID de PNRP for encontrada, o par do ponto de extremidade solicitado responderá diretamente para o par solicitante.  
+- Se a ID de PNRP for encontrada, o par do ponto de extremidade solicitado responderá diretamente para o par solicitante.  
   
--   Se a ID de PNRP não for encontrada e uma ID de PNRP no cache for mais próxima à ID de PNRP de destino, o par solicitado enviará uma resposta ao par solicitante contendo o endereço IPv6 do par que representa a entrada com uma ID de PNRP que melhor corresponde à ID de PNRP de destino. Usando o endereço IP na resposta, o nó de consulta envia outra mensagem de solicitação de PNRP ao endereço IPv6 para responder ou examinar seu cache.  
+- Se a ID de PNRP não for encontrada e uma ID de PNRP no cache for mais próxima à ID de PNRP de destino, o par solicitado enviará uma resposta ao par solicitante contendo o endereço IPv6 do par que representa a entrada com uma ID de PNRP que melhor corresponde à ID de PNRP de destino. Usando o endereço IP na resposta, o nó de consulta envia outra mensagem de solicitação de PNRP ao endereço IPv6 para responder ou examinar seu cache.  
   
--   Se a ID de PNRP não é encontrada e não há nenhuma ID de PNRP em seu cache que melhor corresponde à ID de PNRP, o par solicitado envia ao par solicitante uma resposta que indica essa condição. O par solicitante escolhe então a próxima ID de PNRP com maior correspondência.  
+- Se a ID de PNRP não é encontrada e não há nenhuma ID de PNRP em seu cache que melhor corresponde à ID de PNRP, o par solicitado envia ao par solicitante uma resposta que indica essa condição. O par solicitante escolhe então a próxima ID de PNRP com maior correspondência.  
   
 O par solicitante continua esse processo com iterações sucessivas, eventualmente localizando o nó que registrou a ID de PNRP.  
   

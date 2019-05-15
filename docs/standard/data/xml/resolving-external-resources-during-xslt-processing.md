@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f73edf5912f8158db51ed070da8816d5b988b8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bcd45a97ab0f0b0ac462d50c18fb68f9d7bd386
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555473"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590023"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Resolvendo recursos externos durante processamento XSLT
 Há várias vezes durante uma transformação XSLT quando você precise resolver recursos externos.  
@@ -30,13 +30,13 @@ Há várias vezes durante uma transformação XSLT quando você precise resolver
   
  A lista a seguir descreve quando você pode querer especificar um objeto de <xref:System.Xml.XmlResolver> :  
   
--   Se o processo XSLT precisa acessar um recurso de rede que requer autenticação, você pode usar <xref:System.Xml.XmlResolver> com as credenciais necessárias.  
+- Se o processo XSLT precisa acessar um recurso de rede que requer autenticação, você pode usar <xref:System.Xml.XmlResolver> com as credenciais necessárias.  
   
--   Se você deseja restringir os recursos que o processo XSLT pode acessar, você pode usar <xref:System.Xml.XmlSecureResolver> com o conjunto de permissões correto. Use a classe de <xref:System.Xml.XmlSecureResolver> se você precisa abrir um recurso que você não controle, ou que é não confiável.  
+- Se você deseja restringir os recursos que o processo XSLT pode acessar, você pode usar <xref:System.Xml.XmlSecureResolver> com o conjunto de permissões correto. Use a classe de <xref:System.Xml.XmlSecureResolver> se você precisa abrir um recurso que você não controle, ou que é não confiável.  
   
--   Se você desejar personalizar o comportamento, você pode implementar sua própria classe de <xref:System.Xml.XmlResolver> e usá-la para resolver recursos.  
+- Se você desejar personalizar o comportamento, você pode implementar sua própria classe de <xref:System.Xml.XmlResolver> e usá-la para resolver recursos.  
   
--   Se você quiser garantir que nenhum recurso externo é acessado, você pode especificar `null` para o argumento de <xref:System.Xml.XmlResolver> .  
+- Se você quiser garantir que nenhum recurso externo é acessado, você pode especificar `null` para o argumento de <xref:System.Xml.XmlResolver> .  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria uma folha de estilos que é armazenada em um recurso de rede. Um objeto de <xref:System.Xml.XmlUrlResolver> especifica as credenciais necessárias para acessar a folha de estilos.  

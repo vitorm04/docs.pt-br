@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909267"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588841"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Resumo de tecnologia do controle DataGridView (Windows Forms)
 Este tópico resume as informações sobre o controle `DataGridView` e as classes que dão suporte ao seu uso.  
@@ -29,7 +29,7 @@ Este tópico resume as informações sobre o controle `DataGridView` e as classe
  `BindingSource`  
   
 ## <a name="background"></a>Informações preliminares  
- Designers de interface do usuário com frequência consideram necessário exibir dados tabulares para os usuários. O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornece várias maneiras de exibir dados em uma tabela ou grade. O controle `DataGridView` representa a mais recente evolução dessa tecnologia para aplicativos dos Windows Forms.  
+ Designers de interface do usuário com frequência consideram necessário exibir dados tabulares para os usuários. O .NET Framework fornece várias maneiras de exibir dados em uma tabela ou grade. O controle `DataGridView` representa a mais recente evolução dessa tecnologia para aplicativos dos Windows Forms.  
   
  O controle `DataGridView` pode exibir linhas de dados de um armazenamento de dados. Há suporte para muitos tipos de armazenamentos de dados. O armazenamento de dados pode conter dados simples, sem tipo, como uma matriz unidimensional, ou ele pode conter dados tipados, como um <xref:System.Data.DataSet>. Para obter mais informações, confira [Como: Associar dados para o Windows Forms DataGridView Control](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   

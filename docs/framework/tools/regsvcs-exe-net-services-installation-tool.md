@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0dc05294ae762b4f896bb7f514df102c1f948fe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215034"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623403"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Ferramenta de Instalação de Serviços .NET)
 A ferramenta Instalação de Serviços .NET realiza as seguintes ações:  
   
--   Carrega e registra um assembly.  
+- Carrega e registra um assembly.  
   
--   Gera, registra e instala uma biblioteca de tipos em um aplicativo COM+ especificado.  
+- Gera, registra e instala uma biblioteca de tipos em um aplicativo COM+ especificado.  
   
--   Configura serviços adicionados programaticamente à classe.  
+- Configura serviços adicionados programaticamente à classe.  
   
  Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   

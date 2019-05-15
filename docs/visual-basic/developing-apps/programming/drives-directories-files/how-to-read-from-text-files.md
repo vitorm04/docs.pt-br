@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 813928fbcf67f269d99d418ab16e202bd19f25fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1d3fbe3ab8ff59d73dc5ec4f33e4dde2437bcbec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836877"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623327"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Como: Ler de arquivos de texto em Visual Basic
 O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> do objeto `My.Computer.FileSystem` permite que você leia um arquivo de texto. A codificação do arquivo pode ser especificada se o conteúdo do arquivo usar uma codificação, como ASCII ou UTF-8.  
@@ -25,34 +25,34 @@ O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A>
   
 ### <a name="to-read-from-a-text-file"></a>Para ler um arquivo de texto  
   
--   Use o método `ReadAllText` do objeto `My.Computer.FileSystem` para ler o conteúdo de um arquivo de texto em uma cadeia de caracteres, fornecendo o caminho. O exemplo a seguir lê o conteúdo de test.txt em uma cadeia de caracteres e o exibe em uma caixa de mensagem.  
+- Use o método `ReadAllText` do objeto `My.Computer.FileSystem` para ler o conteúdo de um arquivo de texto em uma cadeia de caracteres, fornecendo o caminho. O exemplo a seguir lê o conteúdo de test.txt em uma cadeia de caracteres e o exibe em uma caixa de mensagem.  
   
      [!code-vb[VbFileIORead#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#2)]  
   
 ### <a name="to-read-from-a-text-file-that-is-encoded"></a>Para ler de um arquivo de texto que está codificado  
   
--   Use o método `ReadAllText` do objeto `My.Computer.FileSystem` para ler o conteúdo de um arquivo de texto em uma cadeia de caracteres, fornecendo o caminho e o tipo da codificação do arquivo. O exemplo a seguir lê o conteúdo do arquivo test.txt UTF32 em uma cadeia de caracteres e depois o exibe em uma caixa de mensagem.  
+- Use o método `ReadAllText` do objeto `My.Computer.FileSystem` para ler o conteúdo de um arquivo de texto em uma cadeia de caracteres, fornecendo o caminho e o tipo da codificação do arquivo. O exemplo a seguir lê o conteúdo do arquivo test.txt UTF32 em uma cadeia de caracteres e depois o exibe em uma caixa de mensagem.  
   
      [!code-vb[VbFileIORead#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#3)]  
   
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   O caminho não é válido por um destes motivos: é uma cadeia de caracteres de comprimento zero, contém somente espaço em branco, contém caracteres inválidos ou é um caminho de dispositivo (<xref:System.ArgumentException>).  
+- O caminho não é válido por um destes motivos: é uma cadeia de caracteres de comprimento zero, contém somente espaço em branco, contém caracteres inválidos ou é um caminho de dispositivo (<xref:System.ArgumentException>).  
   
--   O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
+- O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
   
--   O arquivo não existe (<xref:System.IO.FileNotFoundException>).  
+- O arquivo não existe (<xref:System.IO.FileNotFoundException>).  
   
--   O arquivo está em uso por outro processo, ou ocorre um erro de E/S (<xref:System.IO.IOException>).  
+- O arquivo está em uso por outro processo, ou ocorre um erro de E/S (<xref:System.IO.IOException>).  
   
--   O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
+- O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
   
--   Um nome de arquivo ou de diretório no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
+- Um nome de arquivo ou de diretório no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
   
--   Não há memória suficiente para gravar a cadeia de caracteres no buffer (<xref:System.OutOfMemoryException>).  
+- Não há memória suficiente para gravar a cadeia de caracteres no buffer (<xref:System.OutOfMemoryException>).  
   
--   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
+- O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
  Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo. Por exemplo, o arquivo Form1.vb pode não ser um arquivo de código-fonte do Visual Basic.  
   
