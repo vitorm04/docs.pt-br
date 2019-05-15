@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e018d8c83165b3e025ad4db7f3d59b6ba58b72a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213123"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616087"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Gerador de Classe Fortemente Tipada de Gerenciamento)
 A ferramenta Gerador de Classes Fortemente Tipadas de Gerenciamento permite gerar rapidamente uma classe gerenciada Early Bound para uma classe WMI (Instrumentação de Gerenciamento do Windows) especificada. A classe gerada simplifica o código que você deve gravar para acessar uma instância da classe WMI.  
@@ -75,19 +75,19 @@ WMIClass [options]
   
  Observer os seguintes comportamentos quando você gera uma classe WMI:  
   
--   É possível que uma propriedade ou um método público padrão tenha o mesmo nome de uma propriedade ou um método existente. Se isso ocorrer, a ferramenta alterará o nome da propriedade ou do método na classe gerada para evitar conflitos de nomenclatura.  
+- É possível que uma propriedade ou um método público padrão tenha o mesmo nome de uma propriedade ou um método existente. Se isso ocorrer, a ferramenta alterará o nome da propriedade ou do método na classe gerada para evitar conflitos de nomenclatura.  
   
--   É possível que o nome de uma propriedade ou de um método em uma classe gerada seja uma palavra-chave na linguagem de programação de destino. Se isso ocorrer, a ferramenta alterará o nome da propriedade ou do método na classe gerada para evitar conflitos de nomenclatura.  
+- É possível que o nome de uma propriedade ou de um método em uma classe gerada seja uma palavra-chave na linguagem de programação de destino. Se isso ocorrer, a ferramenta alterará o nome da propriedade ou do método na classe gerada para evitar conflitos de nomenclatura.  
   
--   No WMI, os qualificadores são os modificadores que contêm informações para descrever uma classe, uma instância, uma propriedade ou um método. O WMI usa qualificadores padrão como **Leitura**, **Gravação** e **Chave** para descrever uma propriedade em uma classe gerada. Por exemplo, uma propriedade modificada com um qualificador **Leitura** é definida apenas com um acessador **get** da propriedade na classe gerada. Como uma propriedade marcada com o qualificador **Leitura** deve ser somente leitura, um acessador **set** não é definido.  
+- No WMI, os qualificadores são os modificadores que contêm informações para descrever uma classe, uma instância, uma propriedade ou um método. O WMI usa qualificadores padrão como **Leitura**, **Gravação** e **Chave** para descrever uma propriedade em uma classe gerada. Por exemplo, uma propriedade modificada com um qualificador **Leitura** é definida apenas com um acessador **get** da propriedade na classe gerada. Como uma propriedade marcada com o qualificador **Leitura** deve ser somente leitura, um acessador **set** não é definido.  
   
--   Uma propriedade numérica pode ser modificada pelos qualificadores **Values** e **ValueMaps** para indicar que a propriedade pode ser definida somente como valores permitidos especificados. Uma enumeração é gerada com **Values** e **ValueMaps** e a propriedade é mapeada para a enumeração.  
+- Uma propriedade numérica pode ser modificada pelos qualificadores **Values** e **ValueMaps** para indicar que a propriedade pode ser definida somente como valores permitidos especificados. Uma enumeração é gerada com **Values** e **ValueMaps** e a propriedade é mapeada para a enumeração.  
   
--   O WMI usa o termo singleton para descrever uma classe que só pode ter uma instância. Por isso, o construtor padrão de uma classe singleton inicializará a classe com a única instância da classe.  
+- O WMI usa o termo singleton para descrever uma classe que só pode ter uma instância. Por isso, o construtor padrão de uma classe singleton inicializará a classe com a única instância da classe.  
   
--   Uma classe WMI pode ter as propriedades que são objetos. Ao gerar uma classe fortemente tipada para esse tipo de classe WMI, você deve levar em consideração a geração de classes fortemente tipadas para os tipos das propriedades de objeto inseridas. Isso permitirá acessar os objetos inseridos de maneira fortemente tipada. Observe que o código gerado talvez não seja capaz de detectar o tipo de objeto inserido. Nesse caso, um comentário será criado no código gerado para notificar você desse problema. Em seguida, é possível modificar o código gerado para tipar a propriedade para a outra classe gerada.  
+- Uma classe WMI pode ter as propriedades que são objetos. Ao gerar uma classe fortemente tipada para esse tipo de classe WMI, você deve levar em consideração a geração de classes fortemente tipadas para os tipos das propriedades de objeto inseridas. Isso permitirá acessar os objetos inseridos de maneira fortemente tipada. Observe que o código gerado talvez não seja capaz de detectar o tipo de objeto inserido. Nesse caso, um comentário será criado no código gerado para notificar você desse problema. Em seguida, é possível modificar o código gerado para tipar a propriedade para a outra classe gerada.  
   
--   No WMI, o valor de dados do tipo de dados CIM_DATETIME pode representar uma data e hora específicas ou um intervalo de tempo. Se o valor de dados representar uma data e hora, o tipo de dados na classe gerada será **DateTime**. Se o valor de dados representar um intervalo de tempo, o tipo de dados na classe gerada será **TimeSpan**.  
+- No WMI, o valor de dados do tipo de dados CIM_DATETIME pode representar uma data e hora específicas ou um intervalo de tempo. Se o valor de dados representar uma data e hora, o tipo de dados na classe gerada será **DateTime**. Se o valor de dados representar um intervalo de tempo, o tipo de dados na classe gerada será **TimeSpan**.  
   
  Também é possível gerar uma classe fortemente tipada usando-se a Extensão de Gerenciamento do Gerenciador de Servidores no Visual Studio .NET.  
   

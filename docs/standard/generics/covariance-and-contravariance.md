@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836416"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622730"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariância e contravariância em genéricos
 <a name="top"></a> Covariância e contravariância são termos que fazem referência à capacidade de usar um tipo mais derivado (mais específico) ou menos derivado (menos específico) do que o especificado originalmente. Os parâmetros de tipo genéricos oferecem suporte a covariância e contravariância para fornecer maior flexibilidade na atribuição e no uso de tipos genéricos. Quando você se refere a um sistema de tipos, a covariância, contravariância e invariância possuem as definições a seguir. Os exemplos assumem uma classe base chamada `Base` e uma classe derivada chamada `Derived`.  
   
--   `Covariance`  
+- `Covariance`  
   
      Permite usar um tipo mais derivado que o especificado originalmente.  
   
      Você pode atribuir uma instância de `IEnumerable<Derived>` (`IEnumerable(Of Derived)` no Visual Basic) a uma variável do tipo `IEnumerable<Base>`.  
   
--   `Contravariance`  
+- `Contravariance`  
   
      Permite a você usar um tipo mais genérico (menos derivado) do que aquele especificado originalmente.  
   
      Você pode atribuir uma instância de `Action<Base>` (`Action(Of Base)` no Visual Basic) a uma variável do tipo `Action<Derived>`.  
   
--   `Invariance`  
+- `Invariance`  
   
      Significa que você pode usar apenas o tipo especificado originalmente; assim, um parâmetro de tipo genérico invariante não é covariante nem contravariante.  
   
@@ -59,25 +59,25 @@ ms.locfileid: "56836416"
   
  A covariância e a contravariância são referidas coletivamente como *variância*. Um parâmetro de tipo genérico que não é covariante ou contravariante é referido como *invariante*. Um breve resumo de fatos sobre variância em Common Language Runtime:  
   
--   No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], os parâmetros de tipo variantes são restringidos à interface genérica e tipos de delegados genéricos.  
+- No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], os parâmetros de tipo variantes são restringidos à interface genérica e tipos de delegados genéricos.  
   
--   Uma interface genérica ou um tipo delegado genérico podem ter parâmetros de tipo covariantes e contravariantes.  
+- Uma interface genérica ou um tipo delegado genérico podem ter parâmetros de tipo covariantes e contravariantes.  
   
--   A variância aplica-se apenas para referenciar tipos; se você especificar um tipo de valor para um parâmetro de tipo variante, esse parâmetro de tipo será invariante para o tipo construído resultante.  
+- A variância aplica-se apenas para referenciar tipos; se você especificar um tipo de valor para um parâmetro de tipo variante, esse parâmetro de tipo será invariante para o tipo construído resultante.  
   
--   A variância não se aplica à combinação de delegado. Ou seja, considerando dois delegados de tipos `Action<Derived>` e `Action<Base>` (`Action(Of Derived)` e `Action(Of Base)` no Visual Basic), você não pode combinar o segundo delegado com o primeiro, ainda que o resultado seja de tipo seguro. A variância permite que o segundo delegado seja atribuído a uma variável do tipo `Action<Derived>`, mas os delegados podem ser combinados somente quando seus tipos são exatamente iguais.  
+- A variância não se aplica à combinação de delegado. Ou seja, considerando dois delegados de tipos `Action<Derived>` e `Action<Base>` (`Action(Of Derived)` e `Action(Of Base)` no Visual Basic), você não pode combinar o segundo delegado com o primeiro, ainda que o resultado seja de tipo seguro. A variância permite que o segundo delegado seja atribuído a uma variável do tipo `Action<Derived>`, mas os delegados podem ser combinados somente quando seus tipos são exatamente iguais.  
   
  As subseções a seguir descrevem parâmetros de tipo covariantes e contravariantes em detalhes:  
   
--   [Interfaces genéricas com parâmetros de tipo covariantes](#InterfaceCovariantTypeParameters)  
+- [Interfaces genéricas com parâmetros de tipo covariantes](#InterfaceCovariantTypeParameters)  
   
--   [Interfaces genéricas com parâmetros de tipo genéricos contravariantes](#InterfaceCovariantTypeParameters)  
+- [Interfaces genéricas com parâmetros de tipo genéricos contravariantes](#InterfaceCovariantTypeParameters)  
   
--   [Delegados genéricos com parâmetros de tipo variantes](#DelegateVariantTypeParameters)  
+- [Delegados genéricos com parâmetros de tipo variantes](#DelegateVariantTypeParameters)  
   
--   [Definir interfaces e delegados genéricos variantes](#DefiningVariantTypeParameters)  
+- [Definir interfaces e delegados genéricos variantes](#DefiningVariantTypeParameters)  
   
--   [Lista de tipos de interfaces e delegados genéricos variantes](#VariantList)  
+- [Lista de tipos de interfaces e delegados genéricos variantes](#VariantList)  
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Interfaces genéricas com parâmetros de tipo covariantes  

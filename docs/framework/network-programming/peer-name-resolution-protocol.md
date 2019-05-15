@@ -2,12 +2,12 @@
 title: Protocolo PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 4473ccb01349d2697ba512861aa505d5e363ab19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e20e23cf467bc87fd9984bdbc15d07dfed06798
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119061"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623011"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo PNRP
 Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores. No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).  
@@ -20,31 +20,31 @@ Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome espec�
   
 O protocolo PNRP demonstra as seguintes propriedades:  
   
--   Distribuído e quase que totalmente sem servidor. Servidores só são necessários para o processo de inicialização.  
+- Distribuído e quase que totalmente sem servidor. Servidores só são necessários para o processo de inicialização.  
   
--   Publicação de nome segura sem o envolvimento de terceiros. Ao contrário da publicação de nome DNS, a publicação de nome PNRP é instantânea e sem custos financeiros.  
+- Publicação de nome segura sem o envolvimento de terceiros. Ao contrário da publicação de nome DNS, a publicação de nome PNRP é instantânea e sem custos financeiros.  
   
--   O PNRP é atualizado em tempo real, o que impede a resolução de endereços obsoletos.  
+- O PNRP é atualizado em tempo real, o que impede a resolução de endereços obsoletos.  
   
--   A resolução de nomes por meio de PNRP vai além de computadores, permitindo também a resolução de nomes de serviços.  
+- A resolução de nomes por meio de PNRP vai além de computadores, permitindo também a resolução de nomes de serviços.  
   
 ## <a name="the-systemnetpeertopeer-namespace"></a>O namespace System.Net.PeerToPeer  
   
--   A funcionalidade do protocolo PNRP é definida pelo namespace <xref:System.Net.PeerToPeer> dentro do .NET Framework versão 3.5. Ele fornece um conjunto de tipos que podem ser usados para registrar e resolver os nomes de ponto a ponto com um serviço PNRP disponível.  
+- A funcionalidade do protocolo PNRP é definida pelo namespace <xref:System.Net.PeerToPeer> dentro do .NET Framework versão 3.5. Ele fornece um conjunto de tipos que podem ser usados para registrar e resolver os nomes de ponto a ponto com um serviço PNRP disponível.  
   
--   (PNRP e resolvedores de par personalizados podem ser criados e instanciados usando os tipos fornecidos no namespace <xref:System.ServiceModel.PeerResolvers>.)  
+- (PNRP e resolvedores de par personalizados podem ser criados e instanciados usando os tipos fornecidos no namespace <xref:System.ServiceModel.PeerResolvers>.)  
   
--   Os tipos básicos usados para registrar e resolver os nomes com um serviço PNRP disponível são os seguintes:  
+- Os tipos básicos usados para registrar e resolver os nomes com um serviço PNRP disponível são os seguintes:  
   
--   <xref:System.Net.PeerToPeer.Cloud>: Define as informações que descrevem uma nuvem PNRP disponível, incluindo seu escopo.  
+- <xref:System.Net.PeerToPeer.Cloud>: Define as informações que descrevem uma nuvem PNRP disponível, incluindo seu escopo.  
   
--   <xref:System.Net.PeerToPeer.PeerName>: Define um nome de par que pode ser usado para registrar e posteriormente resolver um par em uma nuvem.  
+- <xref:System.Net.PeerToPeer.PeerName>: Define um nome de par que pode ser usado para registrar e posteriormente resolver um par em uma nuvem.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>: Define o registro na nuvem PNRP que contém as informações de registro de um par, que incluem os pontos de extremidade de rede nos quais o par pode ser contatado.  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>: Define o registro na nuvem PNRP que contém as informações de registro de um par, que incluem os pontos de extremidade de rede nos quais o par pode ser contatado.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRegistration>: Define o processo de registro de um nome de par, incluindo métodos para iniciar e interromper o registro de nome de par.  
+- <xref:System.Net.PeerToPeer.PeerNameRegistration>: Define o processo de registro de um nome de par, incluindo métodos para iniciar e interromper o registro de nome de par.  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>: Define o processo de resolução de um nome de par para seus pontos de extremidade de rede, incluindo métodos síncronos e assíncronos para a resolução.  
+- <xref:System.Net.PeerToPeer.PeerNameResolver>: Define o processo de resolução de um nome de par para seus pontos de extremidade de rede, incluindo métodos síncronos e assíncronos para a resolução.  
   
 ## <a name="see-also"></a>Consulte também
 

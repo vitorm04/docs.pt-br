@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322401"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615227"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parâmetros de folha de estilos e objetos de extensão
 A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível de folha de estilos para objetos de parâmetros de transformações (XSLT) e a extensão XSLT. Quando passados para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , esses parâmetros e objetos de extensão podem ser chamados de folhas de estilos.  
@@ -25,13 +25,13 @@ A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível 
   
  Os seguintes são vantagens de passar um objeto em vez de usar um script inserido:  
   
--   Fornece a melhor encapsulamento e reutilização de classes.  
+- Fornece a melhor encapsulamento e reutilização de classes.  
   
--   Permite que as folhas de estilos são menores e mais sustentável.  
+- Permite que as folhas de estilos são menores e mais sustentável.  
   
--   Suporte que chamam métodos nas classes que pertencem aos espaços para nomes diferentes de aquelas definidas dentro do conjunto de namespaces suporte de <xref:System> .  
+- Suporte que chamam métodos nas classes que pertencem aos espaços para nomes diferentes de aquelas definidas dentro do conjunto de namespaces suporte de <xref:System> .  
   
--   Suporte que passam partes da árvore de resultado à folha de estilos com o uso de <xref:System.Xml.XPath.XPathNodeIterator>.  
+- Suporte que passam partes da árvore de resultado à folha de estilos com o uso de <xref:System.Xml.XPath.XPathNodeIterator>.  
   
 ## <a name="xslt-style-sheet-parameters"></a>Parâmetros de folha de estilos XSLT  
  Os parâmetros XSLT são adicionados a <xref:System.Xml.Xsl.XsltArgumentList> usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> . Um nome qualificado e um namespace Uniform Resource Identifier (URI) são associados com o objeto de parâmetro no momento.  

@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307711"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626290"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Como: Migrar código DCOM gerenciado para o WCF
 O WCF (Windows Communication Foundation) é a opção recomendada e uma escolha segura no lugar do DCOM (Distributed Component Object Model) para chamadas de código gerenciado entre servidores e clientes em um ambiente distribuído. Este artigo mostra como migrar código de DCOM para o WCF para os cenários a seguir.  
   
--   O serviço remoto retorna um objeto por valor para o cliente  
+- O serviço remoto retorna um objeto por valor para o cliente  
   
--   O cliente envia um objeto por valor para o serviço remoto  
+- O cliente envia um objeto por valor para o serviço remoto  
   
--   O serviço remoto retorna um objeto por referência para o cliente  
+- O serviço remoto retorna um objeto por referência para o cliente  
   
  Por motivos de segurança, enviar um objeto por referência do cliente para o serviço não é permitido no WCF. Um cenário que requer uma conversa de ida e volta entre o cliente e o servidor pode ser obtido no WCF usando um serviço duplex.  Para obter mais informações sobre serviços duplex, consulte [Serviços duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   

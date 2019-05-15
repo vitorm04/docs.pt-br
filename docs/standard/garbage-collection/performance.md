@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310558"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622884"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 <a name="top"></a> Este tópico descreve problemas relacionados ao uso de memória e coleta de lixo. Ele aborda problemas relacionados a heap gerenciado e explica como minimizar o efeito da coleta de lixo em seus aplicativos. Cada problema tem links para procedimentos que podem ser usados para investigar problemas.  
   
  Esse tópico contém as seguintes seções:  
   
--   [Ferramentas de análise de desempenho](#performance_analysis_tools)  
+- [Ferramentas de análise de desempenho](#performance_analysis_tools)  
   
--   [Solucionando problemas de desempenho](#troubleshooting_performance_issues)  
+- [Solucionando problemas de desempenho](#troubleshooting_performance_issues)  
   
--   [Diretrizes de solução de problemas](#troubleshooting_guidelines)  
+- [Diretrizes de solução de problemas](#troubleshooting_guidelines)  
   
--   [Procedimentos de verificação de desempenho](#performance_check_procedures)  
+- [Procedimentos de verificação de desempenho](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
 ## <a name="performance-analysis-tools"></a>Ferramentas de análise de desempenho  
@@ -46,11 +46,11 @@ ms.locfileid: "59310558"
 ### <a name="garbage-collection-etw-events"></a>Eventos ETW de coleta de lixo  
  O ETW (Rastreamento de Eventos para Windows) é um sistema de rastreamento que complementa o suporte à criação de perfil e à depuração fornecido pelo .NET Framework. Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], os [eventos ETW de coleta de lixo](../../../docs/framework/performance/garbage-collection-etw-events.md) capturam informações úteis para analisar o heap gerenciado do ponto de vista estatístico. Por exemplo, o `GCStart_V1` evento, que é acionado quando uma coleta de lixo está prestes a ocorrer, fornece as seguintes informações:  
   
--   Qual geração de objetos está sendo coletada.  
+- Qual geração de objetos está sendo coletada.  
   
--   O que disparou a coleta de lixo.  
+- O que disparou a coleta de lixo.  
   
--   Tipo de coleta de lixo (simultânea ou não simultânea).  
+- Tipo de coleta de lixo (simultânea ou não simultânea).  
   
  O log de eventos ETW é eficiente e não mascarará nenhum problema de desempenho associado à coleta de lixo. Um processo pode fornecer seus próprios eventos junto com eventos ETW. Quando registrados em log, tanto os eventos de coleta de lixo quanto os eventos do aplicativo podem ser correlacionados para determinar como e quando os problemas de heap ocorrem. Por exemplo, um aplicativo para servidores pode fornecer eventos no início e no final de uma solicitação de cliente.  
   
@@ -69,29 +69,29 @@ ms.locfileid: "59310558"
 ## <a name="troubleshooting-performance-issues"></a>Solucionando problemas de desempenho  
  A primeira etapa é [determinar se o problema é realmente a coleta de lixo](#IsGC). Se você determinar que é, selecione um item da lista a seguir para solucionar o problema.  
   
--   [Uma exceção de falta de memória é lançada](#Issue_OOM)  
+- [Uma exceção de falta de memória é lançada](#Issue_OOM)  
   
--   [O processo usa memória demais](#Issue_TooMuchMemory)  
+- [O processo usa memória demais](#Issue_TooMuchMemory)  
   
--   [O coletor de lixo não recupera objetos com rapidez suficiente](#Issue_NotFastEnough)  
+- [O coletor de lixo não recupera objetos com rapidez suficiente](#Issue_NotFastEnough)  
   
--   [O heap gerenciado está fragmentado demais](#Issue_Fragmentation)  
+- [O heap gerenciado está fragmentado demais](#Issue_Fragmentation)  
   
--   [As pausas na coleta de lixo são longas demais](#Issue_LongPauses)  
+- [As pausas na coleta de lixo são longas demais](#Issue_LongPauses)  
   
--   [A geração 0 é grande demais](#Issue_Gen0)  
+- [A geração 0 é grande demais](#Issue_Gen0)  
   
--   [O uso da CPU durante uma coleta de lixo é alto demais](#Issue_HighCPU)  
+- [O uso da CPU durante uma coleta de lixo é alto demais](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
 ### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: Uma exceção de falta de memória é lançada  
  Há dois casos legítimos para um <xref:System.OutOfMemoryException> gerenciado ser lançado:  
   
--   Falta de memória virtual.  
+- Falta de memória virtual.  
   
      O coletor de lixo aloca memória do sistema em segmentos com tamanho predeterminado. Se uma alocação requer um segmento adicional mas não há nenhum bloco contíguo livre restante no espaço de memória virtual do processo, a alocação de heap gerenciado falha.  
   
--   Não há memória física suficiente para alocar.  
+- Não há memória física suficiente para alocar.  
   
 |Verificações de desempenho|  
 |------------------------|  
@@ -99,11 +99,11 @@ ms.locfileid: "59310558"
   
  Se você determinar que a exceção não é legítima, entre em contato com o Serviço de Suporte e Atendimento ao Cliente Microsoft com as seguintes informações:  
   
--   A pilha com a exceção de falta de memória gerenciada.  
+- A pilha com a exceção de falta de memória gerenciada.  
   
--   O despejo de memória completo.  
+- O despejo de memória completo.  
   
--   Dados que provam que não é uma exceção de memória insuficiente legítima, incluindo dados mostrando que a memória física ou virtual não são um problema.  
+- Dados que provam que não é uma exceção de memória insuficiente legítima, incluindo dados mostrando que a memória física ou virtual não são um problema.  
   
 <a name="Issue_TooMuchMemory"></a>   
 ### <a name="issue-the-process-uses-too-much-memory"></a>Problema: O processo usa memória demais  
@@ -141,11 +141,11 @@ ms.locfileid: "59310558"
   
  Se a fragmentação da memória virtual estiver impedindo que o coletor de lixo adicione segmentos, as causas poderão ser uma dos seguintes:  
   
--   Carregamento e descarregamento frequente de muitos assemblies pequenos.  
+- Carregamento e descarregamento frequente de muitos assemblies pequenos.  
   
--   Retenção de um número excessivo de referências a objetos COM ao interoperar com código não gerenciado.  
+- Retenção de um número excessivo de referências a objetos COM ao interoperar com código não gerenciado.  
   
--   Criação de objetos transitórios grandes, que faz com que o heap de objeto grande aloque e libere segmentos de heap frequentemente.  
+- Criação de objetos transitórios grandes, que faz com que o heap de objeto grande aloque e libere segmentos de heap frequentemente.  
   
      Ao hospedar o CLR, um aplicativo pode solicitar que o coletor de lixo retenha seus segmentos. Isso reduz a frequência de alocações de segmento. Isso é feito usando o sinalizador STARTUP_HOARD_GC_VM na [Enumeração STARTUP_FLAGS](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
   
@@ -201,24 +201,24 @@ ms.locfileid: "59310558"
 ### <a name="when-to-measure-the-managed-heap-size"></a>Quando medir o tamanho do heap gerenciado  
  A menos que você esteja usando um criador de perfil, você terá que estabelecer um padrão de medição consistente para diagnosticar problemas de desempenho de modo eficaz. Considere os pontos a seguir ao estabelecer uma agenda:  
   
--   Se você medir após uma coleta de lixo da geração 2, todo o heap gerenciado estará livre de lixo (objetos inativos).  
+- Se você medir após uma coleta de lixo da geração 2, todo o heap gerenciado estará livre de lixo (objetos inativos).  
   
--   Se você medir imediatamente após uma coleta de lixo da geração 0, os objetos nas gerações 1 e 2 ainda não serão coletados.  
+- Se você medir imediatamente após uma coleta de lixo da geração 0, os objetos nas gerações 1 e 2 ainda não serão coletados.  
   
--   Se você medir imediatamente antes de uma coleta de lixo, você medirá o máximo de alocação possível antes do início da coleta de lixo.  
+- Se você medir imediatamente antes de uma coleta de lixo, você medirá o máximo de alocação possível antes do início da coleta de lixo.  
   
--   Medir durante uma coleta de lixo é problemático, pois as estruturas de dados do coletor de lixo não estão em um estado válido para passagem e podem não ser capazes de fornecer a você os resultados completos. Esse comportamento é esperado.  
+- Medir durante uma coleta de lixo é problemático, pois as estruturas de dados do coletor de lixo não estão em um estado válido para passagem e podem não ser capazes de fornecer a você os resultados completos. Esse comportamento é esperado.  
   
--   Quando você usa a coleta de lixo de estação de trabalho com coleta de lixo simultânea, os objetos recuperados não são compactados, portanto, o tamanho do heap pode ser igual ou maior (a fragmentação pode fazer com que pareça maior).  
+- Quando você usa a coleta de lixo de estação de trabalho com coleta de lixo simultânea, os objetos recuperados não são compactados, portanto, o tamanho do heap pode ser igual ou maior (a fragmentação pode fazer com que pareça maior).  
   
--   A coleta de lixo simultânea na geração 2 é atrasada quando a carga de memória física é alta demais.  
+- A coleta de lixo simultânea na geração 2 é atrasada quando a carga de memória física é alta demais.  
   
  O procedimento a seguir descreve como definir um ponto de interrupção para que você possa medir o heap gerenciado.  
   
 <a name="GenBreak"></a>   
 ##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Para definir um ponto de interrupção no final da coleta de lixo  
   
--   No WinDbg, com a extensão de depurador SOS carregada, digite o seguinte comando:  
+- No WinDbg, com a extensão de depurador SOS carregada, digite o seguinte comando:  
   
      **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**  
   
@@ -234,44 +234,44 @@ ms.locfileid: "59310558"
 ## <a name="performance-check-procedures"></a>Procedimentos de verificação de desempenho  
  Esta seção descreve os procedimentos a seguir para isolar a causa do problema de desempenho:  
   
--   [Determine se o problema é causado pela coleta de lixo.](#IsGC)  
+- [Determine se o problema é causado pela coleta de lixo.](#IsGC)  
   
--   [Determine se a exceção de falta de memória é gerenciada.](#OOMIsManaged)  
+- [Determine se a exceção de falta de memória é gerenciada.](#OOMIsManaged)  
   
--   [Determine a quantidade de memória virtual que pode ser reservada.](#GetVM)  
+- [Determine a quantidade de memória virtual que pode ser reservada.](#GetVM)  
   
--   [Determine se há memória física suficiente.](#Physical)  
+- [Determine se há memória física suficiente.](#Physical)  
   
--   [Determine a quantidade de memória que o heap gerenciado está confirmando.](#ManagedHeapCommit)  
+- [Determine a quantidade de memória que o heap gerenciado está confirmando.](#ManagedHeapCommit)  
   
--   [Determine a quantidade de memória que o heap gerenciado reserva.](#ManagedHeapReserve)  
+- [Determine a quantidade de memória que o heap gerenciado reserva.](#ManagedHeapReserve)  
   
--   [Determine objetos grandes na geração 2.](#ExamineGen2)  
+- [Determine objetos grandes na geração 2.](#ExamineGen2)  
   
--   [Determine referências para os objetos.](#ObjRef)  
+- [Determine referências para os objetos.](#ObjRef)  
   
--   [Determine se um finalizador foi executado.](#Induce)  
+- [Determine se um finalizador foi executado.](#Induce)  
   
--   [Determine se há objetos aguardando finalização.](#Finalize)  
+- [Determine se há objetos aguardando finalização.](#Finalize)  
   
--   [Determine a quantidade de espaço livre no heap gerenciado.](#Fragmented)  
+- [Determine a quantidade de espaço livre no heap gerenciado.](#Fragmented)  
   
--   [Determine o número de objetos fixados.](#Pinned)  
+- [Determine o número de objetos fixados.](#Pinned)  
   
--   [Determine a duração de uma coleta de lixo.](#TimeInGC)  
+- [Determine a duração de uma coleta de lixo.](#TimeInGC)  
   
--   [Determine o que disparou uma coleta de lixo.](#Triggered)  
+- [Determine o que disparou uma coleta de lixo.](#Triggered)  
   
--   [Determine se o alto uso da CPU é causado pela coleta de lixo.](#HighCPU)  
+- [Determine se o alto uso da CPU é causado pela coleta de lixo.](#HighCPU)  
   
 <a name="IsGC"></a>   
 ##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Para determinar se o problema é causado pela coleta de lixo  
   
--   Examine os dois contadores de desempenho de memória a seguir:  
+- Examine os dois contadores de desempenho de memória a seguir:  
   
-    -   **% de Tempo Gasto em GC**. Exibe o percentual de tempo decorrido que foi gasto na execução de uma coleta de lixo após o último ciclo de coleta de lixo. Use este contador para determinar se o coletor de lixo está gastando tempo demais para disponibilizar espaço de heap gerenciado. Se o tempo gasto na coleta de lixo for relativamente baixo, isso poderá indicar um problema de recurso fora do heap gerenciado. Esse contador pode não ser preciso quando coleta de lixo simultânea ou em segundo plano está envolvida.  
+    - **% de Tempo Gasto em GC**. Exibe o percentual de tempo decorrido que foi gasto na execução de uma coleta de lixo após o último ciclo de coleta de lixo. Use este contador para determinar se o coletor de lixo está gastando tempo demais para disponibilizar espaço de heap gerenciado. Se o tempo gasto na coleta de lixo for relativamente baixo, isso poderá indicar um problema de recurso fora do heap gerenciado. Esse contador pode não ser preciso quando coleta de lixo simultânea ou em segundo plano está envolvida.  
   
-    -   **N. Total de Bytes Confirmados**. Exibe a quantidade de memória virtual confirmada atualmente pelo coletor de lixo. Use este contador para determinar se a memória consumida pelo coletor de lixo é uma parte excessiva da memória usada pelo aplicativo.  
+    - **N. Total de Bytes Confirmados**. Exibe a quantidade de memória virtual confirmada atualmente pelo coletor de lixo. Use este contador para determinar se a memória consumida pelo coletor de lixo é uma parte excessiva da memória usada pelo aplicativo.  
   
      A maioria dos contadores de desempenho de memória é atualizada no final de cada coleta de lixo. Portanto, eles podem não refletir as condições atuais sobre as quais você deseja obter informações.  
   
@@ -311,7 +311,7 @@ ms.locfileid: "59310558"
 <a name="GetVM"></a>   
 ##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Para determinar a quantidade de memória virtual que pode ser reservada  
   
--   No WinDbg, com a extensão de depurador SOS carregada, digite o seguinte comando para obter a maior região livre:  
+- No WinDbg, com a extensão de depurador SOS carregada, digite o seguinte comando para obter a maior região livre:  
   
      **!address -summary**  
   
@@ -325,7 +325,7 @@ ms.locfileid: "59310558"
   
      - ou -  
   
--   Use o comando **vmstat**:  
+- Use o comando **vmstat**:  
   
      **!vmstat**  
   
@@ -353,7 +353,7 @@ ms.locfileid: "59310558"
 <a name="ManagedHeapCommit"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Para determinar a quantidade de memória que o heap gerenciado está confirmando  
   
--   Use o contador de desempenho de memória de `# Total committed bytes` para obter o número de bytes que o heap gerenciado está confirmando. O coletor de lixo confirma partes em um segmento conforme necessário, nem todas ao mesmo tempo.  
+- Use o contador de desempenho de memória de `# Total committed bytes` para obter o número de bytes que o heap gerenciado está confirmando. O coletor de lixo confirma partes em um segmento conforme necessário, nem todas ao mesmo tempo.  
   
     > [!NOTE]
     >  Não use o contador de desempenho de `# Bytes in all Heaps`, porque ele não representa o uso de memória real pelo heap gerenciado. O tamanho de uma geração está incluído no valor e é na verdade seu tamanho limite, ou seja, o tamanho que induz uma coleta de lixo caso a geração esteja preenchida com objetos. Portanto, esse valor geralmente é zero.  
@@ -361,14 +361,14 @@ ms.locfileid: "59310558"
 <a name="ManagedHeapReserve"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Para determinar a quantidade de memória que o heap gerenciado reserva  
   
--   Use o contador de desempenho de memória de `# Total reserved bytes`.  
+- Use o contador de desempenho de memória de `# Total reserved bytes`.  
   
      O coletor de lixo reserva de memória em segmentos, sendo que você pode determinar a localização do início de um segmento usando o comando **eeheap**.  
   
     > [!IMPORTANT]
     >  Embora você possa determinar a quantidade de memória que o coletor de lixo aloca para cada segmento, o tamanho de segmento é específico da implementação e está sujeito a alterações a qualquer momento, incluindo atualizações periódicas. Seu aplicativo nunca deve fazer suposições sobre o tamanho de um segmento em particular nem depender dele, tampouco deve tentar configurar a quantidade de memória disponível para alocações de segmento.  
   
--   No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:  
+- No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:  
   
      **!eeheap -gc**  
   
@@ -409,7 +409,7 @@ ms.locfileid: "59310558"
 <a name="ExamineGen2"></a>   
 ##### <a name="to-determine-large-objects-in-generation-2"></a>Para determinar objetos grandes na geração 2  
   
--   No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:  
+- No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:  
   
      **!dumpheap –stat**  
   
@@ -448,13 +448,13 @@ ms.locfileid: "59310558"
 <a name="ObjRef"></a>   
 ##### <a name="to-determine-references-to-objects"></a>Para determinar referências a objetos  
   
--   No WinDbg, com a extensão de depurador SOS carregada, digite o seguinte comando para listar as referências a objetos:  
+- No WinDbg, com a extensão de depurador SOS carregada, digite o seguinte comando para listar as referências a objetos:  
   
      **!gcroot**  
   
      `-or-`  
   
--   Para determinar as referências a um objeto específico, inclua o endereço:  
+- Para determinar as referências a um objeto específico, inclua o endereço:  
   
      **!gcroot 1c37b2ac**  
   
@@ -481,7 +481,7 @@ ms.locfileid: "59310558"
 <a name="Induce"></a>   
 ##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Para determinar se um finalizador foi executado  
   
--   Execute um programa de teste que contenha o código a seguir:  
+- Execute um programa de teste que contenha o código a seguir:  
   
     ```  
     GC.Collect();  
@@ -518,7 +518,7 @@ ms.locfileid: "59310558"
 <a name="Fragmented"></a>   
 ##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Para determinar a quantidade de espaço livre no heap gerenciado  
   
--   No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:  
+- No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:  
   
      **!dumpheap -type Free -stat**  
   
@@ -532,7 +532,7 @@ ms.locfileid: "59310558"
     Total 230 objects  
     ```  
   
--   Para determinar o espaço livre na geração 0, digite o comando a seguir para obter informações de consumo de memória por geração:  
+- Para determinar o espaço livre na geração 0, digite o comando a seguir para obter informações de consumo de memória por geração:  
   
      **!eeheap -gc**  
   
@@ -552,7 +552,7 @@ ms.locfileid: "59310558"
     46120000 46120038  49e05d04   0x03ce5ccc(63855820)  
     ```  
   
--   Calcule o espaço usado pela geração 0:  
+- Calcule o espaço usado pela geração 0:  
   
      **? 49e05d04-0x49521f8c**  
   
@@ -562,7 +562,7 @@ ms.locfileid: "59310558"
     Evaluate expression: 9321848 = 008e3d78  
     ```  
   
--   O comando a seguir despeja o espaço livre dentro do intervalo de geração 0:  
+- O comando a seguir despeja o espaço livre dentro do intervalo de geração 0:  
   
      **!dumpheap -type Free -stat 0x49521f8c 49e05d04**  
   
@@ -594,7 +594,7 @@ ms.locfileid: "59310558"
 <a name="Pinned"></a>   
 ##### <a name="to-determine-the-number-of-pinned-objects"></a>Para determinar o número de objetos fixados  
   
--   No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:  
+- No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:  
   
      **!gchandles**  
   
@@ -609,7 +609,7 @@ ms.locfileid: "59310558"
 <a name="TimeInGC"></a>   
 ##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Para determinar a duração de uma coleta de lixo  
   
--   Examine o contador de desempenho de memória de `% Time in GC`.  
+- Examine o contador de desempenho de memória de `% Time in GC`.  
   
      O valor é calculado usando um intervalo de tempo de exemplo. Já que os contadores são atualizados ao final de cada coleta de lixo, a amostra atual terá o mesmo valor que a amostra anterior se nenhuma coleta tiver ocorrido durante o intervalo.  
   
@@ -640,7 +640,7 @@ ms.locfileid: "59310558"
   
      A segunda coleta de lixo de geração 2 começou durante o terceiro intervalo e terminou no quinto intervalo. Supondo o pior cenário possível, a última coleta de lixo foi para uma coleta de geração 0 que terminou no início do segundo intervalo e a coleta de lixo de geração 2 terminou no final do quinto intervalo. Portanto, o tempo entre o fim da coleta de lixo de geração 0 e o fim da coleta de lixo de geração 2 é de quatro segundos. Já que o contador de `% Time in GC` é 20%, a quantidade máxima de tempo que a coleta de lixo de geração 2 poderia ter levado é (quatro segundos * 20% = 800 ms).  
   
--   Como alternativa, você pode determinar a duração de uma coleta de lixo usando [eventos ETW de coleta de lixo](../../../docs/framework/performance/garbage-collection-etw-events.md) e analisando as informações para determinar a duração da coleta de lixo.  
+- Como alternativa, você pode determinar a duração de uma coleta de lixo usando [eventos ETW de coleta de lixo](../../../docs/framework/performance/garbage-collection-etw-events.md) e analisando as informações para determinar a duração da coleta de lixo.  
   
      Por exemplo, os dados a seguir mostram uma sequência de eventos que ocorreram durante uma coleta de lixo não simultânea.  
   
@@ -696,7 +696,7 @@ ms.locfileid: "59310558"
 <a name="Triggered"></a>   
 ##### <a name="to-determine-what-triggered-a-garbage-collection"></a>Para determinar o que disparou uma coleta de lixo  
   
--   No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir para mostrar todos os threads com suas pilhas de chamadas:  
+- No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir para mostrar todos os threads com suas pilhas de chamadas:  
   
      **~\*kb**  
   
@@ -774,7 +774,7 @@ ms.locfileid: "59310558"
 <a name="HighCPU"></a>   
 ##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Para determinar se o alto uso da CPU é causado pela coleta de lixo  
   
--   Correlacionar o valor do contador de desempenho de memória de `% Time in GC` com o tempo de processamento.  
+- Correlacionar o valor do contador de desempenho de memória de `% Time in GC` com o tempo de processamento.  
   
      Se o valor de `% Time in GC` subir ao mesmo tempo que o tempo de processamento, isso significará que a coleta de lixo está causando um alto uso da CPU. Caso contrário, crie o perfil do aplicativo para encontrar o local de ocorrência do alto uso.  
   

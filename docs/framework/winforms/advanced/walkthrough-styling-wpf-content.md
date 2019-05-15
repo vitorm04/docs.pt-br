@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d815311a89ba09ade7e3092ca4eeab67cbe20bd0
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211258"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557884"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Passo a passo: Conteúdo do WPF de estilo
 
@@ -58,15 +58,15 @@ Você pode aplicar um estilo diferente a um controle WPF para alterar sua aparê
 
 1. Abra `Form1` no Designer de Formulários do Windows.
 
-2. Na **Caixa de ferramentas**, clique duas vezes em `UserControl1` para criar uma instância de `UserControl1` no formulário.
+1. Na **Caixa de ferramentas**, clique duas vezes em `UserControl1` para criar uma instância de `UserControl1` no formulário.
 
      Uma instância do `UserControl1` é hospedado em uma nova <xref:System.Windows.Forms.Integration.ElementHost> controle chamado `elementHost1`.
 
-3. No painel de smart tag para `elementHost1`, clique em **Editar conteúdo hospedado** na lista suspensa.
+1. No painel de smart tag para `elementHost1`, clique em **Editar conteúdo hospedado** na lista suspensa.
 
      `UserControl1` é aberto no [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
-4. Na exibição XAML, insira o seguinte XAML após a marca de abertura `<UserControl>`.
+1. Na exibição XAML, insira o seguinte XAML após a marca de abertura `<UserControl>`.
 
      Esse XAML cria um gradiente com uma borda gradiente de contraste. Ao clicar no controle, os gradientes são alterados para gerar uma aparência de botão pressionado. Para obter mais informações, consulte [Estilo e modelagem](../../wpf/controls/styling-and-templating.md).
 
@@ -118,7 +118,7 @@ Você pode aplicar um estilo diferente a um controle WPF para alterar sua aparê
    </UserControl.Resources>
    ```
 
-4. Aplique o estilo `SimpleButton` definido na etapa anterior para o botão Cancelar inserindo o seguinte XAML na marca `<Button>` do botão Cancelar.
+1. Aplique o estilo `SimpleButton` definido na etapa anterior para o botão Cancelar inserindo o seguinte XAML na marca `<Button>` do botão Cancelar.
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -131,15 +131,15 @@ Você pode aplicar um estilo diferente a um controle WPF para alterar sua aparê
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-5. Compile o projeto.
+1. Compile o projeto.
 
-6. Abra `Form1` no Designer de Formulários do Windows.
+1. Abra `Form1` no Designer de Formulários do Windows.
 
-7. O novo estilo é aplicado ao controle de botão.
+1. O novo estilo é aplicado ao controle de botão.
 
-8. No menu **Depuração**, selecione **Iniciar Depuração** para executar o aplicativo.
+1. No menu **Depuração**, selecione **Iniciar Depuração** para executar o aplicativo.
 
-9. Clique nos botões OK e Cancelar e exibir as diferenças.
+1. Clique nos botões OK e Cancelar e exibir as diferenças.
 
 ## <a name="see-also"></a>Consulte também
 

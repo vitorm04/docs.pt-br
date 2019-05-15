@@ -2,12 +2,12 @@
 title: Nuvens PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110039"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623026"
 ---
 # <a name="pnrp-clouds"></a>Nuvens PNRP
 A "nuvem" PNRP representa um conjunto de nós que podem se comunicar entre si através da rede. O termo "nuvem" é sinônimo de "malha ponto a ponto" e "grafo ponto a ponto".  
@@ -18,9 +18,9 @@ A "nuvem" PNRP representa um conjunto de nós que podem se comunicar entre si at
   
  O PNRP usa três "escopos" de nuvem, nos quais um escopo é um agrupamento de computadores capazes de localizar uns aos outros:  
   
--   A nuvem global corresponde ao escopo de endereço IPv6 global e endereços globais e representa todos os computadores em toda a Internet IPv6. Há apenas uma única nuvem global.  
+- A nuvem global corresponde ao escopo de endereço IPv6 global e endereços globais e representa todos os computadores em toda a Internet IPv6. Há apenas uma única nuvem global.  
   
--   A nuvem de link local corresponde ao escopo de endereço IPv6 link local e endereços de link local. Uma nuvem de link local é para um link específico, que normalmente é o mesmo que a sub-rede conectada localmente. Pode haver várias nuvens de link local.  
+- A nuvem de link local corresponde ao escopo de endereço IPv6 link local e endereços de link local. Uma nuvem de link local é para um link específico, que normalmente é o mesmo que a sub-rede conectada localmente. Pode haver várias nuvens de link local.  
   
  Uma terceira nuvem, a nuvem específica do site, corresponde ao escopo de endereço IPv6 do site e a endereços de site local. Essa nuvem foi preterida, embora ela ainda tenha suporte em PNRP.  
   

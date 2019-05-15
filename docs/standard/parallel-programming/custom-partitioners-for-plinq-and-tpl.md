@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d08be327d4c6bf6dd1add3c7ea40ed491619a9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698885"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625614"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Particionadores personalizados para PLINQ e TPL
 Para paralelizar a uma operação em uma fonte de dados, uma das etapas essenciais é *particionar* a fonte em várias seções que possam ser acessadas simultaneamente por vários threads. O PLINQ e a TPL (Biblioteca de Paralelismo de Tarefas) fornecem particionadores padrão que funcionam de forma transparente quando você escreve uma consulta paralela ou um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A>. Para cenários mais avançados, você pode conectar seu próprio particionador.  
@@ -100,25 +100,25 @@ Para paralelizar a uma operação em uma fonte de dados, uma das etapas essencia
 ### <a name="contract-for-partitioners"></a>Contrato para particionadores  
  Ao implementar um particionador personalizado, siga estas diretrizes para garantir a interação correta com PLINQ e <xref:System.Threading.Tasks.Parallel.ForEach%2A> na TPL:  
   
--   Se <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> for chamado com um argumento de zero ou menos para `partitionsCount`, gere <xref:System.ArgumentOutOfRangeException>. Embora o PLINQ e o TPL nunca passem um `partitionCount` igual a 0, mesmo assim, recomendamos que você proteja contra a possibilidade.  
+- Se <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> for chamado com um argumento de zero ou menos para `partitionsCount`, gere <xref:System.ArgumentOutOfRangeException>. Embora o PLINQ e o TPL nunca passem um `partitionCount` igual a 0, mesmo assim, recomendamos que você proteja contra a possibilidade.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> e <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> devem retornar sempre `partitionsCount` partições. Se o particionador ficar sem dados e não puder criar tantas partições quantas foram solicitadas, o método deverá retornar um enumerador vazio para cada uma das partições restantes. Caso contrário, o PLINQ e o TPL gerarão um <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> e <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> devem retornar sempre `partitionsCount` partições. Se o particionador ficar sem dados e não puder criar tantas partições quantas foram solicitadas, o método deverá retornar um enumerador vazio para cada uma das partições restantes. Caso contrário, o PLINQ e o TPL gerarão um <xref:System.InvalidOperationException>.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> e <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> nunca devem retornar `null` (`Nothing` no Visual Basic). Se isso ocorrer, PLINQ/TPL gerará um <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> e <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> nunca devem retornar `null` (`Nothing` no Visual Basic). Se isso ocorrer, PLINQ/TPL gerará um <xref:System.InvalidOperationException>.  
   
--   Os métodos que retornam partições devem retornar sempre partições que podem enumerar total e exclusivamente a fonte de dados. Não deve haver nenhuma duplicação na fonte de dados nem itens ignorados, a menos que isso seja especificamente necessário para o design do particionador. Se essa regra não for seguida, a ordem de saída poderá ser embaralhada.  
+- Os métodos que retornam partições devem retornar sempre partições que podem enumerar total e exclusivamente a fonte de dados. Não deve haver nenhuma duplicação na fonte de dados nem itens ignorados, a menos que isso seja especificamente necessário para o design do particionador. Se essa regra não for seguida, a ordem de saída poderá ser embaralhada.  
   
--   Os seguintes getters boolianos devem sempre retornar com precisão os seguintes valores para que a ordem de saída não seja embaralhada:  
+- Os seguintes getters boolianos devem sempre retornar com precisão os seguintes valores para que a ordem de saída não seja embaralhada:  
   
-    -   `KeysOrderedInEachPartition`: Cada partição retorna elementos com índices de chave crescentes.  
+    - `KeysOrderedInEachPartition`: Cada partição retorna elementos com índices de chave crescentes.  
   
-    -   `KeysOrderedAcrossPartitions`: Para todas as partições retornadas, os índices de chave na partição *i* são maiores que os índices de chave na partição *i*-1.  
+    - `KeysOrderedAcrossPartitions`: Para todas as partições retornadas, os índices de chave na partição *i* são maiores que os índices de chave na partição *i*-1.  
   
-    -   `KeysNormalized`: Todos os índices de chave aumentam de forma monotônica sem lacunas, começando com zero.  
+    - `KeysNormalized`: Todos os índices de chave aumentam de forma monotônica sem lacunas, começando com zero.  
   
--   Todos os índices devem ser exclusivos. Não pode haver índices duplicados. Se essa regra não for seguida, a ordem de saída poderá ser embaralhada.  
+- Todos os índices devem ser exclusivos. Não pode haver índices duplicados. Se essa regra não for seguida, a ordem de saída poderá ser embaralhada.  
   
--   Todos os índices devem ser não negativos. Se essa regra não for seguida, PLINQ/TPL poderão gerar exceções.  
+- Todos os índices devem ser não negativos. Se essa regra não for seguida, PLINQ/TPL poderão gerar exceções.  
   
 ## <a name="see-also"></a>Consulte também
 

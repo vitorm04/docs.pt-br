@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f2e2fd6f46a430424e6010adbe0662b5bd3db7ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121097"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622649"
 ---
 # <a name="weak-references"></a>Referências fracas
 O coletor de lixo não pode coletar um objeto em uso por um aplicativo enquanto o código do aplicativo pode acessar esse objeto. O aplicativo tem uma referência forte para o objeto.  
@@ -33,11 +33,11 @@ O coletor de lixo não pode coletar um objeto em uso por um aplicativo enquanto 
 ## <a name="short-and-long-weak-references"></a>Referências fracas curtas e longas  
  Você pode criar uma referência fraca curta ou uma referência fraca longa:  
   
--   Abreviado  
+- Abreviado  
   
      O destino de uma referência fraca curta se torna `null` quando o objeto é recuperado pela coleta de lixo. A referência fraca é um objeto gerenciado e está sujeita à coleta de lixo assim como qualquer outro objeto gerenciado.  Uma referência fraca curta é o construtor padrão para <xref:System.WeakReference>.  
   
--   Long  
+- Long  
   
      Uma referência fraca longa é mantida após o método <xref:System.Object.Finalize%2A> do objeto ter sido chamado. Isso permite que o objeto seja recriado, mas o estado do objeto permanece imprevisível. Para usar uma referência longa, especifique `true` no construtor <xref:System.WeakReference>.  
   

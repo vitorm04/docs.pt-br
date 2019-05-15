@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a6c2b755b87f6f01f08f54a2f2fc567868dbb55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345762"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626342"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Expondo componentes do .NET Framework para COM
 A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado são atividades distintas para desenvolvedores. Esta seção descreve várias dicas para escrever um código gerenciado que interopera com clientes COM:  
   
--   [Qualificando tipos .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+- [Qualificando tipos .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
   
      Todos os tipos gerenciados, métodos, propriedades, campos e eventos que você deseja expor ao COM devem ser públicos. Os tipos devem ter um construtor padrão público, que é o único construtor que pode ser invocado por meio do COM.  
   
--   [Aplicando atributos de interoperabilidade](../../../docs/framework/interop/applying-interop-attributes.md).  
+- [Aplicando atributos de interoperabilidade](../../../docs/framework/interop/applying-interop-attributes.md).  
   
      Atributos personalizados no código gerenciado podem melhorar a interoperabilidade de um componente.  
   
--   [Empacotando um assembly para o COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
+- [Empacotando um assembly para o COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
   
      Os desenvolvedores do COM podem precisar que você resuma as etapas envolvidas na referência e implantação dos assemblies.  
   

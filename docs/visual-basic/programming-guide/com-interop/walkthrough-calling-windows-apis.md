@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022396"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592714"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Passo a passo: Chamando APIs do Windows (Visual Basic)
 APIs do Windows são bibliotecas de vínculo dinâmico (DLLs) que fazem parte do sistema operacional Windows. Você pode usá-los para executar tarefas quando é difícil escrever procedimentos equivalentes de sua preferência. Por exemplo, o Windows fornecem uma função chamada `FlashWindowEx` que permite que você faça a barra de título para um aplicativo alternativo entre tonalidades claras e escuras.  
   
  A vantagem de usar as APIs do Windows em seu código é que elas podem economizar tempo de desenvolvimento, porque eles contêm dezenas de funções úteis que já foram criadas e esperando para ser usado. A desvantagem é que as APIs do Windows pode ser difícil trabalhar com e implacável quando as coisas dão errado.  
   
- APIs do Windows representam uma categoria especial de interoperabilidade. APIs do Windows não use código gerenciado, não têm interno bibliotecas de tipos e usar os tipos de dados que são diferentes daqueles usados com o Visual Studio. Devido a essas diferenças, e como as APIs do Windows não são objetos COM, interoperabilidade com APIs do Windows e o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] é realizada usando a plataforma de invocar, ou PInvoke. Invocação de plataforma é um serviço que permite que código gerenciado chame funções não gerenciadas implementadas em DLLs. Para obter mais informações, consulte [consumindo funções de DLL não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md). Você pode usar PInvoke no Visual Basic usando o `Declare` instrução ou aplicar o `DllImport` de atributo a um procedimento vazio.  
+ APIs do Windows representam uma categoria especial de interoperabilidade. APIs do Windows não use código gerenciado, não têm interno bibliotecas de tipos e usar os tipos de dados que são diferentes daqueles usados com o Visual Studio. Por causa dessas diferenças, e porque as APIs do Windows não são objetos COM, interoperabilidade com APIs do Windows e o .NET Framework é realizado usando invocação de plataforma, ou PInvoke. Invocação de plataforma é um serviço que permite que código gerenciado chame funções não gerenciadas implementadas em DLLs. Para obter mais informações, consulte [consumindo funções de DLL não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md). Você pode usar PInvoke no Visual Basic usando o `Declare` instrução ou aplicar o `DllImport` de atributo a um procedimento vazio.  
   
- Chamadas à API do Windows foram uma parte importante do Visual Basic de programação no passado, mas raramente são necessárias com o Visual Basic .NET. Sempre que possível, você deve usar código gerenciado do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para executar tarefas, em vez de chamadas à API do Windows. Este passo a passo fornece informações sobre as situações nas quais o uso APIs do Windows é necessária.  
+ Chamadas à API do Windows foram uma parte importante do Visual Basic de programação no passado, mas raramente são necessárias com o Visual Basic .NET. Sempre que possível, você deve usar código gerenciado do .NET Framework para executar tarefas, em vez de chamadas à API do Windows. Este passo a passo fornece informações sobre as situações nas quais o uso APIs do Windows é necessária.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

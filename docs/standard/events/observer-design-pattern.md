@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: a89739b92d64e8774080d82f9e39af24c269223e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836559"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615171"
 ---
 # <a name="observer-design-pattern"></a>Padrão de design do observador
 O padrão de design do observador permite a um assinante se registrar em um provedor e receber notificações dele. Ele é adequado para qualquer cenário que requer a notificação por push. O padrão define um *provedor* (também conhecido como *assunto* ou *observável*) e zero, um ou mais *observadores*. Observadores registram-se com o provedor e, sempre que uma condição, evento ou alteração de estado predefinido ocorrer, o provedor notificará automaticamente todos os observadores chamando um dos seus métodos. Nessa chamada de método, o provedor também pode fornecer informações sobre o estado atual para observadores. No .NET Framework, o padrão de design de observador é aplicado ao implementar as interfaces genéricas <xref:System.IObservable%601?displayProperty=nameWithType> e <xref:System.IObserver%601?displayProperty=nameWithType>. O parâmetro de tipo genérico representa o tipo que fornece informações de notificação.  
@@ -29,21 +29,21 @@ O padrão de design do observador permite a um assinante se registrar em um prov
   
  A implementação do padrão exige que você forneça o seguinte:  
   
--   Um provedor ou o assunto, que é o objeto que envia notificações para observadores. Um provedor é uma classe ou estrutura que implementa a interface <xref:System.IObservable%601>. O provedor deve implementar um único método, <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, que é chamado pelos observadores que desejam receber notificações do provedor.  
+- Um provedor ou o assunto, que é o objeto que envia notificações para observadores. Um provedor é uma classe ou estrutura que implementa a interface <xref:System.IObservable%601>. O provedor deve implementar um único método, <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, que é chamado pelos observadores que desejam receber notificações do provedor.  
   
--   Um observador, que é um objeto que recebe notificações de um provedor. Um observador é uma classe ou estrutura que implementa a interface <xref:System.IObserver%601>. O observador deve implementar três métodos, que são chamados pelo provedor:  
+- Um observador, que é um objeto que recebe notificações de um provedor. Um observador é uma classe ou estrutura que implementa a interface <xref:System.IObserver%601>. O observador deve implementar três métodos, que são chamados pelo provedor:  
   
-    -   <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, que fornece ao observador informações novas ou atuais.  
+    - <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, que fornece ao observador informações novas ou atuais.  
   
-    -   <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, que informa o observador que ocorreu um erro.  
+    - <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, que informa o observador que ocorreu um erro.  
   
-    -   <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, que indica que o provedor terminou de enviar notificações.  
+    - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, que indica que o provedor terminou de enviar notificações.  
   
--   Um mecanismo que permite que o provedor mantenha controle dos observadores. Normalmente, o provedor usa um objeto de contêiner, como um objeto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, para manter as referências às implementações de <xref:System.IObserver%601> que assinaram notificações. Usar um contêiner de armazenamento para essa finalidade permite que o provedor lidar com um número ilimitado de observadores. A ordem na qual os observadores recebem notificações não está definida. O provedor está livre para usar qualquer método para determinar a ordem.  
+- Um mecanismo que permite que o provedor mantenha controle dos observadores. Normalmente, o provedor usa um objeto de contêiner, como um objeto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, para manter as referências às implementações de <xref:System.IObserver%601> que assinaram notificações. Usar um contêiner de armazenamento para essa finalidade permite que o provedor lidar com um número ilimitado de observadores. A ordem na qual os observadores recebem notificações não está definida. O provedor está livre para usar qualquer método para determinar a ordem.  
   
--   Uma implementação de <xref:System.IDisposable> que permite que o provedor remova os observadores quando a notificação for concluída. Observadores recebem uma referência para a implementação de <xref:System.IDisposable> do método <xref:System.IObservable%601.Subscribe%2A>, portanto, eles também podem chamar o método <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> para cancelar a assinatura antes que o provedor tenha terminado de enviar notificações.  
+- Uma implementação de <xref:System.IDisposable> que permite que o provedor remova os observadores quando a notificação for concluída. Observadores recebem uma referência para a implementação de <xref:System.IDisposable> do método <xref:System.IObservable%601.Subscribe%2A>, portanto, eles também podem chamar o método <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> para cancelar a assinatura antes que o provedor tenha terminado de enviar notificações.  
   
--   Um objeto que contém os dados que o provedor envia para seus observadores. O tipo desse objeto corresponde ao parâmetro de tipo genérico das interfaces <xref:System.IObservable%601> e <xref:System.IObserver%601>. Embora esse objeto possa ser o mesmo que a implementação de <xref:System.IObservable%601>, geralmente ele é um tipo separado.  
+- Um objeto que contém os dados que o provedor envia para seus observadores. O tipo desse objeto corresponde ao parâmetro de tipo genérico das interfaces <xref:System.IObservable%601> e <xref:System.IObserver%601>. Embora esse objeto possa ser o mesmo que a implementação de <xref:System.IObservable%601>, geralmente ele é um tipo separado.  
   
 > [!NOTE]
 >  Além de implementar o padrão de design do observador, pode ser interessante explorar bibliotecas que são criadas usando as interfaces <xref:System.IObservable%601> e <xref:System.IObserver%601>. Por exemplo, [Extensões Reativas para .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) consistem em um conjunto de métodos de extensão e operadores de sequência padrão LINQ para oferecer suporte à programação assíncrona.  
@@ -56,9 +56,9 @@ O padrão de design do observador permite a um assinante se registrar em um prov
   
  Uma classe `BaggageHandler` é responsável por receber informações sobre os voos que chegam e as esteiras de coleta de bagagem. Internamente, ela mantém duas coleções:  
   
--   `observers` - Uma coleção de clientes que receberão informações atualizadas.  
+- `observers` - Uma coleção de clientes que receberão informações atualizadas.  
   
--   `flights` - Uma coleção de voos e suas respectivas esteiras.  
+- `flights` - Uma coleção de voos e suas respectivas esteiras.  
   
  Ambas as coleções são representadas por objetos <xref:System.Collections.Generic.List%601> genéricos que são instanciados no construtor de classe `BaggageHandler`. O código-fonte para a classe `BaggageHandler` é mostrado no exemplo a seguir.  
   

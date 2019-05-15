@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: f92fc78aa7645abb742fdb38c360ac6641b1591d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb9ad627df640e56b5250a2fdd15f5ac0d52df79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627055"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592595"
 ---
 # <a name="data-member-default-values"></a>Valores padrões de membro de dados
-No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tipos têm um conceito de *valores padrão*. Por exemplo, para qualquer tipo de referência, o valor padrão é `null`, e para um tipo inteiro é zero. É desejável, ocasionalmente, para omitir um membro de dados dos dados serializados quando ela é definida como seu valor padrão. Como o membro tem um valor padrão, um valor real não precisa ser serializado; Isso tem uma vantagem de desempenho.  
+No .NET Framework, os tipos têm um conceito de *valores padrão*. Por exemplo, para qualquer tipo de referência, o valor padrão é `null`, e para um tipo inteiro é zero. É desejável, ocasionalmente, para omitir um membro de dados dos dados serializados quando ela é definida como seu valor padrão. Como o membro tem um valor padrão, um valor real não precisa ser serializado; Isso tem uma vantagem de desempenho.  
   
  Para omitir um membro de dados serializados, defina a <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> atributo `false` (o padrão é `true`).  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
-ms.openlocfilehash: a2179e767a0556f5223f2f4c1cc91708133120a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 99bbff5a3350f55f04fdbd6ce7147b6597773322
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103695"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624593"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Como: Habilitar uma WebRequest a usar um proxy para se comunicar com a Internet
 Este exemplo cria uma instância de proxy global que permitirá que qualquer <xref:System.Net.WebRequest> use um proxy para se comunicar com a Internet. O exemplo supõe que o servidor proxy se chama `webproxy` e que ele se comunica na porta 80, a porta HTTP padrão.  
@@ -30,7 +30,7 @@ GlobalProxySelection.Select = proxyObject
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Uma [diretiva `using`](../../csharp/language-reference/keywords/using-directive.md) para o namespace **System.Net**.  
+- Uma [diretiva `using`](../../csharp/language-reference/keywords/using-directive.md) para o namespace **System.Net**.  
   
 ## <a name="see-also"></a>Consulte também
 

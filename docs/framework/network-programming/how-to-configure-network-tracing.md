@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151548"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613708"
 ---
 # <a name="how-to-configure-network-tracing"></a>Como: Configurar o rastreamento de rede
 O aplicativo ou o arquivo de configuração do computador mantém as configurações que determinam o formato e o conteúdo dos rastreamentos de rede. Antes de executar este procedimento, certifique-se de que o rastreamento está habilitado. Para obter informações sobre como habilitar o rastreamento, consulte [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -27,7 +27,7 @@ O aplicativo ou o arquivo de configuração do computador mantém as configuraç
   
 ### <a name="to-configure-network-tracing"></a>Para configurar o rastreamento de rede  
   
--   Adicione as seguintes linhas no arquivo de configuração apropriado. Os valores e as opções dessas configurações são descritos nas tabelas abaixo.  
+- Adicione as seguintes linhas no arquivo de configuração apropriado. Os valores e as opções dessas configurações são descritos nas tabelas abaixo.  
   
     ```xml  
     <configuration>  

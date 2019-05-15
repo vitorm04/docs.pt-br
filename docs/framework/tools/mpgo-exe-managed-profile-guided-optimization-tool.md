@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306317"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616065"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Ferramenta de Otimização Guiada por Perfil Gerenciado)
 
@@ -102,9 +102,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="using-mpgoexe-from-visual-studio"></a>Usando Mpgo.exe com base no Visual Studio  
  Você pode executar o Mpgo.exe do Visual Studio (confira o artigo [Como especificar eventos de build (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) com as seguintes restrições:  
   
--   Não é possível usar caminhos entre aspas com marcas de barra à direita porque as macros do Visual Studio também usam marcas de barra à direita por padrão. (Por exemplo, `–OutDir "C:\Output Folder\"` é inválido.) Para solucionar essa restrição, é possível ignorar a barra à direita. (Por exemplo, use `-OutDir "$(OutDir)\"` em vez disso.)  
+- Não é possível usar caminhos entre aspas com marcas de barra à direita porque as macros do Visual Studio também usam marcas de barra à direita por padrão. (Por exemplo, `–OutDir "C:\Output Folder\"` é inválido.) Para solucionar essa restrição, é possível ignorar a barra à direita. (Por exemplo, use `-OutDir "$(OutDir)\"` em vez disso.)  
   
--   Por padrão, Mpgo.exe não está no caminho de compilação do Visual Studio. Você deve adicionar o caminho para o Visual Studio ou especificar o caminho completo na linha de comando de Mpgo. É possível usar o parâmetro `–Scenario` ou `–Import` no evento de pós-build no Visual Studio. No entanto, o processo típico é usar `–Scenario` uma vez de um Prompt de Comando do Desenvolvedor para Visual Studio e, então, usar `–Import` para atualizar os assemblies otimizados após cada build, por exemplo: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
+- Por padrão, Mpgo.exe não está no caminho de compilação do Visual Studio. Você deve adicionar o caminho para o Visual Studio ou especificar o caminho completo na linha de comando de Mpgo. É possível usar o parâmetro `–Scenario` ou `–Import` no evento de pós-build no Visual Studio. No entanto, o processo típico é usar `–Scenario` uma vez de um Prompt de Comando do Desenvolvedor para Visual Studio e, então, usar `–Import` para atualizar os assemblies otimizados após cada build, por exemplo: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>Exemplos  

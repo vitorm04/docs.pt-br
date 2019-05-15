@@ -2,12 +2,12 @@
 title: Nomes de par e IDs de PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: e7e92519bede478a5e26a88a56236f987c93c441
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8cdd5151d029436d11c78806cf7673861cc0d8a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772902"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623115"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nomes de par e IDs de PNRP
 Um nome de par representa um ponto de extremidade para comunicação, que pode ser um computador, um usuário, um grupo, um serviço ou qualquer elemento associado a um par que pode ser resolvido para um endereço IPv6. O protocolo PNRP usa o nome do par estatisticamente exclusivo para a criação de uma ID de PNRP, que é usado para identificar membros de nuvem.  
@@ -24,9 +24,9 @@ Um nome de par representa um ponto de extremidade para comunicação, que pode s
   
  IDs de PNRP são compostas do seguinte:  
   
--   Os 128 bits superiores, conhecidos como a ID P2P (ponto a ponto), são um hash de um nome de par atribuído ao ponto de extremidade. O nome do par tem o seguinte formato: *Autoridade.Classificador*. Para nomes seguros, *Autoridade* é o hash SHA1 (Secure Hash Algorithm 1) da chave pública do nome de par em caracteres hexadecimais. Para nomes não seguros, a *Autoridade* é o caractere único "0". *Classificador* é uma cadeia de caracteres que identifica o aplicativo. Nenhuma classificação de nome de par pode ser maior que 149 caracteres, incluindo o terminador `null`.  
+- Os 128 bits superiores, conhecidos como a ID P2P (ponto a ponto), são um hash de um nome de par atribuído ao ponto de extremidade. O nome do par tem o seguinte formato: *Autoridade.Classificador*. Para nomes seguros, *Autoridade* é o hash SHA1 (Secure Hash Algorithm 1) da chave pública do nome de par em caracteres hexadecimais. Para nomes não seguros, a *Autoridade* é o caractere único "0". *Classificador* é uma cadeia de caracteres que identifica o aplicativo. Nenhuma classificação de nome de par pode ser maior que 149 caracteres, incluindo o terminador `null`.  
   
--   Os 128 bits inferiores são usados para o Local do Serviço, que é um número gerado que identifica diferentes instâncias da mesma ID P2P na mesma nuvem.  
+- Os 128 bits inferiores são usados para o Local do Serviço, que é um número gerado que identifica diferentes instâncias da mesma ID P2P na mesma nuvem.  
   
  Essa combinação de ID P2P e Local de Serviço permite que várias IDs de PNRP sejam registradas em um único computador.  
   
