@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626849"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592312"
 ---
 # <a name="data-binding-and-windows-forms"></a>Associação de dados e o Windows Forms
 No Windows Forms, você pode vincular não apenas a fontes de dados tradicionais, mas também a praticamente qualquer estrutura que contenha dados. Você pode vincular a uma matriz de valores que você calcula no tempo de execução, lê de um arquivo ou deriva dos valores de outros controles.  
   
- Além disso, você pode vincular qualquer propriedade de qualquer controle à fonte de dados. Na vinculação de dados tradicional, você geralmente vincula a propriedade de exibição — por exemplo, a propriedade <xref:System.Windows.Forms.Control.Text%2A> de um controle <xref:System.Windows.Forms.TextBox> — à fonte de dados. Com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você tem também a opção de definir outras propriedades por meio da vinculação. É possível usar a vinculação para realizar as seguintes tarefas:  
+ Além disso, você pode vincular qualquer propriedade de qualquer controle à fonte de dados. Na vinculação de dados tradicional, você geralmente vincula a propriedade de exibição — por exemplo, a propriedade <xref:System.Windows.Forms.Control.Text%2A> de um controle <xref:System.Windows.Forms.TextBox> — à fonte de dados. Com o .NET Framework, você também tem a opção de definir outras propriedades por meio de associação também. É possível usar a vinculação para realizar as seguintes tarefas:  
   
 - Definir o grafo de um controle de imagem.  
   

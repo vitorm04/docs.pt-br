@@ -2,12 +2,12 @@
 title: Programação assíncrona em C#
 description: Uma visão geral do suporte de linguagem C# para programação assíncrona usando async, await, Task e Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 350ccdeeb31e318ca0c1a8158691f58bf5208efb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668673"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064113"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>O modelo de programação assíncrono Task em C\#
 
@@ -22,7 +22,7 @@ Essa é a meta dessa sintaxe: habilitar um código que leia como uma sequência 
 1. Adicionar manteiga e a geleia na torrada.
 1. Encher um copo com suco de laranja.
 
-Se você tivesse experiência culinária, você as executaria **assincronamente**. Você iniciaria aquecendo a frigideira para os ovos e, em seguida, começaria a preparar o bacon. Você colocaria o pão na torradeira e começaria a preparar os ovos. Em cada etapa do processo, iniciaria uma tarefa e voltaria sua atenção para as tarefas que estivessem prontas para a sua atenção.
+Se tivesse experiência em culinária, você executaria essas instruções **assincronamente**. Você iniciaria aquecendo a frigideira para os ovos e, em seguida, começaria a preparar o bacon. Você colocaria o pão na torradeira e começaria a preparar os ovos. Em cada etapa do processo, iniciaria uma tarefa e voltaria sua atenção para as tarefas que estivessem prontas para a sua atenção.
 
 Preparar o café da manhã é um bom exemplo de trabalho assíncrono que não é paralelo. Uma pessoa (ou um thread) pode lidar com todas essas tarefas. Continuando com a analogia do café da manhã, uma pessoa pode fazer café da manhã assincronamente iniciando a tarefa seguinte antes de concluir a primeira. O preparo progride independentemente de haver alguém observando. Assim que inicia o aquecimento da frigideira para os ovos, você pode começar a fritar o bacon. Quando começar a preparar o bacon, você pode colocar o pão na torradeira.
 

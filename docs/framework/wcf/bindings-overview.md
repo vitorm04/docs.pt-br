@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652111"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592235"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Visão geral de associações do Windows Communication Foundation
 Associações são objetos que são usados para especificar os detalhes de comunicação que são necessárias para se conectar ao ponto de extremidade de um serviço do Windows Communication Foundation (WCF). Cada ponto de extremidade em um serviço WCF requer uma associação a ser bem especificado. Este tópico descreve os tipos dos detalhes de comunicação que definem as associações, os elementos de uma associação, quais associações são incluídas no WCF e como uma associação pode ser especificada para um ponto de extremidade.  
@@ -36,9 +36,9 @@ Associações são objetos que são usados para especificar os detalhes de comun
   
 - <xref:System.ServiceModel.WSHttpBinding>: Uma associação interoperável adequada para se conectar a pontos de extremidade que estão em conformidade com o WS-* protocolos.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para se conectar a outros pontos de extremidade do WCF no mesmo computador.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa o .NET Framework para se conectar a outros pontos de extremidade do WCF no mesmo computador.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: Usa o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] criar conexões de mensagem na fila com outros pontos de extremidade do WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Usa o .NET Framework para criar na fila de mensagens conexões com outros pontos de extremidade do WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Esta associação oferece um desempenho mais alto que associações HTTP e é ideal para uso em uma rede local.
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: 56eaf438455754c69b2df3ff798cf6d2ac6f7549
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f158cf71f69ed3221dcaf7d3abbe495cf818638b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636963"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593195"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Como: dar suporte à interoperabilidade COM exibindo cada formulário do Windows Forms em um thread separado
-Você pode resolver problemas de interoperabilidade com exibindo seu formulário em um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] loop de mensagem, você pode criar usando o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
+Você pode resolver problemas de interoperabilidade COM exibindo seu formulário em um loop de mensagem do .NET Framework, você pode criar usando o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
   
  Para fazer um Windows Form funcionar corretamente em um aplicativo cliente COM, execute o formulário em um loop de mensagem dos Windows Forms. Para fazer isso, use uma das abordagens a seguir:  
   
@@ -33,7 +33,7 @@ Você pode resolver problemas de interoperabilidade com exibindo seu formulário
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra como exibir o formulário em um thread separado e chamar o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método para iniciar uma bomba de mensagem do Windows Forms nesse thread. Para usar essa abordagem, você deve empacotar as chamadas para o formulário do aplicativo não gerenciado usando o <xref:System.Windows.Forms.Control.Invoke%2A> método.  
   
- Essa abordagem requer que cada instância de um formulário seja executada em seu próprio thread usando seu próprio loop de mensagem. Não é possível ter mais de um loop de mensagem em execução por thread. Portanto, não é possível alterar o loop de mensagem do aplicativo cliente. No entanto, é possível modificar o componente [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para iniciar um novo thread que usa seu próprio loop de mensagem.  
+ Essa abordagem requer que cada instância de um formulário seja executada em seu próprio thread usando seu próprio loop de mensagem. Não é possível ter mais de um loop de mensagem em execução por thread. Portanto, não é possível alterar o loop de mensagem do aplicativo cliente. No entanto, você pode modificar o componente do .NET Framework para iniciar um novo thread que usa seu próprio loop de mensagem.  
   
  [!code-vb[System.Windows.Forms.ComInterop#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/COMForm.vb#1)]  
   

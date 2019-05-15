@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614654"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592611"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderizando controles com estilos visuais
-O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à renderização de controles e outros elementos da interface do usuário do Windows usando estilos visuais em sistemas operacionais que dão suporte a eles. Este tópico discute os vários níveis de suporte no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para renderizar controles e outros elementos da interface do usuário com o estilo visual atual do sistema operacional.  
+O .NET Framework fornece suporte para controles de renderização e outro usuário do Windows, os elementos de interface do usuário usando estilos visuais em sistemas operacionais que dão suporte a eles. Este tópico discute os vários níveis de suporte no .NET Framework para renderizar controles e outros elementos de interface do usuário com o estilo visual atual do sistema operacional.  
   
 ## <a name="rendering-classes-for-common-controls"></a>Classes de renderização para controles comuns  
  Renderizar um controle refere-se a desenhar a interface do usuário de um controle. O <xref:System.Windows.Forms?displayProperty=nameWithType> namespace fornece o <xref:System.Windows.Forms.ControlPaint> classe para alguns comuns de renderização controles de formulários do Windows. No entanto, essa classe desenha controles no estilo clássico do Windows, o que pode dificultar a manutenção de uma experiência de interface do usuário consistente ao desenhar controles personalizados em aplicativos com os estilos visuais habilitados.  
@@ -61,7 +61,7 @@ O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à
  Para obter mais informações sobre como usar <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> e <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, consulte [como: Renderizar um elemento de estilo Visual](how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Habilitar estilos visuais  
- Para habilitar os estilos visuais para um aplicativo escrito para o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versão 1.0, os programadores devem incluir um manifesto do aplicativo que especifique que o ComCtl32.dll versão 6 ou posterior será usado para desenhar controles. Aplicativos criados com o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versão 1.1 ou posterior pode usar o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método da <xref:System.Windows.Forms.Application> classe.  
+ Para habilitar estilos visuais para um aplicativo escrito para o .NET Framework versão 1.0, os programadores devem incluir um manifesto de aplicativo que especifique que ComCtl32.dll versão 6 ou posterior será usado para desenhar controles. Os aplicativos criados com o .NET Framework versão 1.1 ou posterior podem usar o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método da <xref:System.Windows.Forms.Application> classe.  
   
 ## <a name="checking-for-visual-styles-support"></a>Verificando se há suporte para estilos visuais  
  O <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> propriedade do <xref:System.Windows.Forms.Application> classe indica se o aplicativo atual está desenhando controles com estilos visuais. Ao pintar um controle personalizado, você pode verificar o valor de <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> para determinar se deve renderizar o controle com ou sem estilos visuais. A tabela a seguir lista as quatro condições que devem existir para <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> para retornar `true`.  

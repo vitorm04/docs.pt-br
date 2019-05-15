@@ -13,15 +13,15 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c161cc27bd45f8f29e4d48c572d26d3c153b8f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802083"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592671"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acesso mais seguro a arquivos e dados no Windows Forms
-O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa permissões para ajudar a proteger recursos e dados. Onde seu aplicativo pode ler ou gravar dados depende das permissões concedidas ao aplicativo. Quando seu aplicativo é executado em um ambiente de confiança parcial, talvez você não tenha acesso aos seus dados ou talvez você precise alterar a maneira como você acessa os dados.  
+O .NET Framework usa permissões para ajudar a proteger recursos e dados. Onde seu aplicativo pode ler ou gravar dados depende das permissões concedidas ao aplicativo. Quando seu aplicativo é executado em um ambiente de confiança parcial, talvez você não tenha acesso aos seus dados ou talvez você precise alterar a maneira como você acessa os dados.  
   
  Quando você encontrar uma restrição de segurança, você tem duas opções: declarar a permissão (supondo que ela foi concedida ao seu aplicativo) ou use uma versão do recurso escrita para trabalhar em confiança parcial. As seções a seguir abordam como trabalhar com arquivos, o banco de dados e o acesso ao Registro de aplicativos que são executados em um ambiente parcialmente confiável.  
   
@@ -29,7 +29,7 @@ O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa permissões p
 >  Por padrão, as ferramentas que geram [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] implantações, padronizam essas distribuições para solicitar confiança total dos computadores em que são executadas. Se você decidir que deseja os benefícios de aumentar a segurança da execução em confiança parcial, você deve alterar esse padrão no Visual Studio ou em um do [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] ferramentas (Mage.exe ou MageUI.exe). Para obter mais informações sobre segurança dos Windows Forms e sobre como determinar o nível de confiança apropriado para seu aplicativo, consulte [Visão geral de Segurança nos Windows Forms](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Acesso a arquivos  
- O <xref:System.Security.Permissions.FileIOPermission> classe controla o acesso do arquivo e pasta no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Por padrão, o sistema de segurança não concede a <xref:System.Security.Permissions.FileIOPermission> para ambientes de confiança parcial, como a intranet local e zonas da Internet. No entanto, um aplicativo que requer acesso a arquivos ainda funcionará nesses ambientes se você modificar o design do seu aplicativo ou usa métodos diferentes para acessar arquivos. Por padrão, a zona da intranet local recebe o direito de ter o mesmo acesso a sites e o mesmo acesso a diretórios, para conectar-se novamente ao site de sua origem e ler seu diretório de instalação. Por padrão, a zona da Internet, é apenas o direito para se conectar novamente ao site de sua origem.  
+ O <xref:System.Security.Permissions.FileIOPermission> classe controla o acesso do arquivo e pasta no .NET Framework. Por padrão, o sistema de segurança não concede a <xref:System.Security.Permissions.FileIOPermission> para ambientes de confiança parcial, como a intranet local e zonas da Internet. No entanto, um aplicativo que requer acesso a arquivos ainda funcionará nesses ambientes se você modificar o design do seu aplicativo ou usa métodos diferentes para acessar arquivos. Por padrão, a zona da intranet local recebe o direito de ter o mesmo acesso a sites e o mesmo acesso a diretórios, para conectar-se novamente ao site de sua origem e ler seu diretório de instalação. Por padrão, a zona da Internet, é apenas o direito para se conectar novamente ao site de sua origem.  
   
 ### <a name="user-specified-files"></a>Arquivos especificados pelo usuário  
  Uma forma de lidar com não ter acesso a arquivos permissão é solicitar ao usuário para fornecer informações específicas do arquivo usando o <xref:System.Windows.Forms.OpenFileDialog> ou <xref:System.Windows.Forms.SaveFileDialog> classe. Essa interação de usuário ajuda a fornecer alguma garantia de que o aplicativo não pode carregar arquivos particulares ou substituir arquivos importantes maliciosamente. O <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> e <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> métodos fornecem a leitura e gravação de acesso a arquivos, abrindo o fluxo de arquivos para o arquivo que o usuário especificado. Os métodos também ajudam a proteger o arquivo do usuário ocultando o caminho do arquivo.  
@@ -47,7 +47,7 @@ O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa permissões p
 > [!NOTE]
 >  A permissão específica não é solicitada até que o <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método é chamado.  
   
- Permissão para exibir uma caixa de diálogo não concede o aplicativo tenha acesso completo a todos os membros de <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>, e <xref:System.Windows.Forms.SaveFileDialog> classes. Para as permissões exatas que são necessárias para chamar cada método, consulte o tópico de referência para o método na [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] documentação da biblioteca de classes.  
+ Permissão para exibir uma caixa de diálogo não concede o aplicativo tenha acesso completo a todos os membros de <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>, e <xref:System.Windows.Forms.SaveFileDialog> classes. Para as permissões exatas que são necessárias para chamar cada método, consulte o tópico de referência para o método na documentação da biblioteca de classe do .NET Framework.  
   
  O seguinte exemplo de código usa o <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método para abrir um arquivo especificado pelo usuário em um <xref:System.Windows.Forms.RichTextBox> controle. O exemplo requer <xref:System.Security.Permissions.FileDialogPermission> e os respectivos <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> valor de enumeração. O exemplo demonstra como manipular o <xref:System.Security.SecurityException> para determinar se o salvamento recurso deve ser desativado. Este exemplo requer que seu <xref:System.Windows.Forms.Form> tem uma <xref:System.Windows.Forms.Button> controle denominado `ButtonOpen`e uma <xref:System.Windows.Forms.RichTextBox> controle chamado `RtfBoxMain`.  
   

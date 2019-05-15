@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 9c8ccf2404c4d8fd6e71f7aa41445c3d26ef5da7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 813ee167fdc09c7c7ea12f5f09602230e711d362
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601079"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593390"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos no Visual Basic (Visual Basic)
 Um *tipo genérico* é um único elemento de programação que se adapta ao executar a mesma funcionalidade para uma variedade de tipos de dados. Quando você define uma classe genérica ou um procedimento, você não precisa definir uma versão separada para cada tipo de dados para os quais você talvez queira executar essa funcionalidade.  
@@ -76,7 +76,7 @@ Um *tipo genérico* é um único elemento de programação que se adapta ao exec
  Para obter um exemplo mais completo, confira [Como: Definir uma classe que pode fornecer uma funcionalidade idêntica em tipos de dados diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Elementos de programação qualificados  
- Você pode definir e usar delegados, estruturas, interfaces, procedimentos e as classes genéricas. Observe que o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] define várias classes genéricas, estruturas e interfaces que representam os elementos genéricos comumente usados. O <xref:System.Collections.Generic?displayProperty=nameWithType> namespace fornece dicionários, listas, filas e pilhas. Antes de definir seu próprio elemento genérico, confira se ele já está disponível em <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ Você pode definir e usar delegados, estruturas, interfaces, procedimentos e as classes genéricas. Observe que o .NET Framework define várias classes genéricas, estruturas e interfaces que representam os elementos genéricos comumente usados. O <xref:System.Collections.Generic?displayProperty=nameWithType> namespace fornece dicionários, listas, filas e pilhas. Antes de definir seu próprio elemento genérico, confira se ele já está disponível em <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
  Procedimentos não são de tipos, mas você pode definir e usar procedimentos genéricos. Ver [procedimentos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
