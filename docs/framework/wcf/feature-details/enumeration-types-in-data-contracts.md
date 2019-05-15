@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587609"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586680"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipos de enumeração em contratos de dados
 Enumerações podem ser expressos no modelo de contrato de dados. Este tópico explica a vários exemplos que explicam o modelo de programação.  
@@ -39,7 +39,7 @@ Enumerações podem ser expressos no modelo de contrato de dados. Este tópico e
   
  Por exemplo, você pode usar `CarConditionEnum` no lado de envio e `CarConditionWithNumbers` no lado de recepção. Embora o lado de envio usa o valor "1" para `Used` e os usos do lado receptor é o valor "20", a representação XML `<condition>Used</condition>` para ambos os lados.  
   
- Para ser incluído no contrato de dados, você deve aplicar o <xref:System.Runtime.Serialization.EnumMemberAttribute> atributo. No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], você sempre pode aplicar o valor especial 0 (zero) a uma enumeração, que também é o valor padrão para qualquer enumeração. No entanto, até mesmo esse especial de valor zero não pode ser serializado, a menos que ele é marcado com o <xref:System.Runtime.Serialization.EnumMemberAttribute> atributo.  
+ Para ser incluído no contrato de dados, você deve aplicar o <xref:System.Runtime.Serialization.EnumMemberAttribute> atributo. No .NET Framework, você sempre pode aplicar o valor especial 0 (zero) como uma enumeração, que também é o valor padrão para qualquer enumeração. No entanto, até mesmo esse especial de valor zero não pode ser serializado, a menos que ele é marcado com o <xref:System.Runtime.Serialization.EnumMemberAttribute> atributo.  
   
  Há duas exceções a isso:  
   

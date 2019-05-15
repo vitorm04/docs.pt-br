@@ -2,12 +2,12 @@
 title: Desempenho do Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592154"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592541"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Desempenho do Windows Workflow Foundation 4
 
@@ -18,7 +18,7 @@ ms.locfileid: "64592154"
 ## <a name="terminology"></a>Terminologia
  A versão de [!INCLUDE[wf1](../../../includes/wf1-md.md)] introduziu em [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] será chamada como WF4 para o restante deste tópico.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi introduzido no .NET 3.0 e tinha algumas revisões menores com [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. A versão de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] de base de fluxo de trabalho será chamada como WF3 para o restante deste tópico. WF3 é enviado em [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] lado a lado com WF4. Para obter mais informações sobre como migrar os artefatos WF3 a WF4, consulte: [Guia de migração do Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313)
 
- Windows Communication Foundation (WCF) é um modelo de programação unificado da Microsoft para a criação de aplicativos orientados a serviço. Ele foi introduzido pela primeira vez como parte do .NET 3.0 juntamente com WF3 e agora é um dos principais componentes do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
+ Windows Communication Foundation (WCF) é um modelo de programação unificado da Microsoft para a criação de aplicativos orientados a serviço. Ele foi introduzido pela primeira vez como parte do .NET 3.0 juntamente com WF3 e agora é um dos principais componentes do .NET Framework.
 
  Windows Server AppFabric é um conjunto de tecnologias integrados que tornam mais fácil criar, redimensionar e gerenciar Web e aplicativos compostos que executam no IIS. Fornece ferramentas para monitorar e gerenciar serviços e fluxos de trabalho. Para obter mais informações, consulte [do Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
@@ -401,7 +401,7 @@ public class Workflow1 : Activity
 
  WF3 enviados com um serviço SQL- base de rastreamento.  Esse serviço pode trabalhar nos modos processados em lotes e não processados em lotes.  No modo não processado em lotes, controlando eventos são gravados diretamente a base de dados.  No modo processado em lotes, controlando eventos são coletados em lotes mesmo que o estado da instância de fluxo de trabalho.  O modo processado em lotes tem um desempenho melhor para o intervalo o maior de projetos de fluxo de trabalho.  No entanto, em lotes pode ter um impacto de desempenho negativo se o fluxo de trabalho executa muitos atividades sem persistir e as atividades são rastreadas.  Isso geralmente aconteceria em loop e a melhor maneira para evitar esse cenário é criar grandes loop para conter um ponto de persistência.  Introduzir um ponto de persistência em um loop pode afetar negativamente o desempenho também portanto é importante medir o custo de cada e vir anterior com um balanço.
 
- WF4 não é enviado com um serviço de rastreamento SQL.  Informações de rastreamento de gravação a um base de dados SQL pode ser tratada melhor de um servidor de aplicativos em vez de compilada em [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Portanto o rastreamento SQL é tratado agora por AppFabric.  O provedor pronto para uso de rastreamento em WF4 é baseado no rastreamento de evento para o Windows (ETW).
+ WF4 não é enviado com um serviço de rastreamento SQL.  Gravação de informações de rastreamento para um banco de dados SQL pode ser tratada melhor de um servidor de aplicativos em vez de embutidos no .NET Framework. Portanto o rastreamento SQL é tratado agora por AppFabric.  O provedor pronto para uso de rastreamento em WF4 é baseado no rastreamento de evento para o Windows (ETW).
 
  ETW é um kernel- nível, o sistema de evento de baixo latência compilado no Windows.  Usa um modelo de provedor/consumidor que execute possível incorrer somente a caneta para o rastreamento de evento quando há realmente um consumidor.  Além de eventos kernel como o processador, o disco, a memória, e o uso de rede, muitos aplicativos aproveitam ETW também.  Os eventos de ETW são mais avançados de contadores de desempenho que os eventos podem ser personalizados para o aplicativo.  Um evento pode conter texto como uma identificação de fluxo de trabalho ou uma mensagem informativa.  Além disso, os eventos são categorizados com máscaras de bits de modo que consumir um certo subconjunto de eventos menos tenha impacto de desempenho de tratar todos os eventos.
 

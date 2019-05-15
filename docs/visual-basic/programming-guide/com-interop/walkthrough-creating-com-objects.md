@@ -8,15 +8,15 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 465f1d8141f51de179dbb4e963a8fcac8c09fa33
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022305"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592698"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Passo a passo: Criando objetos COM o Visual Basic
-Ao criar novos aplicativos ou componentes, é melhor criar assemblies do .NET Framework. No entanto, Visual Basic também torna mais fácil para expor um componente do .NET Framework para COM. Isso permite que você forneça novos componentes anteriores aplicativo conjuntos que requerem componentes COM. Este passo a passo demonstra como usar o Visual Basic para expor [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] objetos como objetos COM, com e sem o modelo de classe COM.  
+Ao criar novos aplicativos ou componentes, é melhor criar assemblies do .NET Framework. No entanto, Visual Basic também torna mais fácil para expor um componente do .NET Framework para COM. Isso permite que você forneça novos componentes anteriores aplicativo conjuntos que requerem componentes COM. Este passo a passo demonstra como usar o Visual Basic para expor objetos do .NET Framework como objetos COM, com e sem o modelo de classe COM.  
   
  É a maneira mais fácil expor objetos COM usando o modelo de classe COM. O modelo de classe COM cria uma nova classe e, em seguida, configura seu projeto para gerar a camada de interoperabilidade e a classe como um objeto COM e registrá-lo com o sistema operacional.  
   

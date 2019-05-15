@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 458b53c9a2f1ea9774a61bb3439fe041cc8c2861
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fee2aad90485d3d06f1730d5937fd4e1240b4801
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672088"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064041"
 ---
 # <a name="c-guide"></a>Guia de C#
 
@@ -39,7 +39,7 @@ Há várias seções no Guia do C#. Você pode lê-los em ordem ou ir diretament
   * Os tutoriais de introdução ao C# são tutoriais interativos para os novos desenvolvedores explorarem e aprenderem a linguagem C# no navegador usando uma interface REPL (Read-Eval-Print Loop). Após concluir as aulas interativas, você pode melhorar suas habilidades de codificação praticando as mesmas lições em seu computador.
 
 * [Tutoriais](tutorials/index.md)
-  * Esta seção fornece vários cenários de ponta a ponta, incluindo descrições e código. Ela mostra por que há preferência por determinadas linguagens, quais recursos do C# funcionam melhor em situações diferentes e implementações de referência para tarefas comuns. Se você aprende melhor analisando o código, comece nesta seção. Você também pode baixar todo o código e testar em seu próprio ambiente.
+  * Esta seção fornece vários cenários de ponta a ponta, incluindo descrições e código. Ela mostra por que há preferência por determinadas linguagens, quais recursos do C# funcionam melhor em situações diferentes e implementações de referência para tarefas comuns. Se você aprende melhor vendo o código, comece nesta seção. Você também pode baixar todo o código e testar em seu próprio ambiente.
 
 * [Tour do C#](tour-of-csharp/index.md)
   * Esta seção fornece uma visão geral da linguagem. Ela aborda os elementos que compõem os programas em C# e os recursos da linguagem. Ela mostra pequenos exemplos de todos os elementos da sintaxe do C# e discussões dos principais tópicos de linguagem C#.

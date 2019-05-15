@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: fc8e55d8f3824ca11c575479863491d7f949efa3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665853"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592506"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
 Aplicativos do Windows Forms e controles podem interoperar com aplicativos não gerenciados, com algumas restrições. As seções a seguir descrevem os cenários e as configurações com suporte em controles e aplicativos do Windows Forms e aqueles que não têm suporte.  
@@ -47,7 +47,7 @@ Aplicativos do Windows Forms e controles podem interoperar com aplicativos não 
  Um loop de mensagem do aplicativo é um loop interno do programa que recupera mensagens da fila de mensagens do thread, converte-as e envia-as para o aplicativo para serem processadas. O loop de mensagem para um Windows Form não tem a mesma arquitetura que loops de mensagem que aplicativos anteriores, como aplicativos do Visual Basic 6.0 e do MFC, forneciam. As mensagens de janela que são lançadas para o loop de mensagem podem ser processadas de maneira diferente daquela que o Formulário do Windows espera. Portanto, pode ocorrer um comportamento inesperado. Algumas combinações de teclas e atividades do mouse podem não funcionar ou alguns eventos podem não ser gerados como o esperado.  
   
 ## <a name="resolving-interoperability-issues"></a>Resolvendo problemas de interoperabilidade  
- Você pode resolver esses problemas exibindo o formulário em um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] loop de mensagem, que é criado usando o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
+ Você pode resolver esses problemas exibindo o formulário em um loop de mensagem do .NET Framework, que é criado usando o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
   
  Para fazer um Formulário do Windows funcionar corretamente em um aplicativo cliente COM, execute-o em um loop de mensagem do Windows Forms. Para fazer isso, use uma das abordagens a seguir:  
   

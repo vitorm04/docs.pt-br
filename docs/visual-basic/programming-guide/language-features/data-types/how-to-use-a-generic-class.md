@@ -21,19 +21,19 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: c7fb4c95b6ef09508df57b3a0c08a651b122e251
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b069d3a0249f6aff2f9f09c5a560e5708bd60aa6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906471"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593365"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Como: Usar uma classe genérica (Visual Basic)
 Uma classe que leva *parâmetros de tipo* é chamado um *classe genérica*. Se você estiver usando uma classe genérica, você pode gerar uma *classe construída* dele, fornecendo uma *argumento de tipo* para cada um desses parâmetros. Em seguida, você pode declarar uma variável do tipo de classe construído, e você pode criar uma instância da classe construída e atribuí-lo para a variável.  
   
  Além das classes, você também pode definir e usar delegados, interfaces, procedimentos e estruturas genéricas.  
   
- O procedimento a seguir usa uma classe genérica definida no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e cria uma instância dele.  
+ O procedimento a seguir usa uma classe genérica definida no .NET Framework e cria uma instância dele.  
   
 ### <a name="to-use-a-class-that-takes-a-type-parameter"></a>Para usar uma classe que usa um parâmetro de tipo  
   

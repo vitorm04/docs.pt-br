@@ -2,12 +2,12 @@
 title: 'Como: Consultar caracteres em uma cadeia de caracteres (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fba5d8ca6c0c060c76b1ecf4f66434ce0884e733
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644377"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593309"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Como: Consultar caracteres em uma cadeia de caracteres (LINQ) (Visual Basic)
 Já que a classe <xref:System.String> implementa a interface <xref:System.Collections.Generic.IEnumerable%601> genérica, qualquer cadeia de caracteres pode ser consultada como uma sequência de caracteres. No entanto, esse não é um uso comum da LINQ. Para operações de correspondência de padrões complexas, use a classe <xref:System.Text.RegularExpressions.Regex>.  
@@ -55,7 +55,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior com uma referência a System.Core.dll e uma instrução `Imports` para o namespace System.Linq.  
+Criar um projeto de aplicativo do console do VB.NET, com um `Imports` instrução para o namespace System. Linq.
   
 ## <a name="see-also"></a>Consulte também
 

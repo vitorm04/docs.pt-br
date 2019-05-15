@@ -2,12 +2,12 @@
 title: Uniões discriminadas
 description: Saiba como usar F# uniões discriminadas.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27fb9205f3f216adc435483fd1dcc839a6e13e03
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766007"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557968"
 ---
 # <a name="discriminated-unions"></a>Uniões discriminadas
 
@@ -80,7 +80,7 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-Normalmente, os identificadores de caso podem ser usados sem qualificá-los com o nome da união. Se você quiser que o nome seja sempre qualificado com o nome da união, você pode aplicar a [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) de atributo para a definição de tipo de união.
+Normalmente, os identificadores de caso podem ser usados sem qualificá-los com o nome da união. Se você quiser que o nome seja sempre qualificado com o nome da união, você pode aplicar a [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp]) de atributo para a definição de tipo de união.
 
 ### <a name="unwrapping-discriminated-unions"></a>Uniões discriminadas descompactação
 

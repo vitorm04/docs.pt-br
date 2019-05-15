@@ -2,12 +2,12 @@
 title: 'Como: adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761540"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586617"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Como: adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF
 Este tópico explica como criar um serviço do Windows Communication Foundation (WCF) podem ser descobertos. Ele se baseia a [auto-hospedar](https://go.microsoft.com/fwlink/?LinkId=145523) exemplo.  
@@ -16,7 +16,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
   
 1. Abra a solução de hospedagem interna no Visual Studio 2012. O exemplo está localizado no diretório TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2. Adicione uma referência ao `System.ServiceModel.Discovery.dll` ao projeto de serviço. Você poderá ver uma mensagem de erro dizendo "System. ServiceModel.Discovery.dll ou uma de suas dependências requer uma versão posterior do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] daquele especificado no projeto... " Se você vir essa mensagem, clique com botão direito no projeto no Gerenciador de soluções e escolha **propriedades**. No **propriedades do projeto** janela, certifique-se de que o **estrutura de destino** é [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Adicione uma referência ao `System.ServiceModel.Discovery.dll` ao projeto de serviço. Você poderá ver uma mensagem de erro dizendo "System. ServiceModel.Discovery.dll ou uma de suas dependências requer uma versão posterior do .NET Framework àquela especificada no projeto..." Se você vir essa mensagem, clique com botão direito no projeto no Gerenciador de soluções e escolha **propriedades**. No **propriedades do projeto** janela, certifique-se de que o **estrutura de destino** é [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3. Abra o arquivo Service.cs e adicione o seguinte `using` instrução.  
   

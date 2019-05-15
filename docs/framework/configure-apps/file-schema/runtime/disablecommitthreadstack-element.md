@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08ffd6ffcb9a8fa356d486f6d2ae1113de0fa682
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5852579758e85bb033af9b6d036fe76444bb8e4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674214"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583860"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > elemento
 Especifica se a pilha completa de threads é confirmada quando um thread é iniciado.  
@@ -53,7 +53,7 @@ Especifica se a pilha completa de threads é confirmada quando um thread é inic
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`configuration`|O elemento raiz em cada arquivo de configuração usado pelo common language runtime e [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplicativos.|  
+|`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
