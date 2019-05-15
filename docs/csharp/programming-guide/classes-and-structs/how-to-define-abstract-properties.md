@@ -6,23 +6,23 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 98a535f68efc50c2ff7409d8eadf52f9e7549566
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: ef19b80e7f4c32830aabfcf1ad595348c2107228
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201944"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599986"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Como: definir propriedades abstract (Guia de Programação em C#)
 O exemplo a seguir mostra como definir propriedades [abstract](../../../csharp/language-reference/keywords/abstract.md). Uma declaração de propriedade abstract não fornece uma implementação dos acessadores da propriedade – ela declara que a classe dá suporte às propriedades, mas deixa a implementação do acessador para classes derivadas. O exemplo a seguir demonstra como implementar as propriedades abstract herdadas de uma classe base.  
   
  Esse exemplo consiste em três arquivos, cada um deles é compilado individualmente e seu assembly resultante é referenciado pela próxima compilação:  
   
--   abstractshape.cs: a classe `Shape` que contém uma propriedade abstract `Area`.  
+- abstractshape.cs: a classe `Shape` que contém uma propriedade abstract `Area`.  
   
--   shapes.cs: as subclasses da classe `Shape`.  
+- shapes.cs: as subclasses da classe `Shape`.  
   
--   shapetest.cs: um programa de teste para exibir as áreas de alguns objetos derivados de `Shape`.  
+- shapetest.cs: um programa de teste para exibir as áreas de alguns objetos derivados de `Shape`.  
   
  Para compilar o exemplo, use o comando a seguir:  
   
@@ -35,13 +35,13 @@ O exemplo a seguir mostra como definir propriedades [abstract](../../../csharp/l
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
--   Os modificadores da propriedade são colocados na própria declaração de propriedade. Por exemplo:  
+- Os modificadores da propriedade são colocados na própria declaração de propriedade. Por exemplo:  
   
     ```csharp  
     public abstract double Area  
     ```  
   
--   Ao declarar uma propriedade abstract (como `Area` neste exemplo), você simplesmente indica quais acessadores de propriedade estão disponíveis, mas não os implementa. Neste exemplo, apenas um acessador [get](../../../csharp/language-reference/keywords/get.md) está disponível, assim, a propriedade é somente leitura.  
+- Ao declarar uma propriedade abstract (como `Area` neste exemplo), você simplesmente indica quais acessadores de propriedade estão disponíveis, mas não os implementa. Neste exemplo, apenas um acessador [get](../../../csharp/language-reference/keywords/get.md) está disponível, assim, a propriedade é somente leitura.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra três subclasses de `Shape` e como elas substituem a propriedade `Area` para fornecer sua própria implementação.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496251"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583105"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Quando usar as palavras-chave override e new (Guia de Programação em C#)
 No C#, um método em uma classe derivada pode ter o mesmo nome que um método na classe base. É possível especificar a maneira como os métodos interagem usando as palavras-chave [new](../../../csharp/language-reference/keywords/new.md) e [override](../../../csharp/language-reference/keywords/override.md). O modificador `override` *estende* o método da classe base e o modificador `new` o *oculta*. A diferença é ilustrada nos exemplos deste tópico.  
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  No método `Main`, declare as variáveis `bc`, `dc` e `bcdc`.  
   
--   `bc` é do tipo `BaseClass` e seu valor é do tipo `BaseClass`.  
+- `bc` é do tipo `BaseClass` e seu valor é do tipo `BaseClass`.  
   
--   `dc` é do tipo `DerivedClass` e seu valor é do tipo `DerivedClass`.  
+- `dc` é do tipo `DerivedClass` e seu valor é do tipo `DerivedClass`.  
   
--   `bcdc` é do tipo `BaseClass` e seu valor é do tipo `DerivedClass`. Essa é a variável à qual você deve prestar atenção.  
+- `bcdc` é do tipo `BaseClass` e seu valor é do tipo `DerivedClass`. Essa é a variável à qual você deve prestar atenção.  
   
  Como `bc` e `bcdc` têm o tipo `BaseClass`, eles podem ter acesso direto a `Method1`, a menos que você usa a conversão. A variável `dc` pode acessar `Method1` e `Method2`. Essas relações são mostradas no código a seguir.  
   

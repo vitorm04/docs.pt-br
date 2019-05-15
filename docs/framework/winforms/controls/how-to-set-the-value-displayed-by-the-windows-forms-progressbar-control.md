@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 42a9e0f67f00c1a706b72ab0eeb522e99d8a8dfe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10e864ccfeb22113e5704a4063f903d7a91fedcd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912841"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591586"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Como: Definir o valor exibido pelo controle ProgressBar do Windows Forms
 > [!IMPORTANT]
 >  O controle <xref:System.Windows.Forms.ToolStripProgressBar> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.ProgressBar>, no entanto, o controle <xref:System.Windows.Forms.ProgressBar> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.  
   
- O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] oferece várias maneiras diferentes de exibir um determinado valor dentro de <xref:System.Windows.Forms.ProgressBar> controle. A abordagem que você escolher dependerá da tarefa em mãos ou do problema que está resolvendo. A tabela a seguir mostra as abordagens que você pode escolher.  
+ O .NET Framework fornece várias maneiras diferentes de exibir um determinado valor dentro de <xref:System.Windows.Forms.ProgressBar> controle. A abordagem que você escolher dependerá da tarefa em mãos ou do problema que está resolvendo. A tabela a seguir mostra as abordagens que você pode escolher.  
   
 |Abordagem|Descrição|  
 |--------------|-----------------|  

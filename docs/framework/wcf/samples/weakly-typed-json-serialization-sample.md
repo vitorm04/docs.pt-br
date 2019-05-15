@@ -2,12 +2,12 @@
 title: Weakly-typed JSON Serialization Sample
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006350"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589217"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Weakly-typed JSON Serialization Sample
 Ao serializar um tipo definido pelo usuário para um formato com fio fornecida ou desserialização de um formato com fio volta para um tipo definido pelo usuário, de determinado tipo definido pelo usuário deve estar disponível no serviço e no cliente. Normalmente, para fazer isso, o <xref:System.Runtime.Serialization.DataContractAttribute> atributo é aplicado a esses tipos definidos pelo usuário e o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo é aplicado aos seus membros. Esse mecanismo também se aplica ao trabalhar com objetos de notação JSON (JavaScript Object), conforme descrito no tópico [como: Serializar e desserializar dados JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -58,7 +58,7 @@ Ao serializar um tipo definido pelo usuário para um formato com fio fornecida o
   
  Isso pode ser complicado, especialmente se o cliente deve lidar com mais de um tipo de objeto JSON.  
   
- O `JsonObject` tipo fornecido por este exemplo apresenta uma representação com tipagem fraca do objeto JSON desserializado. `JsonObject` depende do mapeamento natural entre objetos JSON e [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dicionários e o mapeamento entre matrizes JSON e [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] matrizes. O seguinte código mostra o `JsonObject` tipo.  
+ O `JsonObject` tipo fornecido por este exemplo apresenta uma representação com tipagem fraca do objeto JSON desserializado. `JsonObject` usa o mapeamento natural entre objetos JSON e dicionários do .NET Framework e o mapeamento entre matrizes JSON e matrizes do .NET Framework. O seguinte código mostra o `JsonObject` tipo.  
   
 ```  
 // Instantiation of JsonObject json omitted  

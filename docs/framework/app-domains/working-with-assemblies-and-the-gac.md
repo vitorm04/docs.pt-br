@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e780ed7e841809f21130822babe55ad4935670
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744298"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592729"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabalhando com assemblies e o cache de assemblies global
 Se você pretender compartilhar um assembly com vários aplicativos, será necessário instalá-lo no cache de assembly global. Cada computador em que o Common Language Runtime está instalado tem um cache de código em todo o computador. O cache de assembly global armazena assemblies projetados especificamente para serem compartilhados por vários aplicativos no computador. Um assembly deve ter um nome forte para ser instalado no cache de assembly global.  
@@ -27,32 +27,32 @@ Se você pretender compartilhar um assembly com vários aplicativos, será neces
   
  Há diversas razões para instalar um assembly no cache de assembly global:  
   
--   Local compartilhado.  
+- Local compartilhado.  
   
      Assemblies que devem ser usados por aplicativos podem ser colocados no cache de assembly global. Por exemplo, se todos os aplicativos devem usar um assembly localizado no cache de assembly global, uma declaração de política de versão pode adicionada ao arquivo Machine.config que redireciona referências para o assembly.  
   
--   Segurança do arquivo.  
+- Segurança do arquivo.  
   
      Os administradores geralmente protegem o diretório systemroot usando uma ACL (Lista de Controle de Acesso) para controlar os acesso de gravação e de execução. Como o cache de assembly global é instalado em um diretório do systemroot, ele herda a ACL desse diretório. É recomendável que apenas usuários com privilégios Administrador tenham permissão para excluir arquivos do cache de assembly global.  
   
--   Controle de versão lado a lado.  
+- Controle de versão lado a lado.  
   
      Várias cópias de assemblies com o mesmo nome, mas com informações diferentes de versão, podem ser mantidas no cache de assembly global.  
   
--   Local adicional de pesquisa.  
+- Local adicional de pesquisa.  
   
      O Common Language Runtime verifica o cache de assembly global para um assembly que corresponde à solicitação de assembly antes de investigar ou usar as informações da base de código em um arquivo de configuração.  
   
  Observe que há situações em que explicitamente não é recomendado instalar um assembly no cache de assembly global. Se colocar um dos assemblies que compõem um aplicativo no cache de assembly global, você não poderá mais replicar nem instalar o aplicativo usando XCOPY para copiar o diretório do aplicativo. Nesse caso, você também deve mover o assembly para o cache de assembly global.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como instalar um assembly no cache de assembly global](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [Como: Instalar um assembly no cache de assembly global](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  Descreve as maneiras de instalar um assembly no cache de assembly global.  
   
- [Como exibir o conteúdo do cache de assembly global](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+ [Como: Exibir o conteúdo do cache de assembly global](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
  Explica como usar a [Gacutil.exe (Ferramenta de Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para exibir o conteúdo do cache de assembly global.  
   
- [Como remover um assembly do cache de assembly global](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+ [Como: Remover um assembly do cache de assembly global](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  Explica como usar a [Gacutil.exe (Ferramenta de Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para remover um assembly do cache de assembly global.  
   
  [Uso de componentes atendidos com o cache de assembly global](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
@@ -65,7 +65,7 @@ Se você pretender compartilhar um assembly com vários aplicativos, será neces
  [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
  Descreve o cache de assembly global.  
   
- [Como exibir o conteúdo do assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [Como: Exibir o conteúdo do assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
  Explica como usar o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para exibir informações MSIL (Microsoft Intermediate Language) em um assembly.  
   
  [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

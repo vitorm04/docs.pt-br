@@ -2,12 +2,12 @@
 title: 'Como: Criar assemblies amigáveis com sinal (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325196"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582977"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Como: Criar assemblies amigáveis com sinal (C#)
 Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes. Os dois assemblies devem ter nomes fortes. Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.  
@@ -18,15 +18,15 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
   
 2. Use a seguinte sequência de comandos com a ferramenta Nome Forte para gerar um keyfile e exibir sua chave pública. Para saber mais, veja [Sn.exe (Ferramenta de Nome Forte)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
-    1.  Gere uma chave de nome forte para este exemplo e armazene-a no arquivo FriendAssemblies.snk:  
+    1. Gere uma chave de nome forte para este exemplo e armazene-a no arquivo FriendAssemblies.snk:  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  Extraia a chave pública de FriendAssemblies.snk e coloque-a no FriendAssemblies.publickey:  
+    2. Extraia a chave pública de FriendAssemblies.snk e coloque-a no FriendAssemblies.publickey:  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  Exiba a chave pública armazenada no arquivo FriendAssemblies.publickey:  
+    3. Exiba a chave pública armazenada no arquivo FriendAssemblies.publickey:  
   
          `sn -tp FriendAssemblies.publickey`  
   

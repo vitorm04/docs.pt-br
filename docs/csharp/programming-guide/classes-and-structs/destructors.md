@@ -7,27 +7,27 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202880"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584381"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guia de Programação em C#)
 Os finalizadores (que também são chamados de **destruidores**) são usados para executar qualquer limpeza final necessária, quando uma instância da classe está sendo coletada pelo coletor de lixo.  
   
 ## <a name="remarks"></a>Comentários  
   
--   Os finalizadores não podem ser definidos em structs. Eles são usados somente com classes.  
+- Os finalizadores não podem ser definidos em structs. Eles são usados somente com classes.  
   
--   Uma classe pode ter somente um finalizador.  
+- Uma classe pode ter somente um finalizador.  
   
--   Os finalizadores não podem ser herdados ou sobrecarregados.  
+- Os finalizadores não podem ser herdados ou sobrecarregados.  
   
--   Os finalizadores não podem ser chamados. Eles são invocados automaticamente.  
+- Os finalizadores não podem ser chamados. Eles são invocados automaticamente.  
   
--   Um finalizador não usa modificadores ou não tem parâmetros.  
+- Um finalizador não usa modificadores ou não tem parâmetros.  
   
  Por exemplo, o seguinte é uma declaração de um finalizador para a classe `Car`.
   
@@ -72,11 +72,11 @@ protected override void Finalize()
   
  Para obter mais detalhes sobre limpeza de recursos, consulte os seguintes tópicos:  
   
--   [Limpando recursos não gerenciados](../../../standard/garbage-collection/unmanaged.md)  
+- [Limpando recursos não gerenciados](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Implementando um método dispose](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Implementando um método dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)  
+- [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria três classes que compõem uma cadeia de herança. A classe `First` é a classe base, `Second` é derivado de `First` e `Third` é derivado de `Second`. Todas as três têm finalizadores. Em `Main`, uma instância da classe mais derivada é criada. Quando o programa for executado, observe que os finalizadores das três classes são chamados automaticamente e em ordem, do mais derivado para o menos derivado.  

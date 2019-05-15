@@ -16,24 +16,24 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050449"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586293"
 ---
 # <a name="namespaces-in-visual-basic"></a>Namespaces no Visual Basic
 Namespaces organizam objetos definidos em um assembly. Os assemblies podem conter vários namespaces, que por sua vez pode conter outros namespaces. Namespaces evitar a ambiguidade e simplificar as referências ao usar grupos grandes de objetos, como bibliotecas de classes.  
   
- Por exemplo, o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] define o <xref:System.Windows.Forms.ListBox> classe o <xref:System.Windows.Forms?displayProperty=nameWithType> namespace. O fragmento de código a seguir mostra como declarar uma variável usando o nome totalmente qualificado para esta classe:  
+ Por exemplo, o .NET Framework define o <xref:System.Windows.Forms.ListBox> classe o <xref:System.Windows.Forms?displayProperty=nameWithType> namespace. O fragmento de código a seguir mostra como declarar uma variável usando o nome totalmente qualificado para esta classe:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Evitando conflitos de nome  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] um problema às vezes chamado de endereço de namespaces *poluição de namespace*, no qual o desenvolvedor de uma biblioteca de classes é dificultado pelo uso de nomes semelhantes em outra biblioteca. Esses conflitos com os componentes existentes às vezes são chamados *conflitos de nome*.  
+ Um problema às vezes chamado de endereço de namespaces do .NET framework *poluição de namespace*, no qual o desenvolvedor de uma biblioteca de classes é dificultado pelo uso de nomes semelhantes em outra biblioteca. Esses conflitos com os componentes existentes às vezes são chamados *conflitos de nome*.  
   
- Por exemplo, se você criar uma nova classe chamada `ListBox`, você pode usá-lo dentro de seu projeto sem qualificação. No entanto, se você quiser usar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> classe no mesmo projeto, você deve usar uma referência totalmente qualificada para tornar a referência exclusiva. Se a referência não for exclusiva, o Visual Basic gera um erro informando que o nome é ambíguo. O exemplo de código a seguir demonstra como declarar esses objetos:  
+ Por exemplo, se você criar uma nova classe chamada `ListBox`, você pode usá-lo dentro de seu projeto sem qualificação. No entanto, se você quiser usar o .NET Framework <xref:System.Windows.Forms.ListBox> classe no mesmo projeto, você deve usar uma referência totalmente qualificada para tornar a referência exclusiva. Se a referência não for exclusiva, o Visual Basic gera um erro informando que o nome é ambíguo. O exemplo de código a seguir demonstra como declarar esses objetos:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   

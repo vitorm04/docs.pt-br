@@ -12,26 +12,26 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2f1dbfde5e13d771f82ab1542e02de4c72b68678
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097521"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607734"
 ---
 # <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Como: Determinar o nome totalmente qualificado de um assembly
 Para descobrir o nome totalmente qualificado de um assembly no cache de assembly global, use a Ferramenta Cache de Assembly Global ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Confira [Como Exibir o conteúdo do cache de assembly global](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Para assemblies que não estão no cache de assembly global, você pode obter o nome totalmente qualificado do assembly de várias maneiras: pode usar código para produzir a saída de informações para o console ou para uma variável ou pode usar o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar os metadados do assembly, que contêm o nome totalmente qualificado.  
   
--   Se o assembly já estiver carregado pelo aplicativo, você poderá recuperar o valor da propriedade <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> para obter o nome totalmente qualificado. Você pode usar essa abordagem se o assembly estiver ou não no GAC. O exemplo fornece uma ilustração.  
+- Se o assembly já estiver carregado pelo aplicativo, você poderá recuperar o valor da propriedade <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> para obter o nome totalmente qualificado. Você pode usar essa abordagem se o assembly estiver ou não no GAC. O exemplo fornece uma ilustração.  
   
--   Se você souber o caminho do sistema de arquivos do assembly, poderá chamar o método (`Shared` no Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> estático para obter o nome totalmente qualificado do assembly. Este é um exemplo simples.  
+- Se você souber o caminho do sistema de arquivos do assembly, poderá chamar o método (`Shared` no Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> estático para obter o nome totalmente qualificado do assembly. Este é um exemplo simples.  
   
      [!code-csharp[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/cs/getassemblyname1.cs#1)]
      [!code-vb[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/vb/getassemblyname1.vb#1)]  
   
--   Você pode usar o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar os metadados do assembly, que contêm o nome totalmente qualificado.  
+- Você pode usar o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar os metadados do assembly, que contêm o nome totalmente qualificado.  
   
  Para obter mais informações sobre atributos de assembly de configuração, como a versão, a cultura e o nome do assembly, consulte [Definindo atributos do assembly](../../../docs/framework/app-domains/set-assembly-attributes.md). Para obter mais informações sobre como atribuir um nome forte a um assembly, consulte [Criando e usando assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   

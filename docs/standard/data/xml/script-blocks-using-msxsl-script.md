@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565638"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589972"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Blocos de script usando msxsl:script
 A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts inserido usando o elemento `msxsl:script`. Quando a folha de estilos é carregada, todas as funções definidas são compiladas para Microsoft Intermediate Language (MSIL) pelo Code Document Object Model (CodeDOM) e executadas durante o tempo de execução. O assembly gerado no bloco de script inserido é separado do assembly gerado para a folha de estilos.  
@@ -71,11 +71,11 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts in
 #### <a name="assemblies"></a>Assemblies  
  Os dois assemblies seguintes são referenciados por padrão:  
   
--   System.dll  
+- System.dll  
   
--   System.Xml.dll  
+- System.Xml.dll  
   
--   Microsoft.VisualBasic.dll (quando a linguagem de script for VB)  
+- Microsoft.VisualBasic.dll (quando a linguagem de script for VB)  
   
  Você pode importar os assemblies adicionais usando o elemento `msxsl:assembly`. Isso inclui o assembly quando a folha de estilos é compilada. O elemento `msxsl:assembly` tem a seguinte definição:  
   
@@ -94,21 +94,21 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts in
 #### <a name="namespaces"></a>Namespaces  
  Os seguintes namespaces são incluídos por padrão:  
   
--   Sistema  
+- Sistema  
   
--   System.Collection  
+- System.Collection  
   
--   System.Text  
+- System.Text  
   
--   System.Text.RegularExpressions  
+- System.Text.RegularExpressions  
   
--   System.Xml  
+- System.Xml  
   
--   System.Xml.Xsl  
+- System.Xml.Xsl  
   
--   System.Xml.XPath  
+- System.Xml.XPath  
   
--   Microsoft.VisualBasic (quando a linguagem de script for VB)  
+- Microsoft.VisualBasic (quando a linguagem de script for VB)  
   
  Você pode adicionar suporte a namespaces adicionais usando o atributo `namespace`. O valor do atributo é o nome do namespace.  
   

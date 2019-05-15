@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: a205682bb15b5d25ba0a2df895533d3443a41409
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663462"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583365"
 ---
 # <a name="-reference-visual-basic"></a>-referência (Visual Basic)
 Faz com que o compilador disponibilizar informações de tipo nos assemblies especificados para o projeto que você está compilando.  
@@ -46,7 +46,7 @@ Faz com que o compilador disponibilizar informações de tipo nos assemblies esp
   
  Para o compilador reconheça um tipo em um assembly (não um módulo), ele deve ser forçado a resolver o tipo. Um exemplo de como você pode fazer isso é definir uma instância do tipo. Outras maneiras de estão disponíveis para resolver nomes de tipo em um assembly para o compilador. Por exemplo, se você herdar de um tipo em um assembly, o nome do tipo, em seguida, se tornam conhecido para o compilador.  
   
- O arquivo de resposta Vbc, que as referências usadas comumente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies, é usado por padrão. Use `-noconfig` se você não quiser que o compilador use Vbc.  
+ O arquivo de resposta Vbc, que referencia assemblies .NET Framework comumente usados, é usado por padrão. Use `-noconfig` se você não quiser que o compilador use Vbc.  
   
  A forma abreviada de `-reference` é `/r`.  
   

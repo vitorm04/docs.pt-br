@@ -2,12 +2,12 @@
 title: 'Como: Usar árvores de expressão para compilar consultas dinâmicas (C#)'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: dec9d84f7fa37f859e307f2a653464608684bc88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3c65770af11518f6ac86e0fecd47b56f78cff59
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499545"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597973"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Como: Usar árvores de expressão para compilar consultas dinâmicas (C#)
 No LINQ, as árvores de expressão são usadas para representar consultas estruturadas que se destinam a fontes de dados que implementam <xref:System.Linq.IQueryable%601>. Por exemplo, o provedor LINQ implementa a interface <xref:System.Linq.IQueryable%601> para consultar repositórios de dados relacionais. O compilador do C# compila as consultas que se destinam a essas fontes de dados, no código que cria uma árvore de expressão em tempo de execução. O provedor de consultas pode percorrer a estrutura de dados da árvore de expressão e convertê-la em uma linguagem de consulta apropriada para a fonte de dados.  
@@ -100,13 +100,13 @@ foreach (string company in results)
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Crie um novo projeto de **Aplicativo de Console**.  
+- Crie um novo projeto de **Aplicativo de Console**.  
   
--   Adicione uma referência à System.Core.dll, se ainda não foi referenciada.  
+- Adicione uma referência à System.Core.dll, se ainda não foi referenciada.  
   
--   Inclua o namespace System.Linq.Expressions.  
+- Inclua o namespace System.Linq.Expressions.  
   
--   Copie o código do exemplo e cole-o no método `Main`.  
+- Copie o código do exemplo e cole-o no método `Main`.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: da1526afe48a0d4bda63274380dcf59ee30c480e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e3fa0eb12c9259629ff8151ff2d057f2744e9e36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968792"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595622"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Como: escrever em um arquivo de texto (Guia de Programação em C#)
 Estes exemplos mostram várias maneiras de gravar textos em um arquivo. Os dois primeiros exemplos usam métodos de conveniência estáticos na classe <xref:System.IO.File?displayProperty=nameWithType> para gravar cada elemento de qualquer `IEnumerable<string>` e uma cadeia de caracteres em um arquivo de texto. O exemplo 3 mostra como adicionar texto a um arquivo quando você precisa processar cada linha individualmente enquanto escreve no arquivo. Os exemplos de 1 a 3 substituem todo o conteúdo existente no arquivo, mas o exemplo 4 mostra como adicionar texto em um arquivo existente.  
@@ -27,11 +27,11 @@ Estes exemplos mostram várias maneiras de gravar textos em um arquivo. Os dois 
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   O arquivo existe e é somente leitura.  
+- O arquivo existe e é somente leitura.  
   
--   O nome do caminho pode ser muito longo.  
+- O nome do caminho pode ser muito longo.  
   
--   O disco pode estar cheio.  
+- O disco pode estar cheio.  
   
 ## <a name="see-also"></a>Consulte também
 

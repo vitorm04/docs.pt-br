@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679429"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593080"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (opções do compilador do C#)
 A opção **-reference** opção faz com que o compilador importe informações de tipo [public](../../../csharp/language-reference/keywords/public.md) no arquivo especificado para o projeto atual, permitindo que você referencie metadados dos arquivos do assembly especificado.  
@@ -48,9 +48,9 @@ A opção **-reference** opção faz com que o compilador importe informações 
   
  Se você referenciar um assembly (Assembly A) que referencia outro assembly (Assembly B), será necessário referenciar o Assembly B se:  
   
--   o tipo A que você usar do Assembly A herdar de um tipo ou implementar uma interface do Assembly B.  
+- o tipo A que você usar do Assembly A herdar de um tipo ou implementar uma interface do Assembly B.  
   
--   Você invoca um campo, propriedade, evento ou método que tem um tipo de retorno ou de parâmetro do Assembly B.  
+- Você invoca um campo, propriedade, evento ou método que tem um tipo de retorno ou de parâmetro do Assembly B.  
   
  Use [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) para especificar o diretório no qual uma ou mais das suas referências do assembly estão localizadas. O tópico **-lib** também aborda os diretórios nos quais o compilador pesquisa assemblies.  
   

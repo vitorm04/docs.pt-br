@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218064"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607690"
 ---
 # <a name="assembly-security-considerations"></a>Considerações sobre segurança de assemblies
 <a name="top"></a> Ao criar um assembly, você pode especificar um conjunto de permissões que o assembly exige para ser executado. Se determinadas permissões são concedidas ou não a um assembly é algo que se baseia na evidência.  
   
  Existem duas formas distintas de usar a evidência:  
   
--   A evidência de entrada é mesclada com a evidência coletada pelo carregador para criar um conjunto final de evidências usado na resolução da política. Entre os métodos que usam essa semântica estão **Assembly.Load**, **Assembly.LoadFrom** e **Activator.CreateInstance**.  
+- A evidência de entrada é mesclada com a evidência coletada pelo carregador para criar um conjunto final de evidências usado na resolução da política. Entre os métodos que usam essa semântica estão **Assembly.Load**, **Assembly.LoadFrom** e **Activator.CreateInstance**.  
   
--   A evidência de entrada é usada inalterada como o conjunto final de evidências usado na resolução da política. Entre os métodos que usam essa semântica estão **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()**.  
+- A evidência de entrada é usada inalterada como o conjunto final de evidências usado na resolução da política. Entre os métodos que usam essa semântica estão **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()**.  
   
  Permissões opcionais podem ser concedidas pelo conjunto de [políticas de segurança](../../../docs/framework/misc/code-access-security-basics.md) no computador em que o assembly será executado. Se quiser que o código identifique todas as exceções de segurança em potencial, você poderá seguir um destes procedimentos:  
   
--   Insira uma solicitação de permissão para todas as permissões que seu código deve ter e identifique antecipadamente a falha de tempo de carga que ocorrerá se as permissões não forem concedidas.  
+- Insira uma solicitação de permissão para todas as permissões que seu código deve ter e identifique antecipadamente a falha de tempo de carga que ocorrerá se as permissões não forem concedidas.  
   
--   Não use uma solicitação de permissão para obter permissões de que seu código possa precisar, mas esteja preparado para identificar exceções de segurança se as permissões não forem concedidas.  
+- Não use uma solicitação de permissão para obter permissões de que seu código possa precisar, mas esteja preparado para identificar exceções de segurança se as permissões não forem concedidas.  
   
     > [!NOTE]
     >  Segurança é uma área complexa, e você tem várias opções para escolher. Para saber mais, confira [Conceitos-chave sobre segurança](../../../docs/standard/security/key-security-concepts.md).  

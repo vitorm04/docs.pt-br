@@ -6,29 +6,29 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975847"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583119"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controle de versão com as palavras-chave override e new (Guia de Programação em C#)
 A linguagem C# foi projetada para que o controle de versão entre classes derivadas e [base](../../../csharp/language-reference/keywords/base.md) em diferentes bibliotecas possa evoluir e manter a compatibilidade com versões anteriores. Isso significa, por exemplo, que a introdução de um novo membro em uma [classe](../../../csharp/language-reference/keywords/class.md) base com o mesmo nome que um membro em uma classe derivada tem suporte completo pelo C# e não leva a comportamento inesperado. Isso também significa que uma classe deve declarar explicitamente se um método destina-se a substituir um método herdado ou se um método é um novo método que oculta um método herdado de nome semelhante.  
   
  No C#, as classes derivadas podem conter métodos com o mesmo nome que os métodos da classe base.  
   
--   O método de classe base deve ser definido como [virtual](../../../csharp/language-reference/keywords/virtual.md).  
+- O método de classe base deve ser definido como [virtual](../../../csharp/language-reference/keywords/virtual.md).  
   
--   Se o método na classe derivada não for precedido pelas palavras-chave [new](../../../csharp/language-reference/keywords/new.md) ou [override](../../../csharp/language-reference/keywords/override.md), o compilador emitirá um aviso e o método se comportará como se a palavra-chave `new` estivesse presente.  
+- Se o método na classe derivada não for precedido pelas palavras-chave [new](../../../csharp/language-reference/keywords/new.md) ou [override](../../../csharp/language-reference/keywords/override.md), o compilador emitirá um aviso e o método se comportará como se a palavra-chave `new` estivesse presente.  
   
--   Se o método na classe derivada for precedido pela palavra-chave `new`, o método será definido como sendo independente do método na classe base.  
+- Se o método na classe derivada for precedido pela palavra-chave `new`, o método será definido como sendo independente do método na classe base.  
   
--   Se o método na classe derivada for precedido pela palavra-chave `override`, os objetos da classe derivada chamarão esse método em vez do método da classe base.  
+- Se o método na classe derivada for precedido pela palavra-chave `override`, os objetos da classe derivada chamarão esse método em vez do método da classe base.  
   
--   O método da classe base pode ser chamado de dentro da classe derivada usando a palavra-chave `base`.  
+- O método da classe base pode ser chamado de dentro da classe derivada usando a palavra-chave `base`.  
   
--   As palavras-chave `override`, `virtual` e `new` também podem ser aplicadas a propriedades, indexadores e eventos.  
+- As palavras-chave `override`, `virtual` e `new` também podem ser aplicadas a propriedades, indexadores e eventos.  
   
  Por padrão, os métodos C# não são virtuais. Se um método for declarado como virtual, qualquer classe que herdar o método pode implementar sua própria versão. Para tornar um método virtual, o modificador `virtual` é usado na declaração de método da classe base. A classe derivada pode, em seguida, substituir o método virtual base usando a palavra-chave `override` ou ocultar o método virtual na classe base usando a palavra-chave `new`. Se nem a palavra-chave `override` nem a `new` for especificada, o compilador emitirá um aviso e o método na classe derivada ocultará o método na classe base.  
   

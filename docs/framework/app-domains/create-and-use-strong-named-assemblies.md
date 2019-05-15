@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300691"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607676"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Criar e usar assemblies com nome forte
 
@@ -36,9 +36,9 @@ O cenário a seguir descreve o processo de assinar um assembly com um nome forte
 
 1. O Assembly A é criado com um nome forte usando um dos seguintes métodos:
 
-    -   Usando um ambiente de desenvolvimento que dá suporte à criação de nomes fortes, tal como o Visual Studio.
+    - Usando um ambiente de desenvolvimento que dá suporte à criação de nomes fortes, tal como o Visual Studio.
 
-    -   Criando um par de chaves de criptografia usando a [ferramenta Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) e atribuindo esse par de chaves ao assembly usando um compilador de linha de comando ou o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). O Software Development Kit do Windows (SDK do Windows) fornece o Sn.exe e AI.exe.
+    - Criando um par de chaves de criptografia usando a [ferramenta Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) e atribuindo esse par de chaves ao assembly usando um compilador de linha de comando ou o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). O Software Development Kit do Windows (SDK do Windows) fornece o Sn.exe e AI.exe.
 
 2. O ambiente de desenvolvimento ou a ferramenta assina o hash do arquivo que contém o manifesto do assembly com a chave privada do desenvolvedor. Esta assinatura digital é armazenada no arquivo PE que contém o manifesto do Assembly A.
 
@@ -55,13 +55,13 @@ Desde o [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)], as
 
 O recurso de desvio se aplica a qualquer assembly que está assinado com um nome forte e que tem as seguintes características:
 
--   Totalmente confiável sem a evidência <xref:System.Security.Policy.StrongName> (por exemplo, tem a evidência de zona `MyComputer`).
+- Totalmente confiável sem a evidência <xref:System.Security.Policy.StrongName> (por exemplo, tem a evidência de zona `MyComputer`).
 
--   Carregado em um <xref:System.AppDomain> totalmente confiável.
+- Carregado em um <xref:System.AppDomain> totalmente confiável.
 
--   Carregado de um local sob a propriedade <xref:System.AppDomainSetup.ApplicationBase%2A> desse <xref:System.AppDomain>.
+- Carregado de um local sob a propriedade <xref:System.AppDomainSetup.ApplicationBase%2A> desse <xref:System.AppDomain>.
 
--   Não assinado com atraso.
+- Não assinado com atraso.
 
 Esse recurso pode ser desabilitado para aplicativos individuais ou para um computador. Confira [Como desabilitar a funcionalidade de bypass de nome forte](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 

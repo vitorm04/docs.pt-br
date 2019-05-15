@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 56c236e2e061b473f0b188b24d3ebdd98e013aa8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306593"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595985"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como: realizar e cancelar a assinatura de eventos (Guia de Programação em C#)
 Você assina um evento publicado por outra classe quando quer escrever um código personalizado que é chamado quando esse evento é gerado. Por exemplo, você pode assinar o evento `click` de um botão para fazer com que seu aplicativo faça algo útil quando o usuário clicar no botão.  
@@ -74,7 +74,7 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Para assinar eventos usando um método anônimo  
   
--   Se não precisar cancelar a assinatura de um evento posteriormente, você pode usar o operador de atribuição de adição (`+=`) para anexar um método anônimo ao evento. No exemplo a seguir, suponha que um objeto chamado `publisher` tenha um evento chamado `RaiseCustomEvent` e que uma classe `CustomEventArgs` também tenha sido definida para conter algum tipo de informação de evento específico. Observe que a classe do assinante precisa de uma referência a `publisher` para assinar seus eventos.  
+- Se não precisar cancelar a assinatura de um evento posteriormente, você pode usar o operador de atribuição de adição (`+=`) para anexar um método anônimo ao evento. No exemplo a seguir, suponha que um objeto chamado `publisher` tenha um evento chamado `RaiseCustomEvent` e que uma classe `CustomEventArgs` também tenha sido definida para conter algum tipo de informação de evento específico. Observe que a classe do assinante precisa de uma referência a `publisher` para assinar seus eventos.  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -91,7 +91,7 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
   
 #### <a name="to-unsubscribe-from-an-event"></a>Para cancelar a assinatura de um evento  
   
--   Use o operador de atribuição de subtração (`-=`) para cancelar a assinatura de um evento:  
+- Use o operador de atribuição de subtração (`-=`) para cancelar a assinatura de um evento:  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  

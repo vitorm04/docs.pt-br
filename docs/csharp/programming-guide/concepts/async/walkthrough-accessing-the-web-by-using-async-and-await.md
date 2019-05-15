@@ -2,12 +2,12 @@
 title: 'Passo a passo: Acessando a Web usando async e await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c9616cc7bed3170803ee3c917fa651afc5ae6fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306723"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599681"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Passo a passo: Acessando a Web usando async e await (C#)
 
@@ -46,19 +46,19 @@ Se não quiser compilar os aplicativos, você poderá baixar o [Amostra assíncr
 
 4. Realce o controle **Caixa de Texto** e, na janela **Propriedades**, defina os seguintes valores:
 
-    -   Defina a propriedade **Nome** como `resultsTextBox`.
+    - Defina a propriedade **Nome** como `resultsTextBox`.
 
-    -   Defina a propriedade **Altura** como 250.
+    - Defina a propriedade **Altura** como 250.
 
-    -   Defina a propriedade **Largura** como 500.
+    - Defina a propriedade **Largura** como 500.
 
-    -   Na guia **Texto**, especifique uma fonte com espaçamento uniforme, como Lucida Console ou Global Monospace.
+    - Na guia **Texto**, especifique uma fonte com espaçamento uniforme, como Lucida Console ou Global Monospace.
 
 5. Realce o controle **Botão** e, na janela **Propriedades**, defina os seguintes valores:
 
-    -   Defina a propriedade **Nome** como `startButton`.
+    - Defina a propriedade **Nome** como `startButton`.
 
-    -   Altere o valor da propriedade **Conteúdo** de **Botão** para **Iniciar**.
+    - Altere o valor da propriedade **Conteúdo** de **Botão** para **Iniciar**.
 
 6. Posicione a caixa de texto e o botão de modo que ambos sejam exibidos na janela **MainWindow**.
 
@@ -108,13 +108,13 @@ Se não quiser compilar os aplicativos, você poderá baixar o [Amostra assíncr
 
 3. O código para a solução síncrona contém os quatro métodos a seguir:
 
-    -   `SumPageSizes`, que obtém uma lista de URLs de página da Web de `SetUpURLList` e chama `GetURLContents` e `DisplayResults` para processar cada URL.
+    - `SumPageSizes`, que obtém uma lista de URLs de página da Web de `SetUpURLList` e chama `GetURLContents` e `DisplayResults` para processar cada URL.
 
-    -   `SetUpURLList`, que cria e retorna uma lista de endereços web.
+    - `SetUpURLList`, que cria e retorna uma lista de endereços web.
 
-    -   `GetURLContents`, que baixa o conteúdo de cada site e retorna o conteúdo como uma matriz de bytes.
+    - `GetURLContents`, que baixa o conteúdo de cada site e retorna o conteúdo como uma matriz de bytes.
 
-    -   `DisplayResults`, que exibe o número de bytes na matriz de bytes de cada URL.
+    - `DisplayResults`, que exibe o número de bytes na matriz de bytes de cada URL.
 
     Copie os quatro métodos a seguir e cole-os no manipulador de eventos `startButton_Click` em MainWindow.xaml.cs:
 
@@ -258,9 +258,9 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
 3. Como você adicionou o operador `await` na etapa anterior, um erro do compilador ocorre. O operador pode ser usado apenas em métodos que são marcados com o modificador [async](../../../../csharp/language-reference/keywords/async.md). Ignore o erro enquanto você repetir as etapas de conversão para substituir a chamada para `CopyTo` por uma chamada para `CopyToAsync`.
 
-    -   Altere o nome do método que é chamado para <xref:System.IO.Stream.CopyToAsync%2A>.
+    - Altere o nome do método que é chamado para <xref:System.IO.Stream.CopyToAsync%2A>.
 
-    -   O método `CopyTo` ou `CopyToAsync` copia bytes para seu argumento, `content` e não retorna um valor significativo. Na versão síncrona, a chamada para `CopyTo` é uma instrução simples que não retorna um valor. A versão assíncrona, `CopyToAsync`, retorna um <xref:System.Threading.Tasks.Task>. A tarefa funciona como "Task(void)" e permite que o método seja aguardado. Aplique `Await` ou `await` à chamada para `CopyToAsync`, como mostra o código a seguir.
+    - O método `CopyTo` ou `CopyToAsync` copia bytes para seu argumento, `content` e não retorna um valor significativo. Na versão síncrona, a chamada para `CopyTo` é uma instrução simples que não retorna um valor. A versão assíncrona, `CopyToAsync`, retorna um <xref:System.Threading.Tasks.Task>. A tarefa funciona como "Task(void)" e permite que o método seja aguardado. Aplique `Await` ou `await` à chamada para `CopyToAsync`, como mostra o código a seguir.
 
         ```csharp
         await responseStream.CopyToAsync(content);
@@ -289,9 +289,9 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
      O método `GetURLContents` tem uma instrução de retorno e a instrução retorna uma matriz de bytes. Portanto, o tipo de retorno da versão assíncrona é Task(T), em que T é uma matriz de bytes. Faça as seguintes alterações na assinatura do método:
 
-    -   Altere o tipo de retorno para `Task<byte[]>`.
+    - Altere o tipo de retorno para `Task<byte[]>`.
 
-    -   Por convenção, métodos assíncronos têm nomes que terminam em "Async", então renomeie o método `GetURLContentsAsync`.
+    - Por convenção, métodos assíncronos têm nomes que terminam em "Async", então renomeie o método `GetURLContentsAsync`.
 
      O código a seguir mostra essas alterações.
 
@@ -305,9 +305,9 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
 1. Repita as etapas do procedimento anterior para `SumPageSizes`. Primeiro, altere a chamada para `GetURLContents` para uma chamada assíncrona.
 
-    -   Altere o nome do método que é chamado de `GetURLContents` para `GetURLContentsAsync`, se ainda não tiver feito isso.
+    - Altere o nome do método que é chamado de `GetURLContents` para `GetURLContentsAsync`, se ainda não tiver feito isso.
 
-    -   Aplique `await` à tarefa que `GetURLContentsAsync` retorna para obter o valor da matriz de bytes.
+    - Aplique `await` à tarefa que `GetURLContentsAsync` retorna para obter o valor da matriz de bytes.
 
      O código a seguir mostra essas alterações.
 
@@ -326,11 +326,11 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
 2. Faça as seguintes alterações na assinatura do método:
 
-    -   Marque o método com o modificador `async`.
+    - Marque o método com o modificador `async`.
 
-    -   Acrescente "Async" ao nome do método.
+    - Acrescente "Async" ao nome do método.
 
-    -   Não há nenhuma variável de retorno de tarefa, T, desta vez porque `SumPageSizesAsync` não retorna um valor para T. (O método não tem uma instrução `return`.) No entanto, o método deve retornar um `Task` para que possa ser aguardado. Portanto, altere o tipo de retorno do método de `void` para `Task`.
+    - Não há nenhuma variável de retorno de tarefa, T, desta vez porque `SumPageSizesAsync` não retorna um valor para T. (O método não tem uma instrução `return`.) No entanto, o método deve retornar um `Task` para que possa ser aguardado. Portanto, altere o tipo de retorno do método de `void` para `Task`.
 
     O código a seguir mostra essas alterações.
 
@@ -391,9 +391,9 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
 2. Uma saída semelhante à saída da solução síncrona deve aparecer. No entanto, observe as diferenças a seguir.
 
-    -   Os resultados não ocorrem todos ao mesmo tempo, após a conclusão do processamento. Por exemplo, os dois programas contêm uma linha em `startButton_Click` que desmarca a caixa de texto. A intenção é desmarcar a caixa de texto entre as execuções se você escolher o botão **Iniciar** pela segunda vez, após um conjunto de resultados ter aparecido. Na versão síncrona, a caixa de texto é desmarcada logo antes das contagens aparecerem pela segunda vez, quando os downloads são concluídos e o thread da interface do usuário fica livre para executar outras tarefas. Na versão assíncrona, a caixa de texto é limpa imediatamente após você escolher o botão **Iniciar**.
+    - Os resultados não ocorrem todos ao mesmo tempo, após a conclusão do processamento. Por exemplo, os dois programas contêm uma linha em `startButton_Click` que desmarca a caixa de texto. A intenção é desmarcar a caixa de texto entre as execuções se você escolher o botão **Iniciar** pela segunda vez, após um conjunto de resultados ter aparecido. Na versão síncrona, a caixa de texto é desmarcada logo antes das contagens aparecerem pela segunda vez, quando os downloads são concluídos e o thread da interface do usuário fica livre para executar outras tarefas. Na versão assíncrona, a caixa de texto é limpa imediatamente após você escolher o botão **Iniciar**.
 
-    -   Mais importante, o thread da interface do usuário não é bloqueado durante os downloads. Você pode mover ou redimensionar a janela enquanto os recursos da Web estão sendo baixados, contados e exibido. Se um dos sites estiver lento ou não estiver respondendo, você poderá cancelar a operação escolhendo o botão **Fechar** (o x no campo vermelho no canto superior direito).
+    - Mais importante, o thread da interface do usuário não é bloqueado durante os downloads. Você pode mover ou redimensionar a janela enquanto os recursos da Web estão sendo baixados, contados e exibido. Se um dos sites estiver lento ou não estiver respondendo, você poderá cancelar a operação escolhendo o botão **Fechar** (o x no campo vermelho no canto superior direito).
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>Substituir o método GetURLContentsAsync por um método .NET Framework
 

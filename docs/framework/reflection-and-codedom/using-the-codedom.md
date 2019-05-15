@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 336a0fb5bc0fca5dd6ef917a2eeaf0908680d12b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591494"
 ---
 # <a name="using-the-codedom"></a>Usando o CodeDOM
 O CodeDOM fornece tipos que representam muitos dos tipos mais comuns de elementos de código-fonte. Você pode criar um programa que cria um modelo de código-fonte usando elementos do CodeDOM para montar um grafo de objeto. Este grafo de objeto pode ser renderizado como código-fonte usando um gerador de código CodeDOM para uma linguagem de programação com suporte. O CodeDOM também pode ser usado para compilar o código-fonte em um assembly binário.  
   
  Alguns usos comuns do CodeDOM incluem:  
   
--   Geração de código de modelo: gerar código para ASP.NET, proxies de cliente de serviços Web XML, assistentes de código, designers ou outros mecanismos de emissão de código.  
+- Geração de código de modelo: gerar código para ASP.NET, proxies de cliente de serviços Web XML, assistentes de código, designers ou outros mecanismos de emissão de código.  
   
--   Compilação dinâmica: suporte a compilação de código em uma ou várias linguagens.  
+- Compilação dinâmica: suporte a compilação de código em uma ou várias linguagens.  
   
 ## <a name="building-a-codedom-graph"></a>Compilando um gráfico CodeDOM  
  O namespace <xref:System.CodeDom> fornece classes para representar a estrutura lógica do código-fonte, independente da sintaxe da linguagem.  

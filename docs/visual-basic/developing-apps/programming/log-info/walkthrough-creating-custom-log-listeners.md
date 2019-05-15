@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342434"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593325"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Passo a passo: Criar ouvintes de log personalizados (Visual Basic)
 Estas instruções passo a passo demonstram como criar um ouvinte de log personalizado e configurá-lo para ouvir a saída do objeto `My.Application.Log`.  
@@ -20,7 +20,7 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
 #### <a name="to-create-the-listener"></a>Para criar o ouvinte  
   
--   Em seu aplicativo, crie uma classe denominada `SimpleListener` que herda de <xref:System.Diagnostics.TraceListener>.  
+- Em seu aplicativo, crie uma classe denominada `SimpleListener` que herda de <xref:System.Diagnostics.TraceListener>.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -64,7 +64,7 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Para determinar o nome forte do ouvinte  
   
--   O código a seguir mostra como determinar o tipo de nome forte de `SimpleListener`.  
+- O código a seguir mostra como determinar o tipo de nome forte de `SimpleListener`.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -80,11 +80,11 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
      Se houver um arquivo app.config:  
   
-    1.  No menu **Projeto**, escolha **Adicionar Novo Item**.  
+    1. No menu **Projeto**, escolha **Adicionar Novo Item**.  
   
-    2.  Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.  
+    2. Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.  
   
-    3.  Clique em **Adicionar**.  
+    3. Clique em **Adicionar**.  
   
 2. Localize a seção `<listeners>`, na seção `<source>` com o `name` atributo "DefaultSource", localizado na seção `<sources>`. A seção `<sources>` está localizada na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
   

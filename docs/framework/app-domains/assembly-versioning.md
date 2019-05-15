@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305189"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593650"
 ---
 # <a name="assembly-versioning"></a>Controle de versão de assemblies
 Todo o controle de versão de assemblies que usam o Common Language Runtime é feito no nível do assembly. A versão específica de um assembly e as versões de assemblies dependentes são registradas no manifesto do assembly. A política de versão padrão do tempo de execução diz que aplicativos só são executados com as versões com que foram compilados e testados, a menos que essa política de versão seja substituída pela política de versão explícita em arquivos de configuração (o arquivo de configuração do aplicativo, o arquivo de política do editor e o arquivo de configuração do administrador do computador).  
@@ -42,9 +42,9 @@ Todo o controle de versão de assemblies que usam o Common Language Runtime é f
 ## <a name="version-information"></a>Informações de versão  
  Cada assembly tem duas maneiras diferentes de expressar informações de versão:  
   
--   O número de versão do assembly que, com o nome e a cultura do assembly, faz parte da identidade do assembly. Esse número é usado pelo tempo de execução para impor a política de versão e desempenha um papel fundamental no processo de resolução do tipo no tempo de execução.  
+- O número de versão do assembly que, com o nome e a cultura do assembly, faz parte da identidade do assembly. Esse número é usado pelo tempo de execução para impor a política de versão e desempenha um papel fundamental no processo de resolução do tipo no tempo de execução.  
   
--   Uma versão informativa, uma cadeia de caracteres que representa informações de versão adicionais incluída apenas para fins informativos.  
+- Uma versão informativa, uma cadeia de caracteres que representa informações de versão adicionais incluída apenas para fins informativos.  
   
 ### <a name="assembly-version-number"></a>Número de versão do assembly  
  Cada assembly tem um número de versão como parte de sua identidade. Dessa forma, dois assemblies que diferem pelo número de versão são considerados pelo ambiente de execução assemblies completamente diferentes. Esse número de versão é representado fisicamente como uma cadeia de caracteres em quatro partes com o seguinte formato:  

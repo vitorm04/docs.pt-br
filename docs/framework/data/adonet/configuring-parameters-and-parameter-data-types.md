@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034548"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583831"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurando parâmetros e tipos de dados de parâmetro
 
@@ -33,7 +33,7 @@ Ao adicionar parâmetros, você deverá fornecer uma propriedade <xref:System.Da
 
 ## <a name="working-with-parameter-placeholders"></a>Trabalhando com espaços reservados de parâmetro
 
-A sintaxe para espaços reservados de parâmetro depende da fonte de dados. Os provedores de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] manipulam a nomeação e a especificação de parâmetros e de espaços reservados de parâmetros de maneira diferente. Essa sintaxe é personalizada para uma fonte de dados específica, conforme descrito na tabela a seguir.
+A sintaxe para espaços reservados de parâmetro depende da fonte de dados. Os provedores de dados .NET Framework lidar com a nomenclatura e especificando parâmetros e espaços reservados de parâmetro de forma diferente. Essa sintaxe é personalizada para uma fonte de dados específica, conforme descrito na tabela a seguir.
 
 |Provedor de dados|Sintaxe de nomeação de parâmetro|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ A sintaxe para espaços reservados de parâmetro depende da fonte de dados. Os p
 
 ## <a name="specifying-parameter-data-types"></a>Especificando tipos de dados de parâmetro
 
-O tipo de dados de um parâmetro é específico para o provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Especificar o tipo converte o valor do `Parameter` para o tipo de provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] antes de passar o valor para a fonte de dados. Você também pode especificar o tipo de um `Parameter` genericamente definindo a propriedade `DbType` de um objeto `Parameter` para um <xref:System.Data.DbType> específico.
+O tipo de dados de um parâmetro é específico ao provedor de dados .NET Framework. Especifica o tipo converte o valor da `Parameter` para o tipo de provedor de dados .NET Framework antes de passar o valor para a fonte de dados. Você também pode especificar o tipo de um `Parameter` genericamente definindo a propriedade `DbType` de um objeto `Parameter` para um <xref:System.Data.DbType> específico.
 
-O tipo do provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de um objeto `Parameter` é inferido do tipo do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] do `Value` do objeto de `Parameter` ou do `DbType` do objeto de `Parameter`. A tabela a seguir mostra o tipo inferido de `Parameter` baseado no objeto passado como o valor do `Parameter` ou `DbType` especificado.
+O tipo de provedor de dados .NET Framework de um `Parameter` objeto é inferido do tipo do .NET Framework a `Value` da `Parameter` objeto, ou do `DbType` do `Parameter` objeto. A tabela a seguir mostra o tipo inferido de `Parameter` baseado no objeto passado como o valor do `Parameter` ou `DbType` especificado.
 
 |Tipo do .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -101,7 +101,7 @@ Os procedimentos armazenados oferecem várias vantagens em aplicativos orientado
 > [!NOTE]
 > As instruções parametrizadas são executadas no servidor usando `sp_executesql,` que permite a reutilização do plano de consulta. Os cursores locais ou variáveis no lote `sp_executesql` não são visíveis para os lotes que chamam `sp_executesql`. As alterações no contexto de banco de dados duram somente até o final da instrução `sp_executesql`. Para obter mais informações, consulte [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
 
-Ao usar parâmetros com um <xref:System.Data.SqlClient.SqlCommand> para executar um procedimento armazenado do SQL Server, os nomes dos parâmetros adicionados à coleção de <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> devem coincidir com os nomes dos marcadores de parâmetros no procedimento armazenado. O provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para o SQL Server não oferece suporte ao espaço reservado de ponto de interrogação (?) para passar parâmetros para uma instrução SQL ou procedimento armazenado. Ele trata parâmetros no procedimento armazenado como parâmetros nomeados e procura marcadores de parâmetro compatíveis. Por exemplo, o procedimento armazenado `CustOrderHist` é definido usando um parâmetro chamado `@CustomerID`. Quando o código executar o procedimento armazenado, também deverá usar um parâmetro chamado `@CustomerID`.
+Ao usar parâmetros com um <xref:System.Data.SqlClient.SqlCommand> para executar um procedimento armazenado do SQL Server, os nomes dos parâmetros adicionados à coleção de <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> devem coincidir com os nomes dos marcadores de parâmetros no procedimento armazenado. O .NET Framework Data Provider para SQL Server não suporta o espaço reservado de ponto de interrogação (?) para passar parâmetros para uma instrução SQL ou um procedimento armazenado. Ele trata parâmetros no procedimento armazenado como parâmetros nomeados e procura marcadores de parâmetro compatíveis. Por exemplo, o procedimento armazenado `CustOrderHist` é definido usando um parâmetro chamado `@CustomerID`. Quando o código executar o procedimento armazenado, também deverá usar um parâmetro chamado `@CustomerID`.
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ Este exemplo demonstra como chamar um procedimento armazenado do SQL Server no b
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Usando parâmetros com um OleDbCommand ou um OdbcCommand
 
-Ao usar parâmetros com um <xref:System.Data.OleDb.OleDbCommand> ou <xref:System.Data.Odbc.OdbcCommand>, a ordem dos parâmetros adicionados à coleção de `Parameters` deve coincidir com a ordem dos parâmetros definidos no procedimento armazenado. O Provedor de Dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para OLE DB e o provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para ODBC lidam com parâmetros em um procedimento armazenado como espaços reservados e aplicam valores de parâmetro na ordem. Além disso, os parâmetros do valor de retorno devem ser os primeiros parâmetros adicionados à coleção de `Parameters`.
+Ao usar parâmetros com um <xref:System.Data.OleDb.OleDbCommand> ou <xref:System.Data.Odbc.OdbcCommand>, a ordem dos parâmetros adicionados à coleção de `Parameters` deve coincidir com a ordem dos parâmetros definidos no procedimento armazenado. O .NET Framework Data Provider para OLE DB e o .NET Framework Data Provider para ODBC lidam com parâmetros em um procedimento armazenado como espaços reservados e aplicam valores de parâmetro na ordem. Além disso, os parâmetros do valor de retorno devem ser os primeiros parâmetros adicionados à coleção de `Parameters`.
 
-O provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para OLE DB e o provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para ODBC não oferecem suporte aos parâmetros nomeados para passar parâmetros para uma instrução SQL ou procedimento armazenado. Nesse caso, você deverá usar o espaço reservado de ponto de interrogação (?), como no exemplo a seguir.
+O .NET Framework Data Provider para OLE DB e o .NET Framework Data Provider para ODBC não dão suporte a parâmetros nomeados para passar parâmetros para uma instrução SQL ou um procedimento armazenado. Nesse caso, você deverá usar o espaço reservado de ponto de interrogação (?), como no exemplo a seguir.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

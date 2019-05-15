@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdd43f7079563be6b1377f743a84625429ba4f16
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411688"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589795"
 ---
 # <a name="xml-schema-object-model-overview"></a>Visão geral do modelo de objeto de esquema XML
 O modelo de objeto (SOM) de esquema no Microsoft.NET Framework é ricos API que permite a você criar, editar, e validar esquemas programaticamente. O SOM opera sobre documentos de esquema XML de forma semelhante à forma como Document Object Model (DOM) opera sobre documentos XML. Documentos de esquema XML são arquivos XML válidos, que carregados uma vez no SOM, transmitem significar sobre a estrutura e a validade de outros documentos XML que estão de acordo com o esquema.  
@@ -19,17 +19,17 @@ O modelo de objeto (SOM) de esquema no Microsoft.NET Framework é ricos API que 
   
  Os seguintes são maneiras que o SOM API no .NET Framework permite criar, editar, e para validar esquemas.  
   
--   Esquemas válidos de carregar e de salvar a e arquivos.  
+- Esquemas válidos de carregar e de salvar a e arquivos.  
   
--   Criar esquemas de memória usando classes fortemente tipadas.  
+- Criar esquemas de memória usando classes fortemente tipadas.  
   
--   Interagir com a classe de <xref:System.Xml.Schema.XmlSchemaSet> para armazenar em cachê, compilar, e recuperar esquemas.  
+- Interagir com a classe de <xref:System.Xml.Schema.XmlSchemaSet> para armazenar em cachê, compilar, e recuperar esquemas.  
   
--   Interagir com o método de <xref:System.Xml.XmlReader.Create%2A> da classe de <xref:System.Xml.XmlReader> para validar instância de documentos XML com esquemas.  
+- Interagir com o método de <xref:System.Xml.XmlReader.Create%2A> da classe de <xref:System.Xml.XmlReader> para validar instância de documentos XML com esquemas.  
   
--   Criar editores para criar e esquemas de manutenções.  
+- Criar editores para criar e esquemas de manutenções.  
   
--   Editar dinamicamente um esquema que pode ser seguido e salvo para uso na validação de instância de documentos XML.  
+- Editar dinamicamente um esquema que pode ser seguido e salvo para uso na validação de instância de documentos XML.  
   
 ## <a name="the-schema-object-model"></a>O modelo de objeto de esquema  
  O SOM consiste em um extenso conjunto de classes no namespace de <xref:System.Xml.Schema?displayProperty=nameWithType> que corresponde a elementos em um esquema XML. Por exemplo, os mapeamentos de elemento de `<xsd:schema>...</xsd:schema>` a <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> classe, e qualquer informação que pode ser contido em um elemento de `<xsd:schema/>` pode ser representadas usando a classe de <xref:System.Xml.Schema.XmlSchema> . Da mesma forma, `<xsd:element>...</xsd:element>` e os elementos de `<xsd:attribute>...</xsd:attribute>` a classes de <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> e de <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> respectivamente. Esse mapeamento continua para todos os elementos de um esquema XML que cria um modelo de objeto de esquema XML no espaço de <xref:System.Xml.Schema> ilustrada no diagrama a seguir.  

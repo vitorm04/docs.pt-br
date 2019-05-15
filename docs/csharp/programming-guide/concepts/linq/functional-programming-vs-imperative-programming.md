@@ -2,12 +2,12 @@
 title: Programação com funcional. Programação obrigatória (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 42c80146a091bfdcff2bbf3ebe1f4ed9a9510e29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518950"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596694"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Programação com funcional. Programação obrigatória (C#)
 Este tópico compara e contrasta programação funcional com programação (procedural) imperativa mais tradicional.  
@@ -35,11 +35,11 @@ Este tópico compara e contrasta programação funcional com programação (proc
 ## <a name="advantages-of-pure-functions"></a>Vantagens de funções puras  
  O principal motivo para implementar transformações e como funções puras é que as funções puras são passível de composição: isto é, independentemente e sem estado. Essas características trazem um número de benefícios, incluindo o seguinte:  
   
--   Legibilidade e sustentabilidade aumentadas. Isso ocorre porque cada função é criada para realizar uma tarefa específica determinada seus argumentos. A função não confiar em qualquer estado externo.  
+- Legibilidade e sustentabilidade aumentadas. Isso ocorre porque cada função é criada para realizar uma tarefa específica determinada seus argumentos. A função não confiar em qualquer estado externo.  
   
--   Desenvolvimento reiterative mais fácil. Porque o código é mais fácil refatorar, alterações no design são geralmente mais fácil de implementar. Por exemplo, suponha o escrever uma transformação complicada, e realize-o em que qualquer código é repetido várias vezes na transformação. Se você refatora com um método puro, você pode chamar o método puro na vontade sem se preocupar sobre efeitos colaterais.  
+- Desenvolvimento reiterative mais fácil. Porque o código é mais fácil refatorar, alterações no design são geralmente mais fácil de implementar. Por exemplo, suponha o escrever uma transformação complicada, e realize-o em que qualquer código é repetido várias vezes na transformação. Se você refatora com um método puro, você pode chamar o método puro na vontade sem se preocupar sobre efeitos colaterais.  
   
--   Teste e depuração mais fácil. Como as funções puras podem acessar mais facilmente seja testado no isolamento, você pode escrever código de teste que chama a função pura com valores típicos, caso válidos de borda casos, e inválidas de borda.  
+- Teste e depuração mais fácil. Como as funções puras podem acessar mais facilmente seja testado no isolamento, você pode escrever código de teste que chama a função pura com valores típicos, caso válidos de borda casos, e inválidas de borda.  
   
 ## <a name="transitioning-for-oop-developers"></a>Fazer a transição para OOP desenvolvedores  
  Em programação orientada a objeto tradicional (OOP), a maioria dos desenvolvedores estão acostumados a programação estilo obrigatório/procedural. Para alternar a ficar em um estilo funcional puro, eles precisam fazer uma transição no seu pensamento e a abordagem ao desenvolvimento.  

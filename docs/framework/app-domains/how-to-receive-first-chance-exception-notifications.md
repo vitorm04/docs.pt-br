@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3009bf9eb24c44cedc4021f3d09f1707ae2e40d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770484"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593602"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Como: Receber notificações de exceção de primeira tentativa
 O evento <xref:System.AppDomain.FirstChanceException> da classe <xref:System.AppDomain> permite que você receba uma notificação de que uma exceção foi lançada, antes de o Common Language Runtime começar a procurar por manipuladores de exceção.
@@ -100,7 +100,7 @@ O evento <xref:System.AppDomain.FirstChanceException> da classe <xref:System.App
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
--   Este exemplo é um aplicativo de linha de comando. Para compilar e executar esse código no Visual Studio, adicione o código `Console.ReadLine();` de C# (no Visual Basic, `Console.ReadLine()`) ao final de `Main()`, de modo a impedir que a janela de comando feche antes que você consiga ler a saída.
+- Este exemplo é um aplicativo de linha de comando. Para compilar e executar esse código no Visual Studio, adicione o código `Console.ReadLine();` de C# (no Visual Basic, `Console.ReadLine()`) ao final de `Main()`, de modo a impedir que a janela de comando feche antes que você consiga ler a saída.
 
 ## <a name="see-also"></a>Consulte também
 

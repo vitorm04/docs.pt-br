@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 993c7f590f30b44f45e4833b4364b40ad9748b58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607772"
 ---
 # <a name="creating-assemblies"></a>Criando assemblies
 
@@ -24,23 +24,23 @@ Você pode criar um assembly de vários arquivos de vários módulos de código 
 
 Você tem várias opções ao agrupar módulos de código e recursos em assemblies, dependendo dos seguintes fatores:
 
--   Controle de versão
+- Controle de versão
 
      Agrupe módulos que devem ter as mesmas informações de versão.
 
--   Implantação
+- Implantação
 
      Agrupe recursos e módulos de código que dão suporte ao seu modelo de implantação.
 
--   Reutilização
+- Reutilização
 
      Agrupe os módulos se eles puderem ser usados em conjunto de forma lógica para alguma finalidade. Por exemplo, um assembly composto pelos tipos e classes usados com pouca frequência para a manutenção do programa podem ser colocados no mesmo assembly. Além disso, os tipos que você pretende compartilhar com vários aplicativos devem ser agrupados em um assembly e o assembly deve ser assinado com um nome forte.
 
--   Segurança
+- Segurança
 
      Agrupe módulos que contêm tipos que exigem as mesmas permissões de segurança.
 
--   Definição de escopo
+- Definição de escopo
 
      Agrupe módulos que contêm tipos cuja visibilidade deve ser restrita ao mesmo assembly.
 

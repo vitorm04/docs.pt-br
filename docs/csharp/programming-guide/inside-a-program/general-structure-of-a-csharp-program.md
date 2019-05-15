@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: a60a03d0f88b6176dc22e850c8a84b605078c657
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 80f9fd4e86abbdcc316ff22090cc980bbb8245d1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967316"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595440"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Estrutura geral de um programa em C# (Guia de Programação em C#)
 Os programas C# podem consistir em um ou mais arquivos. Cada arquivo pode conter zero ou mais namespaces. Um namespace pode conter tipos como classes, estruturas, interfaces, enumerações e delegados, além de outros namespaces. A seguir está o esqueleto de um programa em C# que contém todos esses elementos.  
@@ -20,15 +20,15 @@ Os programas C# podem consistir em um ou mais arquivos. Cada arquivo pode conter
 ## <a name="related-sections"></a>Seções relacionadas  
  Para saber mais:  
   
--   [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
--   [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
--   [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
+- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
   
--   [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
+- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
   
--   [Delegados](../../../csharp/programming-guide/delegates/index.md)  
+- [Delegados](../../../csharp/programming-guide/delegates/index.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
