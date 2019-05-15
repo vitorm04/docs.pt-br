@@ -2,12 +2,12 @@
 title: Manuseio de mensagem suspeita
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 1a7ab0afa982508f07256f090a13692174b5fb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1f01714d2b4587659682661c05b341d0f50254e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638420"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592858"
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
 Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo de tentativas de entrega para o aplicativo. Essa situação pode ocorrer quando um aplicativo baseado em fila não pode processar uma mensagem devido a erros. Para atender às demandas de confiabilidade, um aplicativo na fila recebe mensagens em uma transação. Anulando a transação na qual uma mensagem na fila foi recebida deixa a mensagem na fila para que a mensagem é repetida em uma nova transação. Se o problema que causou a anulação da transação não for corrigido, o aplicativo de recebimento pode fique preso em um loop de recebimento e anulando a mesma mensagem até que o número máximo de tentativas de entrega foi excedido e resultados de uma mensagem suspeita.  
@@ -52,7 +52,7 @@ Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo d
   
  O WCF fornece duas ligações na fila padrão:  
   
-- <xref:System.ServiceModel.NetMsmqBinding>. Um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] associação adequada para a execução de comunicação baseada em fila com outros pontos de extremidade do WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>. Uma associação do .NET Framework adequada para executar a comunicação baseada em fila com outros pontos de extremidade do WCF.  
   
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Uma associação adequada para se comunicar com aplicativos de enfileiramento de mensagens existentes.  
   

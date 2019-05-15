@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479692"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625590"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estruturas de dados para programação paralela
 O .NET Framework versão 4 apresenta vários tipos novos que são úteis em programação paralela, incluindo um conjunto de classes de coleção simultâneas, primitivos de sincronização leve e tipos para inicialização lenta. Você pode usar esses tipos com qualquer código de aplicativo multithread, incluindo PLINQ e biblioteca de paralelismo de tarefas.  
@@ -48,9 +48,9 @@ O .NET Framework versão 4 apresenta vários tipos novos que são úteis em prog
   
  Para obter mais informações, consulte:  
   
--   [Como: Usar SpinLock para sincronização de baixo nível](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Como: Usar SpinLock para sincronização de baixo nível](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [Como: Sincronizar operações simultâneas com uma barreira](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Como: Sincronizar operações simultâneas com uma barreira](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Classes de inicialização lenta  
  Com a inicialização lenta, a memória de um objeto não é alocada até que seja necessário. A inicialização lenta pode melhorar o desempenho distribuindo as alocações de objeto uniformemente entre o tempo de vida de um programa. Você pode habilitar a inicialização lenta para qualquer tipo personalizado encapsulando o tipo <xref:System.Lazy%601>.  
