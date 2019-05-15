@@ -1,15 +1,13 @@
 ---
 title: Quando implantar contêineres do Windows em sua infraestrutura de VM de IaaS local
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Quando implantar contêineres do Windows em seu local infraestrutura de VM IaaS
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: bcfc4990a261b8675c36358c5188a8d26d76479d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5986073e295eeba5921a2d899b236c68a27251fd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621024"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643778"
 ---
 # <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>Quando implantar contêineres do Windows em sua infraestrutura de VM de IaaS local
 

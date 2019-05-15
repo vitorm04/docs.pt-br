@@ -1,15 +1,13 @@
 ---
 title: Executar aplicativos compostos e microsserviços em ambientes de produção
 description: Conheça os principais componentes para executar aplicativos baseados em contêiner na produção
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921583"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644974"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Executar aplicativos compostos e microsserviços em ambientes de produção
 

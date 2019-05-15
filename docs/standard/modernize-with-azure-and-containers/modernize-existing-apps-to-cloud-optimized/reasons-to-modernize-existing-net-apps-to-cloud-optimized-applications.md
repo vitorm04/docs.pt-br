@@ -1,15 +1,13 @@
 ---
 title: Motivos para modernizar aplicativos existentes do .NET para aplicativos otimizados para a nuvem
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Motivos para modernizar aplicativos existentes do .NET para aplicativos otimizados para a nuvem
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 896162116d2c6e92fa3038405c5f3bf40a956ad9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611559"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639053"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Motivos para modernizar aplicativos existentes do .NET para aplicativos otimizados para a nuvem
 

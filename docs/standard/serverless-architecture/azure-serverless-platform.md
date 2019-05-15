@@ -4,12 +4,12 @@ description: A plataforma sem servidor do Azure fornece recursos, incluindo o c√
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 6149e79f45422be0b4f1ebc719543efd1b0b750c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43646db564ae31d26fe59e1ad7392e51d2d4e953
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053269"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638859"
 ---
 # <a name="azure-serverless-platform"></a>Plataforma sem servidor do Azure
 

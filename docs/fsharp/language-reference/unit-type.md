@@ -2,12 +2,12 @@
 title: Tipo unit
 description: Saiba como o F# tipo de 'unit' geralmente é usado para manter o lugar onde um valor é exigido pela sintaxe de linguagem quando nenhum valor é necessário ou desejado.
 ms.date: 05/16/2016
-ms.openlocfilehash: f1866ff12f36f4f8d3eaa1275551c42fc4ade216
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d515e19489bfa7de6f17194fd74176cfa0bcd7c9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982521"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645130"
 ---
 # <a name="unit-type"></a>Tipo unit
 

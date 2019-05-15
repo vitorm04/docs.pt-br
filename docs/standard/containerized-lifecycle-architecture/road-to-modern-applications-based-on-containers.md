@@ -1,15 +1,13 @@
 ---
 title: Caminho para aplicativos modernos baseados em contêineres
 description: Compreenda Docker, contêineres e uma arquitetura de Microsserviços não são uma solução padronizada. Aqui você encontrará algumas referências que ajudarão você a decidir.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd5a53ec557b7dd90733a93d0cb03f19e3bc2940
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922610"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641263"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Caminho para aplicativos modernos baseados em contêineres
 

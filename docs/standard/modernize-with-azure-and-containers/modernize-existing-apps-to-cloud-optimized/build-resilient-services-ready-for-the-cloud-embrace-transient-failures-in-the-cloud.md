@@ -1,15 +1,13 @@
 ---
 title: Compile serviços resilientes prontos para a nuvem. adote as falhas transitórias na nuvem
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Compile serviços resilientes prontos para a nuvem. adote as falhas transitórias na nuvem
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7af5e189ea930f9eac8aadab2ba1497f43f8d2b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca5d5e0c3af772ac52a02894c96889c776cf7d48
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614519"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643732"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Crie serviços resilientes prontos para a nuvem: adote as falhas transitórias na nuvem
 

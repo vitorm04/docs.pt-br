@@ -2,12 +2,12 @@
 title: 'Como: criar um modelo personalizado de atividades'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: ee6f249092c5cf8643e3c9bfd15d32e77791d8bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f54a625fbe5497406645ea29f824d361c0392eb3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773602"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637721"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Como: criar um modelo personalizado de atividades
 
