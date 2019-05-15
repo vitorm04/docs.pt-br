@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 17b6dd979f7554cd433cc1abcf2a4da8dd9b83cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac5817c5c1cfcf88be3f85836749eed53004dd43
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779334"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591138"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Como: chamar operações assíncronas usando uma fábrica de canais
 Este tópico aborda como um cliente pode acessar uma operação de serviço assincronamente ao usar um <xref:System.ServiceModel.ChannelFactory%601>-com base em aplicativo cliente. (Ao usar um <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> objeto no qual invocar um serviço que você pode usar o modelo de chamada assíncrona controlada por evento. Para obter mais informações, confira [Como: Chamar operações de serviço de forma assíncrona](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obter mais informações sobre o modelo de chamada assíncrono baseado em evento, consulte [padrão assíncrono baseado em evento (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
@@ -42,7 +42,7 @@ Este tópico aborda como um cliente pode acessar uma operação de serviço assi
      Quando a função de retorno de chamada é executado, o cliente chama `End<operation>` (por exemplo, `EndAdd`) para recuperar o resultado.  
   
 ## <a name="example"></a>Exemplo  
- O serviço que é usado com o código do cliente que é usado no procedimento anterior implementa o `ICalculator` interface conforme mostrado no código a seguir. No lado do serviço, o `Add` e `Subtract` operações do contrato são invocadas sincronicamente, o Windows Communication Foundation (WCF) tempo de execução, mesmo que as etapas anteriores do cliente são invocadas de forma assíncrona no cliente. O `Multiply` e `Divide` operações são usadas para chamar o serviço de forma assíncrona no lado do serviço, mesmo se o cliente invoca forma síncrona. Este exemplo define o <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> propriedade para `true`. Essa configuração de propriedade, em combinação com a implementação do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] padrão assíncrono, informa ao tempo de execução para invocar a operação de forma assíncrona.  
+ O serviço que é usado com o código do cliente que é usado no procedimento anterior implementa o `ICalculator` interface conforme mostrado no código a seguir. No lado do serviço, o `Add` e `Subtract` operações do contrato são invocadas sincronicamente, o Windows Communication Foundation (WCF) tempo de execução, mesmo que as etapas anteriores do cliente são invocadas de forma assíncrona no cliente. O `Multiply` e `Divide` operações são usadas para chamar o serviço de forma assíncrona no lado do serviço, mesmo se o cliente invoca forma síncrona. Este exemplo define o <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> propriedade para `true`. Essa configuração de propriedade, em combinação com a implementação do padrão assíncrono do .NET Framework, informa ao tempo de execução para invocar a operação de forma assíncrona.  
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
