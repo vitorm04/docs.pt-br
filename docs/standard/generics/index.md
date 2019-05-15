@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622805"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592242"
 ---
 # <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
 
@@ -119,7 +119,7 @@ ms.locfileid: "64622805"
   
  Veja a seguir algumas limitações de genéricos:  
   
-- Os tipos genéricos podem ser derivados da maioria das classes base, tais como <xref:System.MarshalByRefObject> (e restrições podem ser usadas para exigir que parâmetros do tipo genérico derivem de classes base como <xref:System.MarshalByRefObject>). No entanto, o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] não dá suporte para tipos genéricos vinculados a um contexto. Um tipo genérico pode ser derivado de <xref:System.ContextBoundObject>, mas tentar criar uma instância desse tipo causa uma <xref:System.TypeLoadException>.  
+- Os tipos genéricos podem ser derivados da maioria das classes base, tais como <xref:System.MarshalByRefObject> (e restrições podem ser usadas para exigir que parâmetros do tipo genérico derivem de classes base como <xref:System.MarshalByRefObject>). No entanto, o .NET Framework não dá suporte para tipos genéricos vinculados a um contexto. Um tipo genérico pode ser derivado de <xref:System.ContextBoundObject>, mas tentar criar uma instância desse tipo causa uma <xref:System.TypeLoadException>.  
   
 - Enumerações não podem ter parâmetros do tipo genérico. Uma enumeração pode ser genérica somente incidentalmente (por exemplo, porque ela está aninhada em um tipo genérico que é definido usando Visual Basic, C# ou C++). Para saber mais, confira "Enumerações" em [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
   
