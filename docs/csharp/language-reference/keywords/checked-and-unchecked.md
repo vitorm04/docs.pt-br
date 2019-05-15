@@ -10,27 +10,27 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 12f65fe4b1dc710ff5c053073817dbd793c86082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3378cffc1dcee7bb12705704e66b7fdd287105fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511823"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592977"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Contexto verificado e não verificado (Referência de C#)
 Instruções C# podem ser executadas em contexto marcado ou desmarcado. Em um contexto marcado, o estouro aritmético gera uma exceção. Em um contexto não verificado, o estouro aritmético é ignorado, e o resultado é truncado descartando todos os bits de ordem superior que não se encaixam no tipo de destino.  
   
--   [verificado](checked.md) Especificar o contexto verificado.  
+- [verificado](checked.md) Especificar o contexto verificado.  
   
--   [não verificado](unchecked.md) Especificar o contexto não verificado.  
+- [não verificado](unchecked.md) Especificar o contexto não verificado.  
   
  As seguintes operações são afetadas pela verificação de estouro:  
   
--   Expressões que usam os seguintes operadores predefinidos em tipos integrais:  
+- Expressões que usam os seguintes operadores predefinidos em tipos integrais:  
   
      `++`, `--`, unário `-`, `+`, `-`, `*`, `/`  
   
--   Conversões numéricas explícitas entre tipos integrais ou de `float` ou `double` para um tipo integral.  
+- Conversões numéricas explícitas entre tipos integrais ou de `float` ou `double` para um tipo integral.  
   
  Se nem `checked` ou `unchecked` for especificado, o contexto padrão de expressões de não constante (expressões que são avaliadas no tempo de execução) é definido pelo valor da opção do compilador [-checked](../compiler-options/checked-compiler-option.md). Por padrão, o valor dessa opção é removido e as operações aritméticas são executadas em um contexto não verificado.
  

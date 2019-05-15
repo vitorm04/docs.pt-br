@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331293"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593025"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opções do compilador C#)
 A opção **-out** especifica o nome do arquivo de saída.  
@@ -35,9 +35,9 @@ A opção **-out** especifica o nome do arquivo de saída.
   
  Se você não especificar o nome do arquivo de saída:  
   
--   Um .exe extrairá seu nome do arquivo de código-fonte que contém o método **principal**.  
+- Um .exe extrairá seu nome do arquivo de código-fonte que contém o método **principal**.  
   
--   Um arquivo .dll ou .netmodule extrairá seu nome do primeiro arquivo de código-fonte.  
+- Um arquivo .dll ou .netmodule extrairá seu nome do primeiro arquivo de código-fonte.  
   
  Um arquivo de código-fonte usado para compilar um arquivo de saída não pode ser usado na mesma compilação para a compilação de outro arquivo de saída.  
   

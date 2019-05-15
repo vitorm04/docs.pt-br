@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 9dcb79a3310c4c814879501e2723560a84c9b48c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5c5f3337d1c1ff2d58d3876ed0d4ede11d22b6bb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969343"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593064"
 ---
 # <a name="-link-c-compiler-options"></a>-link (opções do compilador C#)
 Faz com que o compilador disponibilize as informações de tipo COM nos assemblies especificados para o projeto sendo compilado no momento.  
@@ -47,9 +47,9 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
   
  Se você vincular a um assembly COM (Assembly A) que em si faz referência a outro assembly COM (Assembly B), também precisará vincular ao Assembly B se uma das seguintes opções for verdadeira:  
   
--   Um tipo do Assembly A herda de um tipo ou implementa uma interface do Assembly B.  
+- Um tipo do Assembly A herda de um tipo ou implementa uma interface do Assembly B.  
   
--   Um campo, propriedade, evento ou método que tem um tipo de retorno ou de parâmetro do Assembly B é invocado.  
+- Um campo, propriedade, evento ou método que tem um tipo de retorno ou de parâmetro do Assembly B é invocado.  
   
  Como a opção do compilador [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md), a opção do compilador `-link` usa o arquivo de resposta Csc.rsp, que faz referência a assemblies [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usados com frequência. Use a opção do compilador [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) se não quiser que o compilador use o arquivo Csc.rsp.  
   

@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f6cb2d387e3b979ed0d4407e17287fb93fa0a20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2736c4758cbaaeda902b43aeea55611a21ea38ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678337"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623805"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilidade com outros tipos e padrões assíncronos
 O .NET Framework 1.0 introduziu o padrão <xref:System.IAsyncResult>, também conhecido como o [Modelo de programação assíncrona (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) ou o padrão `Begin/End`.  O .NET Framework 2.0 adicionou o [EAP (Padrão Assíncrono Baseado em Evento)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partir do .NET Framework 4, o [TAP (Padrão Assíncrono Baseado em Tarefa)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) substitui o APM e o EAP, mas oferece a capacidade de criar facilmente as rotinas de migração dos padrões anteriores.  
   
  Neste tópico:  
   
--   [Tarefas e APM](#APM) ([de APM para TAP](#ApmToTap) ou [de TAP para APM](#TapToApm))  
+- [Tarefas e APM](#APM) ([de APM para TAP](#ApmToTap) ou [de TAP para APM](#TapToApm))  
   
--   [Tarefas e EAP](#EAP)  
+- [Tarefas e EAP](#EAP)  
   
--   [Tarefas e identificadores de espera](#WaitHandles) ([de identificadores de espera para TAP](#WHToTap) ou [de TAP para identificadores de espera](#TapToWH))  
+- [Tarefas e identificadores de espera](#WaitHandles) ([de identificadores de espera para TAP](#WHToTap) ou [de TAP para identificadores de espera](#TapToWH))  
   
 <a name="APM"></a>   
 ## <a name="tasks-and-the-asynchronous-programming-model-apm"></a>Tarefas e APM (Modelo Assíncrono de Programação)  

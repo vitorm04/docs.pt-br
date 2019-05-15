@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971943"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621006"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Armadilhas em potencial em dados e paralelismo da tarefa
 Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> podem melhorar consideravelmente o desempenho em comparação com consultas sequenciais comuns. No entanto, o trabalho de paralelizar o loop apresenta complexidade que pode levar a problemas que, em código sequencial, não são tão comuns ou não são encontrados. Este tópico lista algumas práticas a serem evitadas ao escrever loops paralelos.  
@@ -31,11 +31,11 @@ Em muitos casos, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=
   
  O cenário mais comum em que a paralelização excessiva pode ocorrer é em loops aninhados. Na maioria dos casos, é melhor paralelizar apenas o loop externo, a menos que uma ou mais das seguintes condições se apliquem:  
   
--   O loop interno é conhecido por ser muito longo.  
+- O loop interno é conhecido por ser muito longo.  
   
--   Você está realizando uma computação cara em cada ordem. (A operação mostrada no exemplo não é cara).  
+- Você está realizando uma computação cara em cada ordem. (A operação mostrada no exemplo não é cara).  
   
--   O sistema de destino tem processadores suficientes para lidar com o número de threads que serão produzidos paralelizando a consulta em `cust.Orders`.  
+- O sistema de destino tem processadores suficientes para lidar com o número de threads que serão produzidos paralelizando a consulta em `cust.Orders`.  
   
  Em todos os casos, a melhor maneira de determinar a forma ideal da consulta é testar e medir.  
   

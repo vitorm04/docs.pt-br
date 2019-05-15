@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31143e17eec097cc67dff0cfffeb628f8a0b2127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609454"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590073"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Resolvendo folhas de estilos XSLT e documentos externos
 Há várias vezes durante uma transformação quando você precise resolver recursos externos.  
@@ -20,11 +20,11 @@ Há várias vezes durante uma transformação quando você precise resolver recu
   
  Há várias vezes durante uma transformação quando você precise resolver recursos externos:  
   
--   Durante <xref:System.Xml.Xsl.XslTransform.Load%2A> para localizar uma folha de estilos externa.  
+- Durante <xref:System.Xml.Xsl.XslTransform.Load%2A> para localizar uma folha de estilos externa.  
   
--   Durante <xref:System.Xml.Xsl.XslTransform.Load%2A> para resolver alguns elementos de `<xsl:include>` ou de `<xsl:import>` localizados na folha de estilos.  
+- Durante <xref:System.Xml.Xsl.XslTransform.Load%2A> para resolver alguns elementos de `<xsl:include>` ou de `<xsl:import>` localizados na folha de estilos.  
   
--   Durante <xref:System.Xml.Xsl.XslTransform.Transform%2A> para resolver algumas funções de `document()` .  
+- Durante <xref:System.Xml.Xsl.XslTransform.Transform%2A> para resolver algumas funções de `document()` .  
   
 ## <a name="using-the-xmlresolver-class"></a>Usando a classe de XmlResolver  
  Se a autenticação for necessária para acessar um recurso de rede, use os métodos de <xref:System.Xml.Xsl.XslTransform.Load%2A> que têm um parâmetro de <xref:System.Xml.XmlResolver> para passar o objeto de <xref:System.Xml.XmlResolver> , que tem as propriedades credenciais necessárias definidas.  

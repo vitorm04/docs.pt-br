@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591560"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (ferramenta Gerenciador de Certificados)
 A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CTLs (listas de certificados confiáveis) e CRLs (listas de certificados revogados).  
@@ -75,13 +75,13 @@ A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CT
 ## <a name="remarks"></a>Comentários  
  Certmgr.exe realiza as seguintes funções básicas:  
   
--   Exibe certificados, CTLs e CRLs para o console.  
+- Exibe certificados, CTLs e CRLs para o console.  
   
--   Adiciona certificados, CTLs e CRLs a um repositório de certificados.  
+- Adiciona certificados, CTLs e CRLs a um repositório de certificados.  
   
--   Exclui certificados, CTLs e CRLs de um repositório de certificados.  
+- Exclui certificados, CTLs e CRLs de um repositório de certificados.  
   
--   Salva um certificado X.509, uma CTL ou uma CRL de um repositório de certificados em um arquivo.  
+- Salva um certificado X.509, uma CTL ou uma CRL de um repositório de certificados em um arquivo.  
   
  O Certmgr.exe funciona com dois tipos de repositórios de certificados: **StoreFile** e repositório do sistema. Não é necessário especificar o tipo do repositório de certificados; Certmgr.exe pode identificar o tipo de repositório e realizar as operações apropriadas.  
   

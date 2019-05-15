@@ -2,15 +2,15 @@
 title: Hospedagem em um aplicativo gerenciado
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1f4d91994ba44407ff5c93dbd34aa0bdef9332b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855823"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591737"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hospedagem em um aplicativo gerenciado
-Serviços do Windows Communication Foundation (WCF) podem ser hospedados em qualquer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicativo. Serviços de hospedagem interna é a opção de hospedagem mais flexível porque requer que a infra-estrutura mínimos para implantar. No entanto, também é a opção de hospedagem menos robusta, porque os aplicativos gerenciados não fornecem hospedagem avançados e recursos de gerenciamento de outras opções de hospedagem no WCF, como os serviços de Internet Information Services (IIS) e Windows.  
+Serviços do Windows Communication Foundation (WCF) podem ser hospedados em qualquer aplicativo .NET Framework. Serviços de hospedagem interna é a opção de hospedagem mais flexível porque requer que a infra-estrutura mínimos para implantar. No entanto, também é a opção de hospedagem menos robusta, porque os aplicativos gerenciados não fornecem hospedagem avançados e recursos de gerenciamento de outras opções de hospedagem no WCF, como os serviços de Internet Information Services (IIS) e Windows.  
   
  Para criar um serviço auto-hospedado, crie e abra uma instância da <xref:System.ServiceModel.ServiceHost>, que inicia um serviço de escuta de mensagens. Para obter mais informações, confira [Como: Hospedar um serviço WCF em um aplicativo gerenciado](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   

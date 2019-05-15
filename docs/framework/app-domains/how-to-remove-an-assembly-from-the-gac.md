@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff00e2f1d266243f0453f004564f2ed802d26c85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bfa0cd7041f61e9848804f74d59b85a60450ea92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338716"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593573"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Como: Remover um assembly do cache de assembly global
 Há duas maneiras de remover um assembly do GAC (cache de assemblies global):  
   
--   Usando a [Ferramenta Cache de Assembly Global (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md). Use essa opção para desinstalar assemblies que você colocou no GAC durante o desenvolvimento e teste.  
+- Usando a [Ferramenta Cache de Assembly Global (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md). Use essa opção para desinstalar assemblies que você colocou no GAC durante o desenvolvimento e teste.  
   
--   Usando o [Windows Installer](/windows/desktop/Msi/windows-installer-portal). Use essa opção para desinstalar assemblies ao testar pacotes de instalação e para sistemas de produção.  
+- Usando o [Windows Installer](/windows/desktop/Msi/windows-installer-portal). Use essa opção para desinstalar assemblies ao testar pacotes de instalação e para sistemas de produção.  
   
 ### <a name="removing-an-assembly-with-gacutilexe"></a>Remover um assembly com o Gacutil.exe  
   

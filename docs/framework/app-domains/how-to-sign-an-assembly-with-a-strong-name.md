@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303412"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593558"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Como: assinar um assembly com um nome forte
 Há vários modos de assinar um assembly com um nome forte:  
   
--   Usando a guia **Assinatura** na caixa de diálogo **Propriedades** de um projeto no Visual Studio. Esta é a forma mais fácil e conveniente de assinar um assembly com um nome forte.  
+- Usando a guia **Assinatura** na caixa de diálogo **Propriedades** de um projeto no Visual Studio. Esta é a forma mais fácil e conveniente de assinar um assembly com um nome forte.  
   
--   Usando o [Vinculador de Assembly (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) para vincular um módulo de código do .NET Framework (um arquivo .netmodule) com um arquivo de chave.  
+- Usando o [Vinculador de Assembly (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) para vincular um módulo de código do .NET Framework (um arquivo .netmodule) com um arquivo de chave.  
   
--   Usando atributos de assembly para inserir as informações do nome forte no seu código. Você pode usar o atributo <xref:System.Reflection.AssemblyKeyFileAttribute> ou <xref:System.Reflection.AssemblyKeyNameAttribute>, dependendo do local em que o arquivo de chave a ser usado se encontra.  
+- Usando atributos de assembly para inserir as informações do nome forte no seu código. Você pode usar o atributo <xref:System.Reflection.AssemblyKeyFileAttribute> ou <xref:System.Reflection.AssemblyKeyNameAttribute>, dependendo do local em que o arquivo de chave a ser usado se encontra.  
   
--   Usando opções do compilador.  
+- Usando opções do compilador.  
   
  Você deve ter um par de chaves de criptografia para assinar um assembly com um nome forte. Para obter mais informações de como criar um par de chaves, confira [Como criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
@@ -48,7 +48,7 @@ Há vários modos de assinar um assembly com um nome forte:
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Para criar e assinar um assembly com um nome forte usando o Vinculador de Assembly.  
   
--   Com o [Prompt de Comando do Desenvolvedor para Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), digite o seguinte comando:  
+- Com o [Prompt de Comando do Desenvolvedor para Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), digite o seguinte comando:  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -90,7 +90,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ### <a name="to-sign-an-assembly-with-a-strong-name-by-using-the-compiler"></a>Para assinar um assembly com um nome forte usando o compilador  
   
--   Compile seu arquivo ou arquivos de código-fonte com a opção de compilador `/keyfile` ou `/delaysign` no C# e em Visual Basic, ou a opção de vinculador `/KEYFILE` ou `/DELAYSIGN` em C++. Depois do nome da opção, adicione um dois-pontos e o nome do arquivo da chave. Ao usar compiladores de linha de comando, você pode copiar o arquivo de chave para o diretório que contém seus arquivos de código-fonte.  
+- Compile seu arquivo ou arquivos de código-fonte com a opção de compilador `/keyfile` ou `/delaysign` no C# e em Visual Basic, ou a opção de vinculador `/KEYFILE` ou `/DELAYSIGN` em C++. Depois do nome da opção, adicione um dois-pontos e o nome do arquivo da chave. Ao usar compiladores de linha de comando, você pode copiar o arquivo de chave para o diretório que contém seus arquivos de código-fonte.  
   
      Para saber mais sobre assinatura com atraso, veja [Assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md).  
   

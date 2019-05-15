@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788538"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623803"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Padrão assíncrono baseado em tarefa (TAP)
 O TAP (Padrão Assíncrono Baseado em Tarefa) baseia-se nos tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> no namespace <xref:System.Threading.Tasks?displayProperty=nameWithType>, os quais são usados para representar operações assíncronas arbitrárias. O TAP é o padrão de design assíncrono recomendado para novos desenvolvimentos.  
@@ -39,9 +39,9 @@ O TAP usa um único método para representar o início e a conclusão de uma ope
 ## <a name="initiating-an-asynchronous-operation"></a>Como iniciar uma operação assíncrona  
  Um método assíncrono baseado no TAP pode fazer uma pequena quantidade de trabalho de forma síncrona, como validar argumentos e iniciar a operação assíncrona, antes de retornar a tarefa resultante. O trabalho síncrono deve ser mantido no mínimo possível para que o método assíncrono possa retornar rapidamente. Os motivos para um retorno rápido incluem:  
   
--   Os métodos assíncronos podem ser chamados de segmentos de interface do usuário (UI), e qualquer trabalho síncrono longo pode prejudicar a resposta do aplicativo.  
+- Os métodos assíncronos podem ser chamados de segmentos de interface do usuário (UI), e qualquer trabalho síncrono longo pode prejudicar a resposta do aplicativo.  
   
--   É possível iniciar vários métodos assíncronos simultaneamente. Portanto, qualquer trabalho longo na parte síncrona de um método assíncrono pode atrasar a inicialização de outras operações assíncronas, diminuindo assim os benefícios de simultaneidade.  
+- É possível iniciar vários métodos assíncronos simultaneamente. Portanto, qualquer trabalho longo na parte síncrona de um método assíncrono pode atrasar a inicialização de outras operações assíncronas, diminuindo assim os benefícios de simultaneidade.  
   
  Em alguns casos, a quantidade de trabalho necessária para concluir a operação é menor do que a quantidade de trabalho necessária para iniciar a operação de forma assíncrona. Ler de um fluxo em que a operação de leitura pode ser satisfeita pelos dados que já estão armazenados no buffer de memória é um exemplo de cenário desse tipo. Em casos como esse, a operação pode ser concluída de forma síncrona e retornar uma tarefa que já havia sido concluída.  
   

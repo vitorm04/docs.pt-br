@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560329"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587384"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (opções do compilador C#)
 Especifica que as informações de depuração devem ser colocadas em um arquivo para análise posterior.  
@@ -31,19 +31,19 @@ Especifica que as informações de depuração devem ser colocadas em um arquivo
 ## <a name="remarks"></a>Comentários  
  A opção **-bugreport** especifica que as informações a seguir devem ser colocadas em `file`:  
   
--   Uma cópia de todos os arquivos de código-fonte na compilação.  
+- Uma cópia de todos os arquivos de código-fonte na compilação.  
   
--   Uma lista das opção do compilador usadas na compilação.  
+- Uma lista das opção do compilador usadas na compilação.  
   
--   Informações de versão sobre o compilador, o tempo de execução e o sistema operacional.  
+- Informações de versão sobre o compilador, o tempo de execução e o sistema operacional.  
   
--   Assemblies e módulos referenciados, salvos como dígitos hexadecimais, exceto os assemblies que vêm com o .NET Framework e o SDK.  
+- Assemblies e módulos referenciados, salvos como dígitos hexadecimais, exceto os assemblies que vêm com o .NET Framework e o SDK.  
   
--   Saída do compilador, se houver.  
+- Saída do compilador, se houver.  
   
--   Uma solicitação de descrição do problema.  
+- Uma solicitação de descrição do problema.  
   
--   Uma solicitação de como você acha que o problema deve ser corrigido.  
+- Uma solicitação de como você acha que o problema deve ser corrigido.  
   
  Se essa opção for usada com **-errorreport:prompt** ou **-errorreport:send**, as informações no arquivo serão enviadas à Microsoft Corporation.  
   

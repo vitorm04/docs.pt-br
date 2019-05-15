@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5c286c240c405fc2d01b267bb4395701ec091c8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312600"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620691"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Como: Criar uma chave do Registro e definir o valor no Visual Basic
 O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para criar uma chave do Registro.  
@@ -25,7 +25,7 @@ O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para cr
   
 #### <a name="to-create-a-registry-key"></a>Criar uma chave do Registro  
   
--   Use o método `CreateSubKey` especificando em qual hive a chave será colocada, bem como o nome da chave. O parâmetro `Subkey` não diferencia maiúsculas e minúsculas. Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER.  
+- Use o método `CreateSubKey` especificando em qual hive a chave será colocada, bem como o nome da chave. O parâmetro `Subkey` não diferencia maiúsculas e minúsculas. Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
@@ -57,15 +57,15 @@ O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para cr
   
  As seguintes condições podem causar uma exceção:  
   
--   O nome da chave é `Nothing` (<xref:System.ArgumentNullException>).  
+- O nome da chave é `Nothing` (<xref:System.ArgumentNullException>).  
   
--   O usuário não tem permissões para criar chaves do Registro (<xref:System.Security.SecurityException>).  
+- O usuário não tem permissões para criar chaves do Registro (<xref:System.Security.SecurityException>).  
   
--   O nome da chave excede o limite de 255 caracteres (<xref:System.ArgumentException>).  
+- O nome da chave excede o limite de 255 caracteres (<xref:System.ArgumentException>).  
   
--   A chave é fechada (<xref:System.IO.IOException>).  
+- A chave é fechada (<xref:System.IO.IOException>).  
   
--   A chave do Registro é somente leitura (<xref:System.UnauthorizedAccessException>).  
+- A chave do Registro é somente leitura (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Para executar esse processo, seu assembly exige um nível de privilégio concedido pela classe <xref:System.Security.Permissions.RegistryPermission>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Da mesma forma, o usuário deve ter as ACLs corretas para criar ou gravar nas configurações. Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md).  

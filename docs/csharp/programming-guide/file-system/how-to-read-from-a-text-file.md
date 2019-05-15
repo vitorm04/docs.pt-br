@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 560453a81124a3ee52a2ffd794ddac026c7394a5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 236e730eaae0bc73c715e9b1c2c71d6c870d78e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978014"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608531"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Como: ler um arquivo de texto (Guia de Programação em C#)
 Este exemplo lê o conteúdo de um arquivo de texto usando os métodos estáticos <xref:System.IO.File.ReadAllText%2A> e <xref:System.IO.File.ReadAllLines%2A> da classe <xref:System.IO.File?displayProperty=nameWithType>.  
@@ -36,7 +36,7 @@ Este exemplo lê o conteúdo de um arquivo de texto usando os métodos estático
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   O arquivo não existe ou não existe no local especificado. Verifique o caminho e a ortografia do nome do arquivo.  
+- O arquivo não existe ou não existe no local especificado. Verifique o caminho e a ortografia do nome do arquivo.  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Não confie no nome de um arquivo para determinar o conteúdo do arquivo. Por exemplo, o arquivo `myFile.cs` pode não ser um arquivo de origem do C#.  

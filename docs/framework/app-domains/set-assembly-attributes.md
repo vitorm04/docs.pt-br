@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 638ea8c1f01c62075fc4399cada282128e07422d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186557"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607555"
 ---
 # <a name="setting-assembly-attributes"></a>Configuração de atributos de assembly
 Os atributos de assembly são valores que fornecem informações sobre um assembly. Os atributos são divididos nos seguintes conjuntos de informações:  
   
--   Atributos de identidade do assembly.  
+- Atributos de identidade do assembly.  
   
--   Atributos informativos.  
+- Atributos informativos.  
   
--   Atributos de manifesto do assembly.  
+- Atributos de manifesto do assembly.  
   
--   Atributos de nome forte.  
+- Atributos de nome forte.  
   
 ## <a name="assembly-identity-attributes"></a>Atributos de Identidade do Assembly  
  Três atributos, com um nome forte (se aplicável), determinam a identidade de um assembly: nome, versão e cultura. Esses atributos formam o nome completo do assembly e são necessários ao fazer referência ao assembly no código. Você pode usar atributos para definir a versão e a cultura de um assembly. O compilador ou o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) define o valor do nome quando o assembly é criado, com base no arquivo que contém o manifesto do assembly.  

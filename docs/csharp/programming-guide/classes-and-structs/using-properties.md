@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6a929957a0bb512ae4af503ad4b80c9d081764dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200384"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582973"
 ---
 # <a name="using-properties-c-programming-guide"></a>Usando propriedades (Guia de Programação em C#)
 As propriedades combinam aspectos de métodos e campos. Para o usuário de um objeto, uma propriedade parece ser um campo. Acessar a propriedade requer a mesma sintaxe. Para o implementador de uma classe, uma propriedade consiste em um ou dois blocos de código, que representam um acessador [get](../../../csharp/language-reference/keywords/get.md) e/ou um acessador [set](../../../csharp/language-reference/keywords/set.md). O bloco de código para o acessador `get` é executado quando a propriedade é lida. O bloco de código para o acessador `set` é executado quando um novo valor é atribuído à propriedade. Uma propriedade sem um acessador `set` é considerada como somente leitura. Uma propriedade sem um acessador `get` é considerada como somente gravação. Uma propriedade que tem os dois acessadores é leitura/gravação.  
@@ -85,11 +85,11 @@ As propriedades combinam aspectos de métodos e campos. Para o usuário de um ob
   
  A seguir estão os pontos importantes do exemplo anterior:  
   
--   A propriedade `Name` na classe derivada oculta a propriedade `Name` na classe base. Nesse caso, o modificador `new` é usado na declaração da propriedade na classe derivada:  
+- A propriedade `Name` na classe derivada oculta a propriedade `Name` na classe base. Nesse caso, o modificador `new` é usado na declaração da propriedade na classe derivada:  
   
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
--   A conversão `(Employee)` é usada para acessar a propriedade oculta na classe base:  
+- A conversão `(Employee)` é usada para acessar a propriedade oculta na classe base:  
   
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   

@@ -2,12 +2,12 @@
 title: Colaboração ponto a ponto
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225294"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623169"
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboração ponto a ponto
 
@@ -19,21 +19,21 @@ A infraestrutura de colaboração ponto a ponto é uma implementação simplific
 
  Um aplicativo de colaboração ponto a ponto típico é composto das seguintes etapas:  
   
--   O par determina a identidade de um par que está interessado em hospedar uma sessão de colaboração  
+- O par determina a identidade de um par que está interessado em hospedar uma sessão de colaboração  
   
--   Uma solicitação para hospedar uma sessão é enviada de alguma forma e o par de host concorda em gerenciar a atividade de colaboração.  
+- Uma solicitação para hospedar uma sessão é enviada de alguma forma e o par de host concorda em gerenciar a atividade de colaboração.  
   
--   O host convida contatos na sub-rede (incluindo o solicitante) para uma sessão.  
+- O host convida contatos na sub-rede (incluindo o solicitante) para uma sessão.  
   
--   Todos os pares que desejam colaborar podem adicionar o host aos respectivos gerenciadores de contatos.  
+- Todos os pares que desejam colaborar podem adicionar o host aos respectivos gerenciadores de contatos.  
   
--   A maioria dos pares enviará respostas ao convite, aceito ou recusado, de volta para o par de host de maneira oportuna.  
+- A maioria dos pares enviará respostas ao convite, aceito ou recusado, de volta para o par de host de maneira oportuna.  
   
--   Todos os pares que desejam colaborar assinarão o par de host.  
+- Todos os pares que desejam colaborar assinarão o par de host.  
   
--   Enquanto os pares estiverem executando a atividade de colaboração inicial, o par de host poderá adicionar pares remotos a seu gerenciador de contatos. Ele também processa todas as respostas de convite para determinar quem aceitou, quem recusou e que não foi atendido.  Ele pode cancelar convites para aqueles que não responderam ou executar alguma outra atividade.  
+- Enquanto os pares estiverem executando a atividade de colaboração inicial, o par de host poderá adicionar pares remotos a seu gerenciador de contatos. Ele também processa todas as respostas de convite para determinar quem aceitou, quem recusou e que não foi atendido.  Ele pode cancelar convites para aqueles que não responderam ou executar alguma outra atividade.  
   
--   Neste ponto, o par de host pode iniciar uma sessão de colaboração com todos os pares convidados ou registrar um aplicativo com a infraestrutura de colaboração.  Aplicativos P2P usam a infraestrutura de colaboração ponto a ponto e o namespace <xref:System.Net.PeerToPeer.Collaboration> para coordenar as comunicações para jogos, BBS, conferência e outros aplicativos de presença sem servidor.  
+- Neste ponto, o par de host pode iniciar uma sessão de colaboração com todos os pares convidados ou registrar um aplicativo com a infraestrutura de colaboração.  Aplicativos P2P usam a infraestrutura de colaboração ponto a ponto e o namespace <xref:System.Net.PeerToPeer.Collaboration> para coordenar as comunicações para jogos, BBS, conferência e outros aplicativos de presença sem servidor.  
   
 ## <a name="peer-to-peer-networking-security"></a>Segurança de rede ponto a ponto  
 
