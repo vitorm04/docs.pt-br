@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [Windows Forms], aligning
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
-ms.openlocfilehash: 0e77e4d8eeb9d7a07115b89525ac80074afeb6e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a569284a1c4b43fa7264e0354934436f95b8dc3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937807"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589389"
 ---
 # <a name="how-to-align-drawn-text"></a>Como: alinhar um texto desenhado
 Quando você executa um desenho personalizado, você geralmente deseja centralizar o texto desenhado em um formulário ou controle. Você pode facilmente alinhar texto desenhado com a <xref:System.Drawing.Graphics.DrawString%2A> ou <xref:System.Windows.Forms.TextRenderer.DrawText%2A> métodos, criando o objeto de formatação correto e definindo os sinalizadores de formato apropriado.  

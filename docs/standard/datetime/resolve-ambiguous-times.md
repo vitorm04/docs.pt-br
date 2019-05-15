@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aae3e5145d2fa85cd55fc5b1288ef4aaa0fef48f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c98f47613479c40804dce254261c560d829d91c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796403"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586377"
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>Como: resolver horários ambíguos
 
@@ -52,8 +52,6 @@ Neste exemplo, todas as referências para o fuso horário local são feitas por 
 ## <a name="compiling-the-code"></a>Compilando o código
 
 Este exemplo requer:
-
-* Que uma referência à dll seja adicionada ao projeto.
 
 * Que o <xref:System> namespace sejam importados com o `using` instrução (necessária em código c#).
 

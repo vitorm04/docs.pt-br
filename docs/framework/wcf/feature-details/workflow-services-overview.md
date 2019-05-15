@@ -2,12 +2,12 @@
 title: Visão geral dos serviços de fluxo de trabalho - WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5f8636bec57cee1cb72c2796fc4bafc6b9c044
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050331"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590077"
 ---
 # <a name="workflow-services-overview"></a>Visão geral dos serviços de fluxo de trabalho
 
@@ -48,7 +48,7 @@ O WCF define duas ligações com base em MSMQ <xref:System.ServiceModel.NetMsmqB
 
 Assim como serviços WCF, serviços de fluxo de trabalho devem ser hospedados. Serviços WCF usam a <xref:System.ServiceModel.ServiceHost> serviços de classe para o fluxo de trabalho e hospedar serviços usam <xref:System.ServiceModel.Activities.WorkflowServiceHost> para hospedar os serviços. Assim como serviços WCF, serviços de fluxo de trabalho podem ser hospedados em uma variedade de maneiras, por exemplo:
 
-- Em um gerenciado [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicativo.
+- Em um aplicativo gerenciado do .NET Framework.
 
 - No Internet Information Services (IIS).
 
@@ -56,7 +56,7 @@ Assim como serviços WCF, serviços de fluxo de trabalho devem ser hospedados. S
 
 - Em um serviço Windows gerenciado.
 
-Serviços de fluxo de trabalho hospedados em um gerenciado [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicativo ou um serviço Windows gerenciado criar uma instância do <xref:System.ServiceModel.Activities.WorkflowServiceHost> de classe e passá-lo uma instância da <xref:System.ServiceModel.Activities.WorkflowService> que contém a definição de fluxo de trabalho dentro a <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> propriedade. Uma definição de fluxo de trabalho que contém as atividades de mensagem é exposta como um serviço de fluxo de trabalho.
+Serviços de fluxo de trabalho hospedados em um aplicativo gerenciado do .NET Framework ou um serviço Windows gerenciado criar uma instância do <xref:System.ServiceModel.Activities.WorkflowServiceHost> de classe e passá-lo uma instância das <xref:System.ServiceModel.Activities.WorkflowService> que contém a definição de fluxo de trabalho dentro a <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> propriedade. Uma definição de fluxo de trabalho que contém as atividades de mensagem é exposta como um serviço de fluxo de trabalho.
 
 Para hospedar um serviço de fluxo de trabalho no IIS ou WAS, coloque o arquivo. xamlx que contém a definição de serviço de fluxo de trabalho em um diretório virtual. Um ponto de extremidade padrão (usando <xref:System.ServiceModel.BasicHttpBinding>) é criado automaticamente para obter mais informações, consulte [simplificado configuração](../../../../docs/framework/wcf/simplified-configuration.md). Você também pode colocar um arquivo Web. config no diretório virtual para especificar seus próprios pontos de extremidade. Se sua definição de fluxo de trabalho está em um assembly, você pode colocar um arquivo. svc no diretório virtual e o assembly de fluxo de trabalho no diretório App_Code. O arquivo. svc deve especificar a fábrica do host de serviço e a classe que implementa o serviço de fluxo de trabalho. O exemplo a seguir mostra como especificar a fábrica do host de serviço e especificar a classe que implementa o serviço de fluxo de trabalho.
 

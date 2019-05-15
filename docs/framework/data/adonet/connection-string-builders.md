@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034535"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583809"
 ---
 # <a name="connection-string-builders"></a>Construtores de cadeia de conexão
-Em versões anteriores do [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]verificação de cadeias de caracteres de conexão com a cadeia de caracteres concatenada valores não tivesse ocorrido, para que no tempo de execução, uma palavra-chave incorreta gerada pelo tempo de compilação um <xref:System.ArgumentException>. Cada provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dava suporte a diferentes tipos de sintaxe de palavras-chave de cadeias de conexão, o que dificultava a construção de cadeias de conexão válidas manualmente. Para resolver esse problema, o [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduziu novos construtores de cadeia de conexão para cada provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Cada provedor de dados inclui uma classe de construtor de cadeia de conexão fortemente tipada que herda de <xref:System.Data.Common.DbConnectionStringBuilder>. A tabela a seguir lista os provedores de dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e suas respectivas classes de construtores de cadeias de conexão.  
+Em versões anteriores do [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]verificação de cadeias de caracteres de conexão com a cadeia de caracteres concatenada valores não tivesse ocorrido, para que no tempo de execução, uma palavra-chave incorreta gerada pelo tempo de compilação um <xref:System.ArgumentException>. Cada um dos provedores de dados .NET Framework compatível com diferentes sintaxes de conexão palavras-chave, que dificultava a construir cadeias de caracteres de conexão válidas manualmente. Para resolver esse problema, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduziu novos construtores de cadeia de caracteres de conexão para cada provedor de dados .NET Framework. Cada provedor de dados inclui uma classe de construtor de cadeia de conexão fortemente tipada que herda de <xref:System.Data.Common.DbConnectionStringBuilder>. A tabela a seguir lista os provedores de dados .NET Framework e suas classes de construtor de cadeia de caracteres de conexão associado.  
   
 |Provider|Classe ConnectionStringBuilder|  
 |--------------|-----------------------------------|  

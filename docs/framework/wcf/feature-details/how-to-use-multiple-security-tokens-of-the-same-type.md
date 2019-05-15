@@ -2,15 +2,15 @@
 title: 'Como: usar vários tokens de segurança do mesmo tipo'
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: e82c2e256b057f45863d0533efd0c53b921cadce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b383c6ccd96d1b3d7b091b2d7c67bb166da51df
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650273"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589424"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Como: usar vários tokens de segurança do mesmo tipo
-- No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, um token de cliente de mensagem somente deles independente de qualquer tipo. Agora, as mensagens do cliente podem conter vários tokens de um tipo. Este tópico mostra como incluir vários tokens do mesmo tipo em uma mensagem do cliente.  
+- No .NET Framework 3.0, uma mensagem de cliente continha somente um token de qualquer tipo. Agora, as mensagens do cliente podem conter vários tokens de um tipo. Este tópico mostra como incluir vários tokens do mesmo tipo em uma mensagem do cliente.  
   
 - Observe que você não pode configurar um serviço dessa maneira: um serviço pode conter apenas um token de suporte.  
   

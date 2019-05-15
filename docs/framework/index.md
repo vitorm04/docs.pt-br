@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643927"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635525"
 ---
 # <a name="net-framework-guide"></a>Guia do .NET Framework
 
@@ -28,7 +28,7 @@ O .NET Framework fornece vários serviços, incluindo gerenciamento de memória,
 
 Para obter uma introdução geral ao .NET Framework para usuários e desenvolvedores, veja [Introdução](./get-started/index.md). Para obter uma introdução à arquitetura e aos recursos principais do .NET Framework, confira a [visão geral](./get-started/overview.md).
 
-O .NET Framework pode ser usado com o Docker e com [Contêineres do Windows](/virtualization/windowscontainers/about/). Consulte [Implantação de aplicativos .NET Framework com Docker](./docker/index.md) para saber como executar aplicativos em contêineres do Docker.
+O .NET Framework pode ser usado com o Docker e com [Contêineres do Windows](/virtualization/windowscontainers/about/).
 
 ## <a name="installation"></a>Instalação
 
@@ -51,9 +51,6 @@ Fornece recursos e orientações sobre a instalação e a solução de problemas
 
 * [Guia de migração](./migration-guide/index.md)  
 Fornece recursos e uma lista de alterações que você precisa considerar se estiver migrando seu aplicativo para uma nova versão do .NET Framework.
-
-* [.NET Framework no Guia do Docker](./docker/index.md)  
-Fornece recursos para executar aplicativos do .NET Framework com Docker usando Contêineres do Windows.
 
 * [Guia de desenvolvimento](./development-guide.md)  
 Fornece um guia para todas as principais áreas de tecnologia e tarefas para o desenvolvimento de aplicativos, incluindo a criação, a configuração, a depuração, a proteção e a implantação de seu aplicativo, bem como informações sobre programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.

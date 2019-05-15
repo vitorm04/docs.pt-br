@@ -2,12 +2,12 @@
 title: Variação em delegados (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 75b1f94a3fc7a59393d6a114a2b5346dd0534297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657201"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598054"
 ---
 # <a name="variance-in-delegates-c"></a>Variação em delegados (C#)
 O .NET Framework 3.5 introduziu o suporte a variação para assinaturas de método correspondentes com tipos de delegados em todos os delegados do C#. Isso significa que você pode atribuir a delegados não apenas os métodos que têm assinaturas correspondentes, mas também métodos que retornam tipos mais derivados (covariância) ou que aceitam parâmetros que têm tipos menos derivados (contravariância) do que o especificado pelo tipo de delegado. Isso inclui delegados genéricos e não genéricos.  
@@ -112,15 +112,15 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Delegados genéricos que têm parâmetros de tipo variante no .NET Framework  
  O .NET Framework 4 introduziu o suporte à variação para parâmetros de tipo genérico em diversos delegados genéricos existentes:  
   
--   `Action` delega do namespace <xref:System>, por exemplo, <xref:System.Action%601> e <xref:System.Action%602>  
+- `Action` delega do namespace <xref:System>, por exemplo, <xref:System.Action%601> e <xref:System.Action%602>  
   
--   `Func` delega do namespace <xref:System>, por exemplo, <xref:System.Func%601> e <xref:System.Func%602>  
+- `Func` delega do namespace <xref:System>, por exemplo, <xref:System.Func%601> e <xref:System.Func%602>  
   
--   O delegado <xref:System.Predicate%601>  
+- O delegado <xref:System.Predicate%601>  
   
--   O delegado <xref:System.Comparison%601>  
+- O delegado <xref:System.Comparison%601>  
   
--   O delegado <xref:System.Converter%602>  
+- O delegado <xref:System.Converter%602>  
   
  Para obter mais informações e exemplos, consulte [Usando variação para delegados genéricos Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   

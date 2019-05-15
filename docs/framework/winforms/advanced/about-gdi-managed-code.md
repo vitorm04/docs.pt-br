@@ -6,17 +6,17 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960947"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588621"
 ---
 # <a name="about-gdi-managed-code"></a>Sobre código gerenciado no GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] é a parte do sistema operacional Windows que fornece gráficos vetoriais bidimensionais, imagens e tipografia. O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] melhora a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (a Graphics Device Interface incluída em versões anteriores do Windows) adicionando novos recursos e otimizando os recursos existentes.  
   
- A interface de classe gerenciada do [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (um conjunto de wrappers) faz parte do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], um ambiente para criação, implantação e execução de serviços Web XML e outros aplicativos.  
+ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] interface de classe gerenciada (um conjunto de wrappers) faz parte do .NET Framework, um ambiente para criar, implantar e executar outros aplicativos e serviços Web XML.  
   
  Esta seção fornece informações sobre a API do [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para os programadores que usam código gerenciado.  
   

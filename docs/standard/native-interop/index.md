@@ -4,12 +4,12 @@ description: Saiba como fazer interface com componentes nativos no .NET.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 29aacc9210b4103f379b7776c36fc3c29b9e6dec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973546"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062716"
 ---
 # <a name="native-interoperability"></a>Interoperabilidade nativa
 
@@ -29,5 +29,5 @@ A lista acima não abrange todas as possíveis situações e cenários em que o 
 ## <a name="see-also"></a>Consulte também
 
 - [Invocação de plataforma (P/Invoke)](pinvoke.md)
-- [Marshalling dos tipos](type-marshalling.md)
+- [Marshaling de tipo](type-marshaling.md)
 - [Melhores práticas de interoperabilidade nativa](best-practices.md)

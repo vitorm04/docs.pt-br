@@ -2,12 +2,12 @@
 title: Provedor de WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 519f63f8dfc558a83a98ca44f74e926beb81c190
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd1cb5f580ba182516f94f10c809cfa649365045
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007494"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589405"
 ---
 # <a name="wmi-provider"></a>Provedor de WMI
 Este exemplo demonstra como coletar dados de serviços do Windows Communication Foundation (WCF) em tempo de execução, usando o provedor Windows Management Instrumentation (WMI) que é incorporado ao WCF. Além disso, este exemplo demonstra como adicionar um objeto WMI definido pelo usuário a um serviço. O exemplo ativa o provedor WMI para o [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e demonstra como coletar dados do `ICalculator` serviço em tempo de execução.  
@@ -32,7 +32,7 @@ Este exemplo demonstra como coletar dados de serviços do Windows Communication 
  Adicionar objetos WMI a um serviço torna possível revelar informações definidas pelo usuário, juntamente com as informações do provedor WMI internos. Isso é feito ao publicar o esquema do serviço WMI, usando o aplicativo Installutil.exe. Instruções para fazer isso, juntamente com mais detalhes podem ser encontradas nas instruções de instalação no final do tópico.  
   
 ## <a name="accessing-wmi-information"></a>Acessando informações de WMI  
- Dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece as APIs do WMI para scripts, aplicativos do Visual Basic, aplicativos de C++ e o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
+ Dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece as APIs do WMI para scripts, aplicativos Visual Basic, C++ aplicativos e o .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
   
  Este exemplo usa dois scripts de Java: uma para enumerar os serviços em execução no computador junto com algumas das suas propriedades e a segunda para exibir dados WMI definido pelo usuário. O script abre uma conexão para o provedor WMI, analisa os dados e exibe os dados coletados.  
   

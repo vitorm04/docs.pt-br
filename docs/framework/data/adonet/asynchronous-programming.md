@@ -2,16 +2,16 @@
 title: Programação assíncrona
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846123"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584498"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
-Este tópico discute o suporte para programação assíncrona na [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedor de dados para o SQL Server (SqlClient) incluindo os aprimoramentos feitos para dar suporte à funcionalidade de programação assíncrona que foi introduzida no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Este tópico discute o suporte para programação assíncrona no .NET Framework Data Provider para SQL Server (SqlClient) incluindo os aprimoramentos feitos para dar suporte à funcionalidade de programação assíncrona que foi introduzida no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
 
 ## <a name="legacy-asynchronous-programming"></a>Programação assíncrona herdada
 

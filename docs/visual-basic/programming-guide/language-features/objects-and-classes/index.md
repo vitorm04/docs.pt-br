@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: ec5825dacaf67ee2544302f4f95a1b341ecf1bf7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753621"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591572"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos e classes no Visual Basic
 
@@ -176,7 +176,7 @@ Por outro lado, os membros declarados dentro de um módulo são acessíveis publ
 
 Os objetos permitem que você declare variáveis e procedimentos uma vez e reutilize-os quando necessário. Por exemplo, se desejar adicionar um verificador ortográfico a um aplicativo, defina todas as variáveis e funções de suporte para fornecer a funcionalidade de verificação ortográfica. Se criar o verificador de ortografia como uma classe, você poderá reutilizá-lo em outros aplicativos adicionando uma referência ao assembly compilado. Melhor ainda, você poderá diminuir seu trabalho usando uma classe de verificador ortográfico que alguém já desenvolveu.
 
-O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] fornece vários exemplos de componentes que estão disponíveis para uso. O exemplo a seguir usa a classe <xref:System.TimeZone> no namespace <xref:System>. <xref:System.TimeZone> fornece membros que permitem que você recupere informações sobre o fuso horário do sistema atual do computador.
+O .NET Framework fornece vários exemplos de componentes que estão disponíveis para uso. O exemplo a seguir usa a classe <xref:System.TimeZone> no namespace <xref:System>. <xref:System.TimeZone> fornece membros que permitem que você recupere informações sobre o fuso horário do sistema atual do computador.
 
 ```vb
 Public Sub examineTimeZone()

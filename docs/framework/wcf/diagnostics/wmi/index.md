@@ -2,12 +2,12 @@
 title: Usando Windows Management Instrumentation para diagnóstico
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662463"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591245"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
 Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço em tempo de execução através de um provedor de instrumentação de gerenciamento do Windows (WMI) do WCF.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço
  Essa entrada de configuração expõe uma interface WMI. Aplicativos de gerenciamento agora podem se conectar por meio dessa interface e acessar a instrumentação de gerenciamento do aplicativo.  
   
 ## <a name="accessing-wmi-data"></a>Acessando dados do WMI  
- Dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece as APIs do WMI para scripts, aplicativos do Visual Basic, aplicativos de C++ e o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [WMI usando](https://go.microsoft.com/fwlink/?LinkId=95183).  
+ Dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece as APIs do WMI para scripts, aplicativos Visual Basic, C++ aplicativos e o .NET Framework. Para obter mais informações, consulte [WMI usando](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Se você usar o .NET Framework ofereceu métodos para acessar programaticamente os dados do WMI, você deve estar ciente de que esses métodos podem gerar exceções quando a conexão é estabelecida. A conexão não for estabelecida durante a construção do <xref:System.Management.ManagementObject> instância, mas, na primeira solicitação que envolve a troca de dados real. Portanto, você deve usar um `try..catch` bloco para capturar possíveis exceções.  

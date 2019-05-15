@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610425"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591954"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Como a cultura afeta cadeias de caracteres no Visual Basic
 Esta página de Ajuda discute como o Visual Basic usa informações de cultura para executar comparações e conversões de cadeia de caracteres.  
@@ -38,7 +38,7 @@ Esta página de Ajuda discute como o Visual Basic usa informações de cultura p
 ## <a name="using-a-specific-culture"></a>Usando uma cultura específica  
  Imagine que você está desenvolvendo um aplicativo que envia uma data (formatada como uma cadeia de caracteres) a um serviço Web. Nesse caso, seu aplicativo deve usar uma cultura específica para a conversão de cadeia de caracteres. Para ilustrar o porquê, considere o resultado do uso da data <xref:System.DateTime.ToString> método: Se seu aplicativo usa esse método para formatar a data 4 de julho de 2005, ele retorna "4/7/2005 12:00:00 AM" quando executado com a cultura do inglês dos Estados Unidos (en-US), mas ele retorna "04.07.2005 00:00:00" quando executado com a cultura de alemão (de-DE).  
   
- Quando você precisar executar uma conversão de cadeia de caracteres em um formato de cultura específica, você deve usar o `CultureInfo` classe está incorporada a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Você pode criar um novo `CultureInfo` objeto para uma cultura específica, passando o nome da cultura para o <xref:System.Globalization.CultureInfo.%23ctor%2A> construtor. Os nomes de cultura com suporte são listados no <xref:System.Globalization.CultureInfo> página de Ajuda da classe.  
+ Quando você precisar executar uma conversão de cadeia de caracteres em um formato de cultura específica, você deve usar o `CultureInfo` classe que é incorporado ao .NET Framework. Você pode criar um novo `CultureInfo` objeto para uma cultura específica, passando o nome da cultura para o <xref:System.Globalization.CultureInfo.%23ctor%2A> construtor. Os nomes de cultura com suporte são listados no <xref:System.Globalization.CultureInfo> página de Ajuda da classe.  
   
  Como alternativa, você pode obter uma instância de *cultura invariável* do <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> propriedade. A cultura invariável é com base na cultura em inglês, mas há algumas diferenças. Por exemplo, a cultura invariável Especifica um relógio de 24 horas, em vez de um relógio de 12 horas.  
   
@@ -62,7 +62,7 @@ Esta página de Ajuda discute como o Visual Basic usa informações de cultura p
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- Você também pode usar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] parceiros do `StrComp` função, o <xref:System.String.Compare%2A?displayProperty=nameWithType> método. Esse é um método estático, sobrecarregado da classe base da cadeia de caracteres. O exemplo a seguir ilustra como esse método é usado:  
+ Você também pode usar o parceiro do .NET Framework do `StrComp` função, o <xref:System.String.Compare%2A?displayProperty=nameWithType> método. Esse é um método estático, sobrecarregado da classe base da cadeia de caracteres. O exemplo a seguir ilustra como esse método é usado:  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

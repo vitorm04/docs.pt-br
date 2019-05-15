@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469521"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589047"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controles a serem usados nos Windows Forms
 Esta é uma lista alfabética de controles e componentes que podem ser usados nos Windows Forms. Além dos controles dos Windows Forms abordados nesta seção, você pode adicionar ActiveX e controles personalizados ao Windows Forms. Se não encontrar o controle necessário listado aqui, você poderá criar seus próprios. Para mais detalhes, consulte [Desenvolvendo controles dos Windows Forms no tempo de design](developing-windows-forms-controls-at-design-time.md). Para mais informações sobre como escolher o controle necessário, consulte [Controles dos Windows Forms por função](windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Controles do Visual Basic são baseados em classes fornecidas pelo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  Controles do Visual Basic são baseados em classes fornecidas pelo .NET Framework.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)  
- Lista e descreve os controles dos Windows Forms com base em [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Lista e descreve os controles de formulários do Windows com base no .NET Framework.  
   
  [Controles com suporte para desenho do proprietário interno](controls-with-built-in-owner-drawing-support.md)  
  Descreve como alterar aspectos da aparência de um controle que não estão disponíveis por meio de propriedades.  
@@ -168,7 +168,7 @@ Esta é uma lista alfabética de controles e componentes que podem ser usados no
  Permite que o usuário redimensione um controle encaixado.  
   
  [Controle de separador](splitter-control-windows-forms.md)  
- Permite que o usuário redimensione um controle encaixado ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versão 1.x).  
+ Permite que o usuário redimensione um controle encaixado (versão do .NET Framework 1. x).  
   
  [Controle StatusBar](statusbar-control-windows-forms.md)  
  Exibe informações de status relacionadas ao controle que tem o foco. Embora o <xref:System.Windows.Forms.StatusStrip> substitua e estenda o controle <xref:System.Windows.Forms.StatusBar> de versões anteriores, <xref:System.Windows.Forms.StatusBar> é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.  

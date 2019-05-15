@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4114c974da9c108f641aebdb69f32fb3b0c484c9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990880"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591522"
 ---
 # <a name="security-considerations-for-data"></a>Considerações de segurança para dados
 
@@ -28,7 +28,7 @@ Um número de lugares na infraestrutura do Windows Communication Foundation (WCF
 
 É responsabilidade do autor do código para garantir que nenhuma vulnerabilidade de segurança existe. Por exemplo, se você criar um contrato de dados tipo com uma propriedade de membro de dados do tipo inteiro e, no `set` implementação do acessador alocar uma matriz com base no valor da propriedade, você expõe a possibilidade de um ataque de negação de serviço, se um mal-intencionado mensagem contém um valor muito grande para este membro de dados. Em geral, evite qualquer alocação com base nos dados de entrada ou extenso de processamento no código fornecido pelo usuário (especialmente se o processamento mais extenso pode ser causado por uma pequena quantidade de dados de entrada). Ao executar a análise de segurança de código fornecido pelo usuário, certifique-se também considerar todos os casos de falha (ou seja, todas as ramificações do código em que as exceções são geradas).
 
-O exemplo de código fornecido pelo usuário a ultimate é o código dentro de sua implementação de serviço para cada operação. A segurança de sua implementação de serviço é sua responsabilidade. É fácil criar inadvertidamente as implementações de operação não segura que podem resultar em vulnerabilidades de negação de serviço. Por exemplo, uma operação que usa uma cadeia de caracteres e retorna a lista de clientes de um banco de dados cujo nome começa com essa cadeia de caracteres. Se você estiver trabalhando com um banco de dados grande e a cadeia de caracteres que está sendo passada é apenas uma única letra, seu código pode tentar criar uma mensagem maior que toda a memória disponível, fazendo com que todo o serviço falhe. (Um <xref:System.OutOfMemoryException> não é recuperável no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e sempre resulta no encerramento do aplicativo.)
+O exemplo de código fornecido pelo usuário a ultimate é o código dentro de sua implementação de serviço para cada operação. A segurança de sua implementação de serviço é sua responsabilidade. É fácil criar inadvertidamente as implementações de operação não segura que podem resultar em vulnerabilidades de negação de serviço. Por exemplo, uma operação que usa uma cadeia de caracteres e retorna a lista de clientes de um banco de dados cujo nome começa com essa cadeia de caracteres. Se você estiver trabalhando com um banco de dados grande e a cadeia de caracteres que está sendo passada é apenas uma única letra, seu código pode tentar criar uma mensagem maior que toda a memória disponível, fazendo com que todo o serviço falhe. (Um <xref:System.OutOfMemoryException> não é recuperável no .NET Framework e sempre resulta no encerramento do aplicativo.)
 
 Você deve garantir que nenhum código mal-intencionado está conectado a vários pontos de extensibilidade. Isso é especialmente relevante ao executar em confiança parcial, lidando com tipos de assemblies de confiança parcial, ou criando componentes utilizável por código parcialmente confiável. Para obter mais informações, consulte "Ameaças de confiança parcial" em uma seção posterior.
 
@@ -54,7 +54,7 @@ Fazendo com que o lado de recebimento alocar uma quantidade significativa de mem
 
 Ataques de negação de serviço geralmente são atenuados com o uso de cotas. Quando uma cota for ultrapassada, um <xref:System.ServiceModel.QuotaExceededException> exceção normalmente é lançada. Sem a cota, uma mensagem mal-intencionada pode fazer com que toda a memória disponível ser acessado, resultando em uma <xref:System.OutOfMemoryException> exceção ou todas as pilhas disponíveis para serem acessados, resultando em um <xref:System.StackOverflowException>.
 
-O cenário de cota excedida é recuperável; Se encontrado em um serviço em execução, a mensagem que está sendo processada no momento será descartada e o serviço continua em execução e processa mensagens adicionais. Os cenários de estouro de memória insuficiente e pilha, no entanto, não são recuperáveis em qualquer lugar do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; o serviço será encerrado se ele encontrar essas exceções.
+O cenário de cota excedida é recuperável; Se encontrado em um serviço em execução, a mensagem que está sendo processada no momento será descartada e o serviço continua em execução e processa mensagens adicionais. Os cenários de estouro de memória insuficiente e pilha, no entanto, não são recuperáveis em qualquer lugar do .NET Framework; o serviço será encerrado se ele encontrar essas exceções.
 
 Cotas no WCF não envolvem qualquer pré-alocação. Por exemplo, se o <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> cota (encontrada em várias classes) é definida como 128 KB, isso não significa que 128 KB é alocado automaticamente para cada mensagem. O real valor alocado depende do tamanho de mensagem de entrada real.
 
@@ -274,7 +274,7 @@ Essa situação pode ser evitada com esteja ciente de que os seguintes pontos:
 
 - Não crie tipos de contrato de dados para contar com uma ordem específica na qual propriedade setters devem ser chamados.
 
-- Tenha cuidado ao usar tipos herdados marcados com o <xref:System.SerializableAttribute> atributo. Muitos deles foram projetados para funcionar com [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] comunicação remota para uso com dados confiáveis apenas. Os tipos existentes marcados com esse atributo não podem ter sido projetados com segurança de estado em mente.
+- Tenha cuidado ao usar tipos herdados marcados com o <xref:System.SerializableAttribute> atributo. Muitos deles foram projetados para trabalhar com a comunicação remota do .NET Framework para uso com dados confiáveis apenas. Os tipos existentes marcados com esse atributo não podem ter sido projetados com segurança de estado em mente.
 
 - Não confie na <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> atributo para garantir a presença de dados que diz respeito a segurança de estado. Dados podem ser sempre `null`, `zero`, ou `invalid`.
 
@@ -282,7 +282,7 @@ Essa situação pode ser evitada com esteja ciente de que os seguintes pontos:
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>Usando o NetDataContractSerializer com segurança
 
-O <xref:System.Runtime.Serialization.NetDataContractSerializer> é um mecanismo de serialização que usa tipos de acoplamento rígido. Isso é semelhante a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e o <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Ou seja, ele determina que tipo de instanciar lendo o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nome do assembly e tipo de dados de entrada. Embora seja uma parte do WCF, não há nenhuma maneira fornecida de conectar esse mecanismo de serialização; código personalizado deve ser escrito. O `NetDataContractSerializer` é fornecido principalmente para facilitar a migração do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] comunicação remota para o WCF. Para obter mais informações, consulte a seção relevante [serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
+O <xref:System.Runtime.Serialization.NetDataContractSerializer> é um mecanismo de serialização que usa tipos de acoplamento rígido. Isso é semelhante a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e o <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Ou seja, ele determina que tipo de instanciar lendo o assembly do .NET Framework e o nome do tipo de dados de entrada. Embora seja uma parte do WCF, não há nenhuma maneira fornecida de conectar esse mecanismo de serialização; código personalizado deve ser escrito. O `NetDataContractSerializer` é fornecido principalmente para facilitar a migração de comunicação remota do .NET Framework para o WCF. Para obter mais informações, consulte a seção relevante [serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
 Porque a mensagem em si pode indicar qualquer tipo pode ser carregado, o <xref:System.Runtime.Serialization.NetDataContractSerializer> mecanismo é inerentemente inseguro e deve ser usado somente com dados confiáveis. É possível torná-lo seguro, escrevendo um associador de tipo seguro, limitando o tipo que permite que apenas tipos seguros de carga (usando o <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> propriedade).
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 125c577710ed9c2b8a53e367cd22924a3ccb483c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615118"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590791"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Noções básicas de Aplicativo do Windows Forms (Visual Basic)
 Uma parte importante do Visual Basic é a capacidade de criar aplicativos Windows Forms executados localmente nos computadores dos usuários. Você pode usar o Visual Studio para criar o aplicativo e interface do usuário usando Windows Forms. Um aplicativo Windows Forms se baseia nas classes do <xref:System.Windows.Forms> namespace.  
@@ -25,7 +25,7 @@ Uma parte importante do Visual Basic é a capacidade de criar aplicativos Window
 - [Aplicativos de serviço do Windows](../../../framework/windows-services/index.md). Lista os tópicos que explicam como criar serviços do Windows.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Compilando interfaces do usuário sofisticadas e interativas  
- Windows Forms é o componente de cliente inteligente do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], um conjunto de bibliotecas gerenciadas que habilita tarefas comuns de aplicativos como leitura e gravação para o sistema de arquivos. Usando um ambiente de desenvolvimento como o Visual Studio, você pode criar aplicativos do Windows Forms que exibem informações, solicitam entrada de usuários e se comunicar com computadores remotos em uma rede.  
+ Windows Forms é o componente de cliente inteligente do .NET Framework, um conjunto de bibliotecas gerenciadas que habilita tarefas comuns de aplicativos como leitura e gravação para o sistema de arquivos. Usando um ambiente de desenvolvimento como o Visual Studio, você pode criar aplicativos do Windows Forms que exibem informações, solicitam entrada de usuários e se comunicar com computadores remotos em uma rede.  
   
  No Windows Forms, um formulário é uma superfície visual na qual são exibidas informações para o usuário. Normalmente, você criar aplicativos do Windows Forms colocando controles em formulários e respostas de desenvolvimento a ações do usuário, como cliques do mouse ou pressionamentos de teclas. Um *controle* é um elemento discreto de interface do usuário que exibe dados ou aceita a entrada de dados.  
   
@@ -86,7 +86,7 @@ Uma parte importante do Visual Basic é a capacidade de criar aplicativos Window
 |Gerenciar a segurança com [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Como: Habilitar configurações de segurança do ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Outros controles e recursos  
- Existem muitos outros recursos dos Windows Forms que tornam as tarefas comuns de implementação mais fáceis e rápidas, como o suporte à criação de caixas de diálogo, impressão, adição da Ajuda e de documentação e localização do seu aplicativo para diversos idiomas. Além disso, o Windows Forms depende do sistema de segurança robusta do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], permitindo que você ofereça aplicativos mais protegidos aos seus clientes.  
+ Existem muitos outros recursos dos Windows Forms que tornam as tarefas comuns de implementação mais fáceis e rápidas, como o suporte à criação de caixas de diálogo, impressão, adição da Ajuda e de documentação e localização do seu aplicativo para diversos idiomas. Além disso, Windows Forms se baseia no sistema de segurança robusto do .NET Framework, permitindo que você ofereça aplicativos mais protegidos aos seus clientes.  
   
  Para obter informações passo a passo sobre como usar esses recursos, consulte os seguintes tópicos:  
   

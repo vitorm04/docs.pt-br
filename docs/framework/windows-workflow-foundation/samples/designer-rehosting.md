@@ -2,12 +2,12 @@
 title: Designer ReHosting
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: c67bdc5715a95e3f4252fc9ab0c7b151ddddc6cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26878be2aec03f83c5ec0d65e415f75691601d0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583706"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588662"
 ---
 # <a name="designer-rehosting"></a>Alterar a hospedagem do designer
 O designer que rehosting é um cenário comum que se refere hospedar a tela de design de fluxo de trabalho em um aplicativo personalizado. O aplicativo que hospedando a maioria de pessoas estão familiarizados com é Visual Studio entanto, há um número de cenários onde mostrar o designer de fluxo de trabalho em um aplicativo pode ser útil:  
@@ -40,7 +40,7 @@ O designer que rehosting é um cenário comum que se refere hospedar a tela de d
 </Grid>  
 ```  
   
- Em seguida o exemplo cria o designer, e associa os <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> e <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> principais com o recipiente apropriado na interface do usuário. Há algumas linhas de código adicionais no exemplo a seguir merecem que alguma explicação. A chamada de <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> é necessário associar os designers padrão de atividade para as atividades enviados com [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> é chamado para passar no item de WF a ser editado. Finalmente, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (canvas primária) e <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (grade de propriedade) são colocados na superfície de interface do usuário.  
+ Em seguida o exemplo cria o designer, e associa os <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> e <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> principais com o recipiente apropriado na interface do usuário. Há algumas linhas de código adicionais no exemplo a seguir merecem que alguma explicação. O <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> chamada é necessária para associar os designers de atividade padrão para as atividades que acompanham o .NET Framework. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> é chamado para passar no item de WF a ser editado. Finalmente, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (canvas primária) e <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (grade de propriedade) são colocados na superfície de interface do usuário.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  

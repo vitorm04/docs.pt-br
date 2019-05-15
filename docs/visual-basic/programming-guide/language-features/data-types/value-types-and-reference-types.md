@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600939"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589822"
 ---
 # <a name="value-types-and-reference-types"></a>Tipos de valor e referência
 No Visual Basic, os tipos de dados são implementados com base em sua classificação. Os tipos de dados do Visual Basic podem ser classificados de acordo com se uma variável de um determinado tipo armazena seus próprios dados ou um ponteiro para os dados. Se ela armazena seus próprios dados é um *tipo de valor*; se ele contém um ponteiro para dados em outro lugar na memória é um *tipo de referência*.  
@@ -46,7 +46,7 @@ No Visual Basic, os tipos de dados são implementados com base em sua classifica
   
 - Delegados  
   
- Uma classe é um *tipo de referência*. Por esse motivo, tipos de referência, como `Object` e `String` são compatíveis com [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classes. Observe que cada matriz é um tipo de referência, mesmo se seus membros são tipos de valor.  
+ Uma classe é um *tipo de referência*. Por esse motivo, tipos de referência, como `Object` e `String` são compatíveis com classes do .NET Framework. Observe que cada matriz é um tipo de referência, mesmo se seus membros são tipos de valor.  
   
  Como cada tipo de referência representa uma classe base do .NET Framework, você deve usar o [novo operador](../../../../visual-basic/language-reference/operators/new-operator.md) palavra-chave quando inicializá-la. A instrução a seguir inicializa uma matriz.  
   

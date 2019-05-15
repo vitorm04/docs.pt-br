@@ -2,12 +2,12 @@
 title: Controlando perfis
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699664"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589939"
 ---
 # <a name="tracking-profiles"></a>Controlando perfis
 
@@ -17,7 +17,7 @@ Controlando os perfis contêm consultas de rastreamento que permitem um particip
 
 Controlando os perfis são usados para especificar que as informações de rastreamento é emitida para uma instância de fluxo de trabalho. Se nenhum perfil for especificado, então todos os eventos de rastreamento são emitidas. Se um perfil for especificado, então os eventos de rastreamento especificados no perfil serão emitidos. Dependendo dos requisitos de monitoramento, você pode escrever um perfil que é muito geral, que assina um pequeno conjunto de alterações de estado de alto nível em um fluxo de trabalho. Inversamente, você pode criar um perfil muito detalhado cujos eventos resultantes são muito ricos reconstruir posteriormente um fluxo detalhado de execução.
 
-Controlando os perfis manifestam-se como elementos XML em um arquivo de configuração padrão de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ou especificados no código. O exemplo a seguir é de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] que controla o perfil em um arquivo de configuração que permite que um participante de rastreamento assine os eventos de fluxo de trabalho `Started` e de `Completed` .
+Controlando os perfis manifestam-se como elementos XML em um arquivo de configuração do .NET Framework padrão ou especificado no código. O exemplo a seguir é de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] que controla o perfil em um arquivo de configuração que permite que um participante de rastreamento assine os eventos de fluxo de trabalho `Started` e de `Completed` .
 
 ```xml
 <system.serviceModel>
