@@ -2,12 +2,12 @@
 title: Configuração automática de endereço IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 4dc7a148364c9f96a0f6c68c8af71f7668e797b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c7f77bbdebe093b5e3bc706653ed203082d9c3f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170048"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647332"
 ---
 # <a name="ipv6-auto-configuration"></a>Configuração automática de endereço IPv6
 Uma meta importante para IPv6 é dar suporte a Plug and Play de nó. Ou seja, deve ser possível conectar um nó a uma rede IPv6 de modo que ele seja configurado automaticamente sem intervenção humana.  
@@ -15,9 +15,9 @@ Uma meta importante para IPv6 é dar suporte a Plug and Play de nó. Ou seja, de
 ## <a name="type-of-auto-configuration"></a>Tipo de configuração automática  
  O IPv6 dá suporte aos seguintes tipos de configuração automática:  
   
--   **Configuração automática com estado**. Esse tipo de configuração requer um certo nível de intervenção humana, porque é necessário um protocolo DHCP para servidor IPv6 (DHCPv6) para a instalação e administração dos nós. O servidor DHCPv6 mantém uma lista de nós para os quais ele fornece informações de configuração. Ele também mantém informações de estado para que o servidor saiba quanto tempo cada endereço está em uso e quando ele pode estar disponível para reatribuição.  
+- **Configuração automática com estado**. Esse tipo de configuração requer um certo nível de intervenção humana, porque é necessário um protocolo DHCP para servidor IPv6 (DHCPv6) para a instalação e administração dos nós. O servidor DHCPv6 mantém uma lista de nós para os quais ele fornece informações de configuração. Ele também mantém informações de estado para que o servidor saiba quanto tempo cada endereço está em uso e quando ele pode estar disponível para reatribuição.  
   
--   **Configuração automática sem monitoração de estado**. Esse tipo de configuração é adequado para indivíduos e pequenas empresas. Nesse caso, cada host determina seus endereços com base no conteúdo de anúncios de roteador recebidos. Usando o padrão IEEE EUI-64 para definir a parte de ID de rede do endereço, é razoável pressupor a exclusividade do endereço de host no link.  
+- **Configuração automática sem monitoração de estado**. Esse tipo de configuração é adequado para indivíduos e pequenas empresas. Nesse caso, cada host determina seus endereços com base no conteúdo de anúncios de roteador recebidos. Usando o padrão IEEE EUI-64 para definir a parte de ID de rede do endereço, é razoável pressupor a exclusividade do endereço de host no link.  
   
  Independentemente de como o endereço é determinado, o nó deve verificar se seu endereço potencial é exclusivo para o link local. Isso é feito enviando uma mensagem de solicitação de vizinho para o endereço potencial. Se o nó receber alguma resposta, ele saberá que o endereço já está em uso e deverá determinar outro endereço.  
   

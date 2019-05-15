@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673992"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664546"
 ---
 # <a name="blockingcollection-overview"></a>Visão geral de BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> é uma classe de coleção thread-safe que fornece os seguintes recursos:  
   
--   Uma implementação do padrão de produtor-consumidor.  
+- Uma implementação do padrão de produtor-consumidor.  
   
--   Adição e remoção simultâneas de itens de vários threads.  
+- Adição e remoção simultâneas de itens de vários threads.  
   
--   Capacidade máxima opcional.  
+- Capacidade máxima opcional.  
   
--   Operações de inserção e remoção que bloqueiam quando a coleção está vazia ou cheia.  
+- Operações de inserção e remoção que bloqueiam quando a coleção está vazia ou cheia.  
   
--   Operações “try” de inserção e remoção que não bloqueiam ou bloqueiam até um período específico.  
+- Operações “try” de inserção e remoção que não bloqueiam ou bloqueiam até um período específico.  
   
--   Encapsula qualquer tipo de coleção que implemente <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
+- Encapsula qualquer tipo de coleção que implemente <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
   
--   Cancelamento com tokens de cancelamento.  
+- Cancelamento com tokens de cancelamento.  
   
--   Dois tipos de enumeração com `foreach` (`For Each` no Visual Basic):  
+- Dois tipos de enumeração com `foreach` (`For Each` no Visual Basic):  
   
-    1.  Enumeração de somente leitura.  
+    1. Enumeração de somente leitura.  
   
-    2.  Enumeração que remove itens conforme eles são enumerados.  
+    2. Enumeração que remove itens conforme eles são enumerados.  
   
 ## <a name="bounding-and-blocking-support"></a>Suporte a delimitação e bloqueio  
  <xref:System.Collections.Concurrent.BlockingCollection%601> dá suporte à delimitação e ao bloqueio. Delimitação significa que você pode definir a capacidade máxima da coleção. A delimitação é importante em determinados cenários, porque permite que você controle o tamanho máximo da coleção na memória e impede que os threads de produção se distanciem muito a frente dos threads de consumo.  
