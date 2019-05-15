@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: e4d40c4ad3a694b3f7e830604edf94d90cb4c395
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 29b66c52f2f9ac022784c5704c47893aed264c42
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825320"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629058"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Como: Localizar arquivos com um padrão específico no Visual Basic
 O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> retorna uma coleção somente leitura de cadeias de caracteres que representam os nomes de caminho para os arquivos. É possível usar o parâmetro `wildCards` para especificar um padrão específico. Para incluir subdiretórios na pesquisa, configure o parâmetro `searchType` para `SearchOption.SearchAllSubDirectories`.  
@@ -23,28 +23,28 @@ O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> re
   
 ### <a name="to-find-files-with-a-specified-pattern"></a>Localizar arquivos com um padrão específico  
   
--   Use o método `GetFiles`, fornecendo o nome e o caminho do diretório a ser pesquisado e especificando o padrão. O exemplo a seguir retorna todos os arquivos com a extensão `.dll` no diretório e os adiciona a `ListBox1`.  
+- Use o método `GetFiles`, fornecendo o nome e o caminho do diretório a ser pesquisado e especificando o padrão. O exemplo a seguir retorna todos os arquivos com a extensão `.dll` no diretório e os adiciona a `ListBox1`.  
   
      [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  As seguintes condições podem causar uma exceção:  
   
--   O caminho não é válido por um dos seguintes motivos: é uma cadeia de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
+- O caminho não é válido por um dos seguintes motivos: é uma cadeia de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
   
--   O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
+- O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `directory` não existe (<xref:System.IO.DirectoryNotFoundException>).  
+- `directory` não existe (<xref:System.IO.DirectoryNotFoundException>).  
   
--   `directory` aponta para um arquivo existente (<xref:System.IO.IOException>).  
+- `directory` aponta para um arquivo existente (<xref:System.IO.IOException>).  
   
--   O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
+- O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
   
--   Um nome de pasta no caminho contém dois pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
+- Um nome de pasta no caminho contém dois pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
   
--   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
+- O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
--   O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
+- O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Consulte também
 

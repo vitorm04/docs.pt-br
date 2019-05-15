@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef2b5b200f95cdfac9b08a33c328c1dfb797e59e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 79078b16f0d56c40a3dcfeabaaed9b5cbb7753a0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537768"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589838"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>Hierarquia DOM (Document Object Model) XML
 A ilustração a seguir mostra a hierarquia de classes para o DOM (Document Object Model) XML, com o nome do World Wide Web Consortium (W3C) entre parênteses junto com o nome da classe onde é relevante.  
@@ -20,13 +20,13 @@ Hierarquia DOM (Document Object Model) XML
   
  As seguintes classes não herdam de **XmlNode**:  
   
--   **XmlImplementation**  
+- **XmlImplementation**  
   
--   **XmlNamedNodeMap**  
+- **XmlNamedNodeMap**  
   
--   **XmlNodeList**  
+- **XmlNodeList**  
   
--   **XmlNodeChangedEventArgs**  
+- **XmlNodeChangedEventArgs**  
   
  A classe **XmlImplementation** é usada para criar um documento XML. Para saber mais, confira [Criação de documento XML](../../../../docs/standard/data/xml/xml-document-creation.md).  
   

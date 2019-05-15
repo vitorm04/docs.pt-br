@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 91520b8967445a70a7775b99faef0cefc5e01cc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302967"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654401"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Passo a passo: usando BatchBlock e BatchedJoinBlock para melhorar a eficiência
 A Biblioteca de Fluxo de dados TPL fornece as classes <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> para que você possa receber e armazenar em buffer os dados de uma ou mais fontes e, depois, propagar esses dados armazenados em buffer como uma coleção. Este mecanismo de envio em lote é útil quando você coleta dados de uma ou mais fontes e, em seguida, processa vários elementos de dados como um lote. Por exemplo, considere um aplicativo que usa o fluxo de dados para inserir registros em um banco de dados. Essa operação pode ser mais eficiente se vários itens forem inseridos ao mesmo tempo, em vez de um de cada vez sequencialmente. Este documento descreve como usar a classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para melhorar a eficiência dessas operações de inserção de banco de dados. Também descreve como usar a classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar os resultados e todas as exceções que ocorrem quando o programa lê de um banco de dados.
@@ -34,19 +34,19 @@ A Biblioteca de Fluxo de dados TPL fornece as classes <xref:System.Threading.Tas
   
  Este passo a passo contém as seguintes seções:  
   
--   [Criar o Aplicativo de Console](#creating)  
+- [Criar o Aplicativo de Console](#creating)  
   
--   [Definir a classe do funcionário](#employeeClass)  
+- [Definir a classe do funcionário](#employeeClass)  
   
--   [Definir as operações de banco de dados do funcionário](#operations)  
+- [Definir as operações de banco de dados do funcionário](#operations)  
   
--   [Adicionar dados de funcionário ao banco de dados sem o uso de buffer](#nonBuffering)  
+- [Adicionar dados de funcionário ao banco de dados sem o uso de buffer](#nonBuffering)  
   
--   [Usar o armazenamento em buffer para adicionar dados de funcionário ao banco de dados](#buffering)  
+- [Usar o armazenamento em buffer para adicionar dados de funcionário ao banco de dados](#buffering)  
   
--   [Usar o ingresso em buffer para ler dados de funcionário do banco de dados](#bufferedJoin)  
+- [Usar o ingresso em buffer para ler dados de funcionário do banco de dados](#bufferedJoin)  
   
--   [O exemplo completo](#complete)  
+- [O exemplo completo](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>Criando o Aplicativo de Console  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 342c3ce59ad80c9a60f2a2b69b30f77ff0549415
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c6799e36ec312bf857a12293dc0be15e9cc21f55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176755"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648461"
 ---
 # <a name="mitigation-path-colon-checks"></a>Mitigação: Verificações de dois-pontos no caminho
 Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], várias alterações foram feitas para dar suporte aos caminhos anteriormente sem suporte (em termos de comprimento e formato). Em particular, as verificações da sintaxe adequada do separador de unidade (os dois-pontos) foram corrigidas.  
@@ -20,11 +20,11 @@ Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../inclu
 ## <a name="mitigation"></a>Redução  
  Para contornar o problema de um caminho aceitável anteriormente que não tem mais suporte pelos métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType>, é possível fazer o seguinte:  
   
--   Remova manualmente o esquema de uma URL. Por exemplo, remova `file://` de uma URL.  
+- Remova manualmente o esquema de uma URL. Por exemplo, remova `file://` de uma URL.  
   
--   Passe o URI para um construtor <xref:System.Uri> e recupere o valor da propriedade <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType>.  
+- Passe o URI para um construtor <xref:System.Uri> e recupere o valor da propriedade <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType>.  
   
--   Recuse a normalização do novo caminho definindo a opção `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> como `true`.  
+- Recuse a normalização do novo caminho definindo a opção `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> como `true`.  
   
     ```xml  
     <runtime>  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355630"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750432"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como: Acompanhar o progresso do Instalador do .NET Framework 4.5
 
@@ -40,13 +40,13 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução
 
 - **Códigos de saída**. Os códigos de saída a seguir do comando para chamar o programa redistribuível [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] indicam se a instalação teve êxito ou falhou:
 
-    - 0 – Instalação concluída com êxito.
+  - 0 – Instalação concluída com êxito.
 
-    - 3010 – Instalação concluída com êxito. É necessário reiniciar o sistema.
+  - 3010 – Instalação concluída com êxito. É necessário reiniciar o sistema.
 
-    - 1602 – A instalação foi cancelada.
+  - 1602 – A instalação foi cancelada.
 
-    - Todos os outros códigos – A instalação encontrou erros. Examine os arquivos de log criados em %temp% para obter detalhes.
+  - Todos os outros códigos – A instalação encontrou erros. Examine os arquivos de log criados em %temp% para obter detalhes.
 
 - **Cancelando a instalação**. Você pode cancelar a instalação a qualquer momento usando o método `Abort` para definir os sinalizadores `m_downloadAbort` e `m_ installAbort` na seção MMIO.
 

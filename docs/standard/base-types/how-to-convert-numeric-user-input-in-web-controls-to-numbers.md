@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296154"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634171"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Como: Converter em números as entradas numéricas do usuário em controles da Web
 Como uma página da Web pode ser exibida em qualquer lugar no mundo, os usuários podem inserir dados numéricos em um controle de <xref:System.Web.UI.WebControls.TextBox> em um número quase ilimitado de formatos. Como resultado, é muito importante determinar a localidade e a cultura do usuário da página da Web. Quando você analisa a entrada do usuário, pode aplicar as convenções de formatação definidas pela localidade e a cultura do usuário.  
@@ -35,9 +35,9 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, os usuário
   
 4. Chame o método `TryParse` ou `Parse` do tipo numérico para o qual você deseja converter a entrada do usuário. Use uma sobrecarga do método `TryParse` ou `Parse` com um parâmetro `provider` e passe para ele um dos seguintes itens:  
   
-    -   O objeto <xref:System.Globalization.CultureInfo> criado na etapa 3.  
+    - O objeto <xref:System.Globalization.CultureInfo> criado na etapa 3.  
   
-    -   O objeto <xref:System.Globalization.NumberFormatInfo> que é retornado pela propriedade <xref:System.Globalization.CultureInfo.NumberFormat%2A> do objeto <xref:System.Globalization.CultureInfo> criado na etapa 3.  
+    - O objeto <xref:System.Globalization.NumberFormatInfo> que é retornado pela propriedade <xref:System.Globalization.CultureInfo.NumberFormat%2A> do objeto <xref:System.Globalization.CultureInfo> criado na etapa 3.  
   
 5. Se a conversão falhar, repita as etapas 2 a 4 para cada elemento restante na matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
@@ -60,11 +60,11 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, os usuário
 ## <a name="compiling-the-code"></a>Compilando o código  
  Para compilar o código, copie-o para uma página code-behind [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] para que ele substitua todo o código existente. A página da Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] deve conter os seguintes controles:  
   
--   Um controle <xref:System.Web.UI.WebControls.Label>, que não é referenciado no código. Defina a propriedade <xref:System.Web.UI.WebControls.TextBox.Text%2A> como "Digite um Número:".  
+- Um controle <xref:System.Web.UI.WebControls.Label>, que não é referenciado no código. Defina a propriedade <xref:System.Web.UI.WebControls.TextBox.Text%2A> como "Digite um Número:".  
   
--   Um controle <xref:System.Web.UI.WebControls.TextBox> chamado `NumericString`.  
+- Um controle <xref:System.Web.UI.WebControls.TextBox> chamado `NumericString`.  
   
--   Um controle <xref:System.Web.UI.WebControls.Button> chamado `OKButton`. Defina sua propriedade <xref:System.Web.UI.WebControls.Button.Text%2A> como "OK".  
+- Um controle <xref:System.Web.UI.WebControls.Button> chamado `OKButton`. Defina sua propriedade <xref:System.Web.UI.WebControls.Button.Text%2A> como "OK".  
   
  Alterar o nome da classe de `NumericUserInput` para o nome da classe que é definido pelo atributo `Inherits` da diretiva `Page` da página do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Alterar o nome da referência do objeto `NumericInput` para o nome definido pelo atributo `id` da marca `form` da página do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   

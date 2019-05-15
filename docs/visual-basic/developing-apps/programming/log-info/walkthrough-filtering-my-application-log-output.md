@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298390"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647087"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Passo a passo: Filtrando a saída de My.Application.Log (Visual Basic)
 Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log` para controlar quais informações são passadas do objeto `Log` para os ouvintes e quais informações são gravadas pelos ouvintes. Você pode alterar o comportamento de registro em log mesmo após ter compilado o aplicativo, porque as informações de configuração são armazenadas no arquivo de configuração do aplicativo.  
@@ -77,11 +77,11 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
      Se não houver nenhum arquivo app.config:  
   
-    1.  No menu **Projeto**, escolha **Adicionar Novo Item**.  
+    1. No menu **Projeto**, escolha **Adicionar Novo Item**.  
   
-    2.  Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.  
+    2. Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.  
   
-    3.  Clique em **Adicionar**.  
+    3. Clique em **Adicionar**.  
   
 2. Localize a seção `<switches>`, que está na seção `<system.diagnostics>`, que está na seção `<configuration>` superior.  
   
@@ -152,11 +152,11 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
      Se não houver nenhum arquivo app.config:  
   
-    1.  No menu **Projeto**, escolha **Adicionar Novo Item**.  
+    1. No menu **Projeto**, escolha **Adicionar Novo Item**.  
   
-    2.  Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.  
+    2. Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.  
   
-    3.  Clique em **Adicionar**.  
+    3. Clique em **Adicionar**.  
   
 2. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções**. Escolha **Abrir**.  
   

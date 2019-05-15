@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092260"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647247"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Ferramenta de Armazenamento Isolado)
 A ferramenta Armazenamento Isolado lista ou remove todos os repositórios existentes para o usuário atual.  
@@ -49,11 +49,11 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  Os aplicativos têm uma opção de gravação em um dos dois repositórios para um usuário ou no repositório do computador:  
   
--   O repositório local existe em um local que tem garantia de não ser compatível com roaming (no Windows 2000 e posteriores), mesmo se o roaming de dados do usuário estiver habilitado para o usuário.  
+- O repositório local existe em um local que tem garantia de não ser compatível com roaming (no Windows 2000 e posteriores), mesmo se o roaming de dados do usuário estiver habilitado para o usuário.  
   
--   O repositório móvel existe em um local compatível com roaming, mas só poderá fazer isso se o roaming estiver habilitado para o usuário por meio da administração do Windows NT.  
+- O repositório móvel existe em um local compatível com roaming, mas só poderá fazer isso se o roaming estiver habilitado para o usuário por meio da administração do Windows NT.  
   
--   O repositório do computador é comum a todos os usuários em um computador e é armazenado em um diretório comum nesse computador.  
+- O repositório do computador é comum a todos os usuários em um computador e é armazenado em um diretório comum nesse computador.  
   
     > [!NOTE]
     >  O repositório do computador é novo na versão 2.0 do .NET Framework.  

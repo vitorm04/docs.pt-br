@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 93b414eea5849ed020b521fcd5e5d5f5d194c35f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831976"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589801"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integração XML com dados relacionais e o ADO.NET
 A classe **XmlDataDocument** é uma classe derivada de **XmlDocument**, e contém dados XML. A vantagem de **XmlDataDocument** é que fornece uma ponte entre dados relacionais e hierárquicos. É um **XmlDocument** que pode ser associado a **Conjunto de Dados** e ambas as classes podem sincronizar as alterações feitas aos dados contidos nas duas classes. Um **XmlDocument** que é associado a um **Conjunto de Dados** permite ao XML integrar-se a dados relacionais, e você não precisa representar seus dados como XML ou em um formato relacional. Você pode fazer ambos e não ser restrito a uma única representação dos dados.  
   
  Os benefícios de ter os dados disponíveis em dois modos de exibição são:  
   
--   A parte estruturada de um documento XML pode ser mapeado para um dataset, e com eficiência é armazenada, indexada, e pesquisada.  
+- A parte estruturada de um documento XML pode ser mapeado para um dataset, e com eficiência é armazenada, indexada, e pesquisada.  
   
--   As transformações, a validação, e navegação podem ser feitas com eficiência através de um modelo de cursor sobre os dados XML que são armazenados relacional. Às vezes, pode ser feito com mais eficiência em estruturas relacionais em comparação ao armazenamento de XML em um modelo **XmlDocument**.  
+- As transformações, a validação, e navegação podem ser feitas com eficiência através de um modelo de cursor sobre os dados XML que são armazenados relacional. Às vezes, pode ser feito com mais eficiência em estruturas relacionais em comparação ao armazenamento de XML em um modelo **XmlDocument**.  
   
--   O **Conjunto de Dados** pode armazenar uma parte do XML. Ou seja, você pode usar **XPath** ou **XslTransform** para armazenar em um **Conjunto de Dados** somente os elementos e atributos de interesse. A partir daí, as alterações podem ser feitas no subconjunto de dados menor e filtrado, com a propagação das alterações nos dados maiores em **XmlDataDocument**.  
+- O **Conjunto de Dados** pode armazenar uma parte do XML. Ou seja, você pode usar **XPath** ou **XslTransform** para armazenar em um **Conjunto de Dados** somente os elementos e atributos de interesse. A partir daí, as alterações podem ser feitas no subconjunto de dados menor e filtrado, com a propagação das alterações nos dados maiores em **XmlDataDocument**.  
   
  Você também pode executar uma transformação sobre os dados que foram carregados no **Conjunto de Dados** a partir do SQL Server. Outra opção é associar controles WinForm e WebForm gerenciados por estilo de classes do .NET Framework a um **Conjunto de Dados** que foi preenchido a partir um fluxo de entrada XML.  
   

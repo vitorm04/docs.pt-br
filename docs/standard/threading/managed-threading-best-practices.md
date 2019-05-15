@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 907e85d2622ea07ddbb61092f439583ed72e0c50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8319424c82327fd9743c573846663bdd76ed1b9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644620"
 ---
 # <a name="managed-threading-best-practices"></a>Práticas recomendadas de threading gerenciado
 O multithreading requer programação cuidadosa. Para a maioria das tarefas, você pode reduzir a complexidade ao enfileirar solicitações para a execução por parte de threads de pool. Este tópico aborda situações mais difíceis, como coordenar o trabalho de vários threads ou manipular threads que bloqueiam.  
@@ -86,21 +86,21 @@ Use a propriedade <xref:System.Environment.ProcessorCount?displayProperty=nameWi
 ## <a name="general-recommendations"></a>Recomendações gerais  
  Ao usar vários threads, considere as seguintes diretrizes:  
   
--   Não use <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> para encerrar outros threads. Chamar **Abort** em outro thread equivale a gerar uma exceção nesse thread sem saber qual ponto ele alcançou nesse processamento.  
+- Não use <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> para encerrar outros threads. Chamar **Abort** em outro thread equivale a gerar uma exceção nesse thread sem saber qual ponto ele alcançou nesse processamento.  
   
--   Não use <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> para sincronizar as atividades de vários threads. Use <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent>, e <xref:System.Threading.Monitor>.  
+- Não use <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> para sincronizar as atividades de vários threads. Use <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent>, e <xref:System.Threading.Monitor>.  
   
--   Não controle a execução de threads de trabalho do seu programa principal (usando eventos, por exemplo). Em vez disso, projete seu programa de forma que os threads de trabalho sejam responsáveis por esperar até que o trabalho esteja disponível, executá-lo e notificar outras partes do seu programa quando terminar. Se seus threads de trabalho não bloquearem, considere o uso de threads de pool. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> é útil em situações em que os threads de trabalho bloqueiam.  
+- Não controle a execução de threads de trabalho do seu programa principal (usando eventos, por exemplo). Em vez disso, projete seu programa de forma que os threads de trabalho sejam responsáveis por esperar até que o trabalho esteja disponível, executá-lo e notificar outras partes do seu programa quando terminar. Se seus threads de trabalho não bloquearem, considere o uso de threads de pool. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> é útil em situações em que os threads de trabalho bloqueiam.  
   
--   Não use tipos como objetos de bloqueio. Isto é, evite códigos como `lock(typeof(X))` em C# ou `SyncLock(GetType(X))` no Visual Basic ou o uso de <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> com objetos <xref:System.Type>. Para um determinado tipo, há apenas uma instância de <xref:System.Type?displayProperty=nameWithType> por domínio de aplicativo. Se o tipo no qual você usar um bloqueio for público, o código que não for o seu próprio poderá assumir bloqueios, levando a deadlocks. Para problemas adicionais, consulte [Práticas recomendadas de confiabilidade](../../../docs/framework/performance/reliability-best-practices.md).  
+- Não use tipos como objetos de bloqueio. Isto é, evite códigos como `lock(typeof(X))` em C# ou `SyncLock(GetType(X))` no Visual Basic ou o uso de <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> com objetos <xref:System.Type>. Para um determinado tipo, há apenas uma instância de <xref:System.Type?displayProperty=nameWithType> por domínio de aplicativo. Se o tipo no qual você usar um bloqueio for público, o código que não for o seu próprio poderá assumir bloqueios, levando a deadlocks. Para problemas adicionais, consulte [Práticas recomendadas de confiabilidade](../../../docs/framework/performance/reliability-best-practices.md).  
   
--   Tenha cuidado ao bloquear em instâncias, por exemplo `lock(this)` em C# ou `SyncLock(Me)` no Visual Basic. Se outro código no seu aplicativo, externo ao tipo, assumir um bloqueio no objeto, podem ocorrer deadlocks.  
+- Tenha cuidado ao bloquear em instâncias, por exemplo `lock(this)` em C# ou `SyncLock(Me)` no Visual Basic. Se outro código no seu aplicativo, externo ao tipo, assumir um bloqueio no objeto, podem ocorrer deadlocks.  
   
--   Certifique-se de que um thread que tenha entrado em um monitor sempre o deixe, mesmo que uma exceção ocorra enquanto o thread estiver no monitor. A instrução [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) do C# e a instrução [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) do Visual Basic oferece esse comportamento automaticamente, empregando um bloco **finally** para garantir que <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> seja chamado. Se você não puder garantir que **Exit** seja chamado, considere alterar o design para usar **Mutex**. Um mutex é liberado automaticamente quando o thread que o possui atualmente for encerrado.  
+- Certifique-se de que um thread que tenha entrado em um monitor sempre o deixe, mesmo que uma exceção ocorra enquanto o thread estiver no monitor. A instrução [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) do C# e a instrução [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) do Visual Basic oferece esse comportamento automaticamente, empregando um bloco **finally** para garantir que <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> seja chamado. Se você não puder garantir que **Exit** seja chamado, considere alterar o design para usar **Mutex**. Um mutex é liberado automaticamente quando o thread que o possui atualmente for encerrado.  
   
--   Usar vários threads para tarefas que exigem recursos diferentes e evite atribuir vários threads para um único recurso. Por exemplo, qualquer tarefa que envolva E/S se beneficia em ter seu próprio thread, porque esse thread bloqueará durante as operações de E/S e, assim, permitirá que outros threads sejam executados. A entrada do usuário é outro recurso que se beneficia com um thread dedicado. Em um computador de um processador, uma tarefa que envolve a computação intensiva coexiste com a entrada do usuário e com tarefas que envolvem E/S, mas várias tarefas competem umas com as outras.  
+- Usar vários threads para tarefas que exigem recursos diferentes e evite atribuir vários threads para um único recurso. Por exemplo, qualquer tarefa que envolva E/S se beneficia em ter seu próprio thread, porque esse thread bloqueará durante as operações de E/S e, assim, permitirá que outros threads sejam executados. A entrada do usuário é outro recurso que se beneficia com um thread dedicado. Em um computador de um processador, uma tarefa que envolve a computação intensiva coexiste com a entrada do usuário e com tarefas que envolvem E/S, mas várias tarefas competem umas com as outras.  
   
--   Considere o uso de métodos da classe <xref:System.Threading.Interlocked> para alterações de estado simples, em vez de usar a instrução `lock` (`SyncLock` no Visual Basic). A instrução `lock` é uma boa ferramenta para fins gerais, mas a classe <xref:System.Threading.Interlocked> oferece um melhor desempenho para atualizações que devem ser atômicas. Internamente, ela executa um único prefixo de bloqueio se não houver nenhuma contenção. Em revisões de código, atente para códigos semelhantes aos mostrados nos exemplos a seguir. No primeiro exemplo, uma variável de estado é incrementada:  
+- Considere o uso de métodos da classe <xref:System.Threading.Interlocked> para alterações de estado simples, em vez de usar a instrução `lock` (`SyncLock` no Visual Basic). A instrução `lock` é uma boa ferramenta para fins gerais, mas a classe <xref:System.Threading.Interlocked> oferece um melhor desempenho para atualizações que devem ser atômicas. Internamente, ela executa um único prefixo de bloqueio se não houver nenhuma contenção. Em revisões de código, atente para códigos semelhantes aos mostrados nos exemplos a seguir. No primeiro exemplo, uma variável de estado é incrementada:  
   
     ```vb  
     SyncLock lockObject  
@@ -169,13 +169,13 @@ Use a propriedade <xref:System.Environment.ProcessorCount?displayProperty=nameWi
 ## <a name="recommendations-for-class-libraries"></a>Recomendações para bibliotecas de classes  
  Considere as seguintes diretrizes ao criar bibliotecas de classes para multithreading:  
   
--   Evite a necessidade de sincronização, se possível. Isso é especialmente válido para o código de uso intensivo. Por exemplo, um algoritmo pode ser ajustado para tolerar uma condição de corrida em vez de eliminá-la. Sincronização desnecessária reduz o desempenho e cria a possibilidade de deadlocks e condições de corrida.  
+- Evite a necessidade de sincronização, se possível. Isso é especialmente válido para o código de uso intensivo. Por exemplo, um algoritmo pode ser ajustado para tolerar uma condição de corrida em vez de eliminá-la. Sincronização desnecessária reduz o desempenho e cria a possibilidade de deadlocks e condições de corrida.  
   
--   Torne os dados estáticos (`Shared` no Visual Basic) thread-safe por padrão.  
+- Torne os dados estáticos (`Shared` no Visual Basic) thread-safe por padrão.  
   
--   Não torne dados de instância thread-safe por padrão. Adicionar bloqueios para criar códigos de thread-safe reduz o desempenho, aumenta a contenção de bloqueios e cria a possibilidade de deadlocks. Em modelos de aplicativo comuns, somente um thread por vez executa código do usuário, o que minimiza a necessidade de acesso thread-safe. Por esse motivo, as bibliotecas de classes do .NET Framework não são thread-safe por padrão.  
+- Não torne dados de instância thread-safe por padrão. Adicionar bloqueios para criar códigos de thread-safe reduz o desempenho, aumenta a contenção de bloqueios e cria a possibilidade de deadlocks. Em modelos de aplicativo comuns, somente um thread por vez executa código do usuário, o que minimiza a necessidade de acesso thread-safe. Por esse motivo, as bibliotecas de classes do .NET Framework não são thread-safe por padrão.  
   
--   Evite fornecer métodos estáticos que alteram o estado estático. Em cenários de servidor comuns, o estado estático é compartilhado entre as solicitações, que significa que vários threads podem executar esse código ao mesmo tempo. Isso abre a possibilidade de bugs de threading. Considere usar um padrão de design que encapsule dados em instâncias que não sejam compartilhadas entre solicitações. Além disso, se os dados estáticos forem sincronizados, chamadas entre os métodos estáticos que alteram o estado podem resultar em deadlocks ou em sincronização redundante, afetando negativamente o desempenho.  
+- Evite fornecer métodos estáticos que alteram o estado estático. Em cenários de servidor comuns, o estado estático é compartilhado entre as solicitações, que significa que vários threads podem executar esse código ao mesmo tempo. Isso abre a possibilidade de bugs de threading. Considere usar um padrão de design que encapsule dados em instâncias que não sejam compartilhadas entre solicitações. Além disso, se os dados estáticos forem sincronizados, chamadas entre os métodos estáticos que alteram o estado podem resultar em deadlocks ou em sincronização redundante, afetando negativamente o desempenho.  
   
 ## <a name="see-also"></a>Consulte também
 

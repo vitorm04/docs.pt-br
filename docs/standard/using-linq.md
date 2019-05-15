@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968020"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644731"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Consulta Integrada à Linguagem)
 
@@ -103,15 +103,15 @@ Portanto, isso levanta a questão, **você deve usar apenas a sintaxe de consult
 
 A resposta para essa pergunta será **sim** se...
 
-*   Sua base de código já usar a sintaxe de consulta
-*   Você precisar definir o escopo de variáveis em suas consultas devido à complexidade
-*   Você preferir a sintaxe de consulta e ela não for distraí-lo da base de código
+* Sua base de código já usar a sintaxe de consulta
+* Você precisar definir o escopo de variáveis em suas consultas devido à complexidade
+* Você preferir a sintaxe de consulta e ela não for distraí-lo da base de código
 
 A resposta para essa pergunta será **não** se...
 
-*   Sua base de código já usar a sintaxe de API
-*   Você não precisar definir o escopo de variáveis em suas consultas
-*   Você preferir a sintaxe de API e ela não for distraí-lo da base de código
+* Sua base de código já usar a sintaxe de API
+* Você não precisar definir o escopo de variáveis em suas consultas
+* Você preferir a sintaxe de API e ela não for distraí-lo da base de código
 
 ## <a name="essential-samples"></a>Exemplos essenciais
 
@@ -119,7 +119,7 @@ Para obter uma lista realmente abrangente de amostras de LINQ, visite [101 LINQ 
 
 A seguir está uma rápida demonstração de algumas das partes essenciais da LINQ. De nenhuma forma isso é abrangente, uma vez que a LINQ fornece significativamente mais funcionalidades do que o que é apresentado aqui.
 
-*   O básico: `Where`, `Select` e `Aggregate`:
+* O básico: `Where`, `Select` e `Aggregate`:
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   Nivelar uma lista de listas:
+* Nivelar uma lista de listas:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   União entre dois conjuntos (com o comparador personalizado):
+* União entre dois conjuntos (com o comparador personalizado):
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   Interseção entre dois conjuntos:
+* Interseção entre dois conjuntos:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   Ordenar:
+* Ordenar:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   Por fim, um exemplo mais avançado: determinar se os valores das propriedades de duas instâncias do mesmo tipo são iguais (emprestados e modificados [dessa postagem do StackOverflow](https://stackoverflow.com/a/844855)):
+* Por fim, um exemplo mais avançado: determinar se os valores das propriedades de duas instâncias do mesmo tipo são iguais (emprestados e modificados [dessa postagem do StackOverflow](https://stackoverflow.com/a/844855)):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ Trabalhos vinculados à CPU paralelizáveis que podem ser facilmente expressos p
 
 ## <a name="further-resources"></a>Recursos adicionais:
 
-*   [101 exemplos do LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [LINQPad](https://www.linqpad.net/), um mecanismo de consulta de banco de dados e ambiente de playground para C#/F#/VB
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), um livro eletrônico para aprender como o LINQ to Objects é implementado
+* [101 exemplos do LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [LINQPad](https://www.linqpad.net/), um mecanismo de consulta de banco de dados e ambiente de playground para C#/F#/VB
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), um livro eletrônico para aprender como o LINQ to Objects é implementado

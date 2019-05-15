@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615971"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634726"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retrocesso em expressões regulares
 <a name="top"></a> O retrocesso ocorre quando um padrão de expressão regular contém [quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) opcionais ou [constructos de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) e o mecanismo de expressões regulares retorna a um estado salvo anterior para retomar sua pesquisa por uma correspondência. O retrocesso é indispensável para o poder das expressões regulares, ele permite que as expressões sejam poderosas e flexíveis e correspondam a padrões muito complexos. No entanto, todo esse poder tem um custo. O retrocesso muitas vezes é o fator individual que mais afeta o desempenho do mecanismo de expressões regulares. Felizmente, o desenvolvedor tem controle sobre o comportamento do mecanismo de expressões regulares e como ele usa o retrocesso. Este tópico explica como o retrocesso funciona e como ele pode ser controlado.  
@@ -35,13 +35,13 @@ ms.locfileid: "54615971"
   
  Esse tópico contém as seguintes seções:  
   
--   [Comparação linear sem retrocesso](#linear_comparison_without_backtracking)  
+- [Comparação linear sem retrocesso](#linear_comparison_without_backtracking)  
   
--   [Retrocesso com quantificadores opcionais ou constructos de alternância](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
+- [Retrocesso com quantificadores opcionais ou constructos de alternância](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
   
--   [Retrocesso com quantificadores opcionais aninhados](#backtracking_with_nested_optional_quantifiers)  
+- [Retrocesso com quantificadores opcionais aninhados](#backtracking_with_nested_optional_quantifiers)  
   
--   [Controle do retrocesso](#controlling_backtracking)  
+- [Controle do retrocesso](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>Comparação linear sem retrocesso  
@@ -81,7 +81,7 @@ ms.locfileid: "54615971"
  [Voltar ao início](#top)  
   
 <a name="backtracking_with_optional_quantifiers_or_alternation_constructs"></a>   
-## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>Retrocesso com quantificadores opcionais ou constructos de alternância  
+## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>Retrocesso com quantificadores opcionais ou construtores de alternância  
  Quando uma expressão regular inclui quantificadores ou construtores de alternância opcionais, a avaliação da cadeia de caracteres de entrada deixa de ser linear. A correspondência de padrões com um mecanismo NFA é orientada pelos elementos de linguagem da expressão regular e não pelos caracteres a serem correspondidos na cadeia de caracteres de entrada. Assim, o mecanismo de expressões regulares tenta fazer a correspondência total de subexpressões opcionais ou alternativas. Quando ele avança para o elemento de linguagem seguinte na subexpressão e a correspondência falha, o mecanismo de expressões regulares pode abandonar uma parte de sua correspondência bem-sucedida e retornar a um estado salvo anteriormente com o objetivo de corresponder a expressão regular inteira com a cadeia de caracteres de entrada. Esse processo de retornar a um estado salvo anterior para localizar uma correspondência é conhecido como o retrocesso.  
   
  Por exemplo, considere o padrão de expressão regular `.*(es)`, o qual corresponde os caracteres “es” e todos os caracteres que os precedem. Como mostra o exemplo a seguir, se a cadeia de caracteres de entrada é "Essential services are provided by regular expressions." (Serviços essenciais são fornecidos por expressões regulares.), o padrão corresponde a cadeia de caracteres até o “es” (inclusive) em "expressions”.  
@@ -91,15 +91,15 @@ ms.locfileid: "54615971"
   
  Para fazer isso, o mecanismo de expressões regulares usa o retrocesso da seguinte forma:  
   
--   Ele corresponde o `.*` (que corresponde a zero, uma ou mais ocorrências de qualquer caractere) com a cadeia de caracteres de entrada inteira.  
+- Ele corresponde o `.*` (que corresponde a zero, uma ou mais ocorrências de qualquer caractere) com a cadeia de caracteres de entrada inteira.  
   
--   Ele tenta corresponder “e” no padrão da expressão regular. No entanto, a cadeia de caracteres de entrada não tem nenhum caractere restante disponível para corresponder.  
+- Ele tenta corresponder “e” no padrão da expressão regular. No entanto, a cadeia de caracteres de entrada não tem nenhum caractere restante disponível para corresponder.  
   
--   Ele retrocede para sua última correspondência bem-sucedida, "Essential services are provided by regular expressions", e tenta corresponder “e” com o ponto no final da frase. A correspondência falha.  
+- Ele retrocede para sua última correspondência bem-sucedida, "Essential services are provided by regular expressions", e tenta corresponder “e” com o ponto no final da frase. A correspondência falha.  
   
--   Ele continua a retroceder para uma correspondência bem-sucedida anterior um caractere de cada vez até que a subcadeia de caracteres provisória correspondente seja “Essential services are provided by regular expr". Ele então compara o “e” no padrão com o segundo “e” em “expressions” e encontra uma correspondência.  
+- Ele continua a retroceder para uma correspondência bem-sucedida anterior um caractere de cada vez até que a subcadeia de caracteres provisória correspondente seja “Essential services are provided by regular expr". Ele então compara o “e” no padrão com o segundo “e” em “expressions” e encontra uma correspondência.  
   
--   Ele compara o “s” no padrão com o “s” após o caractere “e” que já foi correspondido (o primeiro “s” em “expressions”). A correspondência é bem-sucedida.  
+- Ele compara o “s” no padrão com o “s” após o caractere “e” que já foi correspondido (o primeiro “s” em “expressions”). A correspondência é bem-sucedida.  
   
  Quando o retrocesso é usado, corresponder o padrão de expressão regular com a cadeia de caracteres de entrada, que tem 55 caracteres de comprimento, requer 67 operações de comparação. Geralmente, se um padrão de expressão regular tem um único constructo de alternância ou um único quantificador opcional, o número de operações de comparação necessárias para corresponder ao padrão é mais que duas vezes maior do que o número de caracteres na cadeia de caracteres de entrada.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "54615971"
   
  Como a saída do exemplo mostra, o mecanismo de expressões regulares demora aproximadamente duas vezes mais tempo para descobrir que uma cadeia de caracteres de entrada não correspondeu ao padrão do que o tempo que foi necessário para identificar uma cadeia de caracteres compatível. Isso acontece porque uma correspondência malsucedida sempre representa um cenário de pior caso. O mecanismo de expressões regulares deve usar a expressão regular para seguir todos os caminhos possíveis através dos dados antes de concluir que a correspondência falhou e os parênteses aninhados criam vários caminhos adicionais nos dados. O mecanismo de expressões regulares conclui que a segunda cadeia de caracteres não correspondeu ao padrão ao fazer o seguinte:  
   
--   Ele verifica que estava no início da cadeia de caracteres e então corresponde os primeiros cinco caracteres da cadeia de caracteres com o padrão `a+`. Ele então determina que não há grupos adicionais de caracteres “a” na cadeia de caracteres. Finalmente, ele testa o final da cadeia de caracteres. Como um caractere adicional permanece na cadeia de caracteres, a correspondência falha. Essa correspondência com falha requer 9 comparações. O mecanismo de expressões regulares também salva as informações de estado de suas correspondências de “a” (as quais chamaremos a correspondência 1), "aa” (correspondência 2), "aaa" (correspondência 3) e “aaaa" (correspondência 4).  
+- Ele verifica que estava no início da cadeia de caracteres e então corresponde os primeiros cinco caracteres da cadeia de caracteres com o padrão `a+`. Ele então determina que não há grupos adicionais de caracteres “a” na cadeia de caracteres. Finalmente, ele testa o final da cadeia de caracteres. Como um caractere adicional permanece na cadeia de caracteres, a correspondência falha. Essa correspondência com falha requer 9 comparações. O mecanismo de expressões regulares também salva as informações de estado de suas correspondências de “a” (as quais chamaremos a correspondência 1), "aa” (correspondência 2), "aaa" (correspondência 3) e “aaaa" (correspondência 4).  
   
--   Ele retorna à correspondência 4 salva anteriormente. Ele determina que há um caractere adicional “a” a ser atribuído a um grupo capturado adicional. Finalmente, ele testa o final da cadeia de caracteres. Como um caractere adicional permanece na cadeia de caracteres, a correspondência falha. Essa correspondência com falha requer 4 comparações. Até agora, foi executado um total de 13 comparações.  
+- Ele retorna à correspondência 4 salva anteriormente. Ele determina que há um caractere adicional “a” a ser atribuído a um grupo capturado adicional. Finalmente, ele testa o final da cadeia de caracteres. Como um caractere adicional permanece na cadeia de caracteres, a correspondência falha. Essa correspondência com falha requer 4 comparações. Até agora, foi executado um total de 13 comparações.  
   
--   Ele retorna à correspondência 3 salva anteriormente. Ele determina que há dois caracteres adicionais “a” a serem atribuídos a um grupo capturado adicional. No entanto, o teste de fim da cadeia de caracteres falha. Ele então retorna para a correspondência 3 e tenta corresponder os dois caracteres adicionais “a” em dois grupos capturados adicionais. No entanto, o teste de fim da cadeia de caracteres continua a falhar. Essas correspondências com falha exigem 12 comparações. Até agora, foi executado um total de 25 comparações.  
+- Ele retorna à correspondência 3 salva anteriormente. Ele determina que há dois caracteres adicionais “a” a serem atribuídos a um grupo capturado adicional. No entanto, o teste de fim da cadeia de caracteres falha. Ele então retorna para a correspondência 3 e tenta corresponder os dois caracteres adicionais “a” em dois grupos capturados adicionais. No entanto, o teste de fim da cadeia de caracteres continua a falhar. Essas correspondências com falha exigem 12 comparações. Até agora, foi executado um total de 25 comparações.  
   
  A comparação de cadeia de caracteres de entrada com a expressão regular continuará dessa forma até que o mecanismo de expressão regular tente todas as combinações possíveis de correspondências e conclua que não há nenhuma correspondência. Devido aos quantificadores aninhados, essa comparação é O(2<sup>n</sup>) ou uma operação exponencial, em que *n* é o número de caracteres na cadeia de caracteres de entrada. Isso significa que, no pior caso, uma cadeia de caracteres de entrada com 30 caracteres requer aproximadamente 1.073.741.824 comparações e uma cadeia de caracteres de entrada com 40 caracteres requer aproximadamente 1.099.511.627.776 comparações. Se você usar cadeias de caracteres com esses tamanhos ou até mesmo com tamanhos maiores, os métodos de expressões regulares poderão demorar um tempo extremamente longo para terminar ao processarem uma entrada que não correspondam ao padrão de expressão regular.  
   

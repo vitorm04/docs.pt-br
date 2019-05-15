@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298416"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589857"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validando um documento XML no DOM
 A classe <xref:System.Xml.XmlDocument> não valida o XML no DOM (Modelo de Objeto de Documento) em um esquema da linguagem XSD ou uma DTD (definição de tipo de documento) por padrão; o XML é verificado somente se está bem-formado.  
@@ -56,9 +56,9 @@ A classe <xref:System.Xml.XmlDocument> não valida o XML no DOM (Modelo de Objet
   
  Considere o seguinte ao validar dados XML à medida que são carregados no DOM.  
   
--   No exemplo anterior, o <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> é chamado sempre que um tipo inválido for encontrado. Se um <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> não estiver definido no <xref:System.Xml.XmlReader> de validação, um <xref:System.Xml.Schema.XmlSchemaValidationException> será gerado quando <xref:System.Xml.XmlDocument.Load%2A> for chamado se algum atributo ou tipo de elemento não corresponder ao tipo correspondente especificado no esquema de validação.  
+- No exemplo anterior, o <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> é chamado sempre que um tipo inválido for encontrado. Se um <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> não estiver definido no <xref:System.Xml.XmlReader> de validação, um <xref:System.Xml.Schema.XmlSchemaValidationException> será gerado quando <xref:System.Xml.XmlDocument.Load%2A> for chamado se algum atributo ou tipo de elemento não corresponder ao tipo correspondente especificado no esquema de validação.  
   
--   Quando um documento XML for carregado em um objeto <xref:System.Xml.XmlDocument> com um esquema associado que define os valores padrão, o <xref:System.Xml.XmlDocument> trata esses padrões como se eles tivessem aparecido no documento XML. Isso significa que a propriedade <xref:System.Xml.XmlReader.IsEmptyElement%2A> sempre retorna `false` para um elemento que foi usado como padrão do esquema. Mesmo se estiver no documento XML, ele terá sido escrito como um elemento vazio.  
+- Quando um documento XML for carregado em um objeto <xref:System.Xml.XmlDocument> com um esquema associado que define os valores padrão, o <xref:System.Xml.XmlDocument> trata esses padrões como se eles tivessem aparecido no documento XML. Isso significa que a propriedade <xref:System.Xml.XmlReader.IsEmptyElement%2A> sempre retorna `false` para um elemento que foi usado como padrão do esquema. Mesmo se estiver no documento XML, ele terá sido escrito como um elemento vazio.  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>Validando um documento XML no DOM  
  O método <xref:System.Xml.XmlDocument.Validate%2A> da classe <xref:System.Xml.XmlDocument> valida os dados XML carregados no DOM com os esquemas na propriedade <xref:System.Xml.XmlDocument> do objeto <xref:System.Xml.XmlDocument.Schemas%2A>. Após uma validação bem-sucedida, os padrões do esquema são aplicados, os valores de texto são convertidos em valores atômicos conforme o necessário e as informações de tipo estão associadas aos itens de informação validados. Como resultado, os dados XML tipados substituem os dados XML sem tipo anteriores.  

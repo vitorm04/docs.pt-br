@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 352848f9b14300a6e8291cefa8d7a7ee251e1d14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466147"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647799"
 ---
 # <a name="types-of-isolation"></a>Tipos de isolamento
 O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Para implementar esse tipo de isolamento, o common language runtime usa a mesma noção de identidade de usuário que o sistema operacional reconhece, que é a identidade associada ao processo no qual o código está em execução quando o armazenamento é aberto. Essa é uma identidade de usuário autenticado, mas a representação pode fazer com que a identidade do usuário atual seja alterada dinamicamente.  
   
  O acesso ao armazenamento isolado também é restrito de acordo com a identidade associada ao domínio do aplicativo e ao assembly ou apenas ao assembly. O tempo de execução obtém essas identidades das seguintes maneiras:  
   
--   A identidade de domínio representa a evidência do aplicativo, que, no caso de um aplicativo Web, pode ser a URL completa. Para código hospedado pelo shell, a identidade de domínio pode ser baseada no caminho de diretório de aplicativo. Por exemplo, se o executável é executado do caminho C:\Office\MyApp.exe, a identidade de domínio é C:\Office\MyApp.exe.  
+- A identidade de domínio representa a evidência do aplicativo, que, no caso de um aplicativo Web, pode ser a URL completa. Para código hospedado pelo shell, a identidade de domínio pode ser baseada no caminho de diretório de aplicativo. Por exemplo, se o executável é executado do caminho C:\Office\MyApp.exe, a identidade de domínio é C:\Office\MyApp.exe.  
   
--   A identidade do assembly é a evidência do assembly. Pode vir de uma assinatura digital de criptografia, que pode ser o [nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md) do assembly, o editor de software do assembly ou sua identidade de URL. Se um assembly tiver um nome forte e uma identidade do editor de software, a identidade do editor de software será usada. Se o assembly vier da Internet e não estiver assinado, a identidade de URL será usada. Para saber mais sobre assemblies e nomes fortes, confira [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+- A identidade do assembly é a evidência do assembly. Pode vir de uma assinatura digital de criptografia, que pode ser o [nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md) do assembly, o editor de software do assembly ou sua identidade de URL. Se um assembly tiver um nome forte e uma identidade do editor de software, a identidade do editor de software será usada. Se o assembly vier da Internet e não estiver assinado, a identidade de URL será usada. Para saber mais sobre assemblies e nomes fortes, confira [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md).  
   
--   Os armazenamentos móveis migram com um usuário que tem um perfil de usuário móvel. Os arquivos são gravados em um diretório de rede e são baixados em qualquer computador em que o usuário faz logon. Para saber mais sobre perfis de usuário móvel, confira <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+- Os armazenamentos móveis migram com um usuário que tem um perfil de usuário móvel. Os arquivos são gravados em um diretório de rede e são baixados em qualquer computador em que o usuário faz logon. Para saber mais sobre perfis de usuário móvel, confira <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
  Combinando os conceitos de usuário, domínio e identidade de assembly, o armazenamento isolado pode isolar dados das seguintes maneiras, cada uma das quais tem seus próprios cenários de uso:  
   
--   [Isolamento por usuário e assembly](#UserAssembly)  
+- [Isolamento por usuário e assembly](#UserAssembly)  
   
--   [Isolamento por usuário, domínio e assembly](#UserDomainAssembly)  
+- [Isolamento por usuário, domínio e assembly](#UserDomainAssembly)  
   
  Um desses isolamentos pode ser combinado a um perfil de usuário móvel. Para saber mais, confira a seção [Armazenamento isolado e roaming](#Roaming).  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: af796affa669d0f21e9d503f5263ad26b537fb91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0982baea2327daf23726ef269d53388d6011703d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553757"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596141"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Como: Criar uma chave no Registro (Visual C#)
 Este exemplo adiciona o par de valores, "Name" e "Isabella", ao Registro do usuário atual, sob a chave "Names".  
@@ -27,26 +27,26 @@ key.Close();
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Copie o código e cole-o no método `Main` de um aplicativo de console.  
+- Copie o código e cole-o no método `Main` de um aplicativo de console.  
   
--   Substitua o parâmetro `Names` pelo nome de uma chave existente diretamente sob o nó HKEY_CURRENT_USER do Registro.  
+- Substitua o parâmetro `Names` pelo nome de uma chave existente diretamente sob o nó HKEY_CURRENT_USER do Registro.  
   
--   Substitua o parâmetro `Name` pelo nome de um valor que existe diretamente sob o nó Names.  
+- Substitua o parâmetro `Name` pelo nome de um valor que existe diretamente sob o nó Names.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Analise a estrutura do Registro para encontrar um local adequado para a chave. Por exemplo, caso você queira abrir a chave Software do usuário atual e criar uma chave com o nome da empresa. Em seguida, adicione os valores do Registro à chave da empresa.  
   
  As seguintes condições podem causar uma exceção:  
   
--   O nome da chave é nulo.  
+- O nome da chave é nulo.  
   
--   O usuário não tem permissões para criar chaves do Registro.  
+- O usuário não tem permissões para criar chaves do Registro.  
   
--   O nome da chave excede o limite de 255 caracteres.  
+- O nome da chave excede o limite de 255 caracteres.  
   
--   A chave é fechada.  
+- A chave é fechada.  
   
--   A chave do Registro é somente leitura.  
+- A chave do Registro é somente leitura.  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  É mais seguro gravar dados na pasta do usuário — `Microsoft.Win32.Registry.CurrentUser` — em vez de no computador local — `Microsoft.Win32.Registry.LocalMachine`.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648213"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644928"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Pausando e interrompendo threads
 
@@ -45,9 +45,9 @@ As formas mais comuns para sincronizar as atividades de threads são segmentos d
   
  Se uma espera for uma espera gerenciada, <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ativarão o thread imediatamente. Se uma espera for uma espera não gerenciada (por exemplo, uma chamada de invocação de plataforma para a função Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)), <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> não poderão assumir o controle do thread até que ele chame o código gerenciado ou retorne a ele. No código gerenciado, o comportamento é o seguinte:  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ativa um thread de qualquer espera em que ele possa estar e faz com que um <xref:System.Threading.ThreadInterruptedException> seja gerado no thread de destino.  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ativa um thread de qualquer espera em que ele possa estar e faz com que um <xref:System.Threading.ThreadInterruptedException> seja gerado no thread de destino.  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ativa um thread de qualquer espera em que ele possa estar e faz com que um <xref:System.Threading.ThreadAbortException> seja gerado no thread. Para obter detalhes, confira [Destruindo threads](../../../docs/standard/threading/destroying-threads.md).  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ativa um thread de qualquer espera em que ele possa estar e faz com que um <xref:System.Threading.ThreadAbortException> seja gerado no thread. Para obter detalhes, confira [Destruindo threads](../../../docs/standard/threading/destroying-threads.md).  
   
 ## <a name="see-also"></a>Consulte também
 

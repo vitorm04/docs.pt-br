@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e4b789a23b790757ce2dfaa82b6eaec7fdaf3cb3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207220"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647878"
 ---
 # <a name="load-data-from-a-reader"></a>Carregando dados de um leitor
 Se um documento XML é carregado usando o método <xref:System.Xml.XmlDocument.Load%2A> e um parâmetro de <xref:System.Xml.XmlReader>, existem diferenças no comportamento que ocorre quando comparado ao comportamento de dados de carregamento de outro formata. Se o leitor está no estado inicial, <xref:System.Xml.XmlDocument.Load%2A> consome todo o conteúdo do leitor e compila o modelo de objeto (DOM) de documento de todos os dados no leitor.  
   
  Se o leitor já está localizado em um nó em algum lugar no documento, e o leitor é então passado para o método de <xref:System.Xml.XmlDocument.Load%2A> , tentativas de <xref:System.Xml.XmlDocument.Load%2A> de ler o nó atual e todos os seus irmãos, até a marca de fim que fecha a profundidade atual na memória. O sucesso de <xref:System.Xml.XmlDocument.Load%2A> tentado depende do nó que o leitor está na carga quando é tentada, porque <xref:System.Xml.XmlDocument.Load%2A> verifica que XML do leitor seja bem formado. Se XML bem formado, não é <xref:System.Xml.XmlDocument.Load%2A> gerencie uma exceção. Por exemplo, o seguinte conjunto de nós contém dois elementos de nível raiz, não é XML bem formado, e gera de <xref:System.Xml.XmlDocument.Load%2A> uma exceção.  
   
--   Nó de comentário, seguido por um nó de elemento, seguido por um nó de elemento, seguido por um nó de EndElement.  
+- Nó de comentário, seguido por um nó de elemento, seguido por um nó de elemento, seguido por um nó de EndElement.  
   
  O seguinte conjunto de nós cria os DOM incompletos, porque não há nenhum elemento de nível raiz.  
   
--   Nó de comentário seguido por um nó de ProcessingInstruction seguido por um nó de comentário seguido por um nó de EndElement.  
+- Nó de comentário seguido por um nó de ProcessingInstruction seguido por um nó de comentário seguido por um nó de EndElement.  
   
  Isso não gerencie uma exceção, e os dados estão carregados. Você pode adicionar um elemento raiz na parte superior desses nós e criar o XML bem formado que pode ser salvo sem erro.  
   

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295985"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592358"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Criando assemblies satélite para aplicativos de área de trabalho
 Arquivos de recurso desempenham um papel central em aplicativos localizados. Eles permitem que um aplicativo exiba cadeias de caracteres, imagens e outros dados no idioma e na cultura do usuário e forneça dados alternativos se esses recursos não estiverem disponíveis. O .NET Framework usa um modelo de hub e spoke para localizar e recuperar os recursos localizados. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, que é chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; ela é usada quando não há recursos localizados disponíveis. Você usa o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para designar a cultura da cultura padrão do aplicativo. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura localizada, mas não contém nenhum código. Como os assemblies satélite não fazem parte do assembly principal, você pode facilmente atualizar ou substituir recursos que correspondem a uma cultura específica sem substituir o assembly principal do aplicativo.  
@@ -41,16 +41,16 @@ Arquivos de recurso desempenham um papel central em aplicativos localizados. Ele
 ## <a name="satellite-assembly-name-and-location"></a>Nome e local do assembly satélite  
  Esse modelo hub e spoke requer que você coloque recursos em locais específicos, para que possam ser facilmente localizados e usados. Se você não compilar e nomear os recursos conforme esperado, ou se não colocá-los nos locais corretos, o CLR não poderá localizá-los e usará os recursos da cultura padrão. O Gerenciador de Recursos do .NET Framework, representado por um objeto <xref:System.Resources.ResourceManager>, é usado para acessar automaticamente os recursos localizados. O Gerenciador de Recursos requer o seguinte:  
   
--   Um assembly satélite único deve incluir todos os recursos de uma cultura específica. Em outras palavras, você deve compilar vários arquivos .txt ou .resx em um arquivo binário .resources.  
+- Um assembly satélite único deve incluir todos os recursos de uma cultura específica. Em outras palavras, você deve compilar vários arquivos .txt ou .resx em um arquivo binário .resources.  
   
--   Deve haver um subdiretório separado no diretório do aplicativo para cada cultura localizada que armazena os recursos da cultura. O nome do subdiretório deve ser igual ao nome de cultura. Como alternativa, você pode armazenar seus assemblies satélites no cache de assembly global. Nesse caso, o componente de informações de cultura do nome forte do assembly deve indicar sua cultura. (Consulte a seção [Instalação dos assemblies de satélite no cache de assembly global](#SN), mais adiante neste tópico.)  
+- Deve haver um subdiretório separado no diretório do aplicativo para cada cultura localizada que armazena os recursos da cultura. O nome do subdiretório deve ser igual ao nome de cultura. Como alternativa, você pode armazenar seus assemblies satélites no cache de assembly global. Nesse caso, o componente de informações de cultura do nome forte do assembly deve indicar sua cultura. (Consulte a seção [Instalação dos assemblies de satélite no cache de assembly global](#SN), mais adiante neste tópico.)  
   
     > [!NOTE]
     >  Se o aplicativo incluir recursos para subculturas, coloque cada subcultura em um subdiretório separado no diretório do aplicativo. Não coloque subculturas em subdiretórios no diretório principal da sua cultura.  
   
--   O assembly satélite deve ter o mesmo nome que o aplicativo e usar a extensão de nome de arquivo ".resources.dll". Por exemplo, se um aplicativo for denominado Example.exe, o nome de cada assembly satélite deverá ser Example.resources.dll. Observe que o nome do assembly satélite não indica a cultura dos seus arquivos de recursos. No entanto, o assembly satélite aparece em um diretório que especifica a cultura.  
+- O assembly satélite deve ter o mesmo nome que o aplicativo e usar a extensão de nome de arquivo ".resources.dll". Por exemplo, se um aplicativo for denominado Example.exe, o nome de cada assembly satélite deverá ser Example.resources.dll. Observe que o nome do assembly satélite não indica a cultura dos seus arquivos de recursos. No entanto, o assembly satélite aparece em um diretório que especifica a cultura.  
   
--   Informações sobre a cultura do assembly satélite devem ser incluídas nos metadados do assembly. Para armazenar o nome da cultura nos metadados do assembly satélite, você deve especificar a opção `/culture` quando usar o [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) para incorporar recursos no assembly satélite.  
+- Informações sobre a cultura do assembly satélite devem ser incluídas nos metadados do assembly. Para armazenar o nome da cultura nos metadados do assembly satélite, você deve especificar a opção `/culture` quando usar o [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) para incorporar recursos no assembly satélite.  
   
  A ilustração a seguir mostra a estrutura e os requisitos de localização de um diretório de exemplo para os aplicativos que você não está instalando no [cache de assembly global](../../../docs/framework/app-domains/gac.md). Os itens com as extensões .txt e .resources não serão fornecidos com o aplicativo final. Esses são os arquivos de recurso intermediários usados para criar os assemblies satélite finais de recursos. Neste exemplo, você poderia substituir arquivos .resx por arquivos .txt. Para obter mais informações, consulte [Empacotamento e implantação de recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). 
  
@@ -97,11 +97,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 3. Adicione suporte a culturas adicionais (en-US, fr-FR e ru-RU) ao aplicativo da seguinte maneira:  
   
-    -   Para oferecer suporte à cultura inglesa (Estados Unidos) ou en-US, crie um arquivo de recurso chamado Greeting.en-US.resx ou Greeting.en- US.txt e armazene nele uma única cadeia de caracteres denominada `HelloString`, cujo valor é "Hi world!"  
+    - Para oferecer suporte à cultura inglesa (Estados Unidos) ou en-US, crie um arquivo de recurso chamado Greeting.en-US.resx ou Greeting.en- US.txt e armazene nele uma única cadeia de caracteres denominada `HelloString`, cujo valor é "Hi world!"  
   
-    -   Para oferecer suporte à cultura francesa (França) ou fr-FR, crie um arquivo de recurso chamado Greeting.fr-FR.resx ou Greeting.fr-FR.txt e armazene nele uma única cadeia de caracteres denominada `HelloString`, cujo valor é "Salout tout le monde!"  
+    - Para oferecer suporte à cultura francesa (França) ou fr-FR, crie um arquivo de recurso chamado Greeting.fr-FR.resx ou Greeting.fr-FR.txt e armazene nele uma única cadeia de caracteres denominada `HelloString`, cujo valor é "Salout tout le monde!"  
   
-    -   Para oferecer suporte à cultura russa (Rússia) ou ru-RU, crie um arquivo de recurso chamado Greeting.ru-RU.resx ou Greeting.ru-RU.txt e armazene nele uma única cadeia de caracteres denominada `HelloString`, cujo valor é "Всем привет!"  
+    - Para oferecer suporte à cultura russa (Rússia) ou ru-RU, crie um arquivo de recurso chamado Greeting.ru-RU.resx ou Greeting.ru-RU.txt e armazene nele uma única cadeia de caracteres denominada `HelloString`, cujo valor é "Всем привет!"  
   
 4. Use [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilar cada texto ou um arquivo de recursos XML em um arquivo binário .resources. A saída é um conjunto de arquivos que têm o mesmo nome de arquivo raiz que os arquivos. resx ou. txt, mas uma extensão .resources. Se você criar o exemplo com o Visual Studio, o processo de compilação será manipulado automaticamente. Se você não estiver usando o Visual Studio, execute os seguintes comandos para compilar os arquivos .resx em arquivos .resources:  
   
@@ -226,11 +226,11 @@ gacutil -i:StringLibrary.resources.dll
   
 5. Adicione suporte a culturas adicionais (en-US, fr-FR e ru-RU) ao aplicativo da seguinte maneira:  
   
-    -   Para oferecer suporte à cultura inglesa (Estados Unidos) ou “en-US”, crie um arquivo de recurso chamado Strings.en-US.resx ou Strings.en- US.txt e armazene nele uma única cadeia de caracteres denominada `Greeting`, cujo valor é "Hello!".  
+    - Para oferecer suporte à cultura inglesa (Estados Unidos) ou “en-US”, crie um arquivo de recurso chamado Strings.en-US.resx ou Strings.en- US.txt e armazene nele uma única cadeia de caracteres denominada `Greeting`, cujo valor é "Hello!".  
   
-    -   Para oferecer suporte à cultura francesa (França) ou “fr-FR”, crie um arquivo de recurso chamado Strings.fr-FR.resx ou Strings.fr-FR.txt e armazene nele uma única cadeia de caracteres denominada `Greeting`, cujo valor é "Bon jour!"  
+    - Para oferecer suporte à cultura francesa (França) ou “fr-FR”, crie um arquivo de recurso chamado Strings.fr-FR.resx ou Strings.fr-FR.txt e armazene nele uma única cadeia de caracteres denominada `Greeting`, cujo valor é "Bon jour!"  
   
-    -   Para oferecer suporte à cultura russa (Rússia) ou “ru-RU”, crie um arquivo de recurso chamado Strings.fr-FR.resx ou Strings.ru-RU.txt e armazene nele uma única cadeia de caracteres denominada `Greeting`, cujo valor é "Привет!"  
+    - Para oferecer suporte à cultura russa (Rússia) ou “ru-RU”, crie um arquivo de recurso chamado Strings.fr-FR.resx ou Strings.ru-RU.txt e armazene nele uma única cadeia de caracteres denominada `Greeting`, cujo valor é "Привет!"  
   
 6. Use [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilar cada texto ou um arquivo de recursos XML em um arquivo binário .resources. A saída é um conjunto de arquivos que têm o mesmo nome de arquivo raiz que os arquivos. resx ou. txt, mas uma extensão .resources. Se você criar o exemplo com o Visual Studio, o processo de compilação será manipulado automaticamente. Se você não estiver usando o Visual Studio, execute o seguinte comando para compilar os arquivos .resx em arquivos .resources:  
   

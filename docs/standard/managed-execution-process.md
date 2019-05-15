@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336142"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647713"
 ---
 # <a name="managed-execution-process"></a>Processo de execução gerenciada
 <a name="introduction"></a> O processo de execução gerenciada inclui as seguintes etapas, que serão discutidas em detalhes mais adiante neste tópico:  
@@ -58,9 +58,9 @@ ms.locfileid: "59336142"
 ## <a name="compiling-msil-to-native-code"></a>Compilando MSIL para código nativo  
  Para executar o MSIL, ele deve ser compilado no CLR para código nativo da arquitetura do computador de destino. O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece duas maneiras para realizar essa conversão:  
   
--   Um compilador JIT (just-in-time) do .NET Framework.  
+- Um compilador JIT (just-in-time) do .NET Framework.  
   
--   O [Ngen.exe (Gerador de Imagem Nativa)](../../docs/framework/tools/ngen-exe-native-image-generator.md) do .NET Framework.  
+- O [Ngen.exe (Gerador de Imagem Nativa)](../../docs/framework/tools/ngen-exe-native-image-generator.md) do .NET Framework.  
   
 ### <a name="compilation-by-the-jit-compiler"></a>Compilação pelo compilador JIT  
  A compilação JIT converte MSIL para código nativo sob demanda no tempo de execução do aplicativo, quando o conteúdo de um assembly é carregado e executado. Como o CLR fornece um compilador JIT para cada arquitetura de CPU compatível, os desenvolvedores podem compilar um conjunto de assemblies MSIL que pode ser compilado pelo JIT e executado em diferentes computadores com arquiteturas diferentes. No entanto, se seu código gerenciado chama APIs nativas específicas da plataforma ou uma biblioteca de classes específica da plataforma, ele será executado somente nesse sistema operacional.  
@@ -70,22 +70,22 @@ ms.locfileid: "59336142"
 ### <a name="install-time-code-generation-using-ngenexe"></a>Geração de código do tempo de instalação usando NGen.exe  
  Como o compilador JIT converte o MSIL do assembly para código nativo quando métodos individuais definidos nesse assembly são chamados, ele afeta o desempenho negativamente no tempo de execução. Na maioria dos casos, esse desempenho diminuído é aceitável. Mais importante, o código gerado pelo compilador JIT é associado ao processo que disparou a compilação. Ele não pode ser compartilhado por vários processos. Para permitir que o código gerado seja compartilhado por várias invocações de um aplicativo ou por vários processos que compartilham um conjunto de assemblies, o CLR dá suporte a um modo de compilação antecipado. Esse modo de compilação Ahead Of Time usa o [Ngen.exe (Gerador de Imagem Nativa)](../../docs/framework/tools/ngen-exe-native-image-generator.md) para converter assemblies MSIL em código nativo de maneira semelhante ao compilador JIT. No entanto, a operação de Ngen.exe é diferente da operação do compilador JIT de três maneiras:  
   
--   Ele executa a conversão do MSIL em código nativo antes de executar o aplicativo, e não durante a execução do aplicativo.  
+- Ele executa a conversão do MSIL em código nativo antes de executar o aplicativo, e não durante a execução do aplicativo.  
   
--   Ele cria um assembly inteiro por vez, em vez de um método de cada vez.  
+- Ele cria um assembly inteiro por vez, em vez de um método de cada vez.  
   
--   Ele mantém o código gerado no Cache de Imagem Nativa como um arquivo no disco.  
+- Ele mantém o código gerado no Cache de Imagem Nativa como um arquivo no disco.  
   
 ### <a name="code-verification"></a>Verificação de código  
  Como parte de sua compilação para código nativo, o código MSIL deve passar por um processo de verificação, a menos que um administrador estabeleça uma política de segurança permitindo que o código ignore a verificação. A verificação examina o MSIL e os metadados para descobrir se o código é fortemente tipado, o que significa que ele acessa apenas os locais de memória que está autorizado a acessar. A segurança de tipo ajuda a isolar objetos uns dos outros e a protegê-los de danos não intencionais ou corrupção mal-intencionada. Ela também dá garantia de que restrições de segurança no código possam ser aplicadas confiavelmente.  
   
  O tempo de execução depende das seguintes declarações serem verdadeiras para o código que é comprovadamente fortemente tipado:  
   
--   Uma referência a um tipo é estritamente compatível com o tipo que está sendo referenciado.  
+- Uma referência a um tipo é estritamente compatível com o tipo que está sendo referenciado.  
   
--   Somente operações definidas adequadamente são invocadas em um objeto.  
+- Somente operações definidas adequadamente são invocadas em um objeto.  
   
--   Identidades são o que elas afirmam ser.  
+- Identidades são o que elas afirmam ser.  
   
  Durante o processo de verificação, o código MSIL é examinado em uma tentativa de confirmar que o código possa acessar locais de memória e chamar métodos apenas por tipos corretamente definidos. Por exemplo, o código não pode permitir que campos de um objeto sejam acessados de uma maneira que permita que locais de memória sejam saturados. Além disso, a verificação inspeciona o código para determinar se o MSIL foi corretamente gerado, porque MSIL incorreto pode levar a uma violação das regras de segurança de tipos. O processo de verificação passa um conjunto bem definido de código fortemente tipado, e ele passa apenas código fortemente tipado. Entretanto, alguns códigos fortemente tipados podem não passar nessa verificação devido às limitações do processo de verificação, e algumas linguagens, por projeto, não produzem código fortemente tipado verificável. Se o código fortemente tipado for exigido pela política de segurança mas o código não passar pela verificação, uma exceção será lançada quando o código for executado.  
   

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd3b1cacc73743622aaaad72bfd4edb26dc26390
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f2be5881a7f663b13dd13ffc0e0faf88afd7efc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740470"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647968"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Navegação do nó de atributo e do namespace usando XPathNavigator
 A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métodos de navegação. O primeiro conjunto, encontrado no tópico [Navegação do nó usando XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), é usado para navegar em *conjuntos de nós* em um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>. O segundo conjunto, descrito neste tópico, é usado para navegar em *nós de atributo e namespace* em um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>.  
@@ -22,11 +22,11 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métod
   
  Estes são os métodos de navegação de atributo de classe de <xref:System.Xml.XPath.XPathNavigator> .  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
   
  Quando o nó atual é um elemento, você pode usar a propriedade de <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> para ver se houver algum atributo associado com o elemento. Depois que se souber que um elemento tem atributos, há vários métodos para acessar atributos. Para recuperar um único atributo do elemento, use o método de <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> . Para mover <xref:System.Xml.XPath.XPathNavigator> a um atributo específico, use o método de <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> . Você também pode iterar sobre cada atributo de um elemento usando o método <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> , seguido por várias chamadas para o método de <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> .  
   
@@ -40,11 +40,11 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métod
   
  Estes são os métodos de navegação do namespace da classe de <xref:System.Xml.XPath.XPathNavigator> .  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
   
  Há sempre pelo menos um nó de namespace no escopo para qualquer elemento em um documento XML. Este é o nó do namespace com o prefixo `xml` e URI `http://www.w3.org/XML/1998/namespace`de namespace. Para recuperar o URI de namespace no escopo dado um determinado prefixo, use o método de <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> . Para mover o objeto de <xref:System.Xml.XPath.XPathNavigator> a um nó específico de namespace, use o método de <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> . Você também pode iterar sobre cada nó do namespace no escopo de um elemento usando o método <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> seguido por várias chamadas para o método de <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> .  
   
@@ -66,11 +66,11 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métod
   
  A sequência de namespace (o namespace que <xref:System.Xml.XPath.XPathNavigator> é posicionado na depois de chamar o método de <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> tiver usado por uma série de chamadas para o método de <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> ) é da seguinte maneira.  
   
--   Quando localizado em `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- Quando localizado em `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   Quando localizado em `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- Quando localizado em `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   Quando localizado em `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+- Quando localizado em `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
   
 > [!NOTE]
 >  Os nós de namespace de retornos de classe de <xref:System.Xml.XPath.XPathNavigator> na ordem inversa do documento. Portanto, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> move essencialmente ao último nó do namespace no escopo atual.  
@@ -87,11 +87,11 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métod
   
  Quando posicionado em `child2`, a sequência de namespace (o namespace <xref:System.Xml.XPath.XPathNavigator> é posicionado na depois de chamar o método de <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> seguido por uma série de chamadas para o método de <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> ) é da seguinte maneira.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"`, e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"`, e `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, e `xmlns="http://www.contoso.com"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, e `xmlns="http://www.contoso.com"`.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
   
 > [!NOTE]
 >  Os nós de namespace de retornos de classe de <xref:System.Xml.XPath.XPathNavigator> na ordem inversa do documento. Portanto, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> move essencialmente ao último nó do namespace no escopo atual.  

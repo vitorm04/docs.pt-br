@@ -1,21 +1,16 @@
 ---
 title: Criar um aplicativo de lista de campeonato com o Infer.NET e a programação probabilística
 description: Descubra como usar a programação probabilística com o Infern.NET para criar um aplicativo de lista de campeonato com base em uma versão simplificada do TrueSkill.
-ms.date: 03/05/2019
+ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679121"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211431"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Criar um aplicativo de lista de campeonato com o Infer.NET e a programação probabilística
-
-> [!NOTE]
-> Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações. Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento. Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Este guia de instruções ensina você sobre a programação probabilística usando o Infer.NET. A programação probabilística é uma abordagem de aprendizado de máquina em que os modelos personalizados são expressados como programas de computador. Ela permite a incorporação de conhecimento de domínio aos modelos, além de tornar o sistema de aprendizado de máquina mais interpretável. Ela também dá suporte à inferência online – o processo de aprender à medida que novos dados são apresentados. O Infer.NET é usado em vários produtos da Microsoft no Azure, Xbox e Bing.
 

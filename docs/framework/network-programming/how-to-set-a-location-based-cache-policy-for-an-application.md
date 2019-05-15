@@ -11,12 +11,12 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1bbbb558134e5f11537de0efef594be2b964cdcb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341862"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647379"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Como: Definir uma política de cache baseada na localização para um aplicativo
 Políticas de cache com base no local permitem que um aplicativo defina explicitamente o comportamento do cache com base na localização do recurso solicitado. Este tópico demonstra como definir a política de cache programaticamente. Para obter informações sobre como configurar a política para um aplicativo usando os arquivos de configuração, veja o [elemento \<requestCaching> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
@@ -29,7 +29,7 @@ Políticas de cache com base no local permitem que um aplicativo defina explicit
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Para definir uma política que toma recursos solicitados de um cache  
   
--   Crie uma política que toma recursos solicitados de um cache se disponíveis e, caso contrário, envia solicitações ao servidor, definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>. Uma solicitação pode ser atendida por qualquer cache entre o cliente e servidor, incluindo caches remotos.  
+- Crie uma política que toma recursos solicitados de um cache se disponíveis e, caso contrário, envia solicitações ao servidor, definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>. Uma solicitação pode ser atendida por qualquer cache entre o cliente e servidor, incluindo caches remotos.  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -50,7 +50,7 @@ Políticas de cache com base no local permitem que um aplicativo defina explicit
   
 ### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>Para definir uma política que impede qualquer cache de fornecer recursos  
   
--   Crie uma política que impede que qualquer cache forneça recursos solicitados, definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>. Esse nível de política remove o recurso do cache local se ele está presente e indica para caches remotos que eles também devem remover o recurso.  
+- Crie uma política que impede que qualquer cache forneça recursos solicitados, definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>. Esse nível de política remove o recurso do cache local se ele está presente e indica para caches remotos que eles também devem remover o recurso.  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -71,7 +71,7 @@ Políticas de cache com base no local permitem que um aplicativo defina explicit
   
 ### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>Para definir uma política que retorna os recursos solicitados apenas se eles estiverem no cache local  
   
--   Criar uma política que retorna os recursos solicitados apenas se estiverem no cache local, definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>. Se o recurso solicitado não estiver no cache, uma exceção <xref:System.Net.WebException> será lançada.  
+- Criar uma política que retorna os recursos solicitados apenas se estiverem no cache local, definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>. Se o recurso solicitado não estiver no cache, uma exceção <xref:System.Net.WebException> será lançada.  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -92,7 +92,7 @@ Políticas de cache com base no local permitem que um aplicativo defina explicit
   
 ### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>Para definir uma política que impede o cache local de fornecer recursos  
   
--   Crie uma política que impede que o cache local forneça os recursos solicitados, definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>. Se o recurso solicitado está em um cache intermediário e é revalidado com êxito, o cache intermediário pode fornecer o recurso solicitado.  
+- Crie uma política que impede que o cache local forneça os recursos solicitados, definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>. Se o recurso solicitado está em um cache intermediário e é revalidado com êxito, o cache intermediário pode fornecer o recurso solicitado.  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -113,7 +113,7 @@ Políticas de cache com base no local permitem que um aplicativo defina explicit
   
 ### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>Para definir uma política que impede qualquer cache de fornecer recursos solicitados  
   
--   Crie uma política que impede que qualquer cache forneça recursos solicitados, definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>. O recurso retornado pelo servidor pode ser armazenado no cache.  
+- Crie uma política que impede que qualquer cache forneça recursos solicitados, definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>. O recurso retornado pelo servidor pode ser armazenado no cache.  
   
     ```csharp  
     public static void SendToServer()  
@@ -134,7 +134,7 @@ Políticas de cache com base no local permitem que um aplicativo defina explicit
   
 ### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>Para definir uma política que permite que qualquer cache forneça recursos solicitados se o recurso no servidor não é mais recente do que a cópia armazenada em cache  
   
--   Crie uma política que permite que qualquer cache forneça recursos solicitados se o recurso no servidor não é mais recente do que a cópia armazenada em cache definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.  
+- Crie uma política que permite que qualquer cache forneça recursos solicitados se o recurso no servidor não é mais recente do que a cópia armazenada em cache definindo o nível de cache para <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.  
   
     ```csharp  
     public static void CheckServer()  

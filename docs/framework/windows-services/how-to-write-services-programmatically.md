@@ -9,33 +9,33 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328420"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591426"
 ---
 # <a name="how-to-write-services-programmatically"></a>Como: Escrever serviços de forma programática
 Quando você opta por não usar o modelo de projeto de Serviço Windows, é possível escrever seus próprios serviços configurando a herança e outros elementos de infraestrutura por conta própria. Ao criar um serviço de forma programática, você precisa executar várias etapas que o modelo executaria para você:  
   
--   Você precisa configurar a classe de serviço para ser herdada da classe <xref:System.ServiceProcess.ServiceBase>.  
+- Você precisa configurar a classe de serviço para ser herdada da classe <xref:System.ServiceProcess.ServiceBase>.  
   
--   Você precisa criar um método `Main` para seu projeto de serviço que defina os serviços a serem executados e chame o método <xref:System.ServiceProcess.ServiceBase.Run%2A>neles.  
+- Você precisa criar um método `Main` para seu projeto de serviço que defina os serviços a serem executados e chame o método <xref:System.ServiceProcess.ServiceBase.Run%2A>neles.  
   
--   Você precisa substituir os procedimentos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> e preencher os códigos que desejar que eles executem.  
+- Você precisa substituir os procedimentos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> e preencher os códigos que desejar que eles executem.  
   
 ### <a name="to-write-a-service-programmatically"></a>Para escrever um serviço de forma programático  
   
 1. Criar um projeto vazio e crie uma referência aos namespaces necessários seguindo estas etapas:  
   
-    1.  Em **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Referências** e clique em **Adicionar Referência**.  
+    1. Em **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Referências** e clique em **Adicionar Referência**.  
   
-    2.  Na guia **.NET Framework**, role até **System.dll** e clique em **Selecionar**.  
+    2. Na guia **.NET Framework**, role até **System.dll** e clique em **Selecionar**.  
   
-    3.  Role até **System.ServiceProcess.dll** e clique em **Selecionar**.  
+    3. Role até **System.ServiceProcess.dll** e clique em **Selecionar**.  
   
-    4.  Clique em **OK**.  
+    4. Clique em **OK**.  
   
 2. Adicione uma classe e configure-a para ser herdada de <xref:System.ServiceProcess.ServiceBase>:  
   

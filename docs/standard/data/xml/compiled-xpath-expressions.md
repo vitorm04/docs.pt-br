@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1716488f6e072b09469dfbe5cc8fb4965e5db44c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605229"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647948"
 ---
 # <a name="compiled-xpath-expressions"></a>Expressões XPath compilados
 Um objeto de <xref:System.Xml.XPath.XPathExpression> representa uma consulta XPath compilado retornada do método estático de <xref:System.Xml.XPath.XPathExpression.Compile%2A> da classe de <xref:System.Xml.XPath.XPathExpression> ou método de <xref:System.Xml.XPath.XPathNavigator.Compile%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> .  
@@ -25,15 +25,15 @@ Um objeto de <xref:System.Xml.XPath.XPathExpression> representa uma consulta XPa
   
  Uma vez que compilado, o objeto de <xref:System.Xml.XPath.XPathExpression> pode ser usado como entrada para os seguintes métodos da classe <xref:System.Xml.XPath.XPathNavigator> dependendo do tipo retornado de consulta XPath.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  A tabela a seguir descreve cada um dos tipos de retorno XPath W3C, suas equivalências do Microsoft.NET Framework, e métodos que o objeto de <xref:System.Xml.XPath.XPathExpression> pode ser usado com base no seu tipo de retorno.  
   
@@ -52,19 +52,19 @@ Um objeto de <xref:System.Xml.XPath.XPathExpression> representa uma consulta XPa
   
  A propriedade de <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> retorna um dos seguintes valores de enumeração <xref:System.Xml.XPath.XPathResultType> que representam os tipos de retorno XPath W3C.  
   
--   <xref:System.Xml.XPath.XPathResultType.Any>  
+- <xref:System.Xml.XPath.XPathResultType.Any>  
   
--   <xref:System.Xml.XPath.XPathResultType.Boolean>  
+- <xref:System.Xml.XPath.XPathResultType.Boolean>  
   
--   <xref:System.Xml.XPath.XPathResultType.Error>  
+- <xref:System.Xml.XPath.XPathResultType.Error>  
   
--   <xref:System.Xml.XPath.XPathResultType.Navigator>  
+- <xref:System.Xml.XPath.XPathResultType.Navigator>  
   
--   <xref:System.Xml.XPath.XPathResultType.NodeSet>  
+- <xref:System.Xml.XPath.XPathResultType.NodeSet>  
   
--   <xref:System.Xml.XPath.XPathResultType.Number>  
+- <xref:System.Xml.XPath.XPathResultType.Number>  
   
--   <xref:System.Xml.XPath.XPathResultType.String>  
+- <xref:System.Xml.XPath.XPathResultType.String>  
   
  O exemplo a seguir usa o objeto de <xref:System.Xml.XPath.XPathExpression> para retornar um número e um nó definidas do arquivo de `books.xml` . A propriedade de <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> de cada objeto de <xref:System.Xml.XPath.XPathExpression> bem como os resultados dos métodos de <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> e de <xref:System.Xml.XPath.XPathNavigator.Select%2A> são gravados no console.  
   

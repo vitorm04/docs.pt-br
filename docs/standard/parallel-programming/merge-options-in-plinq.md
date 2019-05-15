@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06f772b8d26ec87519efdaae7b621f3fd2d321c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7255ef11bfdf74afa6ae2032b0c86c8c44dbfe7d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714731"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647734"
 ---
 # <a name="merge-options-in-plinq"></a>Opções de mesclagem em PLINQ
 Quando uma consulta está sendo executada como paralela, o PLINQ faz a partição da sequência de origem para que várias threads possam funcionar em diferentes partes simultaneamente, normalmente em threads separados. Se os resultados forem consumidos em um thread, por exemplo, em um loop `foreach` (`For Each` em Visual Basic), os resultados de cada thread precisarão ser mesclados novamente em uma sequência. O tipo de mesclagem executado pelo PLINQ depende dos operadores que estão presentes na consulta. Por exemplo, os operadores que impõem uma nova ordem aos resultados devem armazenar em buffer todos os elementos em todos os threads. Do ponto de vista do thread de consumo (que também é o thread do usuário do aplicativo), uma consulta totalmente armazenada em buffer pode ser executada por um período significativo de tempo antes de produzir seu primeiro resultado. Por padrão, outros operadores são parcialmente armazenados em buffer e geram seus resultados em lotes. Um operador <xref:System.Linq.ParallelEnumerable.ForAll%2A> não é armazenado em buffer por padrão. Ele gera todos os elementos de todos os threads imediatamente.  
@@ -32,15 +32,15 @@ Quando uma consulta está sendo executada como paralela, o PLINQ faz a partiçã
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
  A enumeração <xref:System.Linq.ParallelMergeOptions> inclui as seguintes opções que especificam, para formas de consulta com suporte, como a saída final da consulta será produzida quando os resultados forem consumidos em um thread:  
   
--   `Not Buffered`  
+- `Not Buffered`  
   
      A opção <xref:System.Linq.ParallelMergeOptions.NotBuffered> faz com que cada elemento processado seja retornado de cada thread assim que ele for produzido. Esse comportamento é semelhante a fazer "streaming" da saída. Se o operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> estiver presente na consulta, `NotBuffered` preservará a ordem dos elementos de origem. Embora `NotBuffered` inicie a geração de resultados assim que eles se tornam disponíveis, o tempo total para produzir todos os resultados ainda pode ser maior do que usar uma das opções de mesclagem.  
   
--   `Auto Buffered`  
+- `Auto Buffered`  
   
      A opção <xref:System.Linq.ParallelMergeOptions.AutoBuffered> faz com que a consulta colete elementos em um buffer e, em seguida, gere periodicamente todo o conteúdo do buffer de uma vez para o thread de consumo. Isso equivale a gerar os dados de origem em "partes" em vez de usar o comportamento de "streaming" de `NotBuffered`. `AutoBuffered` pode demorar mais do que `NotBuffered` para disponibilizar o primeiro elemento no thread de consumo. O tamanho do buffer e o comportamento exato do retorno não são configuráveis e podem variar dependendo de vários fatores relacionados à consulta.  
   
--   `FullyBuffered`  
+- `FullyBuffered`  
   
      A opção <xref:System.Linq.ParallelMergeOptions.FullyBuffered> faz com que a saída de toda a consulta seja armazenada em buffer antes que qualquer um dos elementos seja gerado. Quando você usa essa opção, pode demorar mais tempo para que o primeiro elemento fique disponível no thread de consumo, mas os resultados completos podem ainda ser produzidos mais rapidamente em comparação com as outras opções.  
   

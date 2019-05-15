@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: e8aa1c96766fc1b63326415c879e9821dc1de7f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 79d104d7e4750bdd9f2a80bd2e2ef16ca6d9d7e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833676"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665763"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>Como: Gravar em arquivos binários no Visual Basic
 O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> grava dados em um arquivo binário. Se o parâmetro `append` for `True`, ele acrescentará os dados ao arquivo; caso contrário, os dados no arquivo serão substituídos.  
@@ -20,26 +20,26 @@ O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> grava 
   
 ### <a name="to-write-to-a-binary-file"></a>Para gravar em um arquivo binário  
   
--   Use o método `WriteAllBytes`, fornecendo o nome e o caminho do arquivo e os bytes a serem gravados. Este exemplo acrescenta a matriz de dados `CustomerData` ao arquivo chamado `CollectedData.dat`.  
+- Use o método `WriteAllBytes`, fornecendo o nome e o caminho do arquivo e os bytes a serem gravados. Este exemplo acrescenta a matriz de dados `CustomerData` ao arquivo chamado `CollectedData.dat`.  
   
      [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]  
   
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem criar uma exceção:  
   
--   O caminho não é válido por um destes motivos: é uma cadeia de caracteres de comprimento zero; contém somente espaço em branco ou contém caracteres inválidos. (<xref:System.ArgumentException>).  
+- O caminho não é válido por um destes motivos: é uma cadeia de caracteres de comprimento zero; contém somente espaço em branco ou contém caracteres inválidos. (<xref:System.ArgumentException>).  
   
--   O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
+- O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `File` aponta para um caminho que não existe (<xref:System.IO.FileNotFoundException> ou <xref:System.IO.DirectoryNotFoundException>).  
+- `File` aponta para um caminho que não existe (<xref:System.IO.FileNotFoundException> ou <xref:System.IO.DirectoryNotFoundException>).  
   
--   O arquivo está sendo usado por outro processo, ou ocorre um erro de E/S (<xref:System.IO.IOException>).  
+- O arquivo está sendo usado por outro processo, ou ocorre um erro de E/S (<xref:System.IO.IOException>).  
   
--   O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
+- O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
   
--   Um nome de arquivo ou de diretório no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
+- Um nome de arquivo ou de diretório no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
   
--   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
+- O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Consulte também
 

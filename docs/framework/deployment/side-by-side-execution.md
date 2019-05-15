@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341069"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641031"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Execução lado a lado no .NET Framework
 A execução lado a lado é a capacidade de executar várias versões de um aplicativo ou componente no mesmo computador. Você pode ter várias versões do Common Language Runtime e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador ao mesmo tempo.  
@@ -33,15 +33,15 @@ A execução lado a lado é a capacidade de executar várias versões de um apli
   
  A execução lado a lado e o .NET Framework fornecem os seguintes recursos para eliminar conflitos de DLL:  
   
--   Assemblies com nomes fortes.  
+- Assemblies com nomes fortes.  
   
      A execução lado a lado usa assemblies com nome forte para associar informações de tipo a uma versão específica de um assembly. Isso impede que um aplicativo ou componente associe-se a uma versão inválida de um assembly. Assemblies com nomes fortes também permitem que várias versões de um arquivo existam no mesmo computador e sejam usadas por aplicativos. Para obter mais informações, consulte [Assemblies com nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
--   Armazenamento de código ciente de versão.  
+- Armazenamento de código ciente de versão.  
   
      O .NET Framework fornece armazenamento de código ciente de versão no cache de assembly global. O cache de assembly global é um cache de código amplo no computador presente em todos os computadores com o .NET Framework instalado. Ele armazena assemblies baseados em versão, cultura e informações do editor, além de oferecer suporte a várias versões de componentes e aplicativos. Para obter mais informações, consulte [Cache de Assembly Global](../../../docs/framework/app-domains/gac.md).  
   
--   Isolamento.  
+- Isolamento.  
   
      Usando o .NET Framework, você pode criar aplicativos e componentes executados em isolamento. O isolamento é um componente essencial da execução lado a lado. Ele envolve estar ciente sobre os recursos que você está usando e compartilhar recursos com confiança entre várias versões de um aplicativo ou componente. O isolamento também inclui armazenar arquivos de forma específica a versões. Para saber mais sobre isolamento, consulte as [Diretrizes para criar componentes para execução lado a lado](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
   
@@ -66,9 +66,9 @@ A execução lado a lado é a capacidade de executar várias versões de um apli
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>Determinando a versão do tempo de execução a ser carregada  
  O Common Language Runtime usa as informações a seguir para determinar qual versão do tempo de execução deve ser carregada para um aplicativo:  
   
--   As versões de tempo de execução que estão disponíveis.  
+- As versões de tempo de execução que estão disponíveis.  
   
--   As versões de tempo de execução com suporte em um aplicativo.  
+- As versões de tempo de execução com suporte em um aplicativo.  
   
 ### <a name="supported-runtime-versions"></a>Versões do tempo de execução com suporte  
  O tempo de execução usa o arquivo de configuração de aplicativo e o cabeçalho do arquivo PE (executável portátil) para determinar a qual versão do tempo de execução um aplicativo dá suporte. Se nenhum arquivo de configuração de aplicativo existir, o tempo de execução carregará a versão de tempo de execução especificada no cabeçalho do arquivo PE do aplicativo, se essa versão estiver disponível.  

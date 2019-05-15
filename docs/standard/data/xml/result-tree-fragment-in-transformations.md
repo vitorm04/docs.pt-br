@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4835536dd3ae815fbe7e50582b94caefb1fc9082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb130c17fa7b2a5d02f55a2944be386bc1bb334c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683814"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750719"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Fragmento da árvore de resultado nas transformações
 
@@ -194,7 +194,6 @@ O seguinte é o resultado de transformar XML com essa folha de estilos:
 
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Xml.XPath.XPathNodeIterator>
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
 - [A classe XslTransform implementa o processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

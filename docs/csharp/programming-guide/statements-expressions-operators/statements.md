@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6dcf5a69be7817351a9e250506ba51471918a772
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971501"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608128"
 ---
 # <a name="statements-c-programming-guide"></a>Instruções (Guia de Programação em C#)
 As ações que usa um programa executa são expressas em instruções. Ações comuns incluem declarar variáveis, atribuir valores, chamar métodos, fazer loops pelas coleções e ramificar para um ou para outro bloco de código, dependendo de uma determinada condição. A ordem na qual as instruções são executadas em um programa é chamada de fluxo de controle ou fluxo de execução. O fluxo de controle pode variar sempre que um programa é executado, dependendo de como o programa reage às entradas que recebe em tempo de execução.  
@@ -83,11 +83,11 @@ Os exemplos a seguir mostram dois usos de uma instrução vazia:
   
 ## <a name="related-sections"></a>Seções relacionadas  
   
--   [Palavras-chave de instrução](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [Palavras-chave de instrução](../../../csharp/language-reference/keywords/statement-keywords.md)  
   
--   [Expressões](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [Expressões](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
--   [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

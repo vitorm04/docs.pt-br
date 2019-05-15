@@ -9,25 +9,25 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617909"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644748"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizando dados para multithreading
 Quando vários threads podem fazer chamadas para as propriedades e métodos de um único objeto, é fundamental que essas chamadas sejam sincronizadas. Caso contrário, um thread pode interromper o que outro thread está fazendo e o objeto pode ser deixado em um estado inválido. Uma classe cujos membros são protegidos de tais interrupções é denominada thread-safe.  
   
  A Common Language Infrastructure fornece várias estratégias para sincronizar o acesso à instância e membros estáticos:  
   
--   Regiões de código sincronizadas. Você pode usar o suporte de compilador ou classe <xref:System.Threading.Monitor> para esta classe para sincronizar apenas o bloco de código que precisa, melhorando o desempenho.  
+- Regiões de código sincronizadas. Você pode usar o suporte de compilador ou classe <xref:System.Threading.Monitor> para esta classe para sincronizar apenas o bloco de código que precisa, melhorando o desempenho.  
   
--   Sincronização manual. Você pode usar os objetos de sincronização fornecidos pela biblioteca de classes .NET Framework. Confira [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md), que inclui uma discussão sobre a classe <xref:System.Threading.Monitor>.  
+- Sincronização manual. Você pode usar os objetos de sincronização fornecidos pela biblioteca de classes .NET Framework. Confira [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md), que inclui uma discussão sobre a classe <xref:System.Threading.Monitor>.  
   
--   Contextos sincronizados. Você pode usar o <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> para habilitar a sincronização simples e automática para objetos <xref:System.ContextBoundObject>.  
+- Contextos sincronizados. Você pode usar o <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> para habilitar a sincronização simples e automática para objetos <xref:System.ContextBoundObject>.  
   
--   Classes de coleção no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>. Essas classes fornecem operações sincronizadas de adição e remoção internas. Para obter mais informações, veja [Coleções thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
+- Classes de coleção no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>. Essas classes fornecem operações sincronizadas de adição e remoção internas. Para obter mais informações, veja [Coleções thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
   
  O Common Language Runtime fornece um modelo de thread em que as classes se enquadram em uma série de categorias que podem ser sincronizadas de diferentes maneiras, dependendo dos requisitos. A tabela a seguir mostra o suporte de sincronização fornecido para campos e métodos com uma determinada categoria de sincronização.  
   

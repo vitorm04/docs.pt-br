@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313262"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649407"
 ---
 # <a name="how-to-create-windows-services"></a>Como: Criar serviços Windows
 Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado **Serviço Windows**. Esse modelo realiza automaticamente muito do trabalho para você referenciando as classes e namespaces apropriados, configurando a herança de classe base para serviços, e substituindo muitos dos métodos que você provavelmente desejará substituir.  
@@ -21,11 +21,11 @@ Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado
   
  Para criar um serviço funcional, você deve, no mínimo:  
   
--   Definir a propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.  
+- Definir a propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.  
   
--   Criar os instaladores necessários para seu aplicativo de serviço.  
+- Criar os instaladores necessários para seu aplicativo de serviço.  
   
--   Substituir e especificar código para os métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> para personalizar as formas nas quais o serviço funciona.  
+- Substituir e especificar código para os métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> para personalizar as formas nas quais o serviço funciona.  
   
 ### <a name="to-create-a-windows-service-application"></a>Para criar um aplicativo de serviço Windows  
   

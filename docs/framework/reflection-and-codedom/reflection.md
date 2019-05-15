@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101569"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591481"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflexão no .NET Framework
 As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Type?displayProperty=nameWithType> permitem que você obtenha informações sobre os [assemblies](../app-domains/assemblies-in-the-common-language-runtime.md) carregados e os tipos definidos neles, como [classes](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces) e [tipos de valor](../../csharp/language-reference/keywords/value-types.md). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.
@@ -37,23 +37,23 @@ As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Ty
   
  Os [assemblies](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) contêm módulos, os módulos contêm tipos e tipos contêm membros. A reflexão fornece objetos que encapsulam assemblies, módulos e tipos. É possível usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente. Você pode então invocar os métodos do tipo ou acessar suas propriedades e campos. Usos típicos da reflexão incluem o seguinte:  
   
--   Use <xref:System.Reflection.Assembly> para definir e carregar assemblies, carregar módulos que estão listados no manifesto do assembly e localizar um tipo nesse assembly e criar uma instância dela.  
+- Use <xref:System.Reflection.Assembly> para definir e carregar assemblies, carregar módulos que estão listados no manifesto do assembly e localizar um tipo nesse assembly e criar uma instância dela.  
   
--   Use <xref:System.Reflection.Module> para descobrir informações como o assembly que contém o módulo e as classes no módulo. Você também pode obter todos os métodos globais ou outros métodos específicos e não globais definidos no módulo.  
+- Use <xref:System.Reflection.Module> para descobrir informações como o assembly que contém o módulo e as classes no módulo. Você também pode obter todos os métodos globais ou outros métodos específicos e não globais definidos no módulo.  
   
--   Use <xref:System.Reflection.ConstructorInfo> para descobrir informações como o nome, os parâmetros, os modificadores de acesso (como `public` ou `private`) e os detalhes de implementação (como `abstract` ou `virtual`) de um construtor. Use o método <xref:System.Type.GetConstructors%2A> ou o <xref:System.Type.GetConstructor%2A> de um <xref:System.Type> para invocar um construtor específico.  
+- Use <xref:System.Reflection.ConstructorInfo> para descobrir informações como o nome, os parâmetros, os modificadores de acesso (como `public` ou `private`) e os detalhes de implementação (como `abstract` ou `virtual`) de um construtor. Use o método <xref:System.Type.GetConstructors%2A> ou o <xref:System.Type.GetConstructor%2A> de um <xref:System.Type> para invocar um construtor específico.  
   
--   Use <xref:System.Reflection.MethodInfo> para descobrir informações como o nome, o tipo de retorno, os parâmetros, os modificadores de acesso (como `public` ou `private`) e os detalhes de implementação (como `abstract` ou `virtual`) de um método. Use o método <xref:System.Type.GetMethods%2A> ou o <xref:System.Type.GetMethod%2A> de um <xref:System.Type> para invocar um método específico.  
+- Use <xref:System.Reflection.MethodInfo> para descobrir informações como o nome, o tipo de retorno, os parâmetros, os modificadores de acesso (como `public` ou `private`) e os detalhes de implementação (como `abstract` ou `virtual`) de um método. Use o método <xref:System.Type.GetMethods%2A> ou o <xref:System.Type.GetMethod%2A> de um <xref:System.Type> para invocar um método específico.  
   
--   Use <xref:System.Reflection.FieldInfo> para descobrir informações como o nome, os modificadores de acesso (como `public` ou `private`) e detalhes de implementação (como `static`) de um campo e para obter ou definir os valores de campo.  
+- Use <xref:System.Reflection.FieldInfo> para descobrir informações como o nome, os modificadores de acesso (como `public` ou `private`) e detalhes de implementação (como `static`) de um campo e para obter ou definir os valores de campo.  
   
--   Use <xref:System.Reflection.EventInfo> para descobrir informações como o nome, o tipo de dados do manipulador de eventos, os atributos personalizados, o tipo de declaração e o tipo refletido de um evento e para adicionar ou remover manipuladores de evento.  
+- Use <xref:System.Reflection.EventInfo> para descobrir informações como o nome, o tipo de dados do manipulador de eventos, os atributos personalizados, o tipo de declaração e o tipo refletido de um evento e para adicionar ou remover manipuladores de evento.  
   
--   Use <xref:System.Reflection.PropertyInfo> para descobrir informações como o nome, o tipo de dados, o tipo de declaração, o tipo refletido e o status somente leitura ou gravável de uma propriedade e para obter ou definir os valores da propriedade.  
+- Use <xref:System.Reflection.PropertyInfo> para descobrir informações como o nome, o tipo de dados, o tipo de declaração, o tipo refletido e o status somente leitura ou gravável de uma propriedade e para obter ou definir os valores da propriedade.  
   
--   Use <xref:System.Reflection.ParameterInfo> para descobrir informações como o nome do parâmetro, o tipo de dados, se um parâmetro é um parâmetro de entrada ou de saída e a posição do parâmetro em uma assinatura de método.  
+- Use <xref:System.Reflection.ParameterInfo> para descobrir informações como o nome do parâmetro, o tipo de dados, se um parâmetro é um parâmetro de entrada ou de saída e a posição do parâmetro em uma assinatura de método.  
   
--   Use <xref:System.Reflection.CustomAttributeData> para descobrir informações sobre atributos personalizados ao trabalhar no contexto de somente reflexão de um domínio do aplicativo. <xref:System.Reflection.CustomAttributeData> permite que você examine atributos sem criar instâncias deles.  
+- Use <xref:System.Reflection.CustomAttributeData> para descobrir informações sobre atributos personalizados ao trabalhar no contexto de somente reflexão de um domínio do aplicativo. <xref:System.Reflection.CustomAttributeData> permite que você examine atributos sem criar instâncias deles.  
   
  As classes do namespace <xref:System.Reflection.Emit> fornecem uma forma especializada de reflexão que permite criar tipos em tempo de execução.  
   

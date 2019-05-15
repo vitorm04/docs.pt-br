@@ -5,25 +5,25 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208576"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647882"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modificando nós, conteúdo e valores em documentos XML
 Existem várias maneiras de modificar os nós e o conteúdo de um documento. Você pode:  
   
--   Alterar o valor dos nós usando a propriedade <xref:System.Xml.XmlNode.Value%2A>.  
+- Alterar o valor dos nós usando a propriedade <xref:System.Xml.XmlNode.Value%2A>.  
   
--   Modificar um conjunto inteiro de nós substituindo os nós por novos nós. Isso é feito usando a propriedade <xref:System.Xml.XmlNode.InnerXml%2A>.  
+- Modificar um conjunto inteiro de nós substituindo os nós por novos nós. Isso é feito usando a propriedade <xref:System.Xml.XmlNode.InnerXml%2A>.  
   
--   Substituir nós existentes por novos nós usando o método <xref:System.Xml.XmlNode.RemoveChild%2A>.  
+- Substituir nós existentes por novos nós usando o método <xref:System.Xml.XmlNode.RemoveChild%2A>.  
   
--   Adicionar caracteres aos nós que herdam da classe <xref:System.Xml.XmlCharacterData> usando os métodos <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> ou <xref:System.Xml.XmlCharacterData.ReplaceData%2A>.  
+- Adicionar caracteres aos nós que herdam da classe <xref:System.Xml.XmlCharacterData> usando os métodos <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> ou <xref:System.Xml.XmlCharacterData.ReplaceData%2A>.  
   
--   Modificar o conteúdo removendo um intervalo de caracteres usando o método <xref:System.Xml.XmlCharacterData.DeleteData%2A> nos tipos de nós que herdam de <xref:System.Xml.XmlCharacterData>.  
+- Modificar o conteúdo removendo um intervalo de caracteres usando o método <xref:System.Xml.XmlCharacterData.DeleteData%2A> nos tipos de nós que herdam de <xref:System.Xml.XmlCharacterData>.  
   
  Uma técnica simples de alterar o valor de um nó é usar `node.Value = "new value";`. A tabela a seguir lista os tipos de nós utilizados por essa linha de código único e os dados exatos alterados por esse tipo de nó.  
   

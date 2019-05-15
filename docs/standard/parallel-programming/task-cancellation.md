@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84da3e1e896397b4e5dacec9d7dd0eeeed96d1c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7fefbfd33788ea84a8daf9dfbab452802ffd50d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690833"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650749"
 ---
 # <a name="task-cancellation"></a>Cancelamento da tarefa
 As classes <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> oferecem suporte ao cancelamento por meio do uso de tokens de cancelamento no .NET Framework. Para saber mais, confira [Cancelamento em threads gerenciados](../../../docs/standard/threading/cancellation-in-managed-threads.md). Nas classes de tarefas, o cancelamento envolve a cooperação entre o delegado do usuário, que representa uma operação cancelável, e o código que solicitou o cancelamento.  Um cancelamento bem-sucedido envolve o código de solicitação chamar o método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> e o delegado do usuário terminar a operação de forma breve. Você pode terminar a operação ao usar uma destas opções:  
   
--   Simplesmente ao sair do delegado. Em muitos cenários isso é suficiente. Entretanto, uma instância da tarefa que é cancelada desse modo faz a transição para o estado <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>, e não para o estado <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.  
+- Simplesmente ao sair do delegado. Em muitos cenários isso é suficiente. Entretanto, uma instância da tarefa que é cancelada desse modo faz a transição para o estado <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>, e não para o estado <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.  
   
--   Ao gerar um <xref:System.OperationCanceledException> e passar o token em que o cancelamento foi solicitado. O modo preferido de fazer isso é usar o método <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>. Uma tarefa que é cancelada desse modo faz a transição para o estado Cancelado, o qual o código de chamada pode usar para verificar se a tarefa respondeu a sua solicitação de cancelamento.  
+- Ao gerar um <xref:System.OperationCanceledException> e passar o token em que o cancelamento foi solicitado. O modo preferido de fazer isso é usar o método <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>. Uma tarefa que é cancelada desse modo faz a transição para o estado Cancelado, o qual o código de chamada pode usar para verificar se a tarefa respondeu a sua solicitação de cancelamento.  
   
  O exemplo a seguir mostra o padrão básico para o cancelamento da tarefa que gerou a exceção. Observe que o token é passado ao delegado do usuário e à instância da tarefa em si.  
   

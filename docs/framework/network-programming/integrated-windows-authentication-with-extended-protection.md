@@ -2,12 +2,12 @@
 title: Autenticação Integrada do Windows com proteção estendida
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 672737471c7c73e7ddd03d26d00d30cff3e23ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325716"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647405"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticação Integrada do Windows com proteção estendida
 Foram feitas melhorias que afetam a maneira como a autenticação integrada do Windows é controlada por <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> e por classes relacionadas no <xref:System.Net> e por namespaces relacionados. Foi adicionado suporte à proteção estendida a fim de aprimorar a segurança.  
@@ -39,21 +39,21 @@ Foram feitas melhorias que afetam a maneira como a autenticação integrada do W
   
  Informações de associação de serviço são uma indicação da intenção do cliente para autenticar para um ponto de extremidade de serviço específico. Elas são comunicadas de cliente para servidor com as seguintes propriedades:  
   
--   O valor de SPN deve estar disponível para o servidor que executa a autenticação de cliente em forma de texto não criptografado.  
+- O valor de SPN deve estar disponível para o servidor que executa a autenticação de cliente em forma de texto não criptografado.  
   
--   O valor do SPN é público.  
+- O valor do SPN é público.  
   
--   O SPN deve ser protegido criptograficamente em trânsito, de modo que um ataque man-in-the-middle não possa inserir, remover nem modificar seu valor.  
+- O SPN deve ser protegido criptograficamente em trânsito, de modo que um ataque man-in-the-middle não possa inserir, remover nem modificar seu valor.  
   
  Um CBT é uma propriedade de externa do canal de segurança (como TLS) usada para ligá-lo (associá-lo) a uma conversa em um canal interno autenticado pelo cliente. O CBT deve ter as seguintes propriedades (também definidas pela RFC 5056 da IETF):  
   
--   Quando um canal externo existe, o valor do CBT deve ser uma propriedade que identifica o canal externo ou o ponto de extremidade do servidor, no qual se chega independentemente por ambos o lado do cliente e o lado do servidor de uma conversa.  
+- Quando um canal externo existe, o valor do CBT deve ser uma propriedade que identifica o canal externo ou o ponto de extremidade do servidor, no qual se chega independentemente por ambos o lado do cliente e o lado do servidor de uma conversa.  
   
--   O valor do CBT enviado pelo cliente não deve ser algo que um invasor pode influenciar.  
+- O valor do CBT enviado pelo cliente não deve ser algo que um invasor pode influenciar.  
   
--   Não há garantias sobre sigilo do valor de CBT. Isso não significa no entanto que o valor da associação de serviço, bem como informações de associação de canal, sempre possam ser examinadas por qualquer outro que não o servidor que executa a autenticação, já que o protocolo portando o CBT pode estar criptografando-o.  
+- Não há garantias sobre sigilo do valor de CBT. Isso não significa no entanto que o valor da associação de serviço, bem como informações de associação de canal, sempre possam ser examinadas por qualquer outro que não o servidor que executa a autenticação, já que o protocolo portando o CBT pode estar criptografando-o.  
   
--   O CBT deve ter sua integridade protegida criptograficamente em trânsito, de modo que um invasor não possa inserir, remover nem modificar seu valor.  
+- O CBT deve ter sua integridade protegida criptograficamente em trânsito, de modo que um invasor não possa inserir, remover nem modificar seu valor.  
   
  A associação de canal é realizada pelo cliente transferindo o SPN e o CBT para o servidor de maneira inviolável. O servidor valida as informações de associação de canal de acordo com sua política e rejeita tentativas de autenticação cujo destino pretendido ele não acredita ter sido ele mesmo. Desse modo, os dois canais tornam-se criptograficamente associados juntos.  
   
@@ -72,37 +72,37 @@ Foram feitas melhorias que afetam a maneira como a autenticação integrada do W
   
  Um <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> que tem os seguintes elementos:  
   
--   Uma propriedade <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> que indica se o sistema operacional dá suporte à autenticação integrada do Windows com proteção estendida.  
+- Uma propriedade <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> que indica se o sistema operacional dá suporte à autenticação integrada do Windows com proteção estendida.  
   
--   Um valor <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> que indica quando a política de proteção estendida deve ser imposta.  
+- Um valor <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> que indica quando a política de proteção estendida deve ser imposta.  
   
--   Um valor <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> que indica o cenário de implantação. Isso influencia o modo como a proteção estendida é verificada.  
+- Um valor <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> que indica o cenário de implantação. Isso influencia o modo como a proteção estendida é verificada.  
   
--   Um <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> opcional que contém a lista de SPN personalizada que é usada para fazer a correspondência com o SPN fornecido pelo cliente como o destino pretendido da autenticação.  
+- Um <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> opcional que contém a lista de SPN personalizada que é usada para fazer a correspondência com o SPN fornecido pelo cliente como o destino pretendido da autenticação.  
   
--   Um <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> opcional que contém uma associação de canal personalizada a ser usada para validação. Esse cenário não é um caso comum  
+- Um <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> opcional que contém uma associação de canal personalizada a ser usada para validação. Esse cenário não é um caso comum  
   
  O namespace <xref:System.Security.Authentication.ExtendedProtection.Configuration> dá suporte à configuração da autenticação usando proteção estendida para aplicativos.  
   
  Um número de alterações de recursos foram feitas para dar suporte à proteção estendida no namespace <xref:System.Net> existente. Essas alterações incluem o seguinte:  
   
--   Uma nova classe <xref:System.Net.TransportContext> adicionada ao namespace <xref:System.Net> que representa um contexto de transporte.  
+- Uma nova classe <xref:System.Net.TransportContext> adicionada ao namespace <xref:System.Net> que representa um contexto de transporte.  
   
--   Novos métodos de sobrecarga <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> e <xref:System.Net.HttpWebRequest.GetRequestStream%2A> na classe <xref:System.Net.HttpWebRequest> que permitem recuperar o <xref:System.Net.TransportContext> para dar suporte à proteção estendida para aplicativos cliente.  
+- Novos métodos de sobrecarga <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> e <xref:System.Net.HttpWebRequest.GetRequestStream%2A> na classe <xref:System.Net.HttpWebRequest> que permitem recuperar o <xref:System.Net.TransportContext> para dar suporte à proteção estendida para aplicativos cliente.  
   
--   Adições para as classes <xref:System.Net.HttpListener> e <xref:System.Net.HttpListenerRequest> para dar suporte a aplicativos para servidores.  
+- Adições para as classes <xref:System.Net.HttpListener> e <xref:System.Net.HttpListenerRequest> para dar suporte a aplicativos para servidores.  
   
  Foi feita uma alteração de recurso para dar suporte à proteção estendida para aplicativos cliente SMTP existentes no namespace <xref:System.Net.Mail>:  
   
--   Uma propriedade <xref:System.Net.Mail.SmtpClient.TargetName%2A> na classe <xref:System.Net.Mail.SmtpClient> que representa o SPN a ser usado para autenticação ao usar proteção estendida para aplicativos cliente SMTP.  
+- Uma propriedade <xref:System.Net.Mail.SmtpClient.TargetName%2A> na classe <xref:System.Net.Mail.SmtpClient> que representa o SPN a ser usado para autenticação ao usar proteção estendida para aplicativos cliente SMTP.  
   
  Um número de alterações de recursos foram feitas para dar suporte à proteção estendida no namespace <xref:System.Net.Security> existente. Essas alterações incluem o seguinte:  
   
--   Novos métodos de sobrecarga <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> e <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> na classe <xref:System.Net.Security.NegotiateStream> que permitem passar um CBT para dar suporte à proteção estendida para aplicativos cliente.  
+- Novos métodos de sobrecarga <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> e <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> na classe <xref:System.Net.Security.NegotiateStream> que permitem passar um CBT para dar suporte à proteção estendida para aplicativos cliente.  
   
--   Novos métodos de sobrecarga <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> e <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> na classe <xref:System.Net.Security.NegotiateStream> que permitem passar um <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> para dar suporte à proteção estendida para aplicativos para servidores.  
+- Novos métodos de sobrecarga <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> e <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> na classe <xref:System.Net.Security.NegotiateStream> que permitem passar um <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> para dar suporte à proteção estendida para aplicativos para servidores.  
   
--   Uma nova propriedade <xref:System.Net.Security.SslStream.TransportContext%2A> na classe <xref:System.Net.Security.SslStream> para dar suporte à proteção estendida para aplicativos cliente e aplicativos para servidores.  
+- Uma nova propriedade <xref:System.Net.Security.SslStream.TransportContext%2A> na classe <xref:System.Net.Security.SslStream> para dar suporte à proteção estendida para aplicativos cliente e aplicativos para servidores.  
   
  Uma propriedade <xref:System.Net.Configuration.SmtpNetworkElement> foi adicionada para dar suporte à configuração da proteção estendida para clientes SMTP no namespace <xref:System.Net.Security>.  
   

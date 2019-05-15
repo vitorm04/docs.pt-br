@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 268d40e8d6eb5f5f2a82a5ce3a3346179c886c14
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d3e0740a472f74116712e737e49f86d4202dea5
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969018"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452797"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Como: usar o alias de namespace global (Guia de Programação em C#)
 A capacidade de acessar um membro no [namespace](../../../csharp/language-reference/keywords/namespace.md) global é útil quando o membro estiver oculto por outra entidade com o mesmo nome.  
@@ -50,6 +50,5 @@ A capacidade de acessar um membro no [namespace](../../../csharp/language-refere
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
-- [. ??](../../../csharp/language-reference/operators/member-access-operator.md)
 - [:: ??](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

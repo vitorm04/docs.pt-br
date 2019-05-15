@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654302"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628949"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modelo de programação assíncrona (APM)
 Uma operação assíncrona que utiliza o padrão de design <xref:System.IAsyncResult> é implementada como dois métodos chamados `BeginOperationName` e `EndOperationName` que começam e terminam a operação assíncrona *OperationName*, respectivamente. Por exemplo, a classe <xref:System.IO.FileStream> fornece os métodos <xref:System.IO.FileStream.BeginRead%2A> e <xref:System.IO.FileStream.EndRead%2A> para ler os bytes de um arquivo de forma assíncrona. Esses métodos implementam a versão assíncrona do método <xref:System.IO.FileStream.Read%2A>.  
@@ -55,15 +55,15 @@ Uma operação assíncrona que utiliza o padrão de design <xref:System.IAsyncRe
   
  Os desenvolvedores de aplicativos tem várias opções de design para acessar os resultados da operação assíncrona. A opção correta depende se o aplicativo tem instruções que podem ser executadas enquanto a operação é concluída. Se um aplicativo não puder executar trabalho adicional até que ele receba os resultados da operação assíncrona, o aplicativo deverá ser bloqueado até que os resultados estejam disponíveis. Para bloquear até que uma operação assíncrona seja concluída, você poderá usar uma das seguintes abordagens:  
   
--   Chamar `EndOperationName` do thread principal do aplicativo, bloqueando a execução do aplicativo até que a operação seja concluída. Veja um exemplo que ilustra essa técnica em [Bloqueando a execução de um aplicativo encerrando uma operação assíncrona](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+- Chamar `EndOperationName` do thread principal do aplicativo, bloqueando a execução do aplicativo até que a operação seja concluída. Veja um exemplo que ilustra essa técnica em [Bloqueando a execução de um aplicativo encerrando uma operação assíncrona](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
--   Use o <xref:System.IAsyncResult.AsyncWaitHandle%2A> para impedir a execução do aplicativo até que uma ou mais operações sejam concluídas. Veja um exemplo que ilustra essa técnica em [Bloqueando a execução de um aplicativo com um AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- Use o <xref:System.IAsyncResult.AsyncWaitHandle%2A> para impedir a execução do aplicativo até que uma ou mais operações sejam concluídas. Veja um exemplo que ilustra essa técnica em [Bloqueando a execução de um aplicativo com um AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
  Os aplicativos que não precisarem ser bloqueados enquanto a operação assíncrona é concluída podem usar uma das seguintes abordagens:  
   
--   Sondagem de status de conclusão da operação, verificando a propriedade <xref:System.IAsyncResult.IsCompleted%2A> periodicamente e chamando `EndOperationName` quando a operação for concluída. Veja um exemplo que ilustra essa técnica em [Sondagem do status de uma operação assíncrona](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+- Sondagem de status de conclusão da operação, verificando a propriedade <xref:System.IAsyncResult.IsCompleted%2A> periodicamente e chamando `EndOperationName` quando a operação for concluída. Veja um exemplo que ilustra essa técnica em [Sondagem do status de uma operação assíncrona](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
   
--   Use um delegado <xref:System.AsyncCallback> para especificar um método a ser invocado quando a operação for concluída. Veja um exemplo que ilustra essa técnica em [Usar um representante AsyncCallback para finalizar uma operação assíncrona](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+- Use um delegado <xref:System.AsyncCallback> para especificar um método a ser invocado quando a operação for concluída. Veja um exemplo que ilustra essa técnica em [Usar um representante AsyncCallback para finalizar uma operação assíncrona](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="see-also"></a>Consulte também
 

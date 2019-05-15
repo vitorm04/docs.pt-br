@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
-ms.openlocfilehash: e1f0c9d5ba428f5379f8025c0e733cdbeb5204e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66f7d0b51e51f6d550a42cca55b3194c2e273969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822850"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662721"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Como: Enviar cadeias de caracteres para portas seriais no Visual Basic
 Este tópico descreve como usar o `My.Computer.Ports` para enviar cadeias de caracteres para portas seriais do computador em Visual Basic.  
@@ -30,7 +30,7 @@ Este tópico descreve como usar o `My.Computer.Ports` para enviar cadeias de car
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Este exemplo pressupõe que o computador esteja usando a `COM1`.  
+- Este exemplo pressupõe que o computador esteja usando a `COM1`.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Este exemplo pressupõe que o computador esteja usando a `COM1`. Para obter mais flexibilidade, o código deve permitir que o usuário selecione a porta serial desejada na lista de portas disponíveis. Para obter mais informações, confira [Como: Mostrar portas seriais disponíveis](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  

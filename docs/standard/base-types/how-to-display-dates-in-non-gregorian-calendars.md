@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634008"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Como: exibir datas em calendários não gregorianos
 Os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> usam o calendário gregoriano como seu calendário padrão. Isso significa que chamar o método `ToString` de um valor de data e hora exibe a representação de cadeia de caracteres da data e hora no calendário gregoriano, mesmo que a data e hora tenha sido criada usando outro calendário. Isso é ilustrado no exemplo a seguir, que usa duas maneiras diferentes para criar um valor de data e hora com o calendário persa, mas ainda exibe esses valores de data e hora no calendário gregoriano quando chama o método <xref:System.DateTime.ToString%2A>. Este exemplo reflete duas técnicas comumente usadas, mas incorretas, para exibir a data em um calendário específico.  
@@ -51,19 +51,19 @@ Os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> usam o calendári
   
 3. Para cada elemento de data e hora que você deseja exibir, chame o método `Get` do objeto de calendário... método. Os métodos a seguir estão disponíveis:  
   
-    -   <xref:System.Globalization.Calendar.GetYear%2A>, para exibir o ano no calendário apropriado.  
+    - <xref:System.Globalization.Calendar.GetYear%2A>, para exibir o ano no calendário apropriado.  
   
-    -   <xref:System.Globalization.Calendar.GetMonth%2A>, para exibir o mês no calendário apropriado.  
+    - <xref:System.Globalization.Calendar.GetMonth%2A>, para exibir o mês no calendário apropriado.  
   
-    -   <xref:System.Globalization.Calendar.GetDayOfMonth%2A>, para exibir o número do dia do mês no calendário apropriado.  
+    - <xref:System.Globalization.Calendar.GetDayOfMonth%2A>, para exibir o número do dia do mês no calendário apropriado.  
   
-    -   <xref:System.Globalization.Calendar.GetHour%2A>, para exibir a hora do dia no calendário apropriado.  
+    - <xref:System.Globalization.Calendar.GetHour%2A>, para exibir a hora do dia no calendário apropriado.  
   
-    -   <xref:System.Globalization.Calendar.GetMinute%2A>, para exibir os minutos da hora no calendário apropriado.  
+    - <xref:System.Globalization.Calendar.GetMinute%2A>, para exibir os minutos da hora no calendário apropriado.  
   
-    -   <xref:System.Globalization.Calendar.GetSecond%2A>, para exibir os segundos do minuto no calendário apropriado.  
+    - <xref:System.Globalization.Calendar.GetSecond%2A>, para exibir os segundos do minuto no calendário apropriado.  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A>, para exibir os milissegundos do segundo no calendário apropriado.  
+    - <xref:System.Globalization.Calendar.GetMilliseconds%2A>, para exibir os milissegundos do segundo no calendário apropriado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo exibe uma data usando dois calendários diferentes. Ele exibe a data após definir o calendário islâmico como calendário padrão para a cultura ar-JO e exibe a data usando o calendário persa, que não tem suporte como calendário opcional pela cultura fa-IR.  
@@ -75,13 +75,13 @@ Os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> usam o calendári
   
  O exemplo define uma classe de utilitário de calendário reutilizável, `CalendarUtility`, para manipular muitos dos detalhes de gerar a representação de cadeia de caracteres de uma data usando um calendário específico. A classe `CalendarUtility` tem os seguintes membros:  
   
--   Um construtor parametrizado cujo único parâmetro é um objeto <xref:System.Globalization.Calendar> em que uma data deve ser representada. Ele é atribuído a um campo particular da classe.  
+- Um construtor parametrizado cujo único parâmetro é um objeto <xref:System.Globalization.Calendar> em que uma data deve ser representada. Ele é atribuído a um campo particular da classe.  
   
--   `CalendarExists`, um método particular que retorna um valor booliano que indica se o calendário representado pelo `CalendarUtility` objeto tem suporte do objeto <xref:System.Globalization.CultureInfo> passado para o método como um parâmetro. O método ajusta uma chamada para o método <xref:System.Array.Exists%2A?displayProperty=nameWithType> ao qual ele passa a matriz <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>.  
+- `CalendarExists`, um método particular que retorna um valor booliano que indica se o calendário representado pelo `CalendarUtility` objeto tem suporte do objeto <xref:System.Globalization.CultureInfo> passado para o método como um parâmetro. O método ajusta uma chamada para o método <xref:System.Array.Exists%2A?displayProperty=nameWithType> ao qual ele passa a matriz <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>.  
   
--   `HasSameName`, um método particular atribuído ao representante <xref:System.Predicate%601> que é transmitido como um parâmetro para o método <xref:System.Array.Exists%2A?displayProperty=nameWithType>. Cada membro da matriz é passado ao método até que o método retorne `true`. O método determina se o nome de um calendário opcional é o mesmo que o calendário representado pelo objeto `CalendarUtility`.  
+- `HasSameName`, um método particular atribuído ao representante <xref:System.Predicate%601> que é transmitido como um parâmetro para o método <xref:System.Array.Exists%2A?displayProperty=nameWithType>. Cada membro da matriz é passado ao método até que o método retorne `true`. O método determina se o nome de um calendário opcional é o mesmo que o calendário representado pelo objeto `CalendarUtility`.  
   
--   `DisplayDate`, um método público sobrecarregado a que são passados dois parâmetros: um valor de <xref:System.DateTime> ou <xref:System.DateTimeOffset> para expressar no calendário representado pelo objeto `CalendarUtility`; e a cultura cujas regras de formatação devem ser usadas. Seu comportamento ao retornar a representação de cadeia de caracteres de uma data depende de o calendário de destino ter suporte da cultura cujas regras de formatação devem ser usadas.  
+- `DisplayDate`, um método público sobrecarregado a que são passados dois parâmetros: um valor de <xref:System.DateTime> ou <xref:System.DateTimeOffset> para expressar no calendário representado pelo objeto `CalendarUtility`; e a cultura cujas regras de formatação devem ser usadas. Seu comportamento ao retornar a representação de cadeia de caracteres de uma data depende de o calendário de destino ter suporte da cultura cujas regras de formatação devem ser usadas.  
   
  Independentemente do calendário usado para criar um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> neste exemplo, o valor normalmente é expresso como uma data no calendário gregoriano. Isso ocorre porque os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> não preservam nenhuma informação de calendário. Internamente, eles são representados como o número de marcadores decorridos desde a meia-noite de 1º de janeiro de 0001. A interpretação desse número depende do calendário. Na maioria das culturas, o calendário padrão é o calendário gregoriano.  
   

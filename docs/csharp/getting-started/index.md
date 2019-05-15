@@ -8,16 +8,16 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668946"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062965"
 ---
 # <a name="get-started-with-c"></a>Introdução ao C\#
 
-Esta seção fornece breves tutoriais simples que permitem que você compile rapidamente um aplicativo usando C# e .NET Core. Há tópicos com introdução ao Visual Studio 2017 e ao Visual Studio Code. Esses artigos supõem experiência prévia em programação. Se você está dando os primeiros passos com o uso de programação, experimente nossos tutoriais interativos [Introdução ao C#](../tutorials/intro-to-csharp/index.md).
+Esta seção fornece breves tutoriais simples que permitem que você compile rapidamente um aplicativo usando C# e .NET Core. Há tópicos com introdução ao Visual Studio 2017 e ao Visual Studio Code. Esses artigos supõem experiência prévia em programação. Se você for iniciante em programação, experimente nossos tutoriais interativos de [Introdução ao C#](../tutorials/intro-to-csharp/index.md).
 
 Os seguintes tópicos estão disponíveis:
 

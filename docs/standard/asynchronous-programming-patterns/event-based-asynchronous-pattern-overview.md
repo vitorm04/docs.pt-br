@@ -16,25 +16,25 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 3f3c7e96f1c372bb05aba9bef81192aec47b3cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678285"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629006"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Visão geral do padrão assíncrono baseado em evento
 Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanecem responsivos para interação com o usuário, geralmente exigem um projeto que utilize vários threads. O namespace <xref:System.Threading> oferece todas as ferramentas necessárias para criar aplicativos commulti-thread de alto desempenho. No entanto, usar essas ferramentas de maneira eficaz requer um nível de experiência significativo com engenharia de software com multi-thread. Para aplicativos com multi-thread relativamente simples, o componente <xref:System.ComponentModel.BackgroundWorker> oferece uma solução direta. Para aplicativos assíncronos mais sofisticados, considere implementar uma classe que adere ao Padrão Assíncrono baseado em Evento.  
   
  O Padrão Assíncrono baseado em Evento oferece as vantagens de aplicativos com multi-threaded e, ao mesmo tempo, não apresenta muitos dos problemas complexos inerentes em projetos com multi-thread. Usar uma classe com suporte a esse padrão pode permitir que você:  
   
--   Realize tarefas que consomem tempo, como downloads e operações do banco de dados, "em segundo plano", sem interromper o aplicativo.  
+- Realize tarefas que consomem tempo, como downloads e operações do banco de dados, "em segundo plano", sem interromper o aplicativo.  
   
--   Execute várias operações simultaneamente, recebendo notificações quando cada uma delas for concluída.  
+- Execute várias operações simultaneamente, recebendo notificações quando cada uma delas for concluída.  
   
--   Esperar até que recursos sejam disponibilizados sem interromper seu aplicativo (deixá-lo em "espera").  
+- Esperar até que recursos sejam disponibilizados sem interromper seu aplicativo (deixá-lo em "espera").  
   
--   Comunicar-se com operações assíncronas pendentes usando o modelo familiar de eventos e representantes. Para saber mais sobre como usar manipuladores e representantes de eventos, confira [Eventos](../../../docs/standard/events/index.md).  
+- Comunicar-se com operações assíncronas pendentes usando o modelo familiar de eventos e representantes. Para saber mais sobre como usar manipuladores e representantes de eventos, confira [Eventos](../../../docs/standard/events/index.md).  
   
  Uma classe compatível com o Padrão Assíncrono baseado em Evento terá um ou mais métodos denominados _MethodName_**Async**. Esses métodos podem espelhar versões síncronas, que realizam a mesma operação no thread atual. A classe também pode ter um evento _MethodName_**Completed** e pode ter um método _MethodName_**AsyncCancel** (ou simplesmente **CancelAsync**).  
   

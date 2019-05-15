@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675145"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634743"
 ---
 # <a name="anchors-in-regular-expressions"></a>Âncoras em expressões regulares
 <a name="top"></a> Âncoras ou asserções atômicas de largura zero, especificam uma posição na cadeia de caracteres em que uma correspondência deve ocorrer. Quando você usa uma âncora na sua expressão de pesquisa, o mecanismo de expressões regulares não avança pela cadeia de caracteres ou consome caracteres, ele procura uma correspondência apenas na posição especificada. Por exemplo, `^` Especifica que a correspondência deve começar no início de uma linha ou cadeia de caracteres. Portanto, a expressão regular `^http:` corresponde a "http:" apenas quando ele ocorre no início de uma linha. A tabela a seguir lista as âncoras com suporte pelas expressões regulares no .NET.  
@@ -46,9 +46,9 @@ ms.locfileid: "54675145"
   
  O exemplo a seguir usa a âncora `^` em uma expressão regular que extrai informações sobre os anos durante os quais algumas equipes de profissionais de beisebol existiram. O exemplo chama duas sobrecargas do método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>:  
   
--   A chamada para a sobrecarga <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> localiza apenas a primeira subcadeia de caracteres na cadeia de caracteres de entrada que corresponde ao padrão de expressão regular.  
+- A chamada para a sobrecarga <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> localiza apenas a primeira subcadeia de caracteres na cadeia de caracteres de entrada que corresponde ao padrão de expressão regular.  
   
--   A chamada para a sobrecarga do <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> com o parâmetro `options` definido como <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> localiza todas as cinco subcadeias de caracteres.  
+- A chamada para a sobrecarga do <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> com o parâmetro `options` definido como <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> localiza todas as cinco subcadeias de caracteres.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  

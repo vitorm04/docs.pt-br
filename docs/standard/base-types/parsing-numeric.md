@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603603"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633329"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Análise de cadeias de caracteres numéricas no .NET
 Todos os tipos numéricos têm dois métodos de análise estáticos, `Parse` e `TryParse`, que podem ser usados para converter a representação de cadeia de caracteres de um número em um tipo numérico. Esses métodos permitem analisar cadeias de caracteres que foram produzidas usando as cadeias de caracteres de formato documentadas em [Cadeias de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md) e [Cadeias de caracteres de formato numérico personalizadas](../../../docs/standard/base-types/custom-numeric-format-strings.md). Por padrão, os métodos `Parse` e `TryParse` conseguem converter cadeias de caracteres que contêm dígitos decimais integrais somente em valores inteiros. Podem converter cadeias de caracteres que contêm dígitos decimais integrais e dígitos fracionários, separadores de grupo e um separador decimal em valores de ponto flutuante. O método `Parse` lança uma exceção se a operação falhar, enquanto o método `TryParse` retorna `false`.  
@@ -28,9 +28,9 @@ Todos os tipos numéricos têm dois métodos de análise estáticos, `Parse` e `
   
  Um provedor de formato é representado por uma implementação <xref:System.IFormatProvider>. Essa interface tem um único membro, o método <xref:System.IFormatProvider.GetFormat%2A>, cujo único parâmetro é um objeto <xref:System.Type> que representa o tipo a ser formatado. Esse método retorna um objeto que fornece informações de formatação. O .NET dá suporte às duas implementações <xref:System.IFormatProvider> a seguir para analisar cadeias de caracteres numéricas:  
   
--   Um objeto <xref:System.Globalization.CultureInfo> cujo método <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Globalization.NumberFormatInfo> que fornece informações de formatação específicas da cultura.  
+- Um objeto <xref:System.Globalization.CultureInfo> cujo método <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Globalization.NumberFormatInfo> que fornece informações de formatação específicas da cultura.  
   
--   Um objeto <xref:System.Globalization.NumberFormatInfo> cujo método <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> retorna a si mesmo.  
+- Um objeto <xref:System.Globalization.NumberFormatInfo> cujo método <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> retorna a si mesmo.  
   
  O exemplo a seguir tenta converter cada cadeia de caracteres em uma matriz em um valor <xref:System.Double>. Em primeiro lugar, tenta analisar a cadeia de caracteres usando um provedor de formato que reflete as convenções da cultura do inglês (Estados Unidos). Se essa operação lançar um <xref:System.FormatException>, tentará analisar a cadeia de caracteres usando um provedor de formato que reflita as convenções da cultura de francês (França).  
   
@@ -75,7 +75,7 @@ Todos os tipos numéricos têm dois métodos de análise estáticos, `Parse` e `
 |<xref:System.Globalization.NumberStyles.Any?displayProperty=nameWithType>|Inclui todos os estilos, exceto <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType>.|  
 |<xref:System.Globalization.NumberStyles.HexNumber?displayProperty=nameWithType>|Inclui os estilos <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> e <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType>.|  
   
-## <a name="parsing-and-unicode-digits"></a>Análise e dígitos Unicode  
+## <a name="parsing-and-unicode-digits"></a>Análise e Dígitos Unicode  
  O padrão Unicode define pontos de código para dígitos em diversos sistemas de escrita. Por exemplo, os pontos de código de U+0030 a U+0039 representam os dígitos latinos básicos 0 a 9; os pontos de código de U+09E6 a U+09EF representam os dígitos bengali de 0 a 9; e os pontos de código de U+FF10 a U+FF19 representam os dígitos de largura inteira 0 a 9. No entanto, os únicos dígitos numéricos reconhecidos pelos métodos de análise são os dígitos latinos básicos 0-9 com os pontos de código de U+0030 a U+0039. Se um método de análise numérica passar uma cadeia de caracteres que contenha outros dígitos, o método lançará um <xref:System.FormatException>.  
   
  O exemplo a seguir usa o método <xref:System.Int32.Parse%2A?displayProperty=nameWithType> para analisar cadeias de caracteres que consistem em dígitos em diferentes sistemas de escrita. Como mostra a saída do exemplo, a tentativa de analisar os dígitos latinos básicos é bem-sucedida, mas a tentativa de analisar os dígitos de largura inteira, indo-arábicos e bengali.  

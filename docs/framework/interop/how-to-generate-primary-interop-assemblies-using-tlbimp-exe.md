@@ -8,29 +8,29 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295491"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910763"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Como: Gerar assemblies de interoperabilidade primários usando Tlbimp.exe
 Há duas maneiras de gerar um assembly de interoperabilidade primário:  
   
--   Usando o [Importador de Biblioteca de Tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) fornecido pelo [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- Usando o [Importador de Biblioteca de Tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) fornecido pelo [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
      A maneira mais simples de gerar assemblies de interoperabilidade primários é usar o [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). O Tlbimp.exe fornece as seguintes garantias:  
   
-    -   Verifica se há outros assemblies de interoperabilidade primários registrados antes de criar novos assemblies de interoperabilidade para quaisquer referências aninhadas de biblioteca de tipos.  
+    - Verifica se há outros assemblies de interoperabilidade primários registrados antes de criar novos assemblies de interoperabilidade para quaisquer referências aninhadas de biblioteca de tipos.  
   
-    -   Falhará ao emitir o assembly de interoperabilidade primário se você não especificar o contêiner ou o nome de arquivo para dar um nome forte ao assembly de interoperabilidade primário.  
+    - Falhará ao emitir o assembly de interoperabilidade primário se você não especificar o contêiner ou o nome de arquivo para dar um nome forte ao assembly de interoperabilidade primário.  
   
-    -   Falhará ao emitir um assembly de interoperabilidade primário se você omitir referências a assemblies dependentes.  
+    - Falhará ao emitir um assembly de interoperabilidade primário se você omitir referências a assemblies dependentes.  
   
-    -   Falhará ao emitir um assembly de interoperabilidade primário se você adicionar referências a assemblies dependentes que não forem assemblies de interoperabilidade primários.  
+    - Falhará ao emitir um assembly de interoperabilidade primário se você adicionar referências a assemblies dependentes que não forem assemblies de interoperabilidade primários.  
   
--   Criando assemblies de interoperabilidade primários manualmente no código-fonte usando uma linguagem em conformidade com CLS (Common Language Specification), tal como C#. Essa abordagem é útil quando uma biblioteca de tipos não está disponível.  
+- Criando assemblies de interoperabilidade primários manualmente no código-fonte usando uma linguagem em conformidade com CLS (Common Language Specification), tal como C#. Essa abordagem é útil quando uma biblioteca de tipos não está disponível.  
   
  Você deve ter um par de chaves de criptografia para assinar o assembly com um nome forte. Para obter detalhes, consulte [Criando um par de chaves](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095094"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648602"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshaling de diversos tipos de matrizes
 Uma matriz é um tipo de referência em código gerenciado que contém um ou mais elementos do mesmo tipo. Embora as matrizes sejam tipos de referência, elas são passadas como parâmetros para funções não gerenciadas. Esse comportamento é inconsistente com a maneira que matrizes gerenciadas são passadas para objetos gerenciados, que é na forma de parâmetros de In/Out. Para obter detalhes adicionais, consulte [Copiando e fixando](copying-and-pinning.md).  
@@ -34,53 +34,53 @@ Uma matriz é um tipo de referência em código gerenciado que contém um ou mai
 ## <a name="example"></a>Exemplo  
  Este exemplo demonstra como passar os seguintes tipos de matrizes:  
   
--   Matriz de inteiros por valor.  
+- Matriz de inteiros por valor.  
   
--   Matriz de inteiros por referência, que pode ser redimensionada.  
+- Matriz de inteiros por referência, que pode ser redimensionada.  
   
--   Matriz multidimensional de inteiros por valor.  
+- Matriz multidimensional de inteiros por valor.  
   
--   Matriz de cadeias de caracteres por valor.  
+- Matriz de cadeias de caracteres por valor.  
   
--   Matriz de estruturas com inteiros.  
+- Matriz de estruturas com inteiros.  
   
--   Matriz de estruturas com cadeias de caracteres.  
+- Matriz de estruturas com cadeias de caracteres.  
   
  A menos que o marshaling de uma matriz seja realizado explicitamente por referência, o comportamento padrão realizará o marshaling da matriz como um parâmetro In. Você pode alterar esse comportamento ao aplicar os atributos <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> explicitamente.  
   
  A amostra de matrizes usa as seguintes funções não gerenciadas, mostradas com a sua declaração de função original:  
   
--   **TestArrayOfInts** exportado de PinvokeLib.dll.  
+- **TestArrayOfInts** exportado de PinvokeLib.dll.  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   **TestRefArrayOfInts** exportado de PinvokeLib.dll.  
+- **TestRefArrayOfInts** exportado de PinvokeLib.dll.  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   **TestMatrixOfInts** exportado de PinvokeLib.dll.  
+- **TestMatrixOfInts** exportado de PinvokeLib.dll.  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   **TestArrayOfStrings** exportado de PinvokeLib.dll.  
+- **TestArrayOfStrings** exportado de PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   **TestArrayOfStructs** exportado de PinvokeLib.dll.  
+- **TestArrayOfStructs** exportado de PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   **TestArrayOfStructs2** exportado de PinvokeLib.dll.  
+- **TestArrayOfStructs2** exportado de PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef107ae0dceb7ee937b21d65cba92cbcf6a9a96c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554238"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628993"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Como: Tratar exceções em uma consulta PLINQ
 O primeiro exemplo neste tópico mostra como tratar o <xref:System.AggregateException?displayProperty=nameWithType> que pode ser gerado de uma consulta PLINQ ao ser executado. O segundo exemplo mostra como colocar blocos try-catch em representantes, o mais próximo possível de onde a exceção será gerada. Dessa forma, você pode capturá-los assim que eles ocorrerem e, possivelmente, continuar a execução da consulta. Quando as exceções tiverem permissão de emergirem novamente para o thread de associação, então será possível que uma consulta continue a processar alguns itens após a geração da exceção.  
@@ -43,7 +43,7 @@ O primeiro exemplo neste tópico mostra como tratar o <xref:System.AggregateExce
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Para compilar e executar esses exemplos, copie-os para o Exemplo de Dados do PLINQ e chame o método do Principal.  
+- Para compilar e executar esses exemplos, copie-os para o Exemplo de Dados do PLINQ e chame o método do Principal.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Não captura uma exceção, a menos que você saiba como tratá-la para que o estado do programa não sejam corrompido.  

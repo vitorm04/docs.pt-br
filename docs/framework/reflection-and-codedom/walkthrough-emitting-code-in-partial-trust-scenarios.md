@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299469"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592449"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Passo a passo: Emitindo o código em cenários de confiança parcial
 A emissão de reflexão usa a mesma API definida na confiança total ou parcial, porém alguns recursos exigem permissões especiais em código parcialmente confiável. Além disso, a emissão de reflexão tem um recurso, os métodos dinâmicos hospedados anonimamente, que é projetado para ser usado com confiança parcial e por assemblies transparentes de segurança.  
@@ -31,14 +31,14 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
   
  Esta explicação passo a passo ilustra as seguintes tarefas:  
   
--   [Configurando uma área restrita simples para testar código parcialmente confiável](#Setting_up).  
+- [Configurando uma área restrita simples para testar código parcialmente confiável](#Setting_up).  
   
     > [!IMPORTANT]
     >  Essa é uma maneira simples de experimentar o código em confiança parcial. Para executar o código que, na verdade, é proveniente de locais não confiáveis, confira [Como: Executar o código parcialmente confiável em uma área restrita](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
--   [Executando código em domínios de aplicativo parcialmente confiável](#Running_code).  
+- [Executando código em domínios de aplicativo parcialmente confiável](#Running_code).  
   
--   [Usando métodos dinâmicos hospedados anonimamente para emitir e executar código em confiança parcial](#Using_methods).  
+- [Usando métodos dinâmicos hospedados anonimamente para emitir e executar código em confiança parcial](#Using_methods).  
   
  Para obter mais informações sobre como emitir código em cenários de confiança parcial, consulte [Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).  
   
@@ -48,9 +48,9 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
 ## <a name="setting-up-partially-trusted-locations"></a>Configurar locais parcialmente confiáveis  
  Os dois procedimentos a seguir mostram como configurar locais de onde você pode testar o código com confiança parcial.  
   
--   O primeiro procedimento mostra como criar um domínio do aplicativo em área restrita no qual o código recebe permissões da Internet.  
+- O primeiro procedimento mostra como criar um domínio do aplicativo em área restrita no qual o código recebe permissões da Internet.  
   
--   O segundo procedimento mostra como adicionar <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> para um domínio do aplicativo parcialmente confiável, a fim de habilitar o acesso aos dados particulares em assemblies de confiança iguais ou inferior.  
+- O segundo procedimento mostra como adicionar <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> para um domínio do aplicativo parcialmente confiável, a fim de habilitar o acesso aos dados particulares em assemblies de confiança iguais ou inferior.  
   
 ### <a name="creating-sandboxed-application-domains"></a>Criar domínios do aplicativo em área restrita  
  Para criar um domínio do aplicativo no qual seus assemblies são executados com confiança parcial, você deve especificar o conjunto de permissões a serem concedidas aos assemblies usando a sobrecarga de método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> para criar o domínio do aplicativo. A maneira mais fácil de especificar o conjunto de concessões é recuperar um conjunto de permissões nomeadas da política de segurança.  
@@ -155,7 +155,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
   
 #### <a name="to-use-anonymously-hosted-dynamic-methods"></a>Usar métodos dinâmicos hospedados anonimamente  
   
--   Crie um método dinâmico hospedado anonimamente usando um construtor que não especifica um tipo ou um módulo associado.  
+- Crie um método dinâmico hospedado anonimamente usando um construtor que não especifica um tipo ou um módulo associado.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#15)]
      [!code-vb[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#15)]  
@@ -164,7 +164,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
   
      Nenhuma permissão especial é necessária para emitir um método dinâmico, mas o código emitido requer as permissões exigidas por esses tipos e métodos que ele usa. Por exemplo, se o código emitido chama um método que acessa um arquivo, ele requer <xref:System.Security.Permissions.FileIOPermission>. Se o nível de confiança não inclui essa permissão, uma exceção de segurança é gerada quando o código emitido é executado. O código mostrado aqui emite um método dinâmico que usa apenas o método <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>. Portanto, o código pode ser executado em locais parcialmente confiáveis.  
   
--   Como alternativa, crie um método dinâmico hospedado anonimamente com capacidade restrita de ignorar as verificações de visibilidade JIT usando o construtor <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> e especificando `true` para o parâmetro `restrictedSkipVisibility`.  
+- Como alternativa, crie um método dinâmico hospedado anonimamente com capacidade restrita de ignorar as verificações de visibilidade JIT usando o construtor <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> e especificando `true` para o parâmetro `restrictedSkipVisibility`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
@@ -191,15 +191,15 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
   
  O exemplo usa um método auxiliar para criar um conjunto de concessões limitado a permissões `Internet` e, em seguida, cria um domínio do aplicativo, usando a sobrecarga do método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> para especificar que todo o código que é executado no domínio usa esse conjunto de concessões. O exemplo cria uma instância da classe `Worker` no domínio do aplicativo e executa o método `AccessPrivateMethod` duas vezes.  
   
--   Na primeira vez que o método `AccessPrivateMethod` é executado, as verificações de visibilidade JIT são impostas. O método dinâmico falhará quando for invocado, pois as verificações de visibilidade JIT o impedirão de acessar o método particular.  
+- Na primeira vez que o método `AccessPrivateMethod` é executado, as verificações de visibilidade JIT são impostas. O método dinâmico falhará quando for invocado, pois as verificações de visibilidade JIT o impedirão de acessar o método particular.  
   
--   Na segunda vez que o método `AccessPrivateMethod` é executado, as verificações de visibilidade JIT são ignoradas. O método dinâmico falha quando ele é compilado, porque o conjunto de concessões `Internet` não concede permissões suficientes para ignorar as verificações de visibilidade.  
+- Na segunda vez que o método `AccessPrivateMethod` é executado, as verificações de visibilidade JIT são ignoradas. O método dinâmico falha quando ele é compilado, porque o conjunto de concessões `Internet` não concede permissões suficientes para ignorar as verificações de visibilidade.  
   
  O exemplo adiciona <xref:System.Security.Permissions.ReflectionPermission> com <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ao conjunto de concessões. O exemplo a seguir cria um segundo domínio, especificando que todo o código que é executado no domínio recebe as permissões no novo conjunto de concessões. O exemplo cria uma instância da classe `Worker` no domínio do aplicativo e executa ambas as sobrecargas do método `AccessPrivateMethod`.  
   
--   A primeira sobrecarga do método `AccessPrivateMethod` é executada e as verificações de visibilidade JIT são ignoradas. O método dinâmico é compilado e executado com êxito, pois o assembly que emite o código é o mesmo que o assembly que contém o método particular. Portanto, os níveis de confiança são iguais. Se o aplicativo que contém a classe `Worker` tiver vários assemblies, o mesmo processo teria êxito para qualquer um desses assemblies, pois todos estão no mesmo nível de confiança.  
+- A primeira sobrecarga do método `AccessPrivateMethod` é executada e as verificações de visibilidade JIT são ignoradas. O método dinâmico é compilado e executado com êxito, pois o assembly que emite o código é o mesmo que o assembly que contém o método particular. Portanto, os níveis de confiança são iguais. Se o aplicativo que contém a classe `Worker` tiver vários assemblies, o mesmo processo teria êxito para qualquer um desses assemblies, pois todos estão no mesmo nível de confiança.  
   
--   A segunda sobrecarga do método `AccessPrivateMethod` é executada e as verificações de visibilidade JIT são ignoradas novamente. Dessa vez, o método dinâmico falha ao ser compilado, pois ele tenta acessar a propriedade `internal` `FirstChar` da classe <xref:System.String>. O assembly que contém a classe <xref:System.String> é totalmente confiável. Portanto, ele está em um nível mais alto que o assembly que emite o código.  
+- A segunda sobrecarga do método `AccessPrivateMethod` é executada e as verificações de visibilidade JIT são ignoradas novamente. Dessa vez, o método dinâmico falha ao ser compilado, pois ele tenta acessar a propriedade `internal` `FirstChar` da classe <xref:System.String>. O assembly que contém a classe <xref:System.String> é totalmente confiável. Portanto, ele está em um nível mais alto que o assembly que emite o código.  
   
  Essa comparação mostra como <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> habilita código parcialmente confiável para ignorar as verificações de visibilidade para outros códigos parcialmente confiáveis sem comprometer a segurança do código confiável.  
   
@@ -209,7 +209,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Se você compilar esse exemplo de código no Visual Studio, deverá alterar o nome da classe para incluir o namespace ao passá-lo para o método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Por padrão, o namespace é o nome do projeto. Por exemplo, se o projeto for “PartialTrust”, o nome de classe deverá ser “PartialTrust.Worker”.  
+- Se você compilar esse exemplo de código no Visual Studio, deverá alterar o nome da classe para incluir o namespace ao passá-lo para o método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Por padrão, o namespace é o nome do projeto. Por exemplo, se o projeto for “PartialTrust”, o nome de classe deverá ser “PartialTrust.Worker”.  
   
 ## <a name="see-also"></a>Consulte também
 

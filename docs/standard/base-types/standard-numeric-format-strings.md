@@ -18,20 +18,20 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979951"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664648"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 
 As cadeias de caracteres de formato numérico padrão são usadas para formatar tipos numéricos comuns. Uma cadeia de caracteres de formato numérico padrão assume o formato `Axx`, em que:  
   
--   `A` é um caractere alfabético único chamado *especificador de formato*. Qualquer cadeia de caracteres de formato numérico que contém mais de um caractere alfabético, incluindo espaços em branco, é interpretada como uma cadeia de caracteres de formato numérico personalizado. Para obter mais informações, consulte [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- `A` é um caractere alfabético único chamado *especificador de formato*. Qualquer cadeia de caracteres de formato numérico que contém mais de um caractere alfabético, incluindo espaços em branco, é interpretada como uma cadeia de caracteres de formato numérico personalizado. Para obter mais informações, consulte [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx` é um inteiro opcional chamado *especificador de precisão*. O especificador de precisão varia de 0 a 99 e afeta o número de dígitos no resultado. Observe que o especificador de precisão controla o número de dígitos na representação da cadeia de caracteres de um número. Ele não arredonda o número em si. Para executar uma operação de arredondamento, use o método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
+- `xx` é um inteiro opcional chamado *especificador de precisão*. O especificador de precisão varia de 0 a 99 e afeta o número de dígitos no resultado. Observe que o especificador de precisão controla o número de dígitos na representação da cadeia de caracteres de um número. Ele não arredonda o número em si. Para executar uma operação de arredondamento, use o método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
     Quando o *especificador de precisão* controla o número de dígitos fracionários na cadeia de caracteres de resultado, ela reflete um número que será arredondado para um resultado representável mais próximo do resultado infinitamente preciso. Se houver dois resultados representáveis igualmente próximos:
     - **No .NET Framework e .NET Core até o .NET Core 2.0**, o tempo de execução selecionará o resultado com o dígito menos significativo maior (ou seja, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
@@ -73,13 +73,13 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
 
 Uma cadeia de caracteres de formato numérico padrão pode ser usada para definir a formatação de um valor numérico em uma de duas formas:  
   
--   Ela pode ser passada para uma sobrecarga do método `ToString` que tem um parâmetro `format`. O exemplo a seguir formata um valor numérico como uma cadeia de caracteres de moeda na cultura atual (nesse caso, a cultura en-US).  
+- Ela pode ser passada para uma sobrecarga do método `ToString` que tem um parâmetro `format`. O exemplo a seguir formata um valor numérico como uma cadeia de caracteres de moeda na cultura atual (nesse caso, a cultura en-US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Ele pode ser fornecido como o argumento `formatString` em um item de formato usado com métodos como <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Para obter mais informações, veja [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md). O exemplo a seguir usa um item de formato para inserir um valor de moeda em uma cadeia de caracteres.  
+- Ele pode ser fornecido como o argumento `formatString` em um item de formato usado com métodos como <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Para obter mais informações, veja [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md). O exemplo a seguir usa um item de formato para inserir um valor de moeda em uma cadeia de caracteres.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ Uma cadeia de caracteres de formato numérico padrão pode ser usada para defini
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   Ele pode ser fornecido como o argumento `formatString` em um item de expressão interpolada de uma cadeia de caracteres interpolada. Para obter mais informações, consulte o tópico [Interpolação de cadeia de caracteres](../../csharp/language-reference/tokens/interpolated.md) na referência do C# ou o tópico [Cadeias de caracteres interpoladas](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) na referência do Visual Basic.  
+- Ele pode ser fornecido como o argumento `formatString` em um item de expressão interpolada de uma cadeia de caracteres interpolada. Para obter mais informações, consulte o tópico [Interpolação de cadeia de caracteres](../../csharp/language-reference/tokens/interpolated.md) na referência do C# ou o tópico [Cadeias de caracteres interpoladas](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) na referência do Visual Basic.  
   
  As seções a seguir fornecem informações detalhadas sobre cada uma das cadeias de caracteres de formato numérico padrão.  
   

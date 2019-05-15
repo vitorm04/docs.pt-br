@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 57934742e378df9bf77938e8c6b3b49cb25e6ecf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313366"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647752"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independência da linguagem e componentes independentes da linguagem
 O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor, você pode desenvolver em uma das muitas linguagens que segmentam o .NET Framework, como C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL e Windows PowerShell. É possível acessar os tipos e os membros das bibliotecas de classes desenvolvidas para o .NET Framework sem que seja necessário conhecer a linguagem em que foram originalmente gravados e sem precisar seguir as convenções da linguagem original. Se você for um desenvolvedor de componentes, o componente poderá ser acessado por qualquer aplicativo do .NET Framework, independentemente da linguagem.  
@@ -34,41 +34,41 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  Neste artigo:  
   
--   [Regras de conformidade da CLS](#Rules)  
+- [Regras de conformidade da CLS](#Rules)  
   
-    -   [Tipos e assinaturas de membro de tipo](#Types)  
+    - [Tipos e assinaturas de membro de tipo](#Types)  
   
-    -   [Convenções de nomenclatura](#naming)  
+    - [Convenções de nomenclatura](#naming)  
   
-    -   [Conversão de tipos](#conversion)  
+    - [Conversão de tipos](#conversion)  
   
-    -   [Matrizes](#arrays)  
+    - [Matrizes](#arrays)  
   
-    -   [Interfaces](#Interfaces)  
+    - [Interfaces](#Interfaces)  
   
-    -   [Enumerações](#enums)  
+    - [Enumerações](#enums)  
   
-    -   [Membros de tipo em geral](#members)  
+    - [Membros de tipo em geral](#members)  
   
-    -   [Acessibilidade de membro](#MemberAccess)  
+    - [Acessibilidade de membro](#MemberAccess)  
   
-    -   [Tipos e membros genéricos](#Generics)  
+    - [Tipos e membros genéricos](#Generics)  
   
-    -   [Construtores](#ctors)  
+    - [Construtores](#ctors)  
   
-    -   [Propriedades](#properties)  
+    - [Propriedades](#properties)  
   
-    -   [Eventos](#events)  
+    - [Eventos](#events)  
   
-    -   [Sobrecargas](#overloads)  
+    - [Sobrecargas](#overloads)  
   
-    -   [Exceções](#exceptions)  
+    - [Exceções](#exceptions)  
   
-    -   [Atributos](#attributes)  
+    - [Atributos](#attributes)  
   
--   [O atributo CLSCompliantAttribute](#CLSAttribute)  
+- [O atributo CLSCompliantAttribute](#CLSAttribute)  
   
--   [Interoperabilidade em qualquer idioma](#CrossLang)  
+- [Interoperabilidade em qualquer idioma](#CrossLang)  
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>Regras de conformidade com CLS  
@@ -94,11 +94,11 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  A interface pública de uma biblioteca consiste no seguinte:  
   
--   Definições de classes públicas.  
+- Definições de classes públicas.  
   
--   Definições dos membros públicos de classes públicas e definições de membros acessíveis para classes derivadas (ou seja, membros protegidos).  
+- Definições dos membros públicos de classes públicas e definições de membros acessíveis para classes derivadas (ou seja, membros protegidos).  
   
--   Parâmetros e tipos de retorno de métodos públicos de classes públicas e parâmetros e tipos de retorno de métodos acessíveis para classes derivadas.  
+- Parâmetros e tipos de retorno de métodos públicos de classes públicas e parâmetros e tipos de retorno de métodos acessíveis para classes derivadas.  
   
  As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras foi retirado palavra por palavra do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.  
   
@@ -163,9 +163,9 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  Todos os tipos exibidos em assinaturas de membro, incluindo um tipo de retorno de método ou um tipo de propriedade, devem ser compatíveis com CLS. Além disso, para tipos genéricos:  
   
--   Todos os tipos que compõe um tipo genérico instanciado devem ser compatíveis com CLS.  
+- Todos os tipos que compõe um tipo genérico instanciado devem ser compatíveis com CLS.  
   
--   Todos os tipos usados como restrições em parâmetros genéricos devem ser compatíveis com CLS.  
+- Todos os tipos usados como restrições em parâmetros genéricos devem ser compatíveis com CLS.  
   
  O [Common Type System](../../docs/standard/base-types/common-type-system.md) do .NET Framework inclui vários tipos internos que têm suporte direto do Common Language Runtime e são codificados especialmente nos metadados de um assembly. Desses tipos intrínsecos, os tipos listados na tabela a seguir são compatíveis com CLS.  
   
@@ -196,11 +196,11 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  A biblioteca de classes .NET Framework ou qualquer outra biblioteca de classes pode incluir outros tipos que não sejam compatíveis com CLS; por exemplo:  
   
--   Tipos de valor demarcado. O exemplo do C# a seguir cria uma classe que tem uma propriedade pública do tipo `int*` chamada `Value`. Como um `int*` é um tipo de valor demarcado, o compilador o sinaliza como incompatível com CLS.  
+- Tipos de valor demarcado. O exemplo do C# a seguir cria uma classe que tem uma propriedade pública do tipo `int*` chamada `Value`. Como um `int*` é um tipo de valor demarcado, o compilador o sinaliza como incompatível com CLS.  
   
      [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]  
   
--   Referências de tipo, que são constructos especiais que contêm referência a um objeto e referência a um tipo. As referências tipadas são representadas no .NET Framework pela classe <xref:System.TypedReference>.  
+- Referências de tipo, que são constructos especiais que contêm referência a um objeto e referência a um tipo. As referências tipadas são representadas no .NET Framework pela classe <xref:System.TypedReference>.  
   
  Se um tipo não for compatível com CLS, você deverá aplicar o atributo <xref:System.CLSCompliantAttribute> com um valor `isCompliant` de `false` a ele. Para obter mais informações, consulte a seção [O atributo CLSCompliantAttribute](#CLSAttribute).  
   
@@ -228,9 +228,9 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  Identificadores de linguagem de programação, como nomes de namespaces, tipos e membros, devem estar de acordo com o [Padrão Unicode 3.0, Relatório Técnico 15, Anexo 7](https://www.unicode.org/reports/tr15/tr15-18.html). Isso significa que:  
   
--   O primeiro caractere de um identificador pode ser qualquer letra maiúscula Unicode, letra minúscula, letra maiúscula do título, letra modificadora, outra letra ou o número da letra. Para obter informações sobre categorias de caracteres Unicode, consulte a enumeração <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>.  
+- O primeiro caractere de um identificador pode ser qualquer letra maiúscula Unicode, letra minúscula, letra maiúscula do título, letra modificadora, outra letra ou o número da letra. Para obter informações sobre categorias de caracteres Unicode, consulte a enumeração <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>.  
   
--   Os caracteres subsequentes podem ser de qualquer uma das categorias, como o primeiro caractere e também podem incluir marcas sem espaçamento, marcas que combinam espaçamento, números decimais, pontuações de conector e códigos de formatação.  
+- Os caracteres subsequentes podem ser de qualquer uma das categorias, como o primeiro caractere e também podem incluir marcas sem espaçamento, marcas que combinam espaçamento, números decimais, pontuações de conector e códigos de formatação.  
   
  Antes de comparar identificadores, você deve filtrar códigos de formatação e converter os identificadores em Formulário C de Normalização de Unicode, porque um caractere único pode ser representado por várias unidades de código codificadas em UTF-16. As sequências de caracteres que produzem as mesmas unidades de código no Formulário C de Normalização de Unicode não são compatíveis com CLS. O exemplo a seguir define uma propriedade chamada `Å`, que consiste no caractere SÍMBOLO DE ANGSTROM (U+212B) e uma segunda propriedade chamada `Å`, que consiste no caractere LETRA LATINA MAIÚSCULA A COM ANEL SUPERIOR (U+00C5). Os compiladores do C# e do Visual Basic sinalizam o código-fonte como incompatível com CLS.  
   
@@ -239,9 +239,9 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  Os nomes de membro em um escopo específico (como os namespaces em um assembly, os tipos em um namespace ou os membros em um tipo) devem ser exclusivos, exceto os nomes resolvidos por meio de sobrecarga. Esse requisito é mais rígido do que o do Common Type System, que permite que vários membros em um escopo tenham nomes idênticos desde que sejam tipos diferentes de membros (por exemplo, um é um método e outro é um campo). Em particular, para membros de tipo:  
   
--   Campos e tipos aninhados são diferenciados apenas por nome.  
+- Campos e tipos aninhados são diferenciados apenas por nome.  
   
--   Métodos, propriedades e eventos que tenham o mesmo nome devem ser diferentes além apenas do tipo de retorno.  
+- Métodos, propriedades e eventos que tenham o mesmo nome devem ser diferentes além apenas do tipo de retorno.  
   
  O exemplo a seguir ilustra o requisito de que nomes de membros devem ser exclusivos dentro de seu escopo. Ele define uma classe chamada `Converter` que inclui quatro membros chamados `Conversion`. Três são métodos e um é uma propriedade. O método que inclui um parâmetro <xref:System.Int64> tem um nome exclusivo, mas os dois métodos com um parâmetro <xref:System.Int32> não têm, porque o valor retornado não é considerado parte da assinatura de um membro. A propriedade `Conversion` também viola esse requisito porque as propriedades não podem ter o mesmo nome dos métodos sobrecarregados.  
   
@@ -260,9 +260,9 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 ### <a name="type-conversion"></a>Conversão de tipos  
  A Common Language Specification define dois operadores de conversão:  
   
--   `op_Implicit`, que é usado para conversões de ampliação que não resultam em perda de dados ou precisão. Por exemplo, a estrutura <xref:System.Decimal> inclui um operador `op_Implicit` sobrecarregado para converter valores de tipos integrais e valores <xref:System.Char> em valores <xref:System.Decimal>.  
+- `op_Implicit`, que é usado para conversões de ampliação que não resultam em perda de dados ou precisão. Por exemplo, a estrutura <xref:System.Decimal> inclui um operador `op_Implicit` sobrecarregado para converter valores de tipos integrais e valores <xref:System.Char> em valores <xref:System.Decimal>.  
   
--   `op_Explicit`, que é usado para conversões de redução que possam resultar em perda de magnitude (um valor é convertido em um valor com um intervalo menor) ou precisão. Por exemplo, a estrutura <xref:System.Decimal> inclui um operador `op_Explicit` sobrecarregado para converter <xref:System.Double> e valores <xref:System.Single> em <xref:System.Decimal> e para converter valores <xref:System.Decimal> em valores inteiros, o <xref:System.Double>, <xref:System.Single> e <xref:System.Char>.  
+- `op_Explicit`, que é usado para conversões de redução que possam resultar em perda de magnitude (um valor é convertido em um valor com um intervalo menor) ou precisão. Por exemplo, a estrutura <xref:System.Decimal> inclui um operador `op_Explicit` sobrecarregado para converter <xref:System.Double> e valores <xref:System.Single> em <xref:System.Decimal> e para converter valores <xref:System.Decimal> em valores inteiros, o <xref:System.Double>, <xref:System.Single> e <xref:System.Char>.  
   
  No entanto, nem todas as linguagens dão suporte à sobrecarga de operador ou à definição de operadores personalizados. Se optar por implementar esses operadores de conversão, você também deverá fornecer uma maneira alternativa para realizar a conversão. Recomendamos que você forneça os métodos `From`*Xxx* e `To`*Xxx*.  
   
@@ -275,17 +275,17 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 ### <a name="arrays"></a>Matrizes  
  As matrizes compatíveis com CLS estão em conformidade com as seguintes regras:  
   
--   Todas as dimensões de uma matriz devem ter um limite inferior igual a zero. O exemplo a seguir cria uma matriz não compatível com CLS com um limite inferior de um. Independentemente da presença do atributo <xref:System.CLSCompliantAttribute>, o compilador não detecta se a matriz retornada pelo método `Numbers.GetTenPrimes` não é compatível com CLS.  
+- Todas as dimensões de uma matriz devem ter um limite inferior igual a zero. O exemplo a seguir cria uma matriz não compatível com CLS com um limite inferior de um. Independentemente da presença do atributo <xref:System.CLSCompliantAttribute>, o compilador não detecta se a matriz retornada pelo método `Numbers.GetTenPrimes` não é compatível com CLS.  
   
      [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
      [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
   
--   Todos os elementos de matriz devem consistir em tipos compatíveis com CLS. O exemplo a seguir define dois métodos que retornam matrizes não compatíveis com CLS. O primeiro retorna uma matriz de valores <xref:System.UInt32>. O segundo retorna uma matriz <xref:System.Object> que inclui valores <xref:System.Int32> e <xref:System.UInt32>. Embora o compilador identifique a primeira matriz como não compatível devido ao seu tipo <xref:System.UInt32>, ele não reconhece que a segunda matriz inclui elementos não compatíveis com CLS.  
+- Todos os elementos de matriz devem consistir em tipos compatíveis com CLS. O exemplo a seguir define dois métodos que retornam matrizes não compatíveis com CLS. O primeiro retorna uma matriz de valores <xref:System.UInt32>. O segundo retorna uma matriz <xref:System.Object> que inclui valores <xref:System.Int32> e <xref:System.UInt32>. Embora o compilador identifique a primeira matriz como não compatível devido ao seu tipo <xref:System.UInt32>, ele não reconhece que a segunda matriz inclui elementos não compatíveis com CLS.  
   
      [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
      [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
   
--   A resolução de sobrecarga para métodos que tenham parâmetros de matriz se baseia no fato de que são matrizes e em seu tipo de elemento. Por esse motivo, a seguinte definição de um método `GetSquares` sobrecarregado é compatível com CLS.  
+- A resolução de sobrecarga para métodos que tenham parâmetros de matriz se baseia no fato de que são matrizes e em seu tipo de elemento. Por esse motivo, a seguinte definição de um método `GetSquares` sobrecarregado é compatível com CLS.  
   
      [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
      [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
@@ -294,11 +294,11 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 ### <a name="interfaces"></a>Interfaces  
  Interfaces compatíveis com CLS podem definir propriedades, eventos e métodos virtuais (métodos sem implementação). Uma interface compatível com CLS não pode ter nenhum dos seguintes itens:  
   
--   Métodos estáticos ou campos estáticos. Os compiladores do C# e do Visual Basic gerarão erros de compilador se você definir um membro estático em uma interface.  
+- Métodos estáticos ou campos estáticos. Os compiladores do C# e do Visual Basic gerarão erros de compilador se você definir um membro estático em uma interface.  
   
--   Campos. Os compiladores do C# e do Visual Basic gerarão erros de compilador se você definir um campo em uma interface.  
+- Campos. Os compiladores do C# e do Visual Basic gerarão erros de compilador se você definir um campo em uma interface.  
   
--   Métodos que não são compatíveis com CLS. Por exemplo, a definição a seguir da interface inclui um método, `INumber.GetUnsigned`, que está marcado como não compatível com CLS. Este exemplo gera um aviso do compilador.  
+- Métodos que não são compatíveis com CLS. Por exemplo, a definição a seguir da interface inclui um método, `INumber.GetUnsigned`, que está marcado como não compatível com CLS. Este exemplo gera um aviso do compilador.  
   
      [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
      [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
@@ -314,24 +314,24 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 ### <a name="enumerations"></a>Enumerações  
  Enumerações compatíveis com CLS devem seguir estas regras:  
   
--   O tipo subjacente da enumeração deve ser um inteiro intrínseco compatível com CLS (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> ou <xref:System.Int64>). Por exemplo, o código a seguir tenta definir uma enumeração cujo tipo subjacente é <xref:System.UInt32> e gera um aviso do compilador.  
+- O tipo subjacente da enumeração deve ser um inteiro intrínseco compatível com CLS (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> ou <xref:System.Int64>). Por exemplo, o código a seguir tenta definir uma enumeração cujo tipo subjacente é <xref:System.UInt32> e gera um aviso do compilador.  
   
      [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
      [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
   
--   Um tipo de enumeração deve ter um campo de instância única chamado `Value__` que foi marcado com o atributo <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType>. Isso permite que você referencie o valor do campo implicitamente.  
+- Um tipo de enumeração deve ter um campo de instância única chamado `Value__` que foi marcado com o atributo <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType>. Isso permite que você referencie o valor do campo implicitamente.  
   
--   Uma enumeração inclui campos estáticos literais, cujos tipos correspondem ao tipo da própria enumeração. Por exemplo, se você definir uma enumeração `State` com valores de `State.On` e `State.Off`, `State.On` e `State.Off` serão campos literais estáticos cujo tipo será `State`.  
+- Uma enumeração inclui campos estáticos literais, cujos tipos correspondem ao tipo da própria enumeração. Por exemplo, se você definir uma enumeração `State` com valores de `State.On` e `State.Off`, `State.On` e `State.Off` serão campos literais estáticos cujo tipo será `State`.  
   
--   Há dois tipos de enumeração:  
+- Há dois tipos de enumeração:  
   
-    -   Uma enumeração que representa um conjunto de valores mutuamente excludentes, valores inteiros nomeados. Esse tipo de enumeração é indicado pela ausência do atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
+    - Uma enumeração que representa um conjunto de valores mutuamente excludentes, valores inteiros nomeados. Esse tipo de enumeração é indicado pela ausência do atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
   
-    -   Uma enumeração que representa um conjunto de sinalizadores de bit que podem ser combinados para produzir um valor sem nome. Esse tipo de enumeração é indicado pela presença do atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
+    - Uma enumeração que representa um conjunto de sinalizadores de bit que podem ser combinados para produzir um valor sem nome. Esse tipo de enumeração é indicado pela presença do atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
   
      Para obter mais informações, consulte a documentação da estrutura <xref:System.Enum>.  
   
--   O valor de uma enumeração não está limitado ao intervalo de seus valores especificados. Em outras palavras, o intervalo de valores em uma enumeração é o intervalo de seu valor subjacente. Você pode usar o método <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para determinar se um valor especificado é membro de uma enumeração.  
+- O valor de uma enumeração não está limitado ao intervalo de seus valores especificados. Em outras palavras, o intervalo de valores em uma enumeração é o intervalo de seu valor subjacente. Você pode usar o método <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para determinar se um valor especificado é membro de uma enumeração.  
   
 <a name="members"></a>   
 ### <a name="type-members-in-general"></a>Membros de tipo em geral  
@@ -390,34 +390,34 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 ### <a name="constructors"></a>Construtores  
  Os construtores em classes compatíveis com CLS e em estruturas devem seguir estas regras:  
   
--   Um construtor de uma classe derivada deve chamar o construtor de instância de sua classe base antes de acessar quaisquer dados de instância herdados. Esse requisito deve-se ao fato de que construtores de classe base não são herdados por suas classes derivadas. Essa regra não se aplica a estruturas que não dão suporte a herança direta.  
+- Um construtor de uma classe derivada deve chamar o construtor de instância de sua classe base antes de acessar quaisquer dados de instância herdados. Esse requisito deve-se ao fato de que construtores de classe base não são herdados por suas classes derivadas. Essa regra não se aplica a estruturas que não dão suporte a herança direta.  
   
      Normalmente, os compiladores aplicam essa regra independentemente da conformidade com CLS, conforme mostrado no exemplo a seguir. Ele cria uma classe `Doctor` que é derivada de uma classe `Person`, mas a classe `Doctor` falha ao chamar o construtor de classe `Person` para inicializar campos herdados da instância.  
   
      [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
      [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
   
--   Um construtor de objeto não pode ser chamado, exceto para criar um objeto. Além disso, um objeto não pode ser inicializado duas vezes. Por exemplo, isso significa que <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> e métodos de desserialização como <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> não devem chamar construtores.  
+- Um construtor de objeto não pode ser chamado, exceto para criar um objeto. Além disso, um objeto não pode ser inicializado duas vezes. Por exemplo, isso significa que <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> e métodos de desserialização como <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> não devem chamar construtores.  
   
 <a name="properties"></a>   
 ### <a name="properties"></a>Propriedades  
  As propriedades em tipos compatíveis com CLS devem seguir estas regras:  
   
--   Uma propriedade deve ter um setter, um getter ou ambos. Em um assembly, eles são implementados como métodos especiais, o que significa que aparecerão como métodos separados (o getter é chamado de `get_`*propertyname* e o setter é `set_`*propertyname*) marcado como `SpecialName` nos metadados do assembly. Os compiladores do C# e do Visual Basic aplicam automaticamente essa regra, sem a necessidade de aplicar o atributo <xref:System.CLSCompliantAttribute>.  
+- Uma propriedade deve ter um setter, um getter ou ambos. Em um assembly, eles são implementados como métodos especiais, o que significa que aparecerão como métodos separados (o getter é chamado de `get_`*propertyname* e o setter é `set_`*propertyname*) marcado como `SpecialName` nos metadados do assembly. Os compiladores do C# e do Visual Basic aplicam automaticamente essa regra, sem a necessidade de aplicar o atributo <xref:System.CLSCompliantAttribute>.  
   
--   Um tipo de propriedade é o tipo de retorno do getter da propriedade e o último argumento do setter. Esses tipos devem ser compatíveis com CLS e os argumentos não podem ser atribuídos à propriedade por referência (ou seja, não podem ser ponteiros gerenciados).  
+- Um tipo de propriedade é o tipo de retorno do getter da propriedade e o último argumento do setter. Esses tipos devem ser compatíveis com CLS e os argumentos não podem ser atribuídos à propriedade por referência (ou seja, não podem ser ponteiros gerenciados).  
   
--   Se uma propriedade tiver um getter e um setter, ambos deverão ser virtuais, estáticos ou instâncias. Os compiladores do C# e do Visual Basic aplicam automaticamente essa regra por meio de sua sintaxe de definição da propriedade.  
+- Se uma propriedade tiver um getter e um setter, ambos deverão ser virtuais, estáticos ou instâncias. Os compiladores do C# e do Visual Basic aplicam automaticamente essa regra por meio de sua sintaxe de definição da propriedade.  
   
 <a name="events"></a>   
 ### <a name="events"></a>Eventos  
  Um evento é definido por seu nome e tipo. O tipo de evento é um delegado que é usado para indicar o evento. Por exemplo, o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é do tipo <xref:System.ResolveEventHandler>. Além do evento em si, três métodos com nomes com base no nome do evento fornecem a implementação do evento e estão marcados como `SpecialName` nos metadados do assembly:  
   
--   Um método para adicionar um manipulador de eventos, chamado `add_`*EventName*. Por exemplo, o método de assinatura do evento para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é chamado `add_AssemblyResolve`.  
+- Um método para adicionar um manipulador de eventos, chamado `add_`*EventName*. Por exemplo, o método de assinatura do evento para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é chamado `add_AssemblyResolve`.  
   
--   Um método para remover um manipulador de eventos, chamado `remove_`*EventName*. Por exemplo, o método de remoção para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é chamado `remove_AssemblyResolve`.  
+- Um método para remover um manipulador de eventos, chamado `remove_`*EventName*. Por exemplo, o método de remoção para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é chamado `remove_AssemblyResolve`.  
   
--   Um método para indicar que o evento ocorreu, chamado `raise_`*EventName*.  
+- Um método para indicar que o evento ocorreu, chamado `raise_`*EventName*.  
   
 > [!NOTE]
 >  A maioria das regras da Common Language Specification em relação a eventos é implementada por compiladores de linguagem e é transparente para desenvolvedores de componente.  
@@ -433,11 +433,11 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 ### <a name="overloads"></a>Sobrecargas  
  A Common Language Specification impõe os seguintes requisitos em membros sobrecarregados:  
   
--   Os membros podem ser sobrecarregados com base no número de parâmetros e no tipo de qualquer parâmetro. A convenção de chamada, o tipo de retorno, os modificadores personalizados aplicados ao método ou seus parâmetros e se os parâmetros são passados por valor ou por referência não são considerados na diferenciação entre sobrecargas. Para obter um exemplo, consulte o código para o requisito de que os nomes devem ser exclusivos em um escopo na seção [Convenções de nomenclatura](#naming).  
+- Os membros podem ser sobrecarregados com base no número de parâmetros e no tipo de qualquer parâmetro. A convenção de chamada, o tipo de retorno, os modificadores personalizados aplicados ao método ou seus parâmetros e se os parâmetros são passados por valor ou por referência não são considerados na diferenciação entre sobrecargas. Para obter um exemplo, consulte o código para o requisito de que os nomes devem ser exclusivos em um escopo na seção [Convenções de nomenclatura](#naming).  
   
--   Somente propriedades e métodos podem ser sobrecarregados. Campos e eventos não podem ser sobrecarregados.  
+- Somente propriedades e métodos podem ser sobrecarregados. Campos e eventos não podem ser sobrecarregados.  
   
--   Métodos genéricos podem ser sobrecarregados com base no número de seus parâmetros genéricos.  
+- Métodos genéricos podem ser sobrecarregados com base no número de seus parâmetros genéricos.  
   
 > [!NOTE]
 >  Os operadores `op_Explicit` e `op_Implicit` são exceções à regra de que o valor retornado não é considerado parte de uma assinatura de método para resolução de sobrecarga. Esses dois operadores podem ser sobrecarregados com base nos parâmetros e valor retornado.  
@@ -465,27 +465,27 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  O construtor ou as propriedades de um atributo compatível com CLS podem expor somente os seguintes tipos:  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.Byte>  
+- <xref:System.Byte>  
   
--   <xref:System.Char>  
+- <xref:System.Char>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Int16>  
+- <xref:System.Int16>  
   
--   <xref:System.Int32>  
+- <xref:System.Int32>  
   
--   <xref:System.Int64>  
+- <xref:System.Int64>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Type>  
+- <xref:System.Type>  
   
--   Qualquer tipo de enumeração cujo tipo subjacente seja <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> ou <xref:System.Int64>.  
+- Qualquer tipo de enumeração cujo tipo subjacente seja <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> ou <xref:System.Int64>.  
   
  O exemplo a seguir define uma classe `DescriptionAttribute` que é derivada de <xref:System.Attribute>. O construtor de classe tem um parâmetro do tipo `Descriptor`, portanto a classe não é compatível com CLS. Observe que o compilador do C# emite um aviso, mas compila com êxito, enquanto o compilador do Visual Basic nem emite um aviso ou um erro.  
   
@@ -500,9 +500,9 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  Os desenvolvedores de componentes podem usar o atributo <xref:System.CLSCompliantAttribute> de duas maneiras:  
   
--   Para definir as partes da interface pública exposta por um componente que são compatíveis com CLS e as partes que não são compatíveis com CLS. Quando o atributo é usado para marcar elementos de programa específicos como compatíveis com CLS, seu uso garante que os elementos sejam acessíveis em todas as linguagens e ferramentas direcionadas ao .NET Framework.  
+- Para definir as partes da interface pública exposta por um componente que são compatíveis com CLS e as partes que não são compatíveis com CLS. Quando o atributo é usado para marcar elementos de programa específicos como compatíveis com CLS, seu uso garante que os elementos sejam acessíveis em todas as linguagens e ferramentas direcionadas ao .NET Framework.  
   
--   Para garantir que a interface pública da biblioteca de componentes exponha apenas elementos de programa que são compatíveis com CLS. Se os elementos não forem compatíveis com CLS, os compiladores geralmente emitirão um aviso.  
+- Para garantir que a interface pública da biblioteca de componentes exponha apenas elementos de programa que são compatíveis com CLS. Se os elementos não forem compatíveis com CLS, os compiladores geralmente emitirão um aviso.  
   
 > [!WARNING]
 >  Em alguns casos, os compiladores de linguagem aplicam as regras de compatibilidade com CLS independentemente do uso ou não do atributo <xref:System.CLSCompliantAttribute>. Por exemplo, definir um membro estático em uma interface viola uma regra CLS. Neste sentido, se você definir um membro `static` (no C#) ou `Shared` (no Visual Basic) em uma interface, os compiladores do C# e do Visual Basic exibirão uma mensagem de erro e não compilarão o aplicativo.  

@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970565"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664619"
 ---
 # <a name="net-class-library-overview"></a>Visão geral da biblioteca de classes do .NET
 
@@ -52,17 +52,17 @@ As implementações do .NET incluem classes, interfaces, delegados e tipos de va
   
  Os tipos do .NET são a base na qual os aplicativos, os componentes e os controles do .NET são criados. As implementações do .NET incluem tipos que realizam as seguintes funções:  
   
--   Representam tipos de dados base e exceções.  
+- Representam tipos de dados base e exceções.  
   
--   Encapsulam estruturas de dados.  
+- Encapsulam estruturas de dados.  
   
--   Executam E/S.  
+- Executam E/S.  
   
--   Acessam informações sobre tipos carregados.  
+- Acessam informações sobre tipos carregados.  
   
--   Invocam verificações de segurança do .NET Framework.  
+- Invocam verificações de segurança do .NET Framework.  
   
--   Fornecem acesso a dados, uma GUI detalhada do lado do cliente e uma GUI do lado do cliente controlada pelo servidor.  
+- Fornecem acesso a dados, uma GUI detalhada do lado do cliente e uma GUI do lado do cliente controlada pelo servidor.  
   
  O .NET fornece um conjunto avançado de interfaces, bem como classes abstratas e concretas (não abstratas). Você pode usar as classes concretas como estão ou, em muitos casos, pode derivar suas próprias classes a partir delas. Para usar a funcionalidade de uma interface, você pode criar uma classe que implementa a interface ou derivar uma classe de uma das classes do .NET que implementa a interface.  
   

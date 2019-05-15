@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 51291fbc9ad2927bc3b9649074a6dbf374aaf7f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176534"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648448"
 ---
 # <a name="mitigation-path-normalization"></a>Mitigação: Normalização de caminho
 Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a normalização do caminho no .NET Framework foi alterada.  
@@ -17,26 +17,26 @@ Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../inclu
 ## <a name="what-is-path-normalization"></a>O que é normalização do caminho?  
  Normalizar um caminho envolve modificar a cadeia de caracteres que identifica um caminho ou arquivo para que ele esteja em conformidade com um caminho válido no sistema operacional de destino. Normalmente, a normalização envolve:  
   
--   Padronização de separadores de diretório e componente.  
+- Padronização de separadores de diretório e componente.  
   
--   Aplicação do diretório atual a um caminho relativo.  
+- Aplicação do diretório atual a um caminho relativo.  
   
--   Avaliação do diretório relativo (`.`) ou do diretório pai (`..`) em um caminho.  
+- Avaliação do diretório relativo (`.`) ou do diretório pai (`..`) em um caminho.  
   
--   Remoção de determinados caracteres.  
+- Remoção de determinados caracteres.  
   
 ## <a name="the-changes"></a>As alterações  
  Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a normalização do caminho foi alterada nos seguintes aspectos:  
   
--   O tempo de execução atende à função [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) do sistema operacional para normalizar caminhos.  
+- O tempo de execução atende à função [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) do sistema operacional para normalizar caminhos.  
   
--   A normalização não envolve mais a remoção do fim dos segmentos do diretório (como um espaço no fim do nome de um diretório).  
+- A normalização não envolve mais a remoção do fim dos segmentos do diretório (como um espaço no fim do nome de um diretório).  
   
--   Suporte à sintaxe do caminho do dispositivo em confiança total, incluindo `\\.\` e, para APIs de E/S de arquivo em mscorlib.dll, `\\?\`.  
+- Suporte à sintaxe do caminho do dispositivo em confiança total, incluindo `\\.\` e, para APIs de E/S de arquivo em mscorlib.dll, `\\?\`.  
   
--   O tempo de execução não valida caminhos de sintaxe do dispositivo.  
+- O tempo de execução não valida caminhos de sintaxe do dispositivo.  
   
--   Há suporte ao uso da sintaxe de dispositivo para acessar fluxos de dados alternados.  
+- Há suporte ao uso da sintaxe de dispositivo para acessar fluxos de dados alternados.  
   
 ## <a name="impact"></a>Impacto  
  Para os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou posteriores, essas alterações estão ativadas por padrão. Elas devem melhorar o desempenho e ao mesmo tempo permitir que os métodos acessem caminhos anteriormente inacessíveis.  

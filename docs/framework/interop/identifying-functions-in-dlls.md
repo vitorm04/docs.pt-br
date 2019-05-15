@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132005"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648668"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identificando funções em DLLs
 A identidade de uma função de DLL consiste dos seguintes elementos:  
   
--   Ordinal ou nome da função  
+- Ordinal ou nome da função  
   
--   Nome do arquivo DLL em que a implementação pode ser encontrada  
+- Nome do arquivo DLL em que a implementação pode ser encontrada  
   
  Por exemplo, especificar a função **MessageBox** na User32.dll identifica a função (**MessageBox**) e sua localização (User32.dll, User32 ou user32). A interface de programação de aplicativo (API do Windows) do Microsoft Windows pode conter duas versões de cada função que manipula caracteres e cadeias de caracteres: uma versão ANSI do caractere de 1 byte e uma versão Unicode do caractere de 2 bytes. Quando não especificado, o conjunto de caracteres, representado pelo campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>, torna-se ANSI por padrão. Algumas funções podem ter mais de duas versões.  
   

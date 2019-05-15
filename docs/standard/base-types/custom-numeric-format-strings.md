@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133331"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634517"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
 
 Você pode criar uma cadeia de caracteres de formato numérico personalizado, que consiste em um ou mais especificadores numéricos personalizados, para definir a formatação de dados numéricos. Uma cadeia de caracteres de formato numérico personalizado é qualquer cadeia de caracteres que é não uma [cadeia de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
-  
 
  As cadeias de caracteres de formato numérico personalizado têm suporte de algumas sobrecargas do método `ToString` de todos os tipos numéricos. Por exemplo, você pode fornecer uma cadeia de caracteres de formato numérico para os métodos <xref:System.Int32.ToString%28System.String%29> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> do tipo <xref:System.Int32>. Cadeias de caracteres de formato numérico personalizado também têm suporte no [recurso de formatação composta](../../../docs/standard/base-types/composite-formatting.md) do .NET Framework, o qual é usado por alguns métodos `Write` e `WriteLine` das classes <xref:System.Console> e <xref:System.IO.StreamWriter>, o método <xref:System.String.Format%2A?displayProperty=nameWithType> e o método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. O recurso de [Interpolação de cadeia de caracteres](../../csharp/language-reference/tokens/interpolated.md) também é compatível com cadeias de caracteres de formato numérico personalizado.  
   
@@ -109,11 +108,11 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
 ## <a name="the--custom-specifier"></a>Especificador personalizado ","  
  O caractere "," funciona tanto como um separador de grupo quanto como um especificador de escala do número.  
   
--   Separador de grupo: Se uma ou mais vírgulas forem especificadas entre dois espaços reservados de dígito (0 ou #) que formatam os dígitos integrais de um número, um caractere separador de grupo será inserido entre cada grupo de números na parte integral da saída.  
+- Separador de grupo: Se uma ou mais vírgulas forem especificadas entre dois espaços reservados de dígito (0 ou #) que formatam os dígitos integrais de um número, um caractere separador de grupo será inserido entre cada grupo de números na parte integral da saída.  
   
      As propriedades <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> e <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> do objeto <xref:System.Globalization.NumberFormatInfo> atual determinam o caractere usado como separador de número de grupo e o tamanho de cada grupo de números. Por exemplo, se a cadeia de caracteres "#,#" e a cultura invariável forem usadas para formatar o número 1000, a saída será "1.000".  
   
--   Especificador de escala numérica: Se uma ou mais vírgulas forem especificadas imediatamente à esquerda do ponto decimal explícito ou implícito, o número a ser formatado será dividido por 1.000 para cada vírgula. Por exemplo, se a cadeia de caracteres "0,," for usada para formatar o número 100 milhões, a saída será "100".  
+- Especificador de escala numérica: Se uma ou mais vírgulas forem especificadas imediatamente à esquerda do ponto decimal explícito ou implícito, o número a ser formatado será dividido por 1.000 para cada vírgula. Por exemplo, se a cadeia de caracteres "0,," for usada para formatar o número 100 milhões, a saída será "100".  
   
  Você pode usar os especificadores de separador de grupo e escala numérica na mesma cadeia de caracteres de formato. Por exemplo, se a cadeia de caracteres "#, 0,," e a cultura invariante forem usadas para formatar o número um bilhão, a saída será "1.000".  
   

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 224e4f3db31e4818833eb8411f44f547538534fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517247"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647908"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Dados XML de inserção usando XPathNavigator
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para irmão, o filho, e nós de atributo de inserção em um documento XML. Para usar esses métodos, o objeto <xref:System.Xml.XPath.XPathNavigator> deve ser editável, ou seja, sua propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve ser `true`.  
@@ -29,13 +29,13 @@ A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métod
 ### <a name="inserting-sibling-nodes"></a>Inserindo nós irmãos  
  A classe de <xref:System.Xml.XPath.XPathNavigator> fornece os seguintes métodos para nós irmãos de inserção.  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
  Esses nós irmãos de inserção dos métodos antes e após o nó um objeto de <xref:System.Xml.XPath.XPathNavigator> é posicionado atualmente.  
   
@@ -58,13 +58,13 @@ A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métod
 ### <a name="inserting-child-nodes"></a>Inserindo nós filho  
  A classe de <xref:System.Xml.XPath.XPathNavigator> fornece os seguintes métodos para nós filho de inserção.  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
  Esses métodos append preceda e nós filho ao final de e a lista de nós filho do nó um objeto de <xref:System.Xml.XPath.XPathNavigator> é posicionado atualmente.  
   
@@ -87,9 +87,9 @@ A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métod
 ### <a name="inserting-attribute-nodes"></a>Inserindo nós de atributo  
  A classe de <xref:System.Xml.XPath.XPathNavigator> fornece os seguintes métodos para nós de atributo de inserção.  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
  Esses nós de atributo de inserção dos métodos no nó do elemento um objeto de <xref:System.Xml.XPath.XPathNavigator> são posicionados atualmente. O método de <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> cria um nó de atributo no nó do elemento de <xref:System.Xml.XPath.XPathNavigator> um objeto é posicionado atualmente em usar o prefixo do namespace, o nome local, o URI de namespace, e o valor especificado como parâmetros. O método de <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> retorna um objeto de <xref:System.Xml.XmlWriter> usado para nós de atributo de inserção.  
   
@@ -227,26 +227,26 @@ navigator.SetTypedValue(DateTime.Now);
   
  Estes são os conflitos possíveis de namespace.  
   
--   Se houver um em- escopo de namespace no contexto de objeto de <xref:System.Xml.XmlReader> , onde o prefixo para mapear URI de namespace não está no contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , uma nova declaração de namespace é adicionada ao nó recentemente inserido.  
+- Se houver um em- escopo de namespace no contexto de objeto de <xref:System.Xml.XmlReader> , onde o prefixo para mapear URI de namespace não está no contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , uma nova declaração de namespace é adicionada ao nó recentemente inserido.  
   
--   Se o mesmo URI de namespace é em- escopo dentro do contexto de objeto de <xref:System.Xml.XmlReader> e o contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , mas tem um prefixo diferente mapeado a ele em ambos os contextos, uma nova declaração de namespace é adicionada ao nó recentemente inserido, com o prefixo e o URI de namespace tirado de <xref:System.Xml.XmlReader> objetos.  
+- Se o mesmo URI de namespace é em- escopo dentro do contexto de objeto de <xref:System.Xml.XmlReader> e o contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , mas tem um prefixo diferente mapeado a ele em ambos os contextos, uma nova declaração de namespace é adicionada ao nó recentemente inserido, com o prefixo e o URI de namespace tirado de <xref:System.Xml.XmlReader> objetos.  
   
--   Se o mesmo prefixo de namespace é em- escopo dentro do contexto de objeto de <xref:System.Xml.XmlReader> e o contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , mas tem URI diferente de um namespace mapeado a ele em ambos os contextos, uma nova declaração de namespace é adicionada ao nó recentemente inserido que a declara que um URI com o prefixo do namespace extraído do objeto de <xref:System.Xml.XmlReader> .  
+- Se o mesmo prefixo de namespace é em- escopo dentro do contexto de objeto de <xref:System.Xml.XmlReader> e o contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , mas tem URI diferente de um namespace mapeado a ele em ambos os contextos, uma nova declaração de namespace é adicionada ao nó recentemente inserido que a declara que um URI com o prefixo do namespace extraído do objeto de <xref:System.Xml.XmlReader> .  
   
--   Se o prefixo bem como o URI de namespace no contexto de objeto de <xref:System.Xml.XmlReader> e no contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> são o mesmo, nenhuma nova declaração de namespace é adicionada ao nó recentemente inserido.  
+- Se o prefixo bem como o URI de namespace no contexto de objeto de <xref:System.Xml.XmlReader> e no contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> são o mesmo, nenhuma nova declaração de namespace é adicionada ao nó recentemente inserido.  
   
 > [!NOTE]
 >  A descrição anterior também se aplica às declarações namespace com `string` vazia como um prefixo (por exemplo, a declaração de namespace padrão).  
   
  Estes são os conflitos possíveis de `xml:lang` .  
   
--   Se houver um em- escopo de atributo de `xml:lang` dentro do contexto de objeto de <xref:System.Xml.XmlReader> mas não no contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , um atributo de `xml:lang` cujo valor é extraído do objeto de <xref:System.Xml.XmlReader> é adicionado ao nó recentemente inserido.  
+- Se houver um em- escopo de atributo de `xml:lang` dentro do contexto de objeto de <xref:System.Xml.XmlReader> mas não no contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , um atributo de `xml:lang` cujo valor é extraído do objeto de <xref:System.Xml.XmlReader> é adicionado ao nó recentemente inserido.  
   
--   Se houver um em- escopo de atributo de `xml:lang` dentro do contexto de objeto de <xref:System.Xml.XmlReader> e o contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , mas cada um possui um valor diferente, um atributo de `xml:lang` cujo valor é extraído do objeto de <xref:System.Xml.XmlReader> é adicionado ao nó recentemente inserido.  
+- Se houver um em- escopo de atributo de `xml:lang` dentro do contexto de objeto de <xref:System.Xml.XmlReader> e o contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , mas cada um possui um valor diferente, um atributo de `xml:lang` cujo valor é extraído do objeto de <xref:System.Xml.XmlReader> é adicionado ao nó recentemente inserido.  
   
--   Se houver um em- escopo de atributo de `xml:lang` dentro do contexto de objeto de <xref:System.Xml.XmlReader> e o contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , mas cada um com o mesmo valor, nenhum novo atributo de `xml:lang` é adicionado no nó recentemente inserido.  
+- Se houver um em- escopo de atributo de `xml:lang` dentro do contexto de objeto de <xref:System.Xml.XmlReader> e o contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , mas cada um com o mesmo valor, nenhum novo atributo de `xml:lang` é adicionado no nó recentemente inserido.  
   
--   Se houver um em- escopo de atributo de `xml:lang` dentro do contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , mas nenhum que existem no contexto de objeto de <xref:System.Xml.XmlReader> , nenhum atributo de `xml:lang` é adicionado ao nó recentemente inserido.  
+- Se houver um em- escopo de atributo de `xml:lang` dentro do contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> , mas nenhum que existem no contexto de objeto de <xref:System.Xml.XmlReader> , nenhum atributo de `xml:lang` é adicionado ao nó recentemente inserido.  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>Inserindo nós com XmlWriter  
  Os métodos usados para inserir o irmão, o filho e os nós de atributo “inserindo descritos na seção de nós e valores são sobrecarregados.” <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> e métodos de <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> retornam um objeto de <xref:System.Xml.XmlWriter> usado para nós de inserção.  
@@ -271,11 +271,11 @@ navigator.SetTypedValue(DateTime.Now);
   
  Os seguintes são notas importantes a considerar ao usar vários <xref:System.Xml.XmlWriter> objeto.  
   
--   Os fragmentos XML escritos por objetos de <xref:System.Xml.XmlWriter> são adicionados ao documento XML quando o método de <xref:System.Xml.XmlWriter.Close%2A> de cada objeto de <xref:System.Xml.XmlWriter> é chamado. Até esse ponto, o objeto de <xref:System.Xml.XmlWriter> estiver escrevendo um fragmento desconectados. Se uma operação é executada no documento XML, quaisquer informações que estão sendo gravados por um objeto de <xref:System.Xml.XmlWriter> , antes que <xref:System.Xml.XmlWriter.Close%2A> é chamado, não são afetados.  
+- Os fragmentos XML escritos por objetos de <xref:System.Xml.XmlWriter> são adicionados ao documento XML quando o método de <xref:System.Xml.XmlWriter.Close%2A> de cada objeto de <xref:System.Xml.XmlWriter> é chamado. Até esse ponto, o objeto de <xref:System.Xml.XmlWriter> estiver escrevendo um fragmento desconectados. Se uma operação é executada no documento XML, quaisquer informações que estão sendo gravados por um objeto de <xref:System.Xml.XmlWriter> , antes que <xref:System.Xml.XmlWriter.Close%2A> é chamado, não são afetados.  
   
--   Se houver um objeto de abertura de <xref:System.Xml.XmlWriter> em uma subárvore específico XML e a subárvore é excluída, o objeto de <xref:System.Xml.XmlWriter> ainda pode adicionar à subárvore. A subárvore transformações somente um fragmento excluído.  
+- Se houver um objeto de abertura de <xref:System.Xml.XmlWriter> em uma subárvore específico XML e a subárvore é excluída, o objeto de <xref:System.Xml.XmlWriter> ainda pode adicionar à subárvore. A subárvore transformações somente um fragmento excluído.  
   
--   Se vários objetos de <xref:System.Xml.XmlWriter> são abertos no mesmo ponto no documento XML, são adicionados ao documento XML na ordem em que os objetos de <xref:System.Xml.XmlWriter> são fechados, não na ordem em que foram abertos.  
+- Se vários objetos de <xref:System.Xml.XmlWriter> são abertos no mesmo ponto no documento XML, são adicionados ao documento XML na ordem em que os objetos de <xref:System.Xml.XmlWriter> são fechados, não na ordem em que foram abertos.  
   
  O seguinte exemplo cria um objeto de <xref:System.Xml.XmlDocument> , cria um objeto de <xref:System.Xml.XPath.XPathNavigator> em seguida, usa o objeto de <xref:System.Xml.XmlWriter> retornado pelo método de <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> para criar a estrutura do primeiro livro no arquivo de `books.xml` . O exemplo salvá-los em como o arquivo de `book.xml` .  
   

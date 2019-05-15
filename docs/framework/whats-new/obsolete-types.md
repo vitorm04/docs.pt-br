@@ -8,67 +8,67 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 304c2ed354c2b3bfe6333550810dde6c779f2e21
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114683"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663438"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos no .NET Framework
 <a name="introduction"></a>As tabelas deste artigo listam os tipos que estão obsoletos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizados por assembly. Use os links a seguir para ver uma lista dos tipos obsoletos e das alternativas recomendadas em cada assembly. Como esses tipos são obsoletos, todos seus membros também estão obsoletos. Para obter uma lista de membros obsoletos adicionais na biblioteca de classes .NET Framework, confira [Membros obsoletos](obsolete-members.md).
 
--   [Tipos obsoletos em assemblies de sistema](#obsolete_types_in_system_assemblies)
+- [Tipos obsoletos em assemblies de sistema](#obsolete_types_in_system_assemblies)
 
-    -   [mscorlib.dll](#mscorlib)
+    - [mscorlib.dll](#mscorlib)
 
-    -   [System.Core.dll](#Core)
+    - [System.Core.dll](#Core)
 
-    -   [System.Data.dll](#data)
+    - [System.Data.dll](#data)
 
-    -   [System.Data.OracleClient.dll](#oracleclient)
+    - [System.Data.OracleClient.dll](#oracleclient)
 
-    -   [System.Design.dll](#design)
+    - [System.Design.dll](#design)
 
-    -   [System.dll](#system)
+    - [System.dll](#system)
 
-    -   [System.EnterpriseServices.dll](#enterpriseservices)
+    - [System.EnterpriseServices.dll](#enterpriseservices)
 
-    -   [System.Net.dll](#net)
+    - [System.Net.dll](#net)
 
-    -   [System.ServiceModel.dll](#servicemodel)
+    - [System.ServiceModel.dll](#servicemodel)
 
-    -   [System.Web.dll](#web)
+    - [System.Web.dll](#web)
 
-    -   [System.Web.Mobile.dll](#mobile)
+    - [System.Web.Mobile.dll](#mobile)
 
-    -   [System.Workflow.Activities.dll](#workflow_activities)
+    - [System.Workflow.Activities.dll](#workflow_activities)
 
-    -   [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
+    - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
 
-    -   [System.Workflow.Runtime.dll](#workflow_runtime)
+    - [System.Workflow.Runtime.dll](#workflow_runtime)
 
-    -   [System.WorkflowServices.dll](#workflowservices)
+    - [System.WorkflowServices.dll](#workflowservices)
 
-    -   [System.Xaml.dll](#xaml)
+    - [System.Xaml.dll](#xaml)
 
-    -   [System.Xml.dll](#xml)
+    - [System.Xml.dll](#xml)
 
-    -   [WindowsBase.dll](#WindowsBase)
+    - [WindowsBase.dll](#WindowsBase)
 
--   [Tipos obsoletos em assemblies Microsoft](#obsolete_types_in_microsoft_assemblies)
+- [Tipos obsoletos em assemblies Microsoft](#obsolete_types_in_microsoft_assemblies)
 
-    -   [IEHost.dll e IEExec.exe](#IEHost)
+    - [IEHost.dll e IEExec.exe](#IEHost)
 
-    -   [Microsoft.Build.Engine.dll](#Engine)
+    - [Microsoft.Build.Engine.dll](#Engine)
 
-    -   [Microsoft.JScript.dll](#jscript)
+    - [Microsoft.JScript.dll](#jscript)
 
-    -   [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
+    - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
 
-    -   [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
+    - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
 
-    -   [Microsoft.VisualC.dll](#visualc)
+    - [Microsoft.VisualC.dll](#visualc)
 
 <a name="obsolete_types_in_system_assemblies"></a>
 ## <a name="obsolete-types-in-system-assemblies"></a>Tipos obsoletos em assemblies de sistema

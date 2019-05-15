@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312703"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665760"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Como: Gravar informações de evento em um arquivo de texto (Visual Basic)
 É possível usar os objetos `My.Application.Log` e `My.Log` para registrar em log as informações sobre eventos que ocorrem em seu aplicativo. Este exemplo mostra como usar o método `My.Application.Log.WriteEntry` para registrar em log informações de rastreamento em um arquivo de log.  
@@ -24,11 +24,11 @@ ms.locfileid: "59312703"
   
      Se não houver nenhum arquivo app.config:  
   
-    1.  No menu **Projeto**, escolha **Adicionar Novo Item**.  
+    1. No menu **Projeto**, escolha **Adicionar Novo Item**.  
   
-    2.  Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.  
+    2. Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.  
   
-    3.  Clique em **Adicionar**.  
+    3. Clique em **Adicionar**.  
   
 2. Localize a seção `<listeners>` no arquivo de configuração de aplicativo.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59312703"
   
 ### <a name="to-write-event-information-to-the-file-log"></a>Para gravar informações de evento no log de arquivos  
   
--   Use o método `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` para gravar informações no log de arquivos. Para obter mais informações, confira [Como: Gravar mensagens de Log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) e [Como: Registrar exceções em log](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+- Use o método `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` para gravar informações no log de arquivos. Para obter mais informações, confira [Como: Gravar mensagens de Log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) e [Como: Registrar exceções em log](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
   
      Depois de configurar o ouvinte de log de arquivos para um assembly, ele receberá todas as mensagens que `My.Application.Log` grava desse assembly.  
   

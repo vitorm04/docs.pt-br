@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: d5b067f299d96b687d44b83e431d89667f2d84f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745762"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664596"
 ---
 # <a name="net-class-libraries"></a>Bibliotecas de classes do .NET
 
@@ -19,9 +19,9 @@ As bibliotecas de classe são o conceito de [biblioteca compartilhada](https://e
 
 Há três tipos de bibliotecas de classes que você pode usar:
 
-*   Bibliotecas de classe **específicas da plataforma** têm acesso a todas as APIs em uma determinada plataforma (por exemplo, .NET Framework, Xamarin iOS), mas só podem ser usadas por aplicativos e bibliotecas que direcionam essa plataforma.
-*   Bibliotecas de classe **portáteis** têm acesso a um subconjunto de APIs e podem ser usadas por aplicativos e bibliotecas voltados para várias plataformas.
-*   Bibliotecas de classe **.NET Standard** são uma fusão do conceito de biblioteca portátil e específica da plataforma em um único modelo que fornece o melhor dos dois mundos.
+* Bibliotecas de classe **específicas da plataforma** têm acesso a todas as APIs em uma determinada plataforma (por exemplo, .NET Framework, Xamarin iOS), mas só podem ser usadas por aplicativos e bibliotecas que direcionam essa plataforma.
+* Bibliotecas de classe **portáteis** têm acesso a um subconjunto de APIs e podem ser usadas por aplicativos e bibliotecas voltados para várias plataformas.
+* Bibliotecas de classe **.NET Standard** são uma fusão do conceito de biblioteca portátil e específica da plataforma em um único modelo que fornece o melhor dos dois mundos.
 
 ## <a name="platform-specific-class-libraries"></a>Bibliotecas de classes específicas da plataforma
 

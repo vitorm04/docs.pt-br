@@ -2,12 +2,12 @@
 title: Sessões confiáveis e filas
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643527"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557164"
 ---
 # <a name="queues-and-reliable-sessions"></a>Sessões confiáveis e filas
 Sessões confiáveis e filas são os recursos do Windows Communication Foundation (WCF) que implementam o sistema de mensagens confiável. Os tópicos contidos nesta seção abordam os recursos de mensagens confiáveis do WCF.  
@@ -31,7 +31,7 @@ Sessões confiáveis e filas são os recursos do Windows Communication Foundatio
   
  Sessões confiáveis fornecem transferências de mensagens confiáveis de baixa latência. Eles fornecem para mensagens SOAP sobre quaisquer proxies ou intermediários, equivalente ao qual o TCP fornece para pacotes em pontes IP. Para obter mais informações sobre as sessões confiáveis, consulte [sessões confiáveis](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
-### <a name="queues"></a>Filas  
+## <a name="queues"></a>Filas  
  As filas no WCF fornecem ambas as transferências de confiáveis de mensagens e a separação entre origens e destinos às custas de alta latência. WCF em fila comunicação se baseia no enfileiramento de mensagens (também conhecido como MSMQ).  
   
  MSMQ é fornecido como uma opção com Windows que é executado como um serviço NT. Ele captura mensagens para transmissão em uma fila de transmissão em nome de origem e a entrega para uma fila de destino. A fila de destino aceita mensagens em nome de destino para entrega posterior sempre que o destino solicita para mensagens. Os gerenciadores de fila do MSMQ implementam um protocolo de transferência de mensagens confiável, de modo que as mensagens não são perdidas durante a transmissão. O protocolo pode ser baseado em SOAP, como Reliable Messaging protocolo SRMP (Soap) ou nativo.  
