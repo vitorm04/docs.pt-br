@@ -2,12 +2,12 @@
 title: Refatoração usando uma função pura (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 66aab1b92f1a017eae650b18bd13d52536e84a6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be0b0d0778fea459701153b1c629f9ce797db1aa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692292"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608918"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refatoração usando uma função pura (C#)
 O exemplo a seguir refatora o exemplo anterior, [Refatoração usando um método de extensão (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar uma função pura. Neste exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText`.  
@@ -177,7 +177,7 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Próximas etapas  
  O exemplo a seguir mostra como projetar XML em uma forma diferente:  
   
--   [Projetando XML em uma forma diferente (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Projetando XML em uma forma diferente (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826594"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615151"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 <a name="top"></a> No CLR (Common Language Runtime), o coletor de lixo atua como um gerenciador automático de memória. Ele oferece os seguintes benefícios:  
   
--   Permite que você desenvolva seu aplicativo sem a necessidade de liberar memória.  
+- Permite que você desenvolva seu aplicativo sem a necessidade de liberar memória.  
   
--   Aloca objetos no heap gerenciado com eficiência.  
+- Aloca objetos no heap gerenciado com eficiência.  
   
--   Recupera os objetos que não estão sendo usados, limpa a memória e mantém a memória disponível para alocações futuras. Os objetos gerenciados obtêm automaticamente conteúdo limpo com o qual começar, portanto, seus construtores não precisam inicializar cada campo de dados.  
+- Recupera os objetos que não estão sendo usados, limpa a memória e mantém a memória disponível para alocações futuras. Os objetos gerenciados obtêm automaticamente conteúdo limpo com o qual começar, portanto, seus construtores não precisam inicializar cada campo de dados.  
   
--   Fornece segurança de memória, assegurando que um objeto não possa usar o conteúdo de outro objeto.  
+- Fornece segurança de memória, assegurando que um objeto não possa usar o conteúdo de outro objeto.  
   
  Este tópico descreve os principais conceitos da coleta de lixo. 
  
@@ -37,25 +37,25 @@ ms.locfileid: "58826594"
 ## <a name="fundamentals-of-memory"></a>Conceitos básicos de memória  
  A lista a seguir resume conceitos importantes de memória do CLR.  
   
--   Cada processo tem seu próprio espaço de endereço virtual separado. Todos os processos no mesmo computador compartilham a mesma memória física e arquivo de paginação, se houver algum.  
+- Cada processo tem seu próprio espaço de endereço virtual separado. Todos os processos no mesmo computador compartilham a mesma memória física e arquivo de paginação, se houver algum.  
   
--   Por padrão, em computadores de 32 bits, cada processo tem um espaço de endereço virtual no modo de usuário de 2 GB.  
+- Por padrão, em computadores de 32 bits, cada processo tem um espaço de endereço virtual no modo de usuário de 2 GB.  
   
--   Como desenvolvedor de aplicativos, você trabalha apenas com o espaço de endereço virtual e nunca manipula a memória física diretamente. O coletor de lixo aloca e libera memória virtual para você no heap gerenciado.  
+- Como desenvolvedor de aplicativos, você trabalha apenas com o espaço de endereço virtual e nunca manipula a memória física diretamente. O coletor de lixo aloca e libera memória virtual para você no heap gerenciado.  
   
      Se você estiver escrevendo um código nativo, use as funções de Win32 para trabalhar com o espaço de endereço virtual. Essas funções alocam e liberam memória virtual para você em heaps nativos.  
   
--   A memória virtual pode estar em três estados:  
+- A memória virtual pode estar em três estados:  
   
-    -   Livre. O bloco de memória não tem referências a ele e está disponível para alocação.  
+    - Livre. O bloco de memória não tem referências a ele e está disponível para alocação.  
   
-    -   Reservado. O bloco de memória está disponível para seu uso e não pode ser usado para nenhuma outra solicitação de alocação. No entanto, você não pode armazenar dados nesse bloco de memória até que ele esteja comprometido.  
+    - Reservado. O bloco de memória está disponível para seu uso e não pode ser usado para nenhuma outra solicitação de alocação. No entanto, você não pode armazenar dados nesse bloco de memória até que ele esteja comprometido.  
   
-    -   Comprometido. O bloco de memória é atribuído para armazenamento físico.  
+    - Comprometido. O bloco de memória é atribuído para armazenamento físico.  
   
--   O espaço de endereço virtual pode ficar fragmentado. Isso significa que há blocos livres, também conhecido como furos, no espaço de endereço. Quando uma alocação de memória virtual é solicitada, o gerenciador de memória virtual precisa localizar um único bloco livre suficientemente grande para atender a essa solicitação de alocação. Mesmo que você tenha 2 GB de espaço livre, a alocação que exige 2 GB não será bem-sucedida a menos que todo esse espaço livre esteja em um único bloco de endereço.  
+- O espaço de endereço virtual pode ficar fragmentado. Isso significa que há blocos livres, também conhecido como furos, no espaço de endereço. Quando uma alocação de memória virtual é solicitada, o gerenciador de memória virtual precisa localizar um único bloco livre suficientemente grande para atender a essa solicitação de alocação. Mesmo que você tenha 2 GB de espaço livre, a alocação que exige 2 GB não será bem-sucedida a menos que todo esse espaço livre esteja em um único bloco de endereço.  
   
--   Você poderá ficar sem memória se ficar sem espaço de endereço virtual para reservar ou espaço físico para confirmar.  
+- Você poderá ficar sem memória se ficar sem espaço de endereço virtual para reservar ou espaço físico para confirmar.  
   
  O arquivo de paginação é usado, mesmo se a pressão de memória física (isto é, a demanda de memória física) é baixa. Na primeira vez em que a pressão de memória física estiver alta, o sistema operacional deverá liberar espaço na memória física para armazenar dados, além de fazer o backup de alguns dos dados na memória física para o arquivo de paginação. Esses dados não são paginados até que sejam necessários, portanto, é possível encontrar paginação em situações nas quais a pressão de memória física é muito baixa. 
  
@@ -65,11 +65,11 @@ ms.locfileid: "58826594"
 ## <a name="conditions-for-a-garbage-collection"></a>Condições para uma coleta de lixo  
  A coleta de lixo ocorre quando uma das seguintes condições é verdadeira:  
   
--   O sistema tem pouca memória física. Isso é detectado pela notificação de falta de memória do sistema operacional, ou falta de memória indicada pelo host.
+- O sistema tem pouca memória física. Isso é detectado pela notificação de falta de memória do sistema operacional, ou falta de memória indicada pelo host.
   
--   A memória usada por objetos alocados no heap gerenciado ultrapassa o limite aceitável. Esse limite é ajustado continuamente enquanto o processo é executado.  
+- A memória usada por objetos alocados no heap gerenciado ultrapassa o limite aceitável. Esse limite é ajustado continuamente enquanto o processo é executado.  
   
--   O método <xref:System.GC.Collect%2A?displayProperty=nameWithType> é chamado. Em quase todos os casos, você não precisa chamar esse método porque o coletor de lixo funciona continuamente. Esse método é usado principalmente para situações exclusivas e testes.  
+- O método <xref:System.GC.Collect%2A?displayProperty=nameWithType> é chamado. Em quase todos os casos, você não precisa chamar esse método porque o coletor de lixo funciona continuamente. Esse método é usado principalmente para situações exclusivas e testes.  
   
  [Voltar ao início](#top)  
   
@@ -100,15 +100,15 @@ ms.locfileid: "58826594"
 ## <a name="generations"></a>Gerações  
  O heap está organizado em gerações de modo que possa manipular objetos de vida útil longa e curta. A coleta de lixo ocorre principalmente com a recuperação de objetos de vida útil curta, que geralmente ocupam apenas uma pequena parte do heap. Há três gerações de objetos no heap:  
   
--   **Geração 0**. Essa é a geração mais jovem e contém objetos de vida útil curta. Um exemplo de um objeto de vida útil curta é uma variável temporária. A coleta de lixo ocorre com mais frequência nessa geração.  
+- **Geração 0**. Essa é a geração mais jovem e contém objetos de vida útil curta. Um exemplo de um objeto de vida útil curta é uma variável temporária. A coleta de lixo ocorre com mais frequência nessa geração.  
   
      Objetos alocados recentemente formam uma nova geração de objetos e, implicitamente, são coletas de geração 0, a menos que sejam objetos grandes; nesse caso, entram no heap de objetos grandes em uma coleta de geração 2.  
   
      A maioria dos objetos são recuperados para coleta de lixo na geração 0 e não sobrevivem para a próxima geração.  
   
--   **Geração 1**. Essa geração contém objetos de vida útil curta e serve como um buffer entre objetos de vida útil curta e longa.  
+- **Geração 1**. Essa geração contém objetos de vida útil curta e serve como um buffer entre objetos de vida útil curta e longa.  
   
--   **Geração 2**. Essa geração contém objetos de vida útil longa. Um exemplo de um objeto de vida útil longa é um objeto em um aplicativo para servidores que contém dados estáticos que estão vivos durante o processo.  
+- **Geração 2**. Essa geração contém objetos de vida útil longa. Um exemplo de um objeto de vida útil longa é um objeto em um aplicativo para servidores que contém dados estáticos que estão vivos durante o processo.  
   
  Coletas de lixo ocorrem em gerações específicas conforme as condições permitirem. Coletar uma geração significa coletar objetos nessa geração e todas as suas gerações mais jovens. Uma coleta de lixo da geração 2 também é conhecida como uma coleta de lixo completa, pois ela recupera todos os objetos em todas as gerações (ou seja, todos os objetos no heap gerenciado).  
   
@@ -141,11 +141,11 @@ ms.locfileid: "58826594"
 ## <a name="what-happens-during-a-garbage-collection"></a>O que ocorre durante uma coleta de lixo  
  Uma coleta de lixo tem as seguintes fases:  
   
--   Uma fase de marcação que localiza todos os objetos vivos e cria uma lista desses objetos.  
+- Uma fase de marcação que localiza todos os objetos vivos e cria uma lista desses objetos.  
   
--   Uma fase de relocação que atualiza as referências aos objetos que serão compactados.  
+- Uma fase de relocação que atualiza as referências aos objetos que serão compactados.  
   
--   Uma fase de compactação que recupera o espaço ocupado por objetos inativos e compacta os objetos sobreviventes. A fase de compactação move objetos que sobreviveram a uma coleta de lixo em direção à extremidade mais antiga do segmento.  
+- Uma fase de compactação que recupera o espaço ocupado por objetos inativos e compacta os objetos sobreviventes. A fase de compactação move objetos que sobreviveram a uma coleta de lixo em direção à extremidade mais antiga do segmento.  
   
      Em virtude das coletas da geração 2 poderem ocupar vários segmentos, objetos que são promovidos para a geração 2 podem ser movidos para um segmento mais antigo. Tanto os sobreviventes da geração 1 quanto da geração 2 podem ser movidos para um segmento diferente, porque eles são promovidos para a geração 2.  
   
@@ -153,11 +153,11 @@ ms.locfileid: "58826594"
   
  O coletor de lixo usa as informações a seguir para determinar se os objetos estão vivos:  
   
--   **Raízes de pilha**. Variáveis de pilha fornecidas pelo compilador JIT (just-in-time) e movimentador de pilhas. As otimizações JIT podem aumentar ou diminuir as regiões de código dentro das quais as variáveis de pilha são relatadas para o coletor de lixo.
+- **Raízes de pilha**. Variáveis de pilha fornecidas pelo compilador JIT (just-in-time) e movimentador de pilhas. As otimizações JIT podem aumentar ou diminuir as regiões de código dentro das quais as variáveis de pilha são relatadas para o coletor de lixo.
   
--   **Identificadores de coleta de lixo**. Identificadores que apontam para objetos gerenciados e que podem ser alocados pelo código do usuário ou pelo Common Language Runtime.  
+- **Identificadores de coleta de lixo**. Identificadores que apontam para objetos gerenciados e que podem ser alocados pelo código do usuário ou pelo Common Language Runtime.  
   
--   **Dados estáticos**. Objetos estáticos em domínios de aplicativo que podem fazer referência a outros objetos. Cada domínio de aplicativo controla seus objetos estáticos.  
+- **Dados estáticos**. Objetos estáticos em domínios de aplicativo que podem fazer referência a outros objetos. Cada domínio de aplicativo controla seus objetos estáticos.  
   
  Antes de iniciar uma coleta de lixo, todos os threads gerenciados são suspensos, exceto o thread que disparou a coleta de lixo.  
   
@@ -182,13 +182,13 @@ Thread que dispara uma coleta de lixo
 ## <a name="workstation-and-server-garbage-collection"></a>Coleta de lixo de estação de trabalho ou de servidor  
  O coletor de lixo tem autoajuste e pode trabalhar em uma ampla variedade de cenários. Você pode usar uma definição de arquivo de configuração para definir o tipo de coleta de lixo com base nas características da carga de trabalho. O CLR fornece os seguintes tipos de coleta de lixo:  
   
--   Coleta de lixo de estação de trabalho, que serve para todas as estações de trabalho cliente e computadores autônomos. Essa é a configuração padrão para o [\<elemento gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) no esquema de configuração de tempo de execução.  
+- Coleta de lixo de estação de trabalho, que serve para todas as estações de trabalho cliente e computadores autônomos. Essa é a configuração padrão para o [\<elemento gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) no esquema de configuração de tempo de execução.  
   
      A coleta de lixo da estação de trabalho pode ser simultânea ou não simultânea. A coleta de lixo simultânea permite que os threads gerenciados continuem as operações durante uma coleta de lixo.  
   
      A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a coleta de lixo em segundo plano substitui a coleta de lixo simultânea.  
   
--   A coleta de lixo de servidor, que serve para aplicativos de servidor que precisam de escalabilidade e taxa de transferência altas. A coleta de lixo de servidor pode ser não simultânea ou em segundo plano.  
+- A coleta de lixo de servidor, que serve para aplicativos de servidor que precisam de escalabilidade e taxa de transferência altas. A coleta de lixo de servidor pode ser não simultânea ou em segundo plano.  
   
  A ilustração a seguir mostra os threads dedicados que executam a coleta de lixo em um servidor.  
   
@@ -205,23 +205,23 @@ Coleta de lixo de servidor
 ### <a name="comparing-workstation-and-server-garbage-collection"></a>Comparação da coleta de lixo de estação de trabalho e de servidor  
  Veja a seguir considerações de desempenho e de threading para a coleta de lixo da estação de trabalho:  
   
--   A coleção ocorre no thread do usuário que disparou a coleta de lixo e permanece com a mesma prioridade. Como os threads de usuário normalmente são executados com prioridade normal, o coletor de lixo (que é executado em um thread de prioridade normal) deve disputam competir outros threads por tempo da CPU.  
+- A coleção ocorre no thread do usuário que disparou a coleta de lixo e permanece com a mesma prioridade. Como os threads de usuário normalmente são executados com prioridade normal, o coletor de lixo (que é executado em um thread de prioridade normal) deve disputam competir outros threads por tempo da CPU.  
   
      O threads que estão executando o código nativo não são suspensos.  
   
--   A coleta de lixo de estação de trabalho é sempre usada em um computador que tem apenas um processador, independentemente da configuração [\<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md). Se você especificar a coleta de lixo de servidor, o CLR usará a coleta de lixo de estação de trabalho com a simultaneidade desabilitada.  
+- A coleta de lixo de estação de trabalho é sempre usada em um computador que tem apenas um processador, independentemente da configuração [\<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md). Se você especificar a coleta de lixo de servidor, o CLR usará a coleta de lixo de estação de trabalho com a simultaneidade desabilitada.  
   
  Veja a seguir considerações de desempenho e de threading para a coleta de lixo de servidor:  
   
--   A coleta ocorre em vários threads dedicados que estão em execução no nível de prioridade `THREAD_PRIORITY_HIGHEST`.  
+- A coleta ocorre em vários threads dedicados que estão em execução no nível de prioridade `THREAD_PRIORITY_HIGHEST`.  
   
--   Fornece-se um heap e um thread dedicado para executar a coleta de lixo para cada CPU, e os heaps são coletados ao mesmo tempo. Cada heap contém um heap de objeto pequeno e um heap de objeto grande, e todos os heaps podem ser acessados pelo código do usuário. Objetos em heaps diferentes podem fazer referência entre si.  
+- Fornece-se um heap e um thread dedicado para executar a coleta de lixo para cada CPU, e os heaps são coletados ao mesmo tempo. Cada heap contém um heap de objeto pequeno e um heap de objeto grande, e todos os heaps podem ser acessados pelo código do usuário. Objetos em heaps diferentes podem fazer referência entre si.  
   
--   Como vários threads de coleta de lixo funcionam em conjunto, a coleta de lixo de servidor é mais rápida do que a coleta de lixo de estação de trabalho no heap de mesmo tamanho.  
+- Como vários threads de coleta de lixo funcionam em conjunto, a coleta de lixo de servidor é mais rápida do que a coleta de lixo de estação de trabalho no heap de mesmo tamanho.  
   
--   Geralmente, a coleta de lixo de servidor tem segmentos maiores. No entanto, observe que isso é apenas uma generalização: o tamanho do segmento é específico à implementação e está sujeito a alterações. Não faça suposição sobre o tamanho dos segmentos alocados pelo coletor de lixo ao ajustar seu aplicativo.  
+- Geralmente, a coleta de lixo de servidor tem segmentos maiores. No entanto, observe que isso é apenas uma generalização: o tamanho do segmento é específico à implementação e está sujeito a alterações. Não faça suposição sobre o tamanho dos segmentos alocados pelo coletor de lixo ao ajustar seu aplicativo.  
   
--   A coleta de lixo de servidor pode usar bastante recursos. Por exemplo, se você tiver 12 processos em execução em um computador que tem 4 processadores, haverá 48 threads de coleta de lixo dedicados se todos estiverem usando a coleta de lixo de servidor. Em uma situação de carga de memória alta, se todos os processos começarem a realizar a coleta de lixo, o coletor de lixo terá 48 threads para agendar.  
+- A coleta de lixo de servidor pode usar bastante recursos. Por exemplo, se você tiver 12 processos em execução em um computador que tem 4 processadores, haverá 48 threads de coleta de lixo dedicados se todos estiverem usando a coleta de lixo de servidor. Em uma situação de carga de memória alta, se todos os processos começarem a realizar a coleta de lixo, o coletor de lixo terá 48 threads para agendar.  
   
  Se você estiver executando centenas de instâncias de um aplicativo, considere o uso da coleta de lixo de estação de trabalho com a coleta de lixo simultânea desabilitada. Isso resultará na redução da comutação de contexto, o que pode melhorar o desempenho.  
   

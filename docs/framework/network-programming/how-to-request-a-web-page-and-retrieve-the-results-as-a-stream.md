@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-ms.openlocfilehash: 23c094f0a3f528750c9589dbc99a0ada86236967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74cb739d381c0b1422d9277be8c3c338a46f8fba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097194"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647413"
 ---
 # <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Como: Solicitar uma página da Web e recuperar os resultados como um fluxo
 Este exemplo mostra como solicitar uma página da Web e recuperar os resultados em um fluxo.  
@@ -34,7 +34,7 @@ response.Close()
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Referências aos namespaces <xref:System.IO> e <xref:System.Net>.  
+- Referências aos namespaces <xref:System.IO> e <xref:System.Net>.  
   
 ## <a name="see-also"></a>Consulte também
 

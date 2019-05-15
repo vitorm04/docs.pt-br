@@ -5,20 +5,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: d87ea1ff18c4697a2c04f22cbf67720f21cbf459
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 587f1b03292db643d721e599ea93c39ba188117d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118125"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593006"
 ---
 # <a name="access-modifiers-c-reference"></a>Modificadores de acesso (Referência de C#)
 Os modificadores de acesso são palavras-chave usadas para especificar a acessibilidade declarada de um membro ou de um tipo. Esta seção apresenta os quatro modificadores de acesso:  
   
--   `public`
--   `protected`
--   `internal`
--   `private`
+- `public`
+- `protected`
+- `internal`
+- `private`
   
  Os seis seguintes níveis de acessibilidade podem ser especificados usando os modificadores de acesso:  
   
@@ -36,11 +36,11 @@ Os modificadores de acesso são palavras-chave usadas para especificar a acessib
   
  Esta seção também apresenta o seguinte:  
   
--   [Níveis de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md): utilização dos quatro modificadores de acesso para declarar seis níveis de acessibilidade.  
+- [Níveis de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md): utilização dos quatro modificadores de acesso para declarar seis níveis de acessibilidade.  
   
--   [Domínio de acessibilidade](../../../csharp/language-reference/keywords/accessibility-domain.md): especifica em que lugar, nas seções do programa, um membro pode ser referenciado.  
+- [Domínio de acessibilidade](../../../csharp/language-reference/keywords/accessibility-domain.md): especifica em que lugar, nas seções do programa, um membro pode ser referenciado.  
   
--   [Restrições ao uso de níveis de acessibilidade](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): um resumo das restrições sobre o uso de níveis de acessibilidade declarados.  
+- [Restrições ao uso de níveis de acessibilidade](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): um resumo das restrições sobre o uso de níveis de acessibilidade declarados.  
   
 ## <a name="see-also"></a>Consulte também
 

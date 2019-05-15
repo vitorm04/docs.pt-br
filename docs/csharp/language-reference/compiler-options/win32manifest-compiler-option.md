@@ -8,12 +8,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 9718febfe5aefba75decc133ad2113b64e4547de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cdab8c818cf3278c829e2486e89be32bb4ba277
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618059"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593040"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (opções do compilador C#)
 Use a opção **-win32manifest** para especificar um arquivo de manifesto do aplicativo Win32 definido pelo usuário para ser inserido em um arquivo PE do projeto.  
@@ -38,9 +38,9 @@ Use a opção **-win32manifest** para especificar um arquivo de manifesto do apl
   
  Seu aplicativo estará sujeito à virtualização se alguma dessas condições for verdadeira:  
   
--   Você usa a opção **-nowin32manifest** e não fornece um manifesto em uma etapa de build posterior ou como parte de um arquivo de Recurso (.res) do Windows usando a opção **-win32res**.  
+- Você usa a opção **-nowin32manifest** e não fornece um manifesto em uma etapa de build posterior ou como parte de um arquivo de Recurso (.res) do Windows usando a opção **-win32res**.  
   
--   Você fornece um manifesto personalizado que não especifica um nível de execução solicitado.  
+- Você fornece um manifesto personalizado que não especifica um nível de execução solicitado.  
   
  O Visual Studio cria um arquivo .manifest padrão e o armazena nos diretórios de depuração e liberação juntamente com o arquivo executável. Você pode adicionar um manifesto personalizado criando um em qualquer editor de texto e, em seguida, adicionando o arquivo ao projeto. Como alternativa, você pode clicar com o botão direito do mouse no ícone **Projeto** no **Gerenciador de Soluções**, clicar em **Adicionar Novo Item** e clicar em **Arquivo de Manifesto do Aplicativo**. Depois de adicionar o arquivo de manifesto novo ou existente, ele aparecerá na lista suspensa **Manifesto**. Para obter mais informações, consulte [Página Aplicativo, Designer de Projeto (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   

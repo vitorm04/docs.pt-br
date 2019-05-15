@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109792"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650504"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperando recursos em aplicativos de área de trabalho
 Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar os recursos nos aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], consulte [Ccriando e recuperando recursos em aplicativos da Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) no Centro de Desenvolvimento do Windows.  
@@ -34,9 +34,9 @@ Quando você trabalha com recursos localizados em aplicativos de área de trabal
 ## <a name="retrieving-resources-from-assemblies"></a>Recuperando recursos dos assemblies  
  A classe <xref:System.Resources.ResourceManager> fornece acesso a recursos em tempo de execução. Você usa o método <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> para recuperar os recursos de cadeia de caracteres e o método <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> ou <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> para recuperar recursos que não são cadeias de caracteres. Cada método possui duas sobrecargas:  
   
--   Uma sobrecarga cujo único parâmetro é uma cadeia de caracteres que contém o nome do recurso. O método tenta recuperar esse recurso para a cultura do thread atual. Para mais informações, consulte os métodos <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29> e <xref:System.Resources.ResourceManager.GetStream%28System.String%29>.  
+- Uma sobrecarga cujo único parâmetro é uma cadeia de caracteres que contém o nome do recurso. O método tenta recuperar esse recurso para a cultura do thread atual. Para mais informações, consulte os métodos <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29> e <xref:System.Resources.ResourceManager.GetStream%28System.String%29>.  
   
--   Uma sobrecarga que tem dois parâmetros: uma cadeia de caracteres que contém o nome do recurso e um objeto <xref:System.Globalization.CultureInfo> que representa a cultura cujo recurso deve ser recuperado. Se um conjunto de recursos para a cultura não for encontrado, o gerenciador de recursos usa regras de fallback para recuperar um recurso apropriado. Para mais informações, consulte os métodos <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29> e <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29>.  
+- Uma sobrecarga que tem dois parâmetros: uma cadeia de caracteres que contém o nome do recurso e um objeto <xref:System.Globalization.CultureInfo> que representa a cultura cujo recurso deve ser recuperado. Se um conjunto de recursos para a cultura não for encontrado, o gerenciador de recursos usa regras de fallback para recuperar um recurso apropriado. Para mais informações, consulte os métodos <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29> e <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29>.  
   
  O gerenciador de recursos usa o processo de fallback de recurso para controlar como o aplicativo recupera os recursos específicos de cultura. Para obter mais informações, consulte a seção "Processo de Fallback de Recurso" em [Empacotamento e implantação de recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Para obter informações sobre como criar uma instância de um objeto <xref:System.Resources.ResourceManager>, consulte a seção “Criando uma instância de um objeto ResourceManager” no tópico de classe <xref:System.Resources.ResourceManager>.  
   

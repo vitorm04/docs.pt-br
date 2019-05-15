@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371e958aca87c922c902d8efd945d94d611672d9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 342af20b78ae996bb61c6b563ecf42137ee51022
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702875"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629097"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Chamando métodos síncronos de forma assíncrona
 
@@ -45,13 +45,13 @@ O método `EndInvoke` recupera os resultados da chamada assíncrona. Ele pode se
 
 Os exemplos de código neste tópico demonstram quatro formas comuns de usar `BeginInvoke` e `EndInvoke` para fazer chamadas assíncronas. Após chamar `BeginInvoke`, você pode fazer o seguinte:
 
--   Trabalhe um pouco e depois chame `EndInvoke` para bloquear até que a chamada seja concluída.
+- Trabalhe um pouco e depois chame `EndInvoke` para bloquear até que a chamada seja concluída.
 
--   Obtenha um <xref:System.Threading.WaitHandle> usando a propriedade <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType>, use seu método <xref:System.Threading.WaitHandle.WaitOne%2A> para impedir a execução até que o <xref:System.Threading.WaitHandle> seja sinalizado e, depois, chame `EndInvoke`.
+- Obtenha um <xref:System.Threading.WaitHandle> usando a propriedade <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType>, use seu método <xref:System.Threading.WaitHandle.WaitOne%2A> para impedir a execução até que o <xref:System.Threading.WaitHandle> seja sinalizado e, depois, chame `EndInvoke`.
 
--   Sonde o <xref:System.IAsyncResult> retornado por `BeginInvoke` para determinar quando a chamada assíncrona for concluída e, em seguida, chame `EndInvoke`.
+- Sonde o <xref:System.IAsyncResult> retornado por `BeginInvoke` para determinar quando a chamada assíncrona for concluída e, em seguida, chame `EndInvoke`.
 
--   Passe um delegado para um método de retorno de chamada para `BeginInvoke`. O método será executado em um thread <xref:System.Threading.ThreadPool> quando a chamada assíncrona for concluída. O método de retorno de chamada chama `EndInvoke`.
+- Passe um delegado para um método de retorno de chamada para `BeginInvoke`. O método será executado em um thread <xref:System.Threading.ThreadPool> quando a chamada assíncrona for concluída. O método de retorno de chamada chama `EndInvoke`.
 
 > [!IMPORTANT]
 > Não importa qual técnica você usa, sempre chame `EndInvoke` para completar a chamada assíncrona.
@@ -101,11 +101,11 @@ Os exemplos de código neste tópico demonstram quatro formas comuns de usar `Be
 
  Observações sobre o exemplo:
 
--   O parâmetro `threadId` de `TestMethod` é um parâmetro `out` ([`<Out>` `ByRef` no Visual Basic), portanto, seu valor de entrada nunca é usado por `TestMethod`. Uma variável fictícia é passada para a chamada `BeginInvoke`. Se o parâmetro `threadId` fosse um parâmetro `ref` (`ByRef` no Visual Basic), a variável precisaria ser um campo de nível de classe para que pudesse ser passada para `BeginInvoke` e `EndInvoke`.
+- O parâmetro `threadId` de `TestMethod` é um parâmetro `out` ([`<Out>` `ByRef` no Visual Basic), portanto, seu valor de entrada nunca é usado por `TestMethod`. Uma variável fictícia é passada para a chamada `BeginInvoke`. Se o parâmetro `threadId` fosse um parâmetro `ref` (`ByRef` no Visual Basic), a variável precisaria ser um campo de nível de classe para que pudesse ser passada para `BeginInvoke` e `EndInvoke`.
 
--   As informações de estado que são passadas para `BeginInvoke` são uma cadeia de caracteres de formato, usada pelo método de retorno de chamada para formatar uma mensagem de saída. Como são passadas como o tipo <xref:System.Object>, as informações de estado devem ser convertidas para o tipo correto antes de poderem ser usadas.
+- As informações de estado que são passadas para `BeginInvoke` são uma cadeia de caracteres de formato, usada pelo método de retorno de chamada para formatar uma mensagem de saída. Como são passadas como o tipo <xref:System.Object>, as informações de estado devem ser convertidas para o tipo correto antes de poderem ser usadas.
 
--   O retorno de chamada é feito em um thread <xref:System.Threading.ThreadPool>. Threads <xref:System.Threading.ThreadPool> são threads em segundo plano, os quais não mantêm o aplicativo em execução se o thread principal terminar. Portanto, o thread principal do exemplo precisa ficar suspenso durante um tempo suficiente para o retorno de chamada ser concluído.
+- O retorno de chamada é feito em um thread <xref:System.Threading.ThreadPool>. Threads <xref:System.Threading.ThreadPool> são threads em segundo plano, os quais não mantêm o aplicativo em execução se o thread principal terminar. Portanto, o thread principal do exemplo precisa ficar suspenso durante um tempo suficiente para o retorno de chamada ser concluído.
 
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: c4122237cccc154d9dc9034ea047f5f44a4b1134
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 665fdd3d19008e7725983ea621a64514238639ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545735"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599952"
 ---
 # <a name="objects-c-programming-guide"></a>Objetos (Guia de Programação em C#)
 Uma definição de classe ou struct é como um esquema que especifica o que o tipo pode fazer. Um objeto é basicamente um bloco de memória que foi alocado e configurado de acordo com o esquema. Um programa pode criar vários objetos da mesma classe. Objetos também são chamados de instâncias e podem ser armazenados em uma variável nomeada ou em uma matriz ou coleção. O código de cliente é o código que usa essas variáveis para chamar os métodos e acessar as propriedades públicas do objeto. Em uma linguagem orientada a objetos, como o C#, um programa típico consiste em vários objetos que interagem dinamicamente.  
@@ -38,28 +38,28 @@ Uma definição de classe ou struct é como um esquema que especifica o que o ti
 ## <a name="object-identity-vs-value-equality"></a>Identidade de objeto versus Igualdade de Valor  
  Quando compara dois objetos quanto à igualdade, primeiro você precisa distinguir se quer saber se as duas variáveis representam o mesmo objeto na memória ou se os valores de um ou mais de seus campos são equivalentes. Se estiver pretendendo comparar valores, você precisa considerar se os objetos são instâncias de tipos de valor (structs) ou tipos de referência (classes, delegados, matrizes).  
   
--   Para determinar se duas instâncias de classe se referem ao mesmo local na memória (o que significa que elas têm a mesma *identidade*), use o método <xref:System.Object.Equals%2A> estático. (<xref:System.Object?displayProperty=nameWithType> é a classe base implícita para todos os tipos de valor e tipos de referência, incluindo classes e structs definidos pelo usuário.)  
+- Para determinar se duas instâncias de classe se referem ao mesmo local na memória (o que significa que elas têm a mesma *identidade*), use o método <xref:System.Object.Equals%2A> estático. (<xref:System.Object?displayProperty=nameWithType> é a classe base implícita para todos os tipos de valor e tipos de referência, incluindo classes e structs definidos pelo usuário.)  
   
--   Para determinar se os campos de instância em duas instâncias de struct têm os mesmos valores, use o método <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>. Como todos os structs herdam implicitamente de <xref:System.ValueType?displayProperty=nameWithType>, você chama o método diretamente em seu objeto, conforme mostrado no exemplo a seguir:  
+- Para determinar se os campos de instância em duas instâncias de struct têm os mesmos valores, use o método <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>. Como todos os structs herdam implicitamente de <xref:System.ValueType?displayProperty=nameWithType>, você chama o método diretamente em seu objeto, conforme mostrado no exemplo a seguir:  
   
  [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  A implementação de <xref:System.ValueType?displayProperty=nameWithType> de `Equals` usa reflexão porque ela precisa ser capaz de determinar quais são os campos em qualquer struct. Ao criar seus próprios structs, substitua o método `Equals` para fornecer um algoritmo de igualdade eficiente que é específico ao seu tipo.  
   
--   Para determinar se os valores dos campos em duas instâncias de classe são iguais, você pode usar o método <xref:System.Object.Equals%2A> ou o [Operador ==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-). No entanto, use-os apenas se a classe os tiver substituído ou sobrecarregado para fornecer uma definição personalizada do que "igualdade" significa para objetos desse tipo. A classe também pode implementar a interface <xref:System.IEquatable%601> ou a interface <xref:System.Collections.Generic.IEqualityComparer%601>. As duas interfaces fornecem métodos que podem ser usados para testar a igualdade de valores. Ao criar suas próprias classes que substituem `Equals`, certifique-se de seguir as diretrizes informadas em [Como definir a igualdade de valor para um tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) e <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+- Para determinar se os valores dos campos em duas instâncias de classe são iguais, você pode usar o método <xref:System.Object.Equals%2A> ou o [Operador ==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-). No entanto, use-os apenas se a classe os tiver substituído ou sobrecarregado para fornecer uma definição personalizada do que "igualdade" significa para objetos desse tipo. A classe também pode implementar a interface <xref:System.IEquatable%601> ou a interface <xref:System.Collections.Generic.IEqualityComparer%601>. As duas interfaces fornecem métodos que podem ser usados para testar a igualdade de valores. Ao criar suas próprias classes que substituem `Equals`, certifique-se de seguir as diretrizes informadas em [Como definir a igualdade de valor para um tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) e <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  Para saber mais:  
   
--   [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
--   [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
--   [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [Eventos](../../../csharp/programming-guide/events/index.md)  
+- [Eventos](../../../csharp/programming-guide/events/index.md)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -2,12 +2,12 @@
 title: Exemplo de execução adiada (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 9697f3e4c120c7d8bc184181ad99df08634e791e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08125f8da54db18423f90564a51fcffad8db44c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598874"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598015"
 ---
 # <a name="deferred-execution-example-c"></a>Exemplo de execução adiada (C#)
 Este tópico mostra como execução adiada e a avaliação lazy afetam a execução das consultas LINQ to XML.  
@@ -61,7 +61,7 @@ Main: str GHI
   
  O próximo tópico neste tutorial mostra o encadeamento consultas em conjunto:  
   
--   [Exemplo de encadeamento de consultas (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+- [Exemplo de encadeamento de consultas (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
 ## <a name="see-also"></a>Consulte também
 

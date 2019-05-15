@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 437a7058abd9ae167fcde15d4bddbe69bc64b7e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 15bec7c9604b243c586b393d71007b02917d3a6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628934"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Como: Copiar arquivos com um padrão específico para um diretório no Visual Basic
 O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> retorna uma coleção somente leitura de cadeias de caracteres que representam os nomes de caminho para os arquivos. É possível usar o parâmetro `wildCards` para especificar um padrão específico.  
@@ -43,19 +43,19 @@ O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> re
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  As seguintes condições podem causar uma exceção:  
   
--   O caminho não é válido por um dos seguintes motivos: é uma cadeia de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
+- O caminho não é válido por um dos seguintes motivos: é uma cadeia de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
   
--   O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
+- O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
   
--   O diretório não existe (<xref:System.IO.DirectoryNotFoundException>).  
+- O diretório não existe (<xref:System.IO.DirectoryNotFoundException>).  
   
--   O diretório aponta para um arquivo existente (<xref:System.IO.IOException>).  
+- O diretório aponta para um arquivo existente (<xref:System.IO.IOException>).  
   
--   O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
+- O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
   
--   Um nome de arquivo ou de diretório no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
+- Um nome de arquivo ou de diretório no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
   
--   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>). O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
+- O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>). O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Consulte também
 

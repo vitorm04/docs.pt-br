@@ -2,12 +2,12 @@
 title: Exemplo de encadeamento de consultas (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: b77de6b1e5bd81ac70165640aecf0d4ce89be03d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8564a2ece7dc09bd3330dc9bdad31689408089cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677336"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598547"
 ---
 # <a name="chaining-queries-example-c"></a>Exemplo de encadeamento de consultas (C#)
 Este exemplo compila no exemplo anterior e mostra o que acontece quando você encadeia duas consultas que usam execução adiada e avaliação lenta.  
@@ -84,7 +84,7 @@ Main: str >GHI!!!<
   
  O próximo tópico neste tutorial mostra o materialization intermediário:  
   
--   [Materialização intermediária (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [Materialização intermediária (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
 ## <a name="see-also"></a>Consulte também
 

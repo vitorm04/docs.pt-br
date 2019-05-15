@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 43037f897dfb591572a62a9bb3cccf9170d1f5fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865173"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645016"
 ---
 # <a name="exceptions-in-managed-threads"></a>Exceções em threads gerenciados
 A partir do .NET Framework versão 2.0, o common language runtime permite que a maioria das exceções sem tratamento em threads prossiga naturalmente. Na maioria dos casos, isso significa que a exceção sem tratamento causa o encerramento do aplicativo.  
@@ -25,11 +25,11 @@ A partir do .NET Framework versão 2.0, o common language runtime permite que a 
   
  O common language runtime fornece uma barreira para certas exceções sem tratamento que são usados para controlar o fluxo do programa:  
   
--   Uma <xref:System.Threading.ThreadAbortException> é gerada em um thread porque <xref:System.Threading.Thread.Abort%2A> foi chamado.  
+- Uma <xref:System.Threading.ThreadAbortException> é gerada em um thread porque <xref:System.Threading.Thread.Abort%2A> foi chamado.  
   
--   Um <xref:System.AppDomainUnloadedException> é gerado em um thread, pois o domínio do aplicativo no qual o thread está em execução está sendo descarregado.  
+- Um <xref:System.AppDomainUnloadedException> é gerado em um thread, pois o domínio do aplicativo no qual o thread está em execução está sendo descarregado.  
   
--   O Common Language Runtime ou um processo de host encerra o thread lançando uma exceção interna.  
+- O Common Language Runtime ou um processo de host encerra o thread lançando uma exceção interna.  
   
  Se qualquer uma dessas exceções não tiver tratamento em threads criados pelo common language runtime, a exceção encerrará o thread, mas o common language runtime não permitirá que a exceção prossiga.  
   
@@ -47,11 +47,11 @@ A partir do .NET Framework versão 2.0, o common language runtime permite que a 
 ## <a name="change-from-previous-versions"></a>Alterar de versões anteriores  
  A alteração mais significativa se refere aos threads gerenciados. Nas versões do .NET Framework 1.0 e 1.1, o CLR fornece uma barreira para exceções sem tratamento nas seguintes situações:  
   
--   Não existe exceção sem tratamento em um thread de pool de threads. Quando uma tarefa gera uma exceção sem tratamento, o runtime imprime o rastreamento de pilha da exceção para o console e, depois, retorna o thread para o pool de threads.  
+- Não existe exceção sem tratamento em um thread de pool de threads. Quando uma tarefa gera uma exceção sem tratamento, o runtime imprime o rastreamento de pilha da exceção para o console e, depois, retorna o thread para o pool de threads.  
   
--   Não existe exceção sem tratamento em um thread criado com o método <xref:System.Threading.Thread.Start%2A> da classe <xref:System.Threading.Thread>. Quando um código em execução em um thread como esse gera uma exceção sem tratamento, o runtime imprime o rastreamento de pilha da exceção para o console e, depois, encerra normalmente o thread.  
+- Não existe exceção sem tratamento em um thread criado com o método <xref:System.Threading.Thread.Start%2A> da classe <xref:System.Threading.Thread>. Quando um código em execução em um thread como esse gera uma exceção sem tratamento, o runtime imprime o rastreamento de pilha da exceção para o console e, depois, encerra normalmente o thread.  
   
--   Não existe exceção sem tratamento no thread finalizador. Quando um finalizar gera uma exceção sem tratamento, o runtime imprime o rastreamento de pilha da exceção para o console e, depois, permite que o thread finalizador retome a execução dos finalizadores.  
+- Não existe exceção sem tratamento no thread finalizador. Quando um finalizar gera uma exceção sem tratamento, o runtime imprime o rastreamento de pilha da exceção para o console e, depois, permite que o thread finalizador retome a execução dos finalizadores.  
   
  O status de primeiro plano ou segundo plano de um thread gerenciado não afeta esse comportamento.  
   
@@ -60,11 +60,11 @@ A partir do .NET Framework versão 2.0, o common language runtime permite que a 
 ### <a name="migrating-code"></a>Migrar o código  
  Em geral, a alteração vai expor problemas de programação não reconhecidos anteriormente, para que possam ser corrigidos. No entanto, em alguns casos, os programadores podem ter aproveitado a barreira do runtime, por exemplo, para encerrar threads. Dependendo da situação, eles devem considerar uma das seguintes estratégias de migração:  
   
--   Reestruturar o código para que o thread feche normalmente quando receber um sinal.  
+- Reestruturar o código para que o thread feche normalmente quando receber um sinal.  
   
--   Use o método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> para anular o thread.  
+- Use o método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> para anular o thread.  
   
--   Se um thread precisar ser interrompido para que o encerramento do processo possa continuar, torne o thread um thread em segundo plano para que ela seja encerrado automaticamente no encerramento do processo.  
+- Se um thread precisar ser interrompido para que o encerramento do processo possa continuar, torne o thread um thread em segundo plano para que ela seja encerrado automaticamente no encerramento do processo.  
   
  Em todos os casos, a estratégia deve seguir as diretrizes de design para exceções. Confira [Diretrizes de design para exceções](../../../docs/standard/design-guidelines/exceptions.md).  
   

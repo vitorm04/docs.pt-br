@@ -18,21 +18,21 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142913"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634782"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construtores de alternância em expressões regulares
 <a name="top"></a> Os constructos de alternância modificam uma expressão regular para permitir uma correspondência condicional ou do tipo um/ou outro. O .NET dá suporte a três constructos de alternância:  
   
--   [Correspondência de padrões com &#124;](#Either_Or)  
+- [Correspondência de padrões com &#124;](#Either_Or)  
   
--   [Correspondência condicional com (?(expression)yes&#124;no)](#Conditional_Expr)  
+- [Correspondência condicional com (?(expression)yes&#124;no)](#Conditional_Expr)  
   
--   [Correspondência condicional com base em um grupo capturado válido](#Conditional_Group)  
+- [Correspondência condicional com base em um grupo capturado válido](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
 ## <a name="pattern-matching-with-124"></a>Correspondência de padrões com &#124;  
@@ -71,11 +71,11 @@ ms.locfileid: "53142913"
 ## <a name="conditional-matching-with-an-expression"></a>Correspondência condicional com uma expressão  
  Este elemento de linguagem tenta corresponder a um dos dois padrões dependendo de se ele pode corresponder a um padrão inicial. A sintaxe é:  
   
- `(?(` *expression* `)` *yes* `|` *no* `)`  
+ `(?(` *expressão* `)` *sim* `|` *não* `)`  
   
  em que *expression* é o padrão inicial para correspondência, *yes* é o padrão para correspondência se *expression* for correspondida e *no* é o padrão opcional para correspondência se *expression* não for correspondida. O mecanismo de expressões regulares trata a *expressão* como uma asserção de largura zero, isto é, o mecanismo de expressões regulares não avança no fluxo de entrada após avaliar a *expressão*. Portanto, esse constructo é equivalente ao seguinte:  
   
- `(?(?=` *expression* `)` *yes* `|` *no* `)`  
+ `(?(?=` *expressão* `)` *sim* `|` *não* `)`  
   
  em que `(?=`*expression*`)` é um constructo de asserção de largura zero. (Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)). Como o mecanismo de expressões regulares interpreta *expression* como uma âncora (uma asserção de largura zero), *expression* deve ser uma asserção de largura zero (para obter mais informações, confira [Âncoras](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) ou uma subexpressão que também está contida em *Yes*. Caso contrário, o padrão *sim* não pode ser correspondido.  
   
@@ -100,10 +100,10 @@ ms.locfileid: "53142913"
  [Voltar ao início](#top)  
   
 <a name="Conditional_Group"></a>   
-## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Correspondência condicional com base em um grupo capturado válido  
+## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Correspondência Condicional com Base em um Grupo Capturado Válido  
  Este elemento de linguagem tenta corresponder a um dos dois padrões dependendo de se ele correspondeu a um grupo de captura especificado. A sintaxe é:  
   
- `(?(` *name* `)` *yes* `|` *no* `)`  
+ `(?(` *nome* `)` *sim* `|` *não* `)`  
   
  ou  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678259"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633639"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantificadores em expressões regulares
 Os quantificadores especificam quantas instâncias de um caractere, grupo ou classe de caracteres devem estar presentes na entrada para encontrar uma correspondência.  A tabela a seguir lista os quantificadores tem suporte no .NET.  
@@ -228,11 +228,11 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
 ## <a name="greedy-and-lazy-quantifiers"></a>Quantificadores Greedy e lentos  
  Alguns quantificadores têm duas versões:  
   
--   Uma versão Greedy.  
+- Uma versão Greedy.  
   
      Um quantificador Greedy tenta corresponder a um elemento tantas vezes quanto possível.  
   
--   Uma versão não Greedy (ou lenta).  
+- Uma versão não Greedy (ou lenta).  
   
      Um quantificador não Greedy tenta corresponder a um elemento o menor número de vezes possível. Você pode transformar um quantificador Greedy em um quantificador lento simplesmente adicionando um `?`.  
   

@@ -19,33 +19,33 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096258"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634636"
 ---
 # <a name="common-type-system"></a>Common Type System
 O Common Type System define como os tipos são declarados, usados e gerenciados no Common Language Runtime e também é uma parte importante do suporte do tempo de execução para a integração entre linguagens. O Common Type System executa as seguintes funções:  
   
--   Estabelece uma estrutura que ajuda a habilitar integração entre linguagens, segurança de tipos e execução de código de alto desempenho.  
+- Estabelece uma estrutura que ajuda a habilitar integração entre linguagens, segurança de tipos e execução de código de alto desempenho.  
   
--   Fornece um modelo orientado a objetos que dá suporte à implementação completa de muitas linguagens de programação.  
+- Fornece um modelo orientado a objetos que dá suporte à implementação completa de muitas linguagens de programação.  
   
--   Define regras que as linguagens devem seguir, o que ajuda a assegurar que objetos escritos em linguagens diferentes possam interagir entre si.  
+- Define regras que as linguagens devem seguir, o que ajuda a assegurar que objetos escritos em linguagens diferentes possam interagir entre si.  
   
--   Fornece uma biblioteca que contém os tipos de dados primitivos (como <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> e <xref:System.UInt64>) usados no desenvolvimento de aplicativos.  
+- Fornece uma biblioteca que contém os tipos de dados primitivos (como <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> e <xref:System.UInt64>) usados no desenvolvimento de aplicativos.  
   
  Esse tópico contém as seguintes seções:  
   
--   [Tipos no .NET](#types_in_the_net_framework)  
+- [Tipos no .NET](#types_in_the_net_framework)  
   
--   [Definições de tipo](#type_definitions)  
+- [Definições de tipo](#type_definitions)  
   
--   [Membros de tipos](#type_members)  
+- [Membros de tipos](#type_members)  
   
--   [Características de membros de tipo](#characteristics_of_type_members)  
+- [Características de membros de tipo](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>   
 ## <a name="types-in-net"></a>Tipos no .NET  
@@ -57,15 +57,15 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
  O Common Type System no .NET dá suporte às seguintes cinco categorias de tipos:  
   
--   [Classes](#Classes)  
+- [Classes](#Classes)  
   
--   [Estruturas](#Structures)  
+- [Estruturas](#Structures)  
   
--   [Enumerações](#Enumerations)  
+- [Enumerações](#Enumerations)  
   
--   [Interfaces](#Interfaces)  
+- [Interfaces](#Interfaces)  
   
--   [Delegados](#Delegates)  
+- [Delegados](#Delegates)  
   
 <a name="Classes"></a>   
 ### <a name="classes"></a>Classes  
@@ -106,13 +106,13 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
  As seguintes restrições adicionais se aplicam a enumerações:  
   
--   Elas não podem definir seus próprios métodos.  
+- Elas não podem definir seus próprios métodos.  
   
--   Elas não podem implementar interfaces.  
+- Elas não podem implementar interfaces.  
   
--   Elas não podem definir propriedades ou eventos.  
+- Elas não podem definir propriedades ou eventos.  
   
--   Elas não podem ser genéricas, a menos que sejam genéricas apenas por estarem aninhadas dentro de um tipo genérico. Ou seja, uma enumeração não pode ter parâmetros de tipo próprios.  
+- Elas não podem ser genéricas, a menos que sejam genéricas apenas por estarem aninhadas dentro de um tipo genérico. Ou seja, uma enumeração não pode ter parâmetros de tipo próprios.  
   
     > [!NOTE]
     >  Tipos aninhados (incluindo enumerações) criados com o Visual Basic, C# e C++ incluem os parâmetros de tipo de todos os tipos genéricos e, portanto, serão genéricos mesmo se não tiverem parâmetros de tipo próprios. Para obter mais informações, consulte "Tipos Aninhados" no tópico de referência <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
@@ -130,13 +130,13 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
  As restrições a seguir se aplicam a interfaces:  
   
--   Uma interface pode ser declarada com qualquer acessibilidade, mas membros da interface devem ter acessibilidade pública.  
+- Uma interface pode ser declarada com qualquer acessibilidade, mas membros da interface devem ter acessibilidade pública.  
   
--   Interfaces não podem definir construtores.  
+- Interfaces não podem definir construtores.  
   
--   Interfaces não podem definir campos.  
+- Interfaces não podem definir campos.  
   
--   Interfaces podem definir apenas membros de instância. Elas não podem definir membros estáticos.  
+- Interfaces podem definir apenas membros de instância. Elas não podem definir membros estáticos.  
   
  Cada linguagem deve fornecer regras para mapear uma implementação para a interface que exija o membro, porque mais de uma interface pode declarar um membro com a mesma assinatura e esses membros podem ter implementações separadas.  
   
@@ -170,17 +170,17 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ## <a name="type-definitions"></a>Definições de tipo  
  Uma definição de tipo inclui o seguinte:  
   
--   Qualquer atributo definido no tipo.  
+- Qualquer atributo definido no tipo.  
   
--   A acessibilidade do tipo (visibilidade).  
+- A acessibilidade do tipo (visibilidade).  
   
--   O nome do tipo.  
+- O nome do tipo.  
   
--   O tipo de base do tipo.  
+- O tipo de base do tipo.  
   
--   Qualquer interface implementada pelo tipo.  
+- Qualquer interface implementada pelo tipo.  
   
--   Definições para cada um dos membros do tipo.  
+- Definições para cada um dos membros do tipo.  
   
 ### <a name="attributes"></a>Atributos  
  Atributos fornecem metadados adicionais definidos pelo usuário. Com frequência, eles são usados para armazenar informações adicionais sobre um tipo em seu assembly ou para modificar o comportamento de um membro de tipo no ambiente do tempo de design ou do tempo de execução.  
@@ -199,22 +199,22 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
  O domínio de acessibilidade de um membro aninhado `M` declarado em um tipo `T` em um programa `P` é definido da seguinte forma (observe que `M` pode ser um tipo):  
   
--   Se a acessibilidade declarada de `M` for `public`, o domínio de acessibilidade de `M` será o domínio de acessibilidade de `T`.  
+- Se a acessibilidade declarada de `M` for `public`, o domínio de acessibilidade de `M` será o domínio de acessibilidade de `T`.  
   
--   Se a acessibilidade declarada de `M` for `protected internal`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto de programa de `P` e o texto de programa de qualquer tipo derivado de `T` declarado fora de `P`.  
+- Se a acessibilidade declarada de `M` for `protected internal`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto de programa de `P` e o texto de programa de qualquer tipo derivado de `T` declarado fora de `P`.  
   
--   Se a acessibilidade declarada de `M` for `protected`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto do programa de `T` e qualquer tipo derivado de `T`.  
+- Se a acessibilidade declarada de `M` for `protected`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto do programa de `T` e qualquer tipo derivado de `T`.  
   
--   Se a acessibilidade declarada de `M` for `internal`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto de programa de `P`.  
+- Se a acessibilidade declarada de `M` for `internal`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto de programa de `P`.  
   
--   Se a acessibilidade declarada de `M` for `private`, o domínio de acessibilidade de `M` será o texto de programa de `T`.  
+- Se a acessibilidade declarada de `M` for `private`, o domínio de acessibilidade de `M` será o texto de programa de `T`.  
   
 ### <a name="type-names"></a>Nomes de tipo  
  O Common Type System impõe apenas duas restrições de nomes:  
   
--   Todos os nomes são codificados como cadeias de caracteres Unicode (16 bits).  
+- Todos os nomes são codificados como cadeias de caracteres Unicode (16 bits).  
   
--   Não são permitidos nomes que tenham um valor (16 bits) inserido de 0x0000.  
+- Não são permitidos nomes que tenham um valor (16 bits) inserido de 0x0000.  
   
  No entanto, a maioria das linguagens impõe restrições adicionais em nomes de tipo. Todas as comparações são feitas em uma base byte por byte e, assim, diferenciam maiúsculas de minúsculas e são independentes de localidade.  
   
@@ -229,25 +229,25 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ## <a name="type-members"></a>Membros de tipo  
  O tempo de execução permite que você defina os membros do tipo, o que especifica o comportamento e o estado de um tipo. Os membros de tipo incluem o seguinte:  
   
--   [Campos](#Fields)  
+- [Campos](#Fields)  
   
--   [Propriedades](#Properties)  
+- [Propriedades](#Properties)  
   
--   [Métodos](#Methods)  
+- [Métodos](#Methods)  
   
--   [Construtores](#Constructors)  
+- [Construtores](#Constructors)  
   
--   [Eventos](#Events)  
+- [Eventos](#Events)  
   
--   [Tipos aninhados](#NestedTypes)  
+- [Tipos aninhados](#NestedTypes)  
   
 <a name="Fields"></a>   
 ### <a name="fields"></a>Campos  
  Um campo descreve e contém parte do estado do tipo. Campos podem ser de qualquer tipo com suporte pelo tempo de execução. Geralmente, os campos são `private` ou `protected`, de forma que são acessíveis somente de dentro da classe ou de uma classe derivada. Se o valor de um campo puder ser modificado fora de seu tipo, um acessador do conjunto de propriedades normalmente será usado. Os campos expostos publicamente geralmente são somente leitura e podem ser de dois tipos:  
   
--   Constantes, cujo valor é atribuído no tempo de design. Esses são membros estáticos de uma classe, embora eles não sejam definidos usando a palavra-chave `static` (`Shared` no Visual Basic).  
+- Constantes, cujo valor é atribuído no tempo de design. Esses são membros estáticos de uma classe, embora eles não sejam definidos usando a palavra-chave `static` (`Shared` no Visual Basic).  
   
--   Variáveis somente leitura, cujos valores podem ser atribuídos no construtor da classe.  
+- Variáveis somente leitura, cujos valores podem ser atribuídos no construtor da classe.  
   
  O exemplo a seguir ilustra esses dois usos de campos somente leitura.  
   
@@ -312,9 +312,9 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ### <a name="inheriting-overriding-and-hiding-members"></a>Herança, substituição e membros ocultos  
  Um tipo derivado herda todos os membros de seu tipo de base; ou seja, esses membros são definidos e disponibilizados para o tipo derivado. O comportamento, ou qualidades, de membros herdados pode ser modificado de duas maneiras:  
   
--   Um tipo derivado pode ocultar um membro herdado definindo um novo membro com a mesma assinatura. Isso pode ser feito para fazer um membro privado anteriormente público ou para definir o novo comportamento de um método herdado marcado como `final`.  
+- Um tipo derivado pode ocultar um membro herdado definindo um novo membro com a mesma assinatura. Isso pode ser feito para fazer um membro privado anteriormente público ou para definir o novo comportamento de um método herdado marcado como `final`.  
   
--   Um tipo derivado pode substituir um método virtual herdado. O método de substituição fornece uma nova definição do método que será invocado com base no tipo do valor no tempo de execução em vez do tipo de variável conhecido no tempo de compilação. Um método poderá substituir um método virtual somente se o método virtual não estiver marcado como `final` e o novo método for tão acessível quanto o método virtual.  
+- Um tipo derivado pode substituir um método virtual herdado. O método de substituição fornece uma nova definição do método que será invocado com base no tipo do valor no tempo de execução em vez do tipo de variável conhecido no tempo de compilação. Um método poderá substituir um método virtual somente se o método virtual não estiver marcado como `final` e o novo método for tão acessível quanto o método virtual.  
   
 ## <a name="see-also"></a>Consulte também
 

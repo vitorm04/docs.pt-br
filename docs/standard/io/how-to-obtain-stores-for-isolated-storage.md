@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622687"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Como: Obter repositórios para o armazenamento isolado
 Um repositório isolado expõe um sistema de arquivos virtual dentro de um compartimento de dados. A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece vários métodos para interagir com um repositório isolado. Para criar e recuperar repositórios, o <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece três métodos estáticos:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> retorna o armazenamento que é isolado pelo usuário e pelo assembly.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> retorna o armazenamento que é isolado pelo usuário e pelo assembly.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> retorna o armazenamento que é isolado pelo domínio e pelo assembly.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> retorna o armazenamento que é isolado pelo domínio e pelo assembly.  
   
      Os dois métodos recuperam um repositório que pertence ao código do qual eles são chamados.  
   
--   O método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> retorna um repositório isolado que é especificado passando uma combinação de parâmetros de escopo.  
+- O método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> retorna um repositório isolado que é especificado passando uma combinação de parâmetros de escopo.  
   
  O exemplo de código a seguir retorna um repositório que é isolado pelo usuário, pelo assembly e pelo domínio.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8ad61eaa292ec4cce17ba029186caf1536afacdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336831"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591453"
 ---
 # <a name="how-to-start-services"></a>Como: Iniciar serviços
 Depois que um serviço for instalado, ele precisará ser iniciado. O início chama o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> na classe de serviço. Normalmente, o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> define o trabalho útil que o serviço executará. Depois que um serviço é iniciado, ele permanece ativo até que ser colocado em pausa ou ser interrompido manualmente.  
@@ -58,11 +58,11 @@ Depois que um serviço for instalado, ele precisará ser iniciado. O início cha
   
 1. Abra o **Gerenciador de Controle de Serviços** seguindo um destes procedimentos:  
   
-    -   No Windows XP e no 2000 Professional, clique com botão direito do mouse em **Meu Computador** na área de trabalho e, em seguida, clique em **Gerenciar**. Na caixa de diálogo que aparece, expanda o nó **Serviços e Aplicativos**.  
+    - No Windows XP e no 2000 Professional, clique com botão direito do mouse em **Meu Computador** na área de trabalho e, em seguida, clique em **Gerenciar**. Na caixa de diálogo que aparece, expanda o nó **Serviços e Aplicativos**.  
   
          \- ou -  
   
-    -   No Windows Server 2003 e no Windows 2000 Server, clique em **Iniciar**, aponte para **Programas**, clique em **Ferramentas Administrativas** e, em seguida, clique em **Serviços**.  
+    - No Windows Server 2003 e no Windows 2000 Server, clique em **Iniciar**, aponte para **Programas**, clique em **Ferramentas Administrativas** e, em seguida, clique em **Serviços**.  
   
         > [!NOTE]
         >  No Windows NT versão 4.0, você pode abrir essa caixa de diálogo do **Painel de Controle**.  
