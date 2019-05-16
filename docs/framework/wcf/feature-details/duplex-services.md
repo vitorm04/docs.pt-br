@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5fef151fe9149e2693ee217e7be642427162322d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592753"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636279"
 ---
 # <a name="duplex-services"></a>Serviços de duplex
 
@@ -87,7 +87,7 @@ O código de exemplo a seguir mostra como especificar o cliente do endereço do 
 ```
 
 > [!WARNING]
-> O modelo de duplex não detecta automaticamente quando um serviço ou cliente fecha seu canal. Portanto, se um cliente termina inesperadamente, por padrão o serviço não será notificado, ou se um serviço termina inesperadamente, o cliente não será notificado. Os clientes e serviços podem implementar seu próprio protocolo para notificar uns aos outros, se desejarem. Para obter mais informações sobre o tratamento de erros, consulte [tratamento de erros do WCF](../wcf-error-handling.md)
+> O modelo de duplex não detectará automaticamente quando um serviço ou cliente fecha seu canal. Portanto, se um cliente termina inesperadamente, por padrão o serviço não será notificado, ou se um serviço termina inesperadamente, o cliente não será notificado. Se você usar um serviço que está desconectado, o <xref:System.ServiceModel.CommunicationException> exceção será gerada. Os clientes e serviços podem implementar seu próprio protocolo para notificar uns aos outros, se desejarem. Para obter mais informações sobre o tratamento de erros, consulte [tratamento de erros do WCF](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,15 +1,13 @@
 ---
 title: Fluxo de trabalho de DevOps de aplicativos do Docker com as ferramentas da Microsoft
 description: Em contêineres Docker ciclo de vida do fluxo de trabalho Microsoft Platform e ferramentas de DevOps com ferramentas da Microsoft
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795285"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644815"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Fluxo de trabalho de DevOps de aplicativos do Docker com as ferramentas da Microsoft
 
