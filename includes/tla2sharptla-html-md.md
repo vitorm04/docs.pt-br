@@ -1,1 +1,9 @@
-<span data-ttu-id="fa55e-101">HTML</span><span class="sxs-lookup"><span data-stu-id="fa55e-101">HTML</span></span>
+---
+ms.openlocfilehash: 5d5ed7487d50067049944e26cfa5876ed6116246
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670406"
+---
+<span data-ttu-id="468ee-101">HTML</span><span class="sxs-lookup"><span data-stu-id="468ee-101">HTML</span></span>

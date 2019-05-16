@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: bd8f00de8adc40869ff34aed2aecdeb8083cff9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 191dfe219ec84bc8fc808376081dd05f4ec5e74e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973831"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671038"
 ---
-<span data-ttu-id="15926-101">SDK do Windows</span><span class="sxs-lookup"><span data-stu-id="15926-101">Windows SDK</span></span>
+<span data-ttu-id="97e0a-101">SDK do Windows</span><span class="sxs-lookup"><span data-stu-id="97e0a-101">Windows SDK</span></span>

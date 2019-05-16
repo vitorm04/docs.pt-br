@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 50699de2c28448770968cd97e3c5b32bfba52bdd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 452671f42ae9bdb1af121bd8b936e705c116b67c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766177"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671043"
 ---
-<span data-ttu-id="2bb39-101">URI (Uniform Resource Identifier)</span><span class="sxs-lookup"><span data-stu-id="2bb39-101">uniform resource identifier (URI)</span></span>
+<span data-ttu-id="5db99-101">URI (Uniform Resource Identifier)</span><span class="sxs-lookup"><span data-stu-id="5db99-101">uniform resource identifier (URI)</span></span>

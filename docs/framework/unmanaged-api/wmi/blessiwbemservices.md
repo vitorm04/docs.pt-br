@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23b72856015d028e50c1e3bfd4a12e0f220291c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb83bc3c0c7724dbcd3133465d4e7ad3a9eea3a9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049317"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636501"
 ---
-# <a name="blessiwbemservices-function"></a><span data-ttu-id="56377-103">Função BlessIWbemServices</span><span class="sxs-lookup"><span data-stu-id="56377-103">BlessIWbemServices function</span></span>
-<span data-ttu-id="56377-104">Indica se as credenciais de usuário permitirem o acesso especificado [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) classe.</span><span class="sxs-lookup"><span data-stu-id="56377-104">Indicates whether the user credentials permit access to the specified [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) class.</span></span>   
+# <a name="blessiwbemservices-function"></a><span data-ttu-id="28331-103">Função BlessIWbemServices</span><span class="sxs-lookup"><span data-stu-id="28331-103">BlessIWbemServices function</span></span>
+<span data-ttu-id="28331-104">Indica se as credenciais de usuário permitirem o acesso especificado [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) classe.</span><span class="sxs-lookup"><span data-stu-id="28331-104">Indicates whether the user credentials permit access to the specified [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) class.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="56377-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="56377-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28331-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="28331-105">Syntax</span></span>  
   
 ```  
 HRESULT BlessIWbemServices (
@@ -41,46 +41,46 @@ HRESULT BlessIWbemServices (
 );
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="56377-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="56377-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="28331-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="28331-106">Parameters</span></span>
 
 `pIWbemServices`\
-<span data-ttu-id="56377-107">[in] Um ponteiro para o [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto para o qual as permissões são necessárias.</span><span class="sxs-lookup"><span data-stu-id="56377-107">[in] A pointer to the [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object for which permissions are required.</span></span>
+<span data-ttu-id="28331-107">[in] Um ponteiro para o [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto para o qual as permissões são necessárias.</span><span class="sxs-lookup"><span data-stu-id="28331-107">[in] A pointer to the [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object for which permissions are required.</span></span>
 
 `strUser`\
-<span data-ttu-id="56377-108">[in] O nome de usuário.</span><span class="sxs-lookup"><span data-stu-id="56377-108">[in] The user name.</span></span>
+<span data-ttu-id="28331-108">[in] O nome de usuário.</span><span class="sxs-lookup"><span data-stu-id="28331-108">[in] The user name.</span></span>
 
 `strPassword`\
-<span data-ttu-id="56377-109">[in] A senha associada `strUser`.</span><span class="sxs-lookup"><span data-stu-id="56377-109">[in] The password associated with `strUser`.</span></span>
+<span data-ttu-id="28331-109">[in] A senha associada `strUser`.</span><span class="sxs-lookup"><span data-stu-id="28331-109">[in] The password associated with `strUser`.</span></span>
 
 `strAuthority`\
-<span data-ttu-id="56377-110">[in] O nome de domínio do usuário.</span><span class="sxs-lookup"><span data-stu-id="56377-110">[in] The domain name of the user.</span></span> <span data-ttu-id="56377-111">Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="56377-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="28331-110">[in] O nome de domínio do usuário.</span><span class="sxs-lookup"><span data-stu-id="28331-110">[in] The domain name of the user.</span></span> <span data-ttu-id="28331-111">Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="28331-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
 `impLevel`\
-<span data-ttu-id="56377-112">[in] O nível de representação.</span><span class="sxs-lookup"><span data-stu-id="56377-112">[in] The impersonation level.</span></span>
+<span data-ttu-id="28331-112">[in] O nível de representação.</span><span class="sxs-lookup"><span data-stu-id="28331-112">[in] The impersonation level.</span></span>
 
 `authnLevel`\
-<span data-ttu-id="56377-113">[in] O nível de autorização.</span><span class="sxs-lookup"><span data-stu-id="56377-113">[in] The authorization level.</span></span>
+<span data-ttu-id="28331-113">[in] O nível de autorização.</span><span class="sxs-lookup"><span data-stu-id="28331-113">[in] The authorization level.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="56377-114">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="56377-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="28331-114">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="28331-114">Return value</span></span>
 
-<span data-ttu-id="56377-115">Os seguintes valores retornados por essa função são definidos na *Winerror. H* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:</span><span class="sxs-lookup"><span data-stu-id="56377-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="28331-115">Os seguintes valores retornados por essa função são definidos na *Winerror. H* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:</span><span class="sxs-lookup"><span data-stu-id="28331-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="56377-116">Constante</span><span class="sxs-lookup"><span data-stu-id="56377-116">Constant</span></span>  |<span data-ttu-id="56377-117">Valor</span><span class="sxs-lookup"><span data-stu-id="56377-117">Value</span></span>  |<span data-ttu-id="56377-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="56377-118">Description</span></span>  |
+|<span data-ttu-id="28331-116">Constante</span><span class="sxs-lookup"><span data-stu-id="28331-116">Constant</span></span>  |<span data-ttu-id="28331-117">Valor</span><span class="sxs-lookup"><span data-stu-id="28331-117">Value</span></span>  |<span data-ttu-id="28331-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="28331-118">Description</span></span>  |
 |---------|---------|---------|
-| `E_INVALIDARG` | <span data-ttu-id="56377-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="56377-119">0x80070057</span></span> | <span data-ttu-id="56377-120">Um ou mais argumentos são inválidos.</span><span class="sxs-lookup"><span data-stu-id="56377-120">One or more arguments are invalid.</span></span> |
-| `E_POINTER` | <span data-ttu-id="56377-121">0x80004003</span><span class="sxs-lookup"><span data-stu-id="56377-121">0x80004003</span></span> | <span data-ttu-id="56377-122">`pIWbemServices` é `null`.</span><span class="sxs-lookup"><span data-stu-id="56377-122">`pIWbemServices` is `null`.</span></span> | 
-| `E_FAIL` | <span data-ttu-id="56377-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="56377-123">0x80000008</span></span> | <span data-ttu-id="56377-124">Ocorreu um erro não especificado.</span><span class="sxs-lookup"><span data-stu-id="56377-124">An unspecified error has occurred.</span></span> |
-| `E_OUTOFMEMORY` | <span data-ttu-id="56377-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="56377-125">0x80000002</span></span> | <span data-ttu-id="56377-126">Memória disponível é insuficiente para executar a operação.</span><span class="sxs-lookup"><span data-stu-id="56377-126">Insufficient memory is available to perform the operation.</span></span> | 
-| `S_OK` | <span data-ttu-id="56377-127">0</span><span class="sxs-lookup"><span data-stu-id="56377-127">0</span></span> | <span data-ttu-id="56377-128">A chamada de função foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="56377-128">The function call was successful.</span></span> | 
+| `E_INVALIDARG` | <span data-ttu-id="28331-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="28331-119">0x80070057</span></span> | <span data-ttu-id="28331-120">Um ou mais argumentos são inválidos.</span><span class="sxs-lookup"><span data-stu-id="28331-120">One or more arguments are invalid.</span></span> |
+| `E_POINTER` | <span data-ttu-id="28331-121">0x80004003</span><span class="sxs-lookup"><span data-stu-id="28331-121">0x80004003</span></span> | <span data-ttu-id="28331-122">`pIWbemServices` é `null`.</span><span class="sxs-lookup"><span data-stu-id="28331-122">`pIWbemServices` is `null`.</span></span> | 
+| `E_FAIL` | <span data-ttu-id="28331-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="28331-123">0x80000008</span></span> | <span data-ttu-id="28331-124">Ocorreu um erro não especificado.</span><span class="sxs-lookup"><span data-stu-id="28331-124">An unspecified error has occurred.</span></span> |
+| `E_OUTOFMEMORY` | <span data-ttu-id="28331-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="28331-125">0x80000002</span></span> | <span data-ttu-id="28331-126">Memória disponível é insuficiente para executar a operação.</span><span class="sxs-lookup"><span data-stu-id="28331-126">Insufficient memory is available to perform the operation.</span></span> | 
+| `S_OK` | <span data-ttu-id="28331-127">0</span><span class="sxs-lookup"><span data-stu-id="28331-127">0</span></span> | <span data-ttu-id="28331-128">A chamada de função foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="28331-128">The function call was successful.</span></span> | 
 
-## <a name="requirements"></a><span data-ttu-id="56377-129">Requisitos</span><span class="sxs-lookup"><span data-stu-id="56377-129">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="28331-129">Requisitos</span><span class="sxs-lookup"><span data-stu-id="28331-129">Requirements</span></span>  
 
- <span data-ttu-id="56377-130">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="56377-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="28331-130">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28331-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56377-131">**Cabeçalho:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="56377-131">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="28331-131">**Cabeçalho:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="28331-131">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="56377-132">**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="56377-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="28331-132">**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="28331-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56377-133">Consulte também</span><span class="sxs-lookup"><span data-stu-id="56377-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28331-133">Consulte também</span><span class="sxs-lookup"><span data-stu-id="28331-133">See also</span></span>
 
-- [<span data-ttu-id="56377-134">WMI e contadores de desempenho (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="56377-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="28331-134">WMI e contadores de desempenho (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="28331-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
