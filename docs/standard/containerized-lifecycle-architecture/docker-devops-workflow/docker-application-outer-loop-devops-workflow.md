@@ -1,15 +1,13 @@
 ---
 title: Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 description: Conheça as etapas de "loop externo" do fluxo de trabalho de DevOps
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7193200d74eeac23e9cba11b3ed2056458c9984e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 194786a90fc02801211c7614eb632392d67f0109
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795682"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641047"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 

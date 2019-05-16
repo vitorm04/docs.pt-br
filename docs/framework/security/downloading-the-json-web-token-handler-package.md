@@ -2,12 +2,12 @@
 title: Baixando o Pacote do Manipulador de Token da Web JSON
 ms.date: 10/10/2018
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
-ms.openlocfilehash: 8f878d23afd76488de7da03f16f72cbfa43c17d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8685a71d46778d932595965f32c0041b176bd83
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792739"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633522"
 ---
 # <a name="download-the-json-web-token-handler-package"></a>Baixe o pacote do manipulador de Token Web JSON
 

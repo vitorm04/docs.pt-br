@@ -2,12 +2,12 @@
 title: Estruturas
 description: Saiba mais sobre o F# estruturar um tipo de objeto compacto geralmente mais eficiente do que uma classe para tipos com uma pequena quantidade de dados e comportamento simples.
 ms.date: 05/16/2016
-ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc302b975604bebcd145a385fb59b21417547c5e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925873"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645338"
 ---
 # <a name="structures"></a>Estruturas
 

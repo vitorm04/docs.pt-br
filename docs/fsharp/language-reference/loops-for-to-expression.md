@@ -2,12 +2,12 @@
 title: 'Loops: expressão for...to'
 description: Veja como o F# loop for... a expressão é usado para iterar em um loop em um intervalo de valores de uma variável de loop.
 ms.date: 05/16/2016
-ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b7bb9bac659ddf1d457be1ce17e90a2593666de
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904027"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645241"
 ---
 # <a name="loops-forto-expression"></a>Loops: expressão for...to
 

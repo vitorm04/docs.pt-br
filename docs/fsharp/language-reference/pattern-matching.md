@@ -2,12 +2,12 @@
 title: Correspondência padrão
 description: Saiba como os padrões são usados no F# para comparar dados com estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados.
 ms.date: 05/16/2016
-ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f76a5fb675f83df87dd896f471a3552495f39e7e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795454"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641758"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
