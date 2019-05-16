@@ -2,95 +2,95 @@
 title: Tuplas
 description: Saiba mais sobre o F# tupla, um agrupamento de valores sem nomeados, mas ordenadas, possivelmente de diferentes tipos.
 ms.date: 05/16/2016
-ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 950451ad1672e0c9fc609773f1bc32fc13636ddb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755331"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645107"
 ---
-# <a name="tuples"></a><span data-ttu-id="a1f09-103">Tuplas</span><span class="sxs-lookup"><span data-stu-id="a1f09-103">Tuples</span></span>
+# <a name="tuples"></a><span data-ttu-id="d3b40-103">Tuplas</span><span class="sxs-lookup"><span data-stu-id="d3b40-103">Tuples</span></span>
 
-<span data-ttu-id="a1f09-104">Um *tupla* é um agrupamento de valores sem nomeados, mas ordenadas, possivelmente de diferentes tipos.</span><span class="sxs-lookup"><span data-stu-id="a1f09-104">A *tuple* is a grouping of unnamed but ordered values, possibly of different types.</span></span>  <span data-ttu-id="a1f09-105">As tuplas podem ser tipos de referência ou structs.</span><span class="sxs-lookup"><span data-stu-id="a1f09-105">Tuples can either be reference types or structs.</span></span>
+<span data-ttu-id="d3b40-104">Um *tupla* é um agrupamento de valores sem nomeados, mas ordenadas, possivelmente de diferentes tipos.</span><span class="sxs-lookup"><span data-stu-id="d3b40-104">A *tuple* is a grouping of unnamed but ordered values, possibly of different types.</span></span>  <span data-ttu-id="d3b40-105">As tuplas podem ser tipos de referência ou structs.</span><span class="sxs-lookup"><span data-stu-id="d3b40-105">Tuples can either be reference types or structs.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a1f09-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a1f09-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="d3b40-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d3b40-106">Syntax</span></span>
 
 ```fsharp
 (element, ... , element)
 struct(element, ... ,element )
 ```
 
-## <a name="remarks"></a><span data-ttu-id="a1f09-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="a1f09-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d3b40-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="d3b40-107">Remarks</span></span>
 
-<span data-ttu-id="a1f09-108">Cada *elemento* na sintaxe anterior pode ser qualquer F# expressão.</span><span class="sxs-lookup"><span data-stu-id="a1f09-108">Each *element* in the previous syntax can be any valid F# expression.</span></span>
+<span data-ttu-id="d3b40-108">Cada *elemento* na sintaxe anterior pode ser qualquer F# expressão.</span><span class="sxs-lookup"><span data-stu-id="d3b40-108">Each *element* in the previous syntax can be any valid F# expression.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="a1f09-109">Exemplos</span><span class="sxs-lookup"><span data-stu-id="a1f09-109">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="d3b40-109">Exemplos</span><span class="sxs-lookup"><span data-stu-id="d3b40-109">Examples</span></span>
 
-<span data-ttu-id="a1f09-110">Pares de triplos e assim por diante, dos tipos iguais ou diferentes são exemplos de tuplas.</span><span class="sxs-lookup"><span data-stu-id="a1f09-110">Examples of tuples include pairs, triples, and so on, of the same or different types.</span></span> <span data-ttu-id="a1f09-111">Alguns exemplos são ilustrados no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="a1f09-111">Some examples are illustrated in the following code.</span></span>
+<span data-ttu-id="d3b40-110">Pares de triplos e assim por diante, dos tipos iguais ou diferentes são exemplos de tuplas.</span><span class="sxs-lookup"><span data-stu-id="d3b40-110">Examples of tuples include pairs, triples, and so on, of the same or different types.</span></span> <span data-ttu-id="d3b40-111">Alguns exemplos são ilustrados no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="d3b40-111">Some examples are illustrated in the following code.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L6-L21)]
 
-## <a name="obtaining-individual-values"></a><span data-ttu-id="a1f09-112">Obtendo valores individuais</span><span class="sxs-lookup"><span data-stu-id="a1f09-112">Obtaining Individual Values</span></span>
+## <a name="obtaining-individual-values"></a><span data-ttu-id="d3b40-112">Obtendo valores individuais</span><span class="sxs-lookup"><span data-stu-id="d3b40-112">Obtaining Individual Values</span></span>
 
-<span data-ttu-id="a1f09-113">Você pode usar a correspondência de padrões para acessar e atribuir nomes de elementos de tupla, conforme mostrado no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="a1f09-113">You can use pattern matching to access and assign names for tuple elements, as shown in the following code.</span></span>
+<span data-ttu-id="d3b40-113">Você pode usar a correspondência de padrões para acessar e atribuir nomes de elementos de tupla, conforme mostrado no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="d3b40-113">You can use pattern matching to access and assign names for tuple elements, as shown in the following code.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-<span data-ttu-id="a1f09-114">Você também pode desconstruir uma tupla por meio de correspondência de fora de um `match` expressão por meio de `let` associação:</span><span class="sxs-lookup"><span data-stu-id="a1f09-114">You can also deconstruct a tuple via pattern matching outside of a `match` expression via  `let` binding:</span></span>
+<span data-ttu-id="d3b40-114">Você também pode desconstruir uma tupla por meio de correspondência de fora de um `match` expressão por meio de `let` associação:</span><span class="sxs-lookup"><span data-stu-id="d3b40-114">You can also deconstruct a tuple via pattern matching outside of a `match` expression via  `let` binding:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
-<span data-ttu-id="a1f09-115">Você pode padrão or corresponder na tuplas como entradas para funções:</span><span class="sxs-lookup"><span data-stu-id="a1f09-115">Or you can pattern match on tuples as inputs to functions:</span></span>
+<span data-ttu-id="d3b40-115">Você pode padrão or corresponder na tuplas como entradas para funções:</span><span class="sxs-lookup"><span data-stu-id="d3b40-115">Or you can pattern match on tuples as inputs to functions:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L43-L47)]
 
-<span data-ttu-id="a1f09-116">Se você precisar apenas um elemento da tupla, o caractere curinga (sublinhado) pode ser usado para evitar a criação de um novo nome para um valor que não é necessário.</span><span class="sxs-lookup"><span data-stu-id="a1f09-116">If you need only one element of the tuple, the wildcard character (the underscore) can be used to avoid creating a new name for a value that you do not need.</span></span>
+<span data-ttu-id="d3b40-116">Se você precisar apenas um elemento da tupla, o caractere curinga (sublinhado) pode ser usado para evitar a criação de um novo nome para um valor que não é necessário.</span><span class="sxs-lookup"><span data-stu-id="d3b40-116">If you need only one element of the tuple, the wildcard character (the underscore) can be used to avoid creating a new name for a value that you do not need.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L53-L54)]
 
-<span data-ttu-id="a1f09-117">Copiando elementos de uma tupla de referência em uma tupla de struct também é simple:</span><span class="sxs-lookup"><span data-stu-id="a1f09-117">Copying elements from a reference tuple into a struct tuple is also simple:</span></span>
+<span data-ttu-id="d3b40-117">Copiando elementos de uma tupla de referência em uma tupla de struct também é simple:</span><span class="sxs-lookup"><span data-stu-id="d3b40-117">Copying elements from a reference tuple into a struct tuple is also simple:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L62-L66)]
 
-<span data-ttu-id="a1f09-118">As funções `fst` e `snd` (referenciar apenas tuplas) retornar o primeiro e segundo os elementos de uma tupla, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="a1f09-118">The functions `fst` and `snd` (reference tuples only) return the first and second elements of a tuple, respectively.</span></span>
+<span data-ttu-id="d3b40-118">As funções `fst` e `snd` (referenciar apenas tuplas) retornar o primeiro e segundo os elementos de uma tupla, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="d3b40-118">The functions `fst` and `snd` (reference tuples only) return the first and second elements of a tuple, respectively.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L72-L73)]
 
-<span data-ttu-id="a1f09-119">Não há nenhuma função interna que retorna o terceiro elemento de um triplo, mas você pode facilmente escrever um da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="a1f09-119">There is no built-in function that returns the third element of a triple, but you can easily write one as follows.</span></span>
+<span data-ttu-id="d3b40-119">Não há nenhuma função interna que retorna o terceiro elemento de um triplo, mas você pode facilmente escrever um da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="d3b40-119">There is no built-in function that returns the third element of a triple, but you can easily write one as follows.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L78-L78)]
 
-<span data-ttu-id="a1f09-120">Em geral, é melhor usar a correspondência de padrões para acessar os elementos de tupla individuais.</span><span class="sxs-lookup"><span data-stu-id="a1f09-120">Generally, it is better to use pattern matching to access individual tuple elements.</span></span>
+<span data-ttu-id="d3b40-120">Em geral, é melhor usar a correspondência de padrões para acessar os elementos de tupla individuais.</span><span class="sxs-lookup"><span data-stu-id="d3b40-120">Generally, it is better to use pattern matching to access individual tuple elements.</span></span>
 
-## <a name="using-tuples"></a><span data-ttu-id="a1f09-121">Uso de tuplas</span><span class="sxs-lookup"><span data-stu-id="a1f09-121">Using Tuples</span></span>
+## <a name="using-tuples"></a><span data-ttu-id="d3b40-121">Uso de tuplas</span><span class="sxs-lookup"><span data-stu-id="d3b40-121">Using Tuples</span></span>
 
-<span data-ttu-id="a1f09-122">As tuplas fornecem uma maneira conveniente para retornar vários valores de uma função, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="a1f09-122">Tuples provide a convenient way to return multiple values from a function, as shown in the following example.</span></span> <span data-ttu-id="a1f09-123">Este exemplo executa a divisão de inteiro e retorna o resultado arredondado da operação como membro de um par de tupla primeiro e o restante como um segundo membro do par.</span><span class="sxs-lookup"><span data-stu-id="a1f09-123">This example performs integer division and returns the rounded result of the operation as a first member of a tuple pair and the remainder as a second member of the pair.</span></span>
+<span data-ttu-id="d3b40-122">As tuplas fornecem uma maneira conveniente para retornar vários valores de uma função, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="d3b40-122">Tuples provide a convenient way to return multiple values from a function, as shown in the following example.</span></span> <span data-ttu-id="d3b40-123">Este exemplo executa a divisão de inteiro e retorna o resultado arredondado da operação como membro de um par de tupla primeiro e o restante como um segundo membro do par.</span><span class="sxs-lookup"><span data-stu-id="d3b40-123">This example performs integer division and returns the rounded result of the operation as a first member of a tuple pair and the remainder as a second member of the pair.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L83-L86)]
 
-<span data-ttu-id="a1f09-124">As tuplas também podem ser usadas como argumentos de função quando você quer evitar currying implícita dos argumentos de função implícita a sintaxe da função normal.</span><span class="sxs-lookup"><span data-stu-id="a1f09-124">Tuples can also be used as function arguments when you want to avoid the implicit currying of function arguments that is implied by the usual function syntax.</span></span>
+<span data-ttu-id="d3b40-124">As tuplas também podem ser usadas como argumentos de função quando você quer evitar currying implícita dos argumentos de função implícita a sintaxe da função normal.</span><span class="sxs-lookup"><span data-stu-id="d3b40-124">Tuples can also be used as function arguments when you want to avoid the implicit currying of function arguments that is implied by the usual function syntax.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L88-L88)]
 
-<span data-ttu-id="a1f09-125">A sintaxe normal para definir a função `let sum a b = a + b` permite que você defina uma função que é o aplicativo parcial do primeiro argumento da função, conforme mostrado no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="a1f09-125">The usual syntax for defining the function `let sum a b = a + b` enables you to define a function that is the partial application of the first argument of the function, as shown in the following code.</span></span>
+<span data-ttu-id="d3b40-125">A sintaxe normal para definir a função `let sum a b = a + b` permite que você defina uma função que é o aplicativo parcial do primeiro argumento da função, conforme mostrado no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="d3b40-125">The usual syntax for defining the function `let sum a b = a + b` enables you to define a function that is the partial application of the first argument of the function, as shown in the following code.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L90-L94)]
 
-<span data-ttu-id="a1f09-126">Usar uma tupla, como o parâmetro desabilita currying.</span><span class="sxs-lookup"><span data-stu-id="a1f09-126">Using a tuple as the parameter disables currying.</span></span> <span data-ttu-id="a1f09-127">Para obter mais informações, consulte "Parcial dos argumentos de aplicativo" na [funções](functions/index.md).</span><span class="sxs-lookup"><span data-stu-id="a1f09-127">For more information, see "Partial Application of Arguments" in [Functions](functions/index.md).</span></span>
+<span data-ttu-id="d3b40-126">Usar uma tupla, como o parâmetro desabilita currying.</span><span class="sxs-lookup"><span data-stu-id="d3b40-126">Using a tuple as the parameter disables currying.</span></span> <span data-ttu-id="d3b40-127">Para obter mais informações, consulte "Parcial dos argumentos de aplicativo" na [funções](functions/index.md).</span><span class="sxs-lookup"><span data-stu-id="d3b40-127">For more information, see "Partial Application of Arguments" in [Functions](functions/index.md).</span></span>
 
-## <a name="names-of-tuple-types"></a><span data-ttu-id="a1f09-128">Nomes de tipos de tupla</span><span class="sxs-lookup"><span data-stu-id="a1f09-128">Names of Tuple Types</span></span>
+## <a name="names-of-tuple-types"></a><span data-ttu-id="d3b40-128">Nomes de tipos de tupla</span><span class="sxs-lookup"><span data-stu-id="d3b40-128">Names of Tuple Types</span></span>
 
-<span data-ttu-id="a1f09-129">Quando você escreve o nome de um tipo que é uma tupla, você usar o `*` símbolo para separar os elementos.</span><span class="sxs-lookup"><span data-stu-id="a1f09-129">When you write out the name of a type that is a tuple, you use the `*` symbol to separate elements.</span></span> <span data-ttu-id="a1f09-130">Para uma tupla que consiste em uma `int`, um `float`e um `string`, tais como `(10, 10.0, "ten")`, o tipo deve ser escrito da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="a1f09-130">For a tuple that consists of an `int`, a `float`, and a `string`, such as `(10, 10.0, "ten")`, the type would be written as follows.</span></span>
+<span data-ttu-id="d3b40-129">Quando você escreve o nome de um tipo que é uma tupla, você usar o `*` símbolo para separar os elementos.</span><span class="sxs-lookup"><span data-stu-id="d3b40-129">When you write out the name of a type that is a tuple, you use the `*` symbol to separate elements.</span></span> <span data-ttu-id="d3b40-130">Para uma tupla que consiste em uma `int`, um `float`e um `string`, tais como `(10, 10.0, "ten")`, o tipo deve ser escrito da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="d3b40-130">For a tuple that consists of an `int`, a `float`, and a `string`, such as `(10, 10.0, "ten")`, the type would be written as follows.</span></span>
 
 ```fsharp
 int * float * string
 ```
 
-## <a name="interoperation-with-c-tuples"></a><span data-ttu-id="a1f09-131">Interoperação com tuplas do c#</span><span class="sxs-lookup"><span data-stu-id="a1f09-131">Interoperation with C# Tuples</span></span>
+## <a name="interoperation-with-c-tuples"></a><span data-ttu-id="d3b40-131">Interoperação com tuplas do c#</span><span class="sxs-lookup"><span data-stu-id="d3b40-131">Interoperation with C# Tuples</span></span>
 
-<span data-ttu-id="a1f09-132">C# 7.0 introduziu tuplas para o idioma.</span><span class="sxs-lookup"><span data-stu-id="a1f09-132">C# 7.0 introduced tuples to the language.</span></span>  <span data-ttu-id="a1f09-133">As tuplas no C# são structs e são equivalentes a tuplas de struct no F#.</span><span class="sxs-lookup"><span data-stu-id="a1f09-133">Tuples in C# are structs, and are equivalent to struct tuples in F#.</span></span>  <span data-ttu-id="a1f09-134">Se você precisar interoperar com c#, você deve usar tuplas de struct.</span><span class="sxs-lookup"><span data-stu-id="a1f09-134">If you need to interoperate with C#, you must use struct tuples.</span></span>
+<span data-ttu-id="d3b40-132">C# 7.0 introduziu tuplas para o idioma.</span><span class="sxs-lookup"><span data-stu-id="d3b40-132">C# 7.0 introduced tuples to the language.</span></span>  <span data-ttu-id="d3b40-133">As tuplas no C# são structs e são equivalentes a tuplas de struct no F#.</span><span class="sxs-lookup"><span data-stu-id="d3b40-133">Tuples in C# are structs, and are equivalent to struct tuples in F#.</span></span>  <span data-ttu-id="d3b40-134">Se você precisar interoperar com c#, você deve usar tuplas de struct.</span><span class="sxs-lookup"><span data-stu-id="d3b40-134">If you need to interoperate with C#, you must use struct tuples.</span></span>
 
-<span data-ttu-id="a1f09-135">Isso é fácil de fazer.</span><span class="sxs-lookup"><span data-stu-id="a1f09-135">This is easy to do.</span></span>  <span data-ttu-id="a1f09-136">Por exemplo, imagine que você precisa passar uma tupla a uma classe c# e, em seguida, consumir seu resultado, que também é uma tupla:</span><span class="sxs-lookup"><span data-stu-id="a1f09-136">For example, imagine you have to pass a tuple to a C# class and then consume its result, which is also a tuple:</span></span>
+<span data-ttu-id="d3b40-135">Isso é fácil de fazer.</span><span class="sxs-lookup"><span data-stu-id="d3b40-135">This is easy to do.</span></span>  <span data-ttu-id="d3b40-136">Por exemplo, imagine que você precisa passar uma tupla a uma classe c# e, em seguida, consumir seu resultado, que também é uma tupla:</span><span class="sxs-lookup"><span data-stu-id="d3b40-136">For example, imagine you have to pass a tuple to a C# class and then consume its result, which is also a tuple:</span></span>
 
 ```csharp
 namespace CSharpTupleInterop
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-<span data-ttu-id="a1f09-137">No seu F# código, você pode passar uma tupla de struct como parâmetro e consumir o resultado como uma tupla de struct.</span><span class="sxs-lookup"><span data-stu-id="a1f09-137">In your F# code, you can then pass a struct tuple as the parameter and consume the result as a struct tuple.</span></span>
+<span data-ttu-id="d3b40-137">No seu F# código, você pode passar uma tupla de struct como parâmetro e consumir o resultado como uma tupla de struct.</span><span class="sxs-lookup"><span data-stu-id="d3b40-137">In your F# code, you can then pass a struct tuple as the parameter and consume the result as a struct tuple.</span></span>
 
 ```fsharp
 open TupleInterop
@@ -112,27 +112,27 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 // newX is now 2, and newY is now 3
 ```
 
-### <a name="converting-between-reference-tuples-and-struct-tuples"></a><span data-ttu-id="a1f09-138">Convertendo entre tuplas de referência e tuplas de Struct</span><span class="sxs-lookup"><span data-stu-id="a1f09-138">Converting between Reference Tuples and Struct Tuples</span></span>
+### <a name="converting-between-reference-tuples-and-struct-tuples"></a><span data-ttu-id="d3b40-138">Convertendo entre tuplas de referência e tuplas de Struct</span><span class="sxs-lookup"><span data-stu-id="d3b40-138">Converting between Reference Tuples and Struct Tuples</span></span>
 
-<span data-ttu-id="a1f09-139">Como as tuplas de referência e Tuples de Struct têm uma representação subjacente completamente diferente, eles não são implicitamente conversíveis.</span><span class="sxs-lookup"><span data-stu-id="a1f09-139">Because Reference Tuples and Struct Tuples have a completely different underlying representation, they are not implicitly convertible.</span></span>  <span data-ttu-id="a1f09-140">Ou seja, não será compilado código como o seguinte:</span><span class="sxs-lookup"><span data-stu-id="a1f09-140">That is, code such as the following won't compile:</span></span>
+<span data-ttu-id="d3b40-139">Como as tuplas de referência e Tuples de Struct têm uma representação subjacente completamente diferente, eles não são implicitamente conversíveis.</span><span class="sxs-lookup"><span data-stu-id="d3b40-139">Because Reference Tuples and Struct Tuples have a completely different underlying representation, they are not implicitly convertible.</span></span>  <span data-ttu-id="d3b40-140">Ou seja, não será compilado código como o seguinte:</span><span class="sxs-lookup"><span data-stu-id="d3b40-140">That is, code such as the following won't compile:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-<span data-ttu-id="a1f09-141">Você deve padrão correspondem em uma tupla e construir o outro com as partes constituintes.</span><span class="sxs-lookup"><span data-stu-id="a1f09-141">You must pattern match on one tuple and construct the other with the constituent parts.</span></span>  <span data-ttu-id="a1f09-142">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="a1f09-142">For example:</span></span>
+<span data-ttu-id="d3b40-141">Você deve padrão correspondem em uma tupla e construir o outro com as partes constituintes.</span><span class="sxs-lookup"><span data-stu-id="d3b40-141">You must pattern match on one tuple and construct the other with the constituent parts.</span></span>  <span data-ttu-id="d3b40-142">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="d3b40-142">For example:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
-## <a name="compiled-form-of-reference-tuples"></a><span data-ttu-id="a1f09-143">Forma compilada de tuplas de referência</span><span class="sxs-lookup"><span data-stu-id="a1f09-143">Compiled Form of Reference Tuples</span></span>
+## <a name="compiled-form-of-reference-tuples"></a><span data-ttu-id="d3b40-143">Forma compilada de tuplas de referência</span><span class="sxs-lookup"><span data-stu-id="d3b40-143">Compiled Form of Reference Tuples</span></span>
 
-<span data-ttu-id="a1f09-144">Esta seção explica a forma de tuplas quando eles serão compilados.</span><span class="sxs-lookup"><span data-stu-id="a1f09-144">This section explains the form of tuples when they're compiled.</span></span>  <span data-ttu-id="a1f09-145">As informações fornecidas aqui não não necessária para ler a menos que você tiver como alvo o .NET Framework 3.5 ou inferior.</span><span class="sxs-lookup"><span data-stu-id="a1f09-145">The information here isn't necessary to read unless you are targeting .NET Framework 3.5 or lower.</span></span>
+<span data-ttu-id="d3b40-144">Esta seção explica a forma de tuplas quando eles serão compilados.</span><span class="sxs-lookup"><span data-stu-id="d3b40-144">This section explains the form of tuples when they're compiled.</span></span>  <span data-ttu-id="d3b40-145">As informações fornecidas aqui não não necessária para ler a menos que você tiver como alvo o .NET Framework 3.5 ou inferior.</span><span class="sxs-lookup"><span data-stu-id="d3b40-145">The information here isn't necessary to read unless you are targeting .NET Framework 3.5 or lower.</span></span>
 
-<span data-ttu-id="a1f09-146">As tuplas são compiladas em objetos de um dos vários tipos genéricos, todas nomeados `System.Tuple`, que são sobrecarregados na arity ou número de parâmetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="a1f09-146">Tuples are compiled into objects of one of several generic types, all named `System.Tuple`, that are overloaded on the arity, or number of type parameters.</span></span> <span data-ttu-id="a1f09-147">Tipos de tupla aparecem neste formulário quando você exibi-los de outra linguagem, tais como C# ou Visual Basic, ou quando você estiver usando uma ferramenta que não está ciente do F# constrói.</span><span class="sxs-lookup"><span data-stu-id="a1f09-147">Tuple types appear in this form when you view them from another language, such as C# or Visual Basic, or when you are using a tool that is not aware of F# constructs.</span></span> <span data-ttu-id="a1f09-148">O `Tuple` tipos foram introduzidos no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="a1f09-148">The `Tuple` types were introduced in .NET Framework 4.</span></span> <span data-ttu-id="a1f09-149">Se você estiver selecionando uma versão anterior do .NET Framework, o compilador usa as versões do [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) da versão 2.0 do F# biblioteca principal.</span><span class="sxs-lookup"><span data-stu-id="a1f09-149">If you are targeting an earlier version of the .NET Framework, the compiler uses versions of [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) from the 2.0 version of the F# Core Library.</span></span> <span data-ttu-id="a1f09-150">Os tipos na biblioteca são usados apenas para aplicativos que direcionam o 2.0, 3.0 e 3.5 versões do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a1f09-150">The types in this library are used only for applications that target the 2.0, 3.0, and 3.5 versions of the .NET Framework.</span></span> <span data-ttu-id="a1f09-151">Encaminhamento de tipo é usado para garantir a compatibilidade binária entre o .NET Framework 2.0 e o .NET Framework 4 F# componentes.</span><span class="sxs-lookup"><span data-stu-id="a1f09-151">Type forwarding is used to ensure binary compatibility between .NET Framework 2.0 and .NET Framework 4 F# components.</span></span>
+<span data-ttu-id="d3b40-146">As tuplas são compiladas em objetos de um dos vários tipos genéricos, todas nomeados `System.Tuple`, que são sobrecarregados na arity ou número de parâmetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="d3b40-146">Tuples are compiled into objects of one of several generic types, all named `System.Tuple`, that are overloaded on the arity, or number of type parameters.</span></span> <span data-ttu-id="d3b40-147">Tipos de tupla aparecem neste formulário quando você exibi-los de outra linguagem, tais como C# ou Visual Basic, ou quando você estiver usando uma ferramenta que não está ciente do F# constrói.</span><span class="sxs-lookup"><span data-stu-id="d3b40-147">Tuple types appear in this form when you view them from another language, such as C# or Visual Basic, or when you are using a tool that is not aware of F# constructs.</span></span> <span data-ttu-id="d3b40-148">O `Tuple` tipos foram introduzidos no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="d3b40-148">The `Tuple` types were introduced in .NET Framework 4.</span></span> <span data-ttu-id="d3b40-149">Se você estiver selecionando uma versão anterior do .NET Framework, o compilador usa as versões do [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) da versão 2.0 do F# biblioteca principal.</span><span class="sxs-lookup"><span data-stu-id="d3b40-149">If you are targeting an earlier version of the .NET Framework, the compiler uses versions of [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) from the 2.0 version of the F# Core Library.</span></span> <span data-ttu-id="d3b40-150">Os tipos na biblioteca são usados apenas para aplicativos que direcionam o 2.0, 3.0 e 3.5 versões do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d3b40-150">The types in this library are used only for applications that target the 2.0, 3.0, and 3.5 versions of the .NET Framework.</span></span> <span data-ttu-id="d3b40-151">Encaminhamento de tipo é usado para garantir a compatibilidade binária entre o .NET Framework 2.0 e o .NET Framework 4 F# componentes.</span><span class="sxs-lookup"><span data-stu-id="d3b40-151">Type forwarding is used to ensure binary compatibility between .NET Framework 2.0 and .NET Framework 4 F# components.</span></span>
 
-### <a name="compiled-form-of-struct-tuples"></a><span data-ttu-id="a1f09-152">Forma compilada de tuplas de Struct</span><span class="sxs-lookup"><span data-stu-id="a1f09-152">Compiled Form of Struct Tuples</span></span>
+### <a name="compiled-form-of-struct-tuples"></a><span data-ttu-id="d3b40-152">Forma compilada de tuplas de Struct</span><span class="sxs-lookup"><span data-stu-id="d3b40-152">Compiled Form of Struct Tuples</span></span>
 
-<span data-ttu-id="a1f09-153">Tuplas de struct (por exemplo, `struct (x, y)`), são fundamentalmente diferente das tuplas de referência.</span><span class="sxs-lookup"><span data-stu-id="a1f09-153">Struct tuples (for example, `struct (x, y)`), are fundamentally different from reference tuples.</span></span>  <span data-ttu-id="a1f09-154">Eles são compilados no <xref:System.ValueTuple> tipo, sobrecarregado por arity ou o número de parâmetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="a1f09-154">They are compiled into the <xref:System.ValueTuple> type, overloaded by arity, or the number of type parameters.</span></span>  <span data-ttu-id="a1f09-155">Elas são equivalentes às [tuplas do c# 7.0](../../csharp/tuples.md) e [tuplas do Visual Basic 2017](../../visual-basic/programming-guide/language-features/data-types/tuples.md)e interoperar bidirecionalmente.</span><span class="sxs-lookup"><span data-stu-id="a1f09-155">They are equivalent to [C# 7.0 Tuples](../../csharp/tuples.md) and [Visual Basic 2017 Tuples](../../visual-basic/programming-guide/language-features/data-types/tuples.md), and interoperate bidirectionally.</span></span>
+<span data-ttu-id="d3b40-153">Tuplas de struct (por exemplo, `struct (x, y)`), são fundamentalmente diferente das tuplas de referência.</span><span class="sxs-lookup"><span data-stu-id="d3b40-153">Struct tuples (for example, `struct (x, y)`), are fundamentally different from reference tuples.</span></span>  <span data-ttu-id="d3b40-154">Eles são compilados no <xref:System.ValueTuple> tipo, sobrecarregado por arity ou o número de parâmetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="d3b40-154">They are compiled into the <xref:System.ValueTuple> type, overloaded by arity, or the number of type parameters.</span></span>  <span data-ttu-id="d3b40-155">Elas são equivalentes às [tuplas do c# 7.0](../../csharp/tuples.md) e [tuplas do Visual Basic 2017](../../visual-basic/programming-guide/language-features/data-types/tuples.md)e interoperar bidirecionalmente.</span><span class="sxs-lookup"><span data-stu-id="d3b40-155">They are equivalent to [C# 7.0 Tuples](../../csharp/tuples.md) and [Visual Basic 2017 Tuples](../../visual-basic/programming-guide/language-features/data-types/tuples.md), and interoperate bidirectionally.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a1f09-156">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a1f09-156">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d3b40-156">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d3b40-156">See also</span></span>
 
-- [<span data-ttu-id="a1f09-157">Referência da Linguagem F#</span><span class="sxs-lookup"><span data-stu-id="a1f09-157">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="a1f09-158">Tipos F#</span><span class="sxs-lookup"><span data-stu-id="a1f09-158">F# Types</span></span>](fsharp-types.md)
+- [<span data-ttu-id="d3b40-157">Referência da Linguagem F#</span><span class="sxs-lookup"><span data-stu-id="d3b40-157">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="d3b40-158">Tipos F#</span><span class="sxs-lookup"><span data-stu-id="d3b40-158">F# Types</span></span>](fsharp-types.md)
