@@ -1,1 +1,0 @@
-<span data-ttu-id="bc179-101">Sistema operacional Windows°7</span><span class="sxs-lookup"><span data-stu-id="bc179-101">Windows°7 operating system</span></span>
