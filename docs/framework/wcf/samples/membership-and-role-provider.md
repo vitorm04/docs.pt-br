@@ -2,15 +2,15 @@
 title: Provedor de função e associação
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 73084bb766274d6eab497555e82e029f94be0359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638375"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876739"
 ---
 # <a name="membership-and-role-provider"></a>Provedor de função e associação
-O provedor de função e associação que demonstra como um serviço pode usar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedores de associação e funções para autenticar e autorizar clientes.  
+O exemplo de provedor de função e associação demonstra como um serviço pode usar os provedores de função e associação do ASP.NET para autenticar e autorizar clientes.  
   
  Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado pelo Internet Information Services (IIS).  
   
@@ -21,11 +21,11 @@ O provedor de função e associação que demonstra como um serviço pode usar o
   
 - Um cliente pode autenticar usando a combinação da senha do nome de usuário.  
   
-- O servidor pode validar as credenciais do cliente em relação a [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação.  
+- O servidor pode validar as credenciais de cliente com o provedor de associação do ASP.NET.  
   
 - O servidor pode ser autenticado usando o certificado do servidor x. 509.  
   
-- O servidor pode mapear o cliente autenticado a uma função usando o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função.  
+- O servidor pode mapear o cliente autenticado a uma função usando o provedor de função do ASP.NET.  
   
 - O servidor pode usar o `PrincipalPermissionAttribute` para controlar o acesso a determinados métodos que são expostos pelo serviço.  
   
@@ -69,7 +69,7 @@ O provedor de função e associação que demonstra como um serviço pode usar o
 </system.web>  
 ```  
   
- O serviço expõe um ponto de extremidade para se comunicar com o serviço, que é definido usando o arquivo de configuração Web. config. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão `wsHttpBinding`, cujo padrão é usando a autenticação do Windows. Este exemplo define o padrão `wsHttpBinding` para usar a autenticação de nome de usuário. O comportamento Especifica que o certificado do servidor deve ser usado para autenticação de serviço. O certificado do servidor deve conter o mesmo valor para o `SubjectName` como o `findValue` atributo na [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento de configuração. Além disso, o comportamento Especifica que a autenticação de senha do nome de usuário pares é executada pela [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação e o mapeamento de função é executada pelo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função, especificando os nomes definidos para os dois provedores.  
+ O serviço expõe um ponto de extremidade para se comunicar com o serviço, que é definido usando o arquivo de configuração Web. config. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão `wsHttpBinding`, cujo padrão é usando a autenticação do Windows. Este exemplo define o padrão `wsHttpBinding` para usar a autenticação de nome de usuário. O comportamento Especifica que o certificado do servidor deve ser usado para autenticação de serviço. O certificado do servidor deve conter o mesmo valor para o `SubjectName` como o `findValue` atributo na [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento de configuração. Além disso, o comportamento Especifica que a autenticação de pares de nome de usuário-senha é executada pelo provedor de associação do ASP.NET e mapeamento de função é executado pelo provedor de função do ASP.NET, especificando os nomes definidos para os dois provedores.  
   
 ```xml  
 <system.serviceModel>  
@@ -123,10 +123,10 @@ O provedor de função e associação que demonstra como um serviço pode usar o
 2. Certifique-se de que você tenha configurado o [serviços de banco de dados do aplicativo ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  Se você estiver executando o SQL Server Express Edition, o nome do servidor é. \SQLEXPRESS. Esse servidor deve ser usado ao configurar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo Serviços de banco de dados, bem como a cadeia de caracteres de conexão de Web. config.  
+    >  Se você estiver executando o SQL Server Express Edition, o nome do servidor é. \SQLEXPRESS. Esse servidor deve ser usado ao configurar o ASP.NET aplicativo Serviços de banco de dados, bem como a cadeia de caracteres de conexão de Web. config.  
   
     > [!NOTE]
-    >  O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] conta de processo de trabalho deve ter permissões no banco de dados que é criado nesta etapa. Use o utilitário sqlcmd ou o SQL Server Management Studio para fazer isso.  
+    >  A conta de processo de trabalho do ASP.NET deve ter permissões no banco de dados é criado nesta etapa. Use o utilitário sqlcmd ou o SQL Server Management Studio para fazer isso.  
   
 3. Para executar o exemplo em uma configuração ou entre computadores, use as instruções a seguir.  
   

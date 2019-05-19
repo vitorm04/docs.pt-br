@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583809"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879886"
 ---
 # <a name="connection-string-builders"></a>Construtores de cadeia de conexão
-Em versões anteriores do [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]verificação de cadeias de caracteres de conexão com a cadeia de caracteres concatenada valores não tivesse ocorrido, para que no tempo de execução, uma palavra-chave incorreta gerada pelo tempo de compilação um <xref:System.ArgumentException>. Cada um dos provedores de dados .NET Framework compatível com diferentes sintaxes de conexão palavras-chave, que dificultava a construir cadeias de caracteres de conexão válidas manualmente. Para resolver esse problema, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduziu novos construtores de cadeia de caracteres de conexão para cada provedor de dados .NET Framework. Cada provedor de dados inclui uma classe de construtor de cadeia de conexão fortemente tipada que herda de <xref:System.Data.Common.DbConnectionStringBuilder>. A tabela a seguir lista os provedores de dados .NET Framework e suas classes de construtor de cadeia de caracteres de conexão associado.  
+Em versões anteriores do ADO.NET, verificação de cadeias de caracteres de conexão com os valores de cadeia de caracteres concatenada de tempo de compilação não ocorreu, para que no tempo de execução, uma palavra-chave incorreta gerada uma <xref:System.ArgumentException>. Cada um dos provedores de dados .NET Framework compatível com diferentes sintaxes de conexão palavras-chave, que dificultava a construir cadeias de caracteres de conexão válidas manualmente. Para resolver esse problema, o ADO.NET 2.0 introduziu novos construtores de cadeia de caracteres de conexão para cada provedor de dados .NET Framework. Cada provedor de dados inclui uma classe de construtor de cadeia de conexão fortemente tipada que herda de <xref:System.Data.Common.DbConnectionStringBuilder>. A tabela a seguir lista os provedores de dados .NET Framework e suas classes de construtor de cadeia de caracteres de conexão associado.  
   
 |Provider|Classe ConnectionStringBuilder|  
 |--------------|-----------------------------------|  

@@ -2,12 +2,12 @@
 title: Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972608"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878600"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 Este tópico descreve algumas práticas recomendadas para a hospedagem de serviços Windows Communication Foundation (WCF).  
@@ -40,7 +40,7 @@ Este tópico descreve algumas práticas recomendadas para a hospedagem de servi�
  Você pode configurar as ligações do site da Web do IIS usando o snap-in do Console de gerenciamento Microsoft (MMC) do IIS.  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Assemblies de outras contas na pasta temporária de substituir os Pools de aplicativos em execução em contextos de usuário diferente  
- Para garantir que os pools de aplicativos em execução em contextos de usuário diferente não é possível substituir os assemblies de outras contas em temporárias [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] arquivos de pasta, use diferentes identidades e as pastas temporárias para diferentes aplicativos. Por exemplo, se você tiver dois /Application1 de aplicativos virtuais e / Application2, você pode criar dois pools de aplicativos, A e B, com duas identidades diferentes. Um pool de aplicativos pode executar a identidade de usuário em uma (user1) enquanto o pool de aplicativos B pode ser executado em outra identidade de usuário (user2) e configurar /Application1 para uso A e /Application2 usar B.  
+ Para garantir que os pools de aplicativos em execução em contextos de usuário diferente não é possível substituir os assemblies de outras contas na pasta de arquivos temporária do ASP.NET, use pastas temporárias e identidades diferentes para diferentes aplicativos. Por exemplo, se você tiver dois /Application1 de aplicativos virtuais e / Application2, você pode criar dois pools de aplicativos, A e B, com duas identidades diferentes. Um pool de aplicativos pode executar a identidade de usuário em uma (user1) enquanto o pool de aplicativos B pode ser executado em outra identidade de usuário (user2) e configurar /Application1 para uso A e /Application2 usar B.  
   
  No Web. config, você pode configurar a pasta temporária usando \< system.web/compilation/@tempFolder>. Para /Application1, pode ser "c:\tempForUser1" e "c:\tempForUser2" pode ser para application2. Conceda permissão de gravação correspondente a essas pastas para as duas identidades.  
   

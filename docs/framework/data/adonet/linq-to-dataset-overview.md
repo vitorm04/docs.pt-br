@@ -2,15 +2,15 @@
 title: LINQ para visão geral do DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0dd220e609d4934527f121e4e5c85f3d83323d69
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878586"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878102"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ para visão geral do DataSet
-O <xref:System.Data.DataSet> é um dos componentes mais amplamente usados de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Ele é um elemento fundamental do desconectado modelo de programação que [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] se baseia, e permite que você explicitamente os dados em cache de fontes de dados diferentes. Para a camada de apresentação, o <xref:System.Data.DataSet> está totalmente integrado com controles de GUI para vinculação de dados. Para a camada intermediária, ele fornece um cache que preserva a forma dos dados relacional e inclui consulta rápida, simples e serviços de navegação da hierarquia. Uma técnica comum usada para reduzir o número de solicitações em um banco de dados é usar o <xref:System.Data.DataSet> para armazenar em cache na camada intermediária. Por exemplo, considere um controlado por dados [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo Web. Geralmente, uma parte significativa de dados do aplicativo não muda com frequência e é comum em sessões ou usuários. Esses dados podem ser mantidos na memória no servidor Web, reduzindo o número de solicitações no banco de dados e acelerando as interações do usuário. Outro aspecto útil do <xref:System.Data.DataSet> é que ele permite que um aplicativo traga subconjuntos de dados da fonte de dados de um ou mais para o espaço de aplicativo. O aplicativo pode manipular os dados na memória, mantendo sua forma relacional.  
+O <xref:System.Data.DataSet> é um dos componentes mais amplamente usados do ADO.NET. É um elemento fundamental do modelo de programação desconectado baseado no ADO.NET e ele permite que você explicitamente os dados em cache de fontes de dados diferentes. Para a camada de apresentação, o <xref:System.Data.DataSet> está totalmente integrado com controles de GUI para vinculação de dados. Para a camada intermediária, ele fornece um cache que preserva a forma dos dados relacional e inclui consulta rápida, simples e serviços de navegação da hierarquia. Uma técnica comum usada para reduzir o número de solicitações em um banco de dados é usar o <xref:System.Data.DataSet> para armazenar em cache na camada intermediária. Por exemplo, considere um aplicativo da Web ASP.NET controlado por dados. Geralmente, uma parte significativa de dados do aplicativo não muda com frequência e é comum em sessões ou usuários. Esses dados podem ser mantidos na memória no servidor Web, reduzindo o número de solicitações no banco de dados e acelerando as interações do usuário. Outro aspecto útil do <xref:System.Data.DataSet> é que ele permite que um aplicativo traga subconjuntos de dados da fonte de dados de um ou mais para o espaço de aplicativo. O aplicativo pode manipular os dados na memória, mantendo sua forma relacional.  
   
  Apesar de sua importância, o <xref:System.Data.DataSet> limitou os recursos de consulta. O método <xref:System.Data.DataTable.Select%2A> pode ser usado para filtrar e classificar, e os métodos <xref:System.Data.DataRow.GetChildRows%2A> e <xref:System.Data.DataRow.GetParentRow%2A> podem ser usados para navegação a hierarquia. Para algo mais complexo, no entanto, o desenvolvedor precisa escrever uma consulta personalizada. Isso pode resultar em aplicativos com baixo desempenho e de difícil manutenção.  
   

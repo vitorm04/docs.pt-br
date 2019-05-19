@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592771"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876218"
 ---
 # <a name="application-settings-architecture"></a>Arquitetura das configurações do aplicativo
 Este tópico descreve como a arquitetura das configurações de aplicativo funciona e explora recursos avançados da arquitetura, como as configurações agrupadas e as chaves de configurações.  
@@ -22,7 +22,7 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
  As interfaces são fornecidas para permitir que componentes personalizados mantenham suas próprias configurações quando forem hospedados em um aplicativo. Ao usar chaves de configurações, os componentes podem manter separadas as configurações para várias instâncias do componente.  
   
 ## <a name="defining-settings"></a>configurando configurações  
- A arquitetura das configurações de aplicativo é usada tanto no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] quanto nos Windows Forms e contém várias classes base que são compartilhadas entre os dois ambientes. O mais importante é <xref:System.Configuration.SettingsBase>, que fornece acesso às configurações através de uma coleção e fornece métodos de baixo nível para carregar e salvar as configurações. Cada ambiente implementa sua própria classe derivada de <xref:System.Configuration.SettingsBase> para fornecer a funcionalidade de configurações adicionais para esse ambiente. Em um aplicativo baseado em Windows Forms, todas as configurações de aplicativo devem ser definidas em uma classe derivada de <xref:System.Configuration.ApplicationSettingsBase> classe, que adiciona a seguinte funcionalidade à classe base:  
+ A arquitetura de configurações do aplicativo é usada dentro do ASP.NET e Windows Forms e contém um número de classes base que são compartilhados entre os dois ambientes. O mais importante é <xref:System.Configuration.SettingsBase>, que fornece acesso às configurações através de uma coleção e fornece métodos de baixo nível para carregar e salvar as configurações. Cada ambiente implementa sua própria classe derivada de <xref:System.Configuration.SettingsBase> para fornecer a funcionalidade de configurações adicionais para esse ambiente. Em um aplicativo baseado em Windows Forms, todas as configurações de aplicativo devem ser definidas em uma classe derivada de <xref:System.Configuration.ApplicationSettingsBase> classe, que adiciona a seguinte funcionalidade à classe base:  
   
 - Operações de carregar e salvar de nível mais alto  
   

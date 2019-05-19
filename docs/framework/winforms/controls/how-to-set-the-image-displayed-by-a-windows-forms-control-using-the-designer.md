@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 89d9517a92155f569a15c5272bcecc1c8f427f1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b914509656d3ce67d62dcd23cebdcc3b74278d72
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013147"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882004"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Como: Definir a imagem exibida por um controle do Windows Forms usando o Designer
 Vários controles de Windows Forms podem exibir imagens. A imagem pode ser um ícone que esclarece a finalidade do controle, como um ícone de disco em um botão que indica a **salvar** comando. Como alternativa, o ícone pode ser uma imagem de plano de fundo para dar o controle a aparência desejada.  
@@ -26,7 +26,7 @@ Vários controles de Windows Forms podem exibir imagens. A imagem pode ser um í
   
 1. No **propriedades** janela, selecione a **imagem** ou **BackgroundImage** propriedade do controle, em seguida, clique no botão de reticências (  
   
-     ![Captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![O botão de reticências (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png))  
   
      ) para exibir o **selecionar recurso** caixa de diálogo.  
   

@@ -2,12 +2,12 @@
 title: Associação de dados em um cliente do ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 07e03a4580795b3424f63cec8f93fea2039b6733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cc6fee822ad300969ccf8556a3eeb410660f256
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990620"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876987"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Associação de dados em um cliente do ASP.NET
 Este exemplo demonstra como associar dados retornados por um serviço típico do Windows Communication Foundation (WCF) em um aplicativo de formulários da Web.  
@@ -19,7 +19,7 @@ Este exemplo demonstra como associar dados retornados por um serviço típico do
   
  O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido o `IWeatherService` interface, que expõe uma operação denominada `GetWeatherData`. Esta operação aceita uma matriz de cidades e retorna uma matriz de `WeatherData` objetos que representam a temperatura alta e baixa prevista para uma cidade.  
   
- Sobre o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] página. aspx de cliente, uma DataGrid Web controle está definido, que contém a representação gráfica dos dados retornados pelo serviço. O código na página. aspx chama o serviço WCF de clima e retorna os dados para uma matriz de `WeatherData` objetos. A grade de dados especifica onde obter seus dados, definindo seu `DataSource` propriedade para essa matriz. A associação de dados ocorre com uma chamada para o DataGrid `DataBind` método. Todo esse código está contido dentro do.`aspx` da página `Page_Load` método, portanto, sempre que o usuário atualiza a página do navegador, os dados é atualizado na DataGrid.  
+ Na página. aspx do cliente do ASP.NET, um controle de DataGrid Web é definido, que contém a representação gráfica dos dados retornados pelo serviço. O código na página. aspx chama o serviço WCF de clima e retorna os dados para uma matriz de `WeatherData` objetos. A grade de dados especifica onde obter seus dados, definindo seu `DataSource` propriedade para essa matriz. A associação de dados ocorre com uma chamada para o DataGrid `DataBind` método. Todo esse código está contido dentro do.`aspx` da página `Page_Load` método, portanto, sempre que o usuário atualiza a página do navegador, os dados é atualizado na DataGrid.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   

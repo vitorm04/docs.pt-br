@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e1e9ce761baa77ea06b3d66aa5b296a186f054b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589021"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878858"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Visão geral do controle DataGrid (Windows Forms)
 > [!NOTE]
@@ -53,7 +53,7 @@ ms.locfileid: "65589021"
   
  Se os dados no conjunto de dados associado são atualizados por meio de qualquer mecanismo, o <xref:System.Windows.Forms.DataGrid> controle reflete as alterações. Se a grade de dados e seus estilos de tabela e os estilos de coluna tem o `ReadOnly` propriedade definida como `false`, os dados no conjunto de dados podem ser atualizados por meio de <xref:System.Windows.Forms.DataGrid> controle.  
   
- Uma única tabela pode ser mostrada no <xref:System.Windows.Forms.DataGrid> por vez. Se uma relação pai-filho é definida entre tabelas, o usuário pode mover entre as tabelas relacionadas para selecionar a tabela a ser exibido no <xref:System.Windows.Forms.DataGrid> controle. Para obter informações sobre associação de um <xref:System.Windows.Forms.DataGrid> o controle para uma [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] fonte de dados em tempo de design ou tempo de execução, consulte [como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+ Uma única tabela pode ser mostrada no <xref:System.Windows.Forms.DataGrid> por vez. Se uma relação pai-filho é definida entre tabelas, o usuário pode mover entre as tabelas relacionadas para selecionar a tabela a ser exibido no <xref:System.Windows.Forms.DataGrid> controle. Para obter informações sobre associação de um <xref:System.Windows.Forms.DataGrid> controle a uma fonte de dados ADO.NET em tempo de design ou tempo de execução, consulte [como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
  Fontes de dados válidos para o <xref:System.Windows.Forms.DataGrid> incluem:  
   

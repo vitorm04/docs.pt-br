@@ -2,26 +2,43 @@
 title: Depurando árvores de expressão no Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: fb5905c3c1124dd64371216bddda0a17235abdce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fc97d898c5956b5a569036e6e0fe1174714576d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787186"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879813"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Depurando árvores de expressão no Visual Studio (Visual Basic)
+Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das árvores de expressão. Para obter uma visão geral da estrutura de árvore de expressão, você pode usar o `DebugView` propriedade, que representa as árvores de expressão usando uma sintaxe especial descrita [abaixo](#debugview-syntax). (Observe que `DebugView` está disponível apenas no modo de depuração.)  
 
-Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das árvores de expressão. Para obter uma rápida visão geral da estrutura da árvore de expressão, você pode usar a propriedade `DebugView`, que está disponível apenas no modo de depuração. Para obter mais informações sobre depuração, consulte [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
+![DebugView de árvore de expressão no depurador do Visual Studio](media/debugging-expression-trees-in-visual-studio/debugview_vb.png)
 
-Para melhor representar o conteúdo das árvores de expressão, a propriedade `DebugView` usa os visualizadores do Visual Studio. Para obter mais informações, consulte [Criar visualizadores personalizados](/visualstudio/debugger/create-custom-visualizers-of-data).
+Pois `DebugView` é uma cadeia de caracteres, você pode usar o [Visualizador de texto interno](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) para exibi-lo em várias linhas, selecionando **Visualizador de texto** de lupa ícone ao lado de `DebugView` rótulo.
 
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Para abrir um visualizador para uma árvore de expressão
+ ![Visualizador de texto aplicado aos resultados de 'DebugView'](media/debugging-expression-trees-in-visual-studio/string_visualizer_vb.png)
 
-1. Clique no ícone de lupa que aparece ao lado da propriedade `DebugView` de uma árvore de expressão em **DataTips**, uma janela **Inspeção**, a janela **Autos** ou a janela **Locais**.
+Como alternativa, você pode instalar e usar [um visualizador personalizado](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data) para árvores de expressão:
 
-    Uma lista de visualizadores é exibida.
+* [Expressões legíveis](https://github.com/agileobjects/ReadableExpressions) ([licença MIT](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), disponível no [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), processa a árvore de expressão como C# código:
 
-2. Clique no visualizador que você deseja usar.
+  ![Visualizador de expressões legível](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
+
+* [Visualizador de árvore de expressão](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([licença MIT](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), fornece uma exibição gráfica de árvore de expressão, suas propriedades e objetos relacionados; e pode processar a árvore de expressão usando o código do Visual Basic:
+
+  ![Visualizador de ExpressionToString](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer_vb.png)
+
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Para abrir um visualizador para uma árvore de expressão  
+  
+1. Clique no ícone de lupa que aparece ao lado da árvore de expressão em **DataTips**, um **inspeção** janela, o **Autos** janela, ou o **locais** janela.  
+  
+     É exibida uma lista de visualizadores disponíveis.: 
+
+      ![Visualizadores de abertura do Visual Studio](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers_vb.png)
+
+2. Clique no visualizador que você deseja usar.  
+
+## <a name="debugview-syntax"></a>`DebugView` Sintaxe 
 
 Cada tipo de expressão é exibido no visualizador, conforme descrito nas seções a seguir.
 

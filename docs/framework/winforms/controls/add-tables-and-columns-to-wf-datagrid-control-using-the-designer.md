@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b248e9b250ce18f05a2bf57b80af8fbcebb4f811
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642445"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880597"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Como: Adicionar tabelas e colunas do controle DataGrid do Windows Forms usando o Designer
 
@@ -29,7 +29,7 @@ ms.locfileid: "61642445"
   
 1. Para exibir dados na tabela, primeiro você deve associar o <xref:System.Windows.Forms.DataGrid> controle para um conjunto de dados. Para obter mais informações, confira [Como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados usando o Designer](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
   
-2. Selecione o <xref:System.Windows.Forms.DataGrid> do controle <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade na janela Propriedades e, em seguida, clique no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) próximo a a propriedade para exibir o **Editor de coleção DataGridTableStyle**.  
+2.  Selecione o <xref:System.Windows.Forms.DataGrid> do controle <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade na janela Propriedades e, em seguida, clique no botão de reticências (![o botão (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) ao lado da propriedade para exibir o **Editor de coleção DataGridTableStyle**.  
   
 3. No editor de coleção, clique em **Adicionar** para inserir um estilo de tabela.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "61642445"
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>Para adicionar uma coluna ao controle DataGrid no designer  
   
-1. Na caixa **Membros** do **Editor de Coleção DataGridTableStyle**, selecione o estilo de tabela adequado. No **propriedades** caixa do editor de coleção, selecione o <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> coleção e, em seguida, clique no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) ao lado da propriedade para exibir o **Editor de coleção DataGridColumnStyle**.  
+1.  Na caixa **Membros** do **Editor de Coleção DataGridTableStyle**, selecione o estilo de tabela adequado. No **propriedades** caixa do editor de coleção, selecione o <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> coleção e, em seguida, clique no botão de reticências (![botão do botão de reticências (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) próximo a a propriedade para exibir o **Editor de coleção DataGridColumnStyle**.  
   
 2. No editor de coleção, clique em **Adicionar** para inserir um estilo de coluna ou clique na seta para baixo ao lado de **Adicionar** para especificar um tipo de coluna.  
   

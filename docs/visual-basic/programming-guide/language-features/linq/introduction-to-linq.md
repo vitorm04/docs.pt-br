@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a5fbc28a470415312540fff0acc969f939410b5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633492"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875539"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introdução a LINQ no Visual Basic
 Consulta integrada à linguagem (LINQ) adiciona recursos de consulta para o Visual Basic e fornece recursos simples e eficientes quando você trabalha com todos os tipos de dados. Em vez de enviar uma consulta para um banco de dados a serem processados ou trabalhar com diferentes sintaxes de consulta para cada tipo de dados que você está procurando, o LINQ apresenta consultas como parte da linguagem Visual Basic. Ele usa uma sintaxe unificada independentemente do tipo de dados.  
@@ -43,7 +43,7 @@ Consulta integrada à linguagem (LINQ) adiciona recursos de consulta para o Visu
 |Objetos LINQ to|O provedor LINQ to Objects permite que você consultar matrizes e coleções na memória. Se um objeto oferecer suporte a <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601> interface, o provedor LINQ to Objects permite que você consultá-lo.<br /><br /> Você pode ativar o provedor LINQ to Objects importando o <xref:System.Linq> namespace, que é importado por padrão para todos os projetos do Visual Basic.<br /><br /> Para obter mais informações sobre o provedor LINQ to Objects, consulte [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
 |LINQ to SQL|O provedor LINQ to SQL permite consultar e modificar dados em um banco de dados do SQL Server. Isso facilita mapear o modelo de objeto para um aplicativo para as tabelas e objetos em um banco de dados.<br /><br /> Visual Basic torna mais fácil trabalhar com LINQ to SQL, incluindo o Object Relational Designer (O/R Designer). Esse designer é usado para criar um modelo de objeto em um aplicativo que mapeia para objetos em um banco de dados. O O/R Designer também fornece funcionalidade para mapear procedimentos armazenados e funções para o <xref:System.Data.Linq.DataContext> object, que gerencia a comunicação com o banco de dados e armazena o estado para concorrência otimista verificações.<br /><br /> Para obter mais informações sobre o provedor LINQ to SQL, consulte [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Para obter mais informações sobre o Object Relational Designer, consulte [ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ to XML|O provedor LINQ to XML permite consultar e modificar XML. Você pode modificar o XML na memória, ou você pode carregar XML de e salvar XML em um arquivo.<br /><br /> Além disso, o provedor LINQ to XML permite literais XML e propriedades de eixo XML que permitem escrever XML diretamente em seu código Visual Basic. Para obter mais informações, consulte [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ to DataSet|O provedor LINQ to DataSet permite consultar e atualizar dados em um [!INCLUDE[vstecado](~/includes/vstecado-md.md)] conjunto de dados. Você pode adicionar o poder do LINQ para aplicativos que usam conjuntos de dados para simplificar e estender seus recursos para consultar, agregar e atualizar os dados no conjunto de dados.<br /><br /> Para obter mais informações, consulte [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|LINQ to DataSet|O provedor LINQ to DataSet permite consultar e atualizar dados em um conjunto de dados do ADO.NET. Você pode adicionar o poder do LINQ para aplicativos que usam conjuntos de dados para simplificar e estender seus recursos para consultar, agregar e atualizar os dados no conjunto de dados.<br /><br /> Para obter mais informações, consulte [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
 ## <a name="structure-of-a-linq-query"></a>Estrutura de uma consulta LINQ  
  Uma consulta LINQ, geralmente conhecida como uma *expressão de consulta*, consiste em uma combinação de cláusulas de consulta que identificam as fontes de dados e variáveis de iteração para a consulta. Uma expressão de consulta também pode incluir instruções para classificação, filtragem, agrupamento e unindo ou cálculos para aplicar a fonte de dados. Sintaxe de expressão de consulta é semelhante à sintaxe do SQL; Portanto, você pode achar grande parte da sintaxe familiar.  

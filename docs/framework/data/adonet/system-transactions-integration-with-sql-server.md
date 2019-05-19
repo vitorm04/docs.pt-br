@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583509"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880588"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integração de System.Transactions com o SQL Server
-O .NET Framework versão 2.0 introduziu uma estrutura de transação que pode ser acessada por meio de <xref:System.Transactions> namespace. Essa estrutura expõe transações de forma que é totalmente integrado no .NET Framework, incluindo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+O .NET Framework versão 2.0 introduziu uma estrutura de transação que pode ser acessada por meio de <xref:System.Transactions> namespace. Essa estrutura expõe transações de forma que é totalmente integrado no .NET Framework, inclusive o ADO.NET.  
   
- Além de aprimoramentos de programabilidade <xref:System.Transactions> e [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] podem trabalhar juntos para coordenar as otimizações, quando você trabalha com transações. Uma transação passível de promoção é uma transação leve (local) que pode ser elevada automaticamente a uma transação totalmente distribuída em uma base conforme necessário.  
+ Além dos aprimoramentos de programabilidade, <xref:System.Transactions> e ADO.NET podem trabalhar juntos para coordenar as otimizações, quando você trabalha com transações. Uma transação passível de promoção é uma transação leve (local) que pode ser elevada automaticamente a uma transação totalmente distribuída em uma base conforme necessário.  
   
- Começando com [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> dá suporte a transações passíveis de promoção ao trabalhar com o SQL Server. Uma transação passível de promoção não chama a sobrecarga adicional de uma transação distribuída a menos que a sobrecarga adicional seja necessária. Transações passíveis de promoção são automáticas e não exigem intervenção do desenvolvedor.  
+ Começando com o ADO.NET 2.0 <xref:System.Data.SqlClient> dá suporte a transações passíveis de promoção ao trabalhar com o SQL Server. Uma transação passível de promoção não chama a sobrecarga adicional de uma transação distribuída a menos que a sobrecarga adicional seja necessária. Transações passíveis de promoção são automáticas e não exigem intervenção do desenvolvedor.  
   
  Transações passíveis de promoção só estão disponíveis quando você usa o .NET Framework Data Provider para SQL Server (`SqlClient`) com o SQL Server.  
   

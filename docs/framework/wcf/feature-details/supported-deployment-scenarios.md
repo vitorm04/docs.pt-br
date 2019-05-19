@@ -2,12 +2,12 @@
 title: Cenários de implantação com suporte – WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639154"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881056"
 ---
 # <a name="supported-deployment-scenarios"></a>Cenários de implantação com suporte
 
@@ -27,7 +27,7 @@ Para obter mais informações sobre os recursos com suporte nesses conjuntos de 
 
 ## <a name="partial-trust-on-the-server"></a>Confiança parcial no servidor
 
-Muitos provedores comerciais de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviços de hospedagem de aplicativos Web, exigem que os aplicativos em execução em seus servidores executados nos [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto de permissões de confiança média. Serviços WCF podem ser executados nesses ambientes desde que eles usam o <xref:System.ServiceModel.BasicHttpBinding>, o <xref:System.ServiceModel.WebHttpBinding>, ou o <xref:System.ServiceModel.WSHttpBinding> com segurança em nível de transporte.
+Muitos provedores comerciais de serviços de hospedagem de aplicativo Web do ASP.NET exigem que os aplicativos em execução em seus servidores executados [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto de permissões de confiança média. Serviços WCF podem ser executados nesses ambientes desde que eles usam o <xref:System.ServiceModel.BasicHttpBinding>, o <xref:System.ServiceModel.WebHttpBinding>, ou o <xref:System.ServiceModel.WSHttpBinding> com segurança em nível de transporte.
 
 Os serviços WCF em execução em ambientes de hospedagem de confiança média também podem atuar como serviços de camada intermediária, enviando mensagens para outros servidores em resposta às solicitações do cliente. Cenários de camada intermediária no servidor têm suporte se o ambiente de hospedagem tiver concedido o aplicativo apropriado <xref:System.Net.WebPermission> para fazer solicitações de saída para o servidor desejado.
 

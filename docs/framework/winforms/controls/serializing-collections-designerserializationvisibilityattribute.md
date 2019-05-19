@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: c8321f98b25026e32e7c69f7029f2c589d0567f7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 1f1412f03f912c0142b08d5ad8581e421252cfb3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211593"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882353"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Passo a passo: Serializando coleções de tipos padrão com a DesignerSerializationVisibilityAttribute
 
@@ -66,7 +66,7 @@ A primeira etapa é criar um controle que tem uma coleção serializável como u
 
 8. Pressione **F5** para compilar o projeto e execute seu controle na **contêiner de teste de UserControl**.
 
-9. Localizar o `Strings` propriedade no <xref:System.Windows.Forms.PropertyGrid> da **contêiner de teste de UserControl**. Clique na propriedade `Strings` e, em seguida, clique no botão de reticências (![captura de tela VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) para abrir o **Editor de conjunto de cadeia de caracteres**.
+9. Localizar o `Strings` propriedade no <xref:System.Windows.Forms.PropertyGrid> da **contêiner de teste de UserControl**. Clique no `Strings` propriedade, em seguida, clique no botão de reticências (![o botão (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) para abrir o **Editor de coleção de cadeias de caracteres**.
 
 10. Insira várias cadeias de caracteres no **Editor de Conjunto de Cadeia de Caracteres**. Separá-los pressionando as **Enter** chave no final de cada cadeia de caracteres. Clique em **OK** quando terminar de inserir cadeias de caracteres.
 
@@ -85,7 +85,7 @@ Para testar o comportamento de serialização do seu controle, coloque-o em um f
 
 3. Coloque um `SerializationDemoControl` em seu formulário.
 
-4. Localize a propriedade `Strings` na janela **Propriedades**. Clique na propriedade `Strings` e, em seguida, clique no botão de reticências (![captura de tela VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) para abrir o **Editor de conjunto de cadeia de caracteres**.
+4. Localize a propriedade `Strings` na janela **Propriedades**. Clique no `Strings` propriedade, em seguida, clique no botão de reticências (![o botão (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) para abrir o **Editor de coleção de cadeias de caracteres**.
 
 5. Digite várias cadeias de caracteres no **Editor de Conjunto de Cadeia de Caracteres**. Separe-os pressionando a tecla ENTER no final de cada cadeia de caracteres. Clique em **OK** quando terminar de inserir cadeias de caracteres.
 

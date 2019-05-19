@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: fb9ad627df640e56b5250a2fdd15f5ac0d52df79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af8fff9d034f8dea4ce9f24a2bda042b5b9708a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592595"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881261"
 ---
 # <a name="data-member-default-values"></a>Valores padrões de membro de dados
 No .NET Framework, os tipos têm um conceito de *valores padrão*. Por exemplo, para qualquer tipo de referência, o valor padrão é `null`, e para um tipo inteiro é zero. É desejável, ocasionalmente, para omitir um membro de dados dos dados serializados quando ela é definida como seu valor padrão. Como o membro tem um valor padrão, um valor real não precisa ser serializado; Isso tem uma vantagem de desempenho.  
@@ -54,7 +54,7 @@ No .NET Framework, os tipos têm um conceito de *valores padrão*. Por exemplo, 
   
 - O valor padrão real a ser usado não está presente no esquema. É até o ponto de extremidade de recebimento para interpretar corretamente um elemento ausente.  
   
- Na importação de esquema, o <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> propriedade é definida automaticamente como `false` sempre que a anotação específicas do WCF mencionada anteriormente é detectada. Ele também é definido como `false` para tipos de referência que têm o `nillable` propriedade definida como `false` para dar suporte a cenários específicos de interoperabilidade que costumam ocorrerem durante o consumo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviços Web.  
+ Na importação de esquema, o <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> propriedade é definida automaticamente como `false` sempre que a anotação específicas do WCF mencionada anteriormente é detectada. Ele também é definido como `false` para tipos de referência que têm o `nillable` propriedade definida como `false` para dar suporte a cenários específicos de interoperabilidade que costumam ocorrerem durante o consumo de serviços Web do ASP.NET.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: c8f6e51b5ab8242ba8253a04160c40e59fce0088
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6484e6bfce885c28b943ad9844bfa6fc17889c2b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648194"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882243"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Passo a passo: Criar uma interface no estilo do Explorer com os controles ListView e TreeView usando o Designer
 Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Windows Forms com aparência profissional em pouco tempo. Um cenário comum é criar uma interface do usuário (UI) com <xref:System.Windows.Forms.ListView> e <xref:System.Windows.Forms.TreeView> controles que se parece com o recurso Windows Explorer dos sistemas de operacionais do Windows. O Windows Explorer exibe uma estrutura hierárquica de arquivos e pastas no computador do usuário.  
@@ -54,7 +54,7 @@ Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Win
   
     2. Defina a propriedade <xref:System.Windows.Forms.ListView.View%2A> como <xref:System.Windows.Forms.View.Details>.  
   
-    3. Abra o Editor de coleção ColumnHeader clicando nas reticências (![captura de tela VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) na <xref:System.Windows.Forms.ListView.Columns%2A> propriedade **.** Adicione três colunas e defina suas <xref:System.Windows.Forms.ColumnHeader.Text%2A> propriedade para `Name`, `Type`, e `Last Modified`, respectivamente. Clique em **OK** para fechar a caixa de diálogo.  
+    3.  Abra o Editor de coleção ColumnHeader clicando nas reticências (![botão do botão de reticências (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) na <xref:System.Windows.Forms.ListView.Columns%2A> propriedade **.** Adicione três colunas e defina suas <xref:System.Windows.Forms.ColumnHeader.Text%2A> propriedade para `Name`, `Type`, e `Last Modified`, respectivamente. Clique em **OK** para fechar a caixa de diálogo.  
   
     4. Defina a propriedade <xref:System.Windows.Forms.ListView.SmallImageList%2A> como `imageList1.`  
   

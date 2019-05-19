@@ -2,12 +2,12 @@
 title: Cadeias de caracteres de conexão no ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032742"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881154"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadeias de caracteres de conexão no ADO.NET
 
@@ -17,24 +17,32 @@ Uma cadeia de conexão contém informações de inicialização que são passada
 
 Uma cadeia de caracteres de conexão é uma lista delimitada por ponto e vírgula de pares de chave/valor do parâmetro:
 
-    keyword1=value; keyword2=value;
+```
+keyword1=value; keyword2=value;
+```
 
 Palavras-chave não diferenciam maiusculas de minúsculas. No entanto, valores, podem ser diferencia maiusculas de minúsculas, dependendo da fonte de dados. Palavras-chave e valores podem conter [caracteres de espaço em branco](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Espaço em branco à esquerda e à direita será ignorado em palavras-chave e sem aspas valores.
 
 Se um valor contém o ponto e vírgula [caracteres de controle Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), ou à esquerda ou à direita de espaço em branco, ela deve ser colocada entre aspas simples ou duplas. Por exemplo:
 
-    Keyword=" whitespace  ";
-    Keyword='special;character';
+```
+Keyword=" whitespace  ";
+Keyword='special;character';
+```
 
 O caractere delimitador não pode ocorrer dentro do valor que ele inclui. Portanto, um valor que contém aspas simples pode ser colocado somente entre aspas duplas e vice-versa:
 
-    Keyword='double"quotation;mark';
-    Keyword="single'quotation;mark";
+```
+Keyword='double"quotation;mark';
+Keyword="single'quotation;mark";
+```
 
 As aspas em si, bem como o sinal de igual, não exige o escape, portanto, as seguintes cadeias de caracteres de conexão são válidas:
 
-    Keyword=no "escaping" 'required';
-    Keyword=a=b=c
+```
+Keyword=no "escaping" 'required';
+Keyword=a=b=c
+```
 
 Uma vez que cada valor é lido até o próximo ponto e vírgula ou ao final da cadeia de caracteres, o valor no segundo exemplo é `a=b=c`, e o ponto e vírgula final é opcional.
 

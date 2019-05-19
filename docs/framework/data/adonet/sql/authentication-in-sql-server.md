@@ -2,12 +2,12 @@
 title: Autenticação no SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 33a4a9e7e9d6d8c5324c0e108ec3705582efc866
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649573"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877454"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticação no SQL Server
 SQL Server dá suporte a dois modos de autenticação, o modo de autenticação do Windows e o modo misto.  
@@ -43,7 +43,7 @@ SQL Server dá suporte a dois modos de autenticação, o modo de autenticação 
   
 - Os usuários se conectam de domínios diferentes e não confiáveis.  
   
-- Aplicativos de Internet, como [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Aplicativos da Internet, como o ASP.NET.  
   
 > [!NOTE]
 >  Especifica autenticação do Windows não desabilita os logons do SQL Server. Use o ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrução para desabilitar os logons do SQL Server altamente privilegiados.  

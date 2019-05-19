@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: fddb59fc32feabf708e209ac4a5e78a14585fa66
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0c11937f1a0300c4a376657d423ef348a844f700
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637538"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880653"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Como: Formatar o controle DataGrid do Windows Forms usando o Designer
 
@@ -79,7 +79,7 @@ ms.locfileid: "65637538"
 
 1. Selecione o <xref:System.Windows.Forms.DataGrid> controle no formulário.
 
-2. No **propriedades** janela, selecione a <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade e clique no **reticências** (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) botão.
+2.  No **propriedades** janela, selecione a <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade e clique no **reticências** (![botão do botão de reticências (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) botão.
 
 3. Na caixa de diálogo **Editor de Coleção DataGridTableStyle**, clique em **Adicionar** para adicionar um estilo de tabela à coleção.
 
@@ -89,7 +89,7 @@ ms.locfileid: "65637538"
 
      O nome do mapeamento é usado para especificar qual estilo de tabela deve ser usado com cada tabela.
 
-5. No **Editor de coleção DataGridTableStyle**, selecione o <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriedade e clique no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton ")).
+5.  No **Editor de coleção DataGridTableStyle**, selecione o <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriedade e clique no botão de reticências (![botão do botão de reticências (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)).
 
 6. Na caixa de diálogo **Editor de Coleção DataGridColumnStyle**, adicione estilos de coluna ao estilo de tabela que você criou.
 

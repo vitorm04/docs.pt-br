@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: c9215d1072060c4272c7d61056d51297dd997197
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645747"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875882"
 ---
 # <a name="windows-forms-overview"></a>Visão geral dos Windows Forms
 
@@ -66,7 +66,7 @@ Para obter informações passo a passo sobre como usar esses recursos, consulte 
 |Descrição|Tópico da ajuda|
 |-----------------|----------------|
 |Usando o <xref:System.Windows.Forms.BindingSource> componente|[Como: Associar controles dos Windows Forms com o componente BindingSource usando o Designer](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|Trabalhando com fontes de dados [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Como: Classificar e filtrar dados ADO.NET com o Windows Forms componente BindingSource](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Trabalhando com fontes de dados ADO.NET|[Como: Classificar e filtrar dados ADO.NET com o Windows Forms componente BindingSource](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Usando a janela de Fontes de Dados|[Associando controles do Windows Forms a dados no Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |Usando configurações de aplicativo|[Como: Criar configurações de aplicativo](./advanced/how-to-create-application-settings.md)|
 

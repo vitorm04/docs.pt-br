@@ -2,12 +2,12 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583508"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879927"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
 Este tópico descreve considerações de segurança específicas para desenvolver, implantar e executar aplicativos [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você também deve seguir as recomendações para criar aplicativos seguros do .NET Framework. Para obter mais informações, consulte [visão geral de segurança](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -141,22 +141,23 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  Acesse métodos e propriedades de um <xref:System.Data.Objects.ObjectContext> dentro de um bloco try-catch. A captura de exceções impede que exceções não tratadas exponham entradas no <xref:System.Data.Objects.ObjectStateManager> ou informações de modelo (como nomes de tabela) aos usuários do seu aplicativo.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>Considerações de segurança para aplicativos ASP.NET  
- O tópico a seguir deve ser considerado quando você trabalha com caminhos em aplicativos [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+
+Você deve considerar o seguinte ao trabalhar com caminhos em aplicativos ASP.NET.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Confira se o host executa verificações de caminho.  
- Quando a cadeia de caracteres de substituição `|DataDirectory|` (delimitada por símbolos de pipe) é usada, o [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] verifica se há suporte para o caminho resolvido. Por exemplo, ".." não é permitido atrás de `DataDirectory`. A mesma verificação para resolver o operador raiz do aplicativo Web (`~`) é executada pelo processo que hospeda [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]. O IIS executa essa verificação; No entanto, os hosts que não seja o IIS não podem verificar que o caminho resolvido é suportado. Você deve conhecer o comportamento do host no qual implantar um aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+ Quando o `|DataDirectory|` (delimitado por símbolos de pipe) é usada a cadeia de caracteres de substituição, ADO.NET verifica que o caminho resolvido é suportado. Por exemplo, ".." não é permitido atrás de `DataDirectory`. Essa mesma verificação para resolver o operador raiz do aplicativo Web (`~`) é executada pelo processo de hospedagem do ASP.NET. O IIS executa essa verificação; No entanto, os hosts que não seja o IIS não podem verificar que o caminho resolvido é suportado. Você deve conhecer o comportamento do host no qual implantar um aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Não faça suposições sobre nomes de caminho resolvidos.  
  Embora os valores para os quais o operador raiz (`~`) e a cadeia de caracteres de substituição `DataDirectory` são resolvidos devam permanecer constantes durante o tempo de execução do aplicativo, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não impede que o host modifique esses valores.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Verifique o comprimento do caminho antes da implantação.  
- Antes de implantar um aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], verifique se os valores do operador raiz (~) e da cadeia de caracteres de substituição `DataDirectory` não excedem os limites de comprimento de caminho no sistema operacional. Os provedores de dados [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] não garantem que o comprimento do caminho esteja dentro dos limites válidos.  
+ Antes de implantar um aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], verifique se os valores do operador raiz (~) e da cadeia de caracteres de substituição `DataDirectory` não excedem os limites de comprimento de caminho no sistema operacional. Provedores de dados ADO.NET não garantem que o comprimento do caminho esteja dentro dos limites válidos.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Considerações de segurança para metadados ADO.NET  
  As considerações de segurança a seguir se aplicam ao gerar e trabalhar com arquivos de modelo e de mapeamento.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>Não exponha informações confidenciais em logs.  
- Os componentes do serviço de metadados [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] não registram em log informações particulares. Se houver resultados que não possam ser retornados devido às restrições de acesso, os sistemas de gerenciamento de bancos de dados e os sistemas de arquivos retornarão um número zero de resultados, em vez de gerar uma exceção que possa conter informações confidenciais.  
+Componentes de serviço de metadados ADO.NET não faça qualquer informação particular. Se houver resultados que não possam ser retornados devido às restrições de acesso, os sistemas de gerenciamento de bancos de dados e os sistemas de arquivos retornarão um número zero de resultados, em vez de gerar uma exceção que possa conter informações confidenciais.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Não aceite objetos MetadataWorkspace de fontes não confiáveis.  
  Os aplicativos não devem aceitar instâncias da classe <xref:System.Data.Metadata.Edm.MetadataWorkspace> de fontes não confiáveis. Em vez disso, você deve construir e popular explicitamente um workspace como fonte.  

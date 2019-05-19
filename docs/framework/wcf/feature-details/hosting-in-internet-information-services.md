@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 4d522fb377fd117800ef4d7d754d513a3d919a35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656043"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877513"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hospedagem no Internet Information Services
-É uma opção para hospedar os serviços do Windows Communication Foundation (WCF) dentro de um aplicativo de serviços de informações da Internet (IIS). Esse modelo de hospedagem é semelhante ao modelo usado pelo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e serviços Web (ASMX) de serviços Web do ASP.NET.  
+É uma opção para hospedar os serviços do Windows Communication Foundation (WCF) dentro de um aplicativo de serviços de informações da Internet (IIS). Esse modelo de hospedagem é semelhante ao modelo usado por ASP.NET e serviços de Web do ASP.NET Web services (ASMX).  
   
 ## <a name="versions-of-iis"></a>Versões do IIS  
  O WCF pode ser hospedado nas seguintes versões do IIS nos seguintes sistemas operacionais:  
@@ -28,11 +28,11 @@ ms.locfileid: "64656043"
 ## <a name="benefits-of-iis-hosting"></a>Benefícios de hospedagem do IIS  
  Hospedando serviços WCF no IIS tem vários benefícios:  
   
-- Os serviços WCF hospedados no IIS são implantados e gerenciados como qualquer outro tipo de aplicativo do IIS, incluindo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativos e ASMX.  
+- Os serviços WCF hospedados no IIS são implantados e gerenciados como qualquer outro tipo de aplicativo do IIS, incluindo aplicativos ASP.NET e ASMX.  
   
 - O IIS fornece ativação de processos, gerenciamento de saúde e recursos de reciclagem para aumentar a confiabilidade dos aplicativos hospedados.  
   
-- Como o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], serviços WCF hospedados no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] podem aproveitar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modelo de hospedagem compartilhado onde vários aplicativos residem em um processo de trabalho comuns de densidade de aprimorada de servidores e escalabilidade.  
+- Como o ASP.NET, serviços WCF hospedados no ASP.NET podem aproveitar o modelo de hospedagem ASP.NET compartilhado onde vários aplicativos residem em um processo de trabalho comuns de densidade de aprimorada de servidores e escalabilidade.  
   
 - Os serviços WCF hospedados no IIS usam o mesmo modelo de compilação dinâmica como [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], que simplifica o desenvolvimento e implantação dos serviços hospedados.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "64656043"
   
 - Certifique-se de que o IIS, ASP.NET, WCF e o componente de ativação de HTTP do WCF estão corretamente instalados e registrados.  
   
-- Criar um novo aplicativo do IIS ou reutilizar um existente do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- Criar um novo aplicativo do IIS ou reutilizar um aplicativo ASP.NET existente.  
   
 - Crie um arquivo. svc para o serviço WCF.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64656043"
  Para uma discussão sobre cada uma dessas tarefas, consulte [Implantando um serviço do WCF Internet Information Services-Hosted](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="wcf-services-and-aspnet"></a>Serviços WCF e ASP.NET  
- Os serviços WCF podem ser hospedados de qualquer lado a lado com [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade em que os serviços podem aproveitar ao máximo dos recursos fornecidos pelo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] plataforma de aplicativos Web. Para uma discussão sobre esses recursos, consulte [serviços WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ Os serviços WCF podem ser hospedados de qualquer lado a lado com o ASP.NET ou no modo de compatibilidade do ASP.NET na qual os serviços podem aproveitar ao máximo dos recursos fornecidos pela plataforma do aplicativo Web do ASP.NET. Para uma discussão sobre esses recursos, consulte [serviços WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ## <a name="see-also"></a>Consulte também
 

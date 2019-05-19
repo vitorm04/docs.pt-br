@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 438be2ffbff5c4f88ccfef4cad63dbfc71d132d5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648265"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881846"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Como: obter métricas de fontes
 O <xref:System.Drawing.FontFamily> classe fornece os seguintes métodos que recuperam várias métricas de uma combinação de estilo/família específica:  
@@ -28,22 +28,22 @@ O <xref:System.Drawing.FontFamily> classe fornece os seguintes métodos que recu
   
  Os números retornados por esses métodos são em unidades de design de fonte, portanto, eles são independentes do tamanho e das unidades de um determinado <xref:System.Drawing.Font> objeto.  
   
- A ilustração a seguir mostra as diversas métricas.  
+ A ilustração a seguir mostra várias métricas:
   
- ![Texto de fontes](./media/fontstext7a.png "fontstext7A")  
+ ![Ilustração de métricas de fonte: ascendente e descendente espaçamento entre linhas.](./media/how-to-obtain-font-metrics/various-font-metrics.png)  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir exibe as métricas para o estilo normal da família de fontes Arial. O código também cria uma <xref:System.Drawing.Font> objeto (com base na família Arial) com 16 pixels de tamanho e exibe as métricas (em pixels) para esse determinado <xref:System.Drawing.Font> objeto.  
   
- A ilustração a seguir mostra a saída do código de exemplo.  
+ A ilustração a seguir mostra a saída do exemplo de código:
   
- ![Texto de fontes](./media/csfontstext8.png "csFontsText8")  
+ ![Saída do código de exemplo de métricas de fonte Arial.](./media/how-to-obtain-font-metrics/example-output-code-arial-font.png)  
   
  Observe as duas primeiras linhas de saída na ilustração anterior. O <xref:System.Drawing.Font> objeto retorna um tamanho de 16 e o <xref:System.Drawing.FontFamily> object retorna uma altura de 2.048. Esses dois números (16 e 2.048) são a chave para a conversão entre unidades de design de fonte e as unidades (em pixels nesse caso) do <xref:System.Drawing.Font> objeto.  
   
  Por exemplo, você pode converter o ascendente de unidades de design em pixels da seguinte maneira:  
   
- ![Texto de fontes](./media/fontstext9.png "FontsText9")  
+ ![Fórmula mostrando a conversão de unidades de design em pixels](./media/how-to-obtain-font-metrics/convert-font-units-example.png)  
   
  O código a seguir posiciona o texto verticalmente, definindo o <xref:System.Drawing.PointF.Y%2A> membro de dados de um <xref:System.Drawing.PointF> objeto. A coordenada y é aumentada em `font.Height` para cada nova linha de texto. O <xref:System.Drawing.Font.Height%2A> propriedade de um <xref:System.Drawing.Font> object retorna o espaçamento entre linhas (em pixels) para esse determinado <xref:System.Drawing.Font> objeto. Neste exemplo, o número retornado por <xref:System.Drawing.Font.Height%2A> é 19. Observe que esse é o mesmo número (arredondado para um número inteiro) obtido ao converter a métrica de espaçamento entre linhas em pixels.  
   

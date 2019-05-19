@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211214"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882309"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Passo a passo: Criar um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio
 
@@ -59,7 +59,7 @@ As tarefas ilustradas neste passo a passo incluem:
 
 Quando você terminar, seu controle personalizado terá aparência semelhante à seguinte:
 
-![Uma possível disposição de MarqueeControl](./media/demomarqueecontrol.gif "DemoMarqueeControl")
+![O aplicativo mostrando um letreiro dizendo que o texto e botões de início e parada.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 Para a listagem de código completo, consulte [como: Criar um controle de formulários do Windows que aproveita os recursos de tempo de Design do](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
@@ -178,7 +178,7 @@ Quando você estiver desenvolvendo uma experiência de tempo de design personali
 
 2. Na caixa de diálogo "Páginas de Propriedade MarqueeControlLibrary", selecione a página **Depurar**.
 
-3. Na seção **Iniciar Ação**, selecione **Iniciar Programa Externo**. Você depurará uma instância separada do Visual Studio, então clique no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) para procurar o IDE do Visual Studio. O nome do arquivo executável é devenv.exe e, se você o instalou no local padrão, o caminho dele é %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+3. Na seção **Iniciar Ação**, selecione **Iniciar Programa Externo**. Você será então a depuração de uma instância separada do Visual Studio, clique nas reticências (![botão do botão de reticências (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) botão para procurar o IDE do Visual Studio. O nome do arquivo executável é devenv.exe e, se você o instalou no local padrão, o caminho dele é %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
 
 4. Clique em OK para fechar a caixa de diálogo.
 

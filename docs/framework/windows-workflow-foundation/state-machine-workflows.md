@@ -2,12 +2,12 @@
 title: Fluxos de trabalho do computador de estado
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: d7f6f2686399d8eabbbc70de11697f3aca61fc8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c6f4f815f16ec4878b9aa70bd3a69c862d7800
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665325"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876112"
 ---
 # <a name="state-machine-workflows"></a>Fluxos de trabalho do computador de estado
 Um computador de estado é um paradigma conhecido para programas desenvolvimento. A atividade de <xref:System.Activities.Statements.StateMachine> , juntamente com <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, e outras atividades pode ser usada para criar programas de fluxo de trabalho do computador de estado. Este tópico fornece uma visão geral de criar fluxos de trabalho do computador de estado.  
@@ -23,14 +23,14 @@ Um computador de estado é um paradigma conhecido para programas desenvolvimento
   
  Para criar um fluxo de trabalho do computador de estado, os estados são adicionados a uma atividade de <xref:System.Activities.Statements.StateMachine> , e as transições são controle usado o fluxo entre estados. Captura de tela a seguir, do [Tutorial de Introdução](getting-started-tutorial.md) etapa [como: Criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md), mostra um fluxo de trabalho de máquina de estado com três estados e transições de três. **Inicializar destino** é o estado inicial e representa o primeiro estado no fluxo de trabalho. Isso é designado por linha levando a partir de **iniciar** nó. O estado final do fluxo de trabalho é denominado **FinalState**e representa o ponto em que o fluxo de trabalho é concluído.  
   
- ![Fluxo de trabalho de máquina de estado concluído](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Ilustração que mostra o fluxo de trabalho de máquina de estado concluído.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
  Um fluxo de trabalho do computador de estado deve ter um e somente um estados iniciais, e pelo menos um estados finais. Cada estado que não é um estado final deve ter pelo menos uma transição. As seções a seguir abordam como criar e configurar de estados e das transições.  
   
 ## <a name="creating-and-configuring-states"></a>Criando e configurando estados  
  <xref:System.Activities.Statements.State> representa um estado em que um computador de estado pode estar. Para adicionar um <xref:System.Activities.Statements.State> a um fluxo de trabalho, arraste o **estado** designer de atividade da **máquina de estado** seção o **caixa de ferramentas** e solte-o em um <xref:System.Activities.Statements.StateMachine> atividade no [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] superfície.  
   
- ![WF4 Atividades de máquina de estado](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![Captura de tela da seção de máquina de estado da caixa de ferramentas.](./media/state-machine-workflows/state-machine-section-toolbox.jpg)  
   
  Para configurar um estado como o **estado inicial**, o estado do botão direito do mouse e selecione **definir como estado inicial**. Além disso, se não houver nenhum estado inicial atual, o estado inicial pode ser designado arrastar uma linha do **iniciar** nó na parte superior do fluxo de trabalho para o estado desejado. Quando um <xref:System.Activities.Statements.StateMachine> atividade é solto no designer de fluxo de trabalho, pré-defina está configurada com um estado inicial chamado **State1**. Um fluxo de trabalho do computador de estado deve ter um e somente um estados iniciais.  
   

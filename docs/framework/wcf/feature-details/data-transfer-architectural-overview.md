@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 83fd5ab1cfe7f48999dd2765405f58543eeb743a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592560"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882214"
 ---
 # <a name="data-transfer-architectural-overview"></a>Visão geral da arquitetura de transferência de dados
 Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura de mensagens. Ele pode receber mensagens, processá-los e distribuí-los para o código de usuário para outra ação, ou pode construir mensagens de dados fornecidos pelo código do usuário e enviá-las para um destino. Este tópico, que é destinado a desenvolvedores avançados, descreve a arquitetura para lidar com mensagens e os dados contidos. Para uma exibição mais simples e orientada a tarefas de como enviar e receber dados, consulte [especificando a transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -268,7 +268,7 @@ Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura 
   
  O WCF oferece suporte a duas tecnologias de serialização "pronta" para serializar e desserializar parâmetros e partes da mensagem: o <xref:System.Runtime.Serialization.DataContractSerializer> e o `XmlSerializer`. Além disso, você pode escrever os serializadores personalizados. No entanto, outras partes do WCF (, como a genérica `GetBody` serialização de falha do método ou SOAP) pode ser restrita para usar somente o <xref:System.Runtime.Serialization.XmlObjectSerializer> subclasses (<xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.NetDataContractSerializer>, mas não o <xref:System.Xml.Serialization.XmlSerializer>), ou até mesmo ser embutido em código para usar somente o <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- O `XmlSerializer` é o mecanismo de serialização usado em [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviços Web. O `DataContractSerializer` é o novo mecanismo de serialização que compreende o modelo de programação de contrato de dados de novo. `DataContractSerializer` é a opção padrão e a opção de usar o `XmlSerializer` podem ser feitas por operação usando o <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> atributo.  
+ O `XmlSerializer` é o mecanismo de serialização usado nos serviços Web do ASP.NET. O `DataContractSerializer` é o novo mecanismo de serialização que compreende o modelo de programação de contrato de dados de novo. `DataContractSerializer` é a opção padrão e a opção de usar o `XmlSerializer` podem ser feitas por operação usando o <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> atributo.  
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> e <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> responsáveis os comportamentos de operação para conexão com os formatadores de mensagem para o `DataContractSerializer` e o `XmlSerializer`, respectivamente. O <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> comportamento, na verdade, pode operar com o serializador que deriva <xref:System.Runtime.Serialization.XmlObjectSerializer>, incluindo o <xref:System.Runtime.Serialization.NetDataContractSerializer> (descrito em detalhes na serialização de stand-alone usando). O comportamento chama um do `CreateSerializer` sobrecargas de método virtual para obter o serializador. Para conectar um serializador diferente, crie um novo <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> subclasse e substituição `CreateSerializer` sobrecargas.  
   

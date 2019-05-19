@@ -2,18 +2,18 @@
 title: Aplicativos cliente de camada intermediária
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c7934f6d0d34992db229244373b5a170180f51e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649450"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877465"
 ---
 # <a name="middle-tier-client-applications"></a>Aplicativos cliente de camada intermediária
 Este tópico aborda diversos problemas específicos de aplicativos de cliente de camada intermediária que usam o Windows Communication Foundation (WCF).  
   
 ## <a name="increasing-middle-tier-client-performance"></a>Aumentando o desempenho do cliente de camada intermediária  
- Em comparação com as tecnologias de comunicações anteriores, como serviços Web usando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], a criação de uma instância do cliente WCF pode ser mais complexa devido aos avançado conjunto de recursos do WCF. Por exemplo, quando um <xref:System.ServiceModel.ChannelFactory%601> objeto é aberto. ele pode estabelecer uma sessão segura com o serviço, um procedimento que aumenta o tempo de inicialização para a instância do cliente. Normalmente, esses recursos adicionais não afetam aplicativos cliente significativamente desde que o cliente WCF faz várias chamadas e, em seguida, fecha.  
+ Em comparação com as tecnologias de comunicações anteriores, como serviços Web usando ASP.NET, a criação de uma instância do cliente WCF pode ser mais complexa devido aos avançado conjunto de recursos do WCF. Por exemplo, quando um <xref:System.ServiceModel.ChannelFactory%601> objeto é aberto. ele pode estabelecer uma sessão segura com o serviço, um procedimento que aumenta o tempo de inicialização para a instância do cliente. Normalmente, esses recursos adicionais não afetam aplicativos cliente significativamente desde que o cliente WCF faz várias chamadas e, em seguida, fecha.  
   
  Aplicativos cliente de camada intermediária, no entanto, podem criar muitos objetos de cliente WCF rapidamente e, como resultado, a experiência de requisitos de inicialização maior. Há duas abordagens principais para aumentar o desempenho dos aplicativos de camada intermediária, ao chamar serviços:  
   

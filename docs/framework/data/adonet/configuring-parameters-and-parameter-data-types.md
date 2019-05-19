@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583831"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879963"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurando parâmetros e tipos de dados de parâmetro
 
@@ -96,7 +96,7 @@ Para obter mais informações, consulte [Gerando comandos com CommandBuilders](g
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Usando parâmetros com um SqlCommand e um procedimento armazenado
 
-Os procedimentos armazenados oferecem várias vantagens em aplicativos orientados a dados. Ao usar procedimentos armazenados, as operações de banco de dados podem ser encapsuladas em um único comando, otimizadas para melhor desempenho e aprimoradas com segurança adicional. Embora um procedimento armazenado pode ser chamado, passando o nome do procedimento armazenado seguido por argumentos de parâmetro como uma instrução SQL, usando o <xref:System.Data.Common.DbCommand.Parameters%2A> coleção do [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> objeto permite que você definir mais explicitamente armazenado os parâmetros de procedimento e para acessar parâmetros de saída e valores de retorno.
+Os procedimentos armazenados oferecem várias vantagens em aplicativos orientados a dados. Ao usar procedimentos armazenados, as operações de banco de dados podem ser encapsuladas em um único comando, otimizadas para melhor desempenho e aprimoradas com segurança adicional. Embora um procedimento armazenado pode ser chamado, passando o nome do procedimento armazenado seguido por argumentos de parâmetro como uma instrução SQL, usando o <xref:System.Data.Common.DbCommand.Parameters%2A> coleção de ADO.NET <xref:System.Data.Common.DbCommand> objeto permite que você definir mais explicitamente o procedimento armazenado parâmetros e para acessar parâmetros de saída e valores de retorno.
 
 > [!NOTE]
 > As instruções parametrizadas são executadas no servidor usando `sp_executesql,` que permite a reutilização do plano de consulta. Os cursores locais ou variáveis no lote `sp_executesql` não são visíveis para os lotes que chamam `sp_executesql`. As alterações no contexto de banco de dados duram somente até o final da instrução `sp_executesql`. Para obter mais informações, consulte [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).

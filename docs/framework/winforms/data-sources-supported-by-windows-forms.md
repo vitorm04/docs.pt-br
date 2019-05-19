@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6782261953fb5df94498deefb261407a2f0ba33a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626790"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882392"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Fontes de dados com suporte do Windows Forms
 Tradicionalmente, a associação de dados era usada nos aplicativos para tirar proveito dos dados armazenados em bancos de dados. Com a associação de dados do Windows Forms, você pode acessar dados de bancos de dados, bem como dados em outras estruturas, como matrizes e coleções, desde que certos requisitos mínimos sejam atendidos.  
@@ -44,12 +44,12 @@ Tradicionalmente, a associação de dados era usada nos aplicativos para tirar p
  <xref:System.Collections.IEnumerable>  
  Controles dos Windows Forms podem ser vinculados a fontes de dados que oferecem suporte apenas a <xref:System.Collections.IEnumerable> se eles estiverem associados por meio da interface um <xref:System.Windows.Forms.BindingSource> componente.  
   
- Objetos de dados [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] fornece um número de estruturas de dados adequadas para associação. Cada uma delas varia em termos de sofisticação e complexidade.  
+ Objetos de dados ADO.NET  
+ O ADO.NET fornece um número de estruturas de dados adequados para associação a. Cada uma delas varia em termos de sofisticação e complexidade.  
   
 - <xref:System.Data.DataColumn>. Um <xref:System.Data.DataColumn> é o bloco de construção essencial de um <xref:System.Data.DataTable>, em que um número de colunas compõem uma tabela. Cada <xref:System.Data.DataColumn> tem um <xref:System.Data.DataColumn.DataType%2A> propriedade que determina o tipo de dados, a coluna contém (por exemplo, a marca de um automóvel em uma tabela que descreve carros). Você pode associar de maneira simples um controle (como uma <xref:System.Windows.Forms.TextBox> do controle <xref:System.Windows.Forms.Control.Text%2A> propriedade) para uma coluna dentro de uma tabela de dados.  
   
-- <xref:System.Data.DataTable>. Um <xref:System.Data.DataTable> é a representação de uma tabela, com linhas e colunas, em [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Uma tabela de dados contém duas coleções: <xref:System.Data.DataColumn>, que representam as colunas de dados em uma determinada tabela (que determina os tipos de dados que podem ser inseridos na tabela), e <xref:System.Data.DataRow>, que representa as linhas de dados em uma determinada tabela. Você pode complexo associar um controle às informações contidas em uma tabela de dados (como a associação a <xref:System.Windows.Forms.DataGridView> controle para uma tabela de dados). No entanto, quando você associa a um <xref:System.Data.DataTable>, você está na verdade está associando à exibição padrão da tabela.  
+- <xref:System.Data.DataTable>. Um <xref:System.Data.DataTable> é a representação de uma tabela, com linhas e colunas, no ADO.NET. Uma tabela de dados contém duas coleções: <xref:System.Data.DataColumn>, que representam as colunas de dados em uma determinada tabela (que determina os tipos de dados que podem ser inseridos na tabela), e <xref:System.Data.DataRow>, que representa as linhas de dados em uma determinada tabela. Você pode complexo associar um controle às informações contidas em uma tabela de dados (como a associação a <xref:System.Windows.Forms.DataGridView> controle para uma tabela de dados). No entanto, quando você associa a um <xref:System.Data.DataTable>, você está na verdade está associando à exibição padrão da tabela.  
   
 - <xref:System.Data.DataView>. Um <xref:System.Data.DataView> é uma exibição personalizada de uma única tabela de dados que pode ser filtrada ou classificada. Uma exibição de dados é o "instantâneo" dos dados usado por controles associados de forma complexa. Você pode associar de forma simples ou complexa aos dados em uma exibição de dados, mas lembre-se de que você está associando a uma "imagem" fixa dos dados em vez de uma fonte de dados limpa e atualizada.  
   

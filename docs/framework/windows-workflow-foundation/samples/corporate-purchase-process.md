@@ -2,17 +2,17 @@
 title: Processo de compra corporativo
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665935"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876162"
 ---
 # <a name="corporate-purchase-process"></a>Processo de compra corporativo
 Este exemplo mostra como criar uma solicitação bem básico para o processo com base (RFP) de compra de propostas com a melhor seleção automático de proposta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, e <xref:System.Activities.Statements.ForEach%601> e uma atividade personalizado para criar um fluxo de trabalho que representa o processo.
 
- Este exemplo contém um aplicativo cliente de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permita interagir com o processo como participantes diferentes (como o solicitador original ou um fornecedor particular).
+ Este exemplo contém um aplicativo de cliente do ASP.NET que permite interagir com o processo como participantes diferentes (como o solicitador original ou um fornecedor particular).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -36,7 +36,7 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 
 - Controlar.
 
-- Hospedando [!INCLUDE[wf1](../../../../includes/wf1-md.md)] em diferentes clientes (aplicativos de aplicativos da Web e de WinForms de[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ).
+- Hospedagem [!INCLUDE[wf1](../../../../includes/wf1-md.md)] em diferentes clientes (aplicativos da Web ASP.NET e aplicativos WinForms).
 
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
@@ -82,7 +82,7 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 |-------------|-----------------|  
 |Comuns|Os objetos de entidade usados dentro do processo (aplicativo de propostas, fornecedor, e proposta de provedor).|  
 |WfDefinition|A definição de processo (como um programa de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) e o host (`PurchaseProcessHost`) usado por aplicativos cliente para criar e usar as instâncias de compra processam o fluxo de trabalho.|  
-|Clientes web|Um aplicativo cliente de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permite aos usuários criarem e participem nas instâncias do processo de compras. Usa um host de criado para interagir com o mecanismo de fluxo de trabalho.|  
+|Clientes web|Um aplicativo de cliente do ASP.NET que permite que os usuários criarem e participem nas instâncias do processo de compra. Usa um host de criado para interagir com o mecanismo de fluxo de trabalho.|  
 |WinFormsClient|Um aplicativo cliente Windows Forms que permite aos usuários criarem e participem nas instâncias do processo de compras. Usa um host de criado para interagir com o mecanismo de fluxo de trabalho.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  

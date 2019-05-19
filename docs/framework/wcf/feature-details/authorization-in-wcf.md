@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 26aa445f3136fcb16e2eb9cdce6b245476297dfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c605b310f19a05f994296d8f4268b91b408fb18
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650565"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881204"
 ---
 # <a name="authorization-in-wcf"></a>Autorização no WCF
 A autorização é o processo de controle de acesso e os direitos aos recursos, como os serviços ou arquivos. Os tópicos nesta seção mostram como executar essa tarefa básica no Windows Communication Foundation (WCF) em uma variedade de formas.  
@@ -23,10 +23,10 @@ A autorização é o processo de controle de acesso e os direitos aos recursos, 
  Mostra o processo de restringir o acesso a um serviço com o <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
   
  [Como: Usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- Percorre a configuração de um serviço para habilitá-lo para usar o recurso de provedor de função do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+ Percorre a configuração de um serviço para habilitá-lo para usar o recurso de provedor de função do ASP.NET.  
   
  [Como: Usar o provedor de função do Gerenciador de autorização do ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pode usar o Gerenciador de autorização para gerenciar a autorização para um site da Web. WCF da mesma forma pode aproveitar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]combinação /Authorization Gerenciador de autorização de clientes.  
+ ASP.NET pode usar o Gerenciador de autorização para gerenciar a autorização para um site da Web. WCF da mesma forma pode aproveitar a combinação de ASP.NET/Authorization Gerenciador de autorização de clientes.  
   
  [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  Explica as Noções básicas de como usar a infraestrutura do modelo de identidade para autorização baseada em declarações.  

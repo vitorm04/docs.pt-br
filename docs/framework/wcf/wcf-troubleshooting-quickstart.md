@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 6d631d51cc4f40b5be91b6579039a8b8dffa3dee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53e164bfdc27d99073cc893f98f332366091a753
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613207"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881288"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Início rápido de solução de problemas do WCF
 Este tópico lista diversos problemas conhecidos, os clientes têm executado até ao desenvolver clientes WCF e serviços. Se o problema que está ocorrendo não estiver nessa lista, é recomendável que configurar o rastreamento para seu serviço. Isso irá gerar um arquivo de rastreamento que você pode exibir com o Visualizador do arquivo de rastreamento e obter informações detalhadas sobre exceções que possam estar ocorrendo dentro do serviço. Para obter mais informações sobre como configurar o rastreamento, consulte: [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Para obter mais informações sobre o Visualizador do arquivo de rastreamento, consulte: [Ferramenta de Visualizador de rastreamento (SvcTraceViewer.exe) de serviço](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -194,7 +194,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q10"></a>   
 ## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>O que é o endereço base? Como ele se relaciona a um endereço de ponto de extremidade?  
- Um endereço básico é o endereço de raiz para um <xref:System.ServiceModel.ServiceHost> classe. Por padrão, se você adicionar um <xref:System.ServiceModel.Description.ServiceMetadataBehavior> para todos os pontos de extremidade que publica o host são recuperados do endereço básico HTTP, além de qualquer endereço relativo fornecido para o comportamento dos metadados, de classe em sua configuração de serviço, a descrição de linguagem WSDL (Web Services) Além de "? wsdl". Se você estiver familiarizado com [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] e o IIS, o endereço base é equivalente ao diretório virtual.  
+ Um endereço básico é o endereço de raiz para um <xref:System.ServiceModel.ServiceHost> classe. Por padrão, se você adicionar um <xref:System.ServiceModel.Description.ServiceMetadataBehavior> para todos os pontos de extremidade que publica o host são recuperados do endereço básico HTTP, além de qualquer endereço relativo fornecido para o comportamento dos metadados, de classe em sua configuração de serviço, a descrição de linguagem WSDL (Web Services) Além de "? wsdl". Se você estiver familiarizado com o ASP.NET e IIS, o endereço básico é equivalente ao diretório virtual.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Compartilhar uma porta entre um ponto de extremidade de serviço e um ponto de extremidade de mex usando a NetTcpBinding  
  Se você especifica o endereço básico para um serviço como net.tcp://MyServer: 8080/MyService e adicione os seguintes pontos de extremidade:  

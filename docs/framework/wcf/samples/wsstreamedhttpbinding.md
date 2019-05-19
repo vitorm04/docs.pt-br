@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: de0c5683b081ecebf2168ffb5d6a2768fdd0a1fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f771886192e85cc7e34f0ace4fd95ca04bdb89c9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007455"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881482"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 O exemplo demonstra como criar uma associação que é projetada para dar suporte a cenários de transmissão quando o transporte HTTP é usado.  
@@ -86,7 +86,7 @@ O exemplo demonstra como criar uma associação que é projetada para dar suport
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o comando a seguir.  
+1. Instale usando o seguinte comando do ASP.NET 4.0.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

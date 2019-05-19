@@ -2,12 +2,12 @@
 title: Cenários sem suporte
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637745"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878731"
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
 Por vários motivos, o Windows Communication Foundation (WCF) não oferece suporte a alguns cenários de segurança específicos. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos, e, portanto, o WCF não oferece suporte a execução de um serviço com a autenticação do Windows nessa plataforma. Outros mecanismos de autenticação, como nome de usuário/senha e autenticação integrada do HTTP/HTTPS são suportados quando executados WCF em Windows XP Home Edition.  
@@ -36,7 +36,7 @@ Por vários motivos, o Windows Communication Foundation (WCF) não oferece supor
 >  Os requisitos anteriores são específicos. Por exemplo, o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> cria um elemento de associação que resulta em uma identidade do Windows, mas não estabelece um SCT. Portanto, você pode usá-lo com o `Required` opção [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Possível conflito de ASP.NET  
- WCF e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pode ativar ou desativar a representação. Quando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hospeda um aplicativo WCF, um conflito pode existir entre o WCF e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] definições de configuração. No caso de conflito, a configuração do WCF tem precedência, a menos que o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> estiver definida como <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, caso em que o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] representação configuração terá precedência.  
+ WCF e ASP.NET podem tanto habilitar ou desabilitar a representação. Quando o ASP.NET hospeda um aplicativo WCF, um conflito pode existir entre as definições de configuração do WCF e ASP.NET. No caso de conflito, a configuração do WCF tem precedência, a menos que o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> estiver definida como <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, caso em que a configuração de representação do ASP.NET tem precedência.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Carregamentos de assembly podem falhar sob representação  
  Se o contexto representado não tem direitos de acesso para carregar um assembly e se ele estiver na primeira vez que o common language runtime (CLR) está tentando carregar o assembly para o AppDomain, o <xref:System.AppDomain> armazena em cache a falha. Tentativas subsequentes para carregar o assembly (ou assemblies) falharem, mesmo após reverter a representação e, mesmo se o contexto revertido tem direitos de acesso para carregar o assembly. Isso ocorre porque o CLR não tente realizar novamente a carga depois que o contexto do usuário for alterado. Você deve reiniciar o domínio do aplicativo para se recuperar da falha.  
@@ -75,13 +75,13 @@ Por vários motivos, o Windows Communication Foundation (WCF) não oferece supor
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Falha de segurança de mensagem se é necessário usar a representação do ASP.NET e compatibilidade do ASP.NET  
  O WCF não oferece suporte a seguinte combinação de configurações porque eles podem impedir que a autenticação do cliente ocorra:  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Representação está habilitada. Isso é feito no arquivo Web. config, definindo a `impersonate` atributo da <`identity`> elemento `true`.  
+- Personificação do ASP.NET está habilitada. Isso é feito no arquivo Web. config, definindo a `impersonate` atributo da <`identity`> elemento `true`.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade é habilitado definindo o `aspNetCompatibilityEnabled` atributo o [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) para `true`.  
+- Modo de compatibilidade do ASP.NET é habilitado definindo o `aspNetCompatibilityEnabled` atributo o [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) para `true`.  
   
 - Segurança de modo de mensagem é usada.  
   
- A solução é desativar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade. Ou, se o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade for necessário, desabilite o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] representação de recursos e usar em vez disso, a representação de fornecido pelo WCF. Para obter mais informações, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ A solução é desativar o modo de compatibilidade do ASP.NET. Ou, se o modo de compatibilidade ASP.NET for necessário, desabilite o recurso de representação do ASP.NET e usar em vez disso, a representação de fornecido com o WCF. Para obter mais informações, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Falha de Literal de endereço IPv6  
  Solicitações de segurança falharem quando o cliente e o serviço estão no mesmo computador e endereços literais IPv6 são usados para o serviço.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875531"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877584"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 
@@ -88,7 +88,7 @@ Para obter informações gerais sobre como criar um serviço de dados, consulte 
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Ativando os fluxos de binário grandes no ambiente de hospedagem
 
-Quando você cria um serviço de dados em um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo da Web, Windows Communication Foundation (WCF) é usado para fornecer a implementação de protocolo HTTP. Por padrão, o WCF limita o tamanho de mensagens HTTP para apenas 65 mil bytes. Para transmitir dados binários grandes para e do serviço de dados, você também deve configurar o aplicativo Web para ativar arquivos binários grandes e usar fluxos de transferência. Para fazer isso, adicione o seguinte ao elemento `<configuration />` do arquivo Web.config do aplicativo:
+Quando você cria um serviço de dados em um aplicativo Web ASP.NET, Windows Communication Foundation (WCF) é usado para fornecer a implementação de protocolo HTTP. Por padrão, o WCF limita o tamanho de mensagens HTTP para apenas 65 mil bytes. Para transmitir dados binários grandes para e do serviço de dados, você também deve configurar o aplicativo Web para ativar arquivos binários grandes e usar fluxos de transferência. Para fazer isso, adicione o seguinte ao elemento `<configuration />` do arquivo Web.config do aplicativo:
 
 > [!NOTE]
 > Você deve usar um <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modo de transferência para garantir que os dados binários nas mensagens de solicitação e resposta são transmitidos e não armazenado em buffer pelo WCF.
@@ -125,7 +125,7 @@ Considere o seguinte ao implementar um provedor de streaming e acessar recursos 
 
 - Ao implementar os métodos <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> ou o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, você deve usar os valores eTag e Content-Type fornecidos como parâmetros do método. Não defina cabeçalhos eTag ou Content-Type na implementação do provedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
-- Por padrão, o cliente envia fluxos binários grandes usando uma codificação de transferência HTTP em partes. Porque o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server não oferece suporte a esse tipo de codificação, você não pode usar esse servidor Web para hospedar um serviço de dados de streaming que deve aceitar fluxos binários grandes. Para obter mais informações sobre [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, consulte [servidores Web no Visual Studio para projetos Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+- Por padrão, o cliente envia fluxos binários grandes usando uma codificação de transferência HTTP em partes. Como o ASP.NET Development Server não oferece suporte a esse tipo de codificação, é possível usar esse servidor Web para hospedar um serviço de dados de streaming que deve aceitar fluxos binários grandes. Para obter mais informações sobre o ASP.NET Development Server, consulte [servidores Web no Visual Studio para projetos Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
 <a name="versioning"></a>
 

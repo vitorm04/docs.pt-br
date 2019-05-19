@@ -2,12 +2,12 @@
 title: Exemplos de hospedagem do WCF
 ms.date: 03/30/2017
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
-ms.openlocfilehash: a2b6767ac85a45587f68e0175cb80487baa640c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ea382af4ed7b5d36c199a0a916756cbb935e753
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968110"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876959"
 ---
 # <a name="hosting"></a>Hospedagem
 Esta seção contém exemplos que demonstram a hospedagem de serviços Windows Communication Foundation (WCF).  
@@ -20,7 +20,7 @@ Esta seção contém exemplos que demonstram a hospedagem de serviços Windows C
  Demonstra a integração da camada de hospedagem com as classes de <xref:System.Web.Routing> namespace.  
   
  [Compatibilidade de ASP.NET](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)  
- Demonstra como habilitar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade no WCF.  
+ Demonstra como habilitar o modo de compatibilidade do ASP.NET no WCF.  
   
  [Hospedagem do IIS utilizando código embutido](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
  Demonstra como implementar um serviço hospedado pelo Internet Information Services (IIS), em que o código de serviço está contido na linha em um arquivo. svc e é compilado sob demanda.  

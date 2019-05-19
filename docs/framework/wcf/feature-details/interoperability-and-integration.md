@@ -2,12 +2,12 @@
 title: Interoperabilidade e integração
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b4113d7545ab4e478b49c07681298d9ee942309
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591233"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875969"
 ---
 # <a name="interoperability-and-integration"></a>Interoperabilidade e integração
 Esta seção aborda a interoperabilidade e integração com o Windows Communication Foundation (WCF).  
@@ -32,16 +32,16 @@ Esta seção aborda a interoperabilidade e integração com o Windows Communicat
  Descreve como migrar um serviço Web do WSE 3.0 para um serviço WCF.  
   
  [Interoperabilidade com serviços Web do ASP.NET](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
- Descreve como o WCF pode interoperar com [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviços Web.  
+ Descreve como o WCF pode interoperar com serviços Web do ASP.NET.  
   
  [Migrando serviços Web do ASP.NET para o WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Descreve como migrar um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviço Web para um serviço WCF.  
+ Descreve como migrar um serviço Web ASP.NET para um serviço WCF.  
   
  [Migrando serviços Web do ASP.NET para o WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Descreve como migrar um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviço Web para um serviço WCF.  
+ Descreve como migrar um serviço Web ASP.NET para um serviço WCF.  
   
  [Migrando serviços Web do ASP.NET para o WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Descreve como migrar um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviço Web para um serviço WCF.  
+ Descreve como migrar um serviço Web ASP.NET para um serviço WCF.  
   
  [Interoperabilidade com aplicativos de POX](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
  Descreve como o WCF fornece serviços e clientes que usam mensagens de "Plain Old XML" (POX).  

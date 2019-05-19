@@ -2,12 +2,12 @@
 title: Sessões,instanciação e simultaneidade
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 52c9ed5d672ea05fec3333c9fece8b693143d6f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74b9971fa9267ef6156b27261c61d3e998d01883
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586118"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877325"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessões,instanciação e simultaneidade
 Um *sessão* é uma correlação de todas as mensagens enviadas entre dois pontos de extremidade. *Instanciação* refere-se para controlar o tempo de vida de objetos de serviço definido pelo usuário e seus relacionados <xref:System.ServiceModel.InstanceContext> objetos. *Simultaneidade* é o termo dado ao controle do número de threads em execução em um <xref:System.ServiceModel.InstanceContext> ao mesmo tempo.  
@@ -27,13 +27,13 @@ Um *sessão* é uma correlação de todas as mensagens enviadas entre dois ponto
   
 - Não há nenhum armazenamento de dados gerais associado com uma sessão do WCF.  
   
- Se você estiver familiarizado com o <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativos e a funcionalidade que ele fornece, você pode observar as seguintes diferenças entre esse tipo de sessão e as sessões WCF:  
+ Se você estiver familiarizado com o <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe em aplicativos ASP.NET e a funcionalidade que ele fornece, você pode observar as seguintes diferenças entre esse tipo de sessão e as sessões WCF:  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] as sessões são sempre iniciadas pelo servidor.  
+- Sessões do ASP.NET são sempre iniciadas pelo servidor.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] as sessões são implicitamente não ordenadas.  
+- Sessões do ASP.NET são implicitamente ordenadas.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] as sessões fornecem um mecanismo de armazenamento de dados geral em todas as solicitações.  
+- Sessões do ASP.NET fornecem um mecanismo de armazenamento de dados geral em todas as solicitações.  
   
  Aplicativos cliente e aplicativos de serviço interagem com sessões de maneiras diferentes. Aplicativos cliente iniciam as sessões e, em seguida, recebem e processam as mensagens enviadas dentro da sessão. Aplicativos de serviço podem usar sessões como um ponto de extensibilidade para adicionar um comportamento adicional. Isso é feito ao trabalhar diretamente com o <xref:System.ServiceModel.InstanceContext> ou implementando um provedor de contexto personalizado de instância.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046626"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875575"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gerenciamento de declarações e autorizações com o modelo de identidade
 A autorização é o processo de determinar quais entidades tem permissão para alterar, exibir ou caso contrário, acessar um recurso de computador. Por exemplo, em uma empresa, somente gerentes de podem ser permitidos para acessar os arquivos de seus funcionários. Windows Communication Foundation (WCF) oferece suporte a dois mecanismos para executar o processamento de autorização. O primeiro mecanismo permite que você controle a autorização usando construções de runtime (CLR) de linguagem comum existentes. O segundo é um modelo baseado em declarações, conhecido como o *modelo de identidade*. O WCF usa o modelo de identidade para criar declarações de mensagens de entrada; Classes de modelo de identidade podem ser estendidas para dar suporte a novos tipos de declaração para esquemas de autorização personalizado. Este tópico apresenta uma visão geral dos principais conceitos de programação do recurso de modelo de identidade, bem como uma lista das classes mais importantes que usa o recurso.  
@@ -90,11 +90,12 @@ A autorização é o processo de determinar quais entidades tem permissão para 
   
  A figura a seguir mostra um exemplo dos três conjuntos de declarações, onde um conjunto de declarações tem, como seu emissor, outro conjunto de declarações, que por sua vez tem o sistema estiver definida como seu emissor de declaração. Portanto, conjuntos de declarações formam uma hierarquia que pode ser arbitrariamente profunda.  
   
- ![Gerenciando reivindicações e autorização](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![Conjuntos de declarações dentro da hierarquia.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- Vários conjuntos de declarações podem ter a mesma de emissão de declaração de conjunto, conforme ilustrado na figura a seguir.  
+ Vários conjuntos de declarações podem ter a mesma de emissão de declaração de conjunto, conforme ilustrado na figura a seguir:
+ 
   
- ![Gerenciando reivindicações e autorização](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![Vários conjuntos de declarações com a emissão do mesmo conjunto de declarações.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  Com exceção de um conjunto de declarações que é seu próprio emissor, o modelo de identidade não fornece nenhum suporte para conjuntos de declarações formar um loop. Portanto, nunca pode surgir uma situação em que um conjunto de declarações é emitido pelo conjunto de declarações B, que também é emitido por um conjunto de declarações. Além disso, o modelo de identidade não fornece nenhum suporte para conjuntos de declarações ter vários emissores. Se dois ou mais emissores devem emitir um determinado conjunto de declarações, em seguida, você deve usar vários conjuntos de declarações, cada um contendo as declarações a mesmas, mas tendo emissores diferentes.  
   

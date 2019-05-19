@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4db6d7e13bfc4a0e2705c210820db511a60e09de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645526"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877348"
 ---
 # <a name="securing-wcf-data-services"></a>Protegendo o WCF Data Services
 Este tópico descreve considerações de segurança que são específicas para desenvolver, implantar e executar o WCF Data Services e aplicativos que serviços de acesso que dão suporte a Open Data Protocol (OData). Você também deve seguir as recomendações para criar aplicativos seguros do .NET Framework.  
@@ -55,7 +55,7 @@ context.Credentials = _
  Quando o serviço de dados exige credenciais de logon que não podem ser especificadas com um objeto <xref:System.Net.NetworkCredential>, como um cookie ou um token baseado em declarações, você deve definir manualmente os cabeçalhos na solicitação HTTP, geralmente os cabeçalhos `Authorization` e `Cookie`. Para obter mais informações sobre esse tipo de cenário de autenticação, consulte o postagem no blog [ OData e autenticação – parte 3 – ClientSide Hooks](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/). Para obter um exemplo de como definir cabeçalhos HTTP em uma mensagem de solicitação, consulte [como: Definir os cabeçalhos da solicitação do cliente](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md).  
   
 ## <a name="impersonation"></a>Representação  
- Em geral, o serviço de dados acessa os recursos necessários, como arquivos no servidor ou em um banco de dados, usando as credenciais do processo de trabalho que está hospedando o serviço de dados. Ao usar a representação, os aplicativos [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] podem ser executados com a identidade do Windows (conta de usuário) do usuário que faz a solicitação. A representação é normalmente usada em aplicativos que dependem do IIS para autenticar o usuário, e as credenciais desse princípio são usadas para acessar os recursos necessários. Para obter mais informações, consulte [personificação do ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
+ Em geral, o serviço de dados acessa os recursos necessários, como arquivos no servidor ou em um banco de dados, usando as credenciais do processo de trabalho que está hospedando o serviço de dados. Ao usar a representação, os aplicativos ASP.NET podem ser executados com a identidade do Windows (conta de usuário) do usuário que faz a solicitação. A representação é normalmente usada em aplicativos que dependem do IIS para autenticar o usuário, e as credenciais desse princípio são usadas para acessar os recursos necessários. Para obter mais informações, consulte [personificação do ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
   
 ## <a name="configuring-data-service-authorization"></a>Configurando a autorização do serviço de dados  
  Autorização é a concessão de acesso a recursos do aplicativo a um princípio ou processo que é identificado com base em uma autenticação anteriormente bem-sucedida. Como uma prática geral, você só deve conceder direitos suficientes para os usuários do serviço de dados executarem as operações exigidas pelos aplicativos cliente.  

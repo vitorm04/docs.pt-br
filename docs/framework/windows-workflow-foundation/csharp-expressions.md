@@ -2,12 +2,12 @@
 title: Expressões C#
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: 23c5ee0e0d1408f19e87615008ee95266176d27b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650951"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882100"
 ---
 # <a name="c-expressions"></a>Expressões C#
 Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as expressões c# têm suporte no Windows Workflow Foundation (WF). Novos projetos de fluxo de trabalho c# criados no Visual Studio 2012 que direcionam [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usam expressões c# e projetos de fluxo de trabalho do Visual Basic usam expressões do Visual Basic. Os projetos de fluxo de trabalho existentes do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] que usam as expressões do Visual Basic podem ser migrados para o [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] independentemente da linguagem do projeto e têm suporte. Este tópico fornece uma visão geral de expressões C# no [!INCLUDE[wf1](../../../includes/wf1-md.md)].
@@ -31,7 +31,7 @@ Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as express�
 ### <a name="WFDesigner"></a> Usando expressões c# no Designer de fluxo de trabalho
  Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as expressões c# têm suporte no Windows Workflow Foundation (WF). Projetos de fluxo de trabalho c# criados no Visual Studio 2012 que direcionam [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usar expressões c#, enquanto os projetos de fluxo de trabalho do Visual Basic usam expressões do Visual Basic. Para especificar a expressão desejada c#, digite-o na caixa rotulada **insira uma expressão c#**. Esse rótulo é exibido na janela de propriedades quando a atividade é selecionada no designer ou na atividade no designer de fluxo de trabalho. No exemplo a seguir, duas atividades `WriteLine` estão contidas no `Sequence` dentro de `NoPersistScope`.
 
- ![Atividade de sequência criada automaticamente](./media/autosurround2.png "AutoSurround2")
+ ![Captura de tela que mostra uma atividade de sequência criada automaticamente.](./media/csharp-expressions/auto-surround-sequence-activity.png)
 
 > [!NOTE]
 >  Expressões c# têm suporte apenas no Visual Studio e não têm suporte no designer de fluxo de trabalho hospedado novamente. Para obter mais informações sobre os novos recursos WF45 com suporte no designer hospedado novamente, consulte [suporte para recursos do novo fluxo de trabalho Foundation 4.5 no Designer de fluxo de trabalho Rehosted](wf-features-in-the-rehosted-workflow-designer.md).

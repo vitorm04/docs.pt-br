@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651533"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882429"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Usando a linha para novos registros no controle DataGridView dos Windows Forms
 Quando você usa um <xref:System.Windows.Forms.DataGridView> para editar dados em seu aplicativo, você geralmente desejará dar aos usuários a capacidade de adicionar novas linhas de dados para o armazenamento de dados. O <xref:System.Windows.Forms.DataGridView> controle dá suporte a essa funcionalidade fornecendo uma linha para novos registros, que sempre é exibida como a última linha. Ela é marcada com um símbolo de asterisco (*) em seu cabeçalho de linha. As seções a seguir tratam de algumas coisas que você deve considerar quando programar com a linha de novos registros habilitada.  
@@ -47,7 +47,7 @@ Quando você usa um <xref:System.Windows.Forms.DataGridView> para editar dados e
 ## <a name="sorting"></a>Classificação  
  No modo não associado, novos registros sempre serão adicionados ao final da <xref:System.Windows.Forms.DataGridView> mesmo se o usuário tenha classificado o conteúdo a <xref:System.Windows.Forms.DataGridView>. O usuário precisará aplicar a classificação novamente para classificar a linha na posição correta; Esse comportamento é semelhante do <xref:System.Windows.Forms.ListView> controle.  
   
- Em modos virtuais ou com associação de dados, o comportamento de inserção quando uma classificação for aplicada dependerá da implementação do modelo de dados. Para [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], a linha é classificada imediatamente na posição correta.  
+ Em modos virtuais ou com associação de dados, o comportamento de inserção quando uma classificação for aplicada dependerá da implementação do modelo de dados. Para ADO.NET, a linha é classificada imediatamente na posição correta.  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>Outras observações sobre a linha de novos registros  
  Não é possível definir a <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> propriedade desta linha para `false`. Um <xref:System.InvalidOperationException> será gerado se tentar fazer isso.  

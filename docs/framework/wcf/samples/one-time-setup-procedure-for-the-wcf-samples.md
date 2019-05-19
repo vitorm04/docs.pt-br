@@ -2,12 +2,12 @@
 title: Procedimento de configuração único para exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: a34c2ee7cb98c6120e23114674712de0ba5b8162
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664810"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876716"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimento de configuração único para exemplos do Windows Communication Foundation
 A maioria dos exemplos do Windows Communication Foundation (WCF) é hospedada em serviços de informações da Internet (IIS) e executar a partir de um diretório virtual comum. Este procedimento de configuração única cria uma pasta no disco; Ele também adiciona um diretório virtual IIS chamado **ServiceModelSamples**.
@@ -19,7 +19,7 @@ A maioria dos exemplos do Windows Communication Foundation (WCF) é hospedada em
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procedimento de configuração única para obter exemplos WCF  
   
-1. Certifique-se de que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] está configurado. Para obter mais informações sobre como configurar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], consulte [hospedagem instruções de serviço de informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1. Certifique-se de que o ASP.NET está configurado. Para obter mais informações sobre como configurar o ASP.NET, consulte [hospedagem instruções de serviço de informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2. Certifique-se de que [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] está instalado. Pesquisar o seguinte diretório for v4.0 (ou posterior): **\Windows\Microsoft.NET\Framework**  
   

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 5f8fcd21802c52d61d354c5ba85d665bd17237db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a69605901eef7366c7a9ff9930e5f4ec6cece23
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011379"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878767"
 ---
 # <a name="datagrid-control-windows-forms"></a>Controle DataGrid (Windows Forms)
 > [!NOTE]
 >  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle `DataGrid`, no entanto, o controle `DataGrid` é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- O controle `DataGrid` do Windows Forms fornece uma interface do usuário para conjuntos de dados [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], exibindo dados tabulares e habilitando atualizações para a fonte de dados.  
+ Os formulários do Windows `DataGrid` controle fornece uma interface do usuário para conjuntos de dados ADO.NET, exibindo dados tabulares e habilitando atualizações à fonte de dados.  
   
  Quando o controle `DataGrid` estiver definido como uma fonte de dados válido, o controle é preenchido automaticamente, criando colunas e linhas com base na forma dos dados. O controle `DataGrid` pode ser usado para exibir uma única tabela ou as relações hierárquicas entre um conjunto de tabelas.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "62011379"
  Descreve como adicionar tabelas e colunas ao controle `DataGrid` com programação.  
   
  [Como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados usando o Designer](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
- Descreve como associar um conjunto de dados [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ao controle `DataGrid` usando o designer.  
+ Descreve como associar um conjunto de dados do ADO.NET para o `DataGrid` usando o designer de controle.  
   
  [Como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- Descreve como associar um conjunto de dados [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ao controle `DataGrid`.  
+ Descreve como associar um conjunto de dados do ADO.NET para o `DataGrid` controle.  
   
  [Como: Alterar os dados exibidos em tempo de execução no controle DataGrid dos Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)  
  Descreve como alterar dados com programação no controle `DataGrid`.  
