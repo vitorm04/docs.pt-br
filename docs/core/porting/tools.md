@@ -4,12 +4,12 @@ description: Conheça algumas das ferramentas que você pode usar para portar pa
 author: cartermp
 ms.author: mairaw
 ms.date: 12/07/2018
-ms.openlocfilehash: 88e3edb0442b3326a77323fe4b6396f3eb1ca767
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: d0b74b5708f31922b72fa0e236c8bbe69ae06217
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904862"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632247"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>Ferramentas para ajudar com a portabilidade para o .NET Core
 
