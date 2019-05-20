@@ -2,12 +2,12 @@
 title: Projetando validações na camada de modelo de domínio
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Compreenda conceitos-chave de validações de modelo de domínio.
 ms.date: 10/08/2018
-ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063017"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639581"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Projetar validações na camada de modelo de domínio
 

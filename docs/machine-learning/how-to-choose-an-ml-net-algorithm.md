@@ -4,12 +4,12 @@ description: Saiba como escolher um algoritmo do ML.NET para seu modelo de machi
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: 3fd515a1d150ea51214b55f882726c4ba76bd6d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065629"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557768"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Como escolher um algoritmo do ML.NET
 
@@ -81,8 +81,8 @@ Esses treinadores criam um treinador de várias classe de um instrutor binário.
 
 |Algoritmo|Propriedades|Treinadores|
 |---------|----------|--------|
-|Um versus todos|Esse classificador multiclasse treina um classificador binário para cada classe, que distingue essa classe de todas as outras. É limitado em escala pelo número de classes para categorizar|[OneVersusAllTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|Acoplamento por pares|Esse classificador multiclasse treina um algoritmo de classificação binária em cada par de classes. É limitado em escala pelo número de classes, uma vez que cada combinação de duas classes deve ser treinada.|[PairwiseCouplingTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|Um versus todos|Esse classificador multiclasse treina um classificador binário para cada classe, que distingue essa classe de todas as outras. É limitado em escala pelo número de classes para categorizar|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|Acoplamento por pares|Esse classificador multiclasse treina um algoritmo de classificação binária em cada par de classes. É limitado em escala pelo número de classes, uma vez que cada combinação de duas classes deve ser treinada.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-Means
 
@@ -107,4 +107,3 @@ Esses treinadores criam um treinador de várias classe de um instrutor binário.
 |Propriedades|Treinadores|
 |----------|--------|
 |Use esse treinador de classificação binária para definir a linha de base de desempenho de outros treinadores. Para ser eficaz, as métricas dos outros treinadores devem ser melhores do que a do treinador anterior. |<xref:Microsoft.ML.Trainers.PriorTrainer>|
-

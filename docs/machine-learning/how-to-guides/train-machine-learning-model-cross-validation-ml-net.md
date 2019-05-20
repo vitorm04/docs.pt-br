@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: a15dfbfcd563cf9df9c25779a5854a9f556523d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065559"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557831"
 ---
 # <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>Treinar e avaliar um modelo de machine learning usando validação cruzada
 
@@ -91,7 +91,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 1. O desempenho de cada modelo é avaliado usando o método [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) no conjunto de dados de teste. 
 1. O modelo, juntamente com as métricas, é retornado para cada um dos modelos.
 
-O resultado armazenado em `cvResults` é uma coleção de objetos [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1). Esse objeto inclui o modelo treinado, bem como as métricas acessíveis das propriedades [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Model) e [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Metrics), respectivamente. Neste exemplo, a propriedade `Model` é do tipo [`ITransformer`](xref:Microsoft.ML.ITransformer) e a propriedade `Metrics` é do tipo [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
+O resultado armazenado em `cvResults` é uma coleção de objetos [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601). Esse objeto inclui o modelo treinado, bem como as métricas acessíveis das propriedades [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) e [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics), respectivamente. Neste exemplo, a propriedade `Model` é do tipo [`ITransformer`](xref:Microsoft.ML.ITransformer) e a propriedade `Metrics` é do tipo [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
 
 ## <a name="extract-metrics"></a>Extrair métricas
 
