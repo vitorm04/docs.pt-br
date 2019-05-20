@@ -1,1 +1,9 @@
-<span data-ttu-id="9b118-101">Visual C# 2008</span><span class="sxs-lookup"><span data-stu-id="9b118-101">Visual C# 2008</span></span>
+---
+ms.openlocfilehash: cf72c092f77d5eed402c064111191df50a21dc29
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669994"
+---
+<span data-ttu-id="6b52c-101">Visual C# 2008</span><span class="sxs-lookup"><span data-stu-id="6b52c-101">Visual C# 2008</span></span>
