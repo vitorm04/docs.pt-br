@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2d7f50952a485c09e74462f3ad731d710b8f9198
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323805"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584268"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Como: usar invocação de plataforma para executar um arquivo wave (Guia de Programação em C#)
 O exemplo de código C# a seguir ilustra como usar os serviços de invocação de plataforma para reproduzir um arquivo de som wave no sistema operacional Windows.  
@@ -29,8 +29,6 @@ O exemplo de código C# a seguir ilustra como usar os serviços de invocação d
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
-### <a name="to-compile-the-code"></a>Para compilar o código  
-  
 1. Crie um novo projeto de aplicativos do Windows do C# no Visual Studio e dê o nome de **WinSound**.  
   
 2. Copie o código acima e cole-o sobre o conteúdo do arquivo `Form1.cs`.  
@@ -40,9 +38,6 @@ O exemplo de código C# a seguir ilustra como usar os serviços de invocação d
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
 4. Compile e execute o código.  
-  
-## <a name="net-framework-security"></a>Segurança do .NET Framework  
- Para obter mais informações, confira [Segurança no .NET](../../../standard/security/index.md).  
   
 ## <a name="see-also"></a>Consulte também
 

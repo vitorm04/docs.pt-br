@@ -1,15 +1,13 @@
 ---
 title: Terminologia do Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Terminologia do Docker
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 9cfb8ceb4fa1b95603ccc9aa006dd6ee3e8e8b3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 700cd9a00c30b0a5fc87f9ffcd63821bb578b0cc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767715"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639875"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 

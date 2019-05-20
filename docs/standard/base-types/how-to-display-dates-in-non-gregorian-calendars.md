@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634008"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588827"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Como: exibir datas em calendários não gregorianos
 Os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> usam o calendário gregoriano como seu calendário padrão. Isso significa que chamar o método `ToString` de um valor de data e hora exibe a representação de cadeia de caracteres da data e hora no calendário gregoriano, mesmo que a data e hora tenha sido criada usando outro calendário. Isso é ilustrado no exemplo a seguir, que usa duas maneiras diferentes para criar um valor de data e hora com o calendário persa, mas ainda exibe esses valores de data e hora no calendário gregoriano quando chama o método <xref:System.DateTime.ToString%2A>. Este exemplo reflete duas técnicas comumente usadas, mas incorretas, para exibir a data em um calendário específico.  
@@ -84,11 +84,6 @@ Os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> usam o calendári
 - `DisplayDate`, um método público sobrecarregado a que são passados dois parâmetros: um valor de <xref:System.DateTime> ou <xref:System.DateTimeOffset> para expressar no calendário representado pelo objeto `CalendarUtility`; e a cultura cujas regras de formatação devem ser usadas. Seu comportamento ao retornar a representação de cadeia de caracteres de uma data depende de o calendário de destino ter suporte da cultura cujas regras de formatação devem ser usadas.  
   
  Independentemente do calendário usado para criar um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> neste exemplo, o valor normalmente é expresso como uma data no calendário gregoriano. Isso ocorre porque os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> não preservam nenhuma informação de calendário. Internamente, eles são representados como o número de marcadores decorridos desde a meia-noite de 1º de janeiro de 0001. A interpretação desse número depende do calendário. Na maioria das culturas, o calendário padrão é o calendário gregoriano.  
-  
-## <a name="compiling-the-code"></a>Compilando o código  
- Este exemplo exige uma referência a System.Core.dll.  
-  
- Compile o código na linha de comando usando csc.exe ou vb.exe. Para compilar o código no Visual Studio, coloque-o em um modelo de projeto de aplicativo do console.  
   
 ## <a name="see-also"></a>Consulte também
 

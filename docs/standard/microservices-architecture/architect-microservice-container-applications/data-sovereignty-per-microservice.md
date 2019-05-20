@@ -1,15 +1,13 @@
 ---
 title: Soberania de dados por microsserviço
 description: Soberania de dados por microsserviço é um dos pontos principais dos microsserviços. Cada microsserviço deve ser o proprietário único de seu banco de dados, compartilhando-o com ninguém mais. É claro que todas as instâncias de um microsserviço conectam-se ao mesmo banco de dados de alta disponibilidade.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 1b0b1fbb72f759eb337c0c1a9c465cc4088d8eff
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ccb12451cd7cd44938e09d171eb29e614786f469
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611231"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644446"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Soberania de dados por microsserviço
 

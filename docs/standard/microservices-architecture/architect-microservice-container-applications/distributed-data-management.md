@@ -1,15 +1,13 @@
 ---
 title: Desafios e soluções do gerenciamento de dados distribuídos
 description: Saiba quais são os desafios e soluções de gerenciamento de dados distribuídos no mundo de microsserviços.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 3e683044ea6a31116f1e7da6d690fc32ad87bd76
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613689"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644330"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafios e soluções do gerenciamento de dados distribuídos
 

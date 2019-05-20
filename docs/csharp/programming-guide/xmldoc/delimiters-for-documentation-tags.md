@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 9874b71462fb66828f6baeef4f46ad93899d4cc8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d08dd0c68a11ddf73c19a1e09bc8c59937708553
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607993"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634759"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitadores para marcações de documentação (Guia de Programação em C#)
 O uso de comentários do documento XML requer delimitadores, que indicam ao compilador em que um comentário de documentação começa e termina. Você pode usar os seguintes tipos de delimitadores com as marcas de documentação XML:  
@@ -81,6 +81,6 @@ O uso de comentários do documento XML requer delimitadores, que indicam ao comp
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/index.md)
 - [-doc (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/index.md)

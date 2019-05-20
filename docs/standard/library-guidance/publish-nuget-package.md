@@ -4,12 +4,12 @@ description: Práticas recomendadas para a publicação de bibliotecas .NET para
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 036aa99c89790274628c40824be7e230d81850fe
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144063"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640760"
 ---
 # <a name="publishing-a-nuget-package"></a>Publicar um pacote NuGet
 

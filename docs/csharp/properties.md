@@ -2,11 +2,12 @@
 title: Propriedades
 description: Saiba mais sobre propriedades C#, que incluem recursos de validação, valores computados, avaliação lenta e notificações de alteração de propriedade.
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878276"
 ---
 # <a name="properties"></a>Propriedades
 
@@ -139,7 +140,7 @@ A última situação em que você precisa escrever código em um acessador de pr
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-O operador `?.` é chamado de *operador condicional nulo*. Ele verifica uma referência nula antes de avaliar o lado direito do operador. O resultado final é que, se não houver nenhum assinante para o evento `PropertyChanged`, o código para acionar o evento não é executado. Ela lançaria uma `NullReferenceException` sem essa verificação, nesse caso. Para obter mais informações, consulte [`events`](delegates-events.md). Este exemplo também usa o novo operador `nameof` para converter o símbolo de nome da propriedade em sua representação de texto.
+O operador `?.` é chamado de *operador condicional nulo*. Ele verifica uma referência nula antes de avaliar o lado direito do operador. O resultado final é que, se não houver nenhum assinante para o evento `PropertyChanged`, o código para acionar o evento não é executado. Ela lançaria uma `NullReferenceException` sem essa verificação, nesse caso. Para obter mais informações, consulte [`events`](events-overview.md). Este exemplo também usa o novo operador `nameof` para converter o símbolo de nome da propriedade em sua representação de texto.
 O uso de `nameof` pode reduzir erros no local em que você digitou errado o nome da propriedade.
 
 Novamente, a implementação de <xref:System.ComponentModel.INotifyPropertyChanged> é um exemplo de um caso em que você pode escrever o código nos acessadores para dar suporte aos cenários necessários.

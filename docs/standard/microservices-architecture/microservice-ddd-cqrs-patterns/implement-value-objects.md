@@ -2,12 +2,12 @@
 title: Implementando objetos de valor
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes e as opções para implementar objetos de valor usando as novas funcionalidades do Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063077"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644308"
 ---
 # <a name="implement-value-objects"></a>Implementar objetos de valor
 

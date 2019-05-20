@@ -1,15 +1,13 @@
 ---
 title: Implementando a camada de persistência da infraestrutura com o Entity Framework Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Explore os detalhes de implementação para a camada de persistência da infraestrutura usando o Entity Framework Core.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a84c5057b7a35c837f2c597cd3e60cd293a70009
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611647"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639534"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementar a camada de persistência de infraestrutura com o Entity Framework Core
 

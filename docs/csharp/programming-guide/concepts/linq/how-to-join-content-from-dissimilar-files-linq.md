@@ -2,12 +2,12 @@
 title: 'Como: Unir o conteúdo de arquivos diferentes (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328810"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585755"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Como: Unir o conteúdo de arquivos diferentes (LINQ) (C#)
 
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>Compilando o código
-
-Crie e compile um projeto direcionado para uma das seguintes opções:
-
-- Versão 3.5 do .NET Framework com uma referência ao System.Core.dll.
-- .NET Framework versão 4.0 ou posterior.
-- .NET Core versão 1.0 ou posterior.
-  
 ## <a name="see-also"></a>Consulte também
 
 - [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

@@ -3,12 +3,12 @@ title: Trabalhar com coleções – Introdução ao tutorial do C#
 description: Aprenda C# explorando a Coleção de lista neste tutorial.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 064b01a30410b147e89b0f87180d5af9269a3a87
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261265"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634508"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Saiba como gerenciar coleções de dados usando o tipo de lista genérico
 

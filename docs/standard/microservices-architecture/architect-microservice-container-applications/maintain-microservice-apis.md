@@ -1,15 +1,13 @@
 ---
 title: Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços
 description: Crie contratos e APIs de microsserviço levando em conta a evolução e o controle de versão, porque a alteração é necessária.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: f42de3895f7f9affe09891fd89621fbb414313e9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 1972d02d8bf7935c71bfd383707ae19ea2baded9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612102"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644922"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços
 

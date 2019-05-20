@@ -1,15 +1,13 @@
 ---
 title: Validação do lado do cliente (validação nas camadas de apresentação)
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Explore os principais conceitos da validação do lado do cliente.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ddf53456f9356817d28cd0bfa75df3296fb5d722
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4e72dcafafc3144a75afe1fd23a4a779f5667459
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612609"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644835"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validação do lado do cliente (validação nas camadas de apresentação)
 

@@ -1,15 +1,13 @@
 ---
 title: Principais aspectos a serem lembrados
 description: Saiba quais são os principais aspectos a serem lembrados do guia/livro eletrônico “Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres” para ter uma visão geral de alto nível dos problemas envolvidos ao usar uma arquitetura de microsserviços, como as vantagens e desvantagens, os padrões de DDD para design e desenvolvimento, bem como a resiliência, a segurança e o uso de orquestradores.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 90babf9a32d1e139216cbc8eb1c629401b8e83e3
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362113"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639696"
 ---
 # <a name="key-takeaways"></a>Principais aspectos a serem lembrados
 

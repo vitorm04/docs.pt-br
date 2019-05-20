@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 36bb18d21740f406d33306c212195fa5dbb25ee1
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4dc0618eceda4df7c5aa76aee3ac649deb9f5310
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828326"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639001"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologias da Web comuns do lado do cliente
 

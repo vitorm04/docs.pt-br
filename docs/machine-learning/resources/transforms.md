@@ -4,16 +4,16 @@ description: Explore os componentes de engenharia de recursos com suporte no ML.
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636541"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558022"
 ---
 # <a name="data-transformations"></a>Transformações de dados
 
-Transformações de dados são usadas para preparar dados para o treinamento de modelo. As transformações neste guia retornam classes que implementam a interface [IEstimator](xref:Microsoft.ML.IEstimator`1). Transformações de dados podem ser encadeadas. Cada transformação espera e produz dados de tipos e formatos específicos, especificados na documentação de referência vinculada.
+Transformações de dados são usadas para preparar dados para o treinamento de modelo. As transformações neste guia retornam classes que implementam a interface [IEstimator](xref:Microsoft.ML.IEstimator%601). Transformações de dados podem ser encadeadas. Cada transformação espera e produz dados de tipos e formatos específicos, especificados na documentação de referência vinculada.
 
 Algumas transformações de dados requerem dados de treinamento para calcular seus parâmetros. Por exemplo: o transformador <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> calcula a média e a variância dos dados de treinamento durante a operação `Fit()` e usa esses parâmetros na operação `Transform()`. 
 

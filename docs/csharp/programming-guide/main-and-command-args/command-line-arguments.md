@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332203"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877532"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de linha de comando (Guia de Programação em C#)
 Você pode enviar argumentos para o método `Main` definindo o método de uma das seguintes maneiras:  
@@ -80,6 +80,5 @@ long num = Convert.ToInt64(s);
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)
 - [Como: exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Como: acessar argumentos de linha de comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Valores de retorno de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)

@@ -1,15 +1,13 @@
 ---
 title: Monitoramento de integridade
 description: Explore uma maneira de implementar o monitoramento de integridade.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: deebcf6771d24be34050dd7fdfb807a681ebce1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b03506972166eec1864de840c1abda05bc3e5277
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672198"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639861"
 ---
 # <a name="health-monitoring"></a>Monitoramento de integridade
 

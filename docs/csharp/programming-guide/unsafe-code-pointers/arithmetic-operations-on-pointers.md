@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: bfa81bc926b4fe81455cecb88bc55f4dcd69268e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b08f9dbf8137e483bd38a4f396732191598532cf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977832"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635230"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Operações aritméticas em ponteiros (Guia de Programação em C#)
 Este tópico discute o uso de operadores aritméticos `+` e `-` para manipular ponteiros.  
@@ -40,9 +40,8 @@ Este tópico discute o uso de operadores aritméticos `+` e `-` para manipular p
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Código não seguro e ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
-- [Expressões de ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [Operadores do C#](../../../csharp/language-reference/operators/index.md)
-- [Manipulando ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [Manipulando ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)
 - [Tipos de ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipos](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

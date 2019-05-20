@@ -2,12 +2,12 @@
 title: 'Como: Popular coleções de objetos de várias fontes (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571331"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584397"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Como: Popular coleções de objetos de várias fontes (LINQ) (C#)
 
@@ -138,14 +138,6 @@ foreach (var student in queryNamesScores2)
         student.First, student.Last, student.ExamScores.Average());
 }
 ```
-
-## <a name="compiling-the-code"></a>Compilando o código
-
-Crie e compile um projeto direcionado para uma das seguintes opções:
-
-- Versão 3.5 do .NET Framework com uma referência ao System.Core.dll.
-- .NET Framework versão 4.0 ou posterior.
-- .NET Core versão 1.0 ou posterior.
 
 ## <a name="see-also"></a>Consulte também
 

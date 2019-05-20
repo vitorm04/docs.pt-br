@@ -2,12 +2,12 @@
 title: 'Como: Criar e usar assemblies usando a linha de comando (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 76243034b4291142efa5ac78c21f65333e1378e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599862"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586026"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Como: Criar e usar assemblies usando a linha de comando (C#)
 Um assembly ou uma DLL (biblioteca de vínculo dinâmico), está vinculada ao seu programa em tempo de execução. Para demonstrar a compilação e uso de uma DLL, considere o seguinte cenário:  
@@ -102,25 +102,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
  Para executar o programa, digite o nome do arquivo EXE, seguido de dois números, da seguinte maneira:  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>Compilando o código  
- Para criar o arquivo `MathLibrary.DLL`, compile os arquivos `Add` e `Mult` usando a seguinte linha de comando.  
-  
-```csharp  
-csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
-```  
-  
- A opção do compilador [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) informa ao compilador para gerar uma DLL em vez de um arquivo EXE. A opção do compilador [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) seguida por um nome de arquivo é usada para especificar o nome de arquivo da DLL. Caso contrário, o compilador usará o primeiro arquivo (`Add.cs`) como o nome da DLL.  
-  
- Para compilar o arquivo executável `TestCode.exe`, use a seguinte linha de comando:  
-  
-```csharp  
-csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
-```  
-  
- A opção do compilador **/out** informa ao compilador para gerar um arquivo EXE e especifica o nome do arquivo de saída (`TestCode.exe`). Essa opção do compilador é opcional. A opção do compilador [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) especifica o arquivo ou os arquivos DLL que esse programa usa. Para obter mais informações, consulte [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
-  
- Para obter mais informações sobre a compilação na linha de comando, consulte [Compilando na linha de comando com csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
 ## <a name="see-also"></a>Consulte também
 
