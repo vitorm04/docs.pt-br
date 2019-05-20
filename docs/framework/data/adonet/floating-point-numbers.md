@@ -2,15 +2,15 @@
 title: Números de ponto flutuante
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 209e53e41495603f4ad559a74bdc87033f6a92a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d1c033d7999fa403aaf18fccb765da178cba169a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583676"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882044"
 ---
 # <a name="floating-point-numbers"></a>Números de ponto flutuante
-Este tópico descreve alguns dos problemas que os desenvolvedores geralmente encontram ao trabalhar com números de ponto flutuantes em [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Esses problemas são causados pela maneira como que os computadores armazenam números de ponto flutuante e não são específicas para um provedor específico, como <xref:System.Data.SqlClient> ou <xref:System.Data.OracleClient>.  
+Este tópico descreve alguns dos problemas que os desenvolvedores geralmente encontram ao trabalhar com números de ponto flutuante no ADO.NET. Esses problemas são causados pela maneira como que os computadores armazenam números de ponto flutuante e não são específicas para um provedor específico, como <xref:System.Data.SqlClient> ou <xref:System.Data.OracleClient>.  
   
  Números de ponto flutuante geralmente não têm uma representação binária exata. Em vez disso, o computador armazena uma aproximação do número. Em momentos diferentes, os números diferentes de dígitos binários podem ser usados para representar o número. Quando um flutuante ponto número é convertido de uma representação para outra representação, os dígitos menos significantes desse número pode variar um pouco. Normalmente, a conversão ocorre quando o número é convertido de um tipo em outro tipo. A variação ocorre se a conversão ocorre dentro de um banco de dados entre os tipos que representam valores de banco de dados ou entre tipos. Por causa dessas alterações, números logicamente seria iguais podem ter alterações em seus dígitos menos significativos que fazem com que têm valores diferentes. O número de dígitos de precisão no número pode ser maior ou menor que o esperado. Quando formatado como uma cadeia de caracteres, o número não pode mostrar o valor esperado.  
   
