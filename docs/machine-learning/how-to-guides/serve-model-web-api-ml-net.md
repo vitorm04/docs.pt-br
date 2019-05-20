@@ -1,221 +1,205 @@
 ---
-title: Usar um modelo de Machine Learning em ASP.NET Core Web API
+title: Implantar um modelo em uma API Web do ASP.NET Core
 description: Usar um modelo de Machine Learning para Análise de Sentimento com ML.NET pela internet usando o ASP.NET Web API
-ms.date: 03/05/2019
+ms.date: 05/03/2019
+author: luisquintanilla
+ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: af51ccaac263202fc34d36e746722d2da46404f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c78e58dbec6b2ba3065fc46c4d4fd65abdcd37cd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321219"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063478"
 ---
-# <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a><span data-ttu-id="f5b87-103">Como fazer: Usar um modelo de Machine Learning por meio do ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="f5b87-103">How-To: Serve Machine Learning Model Through ASP.NET Core Web API</span></span>
+# <a name="deploy-a-model-in-an-aspnet-core-web-api"></a><span data-ttu-id="b3351-103">Implantar um modelo em uma API Web do ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="b3351-103">Deploy a model in an ASP.NET Core Web API</span></span>
 
-<span data-ttu-id="f5b87-104">Estas instruções mostram como usar um modelo de machine learning com ML.NET, previamente criado, na Web usando um ASP.NET Core Web API.</span><span class="sxs-lookup"><span data-stu-id="f5b87-104">This how-to shows how to serve a pre-built ML.NET machine learning model to the web using an ASP.NET Core Web API.</span></span> <span data-ttu-id="f5b87-105">Fazer isso permite que os usuários acessem a API para fins de previsão por meio de métodos HTTP padrão.</span><span class="sxs-lookup"><span data-stu-id="f5b87-105">By doing so it allows for users to access the API for prediction purposes via standard HTTP methods.</span></span>
+<span data-ttu-id="b3351-104">Saiba como fornecer um modelo de machine Learning do ML.NET previamente treinado na Web usando uma API Web do ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="b3351-104">Learn how to serve a pre-trained ML.NET machine learning model on the web using an ASP.NET Core Web API.</span></span> <span data-ttu-id="b3351-105">Veicular um modelo por uma API Web habilita previsões por meio de métodos HTTP padrão.</span><span class="sxs-lookup"><span data-stu-id="b3351-105">Serving a model over a web API enables predictions via standard HTTP methods.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f5b87-106">Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações.</span><span class="sxs-lookup"><span data-stu-id="f5b87-106">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="f5b87-107">Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="f5b87-107">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
+> <span data-ttu-id="b3351-106">A extensão de serviço `PredictionEnginePool` está atualmente em versão prévia.</span><span class="sxs-lookup"><span data-stu-id="b3351-106">`PredictionEnginePool` service extension is currently in preview.</span></span>
 
-<span data-ttu-id="f5b87-108">Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento.</span><span class="sxs-lookup"><span data-stu-id="f5b87-108">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="f5b87-109">Saiba mais nas notas de versão no [repositório do github dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="f5b87-109">For more information, see the release notes at the [dotnet/machinelearning github repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="b3351-107">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="b3351-107">Prerequisites</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="f5b87-110">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="f5b87-110">Prerequisites</span></span>
+- <span data-ttu-id="b3351-108">[Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.</span><span class="sxs-lookup"><span data-stu-id="b3351-108">[Visual Studio 2017 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload installed.</span></span>
+- <span data-ttu-id="b3351-109">Powershell.</span><span class="sxs-lookup"><span data-stu-id="b3351-109">Powershell.</span></span>
+- <span data-ttu-id="b3351-110">Modelo previamente treinado.</span><span class="sxs-lookup"><span data-stu-id="b3351-110">Pre-trained model.</span></span> <span data-ttu-id="b3351-111">Use o [tutorial de Análise de Sentimento do ML.NET](../tutorials/sentiment-analysis.md) para criar seu próprio modelo ou baixe este [modelo de machine learning de análise de sentimento pré-treinado](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span><span class="sxs-lookup"><span data-stu-id="b3351-111">Use the [ML.NET Sentiment Analysis tutorial](../tutorials/sentiment-analysis.md) to build your own model or download this [pre-trained sentiment analysis machine learning model](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span></span>
 
-- <span data-ttu-id="f5b87-111">[Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.</span><span class="sxs-lookup"><span data-stu-id="f5b87-111">[Visual Studio 2017 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload installed.</span></span>
-- <span data-ttu-id="f5b87-112">Powershell.</span><span class="sxs-lookup"><span data-stu-id="f5b87-112">Powershell.</span></span>
-- <span data-ttu-id="f5b87-113">Modelo previamente treinado.</span><span class="sxs-lookup"><span data-stu-id="f5b87-113">Pre-trained model.</span></span>
-    - <span data-ttu-id="f5b87-114">Use o [tutorial de Análise de Sentimento com ML.NET](../tutorials/sentiment-analysis.md) para criar seu próprio modelo.</span><span class="sxs-lookup"><span data-stu-id="f5b87-114">Use the [ML.NET Sentiment Analysis tutorial](../tutorials/sentiment-analysis.md) to build your own model.</span></span>
-    - <span data-ttu-id="f5b87-115">Baixe este [modelo de machine learning previamente treinado para análise de sentimento](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span><span class="sxs-lookup"><span data-stu-id="f5b87-115">Download this [pre-trained sentiment analysis machine learning model](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span></span>
+## <a name="create-aspnet-core-web-api-project"></a><span data-ttu-id="b3351-112">Criar o projeto da API Web do ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="b3351-112">Create ASP.NET Core Web API project</span></span>
 
-## <a name="create-aspnet-core-web-api-project"></a><span data-ttu-id="f5b87-116">Criar o projeto do ASP.NET Core Web API</span><span class="sxs-lookup"><span data-stu-id="f5b87-116">Create ASP.NET Core Web API Project</span></span>
+1. <span data-ttu-id="b3351-113">Abra o Visual Studio 2017.</span><span class="sxs-lookup"><span data-stu-id="b3351-113">Open Visual Studio 2017.</span></span> <span data-ttu-id="b3351-114">No menu, selecione **Arquivo > Novo > Projeto**.</span><span class="sxs-lookup"><span data-stu-id="b3351-114">Select **File > New > Project** from the menu bar.</span></span> <span data-ttu-id="b3351-115">Na caixa de diálogo Novo projeto, selecione o nó **Visual C#** seguido pelo nó **Web**.</span><span class="sxs-lookup"><span data-stu-id="b3351-115">In the New Project dialog, select the **Visual C#** node followed by the **Web** node.</span></span> <span data-ttu-id="b3351-116">Em seguida, selecione o modelo de projeto **Aplicativo ASP.NET Core Web**.</span><span class="sxs-lookup"><span data-stu-id="b3351-116">Then select the **ASP.NET Core Web Application** project template.</span></span> <span data-ttu-id="b3351-117">Na caixa de texto **Nome**, digite "SentimentAnalysisWebAPI" e, depois, selecione o botão **OK**.</span><span class="sxs-lookup"><span data-stu-id="b3351-117">In the **Name** text box, type "SentimentAnalysisWebAPI" and then select the **OK** button.</span></span>
 
-1. <span data-ttu-id="f5b87-117">Abra o Visual Studio 2017.</span><span class="sxs-lookup"><span data-stu-id="f5b87-117">Open Visual Studio 2017.</span></span> <span data-ttu-id="f5b87-118">No menu, selecione **Arquivo > Novo > Projeto**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-118">Select **File > New > Project** from the menu bar.</span></span> <span data-ttu-id="f5b87-119">Na caixa de diálogo Novo projeto, selecione o nó **Visual C#** seguido pelo nó **Web**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-119">In the New Project dialog, select the **Visual C#** node followed by the **Web** node.</span></span> <span data-ttu-id="f5b87-120">Em seguida, selecione o modelo de projeto **Aplicativo ASP.NET Core Web**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-120">Then select the **ASP.NET Core Web Application** project template.</span></span> <span data-ttu-id="f5b87-121">Na caixa de texto **Nome**, digite "SentimentAnalysisWebAPI" e, depois, selecione o botão **OK**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-121">In the **Name** text box, type "SentimentAnalysisWebAPI" and then select the **OK** button.</span></span>
-1. <span data-ttu-id="f5b87-122">Na janela que exibe os diferentes tipos de projetos do ASP.NET Core, selecione **API** e, depois, o botão **OK**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-122">In the window that displays the different types of ASP.NET Core Projects, select **API** and the select the **OK** button.</span></span>
-1. <span data-ttu-id="f5b87-123">Crie um diretório chamado *MLModels* em seu projeto para salvar os arquivos de modelo de machine learning criados previamente:</span><span class="sxs-lookup"><span data-stu-id="f5b87-123">Create a directory named *MLModels* in your project to save your pre-built machine learning model files:</span></span>
+1. <span data-ttu-id="b3351-118">Na janela que exibe os diferentes tipos de projetos do ASP.NET Core, selecione **API** e, depois, o botão **OK**.</span><span class="sxs-lookup"><span data-stu-id="b3351-118">In the window that displays the different types of ASP.NET Core Projects, select **API** and the select the **OK** button.</span></span>
 
-    <span data-ttu-id="f5b87-124">No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione Adicionar > Nova Pasta.</span><span class="sxs-lookup"><span data-stu-id="f5b87-124">In Solution Explorer, right-click on your project and select Add > New Folder.</span></span> <span data-ttu-id="f5b87-125">Digite "MLModels" e pressione ENTER.</span><span class="sxs-lookup"><span data-stu-id="f5b87-125">Type "MLModels" and hit Enter.</span></span>
+1. <span data-ttu-id="b3351-119">Crie um diretório chamado *MLModels* em seu projeto para salvar os arquivos de modelo de machine learning criados previamente:</span><span class="sxs-lookup"><span data-stu-id="b3351-119">Create a directory named *MLModels* in your project to save your pre-built machine learning model files:</span></span>
 
-1. <span data-ttu-id="f5b87-126">Instalar o **Pacote NuGet Microsoft.ML**:</span><span class="sxs-lookup"><span data-stu-id="f5b87-126">Install the **Microsoft.ML NuGet Package**:</span></span>
+    <span data-ttu-id="b3351-120">No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione Adicionar > Nova Pasta.</span><span class="sxs-lookup"><span data-stu-id="b3351-120">In Solution Explorer, right-click on your project and select Add > New Folder.</span></span> <span data-ttu-id="b3351-121">Digite "MLModels" e pressione ENTER.</span><span class="sxs-lookup"><span data-stu-id="b3351-121">Type "MLModels" and hit Enter.</span></span>
 
-    <span data-ttu-id="f5b87-127">No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-127">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="f5b87-128">Escolha "nuget.org" como a origem do pacote, selecione a guia Procurar, pesquise **Microsoft.ML**, selecione o pacote na lista e selecione o botão Instalar.</span><span class="sxs-lookup"><span data-stu-id="f5b87-128">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML**, select that package in the list, and select the Install button.</span></span> <span data-ttu-id="f5b87-129">Selecione o botão **OK** na caixa de diálogo **Visualizar alterações** e, depois, o botão **Aceito** na caixa de diálogo Aceitação da Licença, se concordar com o termos de licença para os pacotes listados.</span><span class="sxs-lookup"><span data-stu-id="f5b87-129">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the License Acceptance dialog if you agree with the license terms for the packages listed.</span></span>
+1. <span data-ttu-id="b3351-122">Instalar o **Pacote NuGet Microsoft.ML**:</span><span class="sxs-lookup"><span data-stu-id="b3351-122">Install the **Microsoft.ML NuGet Package**:</span></span>
 
-### <a name="add-model-to-aspnet-core-web-api-project"></a><span data-ttu-id="f5b87-130">Adicionar um modelo ao Projeto do ASP.NET Core Web API</span><span class="sxs-lookup"><span data-stu-id="f5b87-130">Add Model to ASP.NET Core Web API Project</span></span>
+    <span data-ttu-id="b3351-123">No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**.</span><span class="sxs-lookup"><span data-stu-id="b3351-123">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="b3351-124">Escolha "nuget.org" como a origem do pacote, selecione a guia Procurar, pesquise **Microsoft.ML**, selecione o pacote na lista e selecione o botão Instalar.</span><span class="sxs-lookup"><span data-stu-id="b3351-124">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML**, select that package in the list, and select the Install button.</span></span> <span data-ttu-id="b3351-125">Selecione o botão **OK** na caixa de diálogo **Visualizar alterações** e, depois, o botão **Aceito** na caixa de diálogo Aceitação da Licença, se concordar com o termos de licença para os pacotes listados.</span><span class="sxs-lookup"><span data-stu-id="b3351-125">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the License Acceptance dialog if you agree with the license terms for the packages listed.</span></span>
 
-1. <span data-ttu-id="f5b87-131">Copie seu modelo previamente criado para o diretório *MLModels*</span><span class="sxs-lookup"><span data-stu-id="f5b87-131">Copy your pre-built model to the *MLModels* directory</span></span>
-1. <span data-ttu-id="f5b87-132">No Gerenciador de Soluções, clique com o botão direito do mouse no arquivo zip e selecione Propriedades.</span><span class="sxs-lookup"><span data-stu-id="f5b87-132">In Solution Explorer, right-click the model zip file and select Properties.</span></span> <span data-ttu-id="f5b87-133">Em Avançado, altere o valor de Copiar para diretório de saída para Copiar se for mais novo.</span><span class="sxs-lookup"><span data-stu-id="f5b87-133">Under Advanced, change the value of Copy to Output Directory to Copy if newer.</span></span>
+1. <span data-ttu-id="b3351-126">Instalar o **Pacote do Nuget Microsoft.Extensions.ML**:</span><span class="sxs-lookup"><span data-stu-id="b3351-126">Install the **Microsoft.Extensions.ML Nuget Package**:</span></span>
 
-## <a name="build-data-models"></a><span data-ttu-id="f5b87-134">Criar modelo de dados</span><span class="sxs-lookup"><span data-stu-id="f5b87-134">Build Data Models</span></span>
+    <span data-ttu-id="b3351-127">No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**.</span><span class="sxs-lookup"><span data-stu-id="b3351-127">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="b3351-128">Escolha "nuget.org" como a origem do pacote, selecione a guia Procurar, pesquise **Microsoft.Extensions.ML**, selecione o pacote na lista e selecione o botão Instalar.</span><span class="sxs-lookup"><span data-stu-id="b3351-128">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.Extensions.ML**, select that package in the list, and select the Install button.</span></span> <span data-ttu-id="b3351-129">Selecione o botão **OK** na caixa de diálogo **Visualizar alterações** e, depois, o botão **Aceito** na caixa de diálogo Aceitação da Licença, se concordar com o termos de licença para os pacotes listados.</span><span class="sxs-lookup"><span data-stu-id="b3351-129">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the License Acceptance dialog if you agree with the license terms for the packages listed.</span></span>
 
-<span data-ttu-id="f5b87-135">Você precisa criar algumas classes para os dados e previsões de entrada.</span><span class="sxs-lookup"><span data-stu-id="f5b87-135">You need to create some classes for your input data and predictions.</span></span> <span data-ttu-id="f5b87-136">Adicione uma nova classe ao seu projeto:</span><span class="sxs-lookup"><span data-stu-id="f5b87-136">Add a new class to your project:</span></span>
+### <a name="add-model-to-aspnet-core-web-api-project"></a><span data-ttu-id="b3351-130">Adicionar um modelo ao projeto da API Web do ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="b3351-130">Add model to ASP.NET Core Web API project</span></span>
 
-1. <span data-ttu-id="f5b87-137">Crie um diretório chamado *DataModels* em seu projeto para salvar os modelos de dados:</span><span class="sxs-lookup"><span data-stu-id="f5b87-137">Create a directory named *DataModels* in your project to save your data models:</span></span>
+1. <span data-ttu-id="b3351-131">Copie seu modelo previamente criado para o diretório *MLModels*</span><span class="sxs-lookup"><span data-stu-id="b3351-131">Copy your pre-built model to the *MLModels* directory</span></span>
+1. <span data-ttu-id="b3351-132">No Gerenciador de Soluções, clique com o botão direito do mouse no arquivo zip e selecione Propriedades.</span><span class="sxs-lookup"><span data-stu-id="b3351-132">In Solution Explorer, right-click the model zip file and select Properties.</span></span> <span data-ttu-id="b3351-133">Em Avançado, altere o valor de Copiar para diretório de saída para Copiar se for mais novo.</span><span class="sxs-lookup"><span data-stu-id="b3351-133">Under Advanced, change the value of Copy to Output Directory to Copy if newer.</span></span>
 
-    <span data-ttu-id="f5b87-138">No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione Adicionar > Nova Pasta.</span><span class="sxs-lookup"><span data-stu-id="f5b87-138">In Solution Explorer, right-click on your project and select Add > New Folder.</span></span> <span data-ttu-id="f5b87-139">Digite "DataModels" e pressione **ENTER**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-139">Type "DataModels" and hit **Enter**.</span></span>
+## <a name="create-data-models"></a><span data-ttu-id="b3351-134">Criar modelo de dados</span><span class="sxs-lookup"><span data-stu-id="b3351-134">Create data models</span></span>
 
-2. <span data-ttu-id="f5b87-140">No Gerenciador de Soluções, clique com o botão direito do mouse no diretório *DataModels* e selecione Adicionar > Novo item.</span><span class="sxs-lookup"><span data-stu-id="f5b87-140">In Solution Explorer, right-click the *DataModels* directory, and then select Add > New Item.</span></span>
-3. <span data-ttu-id="f5b87-141">Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *SentimentData.cs*.</span><span class="sxs-lookup"><span data-stu-id="f5b87-141">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentData.cs*.</span></span> <span data-ttu-id="f5b87-142">Em seguida, selecione o botão **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-142">Then, select the **Add** button.</span></span> <span data-ttu-id="f5b87-143">O arquivo *SentimentData.cs* é aberto no editor de códigos.</span><span class="sxs-lookup"><span data-stu-id="f5b87-143">The *SentimentData.cs* file opens in the code editor.</span></span> <span data-ttu-id="f5b87-144">Adicione a seguinte instrução using na parte superior do *SentimentData.cs*:</span><span class="sxs-lookup"><span data-stu-id="f5b87-144">Add the following using statement to the top of *SentimentData.cs*:</span></span>
+<span data-ttu-id="b3351-135">Você precisa criar algumas classes para os dados e previsões de entrada.</span><span class="sxs-lookup"><span data-stu-id="b3351-135">You need to create some classes for your input data and predictions.</span></span> <span data-ttu-id="b3351-136">Adicione uma nova classe ao seu projeto:</span><span class="sxs-lookup"><span data-stu-id="b3351-136">Add a new class to your project:</span></span>
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML.Data;
-```
+1. <span data-ttu-id="b3351-137">Crie um diretório chamado *DataModels* em seu projeto para salvar os modelos de dados:</span><span class="sxs-lookup"><span data-stu-id="b3351-137">Create a directory named *DataModels* in your project to save your data models:</span></span>
 
-<span data-ttu-id="f5b87-145">Remova a definição de classe existente e adicione o seguinte código ao arquivo **SentimentData.cs**:</span><span class="sxs-lookup"><span data-stu-id="f5b87-145">Remove the existing class definition and add the following code to the **SentimentData.cs** file:</span></span>
+    <span data-ttu-id="b3351-138">No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione Adicionar > Nova Pasta.</span><span class="sxs-lookup"><span data-stu-id="b3351-138">In Solution Explorer, right-click on your project and select Add > New Folder.</span></span> <span data-ttu-id="b3351-139">Digite "DataModels" e pressione **ENTER**.</span><span class="sxs-lookup"><span data-stu-id="b3351-139">Type "DataModels" and hit **Enter**.</span></span>
 
-```csharp
-public class SentimentData
-{
-    [LoadColumn(0)]
-    public bool Label { get; set; }
-    [LoadColumn(1)]
-    public string Text { get; set; }   
-}
-```
+2. <span data-ttu-id="b3351-140">No Gerenciador de Soluções, clique com o botão direito do mouse no diretório *DataModels* e selecione Adicionar > Novo item.</span><span class="sxs-lookup"><span data-stu-id="b3351-140">In Solution Explorer, right-click the *DataModels* directory, and then select Add > New Item.</span></span>
+3. <span data-ttu-id="b3351-141">Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *SentimentData.cs*.</span><span class="sxs-lookup"><span data-stu-id="b3351-141">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentData.cs*.</span></span> <span data-ttu-id="b3351-142">Em seguida, selecione o botão **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="b3351-142">Then, select the **Add** button.</span></span> <span data-ttu-id="b3351-143">O arquivo *SentimentData.cs* é aberto no editor de códigos.</span><span class="sxs-lookup"><span data-stu-id="b3351-143">The *SentimentData.cs* file opens in the code editor.</span></span> <span data-ttu-id="b3351-144">Adicione a seguinte instrução using na parte superior do *SentimentData.cs*:</span><span class="sxs-lookup"><span data-stu-id="b3351-144">Add the following using statement to the top of *SentimentData.cs*:</span></span>
 
-4. <span data-ttu-id="f5b87-146">No Gerenciador de Soluções, clique com o botão direito do mouse no diretório *DataModels* e selecione **Adicionar > Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-146">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
-5. <span data-ttu-id="f5b87-147">Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *SentimentPrediction.cs*.</span><span class="sxs-lookup"><span data-stu-id="f5b87-147">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentPrediction.cs*.</span></span> <span data-ttu-id="f5b87-148">Em seguida, selecione o botão Adicionar.</span><span class="sxs-lookup"><span data-stu-id="f5b87-148">Then, select the Add button.</span></span> <span data-ttu-id="f5b87-149">O arquivo *SentimentPrediction.cs* é aberto no editor de códigos.</span><span class="sxs-lookup"><span data-stu-id="f5b87-149">The *SentimentPrediction.cs* file opens in the code editor.</span></span> <span data-ttu-id="f5b87-150">Adicione a seguinte instrução "using" na parte superior do *SentimentPrediction.cs*:</span><span class="sxs-lookup"><span data-stu-id="f5b87-150">Add the following using statement to the top of *SentimentPrediction.cs*:</span></span>
-
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML.Data;
-```
-
-<span data-ttu-id="f5b87-151">Remova a definição de classe existente e adicione o seguinte código ao arquivo *SentimentPrediction.cs*:</span><span class="sxs-lookup"><span data-stu-id="f5b87-151">Remove the existing class definition and add the following code to the *SentimentPrediction.cs* file:</span></span>
-
-```csharp
-public class SentimentPrediction
-{
-    [ColumnName("PredictedLabel")]
-    public bool Prediction { get; set; }
-}
-```
-
-## <a name="register-predictionengine-for-use-in-application"></a><span data-ttu-id="f5b87-152">Registrar o PredictionEngine para uso no aplicativo</span><span class="sxs-lookup"><span data-stu-id="f5b87-152">Register PredictionEngine for Use in Application</span></span>
-
-<span data-ttu-id="f5b87-153">Para fazer uma única previsão, você pode usar o `PredictionEngine`.</span><span class="sxs-lookup"><span data-stu-id="f5b87-153">To make a single prediction, you can use `PredictionEngine`.</span></span> <span data-ttu-id="f5b87-154">Para usar o `PredictionEngine` em seu aplicativo, você precisará criá-lo sempre que necessário.</span><span class="sxs-lookup"><span data-stu-id="f5b87-154">In order to use `PredictionEngine` in your application you will have to create it every time it is needed.</span></span> <span data-ttu-id="f5b87-155">Nesse caso, a prática recomendada é a injeção de dependência do ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="f5b87-155">In that case, a best practice to consider is ASP.NET Core dependency injection.</span></span>
-
-<span data-ttu-id="f5b87-156">O link a seguir fornece mais informações sobre a [injeção de dependência](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).</span><span class="sxs-lookup"><span data-stu-id="f5b87-156">The following link provides more information if you want to learn about [dependency injection](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).</span></span>
-
-1. <span data-ttu-id="f5b87-157">Abra a classe *Startup.cs* e adicione a seguinte instrução using à parte superior do arquivo:</span><span class="sxs-lookup"><span data-stu-id="f5b87-157">Open the *Startup.cs* class and add the following using statement to the top of the file:</span></span>
-
-```csharp
-using System.IO;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
-
-2. <span data-ttu-id="f5b87-158">Adicione as seguintes linhas de código ao método *ConfigureServices*:</span><span class="sxs-lookup"><span data-stu-id="f5b87-158">Add the following lines of code to the *ConfigureServices* method:</span></span>
-
-```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-    services.AddScoped<MLContext>();
-    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    ```csharp
+    using Microsoft.ML.Data;
+    ```
+    
+    <span data-ttu-id="b3351-145">Remova a definição de classe existente e adicione o seguinte código ao arquivo **SentimentData.cs**:</span><span class="sxs-lookup"><span data-stu-id="b3351-145">Remove the existing class definition and add the following code to the **SentimentData.cs** file:</span></span>
+    
+    ```csharp
+    public class SentimentData
     {
-        MLContext mlContext = ctx.GetRequiredService<MLContext>();
-        string modelFilePathName = "MLModels/sentiment_model.zip";
+        [LoadColumn(0)]
+        public string SentimentText;
 
-        //Load model from file
-        ITransformer model;
-        using (var stream = File.OpenRead(modelFilePathName))
-        {
-            model = mlContext.Model.Load(stream);
-        }
+        [LoadColumn(1)]
+        [ColumnName("Label")]
+        public bool Sentiment;
+    }
+    ```
 
-        // Return prediction engine
-        return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
-    });
-}
-```
+4. <span data-ttu-id="b3351-146">No Gerenciador de Soluções, clique com o botão direito do mouse no diretório *DataModels* e selecione **Adicionar > Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="b3351-146">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
+5. <span data-ttu-id="b3351-147">Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *SentimentPrediction.cs*.</span><span class="sxs-lookup"><span data-stu-id="b3351-147">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentPrediction.cs*.</span></span> <span data-ttu-id="b3351-148">Em seguida, selecione o botão Adicionar.</span><span class="sxs-lookup"><span data-stu-id="b3351-148">Then, select the Add button.</span></span> <span data-ttu-id="b3351-149">O arquivo *SentimentPrediction.cs* é aberto no editor de códigos.</span><span class="sxs-lookup"><span data-stu-id="b3351-149">The *SentimentPrediction.cs* file opens in the code editor.</span></span> <span data-ttu-id="b3351-150">Adicione a seguinte instrução "using" na parte superior do *SentimentPrediction.cs*:</span><span class="sxs-lookup"><span data-stu-id="b3351-150">Add the following using statement to the top of *SentimentPrediction.cs*:</span></span>
+
+    ```csharp
+    using Microsoft.ML.Data;
+    ```
+    
+    <span data-ttu-id="b3351-151">Remova a definição de classe existente e adicione o seguinte código ao arquivo *SentimentPrediction.cs*:</span><span class="sxs-lookup"><span data-stu-id="b3351-151">Remove the existing class definition and add the following code to the *SentimentPrediction.cs* file:</span></span>
+    
+    ```csharp
+    public class SentimentPrediction : SentimentData
+    {
+
+        [ColumnName("PredictedLabel")]
+        public bool Prediction { get; set; }
+
+        public float Probability { get; set; }
+
+        public float Score { get; set; }
+    }
+    ```
+
+    <span data-ttu-id="b3351-152">`SentimentPrediction` herda de `SentimentData`.</span><span class="sxs-lookup"><span data-stu-id="b3351-152">`SentimentPrediction` inherits from `SentimentData`.</span></span> <span data-ttu-id="b3351-153">Isso torna mais fácil ver os dados originais na propriedade `SentimentText` junto com a saída gerada pelo modelo.</span><span class="sxs-lookup"><span data-stu-id="b3351-153">This makes it easier to see the original data in the `SentimentText` property along with the output generated by the model.</span></span> 
+
+## <a name="register-predictionenginepool-for-use-in-the-application"></a><span data-ttu-id="b3351-154">Registrar PredictionEnginePool para uso no aplicativo</span><span class="sxs-lookup"><span data-stu-id="b3351-154">Register PredictionEnginePool for use in the application</span></span>
+
+<span data-ttu-id="b3351-155">Para fazer uma única previsão, você pode usar o [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span><span class="sxs-lookup"><span data-stu-id="b3351-155">To make a single prediction, use [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span></span> <span data-ttu-id="b3351-156">Para usar [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) em seu aplicativo, você deve criá-lo quando ele for necessário.</span><span class="sxs-lookup"><span data-stu-id="b3351-156">In order to use [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) in your application you must create it when it's needed.</span></span> <span data-ttu-id="b3351-157">Nesse caso, a prática recomendada é considerar sua injeção de dependência.</span><span class="sxs-lookup"><span data-stu-id="b3351-157">In that case, a best practice to consider is dependency injection.</span></span>
+
+<span data-ttu-id="b3351-158">O link a seguir fornece mais informações sobre a [injeção de dependência no ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).</span><span class="sxs-lookup"><span data-stu-id="b3351-158">The following link provides more information if you want to learn about [dependency injection in ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).</span></span>
+
+1. <span data-ttu-id="b3351-159">Abra a classe *Startup.cs* e adicione a seguinte instrução using à parte superior do arquivo:</span><span class="sxs-lookup"><span data-stu-id="b3351-159">Open the *Startup.cs* class and add the following using statement to the top of the file:</span></span>
+
+    ```csharp
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.ML;
+    using SentimentAnalysisWebAPI.DataModels;
+    ```
+
+2. <span data-ttu-id="b3351-160">Adicione o seguinte código ao método *ConfigureServices*:</span><span class="sxs-lookup"><span data-stu-id="b3351-160">Add the following code to the *ConfigureServices* method:</span></span>
+
+    ```csharp
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+        services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+            .FromFile("MLModels/sentiment_model.zip");
+    }
+    ```
+
+<span data-ttu-id="b3351-161">Em um alto nível, esse código inicializa os objetos e serviços automaticamente quando solicitado pelo aplicativo em vez de precisar fazê-lo manualmente.</span><span class="sxs-lookup"><span data-stu-id="b3351-161">At a high level, this code initializes the objects and services automatically when requested by the application instead of having to manually do it.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="f5b87-159">`PredictionEngine` não é thread-safe.</span><span class="sxs-lookup"><span data-stu-id="f5b87-159">`PredictionEngine` is not thread-safe.</span></span> <span data-ttu-id="f5b87-160">Uma maneira de limitar o custo da criação do objeto é definir o tempo de vida do serviço *Com escopo*.</span><span class="sxs-lookup"><span data-stu-id="f5b87-160">A way that you can limit the cost of creating the object is by making its service lifetime *Scoped*.</span></span> <span data-ttu-id="f5b87-161">Os objetos *com escopo* são os mesmos em uma solicitação, mas diferentes entre solicitações.</span><span class="sxs-lookup"><span data-stu-id="f5b87-161">*Scoped* objects are the same within a request but different across requests.</span></span> <span data-ttu-id="f5b87-162">Visite o link a seguir para saber mais sobre [tempos de vida do serviço](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes).</span><span class="sxs-lookup"><span data-stu-id="f5b87-162">Visit the following link to learn more about [service lifetimes](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes).</span></span>
+> <span data-ttu-id="b3351-162">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe.</span><span class="sxs-lookup"><span data-stu-id="b3351-162">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) is not thread-safe.</span></span> <span data-ttu-id="b3351-163">Para melhorar o desempenho e o acesso thread-safe, use o serviço `PredictionEnginePool`, que cria um [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos `PredictionEngine` para uso do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b3351-163">For improved performance and thread safety, use the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of `PredictionEngine` objects for application use.</span></span> <span data-ttu-id="b3351-164">Leia a postagem no blog para saber mais sobre [criar e usar pools de objeto `PredictionEngine` no ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).</span><span class="sxs-lookup"><span data-stu-id="b3351-164">Read the following blog post to learn more about [creating and using `PredictionEngine` object pools in ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).</span></span>  
 
-<span data-ttu-id="f5b87-163">Em um alto nível, esse código inicializa os objetos e serviços automaticamente quando solicitado pelo aplicativo em vez de precisar fazê-lo manualmente.</span><span class="sxs-lookup"><span data-stu-id="f5b87-163">At a high level, this code initializes the objects and services automatically when requested by the application instead of having to manually do it.</span></span>
+## <a name="create-predict-controller"></a><span data-ttu-id="b3351-165">Criar o Controlador de Previsão</span><span class="sxs-lookup"><span data-stu-id="b3351-165">Create Predict controller</span></span>
 
-## <a name="create-predict-controller"></a><span data-ttu-id="f5b87-164">Criar o Predict Controller</span><span class="sxs-lookup"><span data-stu-id="f5b87-164">Create Predict Controller</span></span>
+<span data-ttu-id="b3351-166">Para processar as solicitações HTTP de entrada, crie um controlador.</span><span class="sxs-lookup"><span data-stu-id="b3351-166">To process your incoming HTTP requests, create a controller.</span></span>
 
-<span data-ttu-id="f5b87-165">Para processar as solicitações HTTP de entrada, será necessário criar um controlador.</span><span class="sxs-lookup"><span data-stu-id="f5b87-165">To process your incoming HTTP requests, you need to create a controller.</span></span>
+1. <span data-ttu-id="b3351-167">No Gerenciador de Soluções, clique com o botão direito do mouse no diretório *Controladores* e selecione **Adicionar > Controlador**.</span><span class="sxs-lookup"><span data-stu-id="b3351-167">In Solution Explorer, right-click the *Controllers* directory, and then select **Add > Controller**.</span></span>
+1. <span data-ttu-id="b3351-168">Na caixa de diálogo **Adicionar Novo Item**, selecione **Controlador de API Vazio** e, então, **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="b3351-168">In the **Add New Item** dialog box, select **API Controller Empty** and select **Add**.</span></span>
+1. <span data-ttu-id="b3351-169">No prompt, altere o campo do **Nome do Controlador** para *PredictController.cs*.</span><span class="sxs-lookup"><span data-stu-id="b3351-169">In the prompt change the **Controller Name** field to *PredictController.cs*.</span></span> <span data-ttu-id="b3351-170">Em seguida, selecione o botão Adicionar.</span><span class="sxs-lookup"><span data-stu-id="b3351-170">Then, select the Add button.</span></span> <span data-ttu-id="b3351-171">O arquivo *PredictController.cs* é aberto no editor de códigos.</span><span class="sxs-lookup"><span data-stu-id="b3351-171">The *PredictController.cs* file opens in the code editor.</span></span> <span data-ttu-id="b3351-172">Adicione a seguinte instrução using na parte superior do *PredictController.cs*:</span><span class="sxs-lookup"><span data-stu-id="b3351-172">Add the following using statement to the top of *PredictController.cs*:</span></span>
 
-1. <span data-ttu-id="f5b87-166">No Gerenciador de Soluções, clique com o botão direito do mouse no diretório *Controladores* e selecione **Adicionar > Controlador**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-166">In Solution Explorer, right-click the *Controllers* directory, and then select **Add > Controller**.</span></span>
-1. <span data-ttu-id="f5b87-167">Na caixa de diálogo **Adicionar Novo Item**, selecione **Controlador de API Vazio** e, então, **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="f5b87-167">In the **Add New Item** dialog box, select **API Controller Empty** and select **Add**.</span></span>
-1. <span data-ttu-id="f5b87-168">No prompt, altere o campo do **Nome do Controlador** para *PredictController.cs*.</span><span class="sxs-lookup"><span data-stu-id="f5b87-168">In the prompt change the **Controller Name** field to *PredictController.cs*.</span></span> <span data-ttu-id="f5b87-169">Em seguida, selecione o botão Adicionar.</span><span class="sxs-lookup"><span data-stu-id="f5b87-169">Then, select the Add button.</span></span> <span data-ttu-id="f5b87-170">O arquivo *PredictController.cs* é aberto no editor de códigos.</span><span class="sxs-lookup"><span data-stu-id="f5b87-170">The *PredictController.cs* file opens in the code editor.</span></span> <span data-ttu-id="f5b87-171">Adicione a seguinte instrução using na parte superior do *PredictController.cs*:</span><span class="sxs-lookup"><span data-stu-id="f5b87-171">Add the following using statement to the top of *PredictController.cs*:</span></span>
+    ```csharp
+    using System;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.ML;
+    using SentimentAnalysisWebAPI.DataModels;
+    ```
 
-```csharp
-using System;
-using Microsoft.AspNetCore.Mvc;
-using SentimentAnalysisWebAPI.DataModels;
-using Microsoft.ML;
-```
-
-<span data-ttu-id="f5b87-172">Remova a definição de classe existente e adicione o seguinte código ao arquivo *PredictController.cs*:</span><span class="sxs-lookup"><span data-stu-id="f5b87-172">Remove the existing class definition and add the following code to the *PredictController.cs* file:</span></span>
-
-```csharp
-public class PredictController : ControllerBase
-{
+    <span data-ttu-id="b3351-173">Remova a definição de classe existente e adicione o seguinte código ao arquivo *PredictController.cs*:</span><span class="sxs-lookup"><span data-stu-id="b3351-173">Remove the existing class definition and add the following code to the *PredictController.cs* file:</span></span>
     
-    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
-
-    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
+    ```csharp
+    public class PredictController : ControllerBase
     {
-        _predictionEngine = predictionEngine; //Define prediction engine
-    }
+        private readonly PredictionEnginePool<SentimentData, SentimentPrediction> _predictionEnginePool;
 
-    [HttpPost]
-    public ActionResult<string> Post([FromBody]SentimentData input)
-    {
-        if(!ModelState.IsValid)
+        public PredictController(PredictionEnginePool<SentimentData,SentimentPrediction> predictionEnginePool)
         {
-            return BadRequest();
+            _predictionEnginePool = predictionEnginePool;
         }
 
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
+        [HttpPost]
+        public ActionResult<string> Post([FromBody] SentimentData input)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
 
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+            SentimentPrediction prediction = _predictionEnginePool.Predict(input);
 
-        return Ok(isToxic);
+            string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
+
+            return Ok(sentiment);
+        }
     }
+    ```
+
+<span data-ttu-id="b3351-174">Esse código atribui o `PredictionEnginePool` passando-o para o construtor do controlador que você obtém por meio da injeção de dependência.</span><span class="sxs-lookup"><span data-stu-id="b3351-174">This code assigns the `PredictionEnginePool` by passing it to the controller's constructor which you get via dependency injection.</span></span> <span data-ttu-id="b3351-175">Em seguida, o controlador `Predict`, com o método `Post`, usará o `PredictionEnginePool` para fazer previsões e retornará os resultados para o usuário se for bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="b3351-175">Then, the `Predict` controller's `Post` method uses the `PredictionEnginePool` to make predictions and return the results back to the user if successful.</span></span>
+
+## <a name="test-web-api-locally"></a><span data-ttu-id="b3351-176">Testar a API Web localmente</span><span class="sxs-lookup"><span data-stu-id="b3351-176">Test web API locally</span></span>
+
+<span data-ttu-id="b3351-177">Depois que tudo estiver definido, é hora de testar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b3351-177">Once everything is set up, it's time to test the application.</span></span>
+
+1. <span data-ttu-id="b3351-178">Execute o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b3351-178">Run the application.</span></span>
+1. <span data-ttu-id="b3351-179">Abra o Powershell e digite o seguinte código, em que PORT é a porta em que seu aplicativo está escutando.</span><span class="sxs-lookup"><span data-stu-id="b3351-179">Open Powershell and enter the following code where PORT is the port your application is listening on.</span></span>
+
+    ```powershell
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    ```
+
+    <span data-ttu-id="b3351-180">Se houver êxito, a saída deverá ser semelhante ao texto abaixo:</span><span class="sxs-lookup"><span data-stu-id="b3351-180">If successful, the output should look similar to the text below:</span></span>
     
-}
-```
+    ```powershell
+    Negative
+    ```
 
-<span data-ttu-id="f5b87-173">Isso atribui o `PredictionEngine` passando-o para o construtor do controlador que você obtém por meio da injeção de dependência.</span><span class="sxs-lookup"><span data-stu-id="f5b87-173">This is assigning the `PredictionEngine` by passing it to the controller's constructor which you get via dependency injection.</span></span> <span data-ttu-id="f5b87-174">Em seguida, no método POST desse controlador, o `PredictionEngine` está sendo usado para fazer previsões e retornar os resultados para o usuário, em caso de êxito.</span><span class="sxs-lookup"><span data-stu-id="f5b87-174">Then, in the POST method of this controller the `PredictionEngine` is being used to make predictions and return the results back to the user if successful.</span></span>
+<span data-ttu-id="b3351-181">Parabéns!</span><span class="sxs-lookup"><span data-stu-id="b3351-181">Congratulations!</span></span> <span data-ttu-id="b3351-182">Você usou com êxito seu modelo para fazer previsões pela internet usando um ASP.NET Core API Web.</span><span class="sxs-lookup"><span data-stu-id="b3351-182">You have successfully served your model to make predictions over the internet using an ASP.NET Core Web API.</span></span>
 
-## <a name="test-web-api-locally"></a><span data-ttu-id="f5b87-175">Testar a API Web localmente</span><span class="sxs-lookup"><span data-stu-id="f5b87-175">Test Web API Locally</span></span>
+## <a name="next-steps"></a><span data-ttu-id="b3351-183">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="b3351-183">Next Steps</span></span>
 
-<span data-ttu-id="f5b87-176">Depois que tudo estiver definido, é hora de testar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f5b87-176">Once everything is set up, it's time to test the application.</span></span>
-
-1. <span data-ttu-id="f5b87-177">Execute o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f5b87-177">Run the application.</span></span>
-1. <span data-ttu-id="f5b87-178">Abra o Powershell e digite o seguinte código, em que PORT é a porta em que seu aplicativo está escutando.</span><span class="sxs-lookup"><span data-stu-id="f5b87-178">Open Powershell and enter the following code where PORT is the port your application is listening on.</span></span>
-
-```powershell
-Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This is a very rude movie"} | ConvertTo-Json) -ContentType "application/json"
-```
-
-<span data-ttu-id="f5b87-179">Se houver êxito, a saída deverá ser semelhante ao texto abaixo:</span><span class="sxs-lookup"><span data-stu-id="f5b87-179">If successful, the output should look similar to the text below:</span></span>
-
-```powershell
-Toxic
-```
-
-<span data-ttu-id="f5b87-180">Parabéns!</span><span class="sxs-lookup"><span data-stu-id="f5b87-180">Congratulations!</span></span> <span data-ttu-id="f5b87-181">Você usou com êxito seu modelo para fazer previsões pela internet usando um ASP.NET Core API.</span><span class="sxs-lookup"><span data-stu-id="f5b87-181">You have successfully served your model to make predictions over the internet using an ASP.NET Core API.</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="f5b87-182">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="f5b87-182">Next Steps</span></span>
-
-- [<span data-ttu-id="f5b87-183">Implantar no Azure</span><span class="sxs-lookup"><span data-stu-id="f5b87-183">Deploy to Azure</span></span>](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)
+- [<span data-ttu-id="b3351-184">Implantar no Azure</span><span class="sxs-lookup"><span data-stu-id="b3351-184">Deploy to Azure</span></span>](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)

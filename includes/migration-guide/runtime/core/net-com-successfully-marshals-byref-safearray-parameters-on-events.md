@@ -1,0 +1,17 @@
+---
+ms.openlocfilehash: 9c72bc686e014a0bffdf272e3813358d1b29cc66
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65198760"
+---
+### <a name="net-com-successfully-marshals-byref-safearray-parameters-on-events"></a><span data-ttu-id="9e2d3-101">O .NET COM realiza marshaling bem-sucedido de parâmetros ByRef SafeArray em eventos</span><span class="sxs-lookup"><span data-stu-id="9e2d3-101">.NET COM successfully marshals ByRef SafeArray parameters on events</span></span>
+
+|   |   |
+|---|---|
+|<span data-ttu-id="9e2d3-102">Detalhes</span><span class="sxs-lookup"><span data-stu-id="9e2d3-102">Details</span></span>|<span data-ttu-id="9e2d3-103">No .NET Framework 4.7.2 e versões anteriores, um parâmetro ByRef [SafeArray](https://docs.microsoft.com/en-us/windows/desktop/api/oaidl/ns-oaidl-safearray) em um evento COM falharia realizar marshaling de volta para o código nativo.</span><span class="sxs-lookup"><span data-stu-id="9e2d3-103">In the .NET Framework 4.7.2 and earlier versions, a ByRef [SafeArray](https://docs.microsoft.com/en-us/windows/desktop/api/oaidl/ns-oaidl-safearray) parameter on a COM event would fail to marshal back to native code.</span></span>  <span data-ttu-id="9e2d3-104">Com essa alteração, o [SafeArray](https://docs.microsoft.com/en-us/windows/desktop/api/oaidl/ns-oaidl-safearray) agora tem o marshaling realizado com êxito.</span><span class="sxs-lookup"><span data-stu-id="9e2d3-104">With this change the [SafeArray](https://docs.microsoft.com/en-us/windows/desktop/api/oaidl/ns-oaidl-safearray) is now marshaled successfully.</span></span><ul><li><span data-ttu-id="9e2d3-105">[x] Quirked</span><span class="sxs-lookup"><span data-stu-id="9e2d3-105">[ x ] Quirked</span></span></li></ul>|
+|<span data-ttu-id="9e2d3-106">Sugestão</span><span class="sxs-lookup"><span data-stu-id="9e2d3-106">Suggestion</span></span>|<span data-ttu-id="9e2d3-107">Se fizer marshaling dos parâmetros ByRef SafeArray corretamente em eventos COM interrompe a execução, você poderá desabilitar esse código, adicionando a seguinte opção de configuração à sua configuração de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="9e2d3-107">If properly marshaling ByRef SafeArray parameters on COM Events breaks execution, you can disable this code by adding the following configuration switch to your application config:</span></span><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.Runtime.InteropServices.DoNotMarshalOutByrefSafeArrayOnInvoke&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>|
+|<span data-ttu-id="9e2d3-108">Escopo</span><span class="sxs-lookup"><span data-stu-id="9e2d3-108">Scope</span></span>|<span data-ttu-id="9e2d3-109">Secundário</span><span class="sxs-lookup"><span data-stu-id="9e2d3-109">Minor</span></span>|
+|<span data-ttu-id="9e2d3-110">Versão</span><span class="sxs-lookup"><span data-stu-id="9e2d3-110">Version</span></span>|<span data-ttu-id="9e2d3-111">4.8</span><span class="sxs-lookup"><span data-stu-id="9e2d3-111">4.8</span></span>|
+|<span data-ttu-id="9e2d3-112">Tipo</span><span class="sxs-lookup"><span data-stu-id="9e2d3-112">Type</span></span>|<span data-ttu-id="9e2d3-113">Tempo de execução</span><span class="sxs-lookup"><span data-stu-id="9e2d3-113">Runtime</span></span>|

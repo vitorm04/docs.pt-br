@@ -1,55 +1,46 @@
 ---
 title: Comando dotnet build
 description: O comando dotnet build compila um projeto e todas as suas dependências.
-ms.date: 12/04/2018
-ms.openlocfilehash: 6a701ee371221c780a878e64b996df95f709371f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.date: 04/24/2019
+ms.openlocfilehash: 2e58bace8055ba793bf7a6ca3a51eb20aa689768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612687"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755222"
 ---
-# <a name="dotnet-build"></a><span data-ttu-id="0cece-103">dotnet build</span><span class="sxs-lookup"><span data-stu-id="0cece-103">dotnet build</span></span>
+# <a name="dotnet-build"></a><span data-ttu-id="99ab3-103">dotnet build</span><span class="sxs-lookup"><span data-stu-id="99ab3-103">dotnet build</span></span>
 
+<span data-ttu-id="99ab3-104">**Este artigo se aplica a: ✓** SDK do .NET Core 1.x e versões posteriores</span><span class="sxs-lookup"><span data-stu-id="99ab3-104">**This article applies to: ✓** .NET Core 1.x SDK and later versions</span></span>
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
-## <a name="name"></a><span data-ttu-id="0cece-104">Nome</span><span class="sxs-lookup"><span data-stu-id="0cece-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="99ab3-105">Nome</span><span class="sxs-lookup"><span data-stu-id="99ab3-105">Name</span></span>
 
-<span data-ttu-id="0cece-105">`dotnet build` – Compila um projeto e todas as suas dependências.</span><span class="sxs-lookup"><span data-stu-id="0cece-105">`dotnet build` - Builds a project and all of its dependencies.</span></span>
+<span data-ttu-id="99ab3-106">`dotnet build` – Compila um projeto e todas as suas dependências.</span><span class="sxs-lookup"><span data-stu-id="99ab3-106">`dotnet build` - Builds a project and all of its dependencies.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="0cece-106">Sinopse</span><span class="sxs-lookup"><span data-stu-id="0cece-106">Synopsis</span></span>
-
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="0cece-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="0cece-107">.NET Core 2.x</span></span>](#tab/netcore2x)
+## <a name="synopsis"></a><span data-ttu-id="99ab3-107">Sinopse</span><span class="sxs-lookup"><span data-stu-id="99ab3-107">Synopsis</span></span>
 
 ```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
-    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
+    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="0cece-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="0cece-108">.NET Core 1.x</span></span>](#tab/netcore1x)
+## <a name="description"></a><span data-ttu-id="99ab3-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="99ab3-108">Description</span></span>
 
-```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
-    [-r|--runtime] [-v|--verbosity] [--version-suffix]
+<span data-ttu-id="99ab3-109">O comando `dotnet build` compila o projeto e suas dependências em um conjunto de binários.</span><span class="sxs-lookup"><span data-stu-id="99ab3-109">The `dotnet build` command builds the project and its dependencies into a set of binaries.</span></span> <span data-ttu-id="99ab3-110">Os binários incluem o código do projeto em IL (Linguagem Intermediária) com uma extensão *.dll* e arquivos de símbolo usados para depuração com uma extensão *.pdb*.</span><span class="sxs-lookup"><span data-stu-id="99ab3-110">The binaries include the project's code in Intermediate Language (IL) files with a *.dll* extension and symbol files used for debugging with a *.pdb* extension.</span></span> <span data-ttu-id="99ab3-111">Um arquivo JSON de dependências (*\*.deps.json*) é produzido listando as dependências do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="99ab3-111">A dependencies JSON file (*\*.deps.json*) is produced that lists the dependencies of the application.</span></span> <span data-ttu-id="99ab3-112">O arquivo *\*.runtimeconfig.json* é produzido, especificando o tempo de execução compartilhado e sua versão do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="99ab3-112">A *\*.runtimeconfig.json* file is produced, which specifies the shared runtime and its version for the application.</span></span>
 
-dotnet build [-h|--help]
-```
+<span data-ttu-id="99ab3-113">Se o projeto tiver dependências de terceiros, como bibliotecas do NuGet, elas serão resolvidas no cache NuGet e não estarão disponíveis com a saída de build do projeto.</span><span class="sxs-lookup"><span data-stu-id="99ab3-113">If the project has third-party dependencies, such as libraries from NuGet, they're resolved from the NuGet cache and aren't available with the project's built output.</span></span> <span data-ttu-id="99ab3-114">Com isso em mente, o produto de `dotnet build` não está pronto para ser transferido para outro computador para execução.</span><span class="sxs-lookup"><span data-stu-id="99ab3-114">With that in mind, the product of `dotnet build` isn't ready to be transferred to another machine to run.</span></span> <span data-ttu-id="99ab3-115">Isso é diferente do comportamento do .NET Framework, no qual compilar um projeto executável (um aplicativo) produz uma saída executável em qualquer computador que tenha o .NET Framework instalado.</span><span class="sxs-lookup"><span data-stu-id="99ab3-115">This is in contrast to the behavior of the .NET Framework in which building an executable project (an application) produces output that's runnable on any machine where the .NET Framework is installed.</span></span> <span data-ttu-id="99ab3-116">Para ter uma experiência semelhante com o .NET Core, é necessário usar o comando [dotnet publish](dotnet-publish.md).</span><span class="sxs-lookup"><span data-stu-id="99ab3-116">To have a similar experience with .NET Core, you need to use the [dotnet publish](dotnet-publish.md) command.</span></span> <span data-ttu-id="99ab3-117">Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="99ab3-117">For more information, see [.NET Core Application Deployment](../deploying/index.md).</span></span>
 
----
-
-## <a name="description"></a><span data-ttu-id="0cece-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="0cece-109">Description</span></span>
-
-<span data-ttu-id="0cece-110">O comando `dotnet build` compila o projeto e suas dependências em um conjunto de binários.</span><span class="sxs-lookup"><span data-stu-id="0cece-110">The `dotnet build` command builds the project and its dependencies into a set of binaries.</span></span> <span data-ttu-id="0cece-111">Os binários incluem o código do projeto em IL (Linguagem Intermediária) com uma extensão *.dll* e arquivos de símbolo usados para depuração com uma extensão *.pdb*.</span><span class="sxs-lookup"><span data-stu-id="0cece-111">The binaries include the project's code in Intermediate Language (IL) files with a *.dll* extension and symbol files used for debugging with a *.pdb* extension.</span></span> <span data-ttu-id="0cece-112">Um arquivo JSON de dependências (*\*.deps.json*) é produzido listando as dependências do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0cece-112">A dependencies JSON file (*\*.deps.json*) is produced that lists the dependencies of the application.</span></span> <span data-ttu-id="0cece-113">O arquivo *\*.runtimeconfig.json* é produzido, especificando o tempo de execução compartilhado e sua versão do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0cece-113">A *\*.runtimeconfig.json* file is produced, which specifies the shared runtime and its version for the application.</span></span>
-
-<span data-ttu-id="0cece-114">Se o projeto tiver dependências de terceiros, como bibliotecas do NuGet, elas serão resolvidas no cache NuGet e não estarão disponíveis com a saída de build do projeto.</span><span class="sxs-lookup"><span data-stu-id="0cece-114">If the project has third-party dependencies, such as libraries from NuGet, they're resolved from the NuGet cache and aren't available with the project's built output.</span></span> <span data-ttu-id="0cece-115">Com isso em mente, o produto de `dotnet build` não está pronto para ser transferido para outro computador para execução.</span><span class="sxs-lookup"><span data-stu-id="0cece-115">With that in mind, the product of `dotnet build` isn't ready to be transferred to another machine to run.</span></span> <span data-ttu-id="0cece-116">Isso é diferente do comportamento do .NET Framework, no qual compilar um projeto executável (um aplicativo) produz uma saída executável em qualquer computador que tenha o .NET Framework instalado.</span><span class="sxs-lookup"><span data-stu-id="0cece-116">This is in contrast to the behavior of the .NET Framework in which building an executable project (an application) produces output that's runnable on any machine where the .NET Framework is installed.</span></span> <span data-ttu-id="0cece-117">Para ter uma experiência semelhante com o .NET Core, é necessário usar o comando [dotnet publish](dotnet-publish.md).</span><span class="sxs-lookup"><span data-stu-id="0cece-117">To have a similar experience with .NET Core, you need to use the [dotnet publish](dotnet-publish.md) command.</span></span> <span data-ttu-id="0cece-118">Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="0cece-118">For more information, see [.NET Core Application Deployment](../deploying/index.md).</span></span>
-
-<span data-ttu-id="0cece-119">A compilação exige o arquivo *project.assets.json*, que lista as dependências do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0cece-119">Building requires the *project.assets.json* file, which lists the dependencies of your application.</span></span> <span data-ttu-id="0cece-120">O arquivo é criado quando [`dotnet restore`](dotnet-restore.md) é executado.</span><span class="sxs-lookup"><span data-stu-id="0cece-120">The file is created when [`dotnet restore`](dotnet-restore.md) is executed.</span></span> <span data-ttu-id="0cece-121">Sem o arquivo de ativos, as ferramentas não conseguem resolver os assemblies de referência, o que resulta em erros.</span><span class="sxs-lookup"><span data-stu-id="0cece-121">Without the assets file in place, the tooling cannot resolve reference assemblies, which results in errors.</span></span> <span data-ttu-id="0cece-122">Com o SDK do .NET Core 1.x, você precisava executar explicitamente o `dotnet restore` antes de executar `dotnet build`.</span><span class="sxs-lookup"><span data-stu-id="0cece-122">With .NET Core 1.x SDK, you needed to explicitly run the `dotnet restore` before running `dotnet build`.</span></span> <span data-ttu-id="0cece-123">Começando pelo SDK do .NET Core 2.0, o `dotnet restore` é executado implicitamente quando você executa `dotnet build`.</span><span class="sxs-lookup"><span data-stu-id="0cece-123">Starting with .NET Core 2.0 SDK, `dotnet restore` runs implicitly when you run `dotnet build`.</span></span> <span data-ttu-id="0cece-124">Se você deseja desabilitar a restauração implícita ao executar o comando de build, é possível passar a opção `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="0cece-124">If you want to disable implicit restore when running the build command, you can pass the `--no-restore` option.</span></span>
+<span data-ttu-id="99ab3-118">A compilação exige o arquivo *project.assets.json*, que lista as dependências do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="99ab3-118">Building requires the *project.assets.json* file, which lists the dependencies of your application.</span></span> <span data-ttu-id="99ab3-119">O arquivo é criado quando [`dotnet restore`](dotnet-restore.md) é executado.</span><span class="sxs-lookup"><span data-stu-id="99ab3-119">The file is created when [`dotnet restore`](dotnet-restore.md) is executed.</span></span> <span data-ttu-id="99ab3-120">Sem o arquivo de ativos em vigor, as ferramentas não conseguem resolver os assemblies de referência, o que resulta em erros.</span><span class="sxs-lookup"><span data-stu-id="99ab3-120">Without the assets file in place, the tooling can't resolve reference assemblies, which results in errors.</span></span> <span data-ttu-id="99ab3-121">Com o SDK do .NET Core 1.x, você precisava executar explicitamente o `dotnet restore` antes de executar `dotnet build`.</span><span class="sxs-lookup"><span data-stu-id="99ab3-121">With .NET Core 1.x SDK, you needed to explicitly run the `dotnet restore` before running `dotnet build`.</span></span> <span data-ttu-id="99ab3-122">Começando pelo SDK do .NET Core 2.0, o `dotnet restore` é executado implicitamente quando você executa `dotnet build`.</span><span class="sxs-lookup"><span data-stu-id="99ab3-122">Starting with .NET Core 2.0 SDK, `dotnet restore` runs implicitly when you run `dotnet build`.</span></span> <span data-ttu-id="99ab3-123">Se você deseja desabilitar a restauração implícita ao executar o comando de build, é possível passar a opção `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="99ab3-123">If you want to disable implicit restore when running the build command, you can pass the `--no-restore` option.</span></span>
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-<span data-ttu-id="0cece-125">O fato de o projeto ser executável ou não é determinado pela propriedade `<OutputType>` do arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="0cece-125">Whether the project is executable or not is determined by the `<OutputType>` property in the project file.</span></span> <span data-ttu-id="0cece-126">O seguinte exemplo mostra um projeto que produz um código executável:</span><span class="sxs-lookup"><span data-stu-id="0cece-126">The following example shows a project that produces executable code:</span></span>
+<span data-ttu-id="99ab3-124">O fato de o projeto ser executável ou não é determinado pela propriedade `<OutputType>` do arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="99ab3-124">Whether the project is executable or not is determined by the `<OutputType>` property in the project file.</span></span> <span data-ttu-id="99ab3-125">O seguinte exemplo mostra um projeto que produz um código executável:</span><span class="sxs-lookup"><span data-stu-id="99ab3-125">The following example shows a project that produces executable code:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -57,137 +48,103 @@ dotnet build [-h|--help]
 </PropertyGroup>
 ```
 
-<span data-ttu-id="0cece-127">Para produzir uma biblioteca, omita a propriedade `<OutputType>`.</span><span class="sxs-lookup"><span data-stu-id="0cece-127">In order to produce a library, omit the `<OutputType>` property.</span></span> <span data-ttu-id="0cece-128">A diferença principal na saída da compilação é que a DLL de IL para uma biblioteca não contém pontos de entrada e não pode ser executada.</span><span class="sxs-lookup"><span data-stu-id="0cece-128">The main difference in built output is that the IL DLL for a library doesn't contain entry points and can't be executed.</span></span>
+<span data-ttu-id="99ab3-126">Para produzir uma biblioteca, omita a propriedade `<OutputType>`.</span><span class="sxs-lookup"><span data-stu-id="99ab3-126">To produce a library, omit the `<OutputType>` property.</span></span> <span data-ttu-id="99ab3-127">A diferença principal na saída da compilação é que a DLL de IL para uma biblioteca não contém pontos de entrada e não pode ser executada.</span><span class="sxs-lookup"><span data-stu-id="99ab3-127">The main difference in built output is that the IL DLL for a library doesn't contain entry points and can't be executed.</span></span>
 
-### <a name="msbuild"></a><span data-ttu-id="0cece-129">MSBuild</span><span class="sxs-lookup"><span data-stu-id="0cece-129">MSBuild</span></span>
+### <a name="msbuild"></a><span data-ttu-id="99ab3-128">MSBuild</span><span class="sxs-lookup"><span data-stu-id="99ab3-128">MSBuild</span></span>
 
-<span data-ttu-id="0cece-130">O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais.</span><span class="sxs-lookup"><span data-stu-id="0cece-130">`dotnet build` uses MSBuild to build the project, so it supports both parallel and incremental builds.</span></span> <span data-ttu-id="0cece-131">Para obter mais informações, consulte [Compilações incrementais](/visualstudio/msbuild/incremental-builds).</span><span class="sxs-lookup"><span data-stu-id="0cece-131">For more information, see [Incremental Builds](/visualstudio/msbuild/incremental-builds).</span></span>
+<span data-ttu-id="99ab3-129">O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais.</span><span class="sxs-lookup"><span data-stu-id="99ab3-129">`dotnet build` uses MSBuild to build the project, so it supports both parallel and incremental builds.</span></span> <span data-ttu-id="99ab3-130">Para obter mais informações, consulte [Compilações incrementais](/visualstudio/msbuild/incremental-builds).</span><span class="sxs-lookup"><span data-stu-id="99ab3-130">For more information, see [Incremental Builds](/visualstudio/msbuild/incremental-builds).</span></span>
 
-<span data-ttu-id="0cece-132">Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `-p` para configurar propriedades ou `-l` para definir um agente.</span><span class="sxs-lookup"><span data-stu-id="0cece-132">In addition to its options, the `dotnet build` command accepts MSBuild options, such as `-p` for setting properties or `-l` to define a logger.</span></span> <span data-ttu-id="0cece-133">Para obter mais informações sobre essas opções, confira a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).</span><span class="sxs-lookup"><span data-stu-id="0cece-133">For more information about these options, see the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference).</span></span> <span data-ttu-id="0cece-134">Ou você também pode usar o comando [dotnet msbuild](dotnet-msbuild.md).</span><span class="sxs-lookup"><span data-stu-id="0cece-134">Or you can also use the [dotnet msbuild](dotnet-msbuild.md) command.</span></span>
+<span data-ttu-id="99ab3-131">Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `-p` para configurar propriedades ou `-l` para definir um agente.</span><span class="sxs-lookup"><span data-stu-id="99ab3-131">In addition to its options, the `dotnet build` command accepts MSBuild options, such as `-p` for setting properties or `-l` to define a logger.</span></span> <span data-ttu-id="99ab3-132">Para obter mais informações sobre essas opções, confira a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).</span><span class="sxs-lookup"><span data-stu-id="99ab3-132">For more information about these options, see the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference).</span></span> <span data-ttu-id="99ab3-133">Ou você também pode usar o comando [dotnet msbuild](dotnet-msbuild.md).</span><span class="sxs-lookup"><span data-stu-id="99ab3-133">Or you can also use the [dotnet msbuild](dotnet-msbuild.md) command.</span></span>
 
-<span data-ttu-id="0cece-135">A execução de `dotnet build` é equivalente a `dotnet msbuild -restore -target:Build`.</span><span class="sxs-lookup"><span data-stu-id="0cece-135">Running `dotnet build` is equivalent to `dotnet msbuild -restore -target:Build`.</span></span>
+<span data-ttu-id="99ab3-134">A execução de `dotnet build` é equivalente a `dotnet msbuild -restore -target:Build`.</span><span class="sxs-lookup"><span data-stu-id="99ab3-134">Running `dotnet build` is equivalent to `dotnet msbuild -restore -target:Build`.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="0cece-136">Arguments</span><span class="sxs-lookup"><span data-stu-id="0cece-136">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="99ab3-135">Arguments</span><span class="sxs-lookup"><span data-stu-id="99ab3-135">Arguments</span></span>
 
 `PROJECT | SOLUTION`
 
-<span data-ttu-id="0cece-137">O arquivo de projeto ou solução a ser compilado.</span><span class="sxs-lookup"><span data-stu-id="0cece-137">The project or solution file to build.</span></span> <span data-ttu-id="0cece-138">Se um arquivo de projeto não for especificado, o MSBuild pesquisará o diretório de trabalho atual em busca de um arquivo que tenha uma extensão de arquivo que termine em *proj* ou *sln* e usará esse arquivo.</span><span class="sxs-lookup"><span data-stu-id="0cece-138">If a project or solution file is not specified, MSBuild searches the current working directory for a file that has a file extension that ends in either *proj* or *sln* and uses that file.</span></span>
+<span data-ttu-id="99ab3-136">O arquivo de projeto ou solução a ser compilado.</span><span class="sxs-lookup"><span data-stu-id="99ab3-136">The project or solution file to build.</span></span> <span data-ttu-id="99ab3-137">Se um arquivo de solução ou projeto não for especificado, o MSBuild pesquisará o diretório de trabalho atual em busca de um arquivo que tenha uma extensão terminada em *proj* ou *sln* e usará esse arquivo.</span><span class="sxs-lookup"><span data-stu-id="99ab3-137">If a project or solution file isn't specified, MSBuild searches the current working directory for a file that has a file extension that ends in either *proj* or *sln* and uses that file.</span></span>
 
-## <a name="options"></a><span data-ttu-id="0cece-139">Opções</span><span class="sxs-lookup"><span data-stu-id="0cece-139">Options</span></span>
-
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="0cece-140">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="0cece-140">.NET Core 2.x</span></span>](#tab/netcore2x)
+## <a name="options"></a><span data-ttu-id="99ab3-138">Opções</span><span class="sxs-lookup"><span data-stu-id="99ab3-138">Options</span></span>
 
 * **`-c|--configuration {Debug|Release}`**
 
-  <span data-ttu-id="0cece-141">Define a configuração da compilação.</span><span class="sxs-lookup"><span data-stu-id="0cece-141">Defines the build configuration.</span></span> <span data-ttu-id="0cece-142">O valor padrão é `Debug`.</span><span class="sxs-lookup"><span data-stu-id="0cece-142">The default value is `Debug`.</span></span>
+  <span data-ttu-id="99ab3-139">Define a configuração da compilação.</span><span class="sxs-lookup"><span data-stu-id="99ab3-139">Defines the build configuration.</span></span> <span data-ttu-id="99ab3-140">O valor padrão é `Debug`.</span><span class="sxs-lookup"><span data-stu-id="99ab3-140">The default value is `Debug`.</span></span>
 
 * **`-f|--framework <FRAMEWORK>`**
 
-  <span data-ttu-id="0cece-143">Compila para uma [estrutura](../../standard/frameworks.md) específica.</span><span class="sxs-lookup"><span data-stu-id="0cece-143">Compiles for a specific [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="0cece-144">A estrutura precisa ser definida no [arquivo de projeto](csproj.md).</span><span class="sxs-lookup"><span data-stu-id="0cece-144">The framework must be defined in the [project file](csproj.md).</span></span>
+  <span data-ttu-id="99ab3-141">Compila para uma [estrutura](../../standard/frameworks.md) específica.</span><span class="sxs-lookup"><span data-stu-id="99ab3-141">Compiles for a specific [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="99ab3-142">A estrutura precisa ser definida no [arquivo de projeto](csproj.md).</span><span class="sxs-lookup"><span data-stu-id="99ab3-142">The framework must be defined in the [project file](csproj.md).</span></span>
 
 * **`--force`**
 
-  <span data-ttu-id="0cece-145">Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="0cece-145">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="0cece-146">A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="0cece-146">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+  <span data-ttu-id="99ab3-143">Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="99ab3-143">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="99ab3-144">A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="99ab3-144">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span> <span data-ttu-id="99ab3-145">Disponível desde o SDK do .NET Core 2.0.</span><span class="sxs-lookup"><span data-stu-id="99ab3-145">Available since .NET Core 2.0 SDK.</span></span>
 
 * **`-h|--help`**
 
-  <span data-ttu-id="0cece-147">Imprime uma ajuda breve para o comando.</span><span class="sxs-lookup"><span data-stu-id="0cece-147">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="99ab3-146">Imprime uma ajuda breve para o comando.</span><span class="sxs-lookup"><span data-stu-id="99ab3-146">Prints out a short help for the command.</span></span>
+
+* **`--interactive`**
+
+  <span data-ttu-id="99ab3-147">Permite que o comando pare e aguarde entrada ou ação do usuário.</span><span class="sxs-lookup"><span data-stu-id="99ab3-147">Allows the command to stop and wait for user input or action.</span></span> <span data-ttu-id="99ab3-148">Por exemplo, para concluir a autenticação.</span><span class="sxs-lookup"><span data-stu-id="99ab3-148">For example, to complete authentication.</span></span> <span data-ttu-id="99ab3-149">Disponível desde o SDK do .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="99ab3-149">Available since .NET Core 3.0 SDK.</span></span>
 
 * **`--no-dependencies`**
 
-  <span data-ttu-id="0cece-148">Ignora as referências P2P (projeto a projeto) e compila apenas o projeto raiz especificado.</span><span class="sxs-lookup"><span data-stu-id="0cece-148">Ignores project-to-project (P2P) references and only builds the specified root project.</span></span>
+  <span data-ttu-id="99ab3-150">Ignora as referências P2P (projeto a projeto) e compila apenas o projeto raiz especificado.</span><span class="sxs-lookup"><span data-stu-id="99ab3-150">Ignores project-to-project (P2P) references and only builds the specified root project.</span></span>
 
 * **`--no-incremental`**
 
-  <span data-ttu-id="0cece-149">Marca o build como não segura para build incremental.</span><span class="sxs-lookup"><span data-stu-id="0cece-149">Marks the build as unsafe for incremental build.</span></span> <span data-ttu-id="0cece-150">Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.</span><span class="sxs-lookup"><span data-stu-id="0cece-150">This flag turns off incremental compilation and forces a clean rebuild of the project's dependency graph.</span></span>
+  <span data-ttu-id="99ab3-151">Marca o build como não segura para build incremental.</span><span class="sxs-lookup"><span data-stu-id="99ab3-151">Marks the build as unsafe for incremental build.</span></span> <span data-ttu-id="99ab3-152">Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.</span><span class="sxs-lookup"><span data-stu-id="99ab3-152">This flag turns off incremental compilation and forces a clean rebuild of the project's dependency graph.</span></span>
+
+* **`--no-logo`**
+
+  <span data-ttu-id="99ab3-153">Não exibe a faixa de inicialização nem a mensagem de direitos autorais.</span><span class="sxs-lookup"><span data-stu-id="99ab3-153">Doesn't display the startup banner or the copyright message.</span></span> <span data-ttu-id="99ab3-154">Disponível desde o SDK do .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="99ab3-154">Available since .NET Core 3.0 SDK.</span></span>
 
 * **`--no-restore`**
 
-  <span data-ttu-id="0cece-151">Não executa uma restauração implícita durante o build.</span><span class="sxs-lookup"><span data-stu-id="0cece-151">Doesn't execute an implicit restore during build.</span></span>
+  <span data-ttu-id="99ab3-155">Não executa uma restauração implícita durante o build.</span><span class="sxs-lookup"><span data-stu-id="99ab3-155">Doesn't execute an implicit restore during build.</span></span> <span data-ttu-id="99ab3-156">Disponível desde o SDK do .NET Core 2.0.</span><span class="sxs-lookup"><span data-stu-id="99ab3-156">Available since .NET Core 2.0 SDK.</span></span>
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  <span data-ttu-id="0cece-152">Diretório no qual os binários compilados são colocados.</span><span class="sxs-lookup"><span data-stu-id="0cece-152">Directory in which to place the built binaries.</span></span> <span data-ttu-id="0cece-153">Você também precisa definir `--framework` ao especificar essa opção.</span><span class="sxs-lookup"><span data-stu-id="0cece-153">You also need to define `--framework` when you specify this option.</span></span> <span data-ttu-id="0cece-154">Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.</span><span class="sxs-lookup"><span data-stu-id="0cece-154">If not specified, the default path is `./bin/<configuration>/<framework>/`.</span></span>
+  <span data-ttu-id="99ab3-157">Diretório no qual os binários compilados são colocados.</span><span class="sxs-lookup"><span data-stu-id="99ab3-157">Directory in which to place the built binaries.</span></span> <span data-ttu-id="99ab3-158">Você também precisa definir `--framework` ao especificar essa opção.</span><span class="sxs-lookup"><span data-stu-id="99ab3-158">You also need to define `--framework` when you specify this option.</span></span> <span data-ttu-id="99ab3-159">Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.</span><span class="sxs-lookup"><span data-stu-id="99ab3-159">If not specified, the default path is `./bin/<configuration>/<framework>/`.</span></span>
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  <span data-ttu-id="0cece-155">Especifica o tempo de execução de destino.</span><span class="sxs-lookup"><span data-stu-id="0cece-155">Specifies the target runtime.</span></span> <span data-ttu-id="0cece-156">Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="0cece-156">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+  <span data-ttu-id="99ab3-160">Especifica o tempo de execução de destino.</span><span class="sxs-lookup"><span data-stu-id="99ab3-160">Specifies the target runtime.</span></span> <span data-ttu-id="99ab3-161">Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="99ab3-161">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
 
 * **`-v|--verbosity <LEVEL>`**
 
-  <span data-ttu-id="0cece-157">Define o nível de detalhes do comando.</span><span class="sxs-lookup"><span data-stu-id="0cece-157">Sets the verbosity level of the command.</span></span> <span data-ttu-id="0cece-158">Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="0cece-158">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+  <span data-ttu-id="99ab3-162">Define o nível de detalhamento do MSBuild.</span><span class="sxs-lookup"><span data-stu-id="99ab3-162">Sets the MSBuild verbosity level.</span></span> <span data-ttu-id="99ab3-163">Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="99ab3-163">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="99ab3-164">O padrão é `minimal`.</span><span class="sxs-lookup"><span data-stu-id="99ab3-164">The default is `minimal`.</span></span>
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  <span data-ttu-id="0cece-159">Define o sufixo da versão para um asterisco (`*`) no campo de versão do arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="0cece-159">Defines the version suffix for an asterisk (`*`) in the version field of the project file.</span></span> <span data-ttu-id="0cece-160">O formato segue as diretrizes de versão do NuGet.</span><span class="sxs-lookup"><span data-stu-id="0cece-160">The format follows NuGet's version guidelines.</span></span>
+  <span data-ttu-id="99ab3-165">Define o valor da propriedade `$(VersionSuffix)` a ser usada ao compilar o projeto.</span><span class="sxs-lookup"><span data-stu-id="99ab3-165">Sets the value of the `$(VersionSuffix)` property to use when building the project.</span></span> <span data-ttu-id="99ab3-166">Isso funcionará apenas se a propriedade `$(Version)` não estiver definida.</span><span class="sxs-lookup"><span data-stu-id="99ab3-166">This only works if the `$(Version)` property isn't set.</span></span> <span data-ttu-id="99ab3-167">Em seguida, `$(Version)` é definido como o `$(VersionPrefix)` combinado com o `$(VersionSuffix)`, separado por um traço.</span><span class="sxs-lookup"><span data-stu-id="99ab3-167">Then, `$(Version)` is set to the `$(VersionPrefix)` combined with the `$(VersionSuffix)`, separated by a dash.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="0cece-161">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="0cece-161">.NET Core 1.x</span></span>](#tab/netcore1x)
+## <a name="examples"></a><span data-ttu-id="99ab3-168">Exemplos</span><span class="sxs-lookup"><span data-stu-id="99ab3-168">Examples</span></span>
 
-* **`-c|--configuration {Debug|Release}`**
-
-  <span data-ttu-id="0cece-162">Define a configuração da compilação.</span><span class="sxs-lookup"><span data-stu-id="0cece-162">Defines the build configuration.</span></span> <span data-ttu-id="0cece-163">O valor padrão é `Debug`.</span><span class="sxs-lookup"><span data-stu-id="0cece-163">The default value is `Debug`.</span></span>
-
-* **`-f|--framework <FRAMEWORK>`**
-
-  <span data-ttu-id="0cece-164">Compila para uma [estrutura](../../standard/frameworks.md) específica.</span><span class="sxs-lookup"><span data-stu-id="0cece-164">Compiles for a specific [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="0cece-165">A estrutura precisa ser definida no [arquivo de projeto](csproj.md).</span><span class="sxs-lookup"><span data-stu-id="0cece-165">The framework must be defined in the [project file](csproj.md).</span></span>
-
-* **`-h|--help`**
-
-  <span data-ttu-id="0cece-166">Imprime uma ajuda breve para o comando.</span><span class="sxs-lookup"><span data-stu-id="0cece-166">Prints out a short help for the command.</span></span>
-
-* **`--no-dependencies`**
-
-  <span data-ttu-id="0cece-167">Ignora as referências P2P (projeto a projeto) e compila apenas o projeto raiz especificado.</span><span class="sxs-lookup"><span data-stu-id="0cece-167">Ignores project-to-project (P2P) references and only builds the specified root project.</span></span>
-
-* **`--no-incremental`**
-
-  <span data-ttu-id="0cece-168">Marca o build como não segura para build incremental.</span><span class="sxs-lookup"><span data-stu-id="0cece-168">Marks the build as unsafe for incremental build.</span></span> <span data-ttu-id="0cece-169">Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.</span><span class="sxs-lookup"><span data-stu-id="0cece-169">This flag turns off incremental compilation and forces a clean rebuild of the project's dependency graph.</span></span>
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  <span data-ttu-id="0cece-170">Diretório no qual os binários compilados são colocados.</span><span class="sxs-lookup"><span data-stu-id="0cece-170">Directory in which to place the built binaries.</span></span> <span data-ttu-id="0cece-171">Você também precisa definir `--framework` ao especificar essa opção.</span><span class="sxs-lookup"><span data-stu-id="0cece-171">You also need to define `--framework` when you specify this option.</span></span>
-
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
-
-  <span data-ttu-id="0cece-172">Especifica o tempo de execução de destino.</span><span class="sxs-lookup"><span data-stu-id="0cece-172">Specifies the target runtime.</span></span> <span data-ttu-id="0cece-173">Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="0cece-173">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
-
-* **`-v|--verbosity <LEVEL>`**
-
-  <span data-ttu-id="0cece-174">Define o nível de detalhes do comando.</span><span class="sxs-lookup"><span data-stu-id="0cece-174">Sets the verbosity level of the command.</span></span> <span data-ttu-id="0cece-175">Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="0cece-175">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  <span data-ttu-id="0cece-176">Define o sufixo da versão para um asterisco (`*`) no campo de versão do arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="0cece-176">Defines the version suffix for an asterisk (`*`) in the version field of the project file.</span></span> <span data-ttu-id="0cece-177">O formato segue as diretrizes de versão do NuGet.</span><span class="sxs-lookup"><span data-stu-id="0cece-177">The format follows NuGet's version guidelines.</span></span>
-
----
-
-## <a name="examples"></a><span data-ttu-id="0cece-178">Exemplos</span><span class="sxs-lookup"><span data-stu-id="0cece-178">Examples</span></span>
-
-* <span data-ttu-id="0cece-179">Compile um projeto e suas dependências:</span><span class="sxs-lookup"><span data-stu-id="0cece-179">Build a project and its dependencies:</span></span>
+* <span data-ttu-id="99ab3-169">Compile um projeto e suas dependências:</span><span class="sxs-lookup"><span data-stu-id="99ab3-169">Build a project and its dependencies:</span></span>
 
   ```console
   dotnet build
   ```
 
-* <span data-ttu-id="0cece-180">Compile um projeto e suas dependências usando a configuração da Versão:</span><span class="sxs-lookup"><span data-stu-id="0cece-180">Build a project and its dependencies using Release configuration:</span></span>
+* <span data-ttu-id="99ab3-170">Compile um projeto e suas dependências usando a configuração da Versão:</span><span class="sxs-lookup"><span data-stu-id="99ab3-170">Build a project and its dependencies using Release configuration:</span></span>
 
   ```console
   dotnet build --configuration Release
   ```
 
-* <span data-ttu-id="0cece-181">Compile um projeto e suas dependências para um tempo de execução específico (nesse exemplo, Ubuntu 16.04):</span><span class="sxs-lookup"><span data-stu-id="0cece-181">Build a project and its dependencies for a specific runtime (in this example, Ubuntu 16.04):</span></span>
+* <span data-ttu-id="99ab3-171">Compile um projeto e suas dependências para um tempo de execução específico (no exemplo, Ubuntu 18.04):</span><span class="sxs-lookup"><span data-stu-id="99ab3-171">Build a project and its dependencies for a specific runtime (in this example, Ubuntu 18.04):</span></span>
 
   ```console
-  dotnet build --runtime ubuntu.16.04-x64
+  dotnet build --runtime ubuntu.18.04-x64
   ```
 
-* <span data-ttu-id="0cece-182">Compile o projeto e use a fonte do pacote NuGet especificada durante a operação de restauração (SDK do .NET Core 2.0 e versões posteriores):</span><span class="sxs-lookup"><span data-stu-id="0cece-182">Build the project and use the specified NuGet package source during the restore operation (.NET Core 2.0 SDK and later versions):</span></span>
+* <span data-ttu-id="99ab3-172">Compile o projeto e use a fonte do pacote NuGet especificada durante a operação de restauração (SDK do .NET Core 2.0 e versões posteriores):</span><span class="sxs-lookup"><span data-stu-id="99ab3-172">Build the project and use the specified NuGet package source during the restore operation (.NET Core 2.0 SDK and later versions):</span></span>
 
   ```console
   dotnet build --source c:\packages\mypackages
   ```
 
-* <span data-ttu-id="0cece-183">Compile o projeto e defina a versão 1.2.3.4 como um parâmetro de compilação:</span><span class="sxs-lookup"><span data-stu-id="0cece-183">Build the project and set 1.2.3.4 version as a build parameter:</span></span>
+* <span data-ttu-id="99ab3-173">Compile o projeto e defina a versão 1.2.3.4 como um parâmetro de compilação:</span><span class="sxs-lookup"><span data-stu-id="99ab3-173">Build the project and set 1.2.3.4 version as a build parameter:</span></span>
 
   ```console
   dotnet build -p:Version=1.2.3.4
