@@ -9,6 +9,12 @@
   items:
     - name: Introdução
       href: tutorials/get-started.md
+    - name: Implantar no Azure HDInsight
+      href: tutorials/hdinsight-deployment.md
+    - name: Implantar no AWS EMR Spark
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: Implantar no Databricks
+      href: tutorials/databricks-deployment.md
 - name: Referência
   items:
     - name: Referência API
