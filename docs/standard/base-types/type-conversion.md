@@ -26,37 +26,37 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea32efaad24f171b7d5ebfa457834b35edbddf4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659755"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664606"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversão de tipos no .NET Framework
 <a name="top"></a> Cada valor tem um tipo associado, o qual define atributos como a quantidade de espaço alocado para o valor, o intervalo de valores possíveis que ele pode assumir e os membros que ele disponibiliza. Muitos valores podem ser expressos por mais de um tipo. Por exemplo, o valor 4 pode ser expresso como um número inteiro ou como um valor de ponto flutuante. A conversão de tipo cria um valor em um novo tipo que é equivalente ao valor de um tipo antigo, mas que não necessariamente preserva a identidade (ou o valor exato) do objeto original.  
   
  O .NET Framework dá suporte automaticamente às seguintes conversões:  
   
--   Conversão de uma classe derivada em uma classe base. Isso significa, por exemplo, que uma instância de qualquer classe ou estrutura pode ser convertida em uma instância de <xref:System.Object>.  Essa conversão não exige um operador de conversão.  
+- Conversão de uma classe derivada em uma classe base. Isso significa, por exemplo, que uma instância de qualquer classe ou estrutura pode ser convertida em uma instância de <xref:System.Object>.  Essa conversão não exige um operador de conversão.  
   
--   Conversão de uma classe base para a classe derivada original. No C#, essa conversão exige um operador de conversão. No Visual Basic, ela exige o operador `CType` quando a `Option Strict` está ativada.  
+- Conversão de uma classe base para a classe derivada original. No C#, essa conversão exige um operador de conversão. No Visual Basic, ela exige o operador `CType` quando a `Option Strict` está ativada.  
   
--   Conversão de um tipo que implementa uma interface para um objeto de interface que representa essa interface. Essa conversão não exige um operador de conversão.  
+- Conversão de um tipo que implementa uma interface para um objeto de interface que representa essa interface. Essa conversão não exige um operador de conversão.  
   
--   Conversão de um objeto de interface de volta para o tipo original que implementa essa interface.  No C#, essa conversão exige um operador de conversão. No Visual Basic, ela exige o operador `CType` quando a `Option Strict` está ativada.  
+- Conversão de um objeto de interface de volta para o tipo original que implementa essa interface.  No C#, essa conversão exige um operador de conversão. No Visual Basic, ela exige o operador `CType` quando a `Option Strict` está ativada.  
   
  Além dessas conversões automáticas, o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece várias funcionalidades que oferecem suporte à conversão personalizada de tipo. Eles incluem o seguinte:  
   
--   O operador `Implicit`, que define as conversões de ampliação disponíveis entre tipos. Para obter mais informações, consulte a seção [Conversão implícita com o operador implícito](#implicit_conversion_with_the_implicit_operator).  
+- O operador `Implicit`, que define as conversões de ampliação disponíveis entre tipos. Para obter mais informações, consulte a seção [Conversão implícita com o operador implícito](#implicit_conversion_with_the_implicit_operator).  
   
--   O operador `Explicit`, que define as conversões de redução disponíveis entre tipos. Para obter mais informações, consulte a seção [Conversão explícita com o operador explícito](#explicit_conversion_with_the_explicit_operator).  
+- O operador `Explicit`, que define as conversões de redução disponíveis entre tipos. Para obter mais informações, consulte a seção [Conversão explícita com o operador explícito](#explicit_conversion_with_the_explicit_operator).  
   
--   A interface <xref:System.IConvertible>, que define conversões para cada um dos tipos de dados base do .NET Framework. Para obter mais informações, consulte a seção [A interface IConvertible](#the_iconvertible_interface).  
+- A interface <xref:System.IConvertible>, que define conversões para cada um dos tipos de dados base do .NET Framework. Para obter mais informações, consulte a seção [A interface IConvertible](#the_iconvertible_interface).  
   
--   A classe <xref:System.Convert>, que fornece um conjunto de métodos que implementam os métodos da interface <xref:System.IConvertible>. Para obter mais informações, consulte a seção [A classe Convert](#Convert).  
+- A classe <xref:System.Convert>, que fornece um conjunto de métodos que implementam os métodos da interface <xref:System.IConvertible>. Para obter mais informações, consulte a seção [A classe Convert](#Convert).  
   
--   A classe <xref:System.ComponentModel.TypeConverter>, que é uma classe base que pode ser estendida para oferecer suporte à conversão de um tipo especificado para qualquer outro tipo. Para obter mais informações, consulte a seção [A classe TypeConverter](#the_typeconverter_class).  
+- A classe <xref:System.ComponentModel.TypeConverter>, que é uma classe base que pode ser estendida para oferecer suporte à conversão de um tipo especificado para qualquer outro tipo. Para obter mais informações, consulte a seção [A classe TypeConverter](#the_typeconverter_class).  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>Conversão implícita com o operador implícito  
@@ -97,7 +97,7 @@ ms.locfileid: "54659755"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> é maior que <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> é maior que <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Para tratar essas conversões de redução, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite que os tipos definam um operador `Explicit`. Os compiladores de linguagens individuais podem então implementar esse operador que usa sua própria sintaxe, ou um membro da classe <xref:System.Convert> pode ser chamado para executar a conversão. (Para obter mais informações sobre a classe <xref:System.Convert>, consulte [A classe Convert](#Convert) mais adiante neste tópico.) O exemplo a seguir ilustra o uso das funcionalidades de linguagem para lidar com a conversão explícita destes valores inteiros que podem estar fora do intervalo em valores <xref:System.Int32>.  
+ Para tratar essas conversões de redução, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite que os tipos definam um operador `Explicit`. Os compiladores de linguagens individuais podem então implementar esse operador que usa sua própria sintaxe, ou um membro da classe <xref:System.Convert> pode ser chamado para executar a conversão. (Para obter mais informações sobre a classe <xref:System.Convert>, veja [A Classe Convert](#Convert) mais adiante neste tópico.) O exemplo a seguir ilustra o uso das funcionalidades de linguagem para lidar com a conversão explícita destes valores inteiros que podem estar fora do intervalo em valores <xref:System.Int32>.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -126,14 +126,14 @@ ms.locfileid: "54659755"
  [Voltar ao início](#top)  
   
 <a name="the_iconvertible_interface"></a>   
-## <a name="the-iconvertible-interface"></a>A interface IConvertible  
+## <a name="the-iconvertible-interface"></a>Interface IConvertible  
  Para oferecer suporte à conversão de qualquer tipo em um tipo base do Common Language Runtime, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] oferece a interface <xref:System.IConvertible>. O tipo de implementação é necessário para fornecer o seguinte:  
   
--   Um método que retorne o <xref:System.TypeCode> do tipo implementando.  
+- Um método que retorne o <xref:System.TypeCode> do tipo implementando.  
   
--   Métodos para converter o tipo implementando em cada tipo base do Common Language Runtime (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double> e assim por diante).  
+- Métodos para converter o tipo implementando em cada tipo base do Common Language Runtime (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double> e assim por diante).  
   
--   Um método de conversão generalizado para converter uma instância do tipo de implementação em outro tipo especificado. As conversões sem suporte devem gerar uma <xref:System.InvalidCastException>.  
+- Um método de conversão generalizado para converter uma instância do tipo de implementação em outro tipo especificado. As conversões sem suporte devem gerar uma <xref:System.InvalidCastException>.  
   
  Cada tipo base do Common Language Runtime (ou seja, <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.String>, <xref:System.UInt16>, <xref:System.UInt32>, e <xref:System.UInt64>), bem como os tipos <xref:System.DBNull> e <xref:System.Enum>, implementam a interface <xref:System.IConvertible>. No entanto, essas são implementações de interfaces explícitas; o método de conversão pode ser chamado somente com uma variável da interface <xref:System.IConvertible>, conforme mostrado no exemplo a seguir. Este exemplo converte um valor <xref:System.Int32> para seu valor <xref:System.Char> equivalente.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "54659755"
  [Voltar ao início](#top)  
   
 <a name="Convert"></a>   
-## <a name="the-convert-class"></a>A classe Convert  
+## <a name="the-convert-class"></a>Classe Convert  
  Embora a implementação da interface <xref:System.IConvertible> de cada tipo de base possa ser chamada para executar uma conversão de tipo, chamar os métodos da classe <xref:System.Convert?displayProperty=nameWithType> é a maneira recomendada independente de linguagem de converter de um tipo base para outro. Além disso, o método <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> pode ser usado para converter de um tipo personalizado especificado para outro tipo.  
   
 ### <a name="conversions-between-base-types"></a>Conversões entre tipos base  
@@ -191,7 +191,7 @@ ms.locfileid: "54659755"
  [Voltar ao início](#top)  
   
 <a name="the_typeconverter_class"></a>   
-## <a name="the-typeconverter-class"></a>A classe TypeConverter  
+## <a name="the-typeconverter-class"></a>Classe TypeConverter  
  O .NET Framework também permite que você defina um conversor de tipo para um tipo personalizado ao estender a classe <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> e associar o conversor de tipo ao tipo por meio de um atributo <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType>. A tabela a seguir realça as diferenças entre esta abordagem e a implementação da interface <xref:System.IConvertible> para um tipo personalizado.  
   
 > [!NOTE]

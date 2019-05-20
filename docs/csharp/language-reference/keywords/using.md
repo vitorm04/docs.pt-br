@@ -8,18 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 07563d32b176832966ab50942cda2b0b26b80e44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: efde313c0a1dabee45de4fd7d580a3aff5139928
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137963"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633797"
 ---
 # <a name="using-c-reference"></a>using (Referência de C#)
 
 A palavra-chave `using` tem três usos principais:
-- A instrução [using](using-statement.md) define um escopo no final do qual um objeto será descartado. 
-- O diretiva [using](using-directive.md) cria um alias para um namespace ou importa tipos definidos em outros namespaces. 
+
+- A instrução [using](using-statement.md) define um escopo no final do qual um objeto será descartado.
+- A [diretiva using](using-directive.md) cria um alias para um namespace ou importa tipos definidos em outros namespaces.
 - O diretiva estática [using](using-static.md) importa os membros de uma única classe.
 
 ## <a name="see-also"></a>Consulte também

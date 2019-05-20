@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145113"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469672"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Carregando e usando tipos dinamicamente
-A reflexão fornece a infraestrutura usada pelos compiladores de linguagem como [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] e JScript para implementar a associação tardia implícita. Associação é o processo de localizar a declaração (ou seja, a implementação) que corresponde a um tipo especificado exclusivamente. Quando esse processo ocorre no tempo de execução em vez do tempo de compilação, ele é chamado de associação tardia. O [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permite que você use associação tardia implícita em seu código. O compilador do Visual Basic chama um método auxiliar que usa a reflexão para obter o tipo de objeto. Os argumentos passados para o método auxiliar fazem com que o método apropriado seja invocado no tempo de execução. Esses argumentos são a instância (um objeto) na qual o método será invocado, o nome do método invocado (uma cadeia de caracteres) e os argumentos passados para o método invocado (uma matriz de objetos).  
+A reflexão fornece a infraestrutura usada pelos compiladores de linguagem para implementar a associação tardia implícita. Associação é o processo de localizar a declaração (ou seja, a implementação) que corresponde a um tipo especificado exclusivamente. Quando esse processo ocorre no tempo de execução em vez do tempo de compilação, ele é chamado de associação tardia. O Visual Basic permite que você use associação tardia implícita em seu código. O compilador do Visual Basic chama um método auxiliar que usa a reflexão para obter o tipo de objeto. Os argumentos passados para o método auxiliar fazem com que o método apropriado seja invocado no tempo de execução. Esses argumentos são a instância (um objeto) na qual o método será invocado, o nome do método invocado (uma cadeia de caracteres) e os argumentos passados para o método invocado (uma matriz de objetos).  
   
  No exemplo a seguir, o compilador do Visual Basic usa reflexão implicitamente para chamar um método em um objeto cujo tipo não é conhecido no tempo de compilação. Uma classe **HelloWorld** tem um método **PrintHello** que imprime “Hello World” concatenado com algum texto que é passado para o método **PrintHello**. O método **PrintHello** chamado neste exemplo é na verdade um <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; o código do Visual Basic permite que o método **PrintHello** seja invocado como se o tipo de objeto (helloObj) fosse conhecido durante o tempo de compilação (associação antecipada) em vez de no tempo de execução (associação tardia).  
   

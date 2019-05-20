@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0f7c390d2ad7233475786e795fef0290af545145
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150961"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634754"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 <a name="top"></a> O .NET dá um amplo suporte para desenvolvimento de aplicativos localizados e globalizados e torna mais fácil aplicar as convenções da cultura atual ou de uma cultura específica ao executar operações comuns, como a classificação e a exibição cadeias de caracteres. Mas a classificação ou a comparação de cadeias de caracteres nem sempre é uma operação que leva em conta a cultura. Por exemplo, cadeias de caracteres que são usadas internamente por um aplicativo normalmente devem ser manipuladas de maneira idêntica em todas as culturas. Quando os dados de cadeias de caracteres culturalmente independentes, como marcações XML, marcações HTML, nomes de usuário, caminhos de arquivo e nomes de objetos do sistema, são interpretados como se levassem em conta a cultura, o código do aplicativo pode estar sujeito a bugs sutis, desempenho ruim e, em alguns casos, problemas de segurança.  
@@ -35,51 +35,51 @@ ms.locfileid: "53150961"
   
  Esse tópico contém as seguintes seções:  
   
--   [Recomendações para uso da cadeia de caracteres](#recommendations_for_string_usage)  
+- [Recomendações para uso da cadeia de caracteres](#recommendations_for_string_usage)  
   
--   [Especificação explícita de comparações da cadeia de caracteres](#specifying_string_comparisons_explicitly)  
+- [Especificação explícita de comparações da cadeia de caracteres](#specifying_string_comparisons_explicitly)  
   
--   [Os detalhes da comparação de cadeia de caracteres](#the_details_of_string_comparison)  
+- [Os detalhes da comparação de cadeia de caracteres](#the_details_of_string_comparison)  
   
--   [Escolha de um membro StringComparison para a chamada de método](#choosing_a_stringcomparison_member_for_your_method_call)  
+- [Escolha de um membro StringComparison para a chamada de método](#choosing_a_stringcomparison_member_for_your_method_call)  
   
--   [Métodos comuns de comparação da cadeia de caracteres no .NET](#common_string_comparison_methods_in_the_net_framework)  
+- [Métodos comuns de comparação da cadeia de caracteres no .NET](#common_string_comparison_methods_in_the_net_framework)  
   
--   [Métodos que realizam comparação indireta de cadeia de caracteres](#methods_that_perform_string_comparison_indirectly)  
+- [Métodos que realizam comparação indireta de cadeia de caracteres](#methods_that_perform_string_comparison_indirectly)  
   
--   [Exibição e persistência de dados formatados](#Formatted)  
+- [Exibição e persistência de dados formatados](#Formatted)  
   
 <a name="recommendations_for_string_usage"></a>   
 ## <a name="recommendations-for-string-usage"></a>Recomendações para Uso da Cadeia de Caracteres  
  Ao desenvolver com o .NET, siga estas recomendações simples quando usar cadeias de caracteres:  
   
--   Use sobrecargas que especificam explicitamente as regras de comparação de cadeias de caracteres para operações de cadeia de caracteres. Normalmente, isso envolve chamar uma sobrecarga de método que tem um parâmetro do tipo <xref:System.StringComparison>.  
+- Use sobrecargas que especificam explicitamente as regras de comparação de cadeias de caracteres para operações de cadeia de caracteres. Normalmente, isso envolve chamar uma sobrecarga de método que tem um parâmetro do tipo <xref:System.StringComparison>.  
   
--   Use <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para comparações como segurança padrão para correspondência de cadeia de caracteres independente de cultura.  
+- Use <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para comparações como segurança padrão para correspondência de cadeia de caracteres independente de cultura.  
   
--   Use as comparações com <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para melhorar o desempenho.  
+- Use as comparações com <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para melhorar o desempenho.  
   
--   Usar operações de cadeia de caracteres com base em <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> quando você exibir a saída para o usuário.  
+- Usar operações de cadeia de caracteres com base em <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> quando você exibir a saída para o usuário.  
   
--   Use os valores não linguísticos <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> em vez de operações de cadeia de caracteres com base em <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> quando a comparação for irrelevante linguisticamente (simbólica, por exemplo).  
+- Use os valores não linguísticos <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> em vez de operações de cadeia de caracteres com base em <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> quando a comparação for irrelevante linguisticamente (simbólica, por exemplo).  
   
--   Use o método <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> em vez do método <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> ao normalizar cadeias de caracteres para comparação.  
+- Use o método <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> em vez do método <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> ao normalizar cadeias de caracteres para comparação.  
   
--   Use uma sobrecarga do método <xref:System.String.Equals%2A?displayProperty=nameWithType> para testar se duas cadeias de caracteres são iguais.  
+- Use uma sobrecarga do método <xref:System.String.Equals%2A?displayProperty=nameWithType> para testar se duas cadeias de caracteres são iguais.  
   
--   Use os métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> e <xref:System.String.CompareTo%2A?displayProperty=nameWithType> para classificar cadeias de caracteres, não para verificar a igualdade.  
+- Use os métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> e <xref:System.String.CompareTo%2A?displayProperty=nameWithType> para classificar cadeias de caracteres, não para verificar a igualdade.  
   
--   Use a formatação que leva em conta a cultura para exibir dados que não são de cadeias de caracteres, como números e datas, em uma interface do usuário. Use a formatação com a cultura invariável para persistir os dados que não são de cadeias de caracteres no formato de cadeia de caracteres.  
+- Use a formatação que leva em conta a cultura para exibir dados que não são de cadeias de caracteres, como números e datas, em uma interface do usuário. Use a formatação com a cultura invariável para persistir os dados que não são de cadeias de caracteres no formato de cadeia de caracteres.  
   
  Evite as práticas a seguir ao usar cadeias de caracteres:  
   
--   Não use sobrecargas que não especificam explicita ou implicitamente as regras de comparação de cadeias de caracteres para operações de cadeia de caracteres.  
+- Não use sobrecargas que não especificam explicita ou implicitamente as regras de comparação de cadeias de caracteres para operações de cadeia de caracteres.  
   
--   Não use operações de cadeia de caracteres com base em <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> na maioria dos casos. Uma das poucas exceções é quando você persiste dados de forma linguisticamente significativa, mas independente de cultura.  
+- Não use operações de cadeia de caracteres com base em <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> na maioria dos casos. Uma das poucas exceções é quando você persiste dados de forma linguisticamente significativa, mas independente de cultura.  
   
--   Não use uma sobrecarga dos métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> ou <xref:System.String.CompareTo%2A> e teste para um valor retornado de zero para determinar se duas cadeias de caracteres são iguais.  
+- Não use uma sobrecarga dos métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> ou <xref:System.String.CompareTo%2A> e teste para um valor retornado de zero para determinar se duas cadeias de caracteres são iguais.  
   
--   Não use a formatação que leva em conta a cultura para persistir dados numéricos ou dados de data e hora no formato de cadeia de caracteres.  
+- Não use a formatação que leva em conta a cultura para persistir dados numéricos ou dados de data e hora no formato de cadeia de caracteres.  
   
  [Voltar ao início](#top)  
   
@@ -98,17 +98,17 @@ ms.locfileid: "53150961"
   
  Por exemplo, o método <xref:System.String.IndexOf%2A>, que retorna um índice de uma subcadeia de caracteres em um objeto <xref:System.String> que corresponde a um caractere ou cadeia de caracteres, tem nove sobrecargas:  
   
--   <xref:System.String.IndexOf%28System.Char%29>, <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%29> e <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%2CSystem.Int32%29>, que, por padrão, realiza, uma pesquisa de ordinal (diferencia maiúsculas de minúsculas e não diferencia a cultura) para um caractere na cadeia de caracteres.  
+- <xref:System.String.IndexOf%28System.Char%29>, <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%29> e <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%2CSystem.Int32%29>, que, por padrão, realiza, uma pesquisa de ordinal (diferencia maiúsculas de minúsculas e não diferencia a cultura) para um caractere na cadeia de caracteres.  
   
--   <xref:System.String.IndexOf%28System.String%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29> e <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%29>, que, por padrão, realizam uma pesquisa que diferencia maiúsculas de minúsculas e cultura de uma subcadeia de caracteres na cadeia de caracteres.  
+- <xref:System.String.IndexOf%28System.String%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29> e <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%29>, que, por padrão, realizam uma pesquisa que diferencia maiúsculas de minúsculas e cultura de uma subcadeia de caracteres na cadeia de caracteres.  
   
--   <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.StringComparison%29> e <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.StringComparison%29>, que incluem um parâmetro de tipo <xref:System.StringComparison> que permite que o formato da comparação seja especificado.  
+- <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.StringComparison%29> e <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.StringComparison%29>, que incluem um parâmetro de tipo <xref:System.StringComparison> que permite que o formato da comparação seja especificado.  
   
  É recomendável que você selecione uma sobrecarga que não usa valores padrão, pelos seguintes motivos:  
   
--   Algumas sobrecargas com parâmetros padrão (aqueles que pesquisam um <xref:System.Char> na instância de cadeia de caracteres) realizam uma comparação ordinal, enquanto outras (aquelas que pesquisam uma cadeia de caracteres na instância de cadeia de caracteres) levam em consideração a cultura. É difícil lembrar qual método usa o valor padrão e é fácil confundir as sobrecargas.  
+- Algumas sobrecargas com parâmetros padrão (aqueles que pesquisam um <xref:System.Char> na instância de cadeia de caracteres) realizam uma comparação ordinal, enquanto outras (aquelas que pesquisam uma cadeia de caracteres na instância de cadeia de caracteres) levam em consideração a cultura. É difícil lembrar qual método usa o valor padrão e é fácil confundir as sobrecargas.  
   
--   A intenção do código que depende de valores padrão para chamadas de método não é clara. No exemplo a seguir, que se baseia em padrões, é difícil saber se o desenvolvedor realmente planejava uma comparação ordinal ou linguística de duas cadeias de caracteres ou se uma diferença entre maiúsculas e minúsculas entre `protocol` e “http” pode fazer com que o teste de igualdade retorne `false`.  
+- A intenção do código que depende de valores padrão para chamadas de método não é clara. No exemplo a seguir, que se baseia em padrões, é difícil saber se o desenvolvedor realmente planejava uma comparação ordinal ou linguística de duas cadeias de caracteres ou se uma diferença entre maiúsculas e minúsculas entre `protocol` e “http” pode fazer com que o teste de igualdade retorne `false`.  
   
      [!code-csharp[Conceptual.Strings.BestPractices#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/explicitargs1.cs#1)]
      [!code-vb[Conceptual.Strings.BestPractices#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/explicitargs1.vb#1)]  
@@ -122,7 +122,7 @@ ms.locfileid: "53150961"
   
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>Os Detalhes de Comparação da Cadeia de Caracteres  
- A comparação de cadeia de caracteres é o centro de muitas operações relacionadas à cadeia de caracteres, especialmente a classificação e teste de igualdade. As cadeias de caracteres são classificadas em uma determinada ordem: se “my” aparece antes de “string” em uma lista classificada de cadeias de caracteres, “my” deve comparar menos que ou igual a “string”. Além disso, a comparação define implicitamente a igualdade. A operação de comparação retorna zero para cadeias de caracteres que considerar iguais. Uma boa interpretação é que nenhuma cadeia de caracteres é menor que a outra. Operações mais significativas envolvendo cadeias de caracteres incluem um ou ambos destes procedimentos: comparação com outra cadeia de caracteres e execução de uma operação de classificação bem definida.  
+ A comparação de cadeia de caracteres é o centro de muitas operações relacionadas à cadeia de caracteres, especialmente a classificação e teste de igualdade. Cadeias de caracteres são classificadas em uma determinada ordem: Se "meu" aparecer antes de "cadeia de caracteres" em uma lista classificada de cadeias de caracteres, "meu" deverá se comparar como menor ou igual a "cadeia de caracteres". Além disso, a comparação define implicitamente a igualdade. A operação de comparação retorna zero para cadeias de caracteres que considerar iguais. Uma boa interpretação é que nenhuma cadeia de caracteres é menor que a outra. Operações mais significativas envolvendo cadeias de caracteres incluem um ou ambos destes procedimentos: comparação com outra cadeia de caracteres e execução de uma operação de classificação bem definida.  
 
 > [!NOTE]
 > Você pode baixar as [Tabelas de peso de classificação](https://www.microsoft.com/en-us/download/details.aspx?id=10921), um conjunto de arquivos de texto que contêm informações sobre os pesos de caracteres usados em operações de classificação e comparação dos sistemas operacionais Windows, e a [Tabela de elemento de ordenação Unicode padrão](https://www.unicode.org/Public/UCA/latest/allkeys.txt), a versão mais recente da tabela de peso de classificação para Linux e macOS. A versão específica da tabela de peso de classificação do Linux e macOS depende da versão das bibliotecas de [Componentes internacionais para Unicode](http://site.icu-project.org/) instaladas no sistema. Para obter informações sobre versões de ICU e as versões Unicode que elas implementam, veja [Baixar ICU](http://site.icu-project.org/download).
@@ -144,17 +144,17 @@ Além disso, comparações de cadeia de caracteres usando versões diferentes do
   
  As comparações que usam a semântica de cultura atual são o padrão para os seguintes métodos:  
   
--   As sobrecargas de <xref:System.String.Compare%2A?displayProperty=nameWithType> que não incluem um parâmetro <xref:System.StringComparison>.  
+- As sobrecargas de <xref:System.String.Compare%2A?displayProperty=nameWithType> que não incluem um parâmetro <xref:System.StringComparison>.  
   
--   As sobrecargas de <xref:System.String.CompareTo%2A?displayProperty=nameWithType>.  
+- As sobrecargas de <xref:System.String.CompareTo%2A?displayProperty=nameWithType>.  
   
--   O método padrão <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> e o método <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> com um parâmetro `null`<xref:System.Globalization.CultureInfo>.  
+- O método padrão <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> e o método <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> com um parâmetro `null`<xref:System.Globalization.CultureInfo>.  
   
--   O método padrão <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> e o método <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> com um parâmetro `null`<xref:System.Globalization.CultureInfo>.  
+- O método padrão <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> e o método <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> com um parâmetro `null`<xref:System.Globalization.CultureInfo>.  
   
--   As sobrecargas de <xref:System.String.IndexOf%2A?displayProperty=nameWithType> que aceitam um <xref:System.String> como um parâmetro de pesquisa e que não têm um parâmetro <xref:System.StringComparison>.  
+- As sobrecargas de <xref:System.String.IndexOf%2A?displayProperty=nameWithType> que aceitam um <xref:System.String> como um parâmetro de pesquisa e que não têm um parâmetro <xref:System.StringComparison>.  
   
--   As sobrecargas de <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> que aceitam um <xref:System.String> como um parâmetro de pesquisa e que não têm um parâmetro <xref:System.StringComparison>.  
+- As sobrecargas de <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> que aceitam um <xref:System.String> como um parâmetro de pesquisa e que não têm um parâmetro <xref:System.StringComparison>.  
   
  Em qualquer caso, é recomendável que você chame uma sobrecarga que tenha um parâmetro <xref:System.StringComparison> para deixar a intenção da chamada do método clara.  
   
@@ -307,17 +307,17 @@ Além disso, comparações de cadeia de caracteres usando versões diferentes do
 ## <a name="methods-that-perform-string-comparison-indirectly"></a>Métodos que Realizam Comparação da Cadeia de Caracteres Indiretamente  
  Alguns métodos que não de cadeias de caracteres que têm a comparação de cadeia de caracteres como uma operação central usam o tipo <xref:System.StringComparer>. A classe <xref:System.StringComparer> inclui quatro propriedades estáticas que retornam instâncias <xref:System.StringComparer> cujos métodos <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType> realizam os seguintes tipos de comparações de cadeias de caracteres:  
   
--   Comparações de cadeias de caracteres que levam em conta a cultura usando a cultura atual. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType>.  
+- Comparações de cadeias de caracteres que levam em conta a cultura usando a cultura atual. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType>.  
   
--   Comparações que não diferenciam maiúsculas de minúsculas usando a cultura atual. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType>.  
+- Comparações que não diferenciam maiúsculas de minúsculas usando a cultura atual. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType>.  
   
--   Comparações sem diferenciação de cultura usando as regras de comparação de palavras da cultura invariável. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType>.  
+- Comparações sem diferenciação de cultura usando as regras de comparação de palavras da cultura invariável. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType>.  
   
--   Comparações que não diferenciam maiúsculas e minúsculas e a cultura usando as regras de comparação de palavras da cultura invariável. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType>.  
+- Comparações que não diferenciam maiúsculas e minúsculas e a cultura usando as regras de comparação de palavras da cultura invariável. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType>.  
   
--   Comparação ordinal. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType>.  
+- Comparação ordinal. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType>.  
   
--   Comparação ordinal que não diferencia maiúsculas de minúsculas. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType>.  
+- Comparação ordinal que não diferencia maiúsculas de minúsculas. Este objeto <xref:System.StringComparer> é retornado pela propriedade <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType>.  
   
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort e Array.BinarySearch  
  Interpretação padrão: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
@@ -337,7 +337,7 @@ Além disso, comparações de cadeia de caracteres usando versões diferentes do
  [!code-csharp[Conceptual.Strings.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
  [!code-vb[Conceptual.Strings.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]  
   
-### <a name="collections-example-hashtable-constructor"></a>Exemplo de Coleções: Construtor da Tabela de Hash  
+### <a name="collections-example-hashtable-constructor"></a>Exemplo de Coleções: Construtor de Tabela de Hash  
  As cadeias de caracteres de hash fornecem um segundo exemplo de uma operação que é afetada pela maneira como as cadeias de caracteres são comparadas.  
   
  O exemplo a seguir cria um objeto <xref:System.Collections.Hashtable> passando-o para o objeto <xref:System.StringComparer> que é retornado pela propriedade <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType>. Como uma classe <xref:System.StringComparer> que é derivada de <xref:System.StringComparer> implementa a interface <xref:System.Collections.IEqualityComparer>, seu método <xref:System.Collections.IEqualityComparer.GetHashCode%2A> é usado para calcular o código hash de cadeias de caracteres na tabela de hash.  
@@ -353,11 +353,11 @@ Além disso, comparações de cadeia de caracteres usando versões diferentes do
   
  Você pode manter os dados que não são de cadeias de caracteres como dados binários ou como dados formatados. Se optar por salvá-los como dados formatados, você deverá chamar uma sobrecarga de método de formatação que inclua um parâmetro `provider` e passar para ele a propriedade <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. A cultura invariável fornece um formato consistente para os dados formatados que é independente da cultura e do computador. Em contraste, dados persistentes que são formatados usando culturas diferentes da cultura invariável têm várias limitações:  
   
--   É provável que os dados não sejam utilizáveis se forem recuperados em um sistema que tem uma cultura diferente ou se o usuário do sistema atual alterar a cultura atual e tentar recuperar os dados.  
+- É provável que os dados não sejam utilizáveis se forem recuperados em um sistema que tem uma cultura diferente ou se o usuário do sistema atual alterar a cultura atual e tentar recuperar os dados.  
   
--   As propriedades de uma cultura em um computador específico podem ser diferentes dos valores padrão. A qualquer momento, um usuário pode personalizar as configurações de exibição que levam em conta a cultura. Devido a isso, os dados formatados que são salvos em um sistema podem não ser legíveis após o usuário personalizar as configurações culturais. É provável que a portabilidade dos dados formatados entre computadores seja ainda mais limitada.  
+- As propriedades de uma cultura em um computador específico podem ser diferentes dos valores padrão. A qualquer momento, um usuário pode personalizar as configurações de exibição que levam em conta a cultura. Devido a isso, os dados formatados que são salvos em um sistema podem não ser legíveis após o usuário personalizar as configurações culturais. É provável que a portabilidade dos dados formatados entre computadores seja ainda mais limitada.  
   
--   Os padrões internacionais, regionais ou nacionais que controlam a formatação de números ou datas e horas são alterados ao longo do tempo e essas alterações são incorporadas nas atualizações do sistema operacional Windows. Quando as convenções de formatação mudam, os dados que foram formatados usando as convenções anteriores podem se tornar ilegíveis.  
+- Os padrões internacionais, regionais ou nacionais que controlam a formatação de números ou datas e horas são alterados ao longo do tempo e essas alterações são incorporadas nas atualizações do sistema operacional Windows. Quando as convenções de formatação mudam, os dados que foram formatados usando as convenções anteriores podem se tornar ilegíveis.  
   
  O exemplo a seguir ilustra a portabilidade limitada resultante do uso da formatação que leva em conta a cultura para manter os dados. O exemplo salva uma matriz de valores de data e hora em um arquivo. Eles são formatados usando as convenções da cultura do inglês (Estados Unidos). Depois que o aplicativo altera a cultura do thread atual para francês (Suíça), ele tenta ler os valores salvos usando as convenções de formatação da cultura atual. A tentativa de ler dois dos itens de dados gera uma exceção <xref:System.FormatException> e a matriz de datas agora contém dois elementos incorretos que são iguais a <xref:System.DateTime.MinValue>.  
   

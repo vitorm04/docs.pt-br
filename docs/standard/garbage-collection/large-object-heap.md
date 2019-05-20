@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677157"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753959"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap de objeto grande em sistemas Windows
 
@@ -154,9 +154,9 @@ Esses contadores de desempenho geralmente são uma boa primeira etapa na investi
 
    Exibe o tamanho atual, em bytes, incluindo o espaço livre, de LOH. Esse contador é atualizado no final de uma coleta de lixo e não em cada alocação.
 
-Uma maneira comum de examinar contadores de desempenho é com o Monitor de Desempenho (perfmon.exe). Use "Adicionar Contadores" para adicionar o contador interessante a processos de seu interesse. Salve os dados do contador de desempenho em um arquivo de log, como mostra a Figura 4.
+Uma maneira comum de examinar contadores de desempenho é com o Monitor de Desempenho (perfmon.exe). Use "Adicionar Contadores" para adicionar o contador interessante a processos de seu interesse. Você pode salvar os dados do contador de desempenho em um arquivo de log como mostra a Figura 4:
 
-![Figura 4: Adicionando contadores de desempenho.](media/loh/perfcounter.png)\
+![Captura de tela que mostra a adição de contadores de desempenho.](media/large-object-heap/add-performance-counter.png)
 Figura 4: LOH depois de um GC geração 2
 
 Os contadores de desempenho também podem ser consultados de forma programática. Várias pessoas os coletam dessa maneira como parte de seu processo de teste de rotina. Quando elas identificam contadores com valores fora do comum, elas usam outro meio de obter dados mais detalhados para ajudar na investigação.
@@ -184,7 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 O resultado é semelhante a este:
 
-![Figura 5: exame dos eventos de ETW usando o PerfView](media/loh/perfview.png) Figura 5: eventos de ETW mostrados usando o PerfView
+![Captura de tela que mostra os eventos ETW no PerfView.](media/large-object-heap/event-tracing-windows-perfview.png)
+Figura 5: Eventos de ETW mostrados usando o PerfView
 
 Como você pode ver, todos os GCs são GCs de geração 2 e são disparados por AllocLarge, o que significa que a alocação de um objeto grande disparou esse GC. Sabemos que essas alocações são temporárias porque a coluna **% da Taxa de Sobrevivência de LOH** indica 1%.
 
@@ -196,7 +197,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 coleta um evento AllocationTick disparado aproximadamente a cada 100 mil alocações. Em outras palavras, um evento é disparado sempre que um objeto grande é alocado. Em seguida, você pode observar uma das exibições de Alocação de Heap de GC, que mostra as pilhas de chamadas que alocaram objetos grandes:
 
-![Figura 6: Uma exibição de alocação de heap de GC](media/loh/perfview2.png)\
+![Captura de tela que mostra a exibição de heap de um coletor de lixo.](media/large-object-heap/garbage-collector-heap.png)
 Figura 6: Uma exibição de alocação de heap de GC
 
 Como você pode ver, esse é um teste muito simples que aloca apenas objetos grandes de seu método `Main`.

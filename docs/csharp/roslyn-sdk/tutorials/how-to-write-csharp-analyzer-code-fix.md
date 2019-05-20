@@ -3,12 +3,12 @@ title: 'Tutorial: crie seu primeiro analisador e correção de código'
 description: Este tutorial fornece instruções passo a passo para criar um analisador e correção de código usando o SDK do .NET Compiler (APIs do Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1a4280741650b41174f93c4403008ee3522adbe6
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427494"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452698"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: crie seu primeiro analisador e correção de código
 
@@ -195,7 +195,7 @@ Abra o arquivo **MakeConstCodeFixProvider.cs** adicionado pelo modelo.  Essa cor
 
 Em seguida, exclua o método `MakeUppercaseAsync`. Ele não se aplica mais.
 
-Todas as correções de código derivam de <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>. Todos eles substituem <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> para relatar as correções de código disponíveis. Em `RegisterCodeFixesAsync`, altere o tipo de nó ancestral pelo qual você está pesquisando para um <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> para corresponder ao diagnóstico:
+Todos os provedores de correção de código derivam de <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>. Todos eles substituem <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> para relatar as correções de código disponíveis. Em `RegisterCodeFixesAsync`, altere o tipo de nó ancestral pelo qual você está pesquisando para um <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> para corresponder ao diagnóstico:
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 

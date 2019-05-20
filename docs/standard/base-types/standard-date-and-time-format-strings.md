@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532182"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664634"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora padrão
 Uma cadeia de caracteres de formato de data e hora padrão usa um especificador de formato único para definir a representação do texto de um valor de data e hora. Qualquer cadeia de caracteres de formato de data e hora que contém mais de um caractere, incluindo espaço em branco, é interpretada como uma cadeia de caracteres de formato de data e hora personalizado. Para obter mais informações, consulte [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Uma cadeia de caracteres de formato padrão ou personalizado pode ser usada de duas maneiras:  
   
--   Para definir a cadeia de caracteres que resulta de uma operação de formatação.  
+- Para definir a cadeia de caracteres que resulta de uma operação de formatação.  
   
--   Para definir a representação de texto de um valor de data e hora que possa ser convertido em valor de <xref:System.DateTime> ou <xref:System.DateTimeOffset> por uma operação de análise.  
+- Para definir a representação de texto de um valor de data e hora que possa ser convertido em valor de <xref:System.DateTime> ou <xref:System.DateTimeOffset> por uma operação de análise.  
 
 > [!TIP]
 >  É possível baixar o [Utilitário de Formatação](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), um aplicativo que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado.  
@@ -63,17 +63,17 @@ Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto c
   
  Se uma cadeia de caracteres de formato padrão em uma operação de formatação aponta para uma cadeia de caracteres de formato personalizado de uma cultura, seu aplicativo pode definir a cultura específica cujas cadeias de caracteres de formato personalizado são usadas de uma dessas maneiras:  
   
--   Você pode usar a cultura padrão (ou atual). O exemplo a seguir exibe uma data usando o formato de data abreviada da cultura atual. Nesse caso, a cultura atual é en-US.  
+- Você pode usar a cultura padrão (ou atual). O exemplo a seguir exibe uma data usando o formato de data abreviada da cultura atual. Nesse caso, a cultura atual é en-US.  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   Você pode passar um objeto <xref:System.Globalization.CultureInfo> que representa a cultura cuja formatação deve ser usada para um método que possua um parâmetro <xref:System.IFormatProvider>. O exemplo a seguir exibe uma data usando o formato de data abreviada da cultura pt-BR.  
+- Você pode passar um objeto <xref:System.Globalization.CultureInfo> que representa a cultura cuja formatação deve ser usada para um método que possua um parâmetro <xref:System.IFormatProvider>. O exemplo a seguir exibe uma data usando o formato de data abreviada da cultura pt-BR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   Você pode passar um objeto <xref:System.Globalization.DateTimeFormatInfo> que fornece informações de formatação para um método que possua um parâmetro <xref:System.IFormatProvider>. O exemplo a seguir exibe uma data usando o formato de data abreviada de um objeto <xref:System.Globalization.DateTimeFormatInfo> para a cultura hr-HR.  
+- Você pode passar um objeto <xref:System.Globalization.DateTimeFormatInfo> que fornece informações de formatação para um método que possua um parâmetro <xref:System.IFormatProvider>. O exemplo a seguir exibe uma data usando o formato de data abreviada de um objeto <xref:System.Globalization.DateTimeFormatInfo> para a cultura hr-HR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -135,7 +135,7 @@ Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto c
  [Voltar à tabela](#table)  
   
 <a name="FullDateShortTime"></a>   
-## <a name="the-full-date-short-time-f-format-specifier"></a>Especificador de formato de data completa e hora abreviada ("f")  
+## <a name="the-full-date-short-time-f-format-specifier"></a>Especificador de formato de data completa e hora abreviada (“f”)  
  O especificador de formato padrão "f" representa uma combinação dos padrões de data completa ("D") e hora abreviada ("t"), separados por um espaço.  
   
  A cadeia de caracteres do resultado é afetada pelas informações de formatação de um objeto <xref:System.Globalization.DateTimeFormatInfo> específico. A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador personalizado de formato retornado pelas propriedades <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> e <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.  
@@ -242,24 +242,24 @@ Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto c
  [Voltar à tabela](#table)  
   
 <a name="Roundtrip"></a>   
-## <a name="the-round-trip-o-o-format-specifier"></a>Especificador de formato de ida e volta ("O", "o")  
+## <a name="the-round-trip-o-o-format-specifier"></a>Especificador de formato da viagem de ida e volta ("O", "o")  
  O especificador de formato padrão "O" ou "o" representa uma cadeia de caracteres de data e hora personalizada usando um padrão que preserva as informações de fuso horário e emite uma cadeia de caracteres de resultado compilada com ISO 8601. Para valores <xref:System.DateTime>, este especificador de formato foi projetado para manter valores de data e hora junto à propriedade <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> no texto. A cadeia de caracteres formatada pode ser analisada de volta usando o método <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> ou <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> quando o parâmetro `styles` está definido como <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>.  
   
  O especificador de formato padrão “O” ou “o” corresponde à cadeia de caracteres de formato personalizado "aaaa'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK" para valores <xref:System.DateTime> e à cadeia de caracteres de formato personalizado "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzzz" para valores <xref:System.DateTimeOffset>. Nesta cadeia de caracteres, os pares de aspas simples que delimitam caracteres individuais, como hifens, dois-pontos e a letra "T", indicam que o caractere individual é literal e não pode ser alterado. As aspas simples em si não aparecem na cadeia de caracteres de saída.  
   
  O especificador de formato "O" ou "o" padrão (e a cadeia de caracteres de formato personalizado "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK") aproveita as três maneiras do ISO 8601 representar as informações de fuso horário para preservar a propriedade <xref:System.DateTime.Kind%2A> dos valores <xref:System.DateTime>:  
   
--   O componente de fuso horário dos valores de data e hora <xref:System.DateTimeKind.Local?displayProperty=nameWithType> é um deslocamento em relação ao UTC (por exemplo, +01:00, -07:00). Todos os valores <xref:System.DateTimeOffset> também estão representados nesse formato.  
+- O componente de fuso horário dos valores de data e hora <xref:System.DateTimeKind.Local?displayProperty=nameWithType> é um deslocamento em relação ao UTC (por exemplo, +01:00, -07:00). Todos os valores <xref:System.DateTimeOffset> também estão representados nesse formato.  
   
--   O componente de fuso horário dos valores de data e hora <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> usa "Z" (que significa deslocamento zero) para representar o UTC.  
+- O componente de fuso horário dos valores de data e hora <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> usa "Z" (que significa deslocamento zero) para representar o UTC.  
   
--   Os valores de data e hora <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> não têm informações de fuso horário.  
+- Os valores de data e hora <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> não têm informações de fuso horário.  
   
  Como o especificador de formato padrão "O" ou "o" está de acordo com um padrão internacional, a operação de formatação ou análise que usa o especificador sempre usa a cultura invariável e o calendário gregoriano.  
   
  As cadeias de caracteres passadas para os métodos `Parse`, `TryParse`, `ParseExact` e `TryParseExact` de <xref:System.DateTime> e <xref:System.DateTimeOffset> podem ser analisadas usando o especificador de formato "O" ou "o", caso estejam em um desses formatos. No caso de objetos <xref:System.DateTime>, a sobrecarga de análise chamada também inclui um parâmetro `styles` com um valor de <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>. Se chamar um método de análise com a cadeia de caracteres de formato personalizado correspondente ao especificador de formato "O" ou "o", você não terá os mesmos resultados de "O" ou "o". Isso porque os métodos de análise que usam uma cadeia de caracteres de formato personalizado não podem analisar a representação da cadeia de caracteres de valores de data e hora que não tenham um componente de fuso horário ou usem "Z" para indicar o UTC.  
   
- O exemplo a seguir usa o especificador de formato "o" para exibir uma série de valores <xref:System.DateTime> e um valor <xref:System.DateTimeOffset> em um sistema no Fuso horário do Pacífico.  
+ O exemplo a seguir usa o especificador de formato "o" para exibir uma série de valores <xref:System.DateTime> e um valor <xref:System.DateTimeOffset> em um sistema nos EUA. Fuso horário do Pacífico.  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
@@ -285,7 +285,7 @@ Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto c
   
  Embora o padrão RFC 1123 expresse a hora no formato UTC (Hora Universal Coordenada), a operação de formatação não altera o valor do objeto <xref:System.DateTime> que está sendo formatado. Assim, você deve converter o valor de <xref:System.DateTime> em UTC ao chamar o método <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> antes de executar a operação de formatação. Em contraste, os valores de <xref:System.DateTimeOffset> executam essa conversão automaticamente; não há necessidade de chamar o método <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> antes da operação de formatação.  
   
- O exemplo a seguir usa o especificador de formato "r" para exibir um <xref:System.DateTime> e um valor <xref:System.DateTimeOffset> em um sistema no Fuso horário do Pacífico.  
+ O exemplo a seguir usa o especificador de formato "r" para exibir um valor <xref:System.DateTime> e <xref:System.DateTimeOffset> em um sistema nos EUA. Fuso horário do Pacífico.  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  
@@ -300,7 +300,7 @@ Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto c
   
  Quando esse especificador de formato padrão é usado, a operação de formatação ou análise sempre usa a cultura invariável.  
   
- O exemplo a seguir usa o especificador de formato "s" para exibir um <xref:System.DateTime> e um valor <xref:System.DateTimeOffset> em um sistema no Fuso horário do Pacífico.  
+ O exemplo a seguir usa o especificador de formato "s" para exibir um valor <xref:System.DateTime> e <xref:System.DateTimeOffset> em um sistema nos EUA. Fuso horário do Pacífico.  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]  
@@ -348,7 +348,7 @@ Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto c
  [Voltar à tabela](#table)  
   
 <a name="UniversalSortable"></a>   
-## <a name="the-universal-sortable-u-format-specifier"></a>Especificador de formato classificável universal ("u")  
+## <a name="the-universal-sortable-u-format-specifier"></a>Especificador de formato classificável universal ("u").  
  O especificador de formato padrão “u" representa uma cadeia de caracteres de formato de data e hora personalizado que é definida pela propriedade <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A?displayProperty=nameWithType>. O padrão reflete um padrão definido e a propriedade é somente leitura. Portanto, ele é sempre o mesmo, independentemente da cultura usada ou do provedor de formato fornecido. A cadeia de caracteres de formato personalizado é "aaaa'-'MM'-'dd HH':'mm':'ss'Z'". Quando esse especificador de formato padrão é usado, a operação de formatação ou análise sempre usa a cultura invariável.  
   
  Embora a cadeia de caracteres de resultado deva expressar a hora no formato UTC, nenhuma conversão do valor de <xref:System.DateTime> original é executada durante a operação de formatação. Assim, você deve converter um valor de <xref:System.DateTime> em UTC ao chamar o método <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> antes de formatá-lo.  Em contraste, os valores de <xref:System.DateTimeOffset> executam essa conversão automaticamente; não há necessidade de chamar o método <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> antes da operação de formatação.  
@@ -361,7 +361,7 @@ Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto c
  [Voltar à tabela](#table)  
   
 <a name="UniversalFull"></a>   
-## <a name="the-universal-full-u-format-specifier"></a>Especificador de formato completo universal ("U")  
+## <a name="the-universal-full-u-format-specifier"></a>Especificador de formato completo universal ("U").  
  O especificador de formato padrão “U” representa uma cadeia de caracteres de formato de data e hora personalizado que é definida pela propriedade <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> de uma cultura específica. O padrão é o mesmo que o padrão "F". Entretanto, o valor de <xref:System.DateTime> é automaticamente convertido em UTC antes de ser formatado.  
   
  A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador de formato personalizado que é retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de algumas culturas não pode usar todas as propriedades.  

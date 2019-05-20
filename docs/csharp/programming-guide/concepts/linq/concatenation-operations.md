@@ -2,19 +2,19 @@
 title: Operações de concatenação (C#)
 ms.date: 07/20/2015
 ms.assetid: 890ee104-c590-457e-8a7f-b2b5da0fb417
-ms.openlocfilehash: 7b9ed736de44c92f927fd47105f72631b07af825
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3df591e6c69ac764656aa193404a435900f7ffa7
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530071"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064058"
 ---
 # <a name="concatenation-operations-c"></a>Operações de concatenação (C#)
 A concatenação refere-se a operação de acrescentar uma sequência à outra.  
   
  A ilustração a seguir mostra uma operação de concatenação em duas sequências de caracteres.  
   
- ![Gráfico mostrando a concatenação de duas sequências.](../../../../csharp/programming-guide/concepts/linq/media/concat.png "Concat")  
+ ![Gráfico mostrando a concatenação de duas sequências.](./media/concatenation-operations/concatenation-two-sequences.png)  
   
  Os métodos de operador de consulta padrão que realizam a concatenação estão listados na seção a seguir.  
   

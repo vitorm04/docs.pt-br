@@ -1,15 +1,13 @@
 ---
 title: Aplicando abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda como a CQRS é implementada no microsserviço de pedidos no eShopOnContainers.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc8c27c25fb6d07207586eb65d5ac9cc543bcc1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613194"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875906"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicar abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers
 
@@ -19,7 +17,7 @@ A essência desses padrões e o ponto importante aqui é que as consultas são i
 
 Portanto, você pode usar um modelo de dados de "leituras" diferente do que o modelo de domínio “gravações” de lógica transacional, mesmo que os microsserviços de pedidos estejam usando o mesmo banco de dados. Portanto, essa é uma abordagem de CQRS simplificada.
 
-Por outro lado, comandos, que disparam transações e atualizações de dados, alteram o estado no sistema. Com os comandos, é necessário ter cuidado ao lidar com a complexidade e com regras de negócio em constante mudança. É aí que você aplica as técnicas DDD para ter um sistema modelado melhor.
+Por outro lado, comandos, que disparam transações e atualizações de dados, alteram o estado no sistema. Com os comandos, é necessário ter cuidado ao lidar com a complexidade e com regras de negócio em constante mudança. É o local em que você deseja aplicar as técnicas DDD para ter um sistema modelado melhor.
 
 Os padrões DDD apresentados neste guia não devem ser aplicados universalmente. Eles apresentam restrições em seu design. Essas restrições oferecem benefícios como maior qualidade com o tempo, principalmente em comandos e outro código que modifica o estado do sistema. No entanto, essas restrições adicionam complexidade com menos benefícios para ler e consultar dados.
 
@@ -46,20 +44,11 @@ Há apenas uma arquitetura de aplicativo: a arquitetura do sistema ou o aplicati
 - **Martin Fowler. CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Greg Young. CQS vs. CQRS** \
-  <http://codebetter.com/gregyoung/2009/08/13/command-query-separation/>
-
 - **Greg Young. Documentos CQRS** \
-  [https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
-
-- **Greg Young. CQRS, interfaces do usuário baseadas em tarefa e Fornecimento de Eventos** \
-  <http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/>
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
 - **Udi Dahan. CQRS esclarecida** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
-
-- **ES (Fornecimento de Eventos)** \
-  <http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/>
 
 >[!div class="step-by-step"]
 >[Anterior](apply-simplified-microservice-cqrs-ddd-patterns.md)

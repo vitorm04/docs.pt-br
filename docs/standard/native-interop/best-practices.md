@@ -4,12 +4,12 @@ description: Saiba mais sobre as práticas recomendadas para fazer interface com
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196652"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063087"
 ---
 # <a name="native-interoperability-best-practices"></a>Práticas recomendadas de interoperabilidade nativa
 
@@ -33,7 +33,7 @@ As diretrizes nesta seção se aplicam a todos os cenários de interoperabilidad
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  manter padrão  | Quando esta configuração é definida como false, valores de retorno HRESULT com falha serão considerados exceções (e o valor de retorno na definição torna-se nulo).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | depende da API  | Defina esta configuração como true se a API usa GetLastError e usa Marshal.GetLastWin32Error para obter o valor. Se a API definir uma condição que informa um erro, obtenha o erro antes de fazer outras chamadas para evitar que ele seja sobrescrito inadvertidamente.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, que reverte para o comportamento `CharSet.Ansi`  | Use explicitamente `CharSet.Unicode` ou `CharSet.Ansi` quando os caracteres ou cadeias de caracteres estiverem presentes na definição | Isso especifica o comportamento de marshalling de cadeias de caracteres e o que `ExactSpelling` faz quando `false`. Note que `CharSet.Ansi` é na verdade UTF8 no Unix. O Windows usa Unicode a _maior parte_ do tempo, enquanto o Unix usa UTF8. Veja mais informações na [documentação sobre conjuntos de caracteres](./charset.md). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, que reverte para o comportamento `CharSet.Ansi`  | Use explicitamente `CharSet.Unicode` ou `CharSet.Ansi` quando os caracteres ou cadeias de caracteres estiverem presentes na definição | Isso especifica o comportamento de marshaling de cadeias de caracteres e o que `ExactSpelling` faz quando `false`. Note que `CharSet.Ansi` é na verdade UTF8 no Unix. O Windows usa Unicode a _maior parte_ do tempo, enquanto o Unix usa UTF8. Veja mais informações na [documentação sobre conjuntos de caracteres](./charset.md). |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Defina como true e obtenha um pequeno benefício de desempenho: o tempo de execução não irá buscar por nomes de função alternativos com o sufixo "A" ou "W" dependendo do valor da configuração `CharSet` ("A" para `CharSet.Ansi` e "W" para `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Parâmetros de cadeia de caracteres
@@ -44,7 +44,7 @@ Lembre-se de marcar `[DllImport]` como `Charset.Unicode`, a menos que você quei
 
 **❌ NÃO** use parâmetros `[Out] string`. Os parâmetros de cadeia de caracteres passados por valor com o atributo `[Out]` podem desestabilizar o tempo de execução se a cadeia de caracteres for uma cadeia de caracteres internada. Veja mais informações sobre a centralização da cadeia de caracteres na documentação do <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌ EVITE** parâmetros `StringBuilder`. O marshalling de `StringBuilder` *sempre* cria uma cópia do buffer nativo. Dessa forma, ele pode ser extremamente ineficiente. Veja o cenário típico da chamada de uma API do Windows que usa uma cadeia de caracteres:
+**❌ EVITE** parâmetros `StringBuilder`. Marshaling de `StringBuilder` *sempre* cria uma cópia do buffer nativo. Dessa forma, ele pode ser extremamente ineficiente. Veja o cenário típico da chamada de uma API do Windows que usa uma cadeia de caracteres:
 
 1. Criar um SB da capacidade desejada (aloca capacidade gerenciada) **{1}**
 2. Chamar
@@ -57,11 +57,11 @@ Ou seja, *{4}* alocações para obter uma cadeia de caracteres fora do código n
 
 O outro problema com `StringBuilder` é que esta configuração sempre copia o buffer de retorno de volta para o primeiro nulo. Se a cadeia de caracteres transmitida não estiver terminada, ou terminar por dois caracteres nulos, na melhor das hipóteses, o recurso P/Invoke estará incorreto.
 
-Se você *usar* o `StringBuilder`, uma última pegadinha é que a capacidade **não** inclui um nulo oculto, que é sempre contabilizado na interoperabilidade. É comum as pessoas entenderem errado, já que a maioria das APIs deseja o tamanho do buffer, *incluindo* o valor nulo. Isso pode resultar em alocações desnecessárias/desperdiçadas. Além disso, essa pegadinha evita que o tempo de execução otimize o marshalling de `StringBuilder` para minimizar as cópias.
+Se você *usar* o `StringBuilder`, uma última pegadinha é que a capacidade **não** inclui um nulo oculto, que é sempre contabilizado na interoperabilidade. É comum as pessoas entenderem errado, já que a maioria das APIs deseja o tamanho do buffer, *incluindo* o valor nulo. Isso pode resultar em alocações desnecessárias/desperdiçadas. Além disso, esse problema impede que o tempo de execução otimize o marshaling de `StringBuilder` para minimizar as cópias.
 
 **✔️ CONSIDERE** usar `char[]`s de um `ArrayPool`.
 
-Para saber mais sobre o marshalling de cadeia de caracteres, confira [Marshalling padrão para cadeia de caracteres](../../framework/interop/default-marshaling-for-strings.md) e [Personalizar o marshalling de cadeia de caracteres](customize-parameter-marshalling.md#customizing-string-parameters).
+Para obter mais informações sobre o marshaling de cadeia de caracteres, veja [Marshaling padrão para cadeias de caracteres](../../framework/interop/default-marshaling-for-strings.md) e [Personalizando marshaling de cadeia de caracteres](customize-parameter-marshaling.md#customizing-string-parameters).
 
 > __Específico do Windows__  
 > Para cadeias de caracteres `[Out]`, a CLR usará `CoTaskMemFree` por padrão para liberar cadeias de caracteres, ou `SysStringFree` para cadeias de caracteres que são marcadas como `UnmanagedType.BSTR`.  
@@ -73,7 +73,7 @@ Para saber mais sobre o marshalling de cadeia de caracteres, confira [Marshallin
 
 ## <a name="boolean-parameters-and-fields"></a>Parâmetros e campos boolianos
 
-É fácil cometer erros com boolianos. Por padrão, um `bool`.NET realiza marshalling para um `BOOL` Windows, onde é um valor de 4 bytes. No entanto, os tipos `_Bool` e `bool` em C e C++ são um byte *único*. Isso pode dificultar o rastreamento de bugs, já que metade do valor de retorno será descartado, o que só *potencialmente* alterará o resultado. Para saber mais sobre como realizar marshalling de valores .NET `bool` para os tipos C ou C ++ `bool`, consulte a documentação sobre [ como personalizar o marshalling de campos boolianos](customize-struct-marshalling.md#customizing-boolean-field-marshalling).
+É fácil cometer erros com boolianos. Por padrão, o marshaling de um `bool` .NET é realizado para um Windows `BOOL`, em que é um valor de 4 bytes. No entanto, os tipos `_Bool` e `bool` em C e C++ são um byte *único*. Isso pode dificultar o rastreamento de bugs, já que metade do valor de retorno será descartado, o que só *potencialmente* alterará o resultado. Para obter mais informações sobre o marshaling de valores do `bool` .NET para tipos `bool` C ou C++, veja a documentação sobre como [personalizar marshaling de campo booliano](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
 
 ## <a name="guids"></a>GUIDs
 
@@ -87,7 +87,7 @@ Os GUIDs podem ser usados diretamente em assinaturas. Muitas APIs do Windows usa
 
 ## <a name="blittable-types"></a>Tipos blittable
 
-Os tipos blittable são tipos que têm a mesma representação em nível de bits no código gerenciado e nativo. Dessa forma, eles não precisam ser convertidos em outro formato para serem organizados de e para código nativo, e como isso melhora o desempenho, eles devem ter a preferência.
+Os tipos blittable são tipos que têm a mesma representação em nível de bits no código gerenciado e nativo. Como tal, eles não precisam ser convertidos em outro formato para serem empacotados para e do código nativo e, uma vez que isso melhora o desempenho, eles devem ter preferência.
 
 **Tipos blittable:**
 
@@ -126,7 +126,7 @@ Você pode verificar se um tipo é blittable pela tentativa de criar um `GCHandl
 Para obter mais informações, consulte:
 
 - [Tipos blittable e não blittable](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [Marshalling dos tipos](type-marshalling.md)
+- [Marshaling de Tipo](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Manter objetos gerenciados ativos
 
@@ -210,7 +210,7 @@ Um `PVOID`Windows que é um `void*` C pode passar por marshalling como `IntPtr` 
 
 As structs gerenciadas são criadas e não são removidas até o método retornar. Por definição, elas são "fixadas" (não serão movidas pelo GC). Você também pode simplesmente pegar o endereço em blocos de código não seguros se o código nativo não usar o ponteiro após o final do método atual.
 
-As estruturas blittable têm um melhor desempenho, pois podem simplesmente ser usadas diretamente pela camada de marshalling. Tente tornar structs blittable (por exemplo, evite `bool`). Para saber mais, veja a seção [Tipos blittable](#blittable-types).
+Structs blittable são muito mais eficazes, pois simplesmente podem ser usados de modo direto pela camada de marshaling. Tente tornar structs blittable (por exemplo, evite `bool`). Para saber mais, veja a seção [Tipos blittable](#blittable-types).
 
 *Se* a struct é blittable, use `sizeof()` em vez de `Marshal.SizeOf<MyStruct>()` para melhor desempenho. Como mencionado acima, você pode validar que o tipo é blittable ao tentar criar um `GCHandle` fixado. Se o tipo não for uma cadeia de caracteres ou considerado blittable, `GCHandle.Alloc` lançara `ArgumentException`.
 
@@ -245,4 +245,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-No entanto, existem algumas armadilhas com buffers fixos. Os buffers fixos de tipos não blittable não serão empacotados corretamente, então a matriz in-loco precisa ser expandido para múltiplos campos individuais. Além disso, no .NET Framework e .NET Core antes de 3.0, se uma struct contendo um campo de buffer fixo estiver aninhada em uma struct não blittable, não será realizado um marshalling correto do campo de buffer fixo para o código nativo.
+No entanto, existem algumas armadilhas com buffers fixos. Buffers fixos de tipos não blittable não serão empacotados corretamente, portanto, a matriz no local precisa ser expandida para vários campos individuais. Além disso, no .NET Framework e no .NET Core antes da versão 3.0, se um struct contendo um campo de buffer fixo for aninhado dentro de um struct não blittable, não será realizado o marshaling correto do campo de buffer fixo para código nativo.

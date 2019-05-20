@@ -3,12 +3,12 @@ title: Classes e objetos em C# - um tour pela linguagem C#
 description: Novato em C#? Leia esta visão geral de classes, objetos e herança
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 6f06a43b60a1101e5583ffa85bd948c69679943b
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 681ed03661bf54dcb1e7e70735a53a553763c95c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921241"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750394"
 ---
 # <a name="classes-and-objects"></a>Classes e objetos
 
@@ -33,42 +33,42 @@ Os membros de uma classe são membros estáticos ou membros de instância. Os me
 O exemplo a seguir fornece uma visão geral dos tipos de membros que uma classe pode conter.
 
 * Constantes
-    - Valores constantes associados à classe
+  - Valores constantes associados à classe
 * Campos
-    - Variáveis de classe
+  - Variáveis de classe
 * Métodos
-    - Os cálculos e as ações que podem ser executados pela classe
+  - Os cálculos e as ações que podem ser executados pela classe
 * Propriedades
-    - Ações associadas à leitura e à gravação de propriedades nomeadas da classe
+  - Ações associadas à leitura e à gravação de propriedades nomeadas da classe
 * Indexadores
-    - Ações associadas a instâncias de indexação da classe como uma matriz
+  - Ações associadas a instâncias de indexação da classe como uma matriz
 * Eventos
-    - Notificações que podem ser geradas pela classe
+  - Notificações que podem ser geradas pela classe
 * Operadores
-    - Operadores de conversões e expressão com suporte da classe
+  - Operadores de conversões e expressão com suporte da classe
 * Construtores
-    - Ações necessárias para inicializar instâncias da classe ou a própria classe
+  - Ações necessárias para inicializar instâncias da classe ou a própria classe
 * Finalizadores
-    - Ações a serem executadas antes de as instâncias da classe serem descartadas permanentemente
+  - Ações a serem executadas antes de as instâncias da classe serem descartadas permanentemente
 * Tipos
-    - Tipos aninhados declarados pela classe
+  - Tipos aninhados declarados pela classe
 
 ## <a name="accessibility"></a>Acessibilidade
 
 Cada membro de uma classe tem uma acessibilidade associada, que controla as regiões de texto do programa que são capazes de acessar o membro. Existem seis formas possíveis de acessibilidade. Elas são resumidas abaixo.
 
 * `public`
-    - Acesso não limitado
+  - Acesso não limitado
 * `protected`
-    - Acesso limitado a essa classe ou classes derivadas dessa classe
+  - Acesso limitado a essa classe ou classes derivadas dessa classe
 * `internal`
-    - Acesso limitado ao assembly atual (.exe, .dll, etc.)
+  - Acesso limitado ao assembly atual (.exe, .dll, etc.)
 * `protected internal`
-    - Acesso limitado à classe recipiente, classes derivadas da classe recipiente ou classes dentro do mesmo assembly
+  - Acesso limitado à classe recipiente, classes derivadas da classe recipiente ou classes dentro do mesmo assembly
 * `private`
-    - Acesso limitado a essa classe
+  - Acesso limitado a essa classe
 * `private protected`
-    - Acesso limitado à classe ou classes recipiente derivadas do tipo recipiente dentro do mesmo assembly
+  - Acesso limitado à classe ou classes recipiente derivadas do tipo recipiente dentro do mesmo assembly
 
 ## <a name="type-parameters"></a>Parâmetros de tipo
 
@@ -230,7 +230,7 @@ O C# dá suporte aos construtores estáticos e de instância. Um *construtor de 
 
 Um construtor é declarado como um método sem nenhum tipo de retorno e o mesmo nome que a classe continente. Se uma declaração de construtor inclui um modificador estático, ela declara um construtor estático. Caso contrário, ela declara um construtor de instância.
 
-Os construtores de instância podem ser sobrecarregados e podem ter parâmetros opcionais. Por exemplo, a classe `MyList<T>` declara dois construtores de instância, um sem parâmetros e um que utiliza um parâmetro `int`. Os construtores de instância são invocados usando o operador `new`. As seguintes instruções alocam duas instâncias `MyList<string>` usando o construtor da classe `MyList` com e sem o argumento opcional.
+Construtores de instância podem ser sobrecarregados e ter parâmetros opcionais. Por exemplo, a classe `MyList<T>` declara um construtor de instância com um único parâmetro `int` opcional. Os construtores de instância são invocados usando o operador `new`. As seguintes instruções alocam duas instâncias `MyList<string>` usando o construtor da classe `MyList` com e sem o argumento opcional.
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 

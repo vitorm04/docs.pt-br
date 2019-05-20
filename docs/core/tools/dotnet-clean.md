@@ -1,17 +1,21 @@
 ---
 title: Comando dotnet clean
 description: O comando dotnet clean limpa o diretório atual.
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/14/2019
+ms.openlocfilehash: 3e735c02c9be9b6f51a8cdf048c18eff34f838cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169853"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754131"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
+**Este tópico aplica-se a: ✓** SDK do .NET Core 1.x e versões posteriores
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Nome
 
@@ -20,7 +24,7 @@ ms.locfileid: "53169853"
 ## <a name="synopsis"></a>Sinopse
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -30,9 +34,9 @@ O comando `dotnet clean` limpará a saída da compilação anterior. Ele é impl
 
 ## <a name="arguments"></a>Arguments
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-O projeto do MSBuild a ser limpo. Se um arquivo de projeto não for especificado, o MSBuild pesquisará o diretório de trabalho atual em busca de um arquivo que tem uma extensão de arquivo que termina em *proj* e que usa esse arquivo.
+O projeto do MSBuild ou a solução para limpar. Se um arquivo de solução ou projeto não for especificado, o MSBuild pesquisará no diretório de trabalho atual por um arquivo que tenha uma extensão terminada em *proj* ou *sln* e usará esse arquivo.
 
 ## <a name="options"></a>Opções
 
@@ -48,9 +52,13 @@ O projeto do MSBuild a ser limpo. Se um arquivo de projeto não for especificado
 
   Imprime uma ajuda breve para o comando.
 
+* **`--interactive`**
+
+  Permite que o comando pare e aguarde entrada ou ação do usuário. Por exemplo, para concluir a autenticação. Disponível desde o SDK do .NET Core 3.0.
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  O diretório no qual as saídas compiladas são colocadas. Especifique a opção `-f|--framework <FRAMEWORK>` com a opção de diretório de saída se você tiver especificado a estrutura durante a compilação do projeto.
+  O diretório que contém os artefatos de build a serem limpos. Especifique a opção `-f|--framework <FRAMEWORK>` com a opção de diretório de saída se você tiver especificado a estrutura durante a compilação do projeto.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -58,7 +66,7 @@ O projeto do MSBuild a ser limpo. Se um arquivo de projeto não for especificado
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Define o nível de detalhes do comando. Os níveis permitidos são q[uiet], m[inimal], n[ormal], d[etailed] e diag[nostic].
+  Define o nível de detalhamento do MSBuild. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O padrão é `normal`.
 
 ## <a name="examples"></a>Exemplos
 

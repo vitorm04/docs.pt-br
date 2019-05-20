@@ -3,12 +3,12 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos na versão 7.0 da linguagem C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481295"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753064"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
@@ -194,7 +194,7 @@ Para saber mais, confira o artigo [Palavra-chave ref](../language-reference/keyw
 
 ## <a name="local-functions"></a>Funções locais
 
-Muitos designs para classes incluem métodos que são chamados de apenas um local. Esses métodos privados adicionais mantêm cada método pequeno e focado. As *funções locais* permitem que você declare métodos dentro do contexto de outro método. As funções locais facilitam para os leitores da classe verem que o método local é chamado apenas no contexto em que ele é declarado.
+Muitos designs para classes incluem métodos que são chamados de apenas um local. Esses métodos privados adicionais mantêm cada método pequeno e focado. As *funções locais* permitem que você declare métodos dentro do contexto de outro método. Funções locais tornam mais fácil para os leitores da classe verem que o método local é chamado apenas do contexto em que é declarado.
 
 Há dois casos de uso muito comuns para funções locais: métodos iteradores públicos e métodos assíncronos públicos. Ambos os tipos de métodos de geram código que relata os erros mais tarde do que os programadores podem esperar. Em métodos iteradores, as exceções são observadas apenas ao chamar o código que enumera a sequência retornada. Em métodos assíncronos, as exceções são observadas apenas quando a `Task` retornada é aguardada. O seguinte exemplo demonstra a validação de parâmetro de separação da implementação do iterador usando uma função local:
 

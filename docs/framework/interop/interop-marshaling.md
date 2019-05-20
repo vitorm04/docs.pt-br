@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677208"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469710"
 ---
 # <a name="interop-marshaling"></a>Realizando marshaling de interoperabilidade
 <a name="top"></a> O marshaling de interoperabilidade controla como os dados são passados em argumentos de método e valores retornados entre memória gerenciada e não gerenciada e durante chamadas. O marshaling de interoperabilidade é uma atividade de tempo de execução executada pelo serviço de marshaling do Common Language Runtime.  
@@ -24,23 +24,23 @@ ms.locfileid: "57677208"
   
  Esta visão geral contém as seguintes seções:  
   
--   [Invocação de plataforma e modelos de interoperabilidade COM](#platform_invoke_and_com_interop_models)  
+- [Invocação de plataforma e modelos de interoperabilidade COM](#platform_invoke_and_com_interop_models)  
   
--   [Marshaling e apartments COM](#marshaling_and_com_apartments)  
+- [Marshaling e apartments COM](#marshaling_and_com_apartments)  
   
--   [Marshaling de chamadas remotas](#marshaling_remote_calls)  
+- [Marshaling de chamadas remotas](#marshaling_remote_calls)  
   
--   [Tópicos relacionados](#related_topics)  
+- [Tópicos relacionados](#related_topics)  
   
--   [Referência](#reference)  
+- [Referência](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>Invocação de plataforma e modelos de interoperabilidade COM  
  O common language runtime fornece dois mecanismos para interoperação com código não gerenciado:  
   
--   Invocação de plataforma, que permite que o código gerenciado chame funções exportadas de uma biblioteca não gerenciada.  
+- Invocação de plataforma, que permite que o código gerenciado chame funções exportadas de uma biblioteca não gerenciada.  
   
--   Interoperabilidade COM, que permite que o código gerenciado interaja com objetos COM (Component Object Model) por meio de interfaces.  
+- Interoperabilidade COM, que permite que o código gerenciado interaja com objetos COM (Component Object Model) por meio de interfaces.  
   
  Tanto a invocação de plataforma quanto a interoperabilidade COM usam marshaling de interoperabilidade para mover com precisão os argumentos de método entre o chamador e o receptor e vice-versa, se necessário. Conforme mostra a ilustração a seguir, uma chamada de método de invocação de plataforma flui do código gerenciado para código não gerenciado e nunca na direção contrária, exceto quando [funções de retorno de chamada](callback-functions.md) estão envolvidas. Embora as chamadas de invocação de plataforma possam fluir somente de código gerenciado para código não gerenciado, os dados podem fluir em ambas as direções como parâmetros de entrada ou de saída. As chamadas de método de interoperabilidade COM podem fluir em ambas as direções.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "57677208"
  Se você planeja exportar um servidor gerenciado, lembre-se de que o cliente COM determina o apartment do servidor. Um servidor gerenciado chamado por um cliente COM inicializado em um MTA deve assegurar acesso thread-safe.  
   
 ### <a name="managed-clients-and-com-servers"></a>Clientes gerenciados e servidores COM  
- A configuração padrão para apartments de cliente gerenciado é MTA; no entanto, o tipo de aplicativo do cliente .NET pode alterar a configuração padrão. Por exemplo, a configuração de apartment de um cliente [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] é STA. Você pode usar uma das propriedades <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> ou <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> para examinar e alterar a configuração de apartment de um cliente gerenciado.  
+ A configuração padrão para apartments de cliente gerenciado é MTA; no entanto, o tipo de aplicativo do cliente .NET pode alterar a configuração padrão. Por exemplo, a configuração de apartment de um cliente do Visual Basic é STA. Você pode usar uma das propriedades <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> ou <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> para examinar e alterar a configuração de apartment de um cliente gerenciado.  
   
  O autor do componente define a afinidade do thread de um servidor COM. A tabela a seguir mostra as combinações de configurações de apartment de clientes .NET e servidores COM. Ele também mostra os requisitos de marshaling resultantes para as combinações.  
   
@@ -86,9 +86,9 @@ ms.locfileid: "57677208"
   
  Para realizar marshaling entre apartments, você pode fazer o seguinte:  
   
--   Aceite a sobrecarga de marshaling de apartment cruzada, que é perceptível somente quando há muitas chamadas entre dos limites. Você deve registrar a biblioteca de tipos do componente COM para que chamadas cruzem o limite do apartment com êxito.  
+- Aceite a sobrecarga de marshaling de apartment cruzada, que é perceptível somente quando há muitas chamadas entre dos limites. Você deve registrar a biblioteca de tipos do componente COM para que chamadas cruzem o limite do apartment com êxito.  
   
--   Altere o thread principal, definindo o thread de cliente para STA ou MTA. Por exemplo, se o cliente C# chama muitos componentes COM STA, você pode evitar marshaling entre apartments definindo o thread principal para STA.  
+- Altere o thread principal, definindo o thread de cliente para STA ou MTA. Por exemplo, se o cliente C# chama muitos componentes COM STA, você pode evitar marshaling entre apartments definindo o thread principal para STA.  
   
     > [!NOTE]
     >  Depois que o thread de um cliente C# for definido para STA, chamadas para componentes COM MTA exigirão marshaling entre apartments.  
@@ -101,9 +101,9 @@ ms.locfileid: "57677208"
 ## <a name="marshaling-remote-calls"></a>Marshaling de chamadas remotas  
  Assim como ocorre com marshaling entre apartments, o marshaling COM está envolvido em cada chamada entre código gerenciado e código não gerenciado e sempre que os objetos residem em processos separados. Por exemplo:  
   
--   Um cliente COM que invoca um servidor gerenciado em um host remoto usa COM distribuído (DCOM).  
+- Um cliente COM que invoca um servidor gerenciado em um host remoto usa COM distribuído (DCOM).  
   
--   Um cliente gerenciado que chama um servidor COM em um host remoto usa DCOM.  
+- Um cliente gerenciado que chama um servidor COM em um host remoto usa DCOM.  
   
  A ilustração a seguir mostra como o marshaling de interoperabilidade e o marshaling COM fornecem canais de comunicação entre os limites de processo e de host.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57677208"
   
  Nessa ilustração:  
   
--   Um cliente não gerenciado obtém uma referência para um objeto COM de um objeto gerenciado que obtém essa referência de um host remoto. O mecanismo de comunicação remota é DCOM.  
+- Um cliente não gerenciado obtém uma referência para um objeto COM de um objeto gerenciado que obtém essa referência de um host remoto. O mecanismo de comunicação remota é DCOM.  
   
--   Um cliente gerenciado obtém uma referência para um objeto gerenciado de um objeto COM que obtém essa referência de um host remoto. O mecanismo de comunicação remota é DCOM.  
+- Um cliente gerenciado obtém uma referência para um objeto gerenciado de um objeto COM que obtém essa referência de um host remoto. O mecanismo de comunicação remota é DCOM.  
   
     > [!NOTE]
     >  A biblioteca de tipos exportada do servidor gerenciado deve ser registrada.  

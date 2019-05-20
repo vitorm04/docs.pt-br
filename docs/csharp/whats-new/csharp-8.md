@@ -2,12 +2,12 @@
 title: Novidades no C# 8.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo foi atualizado com a versão prévia 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427273"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754369"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -321,7 +321,7 @@ Experimente você mesmo os fluxos assíncronos em nosso tutorial sobre como [cri
 
 Intervalos e índices fornecem uma sintaxe sucinta para especificar subintervalos em uma matriz, <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601>.
 
-Você pode especificar um índice **do final**. Especifique **do final** usando o operador `^`. Você está familiarizado com `array[2]` significando o elemento "2 desde o início". Agora, `array[^2]` significa o elemento "2 desde o final". O índice `^0` significa "final", ou o índice que segue o último elemento.
+Você pode especificar um índice **do final** usando o caractere `^` antes do índice. A indexação do final começa da regra que `0..^0` especifica o intervalo inteiro. Para enumerar uma matriz inteira, você inicia *no primeiro elemento* e continua até você *passar do último elemento*. Pense no comportamento do método `MoveNext` em um enumerador: ele retorna falso quando a enumeração passa do último elemento. O índice `^0` significa "o fim", `array[array.Length]`, ou o índice que segue o último elemento. Você está familiarizado com `array[2]` significando o elemento "2 desde o início". Agora, `array[^2]` significa o elemento "2 desde o final". 
 
 Você pode especificar um **intervalo** com o **operador de intervalo**: `..`. Por exemplo, `0..^0` especifica todo o intervalo da matriz: 0 desde o início até, mas não incluindo, 0 do final. Qualquer operando pode usar "desde o início" ou "desde o final". Além disso, qualquer operando pode ser omitido. Os padrões são `0` para o índice de início, e `^0` para o índice final.
 
@@ -340,7 +340,7 @@ var words = new string[]
     "the",      // 6                   ^3
     "lazy",     // 7                   ^2
     "dog"       // 8                   ^1
-};
+};              // 9 (or words.Length) ^0
 ```
 
 O índice de cada elemento reforça o conceito de "do início" e "do final", e que os intervalos excluem o fim do intervalo. O "início" de toda a matriz é o primeiro elemento. O "final" de toda a matriz ocorre *após* o último elemento.
@@ -383,3 +383,5 @@ Em seguida, o intervalo pode ser usado dentro dos caracteres `[` e `]`:
 ```csharp
 var text = words[phrase];
 ```
+
+Você pode explorar mais sobre índices e intervalos do tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).

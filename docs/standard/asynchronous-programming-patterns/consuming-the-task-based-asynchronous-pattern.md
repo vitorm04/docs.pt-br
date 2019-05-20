@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188114"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628896"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Consumindo o padrão assíncrono baseado em tarefa
 
@@ -101,13 +101,13 @@ var cts = new CancellationTokenSource();
 
  Essa abordagem para o cancelamento tem várias vantagens:
 
--   Você pode passar o mesmo token de cancelamento para qualquer número de operações síncronas e assíncronas.
+- Você pode passar o mesmo token de cancelamento para qualquer número de operações síncronas e assíncronas.
 
--   A mesma solicitação de cancelamento pode ser proliferada para qualquer número de ouvintes.
+- A mesma solicitação de cancelamento pode ser proliferada para qualquer número de ouvintes.
 
--   O desenvolvedor da API assíncrona tem total controle com relação ao cancelamento poder ou não ser solicitado e a quando isso pode entrar em vigor.
+- O desenvolvedor da API assíncrona tem total controle com relação ao cancelamento poder ou não ser solicitado e a quando isso pode entrar em vigor.
 
--   O código que consome a API pode, seletivamente, determinar as invocações assíncronas para as quais as solicitações de cancelamento serão propagadas.
+- O código que consome a API pode, seletivamente, determinar as invocações assíncronas para as quais as solicitações de cancelamento serão propagadas.
 
 ## <a name="monitoring-progress"></a>Monitorando o progresso
  Alguns métodos assíncronos expõem progresso através de uma interface de progresso passada para o método assíncrono.  Por exemplo, considere uma função que baixa de forma assíncrona uma cadeia de caracteres de texto e, durante esse processo, emite atualizações de progresso que incluem o percentual de download concluído até o momento.  Tal método poderia ser consumido em um aplicativo do WPF (Windows Presentation Foundation) da seguinte maneira:
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  Você pode usar o método <xref:System.Threading.Tasks.Task.WhenAny%2A> para aguardar de forma assíncrona apenas uma de várias operações assíncronas que são representadas como tarefas.  Esse método tem quatro casos de uso principais:
 
--   Redundância: executar uma operação várias vezes e selecionar aquela que é concluída primeiro (por exemplo, entrando em contato com vários serviços Web de cotação de ações que produzirão um único resultado e selecionar aquele que termina mais rápido).
+- Redundância:  executar uma operação várias vezes e selecionar aquela que termina primeiro (por exemplo, entrando em contato com vários serviços Web de cotação de ações que produzirão um único resultado e selecionar aquele que termina mais rápido).
 
--   Intercalação: iniciar várias operações e aguardar que todas eles sejam concluídas, mas processando-as conforme são concluídas.
+- Intercalação:  iniciar várias operações e aguardar que todas elas sejam concluídas, mas processando-as conforme são concluídas.
 
--   Limitação: permitir que operações adicionais comecem conforme outras forem concluídas.  Essa é uma extensão do cenário de intercalação.
+- Limitação:  permitir que operações adicionais comecem conforme outras forem concluídas.  Essa é uma extensão do cenário de intercalação.
 
--   Saída precoce: por exemplo, uma operação representada pela tarefa t1 pode ser agrupada em uma tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A> com outra tarefa t2 e você pode aguardar na tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A>. A tarefa t2 pode representar um tempo limite, um cancelamento ou algum outro sinal que faça com que a tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A> seja concluída antes de t1.
+- Esgotamento precoce:  por exemplo, uma operação representada pela tarefa t1 pode ser agrupada em uma tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A> com outra tarefa t2. Você pode esperar a tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A>. A tarefa t2 pode representar um tempo limite, um cancelamento ou algum outro sinal que faça com que a tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A> seja concluída antes de t1.
 
 #### <a name="redundancy"></a>Redundância
  Considere um caso em que você deseja tomar uma decisão sobre a possibilidade de comprar uma ação.  Há diversos serviços Web de recomendação de compra de ações nos quais você confia, mas dependendo da carga diária, cada serviço pode acabar sendo lento em horários diferentes.  Você pode usar o método <xref:System.Threading.Tasks.Task.WhenAny%2A> para receber uma notificação quando qualquer operação for concluída:
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Além disso, mesmo que uma primeira tarefa seja concluída com êxito, as tarefas subsequentes poderão falhar.  Neste ponto, você tem várias opções para lidar com exceções: você pode esperar até que todas as tarefas iniciadas tenham sido concluídas, caso em que você pode usar o método <xref:System.Threading.Tasks.Task.WhenAll%2A>, ou você pode decidir que todas as exceções são importantes e devem estar conectadas.  Para isso, você pode usar as continuações para receber uma notificação quando tarefas foram concluídas de forma assíncrona:
+ Além disso, mesmo que uma primeira tarefa seja concluída com êxito, as tarefas subsequentes poderão falhar.  Neste ponto, você tem várias opções para lidar com exceções:  Você pode esperar até que todas as tarefas iniciadas sejam concluídas, caso em que você pode usar o método <xref:System.Threading.Tasks.Task.WhenAll%2A>, ou pode decidir que todas as exceções são importantes e devem ser registradas em log.  Para isso, você pode usar as continuações para receber uma notificação quando tarefas foram concluídas de forma assíncrona:
 
 ```csharp
 foreach(Task recommendation in recommendations)

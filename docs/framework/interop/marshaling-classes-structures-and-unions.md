@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113718"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469723"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling de classes, estruturas e uniões
 Estruturas e classes são semelhantes no .NET Framework. Ambas podem ter campos, propriedades e eventos. Elas também podem ter métodos estáticos e não estáticos. Uma diferença importante é que estruturas são tipos de valor e classes são tipos de referência.  
@@ -50,19 +50,19 @@ Estruturas e classes são semelhantes no .NET Framework. Ambas podem ter campos,
   
  A amostra de Structs usa as seguintes funções não gerenciadas, mostradas com a sua declaração de função original:  
   
--   **TestStructInStruct** exportado de PinvokeLib.dll.  
+- **TestStructInStruct** exportado de PinvokeLib.dll.  
   
     ```  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
--   **TestStructInStruct3** exportado de PinvokeLib.dll.  
+- **TestStructInStruct3** exportado de PinvokeLib.dll.  
   
     ```  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
--   **TestArrayInStruct** exportado de PinvokeLib.dll.  
+- **TestArrayInStruct** exportado de PinvokeLib.dll.  
   
     ```  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
@@ -98,23 +98,23 @@ typedef struct _MYARRAYSTRUCT
   
  As estruturas gerenciadas `MyPerson`, `MyPerson2`, `MyPerson3` e `MyArrayStruct` têm as seguintes características:  
   
--   `MyPerson` contém apenas membros de cadeia de caracteres. O campo [CharSet](specifying-a-character-set.md) define as cadeias de caracteres em formato ANSI quando passadas para a função não gerenciada.  
+- `MyPerson` contém apenas membros de cadeia de caracteres. O campo [CharSet](specifying-a-character-set.md) define as cadeias de caracteres em formato ANSI quando passadas para a função não gerenciada.  
   
--   `MyPerson2` contém uma **IntPtr** para a estrutura `MyPerson`. O tipo **IntPtr** substitui o ponteiro original para a estrutura não gerenciada porque aplicativos do .NET Framework não usam ponteiros, a menos que o código esteja marcado como **não seguro**.  
+- `MyPerson2` contém uma **IntPtr** para a estrutura `MyPerson`. O tipo **IntPtr** substitui o ponteiro original para a estrutura não gerenciada porque aplicativos do .NET Framework não usam ponteiros, a menos que o código esteja marcado como **não seguro**.  
   
--   `MyPerson3` contém `MyPerson` como uma estrutura inserida. Uma estrutura inserida em outra estrutura pode ser mesclada colocando-se os elementos da estrutura inserida diretamente para a estrutura principal ou pode ser deixada como uma estrutura inserida, o que é feito neste exemplo.  
+- `MyPerson3` contém `MyPerson` como uma estrutura inserida. Uma estrutura inserida em outra estrutura pode ser mesclada colocando-se os elementos da estrutura inserida diretamente para a estrutura principal ou pode ser deixada como uma estrutura inserida, o que é feito neste exemplo.  
   
--   `MyArrayStruct` contém uma matriz de inteiros. O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> define o valor de enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para **ByValArray**, que é usado para indicar o número de elementos na matriz.  
+- `MyArrayStruct` contém uma matriz de inteiros. O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> define o valor de enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para **ByValArray**, que é usado para indicar o número de elementos na matriz.  
   
  Para todas as estruturas nesta amostra, o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> é aplicado para garantir que os membros sejam organizados na memória em sequência, na ordem em que aparecem.  
   
  A classe `LibWrap` contém protótipos gerenciados para os métodos `TestStructInStruct`, `TestStructInStruct3` e `TestArrayInStruct` chamados pela classe `App`. Cada protótipo declara um único parâmetro, da seguinte maneira:  
   
--   `TestStructInStruct` declara uma referência ao tipo `MyPerson2` como seu parâmetro.  
+- `TestStructInStruct` declara uma referência ao tipo `MyPerson2` como seu parâmetro.  
   
--   `TestStructInStruct3` declara o tipo `MyPerson3` como seu parâmetro e passa o parâmetro por valor.  
+- `TestStructInStruct3` declara o tipo `MyPerson3` como seu parâmetro e passa o parâmetro por valor.  
   
--   `TestArrayInStruct` declara uma referência ao tipo `MyArrayStruct` como seu parâmetro.  
+- `TestArrayInStruct` declara uma referência ao tipo `MyArrayStruct` como seu parâmetro.  
   
  Estruturas como argumentos para métodos são passadas por valor, a menos que o parâmetro contenha a palavra-chave **ref** (**ByRef** no Visual Basic). Por exemplo, o método `TestStructInStruct` passa uma referência (o valor de um endereço) para um objeto do tipo `MyPerson2` para código não gerenciado. Para manipular a estrutura para a qual `MyPerson2` aponta, a amostra cria um buffer de tamanho especificado e retorna o endereço dele combinando os métodos <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> e <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>. Em seguida, a amostra copia o conteúdo da estrutura gerenciada para o buffer não gerenciado. Por fim, a amostra usa o método <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> para realizar marshaling de dados do buffer não gerenciado para um objeto gerenciado e o método <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> para liberar o bloco de memória não gerenciado.  
   
@@ -133,7 +133,7 @@ typedef struct _MYARRAYSTRUCT
   
  A amostra de FindFile usa a seguinte função não gerenciada, mostrada com a respectiva declaração de função original:  
   
--   **FindFirstFile** exportado de Kernel32.dll.  
+- **FindFirstFile** exportado de Kernel32.dll.  
   
     ```  
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
@@ -176,7 +176,7 @@ typedef struct _WIN32_FIND_DATA
   
  A amostra de Unions usa a seguinte função não gerenciada, mostrada com a respectiva declaração de função original:  
   
--   **TestUnion** exportado de PinvokeLib.dll.  
+- **TestUnion** exportado de PinvokeLib.dll.  
   
     ```  
     void TestUnion(MYUNION u, int type);  
@@ -219,7 +219,7 @@ union MYUNION2
   
  A amostra de SysTime usa a seguinte função não gerenciada, mostrada com a respectiva declaração de função original:  
   
--   **GetSystemTime** exportado de Kernel32.dll.  
+- **GetSystemTime** exportado de Kernel32.dll.  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -266,17 +266,17 @@ typedef struct _MYSTRSTRUCT2
   
  A classe `MyStruct` contém um objeto de cadeia de caracteres ANSI. O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica o formato ANSI. `MyUnsafeStruct` é uma estrutura que contém um tipo <xref:System.IntPtr> em vez de uma cadeia de caracteres.  
   
- A classe `LibWrap` contém o método de protótipo `TestOutArrayOfStructs` sobrecarregado. Se um método declara um ponteiro como um parâmetro, a classe deve ser marcada com a palavra-chave `unsafe`. Já que [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] não é capaz de usar o código não seguro, o método sobrecarregado, o modificador não seguro e a estrutura `MyUnsafeStruct` são desnecessários.  
+ A classe `LibWrap` contém o método de protótipo `TestOutArrayOfStructs` sobrecarregado. Se um método declara um ponteiro como um parâmetro, a classe deve ser marcada com a palavra-chave `unsafe`. Já que Visual Basic não é capaz de usar código não gerenciado, o método sobrecarregado, o modificador não seguro e a estrutura `MyUnsafeStruct` são desnecessários.  
   
  A classe `App` implementa o método `UsingMarshaling`, que executa todas as tarefas necessárias para passar a matriz. A matriz é marcada com a palavra-chave `out` (`ByRef` no Visual Basic) para indicar que os dados passam do receptor para o chamador. A implementação usa os seguintes métodos de classe <xref:System.Runtime.InteropServices.Marshal>:  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> para realizar marshaling de dados do buffer não gerenciado para um objeto gerenciado.  
+- <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> para realizar marshaling de dados do buffer não gerenciado para um objeto gerenciado.  
   
--   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> para liberar a memória reservada para cadeias de caracteres na estrutura.  
+- <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> para liberar a memória reservada para cadeias de caracteres na estrutura.  
   
--   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> para liberar a memória reservada para a matriz.  
+- <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> para liberar a memória reservada para a matriz.  
   
- Como mencionado anteriormente, o C# permite código não seguro e o [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] não. Na amostra do C#, `UsingUnsafePointer` é uma implementação de método alternativo que usa ponteiros em vez da classe <xref:System.Runtime.InteropServices.Marshal> para passar de volta a matriz que contém a estrutura `MyUnsafeStruct`.  
+ Como mencionado anteriormente, o C# permite código não gerenciado e o Visual Basic não. Na amostra do C#, `UsingUnsafePointer` é uma implementação de método alternativo que usa ponteiros em vez da classe <xref:System.Runtime.InteropServices.Marshal> para passar de volta a matriz que contém a estrutura `MyUnsafeStruct`.  
   
 ### <a name="declaring-prototypes"></a>Declarando Protótipos  
  [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)]

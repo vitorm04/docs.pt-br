@@ -3,12 +3,12 @@ title: O padrão de eventos atualizado do .NET Core Event
 description: Saiba como o padrão de evento do .NET Core permite flexibilidade com compatibilidade com versões anteriores e como implementar processamento de eventos seguro com assinantes assíncronos.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188476"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751779"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>O padrão de eventos atualizado do .NET Core Event
 
@@ -23,9 +23,23 @@ O programa funcionará exatamente da mesma forma.
 
 Você também pode alterar o `SearchDirectoryArgs` para um struct, se você fizer mais uma alteração:
 
-[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
+```csharp
+internal struct SearchDirectoryArgs
+{
+    internal string CurrentSearchDirectory { get; }
+    internal int TotalDirs { get; }
+    internal int CompletedDirs { get; }
 
-A alteração adicional é chamar o construtor padrão antes de inserir o construtor que inicializa todos os campos. Sem esse acréscimo, as regras de C# informariam que as propriedades estão sendo acessadas antes de terem sido atribuídas.
+    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs) : this()
+    {
+        CurrentSearchDirectory = dir;
+        TotalDirs = totalDirs;
+        CompletedDirs = completedDirs;
+    }
+}
+```
+
+A alteração adicional é chamar o construtor sem parâmetro antes de inserir o construtor que inicializa todos os campos. Sem esse acréscimo, as regras de C# informariam que as propriedades estão sendo acessadas antes de terem sido atribuídas.
 
 Você não deve alterar o `FileFoundArgs` de uma classe (tipo de referência) para um struct (tipo de valor). Isso ocorre porque o protocolo para manipular cancelamentos exige que os argumentos do evento sejam passados por referência. Se você fizesse a mesma alteração, a classe de pesquisa de arquivo nunca observaria as alterações feitas por qualquer um dos assinantes do evento. Uma nova cópia da estrutura seria usada para cada assinante e essa cópia seria uma cópia diferente daquela vista pelo objeto de pesquisa de arquivo.
 
@@ -37,7 +51,7 @@ Seguindo uma lógica semelhante, qualquer tipo de argumento de evento criado ago
 
 ## <a name="events-with-async-subscribers"></a>Eventos com assinantes assíncronos
 
-Você tem um último padrão para aprender: como escrever corretamente os assinantes do evento que chamam o código assíncrono. O desafio é descrito no artigo em [async e await](async.md). Métodos assíncronos podem ter um tipo de retorno nulo, mas isso não é recomendável. Quando seu código de assinante de evento chama um método assíncrono, você não terá outra escolha além de criar um método `async void`. A assinatura do manipulador de eventos o exige.
+Você tem um último padrão para aprender: Como escrever corretamente os assinantes do evento que chamam o código assíncrono. O desafio é descrito no artigo em [async e await](async.md). Métodos assíncronos podem ter um tipo de retorno nulo, mas isso não é recomendável. Quando seu código de assinante de evento chama um método assíncrono, você não terá outra escolha além de criar um método `async void`. A assinatura do manipulador de eventos o exige.
 
 Você precisa conciliar essas diretrizes opostas. De alguma forma, você precisa criar um método `async void` seguro. As noções básicas do padrão que você precisa implementar estão abaixo:
 

@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94c266c3e44f87d8c8503bcf15789723116460df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301120"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753817"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (Referência de C#)
 
 Os seguintes operadores executam operações aritméticas com tipos numéricos:
 
-- Operadores unários [`++` (incremento)](#increment-operator-), [`--` (decremento)](#decrement-operator---), [`+` (adição)](#unary-plus-and-minus-operators) e [`-` (subtração)](#unary-plus-and-minus-operators).
-- Operadores binários [`*` (multiplicação)](#multiplication-operator-), [`/` (divisão)](#division-operator-), [`%` (resto)](#remainder-operator-), [`+` (adição)](#addition-operator-) e [`-` (subtração)](#subtraction-operator--).
+- Operadores unários [`++` (incremento)](#increment-operator-), [`--` (decremento)](#decrement-operator---), [`+` (adição)](#unary-plus-and-minus-operators) e [`-` (subtração)](#unary-plus-and-minus-operators)
+- Operadores binários [`*` (multiplicação)](#multiplication-operator-), [`/` (divisão)](#division-operator-), [`%` (resto)](#remainder-operator-), [`+` (adição)](#addition-operator-) e [`-` (subtração)](#subtraction-operator--)
 
 Esses operadores dão suporte a todos os tipos numéricos [integrais](../keywords/integral-types-table.md) e de [ponto flutuante](../keywords/floating-point-types-table.md).
 
@@ -163,23 +163,6 @@ O operador de subtração `-` subtrai o segundo operando do primeiro operando:
 
 Você também pode usar o operador `-` para a remoção de delegado. Para obter mais informações, confira o artigo [Operador `-`](subtraction-operator.md).
 
-## <a name="operator-precedence-and-associativity"></a>Precedência e associatividade do operador
-
-A seguinte lista ordena os operadores aritméticos da precedência mais alta para a mais baixa:
-
-- Operadores de incremento `x++` e decremento `x--` pós-fixados.
-- Operadores de incremento `++x` e de decremento `--x` pré-fixados e operadores unários `+` e `-`.
-- Operadores de multiplicação `*`, `/` e `%`.
-- Operadores de adição `+` e `-`.
-
-Operadores aritméticos binários são associativos à esquerda. Ou seja, os operadores com o mesmo nível de precedência são avaliados da esquerda para a direita.
-
-Use parênteses, `()`, para alterar a ordem de avaliação imposta pela precedência e pela capacidade de associação do operador.
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-Para obter a lista completa de operadores do C# ordenada pelo nível de precedência, confira [Operadores do C#](index.md).
-
 ## <a name="compound-assignment"></a>Atribuição composta
 
 Para um operador binário `op`, uma expressão de atribuição composta do formato
@@ -200,7 +183,28 @@ O seguinte exemplo demonstra o uso da atribuição composta com operadores aritm
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
+Devido a [promoções numéricas](~/_csharplang/spec/expressions.md#numeric-promotions), o resultado da operação `op` pode não ser implicitamente conversível no tipo `T` de `x`. Nesse caso, se `op` for um operador predefinido e o resultado da operação for explicitamente convertido no tipo `T` de `x`, uma expressão de atribuição composta da forma `x op= y` será equivalente a `x = (T)(x op y)`, exceto que `x` será avaliada apenas uma vez. O exemplo a seguir demonstra esse comportamento:
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+
 Use também os operadores `+=` e `-=` para assinar e cancelar a assinatura de [eventos](../keywords/event.md). Para obter mais informações, confira [Como assinar e cancelar a assinatura de eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+## <a name="operator-precedence-and-associativity"></a>Precedência e associatividade do operador
+
+A seguinte lista ordena os operadores aritméticos da precedência mais alta para a mais baixa:
+
+- Incluir um pós-fixo a operadores de incremento `x++` e decremento `x--`
+- Incluir um prefixo a operadores de incremento `++x` e de decremento `--x` e operadores unários `+` e `-`
+- Operadores de multiplicação `*`, `/` e `%`
+- Operadores de adição `+` e `-`
+
+Operadores aritméticos binários são associativos à esquerda. Ou seja, os operadores com o mesmo nível de precedência são avaliados da esquerda para a direita.
+
+Use parênteses, `()`, para alterar a ordem de avaliação imposta pela precedência e pela capacidade de associação do operador.
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+Para obter a lista completa de operadores do C# ordenada pelo nível de precedência, confira [Operadores do C#](index.md).
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>Estouro aritmético e divisão por zero
 
@@ -256,6 +260,7 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Operador de subtração](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Atribuição composta](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Os operadores verificados e não verificados](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [Promoções numéricas](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>Consulte também
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965547"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452674"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
 Os namespaces são usados intensamente em programas em C# de duas maneiras. Em primeiro lugar, as classes do .NET Framework usam namespaces para organizar suas muitas classes. Em segundo lugar, declarar seus próprios namespaces pode ajudar a controlar o escopo dos nomes de classe e de método em projetos de programação maiores.  
@@ -39,7 +39,7 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
  [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>Usando namespaces para controlar o escopo  
- A palavra-chave `namespace` é usada para declarar um escopo. A capacidade de criar escopos dentro de seu projeto ajuda a organizar o código e permite que você crie tipos globalmente exclusivos. No exemplo a seguir, uma classe denominada `SampleClass` é definida em dois namespaces, um aninhado no outro. O [. Operador](../../../csharp/language-reference/operators/member-access-operator.md) é usado para diferenciar qual método será chamado.  
+ A palavra-chave `namespace` é usada para declarar um escopo. A capacidade de criar escopos dentro de seu projeto ajuda a organizar o código e permite que você crie tipos globalmente exclusivos. No exemplo a seguir, uma classe denominada `SampleClass` é definida em dois namespaces, um aninhado no outro. O [operador `.` de acesso de membro](../../language-reference/operators/member-access-operators.md#member-access-operator-) é usado para diferenciar qual método é chamado.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -52,13 +52,13 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
  No segmento de código anterior:  
   
--   O namespace `N1` é um membro do namespace global. Seu nome totalmente qualificado é `N1`.  
+- O namespace `N1` é um membro do namespace global. Seu nome totalmente qualificado é `N1`.  
   
--   O namespace `N2` é um membro de `N1`. Seu nome totalmente qualificado é `N1.N2`.  
+- O namespace `N2` é um membro de `N1`. Seu nome totalmente qualificado é `N1.N2`.  
   
--   A classe `C1` é um membro de `N1`. Seu nome totalmente qualificado é `N1.C1`.  
+- A classe `C1` é um membro de `N1`. Seu nome totalmente qualificado é `N1.C1`.  
   
--   O nome de classe `C2` é usado duas vezes nesse código. No entanto, os nomes totalmente qualificados são exclusivos. A primeira instância da `C2` é declarada dentro de `C1`, portanto, seu nome totalmente qualificado é: `N1.C1.C2`. A segunda instância da `C2` é declarada dentro de um namespace `N2`, portanto, seu nome totalmente qualificado é: `N1.N2.C2`.  
+- O nome de classe `C2` é usado duas vezes nesse código. No entanto, os nomes totalmente qualificados são exclusivos. A primeira instância da `C2` é declarada dentro de `C1`, portanto, seu nome totalmente qualificado é: `N1.C1.C2`. A segunda instância da `C2` é declarada dentro de um namespace `N2`, portanto, seu nome totalmente qualificado é: `N1.N2.C2`.  
   
  Usando o segmento de código anterior, você pode adicionar um novo membro de classe `C3` ao namespace `N1.N2`, da seguinte maneira:  
   
@@ -93,6 +93,6 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
 - [Palavras-chave de namespace](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [. ??](../../../csharp/language-reference/operators/member-access-operator.md)
+- [. ??](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [:: ??](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

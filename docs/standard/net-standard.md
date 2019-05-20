@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755208"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -27,9 +27,9 @@ As diversas implementações do .NET se destinam a versões específicas do .NET
 
 ## <a name="net-implementation-support"></a>Suporte à implementação do .NET
 
-A tabela a seguir lista as versões mínimas de plataforma compatíveis com cada versão do .NET Standard.
+A seguinte tabela lista as versões de plataforma **mínimas** que dão suporte a cada versão do .NET Standard. Isso significa que versões posteriores de uma plataforma listada também dão suporte para a versão correspondente do .NET Standard. Por exemplo, o .NET Core 2.2 dá suporte ao .NET Standard 2.0 e anteriores.
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 Para localizar a versão mais recente do .NET Standard para a qual você pode direcionar, siga estas etapas:
 

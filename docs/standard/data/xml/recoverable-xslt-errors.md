@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202979"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590051"
 ---
 # <a name="recoverable-xslt-errors"></a>Erros recuperáveis XSLT
 A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as áreas no qual o provedor de implementação pode decidir como manipular uma situação. Essas áreas são consideradas como comportamento arbitrário. Por exemplo, em instruções de processamento criadoras da seção 7,3, XSLT 1,0 estados de recomendação que é um erro se criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto. Para alguns problemas, a recomendação XSLT 1,0 indica o que a decisão deve ser feita se o processador decidir recuperar de erro. Para o problema da seção 7,3, o W3C com a implementação pode recuperar esse erro ignorando os nós e seu conteúdo.  
@@ -18,11 +18,11 @@ A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as 
 ## <a name="discretionary-behaviors"></a>Comportamentos arbitrários  
  A tabela a seguir lista cada um dos comportamentos arbitrários permitidas pela recomendação XSLT 1,0, e como esses comportamentos são tratados pela classe de <xref:System.Xml.Xsl.XslCompiledTransform> .  
   
--   Recupere indica que a classe de <xref:System.Xml.Xsl.XslCompiledTransform> recuperar esse erro. O evento de <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> pode ser usado para relatar todos os eventos do processador XSLT.  
+- Recupere indica que a classe de <xref:System.Xml.Xsl.XslCompiledTransform> recuperar esse erro. O evento de <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> pode ser usado para relatar todos os eventos do processador XSLT.  
   
--   O erro indica que uma exceção é gerada para essa condição.  
+- O erro indica que uma exceção é gerada para essa condição.  
   
--   As referências da seção podem ser encontradas em [Recomendação de transformações XSL (XSLT) de W3C da versão 1.0](https://www.w3.org/TR/xslt) e a [Errata da especificação de transformações XSL (XSLT) de W3C da versão 1.0](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+- As referências da seção podem ser encontradas em [Recomendação de transformações XSL (XSLT) de W3C da versão 1.0](https://www.w3.org/TR/xslt) e a [Errata da especificação de transformações XSL (XSLT) de W3C da versão 1.0](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Condição XSLT|Seção|Comportamento de XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  
@@ -37,7 +37,7 @@ A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as 
 |Criando nós diferentes de nós de texto durante instanciação de conteúdo de atributo de `xsl:attribute` .|7.1.3|Error*|  
 |O atributo de `name` de `xsl:processing-instruction` não produz um NCName e um destino de instrução de processamento.|7.3|Error*|  
 |Criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto.|7.3|Error*|  
-|O resultado de criar uma instância do conteúdo de `xsl:processing-instruction` contém a cadeia de caracteres “?>”|7.3|Recupere|  
+|O resultado de instanciar o conteúdo do `xsl:processing-instruction` contém a cadeia de caracteres "?>"|7.3|Recupere|  
 |O resultado de criar uma instância do conteúdo de `xsl:processing-instruction` contém a cadeia de caracteres “--” ou termina com “-”.|7.4|Recupere|  
 |O resultado de criar uma instância do conteúdo de `xsl:comment` cria nós diferentes de nós de texto.|7.4|Error*|  
 |O modelo dentro de um elemento de variável associação retorna um nó de atributo ou um nó de namespace.|11.2|Error*|  

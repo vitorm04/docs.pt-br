@@ -3,12 +3,12 @@ title: Padrões de evento .NET padrão
 description: Saiba mais sobre como criar padrões de evento .NET e como criar origens de evento padrão, bem como assinar e processar os eventos padrão em seu código.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201242"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062958"
 ---
 # <a name="standard-net-event-patterns"></a>Padrões de evento .NET padrão
 
@@ -55,7 +55,7 @@ A maneira mais simples de adicionar um evento à sua classe é declarar esse eve
 
 [!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-Isso é semelhante à declaração de um campo público, o que parece ser uma prática ruim orientada a objetos. Você deseja proteger o acesso a dados por meio de propriedades ou métodos. Ao mesmo tempo em que isso se parece com uma prática ruim, o código gerado pelo compilador cria wrappers para que os objetos de evento só possam ser acessados de maneiras seguras. As únicas operações disponíveis em um evento semelhante a campo são adicionar manipulador:
+Isso é semelhante à declaração de um campo público, o que parece ser uma prática ruim orientada a objetos. Você deseja proteger o acesso a dados por meio de propriedades ou métodos. Embora isso possa parecer uma prática ruim, o código gerado pelo compilador cria wrappers para que os objetos de evento só possam ser acessados de maneiras seguras. As únicas operações disponíveis em um evento semelhante a campo são adicionar manipulador:
 
 [!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 

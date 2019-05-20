@@ -3,12 +3,12 @@ title: Introdução ao Docker
 description: Este artigo fornece uma visão geral e introdução ao Docker no contexto de um aplicativo .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: d0bce09d7acdcf474fbb8849c8fc82dae4a69598
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480723"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753298"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introdução ao .NET e ao Docker
 
@@ -73,4 +73,6 @@ Armazene e gerencie imagens de contêiner em todos os tipos de implantações do
 ## <a name="next-steps"></a>Próximas etapas
 
 * [Saiba como colocar em contêiner um aplicativo .NET Core.](build-docker-netcore-container.md)
+* [Aprenda a colocar em contêiner um aplicativo ASP.NET Core.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 * [Experimente o tutorial Saiba mais sobre o Microsserviço do ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+* [Saiba mais sobre as Ferramentas de Contêiner no Visual Studio](/visualstudio/containers/overview)

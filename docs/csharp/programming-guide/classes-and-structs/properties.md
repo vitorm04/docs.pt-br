@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676816"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583053"
 ---
 # <a name="properties-c-programming-guide"></a>Propriedades (Guia de Programação em C#)
 
@@ -54,21 +54,21 @@ O exemplo a seguir ilustra esse padrão. Neste exemplo, a classe `TimePeriod` re
 
 Em alguns casos, os acessadores `get` e `set` da propriedade apenas atribuem um valor ou recuperam um valor de um campo de suporte sem incluir nenhuma lógica adicional. Usando propriedades autoimplementadas, você pode simplificar o código enquanto o compilador C# fornece de forma transparente o campo de suporte para você. 
 
-Se uma propriedade tiver tanto um acessador `get` quanto um `set`, ambos deverão ser autoimplementados. Você define uma propriedade autoimplementada usando as palavras-chave `get` e `set` sem fornecer qualquer implementação. O exemplo a seguir repete o anterior, exceto que `Name` e `Price` são propriedades autoimplementadas. Observe que o exemplo também remove o construtor parametrizado, para que os objetos `SaleItem` agora sejam inicializados com uma chamada para o construtor padrão e um [inicializador de objeto](object-and-collection-initializers.md).
+Se uma propriedade tiver tanto um acessador `get` quanto um `set`, ambos deverão ser autoimplementados. Você define uma propriedade autoimplementada usando as palavras-chave `get` e `set` sem fornecer qualquer implementação. O exemplo a seguir repete o anterior, exceto que `Name` e `Price` são propriedades autoimplementadas. Observe que o exemplo também remove o construtor com parâmetros, de modo que objetos `SaleItem` agora são inicializados com uma chamada para o construtor sem parâmetros e um [inicializador de objeto](object-and-collection-initializers.md).
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>Seções relacionadas  
   
--   [Usando propriedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Usando propriedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [Propriedades de interface](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Propriedades de interface](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Comparação entre propriedades e indexadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Comparação entre propriedades e indexadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Restringindo a acessibilidade ao acessador](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Restringindo a acessibilidade ao acessador](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [Propriedades Autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Propriedades Autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 

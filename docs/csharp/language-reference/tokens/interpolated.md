@@ -2,7 +2,7 @@
 title: $ – interpolação de cadeia de caracteres – Referência de C#
 ms.custom: seodec18
 description: A interpolação de cadeia de caracteres oferece uma sintaxe mais legível e conveniente para formatar a saída de cadeia de caracteres de formatação do que a tradicional formatação composta da cadeia de caracteres.
-ms.date: 03/26/2018
+ms.date: 04/29/2019
 f1_keywords:
 - $_CSharpKeyword
 - $
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920890"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210425"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – interpolação de cadeia de caracteres (Referência de C#)
 
@@ -26,7 +26,7 @@ O caractere especial `$` identifica um literal de cadeia de caracteres como uma 
 
 A interpolação de cadeia de caracteres fornece uma sintaxe mais legível e conveniente para criar cadeias de caracteres formatadas do que o recurso de [formatação composta de cadeia de caracteres](../../../standard/base-types/composite-formatting.md). O exemplo a seguir usa os dois recursos para produzir o mesmo resultado:
 
-[!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
+[!code-csharp-interactive[compare with composite formatting](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
 ## <a name="structure-of-an-interpolated-string"></a>Estrutura de uma cadeia de caracteres interpolada
 
@@ -48,7 +48,7 @@ Os elementos entre colchetes são opcionais. A seguinte tabela descreve cada ele
 
 O exemplo a seguir usa os componentes opcionais de formatação descritos acima:
 
-[!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
+[!code-csharp-interactive[specify alignment and format string](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
 ## <a name="special-characters"></a>Caracteres especiais
 
@@ -58,7 +58,7 @@ Como os dois-pontos (":") têm um significado especial em um item de expressão 
 
 O seguinte exemplo mostra como incluir uma chave em uma cadeia de caracteres de resultado e como usar um operador condicional em uma expressão interpolada:
 
-[!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
+[!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
 Uma cadeia de caracteres interpolada textual começa com o caractere `$` seguido pelo caractere `@`. Para obter mais informações sobre cadeias de caracteres textuais, confira os tópicos [cadeia de caracteres](../keywords/string.md) e [identificador textual](verbatim.md).
 
@@ -83,11 +83,21 @@ Há três conversões implícitas de uma cadeia de caracteres interpolada:
 
 O exemplo a seguir usa a conversão implícita em <xref:System.FormattableString> para a criação de cadeias de caracteres de resultado específicas de cultura:
 
-[!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
+[!code-csharp-interactive[create culture-specific result strings](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-Se não estiver familiarizado com a interpolação de cadeia de caracteres, confira o tutorial [Interpolação de cadeia de caracteres no C# Interativo](../../tutorials/exploration/interpolated-strings.yml). Ou você pode tentar o tutorial de [Interpolação de cadeia de caracteres C#](../../tutorials/string-interpolation.md) localmente em seu computador.
+Se não estiver familiarizado com a interpolação de cadeia de caracteres, confira o tutorial [Interpolação de cadeia de caracteres no C# Interativo](../../tutorials/exploration/interpolated-strings.yml). Você também pode verificar outro tutorial de [interpolação de cadeia de caracteres C#](../../tutorials/string-interpolation.md) que demonstra como usar cadeias de caracteres interpoladas para produzir cadeias de caracteres formatadas.
+
+## <a name="compilation-of-interpolated-strings"></a>Compilação de cadeias de caracteres interpoladas
+
+Se uma cadeia de caracteres interpolada tiver o tipo `string`, ela normalmente será transformada em uma chamada de método <xref:System.String.Format%2A?displayProperty=nameWithType>. O compilador pode substituir <xref:System.String.Format%2A?displayProperty=nameWithType> por <xref:System.String.Concat%2A?displayProperty=nameWithType> se o comportamento analisado for equivalente à concatenação.
+
+Se uma cadeia de caracteres interpolada tiver o tipo <xref:System.IFormattable> ou <xref:System.FormattableString>, o compilador gerará uma chamada para o método <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType>.
+
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Para obter mais informações, consulte a seção [cadeias de caracteres interpoladas](~/_csharplang/spec/expressions.md#interpolated-strings) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -3,12 +3,12 @@ title: Trabalhando com LINQ
 description: Este tutorial ensina a gerar sequências com LINQ, escrever métodos para uso em consultas LINQ e diferenciar entre avaliação lenta e detalhada.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815577"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063221"
 ---
 # <a name="working-with-linq"></a>Trabalhando com LINQ
 
@@ -340,9 +340,9 @@ Além do LINQ, você aprendeu um pouco sobre uma técnica usada por mágicos par
 
 Para saber mais sobre o LINQ, consulte:
 - [LINQ (Consulta Integrada à Linguagem)](../programming-guide/concepts/linq/index.md)
-    - [Introdução ao LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [Introdução a LINQ em C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [Operações de consulta LINQ básica (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [Transformações de dados com LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [Sintaxe de consulta e sintaxe de método em LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [Recursos do C# que dão suporte a LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [Introdução ao LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+  - [Introdução a LINQ em C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+    - [Operações de consulta LINQ básica (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+    - [Transformações de dados com LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+    - [Sintaxe de consulta e sintaxe de método em LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+    - [Recursos do C# que dão suporte a LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

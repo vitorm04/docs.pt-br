@@ -3,12 +3,12 @@ title: Cria um cliente REST usando .NET Core
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612053"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063877"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -36,11 +36,10 @@ Será necessário instalar o editor de código de sua preferência. As descriç�
 
 ## <a name="create-the-application"></a>Criar o aplicativo
 
-A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o comando `dotnet new console` no prompt de comando. Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico.
+A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o comando `dotnet new console` no prompt de comando. Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico. Como esse é um novo projeto, nenhuma das dependências está em vigor, portanto, a primeira execução baixará o .NET Core Framework, instalará um certificado de desenvolvimento e executará o gerenciador de pacotes do NuGet para restaurar dependências ausentes.
 
-Antes de começar as modificações, vamos percorrer as etapas para execução do aplicativo simples Hello World. Depois de criar o aplicativo, digite `dotnet restore` ([veja a observação](#dotnet-restore-note)) no prompt de comando. Esse comando executa o processo de restauração do pacote NuGet. O NuGet é um gerenciador de pacotes do .NET. Esse comando baixa qualquer uma das dependências ausentes para seu projeto. Como esse é um novo projeto, nenhuma das dependências foram aplicadas, portanto, a primeira execução baixará a estrutura do .NET Core. Após essa etapa inicial, você só precisará executar o `dotnet restore` ([veja a observação](#dotnet-restore-note)) ao adicionar novos pacotes dependentes, ou atualizar as versões de qualquer uma de suas dependências.
-
-Depois de restaurar os pacotes, execute `dotnet build`. Isso executa o mecanismo de compilação e cria seu aplicativo. Por fim, execute `dotnet run` para executar o aplicativo.
+Antes de começar a fazer modificações, digite `dotnet run` ([veja a observação](#dotnet-restore-note)) no prompt de comando para executar seu aplicativo. `dotnet run` executará automaticamente `dotnet restore` se estiverem faltando dependências em seu ambiente. Ele também executará `dotnet build` se seu aplicativo precisar ser reconstruído.
+Após sua configuração inicial, você só precisará executar `dotnet restore` ou `dotnet build` quando fizer sentido para seu projeto.
 
 ## <a name="adding-new-dependencies"></a>Adicionar novas dependências
 
@@ -62,7 +61,7 @@ Adicione o seguinte logo após esta linha:
 
 A maioria dos editores de código fornece conclusão para versões diferentes dessas bibliotecas. Convém usar a versão mais recente de qualquer pacote que você adicionar. No entanto, é importante ter certeza de que as versões de todos os pacotes correspondam, e que também correspondam à versão da estrutura de aplicativo do .NET Core.
 
-Após fazer essas alterações, execute `dotnet restore` ([veja a observação](#dotnet-restore-note)) novamente para que o pacote seja instalado em seu sistema.
+Após fazer essas alterações, execute `dotnet restore` ([veja a observação](#dotnet-restore-note)) para que o pacote seja instalado em seu sistema.
 
 ## <a name="making-web-requests"></a>Como fazer solicitações da Web
 

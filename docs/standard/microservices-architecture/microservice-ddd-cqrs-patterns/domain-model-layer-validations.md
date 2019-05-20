@@ -1,15 +1,13 @@
 ---
 title: Projetando validações na camada de modelo de domínio
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Compreenda conceitos-chave de validações de modelo de domínio.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612700"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063017"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Projetar validações na camada de modelo de domínio
 
@@ -81,7 +79,7 @@ Existem várias abordagens para lidar com validações adiadas no domínio. Em s
 
 ### <a name="two-step-validation"></a>Validação de duas etapas
 
-Considere também a validação de duas etapas. Use a validação em nível de campo em seu comando de DTOs (Objetos de Transferência de Dados) e a validação em nível de domínio dentro de suas entidades. Você pode fazer isso retornando um objeto de resultado em vez de exceções para tornar mais fácil lidar com os erros de validação.
+Considere também a validação de duas etapas. Use a validação em nível de campo em seu comando de DTOs (Objetos de Transferência de Dados) e a validação em nível de domínio dentro de suas entidades. Você pode fazer isso retornando um objeto de resultado, em vez de exceções para tornar mais fácil lidar com os erros de validação.
 
 Usando a validação de campo com anotações de dados, por exemplo, você não duplica a definição de validação. A execução, no entanto, pode estar do lado do servidor e do lado do cliente no caso de DTOs (comandos e ViewModels, por exemplo).
 

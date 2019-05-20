@@ -1,23 +1,26 @@
 ---
 title: Pacote de distribuição do .NET Core
 description: Aprenda a empacotar, nomear e controlar a versão do .NET Core para distribuição.
-author: bleroy
-ms.date: 06/28/2017
+author: tmds
+ms.date: 03/02/2018
 ms.custom: seodec18
-ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: b961d84053dc41e75e002c8c12419fdef99ded4b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170412"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585252"
 ---
 # <a name="net-core-distribution-packaging"></a>Pacote de distribuição do .NET Core
 
-À medida que o .NET Core fica disponível em mais plataformas, é muito útil saber como empacotar, nomear e controlar a versão dele. Dessa forma, os mantenedores do pacote podem ajudar a garantir uma experiência consistente, independentemente de onde os usuários escolhem executar o .NET.
+À medida que o .NET Core fica disponível em mais plataformas, é muito útil saber como empacotar, nomear e controlar a versão dele. Dessa forma, os mantenedores do pacote podem ajudar a garantir uma experiência consistente, independentemente de onde os usuários escolhem executar o .NET. Este artigo é útil para usuários que estão:
+
+* Tentando criar o .NET Core com base na origem.
+* Querendo fazer alterações à CLI do .NET Core que poderiam afetar o layout resultante ou os pacotes produzidos.
 
 ## <a name="disk-layout"></a>Layout de disco
 
-Quando instalado, o .NET Core consiste em vários componentes que estão dispostos no sistema de arquivos conforme demonstrado a seguir:
+Quando instalado, o .NET Core consiste em vários componentes que são dispostos da seguinte maneira no sistema de arquivos:
 
 ```
 .
@@ -46,13 +49,13 @@ Quando instalado, o .NET Core consiste em vários componentes que estão dispost
 
 - (1) **dotnet** O host (também conhecido como o "muxer") tem duas funções distintas: ativar um tempo de execução para iniciar um aplicativo e ativar um SDK para enviar comandos a ele. O host é um executável nativo (`dotnet.exe`).
 
-Embora haja um único host, a maioria dos outros componentes está em diretórios com controle de versão (2,3,5,6). Isso significa que muitas versões podem estar presentes no sistema, já que elas são instaladas lado a lado.
+Embora haja um único host, a maioria dos outros componentes está em diretórios com controle de versão (2,3,5,6). Isso significa que várias versões podem estar presentes no sistema, pois são instaladas lado a lado.
 
-- (2) **host/fxr/\<versão do fxr>** contém a lógica de resolução do framework usada pelo host. O host usa o hostfxr mais recente instalado. O hostfxr é responsável por selecionar o tempo de execução apropriado ao executar um aplicativo .NET Core. Por exemplo, um aplicativo compilado para .NET Core 2.0.0 usará o tempo de execução 2.0.5 quando ele estiver disponível. Da mesma forma, o hostfxr seleciona o SDK adequado durante o desenvolvimento.
+- (2) **host/fxr/\<versão do fxr>** contém a lógica de resolução do framework usada pelo host. O host usa o hostfxr mais recente instalado. O hostfxr é responsável por selecionar o tempo de execução apropriado ao executar um aplicativo .NET Core. Por exemplo, um aplicativo criado para o tempo de execução do .NET Core 2.0.0 usa o 2.0.5 quando ele está disponível. Da mesma forma, o hostfxr seleciona o SDK adequado durante o desenvolvimento.
 
-- (3) **sdk/\<versão do SDK>** (também conhecido como "as ferramentas") é um conjunto de ferramentas gerenciadas que pode ser usado para gravar e compilar bibliotecas e aplicativos do .NET Core. O SDK inclui a CLI, o compilador Roslyn, MSBuild e tarefas de compilação e direcionamentos associados, o NuGet, novos modelos de projeto etc.
+- (3) **sdk/\<versão do sdk>** O SDK (também conhecido como "as ferramentas") é um conjunto de ferramentas gerenciadas usado para escrever e compilar aplicativos e bibliotecas do .NET Core. O SDK inclui a CLI (interface de linha de comando) do .NET Core, os compiladores de linguagens gerenciadas, o MSBuild, tarefas e destinos de compilação associados, o NuGet, novos modelos de projeto e assim por diante.
 
-- (4) **sdk/NuGetFallbackFolder** contém um cache de pacotes do NuGet usados por um SDK durante a etapa `dotnet restore`.
+- (4) **sdk/NuGetFallbackFolder** contém um cache de pacotes do NuGet usados por um SDK durante a operação de restauração, como ao executar `dotnet restore` ou `dotnet build /t:Restore`.
 
 A pasta **compartilhada** contém estruturas. Uma estrutura compartilhada fornece um conjunto de bibliotecas em um local central para que elas possam ser usadas por aplicativos diferentes.
 
@@ -60,20 +63,20 @@ A pasta **compartilhada** contém estruturas. Uma estrutura compartilhada fornec
 
 - (6,7) **shared/Microsoft.AspNetCore.{App,All}/\<versão do aspnetcore>** contém as bibliotecas do ASP.NET Core. As bibliotecas em `Microsoft.AspNetCore.App` são desenvolvidas e têm suporte como parte do projeto .NET Core. As bibliotecas em `Microsoft.AspNetCore.All` são um superconjunto que também contém bibliotecas de terceiros.
 
-- (8) **LICENSE.txt,ThirdPartyNotices.txt** são a licença do .NET Core e licenças de bibliotecas de terceiros usadas no .NET Core.
+- (8) **LICENSE.txt,ThirdPartyNotices.txt** são a licença do .NET Core e licenças de bibliotecas de terceiros usadas no .NET Core, respectivamente.
 
 - (9,10) **dotnet.1.gz, dotnet** `dotnet.1.gz` é a página de manual do dotnet. `dotnet` é um symlink ao host(1) dotnet. Esses arquivos são instalados em locais bem conhecidos para a integração do sistema.
 
 ## <a name="recommended-packages"></a>Pacotes recomendados
 
 O controle de versão do .NET Core é baseado nos números de versão `[major].[minor]` do componente de tempo de execução.
-A versão do SDK usa os mesmos `[major].[minor]` e tem um `[patch]` independente que combina as semânticas de recurso e de patch para o SDK.
-Por exemplo: O SDK versão 2.2.302 é a 2ª versão de patch da 3ª versão de funcionalidade do SDK que dá suporte ao tempo de execução 2.2.
+A versão do SDK usa o mesmo `[major].[minor]` e tem um `[patch]` independente que combina as semânticas de recurso e de patch para o SDK.
+Por exemplo: O SDK versão 2.2.302 é a segunda versão de patch da terceira versão do recurso do SDK que dá suporte ao tempo de execução 2.2. Para obter mais informações sobre como o controle de versão funciona, veja [Visão geral do controle de versão do .NET Core](../versions/index.md).
 
-Alguns pacotes incluem parte do número de versão no nome deles. Isso permite que o usuário final instale uma versão específica.
-O restante da versão não está incluído no nome da versão. Isso permite que gerenciador de pacotes do sistema operacional atualize os pacotes (por exemplo, instalar automaticamente correções de segurança).
+Alguns pacotes incluem parte do número de versão no nome deles. Isso permite que você instale uma versão específica.
+O restante da versão não está incluído no nome da versão. Isso permite ao gerenciador de pacotes de SO atualize os pacotes (por exemplo, instalando automaticamente correções de segurança). Gerenciadores de pacotes com suporte são específicos do Linux.
 
-As tabelas a seguir mostra os pacotes recomendados.
+A tabela a seguir mostra os pacotes recomendados:
 
 | Nome                                    | Exemplo                | Caso de uso: Instalar...           | Contém           | Dependências                                   | Versão            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
@@ -87,21 +90,21 @@ As tabelas a seguir mostra os pacotes recomendados.
 
 A maioria das distribuições exigem que todos os artefatos sejam compilados da origem. Isso tem algum impacto nos pacotes:
 
-- As bibliotecas de terceiros sob `shared/Microsoft.AspNetCore.All` não podem ser criadas da origem com facilidade. Portanto, essa pasta é omitida do pacote `aspnetcore-runtime`.
+- As bibliotecas de terceiros em `shared/Microsoft.AspNetCore.All` não podem ser criadas facilmente usando o código-fonte. Portanto, essa pasta é omitida do pacote `aspnetcore-runtime`.
 
 - O `NuGetFallbackFolder` é populado usando os artefatos binários de `nuget.org`. Ele deve permanecer vazio.
 
-Vários pacotes `dotnet-sdk` podem fornecer os mesmos arquivos para o `NuGetFallbackFolder`. Para evitar problemas com o gerenciador de pacotes, esses arquivos devem ser idênticos (soma de verificação, data de modificação, etc.).
+Vários pacotes `dotnet-sdk` podem fornecer os mesmos arquivos para o `NuGetFallbackFolder`. Para evitar problemas com o gerenciador de pacotes, esses arquivos devem ser idênticos (soma de verificação, data de modificação e assim por diante).
 
-#### <a name="preview-versions"></a>Versões prévias
+### <a name="preview-versions"></a>Versões prévias
 
-Os mantenedores do pacote podem decidir fornecer versões prévias da estrutura compartilhada e do SDK. É possível fornecer versões prévias usando os pacotes `dotnet-sdk-[major].[minor].[sdk feat]xx`, `aspnetcore-runtime-[major].[minor]` e `dotnet-runtime-[major].[minor]`. Para versões prévias, a versão principal do pacote deve ser definida como zero. Dessa forma, a versão final será instalada como uma atualização do pacote.
+Os mantenedores do pacote podem decidir fornecer versões prévias da estrutura compartilhada e do SDK. Versões prévias podem ser fornecidas usando os pacotes `dotnet-sdk-[major].[minor].[sdk feat]xx`, `aspnetcore-runtime-[major].[minor]` ou `dotnet-runtime-[major].[minor]`. Para versões prévias, a versão principal do pacote deve ser definida como zero. Dessa forma, a versão final é instalada como uma atualização do pacote.
 
-#### <a name="patch-packages"></a>Pacotes de patch
+### <a name="patch-packages"></a>Pacotes de patch
 
-Já que uma versão de patch de um pacote pode causar uma alteração significativa, é conveniente que um mantenedor de pacote forneça _pacotes de patch_. Esses pacotes permitem instalar uma versão de patch específica, que não é atualizada automaticamente. Pacotes de patch deverão ser usados somente em circunstâncias raras, já que elas não serão atualizadas com correções (de segurança).
+Uma vez que uma versão de patch de um pacote pode causar uma alteração da falha, um mantenedor de pacote pode desejar fornecer _pacotes de patch_. Esses pacotes permitem que você instale uma versão de patch específica que não é atualizada automaticamente. Só use pacotes de patch em circunstâncias raras, pois eles não são atualizados com correções (de segurança).
 
-A tabela a seguir mostra os pacotes e **pacotes de patch** recomendados.
+A tabela a seguir mostra os pacotes recomendados e os **pacotes de patch**:
 
 | Nome                                           | Exemplo                  | Contém         | Dependências                                              |
 |------------------------------------------------|--------------------------|------------------|-----------------------------------------------------------|

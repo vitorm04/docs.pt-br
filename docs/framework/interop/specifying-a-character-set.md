@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 798fcacab5bd74dbd6569a68a3b598c0bb63a0a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e0f732eb7b6ee77cb6b16130fc41655922127c3b
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087724"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469685"
 ---
 # <a name="specifying-a-character-set"></a>Especificando um conjunto de caracteres
 O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controla o marshaling de cadeia de caracteres e determina como a invocação de plataforma localiza os nomes de função em uma DLL. Este tópico descreve os dois comportamentos.  
   
  Algumas APIs exportam duas versões de funções que usam argumentos de cadeia de caracteres: estreita (ANSI) e larga (Unicode). A API do Windows, por exemplo, inclui os seguintes nomes do ponto de entrada para a função **MessageBox**:  
   
--   **MessageBoxA**  
+- **MessageBoxA**  
   
      Fornece a formatação ANSI de caracteres de 1 byte, diferenciada por um “A” acrescentado ao nome do ponto de entrada. Chamadas para **MessageBoxA** sempre realizam marshaling das cadeias de caracteres no formato ANSI.  
   
--   **MessageBoxW**  
+- **MessageBoxW**  
   
      Fornece a formatação Unicode de caracteres de 2 bytes, diferenciada por um “W” acrescentado ao nome do ponto de entrada. Chamadas para **MessageBoxW** sempre realizam marshaling das cadeias de caracteres no formato Unicode.  
   
@@ -37,31 +37,31 @@ O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayP
   
  <xref:System.Runtime.InteropServices.CharSet.Ansi> (valor padrão)  
   
--   Marshaling de cadeia de caracteres  
+- Marshaling de cadeia de caracteres  
   
      A invocação de plataforma realiza marshaling das cadeias de caracteres de seu formato gerenciado (Unicode) para o formato ANSI.  
   
--   Correspondência de nomes  
+- Correspondência de nomes  
   
-     Quando o campo <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> é `true`, que é o padrão no [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], a invocação de plataforma procura somente o nome especificado. Por exemplo, se você especificar **MessageBox**, a invocação de plataforma procurará **MessageBox** e falhará quando não conseguir localizar a ortografia exata.  
+     Quando o campo <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> é `true`, como é o padrão no Visual Basic, a invocação de plataforma procura somente o nome especificado. Por exemplo, se você especificar **MessageBox**, a invocação de plataforma procurará **MessageBox** e falhará quando não conseguir localizar a ortografia exata.  
   
      Quando o campo `ExactSpelling` é `false`, que é o padrão no C++ e no C#, a invocação de plataforma procura o alias não danificado primeiro (**MessageBox**) e, em seguida, o nome danificado (**MessageBoxA**), se o alias não danificado não é encontrado. Observe que o comportamento de correspondência de nomes do ANSI é diferente do comportamento de correspondência de nomes do Unicode.  
   
  <xref:System.Runtime.InteropServices.CharSet.Unicode>  
   
--   Marshaling de cadeia de caracteres  
+- Marshaling de cadeia de caracteres  
   
      A invocação de plataforma copia as cadeias de caracteres de seu formato gerenciado (Unicode) para o formato Unicode.  
   
--   Correspondência de nomes  
+- Correspondência de nomes  
   
-     Quando o campo `ExactSpelling` é `true`, que é o padrão no [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], a invocação de plataforma procura somente o nome especificado. Por exemplo, se você especificar **MessageBox**, a invocação de plataforma procurará **MessageBox** e falhará se não conseguir localizar a ortografia exata.  
+     Quando o campo `ExactSpelling` é `true`, como é o padrão no Visual Basic, a invocação de plataforma procura somente o nome especificado. Por exemplo, se você especificar **MessageBox**, a invocação de plataforma procurará **MessageBox** e falhará se não conseguir localizar a ortografia exata.  
   
      Quando o campo `ExactSpelling` é `false`, que é o padrão no C++ e no C#, a invocação de plataforma procura o nome danificado primeiro (**MessageBoxW**) e, em seguida, o alias não danificado (**MessageBox**), se o nome danificado não é encontrado. Observe que o comportamento de correspondência de nomes do Unicode é diferente do comportamento de correspondência de nomes do ANSI.  
   
  <xref:System.Runtime.InteropServices.CharSet.Auto>  
   
--   A invocação de plataforma escolhe entre os formatos ANSI e Unicode em tempo de execução, com base na plataforma de destino.  
+- A invocação de plataforma escolhe entre os formatos ANSI e Unicode em tempo de execução, com base na plataforma de destino.  
   
 ## <a name="specifying-a-character-set-in-visual-basic"></a>Especificando um conjunto de caracteres no Visual Basic  
  O exemplo a seguir declara a função **MessageBox** três vezes, cada vez com um comportamento diferente do conjunto de caracteres. É possível especificar o comportamento do conjunto de caracteres no Visual Basic adicionando a palavra-chave **Ansi**, **Unicode** ou **Auto** à instrução de declaração.  
@@ -69,22 +69,20 @@ O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayP
  Se você omitir a palavra-chave do conjunto de caracteres, como é feito na primeira instrução de declaração, o campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> usará como padrão o conjunto de caracteres ANSI. A segunda e a terceira instruções no exemplo especificam explicitamente um conjunto de caracteres com uma palavra-chave.  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Function MessageBoxA Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Function MessageBoxA Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
         ByVal uType As UInteger) As Integer
 
-    Friend Shared Declare Unicode Function MessageBoxW Lib "user32.dll" (
+    Friend Declare Unicode Function MessageBoxW Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
         ByVal uType As UInteger) As Integer
 
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -113,7 +111,7 @@ End Class
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll")]
     internal static extern int MessageBoxA(
