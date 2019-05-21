@@ -2,15 +2,15 @@
 title: Protocolo de mensagens confiável versão 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 857bbbf9ffa1311c38cfc007e0cdc6bde06d6284
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db4761efb34e7436ae54819b8e5056c732bd2fab
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617574"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959954"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Protocolo de mensagens confiável versão 1.0
-Este tópico abrange detalhes de implementação do Windows Communication Foundation (WCF) para o WS-Reliable Messaging necessárias para usar o transporte HTTP de interoperação de protocolo de fevereiro de 2005 (versão 1.0). WCF segue a especificação WS-Reliable Messaging com as restrições e esclarecimentos explicados neste tópico. Observe que o protocolo de versão 1.0 WS-ReliableMessaging é implementado começando com o [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+Este tópico abrange detalhes de implementação do Windows Communication Foundation (WCF) para o WS-Reliable Messaging necessárias para usar o transporte HTTP de interoperação de protocolo de fevereiro de 2005 (versão 1.0). WCF segue a especificação WS-Reliable Messaging com as restrições e esclarecimentos explicados neste tópico. Observe que o protocolo de versão 1.0 WS-ReliableMessaging é implementado começando com o WinFX.  
   
  O WS-Reliable Messaging de fevereiro de 2005 protocolo é implementado no WCF, o <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
   

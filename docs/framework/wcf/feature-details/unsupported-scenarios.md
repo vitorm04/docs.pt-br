@@ -2,12 +2,12 @@
 title: Cenários sem suporte
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878731"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959959"
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
 Por vários motivos, o Windows Communication Foundation (WCF) não oferece suporte a alguns cenários de segurança específicos. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos, e, portanto, o WCF não oferece suporte a execução de um serviço com a autenticação do Windows nessa plataforma. Outros mecanismos de autenticação, como nome de usuário/senha e autenticação integrada do HTTP/HTTPS são suportados quando executados WCF em Windows XP Home Edition.  
@@ -50,7 +50,7 @@ Por vários motivos, o Windows Communication Foundation (WCF) não oferece supor
 ## <a name="cryptography"></a>Criptografia  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 tem suportada apenas para usos de chave simétricos  
- O WCF oferece suporte a uma variedade de criptografia e algoritmos de criação de resumo de assinatura que você pode especificar usando o pacote de algoritmos nas associações fornecidas pelo sistema. Para maior segurança, o WCF dá suporte a algoritmos de Secure Hash Algorithm (SHA) 2, especificamente SHA-256, para criar hashes de resumo da assinatura. Esta versão dá suporte a SHA-256 somente para usos de chave simétricos, tais como chaves de Kerberos, e em que um certificado X.509 não é usado para assinar a mensagem. O WCF não oferece suporte para assinaturas RSA (usadas em certificados x. 509) usando o hash SHA-256 devido à falta de suporte atual para RSA-SHA256 no [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ O WCF oferece suporte a uma variedade de criptografia e algoritmos de criação de resumo de assinatura que você pode especificar usando o pacote de algoritmos nas associações fornecidas pelo sistema. Para maior segurança, o WCF dá suporte a algoritmos de Secure Hash Algorithm (SHA) 2, especificamente SHA-256, para criar hashes de resumo da assinatura. Esta versão dá suporte a SHA-256 somente para usos de chave simétricos, tais como chaves de Kerberos, e em que um certificado X.509 não é usado para assinar a mensagem. O WCF não oferece suporte para assinaturas RSA (usadas em certificados x. 509) usando o hash SHA-256 devido à falta de suporte atual para RSA-SHA256 no WinFX.  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>Compatível com FIPS Hashes SHA-256 não tem suportados  
  WCF não oferece suporte a hashes SHA-256-compatível com FIPS, portanto, os conjuntos de algoritmo que usem o SHA-256 não têm suporte pelo WCF em sistemas em que o uso de algoritmos compatíveis com FIPS é necessário.  

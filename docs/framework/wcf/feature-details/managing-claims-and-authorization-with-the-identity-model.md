@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875575"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960119"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gerenciamento de declarações e autorizações com o modelo de identidade
 A autorização é o processo de determinar quais entidades tem permissão para alterar, exibir ou caso contrário, acessar um recurso de computador. Por exemplo, em uma empresa, somente gerentes de podem ser permitidos para acessar os arquivos de seus funcionários. Windows Communication Foundation (WCF) oferece suporte a dois mecanismos para executar o processamento de autorização. O primeiro mecanismo permite que você controle a autorização usando construções de runtime (CLR) de linguagem comum existentes. O segundo é um modelo baseado em declarações, conhecido como o *modelo de identidade*. O WCF usa o modelo de identidade para criar declarações de mensagens de entrada; Classes de modelo de identidade podem ser estendidas para dar suporte a novos tipos de declaração para esquemas de autorização personalizado. Este tópico apresenta uma visão geral dos principais conceitos de programação do recurso de modelo de identidade, bem como uma lista das classes mais importantes que usa o recurso.  
@@ -93,7 +93,6 @@ A autorização é o processo de determinar quais entidades tem permissão para 
  ![Conjuntos de declarações dentro da hierarquia.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
  Vários conjuntos de declarações podem ter a mesma de emissão de declaração de conjunto, conforme ilustrado na figura a seguir:
- 
   
  ![Vários conjuntos de declarações com a emissão do mesmo conjunto de declarações.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   

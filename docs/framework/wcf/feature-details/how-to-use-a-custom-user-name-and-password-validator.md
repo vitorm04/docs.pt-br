@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 49271e087ad63020e695f3bd46d7f8c47adf2130
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 593e3e97ad7e5ae65447d8618caacf22f762f9b4
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662497"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960067"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Como: usar um validador personalizado de nome de usuário e senha
 Por padrão, quando um nome de usuário e senha é usada para autenticação, o Windows Communication Foundation (WCF) usa Windows para validar o nome de usuário e senha. No entanto, WCF permite esquemas de autenticação de nome e a senha da usuário personalizada, também conhecido como *validadores*. Para inserir um validador personalizado de nome de usuário e senha, crie uma classe que deriva de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> e configure-a.  
@@ -44,7 +44,7 @@ Por padrão, quando um nome de usuário e senha é usada para autenticação, o 
      Ao usar a segurança em nível de transporte sobre HTTP (S), adicione a [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ou [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), um [ \< netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) ou um [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) que usa HTTP (S) e o `Basic` esquema de autenticação.  
   
     > [!NOTE]
-    >  Quando [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] ou posterior é usado, você pode usar um validador personalizado de nome de usuário e senha com a segurança de mensagem e transporte. Com o [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], um validador personalizado de nome de usuário e senha só pode ser usado com segurança da mensagem.  
+    >  Quando [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] ou posterior é usado, você pode usar um validador personalizado de nome de usuário e senha com a segurança de mensagem e transporte. Com o WinFX, um validador personalizado de nome de usuário e senha só pode ser usado com segurança de mensagem.  
   
     > [!TIP]
     >  Para obter mais informações sobre como usar \<netTcpBinding > neste contexto, consulte [ \<segurança >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
