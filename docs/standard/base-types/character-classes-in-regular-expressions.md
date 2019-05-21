@@ -15,37 +15,37 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622943"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634703"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 <a name="Top"></a> Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais pode ocorrer em uma cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. A linguagem de expressões regulares no .NET dá suporte às seguintes classes de caracteres:  
   
--   Grupos de caracteres positivos. Um caractere na cadeia de caracteres de entrada deve corresponder a um de um conjunto especificado de caracteres. Para obter mais informações, consulte [Positive Character Group (Grupo de caracteres positivos)](#PositiveGroup).  
+- Grupos de caracteres positivos. Um caractere na cadeia de caracteres de entrada deve corresponder a um de um conjunto especificado de caracteres. Para obter mais informações, consulte [Positive Character Group (Grupo de caracteres positivos)](#PositiveGroup).  
   
--   Grupo de caracteres negativos. Um caractere na cadeia de caracteres de entrada não deve corresponder a um de um conjunto especificado de caracteres. Para obter mais informações, consulte [Negative Character Group (Grupo de caracteres negativos)](#NegativeGroup).  
+- Grupo de caracteres negativos. Um caractere na cadeia de caracteres de entrada não deve corresponder a um de um conjunto especificado de caracteres. Para obter mais informações, consulte [Negative Character Group (Grupo de caracteres negativos)](#NegativeGroup).  
   
--   Caractere qualquer. O `.` (ponto) em uma expressão regular é um caractere curinga que corresponde a qualquer caractere, exceto `\n`. Para obter mais informações, consulte [Qualquer caractere](#AnyCharacter).  
+- Caractere qualquer. O `.` (ponto) em uma expressão regular é um caractere curinga que corresponde a qualquer caractere, exceto `\n`. Para obter mais informações, consulte [Qualquer caractere](#AnyCharacter).  
   
--   Uma categoria geral de Unicode ou bloco nomeado. Um caractere na cadeia de caracteres de entrada deve ser um membro de uma categoria de Unicode específica ou deve estar dentro de um intervalo contíguo de caracteres Unicode para que uma correspondência seja bem-sucedida. Para obter mais informações, consulte [Unicode Category or Unicode Block](#CategoryOrBlock) (Bloco de Unicode ou Categoria de Unicode).  
+- Uma categoria geral de Unicode ou bloco nomeado. Um caractere na cadeia de caracteres de entrada deve ser um membro de uma categoria de Unicode específica ou deve estar dentro de um intervalo contíguo de caracteres Unicode para que uma correspondência seja bem-sucedida. Para obter mais informações, consulte [Unicode Category or Unicode Block](#CategoryOrBlock) (Bloco de Unicode ou Categoria de Unicode).  
   
--   Uma categoria geral de Unicode ou bloco nomeado negativos. Um caractere na cadeia de caracteres de entrada não deve ser um membro de uma categoria de Unicode específica ou não deve estar dentro de um intervalo contíguo de caracteres Unicode para que uma correspondência seja bem-sucedida. Para obter mais informações, consulte [Negative Unicode Category or Unicode Block (Categoria Unicode Negativa ou bloco Unicode)](#NegativeCategoryOrBlock).  
+- Uma categoria geral de Unicode ou bloco nomeado negativos. Um caractere na cadeia de caracteres de entrada não deve ser um membro de uma categoria de Unicode específica ou não deve estar dentro de um intervalo contíguo de caracteres Unicode para que uma correspondência seja bem-sucedida. Para obter mais informações, consulte [Negative Unicode Category or Unicode Block (Categoria Unicode Negativa ou bloco Unicode)](#NegativeCategoryOrBlock).  
   
--   Um caractere de palavra. Um caractere na cadeia de caracteres de entrada pode pertencer a qualquer uma das categorias Unicode que são apropriados para caracteres usados em palavras. Para obter mais informações, consulte [Word Character (Caractere de palavra)](#WordCharacter).  
+- Um caractere de palavra. Um caractere na cadeia de caracteres de entrada pode pertencer a qualquer uma das categorias Unicode que são apropriados para caracteres usados em palavras. Para obter mais informações, consulte [Word Character (Caractere de palavra)](#WordCharacter).  
   
--   Um caractere não pertencente a palavras. Um caractere na cadeia de caracteres de entrada pode pertencer a qualquer categoria Unicode que não seja um caractere de palavra. Para obter mais informações, consulte [Non-Word Character (Caractere não pertencente a palavras)](#NonWordCharacter).  
+- Um caractere não pertencente a palavras. Um caractere na cadeia de caracteres de entrada pode pertencer a qualquer categoria Unicode que não seja um caractere de palavra. Para obter mais informações, consulte [Non-Word Character (Caractere não pertencente a palavras)](#NonWordCharacter).  
   
--   Um caractere de espaço em branco. Um caractere na cadeia de caracteres de entrada pode ser qualquer caractere separador Unicode, bem como qualquer um entre vários caracteres de controle. Para obter mais informações, consulte [White-Space Character (Caractere de espaço em branco)](#WhitespaceCharacter).  
+- Um caractere de espaço em branco. Um caractere na cadeia de caracteres de entrada pode ser qualquer caractere separador Unicode, bem como qualquer um entre vários caracteres de controle. Para obter mais informações, consulte [White-Space Character (Caractere de espaço em branco)](#WhitespaceCharacter).  
   
--   Um caractere diferente de espaço em branco. Um caractere na cadeia de caracteres de entrada pode ser qualquer caractere que não seja um caractere de espaço em branco. Para obter mais informações, consulte [Non-White-Space Character (Caractere diferente de espaço em branco)](#NonWhitespaceCharacter).  
+- Um caractere diferente de espaço em branco. Um caractere na cadeia de caracteres de entrada pode ser qualquer caractere que não seja um caractere de espaço em branco. Para obter mais informações, consulte [Non-White-Space Character (Caractere diferente de espaço em branco)](#NonWhitespaceCharacter).  
   
--   Um dígito decimal. Um caractere na cadeia de caracteres de entrada pode ser qualquer um entre vários caracteres classificados como dígitos decimais Unicode. Para obter mais informações, consulte [Decimal Digit Character (Caractere de dígito decimal)](#DigitCharacter).  
+- Um dígito decimal. Um caractere na cadeia de caracteres de entrada pode ser qualquer um entre vários caracteres classificados como dígitos decimais Unicode. Para obter mais informações, consulte [Decimal Digit Character (Caractere de dígito decimal)](#DigitCharacter).  
   
--   Um dígito não decimal. Um caractere na cadeia de caracteres de entrada pode ser qualquer coisa que não seja um dígito decimal Unicode. Para obter mais informações, consulte [Decimal Digit Character (Caractere de dígito decimal)](#NonDigitCharacter).  
+- Um dígito não decimal. Um caractere na cadeia de caracteres de entrada pode ser qualquer coisa que não seja um dígito decimal Unicode. Para obter mais informações, consulte [Decimal Digit Character (Caractere de dígito decimal)](#NonDigitCharacter).  
   
  O .NET dá suporte a expressões de subtração de classes de caracteres, o que permite a você definir um conjunto de caracteres como resultado da exclusão de uma classe de caracteres de outra classe de caracteres. Para obter mais informações, consulte [Subtração de classe de caracteres](#CharacterClassSubtraction).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54622943"
 >  Classes de caractere que fazem a correspondência de caracteres por categoria, como [\w](#WordCharacter) para a correspondência de caracteres de palavra ou [\p{}](#CategoryOrBlock) para uma categoria de Unicode, dependem da classe <xref:System.Globalization.CharUnicodeInfo> para fornecer informações sobre categorias de caractere.  A partir do [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], as categorias de caracteres se baseiam no [Padrão Unicode, versão 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] até o [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], eles se baseiam no [Padrão Unicode, versão 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
-## <a name="positive-character-group--"></a>Grupo de Caracteres Positivo: [ ]  
+## <a name="positive-character-group--"></a>Grupo de Caracteres Positivo: []  
  Um grupo de caracteres positivos especifica uma lista de caracteres, qualquer caractere dela pode aparecer em uma cadeia de caracteres de entrada para que uma correspondência ocorra. Essa lista de caracteres pode ser especificada individualmente, como um intervalo ou ambos.  
   
  A sintaxe para especificar uma lista de caracteres individuais é a seguinte:  
@@ -160,7 +160,7 @@ ms.locfileid: "54622943"
 ## <a name="any-character-"></a>Caractere qualquer: .  
  O caractere de ponto (.) corresponde a qualquer caractere, exceto `\n` (o caractere de nova linha, \u000A), com estas duas qualificações:  
   
--   Se um padrão de expressão regular é modificado pela opção <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>, ou se a parte do padrão que contém a classe de caracteres `.` é modificada pela opção `s`, `.` corresponde a qualquer caractere. Para obter mais informações, consulte [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+- Se um padrão de expressão regular é modificado pela opção <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>, ou se a parte do padrão que contém a classe de caracteres `.` é modificada pela opção `s`, `.` corresponde a qualquer caractere. Para obter mais informações, consulte [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
      O exemplo a seguir ilustra o comportamento diferente da classe de caracteres `.` por padrão e com a opção <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. A expressão regular `^.+` começa no início da cadeia de caracteres e corresponde a todos os caracteres. Por padrão, a correspondência termina no final da primeira linha; o padrão de expressão regular corresponde ao caractere de retorno de carro, `\r` ou \ u000D, mas não corresponde a `\n`. Como a opção <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interpreta toda a cadeia de caracteres de entrada como uma única linha, ela corresponde a cada caractere na cadeia de caracteres de entrada, incluindo `\n`.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "54622943"
 > [!NOTE]
 >  Como ela corresponde a qualquer caractere, exceto `\n`, a classe de caracteres `.` também corresponde a `\r` (o caractere de retorno de carro, \u000D).  
   
--   Em um grupo de caracteres positivos ou negativos, um ponto é tratado como um caractere de ponto literal e não como uma classe de caracteres. Para saber mais, confira [Grupo de caracteres positivos](#PositiveGroup) e [Grupo de caracteres negativos](#NegativeGroup) anteriormente neste tópico. O exemplo a seguir fornece uma ilustração ao definir uma expressão regular que inclui o caractere de ponto (`.`) como uma classe de caracteres e como um membro de um grupo de caracteres positivos. A expressão regular `\b.*[.?!;:](\s|\z)` começa em um limite de palavra, corresponde a qualquer caractere até encontrar um de cinco sinais de pontuação, incluindo um ponto, e corresponde a um caractere de espaço em branco ou ao final da cadeia de caracteres.  
+- Em um grupo de caracteres positivos ou negativos, um ponto é tratado como um caractere de ponto literal e não como uma classe de caracteres. Para saber mais, confira [Grupo de caracteres positivos](#PositiveGroup) e [Grupo de caracteres negativos](#NegativeGroup) anteriormente neste tópico. O exemplo a seguir fornece uma ilustração ao definir uma expressão regular que inclui o caractere de ponto (`.`) como uma classe de caracteres e como um membro de um grupo de caracteres positivos. A expressão regular `\b.*[.?!;:](\s|\z)` começa em um limite de palavra, corresponde a qualquer caractere até encontrar um de cinco sinais de pontuação, incluindo um ponto, e corresponde a um caractere de espaço em branco ou ao final da cadeia de caracteres.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
@@ -186,7 +186,7 @@ ms.locfileid: "54622943"
   
  A constructo da expressão regular  
   
- `\p{` *name* `}`  
+ `\p{` *nome* `}`  
   
  corresponde a qualquer caractere que pertence a uma categoria geral de Unicode ou a um bloco nomeado, em que *name* é a abreviação da categoria ou o nome do bloco nomeado. Para obter uma lista de abreviações de categoria, consulte a seção [Categorias gerais Unicode com suporte](#SupportedUnicodeGeneralCategories) posteriormente neste tópico. Para obter uma lista dos blocos nomeados, consulte a seção [Blocos nomeados com suporte](#SupportedNamedBlocks) posteriormente neste tópico.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "54622943"
   
  A constructo da expressão regular  
   
- `\P{` *name* `}`  
+ `\P{` *nome* `}`  
   
  corresponde a qualquer caractere que não pertença a uma categoria geral de Unicode ou a um bloco nomeado, em que *name* é a abreviação da categoria ou o nome do bloco nomeado. Para obter uma lista de abreviações de categoria, consulte a seção [Categorias gerais Unicode com suporte](#SupportedUnicodeGeneralCategories) posteriormente neste tópico. Para obter uma lista dos blocos nomeados, consulte a seção [Blocos nomeados com suporte](#SupportedNamedBlocks) posteriormente neste tópico.  
   
@@ -354,7 +354,7 @@ ms.locfileid: "54622943"
  [Voltar ao início](#Top)  
   
 <a name="DigitCharacter"></a>   
-## <a name="decimal-digit-character-d"></a>Caractere de dígito decimal: \d  
+## <a name="decimal-digit-character-d"></a>Caractere de Dígito Decimal: \ d  
  `\d` corresponde a qualquer dígito decimal. É equivalente ao padrão de expressão regular `\p{Nd}`, o qual inclui os dígitos decimais padrão 0-9, bem como os dígitos decimais de vários outros conjuntos de caracteres.  
   
  Se o comportamento compatível com ECMAScript for especificado, `\d` será equivalente a `[0-9]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
@@ -399,7 +399,7 @@ ms.locfileid: "54622943"
  [Voltar ao início](#Top)  
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
-## <a name="supported-unicode-general-categories"></a>Categorias gerais Unicode com suporte  
+## <a name="supported-unicode-general-categories"></a>Categorias gerais de Unicode com suporte  
  O Unicode define as categorias gerais listadas na tabela a seguir. Para obter mais informações, consulte os subtópicos "Formato de arquivo UCD" e "Valores de categoria geral" no [Banco de dados de caractere Unicode](https://www.unicode.org/reports/tr44/).  
   
 |Categoria|Descrição|  
@@ -564,7 +564,7 @@ ms.locfileid: "54622943"
  [Voltar ao início](#Top)  
   
 <a name="CharacterClassSubtraction"></a>   
-## <a name="character-class-subtraction-basegroup---excludedgroup"></a>Subtração de classes de caractere: [base_group - [excluded_group]]  
+## <a name="character-class-subtraction-basegroup---excludedgroup"></a>Subtração da Classe de Caractere: [grupo_base - [grupo_excluído]]  
  Uma classe de caracteres define um conjunto de caracteres. A subtração de classes de caracteres fornece um conjunto de caracteres que é o resultado da exclusão dos caracteres em uma classe de caracteres em outra classe de caracteres.  
   
  A expressão de subtração de classes de caracteres tem a seguinte forma:  

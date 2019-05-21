@@ -18,19 +18,19 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 71da71d1331e9eab818a7492daa230f758840762
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634663"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de caracteres em expressões regulares
 A barra invertida (\\) em uma expressão regular indica uma das situações a seguir:  
   
--   O caractere que segue é um caractere especial, conforme mostrado na tabela na seção a seguir. Por exemplo, `\b` é uma âncora que indica que uma correspondência da expressão regular deve começar em um limite de palavra, `\t` representa uma tabulação e `\x020` representa um espaço.  
+- O caractere que segue é um caractere especial, conforme mostrado na tabela na seção a seguir. Por exemplo, `\b` é uma âncora que indica que uma correspondência da expressão regular deve começar em um limite de palavra, `\t` representa uma tabulação e `\x020` representa um espaço.  
   
--   Um caractere que, caso contrário, seria interpretado como um constructo de linguagem sem escape deve ser interpretado literalmente. Por exemplo, uma chave (`{`) inicia a definição de um quantificador, mas uma barra invertida seguida por uma chave (`\{`) indica que o mecanismo de expressão regular deve corresponder à chave. Da mesma forma, uma única barra invertida marca o início de um constructo de linguagem com escape, mas duas barras invertidas (`\\`) indicam que o mecanismo de expressão regular deve corresponder à barra invertida.  
+- Um caractere que, caso contrário, seria interpretado como um constructo de linguagem sem escape deve ser interpretado literalmente. Por exemplo, uma chave (`{`) inicia a definição de um quantificador, mas uma barra invertida seguida por uma chave (`\{`) indica que o mecanismo de expressão regular deve corresponder à chave. Da mesma forma, uma única barra invertida marca o início de um constructo de linguagem com escape, mas duas barras invertidas (`\\`) indicam que o mecanismo de expressão regular deve corresponder à barra invertida.  
   
 > [!NOTE]
 >  Escapes de caracteres são reconhecidos em padrões de expressão regulares, mas não em padrões de substituição.  
@@ -52,7 +52,7 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
 |`\` *nnn*|Corresponde a um caractere ASCII, em que *nnn* consiste em dois ou três dígitos que representam o código de caracteres octal. Por exemplo, `\040` representa um caractere de espaço. Esse constructo é interpretado como referência inversa se tiver apenas um dígito (por exemplo, `\2`) ou se corresponder ao número de um grupo de captura. (Confira [Constructos de referência inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)).|  
 |`\x` *nn*|Corresponde a um caractere ASCII, em que *nn* é um código de caractere hexadecimal com dois dígitos.|  
 |`\c` *X*|Corresponde a um caractere de controle ASCII, em que X é a letra do caractere de controle. Por exemplo, `\cC` é CTRL-C.|  
-|`\u` *nnnn*|Corresponde a uma unidade de código UTF-16 cujo valor é *nnnn* hexadecimal. **Observação:** o escape de caractere Perl 5 que é usado para especificar Unicode não tem suporte no .NET. O caractere de escape Perl 5 tem o formato `\x{`*####*`…}`, em que *####*`…` é uma série de dígitos hexadecimais. Em vez disso, use `\u`*nnnn*.|  
+|`\u` *nnnn*|Corresponde a uma unidade de código UTF-16 cujo valor é *nnnn* hexadecimal. **Observação:**  O .NET não dá suporte para o caractere de escape Perl 5 que é usado para especificar Unicode. O caractere de escape Perl 5 tem o formato `\x{`*####*`…}`, em que *####*`…` é uma série de dígitos hexadecimais. Em vez disso, use `\u`*nnnn*.|  
 |`\`|Quando seguido por um caractere que não é reconhecido como um caractere com escape, corresponde a esse caractere. Por exemplo, `\*` corresponde a um asterisco (*) e é igual a `\x2A`.|  
   
 ## <a name="an-example"></a>Um Exemplo  
