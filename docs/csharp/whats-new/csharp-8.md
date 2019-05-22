@@ -1,18 +1,20 @@
 ---
 title: Novidades no C# 8.0 – Guia do C#
-description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo foi atualizado com a versão prévia 2.
+description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo está atualizado com a versão prévia 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754369"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557144"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
-Há vários aprimoramentos na linguagem C# que você já pode experimentar na versão prévia 2. Os novos recursos adicionados na versão prévia 2 são:
+Há vários aprimoramentos da linguagem C# que você já pode experimentar. 
 
+- [Membros somente leitura](#readonly-members)
+- [Membros da interface padrão](#default-interface-members)
 - [Aprimoramentos de correspondência de padrões](#more-patterns-in-more-places):
   * [Expressões Switch](#switch-expressions)
   * [Padrões da propriedade](#property-patterns)
@@ -21,17 +23,67 @@ Há vários aprimoramentos na linguagem C# que você já pode experimentar na ve
 - [Declarações using](#using-declarations)
 - [Funções locais estáticas](#static-local-functions)
 - [Estruturas ref descartáveis](#disposable-ref-structs)
-
-Os recursos de linguagem a seguir apareceram pela primeira vez no C# 8.0 versão prévia 1:
-
 - [Tipos de referência nula](#nullable-reference-types)
 - [Fluxos assíncronos](#asynchronous-streams)
 - [Índices e intervalos](#indices-and-ranges)
 
 > [!NOTE]
-> Este artigo foi atualizado pela última vez para o C# 8.0 versão prévia 2.
+> Este artigo foi atualizado pela última vez para o C# 8.0 versão prévia 5.
 
 O restante deste artigo descreve rapidamente esses recursos. Quando houver artigos detalhados disponíveis, forneceremos links para esses tutoriais e visões gerais.
+
+## <a name="readonly-members"></a>Membros somente leitura
+
+É possível aplicar o modificador `readonly` a qualquer membro de um struct. Ele indica que o membro não modifica o estado. É mais granular do que aplicar o modificador `readonly` a uma declaração `struct`.  Considere o seguinte struct mutável:
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+Como a maioria dos structs, o método `ToString()` não modifica o estado. É possível indicar isso adicionando o modificador `readonly` à declaração de `ToString()`:
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+A alteração anterior gera um aviso do compilador, porque o `ToString` acessa a propriedade `Distance`, que não está marcada como `readonly`:
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+O compilador avisa quando há a necessidade de criar uma cópia de defesa.  A propriedade `Distance` não altera o estado, portanto, é possível corrigir esse aviso adicionando o modificador `readonly` à declaração:
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+Observe que o modificador `readonly` é necessário em uma propriedade somente leitura. O compilador não pressupõe que os acessadores `get` não modificam o estado; é necessário declarar `readonly` explicitamente. O compilador impõe como regra que membros `readonly` não modificam o estado. O método a seguir não será compilado, a menos que você remova o modificador `readonly`:
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+Esse recurso permite que você especifique sua intenção de design para que o compilador possa impô-la e faça otimizações com base nessa intenção.
+
+## <a name="default-interface-members"></a>Membros da interface padrão
+
+Agora é possível adicionar membros a interfaces e fornecer uma implementação para esses membros. Esse recurso de linguagem permite que os autores de API adicionem métodos a uma interface em versões posteriores sem interromper a fonte ou a compatibilidade binária com implementações existentes dessa interface. As implementações existentes *herdam* a implementação padrão. Esse recurso também permite que o C# interopere com APIs que direcionam o Android ou o Swift, que dão suporte a recursos semelhantes. Membros da interface padrão também permitem cenários semelhantes a um recurso de linguagem de “características”.
+
+Os membros da interface padrão afetam muitos cenários e elementos de linguagem. Nosso primeiro tutorial aborda [como atualizar uma interface com implementações padrão](../tutorials/default-interface-members-versions.md). Outros tutoriais e atualizações de referência chegarão a tempo para a versão geral.
 
 ## <a name="more-patterns-in-more-places"></a>Mais padrões em mais partes
 
@@ -321,9 +373,15 @@ Experimente você mesmo os fluxos assíncronos em nosso tutorial sobre como [cri
 
 Intervalos e índices fornecem uma sintaxe sucinta para especificar subintervalos em uma matriz, <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601>.
 
-Você pode especificar um índice **do final** usando o caractere `^` antes do índice. A indexação do final começa da regra que `0..^0` especifica o intervalo inteiro. Para enumerar uma matriz inteira, você inicia *no primeiro elemento* e continua até você *passar do último elemento*. Pense no comportamento do método `MoveNext` em um enumerador: ele retorna falso quando a enumeração passa do último elemento. O índice `^0` significa "o fim", `array[array.Length]`, ou o índice que segue o último elemento. Você está familiarizado com `array[2]` significando o elemento "2 desde o início". Agora, `array[^2]` significa o elemento "2 desde o final". 
+Este suporte à linguagem depende de dois tipos novos e dois operadores novos.
+- <xref:System.Index?displayProperty=nameWithType> representa um índice em uma sequência.
+- O operador `^`, que especifica que um índice é relativo ao final da sequência.
+- <xref:System.Range?displayProperty=nameWithType> representa um subintervalo de uma sequência.
+- O operador Range (`..`), que especifica o início e o final de um intervalo como seus operandos.
 
-Você pode especificar um **intervalo** com o **operador de intervalo**: `..`. Por exemplo, `0..^0` especifica todo o intervalo da matriz: 0 desde o início até, mas não incluindo, 0 do final. Qualquer operando pode usar "desde o início" ou "desde o final". Além disso, qualquer operando pode ser omitido. Os padrões são `0` para o índice de início, e `^0` para o índice final.
+Vamos começar com as regras para índices. Considere uma matriz `sequence`. O índice `0` é o mesmo que `sequence[0]`. O índice `^0` é o mesmo que `sequence[sequence.Length]`. Observe que `sequence[^0]` gera uma exceção, assim como `sequence[sequence.Length]` faz. Para qualquer número `n`, o índice `^n` é o mesmo que `sequence.Length - n`.
+
+Um intervalo especifica o *início* e o *final* de um intervalo. Intervalos são exclusivos, o que significa que *final* não está incluído no intervalo. O intervalo `[0..^0]` representa todo o intervalo, assim como `[0..sequence.Length]` representa todo o intervalo. 
 
 Vamos analisar alguns exemplos. Considere a matriz a seguir, anotada com seu índice do início e do final:
 
@@ -342,8 +400,6 @@ var words = new string[]
     "dog"       // 8                   ^1
 };              // 9 (or words.Length) ^0
 ```
-
-O índice de cada elemento reforça o conceito de "do início" e "do final", e que os intervalos excluem o fim do intervalo. O "início" de toda a matriz é o primeiro elemento. O "final" de toda a matriz ocorre *após* o último elemento.
 
 Recupere a última palavra com o índice `^1`:
 

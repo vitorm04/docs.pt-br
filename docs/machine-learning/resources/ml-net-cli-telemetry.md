@@ -4,12 +4,12 @@ description: Conheça os recursos de telemetria da CLI do ML.NET que coletam inf
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 49ebd6c9e1b77c85d891b8c9fb8cbd5c66b478a9
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065539"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645019"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Coleta de telemetria pela CLI do ML.NET
 
@@ -42,15 +42,17 @@ Recuse o recurso de telemetria configurando a variável de ambiente `DOTNET_CLI_
 
 O recurso coleta os seguintes dados:
 
-- Quais comandos são invocados, como `auto-train`
+- Qual comando foi invocado, como `auto-train`
+- Nomes de parâmetro de linha de comando usados (por ex., “dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity”)
 - Endereço MAC com hash: uma ID única e criptograficamente anônima (SHA256) para um computador
 - Carimbo de data/hora de uma invocação
-- Três endereços IP de octeto usados para determinar a localização geográfica
+- Três endereços IP de octeto (não um endereço IP completo) usados apenas para determinar a localização geográfica
 - Nome de todos os argumentos/parâmetros usados. Não valores do cliente, como cadeias de caracteres
+- Nome do arquivo de conjunto de dados com hash
+- Bucket do tamanho do arquivo de conjunto de dados
 - Sistema operacional e versão
-- Valor do parâmetro --ml-task: Valores categóricos, como `regression`, `binary-classification` e `multiclass-classification`
-- Tamanho do arquivo do conjunto de dados [logarítmicos arredondados](https://en.wikipedia.org/wiki/Rounding#Rounding_to_a_specified_power) (mais próximo da potência de 2)
-- `ExitCode` do comando
+- Valor do parâmetro --task: Valores categóricos, como `regression`, `binary-classification` e `multiclass-classification`
+- Versão da CLI do ML.NET (por ex., 0.3.27703.4)
 
 Os dados são enviados com segurança para os servidores Microsoft usando a tecnologia [Azure Application Insights](https://azure.microsoft.com/services/application-insights/), mantidos em acesso restrito e usados sob controles de segurança rigorosos dos sistemas do [Armazenamento do Microsoft Azure](https://azure.microsoft.com/services/storage/) seguros.
 

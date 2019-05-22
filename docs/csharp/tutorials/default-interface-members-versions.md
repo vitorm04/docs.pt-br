@@ -3,16 +3,16 @@ title: Atualizar interfaces com segurança usando membros de interface padrão e
 description: Este tutorial avançado explora como adicionar novos recursos com segurança às definições de interface existentes sem interromper todas as classes e structs que implementam essa interface.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: ded3704428282b8f9f0542e938137585a07802b4
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452908"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877910"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-8"></a>Tutorial: Atualizar interfaces com membros de interface padrão em C# 8
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Atualizar interfaces com membros da interface padrão no C# 8.0
 
-Desde o C# 8 no .NET Core 3.0, você pode definir uma implementação ao declarar um membro de uma interface. O cenário mais comum é adicionar membros com segurança a uma interface já lançada e usada por vários clientes.
+Desde o C# 8.0 no .NET Core 3.0, é possível definir uma implementação em que você declara um membro de uma interface. O cenário mais comum é adicionar membros com segurança a uma interface já lançada e usada por vários clientes.
 
 Neste tutorial, você aprenderá a:
 
@@ -23,7 +23,7 @@ Neste tutorial, você aprenderá a:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar o computador para executar o .NET Core, incluindo o compilador da versão prévia do C# 8.0. O compilador da versão prévia do C# 8 está disponível com o [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou o [SDK de versão prévia do .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) mais recente. Membros de interface padrão estão disponíveis desde a versão prévia 4 do .NET Core 3.0.
+Você precisará configurar o computador para executar o .NET Core, incluindo o compilador da versão prévia do C# 8.0. O compilador da versão prévia do C# 8.0 está disponível no [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou no [SDK de versão prévia do .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) mais recente. Membros de interface padrão estão disponíveis desde a versão prévia 4 do .NET Core 3.0.
 
 ## <a name="scenario-overview"></a>Visão geral do cenário
 

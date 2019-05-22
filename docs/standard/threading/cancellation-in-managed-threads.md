@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531b9b6ae62b34f78f13ff6cd1784a2823584ed6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620780"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586367"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelamento em threads gerenciados
 A começar pelo [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], o .NET Framework usa um modelo unificado para cancelamento cooperativo de operações assíncronas ou síncronas de longa execução. Este modelo é baseado em um objeto leve chamado token de cancelamento. O objeto que invoca uma ou mais operações canceláveis, por exemplo criando novos tópicos ou tarefas, passa o token para cada operação. As operações individuais podem, por sua vez, passar cópias do token para outras operações. Posteriormente, o objeto que criou o token pode usá-lo para solicitar que as operações parem o que estão fazendo. Somente o objeto solicitante pode emitir a solicitação de cancelamento, e cada ouvinte é responsável por perceber a solicitação e respondê-la de forma apropriada e oportuna.  
@@ -60,7 +60,7 @@ A começar pelo [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], 
 |<xref:System.Threading.CancellationToken>|O tipo de valor leve passado a um ou mais ouvintes, normalmente como um parâmetro de método. Os ouvintes monitoram o valor da propriedade `IsCancellationRequested` do token por sondagem, retorno de chamada ou identificador de espera.|  
 |<xref:System.OperationCanceledException>|As sobrecargas do construtor desta exceção aceitam <xref:System.Threading.CancellationToken> como um parâmetro. Os ouvintes podem, opcionalmente, lançar essa exceção para verificar a origem do cancelamento e notificar aos outros que ela respondeu a uma solicitação de cancelamento.|  
   
- O novo modelo de cancelamento está integrado no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] em vários tipos. Os mais importantes são <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Recomendamos o uso desse novo modelo de cancelamento para todas as novas bibliotecas e códigos de aplicativos.  
+ O novo modelo de cancelamento está integrado ao .NET Framework em vários tipos. Os mais importantes são <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Recomendamos o uso desse novo modelo de cancelamento para todas as novas bibliotecas e códigos de aplicativos.  
   
 ## <a name="code-example"></a>Exemplo de código  
  No exemplo a seguir, o objeto solicitante cria um objeto <xref:System.Threading.CancellationTokenSource> e, em seguida, passa sua propriedade <xref:System.Threading.CancellationTokenSource.Token%2A> para a operação cancelável. A operação que recebe a solicitação monitora o valor da propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> do token por sondagem. Quando o valor se torna `true`, o ouvinte pode concluir de qualquer maneira apropriada. Neste exemplo, o método apenas sai, que é tudo necessário em muitos casos.  

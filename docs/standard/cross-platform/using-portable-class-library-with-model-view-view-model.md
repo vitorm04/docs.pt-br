@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a477b9d204be0bc9a4c438bccb1379ecc7abf53
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3aa18d4498bcdcc3737311473b4736545b184395
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664330"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003780"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Usando a Biblioteca de Classes Portátil com Modelo MVVM
 Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) para implementar o padrão Model-View-View modelo (MVVM) e compartilhar assemblies entre várias plataformas.
@@ -25,7 +25,7 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
 
  MVVM é um padrão de aplicativo que isola a interface do usuário da lógica de negócios subjacentes. Você pode implementar as classes de modelo do modelo e exibição em um [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] do projeto no Visual Studio 2012 e, em seguida, criar exibições personalizadas para diferentes plataformas. Essa abordagem permite que você grave os dados de modelo e a lógica de negócios apenas uma vez e usá-la de código do .NET Framework, Silverlight, Windows Phone, e [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos, conforme mostrado na ilustração a seguir.
 
- ![Portátil com o diagrama MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")
+ ![Mostra a biblioteca de classes portátil com assemblies de compartilhamento do MVVM entre plataformas.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
  Este tópico fornece informações gerais sobre o padrão MVVM. Ele só fornece informações sobre como usar [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] para implementar o MVVM. Para obter mais informações sobre o MVVM, consulte o [MVVM início rápido usando o Prism Library 5.0 para WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
 

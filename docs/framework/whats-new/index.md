@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063862"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960007"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -1399,7 +1399,7 @@ Com PDBs do Ngen, o NGen pode criar um PDB que contém o mapeamento do IL para a
 
 ## <a name="whats-new-in-net-2015"></a>Novidades do .NET 2015
 
-O .NET 2015 apresenta o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e o .NET Core. Alguns recursos novos se aplicam aos dois, enquanto outros recursos são específicos ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ou ao [!INCLUDE[net_core](../../../includes/net-core-md.md)].
+O .NET 2015 apresenta o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e o .NET Core. Alguns recursos novos se aplicam aos dois, enquanto outros recursos são específicos do [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ou do .NET Core.
 
 - **ASP.NET Core**
 
@@ -1478,7 +1478,7 @@ O .NET 2015 apresenta o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e o
 
      Várias APIs novas foram adicionadas ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para habilitar cenários-chave. As seguintes alterações e adições foram incluídas:
 
-    - Implementações **IReadOnlyCollection\<T>** 
+    - Implementações **IReadOnlyCollection\<T>**
 
          As coleções adicionais implementam <xref:System.Collections.Generic.IReadOnlyCollection%601> como <xref:System.Collections.Generic.Queue%601> e <xref:System.Collections.Generic.Stack%601>.
 
@@ -1747,11 +1747,11 @@ O .NET 2015 apresenta o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e o
 
 - **Suporte para codificações de página de código**
 
-     O [!INCLUDE[net_core](../../../includes/net-core-md.md)] oferece suporte principalmente a codificações Unicode, e por padrão fornece suporte limitado a codificações de página de código. É possível adicionar suporte a codificações de página de código disponíveis no .NET Framework, mas que não sejam compatíveis com o [!INCLUDE[net_core](../../../includes/net-core-md.md)] ao registrar codificações de página de código com o método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para obter mais informações, consulte <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     O .NET Core oferece suporte principalmente a codificações Unicode, e por padrão fornece suporte limitado a codificações de página de código. É possível adicionar suporte a codificações de página de código disponíveis no .NET Framework, mas que não sejam compatíveis ao .NET Core ao registrar codificações de página de código com o método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para obter mais informações, consulte <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Nativo**
 
-     Aplicativos do Windows para Windows 10 direcionados ao [!INCLUDE[net_core](../../../includes/net-core-md.md)] e escritos em C# ou Visual Basic podem tirar proveito de uma nova tecnologia que compila aplicativos para código nativo em vez de IL. Ela produz aplicativos caracterizados por inicialização e tempos de execução mais rápidos. Para saber mais, confira [Compilação de aplicativos com .NET Nativo](../net-native/index.md). Para obter uma visão geral do .NET Nativo, examinando qual é a diferente dele para a compilação JIT e o NGEN e o que isso significa para seu código, confira [.NET Nativo e compilação](../net-native/net-native-and-compilation.md).
+     Aplicativos do Windows para Windows 10 direcionados ao .NET Core e escritos em C# ou Visual Basic podem tirar proveito de uma nova tecnologia que compila aplicativos para código nativo em vez de IL. Ela produz aplicativos caracterizados por inicialização e tempos de execução mais rápidos. Para saber mais, confira [Compilação de aplicativos com .NET Nativo](../net-native/index.md). Para obter uma visão geral do .NET Nativo, examinando qual é a diferente dele para a compilação JIT e o NGEN e o que isso significa para seu código, confira [.NET Nativo e compilação](../net-native/net-native-and-compilation.md).
 
      Seus aplicativos são compilados por padrão para código nativo quando você os compila com o Visual Studio 2015 ou posterior. Para saber mais, confira [Introdução ao .NET Nativo](../net-native/getting-started-with-net-native.md).
 

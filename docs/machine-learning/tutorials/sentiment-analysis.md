@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Analisar comentários de site – classificação binária'
-description: Este tutorial mostra como criar um aplicativo de console do .NET Core que classifica sentimentos de comentários de um site e executa a ação adequada. O classificador binário de sentimento usa C# no Visual Studio 2017.
-ms.date: 04/18/2019
+description: Este tutorial mostra como criar um aplicativo de console do .NET Core que classifica sentimentos de comentários de um site e executa a ação adequada. O classificador binário de sentimento usa C# no Visual Studio.
+ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1989a11a2f06ce4d713d6c3ecc70de0da606604e
-ms.sourcegitcommit: 438824ff21f77c4301c6ba8a89a106114aa27bc8
+ms.openlocfilehash: e145e65e22c955bd547b67de545b883fb0fb3bc2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65462224"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593408"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Analisar sentimento de comentários de um site com classificação binária em ML.NET
 
@@ -29,7 +29,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento multiplataforma do .NET Core" instalada
+* [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "Desenvolvimento multiplataforma do .NET Core" instalada
 
 * [Conjunto de dados de Sentenças de sentimentos rotuladas da UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (arquivo zip)
 
@@ -303,7 +303,7 @@ Use o código a seguir para exibir as métricas:
 1. Crie o método `UseModelWithBatchItems()`, logo após o método `UseModelWithSingleItem()`, usando o seguinte código:
 
     ```csharp
-    public static void UseModelWithBatchItems(MLContext mlContext)
+    public static void UseModelWithBatchItems(MLContext mlContext, ITransformer model)
     {
 
     }

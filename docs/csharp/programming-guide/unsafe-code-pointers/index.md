@@ -11,46 +11,47 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 9f4e74e1e8fa71d1492a10162191822c1edfb635
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99f0b925a37bff8b6ab1ff46e9ce2f0ea0a38aed
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608047"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959485"
 ---
-# <a name="unsafe-code-and-pointers-c-programming-guide"></a>Código não seguro e ponteiros (Guia de Programação em C#)
-Para manter a segurança de tipos e a segurança, o C# não dá suporte à aritmética de ponteiro por padrão. No entanto, usando a palavra-chave [unsafe](../../../csharp/language-reference/keywords/unsafe.md), você pode definir um contexto não seguro no qual os ponteiros podem ser usados. Para obter mais informações sobre ponteiros, consulte o tópico [Tipos de ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
+# <a name="unsafe-code-and-pointers-c-programming-guide"></a>Código e ponteiros não seguros (Guia de Programação em C#)
+
+Para manter a segurança de tipos e a segurança, o C# não dá suporte à aritmética de ponteiro por padrão. No entanto, usando a palavra-chave [unsafe](../../language-reference/keywords/unsafe.md), você pode definir um contexto não seguro no qual os ponteiros podem ser usados. Para obter mais informações sobre ponteiros, confira [Tipos de ponteiro](pointer-types.md).  
   
 > [!NOTE]
->  No CLR (Common Language Runtime), o código não seguro é conhecido como código não verificado. O código não seguro em C# não é necessariamente perigoso. Ele é apenas o código cuja segurança não pode ser verificada pelo CLR. O CLR, portanto, executará somente o código não seguro se ele estiver em um assembly totalmente confiável. Se você usar código não seguro, será sua responsabilidade assegurar que seu código não apresente riscos de segurança ou erros de ponteiro.  
+> No CLR (Common Language Runtime), o código não seguro é conhecido como código não verificado. O código não seguro em C# não é necessariamente perigoso. Ele é apenas o código cuja segurança não pode ser verificada pelo CLR. O CLR, portanto, executará somente o código não seguro se ele estiver em um assembly totalmente confiável. Se você usar código não seguro, será sua responsabilidade assegurar que seu código não apresente riscos de segurança ou erros de ponteiro.  
   
-## <a name="unsafe-code-overview"></a>Visão Geral de Código Não Seguro  
- O código não seguro tem as propriedades a seguir:  
+## <a name="unsafe-code-overview"></a>Visão Geral de código não seguro
+
+O código não seguro tem as propriedades a seguir:
+
+- Blocos de código, tipos e métodos podem ser definidos como não seguros.
+
+- Em alguns casos, o código não seguro pode aumentar o desempenho de um aplicativo removendo as verificações de limites de matriz.
+
+- O código não seguro é necessário quando você chama funções nativas que exigem ponteiros.
+
+- Usar o código não seguro apresenta riscos de segurança e estabilidade.
+
+- O código que contém blocos não seguros deve ser compilado com a opção do compilador [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md).
   
-- Blocos de código, tipos e métodos podem ser definidos como não seguros.  
-  
-- Em alguns casos, o código não seguro pode aumentar o desempenho de um aplicativo removendo as verificações de limites de matriz.  
-  
-- O código não seguro é necessário quando você chama funções nativas que exigem ponteiros.  
-  
-- Usar o código não seguro apresenta riscos de segurança e estabilidade.  
-  
-- Para que o C# compile o código não seguro, o aplicativo deve ser compilado com [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
-  
-## <a name="related-sections"></a>Seções relacionadas  
- Para obter mais informações, consulte:  
-  
-- [Tipos de ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-  
-- [Buffers de tamanho fixo](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
-  
-- [Como: usar ponteiros para copiar uma matriz de bytes](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
-  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-  
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="related-sections"></a>Seções relacionadas
+
+Para obter mais informações, consulte:
+
+- [Tipos de ponteiro](pointer-types.md)
+
+- [Buffers de tamanho fixo](fixed-size-buffers.md)
+
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Para obter mais informações, confira o tópico [Código não seguro](~/_csharplang/spec/unsafe-code.md) na [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Guia de Programação em C#](../index.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)

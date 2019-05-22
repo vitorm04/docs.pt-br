@@ -4,12 +4,12 @@ description: Informações sobre exemplos e tutoriais para .NET Core, ASP.NET Co
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469460"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960303"
 ---
 # <a name="net-samples-and-tutorials"></a>Exemplos e tutoriais do .NET
 
@@ -63,7 +63,7 @@ Essa série de exemplos demonstra muitos dos recursos da LINQ (Consulta Integrad
 
 **Exemplo de servidor COM gerenciado**
 
-O exemplo de [servidor COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) demonstra a criação de um servidor COM gerenciado e como ele pode ser globalmente registrado.
+O exemplo de [servidor COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) demonstra a criação de um servidor COM gerenciado e como ele pode ser globalmente registrado ou consumido por meio de RegFree COM.
 
 **Exemplo de PIA do Microsoft Office**
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79b31e61f4c7739a20765c9484db6a8cfd04b01b
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008948"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003769"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Como: criar um controle associado simples em um Windows Form
 Com a *associação simples*, é possível exibir um elemento de dados simples, como um valor de coluna de uma tabela de dados em um controle. Você pode associar de maneira simples qualquer propriedade de um controle a um valor de dados.  
@@ -28,7 +28,7 @@ Com a *associação simples*, é possível exibir um elemento de dados simples, 
   
      As propriedades geralmente mais associadas são exibidas sob a propriedade **(DataBindings)**. Por exemplo, na maioria dos controles, a propriedade **Text** é vinculada com mais frequência.  
   
-4. Se a propriedade que deseja associar não for uma das propriedades comumente vinculadas, clique no botão **Elipse** (![VisualStudioEllipsesButton screenshot](./media/vbellipsesbutton.png "vbEllipsesButton")) na caixa **(Avançado)** para exibir a caixa de diálogo **Formatação e associação avançada** com uma lista completa de propriedades para esse controle.  
+4.  Se a propriedade você deseja associar não for uma das propriedades comumente vinculadas, clique no **reticências** botão (![o botão (...) na janela Propriedades do Visual Studio.](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) na **( Avançado)** caixa para exibir o **formatação e associação avançada** caixa de diálogo com uma lista completa de propriedades para o controle.  
   
 5. Selecione a propriedade que deseja associar e clique na seta suspensa em **Associação**.  
   
