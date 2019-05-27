@@ -2,17 +2,17 @@
 title: 'Como: Combinar consultas LINQ com expressões regulares (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: e9aa8378fb6b4bbfbfca280e1a9fc73adc108d81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21c05b0134fda5011ecaf14f296e5a5172cf3bf5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558755"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585904"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a><span data-ttu-id="f7ab1-102">Como: Combinar consultas LINQ com expressões regulares (C#)</span><span class="sxs-lookup"><span data-stu-id="f7ab1-102">How to: Combine LINQ Queries with Regular Expressions (C#)</span></span>
-<span data-ttu-id="f7ab1-103">Este exemplo mostra como usar a classe <xref:System.Text.RegularExpressions.Regex> para criar uma expressão regular para correspondências mais complexas em cadeias de texto.</span><span class="sxs-lookup"><span data-stu-id="f7ab1-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="f7ab1-104">A consulta LINQ torna fácil a aplicação de filtro exatamente nos arquivos que você deseja pesquisar com a expressão regular e formatar os resultados.</span><span class="sxs-lookup"><span data-stu-id="f7ab1-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a><span data-ttu-id="44584-102">Como: Combinar consultas LINQ com expressões regulares (C#)</span><span class="sxs-lookup"><span data-stu-id="44584-102">How to: Combine LINQ Queries with Regular Expressions (C#)</span></span>
+<span data-ttu-id="44584-103">Este exemplo mostra como usar a classe <xref:System.Text.RegularExpressions.Regex> para criar uma expressão regular para correspondências mais complexas em cadeias de texto.</span><span class="sxs-lookup"><span data-stu-id="44584-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="44584-104">A consulta LINQ torna fácil a aplicação de filtro exatamente nos arquivos que você deseja pesquisar com a expressão regular e formatar os resultados.</span><span class="sxs-lookup"><span data-stu-id="44584-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f7ab1-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f7ab1-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="44584-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="44584-105">Example</span></span>  
   
 ```csharp  
 class QueryWithRegEx  
@@ -93,12 +93,12 @@ class QueryWithRegEx
 }  
 ```  
   
- <span data-ttu-id="f7ab1-106">Observe que também é possível consultar o objeto <xref:System.Text.RegularExpressions.MatchCollection> retornado por uma pesquisa `RegEx`.</span><span class="sxs-lookup"><span data-stu-id="f7ab1-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="f7ab1-107">Neste exemplo, apenas o valor de cada correspondência é produzido nos resultados.</span><span class="sxs-lookup"><span data-stu-id="f7ab1-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="f7ab1-108">No entanto, também é possível usar a LINQ para executar todos os tipos de filtragem, classificação e agrupamento nessa coleção.</span><span class="sxs-lookup"><span data-stu-id="f7ab1-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="f7ab1-109">Como <xref:System.Text.RegularExpressions.MatchCollection> é uma coleção <xref:System.Collections.IEnumerable> não genérica, é necessário declarar explicitamente o tipo da variável de intervalo na consulta.</span><span class="sxs-lookup"><span data-stu-id="f7ab1-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
+ <span data-ttu-id="44584-106">Observe que também é possível consultar o objeto <xref:System.Text.RegularExpressions.MatchCollection> retornado por uma pesquisa `RegEx`.</span><span class="sxs-lookup"><span data-stu-id="44584-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="44584-107">Neste exemplo, apenas o valor de cada correspondência é produzido nos resultados.</span><span class="sxs-lookup"><span data-stu-id="44584-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="44584-108">No entanto, também é possível usar a LINQ para executar todos os tipos de filtragem, classificação e agrupamento nessa coleção.</span><span class="sxs-lookup"><span data-stu-id="44584-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="44584-109">Como <xref:System.Text.RegularExpressions.MatchCollection> é uma coleção <xref:System.Collections.IEnumerable> não genérica, é necessário declarar explicitamente o tipo da variável de intervalo na consulta.</span><span class="sxs-lookup"><span data-stu-id="44584-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f7ab1-110">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="f7ab1-110">Compiling the Code</span></span>  
- <span data-ttu-id="f7ab1-111">Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior, com uma referência a System.Core.dll e diretivas `using` para os namespaces System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="f7ab1-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="44584-110">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="44584-110">Compiling the Code</span></span>  
+ <span data-ttu-id="44584-111">Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="44584-111">Create a C# console application project with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7ab1-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f7ab1-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="44584-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="44584-112">See also</span></span>
 
-- [<span data-ttu-id="f7ab1-113">LINQ e cadeias de caracteres (C#)</span><span class="sxs-lookup"><span data-stu-id="f7ab1-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="f7ab1-114">LINQ e diretórios de arquivos (C#)</span><span class="sxs-lookup"><span data-stu-id="f7ab1-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="44584-113">LINQ e cadeias de caracteres (C#)</span><span class="sxs-lookup"><span data-stu-id="44584-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="44584-114">LINQ e diretórios de arquivos (C#)</span><span class="sxs-lookup"><span data-stu-id="44584-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
