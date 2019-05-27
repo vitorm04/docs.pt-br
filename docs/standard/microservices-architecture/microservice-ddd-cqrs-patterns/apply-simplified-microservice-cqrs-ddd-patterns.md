@@ -2,12 +2,12 @@
 title: Aplicando padrões CQRS e DDD simplificados em um microsserviço
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Entender a relação geral entre os padrões CQRS e DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: a5df8ce495b308df63af47ef1ec2ed26be2b5e37
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875895"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959377"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Aplicar padrões CQRS e DDD simplificados em um microsserviço
 
@@ -35,7 +35,7 @@ A camada de aplicativo pode ser a própria API Web. O aspecto de design importan
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
- - **Greg Young. Controle de versão em um Sistema de Origem de Evento** (gratuito para ler o livro eletrônico online) \
+- **Greg Young. Controle de versão em um Sistema de Origem de Evento** (gratuito para ler o livro eletrônico online) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
