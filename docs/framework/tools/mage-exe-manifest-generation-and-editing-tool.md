@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 9ea293a3c96f193285f45f8d70ac038e785f548a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477656"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877569"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Ferramenta de Geração e Edição de Manifesto)
 
-A Manifest Generation and Editing Tool (*Mage.exe*) é uma ferramenta de linha de comando compatível com a criação e a edição dos manifestos de aplicativo e implantação. Como uma ferramenta de linha de comando, *Mage.exe* pode ser executado tanto de scripts de lote quanto de outros aplicativos baseados no Windows, inclusive aplicativos do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].
+A Manifest Generation and Editing Tool (*Mage.exe*) é uma ferramenta de linha de comando compatível com a criação e a edição dos manifestos de aplicativo e implantação. Como uma ferramenta de linha de comando, *Mage.exe* pode ser executado com base tanto em scripts de lote quanto em aplicativos com base no Windows, inclusive aplicativos do ASP.NET.
 
 Também é possível usar *MageUI.exe*, um aplicativo gráfico, em vez de *Mage.exe*. Para obter mais informações, consulte [MageUI.exe (Manifest Generation and Editing Tool, Cliente Gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 

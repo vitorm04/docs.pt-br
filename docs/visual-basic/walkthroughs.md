@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739456"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586275"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Instruções passo a passo da linguagem Visual Basic
 O passo a passo fornece instruções detalhadas para cenários comuns, o que os torna um bom local para começar a aprender sobre o produto ou uma área de recurso específica.  
@@ -72,9 +72,9 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Demonstra como usar funções do Visual Basic para determinar informações sobre um arquivo, procurar uma cadeia de caracteres em um arquivo e gravar em um arquivo.  
   
  [Manipulando arquivos usando métodos do .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Demonstra como usar métodos [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para determinar informações sobre um arquivo, pesquisar uma cadeia de caracteres em um arquivo e gravar em um arquivo.  
+ Demonstra como usar métodos do .NET Framework para determinar informações sobre um arquivo, pesquisar uma cadeia de caracteres em um arquivo e gravar em um arquivo.  
   
- [Mantendo um objeto no Visual Studio](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
+ [Mantendo um objeto no Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Demonstra como criar um objeto simples e manter seus dados em um arquivo.  
   
  [Passo a passo: suporte para Test-First com o recurso “Gerar com base no uso”](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  

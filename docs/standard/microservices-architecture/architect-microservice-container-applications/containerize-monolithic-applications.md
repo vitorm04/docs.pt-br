@@ -1,15 +1,13 @@
 ---
 title: Implantar aplicativos monolíticos em contêineres
 description: Colocar em contêineres aplicativos monolíticos, embora não obtenha todos os benefícios da arquitetura de microsserviços, tem benefícios de implantação importantes que podem ser entregues imediatamente.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: d1de4c4beb8c60aa543e5c71243d93b83fe52072
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130851"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640823"
 ---
 # <a name="containerizing-monolithic-applications"></a>Implantar aplicativos monolíticos em contêineres
 
@@ -35,7 +33,7 @@ De uma perspectiva de infraestrutura, cada servidor pode executar vários aplica
 
 ![Um host pode executar vários aplicativos monolíticos, cada um em um contêiner separado.](./media/image2.png)
 
-**Figura 4-2**. Abordagem monolítica: host executando vários aplicativos, cada um em execução como um contêiner
+**Figura 4-2**. Abordagem monolítica: Host executando vários aplicativos, cada um em execução como um contêiner
 
 Os aplicativos monolíticos no Microsoft Azure podem ser implantados por meio de VMs dedicadas a cada instância. Além disso, usando [conjuntos de dimensionamento de máquinas virtuais do Azure](https://azure.microsoft.com/documentation/services/virtual-machine-scale-sets/), você pode dimensionar VMs facilmente. O [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/) também executa aplicativos monolíticos e dimensiona instâncias facilmente sem necessidade de gerenciamento de VMs. Desde 2016, o Serviços de Aplicativos do Azure também pode executar instâncias únicas de contêineres do Docker, simplificando a implantação.
 

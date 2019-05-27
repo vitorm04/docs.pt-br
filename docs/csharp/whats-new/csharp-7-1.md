@@ -2,12 +2,12 @@
 title: Novidades no C# 7.1
 description: Uma visão geral dos novos recursos no C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480957"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881539"
 ---
 # <a name="whats-new-in-c-71"></a>Novidades no C# 7.1
 
@@ -26,7 +26,7 @@ Os novos recursos de linguagem nesta versão são:
 * [Correspondência de padrões em parâmetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
   - Você pode usar expressões de correspondência de padrão em variáveis cujo tipo é um parâmetro de tipo genérico.
 
-Por fim, o compilador traz duas opções `/refout` e `/refonly`, que controlam a [geração de assembly de referência](#reference-assembly-generation).
+Por fim, o compilador traz duas opções `-refout` e `-refonly`, que controlam a [geração de assembly de referência](#reference-assembly-generation).
 
 Para usar as últimas funcionalidades em uma versão de ponto, você precisa [configurar a versão da linguagem do compilador](../language-reference/configure-language-version.md) e selecionar a versão.
 
@@ -109,5 +109,5 @@ A partir do C# 7.1, a expressão de padrão para o padrão de tipo `is` e `switc
 
 ## <a name="reference-assembly-generation"></a>Geração de assembly de referência
 
-Há duas novas opções do compilador que geram *assemblies somente de referência*: [/refout](../language-reference/compiler-options/refout-compiler-option.md) e [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Há duas novas opções do compilador que geram *assemblies somente de referência*: [-refout](../language-reference/compiler-options/refout-compiler-option.md) e [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
 Os artigos vinculados explicam essas opções e os assemblies de referência mais detalhadamente.

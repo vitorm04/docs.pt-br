@@ -2,12 +2,12 @@
 title: Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 description: Conheça as etapas de "loop externo" do fluxo de trabalho de DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: 194786a90fc02801211c7614eb632392d67f0109
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641047"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195606"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 
@@ -152,7 +152,7 @@ Vamos ver primeiro o cenário menos complexas: Implantando a simples hosts de Do
 
 **Figura 5-6**. Implantação de contêineres de aplicativo para registro de ambientes de host de Docker simple
 
-Figura 5 a 7 destaca como você pode conectar seu build CI para ambientes de controle de qualidade/teste nos serviços do Azure DevOps, clicando em Docker Compose na caixa de diálogo Adicionar tarefa. No entanto, ao implantar em ambientes de preparo ou produção, você normalmente usaria vários ambientes de tratamento de recursos do Release Management (como QA, preparo e produção). Se você estiver implantando em hosts únicos do Docker, ele está usando os serviços de DevOps do Azure "Docker Compose" tarefa (que está invocando o `docker-compose up` comando nos bastidores). Se você estiver implantando no serviço de contêiner do Azure, ele usa a tarefa de implantação do Docker, conforme explicado na seção a seguir.
+Figura 5 a 7 destaca como você pode conectar seu build CI para ambientes de controle de qualidade/teste nos serviços do Azure DevOps, clicando em Docker Compose na caixa de diálogo Adicionar tarefa. No entanto, ao implantar em ambientes de preparo ou produção, você normalmente usaria vários ambientes de tratamento de recursos do Release Management (como QA, preparo e produção). Se você estiver implantando em hosts únicos do Docker, ele está usando os serviços de DevOps do Azure "Docker Compose" tarefa (que está invocando o `docker-compose up` comando nos bastidores). Se você estiver implantando para o serviço de Kubernetes do Azure (AKS), ele usa a tarefa de implantação do Docker, conforme explicado na seção a seguir.
 
 ![Modo de exibição de navegador de adição de uma tarefa do Docker Compose.](./media/image7.png)
 
@@ -186,15 +186,15 @@ Do ponto de vista de CD e os serviços do Azure DevOps especificamente, pode exe
 
 Inicialmente, ao implantar em determinadas clusters ou orquestradores, você tradicionalmente usaria mecanismos por cada orquestrador (ou seja, Kubernetes e Service Fabric possuem mecanismos de implantação diferentes) e scripts de implantação específico em vez do mais simples e fácil de usar `docker-compose` ferramenta com base no `docker-compose.yml` arquivo de definição. No entanto, graças à tarefa do Azure DevOps dos serviços de implantação do Docker, mostrada na Figura 5 a 10, você agora também pode implantar em orquestradores com suporte apenas usando o familiar `docker-compose.yml` arquivo porque a ferramenta realiza essa "tradução" para você (do seu `docker-compose.yml`arquivo para o formato necessário para o orchestrator).
 
-![Tarefa de implantação do modo de exibição de navegador do catálogo de tarefas no DevOps do Azure, mostrando o Docker.](./media/image10.png)
+![Exibição de navegador do catálogo de tarefas no DevOps do Azure, mostrando a opção implantar a tarefa de Kubernetes.](./media/add-deploy-to-kubernetes-task.png)
 
-**Figura 5-10**. Adicionando a tarefa de implantação do Docker para seu ambiente RM
+**Figura 5-10**. Adicionando a opção implantar a tarefa de Kubernetes para seu ambiente
 
-Figura 5 a 11 demonstra como você pode editar a tarefa de implantação do Docker e especificar o tipo de destino (Azure Container Service DC/OS, neste caso), seu arquivo do Docker Compose e a conexão de registro do Docker (como o registro de contêiner do Azure ou Hub do Docker). Esta é a tarefa que irá recuperar as imagens do Docker personalizadas prontos para uso para ser implantado como contêineres no cluster.
+Figura 5 a 11 demonstra como você pode editar o implantar no Kubernetes tarefa com as seções disponíveis para configuração. Esta é a tarefa que irá recuperar as imagens do Docker personalizadas prontos para uso para ser implantado como contêineres no cluster.
 
-![Exibição de navegador do DevOps do Azure, implante a definição de tarefa do orchestrator.](./media/image11.png)
+![Exibição de navegador do DevOps do Azure, implante a definição de tarefa do Kubernetes.](./media/edit-deploy-to-kubernetes-task.png)
 
-**Figura 5-11**. Implantação da definição de tarefa do docker Deploy para serviço de contêiner do Azure DC/SO
+**Figura 5-11**. Implantação da definição de tarefa do docker Deploy ACS DC/SO
 
 > [! INFORMAÇÕES] para ler mais sobre o pipeline de CD com serviços de DevOps do Azure e o Docker, visite <https://azure.microsoft.com/services/devops/pipelines>
 

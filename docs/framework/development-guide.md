@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092950"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583540"
 ---
 # <a name="net-framework-development-guide"></a>Guia de Desenvolvimento do .NET Framework
 Esta seção explica como criar, configurar, depurar, proteger e implantar aplicativos .NET Framework. Esta seção também fornece informações sobre áreas de tecnologia como programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.  
@@ -67,7 +67,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  
 ## <a name="reference"></a>Referência  
  [Biblioteca de classes .NET Framework](/dotnet/api/?view=netframework-4.7)  
- Fornece sintaxe, exemplos de código e informações de uso para cada classe contida nos namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Fornece sintaxe, exemplos de código e informações de uso para cada classe contida nos namespaces do .NET Framework.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Introdução](../../docs/framework/get-started/index.md)  

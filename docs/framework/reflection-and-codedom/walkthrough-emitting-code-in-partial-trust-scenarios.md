@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592449"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585910"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Passo a passo: Emitindo o código em cenários de confiança parcial
 A emissão de reflexão usa a mesma API definida na confiança total ou parcial, porém alguns recursos exigem permissões especiais em código parcialmente confiável. Além disso, a emissão de reflexão tem um recurso, os métodos dinâmicos hospedados anonimamente, que é projetado para ser usado com confiança parcial e por assemblies transparentes de segurança.  
@@ -77,12 +77,12 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     O último parâmetro da sobrecarga do método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> permite que você especifique um conjunto de assemblies que devem receber confiança total, em vez do conjunto de concessões do domínio do aplicativo. Você não precisa especificar os assemblies [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] que o aplicativo usa, pois tais assemblies estão no cache de assembly global. Assemblies no cache de assembly global sempre são totalmente confiáveis. Você pode usar esse parâmetro para especificar os assemblies de nome forte que não estão no cache de assembly global.  
+     O último parâmetro da sobrecarga do método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> permite que você especifique um conjunto de assemblies que devem receber confiança total, em vez do conjunto de concessões do domínio do aplicativo. Você não precisa especificar os assemblies do .NET Framework que o aplicativo usa, pois tais assemblies estão no cache de assembly global. Assemblies no cache de assembly global sempre são totalmente confiáveis. Você pode usar esse parâmetro para especificar os assemblies de nome forte que não estão no cache de assembly global.  
   
 ### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>Adicionando RestrictedMemberAccess a domínios em área restrita  
  Aplicativos host podem permitir que os métodos dinâmicos hospedados anonimamente tenham acesso aos dados particulares em assemblies com níveis de confiança iguais ou inferior ao nível de confiança do assembly que emite o código. Para habilitar essa capacidade restrita de ignorar as verificações de visibilidade JIT (Just-In-Time), o aplicativo host adiciona um objeto <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> (ADM) para o conjunto de concessões.  
   
- Por exemplo, um host pode conceder permissões da Internet a aplicativos da Internet mais ADM para que um aplicativo da Internet possa emitir código que acessa dados particulares em seus próprios assemblies. Como o acesso é limitado aos assemblies de confiança igual ou inferior, um aplicativo da Internet não pode acessar membros de assemblies totalmente confiáveis, como assemblies [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Por exemplo, um host pode conceder permissões da Internet a aplicativos da Internet mais ADM para que um aplicativo da Internet possa emitir código que acessa dados particulares em seus próprios assemblies. Como o acesso é limitado aos assemblies de confiança igual ou inferior, um aplicativo da Internet não pode acessar membros de assemblies totalmente confiáveis, como assemblies do .NET Framework.  
   
 > [!NOTE]
 >  Para evitar a elevação de privilégio, as informações de pilha para o assembly de emissão são incluídas quando ps métodos dinâmicos hospedados anonimamente são construídos. Quando o método é invocado, as informações de pilha são verificadas. Dessa forma, um método dinâmico hospedado anonimamente que é invocado do código totalmente confiável ainda é limitado ao nível de confiança do assembly de emissão.  
@@ -169,7 +169,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     A restrição é que o método dinâmico hospedado anonimamente poderá acessar dados particulares somente em assemblies com níveis de confiança igual ou inferior ao nível de confiança do assembly de emissão. Por exemplo, se o método dinâmico estiver em execução com confiança de Internet, ele poderá acessar os dados particulares em outros assemblies que também são executados com confiança de Internet, mas não pode acessar dados particulares de assemblies [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Assemblies [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] são instalados no cache de assembly global e sempre são totalmente confiáveis.  
+     A restrição é que o método dinâmico hospedado anonimamente poderá acessar dados particulares somente em assemblies com níveis de confiança igual ou inferior ao nível de confiança do assembly de emissão. Por exemplo, se o método dinâmico estiver em execução com confiança de Internet, ele poderá acessar os dados particulares em outros assemblies que também são executados com confiança de Internet, mas não poderá acessar dados particulares de assemblies do .NET Framework. Assemblies do .NET Framework são instalados no cache de assembly global e sempre são totalmente confiáveis.  
   
      Métodos dinâmicos hospedados anonimamente podem usar essa capacidade restrita para ignorar as verificações de visibilidade JIT somente se o aplicativo host conceder <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. A demanda por essa permissão é realizada quando o método é invocado.  
   

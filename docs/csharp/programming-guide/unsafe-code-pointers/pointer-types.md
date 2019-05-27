@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724038"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880323"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -75,28 +75,26 @@ A tabela a seguir lista os operadores e as instruções que podem operar em pont
 
 |Operador/Instrução|Use|
 |-------------------------|---------|
-|*|Executa indireção de ponteiro.|
-|->|Acessa um membro de um struct através de um ponteiro.|
-|[]|Indexa um ponteiro.|
+|`*`|Executa indireção de ponteiro.|
+|`->`|Acessa um membro de um struct através de um ponteiro.|
+|`[]`|Indexa um ponteiro.|
 |`&`|Obtém o endereço de uma variável.|
-|++ e --|Incrementa e decrementa ponteiros.|
-|+ e -|Executa aritmética de ponteiros.|
-|==, !=, \<, >, \<= e >=|Compara ponteiros.|
-|`stackalloc`|Aloca memória na pilha.|
-|Instrução `fixed`|Corrige temporariamente uma variável para que seu endereço possa ser encontrado.|
+|`++` e `--`|Incrementa e decrementa ponteiros.|
+|`+` e `-`|Executa aritmética de ponteiros.|
+|`==`, `!=`, `<`, `>`, `<=` e `>=`|Compara ponteiros.|
+|[Operador `stackalloc`](../../language-reference/keywords/stackalloc.md)|Aloca memória na pilha.|
+|[Instrução `fixed`](../../language-reference/keywords/fixed-statement.md)|Corrige temporariamente uma variável para que seu endereço possa ser encontrado.|
 
-## <a name="c-language-specification"></a>Especificação da Linguagem C#
+Para obter mais informações sobre operadores relacionados a ponteiro, veja [Operadores relacionados a ponteiro](../../language-reference/operators/pointer-related-operators.md).
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Para saber mais, confira a seção [Tipos de ponteiro](~/_csharplang/spec/unsafe-code.md#pointer-types) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../index.md)
 - [Código não seguro e ponteiros](index.md)
 - [Conversões de ponteiro](pointer-conversions.md)
-- [Expressões de ponteiro](pointer-expressions.md)
 - [Tipos](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
-- [Instrução fixed](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [Conversão boxing e unboxing](../types/boxing-and-unboxing.md)

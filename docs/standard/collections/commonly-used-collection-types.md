@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77740f86265db86c998af25e6e9ed4c20a7014e6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835740"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589894"
 ---
 # <a name="commonly-used-collection-types"></a>Tipos de coleção de uso comum
 Tipos de coleção são as variações comuns de coleções de dados, como tabelas de hash, filas, pilhas, pacotes, dicionários e listas.  
@@ -36,10 +36,10 @@ Tipos de coleção são as variações comuns de coleções de dados, como tabel
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Coleções e Estruturas de Dados](../../../docs/standard/collections/index.md)|Discute os diversos tipos de coleção disponíveis no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], incluindo pilhas, filas, listas, matrizes e dicionários.|  
+|[Coleções e Estruturas de Dados](../../../docs/standard/collections/index.md)|Discute os vários tipos de coleção disponíveis no .NET Framework, incluindo pilhas, filas, listas, matrizes e dicionários.|  
 |[Tipos de Coleção de Tabela de Hash e Dicionário](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Descreve os recursos de tipos de dicionário baseados em hash genérico e não genérico.|  
 |[Tipos de Coleção Sorted](../../../docs/standard/collections/sorted-collection-types.md)|Descreve as classes que fornecem funcionalidade de classificação para listas e conjuntos.|  
-|[Genéricos](../../../docs/standard/generics/index.md)|Descreve o recurso Genéricos, incluindo coleções, delegados e interfaces genéricos fornecidos pelo [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Fornece links à documentação de recursos para C#, Visual Basic e Visual C++ e para oferecer suporte a tecnologias, tais como a de reflexão.|  
+|[Genéricos](../../../docs/standard/generics/index.md)|Descreve o recurso de genéricos, incluindo coleções, interfaces e representantes genéricos fornecidos pelo .NET Framework. Fornece links à documentação de recursos para C#, Visual Basic e Visual C++ e para oferecer suporte a tecnologias, tais como a de reflexão.|  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Collections?displayProperty=nameWithType>  

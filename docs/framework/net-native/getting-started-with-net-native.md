@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b466b27925b41823ce3f6537782f3bd6201d5af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39d0066185703ebac7609d506c834b7718693d33
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868505"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052634"
 ---
 # <a name="getting-started-with-net-native"></a>Guia de Introdução ao .NET Nativo
 
-Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou migrando um aplicativo existente da Windows Store, siga o mesmo conjunto de procedimentos. Para criar um aplicativo [!INCLUDE[net_native](../../../includes/net-native-md.md)], siga estas etapas:
+Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou migrando um aplicativo existente da Windows Store, siga o mesmo conjunto de procedimentos. Para criar um aplicativo .NET nativo, siga estas etapas:
 
 1. [Desenvolver um aplicativo UWP (da Plataforma Universal do Windows) que direciona o Windows 10](#Step1) e testar os builds de depuração do aplicativo para garantir que ele funcione corretamente.
 
@@ -24,7 +24,7 @@ Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou m
 4. [Resolver manualmente os metadados ausentes](#Step4) e repetir a [etapa 3](#Step3) até que todos os problemas sejam resolvidos.
 
 > [!NOTE]
-> Se você estiver migrando um aplicativo existente da Windows Store para o [!INCLUDE[net_native](../../../includes/net-native-md.md)], examine [Migrando seu aplicativo da Windows Store para o .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+> Se você estiver migrando um aplicativo da Windows Store existente para o .NET Native, certifique-se de examinar [migrando seu aplicativo da Windows Store para .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
 
 <a name="Step1"></a>
 
@@ -36,12 +36,12 @@ Se você estiver desenvolvendo um novo aplicativo ou migrando um existente, siga
 
 2. Observe que há alguns problemas de compatibilidade conhecidos entre a compilação de projetos de aplicativo UWP com a cadeia de ferramentas do .NET Native e sem ela. Consulte o [guia de migração](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) para obter mais informações.
 
-Agora é possível escrever um código C# ou Visual Basic na área de superfície do [!INCLUDE[net_native](../../../includes/net-native-md.md)] executada no sistema local (ou no simulador).
+Agora você pode escrever C# ou código do Visual Basic em relação a área de superfície .NET nativo que é executado no sistema local (ou no simulador).
 
 > [!IMPORTANT]
 > Ao desenvolver seu aplicativo, observe qualquer uso de serialização ou reflexão no seu código.
 
-Por padrão, os builds de depuração são compilados em JIT para permitir a rápida implantação do F5, enquanto os builds de versão são compilados usando a tecnologia de pré-compilação do [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Isso significa que você deve criar e testar os builds de depuração do aplicativo para garantir que eles funcionem normalmente antes de compilá-los com a cadeia de ferramentas do .NET Native.
+Por padrão, compilações de depuração são compilados em JIT para permitir a rápida implantação de F5, enquanto os builds de versão são compilados usando a tecnologia de pré-compilação .NET Native. Isso significa que você deve criar e testar os builds de depuração do aplicativo para garantir que eles funcionem normalmente antes de compilá-los com a cadeia de ferramentas do .NET Native.
 
 <a name="Step2"></a>
 
@@ -85,13 +85,13 @@ Depois de atualizar o arquivo de diretivas de tempo de execução, você poderá
 
 Se seu aplicativo não funcionar corretamente (especialmente nos casos em que ele gera [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ou [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) exceções em tempo de execução), siga as instruções na próxima seção, [etapa 4: Resolver manualmente metadados ausentes](#Step4). Ativar exceções de primeira chance pode ajudá-lo a encontrar esses bugs.
 
-Depois de testar e depurar os builds de depuração do aplicativo e tiver certeza de que ter eliminado as exceções [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) e [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), você deverá testar o aplicativo como um aplicativo do [!INCLUDE[net_native](../../../includes/net-native-md.md)] otimizado. Para fazer isso, altere as configurações do projeto ativo de **Depuração** para **Versão**.
+Quando você testar e depurar o debug compilações do seu aplicativo e tiver certeza de que ter eliminado as [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) e [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) exceções, você deve testar seu aplicativo como um aplicativo .NET nativo otimizado. Para fazer isso, altere as configurações do projeto ativo de **Depuração** para **Versão**.
 
 <a name="Step4"></a>
 
 ## <a name="step-4-manually-resolve-missing-metadata"></a>Etapa 4: Resolver manualmente metadados ausentes
 
-A falha mais comum encontrada no [!INCLUDE[net_native](../../../includes/net-native-md.md)] que não é encontrada na área de trabalho é uma exceção [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) ou [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) em tempo de execução. Em alguns casos, a ausência de metadados pode manifestar-se em um comportamento imprevisível ou mesmo em falhas de aplicativo. Esta seção discute como depurar e resolver essas exceções adicionando diretivas ao arquivo de diretivas de tempo de execução. Para obter informações sobre o formato das diretivas de tempo de execução, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Depois de adicionar as diretivas de tempo de execução, você deverá [implantar e testar o aplicativo](#Step3) novamente e resolver todas as novas exceções [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) e [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) até não encontrar mais exceções.
+A falha mais comum, você encontrará com o .NET nativo que você não encontrar na área de trabalho é um tempo de execução [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), ou [ MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) exceção. Em alguns casos, a ausência de metadados pode manifestar-se em um comportamento imprevisível ou mesmo em falhas de aplicativo. Esta seção discute como depurar e resolver essas exceções adicionando diretivas ao arquivo de diretivas de tempo de execução. Para obter informações sobre o formato das diretivas de tempo de execução, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Depois de adicionar as diretivas de tempo de execução, você deverá [implantar e testar o aplicativo](#Step3) novamente e resolver todas as novas exceções [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) e [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) até não encontrar mais exceções.
 
 > [!TIP]
 > Especifique as diretivas de tempo de execução em um nível superior para permitir que seu aplicativo seja resistente a alterações de código.  É recomendável adicionar diretivas de tempo de execução nos níveis de namespace e tipo em vez de nível do membro. Observe que pode haver uma relação entre resiliência e binários maiores com mais tempo de compilação.
@@ -113,7 +113,7 @@ Ao lidar com uma exceção de metadados ausentes, considere esses problemas:
   - O código chama um método que depende de reflexão quando alguma alternativa melhor está disponível?
 
 > [!NOTE]
-> Para obter mais informações sobre como resolver problemas causados por diferenças na reflexão e na disponibilidade de metadados em aplicativos da área de trabalho e no [!INCLUDE[net_native](../../../includes/net-native-md.md)], consulte [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
+> Para obter informações adicionais sobre como lidar com problemas causados por diferenças na reflexão e a disponibilidade de metadados em aplicativos da área de trabalho e o .NET Native, consulte [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
 
 Para ver alguns exemplos específicos de como lidar com exceções e outros problemas que ocorrem ao testar seu aplicativo, consulte:
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: e3ca5193db9dbcb4674680884a6372e6383c0852
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7788e08c1257ff900b08ef6b8d26d3fe42ad9116
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289023"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589333"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Acessando as portas do computador (Visual Basic)
 O objeto `My.Computer.Ports` fornece uma propriedade e um método para acessar as portas seriais do computador.  
@@ -29,7 +29,7 @@ O objeto `My.Computer.Ports` fornece uma propriedade e um método para acessar a
  Demonstra como receber uma cadeia de caracteres de uma porta serial do computador.  
   
  [Operações de Porta no .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- Descreve como usar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ao executar operações de porta.  
+ Descreve como usar o .NET Framework ao executar operações de porta.  
   
 ## <a name="reference"></a>Referência  
  <xref:Microsoft.VisualBasic.Devices.Ports>  

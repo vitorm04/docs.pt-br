@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591372"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586119"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de segurança na emissão de reflexão
-O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece três maneiras de emitir a MSIL (Microsoft Intermediate Language), cada uma com seus próprios problemas de segurança:  
+O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate Language), cada uma com seus próprios problemas de segurança:  
   
 - [Assemblies dinâmicos](#Dynamic_Assemblies)  
   
@@ -32,7 +32,7 @@ O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece três man
  Independentemente do modo como você gerar código dinâmico, a execução do código gerado requer que todas as permissões necessárias para os tipos e métodos que o código gerado usa.  
   
 > [!NOTE]
->  As permissões que são necessárias para refletir o código e emitir o código foram alteradas com versões posteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Consulte [Informações de versão](#Version_Information) posteriormente neste tópico.  
+>  As permissões que são necessárias para refletir o código e emitir o código foram alteradas com versões posteriores do .NET Framework. Consulte [Informações de versão](#Version_Information) posteriormente neste tópico.  
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Assemblies Dinâmicos  
@@ -141,17 +141,17 @@ O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece três man
 ## <a name="version-information"></a>Informações de versão  
  Desde o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], a política de segurança de todo computador é eliminada e a transparência de segurança se torna o mecanismo de imposição padrão. Consulte [Alterações de segurança](../../../docs/framework/security/security-changes.md).  
   
- Desde o [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> não é mais necessário ao emitir métodos dinâmicos e assemblies dinâmicos. Esse sinalizador é exigido em todas as versões anteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Desde o [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> não é mais necessário ao emitir métodos dinâmicos e assemblies dinâmicos. Esse sinalizador é exigido em todas as versões anteriores do .NET Framework.  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> é incluído por padrão nos conjuntos de permissões denominados `FullTrust` e `LocalIntranet`, mas não no conjunto de permissões `Internet`. Portanto, em versões anteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], uma biblioteca poderá ser usada com permissões de Internet somente se ela executar um <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tais bibliotecas exigem uma análise atenta da segurança, pois erros de código poderiam resultar em falhas de segurança. O [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] permite que o código seja emitido em cenários de confiança parcial sem emitir qualquer demanda de segurança, pois a geração de código não é uma operação inerentemente privilegiada. Ou seja, o código gerado não tem mais permissões que o assembly que o emite. Isso permite que as bibliotecas que emitem código tenham a segurança transparente e remove a necessidade de declarar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, o que simplifica a tarefa de escrever uma biblioteca de segurança.  
+>  <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> é incluído por padrão nos conjuntos de permissões denominados `FullTrust` e `LocalIntranet`, mas não no conjunto de permissões `Internet`. Portanto, em versões anteriores do .NET Framework, uma biblioteca poderá ser usada com permissões de Internet somente se ela executar um <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tais bibliotecas exigem uma análise atenta da segurança, pois erros de código poderiam resultar em falhas de segurança. O [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] permite que o código seja emitido em cenários de confiança parcial sem emitir qualquer demanda de segurança, pois a geração de código não é uma operação inerentemente privilegiada. Ou seja, o código gerado não tem mais permissões que o assembly que o emite. Isso permite que as bibliotecas que emitem código tenham a segurança transparente e remove a necessidade de declarar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, o que simplifica a tarefa de escrever uma biblioteca de segurança.  
   
- Além disso, o [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] introduz o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> para acessar membros e tipos não públicos de métodos dinâmicos parcialmente confiáveis. Versões anteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] exigem o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> para os métodos dinâmicos que acessam os membros e tipos não públicos. Essa é uma permissão que não deve ser concedida nunca ao código parcialmente confiável.  
+ Além disso, o [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] introduz o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> para acessar membros e tipos não públicos de métodos dinâmicos parcialmente confiáveis. Versões anteriores do .NET Framework exigem o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> para os métodos dinâmicos que acessam os membros e tipos não públicos. Essa é uma permissão que não deve ser concedida nunca ao código parcialmente confiável.  
   
  Por fim, o [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] introduz os métodos hospedados anonimamente.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Obtendo informações sobre tipos e membros  
- Desde o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], não é necessária nenhuma permissão para obter informações sobre membros e tipos não públicos. A reflexão é usada para obter as informações necessárias para emitir métodos dinâmicos. Por exemplo, os objetos <xref:System.Reflection.MethodInfo> são usados para emitir chamadas de método. Versões anteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] exigem <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Para obter mais informações, consulte [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão).  
+ Desde o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], não é necessária nenhuma permissão para obter informações sobre membros e tipos não públicos. A reflexão é usada para obter as informações necessárias para emitir métodos dinâmicos. Por exemplo, os objetos <xref:System.Reflection.MethodInfo> são usados para emitir chamadas de método. As versões anteriores do .NET Framework exigem <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Para obter mais informações, consulte [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão).  
   
 ## <a name="see-also"></a>Consulte também
 

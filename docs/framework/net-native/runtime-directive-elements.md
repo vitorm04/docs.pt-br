@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf692ff93a575858d1d1a89346611cb9c5957b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867037"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052405"
 ---
 # <a name="runtime-directive-elements"></a>Elementos da diretiva de tempo de execução
 O formato do arquivo de diretivas (rd.xml) do tempo de execução suporta os seguintes elementos de diretiva de tempo de execução. Consulte a [Referência do arquivo de configuração (rd.xml) de diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) para uma representação hierárquica.  
@@ -24,7 +24,7 @@ O formato do arquivo de diretivas (rd.xml) do tempo de execução suporta os seg
  Se sua diretiva recipiente [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) for um atributo, ela se aplicará à política de tempo de execução para elementos de código aos quais esse atributo é aplicado.  
   
  [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)  
- O elemento raiz em todos os arquivos de diretivas de tempo de execução para [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Seus elementos filhos são [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) e [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+ O elemento raiz em cada arquivo de diretivas de tempo de execução para .NET nativo. Seus elementos filhos são [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) e [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
  [\<Event>](../../../docs/framework/net-native/event-element-net-native.md)  
  Aplica a política de tempo de execução a um evento. Esse é um filho dos elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) e [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a659de62965d17e965eee2f750337a08ae1801e0
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972309"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053717"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Como: Determinar qual painel no controle StatusBar do Windows Forms foi clicado
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "61972309"
   
 ### <a name="to-determine-which-panel-was-clicked"></a>Para determinar qual painel foi clicado  
   
-1. No <xref:System.Windows.Forms.StatusBar.PanelClick> manipulador de eventos, use uma `Select Case` (no Visual Basic) ou `switch case` (Visual C# ou [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) instrução para determinar qual painel foi clicado examinando o índice do painel clicado nos argumentos do evento.  
+1. No <xref:System.Windows.Forms.StatusBar.PanelClick> manipulador de eventos, use uma `Select Case` (no Visual Basic) ou `switch case` (Visual C# ou Visual C++) instrução para determinar qual painel foi clicado examinando o índice do painel clicado nos argumentos do evento.  
   
      O exemplo de código a seguir exige a presença, no formulário, de um <xref:System.Windows.Forms.StatusBar> controle, `StatusBar1`e dois <xref:System.Windows.Forms.StatusBarPanel> objetos `StatusBarPanel1` e `StatusBarPanel2`.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61972309"
        }  
     ```  
   
-     (Visual c#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.  
+     (Visual C#, Visual C++) Coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.  
   
     ```csharp  
     this.statusBar1.PanelClick += new   

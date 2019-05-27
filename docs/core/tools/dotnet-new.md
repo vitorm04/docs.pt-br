@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet new
 description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
-ms.date: 10/24/2018
-ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 05/06/2019
+ms.openlocfilehash: f8bc8cb59ae6e421f4e9bd05925376399939056d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516142"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878310"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -19,11 +19,18 @@ ms.locfileid: "54516142"
 
 ## <a name="synopsis"></a>Sinopse
 
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+```console
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
+dotnet new <TEMPLATE> [-l|--list] [--type]
+dotnet new [-h|--help]
+```
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```console
-dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
-    [-u|--uninstall] [Template options]
+dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
@@ -59,78 +66,162 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
 O modelo para o qual criar uma instância quando o comando é invocado. Cada modelo pode ter opções específicas que podem ser passadas. Para obter mais informações, consulte [Opções de modelo](#template-options).
 
+Se o valor `TEMPLATE` não for uma correspondência exata no texto na coluna **Modelos** ou **Nome Curto**, uma correspondência de substring será executada nessas duas colunas.
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+O comando contém uma lista padrão de modelos. Use `dotnet new -l` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 2.2.100. O idioma padrão do modelo é mostrado entre parênteses.
+
+| Modelos                                    | Nome curto        | Idioma     | Marcas                                  |
+|----------------------------------------------|-------------------|--------------|---------------------------------------|
+| Aplicativo do Console                          | `console`         | [C#], F#, VB | Comum/Console                        |
+| Biblioteca de classes                                | `classlib`        | [C#], F#, VB | Comum/Library                        |
+| Projeto de Teste de Unidade                            | `mstest`          | [C#], F#, VB | Teste/MSTest                           |
+| Projeto de Teste do NUnit 3                         | `nunit`           | [C#], F#, VB | Teste/NUnit                            |
+| Item de Teste do NUnit 3                            | `nunit-test`      | [C#], F#, VB | Teste/NUnit                            |
+| Projeto de Teste xUnit                           | `xunit`           | [C#], F#, VB | Teste/xUnit                            |
+| Página do Razor                                   | `page`            | [C#]         | Web/ASP.NET                           |
+| Importações de Exibição do MVC                              | `viewimports`     | [C#]         | Web/ASP.NET                           |
+| MVC ViewStart                                | `viewstart`       | [C#]         | Web/ASP.NET                           |
+| ASP.NET Core Vazio                           | `web`             | [C#], F#     | Web/Vazio                             |
+| Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | `mvc`             | [C#], F#     | Web/MVC                               |
+| Aplicativo Web ASP.NET Core                         | `webapp`, `razor` | [C#]         | Web/MVC/Razor Pages                   |
+| ASP.NET Core com Angular                    | `angular`         | [C#]         | Web/MVC/SPA                           |
+| ASP.NET Core com React.js                   | `react`           | [C#]         | Web/MVC/SPA                           |
+| ASP.NET Core com React.js e Redux         | `reactredux`      | [C#]         | Web/MVC/SPA                           |
+| Biblioteca de Classes do Razor                          | `razorclasslib`   | [C#]         | Web/Razor/Biblioteca/Biblioteca de Classes do Razor |
+| API Web do ASP.NET Core                         | `webapi`          | [C#], F#     | Web/WebAPI                            |
+| Arquivo global.json                             | `globaljson`      |              | Config                                |
+| Configuração do NuGet                                 | `nugetconfig`     |              | Config                                |
+| Configuração da Web                                   | `webconfig`       |              | Config                                |
+| Arquivo de Solução                                | `sln`             |              | Solução                              |
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 O comando contém uma lista padrão de modelos. Use `dotnet new -l` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 2.1.300. O idioma padrão do modelo é mostrado entre parênteses.
 
-|Descrição do modelo                          | Nome do modelo    | Linguagens     |
-|----------------------------------------------|------------------|---------------|
-| Aplicativo de console                          | `console`        | [C#], F#, VB  |
-| Biblioteca de classes                                | `classlib`       | [C#], F#, VB  |
-| Projeto de teste de unidade                            | `mstest`         | [C#], F#, VB  |
-| Projeto de teste de xUnit                           | `xunit`          | [C#], F#, VB  |
-| Projeto de teste da NUnit                           | `nunit`          | [C#], F#, VB  |
-| Página do Razor                                   | `page`           | [C#]          |
-| Importações de Exibição do MVC                              | `viewimports`    | [C#]          |
-| MVC ViewStart                                | `viewstart`      | [C#]          |
-| ASP.NET Core vazio                           | `web`            | [C#], F#      |
-| Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | `mvc`            | [C#], F#      |
-| Aplicativo Web ASP.NET Core                         | `razor`, `webapp`| [C#]          |
-| ASP.NET Core com Angular                    | `angular`        | [C#]          |
-| ASP.NET Core com React.js                   | `react`          | [C#]          |
-| ASP.NET Core com React.js e Redux         | `reactredux`     | [C#]          |
-| API Web do ASP.NET Core                         | `webapi`         | [C#], F#      |
-| Biblioteca de classes Razor                          | `razorclasslib`  | [C#]          |
-| Arquivo global.json                             | `globaljson`     |               |
-| Configuração do NuGet                                 | `nugetconfig`    |               |
-| Configuração da Web                                   | `webconfig`      |               |
-| Arquivo de solução                                | `sln`            |               |
+| Modelos                                    | Nome curto      | Idioma     | Marcas                                  |
+|----------------------------------------------|-----------------|--------------|---------------------------------------|
+| Aplicativo do Console                          | `console`       | [C#], F#, VB | Comum/Console                        |
+| Biblioteca de classes                                | `classlib`      | [C#], F#, VB | Comum/Library                        |
+| Projeto de Teste de Unidade                            | `mstest`        | [C#], F#, VB | Teste/MSTest                           |
+| Projeto de Teste xUnit                           | `xunit`         | [C#], F#, VB | Teste/xUnit                            |
+| Página do Razor                                   | `page`          | [C#]         | Web/ASP.NET                           |
+| Importações de Exibição do MVC                              | `viewimports`   | [C#]         | Web/ASP.NET                           |
+| MVC ViewStart                                | `viewstart`     | [C#]         | Web/ASP.NET                           |
+| ASP.NET Core Vazio                           | `web`           | [C#], F#     | Web/Vazio                             |
+| Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | `mvc`           | [C#], F#     | Web/MVC                               |
+| Aplicativo Web ASP.NET Core                         | `razor`         | [C#]         | Web/MVC/Razor Pages                   |
+| ASP.NET Core com Angular                    | `angular`       | [C#]         | Web/MVC/SPA                           |
+| ASP.NET Core com React.js                   | `react`         | [C#]         | Web/MVC/SPA                           |
+| ASP.NET Core com React.js e Redux         | `reactredux`    | [C#]         | Web/MVC/SPA                           | 
+| Biblioteca de Classes do Razor                          | `razorclasslib` | [C#]         | Web/Razor/Biblioteca/Biblioteca de Classes do Razor |
+| API Web do ASP.NET Core                         | `webapi`        | [C#], F#     | Web/WebAPI                            |
+| Arquivo global.json                             | `globaljson`    |              | Config                                |
+| Configuração do NuGet                                 | `nugetconfig`   |              | Config                                |
+| Configuração da Web                                   | `webconfig`     |              | Config                                |
+| Arquivo de Solução                                | `sln`           |              | Solução                              |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-O comando contém uma lista padrão de modelos. Use `dotnet new -l` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 2.0. O idioma padrão do modelo é mostrado entre parênteses.
+O comando contém uma lista padrão de modelos. Use `dotnet new -l` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 2.0.0. O idioma padrão do modelo é mostrado entre parênteses.
 
-|Descrição do modelo                          | Nome do modelo | Linguagens     |
-|----------------------------------------------|---------------|---------------|
-| Aplicativo de console                          | `console`     | [C#], F#, VB  |
-| Biblioteca de classes                                | `classlib`    | [C#], F#, VB  |
-| Projeto de teste de unidade                            | `mstest`      | [C#], F#, VB  |
-| Projeto de teste de xUnit                           | `xunit`       | [C#], F#, VB  |
-| ASP.NET Core vazio                           | `web`         | [C#], F#      |
-| Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | `mvc`         | [C#], F#      |
-| Aplicativo Web ASP.NET Core                         | `razor`       | [C#]          |
-| ASP.NET Core com Angular                    | `angular`     | [C#]          |
-| ASP.NET Core com React.js                   | `react`       | [C#]          |
-| ASP.NET Core com React.js e Redux         | `reactredux`  | [C#]          |
-| API Web do ASP.NET Core                         | `webapi`      | [C#], F#      |
-| Arquivo global.json                             | `globaljson`  |               |
-| Configuração do NuGet                                 | `nugetconfig` |               |
-| Configuração da Web                                   | `webconfig`   |               |
-| Arquivo de solução                                | `sln`         |               |
-| Página do Razor                                   | `page`        |               |
-| Importações de Exibição do MVC                              | `viewimports` |               |
-| MVC ViewStart                                | `viewstart`   |               |
+| Modelos                                    | Nome curto    | Idioma     | Marcas                |
+|----------------------------------------------|---------------|--------------|---------------------|
+| Aplicativo do Console                          | `console`     | [C#], F#, VB | Comum/Console      |
+| Biblioteca de classes                                | `classlib`    | [C#], F#, VB | Comum/Library      |
+| Projeto de Teste de Unidade                            | `mstest`      | [C#], F#, VB | Teste/MSTest         |
+| Projeto de Teste xUnit                           | `xunit`       | [C#], F#, VB | Teste/xUnit          |
+| ASP.NET Core Vazio                           | `web`         | [C#], F#     | Web/Vazio           |
+| Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | `mvc`         | [C#], F#     | Web/MVC             |
+| Aplicativo Web ASP.NET Core                         | `razor`       | [C#]         | Web/MVC/Razor Pages |
+| ASP.NET Core com Angular                    | `angular`     | [C#]         | Web/MVC/SPA         |
+| ASP.NET Core com React.js                   | `react`       | [C#]         | Web/MVC/SPA         |
+| ASP.NET Core com React.js e Redux         | `reactredux`  | [C#]         | Web/MVC/SPA         |
+| API Web do ASP.NET Core                         | `webapi`      | [C#], F#     | Web/WebAPI          |
+| Arquivo global.json                             | `globaljson`  |              | Config              |
+| Configuração do Nuget                                 | `nugetconfig` |              | Config              |
+| Configuração da Web                                   | `webconfig`   |              | Config              |
+| Arquivo de Solução                                | `sln`         |              | Solução            |
+| Página do Razor                                   | `page`        |              | Web/ASP.NET         |
+| Importações de Exibição do MVC                              | `viewimports` |              | Web/ASP.NET         |
+| MVC ViewStart                                | `viewstart`   |              | Web/ASP.NET         |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-O comando contém uma lista padrão de modelos. Use `dotnet new -all` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 1.x. O idioma padrão do modelo é mostrado entre parênteses.
+O comando contém uma lista padrão de modelos. Use `dotnet new -all` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 1.0.1. O idioma padrão do modelo é mostrado entre parênteses.
 
-|Descrição do modelo  | Nome do modelo | Linguagens |
-|----------------------|---------------|-----------|
-| Aplicativo de console  | `console`     | [C#], F#  |
-| Biblioteca de classes        | `classlib`    | [C#], F#  |
-| Projeto de teste de unidade    | `mstest`      | [C#], F#  |
-| Projeto de teste de xUnit   | `xunit`       | [C#], F#  |
-| ASP.NET Core vazio   | `web`         | [C#]      |
-| Aplicativo Web ASP.NET Core | `mvc`         | [C#], F#  |
-| API Web do ASP.NET Core | `webapi`      | [C#]      |
-| Configuração do NuGet         | `nugetconfig` |           |
-| Configuração da Web           | `webconfig`   |           |
-| Arquivo de solução        | `sln`         |           |
+| Modelos            | Nome curto    | Idioma | Marcas           |
+|----------------------|---------------|----------|----------------|
+| Aplicativo do Console  | `console`     | [C#], F# | Comum/Console |
+| Biblioteca de classes        | `classlib`    | [C#], F# | Comum/Library |
+| Projeto de Teste de Unidade    | `mstest`      | [C#], F# | Teste/MSTest    |
+| Projeto de Teste xUnit   | `xunit`       | [C#], F# | Teste/xUnit     |
+| ASP.NET Core Vazio   | `web`         | [C#]     | Web/Vazio      |
+| Aplicativo Web ASP.NET Core | `mvc`         | [C#], F# | Web/MVC        |
+| API Web do ASP.NET Core | `webapi`      | [C#]     | Web/WebAPI     |
+| Configuração do Nuget         | `nugetconfig` |          | Config         |
+| Configuração da Web           | `webconfig`   |          | Config         |
+| Arquivo de Solução        | `sln`         |          | Solução       |
 
 ---
 
 ## <a name="options"></a>Opções
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+`--dry-run`
+
+Exibe um resumo do que ocorreria se o comando fornecido fosse executado se resultasse na criação de um modelo.
+
+`--force`
+
+Força o conteúdo a ser gerado mesmo se ele alterasse os arquivos existentes. Isso é necessário quando o diretório de saída já contiver um projeto.
+
+`-h|--help`
+
+Imprime uma ajuda para o comando. Ele pode ser invocado para o próprio comando `dotnet new` ou para qualquer modelo, como `dotnet new mvc --help`.
+
+`-i|--install <PATH|NUGET_ID>`
+
+Instala um pacote de origem ou de modelo do `PATH` ou `NUGET_ID` fornecido. Se você deseja instalar uma versão de pré-lançamento de um pacote de modelo, é necessário especificar a versão no formato `<package-name>::<package-version>`. Por padrão, `dotnet new` passa \* para a versão, o que representa a última versão estável do pacote. Veja um exemplo na seção [Exemplos](#examples).
+
+Para obter informações sobre a criação de modelos personalizados, consulte [Custom templates for dotnet new](custom-templates.md) (Modelos personalizados para dotnet new).
+
+`-l|--list`
+
+Lista os modelos que contêm o nome especificado. Se for invocado para o comando `dotnet new`, listará os possíveis modelos disponíveis para o diretório especificado. Por exemplo, se o diretório já contiver um projeto, ele não listará todos os modelos de projeto.
+
+`-lang|--language {C#|F#|VB}`
+
+A linguagem do modelo a ser criada. A linguagem aceita varia de acordo com o modelo (consulte os padrões na seção [Argumentos](#arguments)). Não é válida para alguns modelos.
+
+> [!NOTE]
+> Alguns shells interpretam `#` como um caractere especial. Nesses casos, você precisa acrescentar o valor do parâmetro de idioma, como `dotnet new console -lang "F#"`.
+
+`-n|--name <OUTPUT_NAME>`
+
+O nome para a saída criada. Se nenhum nome for especificado, o nome do diretório atual será usado.
+
+`--nuget-source`
+
+Especifica uma origem do NuGet a ser usada durante a instalação.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Local para colocar a saída gerada. O padrão é o diretório atual.
+
+`--type`
+
+Filtra modelos com base em tipos disponíveis. Os valores predefinidos são "projeto", "item" ou "outro".
+
+`-u|--uninstall <PATH|NUGET_ID>`
+
+Desinstala um pacote de origem ou de modelo no `PATH` ou `NUGET_ID` fornecido. Ao excluir o valor `<PATH|NUGET_ID>`, todos os pacotes de modelo atualmente instalados e seus modelos associados são exibidos.
+
+> [!NOTE]
+> Para desinstalar um modelo usando um `PATH`, você precisa qualificar totalmente o caminho. Por exemplo, *C:/Usuários/\<USUÁRIO>/Documentos/Modelos/GarciaSoftware.ConsoleTemplate.CSharp* funcionará, mas *./GarciaSoftware.ConsoleTemplate.CSharp* da pasta que o contém, não.
+> Além disso, não inclua uma barra final de encerramento de diretório no caminho do modelo.
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -266,15 +357,149 @@ Local para colocar a saída gerada. O padrão é o diretório atual.
 
 Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais modelos têm as seguintes opções adicionais:
 
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+**console**
+
+`--langVersion <VERSION_NUMBER>` – Define a propriedade `LangVersion` no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3. Sem suporte para F#.
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**angular, react, reactredux**
+
+`--exclude-launch-settings` – Excluir *launchSettings.json* do modelo gerado.
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+`--no-https` – O projeto não requer HTTPS. Essa opção é aplicável somente se `IndividualAuth` ou `OrganizationalAuth` não está sendo usado.
+
+**razorclasslib**
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**classlib**
+
+`-f|--framework <FRAMEWORK>` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp2.2` para criar uma Biblioteca de classes do .NET Core ou `netstandard2.0` para criar uma Biblioteca de classes .NET Standard. O valor padrão é `netstandard2.0`.
+
+`--langVersion <VERSION_NUMBER>` – Define a propriedade `LangVersion` no arquivo de projeto criado. Por exemplo, use `--langVersion 7.3` para usar C# 7.3. Sem suporte para F#.
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**mstest, xunit**
+
+`-p|--enable-pack` – Habilita empacotamento para o projeto usando [dotnet pack](dotnet-pack.md).
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**nunit**
+
+`-f|--framework <FRAMEWORK>` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. O valor padrão é `netcoreapp2.1`.
+
+`-p|--enable-pack` – Habilita empacotamento para o projeto usando [dotnet pack](dotnet-pack.md).
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**page**
+
+`-na|--namespace <NAMESPACE_NAME>` – namespace para o código gerado. O valor padrão é `MyApp.Namespace`.
+
+`-np|--no-pagemodel` – Cria a página sem um PageModel.
+
+**viewimports**
+
+`-na|--namespace <NAMESPACE_NAME>` – namespace para o código gerado. O valor padrão é `MyApp.Namespace`.
+
+**web**
+
+`--exclude-launch-settings` – Excluir *launchSettings.json* do modelo gerado.
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+`--no-https` – O projeto não requer HTTPS. Essa opção é aplicável somente se `IndividualAuth` ou `OrganizationalAuth` não está sendo usado.
+
+**mvc, webapp**
+
+`-au|--auth <AUTHENTICATION_TYPE>` – O tipo de autenticação usado. Os valores possíveis são:
+
+- `None` – Nenhuma autenticação (Padrão).
+- `Individual` – Autenticação individual.
+- `IndividualB2C` – Autenticação individual com o Azure AD B2C.
+- `SingleOrg` – Autenticação organizacional para um único locatário.
+- `MultiOrg` – Autenticação organizacional para vários locatários.
+- `Windows` – Autenticação do Windows.
+
+`--aad-b2c-instance <INSTANCE>` – A instância do Azure Active Directory B2C à qual se conectar. Use com a autenticação do `IndividualB2C`. O valor padrão é `https://login.microsoftonline.com/tfp/`.
+
+`-ssp|--susi-policy-id <ID>` – A ID da política de credenciais e de inscrição desse projeto. Use com a autenticação do `IndividualB2C`.
+
+`-rp|--reset-password-policy-id <ID>` – A ID da política de senha de redefinição para este projeto. Use com a autenticação do `IndividualB2C`.
+
+`-ep|--edit-profile-policy-id <ID>` – A ID da política de perfil de edição para este projeto. Use com a autenticação do `IndividualB2C`.
+
+`--aad-instance <INSTANCE>` – A instância do Azure Active Directory à qual se conectar. Use com a autenticação `SingleOrg` ou `MultiOrg`. O valor padrão é `https://login.microsoftonline.com/`.
+
+`--client-id <ID>` – A ID do cliente deste projeto. Use com a autenticação `IndividualB2C`, `SingleOrg` ou `MultiOrg`. O valor padrão é `11111111-1111-1111-11111111111111111`.
+
+`--domain <DOMAIN>` – O domínio do locatário de diretório. Use com a autenticação `SingleOrg` ou `IndividualB2C`. O valor padrão é `qualified.domain.name`.
+
+`--tenant-id <ID>` – A ID TenantId do diretório ao qual se conectar. Use com a autenticação do `SingleOrg`. O valor padrão é `22222222-2222-2222-2222-222222222222`.
+
+`--callback-path <PATH>` – O caminho da solicitação dentro do caminho base do aplicativo do URI de redirecionamento. Use com a autenticação `SingleOrg` ou `IndividualB2C`. O valor padrão é `/signin-oidc`.
+
+`-r|--org-read-access` – Permite que esse aplicativo tenha acesso de leitura ao diretório. Aplicável apenas à autenticação `SingleOrg` ou `MultiOrg`.
+
+`--exclude-launch-settings` – Excluir *launchSettings.json* do modelo gerado.
+
+`--no-https` – O projeto não requer HTTPS. `app.UseHsts` e `app.UseHttpsRedirection` não são adicionados ao `Startup.Configure`. Essa opção é aplicável somente se `Individual`, `IndividualB2C`, `SingleOrg` ou `MultiOrg` não estão sendo usados.
+
+`-uld|--use-local-db` – Especifica que LocalDB deve ser usado em vez de SQLite. Aplicável apenas à autenticação `Individual` ou `IndividualB2C`.
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**webapi**
+
+`-au|--auth <AUTHENTICATION_TYPE>` – O tipo de autenticação usado. Os valores possíveis são:
+
+- `None` – Nenhuma autenticação (Padrão).
+- `IndividualB2C` – Autenticação individual com o Azure AD B2C.
+- `SingleOrg` – Autenticação organizacional para um único locatário.
+- `Windows` – Autenticação do Windows.
+
+`--aad-b2c-instance <INSTANCE>` – A instância do Azure Active Directory B2C à qual se conectar. Use com a autenticação do `IndividualB2C`. O valor padrão é `https://login.microsoftonline.com/tfp/`.
+
+`-ssp|--susi-policy-id <ID>` – A ID da política de credenciais e de inscrição desse projeto. Use com a autenticação do `IndividualB2C`.
+
+`--aad-instance <INSTANCE>` – A instância do Azure Active Directory à qual se conectar. Use com a autenticação do `SingleOrg`. O valor padrão é `https://login.microsoftonline.com/`.
+
+`--client-id <ID>` – A ID do cliente deste projeto. Use com a autenticação `IndividualB2C` ou `SingleOrg`. O valor padrão é `11111111-1111-1111-11111111111111111`.
+
+`--domain <DOMAIN>` – O domínio do locatário de diretório. Use com a autenticação `SingleOrg` ou `IndividualB2C`. O valor padrão é `qualified.domain.name`.
+
+`--tenant-id <ID>` – A ID TenantId do diretório ao qual se conectar. Use com a autenticação do `SingleOrg`. O valor padrão é `22222222-2222-2222-2222-222222222222`.
+
+`-r|--org-read-access` – Permite que esse aplicativo tenha acesso de leitura ao diretório. Aplicável apenas à autenticação `SingleOrg` ou `MultiOrg`.
+
+`--exclude-launch-settings` – Excluir *launchSettings.json* do modelo gerado.
+
+`--no-https` – O projeto não requer HTTPS. `app.UseHsts` e `app.UseHttpsRedirection` não são adicionados ao `Startup.Configure`. Essa opção é aplicável somente se `Individual`, `IndividualB2C`, `SingleOrg` ou `MultiOrg` não estão sendo usados.
+
+`-uld|--use-local-db` – Especifica que LocalDB deve ser usado em vez de SQLite. Aplicável apenas à autenticação `Individual` ou `IndividualB2C`.
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**globaljson**
+
+`--sdk-version <VERSION_NUMBER>` – Especifica a versão do SDK do .NET Core a ser usada no arquivo *global.json*.
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 **console, angular, react, reactredux, razorclasslib**
 
-  `--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp2.0` para criar uma Biblioteca de classes do .NET Core ou `netstandard2.0` para criar uma Biblioteca de classes .NET Standard. O valor padrão é `netstandard2.0`.
+`-f|--framework <FRAMEWORK>` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp2.1` para criar uma Biblioteca de classes do .NET Core ou `netstandard2.0` para criar uma Biblioteca de classes .NET Standard. O valor padrão é `netstandard2.0`.
 
 `--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
 
@@ -370,19 +595,19 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 **page**
 
-`-na|--namespace <NAMESPACE_NAME>` – Namespace do código gerado. O valor padrão é `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>` – namespace para o código gerado. O valor padrão é `MyApp.Namespace`.
 
 `-np|--no-pagemodel` – Cria a página sem um PageModel.
 
 **viewimports**
 
-`-na|--namespace <NAMESPACE_NAME>` – Namespace do código gerado. O valor padrão é `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>` – namespace para o código gerado. O valor padrão é `MyApp.Namespace`.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 **console, angular, react, reactredux**
 
-  `--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
 
 **classlib**
 
@@ -488,23 +713,27 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 **console, xunit, mstest, web, webapi** 
 
-`-f|--framework` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp1.0` ou `netcoreapp1.1`. O valor padrão é `netcoreapp1.0`.
+`-f|--framework <FRAMEWORK>` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp1.0` ou `netcoreapp1.1`. O valor padrão é `netcoreapp1.0`.
 
 **classlib**
 
-`-f|--framework` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp1.0`, `netcoreapp1.1` ou `netstandard1.0` como `netstandard1.6`. O valor padrão é `netstandard1.4`.
+`-f|--framework <FRAMEWORK>` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp1.0`, `netcoreapp1.1` ou `netstandard1.0` como `netstandard1.6`. O valor padrão é `netstandard1.4`.
 
 **mvc**
 
-`-f|--framework` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp1.0` ou `netcoreapp1.1`. O valor padrão é `netcoreapp1.0`.
+`-f|--framework <FRAMEWORK>` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp1.0` ou `netcoreapp1.1`. O valor padrão é `netcoreapp1.0`.
 
-`-au|--auth` – O tipo de autenticação usado. Valores: `None` ou `Individual`. O valor padrão é `None`.
+`-au|--auth <AUTHENTICATION_TYPE>` – O tipo de autenticação usado. Valores: `None` ou `Individual`. O valor padrão é `None`.
 
 `-uld|--use-local-db` – Especifica se deve usar ou não o LocalDB em vez do SQLite. Valores: `true` ou `false`. O valor padrão é `false`.
 
 ---
 
 ## <a name="examples"></a>Exemplos
+
+Crie um projeto de aplicativo de console em C# especificando o nome do modelo:
+
+`dotnet new "Console Application"`
 
 Crie um projeto de aplicativo de console F# no diretório atual:
 
@@ -514,17 +743,25 @@ Crie um projeto de biblioteca de classes .NET Standard no diretório especificad
 
 `dotnet new classlib -lang VB -o MyLibrary`
 
-Crie um novo projeto de aplicativo de MVC C# do ASP.NET Core no diretório atual sem autenticação:
+Crie um projeto de MVC em C# do ASP.NET Core no diretório atual sem autenticação:
 
 `dotnet new mvc -au None`
 
-Crie um novo aplicativo xUnit:
+Crie um projeto de xUnit:
 
 `dotnet new xunit`
 
 Lista todos os modelos disponíveis para o MVC:
 
 `dotnet new mvc -l`
+
+Liste todos os modelos que correspondem à substring *we*. Nenhuma correspondência exata é encontrada, portanto, a correspondência de substring é executada em relação tanto ao nome curto quanto às colunas de nome.
+
+`dotnet new we -l`
+
+Tentativa de invocar o modelo correspondente a *ng*. Se não for possível determinar uma única correspondência, liste os modelos que são correspondências parciais.
+
+`dotnet new ng`
 
 Instale a versão 2.0 dos modelos de aplicativo de página única do ASP.NET Core (opção de comando disponível somente para o SDK do .NET Core 1.1 e versões posteriores):
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591507"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585992"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerações sobre segurança relacionadas à reflexão
 A reflexão fornece a capacidade de obter informações sobre tipos e membros e de acessar membros (ou seja, chamar métodos e construtores, obter e definir valores de propriedade, adicionar e remover manipuladores de eventos e assim por diante). O uso da reflexão para obter informações sobre tipos e membros não é restrito. Todo o código pode usar reflexões para realizar as seguintes tarefas:  
@@ -88,7 +88,7 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
   
 - O assembly A pode usar reflexão para acessar membros particulares do assembly B, pois o conjunto de concessões do assembly B não inclui permissões que não foram concedidas a A.  
   
-- O assembly A não pode usar a reflexão para acessar membros particulares de assemblies [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] como mscorlib.dll, pois mscorlib.dll é totalmente confiável e, portanto, tem permissões que não foram concedidas ao assembly A. Um <xref:System.MemberAccessException> é gerado quando a segurança de acesso do código percorre a pilha no tempo de execução.  
+- O assembly A não pode usar a reflexão para acessar membros particulares de assemblies do .NET Framework como mscorlib.dll, pois mscorlib.dll é totalmente confiável e, portanto, tem permissões que não foram concedidas ao assembly A. Um <xref:System.MemberAccessException> é gerado quando a segurança de acesso do código percorre a pilha no tempo de execução.  
   
 ## <a name="serialization"></a>Serialização  
  Para serialização, <xref:System.Security.Permissions.SecurityPermission> com o sinalizador <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> fornece a capacidade de obter e definir os membros de tipos serializáveis, independentemente da acessibilidade. Essa permissão permite que o código descubra e altere o estado particular de uma instância. (Além de receber a concessão das permissões apropriadas, o tipo deve ser [marcado](../../../docs/standard/attributes/applying-attributes.md) como serializável nos metadados.)  
@@ -100,7 +100,7 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
   
 - A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], código transparente não pode usar reflexão para acessar membros críticos para segurança.  
   
-- O sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> foi introduzido no [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Versões anteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] exigem o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> para o código que usa a reflexão para acessar membros não públicos. Esta é uma permissão que nunca deve ser concedida a código parcialmente confiável.  
+- O sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> foi introduzido no [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Versões anteriores do .NET Framework exigem o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> para o código que usa a reflexão para acessar membros não públicos. Esta é uma permissão que nunca deve ser concedida a código parcialmente confiável.  
   
 - A partir do [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], usar reflexão para obter informações sobre tipos e membros não públicos não requer permissões. Em versões anteriores, o <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> é obrigatório.  
   

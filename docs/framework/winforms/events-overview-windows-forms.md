@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 3adc2891579cafff9c8aeb3e918ae74c6f3ad8a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fddb51bfe998c360ca418374b119ec12f25b0fad
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591017"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052288"
 ---
 # <a name="events-overview-windows-forms"></a>Visão geral sobre eventos (Windows Forms)
 Um evento é uma ação a qual você pode responder ou "manipular", no código. Os eventos podem ser gerados por uma ação do usuário, como o clicar do mouse ou pressionar de uma tecla, pelo código de programa ou pelo sistema.
@@ -29,7 +29,7 @@ Um evento é uma ação a qual você pode responder ou "manipular", no código. 
  Para obter informações sobre como gerar e consumir um evento, consulte [eventos](../../standard/events/index.md).
 
 ## <a name="delegates-and-their-role"></a>Classes delegate e suas funções
- Os delegados são classes comumente usados no .NET Framework para criar mecanismos de manipulação de eventos. As classes delegate, em termos gerais, equivalem a ponteiros de função, usados normalmente no [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] e outras linguagens orientadas a objetos. No entanto, diferente dos ponteiros de função, as classes delegate são orientadas a objeto, fortemente tipadas e seguras. Além disso, quando um ponteiro de função contém apenas uma referência a uma função particular, uma classe delegate consiste em uma referência a um objeto, e as referências a um ou mais métodos dentro do objeto.
+ Os delegados são classes comumente usados no .NET Framework para criar mecanismos de manipulação de eventos. Destinos são como ponteiros para funções, comumente usados no Visual C++ e outras linguagens orientadas a objeto. No entanto, diferente dos ponteiros de função, as classes delegate são orientadas a objeto, fortemente tipadas e seguras. Além disso, quando um ponteiro de função contém apenas uma referência a uma função particular, uma classe delegate consiste em uma referência a um objeto, e as referências a um ou mais métodos dentro do objeto.
 
  Esse modelo de evento usa *delegados* para associar eventos aos métodos que são usados para lidar com eles. A classe delegate permite que outras classes se registrem para a notificação de eventos, especificando um método de manipulador. Quando o evento ocorre, a classe delegate chama o método associado. Para obter mais informações sobre como definir classes Delegate, consulte [eventos](../../standard/events/index.md).
 

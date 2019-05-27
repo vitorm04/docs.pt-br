@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8012d2898e9722d1cfb93f5c9dcacce291fe6e78
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55bdf4cf589bd912dbfc85777542150696aaa436
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633890"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589783"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Como: Extrair o dia da semana de uma data específica
 O .NET Framework facilita a verificação da posição numérica do dia da semana em uma determinada data e a exibição do nome do dia localizado em uma determinada data. O valor enumerado que indica o dia da semana correspondente a uma determinada data está disponível na propriedade <xref:System.DateTime.DayOfWeek%2A> ou <xref:System.DateTimeOffset.DayOfWeek%2A>. Em contrapartida, para recuperar o nome do dia da semana é necessário realizar uma operação de formatação que pode ser executada com a chamada de um método de formatação, como o método `ToString` ou <xref:System.String.Format%2A?displayProperty=nameWithType> de valor de data e hora. Este tópico mostra como executar essas operações de formatação.  
@@ -85,7 +85,7 @@ O .NET Framework facilita a verificação da posição numérica do dia da seman
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]
  [!code-vb[Formatting.Howto.WeekdayName#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example6.vb#6)]  
   
- Cada linguagem pode contar com funcionalidades que duplicam ou complementam a funcionalidade de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Por exemplo, o Visual Basic tem duas funções desse tipo:  
+ Cada linguagem pode contar com funcionalidades que duplicam ou complementam a funcionalidade do .NET Framework. Por exemplo, o Visual Basic tem duas funções desse tipo:  
   
 - `Weekday`, que retorna um número que indica o dia da semana de uma determinada data. Ele leva em consideração que o primeiro dia da semana tem valor ordinal um, enquanto a propriedade <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> considera o valor ordinal desse dia como zero.  
   

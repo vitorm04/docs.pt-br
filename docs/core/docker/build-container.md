@@ -4,12 +4,12 @@ description: Neste tutorial, você aprenderá como colocar em contêiner um apli
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a96f96bd91976b0966fb7e8d0c8fb6fb7842cfe3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631861"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051810"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Colocar em contêiner um aplicativo .NET Core
 
@@ -410,6 +410,6 @@ Use o comando `docker images` para ver uma lista de imagens instaladas.
 ## <a name="next-steps"></a>Próximas etapas
 
 * [Experimentar o Tutorial de Microsserviço do ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Revisar os serviços do Azure que oferecem suporte a contêineres.](https://azure.microsoft.com/en-us/overview/containers/)
+* [Revisar os serviços do Azure que oferecem suporte a contêineres.](https://azure.microsoft.com/overview/containers/)
 * [Ler mais sobre os comandos do Dockerfile.](https://docs.docker.com/engine/reference/builder/)
 * [Explore as Ferramentas de Contêiner para Visual Studio](/visualstudio/containers/overview)

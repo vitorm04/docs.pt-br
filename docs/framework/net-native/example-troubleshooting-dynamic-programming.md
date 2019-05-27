@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e482303e684813574a092f0a2d5812445ed7fa6e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868778"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052612"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Exemplo: solução de problemas de programação dinâmica
 > [!NOTE]
 >  Este tópico refere-se ao Developer Preview do .NET Nativo, que é um software em pré-lançamento. Você pode baixar a versão prévia do [site Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (registro obrigatório).  
   
- Nem todas as falhas de pesquisa de metadados em aplicativos desenvolvidos com a cadeia de ferramentas [!INCLUDE[net_native](../../../includes/net-native-md.md)] resulta em uma exceção.  Alguns podem manifestar-se de formas imprevisíveis em um aplicativo.  O exemplo a seguir mostra uma violação de acesso causada pela referência a um objeto nulo:  
+ Nem todas as falhas de pesquisa de metadados em aplicativos desenvolvidos usando o resultado de cadeia de ferramenta nativa do .NET em uma exceção.  Alguns podem manifestar-se de formas imprevisíveis em um aplicativo.  O exemplo a seguir mostra uma violação de acesso causada pela referência a um objeto nulo:  
   
 ```  
 Access violation - code c0000005 (first chance)  
@@ -52,7 +52,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  Nesse caso, adicionar uma diretiva de tempo de execução para `App.Core.ViewModels` resolveu o problema. A causa raiz foi uma chamada à API ao método <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> que retornou **null** e o aplicativo ignorou silenciosamente o problema até que ocorreu uma falha.  
   
- Na programação dinâmica, uma boa prática ao usar APIs de reflexão em [!INCLUDE[net_native](../../../includes/net-native-md.md)] é usar as sobrecargas <xref:System.Type.GetType%2A?displayProperty=nameWithType> que geram uma exceção em caso de falha.  
+ Na programação dinâmica, uma boa prática ao usar a reflexão APIs no .NET Native é usar o <xref:System.Type.GetType%2A?displayProperty=nameWithType> sobrecargas que geram uma exceção em caso de falha.  
   
 ## <a name="is-this-an-isolated-case"></a>Esta é uma ocorrência isolada?  
  Outros problemas também podem surgir ao usar `App.Core.ViewModels`.  Você deve decidir se vale a pena identificar e corrigir cada exceção de metadados ausentes, ou economizar tempo e adicionar diretivas para uma classe maior de tipos.  Aqui, adicionar metadados `dynamic` a `App.Core.ViewModels` pode ser a melhor abordagem se o aumento de tamanho resultante do binário de saída não for um problema.  

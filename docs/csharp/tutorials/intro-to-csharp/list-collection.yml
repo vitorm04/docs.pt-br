@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 0de2cc0434087797b9411075a98cc11dd598ed81
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
+  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029483"
+  ms.lasthandoff: 05/19/2019
+  ms.locfileid: "65880556"
 items:
 - durationInMinutes: 1
   content: >
@@ -56,7 +56,7 @@ items:
     A coleção que você criou usa o tipo <xref:System.Collections.Generic.List%601>. Esse tipo armazena sequências de elementos. Especifique o tipo dos elementos entre os colchetes.
 
 
-    Um aspecto importante desse tipo <xref:System.Collections.Generic.List%601> é que ele pode aumentar ou diminuir, permitindo que você adicione ou remova elementos. Adicione o código a seguir abaixo do código que você já escreveu:
+    Um aspecto importante desse tipo <xref:System.Collections.Generic.List%601> é que ele pode aumentar ou diminuir, permitindo que você adicione ou remova elementos. Você pode ver os resultados ao modificar o conteúdo depois que exibiu seu conteúdo. Adicione o código a seguir abaixo do código que você já escreveu (abaixo do loop que imprime o conteúdo):
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    Você adicionou mais dois nomes ao final da lista. Também removeu um.
+    Você adicionou mais dois nomes ao final da lista. Também removeu um. A saída desse bloco de código mostra o conteúdo inicial e, em seguida, imprime uma linha em branco e o novo conteúdo.
 
 
     O <xref:System.Collections.Generic.List%601> também permite fazer referência a itens individuais por **índice**. Acesse itens usando os tokens `[` e `]`. Adicione o código a seguir abaixo do código que você já escreveu e teste:
@@ -112,7 +112,7 @@ items:
 - title: Pesquisar e classificar listas
   durationInMinutes: 5
   content: >
-    Nossos exemplos usam listas relativamente pequenas, mas seus aplicativos podem criar listas com muitos outros elementos, chegando, às vezes, a milhares. Para localizar elementos nessas coleções maiores, pesquise por itens diferentes na lista. O método <xref:System.Collections.Generic.List%601.IndexOf%2A> procura um item e retorna o índice do item. Tente o seguinte para ver como funciona.  Adicione o código a seguir abaixo do código que você escreveu até o momento:
+    Nossos exemplos usam listas relativamente pequenas, mas seus aplicativos podem criar listas com muitos outros elementos, chegando, às vezes, a milhares. Para localizar elementos nessas coleções maiores, pesquise por itens diferentes na lista. O método <xref:System.Collections.Generic.List%601.IndexOf%2A> procura um item e retorna o índice do item. Experimente para ver como funciona.  Adicione o código a seguir abaixo do código que você escreveu até o momento:
 
 
     ```csharp
@@ -152,7 +152,7 @@ items:
 - title: Listas de outros tipos
   durationInMinutes: 5
   content: >
-    Você usou o tipo `string` nas listas até o momento. Vamos fazer <xref:System.Collections.Generic.List%601> usar um tipo diferente. Vamos compilar um conjunto de números. Exclua o código que você escreveu até o momento e substitua-o pelo seguinte:
+    Você usou o tipo `string` nas listas até o momento. Vamos fazer <xref:System.Collections.Generic.List%601> usar um tipo diferente. Vamos compilar um conjunto de números. Exclua o código que você escreveu até o momento e substitua-o pelo seguinte código:
 
 
     ```csharp
@@ -162,7 +162,7 @@ items:
     ```
 
 
-    Isso cria uma lista de números inteiros e define os primeiros dois inteiros como o valor 1. Estes são os dois primeiros valores de uma *sequência Fibonacci*, uma sequência de números. Cada número Fibonacci seguinte é encontrado considerando a soma dos dois números anteriores. Adicione este código:
+    Isso cria uma lista de números inteiros e define os primeiros dois inteiros como o valor 1. A *Sequência de Fibonacci*, uma sequência de números, começa com dois 1s. Cada número Fibonacci seguinte é encontrado considerando a soma dos dois números anteriores. Adicione este código:
 
 
     ```csharp
@@ -230,7 +230,7 @@ items:
     Você concluiu o tutorial interativo de lista. Este é o tutorial interativo final de introdução ao C#. Visite o [site do .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para baixar o SDK do .NET Core, criar um projeto em seu computador e continuar criando códigos. A etapa "Continuar aprendendo" leva você de volta a esses tutoriais para compilar projetos em sua máquina.
 
 
-    Saiba mais sobre as [Coleções de .NET](../../../standard/collections/index.md) nos tópicos a seguir:
+    Saiba mais sobre as [Coleções de .NET](../../../standard/collections/index.md) nos artigos a seguir:
 
     - [Selecionar um tipo de coleção](../../../standard/collections/selecting-a-collection-class.md)
 

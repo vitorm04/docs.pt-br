@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 77aed78e7822e06b3b1e6c48b07790d93e09559c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 390b2226cc2f345d2f42659bd092e36a4bd0c4fc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612719"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632918"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 
@@ -34,7 +34,7 @@ Ao contrário do que acontece com tipos de referência, você não pode derivar 
 
 Variáveis de tipo de valor não podem ser `null` por padrão. No entanto, as variáveis dos [tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md) correspondentes podem ser `null`.
 
-Cada tipo de valor tem um construtor padrão implícito que inicializa o valor padrão desse tipo. Para saber mais sobre valores padrão de tipos de valor, consulte [Tabela de valores padrão](default-values-table.md).
+Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o valor padrão desse tipo. Para saber mais sobre valores padrão de tipos de valor, consulte [Tabela de valores padrão](default-values-table.md).
 
 ## <a name="simple-types"></a>Tipos simples
 
@@ -67,7 +67,7 @@ int myInt;
 Você não pode usá-la antes de inicializá-la. Você pode inicializar a variável usando a instrução a seguir:
 
 ```csharp
-myInt = new int();  // Invoke default constructor for int type.
+myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
 Essa instrução é equivalente à instrução a seguir:
@@ -88,12 +88,12 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Usando o operador [new](new.md), chama o construtor padrão do tipo específico e atribui o valor padrão à variável. No exemplo anterior, o construtor padrão atribuiu o valor `0` para `myInt`. Para obter mais informações sobre valores atribuídos ao chamar construtores padrão, consulte [Tabela de valores padrão](default-values-table.md).
+Usando o operador [new](new.md), chama o construtor sem parâmetro do tipo específico e atribui o valor padrão à variável. No exemplo anterior, o construtor sem parâmetro atribuiu o valor `0` para `myInt`. Para obter mais informações sobre valores atribuídos ao chamar construtores padrão, consulte [Tabela de valores padrão](default-values-table.md).
 
-Com tipos definidos pelo usuário, use [new](new.md) para invocar o construtor padrão. Por exemplo, a instrução a seguir invoca o construtor padrão do struct `Point`:
+Com tipos definidos pelo usuário, use [new](new.md) para invocar o construtor sem parâmetro. Por exemplo, a instrução a seguir invoca o construtor sem parâmetro do struct `Point`:
 
 ```csharp
-Point p = new Point(); // Invoke default constructor for the struct.
+Point p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 Após esta chamada, o struct é considerado para ser definitivamente atribuído, ou seja, todos os seus membros são inicializados com seus valores padrão.

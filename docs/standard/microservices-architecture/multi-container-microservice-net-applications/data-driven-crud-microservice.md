@@ -2,12 +2,12 @@
 title: Criando um microsserviço de CRUD simples controlado por dados
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entenda a criação de um microsserviço CRUD simples (controlado por dados) dentro do contexto de um aplicativo de microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644420"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053561"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -321,7 +321,7 @@ As principais razões para gerar metadados do Swagger para suas APIs são as seg
 
 - [AutoRest](https://github.com/Azure/AutoRest). É possível gerar classes de cliente do .NET automaticamente para chamar o Swagger. Essa ferramenta pode ser usada na CLI e também se integra ao Visual Studio, facilitando o uso por meio da GUI.
 
-- [Microsoft Flow](https://flow.microsoft.com/en-us/). É possível [usar e integrar sua API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) automaticamente em um fluxo de trabalho do Microsoft Flow de alto nível, sem precisar de nenhuma habilidade de programação.
+- [Microsoft Flow](https://flow.microsoft.com/). É possível [usar e integrar sua API](https://flow.microsoft.com/blog/integrating-custom-api/) automaticamente em um fluxo de trabalho do Microsoft Flow de alto nível, sem precisar de nenhuma habilidade de programação.
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/). É possível consumir a API Automaticamente de [aplicativos móveis PowerApps](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/) criados com o [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/), sem precisar de nenhuma habilidade de programação.
 

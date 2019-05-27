@@ -3,12 +3,12 @@ title: Tipos e variáveis do C# - um tour pela linguagem C#
 description: Saiba mais sobre como definir tipos e declarar variáveis em C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672362"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881973"
 ---
 # <a name="types-and-variables"></a>Tipos e variáveis
 
@@ -23,8 +23,8 @@ O exemplo a seguir fornece uma visão geral do sistema de tipos do C#.
     * Integral com sinal: `sbyte`, `short`, `int`,`long`
     * Integral sem sinal: `byte`, `ushort`, `uint`,`ulong`
     * Caracteres Unicode: `char`
-    * Ponto flutuante IEEE: `float`, `double`
-    * Decimal de alta precisão:`decimal`
+    * Ponto flutuante binário de IEEE: `float`, `double`
+    * Ponto flutuante decimal de alta precisão: `decimal`
     * Booliano: `bool`
   - [Tipos enumerados][EnumTypes]
     * Tipos definidos pelo usuário do formulário `enum E {...}`
@@ -55,33 +55,11 @@ O exemplo a seguir fornece uma visão geral do sistema de tipos do C#.
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-Os tipos integrais oito dão suporte a valores de 8 bits, 16 bits, 32 bits e 64 bits no formulário com ou sem sinal.
-
-Os dois tipos de pontos flutuantes, `float` e `double`, são representados usando os formatos IEC-60559 com 32 bits de precisão simples e 64 bits de precisão dupla, respectivamente.
-
-O tipo `decimal` é um tipo de dados de 128 bits adequado para cálculos financeiros e monetários.
+Para obter mais informações sobre tipos numéricos, veja [Tabela de tipos integrais](../language-reference/keywords/integral-types-table.md) e [Tabela de tipos de ponto flutuante](../language-reference/keywords/floating-point-types-table.md).
 
 O tipo `bool` do C# é usado para representar valores boolianos — valores que são `true` ou `false`.
 
 O processamento de cadeia de caracteres e caracteres em C# usa codificação Unicode. O tipo `char` representa uma unidade de código UTF-16 e o tipo `string` representa uma sequência de unidades de código UTF-16.
-
-Isso resume os tipos numéricos do C#.
-
-* Integral assinado
-  - `sbyte`:  8 bits, intervalo de -128 a 127
-  - `short`: 16 bits, intervalo de -32.768 a 32.767
-  - `int`  : 32 bits, intervalo de -2.147.483.648 a 2.147.483.647
-  - `long`: 64 bits, intervalo de -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807
-* Integral sem sinal
-  - `byte`   :  8 bits, intervalo de 0 a 255
-  - `ushort`: 16 bits, intervalo de 0 a 65.535
-  - `uint`   : 32 bits, intervalo de 0 a 4.294.967.295
-  - `ulong`  : 64 bits, intervalo de 0 a 18.446.744.073.709.551.615
-* Ponto flutuante
-  - `float`  : 32 bits, intervalo de 1,5 × 10<sup>-45</sup> a 3.4 × 10<sup>38</sup>, precisão de 7 dígitos
-  - `double`: 64 bits, intervalo de 5,0 × 10<sup>-324</sup> a 1,7x 10<sup>308</sup>, precisão de 15 dígitos
-* Decimal
-  - `decimal`: 128 bits, intervalo de pelos menos -7,9 × 10<sup>-28</sup> a 7,9 × 10<sup>28</sup>, com precisão de pelo menos 28 dígitos
 
 Os programas em C# usam *declarações de tipos* para criar novos tipos. Uma declaração de tipo especifica o nome e os membros do novo tipo. Cinco das categorias do C# de tipos são tipos definidos pelo usuário: tipos de classe, tipos struct, tipos de interface, tipos enum e tipos delegados.
 

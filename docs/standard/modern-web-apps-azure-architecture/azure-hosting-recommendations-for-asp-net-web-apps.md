@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Re
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 136ad9992ea94b027f095f47df0388408029f24e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638913"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053272"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendações de hospedagem do Azure para aplicativos Web ASP.NET Core
 
@@ -44,7 +44,7 @@ Os Aplicativos Web do Serviço de Aplicativo oferecem uma plataforma totalmente 
 
 - Integração com o Visual Studio.
 
-- Suporte para contêineres do Linux e Windows via [Aplicativo Web para Contêineres](https://azure.microsoft.com/en-us/services/app-service/containers/).
+- Suporte para contêineres do Linux e Windows via [Aplicativo Web para Contêineres](https://azure.microsoft.com/services/app-service/containers/).
 
 O Serviço de Aplicativo do Azure é a melhor opção para a maioria dos aplicativos Web. A implantação e o gerenciamento estão integrados à plataforma, os sites podem ser dimensionados rapidamente para manipular cargas de alto tráfego e o balanceamento de carga interno e o gerenciador de tráfego fornecem alta disponibilidade. Você pode mover os sites existentes para o Serviço de Aplicativo do Azure com facilidade usando uma ferramenta de migração online, usar um aplicativo de software livre por meio da Galeria de Aplicativos Web ou criar um novo site usando a estrutura e as ferramentas de sua escolha. O recurso WebJobs facilita a adição de um processamento de trabalho em segundo plano ao aplicativo Web do Serviço de Aplicativo.
 
@@ -101,7 +101,7 @@ A Figura 11-2 mostra uma arquitetura de referência de exemplo. Esse diagrama de
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
 - Aplicativo Web para Contêineres\
-  <https://azure.microsoft.com/en-us/services/app-service/containers/>
+  <https://azure.microsoft.com/services/app-service/containers/>
 
 - Introdução ao AKS (Serviço de Kubernetes do Azure)\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

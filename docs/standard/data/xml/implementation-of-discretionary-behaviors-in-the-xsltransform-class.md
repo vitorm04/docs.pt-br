@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609571"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591508"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementação de comportamentos arbitrários na classe XslTransform
 
@@ -19,7 +19,7 @@ ms.locfileid: "54609571"
 
 Os comportamentos discricionários são descritos como os comportamentos listados em [World Wide Web Consortium (W3C) XSL Transformations (XSLT) Version 1.0 Recommendation](https://www.w3.org/TR/1999/REC-xslt-19991116) [Recomendação de XSLT (XSL Transformations) do W3C (World Wide Web Consortium) Versão 1.0], nos quais o provedor de implementação escolhe uma das várias opções possíveis como uma maneira de lidar com uma situação. Por exemplo, em instruções de processamento criadoras da seção 7,3, a recomendação W3C informa que é um erro se criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto. Para alguns problemas, W3C informa o que a decisão deve ser feita se o processador decidir recuperar de erro. Para o problema da seção 7,3, o W3C com a implementação pode recuperar esse erro ignorando os nós e seu conteúdo.
 
-Portanto, porque cada um dos comportamentos arbitrários permitidos pelo W3C, a tabela abaixo lista os comportamentos arbitrários implementados para a implementação de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] da classe de <xref:System.Xml.Xsl.XslTransform> , e que na seção recomendação W3C XSLT 1,0 que esse problema é discutido.
+Portanto, porque cada um dos comportamentos arbitrários permitidos pelo W3C, a tabela abaixo lista os comportamentos arbitrários implementados para a implementação do .NET Framework da classe de <xref:System.Xml.Xsl.XslTransform>, e que na seção recomendação W3C XSLT 1,0 que esse problema é discutido.
 
 |Problema|Comportamento|Seção|
 |-------------|--------------|-------------|

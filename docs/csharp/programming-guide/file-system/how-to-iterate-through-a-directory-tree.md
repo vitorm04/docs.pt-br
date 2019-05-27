@@ -6,18 +6,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 070b409a7d1cc755451414d24ca2fa6002638dc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976324"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585803"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Como: iterar em uma árvore de diretório (Guia de Programação em C#)
 A expressão "iterar uma árvore de diretório" significa acessar cada arquivo em cada subdiretório aninhado em uma pasta raiz especificada, em qualquer profundidade. Você não precisa necessariamente abrir cada arquivo. Você pode recuperar apenas o nome do arquivo ou subdiretório como um `string`, ou então você pode recuperar informações adicionais na forma de um objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> ou <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  No Windows, os termos "diretório" e "pasta" são usados de forma intercambiável. A maior parte do texto da documentação e da interface do usuário usa o termo "pasta", mas a biblioteca de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa o termo "diretório".  
+>  No Windows, os termos "diretório" e "pasta" são usados de forma intercambiável. A maior parte do texto da documentação e da interface do usuário usa o termo "pasta", mas a biblioteca de classes do .NET Framework usa o termo "diretório".  
   
  No caso mais simples, em que você sabe com certeza que tem permissões de acesso a todos os diretórios em uma raiz especificada, é possível usar o sinalizador `System.IO.SearchOption.AllDirectories`. Esse sinalizador retorna todos os subdiretórios aninhados que correspondem ao padrão especificado. O exemplo a seguir mostra como usar o sinalizador.  
   

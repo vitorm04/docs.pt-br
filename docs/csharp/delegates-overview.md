@@ -3,16 +3,14 @@ title: Introdução a Delegados
 description: Saiba mais sobre delegados neste tópico de visão geral que apresenta os conceitos básicos e discute as metas de design da linguagem para delegados.
 ms.date: 06/20/2016
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: d42d9d10aeaa153f12933fa3a59e58719f7741e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 43cdf9345f0bae9d5c4d0e6a31d80bc269c37fec
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212181"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879027"
 ---
 # <a name="introduction-to-delegates"></a>Introdução a Delegados
-
-[Anterior](delegates-events.md)
 
 Os delegados fornecem um mecanismo de *associação tardia* no .NET. Associação tardia significa que você cria um algoritmo em que o chamador também fornece pelo menos um método que implementa a parte do algoritmo.
 
@@ -32,7 +30,7 @@ Os designers de linguagem enumeraram várias metas para o recurso que eventualme
 
 A equipe queria um constructo de linguagem comum que pudesse ser usada qualquer algoritmo de associação tardia. Isso permite aos desenvolvedores aprender um conceito e usar esse conceito entre muitos problemas de software diferentes.
 
-Em segundo lugar, a equipe queria dar suporte a chamadas de método single ou multicast. (Delegados multicast são delegados em que vários métodos foram encadeados. Você verá exemplos [posteriormente nesta série](delegate-class.md). 
+Em segundo lugar, a equipe queria dar suporte a chamadas de método single ou multicast. (Delegados multicast são delegados que encadeiam várias chamadas de método. Você verá exemplos [posteriormente nesta série](delegate-class.md).) 
 
 A equipe queria delegados para dar suporte à mesma segurança de tipos que os desenvolvedores esperam de todos os constructos de C#. 
 

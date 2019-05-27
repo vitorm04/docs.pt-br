@@ -1,15 +1,13 @@
 ---
 title: Usando o Azure Service Fabric
 description: Entenda quais modelos de aplicativo do Azure Service Fabric você pode usar além de apenas usá-lo para orquestrar contêineres.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3c629b473a429b64243b5756c96fef6585c939b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126959"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644523"
 ---
 # <a name="using-azure-service-fabric"></a>Usando o Azure Service Fabric
 
@@ -27,7 +25,7 @@ O Service Fabric é independente em relação à maneira como você cria seu ser
 
 Conforme mostrado na Figura 4-27, é possível criar e executar microsserviços no Service Fabric como processos simples ou como contêineres do Docker. Também é possível combinar microsserviços baseados em contêineres com microsserviços baseados em processos dentro do mesmo cluster do Service Fabric.
 
-![Comparação de clusters do Azure Service Fabric: microsserviços como processos, em que cada nó executa um processo para cada microsserviço; microsserviços como contêineres, em que cada nó executa o Docker com vários contêineres, um contêiner por microsserviço.](./media/image30.png)
+![Comparação de clusters do Azure Service Fabric: Microsserviços como processos, em que cada nó executa um processo para cada microsserviço; microsserviços como contêineres, em que cada nó executa o Docker com vários contêineres, um contêiner por microsserviço.](./media/image30.png)
 
 **Figura 4-27**. Implantando microsserviços como processos ou como contêineres no Azure Service Fabric
 

@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628923"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882498"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Como: Implementar um componente compatível com o padrão assíncrono baseado em evento
 Se você estiver escrevendo uma classe com algumas operações que possam causar atrasos notáveis, considere a opção de fornecer funcionalidade assíncrona Implementando a [visão geral de padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
- Este passo a passo ilustra como criar um componente que implemente o Padrão Assíncrono Baseado em Evento. Ele é implementado usando classes auxiliares do namespace <xref:System.ComponentModel?displayProperty=nameWithType>, o que garante que o componente funcione corretamente em qualquer modelo de aplicativo, incluindo [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], aplicativos de Windows Forms e aplicativos de Console. Esse componente também é projetável com um controle <xref:System.Windows.Forms.PropertyGrid> e seus próprios designers personalizados.  
+ Este passo a passo ilustra como criar um componente que implemente o Padrão Assíncrono Baseado em Evento. Ele é implementado usando classes auxiliares do namespace <xref:System.ComponentModel?displayProperty=nameWithType>, o que garante que o componente funcione corretamente em qualquer modelo de aplicativo, incluindo ASP.NET, aplicativos do Windows Forms e aplicativos de Console. Esse componente também é projetável com um controle <xref:System.Windows.Forms.PropertyGrid> e seus próprios designers personalizados.  
   
  Quando terminar, você terá um aplicativo que calcula números primos de forma assíncrona. O aplicativo terá um thread de IU (interface do usuário) do usuário principal e um thread para cada cálculo de números primos. Embora o teste para saber se um número grande é primo possa levar um tempo considerável, o thread de interface do usuário principal não será interrompido por esse atraso e o formulário responderá durante o cálculo. Você poderá executar tantos cálculos quantos desejar simultaneamente e cancelar seletivamente cálculos pendentes.  
   

@@ -4,12 +4,12 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 86705a4f8daa327c442ac6c53c9b44c5b5c5c2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bfdbbc19bb9ed72bc50ebeeac114241ccd47c25
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857357"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053407"
 ---
 # <a name="configuring-http-and-https"></a>Configurando HTTP e HTTPS
 
@@ -57,7 +57,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 Ao usar <xref:System.ServiceModel.WSDualHttpBinding>, a conexão de cliente usa os padrões que são compatíveis com as reservas de namespace e o firewall do Windows. Se você escolher personalizar o endereço base do cliente de uma conexão dupla, também deverá definir essas configurações HTTP no cliente para que correspondam ao novo endereço.
 
-A API do servidor HTTP tem algumas configurações avançadas que não estão disponíveis por meio de HttpCfg. Essas configurações são mantidas no Registro e aplicam-se a todos os aplicativos executados nos sistemas que usam as APIs do servidor HTTP. Para obter informações sobre essas configurações, consulte [configurações de registro HTTP. sys para IIS](https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows). A maioria dos usuários não precisa alterar essas configurações.
+A API do servidor HTTP tem algumas configurações avançadas que não estão disponíveis por meio de HttpCfg. Essas configurações são mantidas no Registro e aplicam-se a todos os aplicativos executados nos sistemas que usam as APIs do servidor HTTP. Para obter informações sobre essas configurações, consulte [configurações de registro HTTP. sys para IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). A maioria dos usuários não precisa alterar essas configurações.
 
 ## <a name="see-also"></a>Consulte também
 

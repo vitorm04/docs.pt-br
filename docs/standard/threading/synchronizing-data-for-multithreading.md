@@ -4,28 +4,29 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
-- threading [.NET Framework], synchronizing threads
+- threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644748"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638756"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizando dados para multithreading
+
 Quando vários threads podem fazer chamadas para as propriedades e métodos de um único objeto, é fundamental que essas chamadas sejam sincronizadas. Caso contrário, um thread pode interromper o que outro thread está fazendo e o objeto pode ser deixado em um estado inválido. Uma classe cujos membros são protegidos de tais interrupções é denominada thread-safe.  
   
- A Common Language Infrastructure fornece várias estratégias para sincronizar o acesso à instância e membros estáticos:  
+O .NET fornece várias estratégias para sincronizar o acesso à instância e aos membros estáticos:  
   
 - Regiões de código sincronizadas. Você pode usar o suporte de compilador ou classe <xref:System.Threading.Monitor> para esta classe para sincronizar apenas o bloco de código que precisa, melhorando o desempenho.  
   
-- Sincronização manual. Você pode usar os objetos de sincronização fornecidos pela biblioteca de classes .NET Framework. Confira [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md), que inclui uma discussão sobre a classe <xref:System.Threading.Monitor>.  
+- Sincronização manual. Você pode usar os objetos de sincronização fornecidos pela biblioteca de classes do .NET. Confira [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md), que inclui uma discussão sobre a classe <xref:System.Threading.Monitor>.  
   
-- Contextos sincronizados. Você pode usar o <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> para habilitar a sincronização simples e automática para objetos <xref:System.ContextBoundObject>.  
+- Contextos sincronizados. Para aplicativos do .NET Framework e Xamarin, você pode usar o <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> para habilitar a sincronização simples e automática para objetos <xref:System.ContextBoundObject>.  
   
 - Classes de coleção no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>. Essas classes fornecem operações sincronizadas de adição e remoção internas. Para obter mais informações, veja [Coleções thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
   
@@ -42,7 +43,7 @@ Quando vários threads podem fazer chamadas para as propriedades e métodos de u
  Este é o padrão para objetos. Qualquer thread pode acessar qualquer método ou campo a qualquer momento. Apenas um thread por vez deve acessar esses objetos.  
   
 ## <a name="manual-synchronization"></a>Sincronização manual  
- A biblioteca de classes do .NET Framework fornece uma série de classes para sincronizar threads. Confira [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+ A biblioteca de classes do .NET fornece uma série de classes para sincronizar threads. Confira [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
 ## <a name="synchronized-code-regions"></a>Regiões de código sincronizadas  
  Você pode usar a classe <xref:System.Threading.Monitor> ou uma palavra-chave do compilador para sincronizar blocos de código, métodos de instância e métodos estáticos. Não há suporte para campos estáticos sincronizados.  
@@ -52,7 +53,7 @@ Quando vários threads podem fazer chamadas para as propriedades e métodos de u
 > [!NOTE]
 >  As instruções `lock` e `SyncLock` são implementadas usando <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, então outros métodos de <xref:System.Threading.Monitor> podem ser usados em conjunto com eles dentro da região sincronizada.  
   
- Você também pode decorar um método com **MethodImplAttribute** e **MethodImplOptions.Synchronized**, que tem o mesmo efeito que usar **Monitor** ou uma das palavras-chave do compilador para bloquear todo o corpo do método.  
+ Você também pode decorar um método com um <xref:System.Runtime.CompilerServices.MethodImplAttribute> com um valor de <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>, que tem o mesmo efeito de usar <xref:System.Threading.Monitor> ou uma das palavras-chave do compilador para bloquear todo o corpo do método.  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> pode ser usado para interromper um thread fora das operações de bloqueio, como aguardar o acesso a uma região de código sincronizada. **Thread.Interrupt** também é usado para interromper threads fora das operações, como <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
@@ -65,7 +66,8 @@ Quando vários threads podem fazer chamadas para as propriedades e métodos de u
  Em ambos os casos, se uma exceção for lançada no bloqueio de código, o bloqueio adquirido por **lock** ou **SyncLock** é liberado automaticamente. Os compiladores C # e Visual Basic emitem um bloqueio **try**/**finally** com **Monitor.Enter** no início da tentativa, e **Monitor.Exit** no bloqueio **finally**. Se uma exceção for lançada dentro do bloqueio **lock** ou **SyncLock**, o manipulador **finally** é executado para permitir que você faça qualquer trabalho de limpeza.  
   
 ## <a name="synchronized-context"></a>Contexto sincronizado  
- Você pode usar o **SynchronizationAttribute** em qualquer **ContextBoundObject** para sincronizar todos os métodos e campos da instância. Todos os objetos no mesmo domínio de contexto compartilham o mesmo bloqueio. Múltiplos threads podem acessar os métodos e os campos, mas somente um único thread é permitido em qualquer momento.  
+ 
+Nos aplicativos .NET Framework e Xamarin somente, você pode usar o <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> em qualquer <xref:System.ContextBoundObject> para sincronizar todos os campos e métodos de instância. Todos os objetos no mesmo domínio de contexto compartilham o mesmo bloqueio. Múltiplos threads podem acessar os métodos e os campos, mas somente um único thread é permitido em qualquer momento.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -1,15 +1,15 @@
 ---
-title: F#convenções de codificação
+title: Convenções de codificação do F#
 description: Aprenda diretrizes gerais e expressões ao escrever F# código.
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902129"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052795"
 ---
-# <a name="f-coding-conventions"></a>F#convenções de codificação
+# <a name="f-coding-conventions"></a>Convenções de codificação do F#
 
 As seguintes convenções são formuladas de experiência trabalhando com grandes F# bases de código. O [cinco princípios bom F# código](index.md#five-principles-of-good-f-code) são a base de cada recomendação. Estão relacionadas com o [ F# diretrizes de design do componente](component-design-guidelines.md), mas são aplicáveis para qualquer F# de código, não apenas componentes, como bibliotecas.
 
@@ -611,7 +611,7 @@ Como não há nenhuma necessidade de uma classe ao interagir com a API de códig
 
 ## <a name="type-abbreviations"></a>Abreviações de tipo
 
-[Abreviações de tipo](../language-reference/type-abbreviations.md) são uma maneira conveniente de atribuir um rótulo para outro tipo, como uma assinatura de função ou um tipo mais complexo. Por exemplo, o alias a seguir atribui um rótulo para o que é necessário definir uma computação com [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), uma biblioteca de aprendizado profundo:
+[Abreviações de tipo](../language-reference/type-abbreviations.md) são uma maneira conveniente de atribuir um rótulo para outro tipo, como uma assinatura de função ou um tipo mais complexo. Por exemplo, o alias a seguir atribui um rótulo para o que é necessário definir uma computação com [CNTK](https://docs.microsoft.com/cognitive-toolkit/), uma biblioteca de aprendizado profundo:
 
 ```fsharp
 open CNTK

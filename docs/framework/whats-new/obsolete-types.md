@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 304c2ed354c2b3bfe6333550810dde6c779f2e21
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e106709c7410b289e7aab2b5cf924466f2eeb501
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663438"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959935"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos no .NET Framework
 <a name="introduction"></a>As tabelas deste artigo listam os tipos que estão obsoletos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizados por assembly. Use os links a seguir para ver uma lista dos tipos obsoletos e das alternativas recomendadas em cada assembly. Como esses tipos são obsoletos, todos seus membros também estão obsoletos. Para obter uma lista de membros obsoletos adicionais na biblioteca de classes .NET Framework, confira [Membros obsoletos](obsolete-members.md).
@@ -512,8 +512,8 @@ ms.locfileid: "64663438"
 
 |Tipo|Mensagem|
 |----------|-------------|
-|<xref:System.Activities.Statements.Interop>|Substituído primeiramente no .NET Framework 4.5.<br /><br />Os tipos Workflow Foundation 3.0 foram preteridos. Em vez disso, use os tipos do Workflow 4.0 de <xref:System.Activities>\*.|
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|Substituído primeiramente no .NET Framework 4.5.<br /><br />Os tipos Workflow Foundation 3.0 foram preteridos. Em vez disso, use os tipos do Workflow 4.0 de <xref:System.Activities>\*.|
+|<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br />Os tipos Workflow Foundation 3.0 foram preteridos. Em vez disso, use os tipos do Workflow 4.0 de <xref:System.Activities>\*.|
+|<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br />Os tipos Workflow Foundation 3.0 foram preteridos. Em vez disso, use os tipos do Workflow 4.0 de <xref:System.Activities>\*.|
 |Todos os tipos no namespace <xref:System.Workflow.Runtime>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|
 |Todos os tipos no namespace <xref:System.Workflow.Runtime.Configuration>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|
 |Todos os tipos no namespace <xref:System.Workflow.Runtime.DebugEngine>, exceto <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|

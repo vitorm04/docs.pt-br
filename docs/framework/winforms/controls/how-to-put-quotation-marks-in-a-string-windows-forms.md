@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913218"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053461"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Como: Inserir aspas em uma cadeia de caracteres (Windows Forms)
 Às vezes, você pode querer colocar aspas (" ") em uma cadeia de caracteres de texto. Por exemplo:  
@@ -26,7 +26,7 @@ ms.locfileid: "61913218"
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Para colocar as aspas em uma cadeia de caracteres no código  
   
-1. No Visual Basic, insira duas aspas em uma linha como aspas incorporadas. No Visual C# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insira a sequência de escape \\"como aspas incorporadas. Por exemplo, para criar a cadeia de caracteres anterior, use o código a seguir.  
+1. No Visual Basic, insira duas aspas em uma linha como aspas incorporadas. No Visual C# e o Visual C++, insira a sequência de escape \\"como aspas incorporadas. Por exemplo, para criar a cadeia de caracteres anterior, use o código a seguir.  
   
     ```vb  
     Private Sub InsertQuote()  

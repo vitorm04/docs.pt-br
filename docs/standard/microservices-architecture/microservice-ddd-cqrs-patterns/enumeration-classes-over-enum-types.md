@@ -2,12 +2,12 @@
 title: Usando classes Enumeration em vez de tipos enum
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Saiba como você pode usar classes de enumeração, em vez de enumerações, como uma maneira de resolver algumas limitações dessa última.
 ms.date: 10/08/2018
-ms.openlocfilehash: 02d5fcef580f71b6f8c4af6d88095e24b0bd3462
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 10b4c2f7b9f079ed535111e65b8154791f6575cd
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644473"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003830"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Usar classes de enumeração em vez de tipos enumerados
 
@@ -67,7 +67,7 @@ public abstract class Enumeration : IComparable
 Use essa classe como um tipo em qualquer entidade ou objeto de valor, como para a seguinte classe `CardType`: `Enumeration`:
 
 ```csharp
-public abstract class CardType : Enumeration
+public class CardType : Enumeration
 {
     public static CardType Amex = new CardType(1, "Amex");
     public static CardType Visa = new CardType(2, "Visa");
@@ -91,7 +91,7 @@ public abstract class CardType : Enumeration
 - **Jimmy Bogard. Classes de enumeração** \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- **Steve Smith. Alternativas para enumerações em C#** \
+- **Steve Smith. Alternativas para enumerações em C#**  \
   <https://ardalis.com/enum-alternatives-in-c>
 
 - **Enumeration.cs.** Classe base de enumeração em eShopOnContainers \

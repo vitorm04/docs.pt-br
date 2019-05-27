@@ -3,12 +3,12 @@ title: Como usar a API de ML automatizado do ML.NET
 description: A API de ML automatizado do ML.NET automatiza o processo de criação de modelo e gera um modelo pronto para implantação. Saiba as opções que você pode usar para configurar tarefas de aprendizado de máquina automatizada.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 21bf594ba70e8c466cba757ca4dcfe39ddfa4d1e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641231"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960419"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Como usar a API de aprendizado de máquina automatizado do ML.NET
 
@@ -104,15 +104,15 @@ Eis alguns exemplos:
     ```
 
 A lista de treinadores com suporte por tarefa de ML pode ser encontrada no link correspondente abaixo:
-* [Algoritmos de Classificação Binária com Suporte](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationtrainer?view=automl-dotnet)
-* [Algoritmos de Classificação Multiclasse com Suporte](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationtrainer?view=automl-dotnet)
-* [Algoritmos de Regressão com Suporte](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressiontrainer?view=automl-dotnet)
+* [Algoritmos de Classificação Binária com Suporte](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
+* [Algoritmos de Classificação Multiclasse com Suporte](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
+* [Algoritmos de Regressão com Suporte](xref:Microsoft.ML.AutoML.RegressionTrainer)
 
 ## <a name="optimizing-metric"></a>Métrica de otimização
 
 A métrica da otimiza, conforme mostrado no exemplo acima, determina a métrica a ser otimizada durante o treinamento de modelo. A métrica de otimização que você pode selecionar é determinada pelo tipo de tarefa que você escolher. Abaixo está uma lista de métricas disponíveis.
 
-|[Classificação Binária](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet) | [Classificação Multiclasse](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet) | [Regressão](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet)
+|[Classificação Binária](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Classificação Multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regressão](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Precisão| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -210,12 +210,9 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 Estas são todas as métricas disponíveis por tarefa de ML:
-* [Métricas de classificação binária](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet
-)
-* [Métricas de classificação multiclasse](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet
-)
-* [Métricas de regressão](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet
-)
+* [Métricas de classificação binária](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
+* [Métricas de classificação multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
+* [Métricas de regressão](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>Consulte também
 

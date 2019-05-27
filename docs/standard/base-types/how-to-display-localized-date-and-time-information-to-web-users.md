@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633879"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882482"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Como: Exibir informações localizadas de data e hora para usuários da Web
 Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações que analisam e formatam valores de data e hora não devem depender de um formato padrão (que geralmente é o formato da cultura local do servidor Web) ao interagir com o usuário. Em vez disso, formulários da Web que lidam com cadeias de caracteres de data e hora inseridas pelo usuário devem analisar as cadeias de caracteres usando a cultura preferencial do usuário. Da mesma forma, os dados de data e hora devem ser exibidos para o usuário em um formato compatível com a respectiva cultura. Este tópico mostra como fazer isso.  
@@ -98,7 +98,7 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações
  O código pode chamar o método <xref:System.DateTime.Parse%2A> ou <xref:System.DateTime.TryParse%2A> para converter a representação de cadeia de caracteres do usuário de uma data e hora em um valor <xref:System.DateTime>. As chamadas repetidas para um método de análise podem ser necessárias para uma única operação de análise. Como resultado, o método <xref:System.DateTime.TryParse%2A> é melhor porque retorna `false` se uma operação de análise falha. Por outro lado, manipular as exceções repetidas que podem ser geradas pelo método <xref:System.DateTime.Parse%2A> pode ser uma proposta muito cara em um aplicativo Web.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Para compilar o código, crie uma página da Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sem code-behind. Copie o exemplo para a página da Web para que ele substitua todo o código existente. A página da Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] deve conter os seguintes controles:  
+ Para compilar o código, crie uma página da Web do ASP.NET sem code-behind. Copie o exemplo para a página da Web para que ele substitua todo o código existente. A página da Web ASP.NET deve conter os seguintes controles:  
   
 - Um controle <xref:System.Web.UI.WebControls.Label>, que não é referenciado no código. Defina a propriedade <xref:System.Web.UI.WebControls.TextBox.Text%2A> como "Digite um Número:".  
   

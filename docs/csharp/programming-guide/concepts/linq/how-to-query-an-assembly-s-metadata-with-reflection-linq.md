@@ -2,12 +2,12 @@
 title: 'Como: Consultar metadados de um assembly com a reflexão (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 849244f1345966dbe198686f4f9024fc321b6ded
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1e8aa8652470240d63ac950d43e5b41e8b3ef1ca
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263492"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584423"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Como: Consultar metadados de um assembly com a reflexão (LINQ) (C#)
 O exemplo a seguir mostra como o LINQ pode ser usado com a reflexão para recuperar metadados específicos sobre os métodos que correspondem a um critério de pesquisa especificado. Nesse caso, a consulta localizará os nomes de todos os métodos no assembly que retornam tipos enumeráveis como matrizes.  
@@ -52,7 +52,7 @@ namespace LINQReflection
  O exemplo usa o método <xref:System.Reflection.Assembly.GetTypes%2A> para retornar uma matriz de tipos no assembly especificado. O filtro [where](../../../../csharp/language-reference/keywords/where-clause.md) é aplicado para que apenas tipos públicos sejam retornados. Para cada tipo de público, uma subconsulta é gerada usando a matriz <xref:System.Reflection.MethodInfo> que é retornada da chamada <xref:System.Type.GetMethods%2A>. Esses resultados são filtrados para retornar apenas os métodos cujo tipo de retorno é uma matriz ou um tipo que implementa <xref:System.Collections.Generic.IEnumerable%601>. Por fim, esses resultados são agrupados usando o nome do tipo como uma chave.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Criar um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior, com uma referência ao System.Core.dll e diretivas `using` para os namespaces System.Linq e System.IO.  
+ Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.  
   
 ## <a name="see-also"></a>Consulte também
 

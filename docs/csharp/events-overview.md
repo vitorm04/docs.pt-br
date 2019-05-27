@@ -3,12 +3,12 @@ title: Introdução a Eventos
 description: Saiba mais sobre eventos no .NET Core e nossas metas de design de linguagem para eventos nesta visão geral.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45747089"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051938"
 ---
 # <a name="introduction-to-events"></a>Introdução a Eventos
 
@@ -65,7 +65,8 @@ Assine um evento usando o operador `+=`:
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += onProgress;
+
+fileLister.Progress += onProgress;
 ```
 
 O método do manipulador normalmente é o prefixo "On" seguido do nome do evento, conforme mostrado acima.
@@ -73,7 +74,7 @@ O método do manipulador normalmente é o prefixo "On" seguido do nome do evento
 Cancele a assinatura usando o operador `-=`:
 
 ```csharp
-lister.Progress -= onProgress;
+fileLister.Progress -= onProgress;
 ```
 
 É importante observar que eu declarei um variável local para a expressão que representa o manipulador de eventos. Isso garante que o cancelamento da assinatura remova o manipulador.

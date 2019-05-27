@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: fbc92c03da69dd452f35e5b4e00cd4a9ca17e252
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8965231307da84fd555b181440978adbea7e7244
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211176"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052840"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Como: Criar formulários filho MDI
 
@@ -34,7 +34,7 @@ O procedimento a seguir, você usará o Visual Studio para criar um formulário 
 
 4. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto, aponte para **Adicionar** e selecione **Adicionar novo item**.
 
-5. No **Adicionar Novo Item** caixa de diálogo, selecione **formulário do Windows** (no Visual Basic ou no Visual c#) ou **aplicativo de formulários do Windows (.NET)** (em [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) do  **Modelos** painel. Na caixa **Nome**, dê o nome **Form2** ao formulário. Clique no botão **Abrir** para adicionar o formulário ao projeto.
+5. No **Adicionar Novo Item** caixa de diálogo, selecione **formulário do Windows** (no Visual Basic ou no Visual C#) ou **aplicativo de formulários do Windows (.NET)** (no Visual C++) das **Modelos** painel. Na caixa **Nome**, dê o nome **Form2** ao formulário. Clique no botão **Abrir** para adicionar o formulário ao projeto.
 
     > [!NOTE]
     > O formulário MDI filho criado nesta etapa é um formulário padrão do Windows. Como tal, ele tem um <xref:System.Windows.Forms.Form.Opacity%2A> propriedade, que permite que você controle a transparência do formulário. No entanto, o <xref:System.Windows.Forms.Form.Opacity%2A> propriedade foi projetada para janelas de nível superior. Não use-a com formulários filho MDI, pois podem ocorrer problemas de pintura.

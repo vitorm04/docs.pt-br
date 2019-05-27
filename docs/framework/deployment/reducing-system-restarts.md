@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a236b3b4b5c4cde66bad2b460637bb533b764be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218440"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881615"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5
 O instalador do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa o [Gerenciador de Reinicialização](https://go.microsoft.com/fwlink/?LinkId=231425) para impedir que o sistema seja reiniciado sempre que possível durante a instalação. Se o programa de instalação do aplicativo instala o .NET Framework, ele pode interagir com o Gerenciador de Reinicialização para aproveitar esse recurso. Para obter mais informações, confira [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
@@ -26,8 +26,7 @@ O instalador do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa o [Gere
   
  Se o Gerenciador de Reinicialização detectar uma situação que exigirá uma reinicialização do sistema, mesmo que os aplicativos em execução sejam fechados, a mensagem não será exibida.  
   
- ![Caixa de diálogo Fechar Aplicativo](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
-Prompt para fechar os aplicativos do .NET Framework que estão em uso  
+ ![A caixa de diálogo Fechar Aplicativo listando os programas em execução no momento.](./media/reducing-system-restarts/close-application-dialog.png)  
   
 ## <a name="using-a-chained-installer"></a>Usando um instalador encadeado  
  Se você quer redistribuir o .NET Framework com seu aplicativo, mas deseja usar seu próprio programa de instalação e interface do usuário, você pode incluir (encadear) o processo de instalação do .NET Framework no seu processo de instalação. Para obter mais informações sobre instalações encadeadas, consulte [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md). Para reduzir as reinicializações do sistema em instalações encadeadas, o instalador do .NET Framework fornece ao programa de instalação a lista de aplicativos a serem fechados. O programa de instalação deve fornecer essas informações para o usuário por meio de uma interface do usuário, como uma caixa de mensagem, obter a resposta do usuário e passar a resposta de volta para o instalador do .NET Framework. Para obter um exemplo de um instalador encadeado, confira o artigo [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
