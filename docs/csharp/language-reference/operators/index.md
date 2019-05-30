@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: a342c0aaf6a1b0c9959c9b79e3e3e92134693bf1
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250765"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300319"
 ---
 # <a name="c-operators"></a>Operadores C#
 
@@ -95,9 +95,9 @@ Esses operadores têm precedência maior do que a próxima seção e precedênci
 
 [*x](pointer-related-operators.md#pointer-indirection-operator-) – indireção de ponteiro ou desreferenciar.
 
-[operador true](../keywords/true-false-operators.md) – retorna o valor [bool](../keywords/bool.md) `true` para indicar que um operando é definitivamente true.
+[operador true](true-false-operators.md) – retorna o valor [bool](../keywords/bool.md) `true` para indicar que um operando é definitivamente true.
 
-[operador false](../keywords/true-false-operators.md) – retorna o valor [bool](../keywords/bool.md) `true` para indicar que um operando é definitivamente false.
+[operador false](true-false-operators.md) – retorna o valor [bool](../keywords/bool.md) `true` para indicar que um operando é definitivamente false.
 
 ## <a name="multiplicative-operators"></a>Operadores de multiplicação
 
@@ -199,7 +199,7 @@ Esses operadores têm precedência maior do que a próxima seção e precedênci
 
 [x += y](arithmetic-operators.md#compound-assignment) – incremento. Adicione o valor de `y` para o valor de `x`, armazene o resultado em `x` e retorne o novo valor. Se `x` designar um [evento](../keywords/event.md), então, `y` deverá ser um método adequado que o C# adiciona como um manipulador de eventos.
 
-[x -= y](subtraction-assignment-operator.md) – diminuir. Subtraia o valor de `y` do valor de `x`, armazene o resultado em `x` e retorne o novo valor. Se `x` designar um [evento](../keywords/event.md), então, `y` deverá ser um método adequado que o C# remove como um manipulador de eventos.
+[x -= y](arithmetic-operators.md#compound-assignment) – diminuir. Subtraia o valor de `y` do valor de `x`, armazene o resultado em `x` e retorne o novo valor. Se `x` designar um [evento](../keywords/event.md), então, `y` deverá ser um método adequado que o C# remove como um manipulador de eventos.
 
 [x *= y](arithmetic-operators.md#compound-assignment) – atribuição de multiplicação. Multiplique o valor de `y` com o valor de `x`, armazene o resultado em `x` e retorne o novo valor.
 

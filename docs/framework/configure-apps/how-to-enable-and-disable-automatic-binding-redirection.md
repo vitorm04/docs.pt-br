@@ -5,20 +5,20 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6c9c3508c53e8a68a3f7e1cb12b6b6c95600e7b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880096"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380097"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Como: Habilitar e desabilitar o redirecionamento automático de associação
 
-Quando você compila aplicativos no Visual Studio que se destinam a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versões posteriores, redirecionamentos de associação poderão ser automaticamente adicionadas ao arquivo de configuração de aplicativo para substituir a Unificação do assembly. Redirecionamentos de associação serão adicionados se o seu aplicativo ou seus componentes fizerem referência a mais de uma versão do mesmo assembly, mesmo se você especificar manualmente redirecionamentos de associação no arquivo de configuração para seu aplicativo. O recurso de redirecionamento de associação automático afeta os aplicativos da área de trabalho e aplicativos web que se destinam a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] ou uma versão posterior, embora o comportamento é ligeiramente diferente para um aplicativo web. Você pode habilitar o redirecionamento de associação automático se você tiver aplicativos existentes destinados a versões anteriores do .NET Framework, ou você pode desativar esse recurso se você quiser criar manualmente redirecionamentos de associação.
+Quando você compila aplicativos no Visual Studio que direcionam o .NET Framework 4.5.1 e versões posteriores, redirecionamentos de associação poderão ser automaticamente adicionados ao arquivo de configuração de aplicativo para substituir a Unificação do assembly. Redirecionamentos de associação serão adicionados se o seu aplicativo ou seus componentes fizerem referência a mais de uma versão do mesmo assembly, mesmo se você especificar manualmente redirecionamentos de associação no arquivo de configuração para seu aplicativo. O recurso de redirecionamento de associação automático afeta os aplicativos da área de trabalho e aplicativos web que direcionam o .NET Framework 4.5.1 ou posterior, embora o comportamento é ligeiramente diferente para um aplicativo web. Você pode habilitar o redirecionamento de associação automático se você tiver aplicativos existentes destinados a versões anteriores do .NET Framework, ou você pode desativar esse recurso se você quiser criar manualmente redirecionamentos de associação.
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Desabilitar os redirecionamentos de associação automáticos em aplicativos da área de trabalho
 
-Redirecionamentos de associação automáticos são habilitados por padrão para aplicativos de desktop do Windows que se destinam a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versões posteriores. Os redirecionamentos de associação são adicionados à configuração de saída (**App. config**) de arquivos quando o aplicativo é compilado e substituem a Unificação do assembly que pode ocorrer de outra forma. O código-fonte **App. config** arquivo não é modificado. Modificando o arquivo de projeto para o aplicativo ou desmarcar uma caixa de seleção nas propriedades do projeto no Visual Studio, você pode desativar esse recurso.
+Redirecionamentos de associação automáticos são habilitados por padrão para aplicativos de desktop do Windows direcionados ao .NET Framework 4.5.1 e versões posteriores. Os redirecionamentos de associação são adicionados à configuração de saída (**App. config**) de arquivos quando o aplicativo é compilado e substituem a Unificação do assembly que pode ocorrer de outra forma. O código-fonte **App. config** arquivo não é modificado. Modificando o arquivo de projeto para o aplicativo ou desmarcar uma caixa de seleção nas propriedades do projeto no Visual Studio, você pode desativar esse recurso.
 
 ### <a name="disable-through-project-properties"></a>Desabilitar por meio das propriedades do projeto
 
@@ -35,7 +35,7 @@ Se você tiver o Visual Studio 2017 versão 15.7 ou posterior, você pode desati
 1. Abra o arquivo de projeto para edição usando um dos seguintes métodos:
 
    - No Visual Studio, selecione o projeto no **Gerenciador de soluções**e, em seguida, escolha **Abrir pasta no Explorador de arquivos** no menu de atalho. No Explorador de arquivos, localize o arquivo de projeto (. csproj ou. vbproj) e abri-lo no bloco de notas.
-   - No Visual Studio, no **Gerenciador de soluções**, clique com botão direito no projeto e escolha **descarregar projeto**. Clique com botão direito do projeto descarregado novamente e, em seguida, escolha **Editar [projectname.csproj]**.
+   - No Visual Studio, no **Gerenciador de soluções**, clique com botão direito no projeto e escolha **descarregar projeto**. Clique com botão direito do projeto descarregado novamente e, em seguida, escolha **Editar [projectname.csproj]** .
 
 2. No arquivo de projeto, localize a seguinte entrada de propriedade:
 
@@ -56,7 +56,7 @@ Você pode habilitar redirecionamentos de associação automáticos em aplicativ
 1. Abra o arquivo de projeto para edição usando um dos seguintes métodos:
 
    - No Visual Studio, selecione o projeto no **Gerenciador de soluções**e, em seguida, escolha **Abrir pasta no Explorador de arquivos** no menu de atalho. No Explorador de arquivos, localize o arquivo de projeto (. csproj ou. vbproj) e abri-lo no bloco de notas.
-   - No Visual Studio, no **Gerenciador de soluções**, clique com botão direito no projeto e escolha **descarregar projeto**. Clique com botão direito do projeto descarregado novamente e, em seguida, escolha **Editar [projectname.csproj]**.
+   - No Visual Studio, no **Gerenciador de soluções**, clique com botão direito no projeto e escolha **descarregar projeto**. Clique com botão direito do projeto descarregado novamente e, em seguida, escolha **Editar [projectname.csproj]** .
 
 2. Adicione o seguinte elemento ao primeiro grupo de propriedades de configuração (sob o \<PropertyGroup > marca):
 
