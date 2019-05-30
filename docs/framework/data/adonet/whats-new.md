@@ -2,20 +2,20 @@
 title: Novidades no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 90ac3ffe9bae892bf20ad874e5634a3a045f776d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877428"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379978"
 ---
 # <a name="whats-new-in-adonet"></a>Novidades no ADO.NET
 
-Os seguintes recursos são novos no ADO.NET no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Os seguintes recursos são novos no ADO.NET no .NET Framework 4.5.
 
 ## <a name="sqlclient-data-provider"></a>Provedor de Dados SqlClient
 
-Os seguintes recursos são novos no .NET Framework Data Provider para SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+Os seguintes recursos são novos no .NET Framework Data Provider para SQL Server no .NET Framework 4.5:
 
 - As palavras-chaves de cadeia de caracteres de conexão ConnectRetryCount e ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) permitem controlar o recurso de resiliência de conexão ociosa.
 
@@ -51,7 +51,7 @@ Os seguintes recursos são novos no .NET Framework Data Provider para SQL Server
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-O [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] adiciona as APIs que permitem que os cenários novos funcionem com o Entity Framework 5.0. Para obter mais informações sobre aprimoramentos e recursos que foram adicionados para o Entity Framework 5.0, consulte os tópicos a seguir: [Quais são as novidades](https://go.microsoft.com/fwlink/?LinkID=251106) e [versões do Entity Framework e controle de versão](https://go.microsoft.com/fwlink/?LinkId=234899).
+O .NET Framework 4.5 adiciona APIs que permitem novos cenários ao trabalhar com o Entity Framework 5.0. Para obter mais informações sobre aprimoramentos e recursos que foram adicionados para o Entity Framework 5.0, consulte os tópicos a seguir: [Quais são as novidades](https://go.microsoft.com/fwlink/?LinkID=251106) e [versões do Entity Framework e controle de versão](https://go.microsoft.com/fwlink/?LinkId=234899).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad3ac93b2a7f92cd33787620fc0caa2b632aa072
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705357"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301242"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Limpar > elemento para NameValueSectionHandler e DictionarySectionHandler
 
 Limpa todas as configurações definidas anteriormente em uma seção.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,7 +38,7 @@ Nenhum
 
 |     | Descrição |
 | --- | ------------|
-| [**\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Define as configurações para seções de configuração personalizadas que usam o <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classes. |
+| [ **\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Define as configurações para seções de configuração personalizadas que usam o <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classes. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -52,7 +52,7 @@ Você pode usar o  **\<limpar >** elemento para remover todas as configurações
 
 Este exemplo define um arquivo de configuração do computador e um arquivo de configuração de aplicativo e mostra como usar o  **\<limpar >** elemento em um arquivo de configuração de aplicativo para limpar as seções definidas anteriormente no arquivo de configuração do computador.
 
-O seguinte código de arquivo de configuração de máquina declara a seção  **\<mySection >**:
+O seguinte código de arquivo de configuração de máquina declara a seção  **\<mySection >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ O seguinte código de arquivo de configuração de máquina declara a seção  *
 </configuration>
 ```
 
-O seguinte código de arquivo de configuração de aplicativo remove todas as configurações de  **\<mySection >**. O aplicativo não é possível recuperar as configurações que foram declarados nas na  **\<mySection >** seção do arquivo de configuração de máquina.
+O seguinte código de arquivo de configuração de aplicativo remove todas as configurações de  **\<mySection >** . O aplicativo não é possível recuperar as configurações que foram declarados nas na  **\<mySection >** seção do arquivo de configuração de máquina.
 
 ```xml
 <!-- Application configuration file -->

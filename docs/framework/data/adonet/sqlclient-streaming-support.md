@@ -2,16 +2,16 @@
 title: Suporte de streaming do SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698441"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380002"
 ---
 # <a name="sqlclient-streaming-support"></a>Suporte de streaming do SqlClient
 
-Suporte a streaming entre o SQL Server e um aplicativo (novo no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) dá suporte a dados não estruturados no servidor (documentos, imagens e arquivos de mídia). Um banco de dados do SQL Server pode armazenar objetos binários grandes (BLOBs), mas recuperar BLOBS pode usar muita memória.
+Suporte a streaming entre o SQL Server e um aplicativo (novo no .NET Framework 4.5) dá suporte a dados não estruturados no servidor (documentos, imagens e arquivos de mídia). Um banco de dados do SQL Server pode armazenar objetos binários grandes (BLOBs), mas recuperar BLOBS pode usar muita memória.
 
 Streaming suporte para e do SQL Server simplifica a gravação de aplicativos em que dados de fluxo, sem ter que carregar completamente os dados na memória, resultando em menos exceções de estouro de memória.
 
@@ -101,9 +101,9 @@ O exemplo a seguir mostra como fazer o seguinte:
 
 - Evite fechar um thread da interface do usuário fornecendo uma maneira assíncrona de recuperar arquivos grandes.
 
-- Transferir um arquivo de texto grande do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Transfira um arquivo de texto grande do SQL Server no .NET Framework 4.5.
 
-- Transferir um arquivo grande XML do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Transferir um arquivo grande XML do SQL Server no .NET Framework 4.5.
 
 - Recupere dados do SQL Server.
 
@@ -323,9 +323,9 @@ GO
 
 O exemplo a seguir mostra como fazer o seguinte:
 
-- Transferindo um grande BLOB para o SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Transferindo um grande BLOB para o SQL Server no .NET Framework 4.5.
 
-- Transferência de um arquivo de texto grande no SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Transferindo um arquivo de texto grande para o SQL Server no .NET Framework 4.5.
 
 - Usando o novo recurso assíncrono para transferir um BLOB grande.
 

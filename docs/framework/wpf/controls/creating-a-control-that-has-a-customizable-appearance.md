@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 279f7932d38885331b69616afa719ad782d7244b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3630b9e2f50830faf50599388e4fbb7ec1630b73
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659909"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300746"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Criando um controle que tenha uma aparência personalizável
 <a name="introduction"></a>
@@ -78,7 +78,7 @@ Um controle NumericUpDown personalizado
   
  [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- Um comportamento visual do controle `NumericUpDown` é que o valor estará em uma fonte vermelha se for negativo.  Se você alterar o <xref:System.Windows.Controls.TextBlock.Foreground%2A> do <xref:System.Windows.Controls.TextBlock> no código quando o `Value` for negativo, o `NumericUpDown` sempre mostrará um valor negativo vermelho. Você especifica o comportamento visual do controle na <xref:System.Windows.Controls.ControlTemplate> adicionando <xref:System.Windows.VisualState> objetos para o <xref:System.Windows.Controls.ControlTemplate>.  A exemplo a seguir mostra a <xref:System.Windows.VisualState> objetos para o `Positive` e `Negative` estados.  `Positive` e `Negative` são mutuamente exclusivos (o controle sempre é exatamente em um dos dois), portanto, o exemplo coloca o <xref:System.Windows.VisualState> objetos em um único <xref:System.Windows.VisualStateGroup>.  Quando o controle passa para o `Negative` estado, o <xref:System.Windows.Controls.TextBlock.Foreground%2A> da <xref:System.Windows.Controls.TextBlock> fica vermelho.  Quando o controle está no `Positive` estado, o <xref:System.Windows.Controls.TextBlock.Foreground%2A> retorna ao seu valor original.  Definindo <xref:System.Windows.VisualState> objetos em um <xref:System.Windows.Controls.ControlTemplate> discutido em mais detalhes [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+ Um comportamento visual do controle `NumericUpDown` é que o valor estará em uma fonte vermelha se for negativo.  Se você alterar o <xref:System.Windows.Controls.TextBlock.Foreground%2A> do <xref:System.Windows.Controls.TextBlock> no código quando o `Value` for negativo, o `NumericUpDown` sempre mostrará um valor negativo vermelho. Você especifica o comportamento visual do controle na <xref:System.Windows.Controls.ControlTemplate> adicionando <xref:System.Windows.VisualState> objetos para o <xref:System.Windows.Controls.ControlTemplate>.  A exemplo a seguir mostra a <xref:System.Windows.VisualState> objetos para o `Positive` e `Negative` estados.  `Positive` e `Negative` são mutuamente exclusivos (o controle sempre é exatamente em um dos dois), portanto, o exemplo coloca o <xref:System.Windows.VisualState> objetos em um único <xref:System.Windows.VisualStateGroup>.  Quando o controle passa para o `Negative` estado, o <xref:System.Windows.Controls.TextBlock.Foreground%2A> da <xref:System.Windows.Controls.TextBlock> fica vermelho.  Quando o controle está no `Positive` estado, o <xref:System.Windows.Controls.TextBlock.Foreground%2A> retorna para seu valor original.  Definindo <xref:System.Windows.VisualState> objetos em um <xref:System.Windows.Controls.ControlTemplate> discutido em mais detalhes [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 > [!NOTE]
 >  Certifique-se de definir a <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> anexados a propriedade na raiz <xref:System.Windows.FrameworkElement> da <xref:System.Windows.Controls.ControlTemplate>.  
@@ -121,7 +121,7 @@ Um controle NumericUpDown personalizado
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>Usar o VisualStateManager para gerenciar estados  
  O <xref:System.Windows.VisualStateManager> controla os estados de um controle e executa a lógica necessária para fazer a transição entre estados. Quando você adiciona <xref:System.Windows.VisualState> objetos para o <xref:System.Windows.Controls.ControlTemplate>, você adicioná-los para um <xref:System.Windows.VisualStateGroup> e adicione o <xref:System.Windows.VisualStateGroup> para o <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> propriedade anexada, de modo que o <xref:System.Windows.VisualStateManager> tem acesso a eles.  
   
- O exemplo a seguir repete o exemplo anterior que mostra a <xref:System.Windows.VisualState> objetos que corresponde do `Positive` e `Negative` estados do controle. O <xref:System.Windows.Media.Animation.Storyboard> no `Negative` <xref:System.Windows.VisualState> transforma o <xref:System.Windows.Controls.TextBlock.Foreground%2A> do <xref:System.Windows.Controls.TextBlock> vermelho.   Quando o controle `NumericUpDown` está no estado `Negative`, o storyboard no estado `Negative` é iniciado.  Em seguida, a <xref:System.Windows.Media.Animation.Storyboard> no `Negative` paradas de estado quando o controle retorna para o `Positive` estado.  O `Positive` <xref:System.Windows.VisualState> precisa conter um <xref:System.Windows.Media.Animation.Storyboard> porque quando o <xref:System.Windows.Media.Animation.Storyboard> para o `Negative` for interrompida, o <xref:System.Windows.Controls.TextBlock.Foreground%2A> retorna à sua cor original.  
+ O exemplo a seguir repete o exemplo anterior que mostra a <xref:System.Windows.VisualState> objetos que correspondem do `Positive` e `Negative` estados do controle. O <xref:System.Windows.Media.Animation.Storyboard> no `Negative` <xref:System.Windows.VisualState> transforma o <xref:System.Windows.Controls.TextBlock.Foreground%2A> do <xref:System.Windows.Controls.TextBlock> vermelho.   Quando o controle `NumericUpDown` está no estado `Negative`, o storyboard no estado `Negative` é iniciado.  Em seguida, a <xref:System.Windows.Media.Animation.Storyboard> no `Negative` paradas de estado quando o controle retorna para o `Positive` estado.  O `Positive` <xref:System.Windows.VisualState> precisa conter um <xref:System.Windows.Media.Animation.Storyboard> porque quando o <xref:System.Windows.Media.Animation.Storyboard> para o `Negative` for interrompida, o <xref:System.Windows.Controls.TextBlock.Foreground%2A> retorna à sua cor original.  
   
  [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   

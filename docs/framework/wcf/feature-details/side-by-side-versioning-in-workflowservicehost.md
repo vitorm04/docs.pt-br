@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 0323c0f10538eda2ed3b365a54470bdecac061a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3ac8b2260e5da1e91c167e3e9ef91039deb983b2
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586202"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380243"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Controle de versão lado a lado no WorkflowServiceHost
-O controle de versões lado a lado do <xref:System.ServiceModel.Activities.WorkflowServiceHost> introduzidas no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] fornece a capacidade de hospedar várias versões de um serviço de fluxo de trabalho em um único ponto de extremidade. A funcionalidade de lado a lado fornecida permite que um serviço de fluxo de trabalho seja configurado para que novas instâncias do serviço de fluxo de trabalho sejam criadas usando a nova definição de fluxo de trabalho, enquanto executa instâncias completas usando a definição existente. Este tópico fornece uma visão geral da execução lado a lado do serviço de fluxo de trabalho usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
+O <xref:System.ServiceModel.Activities.WorkflowServiceHost> lado a lado de controle de versão introduzido no .NET Framework 4.5 fornece a capacidade de hospedar várias versões de um serviço de fluxo de trabalho em um único ponto de extremidade. A funcionalidade de lado a lado fornecida permite que um serviço de fluxo de trabalho seja configurado para que novas instâncias do serviço de fluxo de trabalho sejam criadas usando a nova definição de fluxo de trabalho, enquanto executa instâncias completas usando a definição existente. Este tópico fornece uma visão geral da execução lado a lado do serviço de fluxo de trabalho usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
 > [!NOTE]
 >  Para baixar um exemplo e assistir uma vídeo passo a passo do controle de versão de lado a lado do serviço de fluxo de trabalho, consulte [controle de versão lado a lado com um serviço de fluxo de trabalho Xamlx hospedado na Web](https://go.microsoft.com/fwlink/?LinkId=393746).  

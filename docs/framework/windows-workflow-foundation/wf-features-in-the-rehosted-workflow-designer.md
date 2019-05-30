@@ -2,24 +2,24 @@
 title: Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876463"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380158"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
-Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduziu muitos novos recursos, incluindo vários aprimoramentos à experiência de designer do fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.
+Windows Workflow Foundation (WF) no .NET Framework 4.5 introduziu muitos recursos novos, incluindo vários aprimoramentos à experiência de designer do fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.
 
 > [!NOTE]
->  Para obter uma lista de todos os novos recursos do Windows Workflow Foundation (WF) introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], incluindo aqueles que estão relacionadas ao designer que rehosting, consulte [o que há de novo no Windows Workflow Foundation no .NET 4.5](whats-new-in-wf-in-dotnet.md).
+>  Para obter uma lista de todos os novos recursos do Windows Workflow Foundation (WF) introduzidos no .NET Framework 4.5, incluindo aqueles que estão relacionadas ao designer que rehosting, consulte [o que há de novo no Windows Workflow Foundation no .NET 4.5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="activities"></a>Atividades
  A biblioteca de atividades embutida contém novas atividades e novos recursos para atividades existentes. Todas essas novas atividades têm suporte no designer hospedado novamente. Para obter mais informações sobre essas novas atividades, consulte o [atividades](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) seção [o que há de novo no Windows Workflow Foundation no .NET 4.5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="c-expressions"></a>Expressões C#
- Antes do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], todas as expressões em fluxos de trabalho podiam ser escritas no Visual Basic. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as expressões do Visual Basic são usadas apenas para os projetos criados usando o Visual Basic. Os projetos do Visual C# agora usam o C# para expressões. Ao criar fluxos de trabalho no Visual Studio 2012, um editor de expressão c# completamente funcional é fornecido com recursos como realce de gramática e intellisense. Os projetos do fluxo de trabalho C# criados em versões anteriores que usam expressões do Visual Basic continuarão funcionando.
+ Antes do .NET Framework 4.5, todas as expressões em fluxos de trabalho podiam ser escritas no Visual Basic. No .NET Framework 4.5, as expressões do Visual Basic só são usadas para projetos criados usando o Visual Basic. Os projetos do Visual C# agora usam o C# para expressões. Ao criar fluxos de trabalho no Visual Studio 2012, um editor de expressão c# completamente funcional é fornecido com recursos como realce de gramática e intellisense. Os projetos do fluxo de trabalho C# criados em versões anteriores que usam expressões do Visual Basic continuarão funcionando.
 
 > [!WARNING]
 >  As expressões C# não têm suporte no designer hospedado novamente.
@@ -27,20 +27,20 @@ Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45
 ## <a name="new-designer-capabilities"></a>Novos recursos do designer
 
 ### <a name="designer-search"></a>Pesquisa do designer
- O [localização rápida](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [localizar nos arquivos](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) recursos introduzidos com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] não têm suporte no designer hospedado novamente. A pesquisa de `Toolbox` tem suporte no designer hospedado novamente. Para obter mais informações sobre esses recursos, consulte [Designer de pesquisa](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
+ O [localização rápida](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [localizar nos arquivos](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) recursos introduzidos com o .NET Framework 4.5 não têm suporte no designer hospedado novamente. A pesquisa de `Toolbox` tem suporte no designer hospedado novamente. Para obter mais informações sobre esses recursos, consulte [Designer de pesquisa](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
 
 > [!WARNING]
 >  [Localização rápida](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [localizar nos arquivos](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) não têm suporte no designer hospedado novamente.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Excluir item de menu de contexto no designer de argumento e variável
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as variáveis e os argumentos somente podem ser excluídos no designer usando o teclado. A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as variáveis e os argumentos podem ser excluídos com o menu de contexto. Esse recurso tem suporte no designer hospedado novamente.
+ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as variáveis e os argumentos somente podem ser excluídos no designer usando o teclado. Começando com o .NET Framework 4.5, argumentos e variáveis podem ser excluídos usando o menu de contexto. Esse recurso tem suporte no designer hospedado novamente.
 
  A captura de tela a seguir mostra o menu de contexto do designer de variável e argumento.
 
  ![Menu de contexto do designer de argumento e variável](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Envolvimento automático com sequência
- Como um fluxo de trabalho ou algumas atividades do contêiner (como <xref:System.Activities.Statements.NoPersistScope>) só podem conter uma única atividade do corpo, adicionar uma segunda atividade exigia que o desenvolvedor excluísse a primeira atividade, adicionasse uma atividade <xref:System.Activities.Statements.Sequence> e, em seguida, adicionasse as duas atividades para a atividade de sequência. A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ao adicionar uma segunda atividade para a superfície do designer, uma atividade de `Sequence` será criada automaticamente para incluir as duas atividades. Esse recurso tem suporte no designer hospedado novamente.
+ Como um fluxo de trabalho ou algumas atividades do contêiner (como <xref:System.Activities.Statements.NoPersistScope>) só podem conter uma única atividade do corpo, adicionar uma segunda atividade exigia que o desenvolvedor excluísse a primeira atividade, adicionasse uma atividade <xref:System.Activities.Statements.Sequence> e, em seguida, adicionasse as duas atividades para a atividade de sequência. Começando com o .NET Framework 4.5, ao adicionar uma segunda atividade para a superfície do designer, um `Sequence` atividade será criada automaticamente para incluir as duas atividades. Esse recurso tem suporte no designer hospedado novamente.
 
  A captura de tela a seguir mostra uma atividade de `WriteLine` no `Body` de um `NoPersistScope`.
 
@@ -72,10 +72,10 @@ Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45
  ![Captura de tela da exibição de estrutura de tópicos com um fluxo de trabalho sequencial no Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Mais controle da visibilidade da barra de shell e dos itens de cabeçalho
- Em um designer hospedado novamente, alguns dos controles padrão de interface do usuário não podem ter o significado de um fluxo de trabalho específico, e podem ser desativados. No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], essa personalização é suportada apenas pela barra de shell na parte inferior do designer. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], a visibilidade dos itens de cabeçalho do shell na parte superior do designer pode ser ajustada definindo o <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> com o valor apropriado <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>.
+ Em um designer hospedado novamente, alguns dos controles padrão de interface do usuário não podem ter o significado de um fluxo de trabalho específico, e podem ser desativados. No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], essa personalização é suportada apenas pela barra de shell na parte inferior do designer. No .NET Framework 4.5, a visibilidade de itens de cabeçalho de shell na parte superior do designer pode ser ajustada definindo <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> com os devidos <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> valor.
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Conexão automática e inserção automática em fluxograma e fluxos de trabalho de máquina de estado
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as conexões entre nós em um fluxo de trabalho de fluxograma precisavam ser adicionadas manualmente. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], os nós de fluxograma e da máquina de estado têm pontos de conexão automática que se tornam visíveis quando uma atividade é arrastada da caixa de ferramentas na superfície do designer. Soltar uma atividade em um destes pontos adiciona automaticamente a atividade junto com a conexão necessária.
+ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as conexões entre nós em um fluxo de trabalho de fluxograma precisavam ser adicionadas manualmente. No .NET Framework 4.5, nós de fluxograma e de máquina de estado têm pontos que se tornam visíveis quando uma atividade é arrastada da caixa de ferramentas na superfície do designer de conexão automática. Soltar uma atividade em um destes pontos adiciona automaticamente a atividade junto com a conexão necessária.
 
  A captura de tela a seguir mostra os pontos de anexação que ficam visíveis quando uma atividade é arrastada da caixa de ferramentas.
 
@@ -100,7 +100,7 @@ Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45
  Os delegados de atividade não têm suporte no designer hospedado novamente.
 
 ### <a name="build-time-validation"></a>Validação de tempo de compilação
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os erros de validação do fluxo de trabalho não eram contados como erros de compilação durante a compilação de um projeto de fluxo de trabalho. Isso significava que criar um projeto de fluxo de trabalho poderia ter êxito mesmo se houvesse erros de validação do fluxo de trabalho. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], os erros de validação do fluxo de trabalho causam a falha na compilação.
+ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os erros de validação do fluxo de trabalho não eram contados como erros de compilação durante a compilação de um projeto de fluxo de trabalho. Isso significava que criar um projeto de fluxo de trabalho poderia ter êxito mesmo se houvesse erros de validação do fluxo de trabalho. No .NET Framework 4.5, erros de validação do fluxo de trabalho, fazer com que a compilação falhar.
 
 > [!WARNING]
 >  A validação de tempo de compilação não tem suporte no designer hospedado novamente.  
@@ -111,18 +111,18 @@ Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45
  A validação em segundo plano do tempo de design não tem suporte no designer hospedado novamente.  
   
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>Estado de exibição localizado em um local separado em arquivos XAML  
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as informações de estado de exibição para um fluxo de trabalho são armazenadas no arquivo XAML em muitos lugares diferentes. Isso é inconveniente para os desenvolvedores que desejam ler XAML diretamente, ou gravar código para remover informações de estado de exibição. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as informações de estado de exibição no arquivo XAML são serializadas como um elemento separado no arquivo XAML.  Os desenvolvedores podem facilmente localizar e editar as informações de estado de exibição de uma atividade ou remover completamente o estado de exibição.  
+ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as informações de estado de exibição para um fluxo de trabalho são armazenadas no arquivo XAML em muitos lugares diferentes. Isso é inconveniente para os desenvolvedores que desejam ler XAML diretamente, ou gravar código para remover informações de estado de exibição. No .NET Framework 4.5, as informações de estado de exibição no arquivo XAML são serializadas como um elemento separado no arquivo XAML.  Os desenvolvedores podem facilmente localizar e editar as informações de estado de exibição de uma atividade ou remover completamente o estado de exibição.  
   
  Esse recurso tem suporte no designer de fluxo de trabalho hospedado novamente.  
   
 ### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>Aceitação dos recursos do Workflow 4.5 no designer hospedado novamente  
- Para preservar a compatibilidade com versões anteriores, alguns novos recursos incluídos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] não estão habilitados por padrão no designer hospedado novamente. Este é para garantir que aplicativos existentes que usam o designer hospedado novamente não sejam interrompidos ao atualizar para a versão mais recente. Para habilitar novos recursos no designer hospedado novamente, defina <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> como ".NET Framework 4.5" ou defina membros individuais do conjunto de <xref:System.Activities.Presentation.DesignerConfigurationService> para habilitar recursos individuais.  
+ Para preservar a compatibilidade com versões anteriores, alguns novos recursos incluídos no .NET Framework 4.5 não estão habilitados por padrão no designer hospedado novamente. Este é para garantir que aplicativos existentes que usam o designer hospedado novamente não sejam interrompidos ao atualizar para a versão mais recente. Para habilitar novos recursos no designer hospedado novamente, defina <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> como ".NET Framework 4.5" ou defina membros individuais do conjunto de <xref:System.Activities.Presentation.DesignerConfigurationService> para habilitar recursos individuais.  
   
 ## <a name="new-workflow-development-models"></a>Novos modelos de desenvolvimento de fluxo de trabalho  
  Além do fluxograma e de modelos sequenciais de desenvolvimento de fluxo de trabalho, esta versão inclui fluxos de trabalho da Máquina de Estado e serviços de fluxo de trabalho de primeiro contrato.  
   
 ### <a name="state-machine-workflows"></a>Fluxo de trabalho de máquina de estado  
- Fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4.0.1 na [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. As atualizações incluem:  
+ Fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4.0.1 na [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o .NET Framework 4.5. As atualizações incluem:  
   
 1. A capacidade de definir pontos de interrupção em estados  
   

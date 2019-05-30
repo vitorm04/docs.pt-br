@@ -2,12 +2,12 @@
 title: Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: a2cc63cb0b9118da6eb3c381e853165f800fe61f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645913"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251166"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para recuperação de desastres de alta disponibilidade – grupos de disponibilidade AlwaysOn.  O recurso de grupos de disponibilidade AlwaysOn foi adicionado ao SQL Server 2012. Para obter mais informações sobre grupos de disponibilidade AlwaysOn, consulte os Manuais Online do SQL Server.  
@@ -32,7 +32,7 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
 2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  Definindo `MultiSubnetFailover` à `true` não é necessária com [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] ou versões posteriores.
+>  Definindo `MultiSubnetFailover` para `true` não é necessária com o .NET Framework 4.6.1 ou versões posteriores.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectar-se ao MultiSubnetFailover  
  Sempre especifique `MultiSubnetFailover=True` ao se conectar a um ouvinte de grupo de disponibilidade do SQL Server 2012 ou uma instância de Cluster de Failover do SQL Server 2012. `MultiSubnetFailover` permite failover mais rápido para grupos de disponibilidade todas as e ou instância de Cluster de Failover em SQL Server 2012 e reduzir significativamente o tempo de failover para topologias AlwaysOn únicas e de várias sub-redes. Durante um failover com várias sub-redes, o cliente tentará realizar conexões em paralelo. Durante um failover de sub-rede, ele tentará agressivamente realizar a conexão TCP.  

@@ -2,12 +2,12 @@
 title: Tour do F#
 description: Examine alguns dos principais recursos da linguagem em que este tour com exemplos de código de programação F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64394342777003b33dd77028739fb7209b9f3c86
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901714"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301261"
 ---
 # <a name="tour-of-f"></a>Tour do F\#
 
@@ -17,7 +17,7 @@ Há dois conceitos principais em F#: tipos e funções.  Este tour será enfatiz
 
 ## <a name="executing-the-code-online"></a>A execução do código online
 
-Se você não tiver F# instalado em seu computador, você pode executar todas as amostras online com o [Fable REPL](https://fable.io/repl/). Fable é um dialeto do F# que é executado diretamente no seu navegador. Para exibir os exemplos que execute no REPL, fazer check-out **amostras > Saiba mais > Tour F#**  na barra de menu à esquerda do REPL Fable
+Se você não tiver F# instalado em seu computador, você pode executar todas as amostras em seu navegador com [experimentar F# no WebAssembly](https://tryfsharp.fsbolero.io/). Fable é um dialeto do F# que é executado diretamente no seu navegador. Para exibir os exemplos que execute no REPL, fazer check-out **amostras > Saiba mais > Tour F#**  na barra de menu à esquerda do REPL Fable
 
 ## <a name="functions-and-modules"></a>Módulos e funções
 

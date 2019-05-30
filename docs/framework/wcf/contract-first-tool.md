@@ -2,15 +2,15 @@
 title: Ferramenta Contract-First
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 95aef67eb43176ab062b38979e714f232898f221
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ddc3b2c733c73808d17b6e0f45129cc19d7527c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652067"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380370"
 ---
 # <a name="contract-first-tool"></a>Ferramenta Contract-First
-Contratos de serviço geralmente precisam ser criados a partir de serviços existentes. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], classes de contrato de dados podem ser criadas automaticamente, de serviços existentes usando a ferramenta de primeiro contrato. Para usar a ferramenta de primeiro contrato, o arquivo de definição de esquema XML (XSD) deve ser baixado localmente; a ferramenta não é possível importar os contratos de dados remotos por meio de HTTP.
+Contratos de serviço geralmente precisam ser criados a partir de serviços existentes. No .NET Framework 4.5, as classes de contrato de dados podem ser criadas automaticamente dos serviços existentes usando a ferramenta de primeiro contrato. Para usar a ferramenta de primeiro contrato, o arquivo de definição de esquema XML (XSD) deve ser baixado localmente; a ferramenta não é possível importar os contratos de dados remotos por meio de HTTP.
 
  A ferramenta de primeiro contrato está integrada ao Visual Studio 2012 como uma tarefa de build. Os arquivos de código gerados pela tarefa de build são criados toda vez que o projeto é compilado, para que o projeto pode adotar, com facilidade as alterações no contrato de serviço subjacente.
 

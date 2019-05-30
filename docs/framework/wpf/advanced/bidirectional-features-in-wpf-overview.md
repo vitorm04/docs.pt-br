@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3a991a841182438dca4ef0a4067d333180f4f60
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655481"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380174"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Visão geral dos recursos bidirecionais no WPF
 Ao contrário de qualquer outra plataforma de desenvolvimento, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem muitos recursos que dão suporte ao desenvolvimento rápido de conteúdo bidirecional, por exemplo, mistos da esquerda para a direita e da direita para esquerda dados no mesmo documento. Ao mesmo tempo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] cria uma excelente experiência para usuários que exigem recursos bidirecionais, como árabe e hebraico, falando em usuários.  
@@ -178,7 +178,7 @@ Ao contrário de qualquer outra plataforma de desenvolvimento, [!INCLUDE[TLA2#tl
   
  **Substitution**:  
   
- Essa propriedade especifica o tipo de substituição de números a ser executado. Ela usa um dos seguintes <xref:System.Windows.Media.NumberSubstitutionMethod> valores de enumeração.  
+ Essa propriedade especifica o tipo de substituição de números a ser executado. Ela usa um dos seguintes <xref:System.Windows.Media.NumberSubstitutionMethod> valores de enumeração:  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: O método de substituição é determinado com base na cultura de número <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> propriedade. Esse é o padrão.  
   

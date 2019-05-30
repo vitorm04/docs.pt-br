@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b625b2962c829e7c0692a61d8f5561818f7ebf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b59fe76bd6d8d5887ac825e844e89e85677e2d7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000513"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380347"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>Método ICorProfilerInfo4::GetILToNativeMapping2
 Obtém um mapa da Microsoft intermediate language (MSIL) deslocamentos para deslocamentos nativos para o código contido na versão recompilado por JIT da função especificada.  
@@ -44,7 +44,7 @@ HRESULT GetILToNativeMapping(
  [in] A ID da função que contém o código.  
   
  `pReJitId`  
- [in] A identidade da função recompilado por JIT. A identidade deve ser zero no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+ [in] A identidade da função recompilado por JIT. A identidade deve ser zero no .NET Framework 4.5.  
   
  `cMap`  
  [in] O tamanho máximo da `map` matriz.  
@@ -59,7 +59,7 @@ HRESULT GetILToNativeMapping(
  `GetILToNativeMapping2` é semelhante para o [ICorProfilerInfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) método, exceto que ele permitirá que o criador de perfil especificar a ID da função recompilada em futuras versões.  
   
 > [!NOTE]
->  O [icorprofilerfunctioncontrol:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) método não está implementado de [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], portanto, as funções que tenham sido recompilado por JIT não podem ter um mapeamento de IL para nativo que é diferente do originalmente função compilada. Como tal, `GetILToNativeMapping2` não pode ser chamado com uma ID diferente de zero recompilado por JIT no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+>  O [icorprofilerfunctioncontrol:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) método não está implementado no .NET Framework 4.5, portanto, funções que tenham sido recompilado por JIT não podem ter um mapeamento de IL para nativo que é diferente do originalmente função compilada. Como tal, `GetILToNativeMapping2` não pode ser chamado com uma ID diferente de zero recompilado por JIT do .NET Framework 4.5.  
   
  O `GetILToNativeMapping2` método retorna uma matriz de `COR_DEBUG_IL_TO_NATIVE_MAP` estruturas. Para transmitir que determinados intervalos de instruções nativas correspondem a regiões especiais do código (por exemplo, o prólogo), uma entrada na matriz pode ter sua `ilOffset` campo definido como um valor de [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) enumeração.  
   

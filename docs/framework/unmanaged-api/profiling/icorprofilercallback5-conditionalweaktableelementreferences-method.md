@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd904ba03fd5c652b1e5e5c7f763dab2b80e517
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08b35dd1744dbbb64d202718b61a9db5684d3bc3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636656"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380355"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::Método ConditionalWeakTableElementReferences
 
@@ -82,7 +82,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>Comentários
 
-Um criador de perfil para o [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] ou versões posteriores implementa o [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface e registra as dependências especificadas pelo `ConditionalWeakTableElementReferences` método. `ICorProfilerCallback5` fornece o conjunto completo de dependências entre objetos ativos representados pelas `ConditionalWeakTable` entradas. Essas dependências e o membro de campo referências especificadas pelo [ICorProfilerCallback:: Objectreferences](icorprofilercallback-objectreferences-method.md) método habilitar um criador de perfil gerenciado gerar o grafo de objeto completo de objetos em tempo real.
+Um criador de perfil para o .NET Framework 4.5 ou versões posteriores implementa a [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface e registra as dependências especificadas pelo `ConditionalWeakTableElementReferences` método. `ICorProfilerCallback5` fornece o conjunto completo de dependências entre objetos ativos representados pelas `ConditionalWeakTable` entradas. Essas dependências e o membro de campo referências especificadas pelo [ICorProfilerCallback:: Objectreferences](icorprofilercallback-objectreferences-method.md) método habilitar um criador de perfil gerenciado gerar o grafo de objeto completo de objetos em tempo real.
 
 ## <a name="requirements"></a>Requisitos
 

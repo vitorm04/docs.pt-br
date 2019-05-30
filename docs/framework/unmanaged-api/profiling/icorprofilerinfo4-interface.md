@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 177e5ef8054f408dc8ec3475c56043394a636bc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34c358a3405262787ed495bf9d8d75462d97a71f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049447"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380340"
 ---
 # <a name="icorprofilerinfo4-interface"></a>Interface ICorProfilerInfo4
-Fornece métodos que os criadores de perfil de código usam para se comunicar com o CLR (CLR) para controlar o monitoramento de eventos e informações de solicitação. . O `ICorProfilerInfo4` interface é uma extensão do outro `ICorProfilerInfo` interfaces. Ele fornece novos métodos para dar suporte a recompilação de just-in-time (JIT), adicionada no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+Fornece métodos que os criadores de perfil de código usam para se comunicar com o CLR (CLR) para controlar o monitoramento de eventos e informações de solicitação. . O `ICorProfilerInfo4` interface é uma extensão do outro `ICorProfilerInfo` interfaces. Ele fornece novos métodos para dar suporte a recompilação de (JIT) just-in-time, adicionada no .NET Framework 4.5.  
   
 ## <a name="methods"></a>Métodos  
   

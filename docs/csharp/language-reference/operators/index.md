@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a342c0aaf6a1b0c9959c9b79e3e3e92134693bf1
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876946"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250765"
 ---
 # <a name="c-operators"></a>Operadores C#
 
@@ -197,9 +197,9 @@ Esses operadores têm precedência maior do que a próxima seção e precedênci
 
 [x = y](assignment-operator.md) – atribuição.
 
-[x += y](addition-assignment-operator.md) – incremento. Adicione o valor de `y` para o valor de `x`, armazene o resultado em `x` e retorne o novo valor. Se `x` designar um `event`, então, `y` deverá ser uma função adequada que o C# adiciona como um manipulador de eventos.
+[x += y](arithmetic-operators.md#compound-assignment) – incremento. Adicione o valor de `y` para o valor de `x`, armazene o resultado em `x` e retorne o novo valor. Se `x` designar um [evento](../keywords/event.md), então, `y` deverá ser um método adequado que o C# adiciona como um manipulador de eventos.
 
-[x -= y](subtraction-assignment-operator.md) – diminuir. Subtraia o valor de `y` do valor de `x`, armazene o resultado em `x` e retorne o novo valor. Se `x` designar um `event`, então, `y` deverá ser uma função adequada que o C# remove como um manipulador de eventos.
+[x -= y](subtraction-assignment-operator.md) – diminuir. Subtraia o valor de `y` do valor de `x`, armazene o resultado em `x` e retorne o novo valor. Se `x` designar um [evento](../keywords/event.md), então, `y` deverá ser um método adequado que o C# remove como um manipulador de eventos.
 
 [x *= y](arithmetic-operators.md#compound-assignment) – atribuição de multiplicação. Multiplique o valor de `y` com o valor de `x`, armazene o resultado em `x` e retorne o novo valor.
 

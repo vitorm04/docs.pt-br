@@ -2,15 +2,15 @@
 title: 'Como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: c2ca9c349718c3939d74d052ff0ed448879cd045
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82c9ccc21600ae0b9ff8c514a51ec9b97f8f1d37
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945568"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378127"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente
-O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] apresenta uma melhor integração entre serviços Web e fluxos de trabalho na forma de desenvolvimento de fluxo de trabalho de primeiro contrato. A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite que você crie o contrato no código primeiro. A ferramenta em seguida gera automaticamente um modelo de atividade na caixa de ferramentas para as operações no contrato.  
+Recursos do .NET framework 4.5 melhor integração entre serviços web e fluxos de trabalho na forma de desenvolvimento de fluxo de trabalho de primeiro contrato. A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite que você crie o contrato no código primeiro. A ferramenta em seguida gera automaticamente um modelo de atividade na caixa de ferramentas para as operações no contrato.  
   
 > [!NOTE]
 >  Este tópico fornece orientação passo a passo sobre como criar um serviço de fluxo de trabalho de primeiro contrato. Para obter mais informações sobre o desenvolvimento de serviço de fluxo de trabalho de primeiro contrato, consulte [desenvolvimento de serviço de fluxo de trabalho de primeiro contrato](contract-first-workflow-service-development.md).  
@@ -49,7 +49,7 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] apresenta uma melhor inte
   
 ### <a name="importing-the-service-contract"></a>Importando o contrato de serviço  
   
-1. Clique com botão direito no projeto no **Gerenciador de soluções** e selecione **contrato de serviço de importação**. Sob  **\<projeto atual >**, abra todos os subnós e selecione **IBookService**. Clique em **OK**.  
+1. Clique com botão direito no projeto no **Gerenciador de soluções** e selecione **contrato de serviço de importação**. Sob  **\<projeto atual >** , abra todos os subnós e selecione **IBookService**. Clique em **OK**.  
   
 2. Uma caixa de diálogo abrirá, alertando-o de que a operação foi concluída com êxito e que as atividades geradas serão exibidas na caixa de ferramentas depois que você compilar o projeto. Clique em **OK**.  
   
@@ -57,7 +57,7 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] apresenta uma melhor inte
   
 4. Na **Gerenciador de soluções**, abra Service1.xamlx. O serviço de fluxo de trabalho aparecerá no designer.  
   
-5. Selecione o **sequência** atividade. Na janela Propriedades, clique o **...** botão de **ImplementedContract** propriedade. No **Editor de coleção do tipo** janela que aparece, clique no **tipo** lista suspensa e selecione o **procurar tipos...** entrada. No **navegue e selecione um tipo .NET** caixa de diálogo, em  **\<projeto atual >**, abra todos os subnós e selecione **IBookService**. Clique em **OK**. No **Editor de coleção do tipo** caixa de diálogo, clique em **Okey**.  
+5. Selecione o **sequência** atividade. Na janela Propriedades, clique o **...** botão de **ImplementedContract** propriedade. No **Editor de coleção do tipo** janela que aparece, clique no **tipo** lista suspensa e selecione o **procurar tipos...** entrada. No **navegue e selecione um tipo .NET** caixa de diálogo, em  **\<projeto atual >** , abra todos os subnós e selecione **IBookService**. Clique em **OK**. No **Editor de coleção do tipo** caixa de diálogo, clique em **Okey**.  
   
 6. Selecione e exclua as **ReceiveRequest** e **SendResponse** atividades.  
   

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 9ceffd3194c7df41f12ac6cd6b589602965b4920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c0173879c692588cc2e15f0b14a5687bb0404fb
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674305"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300667"
 ---
 # <a name="remove-element-for-configsections"></a>\<Remover > elemento para \<configSections >
 
 Remove uma seção predefinidos ou grupo da seção.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,7 +40,7 @@ Remove uma seção predefinidos ou grupo da seção.
 
 |     | Descrição |
 | --- | ----------- |
-| [**\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contém as declarações de namespace e a seção de configuração. |
+| [ **\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contém as declarações de namespace e a seção de configuração. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -54,7 +54,7 @@ Você pode usar o  **\<remover >** elemento remover seções e grupos de seçõe
 
 O exemplo a seguir mostra como usar o  **\<remover >** elemento em um arquivo de configuração de aplicativo para remover uma seção definida anteriormente no arquivo de configuração do computador.
 
-O seguinte código de arquivo de configuração de máquina declara a seção  **\<sampleSection >**:
+O seguinte código de arquivo de configuração de máquina declara a seção  **\<sampleSection >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ O seguinte código de arquivo de configuração de máquina declara a seção  *
 </configuration>
 ```
 
-O seguinte código de arquivo de configuração de aplicativo remove o  **\<sampleSection >** seção. Após a remoção, o aplicativo não é possível recuperar as configurações no  **\<sampleSection >**.
+O seguinte código de arquivo de configuração de aplicativo remove o  **\<sampleSection >** seção. Após a remoção, o aplicativo não é possível recuperar as configurações no  **\<sampleSection >** .
 
 ```xml
 <!-- Application configuration file -->

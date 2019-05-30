@@ -2,19 +2,19 @@
 title: Novidades no Windows Foundation Workflow no .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876638"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380133"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novidades no Windows Foundation Workflow no .NET 4.5
 
-Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] apresenta muitos recursos novos, como novas atividades, recursos do designer e modelos de desenvolvimento de fluxo de trabalho. Muitos, mas não todos, os novos recursos do fluxo de trabalho introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] têm suporte no designer de fluxo de trabalho hospedado novamente. Para obter mais informações sobre os novos recursos que têm suporte, consulte [suporte para recursos do novo fluxo de trabalho Foundation 4.5 no Designer de fluxo de trabalho Rehosted](wf-features-in-the-rehosted-workflow-designer.md). Para obter mais informações sobre como migrar aplicativos de fluxo de trabalho de .NET 3.0 e 3.5 do .NET para usar a versão mais recente, consulte [diretrizes de migração](migration-guidance.md). Este tópico fornece uma visão geral dos novos recursos de fluxo de trabalho introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+Windows Workflow Foundation (WF) no .NET Framework 4.5 introduz vários novos recursos, como novas atividades, recursos do designer e modelos de desenvolvimento de fluxo de trabalho. Muitas, mas não todos, do fluxo de trabalho novos recursos introduzidos no .NET Framework 4.5 têm suporte no designer de fluxo de trabalho hospedado novamente. Para obter mais informações sobre os novos recursos que têm suporte, consulte [suporte para recursos do novo fluxo de trabalho Foundation 4.5 no Designer de fluxo de trabalho Rehosted](wf-features-in-the-rehosted-workflow-designer.md). Para obter mais informações sobre como migrar aplicativos de fluxo de trabalho de .NET 3.0 e 3.5 do .NET para usar a versão mais recente, consulte [diretrizes de migração](migration-guidance.md). Este tópico fornece uma visão geral dos novos recursos de fluxo de trabalho introduzida no .NET Framework 4.5.
 
 > [!WARNING]
-> Os novos recursos do Windows Workflow Foundation introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] não estão disponíveis para projetos destinados a versões anteriores do framework. Se um projeto que visa o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] novamente é destinado a uma versão anterior da estrutura, vários problemas podem ocorrer.
+> Os novos recursos do Windows Workflow Foundation introduzidos no .NET Framework 4.5 não estão disponíveis para projetos destinados a versões anteriores do framework. Se um projeto que destinos do .NET Framework 4.5 é novamente direcionado para uma versão anterior do framework, vários problemas podem ocorrer.
 >
 > - As expressões c# serão substituídas no designer com a mensagem **valor foi definido em XAML**.
 > - Muitos erros de compilação ocorrerão, incluindo o seguinte.
@@ -23,7 +23,7 @@ Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45
 
 ## <a name="BKMK_Versioning"></a> Controle de versão de fluxo de trabalho
 
-O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduziu vários novos recursos de controle de versão com base na nova classe <xref:System.Activities.WorkflowIdentity>. O <xref:System.Activities.WorkflowIdentity> fornece a autores de aplicativo de fluxo de trabalho um mecanismo para mapear uma instância de fluxo de trabalho persistida com sua definição.
+.NET framework 4.5 introduziu vários novos recursos de controle de versão com base em torno dos novos <xref:System.Activities.WorkflowIdentity> classe. O <xref:System.Activities.WorkflowIdentity> fornece a autores de aplicativo de fluxo de trabalho um mecanismo para mapear uma instância de fluxo de trabalho persistida com sua definição.
 
 - Os desenvolvedores que usam a hospedagem do <xref:System.Activities.WorkflowApplication> podem usar o <xref:System.Activities.WorkflowIdentity> para habilitar hospedagem de várias versões de um fluxo de trabalho lado a lado. As instâncias de fluxo de trabalho persistidas podem ser carregadas usando a nova classe <xref:System.Activities.WorkflowApplicationInstance> e, em seguida, o <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> pode ser usado pelo host para fornecer a versão correta da definição de fluxo de trabalho ao criar uma instância do <xref:System.Activities.WorkflowApplication>. Para obter mais informações, consulte [usando WorkflowIdentity e controle de versão](using-workflowidentity-and-versioning.md) e [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
@@ -31,7 +31,7 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduziu vários novos 
 
 - A atualização dinâmica é introduzida, o que fornece um mecanismo para atualizar a definição de uma instância de fluxo de trabalho persistida. Para obter mais informações, consulte [atualização dinâmica](dynamic-update.md) e [como: Atualizar a definição de uma instância de fluxo de trabalho em execução](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
-- Um script de banco de dados SqlWorkflowInstanceStoreSchemaUpgrade.sql é fornecido para atualizar bancos de dados de persistência criados usando os scripts de banco de dados do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Esse script atualiza bancos de dados de persistência do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] para dar suporte aos novos recursos de controle de versão introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. As instâncias de fluxo de trabalho persistidas no banco de dados recebem valores padrão do controle de versão e podem participar da execução lado a lado e da atualização dinâmica. Para obter mais informações, consulte [atualizando o .NET Framework 4 persistência bancos de dados ao controle de versão de fluxo de trabalho de suporte](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+- Um script de banco de dados SqlWorkflowInstanceStoreSchemaUpgrade.sql é fornecido para atualizar bancos de dados de persistência criados usando os scripts de banco de dados do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Esse script atualiza [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bancos de dados de persistência para dar suporte a novos recursos de controle de versão introduzidos no .NET Framework 4.5. As instâncias de fluxo de trabalho persistidas no banco de dados recebem valores padrão do controle de versão e podem participar da execução lado a lado e da atualização dinâmica. Para obter mais informações, consulte [atualizando o .NET Framework 4 persistência bancos de dados ao controle de versão de fluxo de trabalho de suporte](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
 ## <a name="BKMK_NewActivities"></a> Atividades
 
@@ -43,7 +43,7 @@ A biblioteca de atividades embutida contém novas atividades e novos recursos pa
 
 ### <a name="BKMK_NewFlowchartCapabilities"></a> Novos recursos de fluxograma
 
-Os fluxogramas são atualizados para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e têm os seguintes novos recursos:
+Os fluxogramas são atualizados para o .NET Framework 4.5 e têm os seguintes recursos novos:
 
 - A propriedade `DisplayName` de uma atividade <xref:System.Activities.Statements.FlowSwitch%601> ou <xref:System.Activities.Statements.FlowDecision> é editável. Isso permitirá que o designer de atividade mostre mais informações sobre a finalidade da atividade.
 
@@ -51,7 +51,7 @@ Os fluxogramas são atualizados para [!INCLUDE[net_v45](../../../includes/net-v4
 
 ## <a name="support-for-partial-trust"></a>Suporte para confiança parcial
 
-Os fluxos de trabalho no [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] exigiam um domínio de aplicativo totalmente confiável. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], os fluxos de trabalho podem operar em um ambiente de confiança parcial. Em um ambiente de confiança parcial, os componentes de terceiros podem ser usados sem conceder a eles acesso completo aos recursos do host. Algumas preocupações sobre fluxos de trabalho em execução em confiança parcial são as seguintes:
+Os fluxos de trabalho no [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] exigiam um domínio de aplicativo totalmente confiável. No .NET Framework 4.5, os fluxos de trabalho podem operar em um ambiente de confiança parcial. Em um ambiente de confiança parcial, os componentes de terceiros podem ser usados sem conceder a eles acesso completo aos recursos do host. Algumas preocupações sobre fluxos de trabalho em execução em confiança parcial são as seguintes:
 
 1. Usar os componentes legados (incluindo regras) contidos na atividade <xref:System.Activities.Statements.Interop> não tem suporte em confiança parcial.
 
@@ -114,7 +114,7 @@ As palavras-chave pesquisadas em fluxos de trabalho coincidirão com o conteúdo
 
 ### <a name="BKMK_VariableDeleteContextMenu"></a> Excluir item de menu de contexto no designer de variável e argumento
 
-No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as variáveis e os argumentos somente podem ser excluídos no designer usando o teclado. A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as variáveis e os argumentos podem ser excluídos com o menu de contexto.
+No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as variáveis e os argumentos somente podem ser excluídos no designer usando o teclado. Começando com o .NET Framework 4.5, argumentos e variáveis podem ser excluídos usando o menu de contexto.
 
 A captura de tela a seguir mostra o menu de contexto do designer de variável e argumento.
 
@@ -122,7 +122,7 @@ A captura de tela a seguir mostra o menu de contexto do designer de variável e 
 
 ### <a name="BKMK_AutoSurround"></a> Envolvimento automático com sequência
 
-Como um fluxo de trabalho ou algumas atividades do contêiner (como <xref:System.Activities.Statements.NoPersistScope>) só podem conter uma única atividade do corpo, adicionar uma segunda atividade exigia que o desenvolvedor excluísse a primeira atividade, adicionasse uma atividade <xref:System.Activities.Statements.Sequence> e, em seguida, adicionasse as duas atividades para a atividade de sequência. A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ao adicionar uma segunda atividade para a superfície do designer, uma atividade de `Sequence` será criada automaticamente para incluir as duas atividades.
+Como um fluxo de trabalho ou algumas atividades do contêiner (como <xref:System.Activities.Statements.NoPersistScope>) só podem conter uma única atividade do corpo, adicionar uma segunda atividade exigia que o desenvolvedor excluísse a primeira atividade, adicionasse uma atividade <xref:System.Activities.Statements.Sequence> e, em seguida, adicionasse as duas atividades para a atividade de sequência. Começando com o .NET Framework 4.5, ao adicionar uma segunda atividade para a superfície do designer, um `Sequence` atividade será criada automaticamente para incluir as duas atividades.
 
 A captura de tela a seguir mostra uma atividade de `WriteLine` no `Body` de um `NoPersistScope`.
 
@@ -158,7 +158,7 @@ A seguinte captura de tela de fluxo de trabalho concluído do [Tutorial de Intro
 
 ### <a name="BKMK_CSharpExpressions"></a> Expressões em c#
 
-Antes do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], todas as expressões em fluxos de trabalho podiam ser escritas no Visual Basic. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as expressões do Visual Basic são usadas apenas para os projetos criados usando o Visual Basic. Os projetos do Visual C# agora usam o C# para expressões. Um editor de expressão C# completamente funcional é fornecido com recursos como realce de gramática e intellisense. Os projetos do fluxo de trabalho C# criados em versões anteriores que usam expressões do Visual Basic continuarão funcionando.
+Antes do .NET Framework 4.5, todas as expressões em fluxos de trabalho podiam ser escritas no Visual Basic. No .NET Framework 4.5, as expressões do Visual Basic só são usadas para projetos criados usando o Visual Basic. Os projetos do Visual C# agora usam o C# para expressões. Um editor de expressão C# completamente funcional é fornecido com recursos como realce de gramática e intellisense. Os projetos do fluxo de trabalho C# criados em versões anteriores que usam expressões do Visual Basic continuarão funcionando.
 
 As expressões C# são validadas em tempo de design. Os erros em expressões C# serão marcados com um sublinhado vermelho ondulado.
 
@@ -166,11 +166,11 @@ Para obter mais informações sobre expressões c#, consulte [expressões c#](cs
 
 ### <a name="BKMK_Visibility"></a> Mais controle da visibilidade da barra de shell e cabeçalho itens
 
-Em um designer hospedado novamente, alguns dos controles padrão de interface do usuário não podem ter o significado de um fluxo de trabalho específico, e podem ser desativados. No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], essa personalização é suportada apenas pela barra de shell na parte inferior do designer. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], a visibilidade dos itens de cabeçalho do shell na parte superior do designer pode ser ajustada definindo o <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> com o valor apropriado <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>.
+Em um designer hospedado novamente, alguns dos controles padrão de interface do usuário não podem ter o significado de um fluxo de trabalho específico, e podem ser desativados. No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], essa personalização é suportada apenas pela barra de shell na parte inferior do designer. No .NET Framework 4.5, a visibilidade de itens de cabeçalho de shell na parte superior do designer pode ser ajustada definindo <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> com os devidos <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> valor.
 
 ### <a name="BKMK_AutoConnect"></a> Conexão automática e inserção automática em fluxos de trabalho de fluxograma e de máquina de estado
 
-No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as conexões entre nós em um fluxo de trabalho de fluxograma precisavam ser adicionadas manualmente. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], os nós de fluxograma e da máquina de estado têm pontos de conexão automática que se tornam visíveis quando uma atividade é arrastada da caixa de ferramentas na superfície do designer. Soltar uma atividade em um destes pontos adiciona automaticamente a atividade junto com a conexão necessária.
+No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as conexões entre nós em um fluxo de trabalho de fluxograma precisavam ser adicionadas manualmente. No .NET Framework 4.5, nós de fluxograma e de máquina de estado têm pontos que se tornam visíveis quando uma atividade é arrastada da caixa de ferramentas na superfície do designer de conexão automática. Soltar uma atividade em um destes pontos adiciona automaticamente a atividade junto com a conexão necessária.
 
 A captura de tela a seguir mostra os pontos de anexação que ficam visíveis quando uma atividade é arrastada da caixa de ferramentas.
 
@@ -196,7 +196,7 @@ As atividades no [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)
 
 ### <a name="BKMK_BuildTimeValidation"></a> Validação em tempo de compilação
 
-No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os erros de validação do fluxo de trabalho não eram contados como erros de compilação durante a compilação de um projeto de fluxo de trabalho. Isso significava que criar um projeto de fluxo de trabalho poderia ter êxito mesmo se houvesse erros de validação do fluxo de trabalho. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], os erros de validação do fluxo de trabalho causam a falha na compilação.
+No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os erros de validação do fluxo de trabalho não eram contados como erros de compilação durante a compilação de um projeto de fluxo de trabalho. Isso significava que criar um projeto de fluxo de trabalho poderia ter êxito mesmo se houvesse erros de validação do fluxo de trabalho. No .NET Framework 4.5, erros de validação do fluxo de trabalho, fazer com que a compilação falhar.
 
 ### <a name="BKMK_DesignTimeValidation"></a> Validação em segundo plano do tempo de design
 
@@ -204,15 +204,15 @@ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os fluxos d
 
 ### <a name="BKMK_ViewState"></a> Estado de exibição localizado em um local separado em arquivos XAML
 
-No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as informações de estado de exibição para um fluxo de trabalho são armazenadas no arquivo XAML em muitos lugares diferentes. Isso é inconveniente para os desenvolvedores que desejam ler XAML diretamente, ou gravar código para remover informações de estado de exibição. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as informações de estado de exibição no arquivo XAML são serializadas como um elemento separado no arquivo XAML. Os desenvolvedores podem facilmente localizar e editar as informações de estado de exibição de uma atividade ou remover completamente o estado de exibição.
+No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as informações de estado de exibição para um fluxo de trabalho são armazenadas no arquivo XAML em muitos lugares diferentes. Isso é inconveniente para os desenvolvedores que desejam ler XAML diretamente, ou gravar código para remover informações de estado de exibição. No .NET Framework 4.5, as informações de estado de exibição no arquivo XAML são serializadas como um elemento separado no arquivo XAML. Os desenvolvedores podem facilmente localizar e editar as informações de estado de exibição de uma atividade ou remover completamente o estado de exibição.
 
 ### <a name="BKMK_ExpressionExtensibility"></a> Extensibilidade de expressão
 
-No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], fornecemos uma maneira para que os desenvolvedores criem sua própria expressão e experiência de criação da expressão, que pode ser conectada ao designer de fluxo de trabalho.
+No .NET Framework 4.5, fornecemos uma maneira para que os desenvolvedores criem seus próprios expressão e experiência de criação que pode ser conectada ao designer de fluxo de trabalho.
 
 ### <a name="BKMK_BackwardCompatRehostedDesigner"></a> Inscreva-se para recursos do Workflow 4.5 no designer hospedado novamente
 
-Para preservar a compatibilidade com versões anteriores, alguns novos recursos incluídos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] não estão habilitados por padrão no designer hospedado novamente. Este é para garantir que aplicativos existentes que usam o designer hospedado novamente não sejam interrompidos ao atualizar para a versão mais recente. Para habilitar novos recursos no designer hospedado novamente, defina <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> como ".NET Framework 4.5" ou defina membros individuais do conjunto de <xref:System.Activities.Presentation.DesignerConfigurationService> para habilitar recursos individuais.
+Para preservar a compatibilidade com versões anteriores, alguns novos recursos incluídos no .NET Framework 4.5 não estão habilitados por padrão no designer hospedado novamente. Este é para garantir que aplicativos existentes que usam o designer hospedado novamente não sejam interrompidos ao atualizar para a versão mais recente. Para habilitar novos recursos no designer hospedado novamente, defina <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> como ".NET Framework 4.5" ou defina membros individuais do conjunto de <xref:System.Activities.Presentation.DesignerConfigurationService> para habilitar recursos individuais.
 
 ## <a name="BKMK_NewWFModels"></a> Novos modelos de desenvolvimento de fluxo de trabalho
 
@@ -220,7 +220,7 @@ Além do fluxograma e de modelos sequenciais de desenvolvimento de fluxo de trab
 
 ### <a name="BKMK_StateMachine"></a> Fluxos de trabalho de máquina de estado
 
-Fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4, versão 4.0.1 na [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. As atualizações incluem:
+Fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4, versão 4.0.1 na [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o .NET Framework 4.5. As atualizações incluem:
 
 1. A capacidade de definir pontos de interrupção em estados
 
