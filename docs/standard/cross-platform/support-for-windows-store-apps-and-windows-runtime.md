@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb2b082393656e84cedb293c3f3857e6680ed2ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45e28ebb9319447f2e1ae98f1de883f90840720f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664333"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378294"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime 
-O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oferece suporte a vários cenários de desenvolvimento de software com o [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Esses cenários se enquadram em três categorias:
+O .NET Framework 4.5 oferece suporte a vários cenários de desenvolvimento de software com o [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Esses cenários se enquadram em três categorias:
 
 - Desenvolvendo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos com controles XAML, conforme descrito em [aplicativos de roteiro para Windows Store usando c# ou Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [como tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), e [visão geral de aplicativos .NET para Windows Store ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
@@ -127,7 +127,7 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oferece suporte a vários
 - Os tipos no seu componente podem derivar [!INCLUDE[wrt](../../../includes/wrt-md.md)] tipos. Controles podem derivar dos tipos primitivos de controle na <xref:Windows.UI.Xaml.Controls.Primitives> namespace ou de mais terminado controles como <xref:Windows.UI.Xaml.Controls.Button>.
 
     > [!IMPORTANT]
-    >  Começando com [!INCLUDE[win8](../../../includes/win8-md.md)] e o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], todos os tipos públicos em um gerenciado [!INCLUDE[wrt](../../../includes/wrt-md.md)] componente deve ser lacrado. Um tipo em outro [!INCLUDE[wrt](../../../includes/wrt-md.md)] componente não pode derivar a partir deles. Se você quiser fornecer um comportamento polimórfico no seu componente, você pode criar uma interface e implementá-lo nos tipos polimórficos.
+    >  Começando com [!INCLUDE[win8](../../../includes/win8-md.md)] e o .NET Framework 4.5, todos os tipos públicos em um gerenciado [!INCLUDE[wrt](../../../includes/wrt-md.md)] componente deve ser lacrado. Um tipo em outro [!INCLUDE[wrt](../../../includes/wrt-md.md)] componente não pode derivar a partir deles. Se você quiser fornecer um comportamento polimórfico no seu componente, você pode criar uma interface e implementá-lo nos tipos polimórficos.
 
 - Todos os tipos de parâmetro e retorno sobre os tipos públicos em seu componente devem ser [!INCLUDE[wrt](../../../includes/wrt-md.md)] tipos (incluindo o [!INCLUDE[wrt](../../../includes/wrt-md.md)] tipos que define seu componente).
 
