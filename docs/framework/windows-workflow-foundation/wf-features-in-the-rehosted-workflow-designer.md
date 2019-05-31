@@ -2,12 +2,12 @@
 title: Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380158"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423968"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 Windows Workflow Foundation (WF) no .NET Framework 4.5 introduziu muitos recursos novos, incluindo vários aprimoramentos à experiência de designer do fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.
@@ -106,7 +106,7 @@ Windows Workflow Foundation (WF) no .NET Framework 4.5 introduziu muitos recurso
 >  A validação de tempo de compilação não tem suporte no designer hospedado novamente.  
   
 ### <a name="design-time-background-validation"></a>Validação em segundo plano do tempo de design  
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os fluxos de trabalho eram validados como um processo de primeiro plano, o que poderia parar a interface do usuário durante processos de validação complexos ou demorados. A validação do fluxo de trabalho agora ocorre em um thread em segundo plano, de modo que a interface do usuário não seja bloqueada.  
+ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], fluxos de trabalho eram validados como um processo de primeiro plano, que potencialmente pode bloquear a interface do usuário durante os processos de validação complexos ou demorados. A validação do fluxo de trabalho agora ocorre em um thread em segundo plano, de modo que a interface do usuário não seja bloqueada.  
   
  A validação em segundo plano do tempo de design não tem suporte no designer hospedado novamente.  
   

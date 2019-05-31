@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d5f24d7415ff7ecceba6b0a5fbd3098d70dcd0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796013"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423857"
 ---
 # <a name="eclroperation-enumeration"></a>Enumeração EClrOperation
 Descreve o conjunto de operações para o qual um host pode aplicar ações de política.  
@@ -55,7 +55,7 @@ typedef enum {
 ## <a name="remarks"></a>Comentários  
  A infraestrutura de confiabilidade do common language runtime (CLR) faz distinção entre recursos e anulações de falhas de alocação que ocorrem em regiões críticas de código e aqueles que ocorrem em regiões de não-críticas do código. Essa distinção é projetada para permitir que os hosts definir diretivas diferentes, dependendo de onde ocorre uma falha no código.  
   
- Um *região crítica de código* é qualquer espaço em que o CLR não garante que anular uma tarefa ou uma falha ao concluir uma solicitação para recursos afetará apenas a tarefa atual. Por exemplo, se uma tarefa está mantendo um bloqueio e recebe um HRESULT que indica falha depois de fazer uma solicitação de alocação de memória, é suficiente simplesmente para anular essa tarefa para garantir a estabilidade do <xref:System.AppDomain>, pois o <xref:System.AppDomain> pode conter outros tarefas aguardando o mesmo bloqueio. Abandonar atual tarefa pode fazer com que as outras tarefas parar de responder (ou parar de responder) indefinidamente. Nesse caso, o host precisa da capacidade de descarregar todo o <xref:System.AppDomain> em vez de instabilidade de potencial de risco.  
+ Um *região crítica de código* é qualquer espaço em que o CLR não garante que anular uma tarefa ou uma falha ao concluir uma solicitação para recursos afetará apenas a tarefa atual. Por exemplo, se uma tarefa está mantendo um bloqueio e recebe um HRESULT que indica falha depois de fazer uma solicitação de alocação de memória, é suficiente simplesmente para anular essa tarefa para garantir a estabilidade do <xref:System.AppDomain>, pois o <xref:System.AppDomain> pode conter outros tarefas aguardando o mesmo bloqueio. Para abandonar atual tarefa pode fazer com que essas outras tarefas pare de responder. Nesse caso, o host precisa da capacidade de descarregar todo o <xref:System.AppDomain> em vez de instabilidade de potencial de risco.  
   
  Um *região não-críticas do código*, por outro lado, é uma região em que o CLR pode garantir uma anulação ou uma falha afeta apenas a tarefa na qual o erro ocorre.  
   

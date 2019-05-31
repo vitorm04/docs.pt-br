@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627020"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423892"
 ---
 # <a name="denial-of-service"></a>Negação de serviço
 Negação de serviço ocorre quando um sistema está sobrecarregado de tal forma que as mensagens não podem ser processadas, ou eles são processados extremamente lenta.  
@@ -46,8 +46,8 @@ Negação de serviço ocorre quando um sistema está sobrecarregado de tal forma
   
  Para atenuar isso, defina as <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> propriedade para `true` e usar as propriedades de Visualizador de eventos para controlar o comportamento de auditoria. Para obter mais informações sobre como usar o Visualizador de eventos para exibir e gerenciar logs de eventos, consulte [Visualizador de eventos](https://go.microsoft.com/fwlink/?LinkId=186123). Para obter mais informações, consulte [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Implementações inválidas de IAuthorizationPolicy Can causa serviço trava  
- Chamar o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método em uma implementação com falha do <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interface pode fazer com que o serviço parar de responder.  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Implementações inválidas de IAuthorizationPolicy podem fazer com que o serviço não responder  
+ Chamar o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método em uma implementação com falha do <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interface pode fazer com que o serviço pare de responder.  
   
  Mitigação: Use somente o código confiável. Ou seja, use somente o código que você tenha escrito e testado, ou que vem de um provedor confiável. Não permita que as extensões não confiáveis de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> sejam conectados ao seu código sem a devida consideração. Isso se aplica a todas as extensões usadas em uma implementação de serviço. O WCF não fará qualquer distinção entre o código do aplicativo e o código externo que está conectado usando pontos de extensibilidade.  
   

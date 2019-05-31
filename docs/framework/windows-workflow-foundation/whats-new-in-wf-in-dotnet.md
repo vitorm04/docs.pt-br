@@ -2,12 +2,12 @@
 title: Novidades no Windows Foundation Workflow no .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9bf836abaa568b3df2080500d8d2357e604dff60
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380133"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423976"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novidades no Windows Foundation Workflow no .NET 4.5
 
@@ -200,7 +200,7 @@ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os erros de
 
 ### <a name="BKMK_DesignTimeValidation"></a> Validação em segundo plano do tempo de design
 
-No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os fluxos de trabalho eram validados como um processo de primeiro plano, o que poderia parar a interface do usuário durante processos de validação complexos ou demorados. A validação do fluxo de trabalho agora ocorre em um thread em segundo plano, de modo que a interface do usuário não seja bloqueada.
+No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], fluxos de trabalho eram validados como um processo de primeiro plano, que potencialmente pode bloquear a interface do usuário durante os processos de validação complexos ou demorados. A validação do fluxo de trabalho agora ocorre em um thread em segundo plano, de modo que a interface do usuário não seja bloqueada.
 
 ### <a name="BKMK_ViewState"></a> Estado de exibição localizado em um local separado em arquivos XAML
 

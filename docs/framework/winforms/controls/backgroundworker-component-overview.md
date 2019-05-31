@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: da1d87464ef30fb549a2c201170e81c45cbdf6fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ef09fdc755480205b9929037277162349afa135
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587732"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423812"
 ---
 # <a name="backgroundworker-component-overview"></a>Visão geral do componente BackgroundWorker
 Há muitas operações realizadas com frequência que podem levar muito tempo para serem executadas. Por exemplo:  
@@ -39,7 +39,7 @@ Há muitas operações realizadas com frequência que podem levar muito tempo pa
   
 - Acesso ao disco local, dada a sua baixa velocidade em relação ao acesso à memória  
   
- Operações como essas podem fazer com que a sua interface de usuário pare de responder enquanto elas estiverem em execução. Se você quer uma interface que responda com agilidade e está enfrentando longos atrasos associados a essas operações, o componente <xref:System.ComponentModel.BackgroundWorker> fornece uma solução conveniente.  
+ Operações como essas podem fazer com que sua interface do usuário bloquear enquanto eles estiverem em execução. Se você quer uma interface que responda com agilidade e está enfrentando longos atrasos associados a essas operações, o componente <xref:System.ComponentModel.BackgroundWorker> fornece uma solução conveniente.  
   
  O componente <xref:System.ComponentModel.BackgroundWorker> possibilita executar operações demoradas de forma assíncrona ("no segundo plano"), em um thread diferente do thread principal da interface do usuário do aplicativo. Para usar um <xref:System.ComponentModel.BackgroundWorker>, basta indicar o método de trabalho demorado que será executado em segundo plano e chamar o método <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>. Seu thread de chamada continua a funcionar normalmente enquanto o método de trabalho é executado de forma assíncrona. Quando o método é concluído, o <xref:System.ComponentModel.BackgroundWorker> alerta o thread de chamada disparando o evento <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>, que contém, opcionalmente, os resultados da operação.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: d6179624ffbdf423f8d9b895c65ff41ac9846f33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 970c69b36eecd110dd81b6a3700fbb0a7eea2834
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647041"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424029"
 ---
 # <a name="date-data-type-visual-basic"></a>Tipo de dados Data (Visual Basic)
 Contém os valores de (8 bytes) do IEEE de 64 bits que representam datas desde 1 de janeiro do ano de 0001 até 31 de dezembro do ano 9999 e horas de 12:00:00 AM (meia-noite) por meio de 11:59:59.9999999 PM. Cada incremento representa 100 nanossegundos de tempo decorrido desde o início de 1º de janeiro do ano 1 no calendário gregoriano. O valor máximo representará 100 nanosegundos antes do início do dia 1º de janeiro do ano 10000.  
@@ -35,7 +35,7 @@ Contém os valores de (8 bytes) do IEEE de 64 bits que representam datas desde 1
 ## <a name="format-requirements"></a>Requisitos de formato  
  Você deve incluir um `Date` literal entre sinais numéricos (`# #`). Você deve especificar o valor de data no formato dd/aaaa, por exemplo `#5/31/1993#`, ou AAAA-MM-dd, por exemplo `#1993-5-31#`. Ao especificar o ano pela primeira vez, você pode usar barras "/".  Esse requisito é independente de sua localidade e data do seu computador e configurações de formato de hora.  
   
- O motivo para essa restrição é que o significado do seu código nunca deve alterar dependendo da localidade na qual seu aplicativo está em execução. Suponha que você codifique uma `Date` literal de `#3/4/1998#` e pretender dizer 4 de março de 1998. Em uma localidade que utilize mm/dd/aaaa, 4/3/1998 compila como você deseja. Mas suponha que você implanta seu aplicativo em vários países. Em uma localidade que utilize dd/mm/aaaa, o literal embutido em código seria compiladas para 3 de abril de 1998. Em uma localidade que utilize aaaa/mm/dd, o literal seriam inválido (abril de 1998, 0003) e causa um erro do compilador.  
+ O motivo para essa restrição é que o significado do seu código nunca deve alterar dependendo da localidade na qual seu aplicativo está em execução. Suponha que você codifique uma `Date` literal de `#3/4/1998#` e pretender dizer 4 de março de 1998. Em uma localidade que utilize mm/dd/aaaa, 4/3/1998 compila como você deseja. Mas suponha que você implanta seu aplicativo em muitos países/regiões. Em uma localidade que utilize dd/mm/aaaa, o literal embutido em código seria compiladas para 3 de abril de 1998. Em uma localidade que utilize aaaa/mm/dd, o literal seriam inválido (abril de 1998, 0003) e causa um erro do compilador.  
   
 ## <a name="workarounds"></a>Soluções alternativas  
  Para converter um `Date` literal para o formato de sua localidade, ou para um formato personalizado, forneça o literal para o <xref:Microsoft.VisualBasic.Strings.Format%2A> função, especificando um formato de data predefinidos ou definidos pelo usuário. O exemplo a seguir demonstra isso.  
