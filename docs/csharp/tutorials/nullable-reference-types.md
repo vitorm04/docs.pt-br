@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296141"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195831"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos de referência que não permitem valor nulo
 
@@ -36,15 +36,18 @@ O código que você gravará para este exemplo expressa essa intenção e o comp
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Criar o aplicativo e habilitar os tipos de referência que permitem valor nulo
 
-Crie um novo aplicativo de console no Visual Studio ou na linha de comando usando `dotnet new console`. Dê o nome `NullableIntroduction` ao aplicativo. Depois de criar o aplicativo, será preciso ativar os recursos beta do C# 8. Abra o arquivo `csproj` e adicione um elemento `LangVersion` ao elemento `PropertyGroup`. Você deve aceitar o recurso dos **tipos de referência que permitem valor nulo**, mesmo em projetos do C# 8. Isso porque, quando o recurso é ativado, as declarações de variáveis de referência existentes tornam-se **tipos de referência que não permitem valor nulo**. Embora essa decisão auxilie na localização de problemas nos quais o código existente pode não ter verificações de valores nulos adequadas, ela pode não refletir com precisão a intenção original do design. Ative o recurso definindo o elemento `NullableContextOptions` como `enable`:
+Crie um novo aplicativo de console no Visual Studio ou na linha de comando usando `dotnet new console`. Dê o nome `NullableIntroduction` ao aplicativo. Depois de criar o aplicativo, será preciso ativar os recursos beta do C# 8. Abra o arquivo `csproj` e adicione um elemento `LangVersion` ao elemento `PropertyGroup`. Você deve aceitar o recurso dos **tipos de referência que permitem valor nulo**, mesmo em projetos do C# 8. Isso porque, quando o recurso é ativado, as declarações de variáveis de referência existentes tornam-se **tipos de referência que não permitem valor nulo**. Embora essa decisão auxilie na localização de problemas nos quais o código existente pode não ter verificações de valores nulos adequadas, ela pode não refletir com precisão a intenção original do design. Ative o recurso definindo o elemento `Nullable` como `enable`:
 
 ```xml
 <LangVersion>8.0</LangVersion>
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
 
+> [!IMPORTANT]
+> O elemento `Nullable` era chamado `NullableContextOptions`. A renomeação acompanha o Visual Studio 2019, 16.2-p1. O SDK do .NET Core 3.0.100-preview5-011568 não tem essa alteração. Se você estiver usando a CLI do .NET Core, precisará usar `NullableContextOptions` até que a próxima versão prévia esteja disponível.
+
 > [!NOTE]
-> Quando C# 8 for lançado (não no modo de versão prévia), o elemento `NullableContextOptions` será adicionado por novos modelos de projeto. Até lá, será necessário adicioná-lo manualmente.
+> Quando C# 8 for lançado (não no modo de versão prévia), o elemento `Nullable` será adicionado por novos modelos de projeto. Até lá, será necessário adicioná-lo manualmente.
 
 ### <a name="design-the-types-for-the-application"></a>Criar os tipos para o aplicativo
 

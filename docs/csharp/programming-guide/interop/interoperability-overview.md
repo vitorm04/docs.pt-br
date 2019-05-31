@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 589bb205b10a5b7b0c4480393b8937e0df36022f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337546"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052392"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -28,7 +28,7 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
 >  O [CLR](../../../standard/clr.md) (Common Language Runtime) gerencia o acesso aos recursos do sistema. Chamar código não gerenciado que esteja fora do CLR ignora esse mecanismo de segurança e, portanto, apresenta um risco de segurança. Por exemplo, o código não gerenciado pode chamar recursos diretamente em código não gerenciado, ignorando os mecanismos de segurança do CLR. Para obter mais informações, confira [Segurança no .NET](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>Interoperabilidade C++  
- Você pode usar a interoperabilidade do C++, também conhecida como IJW (It Just Works), para encapsular uma classe de C++ nativa, de forma que ela possa ser consumida pelo código que é criado no C# ou em outra linguagem do .NET Framework. Para fazer isso, você deve escrever código C++ para encapsular um componente nativo DLL ou COM. Ao contrário de outras linguagens do .NET Framework, o [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] tem suporte de interoperabilidade que permite que o código gerenciado e não gerenciado seja localizado no mesmo aplicativo e até no mesmo arquivo. Então, você compila o código C++ usando a opção do compilador **/clr** para produzir um assembly gerenciado. Finalmente, você adiciona uma referência ao assembly no seu projeto do C# e usa os objetos encapsulados, assim como usaria outras classes gerenciadas.  
+ Você pode usar a interoperabilidade do C++, também conhecida como IJW (It Just Works), para encapsular uma classe de C++ nativa, de forma que ela possa ser consumida pelo código que é criado no C# ou em outra linguagem do .NET Framework. Para fazer isso, você deve escrever código C++ para encapsular um componente nativo DLL ou COM. Ao contrário de outras linguagens do .NET Framework, o Visual C++ tem suporte de interoperabilidade que permite que o código gerenciado e não gerenciado seja localizado no mesmo aplicativo e até no mesmo arquivo. Então, você compila o código C++ usando a opção do compilador **/clr** para produzir um assembly gerenciado. Finalmente, você adiciona uma referência ao assembly no seu projeto do C# e usa os objetos encapsulados, assim como usaria outras classes gerenciadas.  
   
 ## <a name="exposing-com-components-to-c"></a>Expondo componentes COM ao C\#
  Você pode consumir um componente COM de um projeto do C#. As etapas gerais são as seguintes:  

@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634676"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960325"
 ---
 # <a name="character-encoding-in-net"></a>Codificação de caracteres no .NET
 Os caracteres são entidades abstratas que podem ser representadas de muitas maneiras diferentes. Uma codificação de caracteres é um sistema que emparelha cada caractere em um conjunto de caracteres com suporte com algum valor que representa esse caractere. Por exemplo, o código Morse é uma codificação de caracteres que emparelha cada caractere do alfabeto romano com um padrão de pontos e traços adequados para transmissão por linhas telegráficas. Uma codificação de caracteres para computadores emparelha cada caractere em um conjunto de caracteres com suporte com um valor numérico que representa esse caractere. Uma codificação de caracteres tem dois componentes distintos:  
@@ -78,8 +78,8 @@ Os caracteres são entidades abstratas que podem ser representadas de muitas man
   
  Essas codificações permitem que você trabalhe com caracteres Unicode, bem como com codificações mais comumente usadas em aplicativos herdados. Além disso, você pode criar uma codificação personalizada definindo uma classe que deriva de <xref:System.Text.Encoding> e substituindo seus membros.  
   
-### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>Notas de plataforma: [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
- Por padrão, o [!INCLUDE[net_core](../../../includes/net-core-md.md)] não disponibiliza nenhuma codificação de página de código diferente da página de código 28591 e das codificações Unicode, como UTF-8 e UTF-16. No entanto, você pode adicionar as codificações de página de código encontradas em aplicativos do Windows padrão que direcionam o .NET ao seu aplicativo. Para saber mais, confira o tópico <xref:System.Text.CodePagesEncodingProvider>.  
+### <a name="platform-notes-net-core"></a>Notas de plataforma: .Net Core  
+ Por padrão, o .NET Core não disponibiliza nenhuma codificação de página de código diferente de página de código 28591 e das codificações Unicode, como UTF-8 e UTF-16. No entanto, você pode adicionar as codificações de página de código encontradas em aplicativos do Windows padrão que direcionam o .NET ao seu aplicativo. Para saber mais, confira o tópico <xref:System.Text.CodePagesEncodingProvider>.  
   
 <a name="Selecting"></a>   
 ## <a name="selecting-an-encoding-class"></a>Selecionando uma classe de codificação  

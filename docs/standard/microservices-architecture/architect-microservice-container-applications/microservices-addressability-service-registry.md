@@ -2,12 +2,12 @@
 title: Capacidade de endereçamento de microsserviços e o Registro do serviço
 description: Entenda a função dos Registros de imagem de contêiner na arquitetura de microsserviços.
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b601f19b60a8e989977e7135138add7644bd7b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 756be4d7102d2d8ef36ffbf172b70b08872c028c
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639964"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196015"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Capacidade de endereçamento de microsserviços e o Registro do serviço
 
@@ -15,7 +15,7 @@ Cada microsserviço tem um nome exclusivo (URL) usado para resolver sua localiza
 
 O [padrão de Registro de serviço](https://microservices.io/patterns/service-registry.html) é uma parte importante da descoberta de serviço. O Registro é um banco de dados que contém os locais de rede das instâncias de serviço. Um Registro de serviço precisa ser atualizado e estar altamente disponível. Os clientes podem armazenar locais de rede em cache obtidos do Registro de serviço. No entanto, essas informações eventualmente ficam desatualizadas e os clientes não podem mais descobrir instâncias de serviço. Consequentemente, um Registro de serviço consiste em um cluster de servidores que usam um protocolo de replicação para manter a consistência.
 
-Em alguns ambientes de implantação de microsserviço (chamados clusters, a serem abordados em uma seção posterior), a descoberta de serviço é interna. Por exemplo, um ambiente do AKS (Serviço de Contêiner do Azure com Kubernetes) pode manipular o registro e o cancelamento de registro da instância de serviço. Ele também executa um proxy em cada host de cluster que desempenha a função de roteador de descoberta do servidor. Outro exemplo é o Azure Service Fabric, que também fornece um Registro de serviço por meio de seu Serviço de nomenclatura pronto para uso.
+Em alguns ambientes de implantação de microsserviço (chamados clusters, a serem abordados em uma seção posterior), a descoberta de serviço é interna. Por exemplo, um ambiente do AKS (Serviço de Kubernetes do Azure) pode manipular o registro e o cancelamento de registro da instância de serviço. Ele também executa um proxy em cada host de cluster que desempenha a função de roteador de descoberta do servidor. Outro exemplo é o Azure Service Fabric, que também fornece um Registro de serviço por meio de seu Serviço de nomenclatura pronto para uso.
 
 Observe que há determinada sobreposição entre o Registro de serviço e o padrão de gateway de API, que ajuda a resolver esse problema também. Por exemplo, o [Proxy Reverso do Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) é um tipo de implementação de um Gateway de API baseado no Serviço de Nomenclatura do Service Fabric e que ajuda a resolver a resolução de endereço para os serviços internos.
 

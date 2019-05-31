@@ -2,12 +2,12 @@
 title: Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 description: Descubra as opções para orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade e as possibilidades de Azure Dev Spaces durante o desenvolvimento do ciclo de vida de aplicativos Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3b7383f6153b787ce8bfad87e3902c34afba0fb2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644888"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196033"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 
@@ -101,7 +101,7 @@ No ambiente de desenvolvimento, o [Docker anunciou em julho de 2018](https://blo
 
 ## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Introdução ao AKS (Serviço de Kubernetes do Azure) 
 
-Para começar a usar o AKS, implante um cluster do AKS do portal do Azure ou usando a CLI. Para saber mais sobre como implantar um cluster do Serviço de Contêiner do Azure, veja [Implantar um cluster do AKS (Serviço de Kubernetes do Azure)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
+Para começar a usar o AKS, implante um cluster do AKS do portal do Azure ou usando a CLI. Para saber mais sobre como implantar um cluster do Kubernetes no Azure, veja [Implantar um cluster do AKS (Serviço de Kubernetes do Azure)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
 Nenhum valor é cobrado pelos softwares instalados por padrão como parte do AKS. Todas as opções padrão são implementadas com software livre. O AKS está disponível para várias máquinas virtuais no Azure. Somente as instâncias de computação escolhidas serão cobradas, bem como outros recursos adjacentes de infraestrutura consumidos, como armazenamento e rede. Não há cobranças adicionais pelo AKS.
 
@@ -145,7 +145,7 @@ Para obter mais informações, confira o artigo sobre [Desenvolvimento em equipe
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Introdução ao AKS (Serviço de Kubernetes do Azure)** \
+- **Introdução ao AKS (Serviço de Kubernetes do Azure)**  \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \

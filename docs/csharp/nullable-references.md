@@ -2,12 +2,12 @@
 title: Tipos de referência anuláveis
 description: Este artigo fornece uma visão geral dos tipos de referência que permitem valor nulo, adicionados no C# 8. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725019"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195915"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -58,7 +58,7 @@ A nulidade de um tipo em uma declaração de variável é controlada pelo *conte
 
 Contextos que permitem valor nulo habilitam o controle refinado para a maneira como o compilador interpreta variáveis de tipo de referência. O **contexto de anotação que permite valor nulo** de qualquer linha de origem determinada é `enabled` ou `disabled`. Você pode pensar no compilador pré-C# 8 como compilando todo seu código em um contexto que permite valor nulo `disabled`: Qualquer tipo de referência pode ser nulo. O **contexto de avisos que permite valor nulo** pode ser definido como `enabled`, `disabled` ou `safeonly`. O contexto de avisos que permite valor nulo especifica os avisos gerados pelo compilador usando sua análise de fluxo.
 
-O contexto de anotação que permite valor nulo e o contexto de aviso que permite valor nulo podem ser definidos para um projeto que usa o elemento `NullableContextOptions` no seu arquivo `csproj`. Esse elemento configura como o compilador interpreta a nulidade de tipos e quais avisos são gerados. As configurações válidas são:
+O contexto de anotação que permite valor nulo e o contexto de aviso que permite valor nulo podem ser definidos para um projeto que usa o elemento `Nullable` no seu arquivo `csproj`. Esse elemento configura como o compilador interpreta a nulidade de tipos e quais avisos são gerados. As configurações válidas são:
 
 - `enable`: O contexto de anotação que permite valor nulo está **habilitado**. O contexto de aviso que permite valor nulo está **habilitado**.
   - Variáveis de um tipo de referência, `string` por exemplo, não permitem valor nulo.  Todos os avisos de nulidade estão habilitados.
@@ -70,6 +70,9 @@ O contexto de anotação que permite valor nulo e o contexto de aviso que permit
   - As variáveis de um tipo de referência são óbvias. Todos os avisos de nulidade estão habilitados.
 - `safeonlywarnings`: O contexto de anotação que permite valor nulo está **desabilitado**. O contexto de aviso que permite valor nulo é **safeonly**.
   - As variáveis de um tipo de referência são óbvias. Todos os avisos de nulidade de segurança estão habilitados.
+
+> [!IMPORTANT]
+> O elemento `Nullable` era chamado `NullableContextOptions`. A renomeação acompanha o Visual Studio 2019, 16.2-p1. O SDK do .NET Core 3.0.100-preview5-011568 não tem essa alteração. Se você estiver usando a CLI do .NET Core, precisará usar `NullableContextOptions` até que a próxima versão prévia esteja disponível.
 
 Também é possível usar diretivas para definir esses mesmos contextos em qualquer lugar no seu projeto:
 

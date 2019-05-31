@@ -17,6 +17,7 @@ helpviewer_keywords:
 - indexer operator [C#]
 - '[] operator [C#]'
 - null-conditional operators [C#]
+- Elvis operator [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 - invocation operator [C#]
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881042"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195772"
 ---
 # <a name="member-access-operators-c-reference"></a>Operadores de acesso a membro (Referência de C#)
 
@@ -99,7 +100,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Operadores condicionais nulos ?. e ?[]
 
-Disponível no C# 6 e versões posteriores, um operador nulo condicional aplicará a seu operando uma operação de acesso a membro, `?.`, ou de acesso a elemento, `?[]`, somente se o operando for avaliado como não nulo. Se o operando for avaliado como `null`, o resultado da aplicação do operador será `null`.
+Disponível no C# 6 e versões posteriores, um operador nulo condicional aplicará a seu operando uma operação de acesso a membro, `?.`, ou de acesso a elemento, `?[]`, somente se o operando for avaliado como não nulo. Se o operando for avaliado como `null`, o resultado da aplicação do operador será `null`. O operador de acesso do membro condicional nulo `?.` também é conhecido como o operador Elvis.
 
 Os operadores condicionais nulos estão entrando em curto-circuito. Ou seja, se uma operação em uma cadeia de membro operações condicionais de acesso a membro ou elemento retornar `null`, o restante da cadeia não será executado. No exemplo a seguir, `B` não será avaliado se `A` for avaliado como `null` e `C` não será avaliado se `A` ou `B` for avaliado como `null`:
 

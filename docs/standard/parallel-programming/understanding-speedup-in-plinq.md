@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 014adfbf6f9afab0eaacd574cfb181c0eec07b5b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654966"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960316"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Noções básicas sobre agilização em PLINQ
 O principal objetivo do PLINQ é acelerar a execução das consultas do LINQ to Objects executando os delegados da consulta em paralelo em computadores com vários núcleos. O PLINQ funciona melhor quando o processamento de cada elemento em uma coleção de origem é independente, sem nenhum estado compartilhado envolvido entre os delegados individuais. Tais operações são comuns em LINQ to Objects e PLINQ, e muitas vezes são chamadas de "*fantasticamente paralelas*", pois elas se prestam facilmente ao agendamento em múltiplos segmentos. No entanto, nem todas as consultas consistem por completo em operações fantasticamente paralelas; na maioria dos casos, uma consulta envolve alguns operadores que não podem ser paralelizados ou que retardam a execução paralela. E mesmo com consultas que são fantasticamente paralelas por completo, o PLINQ ainda deve particionar a fonte de dados e agendar o trabalho nos threads e, normalmente, mesclar os resultados quando a consulta for concluída. Todas essas operações aumentam o custo computacional da paralelização; esses custos de adição de paralelização são chamados de *sobrecarga*. Para obter o melhor desempenho em uma consulta PLINQ, o objetivo é maximizar as partes que são fantasticamente paralelas e minimizar as partes que exigem sobrecarga. Este artigo fornece informações que ajudarão você a gravar consultas PLINQ que sejam tão eficientes quanto possível, enquanto ainda produzem resultados corretos.  
@@ -61,7 +61,7 @@ O principal objetivo do PLINQ é acelerar a execução das consultas do LINQ to 
   
 5. O tipo de opções de mesclagem.  
   
-     O PLINQ pode ser configurado para armazenar sua saída em buffer e produzir em pedaços ou tudo de uma vez após o conjunto de resultados inteiro ser produzido, ou então transmitir resultados individuais à medida que eles são produzidos. O resultado anterior diminui o tempo de execução geral e o último resulta em latência diminuída entre os elementos produzidos.  Embora as opções de mesclagem nem sempre tenham um grande impacto no desempenho geral da consulta, elas podem afetar o desempenho percebido, pois elas controlam quanto tempo um usuário deve aguardar para ver os resultados. Para saber mais, veja [Opções de mesclagem em PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+     O PLINQ pode ser configurado para armazenar sua saída em buffer e produzir em pedaços ou tudo de uma vez após o conjunto de resultados inteiro ser produzido, ou então transmitir resultados individuais à medida que eles são produzidos. Os resultados anteriores diminuem o tempo de execução geral e o último resulta em latência diminuída entre os elementos produzidos.  Embora as opções de mesclagem nem sempre tenham um grande impacto no desempenho geral da consulta, elas podem afetar o desempenho percebido, pois elas controlam quanto tempo um usuário deve aguardar para ver os resultados. Para saber mais, veja [Opções de mesclagem em PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 6. O tipo de particionamento.  
   

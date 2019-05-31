@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690612"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960371"
 ---
 # <a name="using-threads-and-threading"></a>Usando threads e threading
 
@@ -32,7 +32,7 @@ Crie um thread criando uma nova instância da classe <xref:System.Threading.Thre
 
 Para terminar a execução de um thread, use o método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Esse método gera uma <xref:System.Threading.ThreadAbortException> no thread em que é invocado. Para obter mais informações, confira [Destruindo threads](destroying-threads.md).
 
-Começando com o .NET Framework 4, você pode usar o <xref:System.Threading.CancellationToken?displayProperty=nameWithType> para cancelar um thread de forma cooperativa. Para obter mais informações, confira [Cancelando threads de forma cooperativa](canceling-threads-cooperatively.md).
+Começando com o .NET Framework 4, você pode usar o <xref:System.Threading.CancellationToken?displayProperty=nameWithType> para cancelar um thread de forma cooperativa. Para saber mais, confira [Cancelamento em threads gerenciados](cancellation-in-managed-threads.md).
 
 Use o método <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> para fazer com que o thread de chamada espere o encerramento do thread no qual o método é invocado.
 

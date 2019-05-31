@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 58317c26f87034991c817d0d7221d810657ca332
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452405"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003722"
 ---
 # <a name="-operator-c-reference"></a>?: Operador (Referência de C#)
 
@@ -43,13 +43,12 @@ a ? b : c ? d : e
 a ? b : (c ? d : e)
 ```
 
-Um dispositivo mnemônico que você pode usar para se lembrar de como esse operador é avaliado é perguntar:
-
-```text
-is this condition true ? yes : no
-```
-
-com a parte ? do operador atuando como um ponto de interrogação para a instrução anterior e a seguinte atuando como a resposta lógica para essa pergunta.
+> [!TIP]
+> Você pode usar o seguinte dispositivo mnemônico para se lembrar de como o operador condicional é avaliado:
+>
+> ```text
+> is this condition true ? yes : no
+> ```
 
 O exemplo a seguir demonstra o uso do operador condicional:
 

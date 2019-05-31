@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: df91d9da1f743e17072ad6106d0c4e06d751c2ea
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: b92c3b293b37921e1a8b557a7842027ecce8851c
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612804"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959254"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilar um aplicativo Olá, Mundo em C# com o SDK do .NET Core no Visual Studio 2017
 
@@ -26,7 +26,7 @@ Para obter mais informações, consulte o tópico [Pré-requisitos para .NET Cor
 
 Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas:
 
-1. Inicie o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo *Novo projeto*\*, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Name**, digite "HelloWorld". Selecione o botão **OK**.
+1. Inicie o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo *Novo projeto*\*, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)** . Na caixa de texto **Name**, digite "HelloWorld". Selecione o botão **OK**.
 
    ![Caixa de diálogo Novo Projeto com Aplicativo de Console selecionado](./media/with-visual-studio/visual-studio-new-project.png)
 
@@ -61,7 +61,7 @@ Aprimore seu aplicativo para solicitar ao usuário seu nome e exibi-lo junto com
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   Esse código substitui as instruções <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> e <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> existentes.
+   Esse código substitui o conteúdo do método `Main`.
 
    ![Arquivo C-Sharp do programa do Visual Studio com o método Main atualizado](./media/with-visual-studio/visual-csharp-code-window.png)
 

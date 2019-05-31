@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: 963be5273389ebbdb3458d41b0658de0d94bb2cd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 07594d70b92e2075c3d5aba605eab23d766faed6
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634806"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052742"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>marcações recomendadas para comentários de documentação (Guia de Programação em C#)
 O compilador do C# processa comentários de documentação em seu código e os formata como XML em um arquivo, cujo nome você especifica na opção de linha de comando **/doc**. Para criar a documentação final com base no arquivo gerado pelo compilador, crie uma ferramenta personalizada ou use uma ferramenta como o [DocFX](https://dotnet.github.io/docfx/) ou o [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -36,12 +36,13 @@ O compilador do C# processa comentários de documentação em seu código e os f
   
  (* indica que o compilador verifica a sintaxe).  
   
- Se você quiser que os colchetes angulares sejam exibidos no texto de um comentário de documentação, use `<` e `>`, conforme mostrado no exemplo a seguir.  
+ Se você quiser que os colchetes angulares sejam exibidos no texto de um comentário de documentação, use a codificação HTML de `<` e `>`, que são `&lt;` e `&gt;` respectivamente. Essa codificação é mostrada no exemplo a seguir:
   
 ```csharp  
-/// <summary cref="C < T >">  
-/// </summary>  
-```  
+/// <summary>
+/// This property always returns a value &lt; 1.
+/// </summary>
+```
   
 ## <a name="see-also"></a>Consulte também
 

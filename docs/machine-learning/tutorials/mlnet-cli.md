@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: feddafdd6becd676f4d18aa94bdfae50f02abc6e
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557952"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053640"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Gerar automaticamente um classificador binário usando a CLI
 
@@ -75,7 +75,7 @@ Usaremos um conjunto de dados existente usado para um cenário de 'análise de s
     Agora, você está pronto para começar a usar a CLI para esse cenário de 'análise de sentimento'.
 
     > [!NOTE]
-    > Depois de concluir este tutorial, você também pode experimentar com seus próprios conjuntos de dados enquanto eles estão prontos para ser usados para qualquer uma das tarefas de ML atualmente compatíveis com a versão prévia da CLI do ML.NET, que são *'Classificação binária', 'Classificação multiclasse' e ' Regressão'*.
+    > Depois de concluir este tutorial, você também pode experimentar com seus próprios conjuntos de dados enquanto eles estão prontos para ser usados para qualquer uma das tarefas de ML atualmente compatíveis com a versão prévia da CLI do ML.NET, que são *'Classificação binária', 'Classificação multiclasse' e ' Regressão'* .
 
 ## <a name="run-the-mlnet-auto-train-command"></a>Execute o comando 'mlnet auto-train'
 
@@ -85,10 +85,10 @@ Usaremos um conjunto de dados existente usado para um cenário de 'análise de s
     > mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
-    Esse comando executa o **comando `mlnet auto-train`**:
+    Esse comando executa o **comando `mlnet auto-train`** :
     - para uma **tarefa de ML** do tipo **`binary-classification`**
     - usa o **arquivo de conjunto de dados `yelp_labelled.txt`** como treinamento e teste do conjunto de dados (internamente, a CLI usará a validação cruzada ou será dividida em dois conjuntos de dados, um para treinamento e outro para teste)
-    - em que a **coluna de destino/objetivo** que você deseja prever (comumente chamada de **'Rótulo'**) é a coluna **com o índice 1** (que é a segunda coluna, já que o índice é baseado em zero )
+    - em que a **coluna de destino/objetivo** que você deseja prever (comumente chamada de **'Rótulo'** ) é a coluna **com o índice 1** (que é a segunda coluna, já que o índice é baseado em zero )
     - **não usa um cabeçalho de arquivo** com nomes de coluna, pois esse arquivo de conjunto de dados específico não tem um cabeçalho
     - o **tempo de exploração de destino** para o experimento é de **10 segundos**
 
@@ -142,12 +142,12 @@ Esses ativos enumerados são explicados nas etapas do tutorial a seguir.
 
     ![Solução de VS gerada pela CLI](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - A **biblioteca de classes** gerada que contém o modelo de ML serializado e as classes de dados é algo que você pode usar diretamente em seu aplicativo de usuário final, até mesmo referenciando diretamente essa biblioteca de classes (ou movendo o código, como preferir).
+    - A **biblioteca de classes** gerada que contém o modelo de ML serializado (arquivo .zip) e as classes de dados (modelos de dados) é algo que você pode usar diretamente em seu aplicativo de usuário final, até mesmo referenciando diretamente essa biblioteca de classes (ou movendo o código, como preferir).
     - O **aplicativo de console** gerado contém o código de execução que você precisa revisar e, em seguida, você geralmente reutiliza o 'código de pontuação' (código que executa o modelo de ML para fazer previsões), movendo o código simples (apenas algumas linhas) para seu aplicativo de usuário final em que você deseja fazer as previsões. 
 
-1. Abra os arquivos de classe **Observation.cs** e **Prediction.cs** dentro do projeto de biblioteca de classes. Você verá que essas classes são 'classes de dados' ou classes POCO usadas para armazenar dados. Trata-se de "código clichê", mas útil gerá-lo se o seu conjunto de dados tiver dezenas ou até mesmo centenas de colunas. 
-    - A classe `SampleObservation` é usada ao ler dados do conjunto de dados. 
-    - A classe `SamplePrediction` ou quando
+1. Abra os arquivos de classe **ModelInput.cs** e **ModelOutput.cs** dentro do projeto de biblioteca de classes. Você verá que essas classes são 'classes de dados' ou classes POCO usadas para armazenar dados. Trata-se de "código clichê", mas útil gerá-lo se o seu conjunto de dados tiver dezenas ou até mesmo centenas de colunas. 
+    - A classe `ModelInput` é usada ao ler dados do conjunto de dados. 
+    - A classe `ModelOutput` é usada para obter o resultado da previsão (dados de previsão).
 
 1. Abra o arquivo Program.cs e explore o código. Em apenas algumas linhas, você pode executar o modelo e fazer uma previsão de exemplo.
 
@@ -160,13 +160,13 @@ Esses ativos enumerados são explicados nas etapas do tutorial a seguir.
         //ModelBuilder.CreateModel();
 
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<SampleObservation, SamplePrediction>(mlModel);
+        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
         // Create sample data to do a single prediction with it 
-        SampleObservation sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
+        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
-        SamplePrediction predictionResult = predEngine.Predict(sampleData);
+        ModelOutput predictionResult = predEngine.Predict(sampleData);
 
         Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
     }
@@ -178,14 +178,14 @@ Esses ativos enumerados são explicados nas etapas do tutorial a seguir.
 
 - Na terceira linha de código, você pode carregar o modelo do arquivo zip do modelo serializado com a API `mlContext.Model.Load()`, fornecendo o caminho para esse arquivo zip de modelo.
 
-- Na quarta linha de código que você carregar, crie o `PredictionEngine` do objeto com a API `mlContext.Model.CreatePredictionEngine<TObservation, TPrediction>()`. Você precisa do objeto `PredictionEngine` sempre que deseja fazer uma previsão visando um único exemplo de dados (nesse caso, uma única parte do texto para prever seu sentimento).
+- Na quarta linha de código que você carregar, crie o `PredictionEngine` do objeto com a API `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)`. Você precisa do objeto `PredictionEngine` sempre que deseja fazer uma previsão visando um único exemplo de dados (nesse caso, uma única parte do texto para prever seu sentimento).
 
 - É na quinta linha de código que você cria esse *único dado de exemplo* a ser usado para a previsão chamando a função `CreateSingleDataSample()`. Já que a ferramenta da CLI não sabe que tipo de dados de exemplo usar, dentro dessa função, ela está carregando a primeira linha do conjunto de dados. No entanto, para esse caso, você também pode criar seus próprios dados embutidos em código em vez da implementação atual da função `CreateSingleDataSample()`, atualizando esse código mais simples implementando essa função:
 
     ```csharp
-    private static SampleObservation CreateSingleDataSample()
+    private static ModelInput CreateSingleDataSample()
     {
-        SampleObservation sampleForPrediction = new SampleObservation() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
         return sampleForPrediction;
     }
     ```
@@ -219,7 +219,7 @@ Esses ativos enumerados são explicados nas etapas do tutorial a seguir.
 
 Você pode usar um 'código de pontuação de modelo de ML' semelhante para executar o modelo em seu aplicativo de usuário final e fazer previsões. 
 
-Por exemplo, você poderia mover diretamente esse código para qualquer aplicativo da Área de Trabalho do Windows (assim como **WPP** e **WinForms**) e executar o modelo da mesma maneira que isso foi feito no aplicativo de console.
+Por exemplo, você poderia mover diretamente esse código para qualquer aplicativo da Área de Trabalho do Windows (assim como **WPF** e **WinForms**) e executar o modelo da mesma maneira que isso foi feito no aplicativo de console.
 
 No entanto, a maneira como você implementa essas linhas de código para executar um modelo de ML deverá ser otimizada (isto é, armazenar o arquivo zip de modelo em cache e carregue-o uma vez) e ter objetos singleton em vez de criá-los em cada solicitação, especialmente se seu aplicativo precisar ser escalonável, assim como no caso de um aplicativo Web ou um serviço distribuído, conforme explicado na seção a seguir.
 
@@ -229,7 +229,7 @@ A criação do objeto de modelo (`ITransformer` carregado do arquivo zip de um m
 
 Para o segundo objeto (`PredictionEngine`), isso não é tão fácil porque o objeto `PredictionEngine` não é thread-safe, portanto, você não pode instanciá-lo como singleton ou como um objeto estático em um aplicativo ASP.NET Core. Esse problema de thread-safe e escalabilidade é discutido em profundidade nesta [postagem no blog](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/). 
 
-No entanto, as coisas ficaram muito mais fáceis para você do que aquilo que é explicado nessa postagem no blog. Trabalhamos em uma abordagem mais simples para você e criamos um ótimo **'Pacote de integração do .NET Core'**, que você pode usar facilmente em seus serviços e aplicativos ASP.NET Core registrando-o nos serviços de DI (injeção de dependência) do aplicativo e, em seguida, usando-o diretamente do seu código. Verifique o tutorial e exemplo a seguir para fazer isso:
+No entanto, as coisas ficaram muito mais fáceis para você do que aquilo que é explicado nessa postagem no blog. Trabalhamos em uma abordagem mais simples para você e criamos um ótimo **'Pacote de integração do .NET Core'** , que você pode usar facilmente em seus serviços e aplicativos ASP.NET Core registrando-o nos serviços de DI (injeção de dependência) do aplicativo e, em seguida, usando-o diretamente do seu código. Verifique o tutorial e exemplo a seguir para fazer isso:
 
 - [Tutorial: Executando modelos do ML.NET em aplicativos Web e APIs Web escalonáveis do ASP.NET Core](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [Exemplo: Modelo do ML.NET escalonável na API Web do ASP.NET Core](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
@@ -242,7 +242,7 @@ Esse código de modelo de treinamento é gerado atualmente na classe personaliza
 
 Mais importante, para esse cenário específico (modelo de análise de sentimento) também é possível comparar esse código de treinamento gerado com o código explicado no tutorial a seguir:
 
-- Compare: [Tutorial: Use do ML.NET em um cenário de classificação binária de análise de sentimento](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis).
+- Compare: [Tutorial: Use do ML.NET em um cenário de classificação binária de análise de sentimento](sentiment-analysis.md).
 
 É interessante comparar a configuração de pipeline e o algoritmo escolhido no tutorial com o código gerado pela ferramenta de CLI. Dependendo de quanto tempo você gasta em iteração e pesquisa por modelos melhores, o algoritmo escolhido pode ser diferente, juntamente com os respectivos hiperparâmetros e configuração de pipeline específicos.
 

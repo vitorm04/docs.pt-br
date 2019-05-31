@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427286"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195841"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrar o código existente com tipos de referência anuláveis
 
@@ -49,8 +49,11 @@ A atualização da versão da linguagem seleciona C# 8.0, mas não habilita o co
 Em seguida, ative o contexto de anotação anulável e veja quantos avisos são gerados. Adicione o seguinte elemento aos dois arquivos csproj na solução, diretamente abaixo do elemento `LangVersion`:
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> O elemento `Nullable` era chamado `NullableContextOptions`. A renomeação acompanha o Visual Studio 2019, 16.2-p1. O SDK do .NET Core 3.0.100-preview5-011568 não tem essa alteração. Se você estiver usando a CLI do .NET Core, precisará usar `NullableContextOptions` até que a próxima versão prévia esteja disponível.
 
 Faça uma compilação de teste e observe a lista de avisos. Neste aplicativo pequeno, o compilador gera cinco avisos. Provavelmente, você deixaria o contexto de anotação anulável habilitado e iniciaria a correção de avisos de todo o projeto.
 
@@ -58,7 +61,7 @@ Essa estratégia funciona apenas para projetos menores. Para os projetos maiores
 
 ## <a name="warnings-help-discover-original-design-intent"></a>Os avisos ajudam a descobrir a intenção do design original
 
-Há duas classes que geram vários avisos. Comece com a classe `NewsStoryViewModel`. Remova o elemento `NullableContextOptions` dos arquivos csproj para que você possa limitar o escopo dos avisos para as seções do código com as quais você está trabalhando. Abra o arquivo *NewsStoryViewModel.cs* e adicione as seguintes diretivas para habilitar o contexto de anotação anulável para `NewsStoryViewModel` e restaure-a seguindo a definição dessa classe:
+Há duas classes que geram vários avisos. Comece com a classe `NewsStoryViewModel`. Remova o elemento `Nullable` dos arquivos csproj para que você possa limitar o escopo dos avisos para as seções do código com as quais você está trabalhando. Abra o arquivo *NewsStoryViewModel.cs* e adicione as seguintes diretivas para habilitar o contexto de anotação anulável para `NewsStoryViewModel` e restaure-a seguindo a definição dessa classe:
 
 ```csharp
 #nullable enable

@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6c979483497ff640be7d1126d63ce95130f6c02b
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cb1ef5f52b9ee0407cbd7a0634e8a7c58906d635
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633745"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195569"
 ---
 # <a name="best-practices-for-exceptions"></a>Práticas recomendadas para exceções
 
@@ -54,7 +54,9 @@ Uma classe pode fornecer métodos ou propriedades que permitem que você evite f
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
-Outra maneira de evitar exceções é retornar `null` para casos muito comuns de erro, em vez de gerar uma exceção. Um caso extremamente comum de erro pode ser considerado um fluxo normal de controle. Ao retornar `null` nesses casos, você minimiza o impacto no desempenho de um aplicativo.
+Outra maneira de evitar exceções é retornar nulo (ou padrão) para casos muito comuns de erro, em vez de gerar uma exceção. Um caso extremamente comum de erro pode ser considerado um fluxo normal de controle. Ao retornar nulo (ou padrão) nesses casos, você minimiza o impacto no desempenho de um aplicativo.
+
+Para tipos de valor, convém considerar o uso de Nullable<T> ou padrão como indicador de erro para seu aplicativo. Ao usar `Nullable<Guid>`, `default` se torna `null` em vez de `Guid.Empty`. Algumas vezes, adicionar `Nullable<T>` pode deixar mais claro quando um valor está presente ou ausente. Outras vezes, adicionar `Nullable<T>` pode criar casos extras que não precisam ser verificados e só servem para criar possíveis fontes de erros. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Gerar exceções em vez de retornar um código de erro
 
