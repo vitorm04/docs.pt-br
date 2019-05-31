@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 6d3b77a506186166c9ad76490ef47f8759c704eb
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 893ac7bbfcfe159787789238c3142f34ac7ecf35
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452726"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423293"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (Guia de Programação em C#)
 
@@ -53,6 +53,5 @@ Os namespaces têm as seguintes propriedades:
 - [Como: usar o alias de namespace global](how-to-use-the-global-namespace-alias.md)
 - [Como: usar o My Namespace](how-to-use-the-my-namespace.md)
 - [Nomes de identificadores](../inside-a-program/identifier-names.md)
-- [Palavras-chave de namespace](../../language-reference/keywords/namespace-keywords.md)
 - [Diretiva using](../../language-reference/keywords/using-directive.md)
 - [:: ??](../../language-reference/operators/namespace-alias-qualifer.md)
