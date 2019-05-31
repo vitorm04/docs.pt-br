@@ -1,6 +1,7 @@
 - name: Covariância e contravariância
-  href: index.md
   items:
+    - name: Visão geral
+      href: index.md
     - name: Variação em interfaces genéricas
       href: variance-in-generic-interfaces.md
       items:
