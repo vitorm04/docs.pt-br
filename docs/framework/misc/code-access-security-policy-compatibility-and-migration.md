@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868908"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456646"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Compatibilidade de políticas de segurança de acesso de código e migração
 
@@ -22,7 +22,7 @@ A parte da política de segurança de acesso do código (CAS) se tornou obsoleta
 
 Você pode evitar os avisos e erros por qualquer um:
 
-- [Migrando](#migration) para o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] substituições para as chamadas obsoletas.
+- [Migrando](#migration) para as substituições do .NET Framework 4 para as chamadas obsoletas.
 
    \- ou -
 
@@ -114,7 +114,7 @@ Exceção de tempo de execução:
 
 ### <a name="determining-an-assemblys-trust-level"></a>Determinar o nível de confiança do Assembly
 
-Política de CAS geralmente é usada para determinar um assembly ou conceder o conjunto de permissão do domínio de aplicativo ou nível de confiança. O [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expõe as seguintes propriedades úteis que não é necessário para resolver a política de segurança:
+Política de CAS geralmente é usada para determinar um assembly ou conceder o conjunto de permissão do domínio de aplicativo ou nível de confiança. O .NET Framework 4 expõe as seguintes propriedades úteis que não é necessário para resolver a política de segurança:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,15 +126,15 @@ Política de CAS geralmente é usada para determinar um assembly ou conceder o c
 
 ### <a name="application-domain-sandboxing"></a>Área restrita de domínio de aplicativo
 
-O <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> método normalmente é usado para a área restrita os assemblies em um domínio do aplicativo. O [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expõe membros que não precisa usar <xref:System.Security.Policy.PolicyLevel> para essa finalidade. Para obter mais informações, confira [Como: Executar o código parcialmente confiável em uma área restrita](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+O <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> método normalmente é usado para a área restrita os assemblies em um domínio do aplicativo. O .NET Framework 4 apresenta membros que não precisa usar <xref:System.Security.Policy.PolicyLevel> para essa finalidade. Para obter mais informações, confira [Como: Executar o código parcialmente confiável em uma área restrita](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Determinar uma permissão de segurança ou razoável parcialmente definidos para um código confiável
 
-Hosts geralmente precisam determinar as permissões apropriadas para o código de modo seguro hospedado. Antes do [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], a política de CAS fornecida uma maneira de fazer isso com o <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> método. Como um substituto [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] fornece o <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> método, que retorna uma permissão de segurança, standard definida para a evidência fornecida.
+Hosts geralmente precisam determinar as permissões apropriadas para o código de modo seguro hospedado. Antes do .NET Framework 4, política de CAS forneceu uma maneira de fazer isso com o <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> método. Como uma substituição, o .NET Framework 4 fornece o <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> método, que retorna uma permissão de segurança, standard definida para a evidência fornecida.
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Cenários de não-Sandboxing: Sobrecargas para carregamentos de Assembly
 
-O motivo para usar uma sobrecarga de carregamento de assembly pode ser usar parâmetros que não estão disponíveis, em vez de áreas de segurança do assembly. Começando com o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], sobrecargas de carregamento de assembly que não exigem uma <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> objeto como um parâmetro, por exemplo, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, habilitar esse cenário.
+O motivo para usar uma sobrecarga de carregamento de assembly pode ser usar parâmetros que não estão disponíveis, em vez de áreas de segurança do assembly. Começando com o .NET Framework 4, carregar o assembly sobrecargas que não exigem uma <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> objeto como um parâmetro, por exemplo, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, habilitar esse cenário.
 
 Se você quiser para a área restrita um assembly, use o <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> de sobrecarga.
 

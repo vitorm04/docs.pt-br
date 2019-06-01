@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666059"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457234"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurando um ambiente de criação de perfil
 > [!NOTE]
@@ -37,10 +37,10 @@ ms.locfileid: "64666059"
  Para criar o perfil de um aplicativo CLR, você deve definir as variáveis de ambiente COR_ENABLE_PROFILING e COR_PROFILER antes de executar o aplicativo. Você também deve verificar se que o profiler DLL está registrado.  
   
 > [!NOTE]
->  Começando com o [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], os criadores de perfis não precisa ser registrado.  
+>  Começando com o .NET Framework 4, os criadores de perfis não precisam ser registrados.  
   
 > [!NOTE]
->  Para usar os criadores de perfis do .NET Framework versões 2.0, 3.0 e 3.5 no [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] e versões posteriores, você deve definir a variável de ambiente complus_profapi_profilercompatibilitysetting.  
+>  Para usar os criadores de perfis do .NET Framework versões 2.0, 3.0 e 3.5 no .NET Framework 4 e versões posteriores, você deve definir a variável de ambiente complus_profapi_profilercompatibilitysetting.  
   
 ## <a name="environment-variable-scope"></a>Escopo de variáveis de ambiente  
  Como você pode definir as variáveis de ambiente COR_ENABLE_PROFILING e COR_PROFILER determinará seu escopo de influência. Você pode definir essas variáveis em uma das seguintes maneiras:  

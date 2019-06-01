@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a51b9fb485da605effbad0e81b8baf5e05e382a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91983a0910b272e621783f0fdb68242ddbd20f03
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675085"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456175"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > elemento
 Determina se o common language runtime calcula códigos hash para cadeias de caracteres em uma base de domínio do aplicativo.  
@@ -58,7 +58,7 @@ Determina se o common language runtime calcula códigos hash para cadeias de car
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, o <xref:System.StringComparer> classe e o <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> método usar um único algoritmo de hash que gera um código hash consistente entre domínios de aplicativo. Isso equivale a definir as `enabled` atributo do `<UseRandomizedStringHashAlgorithm>` elemento a ser `0`. Este é o algoritmo de hash usado no [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Por padrão, o <xref:System.StringComparer> classe e o <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> método usar um único algoritmo de hash que gera um código hash consistente entre domínios de aplicativo. Isso equivale a definir as `enabled` atributo do `<UseRandomizedStringHashAlgorithm>` elemento a ser `0`. Isso é o algoritmo de hash usado no .NET Framework 4.  
   
  O <xref:System.StringComparer> classe e o <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> método também pode usar um algoritmo de hash diferente que Compute códigos hash em uma base de domínio do aplicativo. Como resultado, os códigos de hash para cadeias de caracteres equivalentes serão diferente entre domínios de aplicativo. Esse é um recurso no consentimento; para tirar proveito dele, você deve definir a `enabled` atributo o `<UseRandomizedStringHashAlgorithm>` elemento a ser `1`.  
   

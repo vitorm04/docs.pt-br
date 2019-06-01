@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765317"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457050"
 ---
 # <a name="loadlibraryshim-function"></a>Função LoadLibraryShim
 Carrega uma versão especificada de uma DLL que está incluída no pacote redistribuível do .NET Framework.  
@@ -45,7 +45,7 @@ HRESULT LoadLibraryShim (
  [in] Uma cadeia terminada em zero que representa o nome da DLL a ser carregado na biblioteca do .NET Framework.  
   
  `szVersion`  
- [in] Uma cadeia terminada em zero que representa a versão da DLL a ser carregado. Se `szVersion` for nula, a versão selecionada para o carregamento é a versão mais recente da DLL especificado que é inferior à versão 4. Ou seja, todas as versões iguais ou maiores que a versão 4 são ignoradas se `szVersion` for nulo, e se nenhuma versão menor do que a versão 4 está instalado, a DLL não será carregada. Isso é para garantir a instalação do [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] não afeta componentes ou aplicativos já existentes. Consulte a entrada [in-proc SxS e o início rápido da migração](https://go.microsoft.com/fwlink/?LinkId=200329) no blog da equipe do CLR.  
+ [in] Uma cadeia terminada em zero que representa a versão da DLL a ser carregado. Se `szVersion` for nula, a versão selecionada para o carregamento é a versão mais recente da DLL especificado que é inferior à versão 4. Ou seja, todas as versões iguais ou maiores que a versão 4 são ignoradas se `szVersion` for nulo, e se nenhuma versão menor do que a versão 4 está instalado, a DLL não será carregada. Isso é para garantir que a instalação do .NET Framework 4 não afeta componentes ou aplicativos já existentes. Consulte a entrada [in-proc SxS e o início rápido da migração](https://go.microsoft.com/fwlink/?LinkId=200329) no blog da equipe do CLR.  
   
  `pvReserved`  
  Reservado para uso futuro.  

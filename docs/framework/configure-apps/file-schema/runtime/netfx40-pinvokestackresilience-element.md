@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725bd715f6e70dff08929e58d588a3d8561d5011
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674058"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456391"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > elemento
 Especifica se o tempo de execução corrige automaticamente declarações de invocação de plataforma incorretas em tempo de execução, às custas de transições mais lentas entre o código gerenciado e não gerenciado.  
@@ -56,7 +56,7 @@ Especifica se o tempo de execução corrige automaticamente declarações de inv
 ## <a name="remarks"></a>Comentários  
  Esse elemento permite que você troque o marshaling de interoperabilidade mais rápido para declarações de invocação de resiliência de tempo de execução na plataforma incorreta.  
   
- Começando com o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], uma arquitetura de marshaling de interoperabilidade simplificada fornece uma melhoria significativa de desempenho para transições do código gerenciado para código não gerenciado. Em versões anteriores do .NET Framework, a plataforma incorreta de camada detectada marshaling declarações em plataformas de 32 bits de invocação e corrigidas automaticamente a pilha. A nova arquitetura de marshaling elimina essa etapa. Como resultado, as transições são muito rápidas, mas a declaração de invocação de uma plataforma incorreta pode causar uma falha no programa.  
+ Uma arquitetura de marshaling de interoperabilidade simplificada começando com o .NET Framework 4, fornece uma melhoria significativa de desempenho para transições do código gerenciado para código não gerenciado. Em versões anteriores do .NET Framework, a plataforma incorreta de camada detectada marshaling declarações em plataformas de 32 bits de invocação e corrigidas automaticamente a pilha. A nova arquitetura de marshaling elimina essa etapa. Como resultado, as transições são muito rápidas, mas a declaração de invocação de uma plataforma incorreta pode causar uma falha no programa.  
   
  Para que seja fácil detectar declarações incorretas durante o desenvolvimento, a experiência de depuração do Visual Studio foi aprimorado. O [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) Assistente para depuração gerenciada (MDA) notifica você da plataforma incorreta de declarações de invocação quando seu aplicativo está em execução com o depurador anexado.  
   

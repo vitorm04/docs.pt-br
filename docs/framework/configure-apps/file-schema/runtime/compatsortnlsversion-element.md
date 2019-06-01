@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfd241056947fbf1daf48b84ff41e3f74ff7b8de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6aef46db47f881d6a15cc1e58d46219a80194b0
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674267"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456451"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > elemento
 Especifica que o tempo de execução deve usar as ordens de classificação herdadas ao executar comparações de cadeias de caracteres.  
@@ -57,7 +57,7 @@ Especifica que o tempo de execução deve usar as ordens de classificação herd
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Pois operações de maiusculas e minúsculas, classificação e comparação de cadeia de caracteres executada pela <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> classe a [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] estão em conformidade com o padrão Unicode 5,1, os resultados dos métodos de comparação de cadeia de caracteres, como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> pode diferir da versões anteriores do .NET Framework. Se seu aplicativo depender de comportamento herdado, você poderá restaurar as regras de classificação e comparação de cadeia de caracteres usadas no [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] e em versões anteriores ao incluir o elemento `<CompatSortNLSVersion>` no arquivo de configuração do seu aplicativo.  
+ Pois operações de maiusculas e minúsculas, classificação e comparação de cadeia de caracteres executada pela <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> classe no .NET Framework 4 está em conformidade com o padrão Unicode 5,1, os resultados dos métodos de comparação de cadeia de caracteres, como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> podem diferir das versões anteriores do .NET Framework. Se seu aplicativo depender de comportamento herdado, você poderá restaurar as regras de classificação e comparação de cadeia de caracteres usadas no [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] e em versões anteriores ao incluir o elemento `<CompatSortNLSVersion>` no arquivo de configuração do seu aplicativo.  
   
 > [!IMPORTANT]
 >  Restaurar a comparação e as regras de classificação de cadeia de caracteres herdadas também requer que a biblioteca de vínculo dinâmico do arquivo sort00001000.dll esteja disponível no sistema local.  
@@ -70,7 +70,7 @@ Especifica que o tempo de execução deve usar as ordens de classificação herd
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- Ao executar o exemplo no [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], ele exibe a saída a seguir.  
+ Quando você executar o exemplo no .NET Framework 4, ele exibe a saída a seguir.  
   
 ```  
 sta follows a in the sort order.  
@@ -82,7 +82,7 @@ sta follows a in the sort order.
 sta equals a in the sort order.  
 ```  
   
- No entanto, se você adicionar o arquivo de configuração a seguir ao diretório do exemplo e executar o exemplo no [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], a saída será idêntica à produzida pelo exemplo quando ele é executado no [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ No entanto, se você adicionar o seguinte arquivo de configuração para o diretório de exemplo e, em seguida, executar o exemplo no .NET Framework 4, a saída é idêntica à produzida pelo exemplo quando ele é executado o [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
   
 ```xml  
 <?xml version ="1.0"?>  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591200"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457522"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Passo a passo: armazenar dados de aplicativo em cache em um aplicativo WPF
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.
@@ -22,7 +22,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
  O .NET Framework fornece classes que permitem que você usar o cache em aplicativos do .NET Framework. Essas classes estão localizadas no <xref:System.Runtime.Caching> namespace.
 
 > [!NOTE]
->  O <xref:System.Runtime.Caching> namespace é novo no [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Esse namespace torna o caching está disponível para todos os aplicativos do .NET Framework. Nas versões anteriores do .NET Framework, estava disponível apenas no armazenamento em cache o <xref:System.Web> namespace e, portanto, exigia uma dependência das classes do ASP.NET.
+>  O <xref:System.Runtime.Caching> namespace é novo no .NET Framework 4. Esse namespace torna o caching está disponível para todos os aplicativos do .NET Framework. Nas versões anteriores do .NET Framework, estava disponível apenas no armazenamento em cache o <xref:System.Web> namespace e, portanto, exigia uma dependência das classes do ASP.NET.
 
  Este passo a passo mostra como usar a funcionalidade de cache que está disponível no .NET Framework como parte de um [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativo. No passo a passo, você armazenará em cache o conteúdo de um arquivo de texto.
 
@@ -30,7 +30,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
 - Criação de um projeto de aplicativo do WPF.
 
-- Adição de uma referência ao [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+- Adicionando uma referência para o .NET Framework 4.
 
 - Inicialização de um cache.
 
@@ -62,12 +62,12 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
      A caixa de diálogo **Novo Projeto** é exibida.
 
-3. Em **Modelos Instalados**, selecione a linguagem de programação que você deseja usar (**Visual Basic** ou **Visual C#**).
+3. Em **Modelos Instalados**, selecione a linguagem de programação que você deseja usar (**Visual Basic** ou **Visual C#** ).
 
 4. Na caixa de diálogo **Novo Projeto**, selecione **Aplicativo WPF**.
 
     > [!NOTE]
-    >  Se você não vir as **aplicativo WPF** modelo, certifique-se de que você está buscando uma versão do .NET Framework que suporta o WPF. Na caixa de diálogo **Novo Projeto**, selecione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] na lista.
+    >  Se você não vir as **aplicativo WPF** modelo, certifique-se de que você está buscando uma versão do .NET Framework que suporta o WPF. No **novo projeto** caixa de diálogo, selecione .NET Framework 4 na lista.
 
 5. Na caixa de texto **Nome**, insira um nome para o projeto. Por exemplo, você pode inserir **WPFCaching**.
 
@@ -78,7 +78,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
      O WPF Designer é aberto modo de exibição de **Design** e exibe o arquivo MainWindow.xaml. O Visual Studio cria o **meu projeto** pasta, o arquivo Application XAML e o arquivo MainWindow. XAML.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Direcionamento ao .NET Framework e adição de uma referência aos assemblies de cache
- Por padrão, os aplicativos do WPF se destinam ao [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Para usar o <xref:System.Runtime.Caching> namespace em um aplicativo WPF, o aplicativo deve ter como destino o [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (não o [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve incluir uma referência ao namespace.
+ Por padrão, os aplicativos do WPF se destinam ao [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Para usar o <xref:System.Runtime.Caching> namespace em um aplicativo do WPF, o aplicativo deve ter como destino o .NET Framework 4 (não o [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve incluir uma referência ao namespace.
 
  Portanto, a próxima etapa é alterar o destino do .NET Framework e adicionar uma referência para o <xref:System.Runtime.Caching> namespace.
 
@@ -93,11 +93,11 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
 2. Clique na guia **Compilar**.
 
-3. Na parte inferior da janela, clique em **Opções Avançadas de Compilação...**.
+3. Na parte inferior da janela, clique em **Opções Avançadas de Compilação...** .
 
      A caixa de diálogo **Configurações Avançadas do Compilador** é exibida.
 
-4. Na lista **Estrutura de destino (todas as configurações)**, selecione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Não selecione [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]).
+4. No **estrutura de destino (todas as configurações)** , selecione .NET Framework 4. (Não selecione [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]).
 
 5. Clique em **OK**.
 
@@ -121,7 +121,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
 2. Clique na guia **Aplicativo**.
 
-3. Na lista **Estrutura de destino**, selecione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Não selecione **.NET Framework 4 Client Profile**).
+3. No **estrutura de destino** , selecione .NET Framework 4. (Não selecione **.NET Framework 4 Client Profile**).
 
 4. Adicione uma referência ao assembly do cache, seguindo estas etapas:
 

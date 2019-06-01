@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868895"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456562"
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente de segurança, nível 2
 
@@ -58,7 +58,7 @@ Esse tópico contém as seguintes seções:
 
 ## <a name="usage-examples-and-behaviors"></a>Exemplos de Uso e Comportamentos
 
-Para especificar [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] regras (transparência de nível 2), use a anotação a seguir para um assembly:
+Para especificar as regras do .NET Framework 4 (transparência de nível 2), use a anotação a seguir para um assembly:
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,7 +70,7 @@ Para bloquear nas regras do .NET Framework 2.0 (transparência de nível 1), use
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-Se você não fazer anotações em um assembly, o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] regras são usadas por padrão. No entanto, a prática recomendada é usar o <xref:System.Security.SecurityRulesAttribute> de atributo, em vez de dependendo do padrão.
+Se você não fazer anotações em um assembly, as regras do .NET Framework 4 são usadas por padrão. No entanto, a prática recomendada é usar o <xref:System.Security.SecurityRulesAttribute> de atributo, em vez de dependendo do padrão.
 
 ### <a name="assembly-wide-annotation"></a>Anotação de todo o assembly
 

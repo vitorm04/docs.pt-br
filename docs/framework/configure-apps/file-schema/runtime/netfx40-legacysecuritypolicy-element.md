@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a0ca8560fcd5d7f9d171df3e3b4c3f42e78641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674175"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456477"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > elemento
 Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso do Código) herdada.  
@@ -57,7 +57,7 @@ Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso
 ## <a name="remarks"></a>Comentários  
  No .NET Framework versão 3.5 e versões anteriores, a política de CAS está sempre em vigor. No [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], política de CAS deve estar habilitada.  
   
- Política de CAS é específico da versão. As políticas personalizadas do CAS que existem nas versões anteriores do .NET Framework devem ser especificadas novamente no [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Política de CAS é específico da versão. As políticas personalizadas do CAS que existem nas versões anteriores do .NET Framework devem ser especificadas novamente no .NET Framework 4.  
   
  Aplicando o `<NetFx40_LegacySecurityPolicy>` elemento para um [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] assembly não afeta [código transparente de segurança](../../../../../docs/framework/misc/security-transparent-code.md); as regras de transparência ainda se aplicam.  
   
@@ -65,7 +65,7 @@ Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso
 >  Aplicando o `<NetFx40_LegacySecurityPolicy>` elemento pode resultar em penalidades de desempenho significativos para os assemblies de imagem nativa criados pelo [gerador de imagem nativa (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) que não estão instaladas no [cache de assembly global ](../../../../../docs/framework/app-domains/gac.md). A degradação do desempenho é causada pela incapacidade do tempo de execução para carregar os assemblies como imagens nativas, quando o atributo é aplicado, resultando em seus que está sendo carregado assemblies como just-in-time.  
   
 > [!NOTE]
->  Se você especificar uma versão do .NET Framework de destino que é anterior a [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] nas configurações do projeto para o seu projeto do Visual Studio, política de CAS será habilitada, incluindo as políticas personalizadas de CAS especificado para essa versão. No entanto, você não poderá usar um novo [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] tipos e membros. Você também pode especificar uma versão anterior do .NET Framework usando o [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no esquema de configurações de inicialização em seu [arquivo de configuração de aplicativo](../../../../../docs/framework/configure-apps/index.md).  
+>  Se você especificar uma versão do .NET Framework de destino que é anterior ao .NET Framework 4, nas configurações do projeto para o seu projeto do Visual Studio, política de CAS será habilitada, incluindo as políticas personalizadas de CAS especificado para essa versão. No entanto, você não poderá usar os novos tipos do .NET Framework 4 e membros. Você também pode especificar uma versão anterior do .NET Framework usando o [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no esquema de configurações de inicialização em seu [arquivo de configuração de aplicativo](../../../../../docs/framework/configure-apps/index.md).  
   
 > [!NOTE]
 >  Sintaxe do arquivo de configuração diferencia maiusculas de minúsculas. Você deve usar a sintaxe conforme fornecidos nas seções de sintaxe e exemplo.  

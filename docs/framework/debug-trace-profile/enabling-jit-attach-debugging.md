@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7af34cf4bd3a2367eaf320990dbbc24f4e7a8bbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 088ca6dd8973a626b1f028c638e60bf995af1e65
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660144"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457324"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Habilitando a depuração por anexação JIT
 A depuração de anexação JIT é a expressão usada para descrever a anexação de um depurador a um processo quando você encontra erros ou ela pode ser disparada por funções ou métodos específicos.  
@@ -33,7 +33,7 @@ A depuração de anexação JIT é a expressão usada para descrever a anexaçã
   
 - Função [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (Win32).  
   
- Antes do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], o .NET Framework fornecia chaves do Registro separadas para controlar o comportamento dos depuradores nativos e gerenciados. Começando com o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], controle é consolidado em uma única chave do registro: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Current version\aedebug. Os valores que podem ser definidos para essa chave determinam se um depurador é invocado e, nesse caso, se ele é invocado com uma caixa de diálogo que exige a interação do usuário. Para obter informações sobre como definir essa chave do registro, consulte [Configurando a depuração automática](https://go.microsoft.com/fwlink/?LinkId=181767).  
+ Antes do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], o .NET Framework fornecia chaves do Registro separadas para controlar o comportamento dos depuradores nativos e gerenciados. Começando com o .NET Framework 4, o controle é consolidado em uma única chave do registro: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Current version\aedebug. Os valores que podem ser definidos para essa chave determinam se um depurador é invocado e, nesse caso, se ele é invocado com uma caixa de diálogo que exige a interação do usuário. Para obter informações sobre como definir essa chave do registro, consulte [Configurando a depuração automática](https://go.microsoft.com/fwlink/?LinkId=181767).  
   
 ## <a name="see-also"></a>Consulte também
 

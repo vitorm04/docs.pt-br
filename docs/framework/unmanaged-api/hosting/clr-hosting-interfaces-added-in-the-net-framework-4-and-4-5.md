@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6405c61429d56b125fd0327824482bf702e41319
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: aceb0179c6ee52699370480041af62262eff6bc2
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380288"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456934"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfaces de hospedagem CLR adicionadas no .NET Framework 4 e 4.5
 Esta seção descreve as interfaces não gerenciadas hosts podem usar para integrar o common language runtime (CLR) a [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], .NET Framework 4.5 e versões posteriores em seus aplicativos. Essas interfaces fornecem métodos para um host configurar e carregar o tempo de execução em um processo.  
   
- Começando com o [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], hospedagem de todas as interfaces têm as seguintes características:  
+ Começando com o .NET Framework 4, todas as interfaces de hospedagem têm as seguintes características:  
   
 - Usar o gerenciamento da vida útil (`AddRef` e `Release`), o encapsulamento (contexto implícito) e `QueryInterface` de COM.  
   

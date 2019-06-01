@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868739"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456507"
 ---
 # <a name="security-transparent-code"></a>Código transparente de segurança
 
@@ -59,14 +59,14 @@ Nível de assembly <xref:System.Security.SecurityRulesAttribute> atributo seleci
 
 Os níveis são da seguinte maneira:
 
-- Nível 2 (<xref:System.Security.SecurityRuleSet.Level2>) – a [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] regras de transparência.
+- Nível 2 (<xref:System.Security.SecurityRuleSet.Level2>) – as regras de transparência do .NET Framework 4.
 
 - Nível 1 (<xref:System.Security.SecurityRuleSet.Level1>) – as regras de transparência do .NET Framework 2.0.
 
 A principal diferença entre os dois níveis de transparência é que o nível 1 não impõe regras de transparência para chamadas de fora do assembly e destina-se somente para compatibilidade.
 
 > [!IMPORTANT]
-> Você deve especificar a transparência de nível 1 somente para compatibilidade; ou seja, especificar o nível 1 somente para o código que foi desenvolvido com o .NET Framework 3.5 ou anterior que usa o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> de atributo ou não usa o modelo de transparência. Por exemplo, use a transparência de nível 1 para assemblies do .NET Framework 2.0 que permitem chamadas de chamadores parcialmente confiáveis (APTCA). Para o código que é desenvolvido para o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], sempre use a transparência de nível 2.
+> Você deve especificar a transparência de nível 1 somente para compatibilidade; ou seja, especificar o nível 1 somente para o código que foi desenvolvido com o .NET Framework 3.5 ou anterior que usa o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> de atributo ou não usa o modelo de transparência. Por exemplo, use a transparência de nível 1 para assemblies do .NET Framework 2.0 que permitem chamadas de chamadores parcialmente confiáveis (APTCA). Para o código que é desenvolvido para o .NET Framework 4, sempre use a transparência de nível 2.
 
 ### <a name="level-2-transparency"></a>Transparência de nível 2
 
@@ -114,7 +114,7 @@ O modelo de transparência de nível 1 tem as seguintes limitações:
 
 ## <a name="transparency-enforcement"></a>Imposição de Transparência
 
-Regras de transparência não são impostas até que a transparência é calculada. Nesse momento, um <xref:System.InvalidOperationException> será lançada se uma regra de transparência é violada. A hora em que a transparência é calculada depende de vários fatores e não pode ser prevista. Ele é calculado mais tarde. No [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], cálculo de transparência de nível de assembly ocorre mais cedo do que no .NET Framework 2.0. A única garantia é que o cálculo de transparência ocorrerá no momento em que ela é necessária. Isso é semelhante a como o compilador just-in-time (JIT) pode alterar o ponto quando um método é compilado e quaisquer erros nesse método são detectados. Cálculo de transparência é invisível se seu código não tem nenhum erro de transparência.
+Regras de transparência não são impostas até que a transparência é calculada. Nesse momento, um <xref:System.InvalidOperationException> será lançada se uma regra de transparência é violada. A hora em que a transparência é calculada depende de vários fatores e não pode ser prevista. Ele é calculado mais tarde. No .NET Framework 4, o cálculo de transparência de nível de assembly ocorre mais cedo do que no .NET Framework 2.0. A única garantia é que o cálculo de transparência ocorrerá no momento em que ela é necessária. Isso é semelhante a como o compilador just-in-time (JIT) pode alterar o ponto quando um método é compilado e quaisquer erros nesse método são detectados. Cálculo de transparência é invisível se seu código não tem nenhum erro de transparência.
 
 ## <a name="see-also"></a>Consulte também
 

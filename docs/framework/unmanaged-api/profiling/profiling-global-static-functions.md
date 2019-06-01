@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ea65c06871d9762fa6daac229a568594b4c4479
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758230"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457478"
 ---
 # <a name="profiling-global-static-functions"></a>Criando perfil de funções estáticas globais
 Esta seção descreve as funções da API não gerenciadas que usa a API de criação de perfil.  
@@ -35,13 +35,13 @@ Esta seção descreve as funções da API não gerenciadas que usa a API de cria
  Notifica o criador de perfil que o identificador fornecido de uma função pode ser remapeado para uma ID alternativa a ser usado na [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), e [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) retornos de chamada para essa função. Também permite que o criador de perfil indicar se deseja receber retornos de chamada para essa função  
   
  [Função FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- Notifica o criador de perfil que o controle está sendo passado para uma função e fornece informações sobre a pilha de argumentos de função e de quadro. Preterido no [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Notifica o criador de perfil que o controle está sendo passado para uma função e fornece informações sobre a pilha de argumentos de função e de quadro. Preterido no .NET Framework 4.  
   
  [Função FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- Notifica o criador de perfil que uma função está prestes a retornar ao chamador e fornece informações sobre o stack frame e função de valor retornado. Preterido no [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Notifica o criador de perfil que uma função está prestes a retornar ao chamador e fornece informações sobre o stack frame e função de valor retornado. Preterido no .NET Framework 4.  
   
  [Função FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- Notifica o criador de perfil que a função atualmente em execução está prestes a realizar uma chamada tail para outra função e fornece informações sobre o quadro de pilha. Preterido no [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Notifica o criador de perfil que a função atualmente em execução está prestes a realizar uma chamada tail para outra função e fornece informações sobre o quadro de pilha. Preterido no .NET Framework 4.  
   
  [Função StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
  Fornece o criador de perfil com informações sobre cada quadro gerenciado e cada execução de quadros não gerenciados na pilha durante uma movimentação de pilha, que é iniciada com o [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método.  

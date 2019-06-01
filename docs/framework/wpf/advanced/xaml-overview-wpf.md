@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 403bd881f6e6349a91fc952a80441b0cec0c08fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662238"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457545"
 ---
 # <a name="xaml-overview-wpf"></a>Visão geral XAML (WPF)
 Este tópico descreve os recursos da linguagem XAML e demonstra como você pode usar o XAML para escrever aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Este tópico descreve especificamente o XAML como implementado por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O XAML em si é um conceito de linguagem maior que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -307,7 +307,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
 ## <a name="xaml-security"></a>Segurança XAML  
  XAML é uma linguagem de marcação que representa diretamente a instanciação e execução de objetos. Portanto, elementos criados em XAML têm a mesma capacidade que o código gerado equivalente no que se refere a interagir com recursos de sistema (acesso a rede e E/S do sistema de arquivos, por exemplo).  
   
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dá suporte ao [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)] da estrutura de segurança do [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Isso significa que conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em execução na zona da Internet tem permissões de execução reduzidas. "XAML avulso" (páginas de XAML não compilado interpretado na hora do carregamento por um visualizador XAML) e [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] geralmente são executados nesta zona da Internet e usam o mesmo conjunto de permissões.  No entanto, o XAML carregado em um aplicativo totalmente confiável tem o mesmo acesso aos recursos de sistema que o aplicativo host. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](../wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece suporte a estrutura de segurança do .NET Framework 4 [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Isso significa que conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em execução na zona da Internet tem permissões de execução reduzidas. "XAML avulso" (páginas de XAML não compilado interpretado na hora do carregamento por um visualizador XAML) e [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] geralmente são executados nesta zona da Internet e usam o mesmo conjunto de permissões.  No entanto, o XAML carregado em um aplicativo totalmente confiável tem o mesmo acesso aos recursos de sistema que o aplicativo host. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](../wpf-partial-trust-security.md).  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>Carregando XAML do código  

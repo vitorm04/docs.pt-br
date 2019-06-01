@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: d98f8d672ed1de1a5065a0390dba29992bcc1b39
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5b15c504a01a0ab8e17b8ad8811d9ed183609322
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634468"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456268"
 ---
 # <a name="startup-element"></a>\<inicialização > elemento
 
@@ -44,7 +44,7 @@ Especifica informações de inicialização de tempo de execução de linguagem 
 |Valor|Descrição|
 |-----------|-----------------|
 |`true`|Habilitar [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] política de ativação de tempo de execução para o tempo de execução escolhido, é associar técnicas de ativação de tempo de execução herdado (como o [função CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) para o tempo de execução escolhido do arquivo de configuração em vez de limitação-los na versão 2.0 do CLR. Portanto, se a versão do CLR 4 ou posterior é escolhido do arquivo de configuração, assemblies de modo misto criados com versões anteriores do .NET Framework são carregados com a versão do CLR escolhida. Definir esse valor impede a versão 1.1 do CLR ou a versão 2.0 do CLR seja carregado para o mesmo processo, efetivamente, desabilitando o recurso de lado a lado em processo.|
-|`false`|Use a política de ativação padrão para o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] e posterior, que é permitir a técnicas de ativação para carregar a versão 1.1 ou 2.0 do CLR no processo de execução herdado. Definir esse valor impede que os assemblies de modo misto do carregamento para o .NET Framework 4 ou posterior, a menos que eles foram criados com o .NET Framework 4 ou posterior. Esse valor é o padrão.|
+|`false`|Use a política de ativação padrão para o .NET Framework 4 e posterior permitir a técnicas de ativação para carregar a versão 1.1 ou 2.0 do CLR no processo de execução herdado. Definir esse valor impede que os assemblies de modo misto do carregamento para o .NET Framework 4 ou posterior, a menos que eles foram criados com o .NET Framework 4 ou posterior. Esse valor é o padrão.|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -67,7 +67,7 @@ Especifica informações de inicialização de tempo de execução de linguagem 
 
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>O atributo useLegacyV2RuntimeActivationPolicy
 
- Esse atributo é útil se seu aplicativo usa caminhos de ativação herdados, como o [função CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), e você deseja esses caminhos para ativar a versão 4 do CLR em vez de uma versão anterior, ou se seu aplicativo criado com o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] , mas tem uma dependência em um assembly de modo misto criado com uma versão anterior do .NET Framework. Nesses cenários, defina o atributo como `true`.
+ Esse atributo é útil se seu aplicativo usa caminhos de ativação herdados, como o [função CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), e você deseja esses caminhos para ativar a versão 4 do CLR em vez de uma versão anterior, ou se seu aplicativo criado com o .NET Framework 4, mas tem uma dependência em um assembly de modo misto criado com uma versão anterior do .NET Framework. Nesses cenários, defina o atributo como `true`.
 
 > [!NOTE]
 > Definindo o atributo para `true` impede que o CLR versão 1.1 ou versão 2.0 do CLR seja carregado no mesmo processo, efetivamente, desabilitando o recurso de lado a lado em processo (consulte [execução lado a lado para interoperabilidade COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).

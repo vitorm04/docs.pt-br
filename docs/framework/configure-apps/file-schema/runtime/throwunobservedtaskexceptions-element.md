@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b47c4d07fc0ee0cdaf53fe3c8199fb37dcb6c1b1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: cb6cfc8e1c3f0409d99d31efa0a645476b47e45e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377895"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456257"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > elemento
 Especifica se as exceções de tarefas sem tratamento devem encerrar um processo em execução.  
@@ -65,7 +65,7 @@ Especifica se as exceções de tarefas sem tratamento devem encerrar um processo
   
  Para tornar mais fácil para os desenvolvedores escrevam código assíncrono com base em tarefas, o .NET Framework 4.5 altera esse comportamento padrão para exceções não observadas que. Exceções não observadas ainda fazer com que o <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> evento seja acionado, mas por padrão, o processo não encerra. Em vez disso, a exceção é ignorada após o evento é gerado, independentemente se um manipulador de eventos observa a exceção.  
   
- No .NET Framework 4.5, você pode usar o [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) em um arquivo de configuração de aplicativo para habilitar o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] comportamento de lançar uma exceção.  
+ No .NET Framework 4.5, você pode usar o [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) em um arquivo de configuração de aplicativo para habilitar o comportamento do .NET Framework 4 de lançar uma exceção.  
   
  Você também pode especificar o comportamento de exceção em uma das seguintes maneiras:  
   

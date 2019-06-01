@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc55809ecaffa4cab4fa4336f9f7f5c06debde2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634220"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456219"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > elemento
 
@@ -22,7 +22,7 @@ Especifica qual versão do common language runtime e, opcionalmente, o aplicativ
 
 [\<configuration>](../configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<supportedRuntime>**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -51,7 +51,7 @@ Para aplicativos que dão suporte a versões do tempo de execução do .NET Fram
 Se o  **\<supportedRuntime >** elemento com o `sku` atributo estiver presente no arquivo de configuração e a versão instalada do .NET Framework for inferior a versão com suporte especificada, o aplicativo Falha na execução e exibirá uma mensagem solicitando a instalação da versão com suporte. Caso contrário, o aplicativo tenta executar em qualquer versão instalada, mas ele talvez tenha um comportamento inesperado se ele não é totalmente compatível com essa versão. (As diferenças de compatibilidade entre versões do .NET Framework, consulte [compatibilidade de aplicativos no .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility).) Portanto, é recomendável que você inclua esse elemento no arquivo de configuração de aplicativo para o diagnóstico de erro mais fácil. (O arquivo de configuração gerado automaticamente pelo Visual Studio ao criar um novo projeto já contém-lo.)
   
 > [!NOTE]
-> Se seu aplicativo usa caminhos de ativação herdados, como o [função CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), e você deseja esses caminhos para ativar a versão 4 do CLR em vez de uma versão anterior, ou se seu aplicativo é criado com o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], mas tem uma dependência em um assembly de modo misto criado com uma versão anterior do .NET Framework, não é suficiente especificar o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] na lista de tempos de execução com suporte. Além disso, nos [ \<inicialização > elemento](../startup/startup-element.md) em seu arquivo de configuração, você deve definir a `useLegacyV2RuntimeActivationPolicy` atributo `true`. No entanto, definir esse atributo como `true` significa que todos os componentes criados com versões anteriores do .NET Framework serão executados usando [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] em vez dos tempos de execução com os quais foram criados.
+> Se seu aplicativo usa caminhos de ativação herdados, como o [função CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), e você deseja esses caminhos para ativar a versão 4 do CLR em vez de uma versão anterior, ou se seu aplicativo é criado com o .NET Framework 4, mas tem uma dependência em um assembly de modo misto criado com uma versão anterior do .NET Framework, não é suficiente especificar o .NET Framework 4 na lista de tempos de execução com suporte. Além disso, nos [ \<inicialização > elemento](../startup/startup-element.md) em seu arquivo de configuração, você deve definir a `useLegacyV2RuntimeActivationPolicy` atributo `true`. No entanto, definir esse atributo como `true` significa que todos os componentes criados com versões anteriores do .NET Framework são executados usando o .NET Framework 4, em vez dos tempos de execução que eles foram criados.
 
 Recomendamos que você teste aplicativos com todas as versões do .NET Framework na qual eles podem ser executados.
 

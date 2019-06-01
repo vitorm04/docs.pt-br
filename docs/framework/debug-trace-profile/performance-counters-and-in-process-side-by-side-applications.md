@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c50132be2755119b19e38d94919eb4b0ab28d994
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614315"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457259"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Contadores de desempenho e aplicativos lado a lado em processo
 Usando o Monitor de Desempenho (Perfmon.exe), é possível diferenciar os contadores de desempenho por tempo de execução. Este tópico descreve a alteração do Registro necessária para habilitar essa funcionalidade.  
@@ -29,7 +29,7 @@ Usando o Monitor de Desempenho (Perfmon.exe), é possível diferenciar os contad
   
 - Quando um aplicativo usa várias instâncias do Common Language Runtime. O [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] dá suporte a cenários de hospedagem lado a lado em processo; ou seja, um único processo ou aplicativo pode carregar várias instâncias do common language runtime. Se um único aplicativo chamado myapp.exe carrega duas instâncias de tempo de execução, por padrão, elas serão designadas na coluna **Instância** como **myapp** e **myapp#1**. Nesse caso, não está claro se **myapp** e **myapp#1** referem-se a dois aplicativos de mesmo nome ou ao mesmo aplicativo com dois tempos de execução. Se vários aplicativos com o mesmo nome carregam vários tempos de execução, a ambiguidade é ainda maior.  
   
- Você pode definir uma chave do Registro para eliminar essa ambiguidade. Para aplicativos desenvolvidos usando o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], essa alteração do Registro adiciona um identificador de processo seguido por um identificador de instância de tempo de execução para o nome do aplicativo na coluna **Instância**. Em vez de *aplicativo* ou *aplicativo*#1, o aplicativo agora é identificado como *aplicativo*_`p`*processID*\_`r`*runtimeID* na coluna **Instância**. Se um aplicativo foi desenvolvido usando uma versão anterior do Common Language Runtime, essa instância é representada como *aplicativo\_*`p`*processID* desde que o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] esteja instalado.  
+ Você pode definir uma chave do Registro para eliminar essa ambiguidade. Para aplicativos desenvolvidos usando o .NET Framework 4, essa alteração no registro adiciona um identificador de processo seguido por um identificador de instância de tempo de execução para o nome do aplicativo na **instância** coluna. Em vez de *aplicativo* ou *aplicativo*#1, o aplicativo agora é identificado como *aplicativo*_`p`*processID*\_`r`*runtimeID* na coluna **Instância**. Se um aplicativo foi desenvolvido usando uma versão anterior do common language runtime, essa instância é representada como *application\_* `p`*processID* desde que o. NET Framework 4 está instalado.  
   
 ## <a name="performance-counters-for-in-process-side-by-side-applications"></a>Contadores de desempenho para aplicativos lado a lado em processo  
  Para lidar com contadores de desempenho para várias versões do Common Language Runtime hospedadas em um único aplicativo, você deve alterar uma única configuração de chave do Registro, conforme mostrado na tabela a seguir.  
@@ -50,11 +50,11 @@ Usando o Monitor de Desempenho (Perfmon.exe), é possível diferenciar os contad
  [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
  [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
- Quando você altera esse registro, Perfmon.exe exibe os nomes dos aplicativos que têm como destino o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] como *aplicativo*_`p`*processID*\_`r`*runtimeID*, em que *aplicativo* é o nome do aplicativo, *processID* é o identificador de processo do aplicativo e *runtimeID* é um identificador do Common Language Runtime. Por exemplo, se um aplicativo chamado myapp.exe carrega duas instâncias nomeadas do Common Language Runtime, Perfmon.exe pode identificar uma instância como myapp_p1416_r10 e a segunda como myapp_p3160_r10. O identificador de tempo de execução apenas retira a ambiguidade os tempos de execução dentro de um processo; ele não fornece nenhuma outra informação sobre o tempo de execução. (Por exemplo, a ID de tempo de execução não tem nenhuma relação com a versão ou o SKU do tempo de execução.)  
+ Quando você alterar esse registro, Perfmon.exe exibe os nomes dos aplicativos destinados ao .NET Framework 4 como *application*_`p`*processID* \_ `r` *runtimeID*, onde *application* é o nome do aplicativo, *processID* é o identificador de processo do aplicativo, e  *runtimeID* é um identificador de tempo de execução de linguagem comum. Por exemplo, se um aplicativo chamado myapp.exe carrega duas instâncias nomeadas do Common Language Runtime, Perfmon.exe pode identificar uma instância como myapp_p1416_r10 e a segunda como myapp_p3160_r10. O identificador de tempo de execução apenas retira a ambiguidade os tempos de execução dentro de um processo; ele não fornece nenhuma outra informação sobre o tempo de execução. (Por exemplo, a ID de tempo de execução não tem nenhuma relação com a versão ou o SKU do tempo de execução.)  
   
- Se o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] é instalado, a alteração do Registro também afeta os aplicativos que foram desenvolvidos usando versões anteriores do .NET Framework. Eles aparecem em Perfmon.exe como *aplicativo_*`p`*processID*, em que *aplicativo* é o nome do aplicativo e *processID* é o identificador de processo. Por exemplo, se os contadores de desempenho de dois aplicativos chamados myapp.exe são monitorados, um pode aparecer como myapp_p23900 e o outro como myapp_p24908.  
+ Se o .NET Framework 4 é instalado, a alteração do registro também afeta aplicativos que foram desenvolvidos usando versões anteriores do .NET Framework. Eles aparecem em Perfmon.exe como *aplicativo_* `p`*processID*, em que *aplicativo* é o nome do aplicativo e *processID* é o identificador de processo. Por exemplo, se os contadores de desempenho de dois aplicativos chamados myapp.exe são monitorados, um pode aparecer como myapp_p23900 e o outro como myapp_p24908.  
   
 > [!NOTE]
 >  O identificador de processo elimina a ambiguidade da resolução de dois aplicativos com o mesmo nome que usam versões anteriores do tempo de execução. Um identificador de tempo de execução não é necessário para versões anteriores, porque versões anteriores do Common Language Runtime não dão suporte a cenários lado a lado.  
   
- Se o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] não está presente ou foi desinstalado, definir a chave do Registro não tem nenhum efeito. Isso significa que dois aplicativos com o mesmo nome continuarão a aparecer no Perfmon.exe como *aplicativo* e *aplicativo#1* (por exemplo, como **myapp** e **myapp#1**).
+ Se o .NET Framework 4 não está presente ou foi desinstalado, definir a chave do registro não tem nenhum efeito. Isso significa que dois aplicativos com o mesmo nome continuarão a aparecer no Perfmon.exe como *aplicativo* e *aplicativo#1* (por exemplo, como **myapp** e **myapp#1**).
