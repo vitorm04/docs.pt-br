@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920296"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456105"
 ---
 # <a name="net-framework-tools"></a>Ferramentas do .NET Framework
 A ferramentas do .NET Framework facilitam a criação, a implantação e o gerenciamento de aplicativos e componentes com o .NET Framework como destino.  
@@ -63,10 +63,10 @@ A maioria das ferramentas do .NET Framework descritas nesta seção é instalada
  Utiliza um arquivo PE que contém o código IL e cria um arquivo de texto que pode ser inserido no IL Assembler (Ilasm.exe).  
   
  [Installutil.exe (Ferramenta de Instalação)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- Permite instalar e desinstalar recursos de servidor executando os componentes de instalador em um assembly especificado. (Funciona com classes no namespace <xref:System.Configuration.Install>.) Permite instalar e desinstalar recursos de servidor executando os componentes de instalador em um assembly especificado. (Funciona com classes no namespace <xref:System.Configuration.Install>.)  
+ Permite instalar e desinstalar recursos de servidor executando os componentes de instalador em um assembly especificado. (Funciona com classes no namespace <xref:System.Configuration.Install>.) 
   
  [Lc.exe (Compilador de Licença)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- Lê arquivos de texto que contêm informações de licenciamento e produz um arquivo .licenses que pode ser inserido em um executável do Common Language Runtime como um recurso. Lê arquivos de texto que contêm informações de licenciamento e produz um arquivo .licenses que pode ser inserido em um executável do Common Language Runtime como um recurso.  
+ Lê arquivos de texto que contêm informações de licenciamento e produz um arquivo .licenses que pode ser inserido em um executável do Common Language Runtime como um recurso. 
   
  [Mage.exe (Manifest Generation and Editing Tool)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  Permite criar, editar e assinar manifestos de aplicativo e implantação. Como uma ferramenta de linha de comando, Mage.exe pode ser executado com base tanto em scripts de lote quanto em aplicativos com base no Windows, inclusive aplicativos do ASP.NET.  
