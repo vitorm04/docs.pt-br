@@ -1,15 +1,15 @@
 ---
 title: Criar um modelo personalizado para dotnet new
 description: Saiba como criar um modelo personalizado para o comando dotnet new neste divertido tutorial.
-author: guardrex
+author: mairaw
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e47da048584ec31c275ff9c122d157f34556268a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676441"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299952"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Criar um modelo personalizado para dotnet new
 
@@ -35,7 +35,7 @@ Se você desejar usar o exemplo baixado com a distribuição do sistema de arqui
 
 ## <a name="create-a-template-from-a-project"></a>Criar um modelo com base em um projeto
 
-Use um projeto existente que você confirmou que compila e executa ou crie um novo projeto de aplicativo de console em uma pasta no disco rígido. Este tutorial pressupõe que o nome da pasta do projeto é *GarciaSoftware.ConsoleTemplate.CSharp* armazenado em *Documentos\Modelos* no perfil do usuário. O nome do modelo de projeto do tutorial está no formato *\<Nome da empresa>.\<Tipo de modelo>.\<Linguagem de programação>*, mas é livre para nomear seu projeto e o modelo que você deseja.
+Use um projeto existente que você confirmou que compila e executa ou crie um novo projeto de aplicativo de console em uma pasta no disco rígido. Este tutorial pressupõe que o nome da pasta do projeto é *GarciaSoftware.ConsoleTemplate.CSharp* armazenado em *Documentos\Modelos* no perfil do usuário. O nome do modelo de projeto do tutorial está no formato *\<Nome da empresa>.\<Tipo de modelo>.\<Linguagem de programação>* , mas é livre para nomear seu projeto e o modelo que você deseja.
 
 1. Adicione uma pasta à raiz do projeto chamado *.template.config*.
 1. Dentro da pasta *.template.config*, crie um arquivo *template.json* para configurar o modelo. Para obter mais informações e definições de membro para o arquivo *template.json*, consulte o tópico [Custom templates for dotnet new](../tools/custom-templates.md#templatejson) (Modelos personalizados para dotnet new) e o esquema [*template.json* esquema no Repositório de Esquema JSON](http://json.schemastore.org/template).
@@ -73,7 +73,7 @@ O modelo foi concluído. Neste momento, você tem duas opções para a distribui
    | **\<authors>**     | cadeia de caracteres | Uma lista separada por vírgulas de autores de pacotes, que correspondem aos nomes de perfil em nuget.org. Os autores são exibidos na Galeria do NuGet em nuget.org e são usados para fazer referência cruzada aos pacotes dos mesmos autores. |
    | **\<description>** | cadeia de caracteres | Uma descrição longa do pacote para exibição de interface do usuário. |
    | **\<id>**          | cadeia de caracteres | O identificador do pacote que não diferencia maiúsculas de minúsculas, que deve ser exclusivo no nuget.org ou qualquer galeria na qual o pacote resida. As IDs não podem conter espaços nem caracteres que não sejam válidos para uma URL e geralmente seguem as regras de namespace do .NET. Consulte [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) (Escolhendo um identificador de pacote único e definindo o número de versão) para obter orientação. |
-   | **\<packageType>** | cadeia de caracteres | Coloque esse elemento dentro de um elemento **\<packageTypes>** entre os elementos **\<metadata>**. Defina o atributo `name` do elemento **\<packageType>** como `Template`. |
+   | **\<packageType>** | cadeia de caracteres | Coloque esse elemento dentro de um elemento **\<packageTypes>** entre os elementos **\<metadata>** . Defina o atributo `name` do elemento **\<packageType>** como `Template`. |
    | **\<version>**     | cadeia de caracteres | A versão do pacote, seguindo o padrão principal.secundário.patch. Os números de versão podem incluir um sufixo de pré-lançamento, conforme descrito em [Pre-release versions](/nuget/create-packages/prerelease-packages#semantic-versioning) (Versões de pré-lançamento). |
 
    Consulte o esquema de arquivo completo [nuspec](/nuget/schema/nuspec) na *referência do .nuspec*.
