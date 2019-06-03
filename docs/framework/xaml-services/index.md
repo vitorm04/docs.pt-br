@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663230"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457404"
 ---
 # <a name="xaml-services"></a>Serviços XAML
-Este tópico descreve os recursos de um conjunto de tecnologia serviços conhecidos como XAML do .NET Framework. A maioria dos serviços e APIs descritas estão localizados no assembly System. XAML, que é um assembly introduzido com o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] conjunto de assemblies do .NET core. Os serviços incluem leitores e gravadores, classes de esquema e o suporte de esquema, fábricas, atribuição de classes, suporte intrínseco de linguagem XAML e outros recursos da linguagem XAML.  
+Este tópico descreve os recursos de um conjunto de tecnologia serviços conhecidos como XAML do .NET Framework. A maioria dos serviços e APIs descritas estão localizados no assembly System. XAML, que é um assembly introduzido com o conjunto do .NET Framework 4 assemblies do .NET core. Os serviços incluem leitores e gravadores, classes de esquema e o suporte de esquema, fábricas, atribuição de classes, suporte intrínseco de linguagem XAML e outros recursos da linguagem XAML.  
   
 ## <a name="about-this-documentation"></a>Sobre esta documentação  
  Documentação conceitual para serviços de XAML do .NET Framework pressupõe que você tenha experiência anterior com a linguagem XAML e como ele pode se aplicar a uma estrutura específica, por exemplo [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ou Windows Workflow Foundation, ou um recurso de tecnologia específica área, por exemplo de personalização da compilação recursos em <xref:Microsoft.Build.Framework.XamlTypes>. Esta documentação não tenta explicar os conceitos básicos do XAML como uma linguagem de marcação, terminologia de sintaxe XAML ou outro material introdutório. Em vez disso, essa documentação se concentra em especificamente usando os serviços de XAML do .NET Framework que estão habilitados na biblioteca do assembly System. XAML. A maioria dessas APIs é para cenários de integração de linguagem XAML e extensibilidade. Isso pode incluir qualquer um dos seguintes:  
