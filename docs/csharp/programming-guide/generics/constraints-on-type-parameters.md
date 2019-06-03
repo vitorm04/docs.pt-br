@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202594"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423542"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
 
@@ -24,8 +24,8 @@ Restrições informam o compilador sobre as funcionalidades que um argumento de 
 |`where T : class`|O argumento de tipo deve ser um tipo de referência. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
 |`where T : unmanaged`|O argumento de tipo não deve ser um tipo de referência e não deve conter nenhum membro de tipo de referência em nenhum nível de aninhamento.|
 |`where T : new()`|O argumento de tipo deve ter um construtor público sem parâmetros. Quando usado em conjunto com outras restrições, a restrição `new()` deve ser a última a ser especificada.|
-|`where T :`*\<nome de classe base>*|O argumento de tipo deve ser ou derivar da classe base especificada.|
-|`where T :`*\<nome da interface>*|O argumento de tipo deve ser ou implementar a interface especificada. Várias restrições de interface podem ser especificadas. A interface de restrição também pode ser genérica.|
+|`where T :` *\<nome de classe base>*|O argumento de tipo deve ser ou derivar da classe base especificada.|
+|`where T :` *\<nome da interface>*|O argumento de tipo deve ser ou implementar a interface especificada. Várias restrições de interface podem ser especificadas. A interface de restrição também pode ser genérica.|
 |`where T : U`|O argumento de tipo fornecido para T deve ser ou derivar do argumento fornecido para U.|
 
 Algumas das restrições são mutuamente exclusivas. Todos os tipos de valor devem ter um construtor sem parâmetros acessível. A restrição `struct` implica a restrição `new()` e a restrição `new()` não pode ser combinada com a restrição `struct`. A restrição `unmanaged` implica a restrição `struct`. A restrição `unmanaged` não pode ser combinada às restrições `struct` ou `new()`.
@@ -114,6 +114,6 @@ Você pode usá-lo conforme mostrado no exemplo a seguir para criar uma enum e c
 
 - <xref:System.Collections.Generic>
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Introdução aos genéricos](../../../csharp/programming-guide/generics/index.md)
 - [Classes genéricas](../../../csharp/programming-guide/generics/generic-classes.md)
 - [Restrição new](../../../csharp/language-reference/keywords/new-constraint.md)

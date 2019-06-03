@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303356"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423242"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -45,7 +45,6 @@ Os principais recursos do C# 1.0 incluíam:
 - [Expressões](../programming-guide/statements-expressions-operators/expressions.md)
 - [Instruções](../programming-guide/statements-expressions-operators/statements.md)
 - [Atributos](../programming-guide/concepts/attributes/index.md)
-- [Literais](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# versão 1.2
 
@@ -174,4 +173,4 @@ Todas essas funcionalidades oferecem novos recursos interessantes para desenvolv
 
 Mas o C# está sendo colocado para um uso cada vez mais amplo. Agora o .NET Core tem qualquer sistema operacional como destino e tem a visão firme na nuvem e na portabilidade.  Essas novas funcionalidades certamente ocupam a mente e o tempo dos designers da linguagem, além de levarem a novos recursos.
 
-_Artigo_ [_originalmente publicado no blog NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, cortesia de Erik Dietrich e Patrick Smacchia._
+_Artigo_ [_originalmente publicado no blog NDepend_](https://blog.ndepend.com/c-versions-look-language-history/) _, cortesia de Erik Dietrich e Patrick Smacchia._

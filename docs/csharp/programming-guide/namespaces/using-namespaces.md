@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: bb491ef93f0f2da89f0101d10e2cf3d158962850
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452674"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423302"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
 Os namespaces são usados intensamente em programas em C# de duas maneiras. Em primeiro lugar, as classes do .NET Framework usam namespaces para organizar suas muitas classes. Em segundo lugar, declarar seus próprios namespaces pode ajudar a controlar o escopo dos nomes de classe e de método em projetos de programação maiores.  
@@ -92,7 +92,6 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
-- [Palavras-chave de namespace](../../../csharp/language-reference/keywords/namespace-keywords.md)
 - [. ??](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [:: ??](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: df4ccde0a9a377b06b8efc64cc78936a983c66cc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 28bf939cb7da760400486c52bb07649826628c1c
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083919"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422593"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referência de C#)
 
@@ -185,7 +185,6 @@ Cada uma das três tarefas causa uma exceção. O bloco `catch` itera por meio d
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Instruções try, throw e catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [Instruções para manipulação de exceções](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-finally](try-finally.md)
 - [Como: Gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
