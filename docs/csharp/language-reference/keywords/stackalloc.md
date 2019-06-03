@@ -7,12 +7,12 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 654e225ef98b13aeb4f689e17b1ff378e6002d28
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c72daa58d2fceb05d9cc9c388a9d2e5dbe062796
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063923"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422433"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Referência de C#)
 
@@ -77,5 +77,4 @@ Você deve usar <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601> quando 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Palavras-chave do operador](operator-keywords.md)
 - [Código não seguro e ponteiros](../../programming-guide/unsafe-code-pointers/index.md)

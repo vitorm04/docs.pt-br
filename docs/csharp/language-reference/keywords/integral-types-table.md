@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: b4a3a46ba98c0c621b747284ce39e03d68a5b62d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396780"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421736"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabela de tipos integrais (Referência em C#)
 
@@ -43,7 +43,6 @@ Use a estrutura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> p
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Tabelas de referência de tipos](reference-tables-for-types.md)
 - [Tabela de tipos de ponto flutuante](floating-point-types-table.md)
 - [Tabela de valores padrão](default-values-table.md)
 - [Tabela de formatação de resultados numéricos](formatting-numeric-results-table.md)
