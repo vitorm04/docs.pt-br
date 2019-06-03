@@ -5,37 +5,38 @@
       href: statements.md
     - name: Expressões
       href: expressions.md
-      items:
-        - name: Membros aptos para expressão
-          href: expression-bodied-members.md
+    - name: Membros aptos para expressão
+      href: expression-bodied-members.md
     - name: Operadores
       href: operators.md
     - name: Funções anônimas
-      href: anonymous-functions.md
       items:
+        - name: Visão geral
+          href: anonymous-functions.md
         - name: Expressões lambda
           href: lambda-expressions.md
-          items:
-            - name: 'Como: usar expressões lambda em uma consulta'
-              href: how-to-use-lambda-expressions-in-a-query.md
-            - name: 'Como: usar expressões lambda fora do LINQ'
-              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: 'Como: usar expressões lambda em uma consulta'
+          href: how-to-use-lambda-expressions-in-a-query.md
+        - name: 'Como: usar expressões lambda fora do LINQ'
+          href: how-to-use-lambda-expressions-outside-linq.md
         - name: Métodos anônimos
           href: anonymous-methods.md
     - name: Operadores sobrecarregáveis
       href: overloadable-operators.md
     - name: Operadores de conversão
-      href: conversion-operators.md
       items:
+        - name: Visão geral de conversões
+          href: conversion-operators.md
         - name: Usar operadores de conversão
           href: using-conversion-operators.md
         - name: 'Como: implementar conversões entre structs definidas pelo usuário'
           href: how-to-implement-user-defined-conversions-between-structs.md
     - name: Expressões de valor padrão
       href: default-value-expressions.md
-    - name: Comparações de igualdade
-      href: equality-comparisons.md
+    - name: Igualdade e comparações de igualdade
       items:
+        - name: Comparações de igualdade
+          href: equality-comparisons.md
         - name: 'Como: definir a igualdade de valor para um tipo'
           href: how-to-define-value-equality-for-a-type.md
         - name: 'Como: testar a igualdade de referência (identidade)'
