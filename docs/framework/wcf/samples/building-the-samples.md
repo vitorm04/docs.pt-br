@@ -1,5 +1,5 @@
 ---
-title: 'Compilando os exemplos do Windows Communication Foundation '
+title: Compilando os exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
 ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61944060"
 ---
-# <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation 
+# <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation
 
 Os exemplos do Windows Communication Foundation (WCF) podem ser criados usando o IDE do Visual Studio ou usando o **msbuild** comando da linha de comando. Ambos os procedimentos são descritos neste tópico.
 
