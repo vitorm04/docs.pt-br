@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8c8725bf21aefa3abf5fc41366d8f983bd686b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c98084b179d27e97ecb3bb34525967d41f8ad1cb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994351"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489621"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>Método ICorDebugProcess3::SetEnableCustomNotification
 Habilita e desabilita as notificações do depurador personalizados do tipo especificado.  
@@ -44,7 +44,7 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
 ## <a name="remarks"></a>Comentários  
  Quando `fEnable` é definido como `true`, chamadas para o <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> gatilho de método um [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) retorno de chamada. As notificações estão desabilitadas por padrão. Portanto, o depurador deve especificar qualquer tipo de notificação, ele conhece e deseja tratar. Porque o [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) classe está no escopo por domínio de aplicativo, o depurador deve chamar `SetEnableCustomNotification` para cada domínio de aplicativo no processo de se desejam receber a notificação em todo o processo.  
   
- Começando com o [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], o somente notificação com suporte é uma notificação de dependência entre threads.  
+ A notificação com suporte somente a partir do .NET Framework 4, é uma notificação de dependência entre threads.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

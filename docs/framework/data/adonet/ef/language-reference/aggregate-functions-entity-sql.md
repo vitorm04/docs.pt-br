@@ -2,19 +2,19 @@
 title: Funções agregadas (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 423c7e843f54e48d4f05f26f3f4071bff1795c69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b01c7dca675e79c61b87bcc1fb30455286db3118
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631750"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489970"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Funções agregadas (Entity SQL)
 Uma agregação é uma construção de linguagem que condense uma coleção em um escalar como parte de uma operação de grupo. as agregações de[!INCLUDE[esql](../../../../../../includes/esql-md.md)] vêm em duas formas:  
   
 - [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funções de coleção que podem ser usadas em qualquer lugar em uma expressão. Isso inclui usando funções agregadas em projeções e predicados que atuam em coleções. Funções de coleção são o modo preferido para especificar agregados em [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
-- O grupo agrega as expressões de consulta que têm um cláusula GROUP BY. Como em [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregados do grupo aceitam DISTINCT e ALL como modificadores a entrada aggregate.  
+- O grupo agrega as expressões de consulta que têm um cláusula GROUP BY. Como no Transact-SQL, agregados do grupo aceitam DISTINCT e ALL como modificadores a entrada aggregate.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primeiro tenta interpretar uma expressão como uma função de coleção e se a expressão é no contexto de uma expressão SELECT ele interpretará como uma agregação de grupo.  
   

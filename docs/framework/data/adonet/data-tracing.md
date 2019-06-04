@@ -2,12 +2,12 @@
 title: Rastreamento de dados no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583771"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489524"
 ---
 # <a name="data-tracing-in-adonet"></a>Rastreamento de dados no ADO.NET
 
@@ -41,7 +41,7 @@ O `ClientConnectionID` está disponível para um <xref:System.Data.SqlClient.Sql
 
 ADO.NET também envia uma ID de atividade específica de thread. A ID de atividade é capturada em sessões de eventos estendidas se as sessões são iniciadas com a opção TRACK_CAUSALITY habilitada. Para problemas de desempenho com uma conexão ativa, você pode obter a ID de atividade do rastreamento de acesso de dados do cliente (`ActivityID` campo) e, em seguida, localize a ID de atividade nas saídas dos eventos estendidos. A ID de atividade nos eventos estendidos é um GUID de 16 bytes (não o mesmo GUID para a ID de conexão do cliente) anexado com um número de sequência de quatro bytes. O número de sequência representa a ordem de uma solicitação dentro de um thread e indica a ordenação relativa de lote e as instruções RPC para o thread. O `ActivityID` é enviado no momento, opcionalmente para instruções SQL em lotes e solicitações do RPC quando o rastreamento de acesso de dados está habilitado e o 18º bit na palavra de configuração de rastreamento de acesso a dados está ativado.
 
-A seguir está um exemplo que usa [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para iniciar uma sessão de eventos estendidos que será armazenada em um buffer de anel e registrará a ID de atividade enviada de um cliente em operações em lote e RPC.
+A seguir está um exemplo que usa Transact-SQL para iniciar uma sessão de eventos estendidos que será armazenada em um buffer de anel e registrará a ID de atividade enviada de um cliente em operações em lote e RPC.
 
 ```sql
 create event session MySession on server

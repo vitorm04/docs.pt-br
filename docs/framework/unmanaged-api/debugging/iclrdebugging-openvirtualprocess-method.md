@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d530f37c979a1ecddf2cb3895234aab2f7556b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698155"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489625"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>Método ICLRDebugging::OpenVirtualProcess
 Obtém a interface ICorDebugProcess que corresponde a um módulo de runtime (CLR) de linguagem comum carregado no processo.  
@@ -78,7 +78,7 @@ HRESULT OpenVirtualProcess(
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|O [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) retorno de chamada retornará um erro ou não fornecer um identificador válido.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` não implementa as interfaces de destino de dados necessários para esta versão do tempo de execução.|  
 |CORDBG_E_NOT_CLR|O módulo indicado não é um módulo CLR. O HRESULT também é retornado quando um módulo CLR não pode ser detectado porque a memória foi corrompida, o módulo não está disponível ou a versão do CLR é posterior à versão de shim.|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Esta versão de tempo de execução não oferece suporte a esse modelo de depuração. Atualmente, o modelo de depuração não tem suporte por versões do CLR antes do [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. O `pwszVersion` parâmetro de saída ainda está definido como o valor correto após esse erro.|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Esta versão de tempo de execução não oferece suporte a esse modelo de depuração. Atualmente, o modelo de depuração não é compatível com versões do CLR antes do .NET Framework 4. O `pwszVersion` parâmetro de saída ainda está definido como o valor correto após esse erro.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|A versão do CLR é maior que a versão de declarações para dar suporte a este depurador. O `pwszVersion` parâmetro de saída ainda está definido como o valor correto após esse erro.|  
 |E_NO_INTERFACE|O `riidProcess` interface não está disponível.|  
 |CORDBG_E_UNSUPPORTED_VERSION_STRUCT|O `CLR_DEBUGGING_VERSION` estrutura não tem um valor reconhecido para `wStructVersion`. O único valor aceito no momento é 0.|  

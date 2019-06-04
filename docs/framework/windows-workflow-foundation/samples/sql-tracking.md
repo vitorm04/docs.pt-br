@@ -2,12 +2,12 @@
 title: Rastreamento de SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b69336e9a6fd0d3cf91c2a187412638d08490eea
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785912"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491090"
 ---
 # <a name="sql-tracking"></a>Rastreamento de SQL
 Este exemplo demonstra como escrever um participante de rastreamento SQL personalizado, que grava registros de rastreamento em uma base de dados SQL. Windows Workflow Foundation (WF) fornece o fluxo de trabalho de acompanhamento para obter visibilidade sobre a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento emite-se registros de acompanhamento de fluxo de trabalho durante a execução de fluxo de trabalho. Para obter mais informações sobre o controle de fluxo de trabalho, consulte [fluxo de trabalho, controle e rastreamento](../workflow-tracking-and-tracing.md).
@@ -35,7 +35,7 @@ Este exemplo demonstra como escrever um participante de rastreamento SQL persona
   
      Um exemplo de endereço de WSDL de serviço local é `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8. Usando [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], execute o cliente de teste de WCF (WcfTestClient.exe). Está localizado no Microsoft Visual Studio 10.0 diretório \ Common7 \ IDE.  
+8. Usando o Explorador de arquivos, execute o cliente de teste do WCF (WcfTestClient.exe). Está localizado no Microsoft Visual Studio 10.0 diretório \ Common7 \ IDE.  
   
 9. No cliente de teste do WCF, clique o **arquivo** menu e selecione **Adicionar serviço**. Cole o endereço do serviço local na caixa de texto. Clique em **Okey** para fechar a caixa de diálogo.  
   

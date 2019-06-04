@@ -2,12 +2,12 @@
 title: SELECIONAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af704d00800a72b4ab670781c5bb3adec93683cb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797807"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489882"
 ---
 # <a name="select-entity-sql"></a>SELECIONAR (Entity SQL)
 Especifica os elementos retornados por uma consulta.  
@@ -85,7 +85,7 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 SELECT * FROM T1, T2  
 ```  
   
- A expressão de consulta [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] anterior é expressa em [!INCLUDE[esql](../../../../../../includes/esql-md.md)] da seguinte maneira.  
+ A expressão de consulta Transact-SQL anterior é expressa em [!INCLUDE[esql](../../../../../../includes/esql-md.md)] da seguinte maneira.  
   
 ```  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  

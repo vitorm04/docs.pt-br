@@ -2,12 +2,12 @@
 title: Dados FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582713"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490069"
 ---
 # <a name="filestream-data"></a>Dados FILESTREAM
 
@@ -16,7 +16,7 @@ O atributo de armazenamento FILESTREAM é usado para dados binários BLOB armaze
 > [!NOTE]
 > Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para trabalhar com dados FILESTREAM usando o SqlClient.
 
-A especificação do atributo FILESTREAM em uma coluna varbinary(max) faz com que o SQL Server armazene os dados no sistema de arquivos NTFS local em vez de no arquivo de banco de dados. Embora eles sejam armazenados separadamente, você pode usar as mesmas instruções [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], que são suportadas para trabalhar com dados varbinary(max) que estão armazenados no banco de dados.
+A especificação do atributo FILESTREAM em uma coluna varbinary(max) faz com que o SQL Server armazene os dados no sistema de arquivos NTFS local em vez de no arquivo de banco de dados. Embora eles sejam armazenados separadamente, você pode usar as mesmas instruções Transact-SQL, que são suportadas para trabalhar com dados varbinary(max) que estão armazenados no banco de dados.
 
 ## <a name="sqlclient-support-for-filestream"></a>Suporte do SqlClient para FILESTREAM
 
@@ -24,7 +24,7 @@ O .NET Framework Data Provider para SQL Server <xref:System.Data.SqlClient>, dá
 
 ### <a name="creating-the-sql-server-table"></a>Criando a tabela SQL Server
 
-As instruções [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] a seguir criam uma tabela denominada employees e insere uma linha de dados. Depois de habilitar o armazenamento FILESTREAM, você pode usar essa tabela em conjunto com os exemplos de código a seguir. Os links para recursos nos Manuais Online do SQL Server são localizados no final deste tópico.
+As instruções Transact-SQL a seguir criam uma tabela denominada employees e insere uma linha de dados. Depois de habilitar o armazenamento FILESTREAM, você pode usar essa tabela em conjunto com os exemplos de código a seguir. Os links para recursos nos Manuais Online do SQL Server são localizados no final deste tópico.
 
 ```sql
 CREATE TABLE employees

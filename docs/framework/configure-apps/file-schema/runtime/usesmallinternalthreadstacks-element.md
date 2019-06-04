@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456106"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489335"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > elemento
 Usam solicitações que o common language runtime (CLR) reduzir a memória com a especificação de tamanhos de pilha explícito ao criar certos threads que ele usa internamente, em vez de usar o tamanho da pilha padrão para esses threads.  
@@ -41,7 +41,7 @@ Usam solicitações que o common language runtime (CLR) reduzir a memória com a
 |Valor|Descrição|  
 |-----------|-----------------|  
 |true|Tamanhos de pilha explícito de solicitação.|  
-|false|Use o tamanho da pilha padrão. Esse é o padrão para o [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|false|Use o tamanho da pilha padrão. Esse é o padrão para o .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  

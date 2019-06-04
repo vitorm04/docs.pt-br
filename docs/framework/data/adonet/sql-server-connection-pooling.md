@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877441"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490113"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool de conexões do SQL Server (ADO.NET)
 Para se conectar a um servidor de banco de dados, existem, normalmente, várias etapas demoradas. Um canal físico, como um soquete ou um pipe nomeado, deve ser estabelecido, o handshake inicial com o servidor deve ocorrer, informações de cadeia de conexão devem ser analisadas, a conexão deve ser autenticada pelo servidor, verificações devem ser realizadas para a inscrição na transação atual e assim por diante.  
@@ -99,7 +99,7 @@ Para obter mais informações sobre os eventos associados a abertura e fechament
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Fragmentação de pool devido a vários bancos de dados  
  Vários provedores de serviços de Internet hospedam vários sites em um único servidor. Eles podem usar um único banco de dados para confirmar um logon de autenticação de formulários e para abrir uma conexão com um banco de dados específico desse usuário ou grupo de usuários. A conexão com o banco de dados de autenticação é agrupada e usada por todos. Entretanto, há um pool de conexões separado para cada banco de dados, que aumenta o número de conexões com o servidor.  
   
- Trata-se também de um efeito colateral de projeto do aplicativo. Existe uma forma relativamente simples de evitar esse efeito colateral sem comprometer a segurança quando você se conectar ao SQL Server. Em vez de se conectar a um banco de dados separado para cada usuário ou grupo, conecte-se ao mesmo banco de dados no servidor e execute a instrução [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE para alternar para o banco de dados desejado. O fragmento de código a seguir demonstra como criar uma conexão inicial com o banco de dados `master` e depois alternar para o banco de dados desejado especificado na variável da cadeia de caracteres `databaseName`.  
+ Trata-se também de um efeito colateral de projeto do aplicativo. Existe uma forma relativamente simples de evitar esse efeito colateral sem comprometer a segurança quando você se conectar ao SQL Server. Em vez de se conectar a um banco de dados separado para cada usuário ou grupo, conecte-se ao mesmo banco de dados no servidor e execute a instrução Transact-SQL USE para alternar para o banco de dados desejado. O fragmento de código a seguir demonstra como criar uma conexão inicial com o banco de dados `master` e depois alternar para o banco de dados desejado especificado na variável da cadeia de caracteres `databaseName`.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  

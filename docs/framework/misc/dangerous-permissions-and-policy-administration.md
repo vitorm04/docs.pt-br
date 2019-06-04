@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ae24cdcb97e30da0bd4aec6569ef3dcda11488c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17a596d9fc223dc53268ae9c91f7d02357b0a9b8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775759"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489984"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Permissões perigosas e administração de políticas
 Várias operações protegidas para o qual o .NET Framework fornece permissões potencialmente podem permitir que o sistema de segurança seja contornado. Essas permissões perigosas devem ser dada apenas ao código confiável e, em seguida, somente quando necessário. Normalmente, há nenhuma defesa contra código mal-intencionado se ele tem essas permissões.  
   
 > [!NOTE]
->  No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], houve alterações importantes para o modelo de segurança do .NET Framework e a terminologia. Para obter mais informações sobre essas alterações, consulte [alterações de segurança](../../../docs/framework/security/security-changes.md).  
+>  No .NET Framework 4, houve alterações importantes para o modelo de segurança do .NET Framework e a terminologia. Para obter mais informações sobre essas alterações, consulte [alterações de segurança](../../../docs/framework/security/security-changes.md).  
   
  Permissões perigosas são explicadas na tabela a seguir.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596644"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487902"
 ---
 # <a name="securing-wrapper-code"></a>Protegendo código de wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "64596644"
 - [LinkDemand](../../../docs/framework/misc/link-demands.md) ocorre em tempo de compilação just-in-time (JIT) e verifica somente o chamador imediato. Essa verificação de segurança não verifica chamador o chamador do. Depois que essa verificação passa, não há nenhuma segurança adicional sobrecarga, independentemente de quantas vezes o chamador pode chamar. No entanto, também não há nenhuma proteção contra ataques de atração. Com o **LinkDemand**, qualquer código que é aprovado no teste e pode fazer referência a seu código pode potencialmente quebrar a segurança, permitindo que o código mal-intencionado chamar usando o código não autorizado. Portanto, não use **LinkDemand** , a menos que todas as falhas possíveis podem ser completamente evitadas.  
   
     > [!NOTE]
-    >  No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], as demandas de link foram substituídas pela <xref:System.Security.SecurityCriticalAttribute> atributo em <xref:System.Security.SecurityRuleSet.Level2> assemblies. O <xref:System.Security.SecurityCriticalAttribute> é equivalente a uma demanda de link para confiança total; no entanto, isso também afeta as regras de herança. Para obter mais informações sobre essa alteração, consulte [código transparente de segurança, nível 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    >  No .NET Framework 4, as demandas de link foram substituídas pela <xref:System.Security.SecurityCriticalAttribute> de atributo em <xref:System.Security.SecurityRuleSet.Level2> assemblies. O <xref:System.Security.SecurityCriticalAttribute> é equivalente a uma demanda de link para confiança total; no entanto, isso também afeta as regras de herança. Para obter mais informações sobre essa alteração, consulte [código transparente de segurança, nível 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
  As precauções extras necessárias ao utilizar **LinkDemand** deve ser programado individualmente; o sistema de segurança pode ajudar com a imposição. Qualquer erro abre uma vulnerabilidade de segurança. Todos os autorizados código que usa seu código deve ser responsável por implementar segurança adicional fazendo o seguinte:  
   

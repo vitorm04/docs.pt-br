@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e9073e48141bc6895d00c773c2d3d2cfeb260f6
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 26fed0a10b9a25f25a580c7ac9a468cbedeb3671
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456466"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489478"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads > elemento
 Especifica se o PerfCounter.dll usa a configuração de registro CategoryOptions em um aplicativo do .NET Framework versão 1.1 para determinar se é preciso carregar dados do contador de desempenho da memória global ou da memória compartilhada especifica da categoria.  
@@ -55,7 +55,7 @@ enabled="true|false"/>
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Nas versões do .NET Framework antes do [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], a versão do PerfCounter que foi carregado correspondia ao tempo de execução que foi carregado no processo. Se um computador tiver o .NET Framework versão 1.1 e o [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] instalado, um aplicativo do .NET Framework 1.1 carregaria a versão do .NET Framework 1.1 de PerfCounter. Começando com o .NET Framework 4, a versão instalada mais recente de PerfCounter é carregada. Isso significa que um aplicativo do .NET Framework 1.1 carregará a versão do .NET Framework 4 do PerfCounter se o .NET Framework 4 está instalado no computador.  
+ Nas versões do .NET Framework antes do .NET Framework 4, a versão do PerfCounter que foi carregado correspondia ao tempo de execução que foi carregado no processo. Se um computador tiver o .NET Framework versão 1.1 e o [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] instalado, um aplicativo do .NET Framework 1.1 carregaria a versão do .NET Framework 1.1 de PerfCounter. Começando com o .NET Framework 4, a versão instalada mais recente de PerfCounter é carregada. Isso significa que um aplicativo do .NET Framework 1.1 carregará a versão do .NET Framework 4 do PerfCounter se o .NET Framework 4 está instalado no computador.  
   
  Começando com o .NET Framework 4, durante o consumo de contadores de desempenho, PerfCounter verifica a entrada do registro CategoryOptions para cada provedor determinar se ele deve ler da categoria específica memória compartilhada ou memória compartilhada global. O PerfCounter do .NET Framework 1.1 não lê essa entrada de registro, porque ele não está ciente da categoria específica memória compartilhada; ele sempre lê na memória compartilhada global.  
   

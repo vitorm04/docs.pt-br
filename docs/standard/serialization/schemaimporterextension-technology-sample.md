@@ -2,12 +2,12 @@
 title: Exemplo de tecnologia de SchemaImporterExtension
 ms.date: 03/30/2017
 ms.assetid: 3f5eb78f-0ef6-433a-b095-3a63b1ce0bc9
-ms.openlocfilehash: 5027897bcf62e52dae5aab6090c01518a92636dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d63461425fd0b3366d39892512577b0dd706de13
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028298"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490858"
 ---
 # <a name="schemaimporterextension-technology-sample"></a>Exemplo de tecnologia de SchemaImporterExtension
 [Baixar Exemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
@@ -22,7 +22,7 @@ ms.locfileid: "62028298"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Para criar o exemplo usando Visual Studio  
   
-1. Abra o [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] e navegue para um dos subdiretórios específicos da linguagem para o exemplo.  
+1. Abra o Explorador de arquivos e navegue até um dos subdiretórios específicos do idioma para o exemplo.  
   
 2. Clique duas vezes no ícone para OrderSchemaImporterExtension.sln para abrir o arquivo no Visual Studio.  
   

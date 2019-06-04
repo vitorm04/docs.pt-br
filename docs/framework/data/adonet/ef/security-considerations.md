@@ -2,12 +2,12 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879927"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489841"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
 Este tópico descreve considerações de segurança específicas para desenvolver, implantar e executar aplicativos [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você também deve seguir as recomendações para criar aplicativos seguros do .NET Framework. Para obter mais informações, consulte [visão geral de segurança](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -92,7 +92,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  As considerações de segurança a seguir se aplicam em consultas a um modelo conceitual. Essas considerações se aplicam a consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] usando EntityClient e a consultas de objeto usando LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)] e métodos de construtor de consultas.  
   
 #### <a name="prevent-sql-injection-attacks"></a>Evite ataques de injeção de SQL.  
- Os aplicativos normalmente obtêm entrada externa (de um usuário ou de outro agente externo) e executam ações com base nessa entrada. Qualquer entrada que seja derivada direta ou indiretamente do usuário ou de um agente externo pode ter conteúdo que usa a sintaxe da linguagem de destino para executar ações não autorizadas. Quando a linguagem de destino é uma linguagem SQL, como [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], essa manipulação é conhecida como um ataque de injeção de SQL. Um usuário mal-intencionado pode injetar comandos diretamente na consulta e remover uma tabela de banco de dados, causar uma negação de serviço ou alterar a natureza da operação que está sendo executada.  
+ Os aplicativos normalmente obtêm entrada externa (de um usuário ou de outro agente externo) e executam ações com base nessa entrada. Qualquer entrada que seja derivada direta ou indiretamente do usuário ou de um agente externo pode ter conteúdo que usa a sintaxe da linguagem de destino para executar ações não autorizadas. Quando o idioma de destino é uma linguagem SQL (Structured Query), como Transact-SQL, essa manipulação é conhecida como um ataque de injeção de SQL. Um usuário mal-intencionado pode injetar comandos diretamente na consulta e remover uma tabela de banco de dados, causar uma negação de serviço ou alterar a natureza da operação que está sendo executada.  
   
 - Ataques de injeção de [!INCLUDE[esql](../../../../../includes/esql-md.md)]:  
   

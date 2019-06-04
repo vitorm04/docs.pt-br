@@ -2,12 +2,12 @@
 title: Autenticação no SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5809a75dbadffbd2528f6882aa586aecd3232408
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877454"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490092"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticação no SQL Server
 SQL Server dá suporte a dois modos de autenticação, o modo de autenticação do Windows e o modo misto.  
@@ -46,7 +46,7 @@ SQL Server dá suporte a dois modos de autenticação, o modo de autenticação 
 - Aplicativos da Internet, como o ASP.NET.  
   
 > [!NOTE]
->  Especifica autenticação do Windows não desabilita os logons do SQL Server. Use o ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrução para desabilitar os logons do SQL Server altamente privilegiados.  
+>  Especifica autenticação do Windows não desabilita os logons do SQL Server. Use a instrução ALTER LOGIN desabilitar Transact-SQL para desabilitar os logons do SQL Server altamente privilegiados.  
   
 ## <a name="login-types"></a>Tipos de logon  
  SQL Server dá suporte a três tipos de logons:  

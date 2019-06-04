@@ -2,15 +2,15 @@
 title: LINQ e o ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 312eb4b1c0512ca1244daec5bcda3ed864c3646d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bfd5bb845917f9ca8ba3b154a51a946b610ca571
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878325"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489825"
 ---
 # <a name="linq-and-adonet"></a>LINQ e o ADO.NET
-Hoje, muitos desenvolvedores comerciais devem usar duas (ou mais) linguagens de programação: uma linguagem de alto nível para as camadas de apresentação e lógica de negócios (como Visual c# ou Visual Basic) e uma linguagem de consulta para interagir com o banco de dados (como [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Isso exige que o desenvolvedor seja proficiente em várias linguagens para ser eficaz e também provoca incompatibilidades de linguagens no ambiente de desenvolvimento. Por exemplo, um aplicativo que usa uma API de acesso a dados para executar uma consulta em um banco de dados especifica a consulta como um literal de cadeia de caracteres usando aspas. Essa cadeia de caracteres de consulta é ilegível para o compilador e os erros não são verificados, como sintaxe inválida ou se as colunas ou linhas referenciadas realmente existem. Não há nenhuma verificação do tipo dos parâmetros da consulta e também nenhum suporte do `IntelliSense`.  
+Hoje, muitos desenvolvedores comerciais devem usar duas (ou mais) linguagens de programação: uma linguagem de alto nível para as camadas de apresentação e lógica de negócios (como o Visual C# ou Visual Basic) e uma linguagem de consulta para interagir com o banco de dados (como Transact-SQL) . Isso exige que o desenvolvedor seja proficiente em várias linguagens para ser eficaz e também provoca incompatibilidades de linguagens no ambiente de desenvolvimento. Por exemplo, um aplicativo que usa uma API de acesso a dados para executar uma consulta em um banco de dados especifica a consulta como um literal de cadeia de caracteres usando aspas. Essa cadeia de caracteres de consulta é ilegível para o compilador e os erros não são verificados, como sintaxe inválida ou se as colunas ou linhas referenciadas realmente existem. Não há nenhuma verificação do tipo dos parâmetros da consulta e também nenhum suporte do `IntelliSense`.  
   
  O [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] permite que os desenvolvedores formem consultas baseadas em conjuntos no código de seus aplicativos, sem precisar usar uma linguagem de consulta separada. Você pode escrever consultas de [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] com várias fontes de dados enumeráveis (ou seja, uma fonte de dados que implemente a interface <xref:System.Collections.IEnumerable>), como estruturas de dados na memória, documentos XML, bancos de dados SQL e objetos <xref:System.Data.DataSet>. Embora essas fontes de dados enumeráveis sejam implementadas de várias maneiras, todas elas expõem as mesmas sintaxe e constructos de linguagem. Como as consultas podem ser formadas na própria linguagem de programação, você não precisa usar outra linguagem de consulta que seja inserida como literais de cadeia de caracteres que não podem ser compreendidos ou verificados pelo compilador. Integração de consultas na linguagem de programação também permite que os programadores do Visual Studio ser mais produtivo, fornecendo o tipo de tempo de compilação e verificação de sintaxe, e `IntelliSense`. Esses recursos reduzem a necessidade de depuração da consulta e de correção de erros.  
   

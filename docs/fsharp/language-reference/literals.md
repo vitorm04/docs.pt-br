@@ -2,12 +2,12 @@
 title: Literais
 description: Saiba mais sobre os tipos de literais no F# linguagem de programação.
 ms.date: 02/08/2019
-ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904560"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490981"
 ---
 # <a name="literals"></a>Literais
 
@@ -28,12 +28,13 @@ A tabela a seguir mostra os tipos de literais no F#. Caracteres que representam 
 |uint16|número de natural de 16 bits sem sinal|us|`86us`|
 |int<br /><br />int32|inteiro com sinal de 32 bits|l ou none|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|número de natural de 32 bits sem sinal|u ou ul|`86u`<br /><br />`86ul`|
+|nativeint|ponteiro nativo para um número natural assinado|n|`123n`|
 |unativeint|ponteiro nativo como um número natural sem sinal|Cancelar|`0x00002D3Fun`|
 |int64|inteiro com sinal de 64 bits|L|`86L`|
 |uint64|número de natural de 64 bits sem sinal|UL|`86UL`|
 |simples, float32|número de ponto flutuante de 32 bits|F ou f|`4.14F` ou `4.14f`|
 |||LF|`0x00000000lf`|
-|float; Double|número de ponto flutuante de 64 bits|nenhum|`4.14` ou `2.3E+32` ou `2.3e+32`|
+|float; Double|número de ponto flutuante de 64 bits|nenhum|`4.14`, `2.3E+32` ou `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|inteiro não limitado a representação de 64 bits|I|`9999999999999999999999999999I`|
 |decimal|número fracionário representado como um ponto fixo ou um número racional|M ou m|`0.7833M` ou `0.7833m`|

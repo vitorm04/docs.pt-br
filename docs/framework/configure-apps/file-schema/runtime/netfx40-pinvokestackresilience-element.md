@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456391"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489402"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > elemento
 Especifica se o tempo de execução corrige automaticamente declarações de invocação de plataforma incorretas em tempo de execução, às custas de transições mais lentas entre o código gerenciado e não gerenciado.  
@@ -40,7 +40,7 @@ Especifica se o tempo de execução corrige automaticamente declarações de inv
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`0`|O tempo de execução usa a arquitetura introduzida de marshaling de interoperabilidade mais rápida a [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], que não o detecta e declarações de invocação de plataforma incorreta de correção. Esse é o padrão.|  
+|`0`|O tempo de execução usa a arquitetura introduzida no .NET Framework 4, que não detecta de marshaling de interoperabilidade mais rápida e declarações de invocação de plataforma incorreta de correção. Esse é o padrão.|  
 |`1`|Declarações de invocação de tempo de execução usa mais lentas transições que detectam e corrigir a plataforma incorreta.|  
   
 ### <a name="child-elements"></a>Elementos filho  

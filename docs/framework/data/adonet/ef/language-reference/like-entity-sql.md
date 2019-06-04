@@ -2,12 +2,12 @@
 title: COMO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98940c075a01de2ebe061b6dff53917247fc5193
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780439"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489917"
 ---
 # <a name="like-entity-sql"></a>COMO (Entity SQL)
 Determina se um elemento `String` de caracteres corresponde a um padrão especificado.  
@@ -49,7 +49,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 > [!NOTE]
 >  O operador [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE e a cláusula ESCAPE não podem ser aplicados a valores de `System.DateTime` ou `System.Guid`.  
   
- LIKE dá suporte à correspondência de padrões ASCII e à correspondência de padrões Unicode. Quando todos os parâmetros são caracteres ASCII, a correspondência de padrões ASCII é executada. Se um ou mais dos argumentos são Unicode, todos os argumentos são convertidos em Unicode e a correspondência de padrões Unicode é executada. Quando você usa Unicode com LIKE, espaços em branco à direita são significativos; no entanto, para não Unicode, os espaços em branco à direita não são significativos. A sintaxe de cadeia de caracteres de padrão de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é o mesmo da [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
+ LIKE dá suporte à correspondência de padrões ASCII e à correspondência de padrões Unicode. Quando todos os parâmetros são caracteres ASCII, a correspondência de padrões ASCII é executada. Se um ou mais dos argumentos são Unicode, todos os argumentos são convertidos em Unicode e a correspondência de padrões Unicode é executada. Quando você usa Unicode com LIKE, espaços em branco à direita são significativos; no entanto, para não Unicode, os espaços em branco à direita não são significativos. A sintaxe de cadeia de caracteres de padrão de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é o mesmo que do Transact-SQL.  
   
  Um padrão pode incluir caracteres regulares e caracteres curinga. Durante a correspondência de padrões, os caracteres regulares devem corresponder exatamente aos caracteres especificados no caractere `string`. No entanto, os caracteres curinga podem ser correspondentes com fragmentos arbitrários da cadeia de caracteres. Quando usado com caracteres curinga, o operador LIKE é mais flexível do que os operadores de comparação de cadeia de caracteres = e! =.  
   

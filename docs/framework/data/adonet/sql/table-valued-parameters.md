@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: ccef487eb27a5a170d197a6bc670ec4d2bcf8bdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7a39677bbd975ac384357481ef419f57b96d977
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645795"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489812"
 ---
 # <a name="table-valued-parameters"></a>Parâmetros de valores de tabela
-Os parâmetros com valor de tabela fornecem uma maneira fácil de empacotar várias linhas de dados de um aplicativo cliente para o SQL Server sem exigir várias viagens de ida e volta ou lógica especial do lado do servidor para processar os dados. Você pode usar parâmetros de valores de tabela para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável da tabela que pode, em seguida, ser operada usando o [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+Os parâmetros com valor de tabela fornecem uma maneira fácil de empacotar várias linhas de dados de um aplicativo cliente para o SQL Server sem exigir várias viagens de ida e volta ou lógica especial do lado do servidor para processar os dados. Você pode usar parâmetros de valores de tabela para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável de tabela que pode ser operada usando o Transact-SQL.  
   
- Os valores de coluna em parâmetros de valores de tabela podem ser acessados usando instruções SELECT padrão do [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Os parâmetros de valores de tabela são fortemente tipados e sua estrutura é validada automaticamente. O tamanho de parâmetros de valores de tabela é delimitado somente pela memória do servidor.  
+ Valores de coluna em parâmetros com valor de tabela podem ser acessados usando instruções Transact-SQL SELECT padrão. Os parâmetros de valores de tabela são fortemente tipados e sua estrutura é validada automaticamente. O tamanho de parâmetros de valores de tabela é delimitado somente pela memória do servidor.  
   
 > [!NOTE]
 >  Você não pode retornar dados em um parâmetro com valor de tabela. Os parâmetros de valores de tabela são somente entrada; a palavra-chave OUTPUT não tem suporte.  
@@ -39,7 +39,7 @@ Os parâmetros com valor de tabela fornecem uma maneira fácil de empacotar vár
 - Use o programa de utilitário do `bcp` ou o objeto de <xref:System.Data.SqlClient.SqlBulkCopy> para carregar várias linhas de dados em uma tabela. Embora essa técnica seja muito eficiente, ela não dá suporte ao processamento do lado do servidor a menos que os dados sejam carregados em uma tabela temporária ou uma variável da tabela.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Criando tipos de parâmetro com valor de tabela  
- Os parâmetros de valores de tabela são baseados em estruturas de tabela fortemente tipadas que são definidas usando as instruções CREATE TYPE do [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros com valor de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, consulte [tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkID=98364) nos Manuais Online do SQL Server.  
+ Parâmetros com valor de tabela se baseiam nas estruturas de tabela fortemente tipadas que são definidas usando instruções Transact-SQL CREATE TYPE. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros com valor de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, consulte [tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkID=98364) nos Manuais Online do SQL Server.  
   
  A instrução a seguir cria um tipo de tabela chamado CategoryTableType composto pelas colunas CategoryID e CategoryName:  
   
@@ -48,7 +48,7 @@ CREATE TYPE dbo.CategoryTableType AS TABLE
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
- Depois de criar um tipo de tabela, você poderá declarar parâmetros de valores de tabela com base nesse tipo. O fragmento do [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] a seguir demonstra como declarar um parâmetro com valor de tabela em uma definição de procedimento armazenado. Observe que a palavra-chave READONLY é necessária para declarar um parâmetro com valor de tabela.  
+ Depois de criar um tipo de tabela, você poderá declarar parâmetros de valores de tabela com base nesse tipo. O fragmento de Transact-SQL a seguir demonstra como declarar um parâmetro com valor de tabela em uma definição de procedimento armazenado. Observe que a palavra-chave READONLY é necessária para declarar um parâmetro com valor de tabela.  
   
 ```  
 CREATE PROCEDURE usp_UpdateCategories   
@@ -58,7 +58,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>Modificando dados com parâmetros de valores de tabela (Transact-SQL)  
  Os parâmetros de valores de tabela podem ser usados em modificações de dados baseadas em conjuntos que afetam várias linhas executando uma única instrução. Por exemplo, você pode selecionar todas as linhas em um parâmetro com valor de tabela e inseri-las em uma tabela de banco de dados, ou você pode criar uma instrução de atualização unindo um parâmetro com valor de tabela à tabela que você deseja atualizar.  
   
- A instrução UPDATE do [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] a seguir demonstra como usar um parâmetro com valor de tabela unindo-a à tabela Categories. Quando você usa um parâmetro com valor de tabela com um JOIN em uma cláusula FROM, você deverá também utilizar um alias, como mostrado aqui, onde o alias do parâmetro com valor de tabela é “ec”:  
+ A instrução UPDATE Transact-SQL a seguir demonstra como usar um parâmetro com valor de tabela unindo-à tabela Categories. Quando você usa um parâmetro com valor de tabela com um JOIN em uma cláusula FROM, você deverá também utilizar um alias, como mostrado aqui, onde o alias do parâmetro com valor de tabela é “ec”:  
   
 ```  
 UPDATE dbo.Categories  
@@ -67,7 +67,7 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```  
   
- Este exemplo de [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] demonstra como selecionar linhas de um parâmetro com valor de tabela para realizar um INSERT em uma única operação baseada em conjuntos.  
+ Este exemplo de Transact-SQL demonstra como selecionar linhas de um parâmetro com valor de tabela para realizar um INSERT em uma única operação baseada em conjunto.  
   
 ```  
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
@@ -81,7 +81,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 - Os parâmetros de valores de tabela somente podem ser indexados para oferecer suporte às restrições UNIQUE ou PRIMARY KEY. SQL Server não mantém estatísticas sobre parâmetros com valor de tabela.  
   
-- Os parâmetros com valor de tabela são somente leitura no código do [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Você não pode atualizar os valores da coluna nas linhas de um parâmetro com valor de tabela e você não pode inserir ou excluir linhas. Para modificar os dados que são passados para um procedimento armazenado ou instrução parametrizada no parâmetro com valor de tabela, você deverá inserir os dados em uma tabela temporária ou variável da tabela.  
+- Parâmetros com valor de tabela são somente leitura no código Transact-SQL. Você não pode atualizar os valores da coluna nas linhas de um parâmetro com valor de tabela e você não pode inserir ou excluir linhas. Para modificar os dados que são passados para um procedimento armazenado ou instrução parametrizada no parâmetro com valor de tabela, você deverá inserir os dados em uma tabela temporária ou variável da tabela.  
   
 - Você não pode usar instruções ALTER TABLE para modificar o design de parâmetros de valores de tabela.  
   

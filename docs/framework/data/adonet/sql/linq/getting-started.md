@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: 506257c13bbaada98dffa9d3a15c834037c1d971
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f9592ecebdaaac7cdec60ce12e99b910275d553
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038552"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490058"
 ---
 # <a name="getting-started"></a>Guia de Introdução
 Usando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], você pode usar o [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] tecnologia para acessar o SQL bancos de dados exatamente como você acessaria uma coleção em memória.  
@@ -32,6 +32,6 @@ Usando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], voc�
 ## <a name="see-also"></a>Consulte também
 
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [Introdução ao LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)
+- [Introdução ao LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [Introdução ao LINQ (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
 - [O modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

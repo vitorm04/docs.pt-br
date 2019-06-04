@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456407"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489439"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > elemento
 Especifica se o common language runtime permite código gerenciado detecte violações de acesso e outras exceções de estado corrompido.  
@@ -56,7 +56,7 @@ Especifica se o common language runtime permite código gerenciado detecte viola
 ## <a name="remarks"></a>Comentários  
  No .NET Framework versão 3.5 e anteriores, o common language runtime permitido código gerenciado capturar exceções que foram geradas por estados de processo corrompido. Uma violação de acesso é um exemplo desse tipo de exceção.  
   
- Começando com o [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]gerenciado código não captura esses tipos de exceções em `catch` blocos. No entanto, você pode substituir essa alteração e manter o tratamento de exceções de estado corrompido de duas maneiras:  
+ Começando com o .NET Framework 4, código gerenciado não captura esses tipos de exceções em `catch` blocos. No entanto, você pode substituir essa alteração e manter o tratamento de exceções de estado corrompido de duas maneiras:  
   
 - Defina as `<legacyCorruptedStateExceptionsPolicy>` do elemento `enabled` atributo `true`. Essa configuração é aplicada processwide e afeta todos os métodos.  
   

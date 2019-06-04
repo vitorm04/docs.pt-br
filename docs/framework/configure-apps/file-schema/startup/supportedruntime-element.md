@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 90bdd5b8c5fdebe2c5d7ec580975dc63144b2401
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456219"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489306"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > elemento
 
@@ -34,7 +34,7 @@ Especifica qual versão do common language runtime e, opcionalmente, o aplicativ
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|**version**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a versão do Common Language Runtime (CLR) a qual esse aplicativo oferece suporte. Para obter valores válidos do `version` atributo, consulte a [valores de "versão de tempo de execução"](#version) seção. **Observação:**  Por meio do .NET Framework 3.5, o "*versão de tempo de execução*" valor assume a forma *principais*. *pequenas*. *criar*. A partir do [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], somente os números das versões principal e secundária são necessários (isto é, "v4.0" em vez de "v4.0.30319"). A cadeia de caracteres mais curta é recomendada.|
+|**version**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a versão do Common Language Runtime (CLR) a qual esse aplicativo oferece suporte. Para obter valores válidos do `version` atributo, consulte a [valores de "versão de tempo de execução"](#version) seção. **Observação:**  Por meio do .NET Framework 3.5, o "*versão de tempo de execução*" valor assume a forma *principais*. *pequenas*. *criar*. Começando com o .NET Framework 4, somente os números de versão principal e secundária são necessários (ou seja, "v4.0" em vez de "v4.0.30319"). A cadeia de caracteres mais curta é recomendada.|
 |**sku**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a unidade de manutenção de estoque (SKU), que por sua vez Especifica qual versão do .NET Framework dá suporte a esse aplicativo.<br /><br /> Começando com o .NET Framework 4.0, o uso do `sku` atributo é recomendado.  Quando presente, indica a versão do .NET Framework que o destino do aplicativo.<br /><br /> Para obter valores válidos do atributo sku, consulte o [valores de "id de sku"](#sku) seção.|
 
 ## <a name="remarks"></a>Comentários

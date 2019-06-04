@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a3d26a99844d00609b28eaef08ff0874a6701fb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: faa5ecf63ac3795a58369d94f9fb15f853edb576
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664959"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490704"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>Método ICorProfilerInfo2::GetStringLayout
-Obtém informações sobre o layout de um objeto de cadeia de caracteres. Esse método é preterido na [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]e é substituído pelo [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) método.  
+Obtém informações sobre o layout de um objeto de cadeia de caracteres. Esse método foi preterido no .NET Framework 4 e é substituído pelo [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   

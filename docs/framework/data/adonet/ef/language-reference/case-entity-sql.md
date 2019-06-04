@@ -2,12 +2,12 @@
 title: CASO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607186"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489493"
 ---
 # <a name="case-entity-sql"></a>CASO (Entity SQL)
 Avalia um conjunto de expressões de `Boolean` para determinar o resultado.  
@@ -41,7 +41,7 @@ END
  Retorna o tipo mais alto de precedência de conjunto de tipos em `result_expression` e `else_result_expression`opcional.  
   
 ## <a name="remarks"></a>Comentários  
- O [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressão case é semelhante a [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] caso, a expressão. Você usa a expressão dos casos para fazer uma série de teste condicional para determinar qual expressão renderá o resultado apropriado. Este formulário da expressão dos casos se aplica a uma série de uma ou mais expressões de `Boolean` para determinar a expressão resultante correta.  
+ O [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressão case é semelhante a expressão case de Transact-SQL. Você usa a expressão dos casos para fazer uma série de teste condicional para determinar qual expressão renderá o resultado apropriado. Este formulário da expressão dos casos se aplica a uma série de uma ou mais expressões de `Boolean` para determinar a expressão resultante correta.  
   
  A função de CASOS avaliar `Boolean_expression` para o QUANDO cada cláusula na ordem especificada, e retornar `result_expression` de primeiro `Boolean_expression` que avalia para `true`. As expressões restantes não são avaliadas. Se nenhum `Boolean_expression` avalia a `true`, o mecanismo de base de dados retorna `else_result_expression` se uma cláusula OUTRA for especificada, ou um valor nulo se nenhuma cláusula OUTRA é especificado.  
   

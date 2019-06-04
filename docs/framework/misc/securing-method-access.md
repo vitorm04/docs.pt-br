@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9d423ef71b76b2dcbbf2812e13850922fb50ac0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8be971cee4aa2ae09745a090396269c80ca62198
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625887"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487954"
 ---
 # <a name="securing-method-access"></a>Protegendo o acesso dos métodos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -60,7 +60,7 @@ public class Class1
  Use as declarações mostradas nesta seção para impedir que as classes específicas e métodos, bem como as propriedades e eventos, que está sendo usado pelo código parcialmente confiável. Aplicando essas declarações para uma classe, você deve aplicar a proteção para todas as suas propriedades, métodos e eventos; No entanto, observe que o acesso de campo não é afetado pela segurança declarativa. Observe também que as demandas de link ajudam a proteger contra somente os chamadores imediatos e ainda podem estar sujeita a ataques de atração.  
   
 > [!NOTE]
->  Um novo modelo de transparência foi introduzido no [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. O [código transparente de segurança, nível 2](../../../docs/framework/misc/security-transparent-code-level-2.md) modelo identifica o código seguro com o <xref:System.Security.SecurityCriticalAttribute> atributo. Código crítico de segurança requer que os chamadores e herdeiros ser totalmente confiável. Assemblies que executam sob as regras de segurança de acesso do código de versões anteriores do .NET Framework podem chamar assemblies de nível 2. Nesse caso, os atributos de segurança crítica serão tratados como demandas de link para confiança total.  
+>  Um novo modelo de transparência foi introduzido no .NET Framework 4. O [código transparente de segurança, nível 2](../../../docs/framework/misc/security-transparent-code-level-2.md) modelo identifica o código seguro com o <xref:System.Security.SecurityCriticalAttribute> atributo. Código crítico de segurança requer que os chamadores e herdeiros ser totalmente confiável. Assemblies que executam sob as regras de segurança de acesso do código de versões anteriores do .NET Framework podem chamar assemblies de nível 2. Nesse caso, os atributos de segurança crítica serão tratados como demandas de link para confiança total.  
   
  Em assemblies de nome forte, uma [LinkDemand](../../../docs/framework/misc/link-demands.md) é aplicada a todos os métodos publicamente acessíveis, propriedades e eventos para restringir o uso para os chamadores totalmente confiáveis. Para desabilitar esse recurso, você deve aplicar o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo. Assim, marcando explicitamente as classes para excluir os chamadores não confiáveis é necessário apenas para assemblies não assinados ou assemblies com esse atributo. Você pode usar essas declarações para marcar um subconjunto de tipos nele que não são destinadas para chamadores não confiáveis.  
   

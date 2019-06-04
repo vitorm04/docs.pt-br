@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456646"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487976"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Compatibilidade de políticas de segurança de acesso de código e migração
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-A parte da política de segurança de acesso do código (CAS) se tornou obsoleta o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Como resultado, você pode encontrar avisos de compilação e exceções de tempo de execução se você chamar os tipos de política obsoleto e membros [explicitamente](#explicit_use) ou [implicitamente](#implicit_use) (por meio de outros tipos e membros).
+A parte da política de segurança de acesso do código (CAS) se tornou obsoleta no .NET Framework 4. Como resultado, você pode encontrar avisos de compilação e exceções de tempo de execução se você chamar os tipos de política obsoleto e membros [explicitamente](#explicit_use) ou [implicitamente](#implicit_use) (por meio de outros tipos e membros).
 
 Você pode evitar os avisos e erros por qualquer um:
 

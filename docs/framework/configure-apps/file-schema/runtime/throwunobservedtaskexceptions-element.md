@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb6cfc8e1c3f0409d99d31efa0a645476b47e45e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 9647297bf976d26a97be0da8807d607789e8a065
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456257"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489579"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > elemento
 Especifica se as exceções de tarefas sem tratamento devem encerrar um processo em execução.  
@@ -61,7 +61,7 @@ Especifica se as exceções de tarefas sem tratamento devem encerrar um processo
 ## <a name="remarks"></a>Comentários  
  Se uma exceção que está associada com um <xref:System.Threading.Tasks.Task> não foi observado, não há nenhuma <xref:System.Threading.Tasks.Task.Wait%2A> operação, o pai não estiver anexada e o <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> propriedade não foi lido a exceção de tarefa é considerada não observado.  
   
- No [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], por padrão, se um <xref:System.Threading.Tasks.Task> que tem um observada exceção é coletado como lixo, o finalizador lança uma exceção e finaliza o processo. O encerramento do processo é determinado pela medição de tempo de coleta de lixo e finalização.  
+ No .NET Framework 4, por padrão, se um <xref:System.Threading.Tasks.Task> que tem um observada exceção é coletado como lixo, o finalizador lança uma exceção e finaliza o processo. O encerramento do processo é determinado pela medição de tempo de coleta de lixo e finalização.  
   
  Para tornar mais fácil para os desenvolvedores escrevam código assíncrono com base em tarefas, o .NET Framework 4.5 altera esse comportamento padrão para exceções não observadas que. Exceções não observadas ainda fazer com que o <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> evento seja acionado, mas por padrão, o processo não encerra. Em vez disso, a exceção é ignorada após o evento é gerado, independentemente se um manipulador de eventos observa a exceção.  
   

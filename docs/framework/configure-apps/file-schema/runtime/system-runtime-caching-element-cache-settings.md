@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03a17e8f30c15e98a350ef558cc1cb6ddf65cade
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cbe9e81f0e8bef36b780878844512a36a5148fec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584511"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489351"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<System.Runtime.Caching > (configurações de Cache)
 Fornece configuração para a padrão de memória <xref:System.Runtime.Caching.ObjectCache> implementação por meio de `memoryCache` entrada no arquivo de configuração.  
@@ -51,7 +51,7 @@ Fornece configuração para a padrão de memória <xref:System.Runtime.Caching.O
  As classes nesse namespace fornecem uma maneira de usar recursos de armazenamento em cache, como aqueles no ASP.NET, mas sem uma dependência no `System.Web` assembly. Para obter mais informações, consulte [cache em aplicativos do .NET Framework](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
->  A saída de cache de funcionalidade e tipos na <xref:System.Runtime.Caching> namespace são novos no [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].  
+>  A saída de cache de funcionalidade e tipos no <xref:System.Runtime.Caching> namespace são novos no .NET Framework 4.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como configurar um cache que se baseia o <xref:System.Runtime.Caching.MemoryCache> classe. O exemplo mostra como configurar uma instância da `namedCaches` entrada para o cache de memória. O nome do cache é definido para o nome de entrada de cache padrão definindo a `name` atributo como "default".  

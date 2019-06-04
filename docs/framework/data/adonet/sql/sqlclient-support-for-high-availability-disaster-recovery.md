@@ -2,12 +2,12 @@
 title: Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: aa4c716dc1b27d50620777613e698ca6dbab31d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380007"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487641"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 Este tópico discute o suporte do SqlClient (adicionado no .NET Framework 4.5) para recuperação de desastres de alta disponibilidade – grupos de disponibilidade AlwaysOn.  O recurso de grupos de disponibilidade AlwaysOn foi adicionado ao SQL Server 2012. Para obter mais informações sobre grupos de disponibilidade AlwaysOn, consulte os Manuais Online do SQL Server.  
@@ -79,7 +79,7 @@ Este tópico discute o suporte do SqlClient (adicionado no .NET Framework 4.5) p
   
  A palavra-chave `ApplicationIntent` não funciona com bancos de dados legados de somente leitura.  
   
- Um banco de dados pode permitir ou impedir cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Isso é feito com a cláusula `ALLOW_CONNECTIONS` das instruções `PRIMARY_ROLE` e `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].)  
+ Um banco de dados pode permitir ou impedir cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Isso é feito com o `ALLOW_CONNECTIONS` cláusula do `PRIMARY_ROLE` e `SECONDARY_ROLE`instruções Transact-SQL.)  
   
  A palavra-chave `ApplicationIntent` é usada para ativar o roteamento de somente leitura.  
   

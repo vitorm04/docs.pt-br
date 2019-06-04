@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19dacae05766566521f563d0d24980c01dfb7a0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb19f950122f7b0db66830e9ed5dff44ccd370c2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796117"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490430"
 ---
 # <a name="eclrfailure-enumeration"></a>Enumeração EClrFailure
 Descreve o conjunto de falhas para o qual um host pode definir ações de política.  
@@ -49,7 +49,7 @@ typedef enum {
 |`FAIL_FatalRuntime`|O common language runtime (CLR) não é mais capaz de executar código gerenciado no processo. Daqui em diante, chamadas para hospedagem todas as funções retornam um valor HRESULT HOST_E_CLRNOTAVAILABLE.|  
 |`FAIL_OrphanedLock`|Um thread falhou ao liberar um bloqueio após o retorno de um <xref:System.AppDomain> objeto. O host não é possível definir essa falha para fazer com que um thread anular.|  
 |`FAIL_StackOverflow`|Ocorreu um estouro de pilha.|  
-|`FAIL_AccessViolation`|Foi feita uma tentativa para ler ou gravar memória protegida. Não há suportada no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
+|`FAIL_AccessViolation`|Foi feita uma tentativa para ler ou gravar memória protegida. Não tem suporte no .NET Framework 4.|  
 |`FAIL_CodeContract`|Ocorreu uma falha de contrato de código. Ver [contratos de código](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Comentários  

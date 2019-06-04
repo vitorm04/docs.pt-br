@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac2a5d7f72479d5b5f4180de4452143c4dbc8127
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 1fd594ef1fea4c8723965ad483a5a124892bcf00
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456630"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487878"
 ---
 # <a name="security-transparent-code-level-1"></a>Código transparente de segurança, nível 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Transparência ajuda os desenvolvedores a escrever bibliotecas do .NET Framework mais seguras que expõem a funcionalidade para código parcialmente confiável. Transparência de nível 1 foi introduzida no .NET Framework versão 2.0 e foi usada originalmente somente dentro da Microsoft. Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você pode usar [transparência de nível 2](../../../docs/framework/misc/security-transparent-code-level-2.md). No entanto, transparência de nível 1 foi retida para que você possa identificar código herdado que deve ser executado com as regras de segurança anteriores.  
+ Transparência ajuda os desenvolvedores a escrever bibliotecas do .NET Framework mais seguras que expõem a funcionalidade para código parcialmente confiável. Transparência de nível 1 foi introduzida no .NET Framework versão 2.0 e foi usada originalmente somente dentro da Microsoft. Começando com o .NET Framework 4, você pode usar [transparência de nível 2](../../../docs/framework/misc/security-transparent-code-level-2.md). No entanto, transparência de nível 1 foi retida para que você possa identificar código herdado que deve ser executado com as regras de segurança anteriores.  
   
 > [!IMPORTANT]
 >  Você deve especificar a transparência de nível 1 somente para compatibilidade; ou seja, especificar o nível 1 somente para o código que foi desenvolvido com o .NET Framework 3.5 ou anterior que usa o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ou não usar o modelo de transparência. Por exemplo, use a transparência de nível 1 para assemblies do .NET Framework 2.0 que permitem chamadas de chamadores parcialmente confiáveis (APTCA). Para o código que é desenvolvido para o .NET Framework 4, sempre use a transparência de nível 2.  

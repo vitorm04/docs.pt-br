@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab9feaa1c46a45471395fd4c6158490a24882a65
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704746"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489372"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > elemento
 Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas implementações diferentes do .NET Framework, desabilitando o comportamento padrão que trata os assemblies como equivalentes para fins de portabilidade do aplicativo.  
@@ -57,7 +57,7 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
 |`assemblyBinding`|Contém informações sobre o redirecionamento de versão e os locais dos assemblies.|  
   
 ## <a name="remarks"></a>Comentários  
- Começando com o [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], suporte é fornecido automaticamente para aplicativos que podem usar qualquer uma das duas implementações do .NET Framework, por exemplo uma implementação do .NET Framework ou .NET Framework para implementação do Silverlight. As duas implementações de um determinado assembly do .NET Framework são consideradas como equivalentes pelo associador do assembly. Em alguns cenários, esse recurso de portabilidade do aplicativo causa problemas. Nesses cenários, o `<supportPortability>` elemento pode ser usado para desabilitar o recurso.  
+ Começando com o .NET Framework 4, suporte automaticamente é fornecido para aplicativos que podem usar qualquer uma das duas implementações do .NET Framework, por exemplo uma implementação do .NET Framework ou .NET Framework para implementação do Silverlight. As duas implementações de um determinado assembly do .NET Framework são consideradas como equivalentes pelo associador do assembly. Em alguns cenários, esse recurso de portabilidade do aplicativo causa problemas. Nesses cenários, o `<supportPortability>` elemento pode ser usado para desabilitar o recurso.  
   
  Um cenário é um assembly que tem a fazer referência a implementação do .NET Framework e o .NET Framework para implementação do Silverlight de um assembly de referência específico. Por exemplo, um designer XAML escrito no Windows Presentation Foundation (WPF) talvez seja necessário fazer referência a ambos os a implementação de área de trabalho do WPF, para a interface do usuário do designer e o subconjunto do WPF que está incluído na implementação do Silverlight. Por padrão, as referências separadas causam um erro do compilador, pois a associação de assembly considera os dois assemblies equivalentes. Esse elemento desabilita o comportamento padrão e permite que a compilação seja bem-sucedida.  
   

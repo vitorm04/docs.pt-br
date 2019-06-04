@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: dd3501bc74da2c9a812f9c4816b5a081b3780cd0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457259"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490035"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Contadores de desempenho e aplicativos lado a lado em processo
 Usando o Monitor de Desempenho (Perfmon.exe), é possível diferenciar os contadores de desempenho por tempo de execução. Este tópico descreve a alteração do Registro necessária para habilitar essa funcionalidade.  
@@ -27,7 +27,7 @@ Usando o Monitor de Desempenho (Perfmon.exe), é possível diferenciar os contad
   
 - Ao monitorar dois aplicativos que têm o mesmo nome. Por exemplo, se ambos os aplicativos são nomeados myapp.exe, um é exibido como **myapp** e o outro como **myapp#1** na coluna **Instância**. Nesse caso, é difícil corresponder um contador de desempenho a um aplicativo específico. Não está claro se os dados coletados para **myapp#1** referem-se ao primeiro myapp.exe ou ao segundo.  
   
-- Quando um aplicativo usa várias instâncias do Common Language Runtime. O [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] dá suporte a cenários de hospedagem lado a lado em processo; ou seja, um único processo ou aplicativo pode carregar várias instâncias do common language runtime. Se um único aplicativo chamado myapp.exe carrega duas instâncias de tempo de execução, por padrão, elas serão designadas na coluna **Instância** como **myapp** e **myapp#1**. Nesse caso, não está claro se **myapp** e **myapp#1** referem-se a dois aplicativos de mesmo nome ou ao mesmo aplicativo com dois tempos de execução. Se vários aplicativos com o mesmo nome carregam vários tempos de execução, a ambiguidade é ainda maior.  
+- Quando um aplicativo usa várias instâncias do Common Language Runtime. O .NET Framework 4 dá suporte a cenários de hospedagem de lado a lado em processo; ou seja, um único processo ou aplicativo pode carregar várias instâncias do common language runtime. Se um único aplicativo chamado myapp.exe carrega duas instâncias de tempo de execução, por padrão, elas serão designadas na coluna **Instância** como **myapp** e **myapp#1**. Nesse caso, não está claro se **myapp** e **myapp#1** referem-se a dois aplicativos de mesmo nome ou ao mesmo aplicativo com dois tempos de execução. Se vários aplicativos com o mesmo nome carregam vários tempos de execução, a ambiguidade é ainda maior.  
   
  Você pode definir uma chave do Registro para eliminar essa ambiguidade. Para aplicativos desenvolvidos usando o .NET Framework 4, essa alteração no registro adiciona um identificador de processo seguido por um identificador de instância de tempo de execução para o nome do aplicativo na **instância** coluna. Em vez de *aplicativo* ou *aplicativo*#1, o aplicativo agora é identificado como *aplicativo*_`p`*processID*\_`r`*runtimeID* na coluna **Instância**. Se um aplicativo foi desenvolvido usando uma versão anterior do common language runtime, essa instância é representada como *application\_* `p`*processID* desde que o. NET Framework 4 está instalado.  
   

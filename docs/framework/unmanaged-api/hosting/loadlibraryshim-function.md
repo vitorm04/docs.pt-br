@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 87ca5470fe5994d34d12a339c2d92a5f3917063d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457050"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490230"
 ---
 # <a name="loadlibraryshim-function"></a>Função LoadLibraryShim
 Carrega uma versão especificada de uma DLL que está incluída no pacote redistribuível do .NET Framework.  
   
- Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Use o [iclrruntimeinfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) método em vez disso.  
+ Essa função foi preterida no .NET Framework 4. Use o [iclrruntimeinfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) método em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   

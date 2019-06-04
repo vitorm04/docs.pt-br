@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760422"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489907"
 ---
 # <a name="null-comparisons"></a>Comparações nulas
 Um valor `null` na fonte de dados indica que o valor é desconhecido. Nas consultas do [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], você pode procurar valores nulos de modo que determinados cálculos ou comparações só sejam executados nas linhas que têm dados válidos ou não nulos. A semântica nula do CLR, no entanto, pode diferir da semântica nula da fonte de dados. A maioria dos bancos de dados usa uma versão da lógica de três valores para manipular comparações nulas. Ou seja, uma comparação com um valor nulo não é avaliada como `true` ou `false`, ele será avaliado como `unknown`. Geralmente, essa é uma implementação de valores nulos ANSI, mas isso nem sempre acontece.  
   
- Por padrão, no SQL Server, a comparação nulo igual a nulo retorna um valor nulo. No exemplo a seguir, as linhas em que `ShipDate` é null serão excluídas do conjunto de resultados, e a instrução [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] retornará 0 linhas.  
+ Por padrão, no SQL Server, a comparação nulo igual a nulo retorna um valor nulo. No exemplo a seguir, as linhas onde `ShipDate` é null são excluídas do conjunto de resultados, e a instrução Transact-SQL retornará 0 linhas.  
   
 ```  
 -- Find order details and orders with no ship date.  

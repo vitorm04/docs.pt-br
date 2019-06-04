@@ -2,12 +2,12 @@
 title: Citações de código
 description: Saiba mais sobre F# citações de código, um recurso de linguagem que permite que você gere e trabalhar com F# expressões de código por meio de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 464df5e3fafa683c93fd5fb6e94d24c229903491
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5523d54a271ad1c53c6de85f37f261e0ecf6cced
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641998"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490800"
 ---
 # <a name="code-quotations"></a>Citações de código
 
@@ -39,9 +39,7 @@ Mas as expressões a seguir são válidas.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-Para usar citações de código, você deve adicionar uma declaração de importação (usando o `open` palavra-chave) que abre o [quotations](https://msdn.microsoft.com/library/e9ce8a3a-e00c-4190-bad5-cce52ee089b2) namespace.
-
-O F# PowerPack fornece suporte para avaliar e executar F# objetos de expressão.
+Para evalutate F# cotações, você deve usar o [ F# avaliador de cotação](https://github.com/fsprojects/FSharp.Quotations.Evaluator). Ele oferece suporte para avaliar e executando F# objetos de expressão.
 
 ## <a name="expr-type"></a>Tipo expr
 

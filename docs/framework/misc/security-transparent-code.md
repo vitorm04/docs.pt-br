@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456507"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487853"
 ---
 # <a name="security-transparent-code"></a>Código transparente de segurança
 
@@ -23,7 +23,7 @@ ms.locfileid: "66456507"
 A segurança envolve três partes interativas: área restrita, permissões e imposição. Área restrita refere-se à prática de criar domínios isolados, onde algum código é tratado como totalmente confiável e outro código é restrito às permissões no conjunto de concessões para a área restrita. O código do aplicativo que é executado dentro do conjunto de concessões da área de segurança é considerado transparente; ou seja, ele não é possível executar todas as operações que podem afetar a segurança. O conjunto de concessões para a área restrita é determinada pela evidência (<xref:System.Security.Policy.Evidence> classe). A evidência identifica quais permissões específicas são necessárias para áreas restritas e quais tipos de áreas de segurança podem ser criados. Imposição se refere a permitir que código transparente seja executado somente em seu conjunto de concessões.
 
 > [!IMPORTANT]
-> Política de segurança era um elemento importante em versões anteriores do .NET Framework. Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], política de segurança é obsoleta. A eliminação da política de segurança é separada da transparência de segurança. Para obter informações sobre os efeitos dessa alteração, consulte [compatibilidade de política de segurança de acesso do código e migração](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
+> Política de segurança era um elemento importante em versões anteriores do .NET Framework. Começando com o .NET Framework 4, a política de segurança é obsoleta. A eliminação da política de segurança é separada da transparência de segurança. Para obter informações sobre os efeitos dessa alteração, consulte [compatibilidade de política de segurança de acesso do código e migração](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
 
 Este tópico descreve o modelo de transparência em mais detalhes. Ele contém as seguintes seções:
 
@@ -70,7 +70,7 @@ A principal diferença entre os dois níveis de transparência é que o nível 1
 
 ### <a name="level-2-transparency"></a>Transparência de nível 2
 
-Transparência de nível 2 foi introduzida no [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Os três tenets desse modelo são código transparente, código segurança-seguro-crítica e código de segurança crítica.
+Transparência de nível 2 foi introduzida no .NET Framework 4. Os três tenets desse modelo são código transparente, código segurança-seguro-crítica e código de segurança crítica.
 
 - Código transparente, independentemente das permissões que ele recebe (incluindo confiança total), pode chamar apenas outro código transparente ou código segurança-seguro-crítica. Se o código for parcialmente confiável, ele só pode executar ações permitidas pelo conjunto de permissões do domínio. O código transparente não pode fazer o seguinte:
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e330e0d06077d1eef63cf44f31bbcbf7c3431b59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46ff6032f2cdbd4a5f294198fe3bf71862c67528
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985537"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490252"
 ---
 # <a name="hosting-interfaces"></a>Interfaces de hospedagem
 Esta seção descreve as interfaces não gerenciadas hosts podem usar para integrar o common language runtime (CLR) em seus aplicativos.  
@@ -22,7 +22,7 @@ Esta seção descreve as interfaces não gerenciadas hosts podem usar para integ
   
  As versões do .NET Framework 3.0 e 3.5 usam as interfaces de hospedagem do .NET Framework versão 2.0 e não apresenta os recursos de hospedagem.  
   
- O [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] interfaces de hospedagem substituem as interfaces do .NET Framework 2.0.
+ As interfaces de hospedagem do .NET Framework 4 substituem as interfaces do .NET Framework 2.0.
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Interfaces e coclasses de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
@@ -32,7 +32,7 @@ Esta seção descreve as interfaces não gerenciadas hosts podem usar para integ
  Descreve as interfaces de hospedagem introduzidas no .NET Framework versão 2.0.  
   
  [Interfaces de hospedagem CLR adicionadas ao .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- Descreve as interfaces de hospedagem introduzidas no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Descreve as interfaces de hospedagem introduzidas no .NET Framework 4.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Coclasses de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

@@ -2,12 +2,12 @@
 title: Funções agregadas canônicas
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2738d649190b088c34272de5b3e8732d87811a59
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607447"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489517"
 ---
 # <a name="aggregate-canonical-functions"></a>Funções agregadas canônicas
 
@@ -224,7 +224,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 As expressões na agregação grupo- base são avaliadas dentro do escopo de resolução que seria visível para a cláusula WHERE expressão.
 
-Como em [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregações baseadas em grupo também podem especificar um todos ou modificador DISTINCT. Se o modificador DISTINCT é especificado, as duplicatas são eliminadas de coleção de entrada aggregate, antes que a agregação é calculada apenas. Se TODOS OS modificador é especificado (ou se nenhum modificador é especificado), nenhuma descarte duplicado é executada.
+Como no Transact-SQL, agregações baseadas em grupo também podem especificar um todos ou modificador DISTINCT. Se o modificador DISTINCT é especificado, as duplicatas são eliminadas de coleção de entrada aggregate, antes que a agregação é calculada apenas. Se TODOS OS modificador é especificado (ou se nenhum modificador é especificado), nenhuma descarte duplicado é executada.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -2,12 +2,12 @@
 title: Habilitando o acesso entre bancos de dados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: ef018566c5d3881d2f9b77dad932712d1fb11841
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e2a9149074d2d29ff2e17fa2a339bd7820b984
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583695"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490087"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Habilitando o acesso entre bancos de dados no SQL Server
 O encadeamento de propriedade entre bancos de dados ocorre quando um procedimento em um banco de dados depende dos objetos em outro banco de dados. Uma cadeia de propriedade entre bancos de dados funciona como a cadeia de propriedade dentro de um único banco de dados, exceto que uma cadeia de propriedade exige que todos os proprietários de objetos sejam mapeados para a mesma conta de logon. Se o objeto de origem no banco de dados de origem e os objetos de destino nos bancos de dados de destino forem de propriedade da mesma conta de logon, o SQL Server não verificará permissões nos objetos de destino.  
@@ -20,7 +20,7 @@ O encadeamento de propriedade entre bancos de dados ocorre quando um procediment
 - Os usuários com a permissão CREATE DATABASE podem criar novos bancos de dados e anexar bancos de dados existentes. Se o encadeamento de propriedades entre banco de dados estiver habilitado, esses usuários poderão acessar objetos em outros bancos de dados que possam não ter privilégios nos bancos de dados recém-criados ou anexados.  
   
 ## <a name="enabling-cross-database-ownership-chaining"></a>Habilitando o encadeamento de propriedades entre banco de dados  
- O encadeamento de propriedades entre banco de dados deve ser habilitado apenas em ambientes onde você possa confiar completamente em usuários altamente privilegiados. Pode ser configurado durante a instalação para todos os bancos de dados, ou seletivamente para os bancos de dados específicos usando comandos [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`sp_configure` e `ALTER DATABASE`.  
+ O encadeamento de propriedades entre banco de dados deve ser habilitado apenas em ambientes onde você possa confiar completamente em usuários altamente privilegiados. Ele pode ser configurado durante a instalação para todos os bancos de dados, ou seletivamente para os bancos de dados específicos usando os comandos Transact-SQL `sp_configure` e `ALTER DATABASE`.  
   
  Para configurar seletivamente o encadeamento de propriedades entre banco de dados, use `sp_configure` para desativá-lo para o servidor. Use o comando ALTER DATABASE com SET DB_CHAINING ON para configurar o encadeamento de propriedades entre banco de dados para somente os bancos de dados que exigirem isso.  
   

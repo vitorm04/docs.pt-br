@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aeb813cafbf5b18739c4574c386398ac3c7a77b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dfe2c98fd5898a0ad5a1d4fd9e89c7f20741bb0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777995"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490688"
 ---
 # <a name="callfunctionshim-function"></a>Função CallFunctionShim
 Faz uma chamada para a função que tem o nome especificado e os parâmetros na biblioteca especificada.  
   
- Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Essa função foi preterida no .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxe  
   

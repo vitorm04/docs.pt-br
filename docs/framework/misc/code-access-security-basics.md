@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c41becaa149b933d46a01f6ada0ea4b29b68fe8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868764"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488025"
 ---
 # <a name="code-access-security-basics"></a>Noções básicas da segurança de acesso do código
 
@@ -32,7 +32,7 @@ Você deve estar familiarizado com os seguintes conceitos de segurança de acess
 
 - **Proteger as bibliotecas de classes**: Uma biblioteca de classe seguras usa demandas de segurança para garantir que os chamadores da biblioteca tenham permissão para acessar os recursos que expõe a biblioteca. Por exemplo, uma biblioteca de classe seguras pode ter um método para a criação de arquivos que seriam exigem que os chamadores tenham permissões para criar arquivos. O .NET Framework consiste em bibliotecas de classe seguras. Você deve estar ciente das permissões necessárias para acessar qualquer biblioteca que usa seu código. Para obter mais informações, consulte o [usando bibliotecas de classe Secure](#secure_library) seção mais adiante neste tópico.
 
-- **O código transparente**: Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], além de identificar as permissões específicas, você também deve determinar se seu código deve ser executado como transparente de segurança. Código transparente de segurança não é possível chamar tipos ou membros que são identificados como crítico de segurança. Essa regra se aplica a aplicativos de confiança total, bem como aplicativos parcialmente confiáveis. Para obter mais informações, consulte [código transparente de segurança](../../../docs/framework/misc/security-transparent-code.md).
+- **O código transparente**: Começando com o .NET Framework 4, além de identificar as permissões específicas, você também deve determinar se seu código deve ser executado como transparente de segurança. Código transparente de segurança não é possível chamar tipos ou membros que são identificados como crítico de segurança. Essa regra se aplica a aplicativos de confiança total, bem como aplicativos parcialmente confiáveis. Para obter mais informações, consulte [código transparente de segurança](../../../docs/framework/misc/security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
@@ -55,7 +55,7 @@ Segurança de acesso do código não elimina a possibilidade de erro humano em e
 Usa a sintaxe de segurança declarativa [atributos](../../../docs/standard/attributes/index.md) colocar informações de segurança para o [metadados](../../../docs/standard/metadata-and-self-describing-components.md) do seu código. Atributos podem ser colocados no nível do assembly, classe ou membro, para indicar o tipo de solicitação, demanda ou substituição que você deseja usar. As solicitações são usadas em aplicativos que visam o common language runtime para informar o sistema de segurança de tempo de execução sobre as permissões que seu aplicativo precisa ou não quer. As demandas e substituições são usadas nas bibliotecas para ajudar a proteger os recursos de chamadores ou para substituir o comportamento padrão de segurança.
 
 > [!NOTE]
-> No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], houve alterações importantes para o modelo de segurança do .NET Framework e a terminologia. Para obter mais informações sobre essas alterações, consulte [alterações de segurança](../../../docs/framework/security/security-changes.md).
+> No .NET Framework 4, houve alterações importantes para o modelo de segurança do .NET Framework e a terminologia. Para obter mais informações sobre essas alterações, consulte [alterações de segurança](../../../docs/framework/security/security-changes.md).
 
 Para usar chamadas de segurança declarativa, você deve inicializar os dados de estado do objeto de permissão para que ele representa o formato específico de permissão que você precisa. Cada permissão interna tem um atributo que é passado um <xref:System.Security.Permissions.SecurityAction> enumeração para descrever o tipo de operação de segurança que você deseja executar. No entanto, as permissões também aceitam seus próprios parâmetros que são exclusivos para eles.
 

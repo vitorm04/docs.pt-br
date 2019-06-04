@@ -2,12 +2,12 @@
 title: Problemas conhecidos em SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0a6fec7e2d129523e5f68955e51ac50154cb58df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631723"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489538"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conhecidos em SqlClient para Entity Framework
 Esta seção descreve os problemas conhecidos relacionados ao provedor de dados. NET Framework para SQL Server (SqlClient).  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Direcionamento a versão correta do SQL Server  
- O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] destinos a [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] consulta com base na versão do SQL Server que é especificado no `ProviderManifestToken` atributo do elemento do esquema no arquivo de modelo (. SSDL) de armazenamento. Esta versão pode diferir de versão do SQL Server que você real é conectada. Por exemplo, se você estiver usando o SQL Server 2005, mas seu `ProviderManifestToken` atributo é definido como 2008, gerado [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] consulta não pode executar no servidor. Por exemplo, uma consulta que usa os tipos de tempo de nova data que foram introduzidos no SQL Server 2008 não será executado em versões anteriores do SQL Server. Se você estiver usando o SQL Server 2005, mas seu `ProviderManifestToken` atributo é definido como 2000, gerado [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] consulta pode ser menor otimizada, ou você pode receber uma exceção informando que a consulta não é suportada. Para obter mais informações, consulte a seção de operadores de aplicar a CRUZ e EXTERIORES, neste tópico.  
+ O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] tem como alvo a consulta de Transact-SQL com base na versão do SQL Server que é especificado no `ProviderManifestToken` atributo do elemento do esquema no arquivo de modelo (. SSDL) de armazenamento. Esta versão pode diferir de versão do SQL Server que você real é conectada. Por exemplo, se você estiver usando o SQL Server 2005, mas seu `ProviderManifestToken` atributo é definido como 2008, a consulta Transact-SQL gerada não pode executar no servidor. Por exemplo, uma consulta que usa os tipos de tempo de nova data que foram introduzidos no SQL Server 2008 não será executado em versões anteriores do SQL Server. Se você estiver usando o SQL Server 2005, mas seu `ProviderManifestToken` atributo é definido como 2000, a consulta Transact-SQL gerada pode ser menos otimizada ou você pode receber uma exceção informando que a consulta não é suportada. Para obter mais informações, consulte a seção de operadores de aplicar a CRUZ e EXTERIORES, neste tópico.  
   
- Determinados comportamentos de base de dados depende de nível de compatibilidade definido para base de dados. Se o atributo de `ProviderManifestToken` é definido como 2005 e sua versão do SQL Server é 2005, mas a compatibilidade em nível de uma base de dados é definida como “80 " (SQL Server 2000), [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] será gerado como alvo o SQL Server 2005, mas pode não ser executadas como esperado devido à configuração de nível de compatibilidade. Por exemplo, você pode perder ordenação informações se um nome de coluna na cláusula ORDER a lista corresponde a um nome de coluna no seletor.  
+ Determinados comportamentos de base de dados depende de nível de compatibilidade definido para base de dados. Se seu `ProviderManifestToken` atributo é definido como 2005 e sua versão do SQL Server é 2005, mas o nível de compatibilidade de um banco de dados é definido como "80" (SQL Server 2000), o Transact-SQL gerado terão como destino SQL Server 2005, mas não pode ser executado conforme o esperado devido à configuração de nível de compatibilidade. Por exemplo, você pode perder ordenação informações se um nome de coluna na cláusula ORDER a lista corresponde a um nome de coluna no seletor.  
   
 ## <a name="nested-queries-in-projection"></a>Consultas aninhadas na projeção  
  Consultas aninhadas em uma cláusula de projeção podem obter convertido em consultas de produto cartesiano no servidor. Em alguns servidores de back-end, incluindo o servidor de SLQ, isso pode causar a tabela de TempDB a Obtenha muito grande. Isso pode diminuir o desempenho do servidor.  

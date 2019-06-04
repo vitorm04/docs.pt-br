@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704902"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487671"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > elemento
 Especifica se o comportamento padrão, que é permitir que o host de tempo de execução substitua as definições de configuração de um domínio de aplicativo, está desabilitado.  
@@ -40,7 +40,7 @@ Especifica se o comportamento padrão, que é permitir que o host de tempo de ex
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0|Não desabilite a capacidade de substituir as configurações de fusão. Esse é o comportamento padrão, começando com o [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|0|Não desabilite a capacidade de substituir as configurações de fusão. Isso é o comportamento padrão, começando com o .NET Framework 4.|  
 |1|Desabilite a capacidade de substituir as configurações de fusão. Isso será revertido para o comportamento de versões anteriores do .NET Framework.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -54,7 +54,7 @@ Especifica se o comportamento padrão, que é permitir que o host de tempo de ex
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Começando com o [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], o comportamento padrão é permitir que o <xref:System.AppDomainManager> objeto a substituir as definições de configuração usando o <xref:System.AppDomainSetup.ConfigurationFile%2A> propriedade ou o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método da <xref:System.AppDomainSetup> objeto que é passado para sua implementação dos <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método, em sua subclasse de <xref:System.AppDomainManager>. Para o domínio de aplicativo padrão, as configurações alteradas substituirão as configurações que foram especificadas pelo arquivo de configuração de aplicativo. Para outros domínios de aplicativo, elas substituirão as configurações de configuração que foram passadas para o <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> ou <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> método.  
+ Começando com o .NET Framework 4, o comportamento padrão é permitir que o <xref:System.AppDomainManager> objeto a substituir as definições de configuração usando o <xref:System.AppDomainSetup.ConfigurationFile%2A> propriedade ou o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método da <xref:System.AppDomainSetup> objeto que é passado para sua implementação dos <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método, em sua subclasse de <xref:System.AppDomainManager>. Para o domínio de aplicativo padrão, as configurações alteradas substituirão as configurações que foram especificadas pelo arquivo de configuração de aplicativo. Para outros domínios de aplicativo, elas substituirão as configurações de configuração que foram passadas para o <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> ou <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> método.  
   
  Você pode passar novas informações de configuração ou passar null (`Nothing` no Visual Basic) para eliminar informações de configuração que foi passadas.  
   
