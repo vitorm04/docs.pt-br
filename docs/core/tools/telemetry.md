@@ -4,12 +4,12 @@ description: Descubra os recursos de telemetria do SDK do .NET Core que coletam 
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751681"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377497"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
 
@@ -79,7 +79,7 @@ Os dados publicados estão disponíveis trimestralmente e são listados em [.NET
 
 &#8224;A coluna *Ocorrências* exibe uma contagem agregada do uso desse comando para as métricas dessa linha naquele dia.
 
-&#8225;Normalmente, a coluna *Geografia* exibe o nome de um país. Em alguns casos, continente da Antártida aparece na coluna, devido ao fato de os pesquisadores usarem o .NET Core na Antártida ou a dados de localização incorretos.
+&#8225;Normalmente, a coluna *Geografia* exibe o nome de um país/região. Em alguns casos, continente da Antártida aparece na coluna, devido ao fato de os pesquisadores usarem o .NET Core na Antártida ou a dados de localização incorretos.
 
 ### <a name="example"></a>Exemplo
 
