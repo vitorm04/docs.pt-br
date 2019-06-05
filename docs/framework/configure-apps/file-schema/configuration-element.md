@@ -41,16 +41,16 @@ Nenhum
 
 |     | Descrição |
 | --- | ----------- |
-| [**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Especifica a diretiva de ligação de assembly no nível de configuração.|
-| [**\<inicialização >** esquema de configurações](~/docs/framework/configure-apps/file-schema/startup/index.md) | Todos os elementos no esquema de configurações de inicialização. |
-| [**\<tempo de execução >** esquema de configurações](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Todos os elementos no esquema de configurações de tempo de execução. |
-| [**\<system.runtime.remoting>** Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | Todos os elementos no esquema de configurações de comunicação remota. |
-| [**\<system.Net>** Settings Schema](~/docs/framework/configure-apps/file-schema/network/index.md) | Todos os elementos no esquema de configurações de rede. |
-| [**\<cryptographySettings>** Settings Schema](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | Todos os elementos no esquema de configurações de criptografia. |
-| [**\<Configuração >** esquema de seções](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Todos os elementos no esquema de configurações da seção de configuração. |
+| [ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Especifica a diretiva de ligação de assembly no nível de configuração.|
+| [ **\<inicialização >** esquema de configurações](~/docs/framework/configure-apps/file-schema/startup/index.md) | Todos os elementos no esquema de configurações de inicialização. |
+| [ **\<tempo de execução >** esquema de configurações](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Todos os elementos no esquema de configurações de tempo de execução. |
+| [ **\<system.runtime.remoting>** Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | Todos os elementos no esquema de configurações de comunicação remota. |
+| [ **\<system.Net>** Settings Schema](~/docs/framework/configure-apps/file-schema/network/index.md) | Todos os elementos no esquema de configurações de rede. |
+| [ **\<cryptographySettings>** Settings Schema](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | Todos os elementos no esquema de configurações de criptografia. |
+| [ **\<Configuração >** esquema de seções](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Todos os elementos no esquema de configurações da seção de configuração. |
 | [Esquema de configurações de rastreamento e depuração](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | Todos os elementos no esquema de configurações de rastreamento e depuração. |
 | [Esquema de configurações de configuração do ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | Todos os elementos no esquema de configuração de ASP.NET, que inclui elementos para configurar sites e aplicativos Web do ASP.NET. Usado na *Web. config* arquivos. |
-| [**\<webServices>** Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Todos os elementos no esquema de configurações de serviços da Web. |
+| [ **\<webServices>** Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Todos os elementos no esquema de configurações de serviços da Web. |
 | [Esquema de configurações Web](~/docs/framework/configure-apps/file-schema/web/index.md) | Todos os elementos do esquema de configurações da Web, que incluem elementos para configurar como o ASP.NET, funciona com um aplicativo host, como o IIS. Usado na *ASPNET* arquivos. |
 
 ## <a name="remarks"></a>Comentários
