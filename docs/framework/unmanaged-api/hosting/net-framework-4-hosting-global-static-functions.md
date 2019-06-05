@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a372a9072d2ee18df1efd060d3fd024a92e0bc6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cb46d3684e36ca203b3ea5b58491150af4ffd58
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765135"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490152"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 hospedando funções estáticas globais
-O [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] apresenta um novo método exportado em mscoree. dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
+O .NET Framework 4 apresenta um novo método exportado em mscoree. dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Função CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
