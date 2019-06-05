@@ -8,18 +8,18 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: 1b2a1164f02208cc7578820d8f8ed3bc145fb5b8
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196526"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689545"
 ---
-# <a name="debugview-syntax"></a>Sintaxe de `DebugView` 
+# <a name="debugview-syntax"></a>Sintaxe de `DebugView`
 
-O `DebugView` propriedade (disponível apenas durante a depuração) fornece uma renderização de árvores de expressão de cadeia de caracteres. A maior parte da sintaxe é bastante simples de entender; os casos especiais são descritos nas seções a seguir.
+A propriedade `DebugView` (disponível apenas durante a depuração) fornece uma renderização de cadeia de caracteres de árvores de expressão. A maior parte da sintaxe é bastante simples de entender; os casos especiais são descritos nas seções a seguir.
 
-Cada exemplo é seguido por um bloco de comentário que contém o `DebugView`. 
+Cada exemplo é seguido por um bloco de comentário que contém o `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -47,13 +47,13 @@ Para objetos <xref:System.Linq.Expressions.ConstantExpression?displayProperty=na
 
 Para alguns tipos numéricos, um sufixo é adicionado ao valor:
 
-| Tipo | Palavra-chave | Sufixo |  
+| Tipo | Palavra-chave | Sufixo |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [Duplo](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Simples](../../../language-reference/data-types/single-data-type.md) | F | 
+| <xref:System.Single> | [Simples](../../../language-reference/data-types/single-data-type.md) | F |
 | <xref:System.Decimal> | [Decimal](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>Exemplos
@@ -74,7 +74,7 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 
 ## <a name="blockexpression"></a>BlockExpression
 
-Se o tipo de um <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> difere de objeto do tipo da última expressão no bloco, o tipo é exibido entre colchetes angulares (`<` e `>`). Caso contrário, o tipo do objeto <xref:System.Linq.Expressions.BlockExpression> não é exibido.
+Se o tipo de um objeto <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> difere do tipo da última expressão no bloco, o tipo será exibido entre colchetes angulares (`<` e `>`). Caso contrário, o tipo do objeto <xref:System.Linq.Expressions.BlockExpression> não é exibido.
 
 ### <a name="examples"></a>Exemplos
 
@@ -87,7 +87,7 @@ Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
 '
 
 Dim block As BlockExpression = Expression.Block(
-    GetType(Object), 
+    GetType(Object),
     Expression.Constant("test")
 )
 '
@@ -154,7 +154,7 @@ Dim label1 As BlockExpression = Expression.Block(
 
 Dim target As LabelTarget = Expression.Label()
 Dim block As BlockExpression = Expression.Block(
-    Expression.Goto(target), 
+    Expression.Goto(target),
     Expression.Label(target)
 )
 '
@@ -168,7 +168,7 @@ Dim block As BlockExpression = Expression.Block(
 
 ## <a name="checked-operators"></a>Operadores verificados
 
-Operadores verificados são exibidos com o `#` símbolo na frente do operador. Por exemplo, o operador de adição verificado é exibido como `#+`.
+Os operadores verificados são exibidos com o símbolo `#` na frente do operador. Por exemplo, o operador de adição verificado é exibido como `#+`.
 
 ### <a name="examples"></a>Exemplos
 

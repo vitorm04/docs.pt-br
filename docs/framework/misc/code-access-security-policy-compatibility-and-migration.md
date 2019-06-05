@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487976"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690286"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Compatibilidade de políticas de segurança de acesso de código e migração
 
@@ -26,7 +26,7 @@ Você pode evitar os avisos e erros por qualquer um:
 
    \- ou -
 
-- Usando o [o elemento de configuração < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) aceitar o comportamento herdado de política de CAS.
+- Usando o [ \<NetFx40_LegacySecurityPolicy > elemento de configuração](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) aceitar o comportamento herdado de política de CAS.
 
 Esse tópico contém as seguintes seções:
 
@@ -142,7 +142,7 @@ Se você quiser para a área restrita um assembly, use o <xref:System.AppDomain.
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Compatibilidade: Usando a opção de política CAS herdada
 
-O [o elemento de configuração < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) permite que você especifique que um processo ou a biblioteca usa a política CAS herdada. Quando você habilita esse elemento, as sobrecargas de diretiva e evidência funcionará como ocorria nas versões anteriores do framework.
+O [ \<NetFx40_LegacySecurityPolicy > elemento de configuração](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) permite que você especifique que um processo ou a biblioteca usa a política CAS herdada. Quando você habilita esse elemento, as sobrecargas de diretiva e evidência funcionará como ocorria nas versões anteriores do framework.
 
 > [!NOTE]
 > Comportamento da política de CAS é especificado em uma base de versão de tempo de execução, portanto, a modificação de política de CAS para uma versão de tempo de execução não afeta a política de CAS de outra versão.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777124"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689335"
 ---
 # <a name="application-startup-time"></a>Tempo de inicialização do aplicativo
 A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode variar consideravelmente. Este tópico descreve diversas técnicas para reduzir o tempo de inicialização percebido e real de um aplicativo do WPF (Windows Presentation Foundation).  
@@ -81,7 +81,7 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
   
  Considere a instalação do Certificado de Autoridade de Certificação no computador cliente ou evite o uso de Authenticode quando for possível. Se você sabe que seu aplicativo não precisa de prova do editor, não é necessário pagar pelo custo da verificação de assinatura.  
   
- Começando com o [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], há uma opção de configuração que permite que a verificação de Authenticode seja ignorada. Para fazer isso, adicione a seguinte configuração no arquivo app.exe.config:  
+ A partir do .NET Framework 3.5, há uma opção de configuração que permite a verificação de Authenticode seja ignorada. Para fazer isso, adicione a seguinte configuração no arquivo app.exe.config:  
   
 ```xml  
 <configuration>  

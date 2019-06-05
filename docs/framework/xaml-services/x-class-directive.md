@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee94d7bf52f3fb2ea534cdb2f44d0be2cc8699eb
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025412"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689407"
 ---
 # <a name="xclass-directive"></a>Diretiva x:Class
 Configura a compilação de marcação XAML para ingressar em classes parciais entre marcação e code-behind. A classe código parcial é definida em um arquivo de código separado em um [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] idioma, enquanto a classe parcial de marcação é normalmente criada pela geração de código durante a compilação de XAML.  
@@ -52,7 +52,7 @@ Configura a compilação de marcação XAML para ingressar em classes parciais e
  Em um determinado nível da arquitetura, o significado de `x:Class` não está definida nos serviços de XAML do .NET Framework. Isso ocorre porque os serviços de XAML do .NET Framework não especifica o modelo de programação pelo qual XAML marcação e código de backup estão conectados. Usos adicionais do `x:Class` diretiva pode ser implementada por estruturas específicas que usam modelos de programação ou modelos de aplicativo para definir como se conectar a marcação XAML e code-behind com base em CLR. Cada estrutura pode ter suas próprias ações de compilação que permitem que alguns dos componentes específicos que devem ser incluídos no ambiente de compilação ou comportamento. Dentro de uma estrutura, as ações de build também podem variar dependendo da linguagem específica do CLR que é usada para o code-behind.  
   
 ## <a name="xclass-in-the-wpf-programming-model"></a>X:Class no modelo de programação do WPF  
- Em aplicativos WPF e o modelo de aplicativo do WPF `x:Class` pode ser declarado como um atributo para qualquer elemento que é a raiz de um arquivo XAML e está sendo compilado (onde o XAML está incluído em um projeto de aplicativo do WPF com `Page` ação de build), ou para o < C4 > <xref:System.Windows.Application>  raiz na definição de aplicativo de um aplicativo WPF compilado. Declarando `x:Class` em um elemento diferente de raiz da página ou a raiz do aplicativo, ou em um arquivo XAML WPF que não seja compilado, causa um erro de tempo de compilação sob o [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] e [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] compilador WPF XAML. Para obter informações sobre outros aspectos da `x:Class` tratamento no WPF, consulte [Code-Behind e XAML no WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+ Em aplicativos WPF e o modelo de aplicativo do WPF `x:Class` pode ser declarado como um atributo para qualquer elemento que é a raiz de um arquivo XAML e está sendo compilado (onde o XAML está incluído em um projeto de aplicativo do WPF com `Page` ação de build), ou para o < C4 > <xref:System.Windows.Application>  raiz na definição de aplicativo de um aplicativo WPF compilado. Declarando `x:Class` em um elemento diferente de raiz da página ou a raiz do aplicativo, ou em um arquivo XAML WPF que não seja compilado, causa um erro de tempo de compilação sob o [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] e o compilador do .NET Framework 3.5 WPF XAML. Para obter informações sobre outros aspectos da `x:Class` tratamento no WPF, consulte [Code-Behind e XAML no WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md).  
   
 ## <a name="xclass-for-windows-workflow-foundation"></a>X:Class for Windows Workflow Foundation  
  Para o Windows Workflow Foundation, `x:Class` nomeia a classe de uma atividade personalizada composta inteiramente em XAML ou nomes de classe parcial da página XAML para um designer de atividade com code-behind.  

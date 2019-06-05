@@ -1,6 +1,9 @@
 ---
 title: 'Como: Criar um suplemento que seja uma interface do usuário'
 ms.date: 03/30/2017
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
 - add-ins [WPF], UI
@@ -9,12 +12,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b0213ddfd8197ffabcbeb1cd5fc78e517920b8fe
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592655"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690452"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Como: Criar um suplemento que seja uma interface do usuário
 Este exemplo mostra como criar um suplemento que é um Windows Presentation Foundation (WPF) que é hospedado por um aplicativo autônomo do WPF.  
@@ -33,57 +36,79 @@ Este exemplo mostra como criar um suplemento que é um Windows Presentation Foun
  Para criar um suplemento é uma UI do WPF requer código específico para cada segmento de pipeline, o suplemento e o aplicativo host.  
 
 <a name="Contract"></a>   
-## <a name="implementing-the-contract-pipeline-segment"></a>Implementando o segmento de pipeline de contrato  
- Quando um suplemento é uma interface do usuário, o contrato para o suplemento deve implementar <xref:System.AddIn.Contract.INativeHandleContract>. No exemplo, `IWPFAddInContract` implementa <xref:System.AddIn.Contract.INativeHandleContract>, conforme mostrado no código a seguir.  
+## <a name="implementing-the-contract-pipeline-segment"></a>Implementando o segmento de pipeline de contrato
+
+Quando um suplemento é uma interface do usuário, o contrato para o suplemento deve implementar <xref:System.AddIn.Contract.INativeHandleContract>. No exemplo, `IWPFAddInContract` implementa <xref:System.AddIn.Contract.INativeHandleContract>, conforme mostrado no código a seguir.  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
-  
+[!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]
+[!code-vb[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/Contracts/IWPFAddInContract.vb#contractcode)]
+
 <a name="AddInViewPipeline"></a>   
-## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementando o segmento de pipeline de exibição de suplemento  
- Como o suplemento é implementado como uma subclasse do <xref:System.Windows.FrameworkElement> tipo, o modo de exibição também deve subclasse <xref:System.Windows.FrameworkElement>. O código a seguir mostra a exibição do suplemento do contrato, implementada como a `WPFAddInView` classe.  
+## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementando o segmento de pipeline de exibição de suplemento
+
+Como o suplemento é implementado como uma subclasse do <xref:System.Windows.FrameworkElement> tipo, o modo de exibição também deve subclasse <xref:System.Windows.FrameworkElement>. O código a seguir mostra a exibição do suplemento do contrato, implementada como a `WPFAddInView` classe.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+[!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+[!code-vb[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/AddInViews/WPFAddInView.vb#AddInViewCode)]  
   
- Aqui, o modo de exibição é derivado de <xref:System.Windows.Controls.UserControl>. Consequentemente, a interface do suplemento também deve derivar de <xref:System.Windows.Controls.UserControl>.  
+Aqui, o modo de exibição é derivado de <xref:System.Windows.Controls.UserControl>. Consequentemente, a interface do suplemento também deve derivar de <xref:System.Windows.Controls.UserControl>.  
   
-<a name="AddInSideAdapter"></a>   
-## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementando o segmento de pipeline do adaptador no lado do suplemento  
- Enquanto o contrato é um <xref:System.AddIn.Contract.INativeHandleContract>, o suplemento é um <xref:System.Windows.FrameworkElement> (conforme especificado pelo segmento de pipeline de exibição do suplemento). Portanto, o <xref:System.Windows.FrameworkElement> deve ser convertido em um <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar o limite de isolamento. Esse trabalho é executado pelo adaptador do lado do suplemento chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, conforme mostrado no código a seguir.  
+<a name="AddInSideAdapter"></a>
+## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementando o segmento de pipeline do adaptador no lado do suplemento
+
+Enquanto o contrato é um <xref:System.AddIn.Contract.INativeHandleContract>, o suplemento é um <xref:System.Windows.FrameworkElement> (conforme especificado pelo segmento de pipeline de exibição do suplemento). Portanto, o <xref:System.Windows.FrameworkElement> deve ser convertido em um <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar o limite de isolamento. Esse trabalho é executado pelo adaptador do lado do suplemento chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, conforme mostrado no código a seguir.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
-  
- No suplemento do modelo em que um suplemento retorna uma interface do usuário (consulte [criar um suplemento que retorna uma interface do usuário](how-to-create-an-add-in-that-returns-a-ui.md)), o adaptador de suplemento converte as <xref:System.Windows.FrameworkElement> para um <xref:System.AddIn.Contract.INativeHandleContract> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> também deve ser chamado nesse modelo, embora você precise implementar um método do qual escrever o código para chamá-lo. Você pode fazer isso por meio da substituição <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> e implementar o código que chama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> se o código que está chamando <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> está esperando um <xref:System.AddIn.Contract.INativeHandleContract>. Nesse caso, o chamador será o adaptador do lado do host, que é abordado em uma seção mais adiante.  
+[!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+[!code-vb[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.vb#addinsideadaptercode)]
+
+No suplemento do modelo em que um suplemento retorna uma interface do usuário (consulte [criar um suplemento que retorna uma interface do usuário](how-to-create-an-add-in-that-returns-a-ui.md)), o adaptador de suplemento converte as <xref:System.Windows.FrameworkElement> para um <xref:System.AddIn.Contract.INativeHandleContract> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> também deve ser chamado nesse modelo, embora você precise implementar um método do qual escrever o código para chamá-lo. Você pode fazer isso por meio da substituição <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> e implementar o código que chama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> se o código que está chamando <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> está esperando um <xref:System.AddIn.Contract.INativeHandleContract>. Nesse caso, o chamador será o adaptador do lado do host, que é abordado em uma seção mais adiante.  
   
 > [!NOTE]
 >  Você também precisa substituir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> nesse modelo para habilitar tabulações entre o aplicativo de host da interface do usuário e da interface do usuário do suplemento. Para obter mais informações, consulte "Adicionar limitações de WPF" em [visão geral de suplementos WPF](wpf-add-ins-overview.md).  
   
- Como o adaptador do lado do suplemento implementa uma interface que deriva de <xref:System.AddIn.Contract.INativeHandleContract>, você também precisa implementar <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, embora isso seja ignorado quando <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> é substituído.  
+Como o adaptador do lado do suplemento implementa uma interface que deriva de <xref:System.AddIn.Contract.INativeHandleContract>, você também precisa implementar <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, embora isso seja ignorado quando <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> é substituído.  
   
 <a name="HostViewPipeline"></a>   
-## <a name="implementing-the-host-view-pipeline-segment"></a>Implementando o segmento de pipeline de exibição de host  
- Nesse modelo, o aplicativo host tipicamente espera que o modo de exibição de host para ser um <xref:System.Windows.FrameworkElement> subclasse. O adaptador do lado do host deve converter o <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement> depois que o <xref:System.AddIn.Contract.INativeHandleContract> cruza o limite de isolamento. Porque um método não está sendo chamado pelo aplicativo host para obter o <xref:System.Windows.FrameworkElement>, o modo de host deve "retornar" o <xref:System.Windows.FrameworkElement> por que o contém. Consequentemente, a exibição do host deve derivar de uma subclasse de <xref:System.Windows.FrameworkElement> que podem conter outros [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], como <xref:System.Windows.Controls.UserControl>. O código a seguir mostra a exibição de host do contrato, implementada como a `WPFAddInHostView` classe.  
+## <a name="implementing-the-host-view-pipeline-segment"></a>Implementando o segmento de pipeline de exibição de host
+
+Nesse modelo, o aplicativo host tipicamente espera que o modo de exibição de host para ser um <xref:System.Windows.FrameworkElement> subclasse. O adaptador do lado do host deve converter o <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement> depois que o <xref:System.AddIn.Contract.INativeHandleContract> cruza o limite de isolamento. Porque um método não está sendo chamado pelo aplicativo host para obter o <xref:System.Windows.FrameworkElement>, o modo de host deve "retornar" o <xref:System.Windows.FrameworkElement> por que o contém. Consequentemente, a exibição do host deve derivar de uma subclasse de <xref:System.Windows.FrameworkElement> que podem conter outras interfaces do usuário, como <xref:System.Windows.Controls.UserControl>. O código a seguir mostra a exibição de host do contrato, implementada como a `WPFAddInHostView` classe.  
+
+[!code-csharp[WPFAddInHostView class](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/HostViews/WPFAddInHostView.cs#HostViewCode)]
+[!code-vb[WPFAddInHostView class](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/HostViews/WPFAddInHostView.vb#HostViewCode)]
 
 <a name="HostSideAdapter"></a>   
-## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implementando o segmento de pipeline do adaptador no lado do host  
- Enquanto o contrato é um <xref:System.AddIn.Contract.INativeHandleContract>, o aplicativo host espera um <xref:System.Windows.Controls.UserControl> (como especificado pela exibição host). Consequentemente, o <xref:System.AddIn.Contract.INativeHandleContract> deve ser convertido em um <xref:System.Windows.FrameworkElement> depois de cruzar o limite de isolamento, antes de ser definido como o conteúdo da exibição de host (que é derivada de <xref:System.Windows.Controls.UserControl>).  
-  
- O trabalho é executado pelo adaptador no lado do host, conforme mostrado no código a seguir.  
+## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implementando o segmento de pipeline do adaptador no lado do host
 
- Como você pode ver, o adaptador do lado do host adquire o <xref:System.AddIn.Contract.INativeHandleContract> chamando o adaptador lado do suplemento <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> método (esse é o ponto em que o <xref:System.AddIn.Contract.INativeHandleContract> cruza o limite de isolamento).  
+Enquanto o contrato é um <xref:System.AddIn.Contract.INativeHandleContract>, o aplicativo host espera um <xref:System.Windows.Controls.UserControl> (como especificado pela exibição host). Consequentemente, o <xref:System.AddIn.Contract.INativeHandleContract> deve ser convertido em um <xref:System.Windows.FrameworkElement> depois de cruzar o limite de isolamento, antes de ser definido como o conteúdo da exibição de host (que é derivada de <xref:System.Windows.Controls.UserControl>).  
   
- O adaptador do lado do host, em seguida, converte o <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Por fim, o <xref:System.Windows.FrameworkElement> é definido como o conteúdo da exibição de host.  
+O trabalho é executado pelo adaptador no lado do host, conforme mostrado no código a seguir.  
+
+[!code-csharp[Host-side adapter](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#HostSideAdapterCode)]
+[!code-vb[Host-side adapter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#HostSideAdapterCode)]
+
+Como você pode ver, o adaptador do lado do host adquire o <xref:System.AddIn.Contract.INativeHandleContract> chamando o adaptador lado do suplemento <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> método (esse é o ponto em que o <xref:System.AddIn.Contract.INativeHandleContract> cruza o limite de isolamento).  
+  
+O adaptador do lado do host, em seguida, converte o <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Por fim, o <xref:System.Windows.FrameworkElement> é definido como o conteúdo da exibição de host.  
   
 <a name="AddIn"></a>   
-## <a name="implementing-the-add-in"></a>Implementando os suplementos  
- Com o adaptador no lado do suplemento e a exibição de suplemento em vigor, o suplemento pode ser implementado derivando da exibição de suplemento, conforme mostrado no código a seguir.  
+## <a name="implementing-the-add-in"></a>Implementando os suplementos
 
- Neste exemplo, você pode ver um benefício interessante desse modelo: os desenvolvedores de suplemento só precisam implementar o suplemento (já que é a interface de usuário), em vez de uma classe do suplemento e uma interface de usuário.  
+Com o adaptador no lado do suplemento e a exibição de suplemento em vigor, o suplemento pode ser implementado derivando da exibição de suplemento, conforme mostrado no código a seguir.  
+
+[!code-csharp[Add-in implementation](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/WPFAddIn1/AddInUI.xaml.cs#AddInCodeBehind)]
+[!code-vb[Add-in implementation](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/WPFAddIn1/AddInUI.xaml.vb#AddInCodeBehind)]
+
+Neste exemplo, você pode ver um benefício interessante desse modelo: os desenvolvedores de suplemento só precisam implementar o suplemento (já que é a interface de usuário), em vez de uma classe do suplemento e uma interface de usuário.  
   
-<a name="HostApp"></a>   
-## <a name="implementing-the-host-application"></a>Implementando o aplicativo host  
- Com o adaptador do lado do host e o modo de host criados, o aplicativo host pode usar o modelo de suplemento do .NET Framework para abrir o pipeline e adquirir um modo de host do suplemento. Essas etapas são mostradas no código a seguir.  
+<a name="HostApp"></a>
+## <a name="implementing-the-host-application"></a>Implementando o aplicativo host
 
- O aplicativo host usa o código de modelo de suplemento do .NET Framework típico para ativar o suplemento, que implicitamente retorna o modo de exibição de host para o aplicativo host. O aplicativo host posteriormente mostra a exibição de host (que é um <xref:System.Windows.Controls.UserControl>) de um <xref:System.Windows.Controls.Grid>.  
+Com o adaptador do lado do host e o modo de host criados, o aplicativo host pode usar o modelo de suplemento do .NET Framework para abrir o pipeline e adquirir um modo de host do suplemento. Essas etapas são mostradas no código a seguir.  
+
+[!code-csharp[Acquiring a host view of the add-in](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Host/MainWindow.xaml.cs#GetUICode)]
+[!code-vb[Acquiring a host view of the add-in](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/Host/MainWindow.xaml.vb#GetUICode)]
+
+O aplicativo host usa o código de modelo de suplemento do .NET Framework típico para ativar o suplemento, que implicitamente retorna o modo de exibição de host para o aplicativo host. O aplicativo host posteriormente mostra a exibição de host (que é um <xref:System.Windows.Controls.UserControl>) de um <xref:System.Windows.Controls.Grid>.  
   
  O código para processar interações com o suplemento da interface do usuário é executado no domínio de aplicativo do suplemento. Essas ações incluem o seguinte:  
   
