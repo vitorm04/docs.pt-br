@@ -2,39 +2,45 @@
 title: Padrões ativos
 description: Saiba como usar padrões ativos para definir partições nomeadas que subdividem os dados de entrada a F# linguagem de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25ab255574390d3761fe788aeb413c8ee04fda2a
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772743"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690412"
 ---
-# <a name="active-patterns"></a><span data-ttu-id="0c194-103">Padrões ativos</span><span class="sxs-lookup"><span data-stu-id="0c194-103">Active Patterns</span></span>
+# <a name="active-patterns"></a><span data-ttu-id="065e0-103">Padrões ativos</span><span class="sxs-lookup"><span data-stu-id="065e0-103">Active Patterns</span></span>
 
-<span data-ttu-id="0c194-104">*Padrões ativos* permitem definir partições nomeadas que subdividem os dados de entrada, para que você possa usar esses nomes em um padrão de expressão de correspondência de exatamente como você faria para uma união discriminada.</span><span class="sxs-lookup"><span data-stu-id="0c194-104">*Active patterns* enable you to define named partitions that subdivide input data, so that you can use these names in a pattern matching expression just as you would for a discriminated union.</span></span> <span data-ttu-id="0c194-105">Você pode usar padrões ativos para decompor os dados de uma maneira personalizada para cada partição.</span><span class="sxs-lookup"><span data-stu-id="0c194-105">You can use active patterns to decompose data in a customized manner for each partition.</span></span>
+<span data-ttu-id="065e0-104">*Padrões ativos* permitem definir partições nomeadas que subdividem os dados de entrada, para que você possa usar esses nomes em um padrão de expressão de correspondência de exatamente como você faria para uma união discriminada.</span><span class="sxs-lookup"><span data-stu-id="065e0-104">*Active patterns* enable you to define named partitions that subdivide input data, so that you can use these names in a pattern matching expression just as you would for a discriminated union.</span></span> <span data-ttu-id="065e0-105">Você pode usar padrões ativos para decompor os dados de uma maneira personalizada para cada partição.</span><span class="sxs-lookup"><span data-stu-id="065e0-105">You can use active patterns to decompose data in a customized manner for each partition.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="0c194-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0c194-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="065e0-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="065e0-106">Syntax</span></span>
 
 ```fsharp
-// Complete active pattern definition.
-let (|identifer1|identifier2|...|) [ arguments ] = expression
+// Active pattern of one choice.
+let (|identifier|) [arguments] valueToMatch= expression
+
+// Active Pattern with multiple choices.
+// Uses a FSharp.Core.Choice<_,...,_> based on the number of case names. In F#, the limitation n <= 7 applies.
+let (|identifer1|identifier2|...|) valueToMatch = expression
+
 // Partial active pattern definition.
-let (|identifier|_|) [ arguments ] = expression
+// Uses a FSharp.Core.option<_> to represent if the type is satisfied at the call site.
+let (|identifier|_|) [arguments ] valueToMatch = expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="0c194-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="0c194-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="065e0-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="065e0-107">Remarks</span></span>
 
-<span data-ttu-id="0c194-108">Na sintaxe anterior, os identificadores são os nomes de partições de dados de entrada que são representados pela *argumentos*, ou, em outras palavras, os nomes de subconjuntos do conjunto de todos os valores dos argumentos.</span><span class="sxs-lookup"><span data-stu-id="0c194-108">In the previous syntax, the identifiers are names for partitions of the input data that is represented by *arguments*, or, in other words, names for subsets of the set of all values of the arguments.</span></span> <span data-ttu-id="0c194-109">Pode haver até sete partições em uma definição de padrão ativo.</span><span class="sxs-lookup"><span data-stu-id="0c194-109">There can be up to seven partitions in an active pattern definition.</span></span> <span data-ttu-id="0c194-110">O *expressão* descreve o formulário no qual a decompor os dados.</span><span class="sxs-lookup"><span data-stu-id="0c194-110">The *expression* describes the form into which to decompose the data.</span></span> <span data-ttu-id="0c194-111">Você pode usar uma definição de padrão ativo para definir as regras para determinar quais partições nomeadas valores fornecidos como argumentos pertencem a.</span><span class="sxs-lookup"><span data-stu-id="0c194-111">You can use an active pattern definition to define the rules for determining which of the named partitions the values given as arguments belong to.</span></span> <span data-ttu-id="0c194-112">O (| e |) símbolos são denominados *pipe* e é chamada de função criado por este tipo de associação let um *reconhecedor active*.</span><span class="sxs-lookup"><span data-stu-id="0c194-112">The (| and |) symbols are referred to as *banana clips* and the function created by this type of let binding is called an *active recognizer*.</span></span>
+<span data-ttu-id="065e0-108">Na sintaxe anterior, os identificadores são os nomes de partições de dados de entrada que são representados pela *argumentos*, ou, em outras palavras, os nomes de subconjuntos do conjunto de todos os valores dos argumentos.</span><span class="sxs-lookup"><span data-stu-id="065e0-108">In the previous syntax, the identifiers are names for partitions of the input data that is represented by *arguments*, or, in other words, names for subsets of the set of all values of the arguments.</span></span> <span data-ttu-id="065e0-109">Pode haver até sete partições em uma definição de padrão ativo.</span><span class="sxs-lookup"><span data-stu-id="065e0-109">There can be up to seven partitions in an active pattern definition.</span></span> <span data-ttu-id="065e0-110">O *expressão* descreve o formulário no qual a decompor os dados.</span><span class="sxs-lookup"><span data-stu-id="065e0-110">The *expression* describes the form into which to decompose the data.</span></span> <span data-ttu-id="065e0-111">Você pode usar uma definição de padrão ativo para definir as regras para determinar quais partições nomeadas valores fornecidos como argumentos pertencem a.</span><span class="sxs-lookup"><span data-stu-id="065e0-111">You can use an active pattern definition to define the rules for determining which of the named partitions the values given as arguments belong to.</span></span> <span data-ttu-id="065e0-112">O (| e |) símbolos são denominados *pipe* e é chamada de função criado por este tipo de associação let um *reconhecedor active*.</span><span class="sxs-lookup"><span data-stu-id="065e0-112">The (| and |) symbols are referred to as *banana clips* and the function created by this type of let binding is called an *active recognizer*.</span></span>
 
-<span data-ttu-id="0c194-113">Por exemplo, considere o seguinte padrão de Active Directory com um argumento.</span><span class="sxs-lookup"><span data-stu-id="0c194-113">As an example, consider the following active pattern with an argument.</span></span>
+<span data-ttu-id="065e0-113">Por exemplo, considere o seguinte padrão de Active Directory com um argumento.</span><span class="sxs-lookup"><span data-stu-id="065e0-113">As an example, consider the following active pattern with an argument.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
 
-<span data-ttu-id="0c194-114">Você pode usar o Active Directory padrão em um padrão de correspondência de expressão, como no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="0c194-114">You can use the active pattern in a pattern matching expression, as in the following example.</span></span>
+<span data-ttu-id="065e0-114">Você pode usar o Active Directory padrão em um padrão de correspondência de expressão, como no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="065e0-114">You can use the active pattern in a pattern matching expression, as in the following example.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
 
-<span data-ttu-id="0c194-115">A saída desse programa é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="0c194-115">The output of this program is as follows:</span></span>
+<span data-ttu-id="065e0-115">A saída desse programa é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="065e0-115">The output of this program is as follows:</span></span>
 
 ```
 7 is odd
@@ -42,11 +48,11 @@ let (|identifier|_|) [ arguments ] = expression
 32 is even
 ```
 
-<span data-ttu-id="0c194-116">Outro uso dos padrões ativos é decompor os tipos de dados de várias maneiras, como quando os mesmos dados subjacentes tem diversas representações possíveis.</span><span class="sxs-lookup"><span data-stu-id="0c194-116">Another use of active patterns is to decompose data types in multiple ways, such as when the same underlying data has various possible representations.</span></span> <span data-ttu-id="0c194-117">Por exemplo, um `Color` objeto pode ser decomposto em uma representação de RGB ou uma representação HSB.</span><span class="sxs-lookup"><span data-stu-id="0c194-117">For example, a `Color` object could be decomposed into an RGB representation or an HSB representation.</span></span>
+<span data-ttu-id="065e0-116">Outro uso dos padrões ativos é decompor os tipos de dados de várias maneiras, como quando os mesmos dados subjacentes tem diversas representações possíveis.</span><span class="sxs-lookup"><span data-stu-id="065e0-116">Another use of active patterns is to decompose data types in multiple ways, such as when the same underlying data has various possible representations.</span></span> <span data-ttu-id="065e0-117">Por exemplo, um `Color` objeto pode ser decomposto em uma representação de RGB ou uma representação HSB.</span><span class="sxs-lookup"><span data-stu-id="065e0-117">For example, a `Color` object could be decomposed into an RGB representation or an HSB representation.</span></span>
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
-<span data-ttu-id="0c194-118">A saída do programa acima é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="0c194-118">The output of the above program is as follows:</span></span>
+<span data-ttu-id="065e0-118">A saída do programa acima é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="065e0-118">The output of the above program is as follows:</span></span>
 
 ```
 Red
@@ -66,17 +72,17 @@ BlanchedAlmond
  Hue: 36.000000 Saturation: 1.000000 Brightness: 0.901961
 ```
 
-<span data-ttu-id="0c194-119">Em combinação, essas duas maneiras de usar padrões ativos permitem a partição e decompõem os dados em um formulário apropriado em executam os cálculos apropriados nos dados apropriados na forma mais conveniente para a computação.</span><span class="sxs-lookup"><span data-stu-id="0c194-119">In combination, these two ways of using active patterns enable you to partition and decompose data into just the appropriate form and perform the appropriate computations on the appropriate data in the form most convenient for the computation.</span></span>
+<span data-ttu-id="065e0-119">Em combinação, essas duas maneiras de usar padrões ativos permitem a partição e decompõem os dados em um formulário apropriado em executam os cálculos apropriados nos dados apropriados na forma mais conveniente para a computação.</span><span class="sxs-lookup"><span data-stu-id="065e0-119">In combination, these two ways of using active patterns enable you to partition and decompose data into just the appropriate form and perform the appropriate computations on the appropriate data in the form most convenient for the computation.</span></span>
 
-<span data-ttu-id="0c194-120">As expressões de correspondência de padrão resultante habilitar dados a serem gravados em uma maneira conveniente de ramificação potencialmente complexo muito legível, simplificando consideravelmente e o código de análise de dados.</span><span class="sxs-lookup"><span data-stu-id="0c194-120">The resulting pattern matching expressions enable data to be written in a convenient way that is very readable, greatly simplifying potentially complex branching and data analysis code.</span></span>
+<span data-ttu-id="065e0-120">As expressões de correspondência de padrão resultante habilitar dados a serem gravados em uma maneira conveniente de ramificação potencialmente complexo muito legível, simplificando consideravelmente e o código de análise de dados.</span><span class="sxs-lookup"><span data-stu-id="065e0-120">The resulting pattern matching expressions enable data to be written in a convenient way that is very readable, greatly simplifying potentially complex branching and data analysis code.</span></span>
 
-## <a name="partial-active-patterns"></a><span data-ttu-id="0c194-121">Padrões ativos parciais</span><span class="sxs-lookup"><span data-stu-id="0c194-121">Partial Active Patterns</span></span>
+## <a name="partial-active-patterns"></a><span data-ttu-id="065e0-121">Padrões ativos parciais</span><span class="sxs-lookup"><span data-stu-id="065e0-121">Partial Active Patterns</span></span>
 
-<span data-ttu-id="0c194-122">Às vezes, você precisa apenas parte do espaço de entrada de partição.</span><span class="sxs-lookup"><span data-stu-id="0c194-122">Sometimes, you need to partition only part of the input space.</span></span> <span data-ttu-id="0c194-123">Nesse caso, você escrever um conjunto de parciais padrões que corresponder algumas entradas, mas não corresponde a outras entradas.</span><span class="sxs-lookup"><span data-stu-id="0c194-123">In that case, you write a set of partial patterns each of which match some inputs but fail to match other inputs.</span></span> <span data-ttu-id="0c194-124">Padrões ativos que não produzem um valor sempre são chamados *parciais padrões ativos*; eles têm um valor de retorno é um tipo de opção.</span><span class="sxs-lookup"><span data-stu-id="0c194-124">Active patterns that do not always produce a value are called *partial active patterns*; they have a return value that is an option type.</span></span> <span data-ttu-id="0c194-125">Para definir um padrão ativo parcial, você pode usar um caractere curinga (\_) no final da lista de padrões de dentro do pipe.</span><span class="sxs-lookup"><span data-stu-id="0c194-125">To define a partial active pattern, you use a wildcard character (\_) at the end of the list of patterns inside the banana clips.</span></span> <span data-ttu-id="0c194-126">O código a seguir ilustra o uso de um padrão ativo parcial.</span><span class="sxs-lookup"><span data-stu-id="0c194-126">The following code illustrates the use of a partial active pattern.</span></span>
+<span data-ttu-id="065e0-122">Às vezes, você precisa apenas parte do espaço de entrada de partição.</span><span class="sxs-lookup"><span data-stu-id="065e0-122">Sometimes, you need to partition only part of the input space.</span></span> <span data-ttu-id="065e0-123">Nesse caso, você escrever um conjunto de parciais padrões que corresponder algumas entradas, mas não corresponde a outras entradas.</span><span class="sxs-lookup"><span data-stu-id="065e0-123">In that case, you write a set of partial patterns each of which match some inputs but fail to match other inputs.</span></span> <span data-ttu-id="065e0-124">Padrões ativos que não produzem um valor sempre são chamados *parciais padrões ativos*; eles têm um valor de retorno é um tipo de opção.</span><span class="sxs-lookup"><span data-stu-id="065e0-124">Active patterns that do not always produce a value are called *partial active patterns*; they have a return value that is an option type.</span></span> <span data-ttu-id="065e0-125">Para definir um padrão ativo parcial, você pode usar um caractere curinga (\_) no final da lista de padrões de dentro do pipe.</span><span class="sxs-lookup"><span data-stu-id="065e0-125">To define a partial active pattern, you use a wildcard character (\_) at the end of the list of patterns inside the banana clips.</span></span> <span data-ttu-id="065e0-126">O código a seguir ilustra o uso de um padrão ativo parcial.</span><span class="sxs-lookup"><span data-stu-id="065e0-126">The following code illustrates the use of a partial active pattern.</span></span>
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
-<span data-ttu-id="0c194-127">A saída do exemplo anterior é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="0c194-127">The output of the previous example is as follows:</span></span>
+<span data-ttu-id="065e0-127">A saída do exemplo anterior é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="065e0-127">The output of the previous example is as follows:</span></span>
 
 ```
 1.100000 : Floating point
@@ -86,11 +92,11 @@ BlanchedAlmond
 Something else : Not matched.
 ```
 
-<span data-ttu-id="0c194-128">Ao usar padrões ativos parciais, às vezes, as opções individuais podem ser contíguos ou mutuamente exclusivos, mas eles não precisam ser.</span><span class="sxs-lookup"><span data-stu-id="0c194-128">When using partial active patterns, sometimes the individual choices can be disjoint or mutually exclusive, but they need not be.</span></span> <span data-ttu-id="0c194-129">No exemplo a seguir, o quadrado do padrão e o padrão de cubo não são não contíguos, porque alguns números são quadrados e cubos, como 64.</span><span class="sxs-lookup"><span data-stu-id="0c194-129">In the following example, the pattern Square and the pattern Cube are not disjoint, because some numbers are both squares and cubes, such as 64.</span></span> <span data-ttu-id="0c194-130">O programa a seguir usa o padrão AND para combinar os padrões de cubo e o quadrado.</span><span class="sxs-lookup"><span data-stu-id="0c194-130">The following program uses the AND pattern to combine the Square and Cube patterns.</span></span> <span data-ttu-id="0c194-131">Ele imprimir todos os inteiros até 1000 são os quadrados e cubos, bem como aqueles que são apenas a cubos.</span><span class="sxs-lookup"><span data-stu-id="0c194-131">It print out all integers up to 1000 that are both squares and cubes, as well as those which are only cubes.</span></span> 
+<span data-ttu-id="065e0-128">Ao usar padrões ativos parciais, às vezes, as opções individuais podem ser contíguos ou mutuamente exclusivos, mas eles não precisam ser.</span><span class="sxs-lookup"><span data-stu-id="065e0-128">When using partial active patterns, sometimes the individual choices can be disjoint or mutually exclusive, but they need not be.</span></span> <span data-ttu-id="065e0-129">No exemplo a seguir, o quadrado do padrão e o padrão de cubo não são não contíguos, porque alguns números são quadrados e cubos, como 64.</span><span class="sxs-lookup"><span data-stu-id="065e0-129">In the following example, the pattern Square and the pattern Cube are not disjoint, because some numbers are both squares and cubes, such as 64.</span></span> <span data-ttu-id="065e0-130">O programa a seguir usa o padrão AND para combinar os padrões de cubo e o quadrado.</span><span class="sxs-lookup"><span data-stu-id="065e0-130">The following program uses the AND pattern to combine the Square and Cube patterns.</span></span> <span data-ttu-id="065e0-131">Ele imprimir todos os inteiros até 1000 são os quadrados e cubos, bem como aqueles que são apenas a cubos.</span><span class="sxs-lookup"><span data-stu-id="065e0-131">It print out all integers up to 1000 that are both squares and cubes, as well as those which are only cubes.</span></span> 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
-<span data-ttu-id="0c194-132">A saída é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="0c194-132">The output is as follows:</span></span>
+<span data-ttu-id="065e0-132">A saída é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="065e0-132">The output is as follows:</span></span>
 
 ```
 1 is a cube and a square
@@ -105,30 +111,30 @@ Something else : Not matched.
 1000 is a cube
 ```
 
-## <a name="parameterized-active-patterns"></a><span data-ttu-id="0c194-133">Padrões ativos com parâmetros</span><span class="sxs-lookup"><span data-stu-id="0c194-133">Parameterized Active Patterns</span></span>
+## <a name="parameterized-active-patterns"></a><span data-ttu-id="065e0-133">Padrões ativos com parâmetros</span><span class="sxs-lookup"><span data-stu-id="065e0-133">Parameterized Active Patterns</span></span>
 
-<span data-ttu-id="0c194-134">Padrões ativos sempre têm pelo menos um argumento para o item que está sendo correspondido, mas eles podem levar argumentos adicionais, bem, nesse caso, o nome *com parâmetros padrão ativo* se aplica.</span><span class="sxs-lookup"><span data-stu-id="0c194-134">Active patterns always take at least one argument for the item being matched, but they may take additional arguments as well, in which case the name *parameterized active pattern* applies.</span></span> <span data-ttu-id="0c194-135">Argumentos adicionais permitem que um padrão geral ser especializados.</span><span class="sxs-lookup"><span data-stu-id="0c194-135">Additional arguments allow a general pattern to be specialized.</span></span> <span data-ttu-id="0c194-136">Por exemplo, os padrões ativos que usam expressões regulares para analisar cadeias de caracteres geralmente incluem a expressão regular como um parâmetro extra, como no código a seguir, que também usa o padrão ativo parcial `Integer` definido no exemplo de código anterior.</span><span class="sxs-lookup"><span data-stu-id="0c194-136">For example, active patterns that use regular expressions to parse strings often include the regular expression as an extra parameter, as in the following code, which also uses the partial active pattern `Integer` defined in the previous code example.</span></span> <span data-ttu-id="0c194-137">Neste exemplo, cadeias de caracteres que usam expressões regulares para vários formatos de data são fornecidas para personalizar o padrão do Active Directory de ParseRegex geral.</span><span class="sxs-lookup"><span data-stu-id="0c194-137">In this example, strings that use regular expressions for various date formats are given to customize the general ParseRegex active pattern.</span></span> <span data-ttu-id="0c194-138">O padrão do Active Directory de inteiro é usado para converter as cadeias de caracteres correspondentes em números inteiros que podem ser passados ao construtor DateTime.</span><span class="sxs-lookup"><span data-stu-id="0c194-138">The Integer active pattern is used to convert the matched strings into integers that can be passed to the DateTime constructor.</span></span>
+<span data-ttu-id="065e0-134">Padrões ativos sempre têm pelo menos um argumento para o item que está sendo correspondido, mas eles podem levar argumentos adicionais, bem, nesse caso, o nome *com parâmetros padrão ativo* se aplica.</span><span class="sxs-lookup"><span data-stu-id="065e0-134">Active patterns always take at least one argument for the item being matched, but they may take additional arguments as well, in which case the name *parameterized active pattern* applies.</span></span> <span data-ttu-id="065e0-135">Argumentos adicionais permitem que um padrão geral ser especializados.</span><span class="sxs-lookup"><span data-stu-id="065e0-135">Additional arguments allow a general pattern to be specialized.</span></span> <span data-ttu-id="065e0-136">Por exemplo, os padrões ativos que usam expressões regulares para analisar cadeias de caracteres geralmente incluem a expressão regular como um parâmetro extra, como no código a seguir, que também usa o padrão ativo parcial `Integer` definido no exemplo de código anterior.</span><span class="sxs-lookup"><span data-stu-id="065e0-136">For example, active patterns that use regular expressions to parse strings often include the regular expression as an extra parameter, as in the following code, which also uses the partial active pattern `Integer` defined in the previous code example.</span></span> <span data-ttu-id="065e0-137">Neste exemplo, cadeias de caracteres que usam expressões regulares para vários formatos de data são fornecidas para personalizar o padrão do Active Directory de ParseRegex geral.</span><span class="sxs-lookup"><span data-stu-id="065e0-137">In this example, strings that use regular expressions for various date formats are given to customize the general ParseRegex active pattern.</span></span> <span data-ttu-id="065e0-138">O padrão do Active Directory de inteiro é usado para converter as cadeias de caracteres correspondentes em números inteiros que podem ser passados ao construtor DateTime.</span><span class="sxs-lookup"><span data-stu-id="065e0-138">The Integer active pattern is used to convert the matched strings into integers that can be passed to the DateTime constructor.</span></span>
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
-<span data-ttu-id="0c194-139">A saída do código anterior é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="0c194-139">The output of the previous code is as follows:</span></span>
+<span data-ttu-id="065e0-139">A saída do código anterior é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="065e0-139">The output of the previous code is as follows:</span></span>
 
 ```
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
-<span data-ttu-id="0c194-140">Padrões ativos não são restritos apenas a expressões de correspondência padrão, você também pode usá-los em associações permitem.</span><span class="sxs-lookup"><span data-stu-id="0c194-140">Active patterns are not restricted only to pattern matching expressions, you can also use them on let-bindings.</span></span>
+<span data-ttu-id="065e0-140">Padrões ativos não são restritos apenas a expressões de correspondência padrão, você também pode usá-los em associações permitem.</span><span class="sxs-lookup"><span data-stu-id="065e0-140">Active patterns are not restricted only to pattern matching expressions, you can also use them on let-bindings.</span></span>
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
-<span data-ttu-id="0c194-141">A saída do código anterior é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="0c194-141">The output of the previous code is as follows:</span></span>
+<span data-ttu-id="065e0-141">A saída do código anterior é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="065e0-141">The output of the previous code is as follows:</span></span>
 
 ```
 Hello, random citizen!
 Hello, George!
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0c194-142">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0c194-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="065e0-142">Consulte também</span><span class="sxs-lookup"><span data-stu-id="065e0-142">See also</span></span>
 
-- [<span data-ttu-id="0c194-143">Referência da Linguagem F#</span><span class="sxs-lookup"><span data-stu-id="0c194-143">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="0c194-144">Expressões Match</span><span class="sxs-lookup"><span data-stu-id="0c194-144">Match Expressions</span></span>](match-expressions.md)
+- [<span data-ttu-id="065e0-143">Referência da Linguagem F#</span><span class="sxs-lookup"><span data-stu-id="065e0-143">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="065e0-144">Expressões Match</span><span class="sxs-lookup"><span data-stu-id="065e0-144">Match Expressions</span></span>](match-expressions.md)

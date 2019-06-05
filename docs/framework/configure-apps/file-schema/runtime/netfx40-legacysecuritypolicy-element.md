@@ -7,84 +7,90 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 868c5f0742fa4dc963539fd70414752092156c64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e5bfa5449ece1b24d4f47fe3e77e36b26bbe430c
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489422"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689837"
 ---
-# <a name="netfx40legacysecuritypolicy-element"></a><span data-ttu-id="19e70-102">\<NetFx40_LegacySecurityPolicy > elemento</span><span class="sxs-lookup"><span data-stu-id="19e70-102">\<NetFx40_LegacySecurityPolicy> Element</span></span>
-<span data-ttu-id="19e70-103">Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso do Código) herdada.</span><span class="sxs-lookup"><span data-stu-id="19e70-103">Specifies whether the runtime uses legacy code access security (CAS) policy.</span></span>  
-  
- <span data-ttu-id="19e70-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="19e70-104">\<configuration></span></span>  
-<span data-ttu-id="19e70-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="19e70-105">\<runtime></span></span>  
-<span data-ttu-id="19e70-106"><NetFx40_LegacySecurityPolicy></span><span class="sxs-lookup"><span data-stu-id="19e70-106"><NetFx40_LegacySecurityPolicy></span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="19e70-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="19e70-107">Syntax</span></span>  
-  
-```xml  
-<NetFx40_LegacySecurityPolicy  
-   enabled="true|false"/>  
-```  
-  
-## <a name="attributes-and-elements"></a><span data-ttu-id="19e70-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="19e70-108">Attributes and Elements</span></span>  
- <span data-ttu-id="19e70-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="19e70-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
-  
-### <a name="attributes"></a><span data-ttu-id="19e70-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="19e70-110">Attributes</span></span>  
-  
-|<span data-ttu-id="19e70-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="19e70-111">Attribute</span></span>|<span data-ttu-id="19e70-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="19e70-112">Description</span></span>|  
-|---------------|-----------------|  
-|`enabled`|<span data-ttu-id="19e70-113">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="19e70-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="19e70-114">Especifica se o tempo de execução usa a política CAS herdada.</span><span class="sxs-lookup"><span data-stu-id="19e70-114">Specifies whether the runtime uses legacy CAS policy.</span></span>|  
-  
-## <a name="enabled-attribute"></a><span data-ttu-id="19e70-115">Atributo habilitado</span><span class="sxs-lookup"><span data-stu-id="19e70-115">enabled Attribute</span></span>  
-  
-|<span data-ttu-id="19e70-116">Valor</span><span class="sxs-lookup"><span data-stu-id="19e70-116">Value</span></span>|<span data-ttu-id="19e70-117">Descrição</span><span class="sxs-lookup"><span data-stu-id="19e70-117">Description</span></span>|  
-|-----------|-----------------|  
-|`false`|<span data-ttu-id="19e70-118">O tempo de execução não usa a política CAS herdada.</span><span class="sxs-lookup"><span data-stu-id="19e70-118">The runtime does not use legacy CAS policy.</span></span> <span data-ttu-id="19e70-119">Esse é o padrão.</span><span class="sxs-lookup"><span data-stu-id="19e70-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="19e70-120">O tempo de execução usa a política CAS herdada.</span><span class="sxs-lookup"><span data-stu-id="19e70-120">The runtime uses legacy CAS policy.</span></span>|  
-  
-### <a name="child-elements"></a><span data-ttu-id="19e70-121">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="19e70-121">Child Elements</span></span>  
- <span data-ttu-id="19e70-122">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="19e70-122">None.</span></span>  
-  
-### <a name="parent-elements"></a><span data-ttu-id="19e70-123">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="19e70-123">Parent Elements</span></span>  
-  
-|<span data-ttu-id="19e70-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="19e70-124">Element</span></span>|<span data-ttu-id="19e70-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="19e70-125">Description</span></span>|  
-|-------------|-----------------|  
-|`configuration`|<span data-ttu-id="19e70-126">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="19e70-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="19e70-127">Contém informações sobre opções de inicialização do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="19e70-127">Contains information about runtime initialization options.</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="19e70-128">Comentários</span><span class="sxs-lookup"><span data-stu-id="19e70-128">Remarks</span></span>  
- <span data-ttu-id="19e70-129">No .NET Framework versão 3.5 e versões anteriores, a política de CAS está sempre em vigor.</span><span class="sxs-lookup"><span data-stu-id="19e70-129">In the .NET Framework version 3.5 and earlier versions, CAS policy is always in effect.</span></span> <span data-ttu-id="19e70-130">No .NET Framework 4, a política de CAS deve estar habilitada.</span><span class="sxs-lookup"><span data-stu-id="19e70-130">In the .NET Framework 4, CAS policy must be enabled.</span></span>  
-  
- <span data-ttu-id="19e70-131">Política de CAS é específico da versão.</span><span class="sxs-lookup"><span data-stu-id="19e70-131">CAS policy is version-specific.</span></span> <span data-ttu-id="19e70-132">As políticas personalizadas do CAS que existem nas versões anteriores do .NET Framework devem ser especificadas novamente no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="19e70-132">Custom CAS policies that exist in earlier versions of the .NET Framework must be respecified in the .NET Framework 4.</span></span>  
-  
- <span data-ttu-id="19e70-133">Aplicando o `<NetFx40_LegacySecurityPolicy>` não afeta o elemento a um assembly do .NET Framework 4 [código transparente de segurança](../../../../../docs/framework/misc/security-transparent-code.md); as regras de transparência ainda se aplicam.</span><span class="sxs-lookup"><span data-stu-id="19e70-133">Applying the `<NetFx40_LegacySecurityPolicy>` element to a .NET Framework 4 assembly does not affect [security-transparent code](../../../../../docs/framework/misc/security-transparent-code.md); the transparency rules still apply.</span></span>  
-  
-> [!IMPORTANT]
->  <span data-ttu-id="19e70-134">Aplicando o `<NetFx40_LegacySecurityPolicy>` elemento pode resultar em penalidades de desempenho significativos para os assemblies de imagem nativa criados pelo [gerador de imagem nativa (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) que não estão instaladas no [cache de assembly global ](../../../../../docs/framework/app-domains/gac.md).</span><span class="sxs-lookup"><span data-stu-id="19e70-134">Applying the `<NetFx40_LegacySecurityPolicy>` element can result in significant performance penalties for native image assemblies created by the [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) that are not installed in the [global assembly cache](../../../../../docs/framework/app-domains/gac.md).</span></span> <span data-ttu-id="19e70-135">A degradação do desempenho é causada pela incapacidade do tempo de execução para carregar os assemblies como imagens nativas, quando o atributo é aplicado, resultando em seus que está sendo carregado assemblies como just-in-time.</span><span class="sxs-lookup"><span data-stu-id="19e70-135">The performance degradation is caused by the inability of the runtime to load the assemblies as native images when the attribute is applied, resulting in their being loaded as just-in-time assemblies.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="19e70-136">Se você especificar uma versão do .NET Framework de destino que é anterior ao .NET Framework 4, nas configurações do projeto para o seu projeto do Visual Studio, política de CAS será habilitada, incluindo as políticas personalizadas de CAS especificado para essa versão.</span><span class="sxs-lookup"><span data-stu-id="19e70-136">If you specify a target .NET Framework version that is earlier than the .NET Framework 4 in the project settings for your Visual Studio project, CAS policy will be enabled, including any custom CAS policies you specified for that version.</span></span> <span data-ttu-id="19e70-137">No entanto, você não poderá usar os novos tipos do .NET Framework 4 e membros.</span><span class="sxs-lookup"><span data-stu-id="19e70-137">However, you will not be able to use new .NET Framework 4 types and members.</span></span> <span data-ttu-id="19e70-138">Você também pode especificar uma versão anterior do .NET Framework usando o [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no esquema de configurações de inicialização em seu [arquivo de configuração de aplicativo](../../../../../docs/framework/configure-apps/index.md).</span><span class="sxs-lookup"><span data-stu-id="19e70-138">You can also specify an earlier version of the .NET Framework by using the [\<supportedRuntime> element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in the startup settings schema in your [application configuration file](../../../../../docs/framework/configure-apps/index.md).</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="19e70-139">Sintaxe do arquivo de configuração diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="19e70-139">Configuration file syntax is case-sensitive.</span></span> <span data-ttu-id="19e70-140">Você deve usar a sintaxe conforme fornecidos nas seções de sintaxe e exemplo.</span><span class="sxs-lookup"><span data-stu-id="19e70-140">You should use the syntax as provided in the Syntax and Example sections.</span></span>  
-  
-## <a name="configuration-file"></a><span data-ttu-id="19e70-141">Arquivo de Configuração</span><span class="sxs-lookup"><span data-stu-id="19e70-141">Configuration File</span></span>  
- <span data-ttu-id="19e70-142">Esse elemento pode ser usado apenas no arquivo de configuração do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="19e70-142">This element can be used only in the application configuration file.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="19e70-143">Exemplo</span><span class="sxs-lookup"><span data-stu-id="19e70-143">Example</span></span>  
- <span data-ttu-id="19e70-144">O exemplo a seguir mostra como habilitar a política CAS herdada para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="19e70-144">The following example shows how to enable legacy CAS policy for an application.</span></span>  
-  
-```xml  
-<configuration>  
-   <runtime>  
-      <NetFx40_LegacySecurityPolicy enabled="true"/>  
-   </runtime>  
-</configuration>  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="19e70-145">Consulte também</span><span class="sxs-lookup"><span data-stu-id="19e70-145">See also</span></span>
+# <a name="netfx40legacysecuritypolicy-element"></a><span data-ttu-id="bc150-102">\<NetFx40_LegacySecurityPolicy > elemento</span><span class="sxs-lookup"><span data-stu-id="bc150-102">\<NetFx40_LegacySecurityPolicy> Element</span></span>
 
-- [<span data-ttu-id="19e70-146">Esquema de configurações do tempo de execução</span><span class="sxs-lookup"><span data-stu-id="19e70-146">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="19e70-147">Esquema de arquivos de configuração</span><span class="sxs-lookup"><span data-stu-id="19e70-147">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+<span data-ttu-id="bc150-103">Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso do Código) herdada.</span><span class="sxs-lookup"><span data-stu-id="bc150-103">Specifies whether the runtime uses legacy code access security (CAS) policy.</span></span>
+
+<span data-ttu-id="bc150-104">\<configuration>\\</span><span class="sxs-lookup"><span data-stu-id="bc150-104">\<configuration>\\</span></span>
+<span data-ttu-id="bc150-105">\<runtime>\\</span><span class="sxs-lookup"><span data-stu-id="bc150-105">\<runtime>\\</span></span>
+<span data-ttu-id="bc150-106">\<NetFx40_LegacySecurityPolicy></span><span class="sxs-lookup"><span data-stu-id="bc150-106">\<NetFx40_LegacySecurityPolicy></span></span>
+
+## <a name="syntax"></a><span data-ttu-id="bc150-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bc150-107">Syntax</span></span>
+
+```xml
+<NetFx40_LegacySecurityPolicy
+   enabled="true|false"/>
+```
+
+## <a name="attributes-and-elements"></a><span data-ttu-id="bc150-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="bc150-108">Attributes and Elements</span></span>
+
+<span data-ttu-id="bc150-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="bc150-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+
+### <a name="attributes"></a><span data-ttu-id="bc150-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="bc150-110">Attributes</span></span>
+
+|<span data-ttu-id="bc150-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="bc150-111">Attribute</span></span>|<span data-ttu-id="bc150-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="bc150-112">Description</span></span>|
+|---------------|-----------------|
+|`enabled`|<span data-ttu-id="bc150-113">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="bc150-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="bc150-114">Especifica se o tempo de execução usa a política CAS herdada.</span><span class="sxs-lookup"><span data-stu-id="bc150-114">Specifies whether the runtime uses legacy CAS policy.</span></span>|
+
+## <a name="enabled-attribute"></a><span data-ttu-id="bc150-115">Atributo habilitado</span><span class="sxs-lookup"><span data-stu-id="bc150-115">enabled Attribute</span></span>
+
+|<span data-ttu-id="bc150-116">Valor</span><span class="sxs-lookup"><span data-stu-id="bc150-116">Value</span></span>|<span data-ttu-id="bc150-117">Descrição</span><span class="sxs-lookup"><span data-stu-id="bc150-117">Description</span></span>|
+|-----------|-----------------|
+|`false`|<span data-ttu-id="bc150-118">O tempo de execução não usa a política CAS herdada.</span><span class="sxs-lookup"><span data-stu-id="bc150-118">The runtime does not use legacy CAS policy.</span></span> <span data-ttu-id="bc150-119">Esse é o padrão.</span><span class="sxs-lookup"><span data-stu-id="bc150-119">This is the default.</span></span>|
+|`true`|<span data-ttu-id="bc150-120">O tempo de execução usa a política CAS herdada.</span><span class="sxs-lookup"><span data-stu-id="bc150-120">The runtime uses legacy CAS policy.</span></span>|
+
+### <a name="child-elements"></a><span data-ttu-id="bc150-121">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="bc150-121">Child Elements</span></span>
+
+<span data-ttu-id="bc150-122">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="bc150-122">None.</span></span>
+
+### <a name="parent-elements"></a><span data-ttu-id="bc150-123">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="bc150-123">Parent Elements</span></span>
+
+|<span data-ttu-id="bc150-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="bc150-124">Element</span></span>|<span data-ttu-id="bc150-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="bc150-125">Description</span></span>|
+|-------------|-----------------|
+|`configuration`|<span data-ttu-id="bc150-126">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bc150-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
+|`runtime`|<span data-ttu-id="bc150-127">Contém informações sobre opções de inicialização do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="bc150-127">Contains information about runtime initialization options.</span></span>|
+
+## <a name="remarks"></a><span data-ttu-id="bc150-128">Comentários</span><span class="sxs-lookup"><span data-stu-id="bc150-128">Remarks</span></span>
+
+<span data-ttu-id="bc150-129">No .NET Framework versão 3.5 e versões anteriores, a política de CAS está sempre em vigor.</span><span class="sxs-lookup"><span data-stu-id="bc150-129">In the .NET Framework version 3.5 and earlier versions, CAS policy is always in effect.</span></span> <span data-ttu-id="bc150-130">No .NET Framework 4, a política de CAS deve estar habilitada.</span><span class="sxs-lookup"><span data-stu-id="bc150-130">In the .NET Framework 4, CAS policy must be enabled.</span></span>
+
+<span data-ttu-id="bc150-131">Política de CAS é específico da versão.</span><span class="sxs-lookup"><span data-stu-id="bc150-131">CAS policy is version-specific.</span></span> <span data-ttu-id="bc150-132">As políticas personalizadas do CAS que existem nas versões anteriores do .NET Framework devem ser especificadas novamente no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="bc150-132">Custom CAS policies that exist in earlier versions of the .NET Framework must be respecified in the .NET Framework 4.</span></span>
+
+<span data-ttu-id="bc150-133">Aplicando o `<NetFx40_LegacySecurityPolicy>` não afeta o elemento a um assembly do .NET Framework 4 [código transparente de segurança](../../../../../docs/framework/misc/security-transparent-code.md); as regras de transparência ainda se aplicam.</span><span class="sxs-lookup"><span data-stu-id="bc150-133">Applying the `<NetFx40_LegacySecurityPolicy>` element to a .NET Framework 4 assembly does not affect [security-transparent code](../../../../../docs/framework/misc/security-transparent-code.md); the transparency rules still apply.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="bc150-134">Aplicando o `<NetFx40_LegacySecurityPolicy>` elemento pode resultar em penalidades de desempenho significativos para os assemblies de imagem nativa criados pelo [gerador de imagem nativa (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) que não estão instaladas no [cache de assembly global ](../../../../../docs/framework/app-domains/gac.md).</span><span class="sxs-lookup"><span data-stu-id="bc150-134">Applying the `<NetFx40_LegacySecurityPolicy>` element can result in significant performance penalties for native image assemblies created by the [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) that are not installed in the [global assembly cache](../../../../../docs/framework/app-domains/gac.md).</span></span> <span data-ttu-id="bc150-135">A degradação do desempenho é causada pela incapacidade do tempo de execução para carregar os assemblies como imagens nativas, quando o atributo é aplicado, resultando em seus que está sendo carregado assemblies como just-in-time.</span><span class="sxs-lookup"><span data-stu-id="bc150-135">The performance degradation is caused by the inability of the runtime to load the assemblies as native images when the attribute is applied, resulting in their being loaded as just-in-time assemblies.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="bc150-136">Se você especificar uma versão do .NET Framework de destino que é anterior ao .NET Framework 4, nas configurações do projeto para o seu projeto do Visual Studio, política de CAS será habilitada, incluindo as políticas personalizadas de CAS especificado para essa versão.</span><span class="sxs-lookup"><span data-stu-id="bc150-136">If you specify a target .NET Framework version that is earlier than the .NET Framework 4 in the project settings for your Visual Studio project, CAS policy will be enabled, including any custom CAS policies you specified for that version.</span></span> <span data-ttu-id="bc150-137">No entanto, você não poderá usar os novos tipos do .NET Framework 4 e membros.</span><span class="sxs-lookup"><span data-stu-id="bc150-137">However, you will not be able to use new .NET Framework 4 types and members.</span></span> <span data-ttu-id="bc150-138">Você também pode especificar uma versão anterior do .NET Framework usando o [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no esquema de configurações de inicialização em seu [arquivo de configuração de aplicativo](../../../../../docs/framework/configure-apps/index.md).</span><span class="sxs-lookup"><span data-stu-id="bc150-138">You can also specify an earlier version of the .NET Framework by using the [\<supportedRuntime> element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in the startup settings schema in your [application configuration file](../../../../../docs/framework/configure-apps/index.md).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="bc150-139">Sintaxe do arquivo de configuração diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="bc150-139">Configuration file syntax is case-sensitive.</span></span> <span data-ttu-id="bc150-140">Você deve usar a sintaxe conforme fornecidos nas seções de sintaxe e exemplo.</span><span class="sxs-lookup"><span data-stu-id="bc150-140">You should use the syntax as provided in the Syntax and Example sections.</span></span>
+
+## <a name="configuration-file"></a><span data-ttu-id="bc150-141">Arquivo de Configuração</span><span class="sxs-lookup"><span data-stu-id="bc150-141">Configuration File</span></span>
+
+<span data-ttu-id="bc150-142">Esse elemento pode ser usado apenas no arquivo de configuração do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="bc150-142">This element can be used only in the application configuration file.</span></span>
+
+## <a name="example"></a><span data-ttu-id="bc150-143">Exemplo</span><span class="sxs-lookup"><span data-stu-id="bc150-143">Example</span></span>
+
+<span data-ttu-id="bc150-144">O exemplo a seguir mostra como habilitar a política CAS herdada para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="bc150-144">The following example shows how to enable legacy CAS policy for an application.</span></span>
+
+```xml
+<configuration>
+   <runtime>
+      <NetFx40_LegacySecurityPolicy enabled="true"/>
+   </runtime>
+</configuration>
+```
+
+## <a name="see-also"></a><span data-ttu-id="bc150-145">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bc150-145">See also</span></span>
+
+- [<span data-ttu-id="bc150-146">Esquema de configurações do tempo de execução</span><span class="sxs-lookup"><span data-stu-id="bc150-146">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="bc150-147">Esquema de arquivos de configuração</span><span class="sxs-lookup"><span data-stu-id="bc150-147">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
