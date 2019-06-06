@@ -2,12 +2,12 @@
 title: Processo de desenvolvimento de aplicativos baseados no Docker
 description: Obtenha uma visão geral de alto nível das opções para desenvolvimento de aplicativos baseados no Docker. Escolha e use o Visual Studio para Windows, o Visual Studio para Mac ou o Visual Studio Code com suporte a várias plataformas (Windows, Mac e Linux).
 ms.date: 09/27/2018
-ms.openlocfilehash: 8807bc57365e70a0cbf265dc7bce28c93de16098
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a32b27f3d98ed7ebf63b637ec0c979c22ee8e1e8
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300643"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690621"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Processo de desenvolvimento de aplicativos baseados no Docker
 
@@ -46,5 +46,5 @@ Ao instalar a [Área de trabalho do Docker CE (Community Edition)](https://hub.d
 Conforme mencionado nas seções anteriores deste guia, você pode usar o projeto do NET Framework, do .NET Core ou do Mono de software livre ao desenvolver aplicativos .NET em contêineres do Docker. Você poderá desenvolver em C\#, em F\# ou em Visual Basic ao direcionar a contêineres do Linux ou do Windows, dependendo de qual .NET Framework estiver em uso. Para saber mais detalhes sobre as linguagens do .NET detalhes, consulte a postagem no blog [The .NET Language Strategy](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/) (A estratégia de linguagem do .NET).
 
 >[!div class="step-by-step"]
->[Anterior](../architect-microservice-container-applications/using-azure-service-fabric.md)
+>[Anterior](../architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)
 >[Próximo](docker-app-development-workflow.md)

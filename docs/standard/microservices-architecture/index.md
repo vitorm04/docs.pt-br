@@ -2,12 +2,12 @@
 title: Microsserviços do .NET. Arquitetura de aplicativos .NET em contêineres
 description: Arquitetura de microsserviços do .NET para aplicativos do .NET em contêineres | Microsserviços são serviços implantáveis de maneira modular e independente. Os contêineres do Docker (para Linux e Windows) simplificam a implantação e o teste ao agrupar um serviço e suas dependências em uma única unidade, que será executada em um ambiente isolado.
 ms.date: 01/07/2019
-ms.openlocfilehash: a348a9c122ef7f0293a1385aa05dc98f61deab7e
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: f1abeca8bb7eba615545a88862b20b2711b218fd
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195967"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690628"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microsserviços do .NET: Arquitetura de aplicativos .NET em contêineres
 
@@ -126,7 +126,7 @@ Participantes e revisores:
 >
 > **Dylan Reisenberger**, Arquiteto e Desenvolvedor Líder na Polly
 >
-> **Steve Smith**, Especialista e Instrutor em Software na ASPSmith Ltd.
+> **Steve "ardalis" Smith** – Arquiteto de software e instrutor – [Ardalis.com](https://ardalis.com)
 >
 > **Cooper Ian**, Arquiteto de Codificação na Brighter
 >

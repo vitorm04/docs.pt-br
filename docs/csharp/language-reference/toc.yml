@@ -5,15 +5,536 @@
     - name: Configurar versão da linguagem
       href: configure-language-version.md
     - name: 'Palavras-chave de C#'
-      href: keywords/index.md
+      items:
+        - name: Visão geral
+          href: keywords/index.md
+        - name: Tipos
+          items:
+            - name: Tipos de valor
+              items:
+                - name: Recursos dos tipos de valor
+                  href: keywords/value-types.md
+                - name: bool
+                  href: keywords/bool.md
+                - name: byte
+                  href: keywords/byte.md
+                - name: char
+                  href: keywords/char.md
+                - name: decimal
+                  href: keywords/decimal.md
+                - name: double
+                  href: keywords/double.md
+                - name: enum
+                  href: keywords/enum.md
+                - name: float
+                  href: keywords/float.md
+                - name: int
+                  href: keywords/int.md
+                - name: long
+                  href: keywords/long.md
+                - name: sbyte
+                  href: keywords/sbyte.md
+                - name: short
+                  href: keywords/short.md
+                - name: struct
+                  href: keywords/struct.md
+                - name: uint
+                  href: keywords/uint.md
+                - name: ulong
+                  href: keywords/ulong.md
+                - name: ushort
+                  href: keywords/ushort.md
+            - name: Tipos de referência
+              items:
+                - name: Recursos dos tipos de referência
+                  href: keywords/reference-types.md
+                - name: classe
+                  href: keywords/class.md
+                - name: delegado
+                  href: keywords/delegate.md
+                - name: dinâmica
+                  href: keywords/dynamic.md
+                - name: interface
+                  href: keywords/interface.md
+                - name: objeto
+                  href: keywords/object.md
+                - name: cadeia de caracteres
+                  href: keywords/string.md
+            - name: void
+              href: keywords/void.md
+            - name: var
+              href: keywords/var.md
+            - name: Tabelas de referência de tipos
+              items:
+                - name: Tabela de tipos internos
+                  href: keywords/built-in-types-table.md
+                - name: Tabela de tipos integrais
+                  href: keywords/integral-types-table.md
+                - name: Tabela de tipos de ponto flutuante
+                  href: keywords/floating-point-types-table.md
+                - name: Tabela de tipos de valor
+                  href: keywords/value-types-table.md
+                - name: Tabela de valores padrão
+                  href: keywords/default-values-table.md
+                - name: Tabela de conversões numéricas implícitas
+                  href: keywords/implicit-numeric-conversions-table.md
+                - name: Tabela de conversões numéricas explícitas
+                  href: keywords/explicit-numeric-conversions-table.md
+                - name: Tabela de formatação de resultados numéricos
+                  href: keywords/formatting-numeric-results-table.md
+        - name: Modificadores
+          items:
+            - name: Modificadores de acesso
+              items:
+                - name: Referência rápida
+                  href: keywords/access-modifiers.md
+                - name: Níveis de acessibilidade
+                  href: keywords/accessibility-levels.md
+                - name: Domínio de acessibilidade
+                  href: keywords/accessibility-domain.md
+                - name: Restrições ao uso de níveis de acessibilidade
+                  href: keywords/restrictions-on-using-accessibility-levels.md
+                - name: interno
+                  href: keywords/internal.md
+                - name: particulares
+                  href: keywords/private.md
+                - name: protegidos
+                  href: keywords/protected.md
+                - name: públicos
+                  href: keywords/public.md
+                - name: internos protegidos
+                  href: keywords/protected-internal.md
+                - name: privado protegido
+                  href: keywords/private-protected.md
+            - name: abstract
+              href: keywords/abstract.md
+            - name: async
+              href: keywords/async.md
+            - name: const
+              href: keywords/const.md
+            - name: evento
+              href: keywords/event.md
+            - name: extern
+              href: keywords/extern.md
+            - name: in (modificador genérico)
+              href: keywords/in-generic-modifier.md
+            - name: out (modificador genérico)
+              href: keywords/out-generic-modifier.md
+            - name: override
+              href: keywords/override.md
+            - name: readonly
+              href: keywords/readonly.md
+            - name: sealed
+              href: keywords/sealed.md
+            - name: static
+              href: keywords/static.md
+            - name: unsafe
+              href: keywords/unsafe.md
+            - name: virtual
+              href: keywords/virtual.md
+            - name: volatile
+              href: keywords/volatile.md
+        - name: Palavras-chave de instrução
+          items:
+            - name: Categorias de instrução
+              href: keywords/statement-keywords.md
+            - name: Instruções de seleção
+              items:
+                - name: if-else
+                  href: keywords/if-else.md
+                - name: switch
+                  href: keywords/switch.md
+            - name: Instruções de iteração
+              items:
+                - name: do
+                  href: keywords/do.md
+                - name: for
+                  href: keywords/for.md
+                - name: 'foreach, in'
+                  href: keywords/foreach-in.md
+                - name: while
+                  href: keywords/while.md
+            - name: Instruções de atalho
+              items:
+                - name: break
+                  href: keywords/break.md
+                - name: continue
+                  href: keywords/continue.md
+                - name: goto
+                  href: keywords/goto.md
+                - name: return
+                  href: keywords/return.md
+            - name: Instruções para manipulação de exceções
+              items:
+                - name: throw
+                  href: keywords/throw.md
+                - name: try-catch
+                  href: keywords/try-catch.md
+                - name: try-finally
+                  href: keywords/try-finally.md
+                - name: try-catch-finally
+                  href: keywords/try-catch-finally.md
+            - name: Checked e unchecked
+              items:
+                - name: Visão geral
+                  href: keywords/checked-and-unchecked.md
+                - name: checked
+                  href: keywords/checked.md
+                - name: unchecked
+                  href: keywords/unchecked.md
+            - name: Instrução fixed
+              href: keywords/fixed-statement.md
+            - name: Instrução lock
+              href: keywords/lock-statement.md
+        - name: Parâmetros de método
+          items:
+            - name: Passando parâmetros
+              href: keywords/method-parameters.md
+            - name: params
+              href: keywords/params.md
+            - name: in (modificador de parâmetro)
+              href: keywords/in-parameter-modifier.md
+            - name: ref
+              href: keywords/ref.md
+            - name: out (modificador de parâmetro)
+              href: keywords/out-parameter-modifier.md
+        - name: Palavras-chave de namespace
+          items:
+            - name: namespace
+              href: keywords/namespace.md
+            - name: using
+              items:
+                - name: Contextos de uso
+                  href: keywords/using.md
+                - name: Diretiva using
+                  href: keywords/using-directive.md
+                - name: Diretiva using static
+                  href: keywords/using-static.md
+                - name: Instrução using
+                  href: keywords/using-statement.md
+            - name: Alias extern
+              href: keywords/extern-alias.md
+        - name: Palavras-chave de operador
+          items:
+            - name: as
+              href: keywords/as.md
+            - name: await
+              href: keywords/await.md
+            - name: is
+              href: keywords/is.md
+            - name: new
+              items:
+                - name: 'novo operador, modificador e restrição'
+                  href: keywords/new.md
+                - name: Operador new
+                  href: keywords/new-operator.md
+                - name: Modificador new
+                  href: keywords/new-modifier.md
+                - name: Restrição new
+                  href: keywords/new-constraint.md
+            - name: sizeof
+              href: keywords/sizeof.md
+            - name: typeof
+              href: keywords/typeof.md
+            - name: stackalloc
+              href: keywords/stackalloc.md
+            - name: nameof
+              href: keywords/nameof.md
+        - name: Palavras-chave de conversão
+          items:
+            - name: explicit
+              href: keywords/explicit.md
+            - name: implicit
+              href: keywords/implicit.md
+            - name: operator
+              href: keywords/operator.md
+        - name: Palavras-chave de acesso
+          items:
+            - name: base
+              href: keywords/base.md
+            - name: this
+              href: keywords/this.md
+        - name: Palavras-chave literais
+          items:
+            - name: nulo
+              href: keywords/null.md
+            - name: 'true'
+              href: keywords/true-literal.md
+            - name: 'false'
+              href: keywords/false-literal.md
+            - name: default
+              href: keywords/default.md
+        - name: Palavras-chave contextuais
+          items:
+            - name: Referência rápida
+              href: keywords/contextual-keywords.md
+            - name: adicionar
+              href: keywords/add.md
+            - name: get
+              href: keywords/get.md
+            - name: global
+              href: keywords/global.md
+            - name: partial (tipo)
+              href: keywords/partial-type.md
+            - name: partial (método)
+              href: keywords/partial-method.md
+            - name: remove
+              href: keywords/remove.md
+            - name: set
+              href: keywords/set.md
+            - name: when (condição de filtro)
+              href: keywords/when.md
+            - name: where (restrição de tipo genérico)
+              href: keywords/where-generic-type-constraint.md
+            - name: Valor
+              href: keywords/value.md
+            - name: yield
+              href: keywords/yield.md
+        - name: Palavras-chave de consulta
+          items:
+            - name: Referência rápida
+              href: keywords/query-keywords.md
+            - name: Cláusula from
+              href: keywords/from-clause.md
+            - name: Cláusula where
+              href: keywords/where-clause.md
+            - name: Cláusula select
+              href: keywords/select-clause.md
+            - name: Cláusula group
+              href: keywords/group-clause.md
+            - name: into
+              href: keywords/into.md
+            - name: Cláusula orderby
+              href: keywords/orderby-clause.md
+            - name: Cláusula join
+              href: keywords/join-clause.md
+            - name: Cláusula let
+              href: keywords/let-clause.md
+            - name: ascending
+              href: keywords/ascending.md
+            - name: descending
+              href: keywords/descending.md
+            - name: em
+              href: keywords/on.md
+            - name: é igual a
+              href: keywords/equals.md
+            - name: by
+              href: keywords/by.md
+            - name: em
+              href: keywords/in.md
     - name: 'Operadores C#'
-      href: operators/index.md
+      items:
+        - name: Visão geral
+          href: operators/index.md
+        - name: Operadores aritméticos
+          href: operators/arithmetic-operators.md
+          displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
+        - name: Operadores lógicos boolianos
+          href: operators/boolean-logical-operators.md
+          displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+        - name: Operadores shift e bit a bit
+          href: operators/bitwise-and-shift-operators.md
+          displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>='
+        - name: Operadores de igualdade
+          href: operators/equality-operators.md
+          displayName: '==, !='
+        - name: Operadores de comparação
+          href: operators/comparison-operators.md
+          displayName: '>, <, >=, <=, greater, less'
+        - name: Operadores de acesso a membro
+          href: operators/member-access-operators.md
+          displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+        - name: Operadores relacionados a ponteiro
+          href: operators/pointer-related-operators.md
+          displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
+        - name: Operador ()
+          href: operators/invocation-operator.md
+        - name: 'Operador ::'
+          href: operators/namespace-alias-qualifer.md
+        - name: + e operadores +=
+          href: operators/addition-operator.md
+          displayName: 'string concatenation, delegate combination, event subscription'
+        - name: '- e operadores -='
+          href: operators/subtraction-operator.md
+          displayName: 'delegate removal, event unsubscription'
+        - name: Operador =
+          href: operators/assignment-operator.md
+        - name: 'Operador ?:'
+          href: operators/conditional-operator.md
+        - name: '?? operator'
+          href: operators/null-coalescing-operator.md
+        - name: Operador =>
+          href: operators/lambda-operator.md
+        - name: operadores true e false
+          href: operators/true-false-operators.md
     - name: 'Caracteres especiais de C#'
-      href: tokens/index.md
+      items:
+        - name: Visão geral
+          href: tokens/index.md
+        - name: Interpolação de cadeia de caracteres -- $
+          href: tokens/interpolated.md
+        - name: '@ – identificador textual'
+          href: tokens/verbatim.md
     - name: 'Diretivas de pré-processador do C#'
-      href: preprocessor-directives/index.md
+      items:
+        - name: Visão geral
+          href: preprocessor-directives/index.md
+        - name: '#if'
+          href: preprocessor-directives/preprocessor-if.md
+        - name: '#else'
+          href: preprocessor-directives/preprocessor-else.md
+        - name: '#elif'
+          href: preprocessor-directives/preprocessor-elif.md
+        - name: '#endif'
+          href: preprocessor-directives/preprocessor-endif.md
+        - name: '#define'
+          href: preprocessor-directives/preprocessor-define.md
+        - name: '#undef'
+          href: preprocessor-directives/preprocessor-undef.md
+        - name: '#warning'
+          href: preprocessor-directives/preprocessor-warning.md
+        - name: '#error'
+          href: preprocessor-directives/preprocessor-error.md
+        - name: '#line'
+          href: preprocessor-directives/preprocessor-line.md
+        - name: '#region'
+          href: preprocessor-directives/preprocessor-region.md
+        - name: '#endregion'
+          href: preprocessor-directives/preprocessor-endregion.md
+        - name: '#pragma'
+          href: preprocessor-directives/preprocessor-pragma.md
+        - name: '#pragma warning'
+          href: preprocessor-directives/preprocessor-pragma-warning.md
+        - name: '#pragma checksum'
+          href: preprocessor-directives/preprocessor-pragma-checksum.md
     - name: 'Opções do compilador de C#'
-      href: compiler-options/index.md
+      items:
+        - name: Visão geral
+          href: compiler-options/index.md
+        - name: Compilando pela linha de comando com csc.exe
+          href: compiler-options/command-line-building-with-csc-exe.md
+        - name: 'Como: configurar variáveis de ambiente para a linha de comando do Visual Studio.'
+          href: compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
+        - name: 'Opções do compilador de C# listadas por categoria'
+          href: compiler-options/listed-by-category.md
+        - name: 'Opções do compilador de C# listadas em ordem alfabética'
+          href: compiler-options/listed-alphabetically.md
+          items:
+            - name: '@'
+              href: compiler-options/response-file-compiler-option.md
+            - name: '-addmodule'
+              href: compiler-options/addmodule-compiler-option.md
+            - name: '-appconfig'
+              href: compiler-options/appconfig-compiler-option.md
+            - name: '-baseaddress'
+              href: compiler-options/baseaddress-compiler-option.md
+            - name: '-bugreport'
+              href: compiler-options/bugreport-compiler-option.md
+            - name: '-checked'
+              href: compiler-options/checked-compiler-option.md
+            - name: '-codepage'
+              href: compiler-options/codepage-compiler-option.md
+            - name: '-debug'
+              href: compiler-options/debug-compiler-option.md
+            - name: '-define'
+              href: compiler-options/define-compiler-option.md
+            - name: '-delaysign'
+              href: compiler-options/delaysign-compiler-option.md
+            - name: '-deterministic'
+              href: compiler-options/deterministic-compiler-option.md
+            - name: '-doc'
+              href: compiler-options/doc-compiler-option.md
+            - name: '-errorreport'
+              href: compiler-options/errorreport-compiler-option.md
+            - name: '-filealign'
+              href: compiler-options/filealign-compiler-option.md
+            - name: '-fullpaths'
+              href: compiler-options/fullpaths-compiler-option.md
+            - name: '/help, /?'
+              href: compiler-options/help-compiler-option.md
+            - name: '-highentropyva'
+              href: compiler-options/highentropyva-compiler-option.md
+            - name: '-keycontainer'
+              href: compiler-options/keycontainer-compiler-option.md
+            - name: '-keyfile'
+              href: compiler-options/keyfile-compiler-option.md
+            - name: '-langversion'
+              href: compiler-options/langversion-compiler-option.md
+            - name: '-lib'
+              href: compiler-options/lib-compiler-option.md
+            - name: '-link'
+              href: compiler-options/link-compiler-option.md
+            - name: '-linkresource'
+              href: compiler-options/linkresource-compiler-option.md
+            - name: '-main'
+              href: compiler-options/main-compiler-option.md
+            - name: '-moduleassemblyname'
+              href: compiler-options/moduleassemblyname-compiler-option.md
+            - name: '-noconfig'
+              href: compiler-options/noconfig-compiler-option.md
+            - name: '-nologo'
+              href: compiler-options/nologo-compiler-option.md
+            - name: '-nostdlib'
+              href: compiler-options/nostdlib-compiler-option.md
+            - name: '-nowarn'
+              href: compiler-options/nowarn-compiler-option.md
+            - name: '-nowin32manifest'
+              href: compiler-options/nowin32manifest-compiler-option.md
+            - name: '-optimize'
+              href: compiler-options/optimize-compiler-option.md
+            - name: '-out'
+              href: compiler-options/out-compiler-option.md
+            - name: '-pathmap'
+              href: compiler-options/pathmap-compiler-option.md
+            - name: '-pdb'
+              href: compiler-options/pdb-compiler-option.md
+            - name: '-platform'
+              href: compiler-options/platform-compiler-option.md
+            - name: '-preferreduilang'
+              href: compiler-options/preferreduilang-compiler-option.md
+            - name: '-publicsign'
+              href: compiler-options/publicsign-compiler-option.md
+            - name: '-recurse'
+              href: compiler-options/recurse-compiler-option.md
+            - name: '-reference'
+              href: compiler-options/reference-compiler-option.md
+            - name: '-refout'
+              href: compiler-options/refout-compiler-option.md
+            - name: '-refonly'
+              href: compiler-options/refonly-compiler-option.md
+            - name: '-resource'
+              href: compiler-options/resource-compiler-option.md
+            - name: '-subsystemversion'
+              href: compiler-options/subsystemversion-compiler-option.md
+            - name: '-target'
+              href: compiler-options/target-compiler-option.md
+              items:
+                - name: '-target:appcontainerexe'
+                  href: compiler-options/target-appcontainerexe-compiler-option.md
+                - name: '-target:exe'
+                  href: compiler-options/target-exe-compiler-option.md
+                - name: '-target:library'
+                  href: compiler-options/target-library-compiler-option.md
+                - name: '-target:module'
+                  href: compiler-options/target-module-compiler-option.md
+                - name: '-target:winexe'
+                  href: compiler-options/target-winexe-compiler-option.md
+                - name: '-target:winmdobj'
+                  href: compiler-options/target-winmdobj-compiler-option.md
+            - name: '-unsafe'
+              href: compiler-options/unsafe-compiler-option.md
+            - name: '-utf8output'
+              href: compiler-options/utf8output-compiler-option.md
+            - name: '-warn'
+              href: compiler-options/warn-compiler-option.md
+            - name: '-warnaserror'
+              href: compiler-options/warnaserror-compiler-option.md
+            - name: '-win32icon'
+              href: compiler-options/win32icon-compiler-option.md
+            - name: '-win32manifest'
+              href: compiler-options/win32manifest-compiler-option.md
+            - name: '-win32res'
+              href: compiler-options/win32res-compiler-option.md
     - name: 'Erros do compilador de C#'
       href: compiler-messages/index.md
     - name: 'Especificação de rascunho do C# 6.0'
