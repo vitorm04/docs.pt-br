@@ -2,12 +2,12 @@
 title: -subsystemversion (opções do compilador C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: af753b25750c6ef98b4df12eec03c355501a278e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cf1fb74f5d13817448bec2bcdc37510ff82f024d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481152"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377903"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (opções do compilador C#)
 
@@ -56,7 +56,7 @@ O valor padrão da opção do compilador **-subsystemversion** depende das condi
 
   - [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)
 
-- O valor padrão é 6.00 se você estiver usando o MSBuild, se tiver como alvo [!INCLUDE[net_v45](~/includes/net-v45-md.md)] e se não tiver definido nenhuma das opções de compilador que foram especificadas anteriormente na lista.
+- O valor padrão será 6.00 se você estiver usando o MSBuild, se tiver como destino o .NET Framework 4.5 e se não definiu nenhuma das opções de compilador que foram especificadas anteriormente na lista.
 
 - O valor padrão é 4.00 se nenhuma das condições anteriores for verdadeira.
 

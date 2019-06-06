@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586119"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457312"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de segurança na emissão de reflexão
 O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate Language), cada uma com seus próprios problemas de segurança:  
@@ -78,7 +78,7 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
   
  Como com qualquer outro código emitido, executar o método dinâmico requer as permissões que são exigidas pelos métodos que o método dinâmico usa.  
   
- O assembly do sistema que hospeda métodos dinâmicos hospedados anonimamente usa o modelo de transparência <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>, que é o modelo de transparência que era usado no .NET Framework antes do [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+ O assembly do sistema que hospeda métodos dinâmicos hospedados anonimamente usa o modelo de transparência <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>, que é o modelo de transparência que era usado no .NET Framework antes do .NET Framework 4.  
   
  Para obter mais informações, consulte a classe <xref:System.Reflection.Emit.DynamicMethod>.  
   
@@ -139,7 +139,7 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Informações de versão  
- Desde o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], a política de segurança de todo computador é eliminada e a transparência de segurança se torna o mecanismo de imposição padrão. Consulte [Alterações de segurança](../../../docs/framework/security/security-changes.md).  
+ Do .NET Framework 4 em diante, a política de segurança de todo computador é eliminada e a transparência de segurança se torna o mecanismo de imposição padrão. Consulte [Alterações de segurança](../../../docs/framework/security/security-changes.md).  
   
  Desde o [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> não é mais necessário ao emitir métodos dinâmicos e assemblies dinâmicos. Esse sinalizador é exigido em todas as versões anteriores do .NET Framework.  
   

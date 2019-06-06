@@ -1,15 +1,15 @@
 ---
 title: Use o ML.NET em um cenário de detecção de anomalias de vendas
 description: Descubra como usar o ML.NET em um cenário de detecção de anomalias de vendas de produto para compreender como analisar os dados de anomalias de ponto de alteração e picos para tomar as devidas providências.
-ms.date: 05/06/2019
+ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641141"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423899"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Tutorial: Use o ML.NET para detecção de anomalias de vendas do produto 
 
@@ -173,7 +173,7 @@ Use [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimato
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-Ajuste o modelo aos dados `productSales` e retorne o modelo treinado adicionando o seguinte como a próxima linha de código no método `DetectSpike()`:
+Ajuste o modelo aos dados de `productSales` adicionando o seguinte como a próxima linha de código no método `DetectSpike()`:
 
 [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
@@ -283,7 +283,7 @@ O [iidChangePointEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePoi
 
 [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-Como você fez antes, ajuste o modelo aos dados `productSales` e retorne o modelo treinado adicionando o seguinte como a próxima linha de código no método `DetectChangePoint()`:
+Conforme você fez anteriormente, ajuste o modelo aos dados de `productSales` adicionando o seguinte como a próxima linha de código no método `DetectChangePoint()`:
 
 [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 

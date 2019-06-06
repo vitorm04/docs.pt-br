@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615151"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457442"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 <a name="top"></a> No CLR (Common Language Runtime), o coletor de lixo atua como um gerenciador automático de memória. Ele oferece os seguintes benefícios:  
@@ -149,7 +149,7 @@ ms.locfileid: "64615151"
   
      Em virtude das coletas da geração 2 poderem ocupar vários segmentos, objetos que são promovidos para a geração 2 podem ser movidos para um segmento mais antigo. Tanto os sobreviventes da geração 1 quanto da geração 2 podem ser movidos para um segmento diferente, porque eles são promovidos para a geração 2.  
   
-     Normalmente o heap de objetos grandes não é compactado, porque copiar objetos grandes causa uma penalidade de desempenho. No entanto, a partir do [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], você pode usar a propriedade <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> para compactar o heap de objeto grande sob demanda.  
+     Normalmente o heap de objetos grandes não é compactado, porque copiar objetos grandes causa uma penalidade de desempenho. No entanto, do .NET Framework 4.5.1 em diante, você pode usar a propriedade <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> para compactar o heap de objeto grande sob demanda.  
   
  O coletor de lixo usa as informações a seguir para determinar se os objetos estão vivos:  
   
@@ -253,7 +253,7 @@ Coleta de lixo simultânea
  Na coleta de lixo em segundo plano, as gerações efêmeras (0 e 1) são coletadas conforme o necessário, enquanto a coleta da geração 2 estiver em andamento. Não há configuração para a coleta de lixo em segundo plano; ela é habilitada automaticamente com a coleta de lixo simultânea. A coleta de lixo em segundo plano substitui a coleta de lixo simultânea. Assim como ocorre com a coleta de lixo simultânea, a coleta de lixo em segundo plano é executada em um thread dedicado, e é aplicável somente a coletas de geração 2.  
   
 > [!NOTE]
->  A coleta de lixo em segundo plano está disponível apenas no [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e em versões posteriores. No [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], ela tem suporte somente para a coleta de lixo de estação de trabalho. A partir do .NET Framework 4.5, a coleta de lixo em segundo plano está disponível para a coleta de lixo de estação de trabalho e de servidor.  
+>  A coleta de lixo em segundo plano está disponível apenas no .NET Framework 4 e em versões posteriores. No .NET Framework 4, ela é compatível somente para a coleta de lixo de estação de trabalho. A partir do .NET Framework 4.5, a coleta de lixo em segundo plano está disponível para a coleta de lixo de estação de trabalho e de servidor.  
   
  Uma coleta em gerações efêmeras durante a coleta de lixo em segundo plano é conhecida como coleta de lixo em primeiro plano. Quando as coletas de lixo em primeiro plano ocorrem, todos os threads gerenciados são suspensos.  
   

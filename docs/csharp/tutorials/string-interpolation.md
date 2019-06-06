@@ -3,12 +3,12 @@ title: Interpolação de cadeias de caracteres em C#
 description: Saiba como incluir resultados de expressão formatada em uma cadeia de caracteres de resultado em C# com a interpolação de cadeia de caracteres.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063236"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251022"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolação de cadeias de caracteres em C\#
 
@@ -27,17 +27,17 @@ Para identificar uma literal de cadeia de caracteres como uma cadeia de caracter
 Como mostra o exemplo, você inclui uma expressão em uma cadeia de caracteres interpolada colocando-a com chaves:
 
 ```
-{<interpolatedExpression>}
+{<interpolationExpression>}
 ```
 
 Cadeia de caracteres interpoladas são compatíveis com todos os recursos do recurso [formatação composta de cadeia de caracteres](../../standard/base-types/composite-formatting.md). Isso as torna uma alternativa mais legível ao uso do método <xref:System.String.Format%2A?displayProperty=nameWithType>.
 
-## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Como especificar uma cadeia de caracteres de formato para uma expressão interpolada
+## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>Como especificar uma cadeia de caracteres de formato para uma expressão de interpolação
 
-Especifique uma cadeia de caracteres de formato compatível com o tipo do resultado de expressão seguindo a expressão interpolada com dois-pontos (":") e a cadeia de caracteres de formato:
+Especifique uma cadeia de caracteres de formato compatível com o tipo do resultado de expressão seguindo a expressão de interpolação com dois-pontos (":") e a cadeia de caracteres de formato:
 
 ```
-{<interpolatedExpression>:<formatString>}
+{<interpolationExpression>:<formatString>}
 ```
 
 O seguinte exemplo mostra como especificar cadeias de caracteres de formato padrão e personalizadas para expressões que produzem resultados numéricos ou de data e hora:
@@ -46,12 +46,12 @@ O seguinte exemplo mostra como especificar cadeias de caracteres de formato padr
 
 Para obter mais informações, consulte a seção [Componente de cadeia de caracteres de formato](../../standard/base-types/composite-formatting.md#format-string-component) do tópico [Formatação composta](../../standard/base-types/composite-formatting.md). Esta seção fornece links para tópicos que descrevem cadeias de caracteres de formatos padrão e personalizado compatíveis com os tipos base do .NET.
 
-## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Como controlar a largura do campo e o alinhamento da expressão interpolada formatada
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>Como controlar a largura do campo e o alinhamento da expressão de interpolação formatada
 
-Especifique a largura mínima do campo e o alinhamento do resultado de expressão formatada seguindo a expressão interpolada com uma vírgula (",") e a expressão de constante:
+Você especifica a largura mínima do campo e o alinhamento do resultado de expressão formatada seguindo a expressão de interpolação com uma vírgula (",") e a expressão de constante:
 
 ```
-{<interpolatedExpression>,<alignment>}
+{<interpolationExpression>,<alignment>}
 ```
 
 Se o valor *alignment* for positivo, o resultado da expressão formatada será alinhado à direita; se for negativo, ele será alinhado à esquerda.
@@ -59,7 +59,7 @@ Se o valor *alignment* for positivo, o resultado da expressão formatada será a
 Caso precise especificar o alinhamento e uma cadeia de caracteres de formato, comece com o componente de alinhamento:
 
 ```
-{<interpolatedExpression>,<alignment>:<formatString>}
+{<interpolationExpression>,<alignment>:<formatString>}
 ```
 
 O seguinte exemplo mostra como especificar o alinhamento e usa caracteres de barra vertical ("|") para delimitar campos de texto:
@@ -82,9 +82,9 @@ O seguinte exemplo mostra como incluir chaves em uma cadeia de caracteres de res
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Como usar um operador condicional ternário `?:` em uma expressão interpolada
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>Como usar um operador condicional ternário `?:` em uma expressão de interpolação
 
-Como os dois-pontos (:) têm um significado especial em um item com uma expressão interpolada, para usar um [operador condicional](../language-reference/operators/conditional-operator.md) em uma expressão, coloque-a entre parênteses, como mostra o seguinte exemplo:
+Como os dois-pontos (:) têm um significado especial em um item com uma expressão de interpolação, para usar um [operador condicional](../language-reference/operators/conditional-operator.md) em uma expressão, coloque-a entre parênteses, como mostra o seguinte exemplo:
 
 [!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
 

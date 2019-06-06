@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628896"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377746"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Consumindo o padrão assíncrono baseado em tarefa
 
 Quando você usa o TAP (padrão assíncrono baseado em tarefa) para trabalhar com operações assíncronas, você pode usar retornos de chamada para obter uma espera sem bloqueio.  Para tarefas, isso é conseguido por meio de métodos como <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. O suporte assíncrono baseado em linguagem oculta retornos de chamada ao permitir que operações assíncronas sejam colocadas em espera no fluxo de controle normal, sendo que o código gerado pelo compilador fornece esse mesmo suporte de nível de API.
 
 ## <a name="suspending-execution-with-await"></a>Suspendendo a execução com Await
- Começando com o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], você pode usar a palavra-chave [await](~/docs/csharp/language-reference/keywords/await.md) em C# e o [Operador Await](~/docs/visual-basic/language-reference/operators/await-operator.md) no Visual Basic para aguardar os objetos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> de modo assíncrono. Quando você está aguardando um <xref:System.Threading.Tasks.Task>, a expressão `await` é do tipo `void`. Quando você está aguardando um <xref:System.Threading.Tasks.Task%601>, a expressão `await` é do tipo `TResult`. Uma expressão `await` deve ocorrer dentro do corpo de um método assíncrono. Para obter mais informações sobre suporte às linguagens C# e Visual Basic no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte as especificações das linguagens C# e Visual Basic.
+ Começando com o .NET Framework 4.5, você pode usar a palavra-chave [await](~/docs/csharp/language-reference/keywords/await.md) em C# e o [Operador Await](~/docs/visual-basic/language-reference/operators/await-operator.md) no Visual Basic para aguardar os objetos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> de modo assíncrono. Quando você está aguardando um <xref:System.Threading.Tasks.Task>, a expressão `await` é do tipo `void`. Quando você está aguardando um <xref:System.Threading.Tasks.Task%601>, a expressão `await` é do tipo `TResult`. Uma expressão `await` deve ocorrer dentro do corpo de um método assíncrono. Para obter mais informações sobre suporte às linguagens C# e Visual Basic no .NET Framework 4.5, consulte as especificações das linguagens C# e Visual Basic.
 
  Nos bastidores, a funcionalidade await instala um retorno de chamada na tarefa pelo uso de uma continuação.  Esse retorno de chamada retoma o método assíncrono no ponto de suspensão. Quando o método assíncrono é retomado, se a operação de espera foi concluída com êxito e era uma <xref:System.Threading.Tasks.Task%601>, o respectivo `TResult` é retornado.  Se o <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> que foi aguardado terminou no estado <xref:System.Threading.Tasks.TaskStatus.Canceled>, uma exceção <xref:System.OperationCanceledException> será lançada.  Se o <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> que foi aguardado terminou no estado <xref:System.Threading.Tasks.TaskStatus.Faulted>, uma exceção que causou a falha será lançada. Uma `Task` pode falhar como resultado de várias exceções, mas apenas uma dessas exceções é propagada. No entanto, a propriedade <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> retorna uma exceção <xref:System.AggregateException> que contém todos os erros.
 
@@ -833,7 +833,7 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> O namespace <xref:System.Threading.Tasks.Dataflow> está disponível no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] por meio de **NuGet**. Para instalar o assembly que contém o namespace <xref:System.Threading.Tasks.Dataflow>, abra seu projeto no Visual Studio, escolha **Gerenciar Pacotes NuGet** no menu Projeto e procure online pelo pacote Microsoft.Tpl.Dataflow.
+> O namespace <xref:System.Threading.Tasks.Dataflow> está disponível no .NET Framework 4.5 por meio de **NuGet**. Para instalar o assembly que contém o namespace <xref:System.Threading.Tasks.Dataflow>, abra seu projeto no Visual Studio, escolha **Gerenciar Pacotes NuGet** no menu Projeto e procure online pelo pacote Microsoft.Tpl.Dataflow.
 
 ## <a name="see-also"></a>Consulte também
 

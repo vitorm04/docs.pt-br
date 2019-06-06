@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a236b3b4b5c4cde66bad2b460637bb533b764be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a491b0efd38ed7ff37c8c704b6646dddede5efb3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881615"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379912"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5
-O instalador do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa o [Gerenciador de Reinicialização](https://go.microsoft.com/fwlink/?LinkId=231425) para impedir que o sistema seja reiniciado sempre que possível durante a instalação. Se o programa de instalação do aplicativo instala o .NET Framework, ele pode interagir com o Gerenciador de Reinicialização para aproveitar esse recurso. Para obter mais informações, confira [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+O instalador do .NET Framework 4.5 usa o [Gerenciador de Reinicialização](https://go.microsoft.com/fwlink/?LinkId=231425) para impedir que o sistema seja reiniciado sempre que possível durante a instalação. Se o programa de instalação do aplicativo instala o .NET Framework, ele pode interagir com o Gerenciador de Reinicialização para aproveitar esse recurso. Para obter mais informações, confira [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Motivos para uma reinicialização  
- A instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] exigirá uma reinicialização do sistema se um aplicativo do .NET Framework 4 estiver em uso durante a instalação. Isso ocorre porque o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] substitui arquivos do .NET Framework 4 e requer que esses arquivos estejam disponíveis durante a instalação. Em muitos casos, a reinicialização pode ser evitada detectando e fechando preventivamente aplicativos do .NET Framework 4 que estão em uso. No entanto, alguns aplicativos do sistema não devem ser fechados. Nesses casos, a reinicialização não pode ser evitada.  
+ A instalação do .NET Framework 4.5 exigirá uma reinicialização do sistema se um aplicativo do .NET Framework 4 estiver em uso durante a instalação. Isso ocorre porque o .NET Framework 4.5 substitui arquivos do .NET Framework 4 e requer que esses arquivos estejam disponíveis durante a instalação. Em muitos casos, a reinicialização pode ser evitada detectando e fechando preventivamente aplicativos do .NET Framework 4 que estão em uso. No entanto, alguns aplicativos do sistema não devem ser fechados. Nesses casos, a reinicialização não pode ser evitada.  
   
 ## <a name="end-user-experience"></a>Experiência do usuário final  
- Um usuário final que está fazendo uma instalação completa do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] tem a oportunidade de evitar uma reinicialização do sistema se o instalador detecta os aplicativos do .NET Framework 4 em uso. Uma mensagem lista todos os aplicativos do .NET Framework 4 em execução e oferece a opção de fechar esses aplicativos antes da instalação. Se o usuário confirmar, esses aplicativos serão fechados pelo instalador e uma reinicialização do sistema é evitada. Se o usuário não responder à mensagem dentro de um determinado período, a instalação continuará sem fechar os aplicativos.  
+ Um usuário final que está fazendo uma instalação completa do .NET Framework 4.5 terá a oportunidade de evitar uma reinicialização do sistema se o instalador detectar os aplicativos do .NET Framework 4 em uso. Uma mensagem lista todos os aplicativos do .NET Framework 4 em execução e oferece a opção de fechar esses aplicativos antes da instalação. Se o usuário confirmar, esses aplicativos serão fechados pelo instalador e uma reinicialização do sistema é evitada. Se o usuário não responder à mensagem dentro de um determinado período, a instalação continuará sem fechar os aplicativos.  
   
  Se o Gerenciador de Reinicialização detectar uma situação que exigirá uma reinicialização do sistema, mesmo que os aplicativos em execução sejam fechados, a mensagem não será exibida.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409920"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300631"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 
@@ -113,21 +113,21 @@ As opções podem ser combinadas usando uma operação **OR** bit a bit. O exemp
 
 ## <a name="tasks-threads-and-culture"></a>Tarefas, threads e cultura
 
-Cada thread tem uma cultura associada e uma cultura de interface do usuário, que é definida pelas propriedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>, respectivamente. A cultura de um thread é usada em operações como formatação, análise, classificação e comparação de cadeia de caracteres. A cultura de interface do usuário de um thread é usada na pesquisa de recursos. Em geral, a menos que você especifique uma cultura padrão para todos os threads em um domínio de aplicativo usando as propriedades <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>, a cultura padrão e a cultura de interface do usuário de um thread são definidas pela cultura do sistema. Se você definir a cultura de um thread de forma explícita e iniciar um novo thread, o novo thread não herdará a cultura do thread de chamada; em vez disso, sua cultura será a cultura padrão do sistema. O modelo de programação baseado em tarefas para aplicativos destinados a versões do .NET Framework anterior ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] segue essa prática.
+Cada thread tem uma cultura associada e uma cultura de interface do usuário, que é definida pelas propriedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>, respectivamente. A cultura de um thread é usada em operações como formatação, análise, classificação e comparação de cadeia de caracteres. A cultura de interface do usuário de um thread é usada na pesquisa de recursos. Em geral, a menos que você especifique uma cultura padrão para todos os threads em um domínio de aplicativo usando as propriedades <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>, a cultura padrão e a cultura de interface do usuário de um thread são definidas pela cultura do sistema. Se você definir a cultura de um thread de forma explícita e iniciar um novo thread, o novo thread não herdará a cultura do thread de chamada; em vez disso, sua cultura será a cultura padrão do sistema. O modelo de programação baseado em tarefas para aplicativos destinados a versões do .NET Framework anteriores ao .NET Framework 4.6 segue essa prática.
 
 > [!IMPORTANT]
-> Observe que a cultura do thread de chamada como parte do contexto de uma tarefa se aplica aos aplicativos *destinados* ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], não aos aplicativos *executados no* [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Você pode definir como destino uma versão específica do .NET Framework ao criar seu projeto no Visual Studio selecionando essa versão na lista suspensa na parte superior da caixa de diálogo **Novo Projeto**, ou fora do Visual Studio, você pode usar o atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute>. Para aplicativos destinados a versões do .NET Framework anteriores ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ou que não são destinados a uma versão específica do .NET Framework, a cultura de uma tarefa continua sendo determinada pela cultura do thread no qual ela é executada.
+> Observe que a cultura do thread de chamada como parte do contexto de uma tarefa se aplica aos aplicativos *destinados* ao .NET Framework 4.6, não aos aplicativos *executados* no .NET Framework 4.6. Você pode definir como destino uma versão específica do .NET Framework ao criar seu projeto no Visual Studio selecionando essa versão na lista suspensa na parte superior da caixa de diálogo **Novo Projeto**, ou fora do Visual Studio, você pode usar o atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute>. Para aplicativos destinados a versões do .NET Framework anteriores ao .NET Framework 4.6 ou que não são destinados a uma versão específica do .NET Framework, a cultura de uma tarefa continua sendo determinada pela cultura do thread no qual ela é executada.
 
-A partir dos aplicativos destinados ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], a cultura do thread de chamada é herdada por cada tarefa, mesmo se a tarefa é executada de forma assíncrona em um pool de threads.
+Começando com aplicativos destinados ao .NET Framework 4.6, a cultura do thread de chamada será herdada por cada tarefa, mesmo se a tarefa for executada de forma assíncrona em um pool de threads.
 
-O exemplo a seguir fornece uma ilustração simples. Ele usa o atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> para definir o como destino o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e altera a cultura atual do aplicativo para o francês (França) ou, caso o francês (França) já seja a cultura atual, para o inglês (Estados Unidos). Depois, ele chama um delegado chamado `formatDelegate` que retorna alguns números formatados como valores de moeda na nova cultura. Observe que, se o delegado como uma tarefa de forma síncrona ou assíncrona, ele retorna o resultado esperado, pois a cultura do thread de chamada é herdada pela tarefa assíncrona.
+O exemplo a seguir fornece uma ilustração simples. Ele usa o atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> para definir o .NET Framework 4.6 como destino e altera a cultura atual do aplicativo para o francês (França) ou, caso o francês (França) já seja a cultura atual, para o inglês (Estados Unidos). Depois, ele chama um delegado chamado `formatDelegate` que retorna alguns números formatados como valores de moeda na nova cultura. Observe que, se o delegado como uma tarefa de forma síncrona ou assíncrona, ele retorna o resultado esperado, pois a cultura do thread de chamada é herdada pela tarefa assíncrona.
 
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
 Se você estiver usando o Visual Studio, poderá omitir o atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> e selecionar o .NET Framework 4.6 como destino ao criar o projeto na caixa de diálogo **Novo Projeto**.
 
-Para obter um resultado que reflete o comportamento de aplicativos destinados a versões do .NET Framework anteriores ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], remova o atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> do código-fonte. O resultado refletirá as convenções de formatação da cultura padrão do sistema, não da cultura do thread de chamada.
+Para obter um resultado que reflete o comportamento de aplicativos destinados a versões do .NET Framework anteriores ao .NET Framework 4.6, remova o atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> do código-fonte. O resultado refletirá as convenções de formatação da cultura padrão do sistema, não da cultura do thread de chamada.
 
 Para saber mais sobre a cultura e tarefas assíncronas, veja a seção “Cultura e operações assíncronas baseadas em tarefas assíncronas” no tópico <xref:System.Globalization.CultureInfo>.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c40e2150bf56540fc95281f07bd14c60e138abc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607664"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456779"
 ---
 # <a name="resolving-assembly-loads"></a>Resolvendo carregamentos de assembly
 O .NET Framework fornece o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para aplicativos que exigem maior controle sobre o carregamento do assembly. Ao tratar esse evento, seu aplicativo pode carregar um assembly no contexto de carga de fora dos caminhos normais de investigação, selecionar qual das várias versões de assembly carregar, emitir um assembly dinâmico e retorná-lo, etc. Este tópico fornece orientação para a manipulação do evento <xref:System.AppDomain.AssemblyResolve>.  
@@ -72,7 +72,7 @@ O .NET Framework fornece o evento <xref:System.AppDomain.AssemblyResolve?display
  A regra principal para tratamento do evento <xref:System.AppDomain.AssemblyResolve> é que você não deve tentar retornar um assembly que não reconhece. Ao escrever o manipulador, você deve saber quais assemblies podem fazer com que o evento seja acionado. O manipulador deve retornar nulo para outros assemblies.  
   
 > [!IMPORTANT]
->  Começando com o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], o evento <xref:System.AppDomain.AssemblyResolve> é gerado para assemblies satélite. Essa alteração afeta um manipulador de eventos que foi escrito para uma versão anterior do .NET Framework, se o manipulador tenta resolver todas as solicitações de carga do assembly. Os manipuladores de eventos que ignoram assemblies não reconhecidos não são afetados por esta alteração: Eles retornam nulo e os mecanismos normais de fallback são seguidos.  
+>  Começando com o .NET Framework 4, o evento <xref:System.AppDomain.AssemblyResolve> é gerado para assemblies satélite. Essa alteração afeta um manipulador de eventos que foi escrito para uma versão anterior do .NET Framework, se o manipulador tenta resolver todas as solicitações de carga do assembly. Os manipuladores de eventos que ignoram assemblies não reconhecidos não são afetados por esta alteração: Eles retornam nulo e os mecanismos normais de fallback são seguidos.  
   
  Ao carregar um assembly, o manipulador de eventos não deve usar nenhuma das sobrecargas de método <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> ou <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> que possam fazer com que o evento <xref:System.AppDomain.AssemblyResolve> seja gerado recursivamente, pois isso poderia levar a um excedente de pilha. (Confira a lista fornecida anteriormente neste tópico.) Isso acontece mesmo se você fornecer tratamento de exceções para a solicitação de carga, pois nenhuma exceção será gerada até que todos os manipuladores de eventos tenham retornado. Desse modo, o seguinte código resultará em um excedente de pilha se `MyAssembly` não for encontrado:  
   

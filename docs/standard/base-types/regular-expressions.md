@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620707"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423789"
 ---
 # <a name="net-regular-expressions"></a>Expressões regulares do .NET
 Expressões regulares oferecem um método poderoso, flexível e eficiente de processamento de texto. A extensiva notação de correspondência de padrões de expressões regulares permite que você analise rapidamente grandes quantidades de texto para encontrar padrões de caracteres específicos; para validar o texto e garantir que ele corresponda a um padrão predefinido (como um endereço de email); para extrair, editar, substituir ou excluir subcadeias de caracteres de texto; e para adicionar as cadeias de caracteres extraídas para uma coleção a fim de gerar um relatório. Para vários aplicativos que lidam com cadeias de caracteres ou que analisam grandes blocos de texto, as expressões regulares são uma ferramenta indispensável.  
@@ -97,7 +97,7 @@ Expressões regulares oferecem um método poderoso, flexível e eficiente de pro
   
 |||  
 |-|-|  
-|`\$`|Procure uma única ocorrência do símbolo de cifrão ($) na cadeia de caracteres de entrada. A cadeia de caracteres do padrão de expressão regular inclui uma barra invertida para indicar que o símbolo de cifrão deve ser interpretado literalmente ao invés de como uma âncora de expressão regular. (O símbolo $ sozinho indicaria que o mecanismo de expressões regulares deveria tentar iniciar a correspondência no final de uma cadeia de caracteres.) Para garantir que o símbolo de moeda da cultura atual não seja interpretado incorretamente como um símbolo de expressão regular, o exemplo chama o método <xref:System.Text.RegularExpressions.Regex.Escape%2A> para escapar o caractere.|  
+|`\$`|Procure uma única ocorrência do símbolo de cifrão (`$`) na cadeia de caracteres de entrada. A cadeia de caracteres do padrão de expressão regular inclui uma barra invertida para indicar que o símbolo de cifrão deve ser interpretado literalmente ao invés de como uma âncora de expressão regular. (O símbolo `$` sozinho indicaria que o mecanismo de expressões regulares deveria tentar iniciar a correspondência no final de uma cadeia de caracteres.) Para garantir que o símbolo de moeda da cultura atual não seja interpretado incorretamente como um símbolo de expressão regular, o exemplo chama o método <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> para escapar o caractere.|  
 |`\s*`|Procure zero ou mais ocorrências de um caractere de espaço em branco.|  
 |`[-+]?`|Procure zero ou uma ocorrência de um sinal de positivo ou negativo.|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Os parênteses externos ao redor da expressão a definem como um grupo de captura ou uma subexpressão. Se uma correspondência for localizada, informações sobre essa parte da cadeia de caracteres correspondente podem ser recuperadas do segundo objeto <xref:System.Text.RegularExpressions.Group> no objeto <xref:System.Text.RegularExpressions.GroupCollection> retornado pela propriedade <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. (O primeiro elemento na coleção representa a correspondência inteira.)|  

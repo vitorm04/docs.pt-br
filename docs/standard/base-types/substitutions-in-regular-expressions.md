@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030146"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301498"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substituições em expressões regulares
 <a name="Top"></a> As substituições são elementos de linguagem que são reconhecidos apenas em padrões de substituição. Eles usam um padrão de expressão regular para definir o todo ou parte do texto que substitui o texto correspondente na cadeia de caracteres de entrada. O padrão de substituição pode consistir em uma ou mais substituições junto com caracteres literais. Padrões de substituição são fornecidos para sobrecargas do método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que têm um parâmetro `replacement` e para o método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Os métodos substituem o padrão correspondente pelo padrão que é definido pelo parâmetro `replacement`.  
@@ -29,14 +29,14 @@ ms.locfileid: "54030146"
   
 |Substituição|Descrição|  
 |------------------|-----------------|  
-|`$` *number*|Inclui a última subcadeia de caracteres correspondida pelo grupo de captura que é identificado por *number*, no qual *number* é um valor decimal na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo numerado](#Numbered).|  
-|`${` *name* `}`|Inclui a última subcadeia de caracteres correspondida pelo grupo nomeado que é designado por `(?<`*name*`> )` na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo nomeado](#Named).|  
-|`$$`|Inclui um único literal “$” na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um símbolo "$"](#DollarSign).|  
-|`$&`|Inclui uma cópia da correspondência inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo a correspondência inteira](#EntireMatch).|  
-|``$` ``|Inclui todo o texto da cadeia de caracteres de entrada antes da correspondência na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o texto antes da correspondência](#BeforeMatch).|  
-|`$'`|Inclui todo o texto da cadeia de caracteres de entrada após a correspondência na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o texto após a correspondência](#AfterMatch).|  
-|`$+`|O inclui o último grupo capturado na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o último grupo capturado](#LastGroup).|  
-|`$_`|Inclui a cadeia de entrada inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo a cadeia de caracteres de entrada inteira](#EntireString).|  
+|$ *número*|Inclui a última subcadeia de caracteres correspondida pelo grupo de captura que é identificado por *number*, no qual *number* é um valor decimal na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo numerado](#Numbered).|  
+|${ *name* }|Inclui a última subcadeia de caracteres correspondida pelo grupo nomeado que é designado por `(?<`*name*`> )` na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo nomeado](#Named).|  
+|$$|Inclui um único literal “$” na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um símbolo "$"](#DollarSign).|  
+|$&|Inclui uma cópia da correspondência inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo a correspondência inteira](#EntireMatch).|  
+|$\`|Inclui todo o texto da cadeia de caracteres de entrada antes da correspondência na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o texto antes da correspondência](#BeforeMatch).|  
+|$'|Inclui todo o texto da cadeia de caracteres de entrada após a correspondência na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o texto após a correspondência](#AfterMatch).|  
+|$+|O inclui o último grupo capturado na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o último grupo capturado](#LastGroup).|  
+|$_|Inclui a cadeia de entrada inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo a cadeia de caracteres de entrada inteira](#EntireString).|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Elementos de substituição e padrões de substituição  
  As substituições são as únicas construções especiais reconhecidas em um padrão de substituição. Nenhum dos outros elementos de linguagem de expressões regulares, incluindo caracteres de escape e o ponto final (`.`), que corresponde a qualquer caractere, são aceitos. Da mesma forma, os elementos de linguagem de substituição são reconhecidos apenas nos padrões de substituição e nunca são válidos em padrões de expressões regulares.  

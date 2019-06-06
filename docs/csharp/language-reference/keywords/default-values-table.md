@@ -6,18 +6,18 @@ ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
-- default constructor [C#]
+- parameterless constructor [C#]
 - defaults [C#]
 - value types [C#], initializing
 - variables [C#], value types
-- constructors [C#], default constructor
-- types [C#], default constructor return values
-ms.openlocfilehash: 19e9e4f94ab573f2313c185a08192d89103b98fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+- constructors [C#], parameterless constructor
+- types [C#], parameterless constructor return values
+ms.openlocfilehash: 4fc9a35f69540e047a97c21788015ca8e54068a0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237032"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422037"
 ---
 # <a name="default-values-table-c-reference"></a>Tabela de valores padrão (Referência de C#)
 
@@ -57,7 +57,7 @@ Começando no C# 7.1, você pode usar o [`default` literal](../../programming-gu
 int a = default;
 ```
 
-Você também pode usar o construtor padrão ou o construtor padrão implícito para produzir o valor padrão de um tipo de valor, como mostra o exemplo a seguir. Para obter mais informações sobre construtores, confira o artigo [Construtores](../../programming-guide/classes-and-structs/constructors.md).
+Você também pode usar o construtor sem parâmetros ou o construtor sem parâmetros implícito para produzir o valor padrão de um tipo de valor, como mostra o exemplo a seguir. Para obter mais informações sobre construtores, confira o artigo [Construtores](../../programming-guide/classes-and-structs/constructors.md).
 
 ```csharp
 int a = new int();
@@ -70,7 +70,6 @@ O valor padrão de qualquer [tipo de referência](reference-types.md) é `null`.
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Tabelas de referência de tipos](reference-tables-for-types.md)
 - [Tipos de valor](value-types.md)
 - [Tabela de tipos de valor](value-types-table.md)
 - [Tabela de tipos internos](built-in-types-table.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607676"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377879"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Criar e usar assemblies com nome forte
 
@@ -71,7 +71,7 @@ Esse recurso pode ser desabilitado para aplicativos individuais ou para um compu
 |-----------|-----------------|
 |[Como: criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Descreve como criar um par de chaves de criptografia para assinar um assembly.|
 |[Como: assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Descreve como criar um assembly de nome forte.|
-|[Aprimoramento da nomenclatura forte](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Descreve aprimoramentos para nomes fortes no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
+|[Aprimoramento da nomenclatura forte](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Descreve aprimoramentos para nomes fortes no .NET Framework 4.5.|
 |[Como: Referenciar um assembly de nome forte](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Descreve como referenciar tipos ou recursos em um assembly de nome forte no tempo de compilação ou no tempo de execução.|
 |[Como: Desabilitar a funcionalidade de bypass de nome forte](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Descreve como desabilitar o recurso que ignora a validação de assinaturas de nome forte. Esse recurso pode ser desabilitado para todos ou para aplicativos específicos.|
 |[Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)|Fornece uma visão geral dos assemblies de arquivo único e vários arquivos.|

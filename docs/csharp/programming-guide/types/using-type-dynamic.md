@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 18afb2765db41abd305fb83907c08fad75a1d72b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 18e737ec1f6c6f76ff882d48ad311a45ba7b756b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635240"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456731"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Usando o tipo dynamic (Guia de Programação em C#)
 
@@ -60,7 +60,7 @@ A resolução de sobrecarga ocorre em tempo de execução em vez de em tempo de 
 
 ## <a name="dynamic-language-runtime"></a>Tempo de execução de linguagem dinâmico
 
-O DLR (Dynamic Language Runtime) é uma nova API no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Ele fornece a infraestrutura que dá suporte ao tipo `dynamic` em C# e também à implementação das linguagens de programação dinâmicas como IronPython e IronRuby. Para obter mais informações sobre o DLR, consulte [Visão geral do Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).
+O DLR (Dynamic Language Runtime) é uma nova API no .NET Framework 4. Ele fornece a infraestrutura que dá suporte ao tipo `dynamic` em C# e também à implementação das linguagens de programação dinâmicas como IronPython e IronRuby. Para obter mais informações sobre o DLR, consulte [Visão geral do Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).
 
 ## <a name="com-interop"></a>interoperabilidade COM
 

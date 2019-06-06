@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501932"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379897"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigação: Suporte para toque e caneta baseado em ponteiro
 
@@ -38,7 +38,7 @@ A seguir estão os problemas conhecidos no momento com a pilha de toque/caneta c
 
   - Arrastar/soltar não pode mais ser iniciado em eventos de toque/caneta.
 
-      Isso pode travar o aplicativo até que a entrada do mouse seja detectada. Em vez disso, os desenvolvedores devem iniciar a ação de arrastar e soltar usando eventos de mouse.
+      Isso pode fazer com que o aplicativo pare de responder até que a entrada do mouse seja detectada. Em vez disso, os desenvolvedores devem iniciar a ação de arrastar e soltar usando eventos de mouse.
 
 ## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>Optar pelo suporte a toque/caneta com base em WM_POINTER
 

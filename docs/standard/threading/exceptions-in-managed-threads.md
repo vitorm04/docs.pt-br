@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43037f897dfb591572a62a9bb3cccf9170d1f5fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645016"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377462"
 ---
 # <a name="exceptions-in-managed-threads"></a>Exceções em threads gerenciados
 A partir do .NET Framework versão 2.0, o common language runtime permite que a maioria das exceções sem tratamento em threads prossiga naturalmente. Na maioria dos casos, isso significa que a exceção sem tratamento causa o encerramento do aplicativo.  
@@ -39,7 +39,7 @@ A partir do .NET Framework versão 2.0, o common language runtime permite que a 
 >  É possível que o runtime lance uma exceção não tratada antes que qualquer código gerenciado tenha a oportunidade de instalar um manipulador de exceção. Mesmo que o código gerenciado não tivesse possibilidade de manipular essa exceção, a exceção recebe a permissão para prosseguir naturalmente.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Exposição de problemas de threading durante o desenvolvimento  
- Quando os threads recebem a permissão para falhar em modo silencioso, sem encerrar o aplicativo, problemas graves de programação podem passar sem detecção. Este é um problema específico para serviços e outros aplicativos executados por longos períodos. À medida que os threads falham, o estado do programa se torna cada vez mais corrompido. O desempenho do aplicativo pode piorar, ou o aplicativo pode travar.  
+ Quando os threads recebem a permissão para falhar em modo silencioso, sem encerrar o aplicativo, problemas graves de programação podem passar sem detecção. Este é um problema específico para serviços e outros aplicativos executados por longos períodos. À medida que os threads falham, o estado do programa se torna cada vez mais corrompido. O desempenho do aplicativo pode piorar ou o aplicativo pode parar de responder.  
   
  Permitir que exceções sem tratamento em threads prossigam naturalmente, até que o sistema operacional encerre o programa, expõe esses problemas durante o desenvolvimento e teste. Relatórios de erros em depuração de suporte de encerramentos do programa.  
   

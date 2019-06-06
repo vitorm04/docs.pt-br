@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e12deefd4b20d2868ab86fdb4c81f6be3a63aa6d
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 0dff2bf22b701ee57818d04e01dbf643e04acb27
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052651"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379906"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Solucionar problemas de instalações e desinstalações bloqueadas do .NET Framework
 
@@ -38,7 +38,7 @@ Nesta tabela, 4.5.*x* refere-se ao .NET Framework 4.5 e às suas versões de pon
 |Não é possível desinstalar o .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8. Outros aplicativos do computador dependem desse programa.|Em geral, não é recomendável desinstalar quaisquer versões do .NET Framework que estão instaladas no computador, pois algum outro aplicativo pode depender de uma versão específica do .NET Framework. Para saber mais, confira [O .NET Framework para usuários](../../../docs/framework/get-started/index.md#ForUsers) no guia de *Introdução*.|  
 |O redistribuível do .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 não se aplica a esse sistema operacional. Baixe o NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 para seu sistema operacional no Centro de Download da Microsoft.|Você pode estar tentando instalar o .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ou 4.8 em uma plataforma não compatível ou escolheu o pacote de instalação que não inclui componentes para todos os sistemas operacionais compatíveis. Execute a instalação novamente usando o instalador offline ([para 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=309493), [para 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706), [para 4.6](https://go.microsoft.com/fwlink/p/?LinkId=528233), [para 4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671744), para [4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604), para [4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)), para [4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090), para [4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863265) ou para [4.8](https://go.microsoft.com/fwlink/?linkid=2088631). Para saber mais, veja o [Guia de instalação](../../../docs/framework/install/guide-for-developers.md) e [requisitos do sistema](../../../docs/framework/get-started/system-requirements.md) para saber quais são os sistemas operacionais compatíveis.|  
 |A atualização correspondente a KB\<*número*> precisa ser instalado antes de instalar este produto.|Instalação do .NET Framework exige a instalação de uma atualização de KB antes de instalar o .NET Framework. Instale a atualização e, depois, comece novamente a instalação do .NET Framework.<br /><br /> Por exemplo, a instalação de versões atualizadas do .NET Framework no Windows 8.1, Windows RT 8.1 e Windows Server 2012 R2 exige que a atualização correspondente a [KB 2919355](https://support.microsoft.com/kb/2919355) seja instalada.|  
-|O computador está executando uma instalação Núcleo do Servidor do sistema operacional Windows Server 2008. O .NET Framework 4.5.*x* exige uma versão mais recente do sistema operacional. Instale o Windows Server 2008 R2 SP1 ou posterior e execute novamente a instalação do .NET Framework 4.5*x*.|O [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e 4.5.2 são compatíveis com a função Server Core com Windows Server 2008 R2 SP1 ou posterior. Confira [Requisitos de sistema](../../../docs/framework/get-started/system-requirements.md).|  
+|O computador está executando uma instalação Núcleo do Servidor do sistema operacional Windows Server 2008. O .NET Framework 4.5.*x* exige uma versão mais recente do sistema operacional. Instale o Windows Server 2008 R2 SP1 ou posterior e execute novamente a instalação do .NET Framework 4.5*x*.|O .NET Framework 4.5.1 e o 4.5.2 são compatíveis com a função Server Core no Windows Server 2008 R2 SP1 ou posterior. Confira [Requisitos de sistema](../../../docs/framework/get-started/system-requirements.md).|  
 |Você não tem privilégios suficientes para concluir a operação para todos os usuários do computador. Faça logon como administrador e execute novamente a **Instalação**.|Você deve ser um administrador no computador para instalar o .NET Framework.|  
 |A Instalação não pode continuar, pois uma instalação anterior requer que o computador seja reiniciado. Reinicie o computador e execute novamente a Instalação.|Às vezes, uma reinicialização é necessária para concluir uma instalação. Siga as instruções para reiniciar o computador e executar novamente a Instalação.<br /><br /> Em casos raros, você poderá receber uma solicitação para reiniciar o sistema mais de uma vez se o Windows detectar uma quantidade de atualizações ausentes e estiver reiniciando para instalar a próxima atualização na fila.|  
 |A instalação do .NET Framework não pode ser executada no Modo de Compatibilidade de Programa.|Confira a seção [Problemas de compatibilidade de programas](#compat) mais adiante neste artigo.|  
@@ -71,7 +71,7 @@ O instalador do .NET Framework não pode ser executado no Modo de Compatibilidad
 
    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
 
-1. Na coluna Nome, procure os nomes de download do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2, dependendo da versão que estiver instalando, e exclua essas entradas. Para obter os nomes de downloads, consulte o artigo [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md).
+1. Na coluna Nome, procure os nomes de download do .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 (dependendo da versão que estiver instalando) e exclua essas entradas. Para obter os nomes de downloads, consulte o artigo [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md).
 
 1. Execute novamente o instalador do .NET Framework para as versões 4.5, 4.5.1, 4.5.2, ou 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2.
 

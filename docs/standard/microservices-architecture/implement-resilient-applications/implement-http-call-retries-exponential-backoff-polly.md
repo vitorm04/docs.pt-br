@@ -2,12 +2,12 @@
 title: Implementar repetições de chamadas HTTP com retirada exponencial com a Polly
 description: Saiba como tratar falhas de HTTP com a Polly e o HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053111"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301475"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementar repetições de chamadas HTTP com retirada exponencial com o HttpClientFactory e políticas da Polly
 
@@ -69,16 +69,16 @@ Policy
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Padrão de repetição**\
+- **Padrão de repetição**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly e HttpClientFactory**\
+- **Polly e HttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly (biblioteca de tratamento de falhas transitórias e resiliência do .NET)** \
+- **Polly (biblioteca de tratamento de falhas transitórias e resiliência do .NET)**  
   <https://github.com/App-vNext/Polly>
 
-- **Marc Brooker. Jitter: Making Things Better With Randomness**\ (Tremulação: melhorando as coisas com aleatoriedade)
+- **Marc Brooker. Jitter: Making Things Better With Randomness** (Tremulação: melhorando as coisas com aleatoriedade)  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]

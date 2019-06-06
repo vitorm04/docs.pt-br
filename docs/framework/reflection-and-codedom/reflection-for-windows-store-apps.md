@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbfebe57cd10f10719abf02cb529dd0cf3bb3cc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b5503d8a474d7f19348b9342bc02e216bd987223
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103006"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378603"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflexão no .NET Framework para aplicativos da Windows Store
-Desde o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o .NET Framework inclui um conjunto de membros e tipos de reflexão para uso em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Esses tipos e membros estão disponíveis no .NET Framework completo, bem como no [.NET para aplicativos da Windows Store](https://go.microsoft.com/fwlink/?LinkID=225700). Este documento explica as principais diferenças entre eles e seus equivalentes no .NET Framework 4 e em versões anteriores.  
+Desde sua versão 4.5, o .NET Framework inclui um conjunto de membros e tipos de reflexão para uso em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Esses tipos e membros estão disponíveis no .NET Framework completo, bem como no [.NET para aplicativos da Windows Store](https://go.microsoft.com/fwlink/?LinkID=225700). Este documento explica as principais diferenças entre eles e seus equivalentes no .NET Framework 4 e em versões anteriores.  
   
  Se você estiver criando um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], deverá usar os membros e tipos de reflexão no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Esses membros e tipos também estão disponíveis, mas não são obrigatórios, para uso em aplicativos da área de trabalho, portanto você pode usar o mesmo código para os dois tipos de aplicativos.  
   

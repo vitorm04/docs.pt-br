@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ca7bf5ad4b4d145f484f46ee46220a58f326333
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7db411e9ef38adb42c8df2059d166d1fa4184f95
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635622"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378369"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>O que está obsoleto na biblioteca de classes do .NET Framework
 
@@ -43,7 +43,7 @@ Quando você atualiza e depois recompila o código existente, o uso de um tipo o
 
 - Examine a documentação dessa área de tecnologia para determinar como responder à substituição.
 
-Você pode optar por não recompilar o código existente em comparação com uma versão posterior do .NET Framework. Em vez disso, você pode especificar a versão do .NET Framework na qual o código existente compilado é executado. Por exemplo, suponhamos que você tenha um aplicativo chamado app1.exe compilado no [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], mas queira que o aplicativo seja executado no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Isso exige as seguintes etapas:
+Você pode optar por não recompilar o código existente em comparação com uma versão posterior do .NET Framework. Em vez disso, você pode especificar a versão do .NET Framework na qual o código existente compilado é executado. Por exemplo, vamos supor que você tenha um aplicativo chamado app1.exe compilado no [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], mas queira que o aplicativo seja executado no .NET Framework 4.5. Isso exige as seguintes etapas:
 
 1. Crie um arquivo de configuração para o executável principal e denomine-o *appName*.exe.config, em que *appName* é o nome do executável do aplicativo. Para o aplicativo chamado app1.exe em nosso exemplo, você criaria um arquivo de configuração chamado app1.exe.config.
 

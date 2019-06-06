@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629006"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423861"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Visão geral do padrão assíncrono baseado em evento
 Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanecem responsivos para interação com o usuário, geralmente exigem um projeto que utilize vários threads. O namespace <xref:System.Threading> oferece todas as ferramentas necessárias para criar aplicativos commulti-thread de alto desempenho. No entanto, usar essas ferramentas de maneira eficaz requer um nível de experiência significativo com engenharia de software com multi-thread. Para aplicativos com multi-thread relativamente simples, o componente <xref:System.ComponentModel.BackgroundWorker> oferece uma solução direta. Para aplicativos assíncronos mais sofisticados, considere implementar uma classe que adere ao Padrão Assíncrono baseado em Evento.  
@@ -32,13 +32,13 @@ Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanec
   
 - Execute várias operações simultaneamente, recebendo notificações quando cada uma delas for concluída.  
   
-- Esperar até que recursos sejam disponibilizados sem interromper seu aplicativo (deixá-lo em "espera").  
+- Espere até que recursos sejam disponibilizados sem interromper ("bloquear") seu aplicativo.  
   
 - Comunicar-se com operações assíncronas pendentes usando o modelo familiar de eventos e representantes. Para saber mais sobre como usar manipuladores e representantes de eventos, confira [Eventos](../../../docs/standard/events/index.md).  
   
  Uma classe compatível com o Padrão Assíncrono baseado em Evento terá um ou mais métodos denominados _MethodName_**Async**. Esses métodos podem espelhar versões síncronas, que realizam a mesma operação no thread atual. A classe também pode ter um evento _MethodName_**Completed** e pode ter um método _MethodName_**AsyncCancel** (ou simplesmente **CancelAsync**).  
   
- <xref:System.Windows.Forms.PictureBox> é um componente típico que oferece suporte ao Padrão Assíncrono baseado em Evento. Você pode baixar uma imagem de maneira síncrona chamando seu método <xref:System.Windows.Forms.PictureBox.Load%2A>, mas se a imagem for grande, ou se a conexão da rede estiver lenta, seu aplicativo será interrompido (ficará em "espera") até que a operação de download seja concluída e a chamada para <xref:System.Windows.Forms.PictureBox.Load%2A> retorne.  
+ <xref:System.Windows.Forms.PictureBox> é um componente típico que oferece suporte ao Padrão Assíncrono baseado em Evento. Você pode baixar uma imagem de maneira síncrona chamando seu método <xref:System.Windows.Forms.PictureBox.Load%2A>, mas se a imagem for grande, ou se a conexão de rede estiver lenta, seu aplicativo deixará de responder até que a operação de download seja concluída e a chamada para <xref:System.Windows.Forms.PictureBox.Load%2A> retorne.  
   
  Se quiser que seu aplicativo continue em execução enquanto a imagem estiver carregando, você pode chamar o método <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> e lidar com o evento <xref:System.Windows.Forms.PictureBox.LoadCompleted>, assim como lidaria com qualquer outro evento. Ao chamar o método <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>, se aplicativo continuará a ser executado enquanto o download continua em um thread separado ("em segundo plano"). Seu manipulador de evento será chamado quando a operação de carregamento da imagem estiver concluída e o manipulador de evento puder examinar o parâmetro <xref:System.ComponentModel.AsyncCompletedEventArgs> para determinar se o download foi concluído com sucesso.  
   

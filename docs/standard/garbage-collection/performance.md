@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622884"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456798"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 <a name="top"></a> Este tópico descreve problemas relacionados ao uso de memória e coleta de lixo. Ele aborda problemas relacionados a heap gerenciado e explica como minimizar o efeito da coleta de lixo em seus aplicativos. Cada problema tem links para procedimentos que podem ser usados para investigar problemas.  
@@ -61,7 +61,7 @@ ms.locfileid: "64622884"
  Criadores de perfil podem fornecer informações abrangentes. No entanto, criadores de perfil complexos têm o potencial de modificar o comportamento de um aplicativo.  
   
 ### <a name="application-domain-resource-monitoring"></a>Monitoramento de recursos de domínio de aplicativo  
- Começando com o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], o monitoramento de ARM (recursos de domínio de aplicativo) permite que os hosts monitorem o uso de CPU e memória por domínio de aplicativo. Para obter mais informações, consulte [Monitoramento de recursos de domínio do aplicativo](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
+ Do .NET Framework 4 em diante, o ARM (monitoramento de recursos de domínio de aplicativo) permite que os hosts monitorem o uso de CPU e memória por domínio de aplicativo. Para obter mais informações, consulte [Monitoramento de recursos de domínio do aplicativo](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
   
  [Voltar ao início](#top)  
   

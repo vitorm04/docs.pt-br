@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 56c236e2e061b473f0b188b24d3ebdd98e013aa8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 365ea55a112a4a04964a8271f2f7e5591a3b0d5d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595985"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301037"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como: realizar e cancelar a assinatura de eventos (Guia de Programação em C#)
 Você assina um evento publicado por outra classe quando quer escrever um código personalizado que é chamado quando esse evento é gerado. Por exemplo, você pode assinar o evento `click` de um botão para fazer com que seu aplicativo faça algo útil quando o usuário clicar no botão.  
@@ -104,5 +104,5 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
 - [Eventos](../../../csharp/programming-guide/events/index.md)
 - [event](../../../csharp/language-reference/keywords/event.md)
 - [Como: publicar eventos em conformidade com as diretrizes do .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [Operador -= (referência do C#)](../../language-reference/operators/subtraction-assignment-operator.md)
-- [Operador +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)
+- [Operadores - e -=](../../language-reference/operators/subtraction-operator.md)
+- [Operadores + e +=](../../language-reference/operators/addition-operator.md)

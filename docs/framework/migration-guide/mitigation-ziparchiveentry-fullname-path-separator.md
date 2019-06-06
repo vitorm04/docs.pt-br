@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba871215f33e4d3b50054e9ceaa92be090d0143
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 908ac7c441dbb7f6c70b9fafc701d403fc153222
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125101"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251081"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigação: Separador de caminho ZipArchiveEntry.FullName
-A partir dos aplicativos direcionados ao [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], o separador de caminho usado na propriedade <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> foi alterado da barra invertida ("\\") usada nas versões anteriores do .NET Framework para uma barra ("/").   Os objetos <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> são criados chamando uma das sobrecargas do método <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
+Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de caminho usado na propriedade <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> foi alterado da barra invertida ("\\") usada nas versões anteriores do .NET Framework para uma barra ("/").   Os objetos <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> são criados chamando uma das sobrecargas do método <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
   
 ## <a name="impact"></a>Impacto  
  A alteração traz a implementação do .NET em conformidade com a seção 4.4.17.1 da [Especificação de formato de arquivo .ZIP](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) e permite que arquivamentos .ZIP sejam descompactados em sistemas não Windows.  
@@ -36,7 +36,7 @@ A partir dos aplicativos direcionados ao [!INCLUDE[net_v461](../../../includes/n
 </runtime>  
 ```  
   
- Além disso, os aplicativos destinados a versões anteriores do .NET Framework, mas estão sendo executados no [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] e versões posteriores, podem aceitar esse comportamento adicionando uma definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo. Veja a seguir a seção `<runtime>` e a opção de aceitação.  
+ Além disso, os aplicativos destinados a versões anteriores do .NET Framework, mas estão sendo executados no .NET Framework 4.6.1 e versões posteriores, podem aceitar esse comportamento adicionando uma definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo. Veja a seguir a seção `<runtime>` e a opção de aceitação.  
   
 ```xml  
 <runtime>  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7970ba4431161a1da8e0d509ee3d00c19b17c6e9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 882b1de4b1fd3b013b6b2825aec5e607a387531b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607710"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378000"
 ---
 # <a name="enhanced-strong-naming"></a>Nomeação forte aprimorada
 Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework para identificar os assemblies. É uma assinatura digital de chave pública que normalmente é usada para verificar a integridade dos dados que são passados de um remetente (assinante) para um destinatário (verificador). Essa assinatura é usada como uma identidade exclusiva para um assembly e garante que as referências ao assembly não sejam ambíguas. O assembly é assinado como parte do processo de compilação e verificado ao ser carregado.  
@@ -20,9 +20,9 @@ Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework par
  Assinaturas de nome forte ajudam a impedir que pessoas mal-intencionadas adulterem um assembly e assinem novamente o assembly com a chave do assinante original. No entanto, as chaves de nome forte não contêm informações confiáveis sobre o publicador, nem contém uma hierarquia de certificados. Uma assinatura de nome forte não garante a confiabilidade da pessoa que assinou o assembly, nem indica se a pessoa era um proprietário legítimo da chave, indicando apenas que o proprietário da chave assinou o assembly. Portanto, não recomendamos usar uma assinatura de nome forte como um validador de segurança para confiar em código de terceiros. O Microsoft Authenticode é a maneira recomendada para autenticar o código.  
   
 ## <a name="limitations-of-conventional-strong-names"></a>Limitações de nomes fortes convencionais  
- A tecnologia de nomeação forte usada nas versões anteriores ao [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] têm as seguintes limitações:  
+ A tecnologia de nomeação forte usada nas versões anteriores ao .NET Framework 4.5 têm as seguintes limitações:  
   
-- As chaves estão constantemente sendo atacadas e as técnicas e o hardware aprimorados facilitam a inferência de uma chave privada com base em uma chave pública. Para se proteger contra ataques, chaves maiores são necessárias. Versões do .NET framework anteriores ao [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] fornecem a capacidade de assinar com chaves de qualquer tamanho (o tamanho padrão é 1024 bits), mas assinar um assembly com uma nova chave interrompe todos os binários que fazem referência à identidade mais antiga do assembly. Portanto, é extremamente difícil atualizar o tamanho de uma chave de assinatura se você desejar manter a compatibilidade.  
+- As chaves estão constantemente sendo atacadas e as técnicas e o hardware aprimorados facilitam a inferência de uma chave privada com base em uma chave pública. Para se proteger contra ataques, chaves maiores são necessárias. Versões do .NET framework anteriores ao .NET Framework 4.5 fornecem a capacidade de assinar com chaves de qualquer tamanho (o tamanho padrão é 1.024 bits), mas assinar um assembly com uma nova chave interrompe todos os binários que fazem referência à identidade mais antiga do assembly. Portanto, é extremamente difícil atualizar o tamanho de uma chave de assinatura se você desejar manter a compatibilidade.  
   
 - A assinatura de nome forte dá suporte apenas ao algoritmo SHA-1. Recentemente, foi descoberto que o SHA-1 é inadequado para aplicativos de hash seguros. Portanto, um algoritmo mais forte (SHA-256 ou superior) é necessário. É possível que o SHA-1 perca sua posição de conformidade com o FIPS, o que causaria problemas para aqueles que optarem por usar somente os algoritmos e software em conformidade com FIPS.  
   
@@ -34,7 +34,7 @@ Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework par
 - Desenvolvedores que criam novos assemblies e não se preocupam com assinaturas de nome forte pre-existente podem usar os algoritmos SHA-2 mais seguros e assinar os assemblies como de costume.  
   
 ## <a name="using-enhanced-strong-names"></a>Usando nomes fortes aprimorados  
- Chaves de nome forte consistem em uma chave de assinatura e uma chave de identidade. O assembly é assinado com a chave de assinatura e é identificado pela chave de identidade. Antes do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], essas duas chaves eram idênticas. A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], a chave de identidade permanece a mesma que nas versões anteriores do .NET Framework, mas a chave de assinatura foi aprimorada com um algoritmo de hash mais forte. Além disso, a chave de assinatura é assinada com a chave de identidade para criar uma referenda.  
+ Chaves de nome forte consistem em uma chave de assinatura e uma chave de identidade. O assembly é assinado com a chave de assinatura e é identificado pela chave de identidade. Antes do .NET Framework 4.5, essas duas chaves eram idênticas. Do .NET Framework 4.5 em diante, a chave de identidade permanece a mesma que nas versões anteriores do .NET Framework, mas a chave de assinatura foi aprimorada com um algoritmo de hash mais forte. Além disso, a chave de assinatura é assinada com a chave de identidade para criar uma referenda.  
   
  O atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> permite que os metadados de assembly usem a chave pública pré-existente para a identidade do assembly, permitindo que referências ao assembly antigo continuem a funcionar.  O atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> usa a referenda para garantir que o proprietário da nova chave de assinatura também seja o proprietário da chave de identidade antiga.  
   

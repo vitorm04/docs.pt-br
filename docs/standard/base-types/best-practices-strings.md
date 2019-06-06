@@ -1,7 +1,7 @@
 ---
 title: Práticas recomendadas para o uso de cadeias de caracteres no .NET
 description: Saiba como usar cadeias de caracteres com eficiência em aplicativos .NET.
-ms.date: 09/13/2018
+ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052990"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250816"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 <a name="top"></a> O .NET dá um amplo suporte para desenvolvimento de aplicativos localizados e globalizados e torna mais fácil aplicar as convenções da cultura atual ou de uma cultura específica ao executar operações comuns, como a classificação e a exibição cadeias de caracteres. Mas a classificação ou a comparação de cadeias de caracteres nem sempre é uma operação que leva em conta a cultura. Por exemplo, cadeias de caracteres que são usadas internamente por um aplicativo normalmente devem ser manipuladas de maneira idêntica em todas as culturas. Quando os dados de cadeias de caracteres culturalmente independentes, como marcações XML, marcações HTML, nomes de usuário, caminhos de arquivo e nomes de objetos do sistema, são interpretados como se levassem em conta a cultura, o código do aplicativo pode estar sujeito a bugs sutis, desempenho ruim e, em alguns casos, problemas de segurança.  
@@ -69,7 +69,7 @@ ms.locfileid: "66052990"
   
 - Use os métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> e <xref:System.String.CompareTo%2A?displayProperty=nameWithType> para classificar cadeias de caracteres, não para verificar a igualdade.  
   
-- Use a formatação que leva em conta a cultura para exibir dados que não são de cadeias de caracteres, como números e datas, em uma interface do usuário. Use a formatação com a cultura invariável para persistir os dados que não são de cadeias de caracteres no formato de cadeia de caracteres.  
+- Use a formatação que leva em conta a cultura para exibir dados que não são de cadeias de caracteres, como números e datas, em uma interface do usuário. Use a formatação com a [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture) para persistir os dados que não são de cadeias de caracteres no formato de cadeia de caracteres.  
   
  Evite as práticas a seguir ao usar cadeias de caracteres:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66052990"
 > [!NOTE]
 > Você pode baixar as [Tabelas de peso de classificação](https://www.microsoft.com/download/details.aspx?id=10921), um conjunto de arquivos de texto que contêm informações sobre os pesos de caracteres usados em operações de classificação e comparação dos sistemas operacionais Windows, e a [Tabela de elemento de ordenação Unicode padrão](https://www.unicode.org/Public/UCA/latest/allkeys.txt), a versão mais recente da tabela de peso de classificação para Linux e macOS. A versão específica da tabela de peso de classificação do Linux e macOS depende da versão das bibliotecas de [Componentes internacionais para Unicode](http://site.icu-project.org/) instaladas no sistema. Para obter informações sobre versões de ICU e as versões Unicode que elas implementam, veja [Baixar ICU](http://site.icu-project.org/download).
 
- No entanto, avaliar duas cadeias de caracteres quanto à igualdade ou ordem de classificação não gera um único resultado correto, o resultado depende dos critérios usados para comparar as cadeias de caracteres. Em particular, as comparações de cadeia de caracteres ordinais ou baseadas no uso de maiúsculas e minúsculas e convenções classificação da cultura atual ou da cultura invariável (uma cultura independente de localidade com base no idioma inglês) podem gerar resultados diferentes.  
+ No entanto, avaliar duas cadeias de caracteres quanto à igualdade ou ordem de classificação não gera um único resultado correto, o resultado depende dos critérios usados para comparar as cadeias de caracteres. Em particular, as comparações de cadeia de caracteres ordinais ou baseadas no uso de maiúsculas e minúsculas e convenções classificação da cultura atual ou da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture) (uma cultura independente de localidade com base no idioma inglês) podem gerar resultados diferentes.  
 
 Além disso, comparações de cadeia de caracteres usando versões diferentes do .NET ou usando o .NET em diferentes sistemas operacionais ou versões do sistema operacional podem retornar resultados diferentes. Para obter mais informações, veja [Cadeias de caracteres e o padrão Unicode](xref:System.String#Unicode). 
 
@@ -240,7 +240,7 @@ Além disso, comparações de cadeia de caracteres usando versões diferentes do
 ## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>Escolhendo um Membro StringComparison para a Chamada de Método  
  A tabela a seguir descreve o mapeamento do contexto semântico da cadeia de caracteres para um membro de enumeração <xref:System.StringComparison>.  
   
-|Dados|Comportamento|System.StringComparison correspondente<br /><br /> Valor |  
+|Dados|Comportamento|System.StringComparison correspondente<br /><br /> Valor|  
 |----------|--------------|-----------------------------------------------------|  
 |Identificadores internos que diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que diferenciam maiúsculas e minúsculas nos padrões como XML e HTTP.<br /><br /> Configurações relacionadas à segurança que diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que bytes correspondem exatamente.|<xref:System.StringComparison.Ordinal>|  
 |Identificadores internos que não diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que não diferenciam maiúsculas e minúsculas em padrões como XML e HTTP.<br /><br /> Caminhos de arquivo.<br /><br /> Chaves do Registro e valores.<br /><br /> Variáveis de ambiente.<br /><br /> Identificadores de recurso (por exemplo, nomes de identificador).<br /><br /> Configurações relacionadas à segurança que não diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que as maiúsculas e minúsculas são irrelevantes; especialmente, dados armazenados na maioria dos serviços de sistema do Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
@@ -348,10 +348,36 @@ Além disso, comparações de cadeia de caracteres usando versões diferentes do
  [Voltar ao início](#top)  
   
 <a name="Formatted"></a>   
-## <a name="displaying-and-persisting-formatted-data"></a>Exibindo e Mantendo Dados Formatados  
- Quando você exibir dados que não são de cadeias de caracteres como números e datas e horas para os usuários, formate-os usando as configurações culturais do usuário. Por padrão, o método <xref:System.String.Format%2A?displayProperty=nameWithType> e os métodos `ToString` dos tipos numéricos e dos tipos de data e hora usam a cultura do thread atual para as operações de formatação. Para especificar explicitamente que o método de formatação deve usar a cultura atual, você pode chamar uma sobrecarga de um método de formatação que tem um parâmetro `provider`, como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ou <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, e passar para ela a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.  
-  
- Você pode manter os dados que não são de cadeias de caracteres como dados binários ou como dados formatados. Se optar por salvá-los como dados formatados, você deverá chamar uma sobrecarga de método de formatação que inclua um parâmetro `provider` e passar para ele a propriedade <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. A cultura invariável fornece um formato consistente para os dados formatados que é independente da cultura e do computador. Em contraste, dados persistentes que são formatados usando culturas diferentes da cultura invariável têm várias limitações:  
+## <a name="displaying-and-persisting-formatted-data"></a>Exibindo e Mantendo Dados Formatados
+
+Quando você exibir dados que não são de cadeias de caracteres como números e datas e horas para os usuários, formate-os usando as configurações culturais do usuário. Por padrão, todos itens a seguir usam a cultura do thread atual em operações de formatação:
+
+- Cadeias de caracteres interpoladas compatíveis com os compiladores [C#](../../csharp/language-reference/tokens/interpolated.md) e [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+- Operações de concatenação de cadeias de caracteres que usam os operadores de concatenação do [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) ou [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ), ou que chamam o método <xref:System.String.Concat%2A?displayProperty=nameWithType> diretamente.
+
+- O método <xref:System.String.Format%2A?displayProperty=nameWithType>.
+
+- Os métodos `ToString` dos tipos numéricos e dos tipos de data e hora.
+
+Para especificar explicitamente que uma cadeia de caracteres deve ser formatada usando as convenções de uma cultura específica ou a [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture), você pode fazer o seguinte:
+
+- Ao usar os métodos <xref:System.String.Format%2A?displayProperty=nameWithType> e `ToString`, chame uma sobrecarga que tenha um parâmetro `provider`, tal como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ou <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, e passe a ela a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, a propriedade <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> ou uma instância de <xref:System.Globalization.CultureInfo> que represente a cultura desejada.  
+
+- Para concatenação de cadeias de caracteres, não permita que o compilador execute nenhuma conversão implícita. Em vez disso, execute uma conversão explícita, chamando uma sobrecarga `ToString` que tenha um parâmetro `provider`. Por exemplo, o compilador usa implicitamente a cultura atual ao converter um valor de <xref:System.Double> em uma cadeia de caracteres no código C# a seguir:
+
+  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+
+  Em vez disso, você pode especificar explicitamente a cultura cujas convenções de formatação são usadas na conversão ao chamar o método <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType>, assim como o código C# a seguir faz:
+
+  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+
+- Para a interpolação de cadeia de caracteres, em vez de atribuir uma cadeia de caracteres interpolada a uma instância de <xref:System.String>, atribua-a a um <xref:System.FormattableString>. Em seguida, você pode chamar o respectivo método <xref:System.FormattableString.ToString?displayProperty=nameWithType> para produzir uma cadeia de caracteres de resultado que reflete as convenções da cultura atual, ou então pode chamar o método <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> para produzir uma cadeia de caracteres de resultado que reflete as convenções de uma cultura específica. Você também pode passar a cadeia de caracteres formatável para o método <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> estático para produzir uma cadeia de caracteres de resultado que reflete as convenções da cultura invariável. O exemplo a seguir ilustra esta abordagem. (A saída do exemplo reflete uma cultura atual de en-US.)
+
+  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
+  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+
+Você pode manter os dados que não são de cadeias de caracteres como dados binários ou como dados formatados. Se optar por salvá-los como dados formatados, você deverá chamar uma sobrecarga de método de formatação que inclua um parâmetro `provider` e passar para ele a propriedade <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. A cultura invariável fornece um formato consistente para os dados formatados que é independente da cultura e do computador. Em contraste, dados persistentes que são formatados usando culturas diferentes da cultura invariável têm várias limitações:  
   
 - É provável que os dados não sejam utilizáveis se forem recuperados em um sistema que tem uma cultura diferente ou se o usuário do sistema atual alterar a cultura atual e tentar recuperar os dados.  
   
@@ -366,7 +392,7 @@ Além disso, comparações de cadeia de caracteres usando versões diferentes do
   
  No entanto, se você substituir a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> por <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> em chamadas para <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, os dados persistentes de data e hora serão restaurados com êxito, como mostra a saída a seguir.  
   
-```  
+```console  
 06.05.1758 21:26  
 05.05.1818 07:19  
 22.04.1870 23:54  

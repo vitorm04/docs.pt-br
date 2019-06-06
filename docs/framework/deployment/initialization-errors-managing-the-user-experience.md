@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2abbe121879e5f47fbce9a82d2afbf52cbef4ba9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 28e9aab575876d425112c08b59b9cfc44a8c09a7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636637"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379945"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Erros de inicialização do .NET framework: Gerenciando a experiência do usuário
 
@@ -75,21 +75,21 @@ O CLR inclui um conjunto de hosts para uma variedade de cenários e esses hosts 
 |--------------|-----------------|--------------------------|------------------------------------|
 |Host EXE gerenciado|Inicia EXEs gerenciados.|É mostrada no caso de uma versão do .NET Framework ausente|Não|
 |Host COM gerenciado|Carrega componentes COM gerenciados em um processo.|É mostrada no caso de uma versão do .NET Framework ausente|Sim, definindo o sinalizador SEM_FAILCRITICALERRORS|
-|Host ClickOnce|Inicia os aplicativos ClickOnce.|É mostrada no caso de uma versão do .NET Framework ausente, a partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Não|
-|Host XBAP|Inicia os aplicativos XBAP WPF.|É mostrada no caso de uma versão do .NET Framework ausente, a partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Não|
+|Host ClickOnce|Inicia os aplicativos ClickOnce.|É mostrada no caso de uma versão do .NET Framework ausente, do .NET Framework 4.5 em diante|Não|
+|Host XBAP|Inicia os aplicativos XBAP WPF.|É mostrada no caso de uma versão do .NET Framework ausente, do .NET Framework 4.5 em diante|Não|
 
 ## <a name="windows-8-behavior-and-ui"></a>Interface do usuário e comportamento do Windows 8
 
-O sistema de ativação do CLR fornece o mesmo comportamento e interface do usuário no [!INCLUDE[win8](../../../includes/win8-md.md)] que em outras versões do sistema operacional Windows, exceto quando encontra problemas ao carregar o CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] inclui o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], que usa CLR 4.5. No entanto, [!INCLUDE[win8](../../../includes/win8-md.md)] não inclui o .NET Framework 2.0, 3.0 ou 3.5, que usam o CLR 2.0. Como resultado, os aplicativos que dependem do CLR 2.0 não são executados no [!INCLUDE[win8](../../../includes/win8-md.md)] por padrão. Em vez disso, eles exibem a seguinte caixa de diálogo para permitir que os usuários instalem o .NET Framework 3.5. Os usuários também podem habilitar o .NET Framework 3.5 no Painel de Controle. Ambas as opções são discutidas no artigo [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md) (Instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8).
+O sistema de ativação do CLR fornece o mesmo comportamento e interface do usuário no [!INCLUDE[win8](../../../includes/win8-md.md)] que em outras versões do sistema operacional Windows, exceto quando encontra problemas ao carregar o CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] inclui o .NET Framework 4.5, que usa a CLR 4.5. No entanto, [!INCLUDE[win8](../../../includes/win8-md.md)] não inclui o .NET Framework 2.0, 3.0 ou 3.5, que usam o CLR 2.0. Como resultado, os aplicativos que dependem do CLR 2.0 não são executados no [!INCLUDE[win8](../../../includes/win8-md.md)] por padrão. Em vez disso, eles exibem a seguinte caixa de diálogo para permitir que os usuários instalem o .NET Framework 3.5. Os usuários também podem habilitar o .NET Framework 3.5 no Painel de Controle. Ambas as opções são discutidas no artigo [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md) (Instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8).
 
 ![Caixa de diálogo de instalação do 3.5 no Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Prompt para instalar o .NET Framework 3.5 sob demanda")
 
 > [!NOTE]
-> O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] substitui o .NET Framework 4 (CLR 4) no computador do usuário. Portanto, os aplicativos do .NET Framework 4 são executados continuamente, sem exibir essa caixa de diálogo, em [!INCLUDE[win8](../../../includes/win8-md.md)].
+> O .NET Framework 4.5 substitui o .NET Framework 4 (CLR 4) no computador do usuário. Portanto, os aplicativos do .NET Framework 4 são executados continuamente, sem exibir essa caixa de diálogo, em [!INCLUDE[win8](../../../includes/win8-md.md)].
 
 Quando o .NET Framework 3.5 está instalado, os usuários podem executar aplicativos que dependem do .NET Framework 2.0, 3.0 ou 3.5 em seus computadores [!INCLUDE[win8](../../../includes/win8-md.md)]. Eles também podem executar aplicativos do .NET Framework 1.0 e 1.1, desde que esses aplicativos não estejam explicitamente configurados para serem executados apenas no .NET Framework 1.0 e 1.1. Consulte [Migrating from the .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md) (Migrando do .NET Framework 1.1).
 
-Desde o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o registro em log de ativação do CLR foi aprimorado para incluir entradas de log que registram quando e por que a mensagem de erro de inicialização é exibida. Para obter mais informações, confira [Como: depurar problemas de ativação do CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
+Do .NET Framework 4.5 em diante, o registro em log de ativação do CLR foi aprimorado para incluir entradas de log que registram quando e por que a mensagem de erro de inicialização é exibida. Para obter mais informações, confira [Como: depurar problemas de ativação do CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
 
 ## <a name="see-also"></a>Consulte também
 

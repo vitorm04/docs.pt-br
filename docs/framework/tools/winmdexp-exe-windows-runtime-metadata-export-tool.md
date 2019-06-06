@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a00828eba91e4fea41e8b6a6da8953fc399387e3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216334"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378503"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )
-A Ferramenta de Exportação dos Metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforma um módulo do .NET Framework em um arquivo que contém metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Embora os assemblies do .NET Framework e os arquivos de metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] usem o mesmo formato físico, existem diferenças no conteúdo das tabelas de metadados, o que significa que os assemblies do .NET Framework não são automaticamente úteis como Componentes [!INCLUDE[wrt](../../../includes/wrt-md.md)]. O processo de transformar um módulo do .NET Framework em um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] é conhecido como *exportação*. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e no [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], o arquivo de metadados do Windows (.winmd) resultante contém metadados e implementação.  
+A Ferramenta de Exportação dos Metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforma um módulo do .NET Framework em um arquivo que contém metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Embora os assemblies do .NET Framework e os arquivos de metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] usem o mesmo formato físico, existem diferenças no conteúdo das tabelas de metadados, o que significa que os assemblies do .NET Framework não são automaticamente úteis como Componentes [!INCLUDE[wrt](../../../includes/wrt-md.md)]. O processo de transformar um módulo do .NET Framework em um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] é conhecido como *exportação*. No .NET Framework 4.5 e no .NET Framework 4.5.1, o arquivo de metadados do Windows (.winmd) resultante contém metadados e implementação.  
   
- Quando você usar o modelo **Componente do [!INCLUDE[wrt](../../../includes/wrt-md.md)]**, localizado na **Windows Store** para C# e Visual Basic no Visual Studio 2013 ou Visual Studio 2012, o alvo do compilador será um arquivo .winmdobj e uma etapa de compilação subsequente chamará Winmdexp.exe para exportar o arquivo .winmdobj para um arquivo .winmd. Essa é a maneira recomendada para compilar um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Use Winmdexp.exe diretamente quando você quiser mais controle sobre o processo de compilação do que o dado pelo Visual Studio.  
+ Quando você usar o modelo **Componente do [!INCLUDE[wrt](../../../includes/wrt-md.md)]** , localizado na **Windows Store** para C# e Visual Basic no Visual Studio 2013 ou Visual Studio 2012, o alvo do compilador será um arquivo .winmdobj e uma etapa de compilação subsequente chamará Winmdexp.exe para exportar o arquivo .winmdobj para um arquivo .winmd. Essa é a maneira recomendada para compilar um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Use Winmdexp.exe diretamente quando você quiser mais controle sobre o processo de compilação do que o dado pelo Visual Studio.  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -34,7 +34,7 @@ winmdexp [options] winmdmodule
 |Argumento ou opção|Descrição|  
 |------------------------|-----------------|  
 |`winmdmodule`|Especifica o módulo (.winmdobj) a ser exportado. Somente um módulo é permitido. Para criar esse módulo, use a opção do compilador `/target` com o destino `winmdobj`. Consulte [/target:winmdobj (Opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) ou [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
-|`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Especifica o arquivo da documentação XML de saída que Winmdexp.exe produzirá. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o arquivo de saída é basicamente igual ao arquivo de documentação XML da entrada.|  
+|`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Especifica o arquivo da documentação XML de saída que Winmdexp.exe produzirá. No .NET Framework 4.5, o arquivo de saída é basicamente igual ao arquivo de documentação XML da entrada.|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|Especifica o nome do arquivo de documentação XML que o compilador produziu com `winmdmodule`.|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|Especifica o nome do arquivo PDB (banco de dados do programa) que contém símbolos para `winmdmodule`.|  
 |`/nowarn:` `warning`|Suprime o número de aviso especificado. Para *aviso*, forneça apenas a parte numérica do código de erro, sem zeros à esquerda.|  

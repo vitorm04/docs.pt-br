@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607523"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456704"
 ---
 # <a name="shadow-copying-assemblies"></a>Criando cópias de sombra de assemblies
 A criação de cópias de sombra permite que os assemblies usados em um domínio de aplicativo sejam atualizados sem descarregar o domínio de aplicativo. Isso é particularmente útil para aplicativos que devem estar disponíveis continuamente, como sites do ASP.NET.  
@@ -67,9 +67,9 @@ A criação de cópias de sombra permite que os assemblies usados em um domínio
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>Desempenho da Inicialização  
- Quando um domínio de aplicativo que usa a cópia de sombra for iniciado, haverá um atraso durante a cópia dos assemblies do diretório do aplicativo para o diretório de cópia de sombra, ou durante a verificação se eles já estão no local. Antes do [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], todos os assemblies eram copiados para um diretório temporário. Cada assembly era aberto para verificar o nome do assembly, e o nome forte era validado. Cada assembly era analisado para ver se havia sido atualizado mais recentemente do que a cópia no diretório de cópia de sombra. Nesse caso, ele foi copiado para o diretório de cópia de sombra. Por fim, as cópias temporárias eram descartadas.  
+ Quando um domínio de aplicativo que usa a cópia de sombra for iniciado, haverá um atraso durante a cópia dos assemblies do diretório do aplicativo para o diretório de cópia de sombra, ou durante a verificação se eles já estão no local. Antes do .NET Framework 4, todos os assemblies eram copiados para um diretório temporário. Cada assembly era aberto para verificar o nome do assembly, e o nome forte era validado. Cada assembly era analisado para ver se havia sido atualizado mais recentemente do que a cópia no diretório de cópia de sombra. Nesse caso, ele foi copiado para o diretório de cópia de sombra. Por fim, as cópias temporárias eram descartadas.  
   
- A partir do [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], o comportamento de inicialização padrão é comparar diretamente a data e hora do arquivo de cada assembly no diretório de aplicativo com a data e hora do arquivo da cópia no diretório de cópia de sombra. Se o assembly tiver sido atualizado, ele será copiado usando o mesmo procedimento das versões anteriores do .NET Framework; caso contrário, a cópia no diretório de cópia de sombra será carregada.  
+ Do .NET Framework 4 em diante, o comportamento de inicialização padrão é comparar diretamente a data e hora do arquivo de cada assembly no diretório de aplicativo com a data e hora do arquivo da cópia no diretório de cópia de sombra. Se o assembly tiver sido atualizado, ele será copiado usando o mesmo procedimento das versões anteriores do .NET Framework; caso contrário, a cópia no diretório de cópia de sombra será carregada.  
   
  A melhoria no desempenho resultante é maior para aplicativos nos quais os assemblies não são alterados com frequência, e as alterações normalmente ocorrem em um pequeno subconjunto dos assemblies. Se a maioria dos assemblies em um aplicativo mudar com frequência, o novo comportamento padrão poderá causar uma regressão do desempenho. Você pode restaurar o comportamento de inicialização de versões anteriores do .NET Framework, adicionando o elemento[\<shadowCopyVerifyByTimestamp>](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) ao arquivo de configuração, com `enabled="false"`.  
   

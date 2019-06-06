@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8373ed288ff3e8e3f7992729e57b366a4c0043a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126744"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457277"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
-O .NET Client Profile é um subconjunto do .NET Framework que era fornecido com o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e versões anteriores e era otimizado para aplicativos clientes. O .NET Framework é uma plataforma de desenvolvimento para Windows, Windows Phone e Microsoft Azure e fornece um ambiente gerenciado de execução de aplicativos e a biblioteca de classes do .NET Framework. O [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e as versões anteriores forneciam duas opções de implantação: o .NET Framework completo e o Client Profile. O Client Profile permitia uma implantação mais rápida e pacotes de instalação de aplicativos menores que os do .NET Framework completo.  
+O .NET Client Profile é um subconjunto do .NET Framework que era fornecido com o .NET Framework 4 e versões anteriores e era otimizado para aplicativos clientes. O .NET Framework é uma plataforma de desenvolvimento para Windows, Windows Phone e Microsoft Azure e fornece um ambiente gerenciado de execução de aplicativos e a biblioteca de classes do .NET Framework. O .NET Framework 4 e as versões anteriores forneciam duas opções de implantação: o .NET Framework completo e o Client Profile. O Client Profile permitia uma implantação mais rápida e pacotes de instalação de aplicativos menores que os do .NET Framework completo.  
   
- A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o Client Profile foi interrompido e somente o pacote redistribuível completo está disponível. As otimizações fornecidas pelo [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], como um menor tamanho de download e uma implantação mais rápida, eliminaram a necessidade de um pacote de implantação separado. O redistribuível único otimiza o processo de instalação e simplifica as opções de implementação do seu aplicativo.  
+ Do .NET Framework 4.5 em diante, o Client Profile foi interrompido e somente o pacote redistribuível completo está disponível. As otimizações fornecidas pelo .NET Framework 4.5, tais como um menor tamanho de download e uma implantação mais rápida, eliminaram a necessidade de um pacote de implantação separado. O redistribuível único otimiza o processo de instalação e simplifica as opções de implementação do seu aplicativo.  
   
  No entanto, se seu objetivo é o .NET Framework 4 ou 3.5 e você deseja saber mais sobre o Client Profile e quando usá-lo, consulte [.NET Framework Client Profile](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29) na documentação do .NET Framework 4.  
   
- Quando você instala o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o .NET Framework 4 Client Profile é atualizado para a versão completa do .NET Framework. Para obter mais informações sobre como instalar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md).  
+ Quando você instala o .NET Framework 4.5, o .NET Framework 4 Client Profile é atualizado para a versão completa do .NET Framework. Para obter mais informações sobre como instalar o .NET Framework 4.5, veja [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>Consulte também
 

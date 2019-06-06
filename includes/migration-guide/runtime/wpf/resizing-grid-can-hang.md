@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 63101fb127c84de21d165994bba85a2753e97344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5df5afec17d400ed14fe9b4c03c2f754895f0dd7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59236577"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378763"
 ---
-### <a name="resizing-a-grid-can-hang"></a>Redimensionar uma grade pode causar travamento
+### <a name="resizing-a-grid-can-cause-an-application-to-become-unresponsive"></a>Redimensionar uma grade pode fazer com que um aplicativo pare de responder
 
 |   |   |
 |---|---|

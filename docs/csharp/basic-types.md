@@ -3,12 +3,12 @@ title: Tipos básicos – Guia de C#
 description: Saiba mais sobre os tipos principais (numéricos, cadeias de caracteres e objetos) em todos os programas em C#
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: dc91452bb261b7c799cf3b69cab5b33175148b8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508040"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422092"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variáveis e valores
 
@@ -47,13 +47,13 @@ Os tipos de parâmetros de método e valores de retorno são especificados na as
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Depois que uma variável é declarada, ela não pode ser declarada novamente com um novo tipo e não pode ter um valor atribuído que não seja compatível com seu tipo declarado. Por exemplo, você não pode declarar um [int](language-reference/keywords/int.md) e, em seguida, atribuir a ele um valor booliano de [true](language-reference/keywords/true.md). No entanto, os valores podem ser convertidos em outros tipos, por exemplo, quando são passados como argumentos de método ou atribuídos a novas variáveis. Uma *conversão de tipo* que não causa a perda de dados é executada automaticamente pelo compilador. Uma conversão que pode causar perda de dados requer um *cast* no código-fonte.
+Depois que uma variável é declarada, ela não pode ser declarada novamente com um novo tipo e não pode ter um valor atribuído que não seja compatível com seu tipo declarado. Por exemplo, você não pode declarar um [int](language-reference/keywords/int.md) e, em seguida, atribuir a ele um valor booliano de [true](language-reference/keywords/true-literal.md). No entanto, os valores podem ser convertidos em outros tipos, por exemplo, quando são passados como argumentos de método ou atribuídos a novas variáveis. Uma *conversão de tipo* que não causa a perda de dados é executada automaticamente pelo compilador. Uma conversão que pode causar perda de dados requer um *cast* no código-fonte.
 
 Para obter mais informações, consulte [Conversões cast e conversões de tipo](programming-guide/types/casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Tipos internos
 
-O C# fornece um conjunto padrão de tipos numéricos internos para representar números inteiros, valores de ponto flutuante, expressões boolianas, caracteres de texto, valores decimais e outros tipos de dados. Também há tipos internos de **cadeias de caracteres** de **objetos**. Eles estão disponíveis para uso em qualquer programa em C#. Para obter mais informações sobre os tipos internos, consulte [Tabelas de referência de tipos](language-reference/keywords/reference-tables-for-types.md).  
+O C# fornece um conjunto padrão de tipos numéricos internos para representar números inteiros, valores de ponto flutuante, expressões boolianas, caracteres de texto, valores decimais e outros tipos de dados. Também há tipos internos de **cadeias de caracteres** de **objetos**. Eles estão disponíveis para uso em qualquer programa em C#. Para obter mais informações sobre os tipos internos, consulte [Tabelas de referência de tipos internos](language-reference/keywords/built-in-types-table.md).  
   
 ## <a name="custom-types"></a>Tipos personalizados
 
