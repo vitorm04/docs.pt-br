@@ -2,12 +2,12 @@
 title: Assinando eventos
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entenda os detalhes de publicação e assinatura de eventos de integração.
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639712"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722675"
 ---
 # <a name="subscribing-to-events"></a>Assinando eventos
 
@@ -322,7 +322,7 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **eShopOnContainers bifurcado usando NServiceBus (software específico)** \
+- **eShopOnContainers bifurcado usando NServiceBus (software específico)**  \
     <https://go.particular.net/eShopOnContainers>
 
 - **Mensagens controladas por evento** \
@@ -378,12 +378,6 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
 
 - **Guia de Confiabilidade** (documentação do RabbitMQ) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Barramento de Serviço do Azure. Sistema de mensagens agenciado: Detecção de duplicidades** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **Guia de Confiabilidade** (documentação do RabbitMQ) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [Anterior](rabbitmq-event-bus-development-test-environment.md)

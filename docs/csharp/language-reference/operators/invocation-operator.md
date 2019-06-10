@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 412d3ac5296eaf7d67f4a5e84b7a42f6fa5bb8a5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8f7382a49c81b6fd8e104b864ffc2f70db7fe4a6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633843"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758115"
 ---
 # <a name="-operator-c-reference"></a>Operador () (referência do C#)
 
@@ -26,7 +26,7 @@ Você também pode usar parênteses para especificar a ordem na qual as operaç�
 
 O exemplo a seguir demonstra como invocar um método, com ou sem argumentos, e um delegado:
 
-[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
+[!code-csharp-interactive[use for invocation](~/samples/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
 
 Você também pode usar parênteses ao invocar um [construtor](../../programming-guide/classes-and-structs/constructors.md) com um operador [`new`](../keywords/new-operator.md).
 
@@ -38,7 +38,7 @@ Uma expressão de conversão do formulário `(T)E` invoca um operador de convers
 
 O exemplo a seguir demonstra a conversão de tipo entre tipos numéricos:
 
-[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
+[!code-csharp-interactive[use for cast](~/samples/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
 
 Para obter mais informações sobre as conversões explícitas predefinidas entre tipos numéricos, confira [Tabela de conversões numéricas explícitas](../keywords/explicit-numeric-conversions-table.md).
 

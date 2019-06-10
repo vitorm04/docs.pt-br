@@ -4,12 +4,12 @@ description: Descubra como usar o ML.NET em um cenário de detecção de anomali
 ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423899"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758800"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Tutorial: Use o ML.NET para detecção de anomalias de vendas do produto 
 
@@ -373,4 +373,4 @@ Neste tutorial, você aprendeu como:
 
 Confira o repositório do GitHub de exemplos de Machine Learning para explorar um exemplo de Detecção de Anomalias de Consumo de Energia.
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/TimeSeries_PowerAnomalyDetection)
+> [dotnet/machinelearning-samples GitHub repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)
