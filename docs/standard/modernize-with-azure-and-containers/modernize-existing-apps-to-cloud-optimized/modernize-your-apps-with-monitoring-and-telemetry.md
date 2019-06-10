@@ -2,12 +2,12 @@
 title: Modernizar seus aplicativos com o monitoramento e telemetria
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Modernizar seus aplicativos com o monitoramento e telemetria
 ms.date: 04/30/2018
-ms.openlocfilehash: 94196365e6ed93839b28ed3b375e75a9119ae12d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643689"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758612"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizar seus aplicativos com o monitoramento e telemetria
 
@@ -38,8 +38,6 @@ O [solução de monitoramento de contêiner](https://docs.microsoft.com/azure/lo
 - DC/OS
 
 - Kubernetes
-
-- Service Fabric
 
 - Red Hat OpenShift
 
@@ -88,10 +86,6 @@ Você pode usar a solução de monitoramento de contêiner do Log Analytics para
 - **O que é Operations Management Suite (OMS)?**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
-
-- **Monitoramento de contêineres do Windows Server no Service Fabric com o OMS**
-
-<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[Anterior](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

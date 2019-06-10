@@ -2,12 +2,12 @@
 title: Lift- and -shift de aplicativos .NET existentes para o Azure IaaS (infraestrutura de nuvem pronto)
 description: Modernize aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure.
 ms.date: 04/28/2018
-ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643714"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758866"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Lift- and -shift de aplicativos .NET existentes para o Azure IaaS (infraestrutura de nuvem pronto)
 
@@ -39,7 +39,7 @@ As seções a seguir discutem aplicativos otimizados para a nuvem se baseiam-se 
 
 Se seu objetivo é simplesmente mover aplicativos existentes para a nuvem, primeiro, identifique os aplicativos existentes que não exigem modificação significativa para ser executado no serviço de aplicativo do Azure. Esses aplicativos devem ser as primeiras candidatas à otimização de nuvem. 
 
-Em seguida, para os aplicativos que ainda não é possível mover a contêineres do Windows e de PaaS, como o serviço de aplicativo ou orquestradores como o Azure Service Fabric, migrar VMs simples sem formatação (IaaS). 
+Em seguida, para os aplicativos que ainda não é possível mover a contêineres do Windows e de PaaS, como o serviço de aplicativo ou orquestradores como o serviço de Kubernetes do Azure, migrar VMs simples sem formatação (IaaS). 
 
 Mas, lembre-se de que corretamente configurar, proteger e manutenção de VMs exigem muito mais tempo e conhecimento de TI em comparação ao uso de serviços de PaaS no Azure. Se você estiver pensando em máquinas virtuais do Azure, certifique-se de que levam em conta o esforço de manutenção contínua necessário para corrigir, atualizar e gerenciar seu ambiente de VM. Máquinas virtuais do Azure é IaaS.
 

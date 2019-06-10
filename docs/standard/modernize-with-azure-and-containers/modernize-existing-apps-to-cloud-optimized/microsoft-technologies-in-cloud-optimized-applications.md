@@ -2,12 +2,12 @@
 title: Tecnologias da Microsoft em aplicativos otimizados para a nuvem
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Tecnologias da Microsoft em aplicativos otimizados para a nuvem
 ms.date: 04/28/2018
-ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639027"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758626"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Tecnologias da Microsoft em aplicativos otimizados para a nuvem
 
@@ -17,7 +17,7 @@ A lista a seguir descreve as ferramentas, tecnologias e soluções que são reco
 
 - **Tempo de execução**: Essa camada fornece o ambiente para a execução do aplicativo. Se você estiver usando contêineres, essa camada geralmente se baseia no [mecanismo do Docker](https://docs.docker.com/engine/), em execução em hosts Linux ou em hosts do Windows. ([Contêineres do Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) são suportados começando com o Windows Server 2016. Contêineres do Windows é a melhor opção para aplicativos existentes do .NET Framework que são executados no Windows).
 
-- **Gerenciado nuvem**: Quando você escolhe uma opção de nuvem gerenciado, você pode evitar os gastos e a complexidade de gerenciar e dar suporte aos patches de sistema operacional subjacentes infraestrutura, máquinas virtuais e configuração de rede. Se você optar por migrar usando IaaS, será responsável por todas essas tarefas e os custos associados. Uma opção de nuvem gerenciado, você pode gerenciar apenas os aplicativos e serviços que você desenvolve. O provedor de serviços de nuvem normalmente gerencia todo o resto. Exemplos de serviços de nuvem gerenciado no Azure [banco de dados SQL](https://azure.microsoft.com/services/sql-database), [Cache Redis do Azure](https://azure.microsoft.com/services/cache/), [do Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [armazenamento do Azure](https://azure.microsoft.com/services/storage/), [Banco de dados do azure para MySQL](https://azure.microsoft.com/services/mysql/), [banco de dados do Azure para PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)e gerenciadas, como os serviços de computação [de dimensionamento de VM define](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [do Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/), [serviço de aplicativo do Azure](https://azure.microsoft.com/services/app-service/), e [serviço Kubernetes do Azure](https://azure.microsoft.com/services/container-service/).
+- **Gerenciado nuvem**: Quando você escolhe uma opção de nuvem gerenciado, você pode evitar os gastos e a complexidade de gerenciar e dar suporte aos patches de sistema operacional subjacentes infraestrutura, máquinas virtuais e configuração de rede. Se você optar por migrar usando IaaS, será responsável por todas essas tarefas e os custos associados. Uma opção de nuvem gerenciado, você pode gerenciar apenas os aplicativos e serviços que você desenvolve. O provedor de serviços de nuvem normalmente gerencia todo o resto. Exemplos de serviços de nuvem gerenciado no Azure [banco de dados SQL](https://azure.microsoft.com/services/sql-database), [Cache Redis do Azure](https://azure.microsoft.com/services/cache/), [do Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [armazenamento do Azure](https://azure.microsoft.com/services/storage/), [Banco de dados do azure para MySQL](https://azure.microsoft.com/services/mysql/), [banco de dados do Azure para PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)e gerenciadas, como os serviços de computação [de dimensionamento de VM define](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [serviço de aplicativo do Azure](https://azure.microsoft.com/services/app-service/), e [serviço Kubernetes do Azure](https://azure.microsoft.com/services/container-service/).
 
 - **Desenvolvimento de aplicativos**: Muitas linguagens podem ser escolhidos de quando você compila aplicativos que são executados em contêineres. Este guia enfoca [.NET](https://www.microsoft.com/net), mas você pode desenvolver aplicativos baseados em contêiner usando outras linguagens, como o Node. js, Python, Spring/Java, ou ir.
 
@@ -27,7 +27,7 @@ A lista a seguir descreve as ferramentas, tecnologias e soluções que são reco
 
 - **Ciclo de vida do aplicativo**: [Os serviços do Azure DevOps](https://azure.microsoft.com/services/devops/) e outras ferramentas, como Jenkins, são servidores de automação criada que ajudam você a implementar pipelines de CI/CD, incluindo o gerenciamento de versão.
 
-As próximas seções deste capítulo e a passo a passo relacionados, concentre-se especificamente em detalhes sobre a camada de tempo de execução (contêineres do Windows). As diretrizes descrevem as maneiras que você pode implantar VMs de contêineres do Windows no Windows Server 2016 (e versões posteriores) e instâncias de contêiner do Azure. Ele também aborda a plataformas de PaaS mais avançadas, como o serviço de aplicativo do Azure e o orchestrator, como o Azure Service Fabric e serviço Kubernetes do Azure.
+As próximas seções deste capítulo e a passo a passo relacionados, concentre-se especificamente em detalhes sobre a camada de tempo de execução (contêineres do Windows). As diretrizes descrevem as maneiras que você pode implantar VMs de contêineres do Windows no Windows Server 2016 (e versões posteriores) e instâncias de contêiner do Azure. Ele também aborda a plataformas de PaaS mais avançadas, como o serviço de aplicativo do Azure e o orchestrator, como o serviço Kubernetes do Azure.
 
 ## <a name="monolithic-applications-can-be-cloud-optimized"></a>Aplicativos monolíticos *pode* ser otimizada para a nuvem
 

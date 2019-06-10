@@ -2,12 +2,12 @@
 title: Motivos para modernizar aplicativos existentes do .NET para aplicativos otimizados para a nuvem
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Motivos para modernizar aplicativos existentes do .NET para aplicativos otimizados para a nuvem
 ms.date: 04/28/2018
-ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639053"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758751"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Motivos para modernizar aplicativos existentes do .NET para aplicativos otimizados para a nuvem
 
@@ -27,7 +27,7 @@ Seu aplicativo é otimizada para a nuvem se can na maneira-desenvolver seu aplic
 
 A chave é *agilidade*. Você não pode ser enviado com a agilidade, a menos que você reduza ao mínimo absoluto qualquer implantação de produção problemas e problemas de ambiente de desenvolvimento/teste. Serviços gerenciados e contêineres (especificamente, Docker, como um padrão de fato) foram projetados especificamente para essa finalidade.
 
-Para alcançar a agilidade, você também precisa de processos automatizados de DevOps se baseiam em pipelines de CI/CD que liberam a plataformas escalonáveis na nuvem. Plataformas de CI/CD (como serviços de DevOps do Azure ou Jenkins) que implanta em uma plataforma de nuvem escalonável e flexível (como o serviço de aplicativo do Azure, Azure Service Fabric ou serviço Kubernetes do Azure) são tecnologias-chave para alcançar a agilidade na nuvem.
+Para alcançar a agilidade, você também precisa de processos automatizados de DevOps se baseiam em pipelines de CI/CD que liberam a plataformas escalonáveis na nuvem. Plataformas de CI/CD (como serviços de DevOps do Azure ou Jenkins) que implanta em uma plataforma de nuvem escalonável e flexível (como o serviço de aplicativo do Azure ou serviço Kubernetes do Azure) são tecnologias-chave para alcançar a agilidade na nuvem.
 
 A lista a seguir descreve os principais princípios ou práticas recomendadas para aplicativos otimizados para a nuvem. Observe que você pode adotar uma todos ou apenas alguns desses princípios, uma abordagem progressiva ou incremental:
 

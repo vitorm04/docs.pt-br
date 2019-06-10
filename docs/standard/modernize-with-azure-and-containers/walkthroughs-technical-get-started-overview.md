@@ -2,12 +2,12 @@
 title: Visão geral de tutoriais passo a passo e introduções técnicas
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Instruções passo a passo e técnico obtém visão de geral de Introdução
 ms.date: 04/28/2018
-ms.openlocfilehash: f5c1ca2b78d27b275845ada72d252450761f5091
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0b0dbae999e31150a55368d669f718eea0925d51
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638961"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758792"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Visão geral de tutoriais passo a passo e introduções técnicas
 
@@ -30,8 +30,6 @@ Cada as instruções a seguir usa os novo eShopLegacy e eShopModernizing aplicat
 - **Implantar seu aplicativo com base em contêineres do Windows em VMs do Azure**
 
 - **Implantar seus aplicativos baseados em contêineres do Windows no Kubernetes no serviço de contêiner do Azure**
-
-- **Implantar seus aplicativos baseados em contêineres do Windows no Azure Service Fabric**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Passo a passo 1: Tour de aplicativos herdados do eShop
 
@@ -119,7 +117,7 @@ Há vantagens em executar seu aplicativo monolítico em um contêiner. Primeiro,
 
 Um benefício adicional é que os desenvolvedores podem executar o aplicativo no ambiente consistente, que é fornecido pelos contêineres do Windows. Os problemas que aparecem apenas com determinadas versões podem ser identificados imediatamente, em vez de surgirem em um ambiente de preparo ou produção. Diferenças em ambientes de desenvolvimento usados por membros da equipe de desenvolvimento importam menor quando os aplicativos executados em contêineres.
 
-Aplicativos em contêineres também têm uma curva de escala horizontal mais simples. Aplicativos em contêineres permitem que você tenha mais aplicativos e instâncias de serviço (com base em contêineres) em uma VM ou máquina física em relação às implantações de aplicativo regular por máquina. Isso resulta em maior densidade e menos necessários recursos, especialmente ao usar orquestradores como Kubernetes ou Service Fabric.
+Aplicativos em contêineres também têm uma curva de escala horizontal mais simples. Aplicativos em contêineres permitem que você tenha mais aplicativos e instâncias de serviço (com base em contêineres) em uma VM ou máquina física em relação às implantações de aplicativo regular por máquina. Isso resulta em maior densidade e menos necessários recursos, especialmente ao usar orquestradores como Kubernetes.
 
 O uso de contêineres, em situações ideais, não requer fazer alterações ao código do aplicativo (C\#). Na maioria dos cenários, você precisa apenas os arquivos de metadados de implantação do Docker (arquivos Dockerfiles e Docker Compose).
 
@@ -210,7 +208,7 @@ As instâncias de contêiner do Azure torna fácil criar e gerenciar contêinere
 
 ### <a name="considerations"></a>Considerações
 
-Implantar contêineres do Windows com o .NET Framework completo / ASP.NET ou SQL Server nas instâncias de contêiner do Azure (ACI) não é muito mais rápido implantar em um Host Docker regulares (como um Windows Server 2016 com contêineres do Windows) porque a imagem do Docker deve ser baixados (extraídas do registro do Docker) sempre e os tamanhos da imagem de contêiner do SQL (15.1 GB) e a imagem de contêiner do ASP.NET (13.9 GB) são muito grandes, no entanto, é muito mais barato do que manter seu próprio host do docker (permanentemente on-line Windows Server 2016 com VM de contêineres do Windows no Azure) para não mencionar um orquestrador de inteiro como o Kubernetes no Azure (AKS/ACS) ou Azure Service Fabric que são, por outro lado, excelentes opções para implantações de produção.
+Implantar contêineres do Windows com o .NET Framework completo / ASP.NET ou SQL Server nas instâncias de contêiner do Azure (ACI) não é muito mais rápido implantar em um Host Docker regulares (como um Windows Server 2016 com contêineres do Windows) porque a imagem do Docker deve ser baixados (extraídas do registro do Docker) sempre e os tamanhos da imagem de contêiner do SQL (15.1 GB) e a imagem de contêiner do ASP.NET (13.9 GB) são muito grandes, no entanto, é muito mais barato do que manter seu próprio host do docker (permanentemente on-line Windows Server 2016 com VM de contêineres do Windows no Azure) para não mencionar um orquestrador de inteiro, como Kubernetes no Azure (AKS) que é, por outro lado, uma ótima opção para implantações de produção.
 
 Como conclusão principal, usando instâncias de contêiner do Azure é uma opção muito atraente para cenários de desenvolvimento/teste e para os pipelines de CI/CD.
 
@@ -279,80 +277,6 @@ Com o Kubernetes, os desenvolvedores podem progredir de pensar em máquinas fís
 ## <a name="next-steps"></a>Próximas etapas
 
 Explore este conteúdo mais detalhado no wiki do GitHub: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
-
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Passo a passo 6: Implantar seus aplicativos baseados em contêineres do Windows no Azure Service Fabric
-
-### <a name="technical-walkthrough-availability"></a>Disponibilidade de passo a passo técnico
-
-O passo a passo técnica completo está disponível no wiki do repositório de GitHub eShopModernizing:
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
-
-### <a name="overview"></a>Visão geral
-
-Um aplicativo baseado em contêineres do Windows rapidamente precisa usar as plataformas, ainda mais se afastando das VMs de IaaS. Isso é necessário para atingir facilmente alta escalabilidade e melhor automatizada de escalabilidade e para uma melhoria significativa na automatizada implantações e controle de versão. Para atingir essas metas, usando o orquestrador do Azure Service Fabric, que está disponível na nuvem do Azure, mas também está disponível para uso no local, ou até mesmo em uma nuvem pública diferente.
-
-### <a name="goals"></a>Objetivos
-
-O objetivo deste passo a passo é aprender como implantar um aplicativo baseado em contêiner do Windows em um cluster do Service Fabric no Azure. Implantação do Service Fabric do zero é um processo de duas etapas:
-
-1. Implante um cluster do Service Fabric no Azure (ou em um ambiente diferente).
-
-2. Implante o aplicativo e os recursos relacionados ao cluster do Service Fabric.
-
-### <a name="scenarios"></a>Cenários
-
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Cenário a: Implantar diretamente em um cluster do Service Fabric de um ambiente de desenvolvimento
-
-![Implantar diretamente em um cluster do Service Fabric de um ambiente de desenvolvimento](./media/image5-9.png)
-
-> **Figura 5-9.** Implantar diretamente em um cluster do Service Fabric de um ambiente de desenvolvimento
-
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Cenário b: Implantar um cluster do Service Fabric de pipelines de CI/CD nos serviços de DevOps do Azure
-
-![Implantar um cluster do Service Fabric de pipelines de CI/CD nos serviços de DevOps do Azure](./media/image5-10.png)
-
-**Figura 5-10.** Implantar um cluster do Service Fabric de pipelines de CI/CD nos serviços de DevOps do Azure
-
-## <a name="benefits"></a>Benefícios
-
-Os benefícios de implantar um cluster no Service Fabric são semelhantes aos benefícios de usar o Kubernetes. Uma diferença, no entanto, é que o Service Fabric é um ambiente de produção mais maduro para aplicativos do Windows em comparação comparada Kubernetes, que está em uma fase beta para contêineres do Windows na versão 1.9 do Kubernetes (dezembro de 2017). O Kubernetes é um ambiente mais maduro para Linux.
-
-O principal benefício do uso do Azure Service Fabric é que você obtenha um ambiente de produção em que você pode escalar horizontalmente o aplicativo com base no número de instâncias de contêiner, você deseja usar (interna escalabilidade em nós existentes) e, com base no número de nós ou VMs no cluster (escalabilidade global do cluster).
-
-O Azure Service Fabric oferece portabilidade para seus contêineres e sua configuração de aplicativo. Você pode ter uma malha de serviço de cluster no Azure, ou instalá-lo no local em seu próprio datacenter. Você pode até instalar um cluster do Service Fabric em uma nuvem diferente, como [Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/).
-
-Com o Service Fabric, os desenvolvedores podem progredir de pensar em máquinas físicas e virtuais para planejar uma infraestrutura centrada no contêiner que facilita os seguintes recursos, entre outros:
-
-- Aplicativos com base em vários contêineres.
-
-- Replicação de instâncias de contêiner e o dimensionamento automático horizontal.
-
-- Nomenclatura e descobrindo (por exemplo, DNS interno).
-
-- Balanceamento de carga.
-
-- Atualizações sem interrupção.
-
-- Distribuição de segredos.
-
-- Verificações de integridade do aplicativo.
-
-Os seguintes recursos são exclusivos no Service Fabric (em comparação com outros orquestradores):
-
-- Funcionalidade de serviços com estado, por meio do modelo de aplicativo de Reliable Services.
-
-- Padrão de atores, por meio do modelo de aplicativo de Reliable Actors.
-
-- Implante os processos de funções básicas, além de contêineres do Windows ou Linux.
-
-- Atualizações sem interrupção e verificações de integridade avançados.
-
-### <a name="next-steps"></a>Próximas etapas
-
-Explore este conteúdo mais detalhado no wiki do GitHub:
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 > [!div class="step-by-step"]
 > [Anterior](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

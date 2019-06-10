@@ -2,12 +2,12 @@
 title: Conclusões
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | conclusões
 ms.date: 10/26/2017
-ms.openlocfilehash: c6f56e312c052f3ea87e62d36a1ae6846a4b8735
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c5d4a3d504e7d62f74cf74e7b3f53f44f4b9b152
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643756"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758884"
 ---
 # <a name="conclusions"></a>Conclusões
 
@@ -15,7 +15,7 @@ ms.locfileid: "65643756"
 
 - Um contêiner do Docker está se tornando a unidade padrão de implantação para qualquer serviço ou aplicativo baseado em servidor.
 
-- Para ambientes de produção, você deve usar um orquestrador (como o Service Fabric ou Kubernetes) para hospedar aplicativos baseados em contêineres do Windows escalonável.
+- Para ambientes de produção, você deve usar um orquestrador (como Kubernetes) para hospedar aplicativos baseados em contêineres do Windows escalonável.
 
 - As VMs do Azure hospedando contêineres são uma maneira rápida e simple para criar pequenos ambientes de desenvolvimento/teste na nuvem.
 

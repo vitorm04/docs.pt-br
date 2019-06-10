@@ -2,12 +2,12 @@
 title: Implantar aplicativos .NET existentes como contêineres do Windows
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Implantar aplicativos .NET existentes como contêineres do Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643747"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758838"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows
 
@@ -153,7 +153,6 @@ Os produtos em contêineres de suporte do Azure que estão ao mesmo tempo mais p
 
 - **Serviço de Aplicativo do Azure**
 - **Serviço Kubernetes do Azure (AKS e ACS)**
-- **Azure Service Fabric** 
 - **Azure Batch** 
 
 Em seguida, o registro de contêiner do Azure é um registro de contêiner escalonável alta hospedado no Azure que você pode usar de todos os produtos anteriores durante o registro e implantar suas imagens de contêiner personalizado.
