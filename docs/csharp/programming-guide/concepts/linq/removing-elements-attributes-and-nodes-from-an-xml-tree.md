@@ -2,82 +2,81 @@
 title: Removendo elementos, atributos e nós de uma árvore XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: f3091c3f46d8b3283c961fffd4d1f0ce991083ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 977636a9d8a3d0a1431b8afb99966b809b4f420c
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547378"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689932"
 ---
-# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a><span data-ttu-id="3abed-102">Removendo elementos, atributos e nós de uma árvore XML (C#)</span><span class="sxs-lookup"><span data-stu-id="3abed-102">Removing Elements, Attributes, and Nodes from an XML Tree (C#)</span></span>
-<span data-ttu-id="3abed-103">Você pode modificar uma árvore XML, remover elementos, atributos e outros tipos de nós.</span><span class="sxs-lookup"><span data-stu-id="3abed-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>  
-  
- <span data-ttu-id="3abed-104">Remover um único elemento ou um único atributo de um documento XML é simples.</span><span class="sxs-lookup"><span data-stu-id="3abed-104">Removing a single element or a single attribute from an XML document is straightforward.</span></span> <span data-ttu-id="3abed-105">No entanto, ao remover coleções de elementos ou atributos, você deve primeiro materializar uma coleção em uma lista e depois excluir os elementos ou os atributos da lista.</span><span class="sxs-lookup"><span data-stu-id="3abed-105">However, when removing collections of elements or attributes, you should first materialize a collection into a list, and then delete the elements or attributes from the list.</span></span> <span data-ttu-id="3abed-106">A melhor abordagem é usar o método de extensão <xref:System.Xml.Linq.Extensions.Remove%2A>, que fará isso para você.</span><span class="sxs-lookup"><span data-stu-id="3abed-106">The best approach is to use the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method, which will do this for you.</span></span>  
-  
- <span data-ttu-id="3abed-107">O principal motivo para fazer isso é que a maioria das coleções que você recupera de uma árvore XML é gerada usando a execução adiada.</span><span class="sxs-lookup"><span data-stu-id="3abed-107">The main reason for doing this is that most of the collections you retrieve from an XML tree are yielded using deferred execution.</span></span> <span data-ttu-id="3abed-108">Se você não materializar essas coleções primeiro em uma lista, ou não usar os métodos de extensão, poderá encontrar uma determinada classe de bugs.</span><span class="sxs-lookup"><span data-stu-id="3abed-108">If you do not first materialize them into a list, or if you do not use the extension methods, it is possible to encounter a certain class of bugs.</span></span> <span data-ttu-id="3abed-109">Para obter mais informações, consulte [Bugs misturados de código declarativo/código imperativo (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="3abed-109">For more information, see [Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).</span></span>  
-  
- <span data-ttu-id="3abed-110">Os métodos a seguir removem nós e atributos de uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="3abed-110">The following methods remove nodes and attributes from an XML tree.</span></span>  
-  
-|<span data-ttu-id="3abed-111">Método</span><span class="sxs-lookup"><span data-stu-id="3abed-111">Method</span></span>|<span data-ttu-id="3abed-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="3abed-112">Description</span></span>|  
-|------------|-----------------|  
-|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="3abed-113">Remove uma classe <xref:System.Xml.Linq.XAttribute> de seu pai.</span><span class="sxs-lookup"><span data-stu-id="3abed-113">Removes an <xref:System.Xml.Linq.XAttribute> from its parent.</span></span>|  
-|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|<span data-ttu-id="3abed-114">Remove os nós filho de uma classe <xref:System.Xml.Linq.XContainer>.</span><span class="sxs-lookup"><span data-stu-id="3abed-114">Removes the child nodes from an <xref:System.Xml.Linq.XContainer>.</span></span>|  
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|<span data-ttu-id="3abed-115">Remove o conteúdo e os atributos de uma classe <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="3abed-115">Removes content and attributes from an <xref:System.Xml.Linq.XElement>.</span></span>|  
-|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|<span data-ttu-id="3abed-116">Remove os atributos de uma classe <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="3abed-116">Removes the attributes of an <xref:System.Xml.Linq.XElement>.</span></span>|  
-|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|<span data-ttu-id="3abed-117">Se você passar `null` para o valor, esse método removerá o atributo.</span><span class="sxs-lookup"><span data-stu-id="3abed-117">If you pass `null` for value, then removes the attribute.</span></span>|  
-|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|<span data-ttu-id="3abed-118">Se você passar `null` para o valor, esse método removerá o elemento filho.</span><span class="sxs-lookup"><span data-stu-id="3abed-118">If you pass `null` for value, then removes the child element.</span></span>|  
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="3abed-119">Remove uma classe <xref:System.Xml.Linq.XNode> de seu pai.</span><span class="sxs-lookup"><span data-stu-id="3abed-119">Removes an <xref:System.Xml.Linq.XNode> from its parent.</span></span>|  
-|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="3abed-120">Remove cada atributo ou elemento na coleção de origem do respectivo elemento pai.</span><span class="sxs-lookup"><span data-stu-id="3abed-120">Removes every attribute or element in the source collection from its parent element.</span></span>|  
-  
-## <a name="example"></a><span data-ttu-id="3abed-121">Exemplo</span><span class="sxs-lookup"><span data-stu-id="3abed-121">Example</span></span>  
-  
-### <a name="description"></a><span data-ttu-id="3abed-122">Descrição</span><span class="sxs-lookup"><span data-stu-id="3abed-122">Description</span></span>  
- <span data-ttu-id="3abed-123">Este exemplo demonstra três abordagens para remover elementos.</span><span class="sxs-lookup"><span data-stu-id="3abed-123">This example demonstrates three approaches to removing elements.</span></span> <span data-ttu-id="3abed-124">Primeiro, ele remove um único elemento.</span><span class="sxs-lookup"><span data-stu-id="3abed-124">First, it removes a single element.</span></span> <span data-ttu-id="3abed-125">Segundo, ele recupera uma coleção de elementos, materializa essa coleção usando o operador <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> e remove a coleção.</span><span class="sxs-lookup"><span data-stu-id="3abed-125">Second, it retrieves a collection of elements, materializes them using the <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> operator, and removes the collection.</span></span> <span data-ttu-id="3abed-126">Por último, recupera uma coleção de elementos e remove-a usando o método de extensão <xref:System.Xml.Linq.Extensions.Remove%2A>.</span><span class="sxs-lookup"><span data-stu-id="3abed-126">Finally, it retrieves a collection of elements and removes them using the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method.</span></span>  
-  
- <span data-ttu-id="3abed-127">Para obter mais informações sobre o operador <xref:System.Linq.Enumerable.ToList%2A>, consulte [Convertendo Tipos de Dados (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="3abed-127">For more information on the <xref:System.Linq.Enumerable.ToList%2A> operator, see [Converting Data Types (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).</span></span>  
-  
-### <a name="code"></a><span data-ttu-id="3abed-128">Código</span><span class="sxs-lookup"><span data-stu-id="3abed-128">Code</span></span>  
-  
-```csharp  
-XElement root = XElement.Parse(@"<Root>  
-    <Child1>  
-        <GrandChild1/>  
-        <GrandChild2/>  
-        <GrandChild3/>  
-    </Child1>  
-    <Child2>  
-        <GrandChild4/>  
-        <GrandChild5/>  
-        <GrandChild6/>  
-    </Child2>  
-    <Child3>  
-        <GrandChild7/>  
-        <GrandChild8/>  
-        <GrandChild9/>  
-    </Child3>  
-</Root>");  
-root.Element("Child1").Element("GrandChild1").Remove();  
-root.Element("Child2").Elements().ToList().Remove();  
-root.Element("Child3").Elements().Remove();  
-Console.WriteLine(root);  
-```  
-  
-### <a name="comments"></a><span data-ttu-id="3abed-129">Comentários</span><span class="sxs-lookup"><span data-stu-id="3abed-129">Comments</span></span>  
- <span data-ttu-id="3abed-130">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="3abed-130">This code produces the following output:</span></span>  
-  
-```xml  
-<Root>  
-  <Child1>  
-    <GrandChild2 />  
-    <GrandChild3 />  
-  </Child1>  
-  <Child2 />  
-  <Child3 />  
-</Root>  
-```  
-  
- <span data-ttu-id="3abed-131">Observe que o primeiro elemento neto foi removido de `Child1`.</span><span class="sxs-lookup"><span data-stu-id="3abed-131">Notice that the first grandchild element has been removed from `Child1`.</span></span> <span data-ttu-id="3abed-132">Todos os elementos neto foram removidos de `Child2` e de `Child3`.</span><span class="sxs-lookup"><span data-stu-id="3abed-132">All grandchildren elements have been removed from `Child2` and from `Child3`.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="3abed-133">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3abed-133">See also</span></span>
+# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a><span data-ttu-id="5b598-102">Removendo elementos, atributos e nós de uma árvore XML (C#)</span><span class="sxs-lookup"><span data-stu-id="5b598-102">Removing Elements, Attributes, and Nodes from an XML Tree (C#)</span></span>
 
-- [<span data-ttu-id="3abed-134">Modificando árvores XML (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="3abed-134">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+<span data-ttu-id="5b598-103">Você pode modificar uma árvore XML, remover elementos, atributos e outros tipos de nós.</span><span class="sxs-lookup"><span data-stu-id="5b598-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>
+
+<span data-ttu-id="5b598-104">Remover um único elemento ou um único atributo de um documento XML é simples.</span><span class="sxs-lookup"><span data-stu-id="5b598-104">Removing a single element or a single attribute from an XML document is straightforward.</span></span> <span data-ttu-id="5b598-105">No entanto, ao remover coleções de elementos ou atributos, você deve primeiro materializar uma coleção em uma lista e depois excluir os elementos ou os atributos da lista.</span><span class="sxs-lookup"><span data-stu-id="5b598-105">However, when removing collections of elements or attributes, you should first materialize a collection into a list, and then delete the elements or attributes from the list.</span></span> <span data-ttu-id="5b598-106">A melhor abordagem é usar o método de extensão <xref:System.Xml.Linq.Extensions.Remove%2A>, que fará isso para você.</span><span class="sxs-lookup"><span data-stu-id="5b598-106">The best approach is to use the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method, which will do this for you.</span></span>
+
+<span data-ttu-id="5b598-107">O principal motivo para fazer isso é que a maioria das coleções que você recupera de uma árvore XML é gerada usando a execução adiada.</span><span class="sxs-lookup"><span data-stu-id="5b598-107">The main reason for doing this is that most of the collections you retrieve from an XML tree are yielded using deferred execution.</span></span> <span data-ttu-id="5b598-108">Se você não materializar essas coleções primeiro em uma lista, ou não usar os métodos de extensão, poderá encontrar uma determinada classe de bugs.</span><span class="sxs-lookup"><span data-stu-id="5b598-108">If you do not first materialize them into a list, or if you do not use the extension methods, it is possible to encounter a certain class of bugs.</span></span> <span data-ttu-id="5b598-109">Para obter mais informações, consulte [Bugs misturados de código declarativo/código imperativo (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="5b598-109">For more information, see [Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).</span></span>
+
+<span data-ttu-id="5b598-110">Os métodos a seguir removem nós e atributos de uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="5b598-110">The following methods remove nodes and attributes from an XML tree.</span></span>
+
+|<span data-ttu-id="5b598-111">Método</span><span class="sxs-lookup"><span data-stu-id="5b598-111">Method</span></span>|<span data-ttu-id="5b598-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="5b598-112">Description</span></span>|
+|------------|-----------------|
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="5b598-113">Remove uma classe <xref:System.Xml.Linq.XAttribute> de seu pai.</span><span class="sxs-lookup"><span data-stu-id="5b598-113">Removes an <xref:System.Xml.Linq.XAttribute> from its parent.</span></span>|
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|<span data-ttu-id="5b598-114">Remove os nós filho de uma classe <xref:System.Xml.Linq.XContainer>.</span><span class="sxs-lookup"><span data-stu-id="5b598-114">Removes the child nodes from an <xref:System.Xml.Linq.XContainer>.</span></span>|
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|<span data-ttu-id="5b598-115">Remove o conteúdo e os atributos de uma classe <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="5b598-115">Removes content and attributes from an <xref:System.Xml.Linq.XElement>.</span></span>|
+|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|<span data-ttu-id="5b598-116">Remove os atributos de uma classe <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="5b598-116">Removes the attributes of an <xref:System.Xml.Linq.XElement>.</span></span>|
+|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|<span data-ttu-id="5b598-117">Se você passar `null` para o valor, esse método removerá o atributo.</span><span class="sxs-lookup"><span data-stu-id="5b598-117">If you pass `null` for value, then removes the attribute.</span></span>|
+|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|<span data-ttu-id="5b598-118">Se você passar `null` para o valor, esse método removerá o elemento filho.</span><span class="sxs-lookup"><span data-stu-id="5b598-118">If you pass `null` for value, then removes the child element.</span></span>|
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="5b598-119">Remove uma classe <xref:System.Xml.Linq.XNode> de seu pai.</span><span class="sxs-lookup"><span data-stu-id="5b598-119">Removes an <xref:System.Xml.Linq.XNode> from its parent.</span></span>|
+|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="5b598-120">Remove cada atributo ou elemento na coleção de origem do respectivo elemento pai.</span><span class="sxs-lookup"><span data-stu-id="5b598-120">Removes every attribute or element in the source collection from its parent element.</span></span>|
+
+## <a name="example"></a><span data-ttu-id="5b598-121">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5b598-121">Example</span></span>
+
+### <a name="description"></a><span data-ttu-id="5b598-122">Descrição</span><span class="sxs-lookup"><span data-stu-id="5b598-122">Description</span></span>
+
+<span data-ttu-id="5b598-123">Este exemplo demonstra três abordagens para remover elementos.</span><span class="sxs-lookup"><span data-stu-id="5b598-123">This example demonstrates three approaches to removing elements.</span></span> <span data-ttu-id="5b598-124">Primeiro, ele remove um único elemento.</span><span class="sxs-lookup"><span data-stu-id="5b598-124">First, it removes a single element.</span></span> <span data-ttu-id="5b598-125">Segundo, ele recupera uma coleção de elementos, materializa essa coleção usando o operador <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> e remove a coleção.</span><span class="sxs-lookup"><span data-stu-id="5b598-125">Second, it retrieves a collection of elements, materializes them using the <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> operator, and removes the collection.</span></span> <span data-ttu-id="5b598-126">Por último, recupera uma coleção de elementos e remove-a usando o método de extensão <xref:System.Xml.Linq.Extensions.Remove%2A>.</span><span class="sxs-lookup"><span data-stu-id="5b598-126">Finally, it retrieves a collection of elements and removes them using the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method.</span></span>
+
+<span data-ttu-id="5b598-127">Para obter mais informações sobre o operador <xref:System.Linq.Enumerable.ToList%2A>, consulte [Convertendo Tipos de Dados (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="5b598-127">For more information on the <xref:System.Linq.Enumerable.ToList%2A> operator, see [Converting Data Types (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).</span></span>
+
+### <a name="code"></a><span data-ttu-id="5b598-128">Código</span><span class="sxs-lookup"><span data-stu-id="5b598-128">Code</span></span>
+
+```csharp
+XElement root = XElement.Parse(@"<Root>
+    <Child1>
+        <GrandChild1/>
+        <GrandChild2/>
+        <GrandChild3/>
+    </Child1>
+    <Child2>
+        <GrandChild4/>
+        <GrandChild5/>
+        <GrandChild6/>
+    </Child2>
+    <Child3>
+        <GrandChild7/>
+        <GrandChild8/>
+        <GrandChild9/>
+    </Child3>
+</Root>");
+root.Element("Child1").Element("GrandChild1").Remove();
+root.Element("Child2").Elements().ToList().Remove();
+root.Element("Child3").Elements().Remove();
+Console.WriteLine(root);
+```
+
+### <a name="comments"></a><span data-ttu-id="5b598-129">Comentários</span><span class="sxs-lookup"><span data-stu-id="5b598-129">Comments</span></span>
+
+<span data-ttu-id="5b598-130">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="5b598-130">This code produces the following output:</span></span>
+
+```xml
+<Root>
+  <Child1>
+    <GrandChild2 />
+    <GrandChild3 />
+  </Child1>
+  <Child2 />
+  <Child3 />
+</Root>
+```
+
+<span data-ttu-id="5b598-131">Observe que o primeiro elemento neto foi removido de `Child1`.</span><span class="sxs-lookup"><span data-stu-id="5b598-131">Notice that the first grandchild element has been removed from `Child1`.</span></span> <span data-ttu-id="5b598-132">Todos os elementos neto foram removidos de `Child2` e de `Child3`.</span><span class="sxs-lookup"><span data-stu-id="5b598-132">All grandchildren elements have been removed from `Child2` and from `Child3`.</span></span>
