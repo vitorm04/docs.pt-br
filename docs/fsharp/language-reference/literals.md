@@ -1,13 +1,13 @@
 ---
 title: Literais
 description: Saiba mais sobre os tipos de literais no F# linguagem de programação.
-ms.date: 02/08/2019
-ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.date: 06/08/2019
+ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490981"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816238"
 ---
 # <a name="literals"></a>Literais
 
@@ -44,13 +44,16 @@ A tabela a seguir mostra os tipos de literais no F#. Caracteres que representam 
 |byte[]|Cadeia de caracteres ASCII|B|`"text"B`|
 |Cadeia de caracteres ou byte]|cadeia de caracteres textual|@ prefix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>Comentários
+## <a name="named-literals"></a>Literais nomeados
 
-Cadeias de caracteres Unicode podem conter as codificações explícitas que você pode especificar usando `\u` seguido por um código hexadecimal de 16 bits ou codificações UTF-32 que você pode especificar usando `\U` seguido por um código hexadecimal de 32 bits que representa a Unicode par substituto.
+Os valores que devem ser constantes podem ser marcados com o [Literal](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) atributo. Este atributo tem o efeito de causar um valor a ser compilado como uma constante.
 
-Como de F# 3.1, você pode usar o `+` entrar para combinar literais de cadeia de caracteres. Você também pode usar o bit a bit ou (`|||`) operador para combinar sinalizadores de enum. Por exemplo, o código a seguir é legal no F# 3.1:
+Em expressões de correspondência, identificadores que começam com caracteres minúsculos sempre são tratados como variáveis a serem associadas, em vez de como literais, portanto, você deve geralmente usar iniciais maiusculas ao definir literais.
 
 ```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
 [<Literal>]
 let Literal1 = "a" + "b"
 
@@ -64,15 +67,13 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-Não é permitido o uso de outros operadores bit a bit.
+## <a name="remarks"></a>Comentários
 
-## <a name="named-literals"></a>Literais nomeados
+Cadeias de caracteres Unicode podem conter as codificações explícitas que você pode especificar usando `\u` seguido por um código hexadecimal de 16 bits ou codificações UTF-32 que você pode especificar usando `\U` seguido por um código hexadecimal de 32 bits que representa a Unicode par substituto.
 
-Os valores que devem ser constantes podem ser marcados com o [Literal](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) atributo. Este atributo tem o efeito de causar um valor a ser compilado como uma constante.
+O uso de outros operadores bit a bit diferente de `|||` não é permitido.
 
-Em expressões de correspondência, identificadores que começam com caracteres minúsculos sempre são tratados como variáveis a serem associadas, em vez de como literais, portanto, você deve geralmente usar iniciais maiusculas ao definir literais.
-
-## <a name="integers-in-other-bases"></a>Números inteiros em outras Bases
+## <a name="integers-in-other-bases"></a>Números inteiros em outras bases
 
 Inteiros com sinal de 32 bits também podem ser especificados em octal, hexadecimal ou binário usando um `0x`, `0o` ou `0b` do prefixo, respectivamente.
 
@@ -83,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Sublinhados em literais numéricos
 
-Começando com F# 4.1, você pode separar dígitos com o caractere de sublinhado (`_`).
+Você pode separar dígitos com o caractere de sublinhado (`_`).
 
 ```fsharp
 let value = 0xDEAD_BEEF

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1aa958e15449949a1b7ca740198fff71295b2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c13dd2f00e08539d2ba502058c74aa4a1525e3ff
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704954"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816109"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy > elemento
 Especifica se deve-se impor um requisito de configuração do computador em que os algoritmos de criptografia devem estar em conformidade com o FIPS (padrão norte-americano de processamento de informações).  
@@ -58,7 +58,7 @@ Especifica se deve-se impor um requisito de configuração do computador em que 
 ## <a name="remarks"></a>Comentários  
  Começando com o .NET Framework 2.0, a criação de classes que implementam algoritmos de criptografia é controlada pela configuração do computador. Se o computador está configurado para exigir que os algoritmos em conformidade com FIPS, e uma classe implementa um algoritmo que não está em conformidade com FIPS, qualquer tentativa de criar uma instância dessa classe gera uma exceção. Construtores lançar uma <xref:System.InvalidOperationException> exceção, e `Create` métodos geram uma <xref:System.Reflection.TargetInvocationException> exceção com uma interna <xref:System.InvalidOperationException> exceção.  
   
- Se seu aplicativo é executado em computadores cujas configurações exigem a conformidade com FIPS, e seu aplicativo usa um algoritmo que não está em conformidade com FIPS, você pode usar esse elemento no arquivo de configuração para impedir que o common language runtime (CLR) do impor a conformidade com FIPS. Esse elemento foi introduzido no [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].  
+ Se seu aplicativo é executado em computadores cujas configurações exigem a conformidade com FIPS, e seu aplicativo usa um algoritmo que não está em conformidade com FIPS, você pode usar esse elemento no arquivo de configuração para impedir que o common language runtime (CLR) do impor a conformidade com FIPS. Esse elemento foi introduzido no .NET Framework 2.0 Service Pack 1.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como evitar que o CLR de impor a conformidade FIPS.  

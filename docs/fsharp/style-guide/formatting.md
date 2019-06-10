@@ -1,15 +1,15 @@
 ---
-title: F#diretrizes de formatação de código
+title: Diretrizes de formatação de código do F#
 description: Aprenda diretrizes de formatação F# código.
 ms.date: 02/08/2019
-ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063600"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816185"
 ---
-# <a name="f-code-formatting-guidelines"></a>F#diretrizes de formatação de código
+# <a name="f-code-formatting-guidelines"></a>Diretrizes de formatação de código do F#
 
 Este artigo oferece diretrizes para formatar seu código, de modo que seu F# é de código:
 
@@ -836,14 +836,14 @@ Quando aplicado a um parâmetro, elas devem estar na mesma linha e separados por
 
 ## <a name="formatting-literals"></a>Literais de formatação
 
-[F#literais](../language-reference/literals.md) usando o `Literal` atributo deve colocar o atributo em sua própria linha e usar a nomenclatura camelCase:
+[F#literais](../language-reference/literals.md) usando o `Literal` atributo deve colocar o atributo em sua própria linha e usar PascalCase de nomenclatura:
 
 ```fsharp
 [<Literal>]
-let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let myUrl = "www.mywebsitethatiamworkingwith.com"
+let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 Evite colocar o atributo na mesma linha como o valor.
