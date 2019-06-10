@@ -2,12 +2,12 @@
 title: 'Arquivo XML de exemplo: Ordem de compra típica em um Namespace1'
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: 68ead71acee450b7b37e7c933bcb3987681a1311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f47761409a0a174317259eea9b2d3a16c9fb2396
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741555"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487202"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Arquivo XML de exemplo: Ordem de compra típica em um namespace
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo é uma ordem de compra típica. XML é em um namespace.  
@@ -53,7 +53,4 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
   </aw:Items>  
 </aw:PurchaseOrder>  
 ```  
-  
-## <a name="see-also"></a>Consulte também
-
-- [Documentos XML de exemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ 

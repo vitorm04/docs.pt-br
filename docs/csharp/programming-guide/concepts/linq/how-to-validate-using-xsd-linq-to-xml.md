@@ -2,12 +2,12 @@
 title: 'Como: Validar usando o XSD (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: eea274380cd9b1a601059c12ee7bf654dff10437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99ff764c5e5ae51720d257bcb2ff0bb8e2591243
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604282"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484772"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Como: Validar usando o XSD (LINQ to XML) (C#)
 O namespace <xref:System.Xml.Schema> contém métodos de extensão que facilitam a validação de uma árvore XML em um arquivo XSD. Para obter mais informações, consulte a documentação do método <xref:System.Xml.Schema.Extensions.Validate%2A>.  
@@ -123,4 +123,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [Criando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Criando árvores XML (C#)](creating-xml-trees-linq-to-xml-2.md)

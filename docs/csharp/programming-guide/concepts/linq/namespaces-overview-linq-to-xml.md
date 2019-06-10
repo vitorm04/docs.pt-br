@@ -2,12 +2,12 @@
 title: Visão geral sobre namespaces (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-ms.openlocfilehash: e4be7ae398d69145ad8d22e5618a47c70db4fe5f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73d5fbc1ab55eacc7a06fef4a0d465979ff8d072
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585802"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484261"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>Visão geral sobre namespaces (LINQ to XML)
 Este tópico apresenta namespaces, a classe <xref:System.Xml.Linq.XName> e a classe <xref:System.Xml.Linq.XNamespace>.  
@@ -25,4 +25,4 @@ Este tópico apresenta namespaces, a classe <xref:System.Xml.Linq.XName> e a cla
   
 ## <a name="see-also"></a>Consulte também
 
-- [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)

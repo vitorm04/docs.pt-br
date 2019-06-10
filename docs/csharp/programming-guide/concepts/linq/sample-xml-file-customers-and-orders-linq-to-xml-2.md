@@ -2,12 +2,12 @@
 title: 'Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: 74e9ba00b61dbed532c0309043c9a9c944ea6932
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e7eea99a59a4cb1a5d62e728d4812ce3377c09f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617025"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483771"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém clientes e pedidos.  
@@ -433,7 +433,3 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
   </Orders>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>Consulte também
-
-- [Documentos XML de exemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

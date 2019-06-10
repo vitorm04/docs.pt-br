@@ -2,12 +2,12 @@
 title: Preservar espaço em branco ao serializar3
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 2f1e59728dc353a86421c9071710aba23c8f7f6f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d357d40c13a66a152b3c8bb5f61e3a3374c4055
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608724"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484080"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Preservar espaço em branco para serializar
 Este tópico descreve como controlar o espaço em branco para serializar uma árvore XML.  
@@ -30,7 +30,3 @@ Este tópico descreve como controlar o espaço em branco para serializar uma ár
  Se o método não utiliza <xref:System.Xml.Linq.SaveOptions> como um argumento, o método irá formatar (corte XML serializável.) Nesse caso, qualquer espaço em branco irrisória na árvore XML é descartado.  
   
  Se o método utiliza <xref:System.Xml.Linq.SaveOptions> como um argumento, então você pode especificar que o formato de método não (corte XML serializável.) Nesse caso, qualquer espaço em branco na árvore XML é preservada.  
-  
-## <a name="see-also"></a>Consulte também
-
-- [Serializando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

@@ -2,12 +2,12 @@
 title: 'Como: Localizar todos os nós em um namespace (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 3d9a2780a5241bdc535938cb182441418346755f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d94a6c517a76e8ed91f20a17e798ad3806a34a70
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524644"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486824"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Como: Localizar todos os nós em um namespace (C#)
 Você pode filtrar no namespace de cada elemento ou atributo para localizar todos os nós nesse namespace específico.  
@@ -94,7 +94,3 @@ Console.WriteLine(newTree);
   </aw:PurchaseOrder>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>Consulte também
-
-- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

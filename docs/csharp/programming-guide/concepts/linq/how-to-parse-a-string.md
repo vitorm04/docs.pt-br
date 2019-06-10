@@ -2,12 +2,12 @@
 title: 'Como: Analisar uma cadeia de caracteres (C#)'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: c4d26f534c718d69c84a30b11de22249b241e084
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8039e22a3ba1e37818064fafca7c404b57f39021
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629781"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485287"
 ---
 # <a name="how-to-parse-a-string-c"></a>Como: Analisar uma cadeia de caracteres (C#)
 Este tópico mostra como analisar uma cadeia de caracteres para criar uma árvore XML no C#.  
@@ -44,7 +44,3 @@ XElement contacts = XElement.Parse(
     </Contacts>");  
 Console.WriteLine(contacts);  
 ```  
-  
-## <a name="see-also"></a>Consulte também
-
-- [Analisando XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

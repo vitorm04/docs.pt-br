@@ -2,12 +2,12 @@
 title: Refatoração usando um método de extensão (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 0f41c4b4357125b6c92b17d8c818a0cfcf9822e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06c09b1c76e0c5287cc3bf96947b2ebf54337592
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596191"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487267"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refatoração usando um método de extensão (C#)
 Este exemplo se baseia no exemplo anterior, [Recuperando o texto dos parágrafos (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), refatorando a concatenação de cadeias de caracteres usando uma função pura implementada como um método de extensão.  
@@ -248,5 +248,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [Refatoração em funções puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

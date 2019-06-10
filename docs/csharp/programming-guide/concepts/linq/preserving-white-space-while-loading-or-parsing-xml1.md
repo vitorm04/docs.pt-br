@@ -2,12 +2,12 @@
 title: Preservar espaço em branco ao carregar ou ao analisar XML1
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 68b52f1d69c57b4292f02fea932e392de4a3ffc8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 802cd9089d0ab52e9c05546ddad04af8100e82a0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596795"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484091"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Preservar espaço em branco para carregar ou ao analisar XML
 Este tópico descreve como controlar o comportamento de espaço em branco de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -37,6 +37,3 @@ Este tópico descreve como controlar o comportamento de espaço em branco de [!I
   
  Você pode criar uma árvore XML usando <xref:System.Xml.XmlWriter>. Os nós que são gravados em <xref:System.Xml.XmlWriter> são preenchidos na árvore. No entanto, quando você cria uma árvore XML usando esse método, todos os nós são mantidos, independentemente se o nó é o espaço em branco ou não, ou se o espaço em branco é significativo ou não.  
   
-## <a name="see-also"></a>Consulte também
-
-- [Analisando XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

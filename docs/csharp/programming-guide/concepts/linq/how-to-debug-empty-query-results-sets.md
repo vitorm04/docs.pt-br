@@ -2,12 +2,12 @@
 title: 'Como: Depurar conjuntos de resultados de consultas vazios (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: d77a92acf54420b5add3bb9ae8b3f0b8c5448d18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba82e37ef4f57c78e7ba66676ba90312c2a9400f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357905"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485770"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Como: Depurar conjuntos de resultados de consultas vazios (C#)
 Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.  
@@ -16,7 +16,7 @@ Um dos problemas mais comuns para o consulte árvores XML é que se a árvore te
   
  O segundo conjunto de exemplos a seguir mostra as correções necessárias para que você possa ver XML em um namespace.  
   
- Para obter mais informações, consulte [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Para obter mais informações, consulte [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como criar XML em um namespace, e uma consulta que retorna um conjunto de resultados vazia.  
@@ -81,7 +81,3 @@ Result set follows:
 3  
 End of result set  
 ```  
-  
-## <a name="see-also"></a>Consulte também
-
-- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -2,15 +2,15 @@
 title: Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 5963e470acebfe259126ab8f2a17e131cb44f25b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 651b1eddb54f0588ddd3a64927fe79f95671d085
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524696"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484242"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Essa interface de programação é descrita em [Modificando árvores XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Se você estiver iterando com um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A>, e você está alterando a árvore XML como você itera através do eixo, você pode acabar com alguns erros estranhas.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Essa interface de programação é descrita em [Modificando árvores XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md). Se você estiver iterando com um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A>, e você está alterando a árvore XML como você itera através do eixo, você pode acabar com alguns erros estranhas.  
   
  Esse problema é às vezes conhecido como “o problema do Dia De Bruxas”.  
   
@@ -19,11 +19,11 @@ ms.locfileid: "54524696"
   
  Misturar esses estilos de código na mesma operação é o que resulta em problemas. Considere o seguinte:  
   
- Suponha que você tenha uma lista vinculada com três itens nele (a, b, e C#):  
+ Suponha que você tenha uma lista vinculada com três itens nele (a, b, e c#):  
   
  `a -> b -> c`  
   
- Agora, suponha que você deseja mover através da lista vinculada, adicionando novos itens três (a, b, e C#). Você deseja a lista vinculada resultante para ter esta aparência:  
+ Agora, suponha que você deseja mover através da lista vinculada, adicionando novos itens três (a, b, e c#). Você deseja a lista vinculada resultante para ter esta aparência:  
   
  `a -> a' -> b -> b' -> c -> c'`  
   
@@ -167,7 +167,4 @@ XElement newRoot = new XElement("Root",
 );  
 Console.WriteLine(newRoot);  
 ```  
-  
-## <a name="see-also"></a>Consulte também
-
-- [Programação LINQ to XML avançada (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ 
