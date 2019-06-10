@@ -25,105 +25,105 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: de0715a2ac946fa47f0d83ac8569595e622f0b97
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195772"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758086"
 ---
-# <a name="member-access-operators-c-reference"></a><span data-ttu-id="33a76-103">Operadores de acesso a membro (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="33a76-103">Member access operators (C# Reference)</span></span>
+# <a name="member-access-operators-c-reference"></a><span data-ttu-id="e23e5-103">Operadores de acesso a membro (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="e23e5-103">Member access operators (C# Reference)</span></span>
 
-<span data-ttu-id="33a76-104">Quando você acessa um membro de tipo, você pode usar os seguintes operadores:</span><span class="sxs-lookup"><span data-stu-id="33a76-104">You might use the following operators when you access a type member:</span></span>
+<span data-ttu-id="e23e5-104">Quando você acessa um membro de tipo, você pode usar os seguintes operadores:</span><span class="sxs-lookup"><span data-stu-id="e23e5-104">You might use the following operators when you access a type member:</span></span>
 
-- <span data-ttu-id="33a76-105">[`.` (acesso a membro)](#member-access-operator-): para acessar um membro de um namespace ou um tipo</span><span class="sxs-lookup"><span data-stu-id="33a76-105">[`.` (member access)](#member-access-operator-): to access a member of a namespace or a type</span></span>
-- <span data-ttu-id="33a76-106">[`[]` (acesso a um indexador ou elemento de matriz)](#indexer-operator-): para acessar um elemento de matriz ou um indexador de tipo</span><span class="sxs-lookup"><span data-stu-id="33a76-106">[`[]` (array element or indexer access)](#indexer-operator-): to access an array element or a type indexer</span></span>
-- <span data-ttu-id="33a76-107">[`?.` e `?[]` (operadores condicionais nulos)](#null-conditional-operators--and-): para executar uma operação de acesso a membro ou elemento somente se um operando for não nulo</span><span class="sxs-lookup"><span data-stu-id="33a76-107">[`?.` and `?[]` (null-conditional operators)](#null-conditional-operators--and-): to perform a member or element access operation only if an operand is non-null</span></span>
-- <span data-ttu-id="33a76-108">[`()` (invocação)](#invocation-operator-): chamar um método acessado ou invocar um delegado</span><span class="sxs-lookup"><span data-stu-id="33a76-108">[`()` (invocation)](#invocation-operator-): to call an accessed method or invoke a delegate</span></span>
+- <span data-ttu-id="e23e5-105">[`.` (acesso a membro)](#member-access-operator-): para acessar um membro de um namespace ou um tipo</span><span class="sxs-lookup"><span data-stu-id="e23e5-105">[`.` (member access)](#member-access-operator-): to access a member of a namespace or a type</span></span>
+- <span data-ttu-id="e23e5-106">[`[]` (acesso a um indexador ou elemento de matriz)](#indexer-operator-): para acessar um elemento de matriz ou um indexador de tipo</span><span class="sxs-lookup"><span data-stu-id="e23e5-106">[`[]` (array element or indexer access)](#indexer-operator-): to access an array element or a type indexer</span></span>
+- <span data-ttu-id="e23e5-107">[`?.` e `?[]` (operadores condicionais nulos)](#null-conditional-operators--and-): para executar uma operação de acesso a membro ou elemento somente se um operando for não nulo</span><span class="sxs-lookup"><span data-stu-id="e23e5-107">[`?.` and `?[]` (null-conditional operators)](#null-conditional-operators--and-): to perform a member or element access operation only if an operand is non-null</span></span>
+- <span data-ttu-id="e23e5-108">[`()` (invocação)](#invocation-operator-): chamar um método acessado ou invocar um delegado</span><span class="sxs-lookup"><span data-stu-id="e23e5-108">[`()` (invocation)](#invocation-operator-): to call an accessed method or invoke a delegate</span></span>
 
-## <a name="member-access-operator-"></a><span data-ttu-id="33a76-109">Operador de acesso a membro.</span><span class="sxs-lookup"><span data-stu-id="33a76-109">Member access operator .</span></span>
+## <a name="member-access-operator-"></a><span data-ttu-id="e23e5-109">Operador de acesso a membro.</span><span class="sxs-lookup"><span data-stu-id="e23e5-109">Member access operator .</span></span>
 
-<span data-ttu-id="33a76-110">Use o token `.` para acessar um membro de um namespace ou um tipo, como demonstram os exemplos a seguir:</span><span class="sxs-lookup"><span data-stu-id="33a76-110">You use the `.` token to access a member of a namespace or a type, as the following examples demonstrate:</span></span>
+<span data-ttu-id="e23e5-110">Use o token `.` para acessar um membro de um namespace ou um tipo, como demonstram os exemplos a seguir:</span><span class="sxs-lookup"><span data-stu-id="e23e5-110">You use the `.` token to access a member of a namespace or a type, as the following examples demonstrate:</span></span>
 
-- <span data-ttu-id="33a76-111">Use `.` para acessar um namespace aninhado dentro de um namespace, como mostra o exemplo a seguir de uma [diretiva `using`](../keywords/using-directive.md):</span><span class="sxs-lookup"><span data-stu-id="33a76-111">Use `.` to access a nested namespace within a namespace, as the following example of a [`using` directive](../keywords/using-directive.md) shows:</span></span>
+- <span data-ttu-id="e23e5-111">Use `.` para acessar um namespace aninhado dentro de um namespace, como mostra o exemplo a seguir de uma [diretiva `using`](../keywords/using-directive.md):</span><span class="sxs-lookup"><span data-stu-id="e23e5-111">Use `.` to access a nested namespace within a namespace, as the following example of a [`using` directive](../keywords/using-directive.md) shows:</span></span>
 
-  [!code-csharp[nested namespaces](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
+  [!code-csharp[nested namespaces](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
 
-- <span data-ttu-id="33a76-112">Use `.` para formar um *nome qualificado* para acessar um tipo dentro de um namespace, como mostra o código a seguir:</span><span class="sxs-lookup"><span data-stu-id="33a76-112">Use `.` to form a *qualified name* to access a type within a namespace, as the following code shows:</span></span>
+- <span data-ttu-id="e23e5-112">Use `.` para formar um *nome qualificado* para acessar um tipo dentro de um namespace, como mostra o código a seguir:</span><span class="sxs-lookup"><span data-stu-id="e23e5-112">Use `.` to form a *qualified name* to access a type within a namespace, as the following code shows:</span></span>
 
-  [!code-csharp[qualified name](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
+  [!code-csharp[qualified name](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
 
-  <span data-ttu-id="33a76-113">Use uma [diretiva `using`](../keywords/using-directive.md) para tornar o uso de nomes qualificados opcional.</span><span class="sxs-lookup"><span data-stu-id="33a76-113">Use a [`using` directive](../keywords/using-directive.md) to make the use of qualified names optional.</span></span>
+  <span data-ttu-id="e23e5-113">Use uma [diretiva `using`](../keywords/using-directive.md) para tornar o uso de nomes qualificados opcional.</span><span class="sxs-lookup"><span data-stu-id="e23e5-113">Use a [`using` directive](../keywords/using-directive.md) to make the use of qualified names optional.</span></span>
 
-- <span data-ttu-id="33a76-114">Use `.` para acessar [membros de tipo](../../programming-guide/classes-and-structs/index.md#members), estático e não-estático, como mostra o código a seguir:</span><span class="sxs-lookup"><span data-stu-id="33a76-114">Use `.` to access [type members](../../programming-guide/classes-and-structs/index.md#members), static and non-static, as the following code shows:</span></span>
+- <span data-ttu-id="e23e5-114">Use `.` para acessar [membros de tipo](../../programming-guide/classes-and-structs/index.md#members), estático e não-estático, como mostra o código a seguir:</span><span class="sxs-lookup"><span data-stu-id="e23e5-114">Use `.` to access [type members](../../programming-guide/classes-and-structs/index.md#members), static and non-static, as the following code shows:</span></span>
 
-  [!code-csharp-interactive[type members](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
+  [!code-csharp-interactive[type members](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
 
-<span data-ttu-id="33a76-115">Você também pode usar `.` para acessar um [método de extensão](../../programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="33a76-115">You can also use `.` to access an [extension method](../../programming-guide/classes-and-structs/extension-methods.md).</span></span>
+<span data-ttu-id="e23e5-115">Você também pode usar `.` para acessar um [método de extensão](../../programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="e23e5-115">You can also use `.` to access an [extension method](../../programming-guide/classes-and-structs/extension-methods.md).</span></span>
 
-## <a name="indexer-operator-"></a><span data-ttu-id="33a76-116">Operador de indexador []</span><span class="sxs-lookup"><span data-stu-id="33a76-116">Indexer operator []</span></span>
+## <a name="indexer-operator-"></a><span data-ttu-id="e23e5-116">Operador de indexador []</span><span class="sxs-lookup"><span data-stu-id="e23e5-116">Indexer operator []</span></span>
 
-<span data-ttu-id="33a76-117">Os colchetes, `[]`, normalmente são usados para acesso de elemento de matriz, indexador ou ponteiro.</span><span class="sxs-lookup"><span data-stu-id="33a76-117">Square brackets, `[]`, are typically used for array, indexer, or pointer element access.</span></span>
+<span data-ttu-id="e23e5-117">Os colchetes, `[]`, normalmente são usados para acesso de elemento de matriz, indexador ou ponteiro.</span><span class="sxs-lookup"><span data-stu-id="e23e5-117">Square brackets, `[]`, are typically used for array, indexer, or pointer element access.</span></span>
 
-### <a name="array-access"></a><span data-ttu-id="33a76-118">Acesso de matriz</span><span class="sxs-lookup"><span data-stu-id="33a76-118">Array access</span></span>
+### <a name="array-access"></a><span data-ttu-id="e23e5-118">Acesso de matriz</span><span class="sxs-lookup"><span data-stu-id="e23e5-118">Array access</span></span>
 
-<span data-ttu-id="33a76-119">O exemplo a seguir demonstra como acessar elementos de matriz:</span><span class="sxs-lookup"><span data-stu-id="33a76-119">The following example demonstrates how to access array elements:</span></span>
+<span data-ttu-id="e23e5-119">O exemplo a seguir demonstra como acessar elementos de matriz:</span><span class="sxs-lookup"><span data-stu-id="e23e5-119">The following example demonstrates how to access array elements:</span></span>
 
-[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
+[!code-csharp-interactive[array access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
 
-<span data-ttu-id="33a76-120">Se um índice de matriz estiver fora dos limites da dimensão correspondente de uma matriz, uma <xref:System.IndexOutOfRangeException> será gerada.</span><span class="sxs-lookup"><span data-stu-id="33a76-120">If an array index is outside the bounds of the corresponding dimension of an array, an <xref:System.IndexOutOfRangeException> is thrown.</span></span>
+<span data-ttu-id="e23e5-120">Se um índice de matriz estiver fora dos limites da dimensão correspondente de uma matriz, uma <xref:System.IndexOutOfRangeException> será gerada.</span><span class="sxs-lookup"><span data-stu-id="e23e5-120">If an array index is outside the bounds of the corresponding dimension of an array, an <xref:System.IndexOutOfRangeException> is thrown.</span></span>
 
-<span data-ttu-id="33a76-121">Como mostra o exemplo anterior, você também usar colchetes quando declara um tipo de matriz ou instancia uma instância de matriz.</span><span class="sxs-lookup"><span data-stu-id="33a76-121">As the preceding example shows, you also use square brackets when you declare an array type or instantiate an array instance.</span></span>
+<span data-ttu-id="e23e5-121">Como mostra o exemplo anterior, você também usar colchetes quando declara um tipo de matriz ou instancia uma instância de matriz.</span><span class="sxs-lookup"><span data-stu-id="e23e5-121">As the preceding example shows, you also use square brackets when you declare an array type or instantiate an array instance.</span></span>
 
-<span data-ttu-id="33a76-122">Para obter mais informações sobre matrizes, confira [Matrizes](../../programming-guide/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="33a76-122">For more information about arrays, see [Arrays](../../programming-guide/arrays/index.md).</span></span>
+<span data-ttu-id="e23e5-122">Para obter mais informações sobre matrizes, confira [Matrizes](../../programming-guide/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="e23e5-122">For more information about arrays, see [Arrays](../../programming-guide/arrays/index.md).</span></span>
 
-### <a name="indexer-access"></a><span data-ttu-id="33a76-123">Acesso de indexador</span><span class="sxs-lookup"><span data-stu-id="33a76-123">Indexer access</span></span>
+### <a name="indexer-access"></a><span data-ttu-id="e23e5-123">Acesso de indexador</span><span class="sxs-lookup"><span data-stu-id="e23e5-123">Indexer access</span></span>
 
-<span data-ttu-id="33a76-124">O exemplo a seguir usa o tipo <xref:System.Collections.Generic.Dictionary%602> do .NET para demonstrar o acesso de indexador:</span><span class="sxs-lookup"><span data-stu-id="33a76-124">The following example uses .NET <xref:System.Collections.Generic.Dictionary%602> type to demonstrate indexer access:</span></span>
+<span data-ttu-id="e23e5-124">O exemplo a seguir usa o tipo <xref:System.Collections.Generic.Dictionary%602> do .NET para demonstrar o acesso de indexador:</span><span class="sxs-lookup"><span data-stu-id="e23e5-124">The following example uses .NET <xref:System.Collections.Generic.Dictionary%602> type to demonstrate indexer access:</span></span>
 
-[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
+[!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
-<span data-ttu-id="33a76-125">Os indexadores permitem indexar instâncias de um tipo definido pelo usuário de maneira semelhante à indexação de matriz.</span><span class="sxs-lookup"><span data-stu-id="33a76-125">Indexers allow you to index instances of a user-defined type in the similar way as array indexing.</span></span> <span data-ttu-id="33a76-126">Ao contrário dos índices da matriz, que precisam ser um inteiro, os argumentos do indexador podem ser declarados como qualquer tipo.</span><span class="sxs-lookup"><span data-stu-id="33a76-126">Unlike array indices, which must be integer, the indexer arguments can be declared to be of any type.</span></span>
+<span data-ttu-id="e23e5-125">Os indexadores permitem indexar instâncias de um tipo definido pelo usuário de maneira semelhante à indexação de matriz.</span><span class="sxs-lookup"><span data-stu-id="e23e5-125">Indexers allow you to index instances of a user-defined type in the similar way as array indexing.</span></span> <span data-ttu-id="e23e5-126">Ao contrário dos índices da matriz, que precisam ser um inteiro, os argumentos do indexador podem ser declarados como qualquer tipo.</span><span class="sxs-lookup"><span data-stu-id="e23e5-126">Unlike array indices, which must be integer, the indexer arguments can be declared to be of any type.</span></span>
 
-<span data-ttu-id="33a76-127">Para obter mais informações sobre indexadores, confira [Indexadores](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="33a76-127">For more information about indexers, see [Indexers](../../programming-guide/indexers/index.md).</span></span>
+<span data-ttu-id="e23e5-127">Para obter mais informações sobre indexadores, confira [Indexadores](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="e23e5-127">For more information about indexers, see [Indexers](../../programming-guide/indexers/index.md).</span></span>
 
-### <a name="other-usages-of-"></a><span data-ttu-id="33a76-128">Outros usos de []</span><span class="sxs-lookup"><span data-stu-id="33a76-128">Other usages of []</span></span>
+### <a name="other-usages-of-"></a><span data-ttu-id="e23e5-128">Outros usos de []</span><span class="sxs-lookup"><span data-stu-id="e23e5-128">Other usages of []</span></span>
 
-<span data-ttu-id="33a76-129">Para saber mais sobre o acesso a elemento de ponteiro, confira a seção [Operador de acesso a elemento de ponteiro []](pointer-related-operators.md#pointer-element-access-operator-) do artigo [Operadores relacionados a ponteiro](pointer-related-operators.md).</span><span class="sxs-lookup"><span data-stu-id="33a76-129">For information about pointer element access, see the [Pointer element access operator []](pointer-related-operators.md#pointer-element-access-operator-) section of the [Pointer related operators](pointer-related-operators.md) article.</span></span>
+<span data-ttu-id="e23e5-129">Para saber mais sobre o acesso a elemento de ponteiro, confira a seção [Operador de acesso a elemento de ponteiro []](pointer-related-operators.md#pointer-element-access-operator-) do artigo [Operadores relacionados a ponteiro](pointer-related-operators.md).</span><span class="sxs-lookup"><span data-stu-id="e23e5-129">For information about pointer element access, see the [Pointer element access operator []](pointer-related-operators.md#pointer-element-access-operator-) section of the [Pointer related operators](pointer-related-operators.md) article.</span></span>
 
-<span data-ttu-id="33a76-130">Os colchetes também são usados para especificar [atributos](../../programming-guide/concepts/attributes/index.md):</span><span class="sxs-lookup"><span data-stu-id="33a76-130">You also use square brackets to specify [attributes](../../programming-guide/concepts/attributes/index.md):</span></span>
+<span data-ttu-id="e23e5-130">Os colchetes também são usados para especificar [atributos](../../programming-guide/concepts/attributes/index.md):</span><span class="sxs-lookup"><span data-stu-id="e23e5-130">You also use square brackets to specify [attributes](../../programming-guide/concepts/attributes/index.md):</span></span>
 
 ```csharp
 [System.Diagnostics.Conditional("DEBUG")]
 void TraceMethod() {}
 ```
 
-## <a name="null-conditional-operators--and-"></a><span data-ttu-id="33a76-131">Operadores condicionais nulos ?.</span><span class="sxs-lookup"><span data-stu-id="33a76-131">Null-conditional operators ?.</span></span> <span data-ttu-id="33a76-132">e ?[]</span><span class="sxs-lookup"><span data-stu-id="33a76-132">and ?[]</span></span>
+## <a name="null-conditional-operators--and-"></a><span data-ttu-id="e23e5-131">Operadores condicionais nulos ?.</span><span class="sxs-lookup"><span data-stu-id="e23e5-131">Null-conditional operators ?.</span></span> <span data-ttu-id="e23e5-132">e ?[]</span><span class="sxs-lookup"><span data-stu-id="e23e5-132">and ?[]</span></span>
 
-<span data-ttu-id="33a76-133">Disponível no C# 6 e versões posteriores, um operador nulo condicional aplicará a seu operando uma operação de acesso a membro, `?.`, ou de acesso a elemento, `?[]`, somente se o operando for avaliado como não nulo.</span><span class="sxs-lookup"><span data-stu-id="33a76-133">Available in C# 6 and later, a null-conditional operator applies a member access, `?.`, or element access, `?[]`, operation to its operand only if that operand evaluates to non-null.</span></span> <span data-ttu-id="33a76-134">Se o operando for avaliado como `null`, o resultado da aplicação do operador será `null`.</span><span class="sxs-lookup"><span data-stu-id="33a76-134">If the operand evaluates to `null`, the result of applying the operator is `null`.</span></span> <span data-ttu-id="33a76-135">O operador de acesso do membro condicional nulo `?.` também é conhecido como o operador Elvis.</span><span class="sxs-lookup"><span data-stu-id="33a76-135">The null-conditional member access operator `?.` is also known as the Elvis operator.</span></span>
+<span data-ttu-id="e23e5-133">Disponível no C# 6 e versões posteriores, um operador nulo condicional aplicará a seu operando uma operação de acesso a membro, `?.`, ou de acesso a elemento, `?[]`, somente se o operando for avaliado como não nulo.</span><span class="sxs-lookup"><span data-stu-id="e23e5-133">Available in C# 6 and later, a null-conditional operator applies a member access, `?.`, or element access, `?[]`, operation to its operand only if that operand evaluates to non-null.</span></span> <span data-ttu-id="e23e5-134">Se o operando for avaliado como `null`, o resultado da aplicação do operador será `null`.</span><span class="sxs-lookup"><span data-stu-id="e23e5-134">If the operand evaluates to `null`, the result of applying the operator is `null`.</span></span> <span data-ttu-id="e23e5-135">O operador de acesso do membro condicional nulo `?.` também é conhecido como o operador Elvis.</span><span class="sxs-lookup"><span data-stu-id="e23e5-135">The null-conditional member access operator `?.` is also known as the Elvis operator.</span></span>
 
-<span data-ttu-id="33a76-136">Os operadores condicionais nulos estão entrando em curto-circuito.</span><span class="sxs-lookup"><span data-stu-id="33a76-136">The null-conditional operators are short-circuiting.</span></span> <span data-ttu-id="33a76-137">Ou seja, se uma operação em uma cadeia de membro operações condicionais de acesso a membro ou elemento retornar `null`, o restante da cadeia não será executado.</span><span class="sxs-lookup"><span data-stu-id="33a76-137">That is, if one operation in a chain of conditional member or element access operations returns `null`, the rest of the chain doesn't execute.</span></span> <span data-ttu-id="33a76-138">No exemplo a seguir, `B` não será avaliado se `A` for avaliado como `null` e `C` não será avaliado se `A` ou `B` for avaliado como `null`:</span><span class="sxs-lookup"><span data-stu-id="33a76-138">In the following example, `B` is not evaluated if `A` evaluates to `null` and `C` is not evaluated if `A` or `B` evaluates to `null`:</span></span>
+<span data-ttu-id="e23e5-136">Os operadores condicionais nulos estão entrando em curto-circuito.</span><span class="sxs-lookup"><span data-stu-id="e23e5-136">The null-conditional operators are short-circuiting.</span></span> <span data-ttu-id="e23e5-137">Ou seja, se uma operação em uma cadeia de membro operações condicionais de acesso a membro ou elemento retornar `null`, o restante da cadeia não será executado.</span><span class="sxs-lookup"><span data-stu-id="e23e5-137">That is, if one operation in a chain of conditional member or element access operations returns `null`, the rest of the chain doesn't execute.</span></span> <span data-ttu-id="e23e5-138">No exemplo a seguir, `B` não será avaliado se `A` for avaliado como `null` e `C` não será avaliado se `A` ou `B` for avaliado como `null`:</span><span class="sxs-lookup"><span data-stu-id="e23e5-138">In the following example, `B` is not evaluated if `A` evaluates to `null` and `C` is not evaluated if `A` or `B` evaluates to `null`:</span></span>
 
 ```csharp
 A?.B?.Do(C);
 A?.B?[C];
 ```
 
-<span data-ttu-id="33a76-139">O exemplo a seguir demonstra o uso dos operadores `?.` e `?[]`:</span><span class="sxs-lookup"><span data-stu-id="33a76-139">The following example demonstrates the usage of the `?.` and `?[]` operators:</span></span>
+<span data-ttu-id="e23e5-139">O exemplo a seguir demonstra o uso dos operadores `?.` e `?[]`:</span><span class="sxs-lookup"><span data-stu-id="e23e5-139">The following example demonstrates the usage of the `?.` and `?[]` operators:</span></span>
 
-[!code-csharp-interactive[null-conditional operators](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
+[!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
-<span data-ttu-id="33a76-140">O exemplo anterior também mostra o uso do [operador de coalescência nula](null-coalescing-operator.md).</span><span class="sxs-lookup"><span data-stu-id="33a76-140">The preceding example also shows the usage of the [null-coalescing operator](null-coalescing-operator.md).</span></span> <span data-ttu-id="33a76-141">Você pode usar o operador de coalescência nula para fornecer uma expressão alternativa a avaliar caso o resultado da operação condicional nula seja `null`.</span><span class="sxs-lookup"><span data-stu-id="33a76-141">You might use the null-coalescing operator to provide an alternative expression to evaluate in case the result of the null-conditional operation is `null`.</span></span>
+<span data-ttu-id="e23e5-140">O exemplo anterior também mostra o uso do [operador de coalescência nula](null-coalescing-operator.md).</span><span class="sxs-lookup"><span data-stu-id="e23e5-140">The preceding example also shows the usage of the [null-coalescing operator](null-coalescing-operator.md).</span></span> <span data-ttu-id="e23e5-141">Você pode usar o operador de coalescência nula para fornecer uma expressão alternativa a avaliar caso o resultado da operação condicional nula seja `null`.</span><span class="sxs-lookup"><span data-stu-id="e23e5-141">You might use the null-coalescing operator to provide an alternative expression to evaluate in case the result of the null-conditional operation is `null`.</span></span>
 
-### <a name="thread-safe-delegate-invocation"></a><span data-ttu-id="33a76-142">Invocação de delegado thread-safe</span><span class="sxs-lookup"><span data-stu-id="33a76-142">Thread-safe delegate invocation</span></span>
+### <a name="thread-safe-delegate-invocation"></a><span data-ttu-id="e23e5-142">Invocação de delegado thread-safe</span><span class="sxs-lookup"><span data-stu-id="e23e5-142">Thread-safe delegate invocation</span></span>
 
-<span data-ttu-id="33a76-143">Use o operador `?.` para verificar se um delegado é não nulo e chame-o de uma forma thread-safe (por exemplo, quando você [aciona um evento](../../../standard/events/how-to-raise-and-consume-events.md)), conforme mostrado no código a seguir:</span><span class="sxs-lookup"><span data-stu-id="33a76-143">Use the `?.` operator to check if a delegate is non-null and invoke it in a thread-safe way (for example, when you [raise an event](../../../standard/events/how-to-raise-and-consume-events.md)), as the following code shows:</span></span>
+<span data-ttu-id="e23e5-143">Use o operador `?.` para verificar se um delegado é não nulo e chame-o de uma forma thread-safe (por exemplo, quando você [aciona um evento](../../../standard/events/how-to-raise-and-consume-events.md)), conforme mostrado no código a seguir:</span><span class="sxs-lookup"><span data-stu-id="e23e5-143">Use the `?.` operator to check if a delegate is non-null and invoke it in a thread-safe way (for example, when you [raise an event](../../../standard/events/how-to-raise-and-consume-events.md)), as the following code shows:</span></span>
 
 ```csharp
 PropertyChanged?.Invoke(…)
 ```
 
-<span data-ttu-id="33a76-144">Esse código é equivalente ao código a seguir que você usaria no C# 5 ou anterior:</span><span class="sxs-lookup"><span data-stu-id="33a76-144">That code is equivalent to the following code that you would use in C# 5 or earlier:</span></span>
+<span data-ttu-id="e23e5-144">Esse código é equivalente ao código a seguir que você usaria no C# 5 ou anterior:</span><span class="sxs-lookup"><span data-stu-id="e23e5-144">That code is equivalent to the following code that you would use in C# 5 or earlier:</span></span>
 
 ```csharp
 var handler = this.PropertyChanged;
@@ -133,38 +133,38 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a><span data-ttu-id="33a76-145">Operador de invocação ()</span><span class="sxs-lookup"><span data-stu-id="33a76-145">Invocation operator ()</span></span>
+## <a name="invocation-operator-"></a><span data-ttu-id="e23e5-145">Operador de invocação ()</span><span class="sxs-lookup"><span data-stu-id="e23e5-145">Invocation operator ()</span></span>
 
-<span data-ttu-id="33a76-146">Use parênteses, `()`, para chamar um [método](../../programming-guide/classes-and-structs/methods.md) ou invocar um [delegado](../../programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="33a76-146">Use parentheses, `()`, to call a [method](../../programming-guide/classes-and-structs/methods.md) or invoke a [delegate](../../programming-guide/delegates/index.md).</span></span>
+<span data-ttu-id="e23e5-146">Use parênteses, `()`, para chamar um [método](../../programming-guide/classes-and-structs/methods.md) ou invocar um [delegado](../../programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="e23e5-146">Use parentheses, `()`, to call a [method](../../programming-guide/classes-and-structs/methods.md) or invoke a [delegate](../../programming-guide/delegates/index.md).</span></span>
 
-<span data-ttu-id="33a76-147">O exemplo a seguir demonstra como chamar um método (com ou sem argumentos) e invocar um delegado:</span><span class="sxs-lookup"><span data-stu-id="33a76-147">The following example demonstrates how to call a method, with or without arguments, and invoke a delegate:</span></span>
+<span data-ttu-id="e23e5-147">O exemplo a seguir demonstra como chamar um método (com ou sem argumentos) e invocar um delegado:</span><span class="sxs-lookup"><span data-stu-id="e23e5-147">The following example demonstrates how to call a method, with or without arguments, and invoke a delegate:</span></span>
 
-[!code-csharp-interactive[invocation with ()](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
+[!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
-<span data-ttu-id="33a76-148">Você também pode usar parênteses ao invocar um [construtor](../../programming-guide/classes-and-structs/constructors.md) com um operador [`new`](../keywords/new-operator.md).</span><span class="sxs-lookup"><span data-stu-id="33a76-148">You also use parentheses when you invoke a [constructor](../../programming-guide/classes-and-structs/constructors.md) with a [`new`](../keywords/new-operator.md) operator.</span></span>
+<span data-ttu-id="e23e5-148">Você também pode usar parênteses ao invocar um [construtor](../../programming-guide/classes-and-structs/constructors.md) com um operador [`new`](../keywords/new-operator.md).</span><span class="sxs-lookup"><span data-stu-id="e23e5-148">You also use parentheses when you invoke a [constructor](../../programming-guide/classes-and-structs/constructors.md) with a [`new`](../keywords/new-operator.md) operator.</span></span>
 
-### <a name="other-usages-of-"></a><span data-ttu-id="33a76-149">Outros usos de ()</span><span class="sxs-lookup"><span data-stu-id="33a76-149">Other usages of ()</span></span>
+### <a name="other-usages-of-"></a><span data-ttu-id="e23e5-149">Outros usos de ()</span><span class="sxs-lookup"><span data-stu-id="e23e5-149">Other usages of ()</span></span>
 
-<span data-ttu-id="33a76-150">Você também pode usar parênteses para especificar a ordem na qual as operações em uma expressão são avaliada.</span><span class="sxs-lookup"><span data-stu-id="33a76-150">You also use parentheses to specify the order in which to evaluate operations in an expression.</span></span> <span data-ttu-id="33a76-151">Para obter mais informações, confira a seção [Adicionando parênteses](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) o artigo [Operadores](../../programming-guide/statements-expressions-operators/operators.md).</span><span class="sxs-lookup"><span data-stu-id="33a76-151">For more information, see the [Adding parentheses](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) section of the [Operators](../../programming-guide/statements-expressions-operators/operators.md) article.</span></span> <span data-ttu-id="33a76-152">Para obter a lista de operadores ordenada pelo nível de precedência, confira [Operadores do C#](index.md).</span><span class="sxs-lookup"><span data-stu-id="33a76-152">For the list of operators ordered by precedence level, see [C# operators](index.md).</span></span>
+<span data-ttu-id="e23e5-150">Você também pode usar parênteses para especificar a ordem na qual as operações em uma expressão são avaliada.</span><span class="sxs-lookup"><span data-stu-id="e23e5-150">You also use parentheses to specify the order in which to evaluate operations in an expression.</span></span> <span data-ttu-id="e23e5-151">Para obter mais informações, confira a seção [Adicionando parênteses](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) o artigo [Operadores](../../programming-guide/statements-expressions-operators/operators.md).</span><span class="sxs-lookup"><span data-stu-id="e23e5-151">For more information, see the [Adding parentheses](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) section of the [Operators](../../programming-guide/statements-expressions-operators/operators.md) article.</span></span> <span data-ttu-id="e23e5-152">Para obter a lista de operadores ordenada pelo nível de precedência, confira [Operadores do C#](index.md).</span><span class="sxs-lookup"><span data-stu-id="e23e5-152">For the list of operators ordered by precedence level, see [C# operators](index.md).</span></span>
 
-<span data-ttu-id="33a76-153">[Expressões de conversão](invocation-operator.md#cast-expression), que invocam um operador de conversão, também usam parênteses.</span><span class="sxs-lookup"><span data-stu-id="33a76-153">[Cast expressions](invocation-operator.md#cast-expression), which invoke a conversion operator, also use parentheses.</span></span>
+<span data-ttu-id="e23e5-153">[Expressões de conversão](invocation-operator.md#cast-expression), que invocam um operador de conversão, também usam parênteses.</span><span class="sxs-lookup"><span data-stu-id="e23e5-153">[Cast expressions](invocation-operator.md#cast-expression), which invoke a conversion operator, also use parentheses.</span></span>
 
-## <a name="operator-overloadability"></a><span data-ttu-id="33a76-154">Capacidade de sobrecarga do operador</span><span class="sxs-lookup"><span data-stu-id="33a76-154">Operator overloadability</span></span>
+## <a name="operator-overloadability"></a><span data-ttu-id="e23e5-154">Capacidade de sobrecarga do operador</span><span class="sxs-lookup"><span data-stu-id="e23e5-154">Operator overloadability</span></span>
 
-<span data-ttu-id="33a76-155">Os operadores `.` e `()` não podem ser sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="33a76-155">The `.` and `()` operators cannot be overloaded.</span></span> <span data-ttu-id="33a76-156">O operador `[]` também é considerado um operador não sobrecarregável.</span><span class="sxs-lookup"><span data-stu-id="33a76-156">The `[]` operator is also considered a non-overloadable operator.</span></span> <span data-ttu-id="33a76-157">Use [indexadores](../../programming-guide/indexers/index.md) para permitir a indexação com tipos definidos pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="33a76-157">Use [indexers](../../programming-guide/indexers/index.md) to support indexing with user-defined types.</span></span>
+<span data-ttu-id="e23e5-155">Os operadores `.` e `()` não podem ser sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="e23e5-155">The `.` and `()` operators cannot be overloaded.</span></span> <span data-ttu-id="e23e5-156">O operador `[]` também é considerado um operador não sobrecarregável.</span><span class="sxs-lookup"><span data-stu-id="e23e5-156">The `[]` operator is also considered a non-overloadable operator.</span></span> <span data-ttu-id="e23e5-157">Use [indexadores](../../programming-guide/indexers/index.md) para permitir a indexação com tipos definidos pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="e23e5-157">Use [indexers](../../programming-guide/indexers/index.md) to support indexing with user-defined types.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="33a76-158">Especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="33a76-158">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="e23e5-158">Especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="e23e5-158">C# language specification</span></span>
 
-<span data-ttu-id="33a76-159">Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):</span><span class="sxs-lookup"><span data-stu-id="33a76-159">For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):</span></span>
+<span data-ttu-id="e23e5-159">Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):</span><span class="sxs-lookup"><span data-stu-id="e23e5-159">For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):</span></span>
 
-- [<span data-ttu-id="33a76-160">Acesso de membros</span><span class="sxs-lookup"><span data-stu-id="33a76-160">Member access</span></span>](~/_csharplang/spec/expressions.md#member-access)
-- [<span data-ttu-id="33a76-161">Acesso a elemento</span><span class="sxs-lookup"><span data-stu-id="33a76-161">Element access</span></span>](~/_csharplang/spec/expressions.md#element-access)
-- [<span data-ttu-id="33a76-162">Operador condicional nulo</span><span class="sxs-lookup"><span data-stu-id="33a76-162">Null-conditional operator</span></span>](~/_csharplang/spec/expressions.md#null-conditional-operator)
-- [<span data-ttu-id="33a76-163">Expressões de invocação</span><span class="sxs-lookup"><span data-stu-id="33a76-163">Invocation expressions</span></span>](~/_csharplang/spec/expressions.md#invocation-expressions)
+- [<span data-ttu-id="e23e5-160">Acesso de membros</span><span class="sxs-lookup"><span data-stu-id="e23e5-160">Member access</span></span>](~/_csharplang/spec/expressions.md#member-access)
+- [<span data-ttu-id="e23e5-161">Acesso a elemento</span><span class="sxs-lookup"><span data-stu-id="e23e5-161">Element access</span></span>](~/_csharplang/spec/expressions.md#element-access)
+- [<span data-ttu-id="e23e5-162">Operador condicional nulo</span><span class="sxs-lookup"><span data-stu-id="e23e5-162">Null-conditional operator</span></span>](~/_csharplang/spec/expressions.md#null-conditional-operator)
+- [<span data-ttu-id="e23e5-163">Expressões de invocação</span><span class="sxs-lookup"><span data-stu-id="e23e5-163">Invocation expressions</span></span>](~/_csharplang/spec/expressions.md#invocation-expressions)
 
-## <a name="see-also"></a><span data-ttu-id="33a76-164">Consulte também</span><span class="sxs-lookup"><span data-stu-id="33a76-164">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e23e5-164">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e23e5-164">See also</span></span>
 
-- [<span data-ttu-id="33a76-165">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="33a76-165">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="33a76-166">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="33a76-166">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="33a76-167">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="33a76-167">C# Operators</span></span>](index.md)
-- [<span data-ttu-id="33a76-168">?? (operador de união nula)</span><span class="sxs-lookup"><span data-stu-id="33a76-168">?? (null-coalescing operator)</span></span>](null-coalescing-operator.md)
+- [<span data-ttu-id="e23e5-165">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="e23e5-165">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="e23e5-166">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="e23e5-166">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="e23e5-167">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="e23e5-167">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="e23e5-168">?? (operador de união nula)</span><span class="sxs-lookup"><span data-stu-id="e23e5-168">?? (null-coalescing operator)</span></span>](null-coalescing-operator.md)
