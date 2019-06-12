@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: c4629b18a207f1146f97327088fabf5f85a31892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c36de23a6a49e684330fc0f47fc46bd86c55e767
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623322"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834079"
 ---
 # <a name="application-management-overview"></a>Visão geral de gerenciamento do aplicativo
 Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades que se aplicam à implementação e ao gerenciamento do aplicativo. Este tópico fornece uma visão geral da funcionalidade no <xref:System.Windows.Application> classe para criar e gerenciar aplicativos.  
@@ -127,7 +127,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
 
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Splash Screen  
- A partir de [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], você pode especificar uma imagem a ser usada em uma janela de inicialização, ou *tela inicial*. O <xref:System.Windows.SplashScreen> classe torna fácil exibir uma janela de inicialização, enquanto o carregamento do aplicativo. O <xref:System.Windows.SplashScreen> janela é criada e mostrada antes <xref:System.Windows.Application.Run%2A> é chamado. Para obter mais informações, consulte [tempo de inicialização do aplicativo](../advanced/application-startup-time.md) e [adicionar uma tela inicial a um aplicativo WPF](how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ A partir do .NET Framework 3.5 SP1, você pode especificar uma imagem a ser usada em uma janela de inicialização, ou *tela inicial*. O <xref:System.Windows.SplashScreen> classe torna fácil exibir uma janela de inicialização, enquanto o carregamento do aplicativo. O <xref:System.Windows.SplashScreen> janela é criada e mostrada antes <xref:System.Windows.Application.Run%2A> é chamado. Para obter mais informações, consulte [tempo de inicialização do aplicativo](../advanced/application-startup-time.md) e [adicionar uma tela inicial a um aplicativo WPF](how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>Iniciando um aplicativo  

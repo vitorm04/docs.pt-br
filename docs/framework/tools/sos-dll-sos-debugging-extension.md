@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631837"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690161"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (extensão de depuração SOS)
 
@@ -68,11 +68,11 @@ A Extensão de Depuração SOS (SOS.dll) ajuda a depurar programas gerenciados n
 |**HeapStat** [ **-inclUnrooted** &#124; **-iu**]|Exibe os tamanhos de geração para cada heap e o espaço livre total em cada geração em cada heap. Se a opção -**inclUnrooted** for especificada, o relatório incluirá informações sobre os objetos gerenciados do heap da coleta de lixo que não tem mais raiz.|
 |**HistClear**|Libera todos os recursos usados pela família de comandos `Hist`.<br /><br /> Em geral, você não precisa chamar explicitamente `HistClear`, porque cada `HistInit` limpa os recursos anteriores.|
 |**HistInit**|Inicializa as estruturas de SOS com base no log de estresse salvo no elemento a ser depurado.|
-|**HistObj** *<obj_address>*|Examina todos os registros de realocação do log de estresse e exibe a cadeia de realocações da coleta de lixo que podem ter levado o endereço a ser passado como um argumento.|
-|**HistObjFind**  *<obj_address>*|Exibe todas as entradas de log que fazem referência a um objeto no endereço especificado.|
+|**HistObj** *\<obj_address>*|Examina todos os registros de realocação do log de estresse e exibe a cadeia de realocações da coleta de lixo que podem ter levado o endereço a ser passado como um argumento.|
+|**HistObjFind**  *\<obj_address>*|Exibe todas as entradas de log que fazem referência a um objeto no endereço especificado.|
 |**HistRoot** *\<root>*|Exibe informações relacionadas a ambas as promoções e realocações da raiz especificada.<br /><br /> O valor raiz pode ser usado para rastrear o movimento de um objeto por meio das coletas de lixo.|
 |**IP2MD** \<*Code address*>|Exibe a estrutura `MethodDesc` no endereço especificado no código compilado com JIT.|
-|`ListNearObj` (`lno`) *<obj_address>*|Exibe os objetos anteriores e posteriores ao endereço especificado. O comando procura o endereço no heap da coleta de lixo semelhante a um início válido de um objeto gerenciado (com base em uma tabela de método válida) e o objeto posterior ao endereço do argumento.|
+|`ListNearObj` (`lno`) *\<obj_address>*|Exibe os objetos anteriores e posteriores ao endereço especificado. O comando procura o endereço no heap da coleta de lixo semelhante a um início válido de um objeto gerenciado (com base em uma tabela de método válida) e o objeto posterior ao endereço do argumento.|
 |**MinidumpMode** [**0**] [**1**]|Impede a execução de comandos não seguros durante o uso de um minidespejo.<br /><br /> Passe **0** para desabilitar esse recurso ou **1** para habilitar esse recurso. Por padrão, o valor **MinidumpMode** é definido como **0**.<br /><br /> Minidespejos criados com os comandos **.dump /m** ou **.dump** têm dados específicos limitados a CLR e permitem que você execute apenas um subconjunto de comandos SOS corretamente. Alguns comandos podem falhar com erros inesperados porque as áreas necessárias de memória não são mapeadas ou estão mapeadas apenas parcialmente. Essa opção evita a execução de comandos não seguros em minidespejos.|
 |**Name2EE** \<*nome do módulo*> \<*nome do tipo ou método*><br /><br /> - ou -<br /><br /> **Name2EE** \<*nome do módulo*> **!** \<*nome do tipo ou método*>|Exibe a estrutura `MethodTable` e a estrutura `EEClass` do tipo ou do método especificado no módulo especificado.<br /><br /> O módulo especificado deve ser carregado no processo.<br /><br /> Para obter o nome do tipo apropriado, procure o módulo usando o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Também é possível passar `*` como o parâmetro de nome do módulo para pesquisar todos os módulos gerenciados carregados. O parâmetro *module name* também pode ser o nome do depurador para um módulo, como `mscorlib` ou `image00400000`.<br /><br /> Este comando dá suporte à sintaxe do depurador do Windows de <`module`>`!`<`type`>. O tipo deve estar totalmente qualificado.|
 |**ObjSize** [\<*Object address*>] &#124; [ **-aggregate**] [ **-stat**]|Exibe o tamanho do objeto especificado. Se você não especificar parâmetros, o comando **ObjSize** exibirá o tamanho de todos os objetos encontrados em threads gerenciados, exibirá todos os identificadores do coletor de lixo do processo e totalizará o tamanho de todos os objetos apontados por esses identificadores. O comando **ObjSize** inclui o tamanho de todos os objetos filho além do pai.<br /><br /> A opção **-aggregate** pode ser usada com o argumento **-stat** para obter uma exibição detalhada dos tipos que ainda têm raízes. Usando **!dumpheap -stat** e **!objsize -aggregate -stat**, é possível determinar quais objetos não têm mais raízes e diagnosticar diversos problemas de memória.|

@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949221"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833796"
 ---
 # <a name="reliability-best-practices"></a>Práticas recomendadas de confiabilidade
 
@@ -265,7 +265,7 @@ Os finalizadores devem estar livres de problemas de sincronização. Não use um
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>Evitar memória não gerenciada, se possível
 
-Memória não gerenciada pode ser perdida, assim como um identificador de sistema operacional.  Se possível, tente usar memória na pilha usando [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) ou um objeto gerenciado fixo, como a [instrução fixed](~/docs/csharp/language-reference/keywords/fixed-statement.md) ou um <xref:System.Runtime.InteropServices.GCHandle> usando um byte[].  O <xref:System.GC> limpa esses elementos eventualmente.  No entanto, se você precisar alocar memória não gerenciada, considere o uso de uma classe que deriva de <xref:System.Runtime.InteropServices.SafeHandle> para encapsular a alocação de memória.
+Memória não gerenciada pode ser perdida, assim como um identificador de sistema operacional. Se possível, tente usar memória na pilha usando [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) ou um objeto gerenciado fixo, como a [instrução fixed](~/docs/csharp/language-reference/keywords/fixed-statement.md) ou um <xref:System.Runtime.InteropServices.GCHandle> usando um byte[]. O <xref:System.GC> limpa esses elementos eventualmente. No entanto, se você precisar alocar memória não gerenciada, considere o uso de uma classe que deriva de <xref:System.Runtime.InteropServices.SafeHandle> para encapsular a alocação de memória.
 
 Observe que há pelo menos um caso em que <xref:System.Runtime.InteropServices.SafeHandle> não é adequado.  Para chamadas de método COM que alocam ou liberam memória, é comum que uma DLL aloque memória por meio de `CoTaskMemAlloc` e, em seguida, outra DLL libere essa memória com `CoTaskMemFree`.  Usar <xref:System.Runtime.InteropServices.SafeHandle> nesses locais seria inadequado, já que ele tentará associar o tempo de vida da memória não gerenciada ao tempo de vida do <xref:System.Runtime.InteropServices.SafeHandle> em vez de permitir que outra DLL controle o tempo de vida da memória.
 

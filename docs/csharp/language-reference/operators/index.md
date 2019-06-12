@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300319"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833268"
 ---
 # <a name="c-operators"></a>Operadores C#
 
@@ -67,7 +67,7 @@ Esses são os operadores de precedência mais alta.
 
 [sizeof](../keywords/sizeof.md) – retorna o tamanho em bytes do operando do tipo.
 
-[stackalloc](../keywords/stackalloc.md) – aloca um bloco de memória na pilha.
+[stackalloc](stackalloc.md) – aloca um bloco de memória na pilha.
 
 [->](pointer-related-operators.md#pointer-member-access-operator--) – indireção de ponteiro combinada com acesso de membro.
 

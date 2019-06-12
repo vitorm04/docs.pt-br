@@ -2,12 +2,12 @@
 title: Diretrizes de formatação de código do F#
 description: Aprenda diretrizes de formatação F# código.
 ms.date: 02/08/2019
-ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816185"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833901"
 ---
 # <a name="f-code-formatting-guidelines"></a>Diretrizes de formatação de código do F#
 
@@ -290,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Use a sintaxe de prefixo para genéricos (`Foo<T>`) em preferência a sintaxe de sufixo (`T Foo`)
 
-F#herda de ambos os o estilo de ML sufixo de nomeação de tipos genéricos (por exemplo, `int list`), bem como o prefixo de estilo do .NET (por exemplo, `list<int>`). Preferir o estilo de .NET, exceto para quatro tipos específicos:
+F#herda de ambos os o estilo de ML sufixo de nomeação de tipos genéricos (por exemplo, `int list`), bem como o prefixo de estilo do .NET (por exemplo, `list<int>`). Preferir o estilo de .NET, exceto para tipos específicos de cinco:
 
 1. Para F# listas, use o formulário de sufixo: `int list` vez `list<int>`.
 2. Para F# opções, use o formulário de sufixo: `int option` vez `option<int>`.
-3. Para F# matrizes, use o nome sintático `int[]` vez `int array` ou `array<int>`.
-4. Para as células de referência, use `int ref` em vez de `ref<int>` ou `Ref<int>`.
+3. Para F# opções de valor, use o formulário de sufixo: `int voption` vez `voption<int>`.
+4. Para F# matrizes, use o nome sintático `int[]` vez `int array` ou `array<int>`.
+5. Para as células de referência, use `int ref` em vez de `ref<int>` ou `Ref<int>`.
 
 Para todos os outros tipos, use o formulário de prefixo.
 

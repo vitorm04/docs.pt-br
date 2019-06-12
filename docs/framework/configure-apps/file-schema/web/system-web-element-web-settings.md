@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: 3ffd25dae3826df0f02f2afb707f7317b2d92d24
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 687398e47ad95e3234c29571eeeac0c9d2d83a39
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584553"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832785"
 ---
 # <a name="systemweb-element-web-settings"></a>\<System. Web > (configurações da Web)
 Contém informações sobre como a camada de hospedagem do ASP.NET gerencia o comportamento de todo o processo.  
@@ -47,10 +47,10 @@ Contém informações sobre como a camada de hospedagem do ASP.NET gerencia o co
 |[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Especifica o elemento raiz em cada arquivo de configuração que é usado pelo common language runtime e aplicativos do .NET Framework.|  
   
 ## <a name="remarks"></a>Comentários  
- O `system.web` elemento e seus filhos `applicationPool` elemento foram adicionados ao .NET Framework como de [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. Quando você executa [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] ou versões posteriores no modo integrado, essa combinação de elemento permite que você configure como o ASP.NET gerencia os threads e como ele enfileira as solicitações quando o ASP.NET está hospedado em um pool de aplicativos do IIS. Se você executar [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] ou versões posteriores no modo clássico ou ISAPI, essas configurações são ignoradas.  
+ O `system.web` elemento e seu filho `applicationPool` elemento foram adicionados ao .NET Framework a partir do .NET Framework 3.5 SP1. Quando você executa [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] ou versões posteriores no modo integrado, essa combinação de elemento permite que você configure como o ASP.NET gerencia os threads e como ele enfileira as solicitações quando o ASP.NET está hospedado em um pool de aplicativos do IIS. Se você executar [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] ou versões posteriores no modo clássico ou ISAPI, essas configurações são ignoradas.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como configurar o comportamento de todo o processo do ASP.NET no arquivo ASPNET config quando o ASP.NET está hospedado em um pool de aplicativos do IIS. O exemplo supõe que o IIS está em execução no integrado modo e que o aplicativo está usando o [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] ou uma versão posterior. Esse comportamento não ocorre nas versões do .NET Framework anteriores ao [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. Os valores no exemplo são os valores padrão.  
+ O exemplo a seguir mostra como configurar o comportamento de todo o processo do ASP.NET no arquivo ASPNET config quando o ASP.NET está hospedado em um pool de aplicativos do IIS. O exemplo supõe que o IIS está em execução no integrado modo e que o aplicativo está usando o .NET Framework 3.5 SP1 ou posterior. Esse comportamento não ocorre nas versões do .NET Framework anteriores ao .NET Framework 3.5 SP1. Os valores no exemplo são os valores padrão.  
   
 ```xml  
 <configuration>  

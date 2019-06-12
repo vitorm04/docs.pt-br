@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689335"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832695"
 ---
 # <a name="application-startup-time"></a>Tempo de inicialização do aplicativo
 A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode variar consideravelmente. Este tópico descreve diversas técnicas para reduzir o tempo de inicialização percebido e real de um aplicativo do WPF (Windows Presentation Foundation).  
@@ -24,7 +24,7 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
  A inicialização a quente ocorre quando a maioria das páginas dos componentes principais do CLR (Common Language Runtime) já está carregada na memória, o que economiza tempo valioso de acesso a disco. É por isso que um aplicativo gerenciado é iniciado mais rapidamente quando é executado pela segunda vez.  
   
 ## <a name="implement-a-splash-screen"></a>Implementar uma tela inicial  
- Em casos em que há um atraso significativo e inevitável entre o início de um aplicativo e a exibição da primeira interface do usuário, otimize o tempo de inicialização percebido através de uma *tela inicial*. Essa abordagem exibe uma imagem quase que imediatamente após o usuário iniciar o aplicativo. Quando o aplicativo estiver pronto para exibir sua primeira interface do usuário, a tela inicial desaparece. A partir de [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], você pode usar o <xref:System.Windows.SplashScreen> classe para implementar uma tela inicial. Para obter mais informações, consulte [Adicionar uma tela inicial a um aplicativo do WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Em casos em que há um atraso significativo e inevitável entre o início de um aplicativo e a exibição da primeira interface do usuário, otimize o tempo de inicialização percebido através de uma *tela inicial*. Essa abordagem exibe uma imagem quase que imediatamente após o usuário iniciar o aplicativo. Quando o aplicativo estiver pronto para exibir sua primeira interface do usuário, a tela inicial desaparece. A partir do .NET Framework 3.5 SP1, você pode usar o <xref:System.Windows.SplashScreen> classe para implementar uma tela inicial. Para obter mais informações, consulte [Adicionar uma tela inicial a um aplicativo do WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  Você também pode implementar sua própria tela inicial, usando gráficos do Win32 nativos. Exiba sua implementação antes do <xref:System.Windows.Application.Run%2A> método é chamado.  
   
