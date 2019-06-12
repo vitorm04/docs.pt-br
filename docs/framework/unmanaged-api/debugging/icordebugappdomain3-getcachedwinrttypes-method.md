@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73a08e83d67c973294938a030b95b906aec6be6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7e2685d17f3dd32db295f926fc19121d29e1752
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962598"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025916"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypes-method"></a>Método ICorDebugAppDomain3::GetCachedWinRTTypes
-Obtém um enumerador para todos os armazenados em cache [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipos.  
+Obtém um enumerador para todos os tipos de tempo de execução do Windows em cache.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +37,10 @@ HRESULT GetCachedWinRTTypes (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppGuidToTypeEnum`  
- [out] Um ponteiro para um [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) objeto de interface que pode enumerar as representações gerenciadas de [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipos atualmente carregados no domínio do aplicativo.  
+ [out] Um ponteiro para um [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) objeto de interface que pode enumerar as representações gerenciadas dos tipos de tempo de execução do Windows atualmente carregados no domínio do aplicativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Plataformas:** Tempo de Execução do Windows  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

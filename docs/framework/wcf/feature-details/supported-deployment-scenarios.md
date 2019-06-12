@@ -2,16 +2,16 @@
 title: Cenários de implantação com suporte – WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881056"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025631"
 ---
 # <a name="supported-deployment-scenarios"></a>Cenários de implantação com suporte
 
-O subconjunto de recursos do Windows Communication Foundation (WCF) tem suportada para uso em aplicativos parcialmente confiáveis foi projetado para atender aos requisitos de algumas, mas nem todos os cenários para uso do WCF. No servidor, o WCF atende aos requisitos de escala da Internet compartilhada provedores de hospedagem que executam aplicativos de terceiros no [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto por motivos de segurança de permissões de confiança média. No cliente, o suporte de confiança parcial do WCF foi projetado para atender aos requisitos de tecnologias de implantação, como [a implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) ou [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]da tecnologia de aplicativo de navegador XAML, que permitem que direta e segura implantação de aplicativos da área de trabalho de sites não confiáveis.
+O subconjunto de recursos do Windows Communication Foundation (WCF) tem suportada para uso em aplicativos parcialmente confiáveis foi projetado para atender aos requisitos de algumas, mas nem todos os cenários para uso do WCF. No servidor, o WCF atende aos requisitos de conjunto de provedores de hospedagem compartilhada, que executam aplicativos de terceiros no ASP.NET 2.0 Medium Trust permissão por motivos de segurança de escala de Internet. No cliente, o suporte de confiança parcial do WCF foi projetado para atender aos requisitos de tecnologias de implantação, como [a implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) ou [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]da tecnologia de aplicativo de navegador XAML, que permitem que direta e segura implantação de aplicativos da área de trabalho de sites não confiáveis.
 
 ## <a name="minimum-permission-requirements"></a>Requisitos de permissão mínimos
 
@@ -27,7 +27,7 @@ Para obter mais informações sobre os recursos com suporte nesses conjuntos de 
 
 ## <a name="partial-trust-on-the-server"></a>Confiança parcial no servidor
 
-Muitos provedores comerciais de serviços de hospedagem de aplicativo Web do ASP.NET exigem que os aplicativos em execução em seus servidores executados [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto de permissões de confiança média. Serviços WCF podem ser executados nesses ambientes desde que eles usam o <xref:System.ServiceModel.BasicHttpBinding>, o <xref:System.ServiceModel.WebHttpBinding>, ou o <xref:System.ServiceModel.WSHttpBinding> com segurança em nível de transporte.
+Muitos provedores comerciais de serviços de hospedagem de aplicativo Web do ASP.NET exigem que os aplicativos em execução em seus servidores executados no conjunto de permissões de confiança de média do ASP.NET 2.0. Serviços WCF podem ser executados nesses ambientes desde que eles usam o <xref:System.ServiceModel.BasicHttpBinding>, o <xref:System.ServiceModel.WebHttpBinding>, ou o <xref:System.ServiceModel.WSHttpBinding> com segurança em nível de transporte.
 
 Os serviços WCF em execução em ambientes de hospedagem de confiança média também podem atuar como serviços de camada intermediária, enviando mensagens para outros servidores em resposta às solicitações do cliente. Cenários de camada intermediária no servidor têm suporte se o ambiente de hospedagem tiver concedido o aplicativo apropriado <xref:System.Net.WebPermission> para fazer solicitações de saída para o servidor desejado.
 

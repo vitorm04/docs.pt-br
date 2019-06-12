@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eca4b66a3f7c1a96bb06827dde477f34cb904ba3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43bfec471fbcfc481e178f6610e0318e9538ee34
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906237"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025776"
 ---
 # <a name="corassemblyflags-enumeration"></a>Enumeração CorAssemblyFlags
 Contém valores que descrevem os metadados aplicados a uma compilação do assembly.  
@@ -76,7 +76,7 @@ typedef enum CorAssemblyFlags {
 |`afRetargetable`|Indica que o assembly pode ser redirecionado em tempo de execução a um assembly de um outro editor.|  
 |`afContentType_Mask`|Uma máscara que descreve o tipo de conteúdo.|  
 |`afContentType_Default`|Indica o tipo de conteúdo padrão.|  
-|`afContentType_WindowsRuntime`|Indica o [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipo de conteúdo.|  
+|`afContentType_WindowsRuntime`|Indica o tipo de conteúdo de tempo de execução do Windows.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

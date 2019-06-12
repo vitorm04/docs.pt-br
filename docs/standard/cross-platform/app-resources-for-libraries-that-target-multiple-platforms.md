@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055011"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025583"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Recursos do aplicativo para bibliotecas direcionadas a várias plataformas
 Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo para garantir que os recursos em suas bibliotecas de classe podem ser acessados em várias plataformas de projeto. Esse tipo de projeto está disponível no Visual Studio 2012 e tem como alvo o subconjunto portátil da biblioteca de classes do .NET Framework. Usar um [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garante que a biblioteca possa ser acessada de aplicativos da área de trabalho, Silverlight, Windows Phone e [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -47,9 +47,9 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>Os aplicativos do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] e da Windows Store
  Projetos do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] armazenam recursos em arquivos .resx que são compilados em arquivos .resources e inseridos no assembly principal ou em assemblies satélites em tempo de compilação. Os aplicativos do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], por outro lado, exigem que os recursos sejam armazenados em arquivos .resw, que são compilados em um único arquivo de PRI (índice de recurso do pacote). No entanto, independentemente dos formatos de arquivo incompatíveis, seu [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] funcionará em um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 
- Para consumir sua biblioteca de classes do aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], adicione uma referência a ela em seu projeto de aplicativo da Windows Store. O Visual Studio extrairá de forma transparente os recursos de seu assembly em um arquivo .resw e os usará para gerar um arquivo de PRI do qual o [!INCLUDE[wrt](../../../includes/wrt-md.md)] poderá extrair recursos. No tempo de execução, o [!INCLUDE[wrt](../../../includes/wrt-md.md)] executa o código em seu [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], mas recupera recursos de sua Biblioteca de Classes Portátil do arquivo de PRI.
+ Para consumir sua biblioteca de classes do aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], adicione uma referência a ela em seu projeto de aplicativo da Windows Store. Visual Studio transparentemente extrairá os recursos de seu assembly em um arquivo. resw e usá-lo para gerar um arquivo PRI do qual o tempo de execução do Windows poderá extrair recursos. Em tempo de execução, o tempo de execução do Windows executa o código na sua [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], mas recupera recursos da biblioteca de classes portátil do arquivo de PRI.
 
- Se seu projeto do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] incluir recursos localizados, use o modelo hub e spoke para implantá-los exatamente como faria para uma biblioteca em um aplicativo da área de trabalho. Para consumir seu arquivo de recurso principal e quaisquer arquivos de recursos localizados em seu aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], adicione uma referência ao assembly principal. No tempo de compilação, o Visual Studio extrai os recursos do arquivo de recursos principal e quaisquer arquivos de recursos localizados em arquivos .resw separados. Em seguida, ele cria os arquivos .resw em um único arquivo de PRI que acessa o [!INCLUDE[wrt](../../../includes/wrt-md.md)] em tempo de execução.
+ Se seu projeto do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] incluir recursos localizados, use o modelo hub e spoke para implantá-los exatamente como faria para uma biblioteca em um aplicativo da área de trabalho. Para consumir seu arquivo de recurso principal e quaisquer arquivos de recursos localizados em seu aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], adicione uma referência ao assembly principal. No tempo de compilação, o Visual Studio extrai os recursos do arquivo de recursos principal e quaisquer arquivos de recursos localizados em arquivos .resw separados. Em seguida, ele compila os arquivos. resw em um único arquivo PRI que acessa de tempo de execução do Windows em tempo de execução.
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Exemplo: Não localizado [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
