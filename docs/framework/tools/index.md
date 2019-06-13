@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456105"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489658"
 ---
 # <a name="net-framework-tools"></a>Ferramentas do .NET Framework
 A ferramentas do .NET Framework facilitam a criação, a implantação e o gerenciamento de aplicativos e componentes com o .NET Framework como destino.  
@@ -36,7 +36,7 @@ A maioria das ferramentas do .NET Framework descritas nesta seção é instalada
  Converte definições de tipo em uma biblioteca de tipos COM para um controle ActiveX em um controle do Windows Forms.  
   
  [Caspol.exe (Ferramenta de Política de Segurança de Acesso do Código)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- Permite exibir e configurar a política de segurança para o nível de política do computador, o nível de política do usuário e o nível de política da empresa. No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] e posteriores, essa ferramenta não afeta a política de CAS (segurança de acesso do código), a menos que o elemento [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) seja definido como `true`. Para saber mais, confira [Alterações de segurança](../../../docs/framework/security/security-changes.md).  
+ Permite exibir e configurar a política de segurança para o nível de política do computador, o nível de política do usuário e o nível de política da empresa. No .NET Framework 4 e posteriores, essa ferramenta não afeta a política de CAS (segurança de acesso do código), a menos que o elemento [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) seja definido como `true`. Para saber mais, confira [Alterações de segurança](../../../docs/framework/security/security-changes.md).  
   
  [Cert2spc.exe (Ferramenta de Teste de Certificado do Fornecedor de Software)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  Cria um SPC (Software Publisher's Certificate) de um ou mais certificados X.509. Essa ferramenta destina-se apenas a testes.  

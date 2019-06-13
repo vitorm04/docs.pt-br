@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8d95a347237b15dfa55586bb15fe605bd5c7a94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947115"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025504"
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
 
@@ -51,7 +51,7 @@ Confira [Como copiar diretórios](how-to-copy-directories.md), [Como criar uma l
 
 ## <a name="streams"></a>Fluxos
 
-A classe base abstrata <xref:System.IO.Stream> oferece suporte a leitura e gravação de bytes. Todas as classes que representam fluxos herdam da classe <xref:System.IO.Stream>. A classe <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão comum de fontes e repositórios de dados, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.
+A classe base abstrata <xref:System.IO.Stream> dá suporte a leitura e gravação de bytes. Todas as classes que representam fluxos herdam da classe <xref:System.IO.Stream>. A classe <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão comum de fontes e repositórios de dados, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.
 
 Fluxos envolvem estas três operações fundamentais:
 
@@ -61,7 +61,7 @@ Fluxos envolvem estas três operações fundamentais:
 
 - Busca – Consulta e modificação da posição atual em um fluxo.
 
-Dependendo do repositório ou da fonte de dados subjacente, os fluxos podem oferecer suporte somente algumas dessas capacidades. Por exemplo, a classe <xref:System.IO.Pipes.PipeStream> não oferece suporte à operação de busca. As propriedades <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> e <xref:System.IO.Stream.CanSeek%2A> de um fluxo especificam as operações às quais o fluxo oferece suporte.
+Dependendo do repositório ou da fonte de dados subjacente, os fluxos podem dar suporte somente algumas dessas capacidades. Por exemplo, a classe <xref:System.IO.Pipes.PipeStream> não dar suporte à operação de busca. As propriedades <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> e <xref:System.IO.Stream.CanSeek%2A> de um fluxo especificam as operações às quais o fluxo dá suporte.
 
 Algumas classes de fluxo comumente usadas são:
 
@@ -147,7 +147,7 @@ O [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] contém
 
 Algumas diferenças importantes que devem ser observadas ao usar operações de E/S em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]:
 
-- Tipos especificamente relacionados às operações de arquivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, não estão incluídos no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Em vez disso, use os tipos no namespace <xref:Windows.Storage?displayProperty=nameWithType> do [!INCLUDE[wrt](../../../includes/wrt-md.md)], como <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
+- Tipos especificamente relacionados às operações de arquivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, não estão incluídos no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Em vez disso, use os tipos no namespace <xref:Windows.Storage?displayProperty=nameWithType> do Windows Runtime, como <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
 
 - O armazenamento isolado não está disponível. Use [dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

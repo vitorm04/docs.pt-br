@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4639402ee99d215edb3fb28ababe6f750fb353
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457079"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816200"
 ---
 # <a name="thread-safe-collections"></a>Coleções thread-safe
 O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que inclui várias classes de coleção que são tanto thread-safe quanto escalonáveis. Vários threads podem adicionar ou remover itens dessas coleções de modo seguro e eficiente sem a necessidade de sincronização adicional no código do usuário. Ao escrever um novo código, use as classes de coleção simultâneas sempre que vários threads forem ser gravados simultaneamente nas coleções. Se estiver lendo apenas de uma coleção compartilhada, você poderá usar as classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. É recomendável não usar as classes da coleção 1.0, a menos que você precise ter como destino o tempo de execução do .NET Framework 1.1 ou anterior.  
@@ -22,7 +22,7 @@ O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?disp
   
  As classes de coleções introduzidas no .NET Framework 2.0 são encontradas no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. Entre elas <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> e assim por diante. Essas classes fornecem desempenho e segurança de tipos aprimorados em comparação com as classes do .NET Framework 1.0. No entanto, as classes de coleção do .NET Framework 2.0 não fornecem nenhuma sincronização de thread; o código de usuário deve fornecer sincronização quando itens são adicionados ou removidos simultaneamente em vários threads.  
   
- O recomendável são as classes de coleções simultâneas no .NET Framework 4, pois elas fornecem não apenas a segurança de tipos das classes de coleção do .NET Framework 2.0, mas também acesso thread-safe mais eficiente e completo do que o fornecido pelas coleções do [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)].  
+ O recomendável são as classes de coleções simultâneas no .NET Framework 4, pois elas fornecem não apenas a segurança de tipos das classes de coleção do .NET Framework 2.0, mas também acesso thread-safe mais eficiente e completo do que o fornecido pelas coleções do .NET Framework 1.0.  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>Bloqueio refinado e mecanismos sem bloqueio  
  Alguns dos tipos de coleção simultâneos usam mecanismos de sincronização leves como <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim> e <xref:System.Threading.CountdownEvent>, que são novos no .NET Framework 4. Esses tipos de sincronização geralmente usam *giro ocupado* por breves períodos antes de colocarem o thread em um verdadeiro estado de espera. Quando espera-se que os tempos de espera sejam muito curtos, girar é muito menos dispendioso em termos de recursos computacionais do que esperar, o que envolve uma transição de kernel que utiliza muitos recursos. Para classes de coleção que usam o giro, essa eficiência significa que vários threads podem adicionar e remover itens em uma taxa muito alta. Para saber mais sobre rotação versus bloqueio, confira [SpinLock](../../../../docs/standard/threading/spinlock.md) e [SpinWait](../../../../docs/standard/threading/spinwait.md).  

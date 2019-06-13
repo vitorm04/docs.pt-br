@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16e20214981bb5c0f96b26f34be99026aac19266
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644032"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690192"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introdução ao .NET Framework
 
@@ -53,7 +53,7 @@ Em geral, você não deve desinstalar versões do .NET Framework instaladas em s
 
 - Se um aplicativo usado depender de uma versão específica do .NET Framework, ele poderá ser interrompido se essa versão for removida.
 
-- Algumas versões do .NET Framework são atualizações in-loco de versões anteriores. Por exemplo, o [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] é uma atualização in-loco para a versão 2.0 e o .NET Framework 4.8 é uma atualização in-loco para as versões 4 a 4.7.2. Para obter mais informações, confira [Versões e dependências do .NET Framework](../migration-guide/versions-and-dependencies.md).
+- Algumas versões do .NET Framework são atualizações in-loco de versões anteriores. Por exemplo, o .NET Framework 3.5 é uma atualização in-loco para a versão 2.0 e o .NET Framework 4.8 é uma atualização in-loco para as versões 4 a 4.7.2. Para obter mais informações, confira [Versões e dependências do .NET Framework](../migration-guide/versions-and-dependencies.md).
 
 Em versões do Windows anteriores ao Windows 8, se você optar por remover o .NET Framework, sempre use **Programas e Recursos** no Painel de Controle para desinstalá-lo. Nunca remova manualmente uma versão do .NET Framework. No Windows 8 e posterior, o .NET Framework é um componente do sistema operacional e não pode ser desinstalado independentemente.
 
