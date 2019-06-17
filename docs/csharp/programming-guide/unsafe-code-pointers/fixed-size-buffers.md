@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bfd9f3f559e4780b910a2e5a3430b08a2183ee3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700605"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833501"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffers de tamanho fixo (Guia de Programação em C#)
 
@@ -40,7 +40,7 @@ O exemplo anterior demonstra o acesso a campos `fixed` sem fixação, que estão
 Outra matriz de tamanho fixo comum é a matriz [bool](../../language-reference/keywords/bool.md). Os elementos em uma matriz `bool` sempre têm um byte de tamanho. Matrizes `bool` não são adequadas para criar buffers ou matrizes de bits.
 
 > [!NOTE]
-> Exceto pela memória criada usando [stackalloc](../../language-reference/keywords/stackalloc.md), o compilador C# e o CLR (Common Language Runtime) não executam nenhuma verificação de estouro de buffer de segurança. Assim como acontece com qualquer código não seguro, tenha cuidado.
+> Exceto pela memória criada usando [stackalloc](../../language-reference/operators/stackalloc.md), o compilador C# e o CLR (Common Language Runtime) não executam nenhuma verificação de estouro de buffer de segurança. Assim como acontece com qualquer código não seguro, tenha cuidado.
 
 Buffers não seguros diferem de matrizes regulares das seguintes maneiras:
 

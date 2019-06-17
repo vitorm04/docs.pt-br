@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3183f8434dd8a6bc8182e2257d0ab3c7e7c014c4
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880323"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833433"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -45,7 +45,7 @@ Um ponteiro não pode apontar para uma referência ou um [struct](../../language
 
 O valor da variável de ponteiro do tipo `myType*` é o endereço de uma variável do tipo `myType`. Estes são exemplos de declarações de tipos de ponteiro:
 
-|Exemplo|Descrição|
+|Exemplo|DESCRIÇÃO|
 |-------------|-----------------|
 |`int* p`|`p` é um ponteiro para um inteiro.|
 |`int** p`|`p` é um ponteiro para um ponteiro para um inteiro.|
@@ -82,7 +82,7 @@ A tabela a seguir lista os operadores e as instruções que podem operar em pont
 |`++` e `--`|Incrementa e decrementa ponteiros.|
 |`+` e `-`|Executa aritmética de ponteiros.|
 |`==`, `!=`, `<`, `>`, `<=` e `>=`|Compara ponteiros.|
-|[Operador `stackalloc`](../../language-reference/keywords/stackalloc.md)|Aloca memória na pilha.|
+|[Operador `stackalloc`](../../language-reference/operators/stackalloc.md)|Aloca memória na pilha.|
 |[Instrução `fixed`](../../language-reference/keywords/fixed-statement.md)|Corrige temporariamente uma variável para que seu endereço possa ser encontrado.|
 
 Para obter mais informações sobre operadores relacionados a ponteiro, veja [Operadores relacionados a ponteiro](../../language-reference/operators/pointer-related-operators.md).

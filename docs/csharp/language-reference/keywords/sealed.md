@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: d86f3ea7b9ee2a7c511119d9b7c3e52f44bd5e6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7b9551fe892b0335fb445ab9edce4facca0badbe
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634069"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833341"
 ---
 # <a name="sealed-c-reference"></a>sealed (Referência de C#)
 
@@ -56,10 +56,6 @@ O resultado é uma mensagem de erro:
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
 ## <a name="remarks"></a>Comentários
 
 Para determinar se deve lacrar uma classe, método ou propriedade, geralmente você deve considerar os dois pontos a seguir:
@@ -67,6 +63,10 @@ Para determinar se deve lacrar uma classe, método ou propriedade, geralmente vo
 - Os possíveis benefícios que as classes derivadas podem obter por meio da capacidade de personalizar a sua classe.
 
 - O potencial de as classes derivadas modificarem suas classes de forma que elas deixem de funcionar corretamente ou como esperado.
+
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Consulte também
 

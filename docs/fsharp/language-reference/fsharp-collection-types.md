@@ -2,12 +2,12 @@
 title: Tipos de coleção de F#
 description: Saiba mais sobre F# tipos de coleção e como eles diferem de tipos de coleção no .NET Framework.
 ms.date: 05/16/2016
-ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996808"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041716"
 ---
 # <a name="f-collection-types"></a>Tipos de coleção de F#
 
@@ -50,7 +50,7 @@ Esta seção compara as funções que estão disponíveis no F# tipos de coleç�
 |countBy|-|-|(N)|-|-|Aplica uma função de geração de chave para cada elemento de uma sequência e retorna uma sequência que gera as chaves exclusivas e seu número de ocorrências na sequência original.|
 |copy|(N)|-|(N)|-|-|Copia a coleção.|
 |criar|(N)|-|-|-|-|Cria uma matriz de elementos inteiros são todos inicialmente o valor especificado.|
-|Atraso|-|-|O(1)|-|-|Retorna uma sequência que é criada da especificação atrasada determinada de uma sequência.|
+|delay|-|-|O(1)|-|-|Retorna uma sequência que é criada da especificação atrasada determinada de uma sequência.|
 |diferença|-|-|-|-|O (M &#42; log N)|Retorna um novo conjunto com os elementos do segundo conjunto removidos do primeiro conjunto.|
 |Distintos|||(1)&AMP;#42;|||Retorna uma sequência que não contém nenhum entradas duplicadas de acordo com comparações de igualdade e hash genéricas nas entradas. Se um elemento ocorre várias vezes na sequência, ocorrências posteriores serão descartadas.|
 |distinctBy|||(1)&AMP;#42;|||Retorna uma sequência que não contém nenhum entradas duplicadas de acordo com as comparações de igualdade e hash genéricas nas chaves que retorna a função de geração de chave fornecida. Se um elemento ocorre várias vezes na sequência, ocorrências posteriores serão descartadas.|
@@ -83,6 +83,7 @@ Esta seção compara as funções que estão disponíveis no F# tipos de coleç�
 |iteri|(N)|(N)|(N)|-|-|Aplica-se a função fornecida para cada elemento da coleção. O inteiro que é passado para a função indica o índice do elemento.|
 |iteri2|(N)|(N)|-|-|-|Aplica-se a função fornecida a um par de elementos que são desenhados de índices correspondentes em duas matrizes. O inteiro que é passado para a função indica o índice dos elementos. As duas matrizes devem ter o mesmo comprimento.|
 |iter2|(N)|(N)|(N)|-|-|Aplica-se a função fornecida a um par de elementos que são desenhados de índices correspondentes em duas matrizes. As duas matrizes devem ter o mesmo comprimento.|
+|last|O(1)|(N)|(N)|-|-|Retorna o último item na coleção aplicável.|
 |length|O(1)|(N)|(N)|-|-|Retorna o número de elementos na coleção.|
 |map|(N)|(N)|O(1)|-|-|Cria uma coleção cujos elementos são os resultados da aplicação da função fornecida para cada elemento da matriz.|
 |map2|(N)|(N)|O(1)|-|-|Cria uma coleção cujos elementos são os resultados da aplicação da função fornecida para os elementos correspondentes das duas coleções de pares. As duas matrizes de entrada devem ter o mesmo tamanho.|

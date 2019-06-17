@@ -3,12 +3,12 @@ title: Escrever um código C# seguro e eficiente
 description: Aprimoramentos recentes na linguagem C# permitem escrever código seguro verificável que o desempenho associou anteriormente ao código não seguro.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753895"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832939"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escrever um código C# seguro e eficiente
 
@@ -189,7 +189,7 @@ Você não deve passar um tipo de valor anulável como um argumento `in`. O tipo
 
 Um recurso de linguagem relacionado é a capacidade de declarar um tipo de valor que deve ser restrito para um único registro de ativação. Essa restrição permite que o compilador faça várias otimizações. A principal motivação para esse recurso foi <xref:System.Span%601> e as estruturas relacionadas. Você obterá melhorias de desempenho com esses aprimoramentos usando APIs do .NET novas e atualizadas que fazem uso do tipo <xref:System.Span%601>.
 
-Você pode ter requisitos semelhantes funcionando com a memória criada usando [`stackalloc`](language-reference/keywords/stackalloc.md) ou ao usar a memória das APIs de interoperabilidade. Você pode definir seus próprios tipos `ref struct` para essas necessidades.
+Você pode ter requisitos semelhantes funcionando com a memória criada usando [`stackalloc`](language-reference/operators/stackalloc.md) ou ao usar a memória das APIs de interoperabilidade. Você pode definir seus próprios tipos `ref struct` para essas necessidades.
 
 ## <a name="readonly-ref-struct-type"></a>Tipo `readonly ref struct`
 
