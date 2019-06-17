@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf0244060d3c5dfa39c220fc2d699a5f2f1fef9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4369ce9c9ce82ecdbf11d76f3b043778b8374d8b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636209"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489764"
 ---
 # <a name="compiling-an-interop-project"></a>Compilando um projeto de interoperabilidade
 
@@ -24,7 +24,7 @@ Os projetos de interoperabilidade COM que referenciam um ou mais assemblies que 
 
  Há duas maneiras de referenciar assemblies de interoperabilidade:
 
-- Tipos de interoperabilidade inseridos: Do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] e do Visual Studio 2010 em diante, é possível instruir o compilador a inserir informações de tipo de um assembly de interoperabilidade no executável. Esta é a técnica recomendada.
+- Tipos de interoperabilidade inseridos: Do .NET Framework 4 e do Visual Studio 2010 em diante, é possível instruir o compilador a inserir informações de tipo de um assembly de interoperabilidade ao seu executável. Esta é a técnica recomendada.
 
 - Implantando assemblies de interoperabilidade: Crie uma referência padrão a um assembly de interoperabilidade. Nesse caso, o assembly de interoperabilidade deve ser implantado com o aplicativo.
 

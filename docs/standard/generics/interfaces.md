@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613799"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487036"
 ---
 # <a name="generic-interfaces"></a>Interfaces genéricas
 Este tópico fornece uma visão geral de interfaces genéricas que fornecem funcionalidade comum entre famílias de tipos genéricos.  
@@ -24,7 +24,7 @@ Este tópico fornece uma visão geral de interfaces genéricas que fornecem func
  As interfaces genéricas fornecem contrapartes fortemente tipadas para interfaces não genéricas para fins de comparações de ordenação e de igualdade, e para a funcionalidade que é compartilhada por tipos de coleção genérica.  
   
 > [!NOTE]
->  A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], os parâmetros de tipo de várias interfaces genéricas são marcados como covariantes ou contravariantes, fornecendo mais flexibilidade na atribuição e usando tipos que implementam essas interfaces. Consulte [Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md).  
+>  A partir do .NET Framework 4, os parâmetros de tipo de várias interfaces genéricas são marcados como covariantes ou contravariantes, fornecendo mais flexibilidade na atribuição e usando tipos que implementam essas interfaces. Consulte [Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Comparações de ordem e igualdade  
  No namespace <xref:System>, as interfaces genéricas <xref:System.IComparable%601?displayProperty=nameWithType> e <xref:System.IEquatable%601?displayProperty=nameWithType>, assim como suas contrapartes não genéricas, definem métodos para comparações de classificação e de igualdade, respectivamente. Os tipos implementam essas interfaces para permitir a execução dessas comparações.  

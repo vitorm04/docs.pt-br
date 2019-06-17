@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 8d3ac6acf756a0ac468eb4483432467429ed91ca
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457442"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483279"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 <a name="top"></a> No CLR (Common Language Runtime), o coletor de lixo atua como um gerenciador automático de memória. Ele oferece os seguintes benefícios:  
@@ -186,7 +186,7 @@ Thread que dispara uma coleta de lixo
   
      A coleta de lixo da estação de trabalho pode ser simultânea ou não simultânea. A coleta de lixo simultânea permite que os threads gerenciados continuem as operações durante uma coleta de lixo.  
   
-     A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a coleta de lixo em segundo plano substitui a coleta de lixo simultânea.  
+     A partir do .NET Framework 4, a coleta de lixo em segundo plano substitui a coleta de lixo simultânea.  
   
 - A coleta de lixo de servidor, que serve para aplicativos de servidor que precisam de escalabilidade e taxa de transferência altas. A coleta de lixo de servidor pode ser não simultânea ou em segundo plano.  
   

@@ -3,12 +3,12 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos na versão 7.0 da linguagem C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753064"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815976"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
@@ -222,7 +222,7 @@ A alteração de um método para um membro de corpo da expressão é uma [altera
 
 ## <a name="throw-expressions"></a>Expressões throw
 
-No C#, `throw` sempre foi uma instrução. Como `throw` é uma instrução, não uma expressão, havia constructos do C# em que não era possível usá-la. Eles incluíam expressões condicionais, expressões de união nulas e algumas expressões lambda. A adição de membros aptos para expressão inclui mais locais em que as expressões `throw` seriam úteis. Para que você possa escrever qualquer um desses constructos, o C# 7.0 apresenta *expressões throw*.
+No C#, `throw` sempre foi uma instrução. Como `throw` é uma instrução, não uma expressão, havia constructos do C# em que não era possível usá-la. Eles incluíam expressões condicionais, expressões de união nulas e algumas expressões lambda. A adição de membros aptos para expressão inclui mais locais em que as expressões `throw` seriam úteis. Para que você possa escrever qualquer um desses construtos, o C# 7.0 apresenta [*expressões throw*](../language-reference/keywords/throw.md#the-throw-expression).
 
 Essa adição facilita a escrita de um código mais baseado em expressão. Você não precisa de instruções adicionais para a verificação de erros.
 

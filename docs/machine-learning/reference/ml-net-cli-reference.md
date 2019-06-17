@@ -3,12 +3,12 @@ title: O comando auto-train na ferramenta de CLI do ML.NET
 description: Visão geral, exemplos e referência para o comando de treinamento automático na ferramenta de CLI do ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557937"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722607"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>O comando 'auto-train' no ML.NET
 
@@ -228,7 +228,7 @@ Para usar o argumento `--label-column-name`, você precisa ter um cabeçalho no 
 
 `--max-exploration-time | -x` (string)
 
-Por padrão, o tempo máximo de exploração é de 10 segundos.
+Por padrão, o tempo máximo de exploração é de 30 minutos.
 
 Esse argumento define o tempo máximo (em segundos) para o processo explorar vários treinadores e configurações. O tempo configurado poderá ser excedido se o tempo fornecido for muito curto (digamos, dois segundos) para uma única iteração. Nesse caso, o tempo real é o tempo necessário para produzir uma configuração de modelo em uma única iteração.
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adf2e3e3d10f4f32952dbca270be4ca0924d0b73
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457270"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816047"
 ---
 # <a name="in-process-side-by-side-execution"></a>Execução lado a lado em processo
-Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você pode usar a hospedagem lado a lado em processos para executar várias versões do CLR (Common Language Runtime) em um único processo. Por padrão, os componentes COM gerenciados são executados com a versão do .NET Framework com a qual eles foram criados, independentemente da versão do .NET Framework carregada para o processo.  
+A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em processo para executar várias versões do CLR (Common Language Runtime) em um único processo. Por padrão, os componentes COM gerenciados são executados com a versão do .NET Framework com a qual eles foram criados, independentemente da versão do .NET Framework carregada para o processo.  
   
 ## <a name="background"></a>Informações preliminares  
  O .NET Framework sempre forneceu a hospedagem lado a lado para aplicativos de código gerenciado, mas antes do .NET Framework 4, ele não fornecia essa funcionalidade para componentes COM gerenciados. No passado, os componentes COM gerenciados que eram carregados em um processo eram executados com a versão do tempo de execução que já estava carregada ou com a versão mais recente instalada do .NET Framework. Se essa versão não era compatível com o componente COM, ele falhava.  
@@ -56,7 +56,7 @@ Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você po
   
      O que fazer: Nesse cenário, não faça nada. Os componentes COM serão executados com a versão do .NET Framework com a qual foram registrados.  
   
-- **Cenário 2**: Aplicativo gerenciado criado com o [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que você prefere executar com o [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], mas está disposto a executar no .NET Framework 4 se a versão 2.0 não estiver presente.  
+- **Cenário 2**: Aplicativo gerenciado criado com o .NET Framework 2.0 SP1 que você prefere executar com o [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], mas está disposto a executar no .NET Framework 4, caso a versão 2.0 não esteja disponível.  
   
      Versões do .NET Framework instaladas: Uma versão anterior do .NET Framework e o .NET Framework 4.  
   
@@ -88,7 +88,7 @@ Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você po
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra um host COM não gerenciado que está executando um componente COM gerenciado usando a versão do .NET Framework que o componente foi compilado para usar.  
   
- Para executar o exemplo a seguir, compile e registre o seguinte componente COM gerenciado usando o [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Para registrar o componente, no menu **Projeto**, clique em **Propriedades**, clique na guia **Compilar** e marque a caixa de seleção **Registrar para interoperabilidade COM**.  
+ Para executar o exemplo a seguir, compile e registre o seguinte componente COM gerenciado usando o .NET Framework 3.5. Para registrar o componente, no menu **Projeto**, clique em **Propriedades**, clique na guia **Compilar** e marque a caixa de seleção **Registrar para interoperabilidade COM**.  
   
 ```csharp
 using System;  

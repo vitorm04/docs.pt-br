@@ -2,12 +2,12 @@
 title: Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 description: Descubra as opções para orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade e as possibilidades de Azure Dev Spaces durante o desenvolvimento do ciclo de vida de aplicativos Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196033"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815842"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 
@@ -27,7 +27,7 @@ Para ir além do gerenciamento de contêineres individuais ou aplicativos compos
 
 De uma perspectiva de arquitetura e desenvolvimento, ao criar aplicativos empresariais grandes, compostos e baseados em microsserviços, é importante entender as seguintes plataformas e produtos que dão suporte a cenários avançados:
 
-**Clusters e orquestradores.** Quando é preciso expandir os aplicativos em vários hosts do Docker, como um aplicativo grande baseado em microsserviço, é essencial ter a capacidade de gerenciar todos esses hosts como um cluster único, abstraindo a complexidade da plataforma subjacente. É isso que os clusters e orquestradores de contêineres fazem. O Kubernetes e o Azure Service Fabric são exemplos de orquestradores. O Kubernetes está disponível no Azure por meio do Serviço de Kubernetes do Azure.
+**Clusters e orquestradores.** Quando é preciso expandir os aplicativos em vários hosts do Docker, como um aplicativo grande baseado em microsserviço, é essencial ter a capacidade de gerenciar todos esses hosts como um cluster único, abstraindo a complexidade da plataforma subjacente. É isso que os clusters e orquestradores de contêineres fazem. O Kubernetes é um exemplo de orquestrador e está disponível no Azure por meio do Serviço de Kubernetes do Azure.
 
 **Agendadores.** *Agendamento* é a capacidade do administrador de iniciar contêineres em um cluster para que eles também forneçam uma interface do usuário. O agendador do cluster tem diversas responsabilidades: usar os recursos de cluster de forma eficiente, definir as restrições fornecidas pelo usuário, balancear a carga dos contêineres em nós ou hosts de maneira eficaz, ser robusto contra erros e, ao mesmo tempo, oferecer alta disponibilidade.
 
@@ -51,31 +51,9 @@ Os conceitos de "cluster" e "agendador" estão intimamente relacionados, então 
 
 > O [Serviço de Kubernetes do Azure (AKS)](https://azure.microsoft.com/services/kubernetes-service/) é um serviço de orquestração de contêiner de Kubernetes gerenciado no Azure que simplifica o gerenciamento, a implantação e as operações do cluster do Kubernetes.
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-![Logotipo do Azure Service Fabric](./media/image27.png)
-
-> O [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) é uma plataforma de microsserviços da Microsoft para criação de aplicativos. Ele é um [orquestrador](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) de serviços e cria clusters de computadores. O Service Fabric pode implantar serviços como contêineres ou como processos simples. Ele pode até combinar serviços em processos com serviços em contêineres no mesmo aplicativo e cluster.
->
-> Os clusters do *Service Fabric* podem ser implantados no Azure, localmente ou em qualquer nuvem. No entanto, a implantação no Azure é simplificada com uma abordagem gerenciada.
->
-> O *Service Fabric* oferece [modelos de programação do Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) prescritivos adicionais e opcionais, tais como [serviços com estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
->
-> O *Service Fabric* é maduro no Windows (com anos de desenvolvimento) e menos maduro no Linux.
->
-> Contêineres do Linux e Windows são compatíveis com o Service Fabric desde 2017.
-
-### <a name="azure-service-fabric-mesh"></a>Malha do Azure Service Fabric
-
-![Logotipo da Malha do Azure Service Fabric](./media/image35.png)
-
-> A [*Malha do Azure Service Fabric*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) oferece a mesma confiabilidade, desempenho crítico e escala que o Service Fabric, mas oferece uma plataforma totalmente gerenciada e sem servidor. Você não precisa gerenciar um cluster, VMs, armazenamento ou configuração de rede. Você se concentra apenas no desenvolvimento do seu aplicativo.
->
-> A *Malha do Service Fabric* dá suporte a contêineres do Windows e do Linux, permitindo que você desenvolva com qualquer linguagem de programação e estrutura de sua escolha.
-
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Usar orquestradores baseados em contêiner no Microsoft Azure
 
-Diversos provedores de nuvem oferecem suporte a contêineres do Docker e seus clusters e orquestração, como o Microsoft Azure, o Amazon EC2 Container Service e o Google Container Engine. O Microsoft Azure fornece suporte ao orquestrador e ao cluster do Docker por meio do AKS (Serviço de Kubernetes do Azure), do Azure Service Fabric e da Malha do Azure Service Fabric.
+Diversos provedores de nuvem oferecem suporte a contêineres do Docker e seus clusters e orquestração, como o Microsoft Azure, o Amazon EC2 Container Service e o Google Container Engine. O Microsoft Azure fornece suporte ao orquestrador e ao cluster do Docker por meio do AKS (Serviço de Kubernetes do Azure).
 
 ## <a name="using-azure-kubernetes-service"></a>Usando o Serviço de Kubernetes do Azure
 
@@ -156,4 +134,4 @@ Para obter mais informações, confira o artigo sobre [Desenvolvimento em equipe
 
 >[!div class="step-by-step"]
 >[Anterior](resilient-high-availability-microservices.md)
->[Próximo](using-azure-service-fabric.md)
+>[Próximo](../docker-application-development-process/index.md)

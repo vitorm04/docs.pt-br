@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd1ced48847739318f22ec77b17a83a36fd36ee0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c796a93f7ea5ad4664f35788b766117c712b9766
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647763"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487058"
 ---
 # <a name="memory-mapped-files"></a>Arquivos mapeados na memória
-Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtual. Esse mapeamento entre um espaço de arquivo e a memória permite que um aplicativo, inclusive vários processos, modifique o arquivo ao ler e gravar diretamente na memória. Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], é possível usar o código gerenciado para acessar arquivos mapeados na memória da mesma maneira que funções nativas do Windows acessam arquivos mapeados na memória, conforme descrito em [Gerenciamento de arquivos mapeados na memória](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
+Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtual. Esse mapeamento entre um espaço de arquivo e a memória permite que um aplicativo, inclusive vários processos, modifique o arquivo ao ler e gravar diretamente na memória. A partir do .NET Framework 4, é possível usar o código gerenciado para acessar arquivos mapeados na memória da mesma maneira que funções nativas do Windows acessam arquivos mapeados na memória, conforme descrito em [Gerenciamento de arquivos mapeados na memória](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
   
  Há dois tipos de arquivos mapeados na memória:  
   

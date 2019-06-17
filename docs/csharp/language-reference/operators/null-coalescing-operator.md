@@ -1,45 +1,66 @@
 ---
 title: ?? Operador – referência do C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/07/2019
 f1_keywords:
 - ??_CSharpKeyword
 helpviewer_keywords:
-- coalesce operator [C#]
+- null-coalescing operator [C#]
 - ?? operator [C#]
-- conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: e1e981f9ec6a87f6e7de1900008520cde8e46095
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633942"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816015"
 ---
 # <a name="-operator-c-reference"></a>?? operator (Referência de C#)
 
-O operador `??` é chamado operador de coalescência nula.  Ele retornará o operando esquerdo se o operando não for nulo; caso contrário, ele retornará o operando direito.
+O operador de coalescência nula `??` retornará o valor do operando esquerdo se não for `null`; caso contrário, ele avaliará o operando direito e retornará seu resultado. O operador `??` não avaliará seu operando direito se o operando esquerdo for avaliado como não nulo.
 
-## <a name="remarks"></a>Comentários
+O operador de coalescência nula é associativo direito, ou seja, uma expressão do formulário
 
-Um tipo anulável pode representar um valor de domínio do tipo ou o valor pode ser indefinido (nesse caso, o valor será nulo). Você pode usar a expressividade sintática do operador `??` para retornar um valor adequado (o operando direito) quando o operando esquerdo tiver um tipo que permite valor nulo cujo valor seja nulo. Se você tentar atribuir um tipo de valor anulável a um tipo de valor não anulável sem usar o operador `??`, um erro de tempo de compilação será gerado. Se você usar uma conversão e o tipo de valor anulável estiver atualmente indefinido, uma exceção `InvalidOperationException` será acionada.
+```csharp
+a ?? b ?? c
+```
 
-Para obter mais informações, consulte [Tipos que permitem valor nulo](../../programming-guide/nullable-types/index.md).
+é avaliada como
 
-O resultado de um operador ?? não será considerado constante, mesmo se os dois argumentos forem constantes.
+```csharp
+a ?? (b ?? c)
+```
 
-## <a name="example"></a>Exemplo
+O operador `??` pode ser útil nos seguintes cenários:
 
-[!code-csharp[csRefOperators#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#53)]
+- Em expressões com os [operadores condicionais nulos ?. e ?[]](member-access-operators.md#null-conditional-operators--and-), você pode usar o operador de coalescência nula para fornecer uma expressão alternativa a ser avaliada caso o resultado da expressão com operação condicional nula seja `null`:
+
+  [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
+
+- Quando você trabalhar com [tipos que permitem valor nulo](../../programming-guide/nullable-types/index.md) e precisar fornecer o valor de um tipo subjacente, use o operador de coalescência nula para especificar o valor a ser fornecido caso o tipo que permite valor nulo seja `null`:
+
+  [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
+
+  Use o método <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> se o valor a ser usado quando um valor de tipo que permite valor nulo for `null` tiver que ser o valor padrão do tipo de valor subjacente.
+
+- A partir do C# 7.0, você pode usar uma expressão [`throw` ](../keywords/throw.md#the-throw-expression) como o operando direito do operador de coalescência nula para tornar o código de verificação de argumento mais conciso:
+
+  [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
+
+  O exemplo anterior também demonstra como usar [membros aptos para expressão](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) para definir uma propriedade.
+
+## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
+
+O operador de coalescência nula não pode ser sobrecarregado.
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-Para obter mais informações, veja [O operador coalescente nulo](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) na [Especificação da Linguagem C#](../language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+Para saber mais, confira a seção [O operador coalescente nulo](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Operadores do C#](index.md)
-- [Tipos que permitem valor nulo](../../programming-guide/nullable-types/index.md)
-- [O que exatamente “levantado” significa?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [Operadores ?. e ?[]](member-access-operators.md#null-conditional-operators--and-)
+- [Operador ?:](conditional-operator.md)

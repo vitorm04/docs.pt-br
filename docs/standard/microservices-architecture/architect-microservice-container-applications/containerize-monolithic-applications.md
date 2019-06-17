@@ -2,12 +2,12 @@
 title: Implantar aplicativos monolíticos em contêineres
 description: Colocar em contêineres aplicativos monolíticos, embora não obtenha todos os benefícios da arquitetura de microsserviços, tem benefícios de implantação importantes que podem ser entregues imediatamente.
 ms.date: 09/20/2018
-ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640823"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690538"
 ---
 # <a name="containerizing-monolithic-applications"></a>Implantar aplicativos monolíticos em contêineres
 
@@ -63,9 +63,9 @@ Seja para validar um contêiner implantado no Azure ou quando um aplicativo é b
 
 **Figura 4-4**. Publicar um aplicativo baseado em contêiner único no Serviço de Aplicativo do Azure por meio do Visual Studio
 
-Sem o Docker, se você precisasse de outros recursos, estruturas ou dependências sem suporte no Serviço de Aplicativo do Azure, seria necessário aguardar até que a equipe do Azure atualizasse essas dependências no Serviço de Aplicativo. Outra opção era mudar para outros serviços, como Azure Service Fabric, Serviços de Nuvem do Azure ou até mesmo VMs, em que se tinha mais controle e era possível instalar o componente ou a estrutura exigidos pelo aplicativo.
+Sem o Docker, se você precisasse de outros recursos, estruturas ou dependências sem suporte no Serviço de Aplicativo do Azure, seria necessário aguardar até que a equipe do Azure atualizasse essas dependências no Serviço de Aplicativo. Outra opção era mudar para outros serviços, como Serviços de Nuvem do Azure, ou VMs, em que se tinha mais controle e era possível instalar o componente ou a estrutura exigidos pelo aplicativo.
 
-No Visual Studio 2017, o suporte para contêineres oferece a capacidade de incluir tudo o que você deseja no ambiente do aplicativo, conforme mostrado na Figura 4-4. Como está sendo executado em um contêiner, se você adicionar uma dependência ao aplicativo, será possível incluí-la em um Dockerfile ou em uma imagem do Docker.
+No Visual Studio 2017 e posterior, o suporte para contêineres oferece a capacidade de incluir tudo o que você deseja no ambiente do aplicativo, conforme mostrado na Figura 4-4. Como está sendo executado em um contêiner, se você adicionar uma dependência ao aplicativo, será possível incluí-la em um Dockerfile ou em uma imagem do Docker.
 
 A Figura 4-4 também mostra que o fluxo de publicação envia uma imagem por meio do registro de contêiner. Isso pode ser feito pelo Registro de Contêiner do Azure (um registro próximo às implantações no Azure e protegido por grupos e contas do Azure Active Directory) ou outros registros do Docker, como o Docker Hub ou um registro local.
 

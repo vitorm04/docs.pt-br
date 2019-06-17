@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: cb1ef5f52b9ee0407cbd7a0634e8a7c58906d635
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195569"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690665"
 ---
 # <a name="best-practices-for-exceptions"></a>Práticas recomendadas para exceções
 
@@ -56,7 +56,7 @@ Uma classe pode fornecer métodos ou propriedades que permitem que você evite f
 
 Outra maneira de evitar exceções é retornar nulo (ou padrão) para casos muito comuns de erro, em vez de gerar uma exceção. Um caso extremamente comum de erro pode ser considerado um fluxo normal de controle. Ao retornar nulo (ou padrão) nesses casos, você minimiza o impacto no desempenho de um aplicativo.
 
-Para tipos de valor, convém considerar o uso de Nullable<T> ou padrão como indicador de erro para seu aplicativo. Ao usar `Nullable<Guid>`, `default` se torna `null` em vez de `Guid.Empty`. Algumas vezes, adicionar `Nullable<T>` pode deixar mais claro quando um valor está presente ou ausente. Outras vezes, adicionar `Nullable<T>` pode criar casos extras que não precisam ser verificados e só servem para criar possíveis fontes de erros. 
+Para tipos de valor, convém considerar o uso de `Nullable<T>` ou padrão como indicador de erro para seu aplicativo. Ao usar `Nullable<Guid>`, `default` se torna `null` em vez de `Guid.Empty`. Algumas vezes, adicionar `Nullable<T>` pode deixar mais claro quando um valor está presente ou ausente. Outras vezes, adicionar `Nullable<T>` pode criar casos extras que não precisam ser verificados e só servem para criar possíveis fontes de erros. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Gerar exceções em vez de retornar um código de erro
 

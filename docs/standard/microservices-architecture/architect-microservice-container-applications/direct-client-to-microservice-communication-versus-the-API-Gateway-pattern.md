@@ -2,12 +2,12 @@
 title: Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 description: Entenda as diferenças e os usos do padrão de gateway de API e da comunicação direta de cliente com microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: 433ad8bc8204a9a57b8b494040a9de6c533bcca8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641404"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690356"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -146,7 +146,7 @@ Neste guia e no aplicativo de exemplo de referência (eShopOnContainers), a arqu
 
 O [Ocelot](https://github.com/ThreeMammals/Ocelot) é um Gateway de API leve, recomendado para abordagens mais simples. O Ocelot é um Gateway de API baseado no .NET Core de Software Livre, feito especialmente para a arquitetura de microsserviços que precisa de pontos de entrada unificados no sistema. Ele é leve, rápido, escalonável e fornece roteamento e autenticação entre muitos outros recursos.
 
-A principal razão para escolher o Ocelot no [aplicativo de referência eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) é porque o Ocelot é um Gateway de API leve do .NET Core que pode ser implantado no mesmo ambiente de implantação de aplicativos no qual os microsserviços/contêineres são implantados, como um Host do Docker, Kubernetes, Service Fabric, etc. E, como ele é baseado no .NET Core, é uma plataforma cruzada que permite a implantação no Linux ou no Windows.
+A principal razão para escolher o Ocelot no [aplicativo de referência eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) se deve ao fato de o Ocelot ser um Gateway de API leve do .NET Core que pode ser implantado no mesmo ambiente de aplicativos em que os microsserviços/contêineres são implantados, como um Host do Docker, Kubernetes etc. E, como ele é baseado no .NET Core, é uma plataforma cruzada que permite a implantação no Linux ou no Windows.
 
 Os diagramas anteriores que mostram os Gateways de API personalizados em execução nos contêineres correspondem precisamente ao modo como você também pode executar o Ocelot em um contêiner e em um aplicativo baseado em microsserviço.
 
@@ -185,7 +185,7 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 - **Udi Dahan. Composição orientada a serviços** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters. Mensagens e microsserviços na GOTO 2016 (vídeo)** \
+- **Clemens Vasters. Mensagens e microsserviços na GOTO 2016 (vídeo)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **Resumo sobre o Gateway de API** (série de tutoriais do Gateway de API do ASP.NET Core) \

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456779"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486981"
 ---
 # <a name="resolving-assembly-loads"></a>Resolvendo carregamentos de assembly
 O .NET Framework fornece o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para aplicativos que exigem maior controle sobre o carregamento do assembly. Ao tratar esse evento, seu aplicativo pode carregar um assembly no contexto de carga de fora dos caminhos normais de investigação, selecionar qual das várias versões de assembly carregar, emitir um assembly dinâmico e retorná-lo, etc. Este tópico fornece orientação para a manipulação do evento <xref:System.AppDomain.AssemblyResolve>.  
@@ -52,7 +52,7 @@ O .NET Framework fornece o evento <xref:System.AppDomain.AssemblyResolve?display
 > [!NOTE]
 >  O manipulador deve carregar o assembly no contexto de origem de carga, no contexto de carregamento ou sem contexto. Se o manipulador carregar o assembly no contexto de somente reflexão usando o método <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> ou o <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>, a tentativa de carregamento que gerou o evento <xref:System.AppDomain.AssemblyResolve> falhará.  
   
- É responsabilidade do manipulador de eventos retornar um assembly adequado. O manipulador pode analisar o nome de exibição do assembly solicitado passando o valor da propriedade <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> para o construtor <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>. A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], o manipulador pode usar a propriedade <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> para determinar se a solicitação atual é uma dependência de outro assembly. Essas informações podem ajudar a identificar um assembly que atenderá à dependência.  
+ É responsabilidade do manipulador de eventos retornar um assembly adequado. O manipulador pode analisar o nome de exibição do assembly solicitado passando o valor da propriedade <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> para o construtor <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>. A partir do .NET Framework 4, o manipulador pode usar a propriedade <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> para determinar se a solicitação atual é uma dependência de outro assembly. Essas informações podem ajudar a identificar um assembly que atenderá à dependência.  
   
  O manipulador de eventos pode retornar uma versão diferente do assembly do que a versão que foi solicitada.  
   

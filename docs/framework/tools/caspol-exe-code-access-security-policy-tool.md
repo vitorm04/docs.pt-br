@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a0e8d95595d663585639c47be34262f7452e94
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457416"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489684"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)
 A ferramenta de política (Caspol.exe) CAS (Code Access Security) permite que usuários e administradores modifiquem a política de segurança para o nível de política do computador, o nível de política do usuário e o nível de política da empresa.  
   
 > [!IMPORTANT]
->  Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], o Caspol.exe não afeta a política de CAS, a menos que o [elemento \<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esteja definido como `true`. Todas as configurações mostradas ou modificadas por CasPol.exe só afetarão aplicativos que optarem por usar a política de CAS. Para saber mais, confira [Alterações de segurança](../../../docs/framework/security/security-changes.md).  
+>  Desde o .NET Framework 4, o Caspol.exe não afeta a política de CAS, a menos que o [elemento \<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) seja definido como `true`. Todas as configurações mostradas ou modificadas por CasPol.exe só afetarão aplicativos que optarem por usar a política de CAS. Para saber mais, confira [Alterações de segurança](../../../docs/framework/security/security-changes.md).  
   
 > [!NOTE]
 >  Os computadores 64 bits incluem versões 64 e 32 bits da política de segurança. Para verificar se as alterações na política se aplicam a aplicativos 32 e 64 bits, execute as versões 32 e 64 bits de Caspol.exe.  

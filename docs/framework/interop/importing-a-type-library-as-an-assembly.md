@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23a05279615a589bca7bb61507caf8dcc3630020
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5388c67b4cc7b493e6662f421ae13ae878c858ec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648696"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490021"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importando uma biblioteca de tipos como um assembly
 Definições de tipo COM geralmente residem em uma biblioteca de tipos. Por outro lado, os compiladores em conformidade com CLS produzem metadados de tipo em um assembly. As duas fontes de informações de tipo são muito diferentes. Este tópico descreve técnicas para a geração de metadados de uma biblioteca de tipos. O assembly resultante é chamado de um assembly de interoperabilidade e as informações de tipo contidas nele permitem que aplicativos do .NET Framework usem tipos COM.  
   
  Há duas maneiras de disponibilizar essas informações de tipo para seu aplicativo:  
   
-- Usando assemblies de interoperabilidade somente em tempo de design: Do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] em diante, é possível instruir o compilador a inserir informações de tipo do assembly de interoperabilidade no executável. O compilador insere apenas as informações de tipo usadas pelo aplicativo. Não é necessário implantar o assembly de interoperabilidade com o aplicativo. Esta é a técnica recomendada.  
+- Usando assemblies de interoperabilidade somente em tempo de design: Do .NET Framework 4 em diante, é possível instruir o compilador a inserir informações de tipo do assembly de interoperabilidade ao seu executável. O compilador insere apenas as informações de tipo usadas pelo aplicativo. Não é necessário implantar o assembly de interoperabilidade com o aplicativo. Esta é a técnica recomendada.  
   
 - Implantando assemblies de interoperabilidade: Crie uma referência padrão para o assembly de interoperabilidade. Nesse caso, o assembly de interoperabilidade deve ser implantado com o aplicativo. Se você usar essa técnica e não estiver usando um componente COM particular, sempre referencie o PIA (assembly de interoperabilidade primário) publicado pelo autor do componente COM que você pretende incorporar no código gerenciado. Para obter mais informações sobre como produzir e usar assemblies de interoperabilidade primários, consulte [Assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   

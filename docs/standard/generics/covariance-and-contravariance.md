@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456853"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490752"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariância e contravariância em genéricos
 <a name="top"></a> Covariância e contravariância são termos que fazem referência à capacidade de usar um tipo mais derivado (mais específico) ou menos derivado (menos específico) do que o especificado originalmente. Os parâmetros de tipo genéricos oferecem suporte a covariância e contravariância para fornecer maior flexibilidade na atribuição e no uso de tipos genéricos. Quando você se refere a um sistema de tipos, a covariância, contravariância e invariância possuem as definições a seguir. Os exemplos assumem uma classe base chamada `Base` e uma classe derivada chamada `Derived`.  
@@ -59,7 +59,7 @@ ms.locfileid: "66456853"
   
  A covariância e a contravariância são referidas coletivamente como *variância*. Um parâmetro de tipo genérico que não é covariante ou contravariante é referido como *invariante*. Um breve resumo de fatos sobre variância em Common Language Runtime:  
   
-- No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], os parâmetros de tipo variantes são restringidos à interface genérica e tipos de delegados genéricos.  
+- No .NET Framework 4, os parâmetros de tipo variantes são restringidos à interface genérica e tipos de delegados genéricos.  
   
 - Uma interface genérica ou um tipo delegado genérico podem ter parâmetros de tipo covariantes e contravariantes.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 23c1bf7412f18674e87896949e0b57ff8bd60d14
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456798"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489589"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 <a name="top"></a> Este tópico descreve problemas relacionados ao uso de memória e coleta de lixo. Ele aborda problemas relacionados a heap gerenciado e explica como minimizar o efeito da coleta de lixo em seus aplicativos. Cada problema tem links para procedimentos que podem ser usados para investigar problemas.  
@@ -44,7 +44,7 @@ ms.locfileid: "66456798"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Eventos ETW de coleta de lixo  
- O ETW (Rastreamento de Eventos para Windows) é um sistema de rastreamento que complementa o suporte à criação de perfil e à depuração fornecido pelo .NET Framework. Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], os [eventos ETW de coleta de lixo](../../../docs/framework/performance/garbage-collection-etw-events.md) capturam informações úteis para analisar o heap gerenciado do ponto de vista estatístico. Por exemplo, o `GCStart_V1` evento, que é acionado quando uma coleta de lixo está prestes a ocorrer, fornece as seguintes informações:  
+ O ETW (Rastreamento de Eventos para Windows) é um sistema de rastreamento que complementa o suporte à criação de perfil e à depuração fornecido pelo .NET Framework. A partir do .NET Framework 4, os [eventos ETW de coleta de lixo](../../../docs/framework/performance/garbage-collection-etw-events.md) capturam informações úteis para analisar o heap gerenciado do ponto de vista estatístico. Por exemplo, o `GCStart_V1` evento, que é acionado quando uma coleta de lixo está prestes a ocorrer, fornece as seguintes informações:  
   
 - Qual geração de objetos está sendo coletada.  
   

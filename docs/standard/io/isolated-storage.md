@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37d25ed142c31ae1e36385448b75a3a850aafa65
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f6453b8ef2ef2a1b5e86ae461a626808cff7455
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352991"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025515"
 ---
 # <a name="isolated-storage"></a>Armazenamentos isolado
 <a name="top"></a> Para aplicativos [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)], o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.
 
 > [!IMPORTANT]
-> O armazenamento isolado não está disponível para aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API [!INCLUDE[wrt](../../../includes/wrt-md.md)] para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.
+> O armazenamento isolado não está disponível para aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.
 
 Esse tópico contém as seguintes seções:
 

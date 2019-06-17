@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8811fd916afcb39c466b8c9a60f7c7ed2a62ea8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d76615b5bd4d140917b84a52f7d1c251ca32302f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301421"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489992"
 ---
 # <a name="mitigation-product-versioning"></a>Mitigação: Controle de versão do produto
 Na .NET Framework 4.6 e posterior, o controle de versão do produto foi alterado em relação às versões anteriores do .NET Framework (o .NET Framework 4, 4,5, 4.5.1 e 4.5.2).  
@@ -23,7 +23,7 @@ Na .NET Framework 4.6 e posterior, o controle de versão do produto foi alterado
   
 - Os atributos <xref:System.Reflection.AssemblyFileVersionAttribute> e <xref:System.Reflection.AssemblyInformationalVersionAttribute> para assemblies gerenciados têm valores de <xref:System.Version> no formulário `4.6.X.0` para o .NET Framework 4.6 e suas versões pontuais, e `4.7.X.0` para o .NET Framework 4.7.  
   
-- No .NET Framework 4.6, 4.6.1, 4.6.2 e 4.7, a propriedade <xref:System.Environment.Version%2A?displayProperty=nameWithType> retorna a cadeia de caracteres de versão fixa `4.0.30319.42000`. No .NET Framework 4, 4.5, 4.5.1 e 4.5.2, ela retorna as cadeias de caracteres de versão no formato `4.0.30319.xxxxx` (por exemplo, "4.0.30319.18010"). Não é recomendável criar nova dependência de código de aplicativo na propriedade <xref:System.Environment.Version%2A?displayProperty=nameWithType>.  
+- A partir do .NET Framework 4.6, a propriedade <xref:System.Environment.Version%2A?displayProperty=nameWithType> retorna a cadeia de caracteres de versão fixa `4.0.30319.42000`. No .NET Framework 4, 4.5, 4.5.1 e 4.5.2, ela retorna as cadeias de caracteres de versão no formato `4.0.30319.xxxxx`, em que `xxxxx` é menor que 42000 (por exemplo, "4.0.30319.18010"). Não é recomendável criar nova dependência de código de aplicativo na propriedade <xref:System.Environment.Version%2A?displayProperty=nameWithType>.
   
 ### <a name="handling-the-product-versioning-changes"></a>Como lidar com as alterações de controle de versão de produto  
  Em geral, os aplicativos devem depender das técnicas recomendadas para detecção de itens como a versão de tempo de execução do .NET Framework e o diretório de instalação:  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0d5798b8067bde8b711982bfe4f78d66fe1521c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377746"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490842"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Consumindo o padrão assíncrono baseado em tarefa
 
@@ -64,7 +64,7 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>Cancelando uma operação assíncrona
- Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], métodos TAP que dão suporte ao cancelamento fornecem pelo menos uma sobrecarga que aceita um token de cancelamento (objeto <xref:System.Threading.CancellationToken>).
+ A partir do NET Framework 4, os métodos TAP que dão suporte ao cancelamento fornecem pelo menos uma sobrecarga que aceita um token de cancelamento (objeto <xref:System.Threading.CancellationToken>).
 
  Um token de cancelamento é criado por meio de uma origem de token de cancelamento (objeto <xref:System.Threading.CancellationTokenSource>).  A propriedade <xref:System.Threading.CancellationTokenSource.Token%2A> da fonte retorna o token de cancelamento que sinalizará quando o método <xref:System.Threading.CancellationTokenSource.Cancel%2A> da fonte será chamado.  Por exemplo, se você desejar baixar uma única página da Web e você deseja ser capaz de cancelar a operação, crie um objeto <xref:System.Threading.CancellationTokenSource>, passe o token desse objeto para o método TAP e, em seguida, chame o método <xref:System.Threading.CancellationTokenSource.Cancel%2A> da origem quando estiver pronto para cancelar a operação:
 

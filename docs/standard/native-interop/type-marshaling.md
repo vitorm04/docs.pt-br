@@ -4,12 +4,12 @@ description: Saiba como o .NET realizar marshal de seus tipos para uma represent
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065959"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041792"
 ---
 # <a name="type-marshaling"></a>Marshaling de tipo
 
@@ -79,6 +79,20 @@ Alguns tipos só podem ter o marshaling realizado como parâmetros e não como c
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
 Se esses padrões não fizerem exatamente o que você deseja, personalize como os parâmetros têm o marshaling realizado. O artigo sobre [marshaling de parâmetro](customize-parameter-marshaling.md) explica como personalizar a forma como os tipos de parâmetros diferentes têm o marshaling realizado.
+
+## <a name="default-marshaling-in-com-scenarios"></a>Marshaling padrão em cenários COM
+
+Quando você chama métodos em objetos COM no .NET, o tempo de execução do .NET altera a regras de marshaling padrão para corresponder à semântica de COM. A tabela a seguir lista as regras que os tempos de execução do .NET usam em cenários COM:
+
+| Tipo .NET | Tipo nativo (chamadas de método COM) |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| Tipos delegados | `_Delegate*` no .NET Framework. Não permitido no .NET Core. |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| Matriz .NET | `SAFEARRAY`                   |
+| `string[]` | `SAFEARRAY` de `BSTR`s        |
 
 ## <a name="marshaling-classes-and-structs"></a>Marshaling de classes e structs
 

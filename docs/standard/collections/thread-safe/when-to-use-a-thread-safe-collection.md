@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca809c28e7d55d7b899809c2fd514c073dd73054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e18dd5370143dfe4faaffb49017d0a8f62c87433
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543167"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490996"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando usar uma coleção thread-safe
-O [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] apresenta cinco novos tipos de coleção especialmente projetados para dar suporte a operações multithread de adicionar e remover. Para obter o acesso thread-safe, esses novos tipos usam vários tipos de mecanismos de sincronização de bloqueio e sem bloqueio. A sincronização adiciona sobrecarga a uma operação. A quantidade de sobrecarga depende do tipo de sincronização usado, os tipos de operações que são executadas e outros fatores, como o número de threads que estão tentando acessar a coleção simultaneamente.  
+O .NET Framework 4 apresenta cinco novos tipos de coleção especialmente projetados para dar suporte a operações multithread de adição e remoção. Para obter o acesso thread-safe, esses novos tipos usam vários tipos de mecanismos de sincronização de bloqueio e sem bloqueio. A sincronização adiciona sobrecarga a uma operação. A quantidade de sobrecarga depende do tipo de sincronização usado, os tipos de operações que são executadas e outros fatores, como o número de threads que estão tentando acessar a coleção simultaneamente.  
   
  Em alguns cenários, a sobrecarga de sincronização é insignificante e permite que o tipo com multithread funcione significativamente mais rápido e ajuste a escala muito melhor do que seu equivalente não thread-safe quando protegido por um bloqueio externo. Em outros cenários, a sobrecarga pode fazer com o tipo thread-safe funcione e ajuste a escala na mesma velocidade ou até mais lentamente do que a versão bloqueada externamente não thread-safe do tipo.  
   

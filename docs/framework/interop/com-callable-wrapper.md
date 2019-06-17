@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: a658a9f706a53697b341463b443c5145a727b4b9
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613246"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758258"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 
@@ -186,7 +186,7 @@ Uma interface dupla gerada automaticamente pode ser apropriada em casos raros. N
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Verifique se todas as notificações de evento COM têm associação tardia.
 
-Por padrão, informações de tipo COM são incorporadas diretamente em assemblies gerenciados, o que elimina a necessidade de PIAS (assemblies de interoperabilidade primários). No entanto, uma das limitações das informações de tipo inseridas é que elas não dão suporte a entrega de notificações de eventos COM por chamadas vtable early-bound, mas dá suporte apenas a chamadas `IDispatch::Invoke` de associação tardia.
+Por padrão, informações de tipo COM são incorporadas diretamente em assemblies gerenciados, o que elimina a necessidade de PIAS (assemblies de interoperabilidade primários). No entanto, uma das limitações das informações de tipo inseridas é que elas não são compatíveis com a entrega de notificações de eventos COM por chamadas early-bound (vtable), mas apenas com chamadas `IDispatch::Invoke` de associação tardia.
 
 Se o seu aplicativo exigir chamadas early-bound para métodos de interface de eventos COM, defina a propriedade **Embed Interop Types** no Visual Studio como `true`, ou inclua o seguinte elemento no arquivo de projeto:
 

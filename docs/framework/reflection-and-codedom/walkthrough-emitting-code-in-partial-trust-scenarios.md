@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585910"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690304"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Passo a passo: Emitindo o código em cenários de confiança parcial
 A emissão de reflexão usa a mesma API definida na confiança total ou parcial, porém alguns recursos exigem permissões especiais em código parcialmente confiável. Além disso, a emissão de reflexão tem um recurso, os métodos dinâmicos hospedados anonimamente, que é projetado para ser usado com confiança parcial e por assemblies transparentes de segurança.  
   
 > [!NOTE]
->  Antes de [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)], a emissão de código necessitava de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Essa permissão é incluída por padrão nos conjuntos de permissões denominados `FullTrust` e `Intranet`, mas não no conjunto de permissões `Internet`. Portanto, uma biblioteca poderia ser usada da confiança parcial somente se tivesse o atributo <xref:System.Security.SecurityCriticalAttribute> e também executasse um método <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tais bibliotecas exigem uma análise atenta da segurança, pois erros de código poderiam resultar em falhas de segurança. O [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] permite que o código seja emitido em cenários de confiança parcial sem emitir qualquer demanda de segurança, pois a geração de código não é uma operação inerentemente privilegiada. Ou seja, o código gerado não tem mais permissões que o assembly que o emite. Isso permite que bibliotecas que emitem código sejam transparentes de segurança e elimina a necessidade de declarar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, de modo que escrever uma biblioteca de segurança não exige uma análise minuciosa da segurança.  
+>  Antes do .NET Framework 3.5, a emissão de código necessitava de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Essa permissão é incluída por padrão nos conjuntos de permissões denominados `FullTrust` e `Intranet`, mas não no conjunto de permissões `Internet`. Portanto, uma biblioteca poderia ser usada da confiança parcial somente se tivesse o atributo <xref:System.Security.SecurityCriticalAttribute> e também executasse um método <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tais bibliotecas exigem uma análise atenta da segurança, pois erros de código poderiam resultar em falhas de segurança. O .NET Framework 3.5 permite que o código seja emitido em cenários de confiança parcial sem a emissão de nenhuma demanda de segurança, pois a geração de código não é uma operação inerentemente privilegiada. Ou seja, o código gerado não tem mais permissões que o assembly que o emite. Isso permite que bibliotecas que emitem código sejam transparentes de segurança e elimina a necessidade de declarar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, de modo que escrever uma biblioteca de segurança não exige uma análise minuciosa da segurança.  
   
  Esta explicação passo a passo ilustra as seguintes tarefas:  
   

@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e10682dbf5615f9d1ef345cf2c7eeeafa87ec28
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377982"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815952"
 ---
 # <a name="64-bit-applications"></a>Aplicativos de 64 bits
 Ao compilar um aplicativo, você pode especificar se ele deve ser executado em um sistema operacional Windows de 64 bits como um aplicativo nativo ou no WOW64 (Windows de 32 bits em Windows de 64 bits). O WOW64 é um ambiente de compatibilidade que permite que um aplicativo de 32 bits seja executado em um sistema de 64 bits. O WOW64 está incluído em todas as versões de 64 bits do sistema operacional Windows.  
   
 ## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Executando aplicativos de 32 bits vs. de 64 bits no Windows  
- Todos os aplicativos criados no .NET Framework 1.0 ou 1.1 são tratados como aplicativos de 32 bits em um sistema operacional de 64 bits e são sempre executados no WOW64 e no CLR (Common Language Runtime) de 32 bits. Os aplicativos de 32 bits que são criados no [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)] ou versões posteriores também são executados no WOW64 em sistemas de 64 bits.  
+ Todos os aplicativos criados no .NET Framework 1.0 ou 1.1 são tratados como aplicativos de 32 bits em um sistema operacional de 64 bits e são sempre executados no WOW64 e no CLR (Common Language Runtime) de 32 bits. Os aplicativos de 32 bits criados no .NET Framework 4 ou em versões posteriores também são executados no WOW64 em sistemas de 64 bits.  
   
  O Visual Studio instala a versão de 32 bits do CLR em um computador x86, e a versão de 32 bits e a versão de 64 bits apropriada do CLR em um computador Windows de 64 bits. (Como o Visual Studio é um aplicativo de 32 bits, quando ele é instalado em um sistema de 64 bits, ele é executado no WOW64.)  
   
 > [!NOTE]
->  Em razão do projeto da emulação do x86 e do subsistema do WOW64 para a família de processadores Itanium, os aplicativos são restritos à execução em um processador. Esses fatores reduzem o desempenho e escalabilidade de aplicativos do .NET Framework de 32 bits executados em sistemas baseados em Itanium. É recomendável usar o [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)], que inclui suporte nativo para sistemas baseados em Itanium de 64 bits, para aumento de desempenho e escalabilidade.  
+>  Em razão do projeto da emulação do x86 e do subsistema do WOW64 para a família de processadores Itanium, os aplicativos são restritos à execução em um processador. Esses fatores reduzem o desempenho e escalabilidade de aplicativos do .NET Framework de 32 bits executados em sistemas baseados em Itanium. É recomendável usar o .NET Framework 4, que inclui suporte nativo a sistemas baseados em Itanium de 64 bits, para aumento de desempenho e escalabilidade.  
   
  Por padrão, ao executar um aplicativo gerenciado de 64 bits em um sistema operacional Windows de 64 bits, você pode criar um objeto que não ultrapasse 2 GB. No entanto, no .NET Framework 4.5, você pode aumentar esse limite.  Para saber mais, confira o [\<elemento gcAllowVeryLargeObjects>](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
@@ -45,7 +45,7 @@ Ao compilar um aplicativo, você pode especificar se ele deve ser executado em u
   
 - Para saber mais sobre a versão de 64 bits do CLR em um computador Windows de 64 bits, confira [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=37079) (Central de Desenvolvedores do .NET Framework) no site do MSDN.  
   
-- Na documentação do [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)], confira [Programming Guide for 64-bit Windows](https://go.microsoft.com/fwlink/p/?LinkId=253512) (Guia de programação para Windows de 64 bits).  
+- Na documentação do SDK do Windows, confira [Programming Guide for 64-bit Windows](https://go.microsoft.com/fwlink/p/?LinkId=253512) (Guia de programação para Windows de 64 bits).  
   
 - Para saber mais sobre como baixar uma versão de 64 bits do CLR, confira [.NET Framework Developer Center Downloads](https://go.microsoft.com/fwlink/?LinkId=50953) (Downloads da Central de desenvolvedores do .NET Framework) no site do MSDN.  
   

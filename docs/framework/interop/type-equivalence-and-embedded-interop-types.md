@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9ec21a21ce3c81c2d29d2edf353a098489c9026
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 137aeaab4e63adbb81c0f3d90718def10f906e6a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219744"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489242"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Equivalência de tipo e tipos de interoperabilidade inseridos
 
-A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], o Common Language Runtime dá suporte à inserção de informações de tipo para tipos COM diretamente em assemblies gerenciados, em vez de exigir que os assemblies gerenciados obtenham informações de tipo para tipos COM de assemblies de interoperabilidade. Como as informações de tipo inserido incluem somente os tipos e os membros que são realmente usados por um assembly gerenciado, dois assemblies gerenciados podem ter exibições muito diferentes do mesmo tipo COM. Cada assembly gerenciado tem um objeto <xref:System.Type> diferente para representar sua exibição do tipo COM. O Common Language Runtime dá suporte à equivalência de tipo entre essas exibições diferentes para interfaces, estruturas, enumerações e representantes.
+A partir do .NET Framework 4, o Common Language Runtime dá suporte à inserção de informações de tipo de COM diretamente em assemblies gerenciados, em vez de exigir que estes obtenham informações de tipo de COM a partir de assemblies de interoperabilidade. Como as informações de tipo inserido incluem somente os tipos e os membros que são realmente usados por um assembly gerenciado, dois assemblies gerenciados podem ter exibições muito diferentes do mesmo tipo COM. Cada assembly gerenciado tem um objeto <xref:System.Type> diferente para representar sua exibição do tipo COM. O Common Language Runtime dá suporte à equivalência de tipo entre essas exibições diferentes para interfaces, estruturas, enumerações e representantes.
 
 Equivalência de tipo significa que um objeto COM que é passado de um assembly gerenciado para outro pode ser convertido no tipo gerenciado apropriado no assembly receptor.
 

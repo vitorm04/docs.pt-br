@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01c82f2867097b98b04727592cf72c29712075ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b553ec62cf493b94b87079cddd3ec3d1d60daf9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664540"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491003"
 ---
 # <a name="when-to-use-generic-collections"></a>Quando usar coleções genéricas
 Geralmente é recomendável usar coleções genéricas, porque você obtém a vantagem imediata da segurança de tipos sem precisar derivar de um tipo de coleção base e implementar membros específicos do tipo. Tipos de coleção genérica também geralmente executam melhor do que os tipos de coleção não genérica correspondentes (e melhor do que tipos que são derivados de tipos de coleção base não genérica) quando os elementos da coleção forem tipos de valor, pois com genéricos não é necessário colocar os elementos em caixa.  
   
- Para programas destinados à [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] ou posterior, você deve usar as classes de coleção genérica no namespace <xref:System.Collections.Concurrent> quando vários threads puderem adicionar ou remover itens da coleção simultaneamente.  
+ Para programas direcionados ao .NET Framework 4 ou posterior, você deve usar as classes de coleção genérica no namespace <xref:System.Collections.Concurrent> quando vários threads puderem adicionar ou remover itens da coleção simultaneamente.  
   
  Os seguintes tipos genéricos correspondem aos tipos de coleção existentes:  
   

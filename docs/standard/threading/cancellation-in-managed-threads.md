@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586367"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490779"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelamento em threads gerenciados
-A começar pelo [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], o .NET Framework usa um modelo unificado para cancelamento cooperativo de operações assíncronas ou síncronas de longa execução. Este modelo é baseado em um objeto leve chamado token de cancelamento. O objeto que invoca uma ou mais operações canceláveis, por exemplo criando novos tópicos ou tarefas, passa o token para cada operação. As operações individuais podem, por sua vez, passar cópias do token para outras operações. Posteriormente, o objeto que criou o token pode usá-lo para solicitar que as operações parem o que estão fazendo. Somente o objeto solicitante pode emitir a solicitação de cancelamento, e cada ouvinte é responsável por perceber a solicitação e respondê-la de forma apropriada e oportuna.  
+A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para cancelamento cooperativo de operações assíncronas ou síncronas de longa execução. Este modelo é baseado em um objeto leve chamado token de cancelamento. O objeto que invoca uma ou mais operações canceláveis, por exemplo criando novos tópicos ou tarefas, passa o token para cada operação. As operações individuais podem, por sua vez, passar cópias do token para outras operações. Posteriormente, o objeto que criou o token pode usá-lo para solicitar que as operações parem o que estão fazendo. Somente o objeto solicitante pode emitir a solicitação de cancelamento, e cada ouvinte é responsável por perceber a solicitação e respondê-la de forma apropriada e oportuna.  
   
  O padrão geral para implementar o modelo de cancelamento cooperativo é:  
   
@@ -122,7 +122,7 @@ A começar pelo [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], 
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- No novo código que tem como alvo o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> e <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> oferecem suporte à nova estrutura de cancelamento em seus métodos `Wait`. Você pode passar o <xref:System.Threading.CancellationToken> para o método, e quando o cancelamento é solicitado, o evento é acionado e lança um <xref:System.OperationCanceledException>.  
+ No novo código que tem como alvo o .NET Framework 4, <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> e <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> dão suporte à nova estrutura de cancelamento em seus métodos `Wait`. Você pode passar o <xref:System.Threading.CancellationToken> para o método, e quando o cancelamento é solicitado, o evento é acionado e lança um <xref:System.OperationCanceledException>.  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: a47946ab8eb26045e641c44642bfe7a026269f3d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960364"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486334"
 ---
 # <a name="managed-threading-basics"></a>Noções básicas de threading gerenciado
 
@@ -24,7 +24,7 @@ Os cinco primeiros tópicos desta seção destinam-se a ajudá-lo a determinar q
  O restante dos tópicos desta seção abordam tópicos avançados, incluindo a interação de threading gerenciado com o sistema operacional Windows.  
   
 > [!NOTE]
->  No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a biblioteca de paralelismo de tarefas e o PLINQ fornecem APIs para o paralelismo de tarefa e dados em programas multithreading. Para obter mais informações, consulte [Programação paralela](../../../docs/standard/parallel-programming/index.md).  
+>  No .NET Framework 4, a biblioteca de paralelismo de tarefas e o PLINQ fornecem APIs para o paralelismo de tarefa e dados em programas multithreading. Para obter mais informações, consulte [Programação paralela](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>Nesta seção
 

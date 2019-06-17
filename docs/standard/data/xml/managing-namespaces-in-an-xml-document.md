@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b0ace73d81783852242a52bec006b0ad2edaadd
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 83ea398f18ab02840ea811c74a6053dba11a3baa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836130"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490895"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gerenciando namespaces em um documento XML
 Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs personalizado e predefinido. Para criar essas associações, você define prefixos para URIs de namespace e usa os prefixos para qualificar nomes de atributo e elemento nos dados XML. Namespaces impedem conflitos de nomes de elementos e atributos e permitem que elementos e atributos de mesmo nome sejam tratados e validados de maneira diferente.  
@@ -63,7 +63,7 @@ Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs p
  O gerenciador de namespace não executa nenhuma validação nos namespaces, mas presume que namespaces e prefixos já tenham sido verificados e estejam de acordo com a especificação [Namespaces do W3C](https://www.w3.org/TR/REC-xml-names/).  
   
 > [!NOTE]
-> [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) não usam <xref:System.Xml.XmlNamespaceManager> para gerenciar namespaces. Confira [Trabalhando com namespaces de XML(C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) e [Trabalhando com namespaces de XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) na documentação do LINQ para obter informações sobre como gerenciar namespaces ao usar o LINQ to XML.  
+> LINQ TO XML no [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) e [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) não usam <xref:System.Xml.XmlNamespaceManager> para gerenciar namespaces. Confira [Trabalhando com namespaces de XML(C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) e [Trabalhando com namespaces de XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) na documentação do LINQ para obter informações sobre como gerenciar namespaces ao usar o LINQ to XML.  
   
  Aqui estão algumas das tarefas de gerenciamento e de pesquisa podem ser executadas com a classe <xref:System.Xml.XmlNamespaceManager>. Para saber mais e exemplos, siga os links para a página de referência para cada método ou propriedade.  
   

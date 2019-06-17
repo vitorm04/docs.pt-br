@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834121"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491101"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadeias de caracteres de formato TimeSpan padrão
 <a name="Top"></a> Uma cadeia de caracteres de formato padrão <xref:System.TimeSpan> usa um único especificador de formato para definir a representação de texto de um valor <xref:System.TimeSpan> que resulta de uma operação de formatação. Qualquer sequência de formato que contenha mais de um caractere, incluindo espaço em branco, é interpretada como uma sequência de formato <xref:System.TimeSpan> personalizada. Para saber mais, confira [Cadeias de caracteres de formato TimeSpan personalizadas](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "58834121"
 |*ss*|O número de segundos, que varia de "00" a "59".|  
 |*fffffff*|A parte de fração opcional de um segundo.  Seu valor pode variar de "0000001" (um pulso ou um décimo milionésimo de segundo) até "9999999" (9.999.999 dez milionésimos de segundo ou um segundo menos um pulso).|  
   
- Ao contrário dos especificadores de formato de "g" e "G", o especificador de formato "c" não é sensível à cultura. Produz a representação de sequência de um valor <xref:System.TimeSpan> que é invariável e é comum a todas as versões anteriores do .NET Framework antes da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. "c"é a cadeia de caracteres de formato <xref:System.TimeSpan> padrão, o método <xref:System.TimeSpan.ToString?displayProperty=nameWithType> formata um valor de intervalo de tempo usando a sequência de formato "c".  
+ Ao contrário dos especificadores de formato de "g" e "G", o especificador de formato "c" não é sensível à cultura. Ele produz a representação de cadeia de caracteres de um valor <xref:System.TimeSpan> que é invariável e é comum a todas as versões anteriores do .NET Framework, antes do .NET Framework 4. "c"é a cadeia de caracteres de formato <xref:System.TimeSpan> padrão, o método <xref:System.TimeSpan.ToString?displayProperty=nameWithType> formata um valor de intervalo de tempo usando a sequência de formato "c".  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> também oferece suporte às sequências de formato padrão "t" e "T", que são idênticas em comportamento à sequência de formato padrão "c".  
