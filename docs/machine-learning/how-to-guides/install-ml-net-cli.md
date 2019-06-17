@@ -3,12 +3,12 @@ title: Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.N
 description: Visão geral e instalação da ferramenta da CLI (Interface de Linha de Comando) do ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557865"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832929"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.NET
 
@@ -34,7 +34,7 @@ A CLI do ML.NET é instalada como qualquer outra Ferramenta Global do dotnet. Vo
 O exemplo a seguir mostra como instalar a CLI do ML.NET no local de feed do NuGet padrão:
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 Se a ferramenta não puder ser instalada (ou seja, não estiver disponível no feed do NuGet padrão), mensagens de erro serão exibidas. Verifique se os feeds esperados estão sendo verificados.
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 Você pode confirmar que a instalação foi bem-sucedida digitando o seguinte comando:
 
 ```console
-> mlnet
+mlnet
 ```
 
 Você deve ver a ajuda para os comandos disponíveis para a ferramenta mlnet como o comando 'auto-train'.
@@ -59,13 +59,13 @@ Você deve ver a ajuda para os comandos disponíveis para a ferramenta mlnet com
 Se estiver tentando instalar uma versão de pré-lançamento ou uma versão específica da ferramenta, especifique a [estrutura](../../standard/frameworks.md) usando o seguinte formato:
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Você também poderá verificar se o pacote está instalado corretamente digitando o seguinte comando:
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>Desinstalar o pacote da CLI
@@ -73,7 +73,7 @@ Você também poderá verificar se o pacote está instalado corretamente digitan
 Digite o seguinte comando para desinstalar o pacote do seu computador local:
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>Atualizar o pacote da CLI
@@ -81,7 +81,7 @@ Digite o seguinte comando para desinstalar o pacote do seu computador local:
 Digite o seguinte comando para atualizar o pacote do seu computador local:
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>Configurar sugestões da CLI (preenchimento automático baseado em guia)
@@ -101,7 +101,7 @@ No computador em que você deseja habilitar o preenchimento, você precisará fa
 1. Instalar a ferramenta global `dotnet-suggest` executando o seguinte comando:
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. Adicionar o script de shim apropriado ao seu perfil de shell. Talvez você precise criar um arquivo de perfil de shell. O script de shim vai encaminhar solicitações de conclusão do seu shell para a ferramenta `dotnet-suggest`, que delega ao aplicativo baseado em `System.CommandLine` apropriado.
@@ -111,7 +111,7 @@ No computador em que você deseja habilitar o preenchimento, você precisará fa
     * Para o PowerShell, adicione o conteúdo do [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) a seu perfil do PowerShell. Você pode encontrar o caminho esperado para seu perfil do PowerShell executando o comando a seguir em seu console:
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 (Para outros shells, [procure](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) ou abra um [problema](https://github.com/dotnet/System.CommandLine/issues).)
