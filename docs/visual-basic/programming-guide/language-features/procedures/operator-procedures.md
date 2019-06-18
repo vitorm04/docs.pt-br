@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: cafc742474d6f7b46fbfb73374a59a350812a2a5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d62c3480db56b5cbf22c1f3f6ff59ab220a48b09
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639094"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152045"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedimentos do operador (Visual Basic)
 Um procedimento de operador é uma série de instruções do Visual Basic que definem o comportamento de um operador padrão (como `*`, `<>`, ou `And`) em uma classe ou estrutura que você definiu. Isso também é chamado *sobrecarga de operador*.  
@@ -43,13 +43,15 @@ Um procedimento de operador é uma série de instruções do Visual Basic que de
   
 ## <a name="declaration-syntax"></a>Sintaxe da Declaração  
  A sintaxe para declarar um procedimento de operador é da seguinte maneira:  
+ 
+ ```vb 
+ Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  operand2 ]) As datatype  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol*  `(` *operand1*  `[,`  *operand2* `]) As`  *datatype*  
+ ' Statements of the operator procedure.
   
- `' Statements of the operator procedure.`  
-  
- `End Operator`  
-  
+ End Operator
+ ```
+ 
  Você usa o `Widening` ou `Narrowing` palavra-chave apenas em um operador de conversão de tipo. O símbolo do operador é sempre [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para um operador de conversão de tipo.  
   
  Você declara dois operandos para definir um operador binário, e declara um operando para definir um operador unário, incluindo um operador de conversão de tipo. Todos os operandos devem ser declarados `ByVal`.  

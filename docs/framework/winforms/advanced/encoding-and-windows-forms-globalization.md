@@ -19,12 +19,12 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 3a9d891fe898cf691a5f0d36e6360c2a73fb199d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8e56642b6325454d2d55cd3a3d3a83d201c2eb5
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004517"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67151990"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Codificação e globalização de formulários do Windows Forms
 Aplicativos dos Windows Forms são totalmente habilitados para Unicode, o que significa que cada caractere é representado por um número exclusivo, independente da plataforma, programa ou linguagem. Para obter mais informações sobre Unicode, consulte o [site da Unicode Consortium](https://www.unicode.org).  
@@ -32,7 +32,7 @@ Aplicativos dos Windows Forms são totalmente habilitados para Unicode, o que si
 ## <a name="benefits-of-unicode"></a>Benefícios do Unicode  
  Os benefícios de formulários habilitados para Unicode incluem a capacidade de trabalhar com scripts voltados apenas para Unicode, como Hindi. Além disso, é possível usar vários idiomas em um único formulário. Em Unicode, todos os caracteres têm dois bytes, portanto nenhum esforço especial é necessário para representar caracteres de byte duplo. Também é possível escrever um único conjunto de códigos que funcionará em todas as plataformas. Essa é uma alteração de versões anteriores do Visual Basic, no qual você precisava escrever código diferente para diferentes plataformas, como Windows NT e [!INCLUDE[win98](../../../../includes/win98-md.md)].  
   
- No entanto, certos controles não dão suporte a Unicode no [!INCLUDE[win98](../../../../includes/win98-md.md)] e Windows Millennium Edition. Esses controles, todos com herança do controle comum, processarão dados com as páginas de código do Windows, como [!INCLUDE[vcpransi](../../../../includes/vcpransi-md.md)]. Esses controles são: <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.DateTimePicker>, <xref:System.Windows.Forms.MonthCalendar>, <xref:System.Windows.Forms.TrackBar>, <xref:System.Windows.Forms.ProgressBar>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolBar>, e <xref:System.Windows.Forms.StatusBar>. Como resultado, não é possível exibir dados Unicode nesses controles nas plataformas listadas. Por exemplo, não é possível exibir caracteres em japonês em um em sistema operacional [!INCLUDE[win98](../../../../includes/win98-md.md)] em inglês.  
+ No entanto, certos controles não dão suporte a Unicode no [!INCLUDE[win98](../../../../includes/win98-md.md)] e Windows Millennium Edition. Esses controles, todos que herdam do controle comum, processarão dados com as páginas de código do Windows, como ANSI. Esses controles são: <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.DateTimePicker>, <xref:System.Windows.Forms.MonthCalendar>, <xref:System.Windows.Forms.TrackBar>, <xref:System.Windows.Forms.ProgressBar>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolBar>, e <xref:System.Windows.Forms.StatusBar>. Como resultado, não é possível exibir dados Unicode nesses controles nas plataformas listadas. Por exemplo, não é possível exibir caracteres em japonês em um em sistema operacional [!INCLUDE[win98](../../../../includes/win98-md.md)] em inglês.  
   
  Para alternativas de reconhecimento de Unicode para o <xref:System.Windows.Forms.ToolBar> e <xref:System.Windows.Forms.StatusBar> controles, use o <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.StatusStrip> controles, que substituem esses controles mais antigos. Para manter uma aparência semelhante entre elementos visuais em seu aplicativo, use o <xref:System.Windows.Forms.MenuStrip> controle para renderizar menus em vez de <xref:System.Windows.Forms.MainMenu>. Como o <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.StatusStrip>, <xref:System.Windows.Forms.MenuStrip> também pode processar e exibir os caracteres Unicode.  
   
