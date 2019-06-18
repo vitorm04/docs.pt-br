@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d035dd6611909c9a6b67662d17f80057dc33386
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004465"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169960"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Como: adicionar dados à área de transferência
 O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode usar para interagir com o recurso de área de transferência do sistema operacional Windows. Muitos aplicativos usam a Área de Transferência como um repositório temporário para dados. Por exemplo, processadores globais usam a Área de Transferência durante operações de cortar e colar. A Área de Transferência também é útil para transferir dados de um aplicativo para outro.  
@@ -24,7 +24,7 @@ O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode u
   
  Para adicionar dados à área de transferência em um ou vários formatos, use o <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> método. Você pode passar qualquer objeto para esse método, mas, para adicionar dados em vários formatos, é preciso primeiro adicionar os dados a um objeto separado projetado para funcionar com vários formatos. Normalmente, você irá adicionar seus dados para um <xref:System.Windows.Forms.DataObject>, mas você pode usar qualquer tipo que implementa o <xref:System.Windows.Forms.IDataObject> interface.  
   
- No [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], você pode adicionar dados diretamente à Área de Transferência usando novos métodos projetados para facilitar as tarefas básicas da Área de Transferência. Use esses métodos quando você trabalhar com os dados em um único formato comum, como texto.  
+ No .NET Framework 2.0, você pode adicionar dados diretamente para a área de transferência usando novos métodos projetados para facilitar tarefas básicas da área de transferência. Use esses métodos quando você trabalhar com os dados em um único formato comum, como texto.  
   
 > [!NOTE]
 >  Todos os aplicativos baseados em Windows compartilham a Área de Transferência. Portanto, os conteúdos estão sujeito a alterações quando você muda para outro aplicativo.  
@@ -35,14 +35,14 @@ O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode u
   
 ### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Para adicionar dados à Área de Transferência em um único formato comum  
   
-1. Use o <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, ou <xref:System.Windows.Forms.Clipboard.SetText%2A> método. Esses métodos estão disponíveis somente em [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Use o <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, ou <xref:System.Windows.Forms.Clipboard.SetText%2A> método. Esses métodos estão disponíveis apenas no .NET Framework 2.0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Para adicionar dados à Área de Transferência em um formato personalizado  
   
-1. Use o <xref:System.Windows.Forms.Clipboard.SetData%2A> método com um nome de formato personalizado. Esse método está disponível apenas no [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Use o <xref:System.Windows.Forms.Clipboard.SetData%2A> método com um nome de formato personalizado. Esse método está disponível apenas no .NET Framework 2.0.  
   
      Você também pode usar nomes de formato predefinidos com o <xref:System.Windows.Forms.Clipboard.SetData%2A> método. Para obter mais informações, consulte <xref:System.Windows.Forms.DataFormats>.  
   

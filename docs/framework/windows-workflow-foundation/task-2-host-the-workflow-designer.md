@@ -2,17 +2,17 @@
 title: 'Tarefa 2: Hospedar o Designer de Fluxo de Trabalho'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: cce90c6b7f5edfaf960415f0a5d0787f8eee526b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 553a02732e08fa148ffdee250df0305deb8e63b7
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665293"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169992"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarefa 2: Hospedar o Designer de Fluxo de Trabalho
 Este tópico descreve o procedimento para hospedar uma instância das [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] em um aplicativo Windows Presentation Foundation (WPF).  
   
- O procedimento configura a **grade** controle que contém o designer cria programaticamente uma instância das <xref:System.Activities.Presentation.WorkflowDesigner> que contém um padrão <xref:System.Activities.Statements.Sequence> atividade, registra metadados de designer para fornecer suporte de Designer para atividades internas tudo e hosts a [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] no [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] aplicativo.  
+ O procedimento configura a **grade** controle que contém o designer cria programaticamente uma instância das <xref:System.Activities.Presentation.WorkflowDesigner> que contém um padrão <xref:System.Activities.Statements.Sequence> atividade, registra metadados de designer para fornecer suporte de Designer para atividades internas tudo e hosts de [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] no aplicativo do WPF.  
   
 ### <a name="to-host-the-workflow-designer"></a>Para hospedar o designer de fluxo de trabalho  
   
@@ -22,7 +22,7 @@ Este tópico descreve o procedimento para hospedar uma instância das [!INCLUDE[
   
 3. Defina o nome da grade selecionando o **grade** painel no designer (clique na caixa dentro a **MainWindow**) e configuração o **nome** propriedade na parte superior do  **Propriedades** janela a "grid1".  
   
-4. No **propriedades** janela, clique no botão de reticências (**...** ) ao lado de `ColumnDefinitions` para abrir o **Editor de coleção** caixa de diálogo.  
+4. No **propriedades** janela, clique no botão de reticências ( **...** ) ao lado de `ColumnDefinitions` para abrir o **Editor de coleção** caixa de diálogo.  
   
 5. No **Collection Editor** caixa de diálogo, clique no **Add** botão três vezes para inserir três colunas no layout. A primeira coluna conterá o **caixa de ferramentas**, a segunda coluna hospedará o [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], e a terceira coluna será usada para a inspeção de propriedade.  
   

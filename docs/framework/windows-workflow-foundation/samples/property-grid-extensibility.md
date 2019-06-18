@@ -2,12 +2,12 @@
 title: Extensibilidade da grade de propriedade - exemplo WF
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: d22b6e21fbf2d5deb4d47fce683553378e990000
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1cc8b8b34d6236e263f95439da84994e35d627ed
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637675"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170359"
 ---
 # <a name="property-grid-extensibility"></a>Extensibilidade da grade de propriedade
 
@@ -69,7 +69,7 @@ O exemplo do editor de diálogo demonstra o seguinte:
 
 1. Cria um tipo deriva de <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.
 
-2. Defina o valor de <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> no construtor com um modelo de dados de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] . Isso pode ser criado em XAML, mas nesse exemplo, este é criado em código.
+2. Conjuntos de <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> valor no construtor com um modelo de dados do WPF. Isso pode ser criado em XAML, mas nesse exemplo, este é criado em código.
 
 3. O modelo de dados tem um contexto de dados de <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> de item processado na grade de propriedade. No código a seguir, ou associação à propriedade de `Value` . É importante incluir também <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> para fornecer o botão que aumenta a caixa de diálogo em FilePickerEditor.cs.
 

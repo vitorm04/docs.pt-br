@@ -2,12 +2,12 @@
 title: 'Como: criar um designer personalizado de atividades'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945646"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170665"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Como: criar um designer personalizado de atividades
 
@@ -17,7 +17,7 @@ Designers personalizados de atividade normalmente herdam de <xref:System.Activit
 
 <xref:System.Activities.Presentation.ActivityDesigner> usa dois controles auxiliar, <xref:System.Activities.Presentation.WorkflowItemPresenter> e <xref:System.Activities.Presentation.WorkflowItemsPresenter> para tornar mais fácil desenvolver designer personalizadas de atividade. Manipular a funcionalidade comum como arrastar e soltar de elementos filho, de exclusão, de seleção, e a adição desses elementos filho. O <xref:System.Activities.Presentation.WorkflowItemPresenter> permite um único filho de elemento de interface do usuário dentro, fornecendo o "soltar", ele enquanto o <xref:System.Activities.Presentation.WorkflowItemsPresenter> pode fornecer suporte a vários elementos de interface do usuário, incluindo a funcionalidade adicional como ordenar, mover, excluir e adicionar elementos filho.
 
-A outra parte fundamental de artigo que precisa de realce na implementação de um designer personalizado de atividade refere-se à maneira como que as edições visuais são associadas usando os dados de [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] que se associam à instância armazenado na memória que nós estamos edição no designer. Isso é feito pela árvore modelo de item, que também é responsável para ativar a notificação de alteração e o rastreamento de eventos como alterações nos estados.
+A outra parte fundamental da história que precisa de realce na implementação de um designer personalizado de atividade diz respeito a maneira na qual as edições visuais são associadas usando vinculação de dados do WPF para a instância armazenada na memória do que nós estamos edição no designer. Isso é feito pela árvore modelo de item, que também é responsável para ativar a notificação de alteração e o rastreamento de eventos como alterações nos estados.
 
 Este tópico descreve dois procedimentos.
 
