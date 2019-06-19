@@ -1,53 +1,53 @@
 ---
 title: Monitorar serviços de aplicativos em contêineres
-description: Saiba mais alguns aspectos fundamentais do monitoramento de arquiteturas de contêiner
+description: Saiba alguns aspectos fundamentais do monitoramento de arquiteturas de contêiner
 ms.date: 02/15/2019
 ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641214"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorar serviços de aplicativos em contêineres
 
-É essencial para aplicativos dividida em vários contêineres e microsserviços ter uma maneira de monitorar e analisar o comportamento de todo o aplicativo.
+É essencial para aplicativos divididos em vários contêineres e microsserviços ter uma maneira de monitorar e analisar o comportamento do aplicativo como um todo.
 
 ## <a name="azure-monitor"></a>Azure Monitor
 
-[O Azure Monitor](https://azure.microsoft.com/services/monitor/) é um serviço de análise extensível que monitora seu aplicativo ativo. Ele ajuda a detectar e diagnosticar problemas de desempenho e entender o que os usuários realmente fazem com seu aplicativo. Ele é projetado para desenvolvedores, com a intenção de ajudá-lo a melhorar continuamente o desempenho e a usabilidade de seus aplicativos ou serviços. O Azure Monitor funciona com autônomo e de web/serviços aplicativos em uma ampla variedade de plataformas, como .NET, Java, Node. js e muitas outras plataformas, hospedados localmente ou na nuvem.
+O [Azure Monitor](https://azure.microsoft.com/services/monitor/) é um serviço de análise extensível que monitora seu aplicativo online. Com ele, você pode detectar e diagnosticar problemas de desempenho e entender o que os usuários realmente fazem com seu aplicativo. É projetado para desenvolvedores com a intenção de ajudar você a melhorar continuamente o desempenho e a usabilidade de seus aplicativos ou serviços. O Azure Monitor funciona com serviços e aplicativos Web autônomos em uma ampla variedade de plataforma, como .NET, Java, Node.js e diversas outras hospedadas localmente ou na nuvem.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Visão geral do Monitor do Azure** \
+- **Visão geral do Azure Monitor** \
   <https://docs.microsoft.com/azure/azure-monitor/overview>
 
 - **O que é o Application Insights?** \
   <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
-- **O que é monitorar métricas do Azure?** \
+- **O que são as Métricas do Azure Monitor?** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics>
 
 - **Solução de monitoramento de contêiner no Azure Monitor** \
   <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
-## <a name="security-and-backup-services"></a>Serviços de backup e de segurança
+## <a name="security-and-backup-services"></a>Serviços de backup e segurança
 
-Há muitas tarefas de suporte com muitos detalhes que você precisa lidar com para garantir que seus aplicativos e infraestrutura estão em condições de entalhe superior para dar suporte às necessidades de negócios e a situação fica mais complicada no realm de microsserviços, portanto, você precisa de uma maneira de tem exibições detalhadas e de alto nível quando você precisa realizar ação.
+Há muitas tarefas de suporte com vários detalhes que você precisa abordar para garantir que os aplicativos e a infraestrutura estejam nas melhores condições para apoiar as necessidades de negócios. A situação fica mais complicada no caso dos microsserviços, portanto, você precisa de uma forma de obter exibições detalhadas e de alto nível quando precisar tomar medidas.
 
-O Azure tem as ferramentas para gerenciar e fornecer uma exibição unificada de quatro aspectos críticos dos recursos de sua nuvem e locais:
+O Azure tem as ferramentas para gerenciar e oferecer uma exibição unificada de quatro aspectos fundamentais dos recursos locais e em nuvem:
 
-- **Segurança**. Com o [Central de segurança do Azure](https://azure.microsoft.com/services/security-center/).
-  - Obtenha visibilidade e controle sobre a segurança de suas máquinas virtuais, aplicativos e cargas de trabalho completos.
-  - Centralizar o gerenciamento de suas políticas de segurança e integre ferramentas e processos existentes.
-  - Detecte ameaças reais usando análise avançada.
+- **Segurança**. Com a [Central de Segurança do Azure](https://azure.microsoft.com/services/security-center/).
+  - Tenha visibilidade e controle da segurança das suas máquinas virtuais, seus aplicativos e suas cargas de trabalho.
+  - Centralize o gerenciamento das suas políticas de segurança e integre os processos e as ferramentas existentes.
+  - Detecte ameaças reais com análise avançada.
 
-- **Backup**. Com o [o Backup do Azure](https://azure.microsoft.com/services/backup/).
-  - Evite interrupções dos negócios onerosas, cumpra metas de conformidade e proteger seus dados contra ransomware e erros humanos.
+- **Backup**. Com o [Backup do Azure](https://azure.microsoft.com/services/backup/).
+  - Evite interrupções onerosas nos negócios, cumpra as metas de conformidade e proteja seus dados contra ransomware e erros humanos.
   - Mantenha seus dados de backup criptografados em trânsito e em repouso.
-  - Verifique se o acesso com base na autenticação multifator para evitar uso não autorizado.
+  - Garanta acesso com base na autenticação multifator para evitar o uso não autorizado.
 
-- **Recursos locais**. Com o [uma nuvem híbrida realmente consistente](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
+- **Recursos locais**. Com [uma nuvem híbrida realmente consistente](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
 
 >[!div class="step-by-step"]
 >[Anterior](manage-production-docker-environments.md)

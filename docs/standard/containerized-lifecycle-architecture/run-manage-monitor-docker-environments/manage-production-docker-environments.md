@@ -1,44 +1,44 @@
 ---
 title: Gerenciar ambientes de produção do Docker
-description: Obtenha a conhecer os principais pontos para gerenciar um ambiente de produção com base em contêiner.
+description: Saiba os principais pontos do gerenciamento de um ambiente de produção baseado em contêiner.
 ms.date: 02/15/2019
 ms.openlocfilehash: 7d10f670745f8bac1084b8c33c5acde67bac6229
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641066"
 ---
 # <a name="manage-production-docker-environments"></a>Gerenciar ambientes de produção do Docker
 
-Gerenciamento de cluster e a orquestração é o processo de controle de um grupo de hosts. Isso pode envolver a adição e remoção de hosts do cluster, obtendo informações sobre o estado atual de hosts e contêineres e iniciar e parar processos. Orquestração e gerenciamento de cluster estão intimamente vinculados ao agendamento porque o Agendador deve ter acesso a cada host no cluster para agendar serviços. Por esse motivo, a mesma ferramenta geralmente é usada para as duas finalidades.
+O gerenciamento e a orquestração de clusters é o processo de controlar um grupo de hosts. Isso pode envolver a adição e a remoção de hosts de um cluster, obter informações sobre o estado atual dos hosts e os contêineres e iniciar e interromper processos. O gerenciamento e a orquestração de clusters estão estreitamente vinculados ao agendamento, porque o agendador precisa ter acesso a cada host no cluster para agendar serviços. Por esse motivo, a mesma ferramenta é geralmente usada para ambas as finalidades.
 
-## <a name="container-service-and-management-tools"></a>Ferramentas de gerenciamento e o serviço de contêiner
+## <a name="container-service-and-management-tools"></a>Serviço de Contêiner e ferramentas de gerenciamento
 
-O serviço de contêiner fornece implantação rápida de soluções de clustering e a orquestração de contêiner de código-fonte aberto populares. Ele usa imagens do Docker para garantir que seus contêineres de aplicativo sejam totalmente portáteis. Usando o serviço de contêiner, você pode implantar o DC/OS (com Mesosphere e Apache Mesos) e clusters do Docker Swarm com modelos do Azure Resource Manager ou o portal do Azure para garantir que você possa dimensionar esses aplicativos para milhares — até mesmo dezenas de milhares — de contêineres.
+O Serviço de Contêiner fornece implantação rápida de soluções populares de orquestração e clustering de contêiner open-source. Ele utiliza imagens do Docker para garantir que os contêineres de aplicativo sejam totalmente portáteis. Com o Serviço de Contêiner, é possível implantar DC/OS (desenvolvido pela Mesosphere e o Apache Mesos) e clusters do Docker Swarm com modelos do Azure Resource Manager ou o portal do Azure para garantir que esses aplicativos possam ser dimensionados para milhares – até mesmo dezenas de milhares – de contêineres.
 
-Você implanta esses clusters usando conjuntos de dimensionamento de máquina Virtual do Azure e tiram proveito das ofertas de rede e armazenamento do Azure. Para acessar o serviço de contêiner, você precisa de uma assinatura do Azure. Com o serviço de contêiner, você pode aproveitar os recursos de nível empresarial do Azure e ainda manter a portabilidade do aplicativo, inclusive nas camadas de orquestração.
+Você implanta esses clusters usando Conjuntos de Escala de Máquina Virtual do Azure e tiram proveito das ofertas de rede e armazenamento do Azure. Para acessar o Serviço de Contêiner, você precisa de uma assinatura do Azure. O Serviço de Contêiner permite aproveitar os recursos empresariais do Azure e manter a portabilidade do aplicativo, até mesmo nas camadas de orquestração.
 
-Tabela 6-1 lista as ferramentas de gerenciamento comuns relacionadas à sua plataforma clustering, agendadores e orquestradores.
+A Tabela 6-1 lista as ferramentas de gerenciamento comuns relacionadas aos seus orquestradores, agendadores e à plataforma de clustering.
 
-**Tabela 6-1**. Ferramentas de gerenciamento do docker
+**Tabela 6-1**. Ferramentas de gerenciamento do Docker
 
 | Ferramentas de gerenciamento | Descrição | Orquestradores relacionados |
 |------------------|-------------|-----------------------|
-| [O Azure Monitor para contêineres](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Ferramenta de gerenciamento dedicada do Azure de Kubernetes | Serviços de Kubernetes do Azure (AKS) |
-| [Interface do usuário Web Kubernetes (dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Ferramenta de gerenciamento do Kubernetes, pode monitorar e gerenciar o cluster local do Kubernetes | AKS (Serviço de Kubernetes do Azure)<br/>Kubernetes local |
-| [Portal do Azure para o Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Versão on-line e da área de trabalho para gerenciar clusters do Service Fabric, no Azure, no local, no desenvolvimento local e outras nuvens | Azure Service Fabric |
-| [Contêiner de monitoramento (Monitor do Azure)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Gerenciamento de contêiner geral y solução de monitoramento. Pode gerenciar clusters de Kubernetes por meio [do Azure Monitor para contêineres](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>AKS (Serviço de Kubernetes do Azure)<br/>Mesosphere DC/SO e outros. |
+| [Azure Monitor para Contêineres](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Ferramenta de gerenciamento do Kubernetes dedicada ao Azure | AKS (Serviços do Kubernetes do Azure) |
+| [Interface do usuário da Web do Kubernetes (painel)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | A ferramenta de gerenciamento do Kubernetes pode monitorar e gerenciar o cluster local do Kubernetes | AKS (Serviço de Kubernetes do Azure)<br/>Kubernetes local |
+| [Portal do Azure para o Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Versão online e para área de trabalho para gerenciar clusters do Service Fabric no Azure, localmente, no desenvolvimento local e em outras nuvens | Azure Service Fabric |
+| [Monitoramento de contêiner (Azure Monitor)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Gerenciamento geral de contêiner e solução de monitoramento. Pode gerenciar clusters do Kubernetes por meio do [Azure Monitor para Contêineres](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>AKS (Serviço de Kubernetes do Azure)<br/>DC/OS do Mesosphere e outros. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
-Outra opção para gerenciamento e implantação de cluster é o Azure Service Fabric. [O Service Fabric](https://azure.microsoft.com/services/service-fabric/) é uma plataforma de microsserviços da Microsoft que inclui a orquestração de contêiner, bem como desenvolvedor de modelos para criar aplicativos altamente escalonáveis microsserviços de programação. Service Fabric dá suporte ao Docker em contêineres do Linux e Windows e podem ser executados em servidores Windows e Linux.
+Outra opção para gerenciamento e implantação de cluster é o Azure Service Fabric. O [Service Fabric](https://azure.microsoft.com/services/service-fabric/) é uma plataforma de microsserviços da Microsoft que conta com orquestração de contêineres e modelos de programação para desenvolvedores para criar aplicativos de microsserviço altamente escalonáveis. O Service Fabric é compatível com os contêineres do Docker no Linux e no Windows e pode ser executado em servidores de ambos os sistemas operacionais.
 
-A seguir está as ferramentas de gerenciamento do Service Fabric:
+Confira as ferramentas de gerenciamento do Service Fabric:
 
-- [Portal do Azure para o Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) operações relacionadas ao cluster (criar/atualizar/excluir) um cluster ou configurar sua infra-estrutura (máquinas virtuais, balanceador de carga, rede, etc.)
+- [Portal do Azure para Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) para operações relacionadas a clusters (criar/atualizar/excluir) ou configuração de infraestrutura (VMs, balanceador de carga, rede etc.)
 
-- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) é especializada IU Web da área de trabalho ferramenta de várias plataformas que fornece insights e certas operações no cluster do Service Fabric, do ponto de vista de nós/VMs e de aplicativos e serviços de ponto de vista.
+- O [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) é uma ferramenta multiplataforma especializada para interface do usuário da Web e área de trabalho que fornece insights e determinadas operações no cluster do Service Fabric, do ponto de vista dos nós/VMs, do aplicativo e dos serviços.
 
 >[!div class="step-by-step"]
 >[Anterior](run-microservices-based-applications-in-production.md)

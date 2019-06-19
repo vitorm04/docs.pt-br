@@ -1,35 +1,35 @@
 ---
 title: Executar aplicativos compostos e microsserviços em ambientes de produção
-description: Conheça os principais componentes para executar aplicativos baseados em contêiner na produção
+description: Conheça os principais componentes para executar aplicativos baseados em contêiner em produção
 ms.date: 02/15/2019
 ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644974"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Executar aplicativos compostos e microsserviços em ambientes de produção
 
-Aplicativos compostos por vários microsserviços precisam ser implantados em clusters do orchestrator para simplificar a complexidade de implantação e torná-lo viável de um ponto de vista de TI. Sem um cluster do orquestrador, seria difícil de implantar e dimensionar um aplicativo de microsserviços complexos.
+Aplicativos compostos por vários microsserviços precisam ser implantados em clusters do orquestrador para simplificar a complexidade da implantação e torná-la viável do ponto de vista de TI. Sem um cluster orquestrador, seria difícil implantar e expandir um aplicativo de microsserviço complexo.
 
-## <a name="introduction-to-orchestrators-schedulers-and-container-clusters"></a>Introdução aos clusters de contêiner, agendadores e orquestradores
+## <a name="introduction-to-orchestrators-schedulers-and-container-clusters"></a>Introdução a clusters de contêiner, agendadores e orquestradores
 
-Anteriormente, este livro eletrônico *clusters* e *agendadores* foram introduzidos como parte da discussão sobre arquitetura de software e desenvolvimento. Kubernetes e Service Fabric são exemplos de clusters do Docker. Ambos esses orquestradores podem executar como parte da infra-estrutura fornecida pelo serviço de Kubernetes do Microsoft Azure.
+Anteriormente neste livro eletrônico, *clusters* e *agendadores* foram introduzidos como parte da discussão sobre arquitetura e desenvolvimento de software. O Kubernetes e o Service Fabric são exemplos de clusters do Docker. Esses dois orquestradores podem ser executados como parte da infraestrutura fornecida pelo Serviço de Kubernetes do Microsoft Azure.
 
-Quando aplicativos são escalados horizontalmente em vários sistemas de host, a capacidade de gerenciar cada sistema de host e abstraem a complexidade da plataforma subjacente se torna atraente. É exatamente isso que fornecem os orquestradores e agendadores. Aqui, vamos dar uma rápida olhada neles:
+Quando aplicativos são expandidos para vários sistemas de host, a capacidade de gerenciar cada sistema de host e abstrair a complexidade da plataforma subjacente se torna atraente. É exatamente isso que orquestradores e agendadores oferecem. Vamos examiná-los brevemente:
 
-- **Agendadores**. "Planejamento" refere-se à capacidade de um administrador para carregar um arquivo de serviço para um sistema de host que estabelece como executar um contêiner específico. Iniciar contêineres em um cluster do Docker tende a ser conhecido como agendamento. Embora o agendamento refere-se ao ato de carregar a definição de serviço, em um sentido mais geral, específico agendadores são responsáveis por vinculando ao sistema de inicialização do host para gerenciar os serviços em qualquer capacidade necessária.
+- **Agendadores**. "Agendamento" se refere à capacidade de um administrador carregar um arquivo de serviço em um sistema de host que estabelece como executar um contêiner específico. Iniciar contêineres em um cluster do Docker tende a ser conhecido como agendamento. Embora agendamento se refira ao ato específico de carregar a definição do serviço, em um sentido mais geral, agendadores são responsáveis por se vincular ao sistema de inicialização do host para gerenciar serviços de qualquer forma necessária.
 
-   Agendador do cluster tem vários objetivos: usando os recursos de cluster com eficiência, trabalhando com restrições de posicionamento de fornecido pelo usuário, agendar aplicativos rapidamente para não deixá-los em um estado pendente, com um grau de "integridade", sendo robusto para erros, e sempre estarão disponíveis.
+   O agendador de um cluster tem vários objetivos: usar os recursos do cluster com eficiência, trabalhar com restrições de posicionamento fornecidas pelo usuário, agendar aplicativos rapidamente para não os deixar em estado pendente, ter um grau de "integridade", ser robusto a erros e sempre estar disponíveis.
 
-- **Orquestradores**. Plataformas de estendem os recursos de gerenciamento de ciclo de vida para cargas de trabalho de complexos, com vários contêineres implantados em um cluster de hosts. Abstraindo a infraestrutura de host, as ferramentas de orquestração dar aos usuários uma maneira de tratar de todo o cluster como um destino de implantação única.
+- **Orquestradores**. As plataformas estendem as funcionalidades de gerenciamento de ciclo de vida para cargas de trabalho complexas, com vários contêineres, implantadas em um cluster de hosts. Abstraindo a infraestrutura do host, as ferramentas de orquestração fornecem aos usuários uma maneira de tratar todo o cluster como um único destino de implantação.
 
-   O processo de orquestração envolve ferramentas e uma plataforma que pode automatizar todos os aspectos do gerenciamento de aplicativos de posicionamento inicial ou a implantação por contêiner; movendo contêineres para hosts diferentes, dependendo do desempenho; ou integridade do seu host controle de versão e atualizações sem interrupção e funções que dão suporte ao failover; e dimensionamento de monitoramento de integridade e muito mais.
+   O processo de orquestração envolve ferramentas e uma plataforma que possam automatizar todos os aspectos do gerenciamento de aplicativos, como posicionar ou implantar inicialmente por contêiner; mover contêineres para hosts diferentes dependendo do desempenho ou da integridade do host; controlar a versão e implantar atualizações sem interrupção e funções de monitoramento de integridade com suporte para dimensionamento e failover; entre muitos outros.
 
-   Orquestração é um termo abrangente que se refere ao contêiner de agendamento, gerenciamento de cluster e, possivelmente, o provisionamento de hosts adicionais.
+   Orquestração é um termo amplo que se refere ao agendamento do contêiner, ao gerenciamento de cluster e, possivelmente, ao provisionamento de hosts adicionais.
 
-Os recursos fornecidos pelo orquestradores e agendadores são complexos para desenvolver e criar do zero, portanto, você normalmente usaria oferecidas por fornecedores de soluções de orquestração.
+As funcionalidades fornecidas por orquestradores e agendadores são complexas para desenvolver e criar do zero, portanto, normalmente você usaria as soluções de orquestração oferecidas por fornecedores.
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)
