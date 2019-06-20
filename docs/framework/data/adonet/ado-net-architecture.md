@@ -2,18 +2,18 @@
 title: Arquitetura do ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 282f18cc7d379dffc410a0c62dc3b3e66e0a44f6
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877242"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267975"
 ---
 # <a name="adonet-architecture"></a>Arquitetura do ADO.NET
 Antigamente, o processamento de dados dependia basicamente de um modelo de duas camadas baseado em conexão. Como o processamento de dados usa cada vez mais arquiteturas de várias camadas, os programadores estão adotando uma abordagem desconectada para fornecer melhor escalabilidade a seus aplicativos.  
   
 ## <a name="adonet-components"></a>Componentes do ADO.NET  
- Os dois principais componentes do [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] para acessar e manipular dados são os provedores de dados .NET Framework e o <xref:System.Data.DataSet>.  
+ Os dois principais componentes do ADO.NET para acessar e manipular os dados são os provedores de dados .NET Framework e o <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>Provedores de dados .NET Framework  
  Os Provedores de Dados .NET Framework são componentes que foram criados explicitamente para manipulação de dados, e o rápido acesso a dados apenas de encaminhamento e somente leitura. O objeto `Connection` fornece conectividade a uma fonte de dados. O objeto `Command` permite o acesso aos comandos de banco de dados para retornar dados, modificar dados, executar procedimentos armazenados, e enviar ou recuperar informações de parâmetro. O `DataReader` fornece um fluxo de dados de alto desempenho da fonte de dados. Por fim, o `DataAdapter` faz a ponte entre o objeto `DataSet` e a fonte de dados. O `DataAdapter` usa os objetos `Command` para executar comandos SQL na fonte de dados a fim de carregar o `DataSet` com dados e reconciliar as alterações que foram feitas nos dados no `DataSet` com a fonte de dados. Para obter mais informações, consulte [provedores de dados do .NET Framework](../../../../docs/framework/data/adonet/data-providers.md) e [recuperando e modificando dados no ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  

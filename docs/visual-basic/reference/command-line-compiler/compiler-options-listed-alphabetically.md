@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 846d033c62d0168bab4661b9ab2b71a2139e2fcb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d8b3eef0afd780b4a6568e8c067296d2243087
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649810"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268195"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opções de compilador do Visual Basic listadas em ordem alfabética
 O compilador de linha de comando do Visual Basic é fornecido como uma alternativa para compilar programas no ambiente de desenvolvimento integrado (IDE) do Visual Studio. O exemplo a seguir é uma lista das opções de linha de comando do compilador Visual Basic classificados em ordem alfabética.  
@@ -45,7 +45,7 @@ O compilador de linha de comando do Visual Basic é fornecido como uma alternati
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Especifica a classe que contém o `Sub Main` procedimento a ser usado na inicialização.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Especifica o nome do assembly que um módulo fará parte do.|  
 |`-modulename:<string>`|Especificar o nome do módulo de origem|  
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Define o compilador como destino o [!INCLUDE[Compact](~/includes/compact-md.md)].|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Define o compilador para ter como destino o .NET Compact Framework.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Não são compilados com Vbc.|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Suprime as informações da faixa do compilador.|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Faz com que o compilador não referencie as bibliotecas padrão.|  

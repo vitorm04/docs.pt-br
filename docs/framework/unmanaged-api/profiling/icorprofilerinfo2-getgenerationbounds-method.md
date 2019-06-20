@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19288b5631fea8865530f936ac6d77c0286ee169
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 310bde2889f8a383fde88cb1bbffce9bad157399
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791659"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267999"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>Método ICorProfilerInfo2::GetGenerationBounds
 Obtém as regiões de memória, que são segmentos de heap, que compõem as várias gerações de coleta de lixo.  
@@ -47,8 +47,8 @@ HRESULT GetGenerationBounds(
  [out] Uma matriz de [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) estruturas, cada um deles descreve um intervalo (ou seja, o bloco) de memória dentro a geração que está passando por coleta de lixo.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetGenerationBounds` método pode ser chamado de qualquer retorno de chamada do criador de perfil, desde que a coleta de lixo não está em andamento. Ou seja, ele pode ser chamado de qualquer retorno de chamada, exceto aquelas que ocorrem entre [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) e [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).  
-  
+ O `GetGenerationBounds` método pode ser chamado de qualquer retorno de chamada do criador de perfil, desde que a coleta de lixo não está em andamento.
+
  A maioria das mudança de gerações ocorre durante as coletas de lixo. Gerações podem crescer entre coleções, mas geralmente não mover ao redor. Portanto, os lugares mais interessantes para chamar `GetGenerationBounds` estão na `ICorProfilerCallback2::GarbageCollectionStarted` e `ICorProfilerCallback2::GarbageCollectionFinished`.  
   
  Durante a inicialização do programa, alguns objetos são alocados pelo common language runtime (CLR) em si, geralmente em gerações 3 e 0. Assim, quando o código gerenciado inicia a execução, essas gerações já conterá objetos. Gerações 1 e 2 normalmente estarão vazias, exceto para objetos fictícios que são gerados pelo coletor de lixo. (O tamanho dos objetos fictícios é 12 bytes em implementações de 32 bits do CLR; o tamanho é maior em implementações de 64 bits). Você também poderá ver os intervalos de geração 2 que estão dentro de módulos produzidos pelo gerador de imagem nativa (NGen.exe). Nesse caso, os objetos na geração 2 são *congelado objetos*, que é alocado quando NGen.exe é executado em vez de pelo coletor de lixo.  

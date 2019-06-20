@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636965"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268089"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Dimensionamento automático no Windows Forms
 
@@ -48,7 +48,7 @@ Embora esse mecanismo era suficiente para a maioria das finalidades, ele sofria 
 
 - Não é compatível com os gerentes de layout mais recentes introduzidos com o .NET Framework versão 2.0, como <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>.
 
-- Ele não oferecia suporte ao dimensionamento baseado diretamente na resolução de vídeo que é necessária para compatibilidade com o [!INCLUDE[compact](../../../includes/compact-md.md)].
+- Ele não oferecia suporte a dimensionamento baseado diretamente na resolução de vídeo que é necessária para compatibilidade com o .NET Compact Framework.
 
 Embora esse mecanismo é preservado no .NET Framework versão 2.0 para manter a compatibilidade com versões anteriores, ela foi substituída pelo mecanismo de dimensionamento mais robusto descrito a seguir. Como consequência, o <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>e certos <xref:System.Windows.Forms.Control.Scale%2A> sobrecargas são marcadas como obsoletas.
 
@@ -63,7 +63,7 @@ O .NET Framework versão 2.0 supera as limitações anteriores, introduzindo as 
 
 - O <xref:System.Windows.Forms.Control> classe também possui diversos novos membros que permitem que ele participe de dimensionamento e dar suporte ao dimensionamento misto no mesmo formulário. Especificamente o <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A>, e <xref:System.Windows.Forms.Control.GetScaledBounds%2A> membros dão suporte ao dimensionamento.
 
-- Suporte para dimensionamento com base na resolução de tela foi adicionado para complementar o suporte de fonte do sistema, conforme definido pelo <xref:System.Windows.Forms.AutoScaleMode> enumeração. Esse modo é compatível com o dimensionamento automático com suporte a [!INCLUDE[compact](../../../includes/compact-md.md)] habilitando a migração fácil de aplicativos.
+- Suporte para dimensionamento com base na resolução de tela foi adicionado para complementar o suporte de fonte do sistema, conforme definido pelo <xref:System.Windows.Forms.AutoScaleMode> enumeração. Esse modo é compatível com o dimensionamento automático com suporte pelo .NET Compact Framework habilitando a migração fácil de aplicativos.
 
 - Compatibilidade com os gerentes de layout, como <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel> foi adicionado para a implementação de dimensionamento automático.
 

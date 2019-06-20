@@ -2,12 +2,12 @@
 title: Selecione a versão da linguagem Visual Basic
 description: Configure o compilador para executar a validação de sintaxe usando uma versão específica do compilador.
 ms.date: 05/24/2018
-ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4768d59a37d168b2883396f1dea4d0c1a0ff4ca7
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797014"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268271"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Selecione a versão da linguagem Visual Basic
 
@@ -44,6 +44,7 @@ O valor `latest` usa a versão secundária mais recente da linguagem Visual Basi
 |15|O compilador aceita somente a sintaxe incluída em 15.0 do Visual Basic ou inferior.|
 |15.3|O compilador aceita somente a sintaxe incluída na versão 15.3 do Visual Basic ou inferior.|
 |15.5|O compilador aceita somente a sintaxe incluída na versão 15.5 do Visual Basic ou inferior.|
+|15.8|O compilador aceita somente a sintaxe incluída no Visual Basic 15,8 ou inferior.|
 |mais recente|O compilador aceita toda a sintaxe de linguagem à qual dá suporte.|
 
 As cadeias de caracteres especiais `default` e `latest` são resolvidas nas últimas versões da linguagem principal e secundária instaladas no computador de build, respectivamente.
