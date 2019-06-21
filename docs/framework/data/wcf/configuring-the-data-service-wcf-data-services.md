@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 47c320b6d458ff1220808cacfb334e380b1edbc4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d2469324317fe19d2876dceefe68d70a5fd2eae3
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622740"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306293"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurando o serviço de dados (WCF Data Services)
 Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode criar serviços de dados que expõem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Os dados nesses feeds podem vir de uma variedade de fontes de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa provedores de dados para expor esses dados como um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Esses provedores incluem um provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], um provedor de reflexão e um conjunto de interfaces personalizadas de provedor de serviços de dados. A implementação do provedor define o modelo de dados para o serviço. Para obter mais informações, consulte [provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -69,7 +69,7 @@ Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode cr
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Sem suporte|Sem suporte|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Sem suporte|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Sem suporte|Sem suporte|Sem suporte|Sem suporte|  
   
- <sup>1</sup> neste exemplo, `Address` representa uma propriedade de tipo complexo de `Customers` entidade que tem uma propriedade chamada `StreetAddress`. O modelo usado pelos serviços de dados da Northwind não define explicitamente este tipo complexo. Quando o modelo de dados é definido usando o provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], você pode usar as ferramentas do [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] para definir um tipo complexo. Para obter mais informações, confira [Como: Criar e modificar tipos complexos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
+ <sup>1</sup> neste exemplo, `Address` representa uma propriedade de tipo complexo de `Customers` entidade que tem uma propriedade chamada `StreetAddress`. O modelo usado pelos serviços de dados da Northwind não define explicitamente este tipo complexo. Quando o modelo de dados é definido usando o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provedor, você pode usar as ferramentas do modelo de dados de entidade para definir um tipo complexo. Para obter mais informações, confira [Como: Criar e modificar tipos complexos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   
  <sup>2</sup> esta URI tem suporte quando uma propriedade que retorna um objeto binário grande (BLOB) é definida como o recurso de mídia que pertence a uma entidade que é uma entrada de link de mídia, que nesse caso, é `Customers`. Para obter mais informações, consulte [provedor de Streaming](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   

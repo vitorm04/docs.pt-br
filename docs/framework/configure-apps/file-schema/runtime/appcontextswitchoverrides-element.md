@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210441"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307086"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > elemento
 Define uma ou mais opções usadas pela classe <xref:System.AppContext> para fornecer um mecanismo de recusa de uma nova funcionalidade.  
@@ -68,7 +68,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Controla se o algoritmo padrão usado para assinar partes de um pacote por PackageDigitalSignatureManager é SHA1 ou SHA256.<br>Em razão de problemas de colisão com SHA1, a Microsoft recomenda SHA256.|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|Quando definido como `false`, permite a depuração de projetos de fluxo de trabalho baseado em XAML com o Visual Studio quando o FIPS está habilitado. Sem ele, um <xref:System.NullReferenceException> é gerada em chamadas para métodos no assembly System. Activities.|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|Controla se a soma de verificação para uma instância de fluxo de trabalho no depurador usa MD5 ou SHA1. | .NET Framework 4.7|
-|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|Controla se o hash de soma de verificação de fluxo de trabalho usa o algoritmo SHA1 introduzido como padrão no .NET Framework 4.7 (`true`), ou se utiliza o o algoritmo padrão de SHA256 introduzido como padrão no .NET Framework 4.8 (`false`).<br>Em razão de problemas de colisão com SHA1, a Microsoft recomenda SHA256.|.NET Framework 4.8|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|Controla se o hash de soma de verificação de fluxo de trabalho usa o algoritmo SHA1 introduzido como padrão no .NET Framework 4.7 (`true`), ou se ele usa o algoritmo padrão de SHA256 introduzido como padrão no .NET Framework 4.8 (`false`).<br>Em razão de problemas de colisão com SHA1, a Microsoft recomenda SHA256.|.NET Framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Controla se os rastreamentos de pilha obtém ao usar PDBs portáteis pode incluir informações de arquivo e de linha de código-fonte. `false` para incluir informações de arquivo e de linha de código-fonte; Caso contrário, `true`.|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Controles se o <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> método gera uma exceção quando um <xref:System.Drawing.Icon> objeto tiver quadros PNG. Para obter mais informações, confira [Mitigação: Quadros PNG em objetos de ícone](../../../migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|Determina se <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> objetos sejam descartados corretamente quando adicionado à coleção, o <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> método. `true` para manter o comportamento herdado; `false` para descartar todos os objetos de fontes privadas. |.NET Framework 4.7.2|
@@ -134,7 +134,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 |`Switch.UseLegacyAccessibilityFeatures`|Controla se os recursos de acessibilidade disponíveis a partir do .NET Framework 4.7.1 é habilitada ou desabilitada. | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|Os controles se recursos disponíveis no .NET Framework 4.7.2 de acessibilidade são habilitadas (`false`) ou desabilitado (`true`). Se `true`, `Switch.UseLegacyAccessibilityFeatures` também deve ser `true` para habilitar os recursos de acessibilidade do .NET Framework 4.7.1.|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|Os controles se os recursos de acessibilidade introduzido no .NET Framework 4.8 estão habilitados (`false`) ou desabilitado (`true`). Se `true`, `Switch.UseLegacyAccessibilityFeatures` e `Switch.UseLegacyAccessibilityFeatures.2` também deve ser `true`.|.NET Framework 4.8|
-|`Switch.UseLegacyToolTipDisplay`|Controles se as dicas de ferramenta são displaed quando um usuário passa o cursor do mouse sobre um controle WPF (`true`), ou se eles são exibidos em foco do teclado e por meio da tecla de atalho de teclado (`false`, o comportamento padrão). Para aplicativos em execução no .NET Framework 4.8 mas destinados a versões anteriores do .NET Framework, permitindo que ambos o foco de teclado e suporte a chaves atalho requer que `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, e `Switch.UseLegacyAccessibilityFeatures.3` todas definidas para `false`.|.NET Framework 4.8|
+|`Switch.UseLegacyToolTipDisplay`|Controles se as dicas de ferramenta são exibidas quando um usuário passa o cursor do mouse sobre um controle WPF (`true`), ou se eles são exibidos em foco do teclado e por meio da tecla de atalho de teclado (`false`, o comportamento padrão). Para aplicativos em execução no .NET Framework 4.8 mas destinados a versões anteriores do .NET Framework, permitindo que ambos o foco de teclado e suporte a chaves atalho requer que `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, e `Switch.UseLegacyAccessibilityFeatures.3` todas definidas para `false`.|.NET Framework 4.8|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Controla se as sequências de chaves vazias em chaves compostas são ignoradas pela validação de esquema XSD. Para obter mais informações, confira [Mitigação: Validação de esquema XML](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]

@@ -2,12 +2,12 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489841"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307310"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
 Este tópico descreve considerações de segurança específicas para desenvolver, implantar e executar aplicativos [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você também deve seguir as recomendações para criar aplicativos seguros do .NET Framework. Para obter mais informações, consulte [visão geral de segurança](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -86,7 +86,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  O nome invariável do provedor pode ser modificado no arquivo app.config. O aplicativo cliente deve assumir a responsabilidade de acessar o provedor subjacente por meio do modelo padrão de fábrica do provedor usando um nome forte.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Restrinja permissões aos arquivos de modelo e de mapeamento.  
- Um administrador deve restringir o acesso para gravação nos arquivos de modelo e de mapeamento (.edmx, .csdl, .ssdl e .msl) somente aos usuários que alteram o modelo ou os mapeamentos. O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] só requer acesso de leitura a esses arquivos em tempo de execução. Um administrador também deve restringir o acesso à camada do objeto e a arquivos de exibição de código-fonte pré-compilados que são gerados pelas ferramentas [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)].  
+ Um administrador deve restringir o acesso para gravação nos arquivos de modelo e de mapeamento (.edmx, .csdl, .ssdl e .msl) somente aos usuários que alteram o modelo ou os mapeamentos. O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] só requer acesso de leitura a esses arquivos em tempo de execução. Um administrador também deve restringir o acesso à camada de objeto e arquivos código-fonte pré-compilados do modo de exibição que são gerados pelas ferramentas do modelo de dados de entidade.  
   
 ## <a name="security-considerations-for-queries"></a>Considerações de segurança para consultas  
  As considerações de segurança a seguir se aplicam em consultas a um modelo conceitual. Essas considerações se aplicam a consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] usando EntityClient e a consultas de objeto usando LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)] e métodos de construtor de consultas.  
