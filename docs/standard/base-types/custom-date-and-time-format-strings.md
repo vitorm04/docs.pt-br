@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4d7cd61a771f1c9658b5bc98ec85259da1c77f9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634543"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268236"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora personalizado
 
@@ -41,7 +41,7 @@ As cadeias de caracteres de formato de data e hora personalizado podem ser usada
 
 Em operações de análise, as cadeias de caracteres de formato de data e hora personalizado podem ser usadas com os métodos <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>. Esses métodos exigem que uma cadeia de caracteres de entrada esteja exatamente de acordo com um padrão específico para que a operação de análise obtenha êxito. O exemplo a seguir ilustra uma chamada ao método <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> para analisar uma data que deve incluir um dia, um mês e um ano com dois dígitos.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
+[!code-csharp[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
 [!code-vb[Formatting.DateAndTime.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]
 
 A tabela a seguir descreve os especificadores de formato de data e hora padrão e exibe uma cadeia de caracteres de resultado produzida por cada especificador de formato. Por padrão, as cadeias de caracteres de resultado refletem as convenções de formatação da cultura en-US. Se um determinado especificador de formato produz uma cadeia de caracteres de resultado localizada, o exemplo também observa a cultura à qual a cadeia de caracteres de resultado se aplica. Para obter informações adicionais sobre como usar cadeias de caracteres de formato data e hora personalizado, confira a seção [Observações](#notes).
@@ -509,7 +509,7 @@ Em uma operação de análise, um ano de dois dígitos é analisado usando o esp
 
 O exemplo a seguir inclui o especificador de formato personalizado "yy" em uma cadeia de caracteres de formato personalizado.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-csharp[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
 [Voltar à tabela](#table)
@@ -638,7 +638,7 @@ Todos os outros caracteres sempre são interpretados como literais de caracteres
 
 O exemplo a seguir inclui os caracteres literais "PST" (que indicam a Hora Padrão do Pacífico) e “PDT” (que indicam a Hora de Verão do Pacífico) para representar o fuso horário local em uma cadeia de caracteres de formato. Observe que a cadeia de caracteres está incluída na cadeia de caracteres de resultado e que uma cadeia de caracteres que inclui a cadeia de caracteres de fuso horário local também é analisada com êxito.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
+[!code-csharp[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
 [!code-vb[Formatting.DateAndTime.Custom#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]
 
 Há duas maneiras de indicar que os caracteres devem ser interpretados como caracteres literais e não como caracteres reservados, para que possam ser incluídos em uma cadeia de caracteres de resultado ou analisados com êxito em uma cadeia de caracteres de entrada:
@@ -647,12 +647,12 @@ Há duas maneiras de indicar que os caracteres devem ser interpretados como cara
 
 O exemplo a seguir inclui os caracteres literais "pst" (que indicam a Hora Padrão do Pacífico) para representar o fuso horário local em uma cadeia de caracteres de formato. Como "s" e "t" são cadeias de caracteres de formato personalizado, ambos os caracteres devem ter um escape para serem interpretados como caracteres literais.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+[!code-csharp[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
 [!code-vb[Formatting.DateAndTime.Custom#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
 - Colocando toda a cadeia de caracteres literal entre aspas ou apóstrofos. O exemplo a seguir é semelhante ao anterior, mas "pst" é colocado entre aspas para indicar que toda a cadeia de caracteres delimitada deve ser interpretada como literais de caracteres.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+[!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 ## <a name="notes"></a>Observações

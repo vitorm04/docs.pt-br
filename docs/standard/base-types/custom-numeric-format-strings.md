@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634517"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268220"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
 
@@ -36,7 +36,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
   
 <a name="table"></a> A tabela a seguir descreve os especificadores de formato numérico personalizado e exibe amostras de saída produzidas por cada especificador de formato. Consulte a seção [Notas](#NotesCustomFormatting) para obter informações adicionais sobre como usar cadeias de caracteres de formato numérico personalizado e a seção [Exemplo](#example) para obter uma ilustração abrangente de seu uso.  
   
-|Especificador de formato|Nome|Descrição|Exemplos|  
+|Especificador de formato|Nome|DESCRIÇÃO|Exemplos|  
 |----------------------|----------|-----------------|--------------|  
 |"0"|Espaço reservado de zero|Substitui o zero pelo dígito correspondente, se houver um presente. Caso contrário, o zero aparecerá na cadeia de caracteres de resultado.<br /><br /> Para saber mais: [O especificador personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 (en-US "0,00") -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|Espaço reservado de dígito|Substitui o símbolo "#" pelo dígito correspondente, se houver um presente. Caso contrário, nenhum dígito aparecerá na cadeia de caracteres de resultado.<br /><br /> Observe que nenhum dígito aparece na cadeia de caracteres de resultado se o dígito na cadeia de entrada correspondente for um 0 não significativo. Por exemplo, 0003 ("####") -> 3.<br /><br /> Para saber mais: [O especificador personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -85,7 +85,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  Para retornar uma cadeia de caracteres de resultado em que dígitos ausentes ou zeros à esquerda são substituídos por espaços, use o recurso de [formatação de composição](../../../docs/standard/base-types/composite-formatting.md) e especifique uma largura de campo, como mostra o exemplo a seguir.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Voltar à tabela](#table)  
@@ -189,7 +189,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
 ## <a name="the--section-separator"></a>Separador de seção ";"  
  O ponto-e-vírgula (;) é um especificador de formato condicional que aplica formatação diferente a um número dependendo se o valor é positivo, negativo ou zero. Para produzir esse comportamento, uma cadeia de caracteres de formato personalizado pode conter até três seções separadas por ponto-e-vírgula. Essas seções são descritas na tabela a seguir.  
   
-|Número de seções|Descrição|  
+|Número de seções|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |Uma seção|A cadeia de caracteres de formato aplica-se a todos os valores.|  
 |Duas seções|A primeira seção aplica-se a valores positivos e zeros e a segunda seção aplica-se a valores negativos.<br /><br /> Se o número a ser formatado for negativo, mas se tornar zero após o arredondamento de acordo com o formato na segunda seção, então o zero resultante será formatado de acordo com a primeira seção.|  

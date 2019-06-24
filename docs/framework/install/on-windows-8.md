@@ -5,12 +5,12 @@ description: Saiba como instalar o .NET Framework no Windows 8
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 27a5c46a711914b32f8c934a33f5897d8ad7a6b8
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a81569b8475d6d9990d628121766a4c34c5df396
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052713"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267927"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Instalar o .NET Framework no Windows 8 e Windows Server 2012
 
@@ -23,7 +23,7 @@ Essas instruções ajudarão você a instalar as versões do .NET Framework nece
 ## <a name="net-framework-48"></a>.NET Framework 4.8
 
 > [!div class="button"]
-> [Baixe o .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [Baixar o .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 O .NET Framework 4.8 é compatível com o Windows Server 2012. Não há suporte para ele no Windows 8.
 

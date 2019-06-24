@@ -3,12 +3,12 @@ title: 'Como: Modificar o conteúdo de uma cadeia de caracteres – Guia de C#'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663999"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267767"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Como: Modificar o conteúdo de uma cadeia de caracteres em C\#
 
@@ -67,7 +67,7 @@ O exemplo a seguir mostra como substituir um conjunto de caracteres em uma cadei
 Usando código **não seguro**, é possível modificar uma cadeia de caracteres "no local" depois que ela é criada. Código não seguro usa muitos dos recursos do .NET projetados para minimizar determinados tipos de bugs no código. Você precisa usar o código não seguro para modificar uma cadeia de caracteres em vigor porque a classe de cadeia de caracteres foi projetada como um tipo **immutable**. Depois de ela ser criada, seu valor não é alterado. O código não seguro contorna a essa propriedade, acessando e modificando a memória usada por um `string` sem usar métodos `string` normais.
 O exemplo a seguir é fornecido para as raras situações em que você deseja modificar uma cadeia de caracteres no local usando código não seguro. O exemplo mostra como usar a palavra-chave `fixed`. A palavra-chave `fixed` impede que o GC (coletor de lixo) mova o objeto de cadeia de caracteres na memória enquanto o código acessa a memória usando o ponteiro não seguro. Ele também demonstra um possível efeito colateral das operações não seguras em cadeias de caracteres, que resultam da forma com que o compilador C# armazena (interna) as cadeias de caracteres internamente. Em geral, você não deve usar essa técnica, a menos que seja absolutamente necessário. É possível aprender mais sobre [não seguro](../language-reference/keywords/unsafe.md) e [fixo](../language-reference/keywords/fixed-statement.md) nos artigos. A referência à API para <xref:System.String.Intern%2A> inclui informações sobre centralização de cadeia de caracteres.
 
-[!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
 Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
