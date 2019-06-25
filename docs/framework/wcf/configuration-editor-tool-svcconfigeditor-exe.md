@@ -185,11 +185,11 @@ O Editor de configuração de serviço do Windows Communication Foundation (WCF)
   
 1. Selecione a associação que você deseja adicionar um elemento de extensão para.  
   
-2.  Clique em **Adicionar**.  
+2. Clique em **Adicionar** .  
   
 3. Na lista de extensões disponíveis, selecione a extensão de elemento de associação que você deseja adicionar. Para selecionar vários itens, pressione a tecla CTRL ao mesmo tempo.  
   
-4.  Clique em **Adicionar**.  
+4. Clique em **Adicionar** .  
   
 #### <a name="adjusting-the-extension-position-in-a-custom-binding"></a>Ajustar a posição de extensão em uma associação personalizada  
  Uma associação personalizada é uma coleção de elementos que formam uma pilha de associação. Cada elemento na pilha de associação tem seus próprios parâmetros de configuração. A ordem das extensões do elemento de associação em uma associação personalizada indica suas posições na pilha. Elementos na parte superior da pilha são aplicados primeiro. Para alterar a ordem:  
@@ -288,11 +288,11 @@ O Editor de configuração de serviço do Windows Communication Foundation (WCF)
   
 2. Selecione o comportamento que você deseja editar.  
   
-3.  Clique em **Adicionar**.  
+3. Clique em **Adicionar** .  
   
 4. Na lista de extensões disponíveis, selecione a extensão de elemento de comportamento que você deseja adicionar.  
   
-5.  Clique em **Adicionar**.  
+5. Clique em **Adicionar** .  
   
 ##### <a name="adjusting-the-extension-position-in-a-behavior"></a>Ajustar a posição de extensão em um comportamento  
  Os comportamentos são coleções de elementos que formam uma pilha. Cada elemento na pilha tem sua própria configuração. A ordem das extensões de elemento do comportamento em um comportamento indica suas posições na pilha. Elementos na parte superior da pilha são aplicados primeiro. Para alterar a ordem:  
