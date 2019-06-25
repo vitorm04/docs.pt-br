@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 6ab898c93086e477bf4384b4d6c725fbdc8fe761
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879143"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347992"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Noções básicas de Aplicativo do Windows Forms (Visual Basic)
 Uma parte importante do Visual Basic é a capacidade de criar aplicativos Windows Forms executados localmente nos computadores dos usuários. Você pode usar o Visual Studio para criar o aplicativo e interface do usuário usando Windows Forms. Um aplicativo Windows Forms se baseia nas classes do <xref:System.Windows.Forms> namespace.  
@@ -54,7 +54,7 @@ Uma parte importante do Visual Basic é a capacidade de criar aplicativos Window
 ## <a name="displaying-and-manipulating-data"></a>Exibindo e manipulando dados  
  Muitos aplicativos precisam exibir dados obtidos de um banco de dados, de um arquivo XML, de um serviço Web XML ou de outra fonte de dados. Windows Forms fornece um controle flexível, chamado de <xref:System.Windows.Forms.DataGridView> para o processamento desses dados tabulares em um formato tradicional de linha e coluna, para que todos os dados ocupem suas próprias células. Usando <xref:System.Windows.Forms.DataGridView> você pode personalizar a aparência de células individuais, bloquear linhas e colunas em vigor arbitrárias e exibir controles complexos em células, entre outros recursos.  
   
- A conexão a fontes de dados pela rede é uma tarefa simples com clientes inteligentes dos Windows Forms. O <xref:System.Windows.Forms.BindingSource> componente novo com o Windows Forms no Visual Studio 2005 e o [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], representa uma conexão a uma fonte de dados e expõe métodos para vinculação de dados a controles de navegação para registros anteriores e seguintes, edição de registros e salvar alterações de volta para a fonte original. O <xref:System.Windows.Forms.BindingNavigator> controle fornece uma interface simple sobre o <xref:System.Windows.Forms.BindingSource> componente para que os usuários navegarem entre registros.  
+ A conexão a fontes de dados pela rede é uma tarefa simples com clientes inteligentes dos Windows Forms. O <xref:System.Windows.Forms.BindingSource> componente novo com o Windows Forms no Visual Studio 2005 e o .NET Framework 2.0, representa uma conexão a uma fonte de dados e expõe métodos para associar dados a controles de navegação para registros anteriores e seguintes, edição de registros, e Salvando alterações de volta para a fonte original. O <xref:System.Windows.Forms.BindingNavigator> controle fornece uma interface simple sobre o <xref:System.Windows.Forms.BindingSource> componente para que os usuários navegarem entre registros.  
   
 ### <a name="data-bound-controls"></a>Controles ligados a dados  
  Você pode criar controles associados a dados facilmente usando a janela de fontes de dados, que exibe fontes de dados como bancos de dados, serviços da Web e objetos em seu projeto. Você pode criar controles de associação de dados ao arrastar itens dessa janela para os formulários do seu projeto. Você também pode associar controles existentes a dados ao arrastar objetos da janela Fontes de Dados para eles.  

@@ -2,12 +2,12 @@
 title: Desempenho do Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 51cd5b248789c85ab06073f1bb41a83e5f97c139
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592541"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348529"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Desempenho do Windows Workflow Foundation 4
 
@@ -31,7 +31,7 @@ ms.locfileid: "65592541"
 ### <a name="wf-runtime"></a>Tempo de execução de WF
  O núcleo de tempo de execução de [!INCLUDE[wf1](../../../includes/wf1-md.md)] é um agendador assíncrono que resulta a execução das atividades em um fluxo de trabalho. Fornece um ambiente performant, previsível de execução para atividades. O ambiente tem um contrato bem definido para execução, a seguir, a conclusão, cancelamento, as exceções, e um modelo de threads previsível.
 
- Em comparação com WF3, o tempo de execução WF4 tem um agendador mais eficiente. Ele aproveita o mesmo pool de threads de e/s que é usado para o WCF, que é muito eficiente em executar itens de trabalho em lotes. A fila de agendador interna de item de trabalho é otimizado para a maioria de padrões comuns de uso. O tempo de execução WF4 também gerencia os estados de execução em uma maneira muito leve com lógica mínima de manipulação de sincronização e de evento, quando WF3 depender do registro pesado de evento e a chamada para executar a sincronização complexa para o estado transições.
+ Em comparação com WF3, o tempo de execução WF4 tem um agendador mais eficiente. Ele aproveita o mesmo pool de threads de e/s que é usado para o WCF, que é muito eficiente em executar itens de trabalho em lotes. A fila de agendador interna de item de trabalho é otimizado para a maioria de padrões comuns de uso. O tempo de execução WF4 também gerencia os estados de execução de uma maneira muito leve com sincronização mínima e manipular a lógica, quando WF3 depender do registro pesado de evento e a chamada para executar a sincronização complexa para as transições de estado do evento.
 
 ### <a name="data-storage-and-flow"></a>Armazenamento de dados e fluxo
  Em WF3, os dados associados com uma atividade são modelados através das propriedades de dependência implementadas pelo tipo <xref:System.Windows.DependencyProperty>. O padrão de propriedade de dependência foi introduzido no Windows Presentation Foundation (WPF). Normalmente, esse padrão é muito flexível dar suporte à associação fácil de dados e outros recursos de interface do usuário. No entanto, o padrão requer as propriedades ser definido como campos estáticos na definição de fluxo de trabalho. Sempre que o tempo de execução de [!INCLUDE[wf1](../../../includes/wf1-md.md)] obtém ou define os valores de propriedade, envolve a lógica pesado- tornada mais pesada de consulta.
@@ -43,7 +43,7 @@ ms.locfileid: "65592541"
 ### <a name="control-flow"></a>Fluxo de controle
  Assim como em qualquer linguagem de programação, [!INCLUDE[wf1](../../../includes/wf1-md.md)] fornece suporte para fluxos de controle para definições de fluxo de trabalho apresentando um conjunto de atividades de fluxo de controle para arranjar seqüencialmente, padrões loop, ramificar e outros. Em WF3, quando a mesma atividade precisa ser executada, novo <xref:System.Workflow.ComponentModel.ActivityExecutionContext> é criado e a atividade é clonada com uma lógica pesada de serialização e desserialização de baseada em <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Geralmente o desempenho para fluxos de controle iterativos é muito mais lento do que executando uma sequência de atividades.
 
- WF4 manipula esse bem diferente. Leva o modelo de atividade, cria um novo objeto de ActivityInstance, e adicioná-lo a fila de agendador. Esse processo inteiro somente envolve a criação explícita de objeto e é muito leve.
+ WF4 manipula esse bem diferente. Leva o modelo de atividade, cria um novo objeto de ActivityInstance, e adicioná-lo a fila de agendador. Todo esse processo somente envolve a criação explícita de objeto e é muito simples.
 
 ### <a name="asynchronous-programming"></a>Programação assíncrona
  Os aplicativos geralmente têm um melhor desempenho e escalabilidade com programação assíncrona para operações longas de bloqueio como E/S ou operações distribuídos de computação. WF4 fornece suporte assíncrono por tipos de base <xref:System.Activities.AsyncCodeActivity>de atividade, <xref:System.Activities.AsyncCodeActivity%601>. O tempo de execução entende nativo que as atividades assíncronos e portanto podem automaticamente colocar a instância em uma zona sem persistir quando o trabalho assíncrono está excelente. As atividades personalizados podem derivar desses tipos para executar o trabalho assíncrona sem armazenar o segmento de agendador de fluxo de trabalho e bloquear quaisquer atividades que podem ser capaz executar paralelamente.

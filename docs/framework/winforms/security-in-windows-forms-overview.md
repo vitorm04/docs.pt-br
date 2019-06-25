@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 4a669b4eefeeb91c0835dc41a1c8736aacf0e14f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586656"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348464"
 ---
 # <a name="security-in-windows-forms-overview"></a>Visão geral da Segurança do Windows Forms
 
@@ -52,7 +52,7 @@ Ao desenvolver um aplicativo que será executado em confiança parcial, mantenha
 
 Ao solicitar permissões opcionais, você deverá tratar as exceções de segurança que serão geradas se o aplicativo realizar uma ação que exija permissões que não foram concedidas a ele. Tratamento apropriado do <xref:System.Security.SecurityException> garantirá que seu aplicativo pode continuar a operar. Seu aplicativo pode usar a exceção para determinar se um recurso deve ser desabilitado para o usuário. Por exemplo, um aplicativo poderá desabilitar a opção de menu **Salvar** se a permissão de arquivo necessária não for concedida.
 
-Às vezes é difícil saber se você declarou todas as permissões apropriadas. Uma chamada de método que parece inofensiva na superfície, por exemplo, pode acessar o sistema de arquivos em algum ponto durante sua execução. Se você não implantar seu aplicativo com todas as permissões necessárias, poderá ser bem sucedido em teste, quando você depurá-lo na área de trabalho, mas falhar ao ser implantado. Os dois o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK e o Visual Studio 2005 contém ferramentas para calcular as permissões que precisa de um aplicativo: o MT.exe comando ferramenta de linha e o recurso calcular permissões do Visual Studio, respectivamente.
+Às vezes é difícil saber se você declarou todas as permissões apropriadas. Uma chamada de método que parece inofensiva na superfície, por exemplo, pode acessar o sistema de arquivos em algum ponto durante sua execução. Se você não implantar seu aplicativo com todas as permissões necessárias, poderá ser bem sucedido em teste, quando você depurá-lo na área de trabalho, mas falhar ao ser implantado. O SDK do .NET Framework 2.0 e o Visual Studio 2005 contém ferramentas para calcular as permissões que precisa de um aplicativo: o MT.exe comando ferramenta de linha e o recurso calcular permissões do Visual Studio, respectivamente.
 
 Os tópicos a seguir descrevem recursos adicionais de segurança dos Windows Forms.
 
@@ -77,7 +77,7 @@ A tabela a seguir descreve essas tecnologias.
 
 A tecnologia escolhida dependerá de seu ambiente de implantação. Para obter mais informações, consulte [Escolhendo uma estratégia de implantação do ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Por padrão, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] os aplicativos implantados usando o Visual Studio ou o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK tools (Mage.exe e MageUI.exe) são configurados para executar em um computador cliente que tenha confiança total. Se você estiver implantando seu aplicativo usando a confiança parcial ou usando somente algumas permissões adicionais, você terá que alterar esse padrão. Você pode fazer isso com o Visual Studio ou o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] ferramenta SDK MageUI.exe quando você configura sua implantação. Para obter mais informações sobre como usar MageUI.exe, veja o passo a passo: Implantando um aplicativo ClickOnce a partir da linha de comando.  Consulte também [como: Definir permissões personalizadas para um aplicativo ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) ou [como: Definir permissões personalizadas para um aplicativo ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Por padrão, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] aplicativos implantados usando o Visual Studio ou as ferramentas do SDK do .NET Framework (Mage.exe e MageUI.exe) são configurados para executar em um computador cliente que tenha confiança total. Se você estiver implantando seu aplicativo usando a confiança parcial ou usando somente algumas permissões adicionais, você terá que alterar esse padrão. Você pode fazer isso com o Visual Studio ou a ferramenta do SDK do .NET Framework MageUI.exe quando você configura sua implantação. Para obter mais informações sobre como usar MageUI.exe, veja o passo a passo: Implantando um aplicativo ClickOnce a partir da linha de comando.  Consulte também [como: Definir permissões personalizadas para um aplicativo ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) ou [como: Definir permissões personalizadas para um aplicativo ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Para obter mais informações sobre os aspectos de segurança do [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] e sobre a elevação de permissões, consulte [Protegendo aplicativos ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Para obter mais informações sobre a implantação de aplicativo confiável, consulte [Visão geral da implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview).
 

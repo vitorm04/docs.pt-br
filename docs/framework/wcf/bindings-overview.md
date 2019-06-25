@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8449fe048cc9149e8e8cf02f27f131c0d90d6984
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592235"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348194"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Visão geral de associações do Windows Communication Foundation
 Associações são objetos que são usados para especificar os detalhes de comunicação que são necessárias para se conectar ao ponto de extremidade de um serviço do Windows Communication Foundation (WCF). Cada ponto de extremidade em um serviço WCF requer uma associação a ser bem especificado. Este tópico descreve os tipos dos detalhes de comunicação que definem as associações, os elementos de uma associação, quais associações são incluídas no WCF e como uma associação pode ser especificada para um ponto de extremidade.  
   
 ## <a name="what-a-binding-defines"></a>O que define uma associação  
- As informações em uma associação podem ser muito básico ou muito complexos. A associação mais básica especifica somente o protocolo de transporte (como HTTP) que deve ser usado para se conectar ao ponto de extremidade. De modo geral, as informações de que uma associação contém sobre como se conectar a um ponto de extremidade entra em uma das categorias a seguir.  
+ As informações em uma associação podem ser muito básico ou muito complexos. A associação mais básica especifica somente o protocolo de transporte (como HTTP) que deve ser usado para se conectar ao ponto de extremidade. De modo geral, as informações de que uma associação contém sobre como se conectar a um ponto de extremidade se enquadra em uma das seguintes categorias:  
   
- Protocolos  
+ **Protocolos**  
  Determina o mecanismo de segurança que está sendo usado: recurso de mensagens confiável ou configurações de fluxo do contexto de transação.  
   
- Codificando  
+ **Encoding**  
  Determina a codificação de mensagens (por exemplo, texto ou binário).  
   
- Transporte  
+ **Transporte**  
  Determina o protocolo de transporte subjacente usada (por exemplo, TCP ou HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Os elementos de uma associação  

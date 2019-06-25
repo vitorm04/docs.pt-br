@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 4d035dd6611909c9a6b67662d17f80057dc33386
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 06ce64de5e2a6b4aa299b9ad9c41982b7c1924c7
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169960"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348271"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Como: adicionar dados à área de transferência
 O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode usar para interagir com o recurso de área de transferência do sistema operacional Windows. Muitos aplicativos usam a Área de Transferência como um repositório temporário para dados. Por exemplo, processadores globais usam a Área de Transferência durante operações de cortar e colar. A Área de Transferência também é útil para transferir dados de um aplicativo para outro.  
@@ -53,7 +53,7 @@ O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode u
   
 ### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Para adicionar dados à Área de Transferência em vários formatos  
   
-1. Use o <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> método e passar em um <xref:System.Windows.Forms.DataObject> que contém os dados. Você deve usar esse método para adicionar dados à área de transferência em versões anteriores à [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Use o <xref:System.Windows.Forms.Clipboard.SetDataObject%2A?displayProperty=nameWithType> método e passar em um <xref:System.Windows.Forms.DataObject> que contém os dados. Você deve usar esse método para adicionar dados à área de transferência em versões anteriores ao .NET Framework 2.0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

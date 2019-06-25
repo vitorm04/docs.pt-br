@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: e29e71974abda3e6e57d22d9faef28e386ebeefd
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169899"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348214"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Como: recuperar dados da área de transferência
 O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode usar para interagir com o recurso de área de transferência do sistema operacional Windows. Muitos aplicativos usam a Área de Transferência como um repositório temporário para dados. Por exemplo, processadores globais usam a Área de Transferência durante operações de cortar e colar. A Área de Transferência também é útil para transferir informações de um aplicativo para outro.  
@@ -22,7 +22,7 @@ O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode u
   
  Para determinar se a área de transferência contém dados em um formato específico, use um dos `Contains` *formato* métodos ou o <xref:System.Windows.Forms.Clipboard.GetData%2A> método. Para recuperar dados da área de transferência, use um dos `Get` *formato* métodos ou o <xref:System.Windows.Forms.Clipboard.GetData%2A> método. Esses métodos são novos no .NET Framework 2.0.  
   
- Para acessar os dados da área de transferência usando versões anteriores ao [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)], use o <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> método e chamar os métodos de retornado <xref:System.Windows.Forms.IDataObject>. Para determinar se um determinado formato está disponível no objeto retornado, por exemplo, chamar o <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> método.  
+ Para acessar dados da área de transferência usando versões anteriores ao .NET Framework 2.0, use o <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> método e chamar os métodos de retornado <xref:System.Windows.Forms.IDataObject>. Para determinar se um determinado formato está disponível no objeto retornado, por exemplo, chamar o <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> método.  
   
 > [!NOTE]
 >  Todos os aplicativos do Windows compartilham a Área de Transferência do sistema. Portanto, os conteúdos estão sujeito a alterações quando você muda para outro aplicativo.  
@@ -49,7 +49,7 @@ O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode u
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Recuperar dados da Área de Transferência em vários formatos  
   
-1. Use o método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Você deve usar esse método para recuperar dados da Área de Transferência em versões anteriores à [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Use o método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Você deve usar esse método para recuperar dados da área de transferência em versões anteriores ao .NET Framework 2.0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

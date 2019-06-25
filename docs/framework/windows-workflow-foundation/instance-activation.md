@@ -2,12 +2,12 @@
 title: Ativação de instância
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 088722ba19a1f38e8a341e34a8344963021f1113
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e0d5a91a0f0ccc02d13ef96c3470da1942cc520
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584912"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348254"
 ---
 # <a name="instance-activation"></a>Ativação de instância
 A instância Store de fluxo de trabalho do SQL executa uma tarefa periodicamente interna que acorde e detecte instâncias praticáveis ou activatable de fluxo de trabalho na base de dados de persistência. Se encontra uma instância viável de fluxo de trabalho, notifica o host de fluxo de trabalho que é capaz de ativar a instância. Se o armazenamento de instância encontra uma instância activatable de fluxo de trabalho, notifica um host genérico que ative um host de fluxo de trabalho, que executa por sua vez a instância de fluxo de trabalho. As seções neste tópico explica o processo de ativação de instância em detalhes.  
@@ -35,7 +35,7 @@ A instância Store de fluxo de trabalho do SQL executa uma tarefa periodicamente
 ## <a name="generic-hosts"></a>Hosts genéricos  
  Um host genérico é um host com o valor da propriedade de metadados **WorkflowServiceType** para host genéricos é definido como **Workflowservicetype** para indicar que ele pode lidar com qualquer tipo de fluxo de trabalho. Um host genérico tem um parâmetro de XName chamado **ActivationType**.  
   
- Atualmente, a Store de instância de fluxo de trabalho do SQL dá suporte a hosts genéricos com o valor do parâmetro de ActivationType definido como **WAS**. Se o ActivationType não é definido como WAS, a instância de fluxo de trabalho do SQL gerencie <xref:System.Runtime.DurableInstancing.InstancePersistenceException>Store. O serviço de gerenciamento de fluxo de trabalho que acompanha o [!INCLUDE[dublin](../../../includes/dublin-md.md)] é um host genérico que tem o tipo de ativação definido como **WAS**.  
+ Atualmente, a Store de instância de fluxo de trabalho do SQL dá suporte a hosts genéricos com o valor do parâmetro de ActivationType definido como **WAS**. Se o ActivationType não é definido como WAS, a instância de fluxo de trabalho do SQL gerencie <xref:System.Runtime.DurableInstancing.InstancePersistenceException>Store. O serviço de gerenciamento de fluxo de trabalho que é fornecido com recursos de hospedagem do Windows Server AppFabric é um host genérico que tem o tipo de ativação definido como **WAS**.  
   
  Para WAS ativação, um host genérico requer um conjunto de parâmetros de ativação derivar o endereço do ponto de extremidade em que os novos host podem ser ativados. Os parâmetros de ativação para ativação do WAS são nome do site, caminho relativo para o aplicativo ao site, e caminho para o serviço relativo para o aplicativo. A instância Store de fluxo de trabalho do SQL armazena esses parâmetros de ativação durante a execução de <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.  
   
