@@ -1,7 +1,0 @@
-- name: 'Caracteres especiais de C#'
-  href: index.md
-  items:
-    - name: Interpolação de cadeia de caracteres -- $
-      href: interpolated.md
-    - name: '@ – identificador textual'
-      href: verbatim.md
