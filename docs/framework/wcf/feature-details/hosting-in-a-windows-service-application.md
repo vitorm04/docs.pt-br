@@ -2,12 +2,12 @@
 title: Hospedando um aplicativo de serviço do Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: b5167e61bd825ce56905149237dae05ebb44b134
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc95634745aa0c0246cf139d19e0777fde7e1aba
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613300"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402163"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedando um aplicativo de serviço do Windows
 Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) fornecem um processo modelo particularmente adequado para aplicativos que devem residir em um executável de longa execução e não exibem nenhuma forma de interface do usuário. O tempo de vida de um aplicativo de serviço é gerenciado pelo Gerenciador de controle de serviços (SCM), que permite que você inicie, de Windows parar e pausar os aplicativos de serviço do Windows. Você pode configurar um processo de serviço do Windows para iniciar automaticamente quando o computador é iniciado, tornando-o um ambiente de hospedagem adequado para aplicativos "always on". Para obter mais informações sobre aplicativos de serviço do Windows, consulte [aplicativos de serviço do Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -20,7 +20,7 @@ Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) for
   
 - O processo que hospeda seu aplicativo deve permanecer em execução depois de iniciadas. Uma vez iniciada, um processo de serviço do Windows permanece em execução, a menos que explicitamente desligamento por um administrador de servidor usando o Gerenciador de controle de serviço. Aplicativos hospedados no IIS ou WAS podem ser iniciados e interrompidos dinamicamente para fazer o melhor uso de recursos do sistema. Aplicativos que exigem o controle explícito sobre o tempo de vida do seu processo de hospedagem devem usar os serviços do Windows em vez de IIS ou WAS.  
   
-- Seu serviço WCF deve ser executado no Windows Server 2003 e usam transportes diferentes de HTTP. No Windows Server 2003, o [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ambiente de hospedagem é restrito apenas a comunicação HTTP. Aplicativos de serviço do Windows não estão sujeitos a essa restrição e podem usar qualquer transporte WCF dá suporte a, incluindo NET. TCP, NET. pipe e NET. MSMQ.  
+- Seu serviço WCF deve ser executado no Windows Server 2003 e usam transportes diferentes de HTTP. No Windows Server 2003, o ambiente de hospedagem do IIS 6.0 é restrito apenas a comunicação HTTP. Aplicativos de serviço do Windows não estão sujeitos a essa restrição e podem usar qualquer transporte WCF dá suporte a, incluindo NET. TCP, NET. pipe e NET. MSMQ.  
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>Para hospedar o WCF dentro de um aplicativo de serviço do Windows  
   

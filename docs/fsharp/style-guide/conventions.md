@@ -2,12 +2,12 @@
 title: Convenções de codificação do F#
 description: Aprenda diretrizes gerais e expressões ao escrever F# código.
 ms.date: 05/14/2018
-ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: c8df654cbb94fff1ef7ffb909655439398f30bf5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052795"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402372"
 ---
 # <a name="f-coding-conventions"></a>Convenções de codificação do F#
 
@@ -378,7 +378,7 @@ type Transactor(ctx, currentBalance) =
         ...
 ```
 
-Teste de unidade `Transactions.doTransaction` em `ImplementationLogic.Tests.fspoj` é fácil:
+Teste de unidade `Transactions.doTransaction` em `ImplementationLogic.Tests.fsproj` é fácil:
 
 ```fsharp
 namespace TransactionsTestingUtil

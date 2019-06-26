@@ -2,12 +2,12 @@
 title: Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025739"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402294"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
 
@@ -43,7 +43,7 @@ O processo de instalação do .NET Framework registra automaticamente WCF com o 
 
 Os serviços WCF hospedados no IIS devem residir em um aplicativo do IIS. Você pode criar um novo aplicativo do IIS para hospedar serviços WCF exclusivamente. Como alternativa, você pode implantar um serviço WCF em um aplicativo existente que já está hospedando o conteúdo do ASP.NET 2.0 (como páginas. aspx e serviços Web do ASP.NET [ASMX]). Para obter mais informações sobre essas opções, consulte a "Hosting WCF lado a lado com o ASP.NET" e "Hospedagem WCF Services no modo de compatibilidade do ASP.NET" seções nas [serviços WCF e ASP.NET](wcf-services-and-aspnet.md).
 
-Observe que o [!INCLUDE[iis601](../../../../includes/iis601-md.md)] e as versões posteriores reiniciam periodicamente um aplicativo isolado de programação orientada a objeto. O valor padrão é 1740 minutos. O valor máximo valor com suporte é 71.582 minutos. Esse reinício pode ser desabilitado. Para obter mais informações sobre essa propriedade, consulte a [{2&gt;{3&gt;PeriodicRestartTime&lt;3}&lt;2](https://go.microsoft.com/fwlink/?LinkId=109968).
+Observe que o IIS 6.0 e versões posteriores periodicamente reiniciar um aplicativo isolado de programação orientada a objeto. O valor padrão é 1740 minutos. O valor máximo valor com suporte é 71.582 minutos. Esse reinício pode ser desabilitado. Para obter mais informações sobre essa propriedade, consulte a [{2&gt;{3&gt;PeriodicRestartTime&lt;3}&lt;2](https://go.microsoft.com/fwlink/?LinkId=109968).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Criar um arquivo .svc para o serviço WCF
 
@@ -103,7 +103,7 @@ Você sempre deve usar endereços de ponto de extremidade relativos para pontos 
 
 ### <a name="available-transports"></a>Transportes disponíveis
 
-Os serviços WCF hospedados no IIS 5.1 e [!INCLUDE[iis601](../../../../includes/iis601-md.md)] está restrito a usar a comunicação baseada em HTTP. Nessas plataformas do IIS, configurar um serviço hospedado para usar uma associação não HTTP resulta em um erro durante a ativação do serviço. Para o [!INCLUDE[iisver](../../../../includes/iisver-md.md)], os transportes com suporte incluem HTTP, Net.TCP, Net.Pipe, Net.MSMQ e msmq.formatname para compatibilidade retroativa com os aplicativos existentes do MSMQ.
+Serviços do WCF hospedado no IIS 5.1 e 6.0 do IIS está restrito a usar a comunicação baseada em HTTP. Nessas plataformas do IIS, configurar um serviço hospedado para usar uma associação não HTTP resulta em um erro durante a ativação do serviço. Para o [!INCLUDE[iisver](../../../../includes/iisver-md.md)], os transportes com suporte incluem HTTP, Net.TCP, Net.Pipe, Net.MSMQ e msmq.formatname para compatibilidade retroativa com os aplicativos existentes do MSMQ.
 
 ### <a name="http-transport-security"></a>Segurança de transporte de HTTP
 

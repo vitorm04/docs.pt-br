@@ -1,17 +1,17 @@
 ---
-title: Associações do Windows Communcation Foundation
+title: Associações do Windows Communication Foundation
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], bindings
 - Windows Communication Foundation [WCF], bindings
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-ms.openlocfilehash: e69cd500c50e9d76824d0e438a1af86f3a722c52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a29bb9136be2e3bb07776741282a321ef4ee8f2
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857682"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402105"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Associações do Windows Communication Foundation
 Windows Communication Foundation (WCF) separa como o software para um aplicativo é escrito de como ele se comunica com outros softwares. Associações são usadas para especificar o transporte, codificação e detalhes do protocolo necessárias para clientes e serviços para se comunicar entre si. O WCF usa associações para gerar a representação subjacente de transmissão do ponto de extremidade, portanto, a maioria dos detalhes da associação deve ser aceito por terceiros que estão se comunicando. A maneira mais fácil de fazer isso é para clientes de um serviço usar a mesma associação que o ponto de extremidade para o serviço usa. Para obter mais informações sobre como fazer isso, consulte [usando associações para configurar os serviços e clientes](~/docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  

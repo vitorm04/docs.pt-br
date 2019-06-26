@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ba4546397adcfcf6142b41482f574cf86607a6b9
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025583"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402112"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Recursos do aplicativo para bibliotecas direcionadas a várias plataformas
 Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo para garantir que os recursos em suas bibliotecas de classe podem ser acessados em várias plataformas de projeto. Esse tipo de projeto está disponível no Visual Studio 2012 e tem como alvo o subconjunto portátil da biblioteca de classes do .NET Framework. Usar um [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garante que a biblioteca possa ser acessada de aplicativos da área de trabalho, Silverlight, Windows Phone e [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -72,12 +72,12 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- O código a seguir ilustra como a classe `UILibrary` e seus recursos podem ser acessados de um aplicativo no modo de console. Ele requer que uma referência a UILIbrary.dll seja adicionada ao projeto de aplicativo de console.
+ O código a seguir ilustra como a classe `UILibrary` e seus recursos podem ser acessados de um aplicativo no modo de console. Ele requer uma referência a UILibrary a ser adicionado ao projeto de aplicativo de console.
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- O código a seguir ilustra como a classe `UILibrary` e seus recursos podem ser acessados de um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Ele requer que uma referência a UILIbrary.dll seja adicionada ao projeto de aplicativo da Windows Store.
+ O código a seguir ilustra como a classe `UILibrary` e seus recursos podem ser acessados de um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Ele requer uma referência a UILibrary a ser adicionado ao projeto de aplicativo da Windows Store.
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
@@ -94,12 +94,12 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
 |Nome|Nom|
 |Título|Base de données des employés|
 
- O código a seguir ilustra como a classe `UILibrary` e seus recursos podem ser acessados de um aplicativo no modo de console. Ele requer que uma referência a UILIbrary.dll seja adicionada ao projeto de aplicativo de console.
+ O código a seguir ilustra como a classe `UILibrary` e seus recursos podem ser acessados de um aplicativo no modo de console. Ele requer uma referência a UILibrary a ser adicionado ao projeto de aplicativo de console.
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- O código a seguir ilustra como a classe `UILibrary` e seus recursos podem ser acessados de um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Ele requer que uma referência a UILIbrary.dll seja adicionada ao projeto de aplicativo da Windows Store. Usa a propriedade estática `ApplicationLanguages.PrimaryLanguageOverride` para definir o idioma preferencial do aplicativo como francês.
+ O código a seguir ilustra como a classe `UILibrary` e seus recursos podem ser acessados de um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Ele requer uma referência a UILibrary a ser adicionado ao projeto de aplicativo da Windows Store. Usa a propriedade estática `ApplicationLanguages.PrimaryLanguageOverride` para definir o idioma preferencial do aplicativo como francês.
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  

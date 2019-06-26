@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 13108e86d76b0d806eddf71b2f7e50337ca0afba
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348295"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402426"
 ---
 # <a name="what-is-windows-communication-foundation"></a>O que é o Windows Communication Foundation
 Windows Communication Foundation (WCF) é uma estrutura para criar aplicativos orientados a serviço. Usando o WCF, você pode enviar dados como mensagens assíncronas do ponto de extremidade de um serviço para outro. Um ponto de extremidade de serviço pode ser parte de um serviço disponível continuamente hospedado pelo IIS, ou pode ser um serviço hospedado em um aplicativo. Um ponto de extremidade pode ser um cliente de um serviço que solicita dados de um ponto de extremidade de serviço. As mensagens podem ser simples como um único caractere ou uma palavra enviada como XML ou complexo como um fluxo de dados binários. Alguns cenários de exemplo incluem:
@@ -92,7 +92,7 @@ Microsoft BizTalk Server R2 também utiliza o WCF como uma tecnologia de comunic
 
 O Microsoft Silverlight é uma plataforma para criar aplicativos Web interoperáveis, aplicativos Web avançados que permitem que os desenvolvedores criem sites voltados para mídia (como a streaming de vídeo). Começando com a versão 2, o Silverlight inseriu WCF como uma tecnologia de comunicação para conectar os aplicativos do Silverlight a pontos de extremidade do WCF.
 
-Recursos de hospedagem do servidor de aplicativos do Windows Server AppFabric projetados especificamente para implantar e gerenciar aplicativos que usam o WCF para comunicação. O [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] inclui opções de ferramentas e configuração avançadas projetadas especificamente para aplicativos habilitados para WCF.
+Recursos de hospedagem do servidor de aplicativos do Windows Server AppFabric projetados especificamente para implantar e gerenciar aplicativos que usam o WCF para comunicação. Os recursos de hospedagem incluem opções de ferramentas e configuração avançadas projetadas especificamente para aplicativos habilitados para WCF.
 
 ## <a name="see-also"></a>Consulte também
 

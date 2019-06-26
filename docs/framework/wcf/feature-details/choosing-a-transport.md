@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 611e8df29b37efd880ee1d19515697d899e4fa7e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048266"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402152"
 ---
 # <a name="choosing-a-transport"></a>Selecionando um transporte
 Este tópico discute os critérios para escolher entre os três transportes principais que estão incluídos no Windows Communication Foundation (WCF): HTTP, TCP e pipes nomeados. O WCF também inclui um enfileiramento de mensagens (também conhecido como MSMQ) de transporte, mas este documento não abrange o enfileiramento de mensagens.  
@@ -53,7 +53,7 @@ Este tópico discute os critérios para escolher entre os três transportes prin
 |Atributo|Descrição|Transportes favorecidos|  
 |---------------|-----------------|------------------------|  
 |Diagnóstico|Diagnóstico permitem que você detecte automaticamente os problemas de conectividade de transporte. Todos os transportes dão suporte a capacidade de enviar informações de falha de back-que descreve a conectividade. No entanto, o WCF não inclui ferramentas de diagnóstico para investigar problemas de rede.|Nenhum|  
-|Hospedagem|Todos os pontos de extremidade do WCF devem ser hospedados dentro de um aplicativo. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] e anteriores dão suporte somente aplicativos de hospedagem que usam o transporte HTTP. Em [!INCLUDE[wv](../../../../includes/wv-md.md)], o suporte é adicionado para hospedar todos os transportes WCF, incluindo TCP e pipes nomeado. Para obter mais informações, consulte [hospedagem nos serviços de informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) e [hospedagem no serviço de ativação de processos do Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
+|Hospedagem|Todos os pontos de extremidade do WCF devem ser hospedados dentro de um aplicativo. IIS 6.0 e versões anteriores dão suporte somente aplicativos de hospedagem que usam o transporte HTTP. Em [!INCLUDE[wv](../../../../includes/wv-md.md)], o suporte é adicionado para hospedar todos os transportes WCF, incluindo TCP e pipes nomeado. Para obter mais informações, consulte [hospedagem nos serviços de informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) e [hospedagem no serviço de ativação de processos do Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |Inspeção|A inspeção é a capacidade de extrair e processar informações da mensagens durante a transmissão. O protocolo HTTP separa as informações de roteamento e controle de dados, tornando mais fácil criar ferramentas que inspecionar e analisar as mensagens. Transportes que são fáceis de inspecionar também podem exigir menos poder de processamento em dispositivos de rede. O nível de segurança usada afeta se as mensagens podem ser inspecionadas.|HTTP|  
 |latência|Latência é a quantidade mínima de tempo necessário para concluir uma troca de mensagens. Todas as operações de rede mais ou menos têm latência dependendo da opção de transporte. Usando comunicação duplex ou unidirecional com um transporte cujo padrão de troca de mensagem nativo é de solicitação-resposta, como HTTP, pode fazer com que a latência adicional devido a correlação forçada de mensagens. Nessa situação, considere o uso de um transporte cujo padrão de troca de mensagem nativa é duplex, como TCP.|TCP, chamado<br /><br /> Pipe|  
 |Alcance|O alcance de um transporte reflete como compatível com o transporte é ao conectar-se com outros sistemas. O transporte de pipe nomeado tem muito pouco alcance; ele só pode se conectar aos serviços em execução no mesmo computador. Os transportes TCP e HTTP têm alcance excelente e podem entrar em algumas configurações de NAT e firewall. Para obter mais informações, consulte [trabalhando com NATs e Firewalls](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  
