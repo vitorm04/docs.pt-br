@@ -6,62 +6,66 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: f41e3811fc6bab8a354f75f46b0ac79c0ce42f99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02027a238bc9a2f82963ea841584d2bb3c6446c6
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018080"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410540"
 ---
 # <a name="systemxmlserialization-element"></a>\<system.xml.serialization> Element
-O elemento de nível superior para controlar a serialização XML. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md).  
-  
- \<configuration>  
-\<system.xml.serialization>  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```xml  
-<system.xml.serialization>  
-</system.xml.serialization>  
-```  
-  
-## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
-  
-### <a name="attributes"></a>Atributos  
- nenhuma.  
-  
-### <a name="child-elements"></a>Elementos filho  
-  
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|Elemento [\<dateTimeSerialization>](../../../docs/standard/serialization/datetimeserialization-element.md)|Determina o modo de serialização de objetos <xref:System.DateTime>.|  
-|Elemento [\<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|Contém tipos que são usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> para mapeamento de tipos XSD para tipos do .NET Framework.|  
-  
-### <a name="parent-elements"></a>Elementos pai  
-  
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[Elemento \<configuration>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|O elemento raiz em todos os arquivos de configuração que é usado pelo common language runtime e aplicativos do .NET Framework.|  
-  
-## <a name="example"></a>Exemplo  
- O exemplo de código a seguir ilustra como especificar o modo de serialização de um objeto <xref:System.DateTime> e a adição de tipos usada pelo <xref:System.Xml.Serialization.XmlSchemaImporter> ao mapear os tipos XSD para os tipos do .NET Framework.  
-  
-```xml  
-<system.xml.serialization>  
-    <xmlSerializer checkDeserializeAdvances="false" />  
-    <dateTimeSerialization mode = "Local" />  
-    <schemaImporterExtensions>  
-        <add   
-        name = "MobileCapabilities"   
-        type = "System.Web.Mobile.MobileCapabilities,   
-        System.Web.Mobile, Version - 2.0.0.0, Culture = neuutral,   
-        PublicKeyToken = b03f5f6f11d40a3a" />  
-    </schemaImporterExtensions>  
-</system.sxml.serialization>  
-```  
-  
+
+O elemento de nível superior para controlar a serialização XML. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md).
+
+\<configuration>\
+\<system.xml.serialization>
+
+## <a name="syntax"></a>Sintaxe
+
+```xml
+<system.xml.serialization>
+</system.xml.serialization>
+```
+
+## <a name="attributes-and-elements"></a>Atributos e elementos
+
+As seções a seguir descrevem atributos, elementos filho e elementos pai.
+
+### <a name="attributes"></a>Atributos
+
+nenhuma.
+
+### <a name="child-elements"></a>Elementos filho
+
+|Elemento|Descrição|
+|-------------|-----------------|
+|Elemento [\<dateTimeSerialization>](../../../docs/standard/serialization/datetimeserialization-element.md)|Determina o modo de serialização de objetos <xref:System.DateTime>.|
+|Elemento [\<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|Contém tipos que são usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> para mapeamento de tipos XSD para tipos do .NET Framework.|
+
+### <a name="parent-elements"></a>Elementos pai
+
+|Elemento|Descrição|
+|-------------|-----------------|
+|[Elemento \<configuration>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|O elemento raiz em todos os arquivos de configuração que é usado pelo common language runtime e aplicativos do .NET Framework.|
+
+## <a name="example"></a>Exemplo
+
+O exemplo de código a seguir ilustra como especificar o modo de serialização de um objeto <xref:System.DateTime> e a adição de tipos usada pelo <xref:System.Xml.Serialization.XmlSchemaImporter> ao mapear os tipos XSD para os tipos do .NET Framework.
+
+```xml
+<system.xml.serialization>
+    <xmlSerializer checkDeserializeAdvances="false" />
+    <dateTimeSerialization mode = "Local" />
+    <schemaImporterExtensions>
+        <add
+        name = "MobileCapabilities"
+        type = "System.Web.Mobile.MobileCapabilities,
+        System.Web.Mobile, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b03f5f6f11d40a3a" />
+    </schemaImporterExtensions>
+</system.xml.serialization>
+```
+
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
