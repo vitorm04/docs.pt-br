@@ -2,12 +2,12 @@
 title: 'Transporte: Transações personalizadas através de exemplo de UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 8a7b0c4e9ea73fa952710f2b415082b56062dad0
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ec6499a8e69c8512c33297ac4477eaafc397d78f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483108"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425520"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transporte: Transações personalizadas através de exemplo de UDP
 Este exemplo se baseia o [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) amostra no Windows Communication Foundation (WCF)[extensibilidade de transporte](../../../../docs/framework/wcf/samples/transport-extensibility.md). Ele estende o exemplo de transporte UDP para dar suporte a fluxo de transação personalizada e demonstra o uso do <xref:System.ServiceModel.Channels.TransactionMessageProperty> propriedade.  
@@ -234,7 +234,7 @@ if (transaction != null)
 9. Para regenerar o código do cliente e a configuração usando Svcutil.exe, inicie o aplicativo de serviço e, em seguida, execute o seguinte comando de Svcutil.exe do diretório raiz do exemplo.  
   
     ```  
-    svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
+    svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
 10. Observe que Svcutil.exe não gerar a configuração de extensão de associação para o `sampleProfileUdpBinding`; você deve adicioná-lo manualmente.  

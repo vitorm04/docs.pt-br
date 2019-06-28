@@ -2,12 +2,12 @@
 title: Introdução ao roteamento
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 41545d0340ae222e427d1e6d428ed1e3f7b4fa76
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 478c9aa6563cab4ba7769c56d7084c8716c43c58
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912487"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425374"
 ---
 # <a name="routing-introduction"></a>Introdução ao roteamento
 O serviço Routing fornece um SOAP conectável genérico que é capaz de roteamento de mensagens com base no conteúdo da mensagem intermediário. Com o serviço de roteamento, você pode criar lógica de roteamento complexa que permite implementar cenários como a agregação de serviço, controle de versão do serviço, roteamento de prioridades e roteamento de multicast. O serviço de roteamento também fornece a manipulação de erros permite que você configurar as listas de pontos de extremidade de backup, ao qual as mensagens são enviadas se ocorrer uma falha ao enviar para o ponto de extremidade de destino principal.  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>Configuração dinâmica  
  Quando você adicionar pontos de extremidade de cliente adicionais ou precisa modificar os filtros que são usadas para rotear mensagens, você deve ter uma maneira de atualizar a configuração dinamicamente em tempo de execução para evitar interromper o serviço para os pontos de extremidade recebendo mensagens por meio de o serviço de roteamento. Modificar um arquivo de configuração ou o código do aplicativo host nem sempre é suficiente, pois qualquer um dos métodos exige que o aplicativo, o que poderia levar a perda potencial de todas as mensagens atualmente em trânsito e o potencial para tempo de inatividade durante a reciclagem Aguardando o serviço seja reiniciado.  
   
- Você pode modificar apenas o **RoutingConfiguration** programaticamente. Embora inicialmente, você pode configurar o serviço usando um arquivo de configuração, você só pode modificar a configuração de tempo de execução, criando um novo **RoutingConfigution** e passá-lo como um parâmetro para o <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> método exposto pelo <xref:System.ServiceModel.Routing.RoutingExtension> extensão de serviço. Todas as mensagens em trânsito no momento continuam a ser roteado usando a configuração anterior, enquanto as mensagens recebidas após a chamada para **ApplyConfiguration** usar a nova configuração. O exemplo a seguir demonstra como criar uma instância do serviço Roteamento e, em seguida, posteriormente, modificando a configuração.  
+ Você pode modificar apenas o **RoutingConfiguration** programaticamente. Embora inicialmente, você pode configurar o serviço usando um arquivo de configuração, você só pode modificar a configuração de tempo de execução, criando um novo **RoutingConfiguration** e passá-lo como um parâmetro para o <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> método exposto pelo <xref:System.ServiceModel.Routing.RoutingExtension> extensão de serviço. Todas as mensagens em trânsito no momento continuam a ser roteado usando a configuração anterior, enquanto as mensagens recebidas após a chamada para **ApplyConfiguration** usar a nova configuração. O exemplo a seguir demonstra como criar uma instância do serviço Roteamento e, em seguida, posteriormente, modificando a configuração.  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  

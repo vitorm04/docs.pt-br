@@ -3,12 +3,12 @@ title: Modelo de identidade baseada em declarações
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 8560c7fd1969cfed6e43e2982fb69313c45c9405
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650455"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422400"
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidade baseada em declarações
 Quando você cria aplicativos com reconhecimento de declarações, a identidade do usuário é representada em seu aplicativo como um conjunto de declarações. Uma reivindicação pode ser o nome do usuário, outra pode ser um endereço de email. A ideia é que um sistema externo de identidade seja configurado para dar ao seu aplicativo tudo que ele precisa saber sobre o usuário com cada solicitação que ele faz, juntamente com a segurança criptográfica que os dados de identidade você recebe de uma fonte confiável.  
@@ -58,7 +58,7 @@ Quando você cria aplicativos com reconhecimento de declarações, a identidade 
  Ao criar um aplicativo que confia em declarações, você está criando um aplicativo de terceira parte confiável (RP). Um sinônimo para RP é "aplicativo com reconhecimento de declaração" e “aplicativo baseado em declarações”. Os aplicativos e serviços Web podem ser RPs. Um aplicativo RP consome os tokens emitidos por um STS e extrai as declarações dos tokens para usá-las para tarefas relacionadas à identidade. O WIF oferece funcionalidades para ajudar você a criar aplicativos RP.  
   
 ### <a name="standards"></a>Padrões  
- Para tornar tudo isso interoperável, vários padrões WS-* são usados no cenário anterior. A política é recuperada usando WS-MetadataExchange, e a própria política é estruturada de acordo com a especificação de WS-Policy. O STS expõe os pontos de extremidade que implementam a especificação de WS-Trust, que descreve como solicitar e receber tokens de segurança. A maioria dos STSs de hoje emite tokens formatados com SAML. SAML é um vocabulário de XML reconhecido no setor que pode ser usado para representar declarações de maneira interoperável. Ou, em uma situação de várias plataformas, permite que você se comunique com um STS em uma plataforma completamente diferente e faça logon único em todos os seus aplicativos, independentemente da plataforma.  
+ Para tornar tudo isso interoperável, vários padrões WS-* são usados no cenário anterior. A política é recuperada usando WS-MetadataExchange, e a própria política é estruturada de acordo com a especificação de WS-Policy. O STS expõe os pontos de extremidade que implementam a especificação de WS-Trust, que descreve como solicitar e receber tokens de segurança. A maioria dos STSs de hoje emite tokens formatados com marcação linguagem SAML (Security Assertion). SAML é um vocabulário de XML reconhecido no setor que pode ser usado para representar declarações de maneira interoperável. Ou, em uma situação de várias plataformas, permite que você se comunique com um STS em uma plataforma completamente diferente e faça logon único em todos os seus aplicativos, independentemente da plataforma.  
   
 ### <a name="browser-based-applications"></a>Aplicativos baseados em navegador  
  Os clientes inteligentes não são os únicos que podem usar o modelo de identidade baseada em declarações. Os aplicativos baseados em navegador (também chamados de clientes passivos) podem usá-lo também. O cenário a seguir descreve como isso funciona.  

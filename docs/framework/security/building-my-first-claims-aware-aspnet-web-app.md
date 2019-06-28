@@ -3,12 +3,12 @@ title: Criando meu primeiro aplicativo Web ASP.NET baseado em declarações
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: ae313cc16532cf6fc38d28161d4d5a2cf630bbc1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650477"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422388"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Criando meu primeiro aplicativo Web ASP.NET baseado em declarações
 ## <a name="applies-to"></a>Aplica-se a  
@@ -27,7 +27,7 @@ ms.locfileid: "64650477"
   
 3. O usuário é redirecionado do STS ao aplicativo com reconhecimento de declarações com o token emitido pelo STS na solicitação.  
   
-4. O aplicativo com reconhecimento de declarações é configurado para usar o STS e os tokens que ele emite. O aplicativo com reconhecimento de declarações usa o WIF para validar o token e analisá-lo. Os desenvolvedores usam a API e os tipos do WIF, por exemplo, **ClaimsPrincpal**, apropriados para as necessidades do aplicativo, como implementar a autorização para ele.  
+4. O aplicativo com reconhecimento de declarações é configurado para usar o STS e os tokens que ele emite. O aplicativo com reconhecimento de declarações usa o WIF para validar o token e analisá-lo. Os desenvolvedores usam a API e os tipos do WIF, por exemplo, **ClaimsPrincipal**, apropriados para as necessidades do aplicativo, como implementar a autorização para ele.  
   
  A partir do .NET 4.5, o WIF faz parte do pacote do .NET Framework. Ter as classes do WIF diretamente disponíveis no Framework permite uma integração muito mais profunda da identidade baseada em declarações no .NET, facilitando o uso de declarações. Com o WIF 4.5, você não precisa instalar os componentes fora da banda para começar a desenvolver aplicativos Web com reconhecimento de declarações. As classes WIF agora são difundidas por vários assemblies, sendo os principais System.Security.Claims, System.IdentityModel e System.IdentityModel.Services.  
   

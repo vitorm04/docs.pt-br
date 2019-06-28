@@ -2,12 +2,12 @@
 title: Especificação do manifesto do provedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641159"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422714"
 ---
 # <a name="provider-manifest-specification"></a>Especificação do manifesto do provedor
 Esta seção discute como um provedor de armazenamento de dados pode suportar os tipos e funções no armazenamento de dados.  
@@ -83,9 +83,9 @@ Esta seção discute como um provedor de armazenamento de dados pode suportar os
  O manifesto do provedor é carregado pelo carregador de metadados de Store (StoreItemCollection), usando uma conexão de armazenamento de dados ou um token de manifesto do provedor.  
   
 #### <a name="using-a-data-store-connection"></a>Usando uma conexão do armazenamento de dados  
- Quando a conexão do armazenamento de dados está disponível, a chamada DbProvderServices.GetProviderManifestToken para retornar o símbolo que é passado para o método de GetProviderManifest, que retorna DbProviderManifest. Representantes desse método para a implementação de provedor de GetDbProviderManifestToken.  
+ Quando a conexão de armazenamento de dados estiver disponível, chame <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> para retornar o token que é passado para o <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> método, que retorna <xref:System.Data.Common.DbProviderManifest>. Este método delega a implementação do provedor `GetDbProviderManifestToken`.  
   
-```  
+```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  

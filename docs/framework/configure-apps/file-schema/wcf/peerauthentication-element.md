@@ -2,12 +2,12 @@
 title: Elemento <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 1e99f6d117604f9ba2672972a4b09e7fe9f96792
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6aa11c50ef950a8a9d902a0fb77fdf301d18f7cb
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783365"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423037"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > elemento
 Especifica as opções de autenticação para clientes ponto a ponto.  
@@ -39,7 +39,7 @@ Especifica as opções de autenticação para clientes ponto a ponto.
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`customCertificateValidatorType`|Cadeia de caracteres opcional. Um tipo e assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`.|  
-|`certifcateValidationMode`|Enumeração opcional. Especifica um dos três modos usados para validar as credenciais. Se definido como `Custom`, em seguida, um `customCertificateValidator` também deve ser fornecido. O padrão é `ChainTrust`.|  
+|`certificateValidationMode`|Enumeração opcional. Especifica um dos três modos usados para validar as credenciais. Se definido como `Custom`, em seguida, um `customCertificateValidator` também deve ser fornecido. O padrão é `ChainTrust`.|  
 |`revocationMode`|Enumeração opcional. Um dos modos usados para verificar por listas de certificados revogados (CRL). O padrão é `Online`.|  
 |`trustedStoreLocation`|Enumeração opcional. Um dos locais de armazenamento de sistema de dois: `LocalMachine` ou `CurrentUser`. Esse valor é usado quando um certificado de serviço é negociado ao cliente. Validação é executada em relação a **pessoas confiáveis** armazenar no local de repositório especificado. O padrão é `CurrentUser`.|  
   

@@ -2,12 +2,12 @@
 title: Token personalizado
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 862b4b26295ef3e90064b27ecd753e9b541471a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11b89f6d4f2800f079ba6576801b39c85324f6e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650209"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425068"
 ---
 # <a name="custom-token"></a>Token personalizado
 Este exemplo demonstra como adicionar uma implementação personalizada de token em um aplicativo do Windows Communication Foundation (WCF). O exemplo usa um `CreditCardToken` passar com segurança as informações sobre cartões de crédito do cliente para o serviço. O token é passado no cabeçalho da mensagem do WS-Security e é assinado e criptografado usando o elemento de associação de segurança simétrica juntamente com outros cabeçalhos de mensagem e o corpo da mensagem. Isso é útil em casos em que os tokens internos não são suficientes. Este exemplo demonstra como fornecer um token de segurança personalizada para um serviço em vez de usar um dos tokens internos. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.
@@ -251,7 +251,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  Neste exemplo, podemos usar um provedor de token apenas no cliente e um autenticador de token apenas no serviço, porque queremos transmitir um token de cartão de crédito somente na direção para o serviço de cliente.
 
- A funcionalidade no cliente está localizada na `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` e `CreditCardTokenProvider` classes.
+ A funcionalidade no cliente está localizada na `CreditCardClientCredentials`, `CreditCardClientCredentialsSecurityTokenManager` e `CreditCardTokenProvider` classes.
 
  No serviço, a funcionalidade reside na `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` e `CreditCardTokenAuthorizationPolicy` classes.
 

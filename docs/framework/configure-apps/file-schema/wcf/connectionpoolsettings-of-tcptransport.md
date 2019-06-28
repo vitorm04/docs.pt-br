@@ -2,12 +2,12 @@
 title: <connectionPoolSettings> de <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 93363c5ff1753ff02956404da7697780078c9839
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c17184445aa5cec8a5121252934574add2b3db0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673232"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423163"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings> of \<tcpTransport>
 Especifica as configurações do pool de conexão adicionais para um transporte TCP.  
@@ -25,7 +25,7 @@ Especifica as configurações do pool de conexão adicionais para um transporte 
 <connectionPoolSettings groupName="String"
                         idleTimeout="TimeSpan"
                         leaseTimeout="TimeSpan"
-                        maxOutboundConnectionsPerEndpopint="Integer" />
+                        maxOutboundConnectionsPerEndpoint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  

@@ -2,12 +2,12 @@
 title: Noções básicas de alterações de estado
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771552"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424771"
 ---
 # <a name="understanding-state-changes"></a>Noções básicas de alterações de estado
 Este tópico discute os estados e transições que tem canais, os tipos usados para os estados de canal de estrutura e como implementá-los.  

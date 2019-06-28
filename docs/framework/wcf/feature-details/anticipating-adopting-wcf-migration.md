@@ -2,12 +2,12 @@
 title: 'Antecipar a adoção do Windows Communication Foundation: facilitar a migração futura'
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 5e1146806ce631eb5e6795f5d12267138d54785c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 09bbb11c58992f0fabcb822f5f3d88fef273bea9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592830"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425278"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Antecipar a adoção do Windows Communication Foundation: facilitar a migração futura
 Para garantir uma migração mais fácil futuras de novos aplicativos ASP.NET ao WCF, siga as recomendações acima, bem como as recomendações a seguir.  
@@ -65,20 +65,20 @@ Para garantir uma migração mais fácil futuras de novos aplicativos ASP.NET ao
   
 ```csharp  
 [Serializable]  
-[XmlRoot(  
-     Namespace="ExplicitNamespace", IsNullable=true)]  
-    public partial class AnticipatedException {  
-  
-     private string anticipatedExceptionInformationField;  
-  
-     public string AnticipatedExceptionInformation {  
-      get {  
-          return this.anticipatedExceptionInformationField;  
-          }  
-      set {  
-          this.anticipatedExceptionInformationField = value;  
-          }  
-     }  
+[XmlRoot(Namespace="ExplicitNamespace", IsNullable=true)]  
+public partial class AnticipatedException 
+{ 
+    private string anticipatedExceptionInformationField;  
+
+    public string AnticipatedExceptionInformation 
+    {  
+        get {   
+            return this.anticipatedExceptionInformationField;  
+        }  
+        set {  
+            this.anticipatedExceptionInformationField = value;  
+        }  
+    }  
 }  
 ```  
   
@@ -104,7 +104,7 @@ public XmlNode ToXML()
  As classes, em seguida, podem ser usadas para fornecer os detalhes para geradas explicitamente <xref:System.Web.Services.Protocols.SoapException> instâncias:  
   
 ```csharp  
-AnctipatedException exception = new AnticipatedException();  
+AnticipatedException exception = new AnticipatedException();  
 exception.AnticipatedExceptionInformation = "…";  
 throw new SoapException(  
      "Fault occurred",  

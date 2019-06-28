@@ -2,12 +2,12 @@
 title: Validador de senha e nome de usuário
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: ee0e0e85389ecba39c140f383f57be95f15ae879
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 16e5f854dbe76150945145c0ce81d0d5fa4ac0d0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662374"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421819"
 ---
 # <a name="user-name-password-validator"></a>Validador de senha e nome de usuário
 Este exemplo demonstra como implementar um validador personalizado de UserNamePassword. Isso é útil em casos em que nenhum dos modos de validação UserNamePassword internos é adequado para os requisitos do aplicativo; Por exemplo, quando os pares de nome de usuário e senha são armazenados em algum armazenamento externo, como um banco de dados. Este exemplo mostra um serviço que tem um validador personalizado que verifica se há dois pares de nome de usuário/senha específica. O cliente usa tal um par de nome de usuário/senha para se autenticar no serviço.
@@ -32,7 +32,7 @@ Este exemplo demonstra como implementar um validador personalizado de UserNamePa
 
 - O servidor é autenticado usando o certificado do servidor x. 509.
 
- O serviço expõe um ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração App. config. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão `wsHttpBinding` que assume como padrão usando a autenticação de nome de usuário do WS-Securityand. Especifica o comportamento de serviço a `Custom` modo para validar os pares de nome de usuário e senha do cliente junto com o tipo de classe do validador. O comportamento também especifica o certificado de servidor usando o `serviceCertificate` elemento. O certificado do servidor deve conter o mesmo valor para o `SubjectName` como o `findValue` na [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+ O serviço expõe um ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração App. config. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão `wsHttpBinding` que assume como padrão usando a autenticação do WS-Security e o nome de usuário. Especifica o comportamento de serviço a `Custom` modo para validar os pares de nome de usuário e senha do cliente junto com o tipo de classe do validador. O comportamento também especifica o certificado de servidor usando o `serviceCertificate` elemento. O certificado do servidor deve conter o mesmo valor para o `SubjectName` como o `findValue` na [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
 <system.serviceModel>

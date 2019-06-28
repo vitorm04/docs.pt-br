@@ -3,12 +3,12 @@ title: <factorySettings>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 202aad17-1b8b-4c87-ad57-4ca5de18ed35
-ms.openlocfilehash: d8e87799962638ac6514ebb31bbc9e209b39c98d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ee874d4f92ee398dc9752d3c1d1f22610b17097
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790163"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422913"
 ---
 # <a name="factorysettings"></a>\<factorySettings>
 Especifica as configurações de cache da fábrica de canal.  
@@ -64,7 +64,7 @@ Especifica as configurações de cache da fábrica de canal.
  Para obter mais informações sobre como alterar o cache padrão do compartilhamento níveis e configurações de cache para a fábrica de canais e cache de canal, consulte [alterando os níveis de compartilhamento de Cache para enviar atividades](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
   
 ## <a name="example"></a>Exemplo  
- Em um serviço hospedado de fluxo de trabalho, você pode especificar os cache e o canal cache configurações de fábrica no arquivo de configuração do aplicativo. Para fazer isso, adicionar um comportamento de serviço que contém as configurações de cache para cache de fábrica e o canal e adicionar esse comportamento de serviço ao seu serviço. O exemplo a seguir mostra o conteúdo de um arquivo de configuração que contém o **MyChannelCacheBehavior** comportamento de serviço com as configurações de cache de canal e do cache de fábrica personalizada. Esse comportamento de serviço é adicionado ao serviço por meio de **behaviorConfiguarion** atributo.  
+ Em um serviço hospedado de fluxo de trabalho, você pode especificar os cache e o canal cache configurações de fábrica no arquivo de configuração do aplicativo. Para fazer isso, adicionar um comportamento de serviço que contém as configurações de cache para cache de fábrica e o canal e adicionar esse comportamento de serviço ao seu serviço. O exemplo a seguir mostra o conteúdo de um arquivo de configuração que contém o `MyChannelCacheBehavior` comportamento de serviço com as configurações de cache de canal e do cache de fábrica personalizada. Esse comportamento de serviço é adicionado ao serviço por meio de `behaviorConfiguration` atributo.  
   
 ```xml  
 <configuration>    

@@ -2,12 +2,12 @@
 title: Protocolos de segurança versão 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 8114183109befcb77c3bf2b35fe246118da5afde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 71855b73bb08d5edef05747dcff9e1ac04fb951f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586881"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425092"
 ---
 # <a name="security-protocols-version-10"></a>Protocolos de segurança versão 1.0
 Os protocolos de segurança de serviços Web fornecem mecanismos de segurança de serviços Web que abrangem todos os empresariais existentes, requisitos de segurança de mensagens. Esta seção descreve os detalhes do Windows Communication Foundation (WCF) versão 1.0 (implementado de <xref:System.ServiceModel.Channels.SecurityBindingElement>) para protocolos de segurança de serviços da Web a seguir.  
@@ -129,7 +129,7 @@ Os protocolos de segurança de serviços Web fornecem mecanismos de segurança d
  O WCF dá suporte a perfis de Token de SAML do WSS 1.0 e 1.1 para os tokens SAML versão 1.1. É possível implementar outras versões dos formatos de token SAML.  
   
 ### <a name="15-security-context-token"></a>1.5 Token de contexto de segurança de  
- O WCF oferece suporte a segurança contexto Token (SCT) introduzidos no WS-SecureCoversation. SCT é usado para representar um contexto de segurança estabelecido em SecureConversation, bem como a negociação binária protocolos TLS e SSPI, descrito abaixo.  
+ O WCF oferece suporte à segurança contexto Token (SCT) introduzidos no WS-SecureConversation. SCT é usado para representar um contexto de segurança estabelecido em SecureConversation, bem como a negociação binária protocolos TLS e SSPI, descrito abaixo.  
   
 ## <a name="2-common-message-security-parameters"></a>2. Parâmetros comuns de segurança de mensagem  
   

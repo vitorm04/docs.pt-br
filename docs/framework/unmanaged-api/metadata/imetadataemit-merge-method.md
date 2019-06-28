@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 179cfc5c0725934e21d7b89a2f8d4c934b049f78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 65dbfd526110be5b9b3348fb677fbde7301e4038
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106048"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424657"
 ---
 # <a name="imetadataemitmerge-method"></a>Método IMetaDataEmit::Merge
 Adiciona o escopo importado especificado à lista de escopos a serem mesclados.  
@@ -44,7 +44,7 @@ HRESULT Merge (
  `pIMap`  
  [in] Um ponteiro para um [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) objeto que especifica o token remapear.  
   
- `pHandleer`  
+ `pHandler`  
  [in] Um ponteiro para um [IUnknown](/cpp/atl/iunknown) objeto que especifica os erros.  
   
 ## <a name="remarks"></a>Comentários  

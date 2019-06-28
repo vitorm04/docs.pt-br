@@ -2,12 +2,12 @@
 title: Elemento <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 410fffd541926b9a2e75c04d26a2a1e08a262939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804c280bcdb0fecc87f71121b7d95b5fd0268de9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764082"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423119"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > elemento
 Especifica opções de autenticação para remetentes de mensagens ponto a ponto.  
@@ -38,10 +38,10 @@ Especifica opções de autenticação para remetentes de mensagens ponto a ponto
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|customCertificateValidatorType|Um tipo e assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`.|  
-|certifcateValidationMode|Especifica um dos três modos usados para validar as credenciais. Se definido como `Custom`, em seguida, um `customCertificateValidator` também deve ser fornecido.|  
-|revocationMode|Um dos modos usados para verificar por listas de certificados revogados (CRL).|  
-|trustedStoreLocation|Um dos locais de armazenamento de sistema de dois: `LocalMachine` ou `CurrentUser`. Esse valor é usado quando um certificado de serviço é negociado ao cliente. Validação é executada em relação a **pessoas confiáveis** armazenar no local de repositório especificado.|  
+|`customCertificateValidatorType`|Um tipo e assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`.|  
+|`certificateValidationMode`|Especifica um dos três modos usados para validar as credenciais. Se definido como `Custom`, em seguida, um `customCertificateValidator` também deve ser fornecido.|  
+|`revocationMode`|Um dos modos usados para verificar por listas de certificados revogados (CRL).|  
+|`trustedStoreLocation`|Um dos locais de armazenamento de sistema de dois: `LocalMachine` ou `CurrentUser`. Esse valor é usado quando um certificado de serviço é negociado ao cliente. Validação é executada em relação a **pessoas confiáveis** armazenar no local de repositório especificado.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType atributo  
   

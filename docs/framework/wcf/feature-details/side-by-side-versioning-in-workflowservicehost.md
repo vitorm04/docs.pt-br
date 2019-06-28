@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 3ac8b2260e5da1e91c167e3e9ef91039deb983b2
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0dfb2469ac3f497a40a3008c9933977947685979
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380243"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425495"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Controle de versão lado a lado no WorkflowServiceHost
 O <xref:System.ServiceModel.Activities.WorkflowServiceHost> lado a lado de controle de versão introduzido no .NET Framework 4.5 fornece a capacidade de hospedar várias versões de um serviço de fluxo de trabalho em um único ponto de extremidade. A funcionalidade de lado a lado fornecida permite que um serviço de fluxo de trabalho seja configurado para que novas instâncias do serviço de fluxo de trabalho sejam criadas usando a nova definição de fluxo de trabalho, enquanto executa instâncias completas usando a definição existente. Este tópico fornece uma visão geral da execução lado a lado do serviço de fluxo de trabalho usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -81,8 +81,8 @@ End With
 > [!NOTE]
 >  Isso é útil se o serviço foi implantado inicialmente sem um <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> configurado, e uma versão atualizada é criada.  
   
-### <a name="adding-a-new-version-to-a-web-hosted-workflow-service"></a>Adicionar uma nova versão a um serviço de fluxo de trabalho hospedado na web   
- A primeira etapa na configuração de uma nova versão de um serviço de fluxo de trabalho em um serviço hospedado na web é criar uma nova pasta na pasta `App_Code` com o mesmo nome do arquivo de serviço. Se arquivo `xamlx` do serviço é chamado de `MortgageWorkflow.xamlx`, a pasta deve ser nomeada como `MortgageWorkflow`. Coloque uma cópia do arquivo `xamlx` original do serviço nesta pasta e renomeie-o para um novo nome, como `MortgageWorkflowV1.xamlx`. Faça as alterações desejadas no serviço primário, atualize seu <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> e implante o serviço. No exemplo a seguir, o <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> foi atualizado com um <xref:System.Activities.WorkflowIdentity.Name%2A> de `MortageWorkflow` e um <xref:System.Activities.WorkflowIdentity.Version%2A> de `2.0.0.0`.  
+### <a name="adding-a-new-version-to-a-web-hosted-workflow-service"></a>Adicionar uma nova versão a um serviço de fluxo de trabalho hospedado na web  
+ A primeira etapa na configuração de uma nova versão de um serviço de fluxo de trabalho em um serviço hospedado na web é criar uma nova pasta na pasta `App_Code` com o mesmo nome do arquivo de serviço. Se arquivo `xamlx` do serviço é chamado de `MortgageWorkflow.xamlx`, a pasta deve ser nomeada como `MortgageWorkflow`. Coloque uma cópia do arquivo `xamlx` original do serviço nesta pasta e renomeie-o para um novo nome, como `MortgageWorkflowV1.xamlx`. Faça as alterações desejadas no serviço primário, atualize seu <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> e implante o serviço. No exemplo a seguir, o <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> foi atualizado com um <xref:System.Activities.WorkflowIdentity.Name%2A> de `MortgageWorkflow` e um <xref:System.Activities.WorkflowIdentity.Version%2A> de `2.0.0.0`.  
   
  ![Captura de tela que mostra a DefinitionIdentity da WorkflowIdentity.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-workflowidentity.bmp)  
   

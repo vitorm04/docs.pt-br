@@ -2,12 +2,12 @@
 title: 'Passo a passo: Geração SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 380ab80a577fa103c33328047cd24cce6be5cb6e
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 5d8723c6a6d1ab12a2ba1f0f2f7cd5e09e82bfad
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690347"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422769"
 ---
 # <a name="walkthrough-sql-generation"></a>Passo a passo: Geração SQL
 
@@ -128,7 +128,7 @@ A entrada direita é processada da mesma forma como entrada esquerda. O estado a
 
 ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-“False” seguir é empurrado na pilha de IsParentAJoin e == o Var de Var de condição de adição (Extent1) .CategoryID (Extent2) .CategoryID é processado. Var (extenent1) é resolvido para \<symbol_Extent1 > depois de uma pesquisa na tabela de símbolo. Porque a instância é resolvida para um símbolo simples, como resultado de processar Var(Extent1). CategoryID, um SqlBuilder com \<symbol1 >. " CategoryID"é retornado. O outro lado de comparação é processado mesma forma, e o resultado de visitar a condição de associação é acrescentado à cláusula de SelectStatement1 e o valor “false” é aparecido a pilha de IsParentAJoin.
+“False” seguir é empurrado na pilha de IsParentAJoin e == o Var de Var de condição de adição (Extent1) .CategoryID (Extent2) .CategoryID é processado. Var(Extent1) é resolvido para \<symbol_Extent1 > depois de uma pesquisa na tabela de símbolo. Porque a instância é resolvida para um símbolo simples, como resultado de processar Var(Extent1). CategoryID, um SqlBuilder com \<symbol1 >. " CategoryID"é retornado. O outro lado de comparação é processado mesma forma, e o resultado de visitar a condição de associação é acrescentado à cláusula de SelectStatement1 e o valor “false” é aparecido a pilha de IsParentAJoin.
 
 Com isso, Join1 foi processado completamente, e um escopo é aparecido da tabela de símbolo.
 

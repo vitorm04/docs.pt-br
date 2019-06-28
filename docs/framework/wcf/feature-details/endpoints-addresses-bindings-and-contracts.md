@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3d345cfa3169e22e7c5e85cd1c7d11c2feef4f5f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d224535bb266d0a3673359388c6c211103df7374
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665970"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424856"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Pontos de extremidade: endereços, associações e contratos
 Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade de fornecem aos clientes acesso à funcionalidade oferecida por um serviço WCF.  
@@ -61,7 +61,7 @@ Toda a comunicação com um serviço do Windows Communication Foundation (WCF) o
   
      Para obter mais informações sobre como definir um contrato, consulte [Criando contratos de serviço](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
-- Comportamentos: Você pode usar comportamentos de ponto de extremidade para personalizar o comportamento local do ponto de extremidade de serviço. Comportamentos de ponto de extremidade feito participantes no processo de criação de um WCFruntime. Um exemplo de um comportamento de ponto de extremidade é o <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> propriedade, que permite que você especifique um endereço de escutando diferente que o endereço SOAP ou a descrição de linguagem WSDL (Web Services). Para obter mais informações, consulte [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+- Comportamentos: Você pode usar comportamentos de ponto de extremidade para personalizar o comportamento local do ponto de extremidade de serviço. Comportamentos de ponto de extremidade feito participantes no processo de criação de um tempo de execução do WCF. Um exemplo de um comportamento de ponto de extremidade é o <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> propriedade, que permite que você especifique um endereço de escutando diferente que o endereço SOAP ou a descrição de linguagem WSDL (Web Services). Para obter mais informações, consulte [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definir pontos de extremidade  
  Você pode especificar o ponto de extremidade para um serviço usando código imperativa, ou declarativamente por meio da configuração. Para obter mais informações, confira [Como: Criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) e [como: Criar um ponto de extremidade de serviço no código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  

@@ -2,12 +2,12 @@
 title: 'Como: configurar serviços do WCF para interoperar com clientes WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 1c5a5e4e92eedb21e3405370e59344d3b861d1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5034744059e7ed87d4f8b41c6ae89d1af1bf0f56
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619168"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425395"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Como: configurar serviços do WCF para interoperar com clientes WSE 3.0
 Serviços Windows Communication Foundation (WCF) são compatíveis com o nível de transmissão com Web Services aprimoramentos 3.0 para clientes do Microsoft .NET (WSE) quando os serviços do WCF são configurados para usar a versão de agosto de 2004 da especificação WS-Addressing.  
@@ -24,7 +24,7 @@ Serviços Windows Communication Foundation (WCF) são compatíveis com o nível 
   
     3. Especifique um modo de autenticação e a versão das especificações WS-Security que são usados para proteger as mensagens que são compatíveis com o WSE 3.0, com a adição de um filho [ \<segurança >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) para o [ \<de associação >](../../../../docs/framework/misc/binding.md).  
   
-         Para definir o modo de autenticação, defina as `authenicationMode` atributo o [ \<segurança >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Um modo de autenticação é aproximadamente equivalente a uma asserção de segurança pronta para uso em WSE 3.0. A tabela a seguir mapeia os modos de autenticação no WCF para asserções de segurança pronta para uso em WSE 3.0.  
+         Para definir o modo de autenticação, defina as `authenticationMode` atributo o [ \<segurança >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Um modo de autenticação é aproximadamente equivalente a uma asserção de segurança pronta para uso em WSE 3.0. A tabela a seguir mapeia os modos de autenticação no WCF para asserções de segurança pronta para uso em WSE 3.0.  
   
         |Modo de autenticação do WCF|Declaração de segurança pronta para uso do WSE 3.0|  
         |-----------------------------|----------------------------------------|  

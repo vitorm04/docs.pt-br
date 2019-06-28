@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9f32b554de191ff84e7c319e2a00e3cd0610a9f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782987"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422194"
 ---
 # <a name="icordebugprocessenumnext-method"></a>Método ICorDebugProcessEnum::Next
 Obtém o número especificado de instâncias de ICorDebugProcess de enumeração, começando na posição atual.  
@@ -42,7 +42,7 @@ HRESULT Next (
  `celt`  
  [in] O número de `ICorDebugProcess` instâncias a serem recuperados.  
   
- `processess`  
+ `processes`  
  [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugProcess` objeto que representa um processo.  
   
  `pceltFetched`  

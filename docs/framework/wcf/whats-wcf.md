@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a7db79185d4445c68adda214d10be6d31f6ed9e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402426"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425106"
 ---
 # <a name="what-is-windows-communication-foundation"></a>O que é o Windows Communication Foundation
 Windows Communication Foundation (WCF) é uma estrutura para criar aplicativos orientados a serviço. Usando o WCF, você pode enviar dados como mensagens assíncronas do ponto de extremidade de um serviço para outro. Um ponto de extremidade de serviço pode ser parte de um serviço disponível continuamente hospedado pelo IIS, ou pode ser um serviço hospedado em um aplicativo. Um ponto de extremidade pode ser um cliente de um serviço que solicita dados de um ponto de extremidade de serviço. As mensagens podem ser simples como um único caractere ou uma palavra enviada como XML ou complexo como um fluxo de dados binários. Alguns cenários de exemplo incluem:
@@ -72,7 +72,7 @@ O WCF inclui o seguinte conjunto de recursos. Para obter mais informações, con
 
 - **Transações**
 
-     O WCF também oferece suporte a transações usando um dos três modelos de transação: WS-AtomicTtransactions, as APIs no <xref:System.Transactions> namespace e o coordenador de transações distribuídas da Microsoft. Para obter mais informações sobre transações suporte no WCF ver [transações](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
+     O WCF também oferece suporte a transações usando um dos três modelos de transação: WS-AtomicTransactions, as APIs no <xref:System.Transactions> namespace e o coordenador de transações distribuídas da Microsoft. Para obter mais informações sobre transações suporte no WCF ver [transações](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
 
 - **Suporte AJAX e REST**
 

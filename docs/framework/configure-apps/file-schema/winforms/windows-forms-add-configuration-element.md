@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a66ee7ca1d7c99de6e2cc9a1d502ea58dbf9f7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775837"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422820"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms adicionar elemento de configuração
 
@@ -43,7 +43,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se os controles ancorados serão reduzidas horizontalmente em uma única passagem. "true" para desabilitar um único passe dimensionamento; Caso contrário, false. Consulte a seção "Único pass dimensionamento" a [comentários](#remarks) para obter mais informações. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Indica se um aplicativo com reconhecimento de DPI. Defina a chave como "PerMonitorV2" para dar suporte ao reconhecimento de Dpi; Caso contrário, defina-o como "false". Reconhecimento de DPI é um recurso de aceitação; para tirar proveito do suporte ao DPI alto dos Windows Forms, você deve definir seu valor para "PerMonitorV2". Consulte a [comentários](#remarks) seção para obter mais informações. |
-| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Indica se o <xref:System.Windows.Forms.CheckedListBox> controle se beneficia dos aprimoramentos de dimensionamento e layout introduzido no .NET Framework 4.7. "true" para recusar a aprimoramentos de layout e caling; Caso contrário, "false". |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Indica se o <xref:System.Windows.Forms.CheckedListBox> controle se beneficia dos aprimoramentos de dimensionamento e layout introduzido no .NET Framework 4.7. "true" para recusar a aprimoramentos de dimensionamento e layout; Caso contrário, "false". |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Indica se o <xref:System.Windows.Forms.DataGridView> controlar aprimoramentos de dimensionamento e layout introduzidos no .NET Framework 4.7. "true" para recusar o reconhecimento de DPI; "false" caso contrário. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" para recusar o recebimento de mensagens relacionadas a alterações; de dimensionamento de DPI "false" caso contrário. Consulte a [comentários](#remarks) seção para obter mais informações. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Indica se um aplicativo do Windows Forms é redimensionado automaticamente devido a alterações de colocação em escala de DPI. "true" para habilitar o redimensionamento automático; Caso contrário, false. |

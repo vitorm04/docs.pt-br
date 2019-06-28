@@ -2,12 +2,12 @@
 title: Lidando com exceções e falhas
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: f2042bac30ee84530c0da9c30193919dfb99a608
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e99ef5721791af229c68a958e4840a0703d34ac9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654992"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424936"
 ---
 # <a name="handling-exceptions-and-faults"></a>Lidando com exceções e falhas
 As exceções são usadas para comunicar erros localmente dentro do serviço ou a implementação do cliente. Falhas, por outro lado, são usadas para comunicar erros entre limites de serviço, como a do servidor para o cliente ou vice-versa. Além das falhas, os canais de transporte geralmente usam mecanismos de transporte específicos para comunicar erros de nível de transporte. Por exemplo, o transporte HTTP usa códigos de status como 404 para comunicar uma URL de ponto de extremidade não existente (não há nenhum ponto de extremidade para enviar de volta uma falha). Este documento consiste em três seções que fornecem orientação para os autores de canal personalizado. A primeira seção fornece orientação sobre quando e como definir e lançar exceções. A segunda seção fornece orientação sobre como gerar e consumir falhas. A terceira seção explica como fornecer informações de rastreamento para ajudar o usuário do seu canal personalizado na solução de problemas de aplicativos em execução.  
@@ -286,7 +286,7 @@ public override bool OnTryCreateException(
  Para condições de falha específicos que têm os cenários de recuperação distintos, considere definir uma classe derivada de `ProtocolException`.  
   
 ### <a name="mustunderstand-processing"></a>Processamento de MustUnderstand  
- O SOAP define uma falha geral para sinalizar que um cabeçalho necessário não foi entendido pelo destinatário. Essa falha é conhecida como o `mustUnderstand` falha. No WCF, canais personalizados nunca geram `mustUnderstand` falhas. Em vez disso, o Dispatcher WCF, que está localizado na parte superior da pilha de comunicação do WCF, verifica que todos os cabeçalhos que foram marcados como MustUndestand = true foram entendidos pela pilha subjacente. Se qualquer não foram compreendidos, um `mustUnderstand` falha é gerada nesse ponto. (O usuário pode optar por desativar isso `mustUnderstand` de processamento e fazer com que o aplicativo receber todos os cabeçalhos de mensagem. Nesse caso, o aplicativo é responsável por executar `mustUnderstand` de processamento.) A falha gerada inclui um cabeçalho de NotUnderstood que contém os nomes de todos os cabeçalhos com MustUnderstand = true não foi compreendido.  
+ O SOAP define uma falha geral para sinalizar que um cabeçalho necessário não foi entendido pelo destinatário. Essa falha é conhecida como o `mustUnderstand` falha. No WCF, canais personalizados nunca geram `mustUnderstand` falhas. Em vez disso, o Dispatcher WCF, que está localizado na parte superior da pilha de comunicação do WCF, verifica que todos os cabeçalhos que foram marcados como MustUnderstand = true foram entendidos pela pilha subjacente. Se qualquer não foram compreendidos, um `mustUnderstand` falha é gerada nesse ponto. (O usuário pode optar por desativar isso `mustUnderstand` de processamento e fazer com que o aplicativo receber todos os cabeçalhos de mensagem. Nesse caso, o aplicativo é responsável por executar `mustUnderstand` de processamento.) A falha gerada inclui um cabeçalho de NotUnderstood que contém os nomes de todos os cabeçalhos com MustUnderstand = true não foi compreendido.  
   
  Se o seu canal do protocolo envia um cabeçalho personalizado com MustUnderstand = true e recebe um `mustUnderstand` falha, ele deve descobrir se essa falha é devida ao cabeçalho enviado por ele. Há dois membros no `MessageFault` classe são úteis para isso:  
   

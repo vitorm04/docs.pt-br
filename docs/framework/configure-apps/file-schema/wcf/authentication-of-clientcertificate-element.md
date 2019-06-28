@@ -2,12 +2,12 @@
 title: <authentication> de <clientCertificate> elemento
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cbc850331dc6bf76c352f975fda834a309564c6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701327"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423235"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<autenticação > de \<clientCertificate > elemento
 Especifica os comportamentos de autenticação para certificados de cliente usados por um serviço.  
@@ -41,7 +41,7 @@ Especifica os comportamentos de autenticação para certificados de cliente usad
 |customCertificateValidatorType|Cadeia de caracteres opcional. Um tipo e assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`.|  
 |certificateValidationMode|Enumeração opcional. Especifica um dos modos usados para validar as credenciais. Esse atributo é do <xref:System.ServiceModel.Security.X509CertificateValidationMode> tipo. Se definido como <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, em seguida, um `customCertificateValidator` também deve ser fornecido. O padrão é <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>.|  
 |includeWindowsGroups|Booliano opcional. Especifica se os grupos do Windows são incluídos no contexto de segurança. Definir esse atributo como `true` tem um impacto no desempenho, já que resulta em uma expansão de grupo completo. Defina esse atributo como `false` se você não precisar estabelecer a lista de grupos de um usuário pertence.|  
-|mapClientCertificateToWindowsAcccount|Booliano. Especifica se o cliente pode ser mapeado para uma identidade do Windows usando o certificado. Active Directory deve ser habilitado para fazer isso.|  
+|mapClientCertificateToWindowsAccount|Booliano. Especifica se o cliente pode ser mapeado para uma identidade do Windows usando o certificado. Active Directory deve ser habilitado para fazer isso.|  
 |revocationMode|Enumeração opcional. Um dos modos usados para verificar por listas de certificados revogados (RCL). O padrão é `Online`. Esse valor é ignorado ao usar a segurança de transporte HTTP.|  
 |trustedStoreLocation|Enumeração opcional. Um dos locais de armazenamento de sistema de dois: `LocalMachine` ou `CurrentUser`. Esse valor é usado quando um certificado de serviço é negociado ao cliente. Validação é executada em relação a **pessoas confiáveis** armazenar no local de repositório especificado. O padrão é `CurrentUser`.|  
   

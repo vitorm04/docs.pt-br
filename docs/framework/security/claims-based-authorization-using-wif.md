@@ -3,12 +3,12 @@ title: Autorização baseada em declarações usando o WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d20f8fbce916a038fc8224492a4077e1978ed8c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650445"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422367"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorização baseada em declarações usando o WIF
 Em um aplicativo de terceira parte confiável, a autorização determina quais recursos uma identidade autenticada pode acessar e quais operações ela pode executar nesses recursos. A autorização inadequada ou fraca leva à divulgação de informações e à violação de dados. Este tópico descreve as abordagens disponíveis para implementar a autorização para aplicativos e serviços Web ASP.NET com reconhecimento de declarações usando o Windows Identity Foundation (WIF) e um Serviço de Token de Segurança (STS), por exemplo, o Serviço de Controle de Acesso (ACS) do Microsoft Azure.  
@@ -23,13 +23,13 @@ Em um aplicativo de terceira parte confiável, a autorização determina quais r
  O RBAC é uma abordagem de autorização em que as permissões de usuário são gerenciadas e impostas por um aplicativo baseado em funções de usuário. Se um usuário tem a função necessária para executar uma ação, o acesso é concedido; caso contrário, o acesso é negado.  
   
 ### <a name="iprincipalisinrole-method"></a>Método IPrincipal.IsInRole  
- Para implementar a abordagem RBAC em aplicativos baseados em declarações, use o método **IsInRole()** na interface **IPrinicpal**, assim como você faria em aplicativos não baseados em declarações. Há várias maneiras de usar o método **IsInRole()**:  
+ Para implementar a abordagem RBAC em aplicativos com reconhecimento de declarações, use o **IsInRole ()** método o **IPrincipal** interface, assim como faria em aplicativos sem reconhecimento de declarações. Há várias maneiras de usar o método **IsInRole()** :  
   
 - Chamando **IPrincipal.IsInRole("Administrator")** explicitamente. Nessa abordagem, o resultado é um booleano. Use-a em suas instruções condicionais. Ela pode ser usada arbitrariamente em qualquer local de seu código.  
   
-- Usando a demanda de segurança **PrincipalPermission.Demand()**. Nessa abordagem, o resultado é uma exceção caso a demanda não seja atendida. Isso deve se ajustar à sua estratégia de tratamento de exceções. A geração de exceções é muito mais cara, de uma perspectiva de desempenho, comparada ao retorno do booliano. Isso pode ser usado em qualquer local de seu código.  
+- Usando a demanda de segurança **PrincipalPermission.Demand()** . Nessa abordagem, o resultado é uma exceção caso a demanda não seja atendida. Isso deve se ajustar à sua estratégia de tratamento de exceções. A geração de exceções é muito mais cara, de uma perspectiva de desempenho, comparada ao retorno do booliano. Isso pode ser usado em qualquer local de seu código.  
   
-- Usando os atributos declarativos **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Essa abordagem é chamada declarativa porque é usada para decorar métodos. Ela não pode ser usada em blocos de códigos dentro das implementações do método. O resultado é uma exceção caso a demanda não seja atendida. Você deve se certificar de que ela se ajuste à sua estratégia de tratamento de exceções.  
+- Usando os atributos declarativos **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]** . Essa abordagem é chamada declarativa porque é usada para decorar métodos. Ela não pode ser usada em blocos de códigos dentro das implementações do método. O resultado é uma exceção caso a demanda não seja atendida. Você deve se certificar de que ela se ajuste à sua estratégia de tratamento de exceções.  
   
 - Usando a autorização de URL, usando a seção **\<authorization>** em **web.config**. Essa abordagem é apropriada quando você está gerenciando a autorização no nível de URL. Esse é o nível mais grosseiro entre os mencionados anteriormente. A vantagem dessa abordagem é que as alterações são feitas no arquivo de configuração, o que significa que o código não deve ser compilado para se beneficiar da alteração.  
   

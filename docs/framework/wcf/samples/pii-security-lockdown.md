@@ -2,12 +2,12 @@
 title: Bloqueio de segurança PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 18095845db094f0911578816e6bacdb7f3776156
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664780"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425417"
 ---
 # <a name="pii-security-lockdown"></a>Bloqueio de segurança PII
 Este exemplo demonstra como controlar vários recursos relacionados à segurança de um serviço do Windows Communication Foundation (WCF) por:  
@@ -37,7 +37,7 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
  Este exemplo demonstra como controlar o registro em log de conhecidos pessoalmente identificáveis PII (informações) nos logs de rastreamento e a mensagem, como nome de usuário e senha. Por padrão, o log de PII conhecido é desabilitado no entanto, em determinadas situações, registro em log das informações de identificação pessoal pode ser importante na depuração de um aplicativo. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). Além disso, este exemplo usa o rastreamento e o registro de mensagem. Para obter mais informações, consulte o [rastreamento e registro em log de mensagem](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) exemplo.  
   
 ## <a name="encrypting-configuration-file-elements"></a>Elementos do arquivo de configuração de criptografia  
- Para fins de segurança em um ambiente compartilhado de hospedagem na Web, ele pode ser desejável para criptografar alguns elementos de configuração, como cadeias de caracteres de conexão de banco de dados que podem conter informações confidenciais. Um elemento de configuração pode ser criptografado usando a ferramenta aspnet_regiis.exe encontrada na pasta do .NET Framework, por exemplo, % WINDIR%\Micrsoft.NET\Framework\v4.0.20728.  
+ Para fins de segurança em um ambiente compartilhado de hospedagem na Web, ele pode ser desejável para criptografar alguns elementos de configuração, como cadeias de caracteres de conexão de banco de dados que podem conter informações confidenciais. Um elemento de configuração pode ser criptografado usando a ferramenta aspnet_regiis.exe encontrada na pasta do .NET Framework, por exemplo, % WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Para criptografar os valores na seção appSettings no Web. config para o exemplo  
   

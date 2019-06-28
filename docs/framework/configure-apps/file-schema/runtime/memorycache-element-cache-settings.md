@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 872084dabc5d345d10a39f0933ff2ef30ca40355
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4f1dd270ee1b317ec0d3a32e341680646ff0b69d
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584485"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423285"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > (configurações de Cache)
 Define um elemento usado para configurar um cache baseado na classe <xref:System.Runtime.Caching.MemoryCache>. O <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> classe define um [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) elemento que você pode usar para configurar o cache. Várias instâncias do <xref:System.Runtime.Caching.MemoryCache> classe pode ser usada em um único aplicativo. Cada `memoryCache` elemento no arquivo de configuração pode conter configurações para uma nomeada <xref:System.Runtime.Caching.MemoryCache> instância.  
@@ -71,7 +71,7 @@ Define um elemento usado para configurar um cache baseado na classe <xref:System
 - <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como definir o nome da <xref:System.Runtime.Caching.MemoryCache> objeto para o nome do objeto de cache padrão definindo a `name` atributo como "default".  
+ O exemplo a seguir mostra como definir o nome da <xref:System.Runtime.Caching.MemoryCache> objeto para o nome do objeto de cache padrão definindo a `name` do atributo como "Padrão".  
   
  O `cacheMemoryLimitMegabytes` atributo e o `physicalMemoryLimitPercentage` atributo são definidos como zero. Definir esses atributos como zero significa que o <xref:System.Runtime.Caching.MemoryCache> heurística de dimensionamento automático é usada por padrão. A implementação de cache deve comparar a carga de memória atual em relação as limites de memória absoluto e baseado em percentual cada dois minutos.  
   
@@ -80,7 +80,7 @@ Define um elemento usado para configurar um cache baseado na classe <xref:System
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="default"   
+          <add name="Default"   
                cacheMemoryLimitMegabytes="0"   
                physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
