@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 65a7fbb2ef8fd24e80b4ccf979a7f3fc7cf19934
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398089"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423641"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guia de Programação em C#)
 
@@ -39,12 +39,12 @@ As informações armazenadas em um tipo podem incluir o seguinte:
 
 - Os tipos de operações que são permitidos.
 
-O compilador usa as informações de tipo para garantir que todas as operações que são realizadas em seu código sejam *fortemente tipadas*. Por exemplo, se você declarar uma variável do tipo [int](../../../csharp/language-reference/keywords/int.md), o compilador permitirá que você use a variável nas operações de adição e subtração. Se você tentar executar as mesmas operações em uma variável do tipo [bool](../../../csharp/language-reference/keywords/bool.md), o compilador gerará um erro, como mostrado no exemplo a seguir:
+O compilador usa as informações de tipo para garantir que todas as operações que são realizadas em seu código sejam *fortemente tipadas*. Por exemplo, se você declarar uma variável do tipo [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md), o compilador permitirá que você use a variável nas operações de adição e subtração. Se você tentar executar as mesmas operações em uma variável do tipo [bool](../../../csharp/language-reference/keywords/bool.md), o compilador gerará um erro, como mostrado no exemplo a seguir:
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
 > [!NOTE]
-> Desenvolvedores de C e C++, observem que, em C#, [bool](../../../csharp/language-reference/keywords/bool.md) não é conversível em [int](../../../csharp/language-reference/keywords/int.md).
+> Desenvolvedores de C e C++, observem que, em C#, [bool](../../../csharp/language-reference/keywords/bool.md) não é conversível em [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md).
 
 O compilador insere as informações de tipo no arquivo executável como metadados. O CLR (Common Language Runtime) usa metadados em tempo de execução para garantir mais segurança de tipos quando aloca e recupera a memória.
 
@@ -54,11 +54,11 @@ Quando declara uma variável ou constante em um programa, você deve especificar
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-Os tipos de parâmetros de método e valores de retorno são especificados na assinatura do método. A assinatura a seguir mostra um método que requer um [int](../../../csharp/language-reference/keywords/int.md) como um argumento de entrada e retorna uma cadeia de caracteres:
+Os tipos de parâmetros de método e valores de retorno são especificados na assinatura do método. A assinatura a seguir mostra um método que requer um [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) como um argumento de entrada e retorna uma cadeia de caracteres:
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-Depois que uma variável é declarada, ela não pode ser declarada novamente com um novo tipo e não pode ter um valor atribuído que não seja compatível com seu tipo declarado. Por exemplo, você não pode declarar um [int](../../../csharp/language-reference/keywords/int.md) e, em seguida, atribuir a ele um valor booliano de [true](../../../csharp/language-reference/keywords/true-literal.md). No entanto, os valores podem ser convertidos em outros tipos, por exemplo, quando são passados como argumentos de método ou atribuídos a novas variáveis. Uma *conversão de tipo* que não causa a perda de dados é executada automaticamente pelo compilador. Uma conversão que pode causar perda de dados requer um *cast* no código-fonte.
+Depois que uma variável é declarada, ela não pode ser declarada novamente com um novo tipo e não pode ter um valor atribuído que não seja compatível com seu tipo declarado. Por exemplo, você não pode declarar um [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) e, em seguida, atribuir a ele um valor booliano de [true](../../../csharp/language-reference/keywords/true-literal.md). No entanto, os valores podem ser convertidos em outros tipos, por exemplo, quando são passados como argumentos de método ou atribuídos a novas variáveis. Uma *conversão de tipo* que não causa a perda de dados é executada automaticamente pelo compilador. Uma conversão que pode causar perda de dados requer um *cast* no código-fonte.
 
 Para obter mais informações, consulte [Conversões e conversões de Tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md).
 
@@ -74,7 +74,7 @@ Você usa os constructos [struct](../../../csharp/language-reference/keywords/st
 
 É importante entender os dois pontos fundamentais sobre o sistema de tipos do .NET:
 
-- Ele dá suporte ao conceito de herança. Os tipos podem derivar de outros tipos, chamados *tipos base*. O tipo derivado herda (com algumas restrições) os métodos, as propriedades e outros membros do tipo base. O tipo base, por sua vez, pode derivar de algum outro tipo, nesse caso, o tipo derivado herda os membros de ambos os tipos base na sua hierarquia de herança. Todos os tipos, incluindo tipos numéricos internos, como <xref:System.Int32?displayProperty=nameWithType> (palavra-chave de C#: [int](../../../csharp/language-reference/keywords/int.md)), derivam, em última análise, de um único tipo base, que é o <xref:System.Object?displayProperty=nameWithType> (palavra-chave de C#: [object](../../../csharp/language-reference/keywords/object.md)). Essa hierarquia unificada de tipos é chamada de CTS [(Common Type System)](../../../standard/base-types/common-type-system.md). Para obter mais informações sobre herança em C#, consulte [Herança](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
+- Ele dá suporte ao conceito de herança. Os tipos podem derivar de outros tipos, chamados *tipos base*. O tipo derivado herda (com algumas restrições) os métodos, as propriedades e outros membros do tipo base. O tipo base, por sua vez, pode derivar de algum outro tipo, nesse caso, o tipo derivado herda os membros de ambos os tipos base na sua hierarquia de herança. Todos os tipos, incluindo tipos numéricos internos, como <xref:System.Int32?displayProperty=nameWithType> (palavra-chave de C#: [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)), derivam, em última análise, de um único tipo base, que é o <xref:System.Object?displayProperty=nameWithType> (palavra-chave de C#: [object](../../../csharp/language-reference/keywords/object.md)). Essa hierarquia unificada de tipos é chamada de CTS [(Common Type System)](../../../standard/base-types/common-type-system.md). Para obter mais informações sobre herança em C#, consulte [Herança](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
 
 - Cada tipo no CTS é definido como um *tipo de valor* ou um *tipo de referência*. Isso inclui todos os tipos personalizados na biblioteca de classes do .NET, além de tipos personalizados definidos pelo usuário. Os tipos que você define usando a palavra-chave [struct](../../../csharp/language-reference/keywords/struct.md) são tipos de valor. Todos os tipos numéricos internos são `structs`. Os tipos que você define usando a palavra-chave [classe](../../../csharp/language-reference/keywords/class.md) são tipos de referência. Os tipos de referência e os tipos de valor têm diferentes regras de tempo de compilação e comportamento de tempo de execução diferente.
 
@@ -205,4 +205,4 @@ Para mais informações, consulte os seguintes tópicos:
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Conversão de tipos de dados XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
-- [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tipos integrais](../../language-reference/builtin-types/integral-numeric-types.md)
