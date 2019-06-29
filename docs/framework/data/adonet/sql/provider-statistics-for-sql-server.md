@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: b2b63719149c21eba493b3d8f2fc65309515bb0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de05a8783fa957c459006e3ec27d9e8668e7226c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645994"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422654"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Estatísticas do provedor para SQL Server
 A partir da versão 2.0 do .NET Framework, o provedor de dados do .NET Framework para SQL Server dá suporte a estatísticas de tempo de execução. Você deve habilitar estatísticas definindo a propriedade <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> do objeto de <xref:System.Data.SqlClient.SqlConnection> para `True` depois de criar um objeto de conexão válido. Depois que as estatísticas forem habilitadas, você poderá examiná-las como um "instantâneo no tempo" recuperando uma referência do <xref:System.Collections.IDictionary> pelo método <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> do objeto <xref:System.Data.SqlClient.SqlConnection>. Enumere por meio da lista como um conjunto de entradas no dicionário de pares de nome/valor. Esses pares de nome/valor não são ordenados. A qualquer momento, você pode chamar o método <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> do objeto <xref:System.Data.SqlClient.SqlConnection> para redefinir os contadores. Se a coleta de estatísticas não estiver habilitada, uma exceção não será gerada. Além disso, se <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> for chamado sem <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> ter sido chamado primeiro, os valores recuperados serão os valores iniciais para cada entrada. Se você habilitar estatísticas, execute o aplicativo por um tempo e, em seguida, desabilite as estatísticas. Os valores recuperados refletirão os valores coletados até o ponto em que as estatísticas foram desabilitadas. Todos os valores estatísticos são coletados a cada conexão.  
@@ -114,7 +114,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=localhost;Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks"  
   End Function  
@@ -192,7 +192,7 @@ namespace CS_Stats_Console_GetValue
     private static string GetConnectionString()  
     {  
       // To avoid storing the connection string in your code,  
-      // you can retrive it from a configuration file.  
+      // you can retrieve it from a configuration file.  
       return "Data Source=localhost;Integrated Security=SSPI;" +   
         "Initial Catalog=AdventureWorks";  
     }  
@@ -261,7 +261,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=localhost;Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks"  
   End Function  
@@ -330,7 +330,7 @@ namespace CS_Stats_Console_GetAll
     private static string GetConnectionString()  
     {  
       // To avoid storing the connection string in your code,  
-      // you can retrive it from a configuration file.  
+      // you can retrieve it from a configuration file.  
       return "Data Source=localhost;Integrated Security=SSPI;" +   
         "Initial Catalog=AdventureWorks";  
     }  
