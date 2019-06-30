@@ -4,12 +4,12 @@ description: Descubra os recursos de telemetria do SDK do .NET Core que coletam 
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377497"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397753"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
 
@@ -102,7 +102,7 @@ Outros conjuntos de dados são publicados usando um formato de URL padrão. Subs
 
 ## <a name="license"></a>Licença
 
-A distribuição da Microsoft do .NET Core é licenciada com os [Termos de licença de software da Microsoft: biblioteca do Microsoft .NET](https://aka.ms/dotnet-core-eula). Para obter detalhes sobre a coleta e o processamento de dados, veja a seção intitulada "Dados".
+A distribuição da Microsoft do .NET Core é licenciada com os [Termos de licença de software da Microsoft: Biblioteca do Microsoft .NET](https://aka.ms/dotnet-core-eula). Para obter detalhes sobre a coleta e o processamento de dados, veja a seção intitulada "Dados".
 
 Os [Pacotes NuGet do .NET](https://www.nuget.org/profiles/dotnetframework) usam essa mesma licença, mas não habilitam a telemetria (consulte o [Escopo](#scope)).
 
