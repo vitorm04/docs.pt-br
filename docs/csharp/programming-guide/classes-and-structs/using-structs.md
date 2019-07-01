@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 0e0ba1602468d1bcc38985c78e1af5e4d2a5912c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4d1acc758f0121e7450351c63538fd47f28ef732
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586089"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398058"
 ---
 # <a name="using-structs-c-programming-guide"></a>Usando structs (Guia de Programação em C#)
 O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectangle` e `Color`. Embora seja conveniente representar um ponto como uma [classe](../../../csharp/language-reference/keywords/class.md) com [Propriedades Auto-implementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), um [struct](../../../csharp/language-reference/keywords/struct.md) pode ser mais eficiente em alguns cenários. Por exemplo, se você declarar uma matriz de 1000 objetos `Point`, alocará memória adicional para referenciar cada objeto, nesse caso, um struct será mais barato. Como o .NET Framework contém um objeto chamado <xref:System.Drawing.Point>, o struct deste exemplo é chamado "Coords".  
@@ -19,8 +19,8 @@ O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectan
   
  É um erro ao definir um construtor (sem parâmetros) padrão para um struct. Também é um erro ao inicializar um campo de instância em um corpo de struct. Você pode inicializar membros de struct externamente acessíveis somente por meio de um construtor com parâmetros, do construtor sem parâmetro implícito, de um [inicializador de objeto](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) ou acessando os membros individualmente depois que o struct é declarado. Todos os membros particulares ou, de outro modo, inacessíveis exigem o uso de construtores exclusivamente.
   
- Quando você cria um objeto de struct usando o operador [new](../../../csharp/language-reference/keywords/new.md), ele é criado e o construtor apropriado é chamado de acordo com a [assinatura do construtor](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). Diferentemente das classes, os structs podem ser instanciados sem usar o operador `new`. Nesse caso, não há nenhuma chamada do construtor, o que torna a alocação mais eficiente. No entanto, os campos permanecerão não atribuídos e o objeto não poderá ser usado até que todos os campos sejam inicializados. Isso inclui a incapacidade de obter ou definir valores por meio de propriedades.
- 
+ Quando você cria um objeto de struct usando o operador [new](../../../csharp/language-reference/operators/new-operator.md), ele é criado e o construtor apropriado é chamado de acordo com a [assinatura do construtor](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). Diferentemente das classes, os structs podem ser instanciados sem usar o operador `new`. Nesse caso, não há nenhuma chamada do construtor, o que torna a alocação mais eficiente. No entanto, os campos permanecerão não atribuídos e o objeto não poderá ser usado até que todos os campos sejam inicializados. Isso inclui a incapacidade de obter ou definir valores por meio de propriedades.
+
  Se você criar uma instância de um objeto de struct usando o construtor sem parâmetros padrão, todos os membros serão atribuídos de acordo com seus [valores padrão](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).
   
  Ao escrever um construtor com parâmetros para um struct, é necessário inicializar explicitamente todos os membros; caso contrário, um ou mais membros permanecerão não atribuídos e o struct não poderá ser usado, produzindo o erro do compilador CS0171.  
@@ -33,7 +33,7 @@ O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectan
   
 ## <a name="example-1"></a>Exemplo 1  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  Este exemplo demonstra a inicialização de `struct` usando construtores parametrizados e padrão.  
   
 ### <a name="code"></a>Código  
@@ -43,7 +43,7 @@ O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectan
   
 ## <a name="example-2"></a>Exemplo 2  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  Este exemplo demonstra um recurso que é exclusivo para struct. Ele cria um objeto Coords sem usar o operador `new`. Se você substituir a palavra `struct` pela palavra `class`, o programa não compilará.  
   
 ### <a name="code"></a>Código  

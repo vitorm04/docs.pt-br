@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 7bc806cd5516666c86780bb53842725f0c0c1617
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ad01f9e4f5a8b1a153b1ef306e9d6168335eb3d
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600694"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424301"
 ---
 # <a name="decimal-c-reference"></a>decimal (Referência de C#)
 
@@ -81,7 +81,7 @@ O resultado é o seguinte erro:
 
 `Operator '+' cannot be applied to operands of type 'double' and 'decimal'`
 
-Neste exemplo, um `decimal` e um [int](../../../csharp/language-reference/keywords/int.md) são misturados na mesma expressão. O resultado é avaliado como o tipo `decimal`.
+Neste exemplo, um `decimal` e um [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) são misturados na mesma expressão. O resultado é avaliado como o tipo `decimal`.
 
 [!code-csharp[csrefKeywordsTypes#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#6)]
 
@@ -101,7 +101,7 @@ Neste exemplo, a saída é formatada usando a cadeia de caracteres de formato de
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-- [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tipos integrais](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

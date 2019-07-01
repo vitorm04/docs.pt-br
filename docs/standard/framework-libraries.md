@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615176"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425537"
 ---
 # <a name="framework-libraries"></a>Bibliotecas do Framework
 
@@ -28,18 +28,18 @@ As BCL fornecem a funcionalidade de utilitário e tipos mais básicos e são a b
 O .NET inclui um conjunto de tipos primitivos, que são usados (em graus variáveis) em todos os programas. Esses tipos contêm dados, como números, cadeias de caracteres, bytes e objetos arbitrários. A linguagem C# inclui palavras-chave para esses tipos. Um conjunto de amostra desses tipos é listado abaixo, com palavras-chave do C# correspondentes.
 
 * <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)) – a classe base ultimate no sistema de tipos CLR. É a raiz da hierarquia de tipos.
-* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)) – tipo inteiro com sinal de 16 bits. O <xref:System.UInt16> sem sinal também existe.
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)) – um tipo inteiro com sinal de 32 bits. O [UInt32](../csharp/language-reference/keywords/uint.md) sem sinal também existe.
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)) – tipo inteiro com sinal de 16 bits. O <xref:System.UInt16> sem sinal também existe.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)) – um tipo inteiro com sinal de 32 bits. O [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) sem sinal também existe.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)) – um tipo de ponto flutuante de 32 bits.
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)) – um tipo decimal de 128 bits.
-* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)) – um inteiro de 8 bits sem sinal que representa um byte de memória.
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) – um inteiro de 8 bits sem sinal que representa um byte de memória.
 * <xref:System.Boolean?displayProperty=nameWithType>([bool](../csharp/language-reference/keywords/bool.md)) – um tipo booliano que representa `true` ou `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)) – um tipo numérico de 16 bits que representa um caractere Unicode.
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)) – representa uma série de caracteres. Diferente de um `char[]`, mas permite a indexação em cada `char` individual em `string`.
 
 ## <a name="data-structures"></a>Estruturas de dados
 
-O .NET inclui um conjunto de estruturas de dados que são fundamentais para quase todos os aplicativos .NET.  Elas são em sua maioria coleções, mas também incluem outros tipos.
+O .NET inclui um conjunto de estruturas de dados que são fundamentais para quase todos os aplicativos .NET. Elas são em sua maioria coleções, mas também incluem outros tipos.
 
 * <xref:System.Array> – representa uma matriz de objetos fortemente tipados que podem ser acessados por índice. Tem um tamanho fixo, de acordo com sua construção.
 * <xref:System.Collections.Generic.List%601> – representa uma lista fortemente tipada de objetos que podem ser acessados por índice. É redimensionado automaticamente conforme necessário.

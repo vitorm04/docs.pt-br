@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481451"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424118"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
@@ -46,7 +46,7 @@ No C# 6 e versões anteriores, a expressão de correspondência deve ser uma exp
 - um [char](char.md).
 - um [string](string.md).
 - um [bool](bool.md).
-- um valor de inteiro, como um [int](int.md) ou um [long](long.md).
+- um valor de inteiro, como um [int](../builtin-types/integral-numeric-types.md) ou um [long](../builtin-types/integral-numeric-types.md).
 - um valor [enum](enum.md).
 
 Começando com o C# 7.0, a expressão de correspondência pode ser qualquer expressão não nula.
@@ -121,7 +121,7 @@ O padrão de constante testa se a expressão de correspondência é igual a uma 
 em que *constant* é o valor para testar. *constant* pode ser qualquer uma das expressões de constante a seguir:
 
 - Um literal [bool](bool.md), `true` ou `false`.
-- Qualquer constante integral, como um [int](int.md), um [long](long.md) ou um [byte](byte.md).
+- Qualquer constante integral, como um [int](../builtin-types/integral-numeric-types.md), um [long](../builtin-types/integral-numeric-types.md) ou um [byte](../builtin-types/integral-numeric-types.md).
 - O nome de uma variável `const` declarada.
 - Uma constante de enumeração.
 - Um literal [char](char.md).

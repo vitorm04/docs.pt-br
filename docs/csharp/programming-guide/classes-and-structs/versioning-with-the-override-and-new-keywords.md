@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583119"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398079"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controle de versão com as palavras-chave override e new (Guia de Programação em C#)
 A linguagem C# foi projetada para que o controle de versão entre classes derivadas e [base](../../../csharp/language-reference/keywords/base.md) em diferentes bibliotecas possa evoluir e manter a compatibilidade com versões anteriores. Isso significa, por exemplo, que a introdução de um novo membro em uma [classe](../../../csharp/language-reference/keywords/class.md) base com o mesmo nome que um membro em uma classe derivada tem suporte completo pelo C# e não leva a comportamento inesperado. Isso também significa que uma classe deve declarar explicitamente se um método destina-se a substituir um método herdado ou se um método é um novo método que oculta um método herdado de nome semelhante.  
@@ -20,7 +20,7 @@ A linguagem C# foi projetada para que o controle de versão entre classes deriva
   
 - O método de classe base deve ser definido como [virtual](../../../csharp/language-reference/keywords/virtual.md).  
   
-- Se o método na classe derivada não for precedido pelas palavras-chave [new](../../../csharp/language-reference/keywords/new.md) ou [override](../../../csharp/language-reference/keywords/override.md), o compilador emitirá um aviso e o método se comportará como se a palavra-chave `new` estivesse presente.  
+- Se o método na classe derivada não for precedido pelas palavras-chave [new](../../../csharp/language-reference/keywords/new-modifier.md) ou [override](../../../csharp/language-reference/keywords/override.md), o compilador emitirá um aviso e o método se comportará como se a palavra-chave `new` estivesse presente.  
   
 - Se o método na classe derivada for precedido pela palavra-chave `new`, o método será definido como sendo independente do método na classe base.  
   

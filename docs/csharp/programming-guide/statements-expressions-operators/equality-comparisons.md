@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 7cbd1a2c1a9968ae8ed4f96d503d472bbe9b32c4
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 50b1cdb8b7e5087f1fd6669e7163e2c15e9b23bf
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545449"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423655"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparações de igualdade (Guia de Programação em C#)
 
@@ -28,7 +28,7 @@ ms.locfileid: "58545449"
 
 ## <a name="value-equality"></a>Igualdade de valor
 
- Igualdade de valor significa que dois objetos contêm o mesmo valor ou valores. Para tipos de valor primitivos, como [int](../../../csharp/language-reference/keywords/int.md) ou [bool](../../../csharp/language-reference/keywords/bool.md), os testes de igualdade de valor são simples. É possível usar o operador [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-), conforme mostrado no exemplo a seguir.  
+ Igualdade de valor significa que dois objetos contêm o mesmo valor ou valores. Para tipos de valor primitivos, como [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) ou [bool](../../../csharp/language-reference/keywords/bool.md), os testes de igualdade de valor são simples. É possível usar o operador [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-), conforme mostrado no exemplo a seguir.  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -51,7 +51,7 @@ if( b == a)
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Título|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Como: Testar a igualdade de referência (identidade)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|Descreve como determinar se duas variáveis têm igualdade de referência.|  
 |[Como: Definir a igualdade de valor para um tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|Descreve como fornecer uma definição personalizada de igualdade de valor a um tipo.|  

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596690"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398584"
 ---
 # <a name="classes-c-programming-guide"></a>Classes (Guia de Programação em C#)
 
 ## <a name="reference-types"></a>Tipos de referência  
-Um tipo que é definido como uma [classe](../../../csharp/language-reference/keywords/class.md) é um *tipo de referência*. No tempo de execução, quando você declara uma variável de um tipo de referência, a variável contém o valor [null](../../../csharp/language-reference/keywords/null.md) até que você crie explicitamente uma instância da classe usando o operador [new](../../../csharp/language-reference/keywords/new.md) ou atribua a ela um objeto de um tipo compatível que foi criado em outro lugar, conforme mostrado no exemplo a seguir:
+Um tipo que é definido como uma [classe](../../../csharp/language-reference/keywords/class.md) é um *tipo de referência*. No tempo de execução, quando você declara uma variável de um tipo de referência, a variável contém o valor [null](../../../csharp/language-reference/keywords/null.md) até que você crie explicitamente uma instância da classe usando o operador [new](../../../csharp/language-reference/operators/new-operator.md) ou atribua a ela um objeto de um tipo compatível que foi criado em outro lugar, conforme mostrado no exemplo a seguir:
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -47,7 +47,7 @@ Quando o objeto é criado, memória suficiente é alocada no heap gerenciado par
 
 Embora eles sejam usados algumas vezes de maneira intercambiável, uma classe e um objeto são coisas diferentes. Uma classe define um tipo de objeto, mas não é um objeto em si. Um objeto é uma entidade concreta com base em uma classe e, às vezes, é conhecido como uma instância de uma classe.  
   
- Os objetos podem ser criados usando a palavra-chave [new](../../language-reference/keywords/new.md), seguida pelo nome da classe na qual ele se baseará, dessa maneira:  
+ Os objetos podem ser criados usando a palavra-chave [new](../../language-reference/operators/new-operator.md), seguida pelo nome da classe na qual ele se baseará, dessa maneira:  
 
  ```csharp
  Customer object1 = new Customer();

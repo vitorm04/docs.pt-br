@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0139f2000c1bc2c5a13a3a542164201e73f0fb
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514111"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424217"
 ---
 # <a name="float-c-reference"></a>float (Referência de C#)
 
@@ -56,7 +56,7 @@ Para obter mais informações sobre esses valores, consulte o padrão IEEE para 
 
 ## <a name="example"></a>Exemplo
 
-No exemplo a seguir, um [int](int.md), um [short](short.md) e um `float` são incluídos em uma expressão matemática dando um resultado `float`. (Lembre-se de que `float` é um alias para o tipo <xref:System.Single?displayProperty=nameWithType>.) Observe que não há nenhum [double](double.md) na expressão.
+No exemplo a seguir, um [int](../builtin-types/integral-numeric-types.md), um [short](../builtin-types/integral-numeric-types.md) e um `float` são incluídos em uma expressão matemática dando um resultado `float`. (Lembre-se de que `float` é um alias para o tipo <xref:System.Single?displayProperty=nameWithType>.) Observe que não há nenhum [double](double.md) na expressão.
 
 [!code-csharp[csrefKeywordsTypes#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#13)]
 
@@ -71,7 +71,7 @@ No exemplo a seguir, um [int](int.md), um [short](short.md) e um `float` são in
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Transmissões e conversões de tipo](../../programming-guide/types/casting-and-type-conversions.md)
 - [Palavras-chave do C#](index.md)
-- [Tabela de tipos integrais](integral-types-table.md)
+- [Tipos integrais](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabela de tipos internos](built-in-types-table.md)
 - [Tabela de conversões numéricas implícitas](implicit-numeric-conversions-table.md)
 - [Tabela de conversões numéricas explícitas](explicit-numeric-conversions-table.md)

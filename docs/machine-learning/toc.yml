@@ -57,9 +57,9 @@
           href: how-to-guides/matchup-app-infer-net.md
 - name: Referência
   items:
-    - name: Referência de API
+    - name: Referência API
       href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
-    - name: Referência de API de versão prévia
+    - name: Referência da API de versão prévia
       href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
 - name: Recursos
   href: resources/index.md
@@ -80,6 +80,14 @@
   items:
     - name: Visão geral
       href: automl-overview.md
+    - name: Construtor de modelo
+      items:
+        - name: O que é o Construtor de modelo?
+          href: automate-training-with-model-builder.md
+        - name: Instalar o Construtor de modelo
+          href: how-to-guides/install-model-builder.md
+        - name: Prever preços com o Construtor de modelo
+          href: tutorials/predict-prices-with-model-builder.md
     - name: CLI do ML.NET
       items:
         - name: Instalar a CLI
@@ -96,5 +104,5 @@
       items:
         - name: Usar a API de ML automatizado
           href: how-to-guides/how-to-use-the-automl-api.md
-        - name: Referência de API
+        - name: Reference API
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'

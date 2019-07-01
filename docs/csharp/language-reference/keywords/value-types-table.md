@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 959d4840344ba041ae1b01fd6d202f2b53936afc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 98829f30c2c25c0710cf3fe044359d3c7538fe76
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422363"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424048"
 ---
 # <a name="value-types-table-c-reference"></a>Tabela de tipos de valor (Referência em C#)
 
@@ -21,20 +21,21 @@ A tabela a seguir mostra os tipos de valor de C#:
 |Tipo de valor|Categoria|Sufixo de tipo|
 |----------------|--------------|-----------------|
 |[bool](bool.md)|Boolean||
-|[byte](byte.md)|Não assinado, numérico, [integral](integral-types-table.md)||
-|[char](char.md)|Não assinado, numérico, [integral](integral-types-table.md)||
+|[byte](../builtin-types/integral-numeric-types.md)|Não assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)||
+|[char](char.md)|Não assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)
+)||
 |[decimal](decimal.md)|Numérico, [ponto flutuante](floating-point-types-table.md)|M ou m|
 |[double](double.md)|Numérico, [ponto flutuante](floating-point-types-table.md)|D ou d|
 |[enum](enum.md)|Enumeração||
 |[float](float.md)|Numérico, [ponto flutuante](floating-point-types-table.md)|F ou f|
-|[int](int.md)|Assinado, numérico, [integral](integral-types-table.md)||
-|[long](long.md)|Assinado, numérico, [integral](integral-types-table.md)|L ou l|
-|[sbyte](sbyte.md)|Assinado, numérico, [integral](integral-types-table.md)||
-|[short](short.md)|Assinado, numérico, [integral](integral-types-table.md)||
+|[int](../builtin-types/integral-numeric-types.md)|Assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)||
+|[long](../builtin-types/integral-numeric-types.md)|Assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)|L ou l|
+|[sbyte](../builtin-types/integral-numeric-types.md)|Assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)||
+|[short](../builtin-types/integral-numeric-types.md)|Assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)||
 |[struct](struct.md)|Estrutura definida pelo usuário||
-|[uint](uint.md)|Não assinado, numérico, [integral](integral-types-table.md)|U ou u|
-|[ulong](ulong.md)|Não assinado, numérico, [integral](integral-types-table.md)|UL, Ul, uL, ul, LU, Lu, lU ou lu|
-|[ushort](ushort.md)|Não assinado, numérico, [integral](integral-types-table.md)||
+|[uint](../builtin-types/integral-numeric-types.md)|Não assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)|U ou u|
+|[ulong](../builtin-types/integral-numeric-types.md)|Não assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU ou lu|
+|[ushort](../builtin-types/integral-numeric-types.md)|Não assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)||
 
 ## <a name="remarks"></a>Comentários
 

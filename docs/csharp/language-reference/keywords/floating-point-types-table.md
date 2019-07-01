@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: 6dcab8e546ef12ebec5f8b57c66458172fc6f5d0
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: d1d8773edb1d835a8718fa7752e70c07c3c4330b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422336"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424184"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Tabela de tipos de ponto flutuante (referência em C#)
 
@@ -30,7 +30,7 @@ A tabela a seguir mostra a precisão e os intervalos aproximados dos tipos de po
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Tabela de tipos integrais](integral-types-table.md)
+- [Tipos integrais](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabela de valores padrão](default-values-table.md)
 - [Tabela de formatação de resultados numéricos](formatting-numeric-results-table.md)
 - [Tabela de tipos internos](built-in-types-table.md)

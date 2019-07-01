@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422128"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424028"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 
@@ -40,11 +40,11 @@ Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o 
 
 Os *tipos simples* são um conjunto de tipos de struct predefinidos fornecidos por C# e incluem os seguintes tipos:
 
-- [Tipos integrais](integral-types-table.md): tipos numéricos inteiros e o tipo [char](char.md)
+- [Tipos integrais](../builtin-types/integral-numeric-types.md): tipos numéricos inteiros e o tipo [char](char.md)
 - [Tipos de ponto flutuante](floating-point-types-table.md)
 - [bool](bool.md)
 
-Os tipos simples são identificados por meio de palavras-chave, mas essas palavras-chave são simplesmente aliases para tipos de struct predefinidos no namespace <xref:System>. Por exemplo, [int](int.md) é um alias de <xref:System.Int32?displayProperty=nameWithType>. Para obter uma lista completa de aliases, consulte [Tabela de tipos internos](built-in-types-table.md).
+Os tipos simples são identificados por meio de palavras-chave, mas essas palavras-chave são simplesmente aliases para tipos de struct predefinidos no namespace <xref:System>. Por exemplo, [int](../builtin-types/integral-numeric-types.md) é um alias de <xref:System.Int32?displayProperty=nameWithType>. Para obter uma lista completa de aliases, consulte [Tabela de tipos internos](built-in-types-table.md).
 
 Os tipos simples diferem de outros tipos de struct, pois permitem determinadas operações adicionais:
 
@@ -88,9 +88,9 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Usando o operador [new](new.md), chama o construtor sem parâmetro do tipo específico e atribui o valor padrão à variável. No exemplo anterior, o construtor sem parâmetro atribuiu o valor `0` para `myInt`. Para obter mais informações sobre valores atribuídos ao chamar construtores padrão, consulte [Tabela de valores padrão](default-values-table.md).
+Usando o operador [new](../operators/new-operator.md), chama o construtor sem parâmetro do tipo específico e atribui o valor padrão à variável. No exemplo anterior, o construtor sem parâmetro atribuiu o valor `0` para `myInt`. Para obter mais informações sobre valores atribuídos ao chamar construtores padrão, consulte [Tabela de valores padrão](default-values-table.md).
 
-Com tipos definidos pelo usuário, use [new](new.md) para invocar o construtor sem parâmetro. Por exemplo, a instrução a seguir invoca o construtor sem parâmetro do struct `Point`:
+Com tipos definidos pelo usuário, use [new](../operators/new-operator.md) para invocar o construtor sem parâmetro. Por exemplo, a instrução a seguir invoca o construtor sem parâmetro do struct `Point`:
 
 ```csharp
 Point p = new Point(); // Invoke parameterless constructor for the struct.
@@ -98,7 +98,7 @@ Point p = new Point(); // Invoke parameterless constructor for the struct.
 
 Após esta chamada, o struct é considerado para ser definitivamente atribuído, ou seja, todos os seus membros são inicializados com seus valores padrão.
 
-Para saber mais sobre o operador `new`, confira [new](new.md).
+Para saber mais sobre o operador `new`, confira [new](../operators/new-operator.md).
 
 Para saber mais sobre a formatação da saída de tipos numéricos, consulte [Tabela de formatação de resultados numéricos](formatting-numeric-results-table.md).
 

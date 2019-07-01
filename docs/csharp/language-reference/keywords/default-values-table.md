@@ -12,12 +12,12 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], parameterless constructor
 - types [C#], parameterless constructor return values
-ms.openlocfilehash: 4fc9a35f69540e047a97c21788015ca8e54068a0
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: dfab5107d4a0ad14c3ffbfc6a5f3c4317b44d17c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422037"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424232"
 ---
 # <a name="default-values-table-c-reference"></a>Tabela de valores padrão (Referência de C#)
 
@@ -26,20 +26,20 @@ A tabela a seguir mostra os valores padrão dos [tipos de valor](value-types.md)
 |Tipo de valor|Valor padrão|
 |----------------|-------------------|
 |[bool](bool.md)|`false`|
-|[byte](byte.md)|0|
+|[byte](../builtin-types/integral-numeric-types.md)|0|
 |[char](char.md)|'\0'|
 |[decimal](decimal.md)|0M|
 |[double](double.md)|0,0D|
 |[enum](enum.md)|O valor é produzido pela expressão `(E)0`, em que `E` é o identificador de enumeração.|
 |[float](float.md)|0,0F|
-|[int](int.md)|0|
-|[long](long.md)|0L|
-|[sbyte](sbyte.md)|0|
-|[short](short.md)|0|
+|[int](../builtin-types/integral-numeric-types.md)|0|
+|[long](../builtin-types/integral-numeric-types.md)|0L|
+|[sbyte](../builtin-types/integral-numeric-types.md)|0|
+|[short](../builtin-types/integral-numeric-types.md)|0|
 |[struct](struct.md)|O valor produzido pela configuração de todos os campos tipo-valor para seus valores padrão e todos os campos tipo-referência para `null`.|
-|[uint](uint.md)|0|
-|[ulong](ulong.md)|0|
-|[ushort](ushort.md)|0|
+|[uint](../builtin-types/integral-numeric-types.md)|0|
+|[ulong](../builtin-types/integral-numeric-types.md)|0|
+|[ushort](../builtin-types/integral-numeric-types.md)|0|
 
 ## <a name="remarks"></a>Comentários
 
