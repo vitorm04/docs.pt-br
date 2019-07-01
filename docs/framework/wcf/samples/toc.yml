@@ -17,7 +17,7 @@
               href: virtual-directory-setup-instructions.md
             - name: Instalando o Enfileiramento de Mensagens (MSMQ)
               href: installing-message-queuing-msmq.md
-        - name: 'Compilando os exemplos do Windows Communication Foundation '
+        - name: Compilando os exemplos do Windows Communication Foundation
           href: building-the-samples.md
         - name: Executando os exemplos do Windows Communication Foundation
           href: running-the-samples.md
@@ -146,7 +146,7 @@
               items:
                 - name: Interoperabilidade com serviços Web ASMX
                   href: interoperating-with-asmx-web-services.md
-                - name: 'Exemplo de XMLSerializer '
+                - name: Exemplo de XMLSerializer
                   href: xmlserializer-sample.md
             - name: Cabeçalhos de endereço
               href: address-headers.md
