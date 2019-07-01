@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 0374e63191f5f81891a0c7c78c5e739ac5ec7984
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a195dc6583d5a0a72bd08b66f8933f4002e879a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624155"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487270"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Como: Acessar o Modelo de Objeto do Documento HTML gerenciado
 É possível acessar o Document Object Model (DOM) do HTML gerenciado a partir de dois tipos de aplicativos:  
@@ -43,7 +43,7 @@ ms.locfileid: "64624155"
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
   
-1. O aplicativo ou o <xref:System.Windows.Forms.UserControl> exigirá confiança total para acessar o DOM do HTML gerenciado. Ao implantar um aplicativo do Windows Forms usando [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], é possível solicitar confiança total usando Implantação de Aplicativo Confiável ou Elevação de Permissões; consulte [Protegendo Aplicativos ClickOnce](/visualstudio/deployment/securing-clickonce-applications) para obter mais detalhes.  
+1. O aplicativo ou o <xref:System.Windows.Forms.UserControl> exigirá confiança total para acessar o DOM do HTML gerenciado. Se você estiver implantando um aplicativo do Windows Forms usando o ClickOnce, você pode solicitar confiança total usando implantação de aplicativos confiáveis; ou elevação de permissões ver [Protegendo aplicativos ClickOnce](/visualstudio/deployment/securing-clickonce-applications) para obter detalhes.  
   
 ## <a name="see-also"></a>Consulte também
 

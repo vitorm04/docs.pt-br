@@ -2,12 +2,12 @@
 title: Ativação de MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 925148c4bd084f843f125ab9e851a5404bbe4b89
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d6cde7a9342b57933cd3e7475bd4412da86d92
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664806"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487565"
 ---
 # <a name="msmq-activation"></a>Ativação de MSMQ
 Este exemplo demonstra como hospedar aplicativos no serviço de ativação de processos para Windows (WAS) que são lidos a partir de uma fila de mensagens. Este exemplo usa o `netMsmqBinding` e se baseia o [comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md) exemplo. Nesse caso, o serviço é um aplicativo hospedado na Web e o cliente é auto-hospedado e gera como saída para o console para observar o status das ordens de compra enviado.  
@@ -215,7 +215,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que [!INCLUDE[iisver](../../../../includes/iisver-md.md)] estiver instalado, pois ele é necessário para a ativação do WAS.  
+1. Certifique-se de que o IIS 7.0 é instalado, pois ele é necessário para a ativação do WAS.  
   
 2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Além disso, você deve instalar os componentes de ativação não HTTP do WCF:  
   
@@ -249,7 +249,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      Como uma conveniência, as etapas a seguir são implementadas em um arquivo em lotes chamado AddMsmqSiteBinding.cmd localizado no diretório de exemplo.  
   
-    1. Para dar suporte à ativação de NET. MSMQ, site da Web padrão primeiro deve ser associado ao protocolo NET. MSMQ. Isso pode ser feito usando appcmd.exe, que é instalado com o [!INCLUDE[iisver](../../../../includes/iisver-md.md)] conjunto de ferramentas de gerenciamento. Em um prompt de comando com privilégios elevados (administrador), execute o comando a seguir.  
+    1. Para dar suporte à ativação de NET. MSMQ, site da Web padrão primeiro deve ser associado ao protocolo NET. MSMQ. Isso pode ser feito usando appcmd.exe, que é instalado com o conjunto de ferramentas de gerenciamento do IIS 7.0. Em um prompt de comando com privilégios elevados (administrador), execute o comando a seguir.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

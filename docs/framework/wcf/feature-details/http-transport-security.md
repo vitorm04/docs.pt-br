@@ -2,12 +2,12 @@
 title: Segurança de transporte de HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 456df42848c009dcf42022ac674a1d27e5b33972
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402314"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487025"
 ---
 # <a name="http-transport-security"></a>Segurança de transporte de HTTP
 Ao usar o HTTP como o transporte, a segurança é fornecida por uma implementação de Secure Sockets Layer (SSL). SSL é amplamente usado na Internet para autenticar um serviço para um cliente e, em seguida, para fornecer confidencialidade (criptografia) para o canal. Este tópico explica como o SSL funciona e como ele é implementado no Windows Communication Foundation (WCF).  
@@ -38,9 +38,9 @@ Ao usar o HTTP como o transporte, a segurança é fornecida por uma implementaç
 ### <a name="using-iis-for-transport-security"></a>Usando o IIS para segurança de transporte  
   
 #### <a name="iis-70"></a>IIS 7.0  
- Para configurar [!INCLUDE[iisver](../../../../includes/iisver-md.md)] como um host protegido (usando SSL), consulte [IIS 7.0 Beta: Configurando o protocolo SSL no IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ Para configurar o IIS 7.0 como um host protegido (usando SSL), consulte [Configurando Secure Sockets Layer no IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
   
- Configurar certificados para uso com [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: Configurando certificados de servidor no IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
+Para configurar certificados para uso com o IIS 7.0, consulte [Configuring Server Certificates in IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="iis-60"></a>IIS 6,0  
  Para configurar o IIS 6.0 como um host protegido (usando SSL), consulte [Configurando Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601).  

@@ -2,15 +2,15 @@
 title: Fornecedor de token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 90ae5d27d046ad02de0bfd2c7ac1cec6ec0417fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19781b6b162034fb45587103d2a4af6684ab0fe1
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664735"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487503"
 ---
 # <a name="saml-token-provider"></a>Fornecedor de token SAML
-Este exemplo demonstra como implementar uma provedor de token SAML personalizadas do cliente. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriado as credenciais para que a infraestrutura de segurança pode proteger a mensagem. O WCF é fornecido com o provedor de Token do Gerenciador de credenciais padrão. O WCF também é fornecido com um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provedor de token. Provedores de token personalizados são úteis nos seguintes casos:
+Este exemplo demonstra como implementar uma provedor de token SAML personalizadas do cliente. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriado as credenciais para que a infraestrutura de segurança pode proteger a mensagem. O WCF é fornecido com o provedor de Token do Gerenciador de credenciais padrão. O WCF também é fornecido com um provedor de token do CardSpace. Provedores de token personalizados são úteis nos seguintes casos:
 
 - Se você tiver um repositório de credenciais que esses provedores de token não podem operar com.
 

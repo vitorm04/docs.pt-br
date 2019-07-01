@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8de673fae16da8189589e20b6d9a66b96e1823ba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047809"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487103"
 ---
 # <a name="how-to-create-a-federated-client"></a>Como: criar um cliente federado
 No Windows Communication Foundation (WCF), criando um cliente para um *serviço federado* consiste em três etapas principais:  
@@ -39,7 +39,7 @@ No Windows Communication Foundation (WCF), criando um cliente para um *serviço 
   
 4. Examinar outras [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) elementos dentro de comentado out <`alternativeIssuedTokenParameters`> elemento. Ao usar a ferramenta de Svcutil.exe para gerar a configuração para um serviço federado, se o serviço federado ou quaisquer serviços de token de segurança intermediária não especificar um endereço do emissor, mas em vez disso, especificam um endereço de metadados para um serviço de token de segurança que expõe vários pontos de extremidade, o arquivo de configuração resultante se refere ao primeiro ponto de extremidade. Pontos de extremidade adicionais estão no arquivo de configuração como comentada <`alternativeIssuedTokenParameters`> elementos.  
   
-     Determinar se um deles <`issuedTokenParameters`> é preferível já presente na configuração. Por exemplo, o cliente talvez prefira autenticar para um serviço de token de segurança usando um Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] token em vez de um par de nome/senha do usuário.  
+     Determinar se um deles <`issuedTokenParameters`> é preferível já presente na configuração. Por exemplo, talvez prefira que o cliente autenticar em um serviço de token de segurança usando um token do Windows CardSpace em vez de um par de nome/senha do usuário.  
   
     > [!NOTE]
     >  Em que vários serviços de token de segurança devem ser percorridos antes de se comunicar com o serviço, é possível que um serviço de token de segurança intermediária direcionar o cliente para um serviço de token de segurança incorretas. Portanto, certifique-se de que o ponto de extremidade para o serviço de token de segurança na [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) é o serviço de token de segurança esperados e não um serviço de token de segurança desconhecida.  
