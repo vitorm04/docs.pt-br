@@ -2,12 +2,12 @@
 title: O que é o F#
 description: Saiba mais sobre o que o F# é linguagem de programação e o que é a programação em F# como. Saiba mais sobre tipos de dados avançados, funções e como elas se encaixam.
 ms.date: 08/03/2018
-ms.openlocfilehash: 9d5b0de9828aa91857d3961bf7d40c02c344adaa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fc4f4db771c43a4ec08cc9d3a247cf1f38e60457
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641566"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486840"
 ---
 # <a name="what-is-f"></a>O que é F\#
 
@@ -100,7 +100,7 @@ Funções de F# também são de primeira classe, que significa que eles podem se
 F# tem suporte completo para objetos que são tipos de dados úteis quando você precisa combinar dados e funcionalidade. Funções de F# são usadas para manipular objetos.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
+type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided

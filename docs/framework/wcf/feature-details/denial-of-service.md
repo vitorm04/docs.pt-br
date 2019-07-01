@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 0946e123e10fbad7357c9be356287e5e87b271d2
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423892"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486931"
 ---
 # <a name="denial-of-service"></a>Negação de serviço
 Negação de serviço ocorre quando um sistema está sobrecarregado de tal forma que as mensagens não podem ser processadas, ou eles são processados extremamente lenta.  
@@ -67,7 +67,7 @@ Negação de serviço ocorre quando um sistema está sobrecarregado de tal forma
  Em casos raros quando um certificado X.509 contém vários nomes alternativo da entidade e você autorizar usando o nome alternativo da entidade, a autorização pode falhar.  
   
 ## <a name="protect-configuration-files-with-acls"></a>Proteger arquivos de configuração com as ACLs  
- Você pode especificar as declarações obrigatórias e opcionais em arquivos de código e a configuração para [!INCLUDE[infocard](../../../../includes/infocard-md.md)] tokens emitidos. Isso resulta em elementos correspondentes que está sendo emitidos em `RequestSecurityToken` mensagens que são enviadas para a segurança de serviço de token. Um invasor pode modificar código ou a configuração para remover declarações obrigatórias ou opcionais, potencialmente, obtendo o serviço de token de segurança para emitir um token que não permite o acesso ao serviço de destino.  
+ Você pode especificar declarações obrigatórias e opcionais em arquivos de código e a configuração para o CardSpace tokens emitido. Isso resulta em elementos correspondentes que está sendo emitidos em `RequestSecurityToken` mensagens que são enviadas para a segurança de serviço de token. Um invasor pode modificar código ou a configuração para remover declarações obrigatórias ou opcionais, potencialmente, obtendo o serviço de token de segurança para emitir um token que não permite o acesso ao serviço de destino.  
   
  Para atenuar: Exigir acesso ao computador para modificar o arquivo de configuração. Controle de acesso de arquivo de uso de ACLs para proteger arquivos de configuração. WCF requer que o código ser no cache de assembly global ou de diretório do aplicativo antes que ele permita que esse código ser carregado da configuração. Use as ACLs do diretório para proteger os diretórios.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 376448502b7b9c7002213be5c3437849a3868166
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 295e4bd5eca58bc190b31fd96e79f97678e381a4
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425028"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486780"
 ---
 # <a name="federation"></a>Federação
 Este tópico fornece uma visão geral do conceito de segurança federada. Ele também descreve o suporte do Windows Communication Foundation (WCF) para implantação de arquiteturas de segurança federada. Para um aplicativo de exemplo que demonstra a federação, consulte [exemplo de Federação](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -224,7 +224,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
  ![Federation](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")  
   
- Semelhante do STS B, ao STS também é um serviço Web que emite tokens de segurança e expõe um ponto de extremidade para essa finalidade. No entanto, ele usa uma ligação diferente (`wsHttpBinding`) e requer que os usuários apresentem válido [!INCLUDE[infocard](../../../../includes/infocard-md.md)] com um `emailAddress` de declaração. Em resposta, ele emite tokens SAML com o `userAuthenticated` de declaração. Isso é especificado declarativamente na configuração do serviço.  
+ Semelhante do STS B, ao STS também é um serviço Web que emite tokens de segurança e expõe um ponto de extremidade para essa finalidade. No entanto, ele usa uma ligação diferente (`wsHttpBinding`) e requer que os usuários apresentem um CardSpace válido com um `emailAddress` de declaração. Em resposta, ele emite tokens SAML com o `userAuthenticated` de declaração. Isso é especificado declarativamente na configuração do serviço.  
   
 ```xml  
 <system.serviceModel>  

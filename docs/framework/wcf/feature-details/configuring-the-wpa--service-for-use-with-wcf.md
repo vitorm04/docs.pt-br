@@ -2,12 +2,12 @@
 title: Configurando o Serviço de ativação de processos do Windows (WAS) para utilizar com o Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 9fead93fcb8982f4f69af5d4bb401aa731bf887f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ab62bda5e579bcd80a7403d9af3a7e7f9836647
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654560"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486999"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Configurando o Serviço de ativação de processos do Windows (WAS) para utilizar com o Windows Communication Foundation
 Este tópico descreve as etapas necessárias para configurar o serviço de ativação de processos do Windows (também conhecido como WAS) no [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar o Windows Communication Foundation (WCF) protocolos de rede de serviços que não se comunicam por HTTP. As seções a seguir descrevem as etapas para essa configuração:  
@@ -23,7 +23,7 @@ Este tópico descreve as etapas necessárias para configurar o serviço de ativa
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Configurando um Site com associações não HTTP  
  Para usar uma associação não HTTP com WAS, a associação do site deve ser adicionada à configuração do WAS. O repositório de configuração para o WAS é o arquivo applicationHost. config, localizado no diretório %windir%\system32\inetsrv\config. Esse repositório de configuração é compartilhado pelo WAS e o IIS 7.0.  
   
- applicationHost. config é um arquivo de texto XML que pode ser aberto com qualquer editor de texto padrão (como o bloco de notas). No entanto, o [!INCLUDE[iisver](../../../../includes/iisver-md.md)] a ferramenta de configuração de linha de comando (appcmd.exe) é a maneira preferencial para adicionar associações de site não HTTP.  
+ applicationHost. config é um arquivo de texto XML que pode ser aberto com qualquer editor de texto padrão (como o bloco de notas). No entanto, a ferramenta de linha de comando de configuração do IIS 7.0 (appcmd.exe) é a maneira preferencial para adicionar associações de site não HTTP.  
   
  O comando a seguir adiciona uma associação de site do NET. TCP para o site padrão usando appcmd.exe (esse comando é inserido como uma única linha).  
   

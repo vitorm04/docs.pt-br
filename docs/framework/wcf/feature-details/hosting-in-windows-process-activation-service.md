@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: eeac535eac95b19889d0d8d74115bcddc3a15224
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: af40660d1af0a88710c4b53009474847cece6deb
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402347"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486635"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedagem no serviço de ativação do processo do Windows
 O serviço de ativação de processos do Windows (WAS) gerencia a ativação e o tempo de vida dos processos de trabalho que contêm aplicativos que hospedar serviços do Windows Communication Foundation (WCF). O modelo de processo WAS generaliza o modelo de processo do IIS 6.0 para o servidor HTTP, removendo a dependência no HTTP. Isso permite que os serviços do WCF para usar HTTP e protocolos não HTTP, como o NET. TCP, em um ambiente de hospedagem que oferece suporte à ativação baseada em mensagem e oferece a capacidade de hospedar um grande número de aplicativos em um determinado computador.  
@@ -25,10 +25,7 @@ O serviço de ativação de processos do Windows (WAS) gerencia a ativação e o
 - Configuração de aplicativos centralizado e gerenciamento.  
   
 - Permite que os aplicativos tirar proveito do modelo de processo do IIS sem exigir que o volume de implantação de uma instalação completa do IIS.  
-  
- Para obter mais informações sobre os recursos do WAS, consulte [IIS 7.0 Beta: Administração do IIS 7.0 Web](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
-  
- [O Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) funciona com [!INCLUDE[iisver](../../../../includes/iisver-md.md)] e o Windows o serviço de ativação de processos (WAS) para fornecer um ambiente de serviços NET4 WCF e WF de hospedagem de aplicativos avançados. Esses benefícios incluem gerenciamento de ciclo de vida do processo, reciclagem de processo, hospedagem compartilhada, proteção rápida contra falha, órfão de processo, ativação e sob demanda e monitoramento de integridade. Para obter informações detalhadas, consulte [recursos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494) e [conceitos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).  
+[O Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) funciona com o IIS 7.0 e o serviço de ativação de processos do Windows (WAS) para fornecer um ambiente de serviços NET4 WCF e WF de hospedagem de aplicativos avançados. Esses benefícios incluem gerenciamento de ciclo de vida do processo, reciclagem de processo, hospedagem compartilhada, proteção rápida contra falha, órfão de processo, ativação e sob demanda e monitoramento de integridade. Para obter informações detalhadas, consulte [recursos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494) e [conceitos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).  
   
 ## <a name="elements-of-the-was-addressing-model"></a>Elementos do WAS do modelo de endereçamento  
  Aplicativos têm endereços de identificador de recurso uniforme (URI), que são as unidades de código cujo ambiente de execução e tempo de vida são gerenciados pelo servidor. Uma instância de servidor única do WAS pode ser doméstica para muitos aplicativos diferentes. Organizam os servidores de aplicativos em grupos chamados *sites*. Dentro de um site, aplicativos são organizados de forma hierárquica que reflete a estrutura dos URIs que servem como seus endereços externos.  

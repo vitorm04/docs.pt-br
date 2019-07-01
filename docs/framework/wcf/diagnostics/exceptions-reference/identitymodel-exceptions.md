@@ -2,12 +2,12 @@
 title: Exceções de IdentityModel
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998511"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486662"
 ---
 # <a name="identitymodel-exceptions"></a>Exceções de IdentityModel
 Este tópico lista todas as exceções geradas pelas IdentityModel.  
@@ -100,11 +100,11 @@ Este tópico lista todas as exceções geradas pelas IdentityModel.
 |SAMLAssertionMissingMajorVersionAttributeOnRead|A MajorVersion da SamlAssertion lida está ausente ou tem comprimento 0.|  
 |SamlAttributeClaimRightShouldBePossessProperty|Este construtor SamlAttribute requer que o direito da declaração têm o valor System.IdentityModel.Claims.Rights.PossessProperty.|  
 |AuthorizationPolicyEvaluated|A política com a id específica é avaliada.|  
-|SAMLUnableToLoadCondtions|O \<SAML: Conditions > Falha ao carregar o elemento.|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|O \<SAML: Conditions > Falha ao carregar o elemento.|  
 |AESKeyLengthNotSupported|Não há suporte para a chave de bits específicos. Apenas 128, a chave de bits de 192 e 256 tem suporte.|  
 |UserNameCannotBeEmpty|O nome de usuário não pode ficar vazio.|  
 |AlgorithmAndPublicKeyMisMatch|O algoritmo especificado e a chave pública não coincidem.|  
-|SAMLUnableToLoadCondtion|O \<SAML: Conditions > Falha ao carregar o elemento.|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|O \<SAML: Conditions > Falha ao carregar o elemento.|  
 |SamlAssertionMissingSigningCredentials|SigningCredentials não foram definidas na SamlAssertion. As SamlAssertions devem ser assinadas defina SigningCredentials válidas na SamlAssertion para continuar.|  
 |SspiPayloadNotEncrypted|Os dados binários não foi criptografados com o contexto de segurança SSPI.|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|O SamlAuthorizationDecisionStatement que está sendo lido não contém nenhum SamlAction.|  

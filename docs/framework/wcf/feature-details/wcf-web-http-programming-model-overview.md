@@ -2,12 +2,12 @@
 title: Visão geral de modelo de programação HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: a5438857114fba890aac78565ef128bfc5ea95f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d4908eb75324d4316ea615d1a0acc286750752e7
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613058"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487716"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Visão geral de modelo de programação HTTP Web do WCF
 O modelo de programação WEB do Windows Communication Foundation (WCF) HTTP fornece os elementos básicos necessários para compilar serviços WEB HTTP com WCF. Serviços WCF WEB HTTP são projetados para ser acessado por mais ampla gama de possíveis clientes, incluindo navegadores da Web e têm os seguintes requisitos exclusivos:  
@@ -138,7 +138,7 @@ interface ICustomer
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] fornece suporte para dados JSON (AJAX), bem como os feeds de agregação (incluindo ATOM e RSS). Para obter mais informações sobre esses recursos, consulte [WCF Web HTTP formatação](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[visão geral de Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) e [integração AJAX e suporte para JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>Segurança e o modelo de programação WCF WEB HTTP  
- Como o modelo de programação HTTP WEB do WCF não oferece suporte a WS-* protocolos, a única maneira de proteger um serviço WCF WEB HTTP é expor o serviço via HTTPS usando SSL. Para obter mais informações sobre como configurar o SSL com [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [como implementar o SSL no IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ Como o modelo de programação HTTP WEB do WCF não oferece suporte a WS-* protocolos, a única maneira de proteger um serviço WCF WEB HTTP é expor o serviço via HTTPS usando SSL. Para obter mais informações sobre como configurar o SSL com o IIS 7.0, consulte [como implementar o SSL no IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>O modelo de programação WCF WEB HTTP de solução de problemas  
  Ao chamar o WCF WEB HTTP serviços usando um <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> para criar um canal, o <xref:System.ServiceModel.Description.WebHttpBehavior> usa o <xref:System.ServiceModel.EndpointAddress> definir a configuração arquivo, mesmo se um outro <xref:System.ServiceModel.EndpointAddress> é passado para o <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  

@@ -2,12 +2,12 @@
 title: Host de serviço personalizado
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c2a1fc1b398a3a9efcd0c824ca041a790448dd3
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990659"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487638"
 ---
 # <a name="custom-service-host"></a>Host de serviço personalizado
 Este exemplo demonstra como usar um personalizado derivado do <xref:System.ServiceModel.ServiceHost> classe para alterar o comportamento de tempo de execução de um serviço. Essa abordagem fornece uma alternativa reutilizável para configurar um grande número de serviços de uma maneira comum. O exemplo também demonstra como usar o <xref:System.ServiceModel.Activation.ServiceHostFactory> classe para usar um ServiceHost personalizado no ambiente de hospedagem dos serviços de informações da Internet (IIS) ou o serviço de ativação de processos do Windows (WAS).  
@@ -168,11 +168,11 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 2. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Depois que a solução foi criada, execute Setup. bat para configurar o aplicativo ServiceModelSamples no [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. O diretório ServiceModelSamples agora deve aparecer como um [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplicativo.  
+3. Após a solução foi criada, execute Setup. bat para configurar o aplicativo ServiceModelSamples no IIS 7.0. O diretório ServiceModelSamples agora deve aparecer como um aplicativo do IIS 7.0.  
   
 4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5. Para remover o [!INCLUDE[iisver](../../../../includes/iisver-md.md)] execução CleanUp do aplicativo.  
+5. Para remover o aplicativo do IIS 7.0, execute CleanUp.  
   
 ## <a name="see-also"></a>Consulte também
 

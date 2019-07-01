@@ -2,12 +2,12 @@
 title: Compatibilidade ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01329769b74c8a5841b5a2024d3ed674c108be1c
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002658"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487665"
 ---
 # <a name="aspnet-compatibility"></a>Compatibilidade ASP.NET
 Este exemplo demonstra como habilitar o modo de compatibilidade do ASP.NET no Windows Communication Foundation (WCF). Serviços em execução no modo participar totalmente no pipeline de aplicativo do ASP.NET e pode tornar a compatibilidade do ASP.NET usam recursos do ASP.NET, como autorização de URL do arquivo, estado de sessão e o <xref:System.Web.HttpContext> classe. O <xref:System.Web.HttpContext> classe permite o acesso a cookies, sessões e outros recursos do ASP.NET. Esse modo requer que as associações usam o transporte HTTP e o serviço em si deve ser hospedado no IIS.  
@@ -123,7 +123,7 @@ Press <ENTER> to terminate client.
   
 2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Depois que a solução foi criada, execute Setup. bat para configurar o aplicativo ServiceModelSamples no [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. O diretório ServiceModelSamples agora deve aparecer como um [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplicativo.  
+3. Após a solução foi criada, execute Setup. bat para configurar o aplicativo ServiceModelSamples no IIS 7.0. O diretório ServiceModelSamples agora deve aparecer como um aplicativo do IIS 7.0.  
   
 4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

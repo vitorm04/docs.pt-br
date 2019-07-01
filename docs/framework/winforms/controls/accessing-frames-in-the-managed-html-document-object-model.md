@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 9a02a912c170bfc4d997f1d8a0fe4f4d5bedb147
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a9864184e92c3c6bbcf6a613fd1092238181a93
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665805"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487297"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Acessando quadros no Document Object Model HTML gerenciado
 Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter seus próprios documentos HTML distintos. Usar quadros facilita a criação de páginas HTML na qual uma ou mais partes da página permanecem estáticas, como uma barra de navegação, enquanto outros quadros alterar seu conteúdo constantemente.  
@@ -36,7 +36,7 @@ Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter s
 ## <a name="frames-and-security"></a>Quadros e Segurança  
  O acesso aos quadros é complicado pelo fato de que o HTML DOM gerenciado implementa uma medida de segurança, conhecida como *segurança de scripts entre quadros*. Se um documento contiver um `FRAMESET` com duas ou mais `FRAME`s em domínios diferentes, esses `FRAME`s não poderão interagir entre si. Em outras palavras, uma `FRAME` que exibe o conteúdo do seu site da Web não pode acessar informações em um `FRAME` que hospeda um site de terceiros, como `http://www.adatum.com/`. Essa segurança é implementada no nível do <xref:System.Windows.Forms.HtmlWindow> classe. Você pode obter informações gerais sobre um `FRAME` hospeda outro site, como sua URL, mas não será possível acessar seus <xref:System.Windows.Forms.HtmlWindow.Document%2A> ou alterar o tamanho ou local de hospedagem `FRAME` ou `IFRAME`.  
   
- Essa regra também se aplica a janelas abertas usando o <xref:System.Windows.Forms.HtmlWindow.Open%2A> e <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> métodos. Se a janela aberta estiver em um domínio diferente da página hospedada no <xref:System.Windows.Forms.WebBrowser> controle, você não poderá mover a janela ou examinar seu conteúdo. Essas restrições também serão aplicadas se você usar o <xref:System.Windows.Forms.WebBrowser> controle para exibir um site da Web que é diferente do site da Web usado para implantar seu aplicativo baseado em Windows Forms. Se você usar [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] tecnologia de implantação para instalar o aplicativo do site da Web A e você usar o <xref:System.Windows.Forms.WebBrowser> para exibir o site da Web B, você não será capaz de dados de acesso do site B.  
+ Essa regra também se aplica a janelas abertas usando o <xref:System.Windows.Forms.HtmlWindow.Open%2A> e <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> métodos. Se a janela aberta estiver em um domínio diferente da página hospedada no <xref:System.Windows.Forms.WebBrowser> controle, você não poderá mover a janela ou examinar seu conteúdo. Essas restrições também serão aplicadas se você usar o <xref:System.Windows.Forms.WebBrowser> controle para exibir um site da Web que é diferente do site da Web usado para implantar seu aplicativo baseado em Windows Forms. Se você usar tecnologia de implantação ClickOnce para instalar seu aplicativo do site da Web A e usar o <xref:System.Windows.Forms.WebBrowser> para exibir o site da Web B, você não será capaz de dados de acesso do site B.  
   
 ## <a name="see-also"></a>Consulte também
 

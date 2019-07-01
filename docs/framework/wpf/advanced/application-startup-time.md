@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832695"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487184"
 ---
 # <a name="application-startup-time"></a>Tempo de inicialização do aplicativo
 A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode variar consideravelmente. Este tópico descreve diversas técnicas para reduzir o tempo de inicialização percebido e real de um aplicativo do WPF (Windows Presentation Foundation).  
@@ -65,7 +65,7 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
  Ter módulos Ngen e JIT pode ter o efeito pior. Isso ocorre porque a mscorjit.dll deve ser carregada e quando o compilador JIT trabalha em seu código, muitas páginas nas imagens Ngen devem ser acessadas quando o compilador JIT lê os metadados dos assemblies.  
   
 ### <a name="ngen-and-clickonce"></a>Ngen e ClickOnce  
- A maneira como você planeja implantar seu aplicativo também pode fazer diferença no tempo de carregamento. A implantação de aplicativo do [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] não dá suporte ao Ngen. Se você decidir usar o Ngen.exe para o seu aplicativo, terá que usar outro mecanismo de implantação, como o Windows Installer.  
+ A maneira como você planeja implantar seu aplicativo também pode fazer diferença no tempo de carregamento. A implantação do aplicativo ClickOnce não dá suporte a Ngen. Se você decidir usar o Ngen.exe para o seu aplicativo, terá que usar outro mecanismo de implantação, como o Windows Installer.  
   
  Para obter mais informações, consulte [Ngen.exe (Gerador de Imagens Nativas)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -112,9 +112,9 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
  Se você precisar usar o <xref:System.Xml.Serialization.XmlSerializer> classe, você pode obter o melhor desempenho se você gerar previamente o assembly de serialização.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Configurar o ClickOnce para verificar se há atualizações após a inicialização  
- Se seu aplicativo usa o [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], evite o acesso à rede na inicialização, configurando o [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] para verificar se há atualizações no site de implantação depois que o aplicativo for iniciado.  
+ Se seu aplicativo usa o ClickOnce, evite o acesso à rede na inicialização Configurando ClickOnce para verificar o site de implantação para atualizações depois que o aplicativo é iniciado.  
   
- Se você usa o modelo XBAP (aplicativo de navegador XAML), tenha em mente que o [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] verifica se há atualizações no site de implantação, mesmo que o XBAP já esteja no cache do [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Para obter mais informações, consulte [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Se você usar o modelo de aplicativo (XBAP) de navegador XAML, lembre-se de que o ClickOnce verifica o site de implantação para atualizações, mesmo se o XBAP já esteja no cache do ClickOnce. Para obter mais informações, consulte [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Configurar o serviço PresentationFontCache para iniciar automaticamente  
  O primeiro aplicativo do WPF a ser executado após um reinício é o serviço PresentationFontCache. O serviço armazena em cache as fontes do sistema, melhora o acesso à fonte e melhora o desempenho geral. Há uma sobrecarga na inicialização do serviço e, em alguns ambientes controlados, considere a possibilidade de configurar o serviço para iniciar automaticamente quando o sistema for reiniciado.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 12296fbd503a7e9f1866f407964a5e223d1afadd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 58dcfacba302ef3b85a8bc7b24b17f2435115594
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650327"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486657"
 ---
 # <a name="bindings-and-security"></a>Associações e segurança
 As associações fornecidas pelo sistema incluídas com o Windows Communication Foundation (WCF) oferecem uma maneira rápida de aplicativos do WCF de programa. Com uma exceção, todas as associações têm um esquema de segurança padrão habilitado. Este tópico ajuda você a selecionar a associação certa para suas necessidades de segurança.  
@@ -210,7 +210,7 @@ As associações fornecidas pelo sistema incluídas com o Windows Communication 
 |NTLM|Autenticação NT LAN Manager (NTLM).|  
 |Windows|Autenticação do Windows.|  
 |Certificado|Autenticação executada usando um certificado.|  
-|IssuedToken|Permite que o serviço exigir que o cliente seja autenticado usando um token emitido por um serviço de token de segurança ou por [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Para obter mais informações, consulte [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Permite que o serviço exigir que o cliente seja autenticado usando um token emitido por um serviço de token de segurança ou por CardSpace. Para obter mais informações, consulte [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Credenciais de cliente de mensagem em associações  
  A tabela a seguir lista os tipos de credencial de cliente disponíveis ao usar uma associação no modo de segurança de mensagem.  

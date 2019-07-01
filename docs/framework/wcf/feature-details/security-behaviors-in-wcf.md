@@ -2,12 +2,12 @@
 title: Comportamentos de segurança no WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 53d8fedb5f562dfbc4aec566f8d0c442b255e1c9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 378edb6ddd7a66249a0c7548a3d9465475f670a8
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424685"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487757"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamentos de segurança no WCF
 No Windows Communication Foundation (WCF), comportamentos de modificar o comportamento de tempo de execução no nível de serviço ou no nível do ponto de extremidade. (Para obter mais informações sobre os comportamentos em geral, consulte [especificando comportamento de tempo de execução do serviço](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamentos de segurança* permitem o controle sobre as credenciais, autenticação, autorização e os logs de auditoria. Você pode usar comportamentos por meio da programação ou por meio da configuração. Este tópico concentra-se sobre como configurar os seguintes comportamentos relacionados às funções de segurança:  
@@ -87,7 +87,7 @@ No Windows Communication Foundation (WCF), comportamentos de modificar o comport
  Para obter mais informações sobre como usar este elemento de configuração, consulte [como: Configurar credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>Permitindo que os usuários do CardSpace anônimo  
- Definindo o `AllowUntrustedRsaIssuers` atributo do `<IssuedTokenAuthentication>` elemento `true` explicitamente permite que qualquer cliente apresentar um token emitido por conta própria assinado com um par de chaves RSA arbitrário. O emissor é *não confiáveis* porque a chave não tem nenhum dado de emissor associado a ele. Um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] usuário pode criar um cartão emitido por conta própria que inclui automaticamente fornecidas declarações de identidade. Use essa funcionalidade com cuidado. Para usar esse recurso, considere a chave pública RSA como uma senha mais segura que deve ser armazenada em um banco de dados, juntamente com um nome de usuário. Antes de permitir um acesso de cliente para o serviço, verifique se a chave pública RSA apresentada pelo cliente, comparando-o com a chave pública armazenada para o nome do usuário apresentada. Isso pressupõe que você estabeleceu um processo de registro no qual os usuários podem registrar seus nomes de usuário e associá-los com as chaves públicas do RSA emitidas por conta própria.  
+ Definindo o `AllowUntrustedRsaIssuers` atributo do `<IssuedTokenAuthentication>` elemento `true` explicitamente permite que qualquer cliente apresentar um token emitido por conta própria assinado com um par de chaves RSA arbitrário. O emissor é *não confiáveis* porque a chave não tem nenhum dado de emissor associado a ele. Um usuário do CardSpace pode criar um cartão emitido por conta própria que inclui automaticamente fornecidas declarações de identidade. Use essa funcionalidade com cuidado. Para usar esse recurso, considere a chave pública RSA como uma senha mais segura que deve ser armazenada em um banco de dados, juntamente com um nome de usuário. Antes de permitir um acesso de cliente para o serviço, verifique se a chave pública RSA apresentada pelo cliente, comparando-o com a chave pública armazenada para o nome do usuário apresentada. Isso pressupõe que você estabeleceu um processo de registro no qual os usuários podem registrar seus nomes de usuário e associá-los com as chaves públicas do RSA emitidas por conta própria.  
   
 ## <a name="client-credentials"></a>Credenciais do cliente  
  As credenciais do cliente são usadas para autenticar o cliente para serviços em casos em que a autenticação mútua é necessária. Você pode usar a seção para especificar certificados de serviço para cenários em que o cliente deve proteger as mensagens para um serviço com o certificado do serviço.  

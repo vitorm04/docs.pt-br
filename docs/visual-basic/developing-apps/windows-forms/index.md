@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: dd3385d6459199d56f74abfb1b8e0e218a2adf78
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347992"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487797"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Noções básicas de Aplicativo do Windows Forms (Visual Basic)
 Uma parte importante do Visual Basic é a capacidade de criar aplicativos Windows Forms executados localmente nos computadores dos usuários. Você pode usar o Visual Studio para criar o aplicativo e interface do usuário usando Windows Forms. Um aplicativo Windows Forms se baseia nas classes do <xref:System.Windows.Forms> namespace.  
@@ -71,19 +71,19 @@ Uma parte importante do Visual Basic é a capacidade de criar aplicativos Window
 |Usar a janela fontes de dados|[Passo a passo: Exibindo dados em um Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Implantando aplicativos em computadores cliente  
- Depois que você tenha escrito o seu aplicativo, você deve enviá-lo para seus usuários para que eles podem instalar e executá-lo em seus próprios computadores cliente. Usando o [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tecnologia, você pode implantar seus aplicativos no Visual Studio usando apenas alguns cliques e fornecer aos usuários uma URL apontando para seu aplicativo na Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] gerencia todos os elementos e dependências em seu aplicativo e garante que o aplicativo está instalado corretamente no computador cliente.  
+ Depois que você tenha escrito o seu aplicativo, você deve enviá-lo para seus usuários para que eles podem instalar e executá-lo em seus próprios computadores cliente. Usando a tecnologia ClickOnce, você pode implantar seus aplicativos no Visual Studio usando apenas alguns cliques e fornecer aos usuários uma URL apontando para seu aplicativo na Web. O ClickOnce gerencia todos os elementos e dependências em seu aplicativo e garante que o aplicativo está instalado corretamente no computador cliente.  
   
- Os aplicativos [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] podem ser configurados para serem executados somente quando o usuário estiver conectado à rede ou para execução online e offline. Quando você especifica que um aplicativo deve oferecer suporte a operação offline, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] adiciona um link para seu aplicativo o usuário **iniciar** menu, para que o usuário possa abri-lo sem usar a URL.  
+ Aplicativos ClickOnce podem ser configurados para executar apenas quando o usuário está conectado à rede, ou para execução online e offline. Quando você especifica que um aplicativo deve oferecer suporte a operação offline, o ClickOnce adiciona um link para seu aplicativo o usuário **iniciar** menu, para que o usuário possa abri-lo sem usar a URL.  
   
- Quando você atualiza o seu aplicativo, publica um novo manifesto de implantação e uma nova cópia do seu aplicativo em seu servidor Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] detecta que há uma atualização disponível e atualiza a instalação do usuário; nenhuma programação personalizada é necessária para a atualização de assemblies antigos.  
+ Quando você atualiza o seu aplicativo, publica um novo manifesto de implantação e uma nova cópia do seu aplicativo em seu servidor Web. O ClickOnce detecta que há uma atualização disponível e atualiza a instalação do usuário; nenhuma programação personalizada é necessária para a atualização de assemblies antigos.  
   
- Para obter uma introdução completa [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], consulte [Implantação e segurança do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Para obter informações passo a passo sobre como usar esses recursos, consulte os seguintes tópicos:  
+ Para obter uma introdução completa ao ClickOnce, consulte [implantação e segurança do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Para obter informações passo a passo sobre como usar esses recursos, consulte os seguintes tópicos:  
   
 |Para|Consulte|  
 |--------|---------|  
-|Implantar um aplicativo com [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Como: Publicar um aplicativo ClickOnce usando o assistente de publicação](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Passo a passo: Como implantar manualmente aplicativos ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|Atualização de um [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] implantação|[Como: Gerenciar atualizações para um aplicativo ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Gerenciar a segurança com [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Como: Habilitar configurações de segurança do ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Implantar um aplicativo com ClickOnce|[Como: Publicar um aplicativo ClickOnce usando o assistente de publicação](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Passo a passo: Como implantar manualmente aplicativos ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Atualizar uma implantação do ClickOnce|[Como: Gerenciar atualizações para um aplicativo ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|Gerenciar a segurança com o ClickOnce|[Como: Habilitar configurações de segurança do ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Outros controles e recursos  
  Existem muitos outros recursos dos Windows Forms que tornam as tarefas comuns de implementação mais fáceis e rápidas, como o suporte à criação de caixas de diálogo, impressão, adição da Ajuda e de documentação e localização do seu aplicativo para diversos idiomas. Além disso, Windows Forms se baseia no sistema de segurança robusto do .NET Framework, permitindo que você ofereça aplicativos mais protegidos aos seus clientes.  

@@ -1,13 +1,13 @@
 ---
 title: Cadeias de caracteres
 description: Saiba como o F# tipo 'string' representa texto imutável, como uma sequência de caracteres Unicode.
-ms.date: 05/16/2016
-ms.openlocfilehash: c2fda4d936abab5bc3f4653613991a7f5471d81d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/28/2019
+ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642077"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487765"
 ---
 # <a name="strings"></a>Cadeias de caracteres
 
@@ -29,7 +29,7 @@ Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O
 |Barra invertida|`\\`|
 |Marca de aspas|`\"`|
 |Apóstrofe|`\'`|
-|caractere Unicode|`\uXXXX` ou `\UXXXX` (onde `X` indica um dígito hexadecimal)|
+|caractere Unicode|`\uXXXX` (UTF-16) ou `\U00XXXXXX` (UTF-32) (em que `X` indica um dígito hexadecimal)|
 
 Se precedido pelo símbolo @, o literal é uma cadeia de caracteres textual. Isso significa que as sequências de escape são ignoradas, exceto que dois caracteres de marca de aspas simples são interpretados como caracteres de uma marca de aspas simples.
 

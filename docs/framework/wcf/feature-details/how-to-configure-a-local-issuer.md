@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d4c01bf2b84a6379eca5d0e1d5dbee68dc7cdd
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779295"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487144"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Como: configurar um emissor local
 Este tópico descreve como configurar um cliente para usar um emissor local para tokens emitidos.  
@@ -23,7 +23,7 @@ Este tópico descreve como configurar um cliente para usar um emissor local para
  Windows Communication Foundation (WCF) usa um emissor local em casos em que o endereço do emissor de uma associação federado `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` ou `null`. Nesses casos, você deve configurar o <xref:System.ServiceModel.Description.ClientCredentials> com o endereço do emissor local e a associação usar para se comunicar com esse emissor.  
   
 > [!NOTE]
->  Se o <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> propriedade do `ClientCredentials` classe é definida como `true`, um endereço do emissor local não for especificado e o endereço do emissor especificado pelo [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ou outros é associação federada `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, ou é `null`, em seguida, o Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] emissor é usado.  
+>  Se o <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> propriedade do `ClientCredentials` classe é definida como `true`, um endereço do emissor local não for especificado e o endereço do emissor especificado pelo [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ou outros é associação federada `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, ou é `null`, em seguida, o emissor do Windows CardSpace é usado.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Configurar o emissor local no código  
   
