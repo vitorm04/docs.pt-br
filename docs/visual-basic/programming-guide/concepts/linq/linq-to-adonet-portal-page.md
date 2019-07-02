@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (página do portal)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 21d6ddb4b793d2502b315888d79fb826741fed2e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
-ms.translationtype: MT
+ms.openlocfilehash: 04fb330b1a8eaea9c5c64f633322696236eb492e
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307493"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487807"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (página do portal)
-O [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] permite que você realize consultas em qualquer objeto enumerável em ADO.NET usando o modelo de programação [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+LINQ to ADO.NET permite que a consulta em qualquer objeto enumerável no ADO.NET usando o [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] modelo de programação.  
   
 > [!NOTE]
->  A documentação do [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] está localizada na seção ADO.NET do SDK do .NET Framework: [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
+>  O LINQ to ADO.NET documentação está localizado na seção ADO.NET do SDK do .NET Framework: [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
   
  Há três tecnologias separadas do [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] do ADO.NET: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] fornece mais rica e otimizadas sobre o <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] permite que você consulte diretamente esquemas de banco de dados do SQL Server, e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] permite consultar um modelo de dados de entidade.  
   
