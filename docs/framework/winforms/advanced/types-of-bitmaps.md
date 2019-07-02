@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663881"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505299"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de bitmaps
 Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz retangular de pixels. O número de bits dedicados a um pixel individual determina o número de cores que podem ser atribuídos a esse pixel. Por exemplo, se cada pixel é representado por 4 bits, em seguida, um determinado pixel pode ser atribuído um dos 16 cores diferentes (2^4 = 16). A tabela a seguir mostra alguns exemplos do número de cores que podem ser atribuídos a um pixel representado por um determinado número de bits.  
@@ -53,7 +53,7 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
  ![Exemplo de bitmap](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formatos de arquivos gráficos  
- Há muitos formatos padrão para salvar os bitmaps nos arquivos do disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dá suporte a formatos de arquivo gráfico descritos nos parágrafos a seguir.  
+ Há muitos formatos padrão para salvar os bitmaps nos arquivos do disco. Dá suporte a GDI+ o arquivo gráfico formatos descritos nos parágrafos a seguir.  
   
 ### <a name="bmp"></a>BMP  
  BMP é um formato padrão usado pelo Windows para armazenar imagens independente de dispositivo e aplicativo. O número de bits por pixel (1, 4, 8, 15, 24, 32 ou 64) para um determinado arquivo BMP é especificado no cabeçalho do arquivo. Arquivos BMP com 24 bits por pixel são comuns. Arquivos BMP geralmente não são compactados e, portanto, não são adequados para a transferência pela Internet.  

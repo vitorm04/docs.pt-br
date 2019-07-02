@@ -7,15 +7,15 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2a330324085f1a73418cd535f83f2b73e9721c0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747678"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503949"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Introdução à programação de elementos gráficos
-Esta seção mostra como começar a usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] em um aplicativo dos Windows Forms. Os tópicos a seguir mostram como concluir várias tarefas de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] como desenhar e preencher formas e texto.  
+Esta seção mostra como começar a usar o GDI+ em um aplicativo Windows Forms. Os tópicos a seguir mostram como concluir várias tarefas de GDI+, como o desenho e preenchendo formas e texto.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Como: Criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)  

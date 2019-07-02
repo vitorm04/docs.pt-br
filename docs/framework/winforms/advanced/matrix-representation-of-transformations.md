@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967430"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505629"
 ---
 # <a name="matrix-representation-of-transformations"></a>Representação matricial de transformações
 Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. A ilustração a seguir mostra diversas matrizes.  
@@ -66,7 +66,7 @@ Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. 
   
  ![Transformações](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- Na [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] você pode armazenar uma transformação afim em um <xref:System.Drawing.Drawing2D.Matrix> objeto. Como a terceira coluna de uma matriz que representa uma transformação afim sempre é (0, 0, 1), especifique somente os seis números nas duas primeiras colunas quando você constrói um <xref:System.Drawing.Drawing2D.Matrix> objeto. A instrução `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` constrói a matriz mostrada na figura anterior.  
+ No GDI+, você pode armazenar uma transformação afim em um <xref:System.Drawing.Drawing2D.Matrix> objeto. Como a terceira coluna de uma matriz que representa uma transformação afim sempre é (0, 0, 1), especifique somente os seis números nas duas primeiras colunas quando você constrói um <xref:System.Drawing.Drawing2D.Matrix> objeto. A instrução `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` constrói a matriz mostrada na figura anterior.  
   
 ## <a name="composite-transformations"></a>Transformações de composição  
  Uma transformação de composição é uma sequência de transformações, uma seguida da outra. Considere as matrizes e transformações na lista a seguir:  

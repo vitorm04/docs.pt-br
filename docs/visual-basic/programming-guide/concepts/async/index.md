@@ -2,12 +2,12 @@
 title: Programação assíncrona com Async e Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 030ef4549bc820cab66d33fa81c205158c09fff9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0d8810da424b0759dcfba882efe462514a14145a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026104"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505960"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programação assíncrona com Async e Await (Visual Basic)
 
@@ -39,7 +39,7 @@ A abordagem baseada em assincronia adiciona o equivalente de uma transmissão au
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Os métodos assíncronos são mais fáceis de escrever
 
-As palavras-chave [Async](../../../../visual-basic/language-reference/modifiers/async.md) e [Await](../../../../visual-basic/language-reference/modifiers/async.md) no Visual Basic são a parte central da programação assíncrona. Ao usar essas duas palavras-chave, você pode usar recursos do .NET Framework ou do Windows Runtime para criar um método assíncrono quase que tão facilmente como cria um método síncrono. Os métodos assíncronos que você define usando `Async` e `Await` são chamados de métodos assíncronos.
+As palavras-chave [Async](../../../../visual-basic/language-reference/modifiers/async.md) e [Await](../../../../visual-basic/language-reference/operators/await-operator.md) no Visual Basic são a parte central da programação assíncrona. Ao usar essas duas palavras-chave, você pode usar recursos do .NET Framework ou do Windows Runtime para criar um método assíncrono quase que tão facilmente como cria um método síncrono. Os métodos assíncronos que você define usando `Async` e `Await` são chamados de métodos assíncronos.
 
 O exemplo a seguir mostra um método assíncrono. Quase tudo no código deve ser completamente familiar para você. Os comentários chamam os recursos que você deve adicionar para criar a assincronia.
 

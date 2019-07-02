@@ -6,19 +6,19 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73d1759aec3abe2e3e9c371f949cf051930d103c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588621"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506133"
 ---
 # <a name="about-gdi-managed-code"></a>Sobre código gerenciado no GDI+
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] é a parte do sistema operacional Windows que fornece gráficos vetoriais bidimensionais, imagens e tipografia. O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] melhora a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (a Graphics Device Interface incluída em versões anteriores do Windows) adicionando novos recursos e otimizando os recursos existentes.  
+GDI+ é a parte do sistema operacional Windows que fornece gráficos vetoriais bidimensionais, imagens e tipografia. GDI+ melhora em escala de GDI (Interface gráfica de dispositivo incluído com versões anteriores do Windows) adicionando novos recursos e otimizando os recursos existentes.  
   
- O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] interface de classe gerenciada (um conjunto de wrappers) faz parte do .NET Framework, um ambiente para criar, implantar e executar outros aplicativos e serviços Web XML.  
+ A interface de classe gerenciada GDI+ (um conjunto de wrappers) faz parte do .NET Framework, um ambiente para criar, implantar e executar outros aplicativos e serviços Web XML.  
   
- Esta seção fornece informações sobre a API do [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para os programadores que usam código gerenciado.  
+ Esta seção fornece informações sobre a API de GDI+ para programadores que usam o código gerenciado.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Linhas, Curvas e Formas](lines-curves-and-shapes.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "65588621"
  Discute o tipo de imagens disponíveis e como trabalhar com elas.  
   
  [Sistemas de Coordenadas e Transformações](coordinate-systems-and-transformations.md)  
- Discute como transformar elementos gráficos com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Discute como transformar elementos gráficos com GDI+.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  

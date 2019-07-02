@@ -6,19 +6,19 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b6811e1412e1dc5b0731810f159bac633cd1eb2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766162"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505037"
 ---
 # <a name="using-managed-graphics-classes"></a>Usando classes de elementos gráficos gerenciadas
-Os tópicos a seguir descrevem como usar a API [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] na estrutura da classe gerenciada.  
+Os tópicos a seguir descrevem como usar a API GDI+ na estrutura da classe gerenciada.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução à Programação de Elementos Gráficos](getting-started-with-graphics-programming.md)  
- Descreve como realizar tarefas básicas com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Descreve como realizar tarefas básicas com GDI+.  
   
  [Usando uma caneta para desenhar linhas e formas](using-a-pen-to-draw-lines-and-shapes.md)  
  Demonstra como construir uma caneta e usá-la para desenhar uma variedade de formas e linhas.  

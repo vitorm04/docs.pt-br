@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8fabd38ec49070bc588196b38ec64942feab93f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583873"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504696"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Consultas no LINQ to DataSet
 Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalmente, as consultas são expressas em uma linguagem de consulta especializada, como o SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que consultam. O [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] oferece um modelo mais simples e consistente para trabalhar com dados em vários tipos de fontes de dados e formatos. Em uma consulta [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], você sempre trabalha com objetos de programação.  
   
  Uma operação de consulta [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consiste em três ações: obter a fonte ou fontes de dados, criar a consulta e executá-la.  
   
- As fontes de dados que implementam a interface genérica <xref:System.Collections.Generic.IEnumerable%601> podem ser consultadas por meio do [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Chamando <xref:System.Data.DataTableExtensions.AsEnumerable%2A> em um <xref:System.Data.DataTable> retorna um objeto que implementa a <xref:System.Collections.Generic.IEnumerable%601> interface, que serve como fonte de dados para [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consultas.  
+ As fontes de dados que implementam a interface genérica <xref:System.Collections.Generic.IEnumerable%601> podem ser consultadas por meio do [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Chamando <xref:System.Data.DataTableExtensions.AsEnumerable%2A> em um <xref:System.Data.DataTable> retorna um objeto que implementa a <xref:System.Collections.Generic.IEnumerable%601> interface, que serve como a fonte de dados para LINQ para consultas de conjunto de dados.  
   
  Na consulta, você especifica exatamente as informações que deseja recuperar da fonte de dados. Uma consulta também pode especificar como essas informações devem ser classificadas, agrupadas e moldadas antes de serem retornadas. No [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], uma consulta é armazenada em uma variável. Se a consulta foi projetada para retornar uma sequência de valores, a variável de consulta deve ser um tipo enumerável. Essa variável de consulta não toma nenhuma ação e não retorna nenhum dado, ela apenas armazena as informações da consulta. Depois de criar uma consulta, você deve executá-la para recuperar todos os dados.  
   
@@ -26,7 +26,7 @@ Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalm
  Em comparação com as consultas adiadas, que retornam uma sequência de valores, as consultas que retornam um valor singleton são executadas imediatamente. Alguns exemplos de consultas singleton são <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> e <xref:System.Linq.Enumerable.First%2A>. Essas consultas são executadas imediatamente porque os resultados da consulta são necessários para calcular o resultado singleton. Por exemplo, para localizar a média dos resultados da consulta, a consulta deve ser executada para que a função de média tenha os dados de entrada com os quais trabalhar. Você também pode usar o método <xref:System.Linq.Enumerable.ToList%2A> ou <xref:System.Linq.Enumerable.ToArray%2A> em uma consulta para forçar a execução imediata de uma consulta que não produz um valor singleton. Essas técnicas para forçar a execução imediata podem ser úteis quando você deseja armazenar os resultados de uma consulta em cache.
   
 ## <a name="queries"></a>Consultas  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] as consultas podem ser formuladas em duas sintaxes diferentes: sintaxe de expressão consulta e sintaxe de consulta com base em método.  
+ Consultas LINQ to DataSet pode ser formulada em duas sintaxes diferentes: sintaxe de expressão consulta e sintaxe de consulta com base em método.  
   
 ### <a name="query-expression-syntax"></a>Sintaxe de expressão de consulta  
  As expressões de consulta são uma sintaxe declarativa de consulta. Essa sintaxe permite que um desenvolvedor escreva consultas no C# ou no Visual Basic em um formato semelhante ao SQL. Usando a sintaxe de expressão de consulta, você pode executar até operações complexas de filtragem, ordenação e agrupamento em fontes de dados com o mínimo de código. Para obter mais informações, consulte [expressões de consulta LINQ](../../../csharp/linq/index.md#query-expression-overview) e [operações básicas de consulta (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
@@ -39,7 +39,7 @@ Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalm
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Sintaxe de pesquisa baseada em método  
- A outra maneira de formular consultas [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] é usar consultas baseadas em método. A sintaxe de consulta baseada em método é uma sequência de chamadas diretas de método para métodos de operadores [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], passando expressões lambda como parâmetros. Para obter mais informações, consulte [Expressões Lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ A outra maneira de formular LINQ para consultas de conjunto de dados é por meio de consultas com base em método. A sintaxe de consulta baseada em método é uma sequência de chamadas diretas de método para métodos de operadores [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], passando expressões lambda como parâmetros. Para obter mais informações, consulte [Expressões Lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  Este exemplo usa <xref:System.Linq.Enumerable.Select%2A> para retornar todas as linhas da tabela `Product` e exibir os nomes dos produtos.  
   

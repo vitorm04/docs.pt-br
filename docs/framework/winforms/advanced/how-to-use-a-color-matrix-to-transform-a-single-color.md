@@ -8,19 +8,19 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2df74e022b842f7e5c9ff80f6aeddfce51af5eab
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063728"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505828"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Como: usar uma matriz de cores para transformar uma única cor
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece o <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classes para armazenar e manipular imagens. <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> objetos armazenam a cor de cada pixel como um número de 32 bits: 8 bits cada para vermelho, verde, azul e alfa. Cada um dos quatro componentes é um número de 0 a 255, sendo que 0 representa nenhuma intensidade e 255 representa intensidade total. O componente alfa Especifica a transparência da cor: 0 é completamente transparente e 255 é totalmente opaca.  
+GDI+ fornece o <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classes para armazenar e manipular imagens. <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> objetos armazenam a cor de cada pixel como um número de 32 bits: 8 bits cada para vermelho, verde, azul e alfa. Cada um dos quatro componentes é um número de 0 a 255, sendo que 0 representa nenhuma intensidade e 255 representa intensidade total. O componente alfa Especifica a transparência da cor: 0 é completamente transparente e 255 é totalmente opaca.  
   
  Um vetor de cor é uma tupla de 4 do formulário (vermelho, verde, azul, alfa). Por exemplo, o vetor de cor (0, 255, 0, 255) representa uma cor opaca que não tem nenhum vermelho nem azul, mas tem verde na intensidade total.  
   
- Outra convenção para representar cores usa o número 1 para intensidade total. Usando essa convenção, a cor descrita no parágrafo anterior seria representada pelo vetor (0, 1, 0, 1). O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] usa a convenção de 1 como intensidade total quando executa transformações de cor.  
+ Outra convenção para representar cores usa o número 1 para intensidade total. Usando essa convenção, a cor descrita no parágrafo anterior seria representada pelo vetor (0, 1, 0, 1). GDI+ usa a convenção de 1 como intensidade total quando executa transformações de cor.  
   
  Você pode aplicar transformações lineares (rotação, colocação em escala e assim por diante) em vetores de cor multiplicando os vetores de cor por uma matriz de 4 x 4. No entanto, você não pode usar uma matriz de 4 x 4 para realizar uma translação (não linear). Se você adicionar uma quinta coordenada fictícia (por exemplo, o número 1) a cada um dos vetores de cor, poderá usar uma matriz de 5 × 5 para aplicar qualquer combinação de transformações lineares e translações. Uma transformação que consiste em uma transformação linear seguida por uma translação é chamada de transformação afim.  
   

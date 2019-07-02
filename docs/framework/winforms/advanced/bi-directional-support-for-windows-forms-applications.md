@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d69de3265fa0954f640c8a2f08ba85c106320f3e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655672"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506220"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Suporte bidirecional para aplicativos do Windows Forms
 Você pode usar o Visual Studio para criar aplicativos baseados no Windows que dão suporte a espelhamento bidirecional (direita para esquerda) idiomas como árabe e hebraico. Isso inclui formulários padrão, caixas de diálogo, formulários MDI e todos os controles que você pode trabalhar com esses formulários — ou seja, todos os objetos no <xref:System.Windows.Forms.Control> namespace.  
@@ -82,7 +82,7 @@ Você pode usar o Visual Studio para criar aplicativos baseados no Windows que d
  Windows Forms oferece suporte a Unicode, para que você possa incluir qualquer caractere definido quando você cria seus aplicativos bi-direcionais. No entanto, nem todos os controles dos Windows Forms oferecem suporte a Unicode em todas as plataformas. Para obter mais informações, consulte [Codificação e Globalização dos Windows Forms](encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
- Você pode usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para desenhar texto com sentido da leitura da direita para a esquerda. O <xref:System.Drawing.Graphics.DrawString%2A> dá suporte ao método, que é usado para desenhar o texto, uma `StringFormat` parâmetro que pode ser definido para o <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> membro do <xref:System.Drawing.StringFormatFlags> enumeração para inverter o ponto de origem do texto.  
+ Você pode usar GDI+ para desenhar texto com ordem de leitura da direita para esquerda. O <xref:System.Drawing.Graphics.DrawString%2A> dá suporte ao método, que é usado para desenhar o texto, uma `StringFormat` parâmetro que pode ser definido para o <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> membro do <xref:System.Drawing.StringFormatFlags> enumeração para inverter o ponto de origem do texto.  
   
 ## <a name="common-dialog-boxes"></a>Caixas de diálogo comuns  
  Ferramentas do sistema, como a caixa de diálogo Abrir arquivo estão sob o controle do Windows. Elas herdam os elementos de linguagem do sistema operacional. Se você estiver usando uma versão do Windows com as configurações de idioma correto, essas caixas de diálogo funcionarão corretamente com idiomas bidirecionais.  
