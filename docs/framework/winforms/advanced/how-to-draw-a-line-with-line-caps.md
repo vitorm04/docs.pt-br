@@ -10,15 +10,15 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 682474120cbeeeb4cb83b69188a5a125228279d3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34abfc86e980a24ebb835cfd88d2522f8372c68d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631640"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506031"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Como: desenhar uma linha com terminações
-Você pode desenhar o início ou término de uma linha em uma das várias formas chamadas terminações de linha. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dá suporte a várias terminações de linha, como round, quadrado, losango e ponta de seta.  
+Você pode desenhar o início ou término de uma linha em uma das várias formas chamadas terminações de linha. GDI+ dá suporte a várias terminações de linha, como round, quadrado, losango e ponta de seta.  
   
 ## <a name="example"></a>Exemplo  
  Você pode especificar as terminações de linha para o início de uma linha (início cap), a fim de uma linha (limite de extremidade) ou os traços de uma linha tracejada (limite do traço).  

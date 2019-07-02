@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 1aa3030d9daea57bb9b8970baa78f8117a07bd1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bb7293a5423004a13cf98b79bba0a6c411a7c97
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624201"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505522"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Como: criar uma coleção de fontes privada
 O <xref:System.Drawing.Text.PrivateFontCollection> herda o <xref:System.Drawing.Text.FontCollection> classe base abstrata. Você pode usar um <xref:System.Drawing.Text.PrivateFontCollection> objeto para manter um conjunto de fontes especificamente para seu aplicativo. Uma coleção de fontes privada pode incluir fontes do sistema instalado, bem como as fontes que não foram instaladas no computador. Para adicionar um arquivo de fonte para uma coleção de fontes privadas, chame o <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> método de um <xref:System.Drawing.Text.PrivateFontCollection> objeto.  
@@ -41,9 +41,9 @@ O <xref:System.Drawing.Text.PrivateFontCollection> herda o <xref:System.Drawing.
   
  ![Captura de tela que mostra o texto em várias fontes.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
- Arial.tff (adicionada à coleção de fontes privadas no exemplo de código a seguir) é o arquivo de fonte do estilo regular da fonte Arial. No entanto, observe que a saída de programa mostra vários estilos disponíveis além de regular para família de fonte Arial. Isso ocorre porque [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pode simular os estilos negrito, itálico e negrito e itálico do estilo normal. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] também pode produzir sublinhados e riscados do estilo regular.  
+ Arial.tff (adicionada à coleção de fontes privadas no exemplo de código a seguir) é o arquivo de fonte do estilo regular da fonte Arial. No entanto, observe que a saída de programa mostra vários estilos disponíveis além de regular para família de fonte Arial. Isso ocorre porque o GDI+ pode simular os estilos negrito, itálico e negrito, itálico do estilo normal. GDI+ também pode produzir sublinhados e riscados do estilo normal.  
   
- Da mesma forma, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pode simular o estilo negrito e itálico do estilo negrito ou do estilo itálico. A saída do programa mostra que o estilo negrito e itálico está disponível para a família Times, embora TimesBd.tff (Times New Roman, negrito) seja o único arquivo Times na coleção.  
+ Da mesma forma, GDI+ pode simular o estilo negrito e itálico do estilo negrito ou o estilo itálico. A saída do programa mostra que o estilo negrito e itálico está disponível para a família Times, embora TimesBd.tff (Times New Roman, negrito) seja o único arquivo Times na coleção.  
   
  [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  

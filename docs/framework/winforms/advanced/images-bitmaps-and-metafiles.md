@@ -7,12 +7,12 @@ helpviewer_keywords:
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f50d21f4793efb497eb5b030d96a7dc3ab54a04
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003932"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505702"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Imagens, bitmaps e metarquivos
 A classe base `Image` é abstrata e fornece métodos para trabalhar com imagens de varredura (bitmaps) e imagens vetoriais (metarquivos). O `Bitmap` classe e o <xref:System.Drawing.Imaging.Metafile> classe ambos herdam o `Image` classe. A classe `Bitmap` expande os recursos da classe `Image` fornecendo métodos adicionais para carregar, salvar e manipular imagens de varredura. O <xref:System.Drawing.Imaging.Metafile> classe expande os recursos da `Image` classe fornecendo métodos adicionais para gravar e examinar imagens vetoriais.  
@@ -22,7 +22,7 @@ A classe base `Image` é abstrata e fornece métodos para trabalhar com imagens 
  Discute os diversos formatos de imagem.  
   
  [Metarquivos no GDI+](metafiles-in-gdi.md)  
- Discute o suporte a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para metarquivos.  
+ Discute o suporte GDI+ para metarquivos.  
   
  [Desenhando, Posicionando e Clonando Imagens no GDI+](drawing-positioning-and-cloning-images-in-gdi.md)  
  Discute os métodos para desenhar imagens de varredura e vetoriais com código gerenciado.  

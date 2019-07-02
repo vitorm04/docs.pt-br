@@ -8,15 +8,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: be5042e62da6a9a8afd51af08b85dbe16d8eaac0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ce645133af35271fe1de969621907c53183d9a54
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623629"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505598"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Gerenciando o estado de um objeto gráfico
-O <xref:System.Drawing.Graphics> classe é o cerne da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Para desenhar qualquer coisa, você deve obter um <xref:System.Drawing.Graphics> do objeto, defina suas propriedades e chamar seus métodos <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>e assim por diante).  
+O <xref:System.Drawing.Graphics> classe é o cerne da GDI+. Para desenhar qualquer coisa, você deve obter um <xref:System.Drawing.Graphics> do objeto, defina suas propriedades e chamar seus métodos <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>e assim por diante).  
   
  A exemplo a seguir chama o <xref:System.Drawing.Graphics.DrawRectangle%2A> método de um <xref:System.Drawing.Graphics> objeto. O primeiro argumento passado para o <xref:System.Drawing.Graphics.DrawRectangle%2A> método é um <xref:System.Drawing.Pen> objeto.  
   

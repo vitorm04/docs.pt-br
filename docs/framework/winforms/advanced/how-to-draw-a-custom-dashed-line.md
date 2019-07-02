@@ -9,15 +9,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2184a8d7d7f24b8f631818608ab4bcdb89857c7
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004349"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506041"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Como: desenhar uma linha tracejada personalizada
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] oferece diversos estilos de traço que estão listados no <xref:System.Drawing.Drawing2D.DashStyle> enumeração. Se esses estilos de traço padrão não atenderem às suas necessidades, será possível criar um padrão de traço personalizado.  
+GDI+ oferece diversos estilos de traço que estão listados no <xref:System.Drawing.Drawing2D.DashStyle> enumeração. Se esses estilos de traço padrão não atenderem às suas necessidades, será possível criar um padrão de traço personalizado.  
   
 ## <a name="example"></a>Exemplo  
  Para desenhar uma linha tracejada personalizada, coloque os comprimentos dos traços e espaços em uma matriz e atribua a matriz como o valor da <xref:System.Drawing.Pen.DashPattern%2A> propriedade de um <xref:System.Drawing.Pen> objeto. O exemplo a seguir desenha uma linha tracejada personalizada com base na matriz de `{5, 2, 15, 4}`. Se você multiplicar os elementos da matriz pela largura da caneta de 5, você obterá `{25, 10, 75, 20}`. Os traços exibidos alternam de comprimento entre 25 e 75 e os espaços alternam de comprimento entre 10 e 20.  

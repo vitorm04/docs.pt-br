@@ -6,15 +6,15 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8112076bf0b835b558a9f88ae2ff59bdb8476d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926939"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505181"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Usando um pincel para preencher formas
-Um [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> objeto é usado para preencher o interior de uma forma fechada. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] define vários estilos de preenchimento: cor sólida, o padrão de hachura, textura de imagem e gradiente de cores.  
+Um GDI+ <xref:System.Drawing.Brush> objeto é usado para preencher o interior de uma forma fechada. GDI+ define vários estilos de preenchimento: cor sólida, o padrão de hachura, textura de imagem e gradiente de cores.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Como: Preencher uma forma com uma cor sólida](how-to-fill-a-shape-with-a-solid-color.md)  

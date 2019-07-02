@@ -1,17 +1,17 @@
 ---
 title: Cadeias de caracteres – Guia de Programação em C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398121"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503993"
 ---
 # <a name="strings-c-programming-guide"></a>Cadeias de caracteres (Guia de Programação em C#)
 Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é texto. Internamente, o texto é armazenado como uma coleção sequencial somente leitura de objetos <xref:System.Char>. Não há um caractere de finalização null ao fim de uma cadeia em C#. Portanto, uma cadeia de caracteres em C# pode ter qualquer número de caracteres nulos inseridos ('\0'). A propriedade `Char` de uma cadeia de caracteres representa o número de objetos <xref:System.String.Length%2A> que ela contém e não o número de caracteres Unicode. Para acessar os pontos de código Unicode individuais em uma cadeia de caracteres, use o objeto <xref:System.Globalization.StringInfo>.  
@@ -62,13 +62,16 @@ Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é
 |\n|Nova linha|0x000A|  
 |\r|Retorno de carro|0x000D|  
 |\t|Tabulação horizontal|0x0009|  
-|\U|Sequência de escape Unicode para pares substitutos.|\Unnnnnnnn|  
-|\u|Sequência de escape Unicode|\u0041 = "A"|  
+|\U|Sequência de escape Unicode (UTF-32)|`\U00nnnnnn` (por exemplo, `\U0001F47D` = "&#x1F47D;")|  
+|\u|Sequência de escape Unicode (UTF-16)|`\unnnn` (por exemplo, `\u0041` = "A")|  
 |\v|Tabulação vertical|0x000B|  
-|\x|Sequência de escape Unicode semelhante a "\u", exceto pelo comprimento variável.|\x0041 ou \x41 = "A"|  
+|\x|Sequência de escape Unicode semelhante a "\u", exceto pelo comprimento variável.|`\x0041` ou `\x41` = "A"|  
+  
+> [!WARNING]
+>  Ao usar a sequência de escape `\x` e especificar menos de quatro dígitos hexadecimais, se os caracteres que seguem imediatamente a sequência de escape são dígitos hexadecimais válidos (ou seja, 0 a 9, A-F e a-f), eles serão interpretados como sendo parte da sequência de escape. Por exemplo, `\xA1` produz "&#161;", que é o ponto de código U+00A1. No entanto, se o próximo caractere é "A" ou "a", então a sequência de escape será, em vez disso, interpretada como sendo `\xA1A` e produzirá "&#x0A1A;", que é o ponto de código U+0A1A. Nesses casos, especificar todos os quatro dígitos hexadecimais (por exemplo, `\x00A1`) impedirá qualquer interpretação errônea possível.  
   
 > [!NOTE]
->  Em tempo de compilação, cadeias de caracteres textuais são convertidas em cadeias de caracteres comuns com as mesmas sequências de escape. Portanto, se exibir uma cadeia de caracteres textual na janela de observação do depurador, você verá os caracteres de escape que foram adicionados pelo compilador, não a versão textual do código-fonte. Por exemplo, a cadeia de caracteres textual @"C:\files.txt" será exibida na janela de inspeção como "C:\\\files.txt".  
+>  Em tempo de compilação, cadeias de caracteres textuais são convertidas em cadeias de caracteres comuns com as mesmas sequências de escape. Portanto, se exibir uma cadeia de caracteres textual na janela de observação do depurador, você verá os caracteres de escape que foram adicionados pelo compilador, não a versão textual do código-fonte. Por exemplo, a cadeia de caracteres textual `@"C:\files.txt"` será exibida na janela de inspeção como "C:\\\files.txt".  
   
 ## <a name="format-strings"></a>Cadeias de caracteres de formato  
  Uma cadeia de caracteres de formato é aquela cujo conteúdo pode é determinado dinamicamente no tempo de execução. Cadeias de caracteres de formato são criadas incorporando *expressões interpoladas* ou espaços reservados dentro de chaves dentro em uma cadeia de caracteres. Tudo dentro das chaves (`{...}`) será resolvido para um valor e uma saída como uma cadeia de caracteres formatada no tempo de execução. Há dois métodos para criar cadeias de caracteres de formato: cadeia de caracteres de interpolação e formatação de composição.

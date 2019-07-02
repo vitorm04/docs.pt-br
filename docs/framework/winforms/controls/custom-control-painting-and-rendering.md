@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14abac5678bfffa3cdb61307fd3cb54681c82a99
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011473"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506088"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Pintura e renderização de controle personalizada
 A pintura personalizada de controles é uma das muitas tarefas complicadas que são facilitadas pelo .NET Framework. Ao criar um controle personalizado, você tem muitas opções em relação à aparência gráfica dele. Ao criar um controle que herda de `Control`, você deverá fornecer o código que permite ao controle renderizar sua representação gráfica. Ao criar um controle de usuário herdando de `UserControl` ou herdando de um dos controles dos Windows Forms, você pode substituir a representação gráfica padrão e fornecer seu próprio código de elementos gráficos. Se você deseja fornecer renderização personalizada para os controles membros de um `UserControl` que você está criando, suas opções tornam-se mais limitadas, mas ainda proporcionam uma ampla gama de possibilidades gráficas para seus aplicativos e controles.  
@@ -47,7 +47,7 @@ A pintura personalizada de controles é uma das muitas tarefas complicadas que s
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Como: Criar objetos gráficos para desenho](../advanced/how-to-create-graphics-objects-for-drawing.md)  
- Apresenta a funcionalidade de elementos gráficos [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] de uma perspectiva do Visual Studio e fornece links para obter mais informações.  
+ Apresenta a funcionalidade de gráficos GDI+ da perspectiva do Visual Studio e fornece links para obter mais informações.  
   
  [Variedades de controles personalizados](varieties-of-custom-controls.md)  
  Descreve os tipos de controles personalizados que você pode criar.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81c0ddf5b937d604559a9eb1a8b598885546c97f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791127"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504954"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Usando transformações para ajustar a escala de cores
 Uma transformação de dimensionamento multiplica um ou mais dos quatro componentes de cor por um número. As entradas de matriz de cores que representam o dimensionamento são dadas na tabela a seguir.  
@@ -35,7 +35,7 @@ Uma transformação de dimensionamento multiplica um ou mais dos quatro componen
   
  ![Captura de tela que compara as cores em escala e originais.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
- A tabela a seguir lista os vetores de cores para as quatro barras antes e depois do ajuste de azul. Veja que o componente azul na quarta barra de cores foi de 0,8 para 0,6. O motivo é que [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] retém apenas parte fracionária do resultado. Por exemplo, (2)(0,8) = 1,6, e a parte fracionária de 1,6 é 0,6. Reter apenas a parte fracionária assegura que o resultado esteja sempre no intervalo [0, 1].  
+ A tabela a seguir lista os vetores de cores para as quatro barras antes e depois do ajuste de azul. Veja que o componente azul na quarta barra de cores foi de 0,8 para 0,6. Isso ocorre porque o GDI+ retém apenas a parte fracionária do resultado. Por exemplo, (2)(0,8) = 1,6, e a parte fracionária de 1,6 é 0,6. Reter apenas a parte fracionária assegura que o resultado esteja sempre no intervalo [0, 1].  
   
 |Original|Em escala|  
 |--------------|------------|  

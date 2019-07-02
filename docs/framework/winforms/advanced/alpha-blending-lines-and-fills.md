@@ -11,15 +11,15 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], using with fills
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
-ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66061341ee6539e2172c537a0b2a6ec9ff87565c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960934"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506114"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Combinação alfa em linhas e preenchimentos
-No [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], uma cor é um valor de 32 bits com 8 bits cada para alfa, vermelho, verde e azul. O valor alfa indica a transparência da cor – a extensão a qual a cor é combinada com a cor da tela de fundo. Os valores alfa variam de 0 a 255, em que 0 representa uma cor totalmente transparente e 255 representa uma cor totalmente opaca.  
+No GDI+, uma cor é um valor de 32 bits com 8 bits cada para alfa, vermelha, verde e azul. O valor alfa indica a transparência da cor – a extensão a qual a cor é combinada com a cor da tela de fundo. Os valores alfa variam de 0 a 255, em que 0 representa uma cor totalmente transparente e 255 representa uma cor totalmente opaca.  
   
  A combinação alfa é uma combinação de pixel por pixel da fonte e dos dados de cor da tela de fundo. Cada um dos três componentes (vermelho, verde, azul) de uma cor de origem é combinado com o componente correspondente da cor da tela de fundo de acordo com a seguinte fórmula:  
   

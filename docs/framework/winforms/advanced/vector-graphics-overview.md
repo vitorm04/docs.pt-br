@@ -9,15 +9,15 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: 9c854d8742e50a7136455da72a239623fb0c0d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 64bec47a186b08298a49c6f188795d1b51d234eb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639752"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505247"
 ---
 # <a name="vector-graphics-overview"></a>Visão geral de gráficos vetoriais
-O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha linhas, retângulos e outras formas em um sistema de coordenadas. Você pode escolher entre uma variedade de sistemas de coordenadas, mas o sistema de coordenadas padrão tem origem no canto superior esquerdo, com o eixo x apontando para a direita e o eixo y apontando para baixo. A unidade de medida no sistema de coordenadas padrão é o pixel.  
+GDI+ desenha linhas, retângulos e outras formas em um sistema de coordenadas. Você pode escolher entre uma variedade de sistemas de coordenadas, mas o sistema de coordenadas padrão tem origem no canto superior esquerdo, com o eixo x apontando para a direita e o eixo y apontando para baixo. A unidade de medida no sistema de coordenadas padrão é o pixel.  
   
 ## <a name="the-building-blocks-of-gdi"></a>Os blocos de construção da GDI+  
  ![Gráfico vetorial](./media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -26,11 +26,11 @@ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha li
   
  ![Gráfico vetorial](./media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- Quando você usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para desenhar uma linha, um retângulo ou uma curva, fornece determinadas informações importantes sobre o item a ser desenhado. Por exemplo, você pode especificar uma linha fornecendo dois pontos e especificar um retângulo fornecendo um ponto, uma altura e uma largura. O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funciona em conjunto com o software de driver de vídeo para determinar quais pixels devem ser ativados para mostrar a linha, o retângulo ou a curva. A ilustração a seguir mostra os pixels que são ativados para exibir uma linha do ponto (4, 2) ao ponto (12, 8).  
+ Quando você usa GDI+ para desenhar uma linha, retângulo ou curva, você pode fornecer determinadas informações importantes sobre o item a ser desenhado. Por exemplo, você pode especificar uma linha fornecendo dois pontos e especificar um retângulo fornecendo um ponto, uma altura e uma largura. GDI+ funciona em conjunto com o software de driver de vídeo para determinar quais pixels devem ser ativados para mostrar a linha, um retângulo ou uma curva. A ilustração a seguir mostra os pixels que são ativados para exibir uma linha do ponto (4, 2) ao ponto (12, 8).  
   
  ![Gráfico vetorial](./media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
- Ao longo do tempo, determinados blocos de construção básicos mostraram ser mais úteis para criar imagens bidimensionais. Esses blocos de construção, que têm suporte no [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], são apresentados na lista a seguir:  
+ Ao longo do tempo, determinados blocos de construção básicos mostraram ser mais úteis para criar imagens bidimensionais. Esses blocos de construção, que têm suporte por GDI+, são fornecidos na lista a seguir:  
   
 - Linhas  
   
@@ -47,7 +47,7 @@ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha li
 - splines de Bézier  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>Métodos para desenhar com um objeto gráfico  
- O <xref:System.Drawing.Graphics> classe [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece os seguintes métodos para desenhar os itens na lista anterior: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (para splines cardinais) e <xref:System.Drawing.Graphics.DrawBezier%2A>. Cada um desses métodos está sobrecarregado; ou seja, cada método dá suporte a diferentes listas de parâmetros. Por exemplo, uma variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e quatro inteiros, enquanto outra variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e dois <xref:System.Drawing.Point> objetos.  
+ O <xref:System.Drawing.Graphics> classe no GDI+ fornece os seguintes métodos para desenhar os itens na lista anterior: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (para splines cardinais) e <xref:System.Drawing.Graphics.DrawBezier%2A>. Cada um desses métodos está sobrecarregado; ou seja, cada método dá suporte a diferentes listas de parâmetros. Por exemplo, uma variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e quatro inteiros, enquanto outra variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e dois <xref:System.Drawing.Point> objetos.  
   
  Os métodos para desenhar linhas, retângulos e splines de Bézier têm vários métodos complementares que desenham diversos itens em uma única chamada: <xref:System.Drawing.Graphics.DrawLines%2A>, <xref:System.Drawing.Graphics.DrawRectangles%2A>, e <xref:System.Drawing.Graphics.DrawBeziers%2A>. Além disso, o <xref:System.Drawing.Graphics.DrawCurve%2A> método tem um método correspondente, <xref:System.Drawing.Graphics.DrawClosedCurve%2A>, que fecha uma curva conectando o ponto final da curva a partir do ponto.  
   
