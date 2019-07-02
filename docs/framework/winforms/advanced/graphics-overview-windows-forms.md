@@ -8,41 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e14d60e5b77fab8490c373ad76ee2d829aad7c74
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938184"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505384"
 ---
-# <a name="graphics-overview-windows-forms"></a><span data-ttu-id="2305d-102">Visão geral de elementos gráficos (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="2305d-102">Graphics Overview (Windows Forms)</span></span>
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="2305d-103">é uma Interface gráfica de dispositivo que permite que os desenvolvedores escrevam aplicativos independentes de dispositivo.</span><span class="sxs-lookup"><span data-stu-id="2305d-103">is a Graphics Device Interface that enables programmers to write device-independent applications.</span></span> <span data-ttu-id="2305d-104">Os serviços de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] são expostos por meio de um conjunto de classes gerenciadas.</span><span class="sxs-lookup"><span data-stu-id="2305d-104">The services of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] are exposed through a set of managed classes.</span></span>  
+# <a name="graphics-overview-windows-forms"></a><span data-ttu-id="1d898-102">Visão geral de elementos gráficos (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="1d898-102">Graphics Overview (Windows Forms)</span></span>
+<span data-ttu-id="1d898-103">GDI+ é uma Interface gráfica de dispositivo que permite que os desenvolvedores escrevam aplicativos independentes de dispositivo.</span><span class="sxs-lookup"><span data-stu-id="1d898-103">GDI+ is a Graphics Device Interface that enables programmers to write device-independent applications.</span></span> <span data-ttu-id="1d898-104">Os serviços de GDI+ são expostos por meio de um conjunto de classes gerenciadas.</span><span class="sxs-lookup"><span data-stu-id="1d898-104">The services of GDI+ are exposed through a set of managed classes.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2305d-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="2305d-105">In This Section</span></span>  
- [<span data-ttu-id="2305d-106">Visão Geral de Elementos Gráficos</span><span class="sxs-lookup"><span data-stu-id="2305d-106">Overview of Graphics</span></span>](overview-of-graphics.md)  
- <span data-ttu-id="2305d-107">Fornece uma introdução geral ao [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2305d-107">Provides a general introduction to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="1d898-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="1d898-105">In This Section</span></span>  
+ [<span data-ttu-id="1d898-106">Visão Geral de Elementos Gráficos</span><span class="sxs-lookup"><span data-stu-id="1d898-106">Overview of Graphics</span></span>](overview-of-graphics.md)  
+ <span data-ttu-id="1d898-107">Fornece uma introdução geral ao GDI+.</span><span class="sxs-lookup"><span data-stu-id="1d898-107">Provides a general introduction to GDI+.</span></span>  
   
- [<span data-ttu-id="2305d-108">Três Categorias de Serviços Gráficos</span><span class="sxs-lookup"><span data-stu-id="2305d-108">Three Categories of Graphics Services</span></span>](three-categories-of-graphics-services.md)  
- <span data-ttu-id="2305d-109">Descreve as três categorias que compõem a programação com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2305d-109">Describes the three categories that make up programming with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
+ [<span data-ttu-id="1d898-108">Três Categorias de Serviços Gráficos</span><span class="sxs-lookup"><span data-stu-id="1d898-108">Three Categories of Graphics Services</span></span>](three-categories-of-graphics-services.md)  
+ <span data-ttu-id="1d898-109">Descreve as três categorias que compõem a programação com o GDI+.</span><span class="sxs-lookup"><span data-stu-id="1d898-109">Describes the three categories that make up programming with GDI+.</span></span>  
   
- [<span data-ttu-id="2305d-110">Estrutura da Interface Gráfica</span><span class="sxs-lookup"><span data-stu-id="2305d-110">Structure of the Graphics Interface</span></span>](structure-of-the-graphics-interface.md)  
- <span data-ttu-id="2305d-111">Descreve a interface de classe gerenciada de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2305d-111">Describes the managed class interface of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
+ [<span data-ttu-id="1d898-110">Estrutura da Interface Gráfica</span><span class="sxs-lookup"><span data-stu-id="1d898-110">Structure of the Graphics Interface</span></span>](structure-of-the-graphics-interface.md)  
+ <span data-ttu-id="1d898-111">Descreve a interface de classe gerenciada de GDI+.</span><span class="sxs-lookup"><span data-stu-id="1d898-111">Describes the managed class interface of GDI+.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="2305d-112">Referência</span><span class="sxs-lookup"><span data-stu-id="2305d-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1d898-112">Referência</span><span class="sxs-lookup"><span data-stu-id="1d898-112">Reference</span></span>  
  <xref:System.Drawing>  
- <span data-ttu-id="2305d-113">Fornece acesso à funcionalidade básica [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] de elementos gráficos.</span><span class="sxs-lookup"><span data-stu-id="2305d-113">Provides access to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] basic graphics functionality.</span></span>  
+ <span data-ttu-id="1d898-113">Fornece acesso à funcionalidade gráficas básicas GDI+.</span><span class="sxs-lookup"><span data-stu-id="1d898-113">Provides access to GDI+ basic graphics functionality.</span></span>  
   
  <xref:System.Drawing.Drawing2D>  
- <span data-ttu-id="2305d-114">Fornece funcionalidade avançada bidimensional e de gráfico vetorial.</span><span class="sxs-lookup"><span data-stu-id="2305d-114">Provides advanced two-dimensional and vector graphics functionality.</span></span>  
+ <span data-ttu-id="1d898-114">Fornece funcionalidade avançada bidimensional e de gráfico vetorial.</span><span class="sxs-lookup"><span data-stu-id="1d898-114">Provides advanced two-dimensional and vector graphics functionality.</span></span>  
   
  <xref:System.Drawing.Imaging>  
- <span data-ttu-id="2305d-115">Fornece funcionalidade avançada de imagens [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2305d-115">Provides advanced [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] imaging functionality.</span></span>  
+ <span data-ttu-id="1d898-115">Fornece a funcionalidade de imagem GDI+ avançada.</span><span class="sxs-lookup"><span data-stu-id="1d898-115">Provides advanced GDI+ imaging functionality.</span></span>  
   
  <xref:System.Drawing.Text>  
- <span data-ttu-id="2305d-116">Fornece funcionalidade avançada de tipografia [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2305d-116">Provides advanced [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] typography functionality.</span></span>  
+ <span data-ttu-id="1d898-116">Fornece funcionalidade GDI+ tipografia avançada.</span><span class="sxs-lookup"><span data-stu-id="1d898-116">Provides advanced GDI+ typography functionality.</span></span>  
   
  <xref:System.Drawing.Printing>  
- <span data-ttu-id="2305d-117">Fornece serviços de impressão.</span><span class="sxs-lookup"><span data-stu-id="2305d-117">Provides print-related services.</span></span>  
+ <span data-ttu-id="1d898-117">Fornece serviços de impressão.</span><span class="sxs-lookup"><span data-stu-id="1d898-117">Provides print-related services.</span></span>  
   
  <xref:System.Windows.Forms.TextRenderer>  
- <span data-ttu-id="2305d-118">Fornece [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] desenhar e medir a funcionalidade de texto.</span><span class="sxs-lookup"><span data-stu-id="2305d-118">Provides [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] text drawing and measuring functionality.</span></span>
+ <span data-ttu-id="1d898-118">Fornece o desenho de texto GDI e medindo a funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="1d898-118">Provides GDI text drawing and measuring functionality.</span></span>
