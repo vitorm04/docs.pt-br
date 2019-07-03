@@ -2,12 +2,12 @@
 title: Visão geral do Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 498d0478dc94048a69c393151d3ff8a752706e1c
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307343"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539476"
 ---
 # <a name="entity-framework-overview"></a>Visão geral do Entity Framework
 
@@ -45,7 +45,7 @@ O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] usa esse modelo
 
 Mais do que apenas outra solução de mapeamento relacional de objeto, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] é fundamentalmente sobre como habilitar aplicativos acessar e alterar dados que são representados como entidades e relações no modelo conceitual. O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] usa informações nos arquivos de mapeamento do modelo e para converter consultas de objeto em relação a tipos de entidade representados no modelo conceitual em consultas específicas à fonte de dados. Os resultados da consulta são materializados em objetos que o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] gerencia. O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fornece as seguintes maneiras para consultar um modelo conceitual e retornar objetos:
 
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Fornece suporte de consulta integrada à linguagem (LINQ) para consultar os tipos de entidade que são definidos em um modelo conceitual. Para obter mais informações, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+- LINQ to Entities. Fornece suporte de consulta integrada à linguagem (LINQ) para consultar os tipos de entidade que são definidos em um modelo conceitual. Para obter mais informações, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Um dialeto de independente de armazenamento do SQL que trabalha diretamente com entidades no modelo conceitual e que oferece suporte a conceitos de modelo de dados de entidade. [!INCLUDE[esql](../../../../../includes/esql-md.md)] é usado com consultas de objeto e consultas que são executadas usando o provedor EntityClient. Para obter mais informações, consulte [visão geral do Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 

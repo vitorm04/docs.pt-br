@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: a37e7e3d0759cb3cf17d2b4cbd3dd2e4877ff6c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b0d7e668526fd71943513db2fc3c076c8bd3bad
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785392"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539926"
 ---
 # <a name="comparison-expressions"></a>Expressões de comparação
-Uma expressão de comparação verifica se um valor, um valor de propriedade, ou um resultado constante do método sejam iguais, não iguais, maior do que, ou menor que outro valor. Se uma comparação específico é inválido para [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], uma exceção será lançada. Todas as comparações, explícita e implícita, exigem que todos os componentes são comparáveis na fonte de dados. As expressões de comparação são usados nas cláusulas de `Where` para os resultados da consulta.  
+Uma expressão de comparação verifica se um valor, um valor de propriedade, ou um resultado constante do método sejam iguais, não iguais, maior do que, ou menor que outro valor. Se uma comparação não é válida para LINQ to Entities, uma exceção será lançada. Todas as comparações, explícita e implícita, exigem que todos os componentes são comparáveis na fonte de dados. As expressões de comparação são usados nas cláusulas de `Where` para os resultados da consulta.  
   
  O exemplo a seguir na sintaxe da expressão de consulta a seguir mostra uma consulta que retorna os resultados onde o número de ordem de venda é igual a “SO43663”:  
   
@@ -40,7 +40,7 @@ Uma expressão de comparação verifica se um valor, um valor de propriedade, ou
  [!code-csharp[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constantexpression)]
  [!code-vb[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#constantexpression)]  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] não oferece suporte usando uma classe de usuário como uma constante. No entanto, uma referência de propriedade em uma classe de usuário é considerada uma constante, e será convertida em uma expressão constante de árvore de comando e executada na fonte de dados.  
+ O LINQ to Entities não oferece suporte ao uso de uma classe de usuário como uma constante. No entanto, uma referência de propriedade em uma classe de usuário é considerada uma constante, e será convertida em uma expressão constante de árvore de comando e executada na fonte de dados.  
   
  [!code-csharp[DP L2E Conceptual Examples#MyClass](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myclass)]
  [!code-vb[DP L2E Conceptual Examples#MyClass](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myclass)]  

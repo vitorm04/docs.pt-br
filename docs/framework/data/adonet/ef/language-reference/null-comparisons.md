@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489907"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539730"
 ---
 # <a name="null-comparisons"></a>Comparações nulas
-Um valor `null` na fonte de dados indica que o valor é desconhecido. Nas consultas do [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], você pode procurar valores nulos de modo que determinados cálculos ou comparações só sejam executados nas linhas que têm dados válidos ou não nulos. A semântica nula do CLR, no entanto, pode diferir da semântica nula da fonte de dados. A maioria dos bancos de dados usa uma versão da lógica de três valores para manipular comparações nulas. Ou seja, uma comparação com um valor nulo não é avaliada como `true` ou `false`, ele será avaliado como `unknown`. Geralmente, essa é uma implementação de valores nulos ANSI, mas isso nem sempre acontece.  
+Um valor `null` na fonte de dados indica que o valor é desconhecido. Em consultas LINQ to Entities, você pode verificar valores nulos para que determinados cálculos ou comparações só sejam executadas nas linhas que têm dados válidos ou não-nulo. A semântica nula do CLR, no entanto, pode diferir da semântica nula da fonte de dados. A maioria dos bancos de dados usa uma versão da lógica de três valores para manipular comparações nulas. Ou seja, uma comparação com um valor nulo não é avaliada como `true` ou `false`, ele será avaliado como `unknown`. Geralmente, essa é uma implementação de valores nulos ANSI, mas isso nem sempre acontece.  
   
  Por padrão, no SQL Server, a comparação nulo igual a nulo retorna um valor nulo. No exemplo a seguir, as linhas onde `ShipDate` é null são excluídas do conjunto de resultados, e a instrução Transact-SQL retornará 0 linhas.  
   
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Passando coleções nulas para funções agregadas  
- Na [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], quando você passa uma coleção que dá suporte a `IQueryable` para uma função de agregação, as operações agregadas são executadas no banco de dados. Pode haver diferenças nos resultados de uma consulta que foi executada na memória e uma consulta que foi executada no banco de dados. Com uma consulta na memória, se não houver nenhuma correspondência, a consulta retorna zero. No banco de dados, a mesma consulta retorna `null`. Se um `null` valor é passado para uma função agregada LINQ, uma exceção será gerada. Para aceitar possível `null` valores, converta os tipos e as propriedades dos tipos que recebem resultados de consulta para tipos anuláveis.  
+ No LINQ to Entities, quando você passa uma coleção que dá suporte a `IQueryable` para uma função de agregação, as operações agregadas são executadas no banco de dados. Pode haver diferenças nos resultados de uma consulta que foi executada na memória e uma consulta que foi executada no banco de dados. Com uma consulta na memória, se não houver nenhuma correspondência, a consulta retorna zero. No banco de dados, a mesma consulta retorna `null`. Se um `null` valor é passado para uma função agregada LINQ, uma exceção será gerada. Para aceitar possível `null` valores, converta os tipos e as propriedades dos tipos que recebem resultados de consulta para tipos anuláveis.  
   
 ## <a name="see-also"></a>Consulte também
 

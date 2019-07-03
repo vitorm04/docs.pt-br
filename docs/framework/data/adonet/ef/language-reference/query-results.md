@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: 98dbb0185de88c6fd69c6daf1540e997c14cc9e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 165fb1524daa781c29037bf1c9cb2b3013504177
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641425"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539750"
 ---
 # <a name="query-results"></a>Resultados da Consulta
-Depois que uma consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] é convertida para o comando árvores e executada, os resultados da consulta geralmente são retornados como um dos seguintes:  
+Depois que uma consulta LINQ to Entities é convertido em árvores de comando e executado, os resultados da consulta geralmente são retornados como um dos seguintes:  
   
 - Uma coleção de zero ou mais objetos de entidade tipados ou uma projeção de tipos complexos no modelo conceitual.  
   

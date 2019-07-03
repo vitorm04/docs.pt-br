@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3f24fb335169c2b38ce945377bc4e64a47fe9d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785340"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539913"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Consultas compiladas (LINQ to Entities)
 Quando um aplicativo executa muitas vezes consultas estruturalmente similares no Entity Framework, geralmente é possível melhorar o desempenho compilando a consulta uma única vez e executando-a várias vezes com parâmetros diferentes. Por exemplo, um aplicativo pode precisar recuperar todos os clientes de uma cidade específica; a cidade é especificada em tempo de execução pelo usuário em um formulário. LINQ to Entities dá suporte ao uso de consultas compiladas para essa finalidade.  
@@ -19,7 +19,7 @@ Quando um aplicativo executa muitas vezes consultas estruturalmente similares no
   
  A classe <xref:System.Data.Objects.CompiledQuery> fornece a compilação e o cache de consultas para reutilização. Conceitualmente, essa classe contém um método <xref:System.Data.Objects.CompiledQuery> de `Compile` com várias sobrecargas. Chame o método `Compile` para criar um novo delegado para representar a consulta compilada. Os métodos `Compile`, com <xref:System.Data.Objects.ObjectContext> e valores de parâmetro, retornam um delegado que gera um resultado (como uma instância <xref:System.Linq.IQueryable%601>). A consulta é compilada somente uma vez durante a primeira execução. As opções de mesclagem definidas para a consulta no momento da compilação não podem ser alteradas posteriormente. Uma vez compilada a consulta, você só pode fornecer parâmetros de tipo primitivo, mas não pode substituir partes da consulta que alterariam o SQL gerado. Para obter mais informações, consulte [opções de mesclagem do Entity Framework e consultas compiladas](https://go.microsoft.com/fwlink/?LinkId=199591)  
   
- O [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] expressão de consulta que o <xref:System.Data.Objects.CompiledQuery>do `Compile` método compila é representada por um dos genéricos `Func` delega, tais como <xref:System.Func%605>. No máximo, a expressão de consulta pode encapsular um parâmetro `ObjectContext`, um parâmetro de retorno e 16 parâmetros de consulta. Se mais de 16 parâmetros de consulta forem necessários, você poderá criar uma estrutura cujas propriedades representem parâmetros de consulta. Será possível usar, então, as propriedades da estrutura na expressão de consulta depois de definir as propriedades.  
+ A expressão LINQ to Entities consulta que o <xref:System.Data.Objects.CompiledQuery>do `Compile` método compila é representada por um dos genéricos `Func` delega, tais como <xref:System.Func%605>. No máximo, a expressão de consulta pode encapsular um parâmetro `ObjectContext`, um parâmetro de retorno e 16 parâmetros de consulta. Se mais de 16 parâmetros de consulta forem necessários, você poderá criar uma estrutura cujas propriedades representem parâmetros de consulta. Será possível usar, então, as propriedades da estrutura na expressão de consulta depois de definir as propriedades.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir compila e invoca uma consulta que aceita um parâmetro de entrada <xref:System.Decimal> e retorna uma sequência de pedidos em que o total devido é maior ou igual a US$ 200:  

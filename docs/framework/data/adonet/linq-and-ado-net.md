@@ -2,12 +2,12 @@
 title: LINQ e o ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 16b06549573bc79378539cf7f5ccdcb60c812e81
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 9c517b3efca8cd2b41782858ef1e18e3cba76c1b
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504461"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539404"
 ---
 # <a name="linq-and-adonet"></a>LINQ e o ADO.NET
 Hoje, muitos desenvolvedores comerciais devem usar duas (ou mais) linguagens de programação: uma linguagem de alto nível para as camadas de apresentação e lógica de negócios (como o Visual C# ou Visual Basic) e uma linguagem de consulta para interagir com o banco de dados (como Transact-SQL) . Isso exige que o desenvolvedor seja proficiente em várias linguagens para ser eficaz e também provoca incompatibilidades de linguagens no ambiente de desenvolvimento. Por exemplo, um aplicativo que usa uma API de acesso a dados para executar uma consulta em um banco de dados especifica a consulta como um literal de cadeia de caracteres usando aspas. Essa cadeia de caracteres de consulta é ilegível para o compilador e os erros não são verificados, como sintaxe inválida ou se as colunas ou linhas referenciadas realmente existem. Não há nenhuma verificação do tipo dos parâmetros da consulta e também nenhum suporte do `IntelliSense`.  
@@ -16,7 +16,7 @@ Hoje, muitos desenvolvedores comerciais devem usar duas (ou mais) linguagens de 
   
  A transferência de dados de tabelas SQL para objetos na memória é geralmente tediosa e sujeita a erros. O [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] provedor implementado pelo LINQ to DataSet e [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] converte os dados de origem em <xref:System.Collections.IEnumerable>-com base em coleções de objetos. O programador sempre exibe os dados como uma coleção de <xref:System.Collections.IEnumerable>, quando você consulta e quando você atualiza. Suporte completo do `IntelliSense` é fornecido para escrever consultas nessas coleções.  
   
- Há três ADO.NET separado [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] tecnologias: LINQ to DataSet, [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], e [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. LINQ to DataSet fornece mais rica e otimizadas sobre o <xref:System.Data.DataSet> e [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] permite que você consulte diretamente esquemas de banco de dados do SQL Server, e [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] permite consultar um modelo de dados de entidade.  
+ Há três ADO.NET separado [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] tecnologias: LINQ to DataSet, [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]e LINQ to Entities. LINQ to DataSet fornece mais rica e otimizadas sobre o <xref:System.Data.DataSet> e [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] permite que você consulte diretamente esquemas de banco de dados do SQL Server e o LINQ to Entities permite que você consulte um modelo de dados de entidade.  
   
  O diagrama a seguir fornece uma visão geral de como as tecnologias LINQ do ADO.NET estão relacionadas às linguagens de programação de alto nível e às fontes de dados habilitadas para LINQ.  
   
@@ -24,7 +24,7 @@ Hoje, muitos desenvolvedores comerciais devem usar duas (ou mais) linguagens de 
   
  Para obter mais informações sobre o LINQ, consulte [Language Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md).
   
- As seções a seguir fornecem mais informações sobre o LINQ to DataSet, [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], e [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)].  
+ As seções a seguir fornecem mais informações sobre o LINQ to DataSet, [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]e LINQ to Entities.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  O <xref:System.Data.DataSet> é um elemento fundamental do modelo de programação desconectado que se baseia no ADO.NET e é amplamente usado. LINQ to DataSet permite que os desenvolvedores criem recursos sofisticados de consulta no <xref:System.Data.DataSet> usando o mesmo mecanismo de formulação de consulta que está disponível para muitas outras fontes de dados. Para obter mais informações, consulte [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
@@ -37,7 +37,7 @@ Hoje, muitos desenvolvedores comerciais devem usar duas (ou mais) linguagens de 
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  Atualmente, maioria dos aplicativos são escritos sobre bancos de dados relacionais. Em algum ponto, esses aplicativos precisarão interagir com os dados representados em um formulário relacional. Os esquemas de banco de dados não são sempre ideais para criar aplicativos, e os modelos conceituais do aplicativo não são os mesmos que os modelos lógicos de bancos de dados. O modelo de dados de entidade é um modelo de dados conceitual que pode ser usado para modelar os dados de um domínio específico, para que os aplicativos podem interagir com dados como objetos. Ver [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) para obter mais informações.  
   
- Por meio do modelo de dados de entidade, os dados relacionais são expostos como objetos no ambiente .NET. Isso torna a camada do objeto um destino ideal para o suporte do [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] permitindo que os desenvolvedores formulem consultas no banco de dados na linguagem usada para criar a lógica de negócios. Esse recurso é conhecido como [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. Consulte [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md) para obter mais informações.  
+ Por meio do modelo de dados de entidade, os dados relacionais são expostos como objetos no ambiente .NET. Isso torna a camada do objeto um destino ideal para o suporte do [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] permitindo que os desenvolvedores formulem consultas no banco de dados na linguagem usada para criar a lógica de negócios. Esse recurso é conhecido como LINQ to Entities. Consulte [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md) para obter mais informações.  
   
 ## <a name="see-also"></a>Consulte também
 
