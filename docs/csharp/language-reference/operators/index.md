@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025142"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401462"
 ---
 # <a name="c-operators-c-reference"></a>Operadores C# (Referência de C#)
 
@@ -51,9 +51,9 @@ Esses são os operadores de precedência mais alta.
 
 [x--](arithmetic-operators.md#decrement-operator---) – decremento de sufixo. Retorna o valor de x e, em seguida, atualiza o local de armazenamento com o valor de x que é um número menor (normalmente subtrai o inteiro 1).
 
-[new](../keywords/new-operator.md) – instanciação de tipo.
+[new](new-operator.md) – instanciação de tipo.
 
-[typeof](../keywords/typeof.md) – retorna o objeto <xref:System.Type> que representa o operando.
+[typeof](type-testing-and-conversion-operators.md#typeof-operator) – retorna o objeto <xref:System.Type> que representa o operando.
 
 [checked](../keywords/checked.md) – habilita a verificação de estouro para operações de inteiros.
 
@@ -87,7 +87,7 @@ Esses operadores têm precedência maior do que a próxima seção e precedênci
 
 [--x](arithmetic-operators.md#decrement-operator---) – decremento de prefixo. Retorna o valor de x depois de atualizar o local de armazenamento com o valor de x que é um número menor (normalmente subtrai o inteiro 1).
 
-[(T)x](invocation-operator.md) – conversão de tipo.
+[(T)x](type-testing-and-conversion-operators.md#cast-operator-) – conversão de tipo.
 
 [await](../keywords/await.md) – aguarda um `Task`.
 
@@ -137,9 +137,9 @@ Esses operadores têm precedência maior do que a próxima seção e precedênci
 
 [x > = y](comparison-operators.md#greater-than-or-equal-operator-) – maior que ou igual a.
 
-[is](../keywords/is.md) – compatibilidade de tipo. Retornará true se o operando esquerdo avaliado puder ser convertido no tipo especificado no operando à direita (um tipo estático).
+[is](type-testing-and-conversion-operators.md#is-operator) – compatibilidade de tipo. Retornará `true` se o operando esquerdo avaliado puder ser convertido no tipo especificado pelo operando à direita.
 
-[as](../keywords/as.md) – conversão de tipo. Retorna o operando esquerdo convertido para o tipo especificado pelo operando à direita (um tipo estático), mas `as` retorna `null` em que `(T)x` lançaria uma exceção.
+[as](type-testing-and-conversion-operators.md#as-operator) – conversão de tipo. Retorna o operando esquerdo convertido para o tipo especificado pelo operando à direita, mas `as` retorna `null`, em que `(T)x` lançaria uma exceção.
 
 ## <a name="equality-operators"></a>Operadores de igualdade
 
@@ -171,13 +171,13 @@ Esse operador tem precedência maior do que a próxima seção e precedência me
 
 Esse operador tem precedência maior do que a próxima seção e precedência menor que a seção anterior.
 
-[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – AND lógico. Se o primeiro operando for avaliado como falso, então o C# não avaliará o segundo operando.
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – AND lógico. Se `x` for avaliado como `false`, `y` não será avaliado.
 
 ## <a name="conditional-or-operator"></a>Operador OR condicional
 
 Esse operador tem precedência maior do que a próxima seção e precedência menor que a seção anterior.
 
-[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – OR lógico. Se o primeiro operando for avaliado como verdadeiro, então o C# não avaliará o segundo operando.
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – OR lógico. Se `x` for avaliado como `true`, `y` não será avaliado.
 
 ## <a name="null-coalescing-operator"></a>Operador de coalescência nula
 

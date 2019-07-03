@@ -2,12 +2,12 @@
 title: Programação assíncrona em C#
 description: Uma visão geral do suporte de linguagem C# para programação assíncrona usando async, await, Task e Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: 350ccdeeb31e318ca0c1a8158691f58bf5208efb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a306ff75357f9f61ec9b086485472d99de5ad083
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064113"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307133"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>O modelo de programação assíncrono Task em C\#
 
