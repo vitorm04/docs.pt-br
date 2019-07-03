@@ -194,6 +194,12 @@
           href: core/whats-new/dotnet-core-2-1.md
         - name: Novidades do .NET Core 2.0
           href: core/whats-new/dotnet-core-2-0.md
+    - name: Compatibilidade do aplicativo
+      items:
+        - name: Avaliar alterações significativas
+          href: core/compatibility/index.md
+        - name: Categorias de alteração significativa
+          href: core/compatibility/categories.md
     - name: Tutoriais
       href: core/tutorials/index.md
       items:
