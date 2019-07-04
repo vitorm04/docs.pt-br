@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 05/29/2018
-ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535276"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410361"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -48,7 +48,7 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. O comando `dotnet test` inicia o aplicativo de console executor de teste especificado para um projeto. O executor de teste realiza os testes definidos para uma estrutura de teste de unidade (por exemplo, MSTest, NUnit ou xUnit) e relata o êxito ou a falha de cada teste. Se todos os testes forem bem-sucedidos, o executor de testes retornará 0 como um código de saída; caso contrário, se algum teste falhar, retornará 1. O executor de teste e a biblioteca de teste de unidade são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
 
@@ -120,7 +120,7 @@ O diretório em que os resultados de teste serão colocados. Se o diretório esp
 
 `-s|--settings <SETTINGS_FILE>`
 
-Configurações para usar ao executar testes.
+O arquivo `.runsettings` a ser usado para executar os testes. [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -190,7 +190,7 @@ O diretório em que os resultados de teste serão colocados. Se o diretório esp
 
 `-s|--settings <SETTINGS_FILE>`
 
-Configurações para usar ao executar testes.
+O arquivo `.runsettings` a ser usado para executar os testes. [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -240,7 +240,7 @@ Diretório no qual encontram-se os binários para execução.
 
 `-s|--settings <SETTINGS_FILE>`
 
-Configurações para usar ao executar testes.
+O arquivo `.runsettings` a ser usado para executar os testes. [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 

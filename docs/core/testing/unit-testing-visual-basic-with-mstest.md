@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: a717e8b3da4743da96c3f6e52488fa1e8395e35d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 035daf2ec7fa487c171317fd67e7c39fea7fc951
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689272"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397611"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Bibliotecas do .NET Core no Visual Basic de teste de unidade usando dotnet test e MSTest
 
@@ -44,7 +44,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-Altere o diretório de volta para o diretório *unit-testing-vb-using-stest*. Execute [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) para adicionar o projeto de biblioteca de classes à solução.
+Altere o diretório de volta para o diretório *unit-testing-vb-using-mstest*. Execute [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) para adicionar o projeto de biblioteca de classes à solução.
 
 ## <a name="creating-the-test-project"></a>Criando o projeto de teste
 

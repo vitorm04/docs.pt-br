@@ -2,12 +2,12 @@
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 9c1f084af68010632cbe595858b2f242d37af598
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631811"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397530"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -250,7 +250,7 @@ Uma lista separada por ponto e vírgula de autores de pacotes, que correspondem 
 
 Uma descrição longa do pacote para exibição de interface do usuário.
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 Uma descrição longa para o manifesto do assembly. Se `PackageDescription` não for especificada, essa propriedade também será usada como a descrição do pacote.
 
@@ -291,7 +291,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="packagelicensefile"></a>PackageLicenseFile
 
-Caminho até um arquivo de licença dentro do pacote, se você estiver usando uma licença que não tenha recebido um identificador SPDX, ou for uma licença personalizada, (caso contrário, `PackageLicenseExpression` tem preferência)
+Caminho até um arquivo de licença dentro do pacote, se você estiver usando uma licença que não tenha recebido um identificador SPDX ou for uma licença personalizada (caso contrário, `PackageLicenseExpression` tem preferência)
 
 Substitui `PackageLicenseUrl`, não pode ser combinado com `PackageLicenseExpression` e exige o Visual Studio 15.9.4, o SDK 2.1.502 ou 2.2.101 do .NET, ou mais recente.
 
