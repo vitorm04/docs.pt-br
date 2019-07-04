@@ -4,16 +4,16 @@ description: Saiba como treinar novamente um modelo do TensorFlow para classific
 ms.date: 06/12/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 2ad9e71f572cb694897fd12ecbb15da069afe338
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 62a926795ce34a8c1639f1d42ebbb34b53dc67ad
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026089"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401737"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Tutorial: Treinar novamente um classificador de imagens TensorFlow com aprendizado por transferência e o ML.NET
 
-Saiba como treinar novamente um modelo do TensorFlow para classificação de imagens com o aprendizado por transferência e o ML.NET. O modelo original foi treinado para classificar imagens individuais. Depois do novo treinamento, o novo modo organiza as imagens em categorias amplas. 
+Saiba como treinar novamente um modelo do TensorFlow para classificação de imagens com aprendizado por transferência e o ML.NET. O modelo original foi treinado para classificar imagens individuais. Depois do novo treinamento, o novo modo organiza as imagens em categorias amplas. 
 
 Treinar um modelo de [Classificação de Imagens](https://en.wikipedia.org/wiki/Outline_of_object_recognition) do zero requer a configuração de milhões de parâmetros, uma tonelada de dados de treinamento rotulados e uma grande quantidade de recursos de computação (centenas de horas de GPU). Embora não seja tão eficaz quanto treinar um modelo personalizado do zero, o aprendizado de transferência permite que você ative esse processo trabalhando com milhares de imagens em comparação com milhões de imagens rotuladas e crie um modelo personalizado rapidamente (em uma hora em uma máquina sem GPU).
 

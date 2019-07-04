@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 22482a8f55cdb53f9826fbcc850992e20b7a8feb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306616"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424206"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabela de conversões numéricas explícitas (Referência de C#)
 
@@ -23,14 +23,14 @@ A tabela a seguir mostra as conversões explícitas predefinidas entre os tipos 
 
 |De|Para|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`byte`, `ushort`, `uint`, `ulong` ou `char`|  
-|[byte](byte.md)|`sbyte` ou `char`|  
-|[short](short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` ou `char`|  
-|[ushort](ushort.md)|`sbyte`, `byte`, `short` ou `char`|  
-|[int](int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` ou `char`|  
-|[uint](uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` ou `char`|  
-|[long](long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` ou `char`|  
-|[ulong](ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` ou `char`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`byte`, `ushort`, `uint`, `ulong` ou `char`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`sbyte` ou `char`|  
+|[short](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` ou `char`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short` ou `char`|  
+|[int](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` ou `char`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int` ou `char`|  
+|[long](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` ou `char`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` ou `char`|  
 |[char](char.md)|`sbyte`, `byte` ou `short`|  
 |[float](float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` ou `decimal`|  
 |[double](double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` ou `decimal`|  
@@ -69,7 +69,7 @@ A tabela a seguir mostra as conversões explícitas predefinidas entre os tipos 
 - [Referência de C#](../index.md)
 - [Conversão e conversões de tipo](../../programming-guide/types/casting-and-type-conversions.md)
 - [Operador ()](../operators/type-testing-and-conversion-operators.md#cast-operator-)
-- [Tabela de tipos integrais](integral-types-table.md)
+- [Tipos integrais](../builtin-types/integral-numeric-types.md)
 - [Tabela de tipos de ponto flutuante](floating-point-types-table.md)
 - [Tabela de tipos internos](built-in-types-table.md)
 - [Tabela de conversões numéricas implícitas](implicit-numeric-conversions-table.md)
