@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2dcc9e70f51c3c96cbc3af238fed21021ff7ae2c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322869"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347362"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>Como: Enviar dados usando a classe WebRequest
 O procedimento a seguir descreve as etapas usadas para enviar dados para um servidor. Esse procedimento normalmente é usado para enviar dados para uma página da Web. 
@@ -31,7 +31,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     ```  
   
     > [!NOTE]
-    > O .NET Framework fornece classes específicas de protocolo derivadas das classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> para URIs que começam com *http:*, *https:*, *ftp:* e *file:*.
+    > O .NET Framework fornece classes específicas de protocolo derivadas das classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> para URIs que começam com *http:* , *https:* , *ftp:* e *file:* .
     Caso precise definir ou ler propriedades específica de protocolo, converta o objeto <xref:System.Net.WebRequest> ou <xref:System.Net.WebResponse> em um tipo de objeto específico de protocolo. Para obter mais informações, confira [Programando protocolos conectáveis](programming-pluggable-protocols.md). 
   
 2. Defina os valores de propriedade necessários no objeto `WebRequest`. Por exemplo, para habilitar a autenticação, defina a propriedade <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> como uma instância da classe <xref:System.Net.NetworkCredential>:
@@ -80,8 +80,8 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     Stream dataStream = request.GetRequestStream();  
     ```  
   
-    ```vb  
-    Stream dataStream = request.GetRequestStream()  
+    ```vb
+    Dim dataStream As Stream = request.GetRequestStream()  
     ```  
   
 7. Grave os dados no objeto <xref:System.IO.Stream> retornado pelo método `GetRequestStream`. Por exemplo:
@@ -148,7 +148,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
   
 ## <a name="example"></a>Exemplo  
   
-O seguinte exemplo de código mostra como enviar dados para um servidor Web e ler os dados na resposta:  
+O seguinte exemplo mostra como enviar dados para um servidor Web e ler os dados na resposta:  
 
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]

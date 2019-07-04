@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b0aaf6c0b2f614fa5ff8611407cea567da1faafb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b4f04a1ba6244373e36cc6a6188edabe33ec453
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616309"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424337"
 ---
 # <a name="char-c-reference"></a>char (Referência de C#)
 
@@ -33,7 +33,7 @@ As constantes de tipo `char` podem ser escritas como literais de caracteres, seq
 
 ## <a name="conversions"></a>Conversões
 
-Um `char` pode ser implicitamente convertido em [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) ou [decimal](../../../csharp/language-reference/keywords/decimal.md). No entanto, não há conversões implícitas de outros tipos para o tipo `char`.
+Um `char` pode ser implicitamente convertido em [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [double](../../../csharp/language-reference/keywords/double.md) ou [decimal](../../../csharp/language-reference/keywords/decimal.md). No entanto, não há conversões implícitas de outros tipos para o tipo `char`.
 
 O tipo <xref:System.Char?displayProperty=nameWithType> fornece vários métodos estáticos para trabalhar com valores `char`.
 
@@ -47,7 +47,7 @@ Para obter mais informações, veja [Tipos integrais](~/_csharplang/spec/types.m
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-- [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tipos integrais](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

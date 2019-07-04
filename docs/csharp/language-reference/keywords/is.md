@@ -1,77 +1,40 @@
 ---
 title: is – Referência de C#
 ms.custom: seodec18
-ms.date: 04/09/2019
+ms.date: 06/21/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: ac1ec7da7da465f4290000ac9c7254e9492c3c81
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421823"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306585"
 ---
 # <a name="is-c-reference"></a>is (Referência de C#)
 
-Verifica se um objeto é compatível com um determinado tipo ou (começando com o C# 7.0) testa uma expressão em relação a um padrão.
-
-## <a name="testing-for-type-compatibility"></a>Testando a compatibilidade de tipo
-
-A palavra-chave `is` avalia a compatibilidade de tipo em tempo de execução. Ela determina se uma instância de objeto ou o resultado de uma expressão pode ser convertido em um tipo especificado. Ela tem a sintaxe
-
-```csharp
-   expr is type
-```
-
-em que *expr* é uma expressão que é avaliada como uma instância de algum tipo, e *type* é o nome do tipo no qual o resultado de *expr* será convertido. A instrução `is` será `true` se *expr* não for nulo e o objeto resultante da avaliação da expressão puder ser convertido em *type*; caso contrário, ela retornará `false`.
-
-Por exemplo, o código a seguir determina se `obj` pode ser convertido em uma instância do tipo `Person`:
-
-[!code-csharp[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
-
-A instrução `is` será verdadeira se:
-
-- *expr* for uma instância do mesmo tipo que *type*.
-
-- *expr* for uma instância de um tipo derivado de *type*. Em outras palavras, o resultado de *expr* pode sofrer upcast para uma instância de *type*.
-
-- *expr* tem um tipo de tempo de compilação que é uma classe base de *type*, e *expr* tem um tipo de tempo de execução que é *type* ou é derivado de *type*. O *tipo de tempo de compilação* de uma variável é o tipo da variável, conforme definido em sua declaração. O *tipo de tempo de execução* de uma variável é o tipo da instância atribuída a essa variável.
-
-- *expr* é uma instância de um tipo que implementa a interface de *type*.
-
-O exemplo a seguir mostra que a expressão `is` é avaliada como `true` para cada uma dessas conversões.
-
-[!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
-
-A palavra-chave `is` gera um aviso de tempo de compilação caso seja conhecido que a expressão sempre é `true` ou `false`. Ela considera somente conversões de referência, conversões boxing e conversões unboxing, e não considera conversões definidas pelo usuário ou conversões definidas pelos operadores [implicit](implicit.md) e [explicit](explicit.md) de um tipo. O exemplo a seguir gera avisos porque o resultado da conversão é conhecido em tempo de compilação. A expressão `is` para conversões de `int` para `long` e `double` retorna falso porque essas conversões são tratadas pelo operador [implicit](implicit.md).
-
-[!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
-
-`expr` não pode ser um método anônimo ou uma expressão lambda. Pode ser qualquer outra expressão que retorne um valor. O exemplo a seguir usa `is` para avaliar o valor retornado de uma chamada de método.   
-[!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
-
-Começando com o C# 7.0, você pode usar a correspondência de padrões com o [padrão de tipo](#type) para escrever códigos mais concisos que usam a instrução `is`.
+O operador `is` verifica se o resultado de uma expressão é compatível com um tipo fornecido ou (a partir do C# 7.0) testa uma expressão em relação a um padrão. Para saber mais sobre o operador `is` de teste de tipo, confira a seção [operador is](../operators/type-testing-and-conversion-operators.md#is-operator) do artigo [Operadores de conversão e teste de tipo](../operators/type-testing-and-conversion-operators.md).
 
 ## <a name="pattern-matching-with-is"></a>Correspondência de padrões com `is`
 
-Começando com o C# 7.0, as instruções `is` e [switch](../../../csharp/language-reference/keywords/switch.md) permitem a correspondência de padrões. A palavra-chave `is` dá suporte aos seguintes padrões:
+Começando com o C# 7.0, as instruções `is` e [switch](switch.md) permitem a correspondência de padrões. A palavra-chave `is` dá suporte aos seguintes padrões:
 
-- [Padrão de tipo](#type), que testa se uma expressão pode ser convertida em um tipo especificado e, caso possa, a converte em uma variável desse tipo.
+- [Padrão de tipo](#type-pattern), que testa se uma expressão pode ser convertida em um tipo especificado e, caso possa, a converte em uma variável desse tipo.
 
-- [Padrão constante](#constant), que testa se uma expressão é avaliada como um valor constante especificado.
+- [Padrão constante](#constant-pattern), que testa se uma expressão é avaliada como um valor constante especificado.
 
-- [Padrão var](#var), uma correspondência que sempre é bem-sucedida e vincula o valor de uma expressão a uma nova variável local. 
+- [Padrão var](#var-pattern), uma correspondência que sempre é bem-sucedida e vincula o valor de uma expressão a uma nova variável local.
 
-### <a name="a-nametype-type-pattern"></a><a name="type" />Padrão de tipo
+### <a name="type-pattern"></a>Padrão de tipo
 
 Ao usar o padrão de tipo para realizar a correspondência de padrões, `is` testa se uma expressão pode ser convertida em um tipo especificado e, caso possa, a converte em uma variável desse tipo. Trata-se de uma extensão simples da instrução `is` que habilita a conversão e a avaliação de tipo concisas. A forma geral do padrão de tipo `is` é:
 
 ```csharp
-   expr is type varname 
+   expr is type varname
 ```
 
 em que *expr* é uma expressão que é avaliada como uma instância de algum tipo, *type* é o nome do tipo no qual o resultado de *expr* será convertido e *varname* é o objeto no qual o resultado de *expr* será convertido se o teste `is` for `true`. 
@@ -86,7 +49,7 @@ A expressão `is` será `true` se *expr* não for `null` e qualquer um dos segui
 
 - *expr* é uma instância de um tipo que implementa a interface de *type*.
 
-A partir do C# 7.1, *expr* pode ter um tipo de tempo de compilação definido por um parâmetro de tipo genérico e suas restrições. 
+A partir do C# 7.1, *expr* pode ter um tipo de tempo de compilação definido por um parâmetro de tipo genérico e suas restrições.
 
 Se *expr* for `true` e `is` for usado com uma instrução `if`, *varname* será atribuído somente dentro da instrução `if`. O escopo de *varname* é da expressão `is` até o final do bloco que envolve a instrução `if`. Usar *varname* em qualquer outro local gera um erro em tempo de compilação para o uso de uma variável que não foi atribuída.
 
@@ -98,7 +61,7 @@ Sem a correspondência de padrões, esse código pode ser escrito da seguinte ma
 
 [!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
-O padrão de tipo `is` também produz código mais compacto ao determinar o tipo de um tipo de valor. O exemplo a seguir usa o padrão de tipo `is` para determinar se um objeto é uma instância de `Person` ou `Dog` antes de exibir o valor de uma propriedade adequada. 
+O padrão de tipo `is` também produz código mais compacto ao determinar o tipo de um tipo de valor. O exemplo a seguir usa o padrão de tipo `is` para determinar se um objeto é uma instância de `Person` ou `Dog` antes de exibir o valor de uma propriedade adequada.
 
 [!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
@@ -106,7 +69,7 @@ O código equivalente sem correspondência de padrões requer uma atribuição s
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Padrão constante
+### <a name="constant-pattern"></a>Padrão de constante
 
 Ao executar a correspondência de padrões com o padrão constante, `is` testa se uma expressão é igual a uma constante especificada. No C# 6 e em versões anteriores, o padrão constante tem suporte da instrução [switch](switch.md). A partir do C# 7.0, ele também é compatível com a instrução `is`. A sintaxe é:
 
@@ -114,7 +77,7 @@ Ao executar a correspondência de padrões com o padrão constante, `is` testa s
    expr is constant
 ```
 
-em que *expr* é a expressão a ser avaliada e *constant* é o valor a ser testado. *constant* pode ser qualquer uma das expressões de constante a seguir: 
+em que *expr* é a expressão a ser avaliada e *constant* é o valor a ser testado. *constant* pode ser qualquer uma das expressões de constante a seguir:
 
 - Um valor literal.
 
@@ -134,19 +97,19 @@ O exemplo a seguir combina os padrões de tipo e constante para testar se um obj
 
 É possível verificar em busca de `null` usando o padrão de constante. A palavra-chave `null` é compatível com a instrução `is`. A sintaxe é:
 
-```csharp 
+```csharp
    expr is null
 ```
 
 O exemplo a seguir demonstra uma comparação de verificações de `null`:
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
- 
-### <a name="var" /> Padrão var </a>
+
+### <a name="var-pattern"></a>Padrão var
 
 O padrão `var` é um catch-all para qualquer tipo ou valor. O valor de *expr* é sempre atribuído a uma variável local do mesmo tipo que o tipo de tempo de compilação de *expr*. O resultado da expressão `is` é sempre `true`. A sintaxe é:
 
-```csharp 
+```csharp
    expr is var varname
 ```
 
@@ -154,13 +117,15 @@ O exemplo a seguir usa o padrão var para atribuir uma expressão a uma variáve
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
-## <a name="c-language-specification"></a>Especificação da Linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
   
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+Para saber mais, confira a seção [O operador is](~/_csharplang/spec/expressions.md#the-is-operator) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md) e as seguintes propostas da linguagem C#:
+
+- [Correspondência de padrões](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
+- [Correspondência de padrões com genéricos](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)
-- [as](../../../csharp/language-reference/keywords/as.md)
+- [Referência de C#](../index.md)
+- [Palavras-chave do C#](index.md)
+- [Operadores de conversão e teste de tipo](../operators/type-testing-and-conversion-operators.md)

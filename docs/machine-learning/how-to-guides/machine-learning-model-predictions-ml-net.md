@@ -1,16 +1,16 @@
 ---
 title: Fazer previsões com um modelo treinado
 description: Aprenda a fazer previsões usando um modelo treinado
-ms.date: 05/03/2019
+ms.date: 06/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: dac3b3bfa68776975a2e5e762f46db16e39d61fb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065599"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307394"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Fazer previsões com um modelo treinado
 
@@ -92,7 +92,7 @@ Se você acessar a propriedade `Score` do objeto `prediction`, deverá obter um 
 
 ## <a name="batch-prediction"></a>Previsão em lote
 
-Considerando os seguintes dados, carregue-os em um [`IDataView`](xref:Microsoft.ML.IDataView). Uma vez que `CurrentPrice` é o destino ou o rótulo que você está tentando prever usando novos dados, supõe-se que não há valor para ele no momento.
+Considerando os seguintes dados, carregue-os em um [`IDataView`](xref:Microsoft.ML.IDataView). Nesse caso, o nome do [`IDataView`](xref:Microsoft.ML.IDataView) é `inputData`. Uma vez que `CurrentPrice` é o destino ou o rótulo que você está tentando prever usando novos dados, supõe-se que não há valor para ele no momento.
 
 ```csharp
 // Actual data

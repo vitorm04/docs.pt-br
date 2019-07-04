@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877569"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422352"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Ferramenta de Geração e Edição de Manifesto)
 
@@ -32,7 +32,7 @@ Mage [commands] [commandOptions]
 
 A tabela a seguir mostra os comandos compatíveis com *Mage.exe*. Para obter mais informações sobre as opções compatíveis com esses comandos, confira [Opções de comando novas e atualizadas](#new-and-update-command-options) e [Opções do comando de entrada](#sign-command-options).
 
-|Comando|Descrição|
+|Comando|DESCRIÇÃO|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|Limpa o cache do aplicativo baixado somente de todos os aplicativos online.|
 |**-n, -New** *fileType [newOptions]*|Cria um novo arquivo do tipo indicado. Os tipos válidos são:<br /><br /> -   `Deployment`: Cria um novo manifesto de implantação.<br />-   `Application`: Cria um novo manifesto de aplicativo.<br /><br /> Se você não especificar parâmetros adicionais com esse comando, ele criará um arquivo do tipo apropriado, com as marcas padrão adequadas e os valores de atributo.<br /><br /> Use a opção **-ToFile** (consulte na tabela a seguir) para especificar o nome e o caminho do arquivo novo.<br /><br /> Use a opção **-FromDirectory** (consulte na tabela a seguir) para criar um manifesto do aplicativo com todos os assemblies de um aplicativo adicionado à seção \<dependency> do manifesto.|
@@ -45,7 +45,7 @@ A tabela a seguir mostra os comandos compatíveis com *Mage.exe*. Para obter mai
 
 A tabela a seguir mostra as opções compatíveis com os comandos `-New` e `-Update`:
 
-|Opções|Valor padrão|Aplica-se a|Descrição|
+|Opções|Valor padrão|Aplica-se a|DESCRIÇÃO|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|Manifestos de aplicativo.<br /><br /> Manifestos de implantação.|Especifica o algoritmo com o qual gerar resumos de dependência. O valor deve ser "sha256RSA" ou "sha1RSA.<br /><br /> Use com a opção "-Update". Essa opção é ignorada durante o uso da opção "-Sign"|
 |**-appc, -AppCodeBase** `manifestReference`||Manifestos de implantação.|Insere uma referência de URL ou de caminho do arquivo no arquivo de manifesto do aplicativo. Esse valor deve ser o caminho completo do manifesto de aplicativo.|
@@ -57,7 +57,7 @@ A tabela a seguir mostra as opções compatíveis com os comandos `-New` e `-Upd
 |**-if, -IconFile**  `filePath`||Manifestos de aplicativo.|Especifica o caminho completo para um arquivo de ícone .ICO. Esse ícone é exibido ao lado do nome do aplicativo no menu Iniciar e na entrada Adicionar ou Remover Programas. Se nenhum ícone for fornecido, será usado um ícone padrão.|
 |**-ip, -IncludeProviderURL**  `url`|true|Manifestos de implantação.|Indica se o manifesto de implantação inclui o valor local de atualização definido por **-ProviderURL**.|
 |**-i, -Install** `willInstall`|true|Manifestos de implantação.|Indica se o aplicativo ClickOnce deve ou não ser instalado no computador local, ou se o deve ser executado na Web. A instalação de um aplicativo dá a esse aplicativo uma presença no menu **Iniciar** do Windows. Os valores válidos são "true" ou "t" e "false" ou "f".<br /><br /> Se você especificar a opção **-MinVersion** e um usuário tiver uma versão inferior a **-MinVersion** instalada, ela forçará a instalação do aplicativo, independentemente do valor passado para **-Install**.<br /><br /> Essa opção não pode ser usada com a opção **-BrowserHosted**. A tentativa de especificar ambos para o mesmo manifesto resultará em um erro.|
-|**-kc, -KeyContainer** `name`||Todos os tipos de arquivo.|Especifica o contêiner de chave que contém o nome da chave privada. Essa opção exige a opção **CyproProvider**.<br/><br/>Essa opção está disponível a partir do .NET Framework 4.7.|
+|**-kc, -KeyContainer** `name`||Todos os tipos de arquivo.|Especifica o contêiner de chave que contém o nome da chave privada. Essa opção exige a opção **CryptoProvider**.<br/><br/>Essa opção está disponível a partir do .NET Framework 4.7.|
 |**-mv, -MinVersion**  `[version]`|A versão listada no manifesto de implantação do ClickOnce conforme especificado pelo sinalizador **-Version**.|Manifestos de implantação.|A versão mínima desse aplicativo que um usuário pode executar. Esse sinalizador torna a versão nomeada do aplicativo uma atualização obrigatória. Se liberar uma versão do produto com uma atualização para uma alteração importante ou uma falha de segurança crítica, você poderá usar esse sinalizador para especificar se essa atualização deve ser instalada e se o usuário não pode continuar executando versões anteriores.<br /><br /> `version` tem a mesma semântica do argumento do sinalizador **-Version**.|
 |**-n, -Name** `nameString`|Implantar|Todos os tipos de arquivo.|O nome usado para identificar o aplicativo. O ClickOnce usará esse nome para identificar o aplicativo no menu **Iniciar** (se o aplicativo estiver configurado para se instalar) e nas caixas de diálogo Elevação de Permissão. **Observação:**  se você estiver atualizando um manifesto existente e não especificar um nome do editor com essa opção, *Mage.exe* atualizará o manifesto com o nome da organização definido no computador. Para usar um nome diferente, não se esqueça de usar essa opção e especificar o nome do editor desejado.|
 |**-pwd, -Password** `passwd`||Todos os tipos de arquivo.|A senha que é usada na assinatura de um manifesto com um certificado digital. Deve ser usado com a opção **-CertFile**.|
@@ -76,12 +76,12 @@ A tabela a seguir mostra as opções compatíveis com os comandos `-New` e `-Upd
 
 A tabela a seguir mostra as opções compatíveis com o comando `-Sign`, que se aplicam a todos os tipos de arquivos.
 
-|Opções|Descrição|
+|Opções|DESCRIÇÃO|
 |-------------|-----------------|
 |**-cf, -CertFile** `filePath`|Especifica o local de um certificado digital para assinar um manifesto. Essa opção poderá ser usada com a opção **-Password** se o certificado exigir uma senha para arquivos PFX (Personal Information Exchange). A partir do .NET Framework 4.7, se o arquivo não contiver uma chave privada, será necessário usar uma combinação das opções **-CryptoProvider** e **-KeyContainer**.<br/><br/>A partir do .NET Framework 4.6.2, *Mage.exe* assina os manifestos com CNG, bem como os certificados CAPI.|
 |**-ch, -CertHash** `hashSignature`|O hash de um certificado digital armazenado no repositório de certificados pessoais do computador cliente. Isso corresponde à propriedade Impressão Digital de um certificado digital exibido no Windows Certificates Console.<br /><br /> `hashSignature` pode ter maiúsculas ou minúsculas e ser fornecido como uma única cadeia de caracteres ou com cada octeto da Impressão Digital separado por espaços e toda a Impressão Digital entre aspas.|
 **-csp, -CryptoProvider** `provider-name`|Especifica o nome de um provedor de serviços de criptografia (CSP) que contém o contêiner de chave privada. Essa opção exige a opção **-KeyContainer**.<br/><br/>Essa opção está disponível a partir do .NET Framework 4.7.|
-|**-kc, -KeyContainer** `name`|Especifica o contêiner de chave que contém o nome da chave privada. Essa opção exige a opção **CyproProvider**.<br/><br/>Essa opção está disponível a partir do .NET Framework 4.7.|
+|**-kc, -KeyContainer** `name`|Especifica o contêiner de chave que contém o nome da chave privada. Essa opção exige a opção **CryptoProvider**.<br/><br/>Essa opção está disponível a partir do .NET Framework 4.7.|
 |**-pwd, -Password** `passwd`|A senha que é usada na assinatura de um manifesto com um certificado digital. Deve ser usado com a opção **-CertFile**.|
 |**-t, -ToFile** `filePath`|Especifica o caminho de saída do arquivo que foi criado ou modificado.|
 
@@ -214,7 +214,7 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 O exemplo a seguir assina um manifesto de implantação existente usando um certificado digital e uma chave privada no diretório de trabalho atual.
 
 ```console
-mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>Consulte também

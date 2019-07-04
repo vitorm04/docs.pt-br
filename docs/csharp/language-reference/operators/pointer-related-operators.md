@@ -1,5 +1,5 @@
 ---
-title: Operadores relacionados a ponteiro – referência em C#
+title: Operadores relacionados a ponteiro – referência do C#
 description: Saiba mais sobre operadores C# que você pode usar ao trabalhar com indicadores.
 ms.date: 05/20/2019
 author: pkulikov
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758092"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025112"
 ---
-# <a name="pointer-related-operators-c-reference"></a>Operadores relacionados a ponteiro (referência em C#)
+# <a name="pointer-related-operators-c-reference"></a>Operadores relacionados a ponteiro (referência do C#)
 
 Você pode usar os operadores a seguir para trabalhar com ponteiros:
 
@@ -40,7 +40,7 @@ Você pode usar os operadores a seguir para trabalhar com ponteiros:
 Para obter informações sobre tipos de ponteiros, veja [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md).
 
 > [!NOTE]
-> Qualquer operação com ponteiros exige contexto [não seguro](../keywords/unsafe.md). O código que contém blocos não seguros deve ser compilado com a opção do compilador [`-unsafe`](../compiler-options/unsafe-compiler-option.md).
+> Qualquer operação com ponteiros exige um contexto [unsafe](../keywords/unsafe.md). O código que contém blocos não seguros deve ser compilado com a opção do compilador [`-unsafe`](../compiler-options/unsafe-compiler-option.md).
 
 ## <a name="address-of-operator-amp"></a>Operador address-of &amp;
 
@@ -96,7 +96,7 @@ O exemplo a seguir demonstra como acessar elementos da matriz com um ponteiro e 
 
 [!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
-O exemplo usa o [operador `stackalloc`](../keywords/stackalloc.md) para alocar um bloco de memória na pilha.
+O exemplo usa o [operador `stackalloc`](stackalloc.md) para alocar um bloco de memória na pilha.
 
 > [!NOTE]
 > O operador de acesso de elemento de ponteiro não verifica se há erros fora dos limites.
@@ -188,10 +188,9 @@ Para obter mais informações, confira as seguintes seções da [especificação
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Operadores do C#](index.md)
 - [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [`unsafe` palavra-chave](../keywords/unsafe.md)
-- [`fixed` palavra-chave](../keywords/fixed-statement.md)
-- [Operador `stackalloc`](../keywords/stackalloc.md)
-- [Operador `sizeof`](../keywords/sizeof.md)
+- [Palavra-chave unsafe](../keywords/unsafe.md)
+- [Palavra-chave fixed](../keywords/fixed-statement.md)
+- [Operador stackalloc](stackalloc.md)
+- [Operador sizeof](../keywords/sizeof.md)

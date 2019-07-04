@@ -1,5 +1,5 @@
 ---
-title: Operador => – Referência de C#
+title: Operador => – referência do C#
 ms.custom: seodec18
 ms.date: 01/22/2019
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 4c075cedb3cf479f53409f3b0acf4463fc3d7a03
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758217"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025018"
 ---
-# <a name="-operator-c-reference"></a>Operador => (Referência de C#)
+# <a name="-operator-c-reference"></a>Operador => (referência do C#)
 
 Há suporte para o token `=>` de duas formas: como o operador lambda e como um separador de um nome de membro e a implementação de membro em uma definição de corpo da expressão.
 
@@ -77,7 +77,6 @@ Para obter mais informações, confira a seção [Expressões de função anôni
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Operadores do C#](index.md)
 - [Expressões lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Membros de expressão incorporada](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

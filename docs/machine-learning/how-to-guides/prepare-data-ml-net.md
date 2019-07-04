@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 05/03/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: 461a00c6ecc1d9a8b9caaca79f9d7905d2bb7528
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063468"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268243"
 ---
 # <a name="prepare-data"></a>Preparar Dados
 
@@ -124,7 +124,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Normalize os dados usando a normalização Mín-Máx com o método [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*).
+A normalização pode ser aplicada a colunas com valores numéricos únicos e também vetores. Normalize os dados na coluna `Price` usando a normalização Mín-Máx com o método [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*).
 
 ```csharp
 // Define min-max estimator
@@ -294,7 +294,7 @@ Usando a primeira entrada como um exemplo, a seguir está uma descrição detalh
 
 **Texto original: Este é um bom produto**
 
-|Transformar | Descrição | Resultado
+|Transformar | DESCRIÇÃO | Resultado
 |--|--|--|
 |1. NormalizeText | Converte todas as letras em minúsculas por padrão | este é um bom produto
 |2. TokenizeWords | Divide a cadeia de caracteres em palavras individuais | ["este", "é", "um","bom","produto"]

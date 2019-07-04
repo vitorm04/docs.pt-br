@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a00828eba91e4fea41e8b6a6da8953fc399387e3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 01cdcbb93fde0d2d2f1c800613d9709da0d695f6
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378503"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026010"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )
-A Ferramenta de Exportação dos Metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforma um módulo do .NET Framework em um arquivo que contém metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Embora os assemblies do .NET Framework e os arquivos de metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] usem o mesmo formato físico, existem diferenças no conteúdo das tabelas de metadados, o que significa que os assemblies do .NET Framework não são automaticamente úteis como Componentes [!INCLUDE[wrt](../../../includes/wrt-md.md)]. O processo de transformar um módulo do .NET Framework em um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] é conhecido como *exportação*. No .NET Framework 4.5 e no .NET Framework 4.5.1, o arquivo de metadados do Windows (.winmd) resultante contém metadados e implementação.  
+A Ferramenta de Exportação dos Metadados Windows Runtime (Winmdexp.exe) transforma um módulo do .NET Framework em um arquivo que contém metadados do Windows Runtime. Embora os assemblies do .NET Framework e os arquivos de metadados do Windows Runtime usem o mesmo formato físico, existem diferenças no conteúdo das tabelas de metadados, o que significa que os assemblies do .NET Framework não são automaticamente úteis como Componentes do Tempo de Execução do Windows. O processo de transformar um módulo do .NET Framework em um componente do Tempo de Execução do Windows é conhecido como *exportação*. No .NET Framework 4.5 e no .NET Framework 4.5.1, o arquivo de metadados do Windows (.winmd) resultante contém metadados e implementação.  
   
- Quando você usar o modelo **Componente do [!INCLUDE[wrt](../../../includes/wrt-md.md)]** , localizado na **Windows Store** para C# e Visual Basic no Visual Studio 2013 ou Visual Studio 2012, o alvo do compilador será um arquivo .winmdobj e uma etapa de compilação subsequente chamará Winmdexp.exe para exportar o arquivo .winmdobj para um arquivo .winmd. Essa é a maneira recomendada para compilar um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Use Winmdexp.exe diretamente quando você quiser mais controle sobre o processo de compilação do que o dado pelo Visual Studio.  
+ Quando você usar o modelo **Componente do Tempo de Execução do Windows**, localizado na **Windows Store** para C# e Visual Basic no Visual Studio 2013 ou Visual Studio 2012, o alvo do compilador será um arquivo .winmdobj e uma etapa de compilação subsequente chamará Winmdexp.exe para exportar o arquivo .winmdobj para um arquivo .winmd. Essa é a maneira recomendada para compilar um componente do Tempo de Execução do Windows. Use Winmdexp.exe diretamente quando você quiser mais controle sobre o processo de compilação do que o dado pelo Visual Studio.  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -31,7 +31,7 @@ winmdexp [options] winmdmodule
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento ou opção|Descrição|  
+|Argumento ou opção|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |`winmdmodule`|Especifica o módulo (.winmdobj) a ser exportado. Somente um módulo é permitido. Para criar esse módulo, use a opção do compilador `/target` com o destino `winmdobj`. Consulte [/target:winmdobj (Opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) ou [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Especifica o arquivo da documentação XML de saída que Winmdexp.exe produzirá. No .NET Framework 4.5, o arquivo de saída é basicamente igual ao arquivo de documentação XML da entrada.|  
@@ -46,9 +46,9 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|Especifica um arquivo de resposta (.rsp) que contém opções (ou `winmdmodule`). Cada linha em `responsefile` deve conter um único argumento ou opção.|  
   
 ## <a name="remarks"></a>Comentários  
- Winmdexp.exe não foi projetado para converter um assembly do .NET Framework arbitrário para um arquivo .winmd. Ele exige um módulo compilado com a opção `/target:winmdobj`, e as restrições adicionais se aplicam. A mais importante dessas limitações é que todos os tipos expostos na superfície da API do assembly devem ser tipos [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Para obter mais informações, consulte a seção “Declarando tipos em Componentes do Windows Runtime” do artigo [Criando Componentes do Windows Runtime no C# e no Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313) no Centro de Desenvolvimento do Windows.  
+ Winmdexp.exe não foi projetado para converter um assembly do .NET Framework arbitrário para um arquivo .winmd. Ele exige um módulo compilado com a opção `/target:winmdobj`, e as restrições adicionais se aplicam. A mais importante dessas limitações é que todos os tipos expostos na superfície da API do assembly precisam ser tipos do Windows Runtime. Para obter mais informações, consulte a seção “Declarando tipos em Componentes do Windows Runtime” do artigo [Criando Componentes do Windows Runtime no C# e no Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313) no Centro de Desenvolvimento do Windows.  
   
- Ao gravar um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ou um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] com C# ou Visual Basic, o .NET Framework dá suporte para deixar a programação com o [!INCLUDE[wrt](../../../includes/wrt-md.md)] mais natural. Isso é abordado no artigo [Suporte do .NET Framework para Aplicativos da Windows Store e do Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). No processo, alguns tipos [!INCLUDE[wrt](../../../includes/wrt-md.md)] mais usados são mapeados para tipos do .NET Framework. Winmdexp.exe reverte esse processo e produz uma superfície de API que usa os tipos [!INCLUDE[wrt](../../../includes/wrt-md.md)] correspondentes. Por exemplo, tipos construídos com base na interface <xref:System.Collections.Generic.IList%601> são mapeados para tipos construídos com base na interface [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132).  
+ Quando você grava um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ou um componente do Tempo de Execução do Windows com C# ou Visual Basic, o .NET Framework dá suporte para deixar a programação com o Windows Runtime mais natural. Isso é abordado no artigo [Suporte do .NET Framework para Aplicativos da Windows Store e do Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). No processo, alguns tipos do Windows Runtime mais usados são mapeados para tipos do .NET Framework. Winmdexp.exe reverte esse processo e produz uma superfície de API que usa os tipos do Windows Runtime correspondentes. Por exemplo, tipos construídos com base na interface <xref:System.Collections.Generic.IList%601> são mapeados para tipos construídos com base na interface [IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) do Windows Runtime.  
   
 ## <a name="see-also"></a>Consulte também
 

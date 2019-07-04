@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489669"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832823"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Gerador de Imagens Nativas)
 
@@ -74,20 +74,20 @@ ngen /? | /help
 
 A tabela a seguir mostra a sintaxe de cada `action`. Para obter descrições das partes individuais de um `action`, confira as tabelas [Argumentos](#ArgumentTable), [Níveis de Prioridade](#PriorityTable), [Cenários](#ScenarioTable) e [Configuração](#ConfigTable). A tabela [Opções](#OptionTable) descreve o `options` e as opções da ajuda.
 
-|Ação|Descrição|
+|Ação|DESCRIÇÃO|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Gere imagens nativas para um assembly e suas dependências e instale as imagens no cache de imagem nativa.<br /><br /> Se `/queue` for especificado, a ação será enfileirada para o serviço de imagem nativa. A prioridade padrão é 3. Confira a tabela [Níveis de Prioridade](#PriorityTable).|
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Exclua as imagens nativas de um assembly e suas dependências do cache de imagem nativa.<br /><br /> Para desinstalar uma única imagem e suas dependências, use os mesmos argumentos de linha de comando que foram usados para instalar a imagem. **Observação:**  A partir do .NET Framework 4, não há mais suporte para a ação `uninstall` *.|
 |`update` [`/queue`]|Atualize imagens nativas que se tornaram inválidas.<br /><br /> Se `/queue` for especificado, as atualizações serão enfileiradas para o serviço de imagem nativa. Como as atualizações estão sempre programadas na prioridade 3, elas são executadas quando o computador está ocioso.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Exiba o estado das imagens nativas para um assembly e suas dependências.<br /><br /> Se nenhum argumento for fornecido, tudo no cache de imagem nativa será exibido.|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - ou -<br /><br /> `eqi` [1&#124;2&#124;3]|Execute o trabalho de compilação enfileirado.<br /><br /> Se uma prioridade for especificada, trabalhos de compilação com prioridade maior ou igual serão executados. Se nenhuma prioridade for especificada, todos os trabalhos de compilação enfileirados serão executados.|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -ou-<br /><br /> `eqi` [1&#124;2&#124;3]|Execute o trabalho de compilação enfileirado.<br /><br /> Se uma prioridade for especificada, trabalhos de compilação com prioridade maior ou igual serão executados. Se nenhuma prioridade for especificada, todos os trabalhos de compilação enfileirados serão executados.|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Pause o serviço de imagem nativa, deixe o serviço pausado continuar ou consulte o status do serviço.|
 
 <a name="ArgumentTable"></a>
 
 ## <a name="arguments"></a>Arguments
 
-|Argumento|Descrição|
+|Argumento|DESCRIÇÃO|
 |--------------|-----------------|
 |`assemblyName`|O nome para exibição completo do assembly. Por exemplo, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Observação:**  É possível fornecer um nome de assembly parcial como, por exemplo, `myAssembly` para as ações `display` e `uninstall`. <br /><br /> Somente um assembly pode ser especificado por linha de comando de Ngen.exe.|
 |`assemblyPath`|O caminho explícito do assembly. É possível especificar um caminho completo ou relativo.<br /><br /> Se você especificar um nome de arquivo sem um caminho, o assembly deverá estar localizado no diretório atual.<br /><br /> Somente um assembly pode ser especificado por linha de comando de Ngen.exe.|
@@ -96,7 +96,7 @@ A tabela a seguir mostra a sintaxe de cada `action`. Para obter descrições das
 
 ## <a name="priority-levels"></a>Níveis de Prioridade
 
-|Prioridade|Descrição|
+|Prioridade|DESCRIÇÃO|
 |--------------|-----------------|
 |`1`|As imagens nativas são geradas e instaladas imediatamente, sem aguardar o tempo ocioso.|
 |`2`|As imagens nativas são geradas e instaladas sem aguardar o tempo ocioso, mas depois de todas as ações de prioridade 1 (e suas dependências) serem concluídas.|
@@ -106,7 +106,7 @@ A tabela a seguir mostra a sintaxe de cada `action`. Para obter descrições das
 
 ## <a name="scenarios"></a>Cenários
 
-|Cenário|Descrição|
+|Cenário|DESCRIÇÃO|
 |--------------|-----------------|
 |`/Debug`|Gere imagens nativas que possam ser usadas em um depurador.|
 |`/Profile`|Gere imagens nativas que possam ser usadas em um criador de perfil.|
@@ -116,7 +116,7 @@ A tabela a seguir mostra a sintaxe de cada `action`. Para obter descrições das
 
 ## <a name="config"></a>Config
 
-|Configuração|Descrição|
+|Configuração|DESCRIÇÃO|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|Use a configuração do assembly executável especificado.<br /><br /> Ngen.exe precisa tomar as mesmas decisões do carregador durante a associação a dependências. Quando um componente compartilhado é carregado no tempo de execução, usando-se o método <xref:System.Reflection.Assembly.Load%2A>, o arquivo de configuração do aplicativo determina as dependências carregadas para o componente compartilhado — por exemplo, a versão de uma dependência carregada. A opção `/ExeConfig` dá a Ngen.exe orientações sobre quais dependências seriam carregadas no tempo de execução.|
 |`/AppBase:` `directoryPath`|Para localizar dependências, use o diretório especificado como a base do aplicativo.|
@@ -125,7 +125,7 @@ A tabela a seguir mostra a sintaxe de cada `action`. Para obter descrições das
 
 ## <a name="options"></a>Opções
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |------------|-----------------|
 |`/nologo`|Suprima a exibição do banner de inicialização da Microsoft.|
 |`/silent`|Suprima a exibição das mensagens de êxito.|
@@ -233,7 +233,7 @@ A pré-compilação de assemblies com Ngen.exe pode melhorar o tempo de iniciali
 A associação forçada pode afetar o tempo de inicialização, pois todas as imagens solidamente associadas ao assembly do aplicativo principal devem ser carregadas ao mesmo tempo.
 
 > [!NOTE]
-> Antes do [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)], você deve colocar componentes compartilhados, de nome forte, no cache de assembly global, porque o carregador realiza a validação extra em assemblies de nome forte que não estão no cache de assembly global, o que elimina efetivamente qualquer melhoria no tempo da inicialização obtido usando imagens nativas. As otimizações que foram introduzidas no [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] removeram a validação extra.
+> Antes do .NET Framework 3.5 Service Pack 1, você tinha que colocar componentes compartilhados, de nome forte, no cache de assembly global, pois o carregador realiza a validação extra em assemblies de nome forte que não estão no cache de assembly global, o que elimina efetivamente qualquer melhoria no tempo da inicialização obtido usando imagens nativas. As otimizações que foram introduzidas no .NET Framework 3.5 SP1 removeram a validação extra.
 
 <a name="UsageSummary"></a>
 

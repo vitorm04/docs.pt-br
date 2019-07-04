@@ -1,5 +1,5 @@
 ---
-title: Operadores de acesso a membro – referência de C#
+title: Operadores de acesso a membro - Referência de C#
 description: Aprenda sobre operadores de C# que você pode usar para acessar membros de tipo.
 ms.date: 05/09/2019
 author: pkulikov
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: de0715a2ac946fa47f0d83ac8569595e622f0b97
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: b6bca26cc05a13e1384c4fc9642264f65b159ff7
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758086"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306536"
 ---
 # <a name="member-access-operators-c-reference"></a>Operadores de acesso a membro (Referência de C#)
 
@@ -147,7 +147,7 @@ Você também pode usar parênteses ao invocar um [construtor](../../programming
 
 Você também pode usar parênteses para especificar a ordem na qual as operações em uma expressão são avaliada. Para obter mais informações, confira a seção [Adicionando parênteses](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) o artigo [Operadores](../../programming-guide/statements-expressions-operators/operators.md). Para obter a lista de operadores ordenada pelo nível de precedência, confira [Operadores do C#](index.md).
 
-[Expressões de conversão](invocation-operator.md#cast-expression), que invocam um operador de conversão, também usam parênteses.
+[Expressões de conversão](type-testing-and-conversion-operators.md#cast-operator-), que executam conversões de tipo explícitas, também usam parênteses.
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
@@ -165,6 +165,5 @@ Para obter mais informações, confira as seguintes seções da [especificação
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Operadores do C#](index.md)
 - [?? (operador de união nula)](null-coalescing-operator.md)

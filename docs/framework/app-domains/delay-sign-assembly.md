@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb055285af7365536f7e1ad7c7d9290e51be50db
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593640"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832864"
 ---
 # <a name="delay-signing-an-assembly"></a>Atrasando a assinatura de um assembly
 Uma organização pode ter um par de chaves bem protegido ao qual os desenvolvedores não têm acesso todos os dias. A chave pública normalmente está disponível, mas o acesso à chave privada é restrito a apenas algumas pessoas. Ao desenvolver assemblies com nomes fortes, cada assembly que referencia o assembly de destino com nome forte contém o token da chave pública usada para fornecer ao assembly de destino um nome forte. Isso requer que a chave pública esteja disponível durante o processo de desenvolvimento.  
@@ -28,7 +28,7 @@ Uma organização pode ter um par de chaves bem protegido ao qual os desenvolved
   
  As etapas a seguir descrevem o processo de atrasar a assinatura de um assembly:  
   
-1. Obtenha a parte da chave pública do par de chaves da organização que fará a eventual assinatura. Normalmente essa chave está na forma de um arquivo .snk, que pode ser criado usando a [ferramenta Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) fornecida pelo [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+1. Obtenha a parte da chave pública do par de chaves da organização que fará a eventual assinatura. Normalmente, essa chave está na forma de um arquivo .snk, que pode ser criado usando a [ferramenta Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) fornecida pelo SDK (Software Development Kit) do Windows.  
   
 2. Anote o código-fonte para o assembly com dois atributos personalizados de <xref:System.Reflection>:  
   

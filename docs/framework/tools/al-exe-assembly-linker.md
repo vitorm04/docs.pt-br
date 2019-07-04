@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b947aefae4924a70c394626ace5a5abe1ebf546f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816155"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832770"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -37,7 +37,7 @@ al sources options
 
 É possível especificar um ou mais dos seguintes `sources`.
 
-| Origem | Descrição |
+| Origem | DESCRIÇÃO |
 | ------ | ----------- |
 |`file`[,`target`]|Copia o conteúdo de `file` (um módulo) para o nome de arquivo especificado por `target`. Depois de copiar, o *Al.exe* compila `target` em um assembly.|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|Insere o recurso especificado por `file` na imagem que contém o manifesto do assembly; *Al.exe* copia o conteúdo de `file` na imagem PE.<br /><br /> O parâmetro `name` é um identificador interno do recurso. Por padrão, os recursos são públicos no assembly (visível para outros assemblies). A especificação de `private` deixa o recurso não visível para outros assemblies.<br /><br /> Se `file` for um arquivo de recurso do .NET Framework criado, por exemplo, pelo [Gerador de Arquivos de Recurso (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) ou no ambiente de desenvolvimento, ele poderá ser acessado com membros nos <xref:System.Resources>. Para obter mais informações, consulte <xref:System.Resources.ResourceManager>. Para todos os outros recursos, use os métodos `GetManifestResource`* no <xref:System.Reflection.Assembly> para acessar o recurso no tempo de execução.<br /><br /> Se apenas os arquivos de recurso forem passados para *Al.exe*, o arquivo de saída será um assembly de recurso satélite.|
@@ -45,7 +45,7 @@ al sources options
 
 É possível especificar `options` a seguir; você deve especificar **/out**.
 
-| Opção | Descrição |
+| Opção | DESCRIÇÃO |
 | ------ | ----------- |
 |**/algid:** `id`|Especifica um algoritmo hash para todos os arquivos em um assembly multiarquivo, exceto o arquivo que contém o manifesto de assembly. O algoritmo padrão é CALG_SHA1. Consulte ALG_ID na documentação do SDK da Plataforma para ver outros algoritmos. Para a primeira versão do .NET Framework, somente CALG_SHA1 e CALG_MD5 são válidos.<br /><br /> Os valores hash são armazenados na tabela de arquivos do manifesto de assembly. No momento da instalação e da carga, os arquivos do assembly são verificados em relação a seus hashes.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>) no código-fonte de qualquer módulo.|
 |**/base[address]:** `addr`|Especifica o endereço no qual uma DLL será carregada no computador do usuário no tempo de execução. Os aplicativos serão carregados mais rapidamente se você especificar o endereço de base das DLLs, em vez de deixar o sistema operacional realocar as DLL no espaço de processo.|
@@ -89,7 +89,7 @@ Para instalar os assemblies no cache, remova-os do cache ou, para listar o conte
 
 A tabela a seguir lista os erros gerados por *Al.exe*.
 
-| Erro | Descrição |
+| Erro | DESCRIÇÃO |
 | ----- | ----------- |
 |al1001|Erro interno do compilador<br /><br /> Tente determinar se *Al.exe* está falhando devido à sua incapacidade de analisar uma sintaxe inesperada. Então, entre em contato com o Suporte a Produtos da Microsoft.|
 |al1002|Memória insuficiente<br /><br /> *Al.exe* ficou sem memória e foi interrompido. Aumente a quantidade de memória disponível.|
@@ -108,7 +108,7 @@ A tabela a seguir lista os erros gerados por *Al.exe*.
 |al1015|Não é possível localizar o arquivo de mensagens 'alinkui.dll'<br /><br /> O *Al.exe* requer o *Alinkui.dll*. Verifique se esse arquivo está em seu caminho. Se necessário, copie-o do CD do produto.|
 |al1016|Nenhum arquivo de entrada válido foi especificado<br /><br /> O *Al.exe* requer um ou mais arquivos de entrada que não têm informações do assembly.|
 |al1017|Nenhum nome de arquivo de destino foi especificado<br /><br /> Não existia a opção **/out** necessária que especifica o nome do arquivo de destino.|
-|al1018|O arquivo 'file' necessário não pôde ser carregado<br /><br /> Certos arquivos DLL não podem ser carregados. Reinstale o Visual Studio ou [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].|
+|al1018|O arquivo 'file' necessário não pôde ser carregado<br /><br /> Certos arquivos DLL não podem ser carregados. Reinstale o Visual Studio ou o SDK (Software Development Kit) do Windows.|
 |al1019|Falha de metadados ao criar assembly — motivo<br /><br /> A geração do assembly foi interrompida pelo motivo especificado. Por exemplo, este erro ocorrerá se um arquivo especificado com a opção **/win32res** não for encontrado.|
 |al1020|Ignorando o assembly 'file' incluído<br /><br /> Um arquivo de entrada que continha um assembly foi especificado. Os arquivos de entrada do *Al.exe* não podem conter assemblies.|
 |al1021|'setting': substituindo configuração anterior<br /><br /> Um módulo tinha um valor para uma determinada configuração, possivelmente atribuída com atributos personalizados, que foi substituído por um valor passado usando uma opção da linha de comando do *Al.exe*.|

@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 69c647e57dead3b4f61bb45202c6b039099f0499
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 13ccdafc00f7a43d456126e3ec3afc1ae5897564
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052168"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422662"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Instalar o .NET Framework no Windows 10 e no Windows Server 2016 e posterior
 
@@ -34,7 +34,7 @@ O [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/ne
 Instale o [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) na:
 
 * Atualização de outubro de 2018 para Windows 10 (Versão 1809)
-* Atualização de abril de 2018 para Windows 10 (Versão 1803)
+* Atualização de abril de 2018 para o Windows 10 (versão 1803)
 * Windows 10 Fall Creators Update (versão 1709)
 * No Windows 10 Creators Update (versão 1703)
 * Na Atualização de Aniversário do Windows 10 (versão 1607)
@@ -45,8 +45,8 @@ Instale o [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-fram
 
 O .NET Framework 4.8 não é compatível com:
 
-* Windows 10 1507
-* Windows 10 1511
+* Com o Windows 10 1507
+* Com o Windows 10 1511
 
 Se estiver usando o Windows 10 1507 ou 1511 e quiser instalar o .NET Framework 4.8, primeiro, você precisará atualizar para uma versão posterior do Windows 10.
 

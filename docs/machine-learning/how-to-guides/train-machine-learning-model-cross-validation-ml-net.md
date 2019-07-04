@@ -1,20 +1,20 @@
 ---
-title: Treinar e avaliar um modelo de machine learning usando validação cruzada
-description: Aprenda a treinar e avaliar um modelo de machine learning usando validação cruzada
-ms.date: 05/03/2019
+title: Treinar um modelo de machine learning usando validação cruzada
+description: Saiba como usar a validação cruzada para criar modelos de aprendizado de máquina mais robustos no ML.NET. A validação cruzada é uma técnica de avaliação de modelo e treinamento que divide os dados em várias partições e treina vários algoritmos nessas partições.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557831"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397655"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>Treinar e avaliar um modelo de machine learning usando validação cruzada
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>Treinar um modelo de machine learning usando validação cruzada
 
-Saiba como usar a validação cruzada para criar modelos de aprendizado de máquina mais robustos no ML.NET. 
+Saiba como usar a validação cruzada para treinar modelos de aprendizado de máquina mais robustos no ML.NET. 
 
 A validação cruzada é uma técnica de avaliação de modelo e treinamento que divide os dados em várias partições e treina vários algoritmos nessas partições. Essa técnica melhora a robustez do modelo mantendo os dados do processo de treinamento. Além de melhorar o desempenho em observações não vistas, em ambientes com restrições de dados, pode ser uma ferramenta eficiente para treinar modelos com um conjunto de dados menor.
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 O resultado armazenado em `cvResults` é uma coleção de objetos [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601). Esse objeto inclui o modelo treinado, bem como as métricas acessíveis das propriedades [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) e [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics), respectivamente. Neste exemplo, a propriedade `Model` é do tipo [`ITransformer`](xref:Microsoft.ML.ITransformer) e a propriedade `Metrics` é do tipo [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
 
-## <a name="extract-metrics"></a>Extrair métricas
+## <a name="evaluate-the-model"></a>Avaliar o modelo
 
 As métricas para os diferentes modelos treinados podem ser acessadas por meio de propriedade `Metrics` do objeto [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) individual. Neste caso, a [métrica de R ao quadrado](https://en.wikipedia.org/wiki/Coefficient_of_determination) é acessada e armazenada na variável `rSquared`. 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-Se você inspecionar o conteúdo da variável `rSquared`, a saída deverá ter cinco valores que variam de 0 a 1, em que estar mais perto de 1 é melhor.
-
-## <a name="select-the-best-performing-model"></a>Selecione o modelo com melhor desempenho
-
-Usando métricas como R ao quadrado, selecione os modelos do melhor ao pior desempenho. Em seguida, selecione o melhor modelo com o qual fazer previsões ou executar operações adicionais.
+Se você inspecionar o conteúdo da variável `rSquared`, a saída deverá ter cinco valores que variam de 0 a 1, em que estar mais perto de 1 é melhor. Usando métricas como R ao quadrado, selecione os modelos do melhor ao pior desempenho. Em seguida, selecione o melhor modelo com o qual fazer previsões ou executar operações adicionais.
 
 ```csharp
 // Select all models

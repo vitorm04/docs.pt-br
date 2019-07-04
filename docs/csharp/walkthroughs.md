@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: b7240295f154277e722f38e99beb221c1c4d9a34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521992"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025405"
 ---
 # <a name="c-walkthroughs"></a>Explicações passo a passo sobre o C#
 O passo a passo fornece instruções detalhadas para cenários comuns, o que os torna um bom local para começar a aprender sobre o produto ou uma área de recurso específica.  
@@ -24,7 +24,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Mostra como criar uma solução assíncrona usando [async](../csharp/language-reference/keywords/async.md) e [await](../csharp/language-reference/keywords/await.md).  
   
  [Criando um componente do Tempo de Execução do Windows em C# ou no Visual Basic e chamando-o do JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Mostra como criar um tipo [!INCLUDE[wrt](~/includes/wrt-md.md)], compactá-lo em um componente [!INCLUDE[wrt](~/includes/wrt-md.md)] e chamar o componente de um aplicativo [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] que é compilado para Windows usando JavaScript.  
+ Mostra como criar um tipo do Windows Runtime, empacotá-lo em um componente do Windows Runtime e chamar o componente de um aplicativo [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] que é compilado para Windows usando JavaScript.  
   
  [Programação do Office (C# e Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Mostra como criar uma planilha do Excel e um documento do Word usando C# e Visual Basic.  

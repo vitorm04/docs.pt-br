@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80f0b97d38b17740916ea5407b78f298aa42604b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608271"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169846"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Passo a passo: Programação do Office (C# e Visual Basic)
 O Visual Studio oferece funcionalidades no C# e no Visual Basic que melhoram a programação do Microsoft Office. As funcionalidades úteis do C# incluem argumentos nomeados e opcionais e valores retornados do tipo `dynamic`. Na programação COM, você pode omitir a palavra-chave `ref` e obter acesso a propriedades indexadas. As funcionalidades do Visual Basic incluem propriedades autoimplementadas, instruções em expressões lambda e inicializadores de coleção.
@@ -37,9 +37,9 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 2. No menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
   
-3. No painel **Modelos Instalados**, expanda **Visual Basic** ou **Visual C#**, expanda **Office** e, em seguida, clique no ano da versão do produto do Office.  
+3. No painel **Modelos Instalados**, expanda **Visual Basic** ou **Visual C#** , expanda **Office** e, em seguida, clique no ano da versão do produto do Office.  
   
-4. No painel **Modelos**, clique em **Suplemento do Excel \<versão>**.  
+4. No painel **Modelos**, clique em **Suplemento do Excel \<versão>** .  
   
 5. Observe a parte superior do painel **Modelos** para se certificar de que **.NET Framework 4** ou uma versão posterior, é exibido na caixa **Estrutura de Destino**.  
   
@@ -93,7 +93,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
      Dois novos recursos do C# são usados neste método. Esses dois recursos já existem no Visual Basic.  
   
-    - O método [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) tem um *parâmetro opcional* para especificar um modelo específico. Parâmetros opcionais, novos no [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], permitem omitir o argumento para esse parâmetro, se você deseja usar o valor padrão do parâmetro. Como nenhum argumento é enviado no código anterior, `Add` usa o modelo padrão e cria uma nova pasta de trabalho. A instrução equivalente em versões anteriores do C# requer um argumento de espaço reservado: `excelApp.Workbooks.Add(Type.Missing)`.  
+    - O método [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) tem um *parâmetro opcional* para especificar um modelo específico. Os parâmetros opcionais, novos no C# 4, permitem omitir o argumento para esse parâmetro se você quiser usar o valor padrão do parâmetro. Como nenhum argumento é enviado no código anterior, `Add` usa o modelo padrão e cria uma nova pasta de trabalho. A instrução equivalente em versões anteriores do C# requer um argumento de espaço reservado: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Para obter mais informações, consulte [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   

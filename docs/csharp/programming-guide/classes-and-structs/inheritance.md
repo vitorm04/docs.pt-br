@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 8f49118ebff8dcdfee45ce30de9b35437141e2bb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125909"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398465"
 ---
 # <a name="inheritance-c-programming-guide"></a>Herança (Guia de Programação em C#)
 
@@ -40,7 +40,7 @@ A herança, assim como o encapsulamento e o polimorfismo, é uma das três princ
  Quando uma classe base declara um método como [virtual](../../../csharp/language-reference/keywords/virtual.md), uma classe derivada pode [substituir](../../../csharp/language-reference/keywords/override.md) o método por sua própria implementação. Se uma classe base declarar um membro como [abstrato](../../../csharp/language-reference/keywords/abstract.md), esse método deve ser substituído em qualquer classe não abstrata que herdar diretamente da classe. Se uma classe derivada for abstrato, ele herdará membros abstratos sem implementá-los. Membros abstratos e virtuais são a base do polimorfismo, que é a segunda característica principal da programação orientada a objetos. Para obter mais informações, consulte [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
 ## <a name="abstract-base-classes"></a>Classes base abstratas  
- Você pode declarar uma classe como [abstrata](../../../csharp/language-reference/keywords/abstract.md) se quiser impedir a instanciação direta usando a palavra-chave [new](../../../csharp/language-reference/keywords/new.md). Se você fizer isso, a classe poderá ser usada somente se uma nova classe for derivada dela. Uma classe abstrata pode conter uma ou mais assinaturas de método que também são declaradas como abstratas. Essas assinaturas especificam os parâmetros e o valor retornado, mas não têm nenhuma implementação (corpo do método). Uma classe abstrata não precisa conter membros abstratos. No entanto, se uma classe contiver um membro abstrato, a própria classe deverá ser declarada como abstrata. Classes derivadas que não são abstratas devem fornecer a implementação para qualquer método abstrato de uma classe base abstrata. Para obter mais informações, consulte [Classes e Membros de Classes Abstratos e Lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Você poderá declarar uma classe como [abstrata](../../../csharp/language-reference/keywords/abstract.md) se quiser impedir a instanciação direta usando o operador [new](../../../csharp/language-reference/operators/new-operator.md). Se você fizer isso, a classe poderá ser usada somente se uma nova classe for derivada dela. Uma classe abstrata pode conter uma ou mais assinaturas de método que também são declaradas como abstratas. Essas assinaturas especificam os parâmetros e o valor retornado, mas não têm nenhuma implementação (corpo do método). Uma classe abstrata não precisa conter membros abstratos. No entanto, se uma classe contiver um membro abstrato, a própria classe deverá ser declarada como abstrata. Classes derivadas que não são abstratas devem fornecer a implementação para qualquer método abstrato de uma classe base abstrata. Para obter mais informações, consulte [Classes e Membros de Classes Abstratos e Lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="interfaces"></a>Interfaces  
  Uma *interface* é um tipo de referência semelhante a uma classe base abstrata que consiste somente em membros abstratos. Quando uma classe implementa uma interface, ela deve fornecer uma implementação para todos os membros da interface. Uma classe pode implementar várias interfaces, mesmo que ela possa derivar de apenas uma classe base direta.  
@@ -51,7 +51,7 @@ A herança, assim como o encapsulamento e o polimorfismo, é uma das três princ
  Uma classe pode impedir que outras classes herdem dela ou de qualquer um de seus membros, declarando a si mesmo ou o membro como [lacrado](../../../csharp/language-reference/keywords/sealed.md). Para obter mais informações, consulte [Classes e Membros de Classes Abstratos e Lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="derived-class-hiding-of-base-class-members"></a>Ocultação de membros da classe base pela classe derivada  
- Uma classe derivada pode ocultar membros da classe base declarando membros com mesmo nome e assinatura. O modificador [new](../../../csharp/language-reference/keywords/new.md) pode ser usado para indicar explicitamente que o membro não pretende ser uma substituição do membro base. O uso de [new](../../../csharp/language-reference/keywords/new.md) não é obrigatório, mas um aviso do compilador será gerado se [new](../../../csharp/language-reference/keywords/new.md) não for usado. Para obter mais informações, consulte [Controle de versão com as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) e [Quando usar as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
+ Uma classe derivada pode ocultar membros da classe base declarando membros com mesmo nome e assinatura. O modificador [new](../../../csharp/language-reference/keywords/new-modifier.md) pode ser usado para indicar explicitamente que o membro não pretende ser uma substituição do membro base. O uso de [new](../../../csharp/language-reference/keywords/new-modifier.md) não é obrigatório, mas um aviso do compilador será gerado se [new](../../../csharp/language-reference/keywords/new-modifier.md) não for usado. Para obter mais informações, consulte [Controle de versão com as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) e [Quando usar as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Consulte também
 

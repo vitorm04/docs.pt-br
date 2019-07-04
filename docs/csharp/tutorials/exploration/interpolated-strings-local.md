@@ -4,12 +4,12 @@ description: Este tutorial mostra como usar o recurso de interpolação de cadei
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: c1e6fed2293b7447384a657e720fb847f2fa041f
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195892"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397813"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usar interpolação de cadeia de caracteres para construir cadeia de caracteres formatadas
 
@@ -54,7 +54,7 @@ No exemplo a seguir, primeiramente definimos um tipo de dados de [classe](../../
 public Vegetable(string name) => Name = name;
 ```
 
-Em seguida, criamos uma instância da classe `Vegetable` chamada `item` usando a [palavra-chave `new`](../../language-reference/keywords/new-operator.md) e fornecendo um nome para o construtor `Vegetable`:
+Em seguida, criamos uma instância da classe `Vegetable` chamada `item` usando o [`new` operador](../../language-reference/operators/new-operator.md) e fornecendo um nome para o construtor `Vegetable`:
 
 ```csharp
 var item = new Vegetable("eggplant");

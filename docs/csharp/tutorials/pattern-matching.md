@@ -3,12 +3,12 @@ title: Usar o recurso de correspondência de padrões para estender padrões de 
 description: Este tutorial avançado demonstra como usar as técnicas de correspondência de padrões para criar a funcionalidade usando dados e algoritmos que são criados separadamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378079"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397824"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Usar os recursos de correspondência de padrões para estender tipo de dados
 
@@ -199,7 +199,12 @@ vehicle switch
 };
 ```
 
-A autoridade de pedágio não está preocupada com o número de passageiros nos caminhões de carga. Em vez disso, eles cobram mais com base na classe de peso desses caminhões. Os caminhões mais de 5000 quilos pagam uma taxa adicional de R$ 5,00. Os caminhões leves abaixo de 3.000 lb recebem um desconto de US$ 2,00. Essa regra é implementada com o código a seguir:
+A autoridade de pedágio não está preocupada com o número de passageiros nos caminhões de carga. Em vez disso, ela ajusta a quantidade de pedágios com base na classe de peso dos caminhões da seguinte maneira:
+
+- Os caminhões mais de 5000 quilos pagam uma taxa adicional de R$ 5,00.
+- Os caminhões leves abaixo de 3.000 lb recebem um desconto de US$ 2,00.
+
+Essa regra é implementada com o código a seguir:
 
 ```csharp
 vehicle switch

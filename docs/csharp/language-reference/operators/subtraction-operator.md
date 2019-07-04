@@ -1,5 +1,5 @@
 ---
-title: '- Operador -= – Referência de C#'
+title: '- Operadores - e -= – referência do C#'
 ms.custom: seodec18
 ms.date: 05/27/2019
 f1_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816078"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024918"
 ---
-# <a name="--and---operators-c-reference"></a>Operadores - e -= (Referência de C#)
+# <a name="--and---operators-c-reference"></a>Operadores - e -= (referência do C#)
 
 O operador `-` é compatível com os tipos numéricos internos e com os tipos [delegados](../keywords/delegate.md).
 
@@ -81,10 +81,8 @@ Para obter mais informações, veja as seções [Operador de subtração unário
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Operadores do C#](index.md)
 - [Delegados](../../programming-guide/delegates/index.md)
 - [Eventos](../../programming-guide/events/index.md)
-- [Checked e unchecked](../keywords/checked-and-unchecked.md)
 - [Operadores aritméticos](arithmetic-operators.md)
 - [Operadores + e +=](addition-operator.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3b516e43c07666f4b52e67f85cb567ab310f020
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607818"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832911"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Assemblies no Common Language Runtime
 Assemblies são os blocos de construção de aplicativos .NET Framework; eles formam a unidade fundamental de implantação, controle de versão, reutilização, ativação de escopo e permissões de segurança. Um assembly é uma coleção de tipos e recursos compilados para funcionar juntos e formar uma unidade lógica de funcionalidade. Um assembly oferece ao Common Language Runtime as informações de que ele precisa para estar ciente das implementações de tipo. Para o tempo de execução, um tipo não existe fora do contexto de um assembly.  
@@ -42,11 +42,11 @@ Assemblies são os blocos de construção de aplicativos .NET Framework; eles fo
   
  Assemblies podem ser estáticos ou dinâmicos. Assemblies estáticos podem incluir tipos do .NET Framework (interfaces e classes), bem como recursos para o assembly (bitmaps, arquivos JPEG, arquivos de recurso etc.). Assemblies estáticos são armazenados em disco em arquivos PE. Você também pode usar o .NET Framework para criar assemblies dinâmicos, executados diretamente da memória e não são salvos em disco antes da execução. Você pode salvar assemblies dinâmicos em disco após sua execução.  
   
- Existem várias maneiras de criar assemblies. É possível usar ferramentas de desenvolvimento, como Visual Studio, que você utilizava anteriormente para criar arquivos .dll ou .exe. Você pode usar ferramentas fornecidas pelo [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] para criar assemblies com módulos criados em outros ambientes de desenvolvimento. Você também pode usar APIs do Common Language Runtime, como <xref:System.Reflection.Emit?displayProperty=nameWithType>, a fim de criar assemblies dinâmicos.  
+ Existem várias maneiras de criar assemblies. É possível usar ferramentas de desenvolvimento, como Visual Studio, que você utilizava anteriormente para criar arquivos .dll ou .exe. Você pode usar ferramentas fornecidas pelo SDK (Software Development Kit) do Windows para criar assemblies com módulos criados em outros ambientes de desenvolvimento. Você também pode usar APIs do Common Language Runtime, como <xref:System.Reflection.Emit?displayProperty=nameWithType>, a fim de criar assemblies dinâmicos.  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Título|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Conteúdo do assembly](../../../docs/framework/app-domains/assembly-contents.md)|Descreve os elementos que compõem um assembly.|  
 |[Manifesto do assembly](../../../docs/framework/app-domains/assembly-manifest.md)|Descreve os dados no manifesto do assembly e como ele são armazenados em assemblies.|  

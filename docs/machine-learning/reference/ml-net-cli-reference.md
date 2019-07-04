@@ -3,12 +3,12 @@ title: O comando auto-train na ferramenta de CLI do ML.NET
 description: Visão geral, exemplos e referência para o comando de treinamento automático na ferramenta de CLI do ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722607"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397669"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>O comando 'auto-train' no ML.NET
 

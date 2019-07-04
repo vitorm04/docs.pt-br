@@ -1,6 +1,6 @@
 ---
 title: Formatos de caminho de arquivo em sistemas Windows
-ms.date: 06/28/2018
+ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835818"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170740"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -30,7 +30,7 @@ Um caminho DOS padrão pode consistir em três componentes:
 - Um nome de diretório. O [caractere separador de diretório](<xref:System.IO.Path.DirectorySeparatorChar>) separa subdiretórios dentro da hierarquia aninhada do diretório.
 - Um nome de arquivo opcional. O [caractere separador de diretório](<xref:System.IO.Path.DirectorySeparatorChar>) separa o caminho do arquivo e o nome do arquivo.
 
-Se todos os três componentes estiverem presentes, o caminho será absoluto. Se nenhum volume ou letra da unidade forem especificados e os nomes de diretório começarem com o [caractere separador de diretório](<xref:System.IO.Path.DirectorySeparatorChar>), o caminho será relativo na raiz da unidade atual. Caso contrário, o caminho será relativo ao diretório atual. A tabela a seguir mostra alguns possíveis caminhos de arquivo e diretório.
+Se todos os três componentes estiverem presentes, o caminho será absoluto. Se nenhum volume ou letra da unidade for especificado e o nome do diretório começar com o [caractere separador de diretório](<xref:System.IO.Path.DirectorySeparatorChar>), o caminho será relativo na raiz da unidade atual. Caso contrário, o caminho será relativo ao diretório atual. A tabela a seguir mostra alguns possíveis caminhos de arquivo e diretório.
 
 |Caminho  |Descrição  |
 | -- | -- |
@@ -76,6 +76,11 @@ O sistema operacional Windows tem um modelo de objeto unificado que aponta para 
 `\\.\C:\Test\Foo.txt`  
 `\\?\C:\Test\Foo.txt`
 
+Além de identificar uma unidade pela letra, você pode identificar um volume usando a GUID do volume. Ela assume o formato:
+
+`\\.\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+`\\?\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+
 > [!NOTE]
 > A sintaxe do caminho de dispositivo DOS é compatível com implementações do .NET executadas no Windows, a partir do .NET Core 1.1 e .NET Framework 4.6.2.
 
@@ -85,8 +90,8 @@ O caminho de dispositivo DOS tem os seguintes componentes:
 
    > [!NOTE]
    > O `\\?\` é compatível com todas as versões do .NET Core e, no .NET Framework, a partir da versão 4.6.2.
-   
-- Um link simbólico para o objeto de dispositivo "real" (C: neste caso).
+
+- Um link simbólico para o objeto de dispositivo "real" (C: no caso de um nome de unidade ou Volume{b75e2c83-0000-0000-0000-602f00000000} no caso de um GUID de volume).
 
    O primeiro segmento do caminho de dispositivo DOS depois do especificador de caminho do dispositivo identifica o volume ou a unidade. Por exemplo, `\\?\C:\` e `\\.\BootPartition\`.
 

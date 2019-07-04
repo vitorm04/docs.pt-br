@@ -1,7 +1,7 @@
 ---
 title: Novidades na acessibilidade do .NET Framework
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe1a5492b34d2aef88e81b86307498e3a5dc2c
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 19d9752e1c7cfbc0a7c85e7cf8053c09c5baca7a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612284"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425572"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novidades na acessibilidade do .NET Framework
 
@@ -28,10 +28,11 @@ Configure seu aplicativo para aceitar os recursos de acessibilidade se ele for d
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
+|.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>Aproveitando as vantagens das melhorias de acessibilidade
 
-As novas funcionalidades de acessibilidade são habilitadas por padrão para os aplicativos direcionados a o .NET Framework 4.7.1 ou posterior. Além disso, os aplicativos direcionados a uma versão anterior do .NET Framework, mas que estão em execução no .NET Framework 4.7.1 ou posterior, podem recusar os comportamentos de acessibilidade herdados (e, portanto, aproveitar as melhorias de acessibilidade) adicionando opções ao elemento [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo e definindo seu valor como `false`. O seguinte exemplo mostra como aceitar as melhorias de acessibilidade introduzidas no .NET Framework 4.7.1:
+As novas funcionalidades de acessibilidade são habilitadas por padrão para os aplicativos direcionados ao .NET Framework 4.7.1 ou posterior. Além disso, os aplicativos direcionados a uma versão anterior do .NET Framework, mas que estão em execução no .NET Framework 4.7.1 ou posterior, podem recusar os comportamentos de acessibilidade herdados (e, portanto, aproveitar as melhorias de acessibilidade) adicionando opções ao elemento [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo e definindo seu valor como `false`. O seguinte exemplo mostra como aceitar as melhorias de acessibilidade introduzidas no .NET Framework 4.7.1:
 
 ```xml
 <runtime>
@@ -49,6 +50,15 @@ Se você optar por aceitar os recursos de acessibilidade em uma versão posterio
 </runtime>
 ```
 
+A configuração do aplicativo para aproveitar as melhorias de acessibilidade do .NET Framework 4.7.1, 4.7.2 e 4.8 exige o seguinte elemento [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+
+```xml
+<runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+</runtime>
+```
+
 ### <a name="restoring-legacy-behavior"></a>Restaurando o comportamento herdado
 
 Os aplicativos direcionados a versões do .NET Framework a começar pela 4.7.1 podem desabilitar os recursos de acessibilidade adicionando opções ao elemento [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo e definindo seu valor como `true`. Por exemplo, a seguinte configuração recusa os recursos de acessibilidade introduzidos no .NET Framework 4.7.2:
@@ -60,7 +70,258 @@ Os aplicativos direcionados a versões do .NET Framework a começar pela 4.7.1 p
 </runtime>
 ```
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-472"></a>Novidades na acessibilidade do .NET Framework 4.7.2
+## <a name="whats-new-in-accessibility-in-net-framework-48"></a>Novidades na acessibilidade do .NET Framework 4.8
+
+O .NET Framework 4.8 inclui novos recursos de acessibilidade nas seguintes áreas:
+
+- [Windows Forms](#winforms48)
+
+- [Windows Presentation Foundation (WPF)](#wpf48)
+
+- [Designer de fluxo de trabalho do WF (Windows Workflow Foundation)](#wf48)
+
+<a name="winforms48" />
+
+### <a name="windows-forms"></a>Windows Forms
+
+No .NET Framework 4.8, o Windows Forms adiciona suporte ao LiveRegions e Eventos de Notificação para muitos controles usados. Ele também adiciona suporte para Dicas de Ferramentas quando um usuário navega para um controle usando o teclado.
+
+**Suporte para UIA LiveRegions em rótulos e StatusStrips**
+
+UIA LiveRegions permitem que os desenvolvedores de aplicativos notifiquem os leitores de tela de uma alteração de texto em um controle que está localizado longe do local em que o usuário está trabalhando. Isso é útil, por exemplo, para um controle <xref:System.Windows.Forms.StatusStrip> que mostra um status de conexão. Se a conexão cair e o status mudar, o desenvolvedor deverá notificar o leitor de tela.
+
+A partir do .NET Framework 4.8, o Windows Forms implementa UIA LiveRegions nos controles <xref:System.Windows.Forms.Label> e <xref:System.Windows.Forms.StatusStrip>. Por exemplo, o seguinte código usa o para LiveRegion em um controle <xref:System.Windows.Forms.Label> chamado `label1`:
+
+```csharp
+public Form1()
+{
+   InitializeComponent();
+   label1.AutomationLiveSetting = AutomationLiveSetting.Polite;
+}
+
+…
+Label1.Text = “Ready!”;
+```
+
+O narrador anuncia “Pronto” independentemente de onde o usuário esteja interagindo com o aplicativo.
+
+Você também pode implementar seu <xref:System.Windows.Forms.UserControl> como uma LiveRegion:
+
+```csharp
+using System;
+using System.Windows.Forms;
+using System.Windows.Forms.Automation;
+
+namespace WindowsFormsApplication
+{
+   public partial class UserControl1 : UserControl, IAutomationLiveRegion
+   {
+      public UserControl1()
+      {
+         InitializeComponent();
+      }
+
+      public AutomationLiveSetting AutomationLiveSetting { get; set; }
+      private AutomationLiveSetting IAutomationLiveRegion.GetLiveSetting()
+      {
+         return this.AutomationLiveSetting;
+      }
+
+      protected override void OnTextChanged(EventArgs e)
+      {
+         base.OnTextChanged(e);
+         AutomationNotifications.UiaRaiseLiveRegionChangedEvent(this.AccessibilityObject);
+      }
+   }
+}
+```
+
+**Eventos de notificação de UIA**
+
+O evento de notificação de UIA, apresentado no Windows 10 Fall Creators Update, permite que seu aplicativo gere um evento UIA, que leva o Narrador a simplesmente fazer um anúncio com base no texto que você forneceu com o evento, sem a necessidade de ter um controle correspondente na interface do usuário. Em alguns cenários, isso é uma maneira direta de melhorar consideravelmente a acessibilidade de seu aplicativo. Também pode ser útil para notificar sobre o progresso de algum processo que pode levar muito tempo. Para obter mais informações sobre eventos de Notificação de UIA, consulte [Seu aplicativo da área de trabalho pode utilizar o novo evento de Notificação de UIA?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/).
+
+O exemplo a seguir gera o [Evento de notificação](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A):
+
+```csharp
+MethodInfo raiseMethod = typeof(AccessibleObject).GetMethod("RaiseAutomationNotification");
+if (raiseMethod != null) {
+   raiseMethod.Invoke(progressBar1.AccessibilityObject, new object[3] {/*Other*/ 4, /*All*/ 2, "The progress is 50%." });
+}
+```
+
+**Dicas de ferramentas sobre o acesso ao teclado**
+
+Em aplicativos destinados ao .NET Framework 4.7.2 e versões anteriores, uma [dica de ferramenta](xref:System.Windows.Forms.ToolTip) de controle só pode ser acionada para exibição ao mover o ponteiro do mouse no controle. A partir do .NET Framework 4.8, um usuário de teclado pode disparar uma dica de ferramenta de controle, concentrando-se no controle usando uma tecla Tab ou teclas de seta, com ou sem teclas modificadoras. Essa melhoria de acessibilidade específica exige uma outra [opção de AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1"/>
+   </startup>
+   <runtime>
+      <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false  -->
+      <!-- Please note that disabling Switch.UseLegacyAccessibilityFeatures, Switch.UseLegacyAccessibilityFeatures.2 and Switch.UseLegacyAccessibilityFeatures.3 is required to disable Switch.System.Windows.Forms.UseLegacyToolTipDisplay -->
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.System.Windows.Forms.UseLegacyToolTipDisplay=false"/>
+   </runtime>
+</configuration>
+```
+
+A figura a seguir mostrará a dica de ferramenta quando o usuário selecionar um botão com o teclado.
+
+![A dica de ferramenta quando o usuário navegar até um botão com o teclado](media/tooltip.png)
+
+<a name="wpf48" />
+
+### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+A partir do .NET Framework 4.8, o WPF inclui vários aprimoramentos de acessibilidade.
+
+**Narradores de tela não anunciam mais elementos com visibilidade recolhida ou oculta**
+
+Elementos com visibilidade recolhida ou oculta não são mais anunciados pelo leitor de tela. As interfaces do usuário que contêm elementos com uma Visibilidade de <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> ou <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType> poderão ser adulteradas pelos leitores de tela se forem apresentadas ao usuário. A partir do .NET Framework 4.8, o WPF não inclui mais elementos recolhidos ou ocultos na Exibição de Controle da árvore do UIAutomation. Portanto, os leitores de tela não podem anunciar esses elementos.
+
+**Propriedade SelectionTextBrush para uso com a seleção de texto não baseada em Adorno**
+
+No .NET Framework 4.7.2, o WPF adicionou a capacidade de desenhar <xref:System.Windows.Controls.TextBox> e a seleção de texto <xref:System.Windows.Controls.PasswordBox> sem usar a camada de Adorno. A cor de primeiro plano do texto selecionado nesse cenário foi determinada pelo <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>.
+
+O .NET framework 4.8 adiciona uma nova propriedade, `SelectionTextBrush`, que permite que os desenvolvedores selecionem o pincel específico para o texto selecionado quando usar a seleção de texto não baseada em Adorno. Esta propriedade funciona apenas nos controles derivados de <xref:System.Windows.Controls.Primitives.TextBoxBase> e o controle <xref:System.Windows.Controls.PasswordBox> em aplicativos WPF com seleção de texto não baseada em Adorno habilitada. Ela não funciona no controle <xref:System.Windows.Controls.RichTextBox>. Se a seleção de texto não baseada em Adorno não estiver habilitada, essa propriedade será ignorada.
+
+Para usar essa propriedade, basta adicioná-la ao seu código XAML e usar a associação ou o pincel adequado. A seleção de texto resultante tem esta aparência:
+
+![A dica de ferramenta quando o usuário navegar até um botão com o teclado](media/selectiontextbrush-property.png)
+
+Você pode combinar o uso das propriedades `SelectionBrush` e `SelectionTextBrush` para gerar qualquer combinação de plano de fundo e cor de primeiro plano que julgar adequada.
+
+**Suporte para a propriedade ControllerFor do UIAutomation**
+
+A propriedade `ControllerFor` do UIAutomation retorna uma matriz de elementos de automação manipulados pelo elemento de automação que dá suporte a essa propriedade. Essa propriedade normalmente é usada para acessibilidade de sugestão automática. `ControllerFor` é usado quando um elemento de automação afeta um ou mais segmentos de interface do usuário do aplicativo ou da área de trabalho. Caso contrário, é difícil associar o impacto da operação de controle com elementos de interface do usuário. Este recurso adiciona a capacidade de controles para fornecer um valor para a propriedade `ControllerFor`.
+
+O .NET framework 4.8 adiciona um novo método virtual, o <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>. Para fornecer um valor para a propriedade `ControllerFor`, basta substituir este método e retornar um `List<AutomationPeer>` para os controles manipulados por este <xref:System.Windows.Automation.Peers.AutomationPeer>:
+
+```csharp
+public class AutoSuggestTextBox: TextBox
+{
+   protected override AutomationPeer OnCreateAutomationPeer()
+   {
+      return new AutoSuggestTextBoxAutomationPeer(this);
+   }
+
+   public ListBox SuggestionListBox;
+}
+
+internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
+{
+   public AutoSuggestTextBoxAutomationPeer(AutoSuggestTextBox owner) : base(owner)
+   {
+   }
+
+   protected override List<AutomationPeer> GetControlledPeersCore()
+   {
+      List<AutomationPeer> controlledPeers = new List<AutomationPeer>();
+      AutoSuggestTextBox owner = Owner as AutoSuggestTextBox;
+      controlledPeers.Add(UIElementAutomationPeer.CreatePeerForElement(owner.SuggestionListBox));
+      return controlledPeers;
+   }
+}
+```
+
+**Dicas de ferramentas sobre o acesso ao teclado**
+
+No .NET Framework 4.7.2 e versões anteriores, as dicas de ferramentas são exibidas somente quando o usuário passar o cursor do mouse sobre um controle. No .NET Framework 4.8, as dicas de ferramentas também são exibidas no foco do teclado, bem como por meio de um atalho de teclado.
+
+Para habilitar esse recurso, um aplicativo precisa direcionar o .NET Framework 4.8 ou aceitar ao usar as opções `Switch.UseLegacyAccessibilityFeatures.3` e `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md). Veja a seguir um arquivo de exemplo de configuração de aplicativo:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.UseLegacyToolTipDisplay=false" />
+   </runtime>
+</configuration>
+```
+
+Depois de habilitados, todos os controles que contêm uma dica de ferramenta vão exibi-la depois que o controle receber o foco do teclado. A dica de ferramenta pode ser ignorada com o tempo ou quando o foco do teclado mudar. Os usuários também podem ignorar a dica de ferramenta manualmente usando um novo atalho de teclado, Ctrl + Shift + F10. Depois que a dica de ferramenta for ignorada, ela poderá ser exibida novamente usando o mesmo atalho de teclado.
+
+> [!NOTE]
+> As [dicas de ferramentas da faixa de opções](xref:System.Windows.Controls.Ribbon.RibbonToolTip) nos controles <xref:System.Windows.Controls.Ribbon.Ribbon> não serão exibidas no foco do teclado. São exibidas somente por meio do atalho de teclado.
+
+**Adicionado suporte para propriedades SizeOfSet e PositionInSet do UIAutomation**
+
+O Windows 10 introduziu duas novas propriedades do UIAutomation, `SizeOfSet` e `PositionInSet`, que são usadas por aplicativos para descrever a contagem de itens em um conjunto. Aplicativos de cliente do UIAutomation, como leitores de tela podem, então, consultar um aplicativo para essas propriedades e anunciar uma representação precisa da interface de usuário do aplicativo.
+
+A partir do .NET Framework 4.8, o WPF expõe essas duas propriedades para o UIAutomation em aplicativos do WPF. Isso pode ser feito de duas maneiras:
+
+- Usando propriedades de dependência.
+
+   O WPF adiciona duas novas propriedades de dependência, <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> e <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Um desenvolvedor pode usar o XAML para definir seus valores:
+
+   ```xaml
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="1">Button 1</Button>
+
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="2">Button 2</Button>
+
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="3">Button 3</Button>
+   ```
+
+- Ao substituir métodos virtuais do AutomationPeer.
+
+   Os métodos virtuais <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> e <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> foram adicionados à classe AutomationPeer. Um desenvolvedor pode fornecer valores para `SizeOfSet` e `PositionInSet` por meio da substituição desses métodos, conforme mostrado no exemplo a seguir:
+
+   ```csharp
+   public class MyButtonAutomationPeer : ButtonAutomationPeer
+   {
+      protected override int GetSizeOfSetCore()
+      {
+         // Call into your own logic to provide a value for SizeOfSet
+         return CalculateSizeOfSet();
+      }
+
+      protected override int GetPositionInSetCore()
+      {
+         // Call into your own logic to provide a value for PositionInSet
+         return CalculatePositionInSet();
+      }
+   }
+   ```
+
+Além disso, os itens nas instâncias <xref:System.Windows.Controls.ItemsControl> fornecem um valor para essas propriedades automaticamente sem ação adicional do desenvolvedor. Se um <xref:System.Windows.Controls.ItemsControl> for agrupado, a coleção de grupos será representada como um conjunto e cada grupo será contado como um conjunto separado, com cada item dentro desse grupo fornecendo sua posição dentro desse grupo, bem como o tamanho do grupo. Valores automáticos não são afetados pela virtualização. Mesmo que um item não seja percebido, ele ainda é contado para o tamanho total do conjunto e afeta a posição no conjunto de seus itens irmãos.
+
+Valores automáticos serão fornecidos apenas se o aplicativo for destinado ao .NET Framework 4.8. Para aplicativos que se destinam a uma versão anterior do .NET Framework, você pode definir a `Switch.UseLegacyAccessibilityFeatures.3` [opção AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), conforme mostrado no seguinte arquivo App.config:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+   </runtime>
+</configuration>
+```
+
+<a name="wf48" />
+
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Designer de fluxo de trabalho do WF (Windows Workflow Foundation)
+
+O designer de fluxo de trabalho inclui as seguintes alterações no .NET Framework 4.8:
+
+- Os usuários que utilizam o Narrador verão melhorias em rótulos de caso do FlowSwitch.
+
+- Os usuários que utilizam o Narrador verão melhorias em descrições de botão.
+
+- Usuários que escolherem temas de Alto Contraste verão melhorias na visibilidade do Designer de Fluxo de Trabalho e em seus controles, como melhores taxas de contraste entre elementos e caixas de seleção mais perceptíveis usadas para elementos de foco.
+
+Se o seu aplicativo for destinado ao .NET Framework 4.7.2 ou uma versão anterior, você poderá aceitar essas alterações, definindo a `Switch.UseLegacyAccessibilityFeatures.3` [opção de AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) para `false` no seu arquivo de configuração de aplicativo. Para obter mais informações, consulte a seção [Aproveitando os aprimoramentos de acessibilidade](#taking-advantage-of-accessibility-enhancements) neste artigo.
+
+## <a name="whats-new-in-accessibility-in-net-framework-472"></a>Novidades na acessibilidade do .NET Framework 4.7.2
 
 O .NET Framework 4.7.2 inclui novos recursos de acessibilidade nas seguintes áreas:
 
@@ -88,7 +349,7 @@ Começando no .NET Framework 4.7.2, o Windows Forms usa cores definidas pelo sis
 
 **Melhorias do Narrador**
 
-Começando no .NET Framework 4.7.2, o suporte ao Narrador é aprimorado da seguinte maneira:
+A partir do .NET Framework 4.7.2, o suporte ao Narrador é aprimorado da seguinte maneira:
 
 - Ele anuncia o valor da propriedade <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> quando anuncia o texto de um <xref:System.Windows.Forms.ToolStripMenuItem>.
 
@@ -100,7 +361,7 @@ Começando no .NET Framework 4.7.2, o suporte ao Narrador é aprimorado da segui
 
 **Melhorias de DataGridView**
 
-Começando no .NET Framework 4.7.2, o controle <xref:System.Windows.Forms.DataGridView> introduziu as seguintes melhorias de acessibilidade:
+A partir do .NET Framework 4.7.2, o controle <xref:System.Windows.Forms.DataGridView> introduziu as seguintes melhorias de acessibilidade:
 
 - As linhas podem ser classificadas com o teclado. Um usuário pode usar a tecla F3 para classificar pela coluna atual.
 
@@ -128,19 +389,19 @@ Começando no .NET Framework 4.7.2, o controle <xref:System.Windows.Forms.DataGr
 
 **Alterações nos controles CheckBox e RadioButton**
 
-No .NET Framework 4.7.1 e nas versões anteriores, os controles <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> e <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> do WPF têm visuais de foco inconsistentes e, nos temas Clássico e de Alto Contraste, eles têm visuais de foco incorretos.  Esses problemas ocorrem quando os controles não têm nenhum conjunto de conteúdo.  Isso pode dificultar a transição entre os temas e deixar o visual de foco confuso.
+No .NET Framework 4.7.1 e nas versões anteriores, os controles <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> e <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> do WPF têm visuais de foco inconsistentes e, nos temas Clássico e de Alto Contraste, têm visuais de foco incorretos.  Esses problemas ocorrem quando os controles não têm nenhum conjunto de conteúdo.  Isso pode dificultar a transição entre os temas e deixar o visual de foco confuso.
 
 No .NET Framework 4.7.2, agora esses visuais são mais consistentes entre os temas e mais facilmente visíveis nos temas Clássico e de Alto Contraste.
 
 **Controles do WinForms hospedados em um aplicativo WPF**
 
-Para controles do WinForms hospedados em um aplicativo do WPF no .NET Framework 4.7.1 e versões anteriores, os usuários não podem sair da guia da camada do WinForms se o primeiro ou o último controle da camada é o controle <xref:System.Windows.Forms.Integration.ElementHost> do WPF. No .NET Framework 4.7.2, os usuários agora podem sair da guia da camada do WinForms.
+Para controles do WinForms hospedados em um aplicativo do WPF no .NET Framework 4.7.1 e versões anteriores, os usuários não poderão sair da guia da camada do WinForms se o primeiro ou o último controle da camada for o controle <xref:System.Windows.Forms.Integration.ElementHost> do WPF. No .NET Framework 4.7.2, os usuários agora podem sair da guia da camada do WinForms.
 
 No entanto, os aplicativos automatizados que se baseiam em foco e que nunca são escapados da camada do WinForms podem deixar de funcionar conforme o esperado.
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-471"></a>Novidades na acessibilidade do .NET Framework 4.7.1
+## <a name="whats-new-in-accessibility-in-net-framework-471"></a>Novidades na acessibilidade do .NET Framework 4.7.1
 
-O .NET Framework 4.7.1 inclui novas funcionalidades de acessibilidade nas seguintes áreas:
+O .NET Framework 4.7.1 inclui novos recursos de acessibilidade nas seguintes áreas:
 
 - [Windows Presentation Foundation (WPF)](#wpf471)
 

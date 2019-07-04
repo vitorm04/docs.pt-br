@@ -4,22 +4,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832522"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347997"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
 As tabelas a seguir listam as classes usadas comumente para E/S de arquivos do .NET Framework, categorizadas em classes de E/S de arquivos, classes usadas para criar fluxos e classes usadas para ler e gravar em fluxos.  
   
- Para inserir a documentação [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] e encontrar uma listagem mais abrangente, consulte [Visão geral da biblioteca de classes](../../../../standard/class-library-overview.md).  
+Para obter uma listagem mais abrangente, consulte [Visão Geral da Biblioteca de Classes](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Classes básicas de E/S para arquivos, unidades e pastas  
  A tabela a seguir lista e descreve as principais classes usadas para E/S de arquivos.  
   
-|Classe|Descrição|  
+|Classe|DESCRIÇÃO|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Fornece métodos estáticos para criar, mover e enumerar ao longo de diretórios e subdiretórios.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Fornece métodos de instância para criar, mover e enumerar ao longo de diretórios e subdiretórios.|  
@@ -36,7 +36,7 @@ As tabelas a seguir listam as classes usadas comumente para E/S de arquivos do .
 ## <a name="classes-used-to-create-streams"></a>Classes usadas para criar fluxos  
  A tabela a seguir lista e descreve as principais classes usadas para criar fluxos.  
   
-|Classe|Descrição|  
+|Classe|DESCRIÇÃO|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Adiciona uma camada de armazenamento em buffer para ler e gravar operações em outro fluxo.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Dá suporte ao acesso aleatório a arquivos por meio de seu método <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> abre arquivos de forma síncrona por padrão, mas também dá suporte à operação assíncrona.|  

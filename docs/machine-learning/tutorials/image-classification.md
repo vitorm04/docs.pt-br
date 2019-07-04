@@ -1,21 +1,19 @@
 ---
-title: 'Tutorial: Criar um classificador de imagens personalizadas do ML.NET com o TensorFlow'
-description: Descubra como criar um classificador de imagens personalizadas do ML.NET em um cenário de aprendizado de transferência do TensorFlow para classificar imagens reutilizando um modelo do TensorFlow pré-treinado.
-ms.date: 05/06/2019
+title: 'Tutorial: Treinar novamente o classificador de imagens TensorFlow – aprendizado por transferência'
+description: Saiba como treinar novamente um modelo do TensorFlow para classificação de imagens com aprendizado por transferência e o ML.NET. O modelo original foi treinado para classificar imagens individuais. Depois do novo treinamento, o novo modo organiza as imagens em categorias amplas.
+ms.date: 06/12/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 2ad9e71f572cb694897fd12ecbb15da069afe338
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593428"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026089"
 ---
-# <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Tutorial: Criar um classificador de imagens personalizadas do ML.NET com o TensorFlow
+# <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Tutorial: Treinar novamente um classificador de imagens TensorFlow com aprendizado por transferência e o ML.NET
 
-Este tutorial de amostra ilustra como você pode usar um modelo de Classificador de Imagens `TensorFlow` já treinado para criar um novo modelo customizado para classificar imagens em algumas categorias.
-
-E se você pudesse reutilizar um modelo que já tenha sido pré-treinado para resolver um problema semelhante e treinar novamente todas ou algumas das camadas desse modelo para resolvê-lo? Essa técnica de reutilizar parte de um modelo já treinado para construir um novo modelo é conhecida como [aprendizado de transferência](https://en.wikipedia.org/wiki/Transfer_learning).
+Saiba como treinar novamente um modelo do TensorFlow para classificação de imagens com o aprendizado por transferência e o ML.NET. O modelo original foi treinado para classificar imagens individuais. Depois do novo treinamento, o novo modo organiza as imagens em categorias amplas. 
 
 Treinar um modelo de [Classificação de Imagens](https://en.wikipedia.org/wiki/Outline_of_object_recognition) do zero requer a configuração de milhões de parâmetros, uma tonelada de dados de treinamento rotulados e uma grande quantidade de recursos de computação (centenas de horas de GPU). Embora não seja tão eficaz quanto treinar um modelo personalizado do zero, o aprendizado de transferência permite que você ative esse processo trabalhando com milhares de imagens em comparação com milhões de imagens rotuladas e crie um modelo personalizado rapidamente (em uma hora em uma máquina sem GPU).
 
@@ -24,6 +22,10 @@ Neste tutorial, você aprenderá como:
 > * Compreender o problema
 > * Reutilizar e ajustar o modelo pré-treinado
 > * Classificar imagens
+
+## <a name="what-is-transfer-learning"></a>O que é o aprendizado por transferência?
+
+E se você pudesse reutilizar um modelo que já tenha sido pré-treinado para resolver um problema semelhante e treinar novamente todas ou algumas das camadas desse modelo para resolvê-lo? Essa técnica de reutilizar parte de um modelo já treinado para construir um novo modelo é conhecida como [aprendizado de transferência](https://en.wikipedia.org/wiki/Transfer_learning).
 
 ## <a name="image-classification-sample-overview"></a>Visão geral da amostra de classificação de imagens
 

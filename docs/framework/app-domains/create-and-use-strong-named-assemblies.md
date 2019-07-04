@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377879"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832878"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Criar e usar assemblies com nome forte
 
@@ -51,7 +51,7 @@ O cenário a seguir descreve o processo de assinar um assembly com um nome forte
 
 ## <a name="bypass-signature-verification-of-trusted-assemblies"></a>Ignorar a verificação de assinatura de assemblies confiáveis
 
-Desde o [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)], as assinaturas de nome forte não são validadas quando um assembly é carregado em um domínio do aplicativo de confiança total, como o domínio do aplicativo padrão para a zona `MyComputer`. Isso é conhecido como o recurso de desvio de nome forte. Em um ambiente de confiança total, as exigências de <xref:System.Security.Permissions.StrongNameIdentityPermission> sempre têm êxito para assemblies assinados de confiança total, independentemente de sua assinatura. O recurso de desvio de nome forte evita a sobrecarga desnecessária de verificação de assinatura de nome forte dos assemblies de confiança total nessa situação, permitindo que os assemblies carreguem mais rapidamente.
+A partir do .NET Framework 3.5 Service Pack 1, as assinaturas de nome forte não são validadas quando um assembly é carregado em um domínio do aplicativo de confiança total, como o domínio do aplicativo padrão para a zona `MyComputer`. Isso é conhecido como o recurso de desvio de nome forte. Em um ambiente de confiança total, as exigências de <xref:System.Security.Permissions.StrongNameIdentityPermission> sempre têm êxito para assemblies assinados de confiança total, independentemente de sua assinatura. O recurso de desvio de nome forte evita a sobrecarga desnecessária de verificação de assinatura de nome forte dos assemblies de confiança total nessa situação, permitindo que os assemblies carreguem mais rapidamente.
 
 O recurso de desvio se aplica a qualquer assembly que está assinado com um nome forte e que tem as seguintes características:
 
@@ -67,7 +67,7 @@ Esse recurso pode ser desabilitado para aplicativos individuais ou para um compu
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Título|DESCRIÇÃO|
 |-----------|-----------------|
 |[Como: criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Descreve como criar um par de chaves de criptografia para assinar um assembly.|
 |[Como: assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Descreve como criar um assembly de nome forte.|

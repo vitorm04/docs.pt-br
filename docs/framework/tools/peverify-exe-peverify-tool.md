@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0423946ab32c04274bb3d5656ed8603ec4314d88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e657b8e2a0a9dbe8db703ce97d41a3767191a26f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128722"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833863"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Ferramenta PEVerify)
 A ferramenta PEVerify ajuda desenvolvedores que geram MSIL (Microsoft Intermediate Language) (como gravadores de compiladores, desenvolvedores de mecanismos de script etc.) a determinar se o código MSIL e os metadados associados atendem aos requisitos de segurança de tipo. Alguns compiladores só gerarão código fortemente tipado verificável se você evitar usar determinados constructos de linguagem. Se, como desenvolvedor, estiver usando um compilador assim, você talvez queira verificar se não comprometeu a segurança de tipo do código. Nessa situação, é possível executar a ferramenta PEVerify nos arquivos para verificar MSIL e metadados.  
@@ -34,11 +34,11 @@ peverify filename [options]
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento|Descrição|  
+|Argumento|DESCRIÇÃO|  
 |--------------|-----------------|  
 |*filename*|O arquivo PE (Portable Executable) para o qual MSIL e metadados devem ser verificados.|  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Anula a verificação depois de erros *maxErrorCount*.<br /><br /> Esse parâmetro não é compatível no .NET Framework versão 2.0 ou posterior.|  
 |**/clock**|Mede e relata os seguintes tempos de verificação em milissegundos:<br /><br /> **MD Val. cycle**<br /> Ciclo de validação dos metadados<br /><br /> **MD Val. pure**<br /> Validação dos metadados pura<br /><br /> **IL Ver. cycle**<br /> Ciclo de verificação MSIL<br /><br /> **IL Ver pure**<br /> Verificação MSIL pura<br /><br /> Os tempos de **MD Val. cycle** e **IL Ver. cycle** incluem o tempo necessário para a realização de procedimentos de inicialização e desligamento necessários. Os tempos de **MD Val. pure** e **IL Ver pure** refletem o tempo necessário para a realização da validação ou apenas da verificação.|  
@@ -61,7 +61,7 @@ peverify filename [options]
   
  Se as opções **/md** ou **/il** não forem especificadas, Peverify.exe realizará ambos os tipos de verificações. Peverify.exe realiza as verificações de **/md** primeiro. Se não houver erros, as verificações de **/il** serão feitas. Se você especificar **/md** e **/il**, as verificações de **/il** serão feitas mesmo se houver erros nos metadados. Por isso, se não houver erros de metadados, **peverify** *filename* equivalerá a **peverify** *filename* **/md** **/il**.  
   
- Peverify.exe realiza verificações MSIL abrangentes com base na análise do fluxo de dados mais uma lista de várias centenas de regras em metadados válidos. Para obter informações detalhadas sobre as verificações realizadas por Peverify.exe, consulte "Especificação de Validação dos Metadados" e "Especificação do Conjunto de Instruções MSIL" na pasta Guia de Desenvolvedores de Ferramentas no [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+ Peverify.exe realiza verificações MSIL abrangentes com base na análise do fluxo de dados mais uma lista de várias centenas de regras em metadados válidos. Para obter informações detalhadas sobre as verificações realizadas por Peverify.exe, confira "Especificação de Validação dos Metadados" e "Especificação do Conjunto de Instruções MSIL" na pasta Guia de Desenvolvedores de Ferramentas no SDK (Software Development Kit) do Windows.  
   
  Observe que o .NET Framework versão 2.0 ou posterior dá suporte a retornos de `byref` verificáveis usando as seguintes instruções MSIL: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` e `unbox`.  
   

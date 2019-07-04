@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816047"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170512"
 ---
 # <a name="in-process-side-by-side-execution"></a>Execução lado a lado em processo
 A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em processo para executar várias versões do CLR (Common Language Runtime) em um único processo. Por padrão, os componentes COM gerenciados são executados com a versão do .NET Framework com a qual eles foram criados, independentemente da versão do .NET Framework carregada para o processo.  
@@ -56,7 +56,7 @@ A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em proces
   
      O que fazer: Nesse cenário, não faça nada. Os componentes COM serão executados com a versão do .NET Framework com a qual foram registrados.  
   
-- **Cenário 2**: Aplicativo gerenciado criado com o .NET Framework 2.0 SP1 que você prefere executar com o [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], mas está disposto a executar no .NET Framework 4, caso a versão 2.0 não esteja disponível.  
+- **Cenário 2**: Aplicativo gerenciado criado com o .NET Framework 2.0 SP1 que você prefere executar com o .NET Framework 2.0, mas está disposto a executar no .NET Framework 4, caso a versão 2.0 não esteja disponível.  
   
      Versões do .NET Framework instaladas: Uma versão anterior do .NET Framework e o .NET Framework 4.  
   

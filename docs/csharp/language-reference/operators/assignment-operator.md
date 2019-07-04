@@ -1,18 +1,18 @@
 ---
 title: Operador = – Referência de C#
 ms.custom: seodec18
-ms.date: 11/26/2018
+ms.date: 06/21/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 85182acb84ea79cb00a9edb315c3954f440305f4
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ef9c9bab5c1cebb06edf934254507180e2197349
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758357"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306564"
 ---
 # <a name="-operator-c-reference"></a>Operador = (Referência de C#)
 
@@ -30,19 +30,37 @@ a = b = c
 a = (b = c)
 ```
 
-O exemplo a seguir demonstra o uso do operador de atribuição para atribuir valores a uma variável local, uma propriedade e um elemento do indexador:
+O exemplo a seguir demonstra o uso do operador de atribuição com uma variável local, uma propriedade e um elemento do indexador como seu operando esquerdo:
 
-[!code-csharp-interactive[assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
+[!code-csharp-interactive[simple assignment](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>Operador de atribuição ref
 
 Começando pelo C# 7.3, você pode usar o operador de atribuição ref `= ref` para reatribuir uma variável [ref local](../keywords/ref.md#ref-locals) ou [ref readonly local](../keywords/ref.md#ref-readonly-locals). O exemplo a seguir demonstra o uso do operador de atribuição ref:
 
-[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
-No caso do operador de atribuição ref, o tipo do operando esquerdo e do direito deve ser o mesmo.
+No caso do operador de atribuição ref, o tipo dos seus operandos deve ser o mesmo.
 
-Para saber mais, confira a [nota da proposta do recurso](../../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
+Para saber mais, confira a [nota da proposta do recurso](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
+
+## <a name="compound-assignment"></a>Atribuição composta
+
+Para um operador binário `op`, uma expressão de atribuição composta do formato
+
+```csharp
+x op= y
+```
+
+equivale a
+
+```csharp
+x = x op y
+```
+
+exceto que `x` é avaliado apenas uma vez.
+
+A atribuição composta é tem suporte dos operadores [aritmético](arithmetic-operators.md#compound-assignment), [lógico booliano](boolean-logical-operators.md#compound-assignment) e [bit a bit lógico e shift](bitwise-and-shift-operators.md#compound-assignment).
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
@@ -50,11 +68,10 @@ Um tipo definido pelo usuário não pode sobrecarregar o operador de atribuiçã
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-Para saber mais, confira a seção [Atribuição simples](~/_csharplang/spec/expressions.md#simple-assignment) na [especificação da linguagem C#](../language-specification/index.md).
+Saiba mais na seção [Operadores de atribuição](~/_csharplang/spec/expressions.md#assignment-operators) na [Especificação da linguagem C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Operadores do C#](index.md)
 - [ref keyword](../keywords/ref.md)

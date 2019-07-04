@@ -159,15 +159,15 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99fa84b8dea326bc7a32ff4f3c3187acc9883748
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6b9844505516550b9d817b52c72cea15a2468f7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121635"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025958"
 ---
 # <a name="winmdexpexe-error-messages"></a>Mensagens de erro do winmdexp.exe
-O processo de build chama [Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quando você usa o modelo **Componente [!INCLUDE[wrt](../../../includes/wrt-md.md)]** no Visual Studio 2012, portanto, as mensagens de erro de Winmdexp.exe aparecem na **Lista de Erros**. O Winmdexp.exe opera em um módulo compilado com a opção `/target:winmdobj`. Como ele requer um módulo compilado como entrada, suas mensagens de erro não aparecerão se a compilação for bem-sucedida.  
+O processo de compilação chama [Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quando você usa o modelo **Componente do Tempo de Execução do Windows** no Visual Studio 2012, portanto, as mensagens de erro de Winmdexp.exe aparecem na **Lista de Erros**. O Winmdexp.exe opera em um módulo compilado com a opção `/target:winmdobj`. Como ele requer um módulo compilado como entrada, suas mensagens de erro não aparecerão se a compilação for bem-sucedida.  
   
  As mensagens de erro foram projetadas para conter todas as informações necessárias para resolver as condições de erro relatadas. No entanto, alguns problemas exigem mais informações do que a mensagem pode conter. Encontre informações adicionais em [Diagnosticando condições de erro do componente do Tempo de Execução do Windows](https://go.microsoft.com/fwlink/p/?LinkId=251127) no Centro de Desenvolvimento do Windows.  
   

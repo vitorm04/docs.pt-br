@@ -4,12 +4,12 @@ description: Saiba como hospedar o tempo de execução do .NET Core a partir do 
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 0ebd5b1532af77c082a2d8cd6508a83e969b325e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6cddb6fa7dcd7a7d050749c26249f1f5d876322d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587050"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306199"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escreva um host personalizado do .NET Core para controlar o tempo de execução do .NET a partir de seu código nativo
 
@@ -26,19 +26,63 @@ Como os hosts são aplicativos nativos, este tutorial abordará a construção d
 Você também desejará ter um aplicativo .NET Core simples com o qual testará o host e, portanto, deverá instalar o [SDK do .NET Core](https://www.microsoft.com/net/core) e [compilar um aplicativo .NET Core de teste pequeno](../../core/tutorials/with-visual-studio.md) (como um aplicativo “Olá, Mundo”). O aplicativo “Olá, Mundo” criado pelo novo modelo de projeto de console do .NET Core é suficiente.
 
 ## <a name="hosting-apis"></a>APIs de hospedagem
-Há duas APIs diferentes que podem ser usadas para hospedar o .NET Core. Este documento (e seus [exemplos](https://github.com/dotnet/samples/tree/master/core/hosting) associados) abrange as duas opções.
+Há três APIs diferentes que podem ser usadas para hospedar o .NET Core. Este documento (e seus [exemplos](https://github.com/dotnet/samples/tree/master/core/hosting) associados) abrange todas as opções.
 
-* O método preferencial de hospedar o tempo de execução do .NET Core é com a API [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h). Essa API expõe funções para iniciar e interromper facilmente o tempo de execução e invocar o código gerenciado (iniciando um exe gerenciado ou chamando métodos estáticos gerenciados).
+* O método preferencial de hospedar o tempo de execução do .NET Core no .NET Core 3.0 e posteriores é com as APIs das bibliotecas `nethost` e `hostfxr`. Esses pontos de entrada tratam a complexidade de localizar e configurar o tempo de execução para inicialização, bem como permitem iniciar um aplicativo gerenciado e chamar um método gerenciado estático.
+* O método preferencial de hospedar o tempo de execução do .NET Core anterior ao .NET Core 3.0 é com a API [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h). Essa API expõe funções para iniciar e interromper facilmente o tempo de execução e invocar o código gerenciado (iniciando um exe gerenciado ou chamando métodos estáticos gerenciados).
 * O .NET Core também pode ser hospedado com a interface `ICLRRuntimeHost4` na [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h). Essa API é mais antiga que a CoreClrHost.h, portanto, talvez você já tenha visto hosts mais antigos usando-a. Ela ainda funciona e permite um pouco mais controle sobre o processo de hospedagem do que a CoreClrHost. No entanto, agora, na maioria dos cenários, a CoreClrHost.h é preferida devido às suas APIs mais simples.
 
 ## <a name="sample-hosts"></a>Hosts de exemplo
 Há [hosts de exemplo](https://github.com/dotnet/samples/tree/master/core/hosting) que demonstram as etapas descritas nos tutoriais abaixo disponíveis no repositório dotnet/samples do GitHub. Os comentários nos exemplos associam claramente as etapas numeradas destes tutoriais aos pontos em que elas são executadas no exemplo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Lembre-se de que os hosts de exemplo devem ser usados para fins de aprendizado e, portanto, não fazem uma verificação de erros rigorosa e são projetados para enfatizar a legibilidade e não a eficiência. Mais amostras de host do mundo real estão disponíveis no repositório [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts). O [host CoreRun](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun) e o [host CoreRun Unix](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/unixcorerun), em particular, são hosts de uso geral ideais para serem estudados após a leitura desses exemplos mais simples.
+Lembre-se de que os hosts de exemplo devem ser usados para fins de aprendizado e, portanto, não fazem uma verificação de erros rigorosa e são projetados para enfatizar a legibilidade e não a eficiência.
+
+## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>Criar um host usando NetHost.h e HostFxr.h
+
+As etapas a seguir detalham como usar as bibliotecas `nethost` e `hostfxr` para iniciar o tempo de execução do .NET Core em um aplicativo nativo e chamar um método estático gerenciado. A [amostra](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr) usa o cabeçalho `nethost`, bem como a biblioteca instalada com o SDK do .NET e cópias dos arquivos [`coreclr_delegates.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/coreclr_delegates.h) e [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) do repositório [dotnet/core-setup](https://github.com/dotnet/core-setup).
+
+### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>Etapa 1 – Carregar HostFxr e obter funções de hospedagem exportadas
+
+A biblioteca `nethost` fornece a função `get_hostfxr_path` para localizar a biblioteca `hostfxr`. A biblioteca `hostfxr` expõe funções para hospedar o tempo de execução do .NET Core. A lista completa de funções pode ser encontrada em [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) e no [documento de design de hospedagem nativo](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md). A amostra e este tutorial usam o seguinte:
+* `hostfxr_initialize_for_runtime_config`: inicializa um contexto de host e o prepara para a inicialização do tempo de execução do .NET Core usando a configuração de tempo de execução especificada.
+* `hostfxr_get_runtime_delegate`: obtém um representante para a funcionalidade de tempo de execução.
+* `hostfxr_close`: fecha um contexto de host.
+
+A biblioteca `hostfxr` é encontrada usando `get_hostfxr_path`. Ela é carregada e suas exportações são recuperadas.
+
+[!code-cpp[HostFxrHost#LoadHostFxr](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadHostFxr)]
+
+### <a name="step-2---initialize-and-start-the-net-core-runtime"></a>Etapa 2 – Inicializar e iniciar o tempo de execução do .NET Core
+
+As funções `hostfxr_initialize_for_runtime_config` e `hostfxr_get_runtime_delegate` inicializam e iniciam o tempo de execução do .NET Core usando a configuração do tempo de execução para o componente gerenciado que será carregado. A função `hostfxr_get_runtime_delegate` é usada para obter um representante do tempo de execução que permite carregar um assembly gerenciado e obter um ponteiro de função para um método estático no assembly em questão.
+
+[!code-cpp[HostFxrHost#Initialize](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#Initialize)]
+
+### <a name="step-3---load-managed-assembly-and-get-function-pointer-to-a-managed-method"></a>Etapa 3 – Carregar o assembly gerenciado e obter o ponteiro de função para um método gerenciado
+
+O representante do tempo de execução é chamado para carregar o assembly gerenciado e obter um ponteiro de função para um método gerenciado. O representante exige o caminho do assembly, o nome do tipo e o nome do método como entradas e retorna um ponteiro de função que pode ser usado para invocar o método gerenciado.
+
+[!code-cpp[HostFxrHost#LoadAndGet](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadAndGet)]
+
+Ao passar `nullptr` como o nome do tipo de representante chamando o representante do tempo de execução, a amostra usa uma assinatura padrão para o método gerenciado:
+
+```csharp
+public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
+```
+
+Uma assinatura diferente pode ser usada especificando o nome do tipo de representante ao chamar o representante do tempo de execução.
+
+### <a name="step-4---run-managed-code"></a>Etapa 4 – Executar o código gerenciado!
+
+O host nativo agora pode chamar o método gerenciado e passar a ele os parâmetros desejados.
+
+[!code-cpp[HostFxrHost#CallManaged](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#CallManaged)]
 
 ## <a name="create-a-host-using-coreclrhosth"></a>Criar um host usando a CoreClrHost.h
 
 As etapas a seguir detalham como usar a API CoreClrHost.h para iniciar o tempo de execução do .NET Core em um aplicativo nativo e chamar um método estático gerenciado. Os snippets de código neste documento usam algumas APIs específicas do Windows, mas o [host de exemplo completo](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost) mostra os caminhos de código do Windows e do Linux.
+
+O [host CoreRun Unix](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/unixcorerun) mostra um exemplo mais complexo e real de hospedar usando coreclrhost.h.
 
 ### <a name="step-1---find-and-load-coreclr"></a>Etapa 1 – Localizar e carregar a CoreCLR
 
@@ -119,6 +163,8 @@ O CoreCLR não oferece suporte à reinicialização ou descarregamento. Não cha
 ## <a name="create-a-host-using-mscoreeh"></a>Criar um host usando Mscoree.h
 
 Como já mencionado, a CoreClrHost.h agora é o método preferencial de hospedar o tempo de execução do .NET Core. A interface `ICLRRuntimeHost4` ainda pode ser usada, no entanto, se as interfaces de CoreClrHost.h não forem suficientes (se os sinalizadores de inicialização não padrão forem necessários, por exemplo, ou se um AppDomainManager for necessário no domínio padrão). Estas instruções mostrarão como hospedar o .NET Core usando a mscoree.h.
+
+O [host CoreRun](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun) mostra um exemplo mais complexo e real de hospedar usando mscoree.h.
 
 ### <a name="a-note-about-mscoreeh"></a>Uma observação sobre mscoree.h
 A interface de hospedagem `ICLRRuntimeHost4` do .NET Core é definida em [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL). Uma versão de cabeçalho deste arquivo (mscoree.h), que o host precisará referenciar, é produzida por meio da MIDL durante o build do [tempo de execução do .NET Core](https://github.com/dotnet/coreclr/). Se você não desejar compilar o tempo de execução do .NET Core, mscoree.h também estará disponível como um [cabeçalho predefinido](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc) no repositório dotnet/coreclr. Encontre [instruções sobre como compilar o tempo de execução do .NET Core](https://github.com/dotnet/coreclr#building-the-repository) no repositório GitHub.

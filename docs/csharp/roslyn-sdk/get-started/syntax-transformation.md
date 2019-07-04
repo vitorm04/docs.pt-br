@@ -3,12 +3,12 @@ title: Introdução à transformação de sintaxe (APIs Roslyn)
 description: Uma introdução pela travessia, consulta e percurso por árvores de sintaxe.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788434"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306925"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introdução à transformação de sintaxe
 
@@ -30,7 +30,7 @@ Você escolhe uma das duas estratégias para transformações de sintaxe. Os **m
 
 A primeira transformação de sintaxe demonstra os métodos de fábrica. Substitua uma instrução `using System.Collections;` por uma instrução `using System.Collections.Generic;`. Este exemplo demonstra como você cria objetos <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> usando os métodos de fábrica <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>. Para cada tipo de **nó**, **token**ou **trivia**, há um método de fábrica que cria uma instância desse tipo. Você cria árvores de sintaxe compondo os nós hierarquicamente de baixa para cima. Em seguida, você transformará o programa existente substituindo nós existentes pela nova árvore que você criou.
 
-Inicie o Visual Studio e crie um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#. No Visual Studio, escolha **Arquivo** > **Novo** > **Projeto** para exibir a caixa de diálogo Novo Projeto. Em **Visual C#** > **Extensibilidade**, escolha uma **Ferramenta de Análise de Código Autônoma**. Este guia de início rápido tem dois projetos de exemplo, portanto, nomeie a solução **SyntaxTransformationQuickStart** e nomeie o projeto **ConstructionCS**. Clique em **OK**.
+Inicie o Visual Studio e crie um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#. No Visual Studio, escolha **Arquivo** > **Novo** > **Projeto** para exibir a caixa de diálogo Novo Projeto. Em **Visual C#**  > **Extensibilidade**, escolha uma **Ferramenta de Análise de Código Autônoma**. Este guia de início rápido tem dois projetos de exemplo, portanto, nomeie a solução **SyntaxTransformationQuickStart** e nomeie o projeto **ConstructionCS**. Clique em **OK**.
 
 Este projeto usa os métodos de classe <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> para construir um <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> representando o namespace `System.Collections.Generic`.
 
@@ -63,7 +63,7 @@ Execute o programa novamente para ver que você construiu a árvore para o códi
 
 ### <a name="create-a-modified-tree"></a>Criar uma árvore modificada
 
-Você criou uma pequena árvore de sintaxe que contém uma instrução. As APIs para criar novos nós são a escolha certa para criar instruções únicas ou outros pequenos blocos de código. No entanto, para construir blocos maiores de código, você deve usar métodos que substituem nós ou inserem nós em uma árvore existente. Lembre-se de que as árvores de sintaxe são imutáveis. A **API de Sintaxe** não fornece nenhum mecanismo para modificar uma árvore de sintaxe existente após a construção. Em vez disso, fornece métodos que produzem novas árvores com base nas alterações existentes. Os métodos `With*` são definidos em classes concretas que derivam de <xref:Microsoft.CodeAnalysis.SyntaxNode> ou em métodos de extensão declarados na classe <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions>. Esses métodos criam um novo nó aplicando alterações nas propriedades filho de um nó existente. Além disso, o método de extensão <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> pode ser usado para substituir um nó descendente em uma subárvore. Esse método também atualiza o pai para apontar para o filho recém-criado e repete esse processo até a árvore inteira — um processo conhecido como _re-spining_ da árvore.
+Você criou uma pequena árvore de sintaxe que contém uma instrução. As APIs para criar novos nós são a escolha certa para criar instruções únicas ou outros pequenos blocos de código. No entanto, para construir blocos maiores de código, você deve usar métodos que substituem nós ou inserem nós em uma árvore existente. Lembre-se de que as árvores de sintaxe são imutáveis. A **API de Sintaxe** não fornece nenhum mecanismo para modificar uma árvore de sintaxe existente após a construção. Em vez disso, fornece métodos que produzem novas árvores com base nas alterações existentes. Os métodos `With*` são definidos em classes concretas que derivam de <xref:Microsoft.CodeAnalysis.SyntaxNode> ou em métodos de extensão declarados na classe <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions>. Esses métodos criam um novo nó aplicando alterações nas propriedades filho de um nó existente. Além disso, o método de extensão <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> pode ser usado para substituir um nó descendente em uma subárvore. Esse método também atualiza o pai para apontar para o filho recém-criado e repete esse processo até a árvore inteira — um processo conhecido como _re-spinning_ da árvore.
 
 O próximo passo é criar uma árvore que represente um programa inteiro (pequeno) e depois modificá-la. Adicione o seguinte código ao início da classe `Program`:
 
@@ -94,9 +94,9 @@ Execute o programa novamente. Desta vez, a árvore importa corretamente o namesp
 
 Os métodos `With*` e <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> fornecem meios convenientes para transformar ramos individuais de uma árvore de sintaxe. A classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> realiza várias transformações em uma árvore de sintaxe. A classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> é uma subclasse de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>. O <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> aplica uma transformação a um tipo específico de <xref:Microsoft.CodeAnalysis.SyntaxNode>. Você pode aplicar transformações a vários tipos de objetos <xref:Microsoft.CodeAnalysis.SyntaxNode> sempre que eles aparecerem em uma árvore de sintaxe. O segundo projeto neste guia de início rápido cria uma refatoração de linha de comando que remove tipos explícitos em declarações de variáveis ​​locais em qualquer lugar em que a inferência de tipo possa ser usada.
 
-Crie um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#. No Visual Studio, clique com o botão direito do mouse no nó da solução `SyntaxTransformationQuickStart`. Escolha **Adicionar** > **Novo Projeto** para exibir o diálogo **Novo Projeto**. Em **Visual C#** > **Extensibilidade**, escolha **Ferramenta de Análise de Código Autônoma**. Nomeie seu projeto como `TransformationCS` e clique em OK.
+Crie um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#. No Visual Studio, clique com o botão direito do mouse no nó da solução `SyntaxTransformationQuickStart`. Escolha **Adicionar** > **Novo Projeto** para exibir o diálogo **Novo Projeto**. Em **Visual C#**  > **Extensibilidade**, escolha **Ferramenta de Análise de Código Autônoma**. Nomeie seu projeto como `TransformationCS` e clique em OK.
 
-A primeira etapa é criar uma classe que deriva de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> para executar as transformações. Adicione um novo arquivo de classe ao projeto. No Visual Studio, escolha **Projeto** > **Adicionar Classe...**. Na caixa de diálogo **Adicionar Novo Item**, digite `TypeInferenceRewriter.cs` como o nome do arquivo.
+A primeira etapa é criar uma classe que deriva de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> para executar as transformações. Adicione um novo arquivo de classe ao projeto. No Visual Studio, escolha **Projeto** > **Adicionar Classe...** . Na caixa de diálogo **Adicionar Novo Item**, digite `TypeInferenceRewriter.cs` como o nome do arquivo.
 
 Adicione o seguinte usando diretivas ao arquivo `TypeInferenceRewriter.cs`:
 
@@ -112,7 +112,7 @@ Adicione o seguinte código para declarar um campo somente leitura privado para 
 
 Substitua o método <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)>:
 
-```C#
+```csharp
 public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 {
 

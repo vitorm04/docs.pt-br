@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 90691ae0d9de35831b7b3119493e4e9cd81720e6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 22482a8f55cdb53f9826fbcc850992e20b7a8feb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236304"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306616"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabela de conversões numéricas explícitas (Referência de C#)
 
@@ -67,9 +67,8 @@ A tabela a seguir mostra as conversões explícitas predefinidas entre os tipos 
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Conversão e conversões de tipo](../../programming-guide/types/casting-and-type-conversions.md)
-- [Operador ()](../operators/invocation-operator.md)
+- [Operador ()](../operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [Tabela de tipos integrais](integral-types-table.md)
 - [Tabela de tipos de ponto flutuante](floating-point-types-table.md)
 - [Tabela de tipos internos](built-in-types-table.md)

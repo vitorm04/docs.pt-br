@@ -8,18 +8,27 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c7f3b1b1525277bf948070c9121d151f9f520127
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 4a51bb0e854de127c632c28f613a7602bf09f432
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204659"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348018"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referência de C#)
 
 A palavra-chave `readonly` é um modificador que pode ser usado em três contextos:
 
-- Em uma [declaração de campo](#readonly-field-example), `readonly` indica que a atribuição ao campo só pode ocorrer como parte da declaração ou em um construtor na mesma classe.
+- Em uma [declaração de campo](#readonly-field-example), `readonly` indica que a atribuição ao campo só pode ocorrer como parte da declaração ou em um construtor na mesma classe. Um campo readonly pode ser atribuído e reatribuído várias vezes na declaração de campo e no construtor. 
+  
+  Um campo `readonly` não pode ser atribuído depois da saída do construtor. Isso tem implicações diferentes para tipos de valor e tipos de referência:
+  
+  - Como os tipos de valor contêm diretamente seus dados, um campo que é um tipo de valor `readonly` é imutável. 
+  - Como os tipos de referência contêm uma referência a seus dados, um campo que é um tipo de referência `readonly` deve sempre se referir ao mesmo objeto. Esse objeto não é imutável. O modificador `readonly` impede que o campo seja substituído por uma instância diferente do tipo de referência. No entanto, o modificador não impede que dados da instância do campo sejam modificados por meio do campo somente leitura.
+
+  > [!WARNING]
+  > Um tipo visível externamente que contém um campo somente leitura visível externamente que é um tipo de referência mutável pode ser uma vulnerabilidade de segurança e pode disparar um aviso [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : "Não declarar tipos de referência mutáveis somente leitura."
+
 - Em uma [definição `readonly struct`](#readonly-struct-example), `readonly` indica que o `struct` é imutável.
 - Em um [retorno de método `ref readonly`](#ref-readonly-return-example), o modificador `readonly` indica que o método retorna uma referência e que as gravações não são permitidas para essa referência.
 
@@ -35,9 +44,9 @@ Você pode atribuir um valor a um campo `readonly` apenas nos seguintes contexto
 
 - Quando a variável é inicializada na declaração, por exemplo:
 
-```csharp
-public readonly int y = 5;
-```
+  ```csharp
+  public readonly int y = 5;
+  ```
 
 - Em um construtor de instância da classe que contém a declaração de campo de instância.
 - No construtor estático da classe que contém a declaração do campo estático.
@@ -55,7 +64,9 @@ Esses contextos de construtor também são os únicos em que é válido passar u
 
 No exemplo anterior, se você usar uma instrução semelhante ao seguinte exemplo:
 
-`p2.y = 66;        // Error`
+```csharp
+p2.y = 66;        // Error
+```
 
 você receberá a mensagem de erro do compilador:
 
@@ -88,7 +99,7 @@ Adicionar um campo `readonly` não marcado gera o erro do compilador `CS8340`: "
 O modificador `readonly` em um `ref return` indica que a referência retornada não pode ser modificada. O exemplo a seguir retorna uma referência para a origem. Ele usa o modificador `readonly` para indicar que os chamadores não podem modificar a origem:
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
-O tipo retornado não precisa ser um `readonly struct`. Qualquer tipo que possa ser retornado por `ref` pode ser retornado por `ref readonly`
+O tipo retornado não precisa ser um `readonly struct`. Qualquer tipo que possa ser retornado por `ref` pode ser retornado por `ref readonly`.
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 

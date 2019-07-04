@@ -1,5 +1,5 @@
 ---
-title: Operadores de comparação – referência em C#
+title: Operadores de comparação – referência do C#
 description: Saiba mais sobre operadores de comparação em C# que você pode usar para verificar a ordem dos valores numéricos.
 ms.date: 04/25/2019
 author: pkulikov
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 3b123ea1ae57735cdcb763087f12c30b8008dc11
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758205"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025214"
 ---
-# <a name="comparison-operators-c-reference"></a>Operadores de comparação (referência em C#)
+# <a name="comparison-operators-c-reference"></a>Operadores de comparação (referência do C#)
 
 Os operadores de comparação [`<` (menor que)](#less-than-operator-), [`>` (maior que)](#greater-than-operator-), [`<=` (menor ou igual)](#less-than-or-equal-operator-) e [`>=` ( maior que ou igual)](#greater-than-or-equal-operator-), também conhecida como relacionais, comparam seus operandos. Esses operadores dão suporte a todos os tipos numéricos [integrais](../keywords/integral-types-table.md) e de [ponto flutuante](../keywords/floating-point-types-table.md).
 
@@ -74,7 +74,6 @@ Para obter mais informações, consulte a seção [Operadores de teste de tipo e
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Operadores do C#](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [Operadores de igualdade](equality-operators.md)

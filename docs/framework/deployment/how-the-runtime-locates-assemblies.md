@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613972"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833725"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Como o tempo de execução localiza assemblies
 Para implantar seu aplicativo .NET Framework com êxito, você deve entender como o Common Language Runtime localiza e associa aos assemblies que compõem seu aplicativo. Por padrão, o tempo de execução tenta associar com a versão exata de um assembly com o qual o aplicativo foi criado. Esse comportamento padrão pode ser substituído pelas configurações do arquivo de configuração.  
@@ -24,7 +24,7 @@ Para implantar seu aplicativo .NET Framework com êxito, você deve entender com
  O Common Language Runtime executa uma série de etapas ao tentar localizar um assembly e resolver uma referência de assembly. Cada etapa é explicada nas seções a seguir. A investigação de termo normalmente é usada para descrever como o tempo de execução localiza os assemblies, ela referencia o conjunto de heurística usado para localizar o assembly com base em seu nome e cultura.  
   
 > [!NOTE]
->  Você pode exibir informações de associação no arquivo de log usando o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que está incluído no [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+>  Você pode exibir informações de associação no arquivo de log usando o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que está incluído no SDK (Software Development Kit) do Windows.  
   
 ## <a name="initiating-the-bind"></a>Iniciando a associação  
  O processo de localização e associação a um assembly começa quando o tempo de execução tenta resolver uma referência a outro assembly. Essa referência pode ser estática ou dinâmica. O compilador registra as referências estáticas nos metadados do manifesto do assembly no tempo de build. Referências dinâmicas são construídas em tempo real como resultado de chamar vários métodos, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  

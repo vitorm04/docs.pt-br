@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607690"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423403"
 ---
 # <a name="assembly-security-considerations"></a>Considerações sobre segurança de assemblies
 <a name="top"></a> Ao criar um assembly, você pode especificar um conjunto de permissões que o assembly exige para ser executado. Se determinadas permissões são concedidas ou não a um assembly é algo que se baseia na evidência.  
@@ -31,7 +31,7 @@ ms.locfileid: "64607690"
   
 - A evidência de entrada é mesclada com a evidência coletada pelo carregador para criar um conjunto final de evidências usado na resolução da política. Entre os métodos que usam essa semântica estão **Assembly.Load**, **Assembly.LoadFrom** e **Activator.CreateInstance**.  
   
-- A evidência de entrada é usada inalterada como o conjunto final de evidências usado na resolução da política. Entre os métodos que usam essa semântica estão **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()**.  
+- A evidência de entrada é usada inalterada como o conjunto final de evidências usado na resolução da política. Entre os métodos que usam essa semântica estão **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()** .  
   
  Permissões opcionais podem ser concedidas pelo conjunto de [políticas de segurança](../../../docs/framework/misc/code-access-security-basics.md) no computador em que o assembly será executado. Se quiser que o código identifique todas as exceções de segurança em potencial, você poderá seguir um destes procedimentos:  
   

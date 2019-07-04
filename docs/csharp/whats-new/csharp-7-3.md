@@ -2,12 +2,12 @@
 title: Novidades no C# 7.3
 description: Uma visão geral dos novos recursos no C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832706"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397786"
 ---
 # <a name="whats-new-in-c-73"></a>Novidades no C# 7.3
 
@@ -34,7 +34,12 @@ As novas opções do compilador são:
 - `-publicsign` para habilitar a assinatura de Software de código aberto (OSS) de assemblies.
 - `-pathmap` para fornecer um mapeamento para diretórios de origem.
 
-O restante deste artigo fornece detalhes e links para saber mais sobre cada uma das melhorias.
+O restante deste artigo fornece detalhes e links para saber mais sobre cada uma das melhorias. Você pode explorar esses recursos em seu ambiente usando a ferramenta global `dotnet try`:
+
+1. Instale a ferramenta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Clone o repositório [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Definir o diretório atual do subdiretório *csharp7* para o repositório *try-samples*.
+1. Execute `dotnet try`.
 
 ## <a name="enabling-more-efficient-safe-code"></a>Como habilitar código seguro mais eficiente
 

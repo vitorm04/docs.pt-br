@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186072"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025099"
 ---
 # <a name="methods"></a>Métodos
 
@@ -144,9 +144,9 @@ Um chamador pode, então, invocar o método de uma das três maneiras:
 - Passando uma lista separada por vírgulas de argumentos individuais do tipo apropriado para o método.
 - Não fornecendo um argumento para a matriz de parâmetros.
 
-O exemplo a seguir define um método chamado `DoStringOperation` que executa a operação de cadeia de caracteres especificada pelo primeiro parâmetro, um membro de enumeração `StringOperation`. As cadeias de caracteres nas quais a operação deve ser executada são definidas por uma matriz de parâmetros. O método `Main` ilustra todas as três maneiras de invocar o método. Observe que o método marcado com a palavra-chave `params` deve estar preparado para lidar com o caso em que nenhum argumento é fornecido para a matriz de parâmetros, de forma que seu valor é `null`.
+O exemplo a seguir define um método chamado `GetVowels` que retorna todas as vogais de uma matriz de parâmetros. O método `Main` ilustra todas as três maneiras de invocar o método. Os chamadores não precisam fornecer argumentos para parâmetros que incluem o modificador `params`. Nesse caso, o parâmetro é `null`.
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
 
@@ -157,7 +157,7 @@ Uma definição de método pode especificar que os parâmetros são obrigatório
 O valor padrão do parâmetro deve ser atribuído por um dos tipos de expressões a seguir:
 
 - Uma constante, como um número ou uma cadeia de caracteres literal.
-- Uma expressão da forma `new ValType`, em que `ValType` é um tipo de valor. Observe que isso invoca o construtor padrão implícito do tipo de valor, que não é de fato um membro do tipo.
+- Uma expressão da forma `new ValType`, em que `ValType` é um tipo de valor. Isso invoca o construtor sem parâmetros implícito do tipo de valor, que não é de fato um membro do tipo.
 - Uma expressão da forma `default(ValType)`, em que `ValType` é um tipo de valor.
 
 Se um método inclui parâmetros obrigatórios e opcionais, os parâmetros opcionais são definidos no final da lista de parâmetros, após todos os parâmetros obrigatórios.
