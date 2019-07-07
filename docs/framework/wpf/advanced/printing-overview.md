@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: f82fd9803512dbd2466c4d0b49142e2c553d578a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2090c58369ed3c7bda5df1342291001d9550d48d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380228"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610465"
 ---
 # <a name="printing-overview"></a>Visão geral da impressão
 Com o Microsoft .NET Framework, os desenvolvedores de aplicativos usando o Windows Presentation Foundation (WPF) têm um novo conjunto avançado de impressão e imprimir as APIs de gerenciamento do sistema. Com o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alguns desses aprimoramentos do sistema de impressão também estão disponíveis para os desenvolvedores que criam aplicativos do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e desenvolvedores que usam código não gerenciado. No núcleo dessa nova funcionalidade está o novo formato de arquivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e o caminho de impressão [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -31,7 +31,7 @@ Com o Microsoft .NET Framework, os desenvolvedores de aplicativos usando o Windo
 ## <a name="about-xps"></a>Sobre XPS  
  XPS é um formato de documento eletrônico, um formato de arquivo de spool e uma linguagem de descrição de página. É um formato de documento aberto que usa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] e outros padrões do setor para criar documentos multiplataforma. XPS simplifica o processo pelo qual documentos digitais são criados, compartilhados, impressos, exibidos e arquivados. Para obter informações adicionais sobre XPS, consulte [documentos XPS](/windows/desktop/printdocs/documents).  
   
- Várias técnicas para impressão XPS com base no conteúdo usando [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] são demonstradas [programaticamente imprimir arquivos XPS de](how-to-programmatically-print-xps-files.md). Talvez seja útil consultar esses exemplos durante o exame do conteúdo contido neste tópico. (Os desenvolvedores de código não gerenciado devem consultar a documentação para o [função MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Os desenvolvedores de formulários do Windows devem usar o [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] no <xref:System.Drawing.Printing> namespace que não oferece suporte completo [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] caminho de impressão, mas dá suporte a um caminho de impressão híbrido de GDI para XPS. Consulte **Arquitetura de caminho de impressão** abaixo).  
+ Várias técnicas para impressão XPS com base no conteúdo usando [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] são demonstradas [programaticamente imprimir arquivos XPS de](how-to-programmatically-print-xps-files.md). Talvez seja útil consultar esses exemplos durante o exame do conteúdo contido neste tópico. (Os desenvolvedores de código não gerenciado devem consultar a documentação para o [função MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Os desenvolvedores de formulários do Windows devem usar a API do <xref:System.Drawing.Printing> namespace que não oferece suporte completo [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] caminho de impressão, mas dá suporte a um caminho de impressão híbrido de GDI para XPS. Consulte **Arquitetura de caminho de impressão** abaixo).  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Caminho de impressão XPS  
@@ -51,7 +51,7 @@ Com o Microsoft .NET Framework, os desenvolvedores de aplicativos usando o Windo
   
 - Formato XPS padrão da indústria.  
   
- Para cenários de impressão básicos, uma [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] simples e intuitiva está disponível com um único ponto de entrada para interface do usuário, configuração e envio de trabalho. Para cenários avançados, foi adicionado um suporte extra para a personalização de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] (ou mesmo para nenhuma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]), para a impressão síncrona ou assíncrona e recursos de impressão de lote. As duas opções fornecem suporte de impressão no modo de confiança total ou parcial.  
+ Para cenários de impressão básicos, uma API simple e intuitiva está disponível com um único ponto de entrada para envio de trabalho, a configuração e a interface do usuário. Para cenários avançados, foi adicionado um suporte extra para a personalização de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] (ou mesmo para nenhuma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]), para a impressão síncrona ou assíncrona e recursos de impressão de lote. As duas opções fornecem suporte de impressão no modo de confiança total ou parcial.  
   
  XPS foi projetado tendo em mente sua extensibilidade. Usando a estrutura de extensibilidade, recursos e capacidades podem ser adicionadas ao XPS de forma modular. Os recursos de extensibilidade incluem:  
   
@@ -75,7 +75,7 @@ Com o Microsoft .NET Framework, os desenvolvedores de aplicativos usando o Windo
  O <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> controle fornece um único ponto de entrada para [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], configuração e envio do trabalho XPS. Para obter informações sobre como criar uma instância e usar o controle, consulte [Invocar uma caixa de diálogo de impressão](how-to-invoke-a-print-dialog.md).  
   
 ### <a name="advanced-xps-printing"></a>Impressão XPS avançada  
- Para acessar o conjunto completo de XPS recursos, a impressão avançada [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] deve ser usado. Várias [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] relevantes são descritas em mais detalhes abaixo. Caminho de impressão para uma lista completa de XPS [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], consulte o <xref:System.Windows.Xps> e <xref:System.Printing> referências de namespace.  
+ Para acessar o conjunto completo de recursos do XPS, a API de impressa avançada deve ser usada. Vários API relevantes são descritas mais detalhadamente abaixo. Caminho de impressão para uma lista completa de XPS [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], consulte o <xref:System.Windows.Xps> e <xref:System.Printing> referências de namespace.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket e PrintCapabilities  
  O <xref:System.Printing.PrintTicket> e <xref:System.Printing.PrintCapabilities> classes são a base dos recursos avançados de XPS. Os dois tipos de objetos são estruturas formatadas [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] de recursos orientados a impressão, como ordenações, impressão de dois lados, grampeamento, etc. Essas estruturas são definidas pelo esquema de impressão. Um <xref:System.Printing.PrintTicket> instrui uma impressora sobre como processar um trabalho de impressão. O <xref:System.Printing.PrintCapabilities> classe define os recursos de uma impressora. Ao consultar os recursos de uma impressora, um <xref:System.Printing.PrintTicket> podem ser criados que tira total proveito de uma impressora recursos suportados. Da mesma forma, os recursos sem suporte podem ser evitados.  

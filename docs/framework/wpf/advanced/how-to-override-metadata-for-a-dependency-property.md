@@ -9,18 +9,18 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef0309ae0d03c8278134012e645960996c6f93c4
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768622"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610504"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Como: Substituir metadados para uma propriedade de dependência
 Este exemplo mostra como substituir metadados de propriedade de dependência padrão que vem de uma classe herdada, chamando o <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> método e fornecendo metadados específicos do tipo.  
   
 ## <a name="example"></a>Exemplo  
- Definindo seu <xref:System.Windows.PropertyMetadata>, uma classe pode definir os comportamentos da propriedade de dependência, como seus padrão valor e propriedade sistema retornos de chamada. Muitas classes de propriedades de dependência já tem metadados padrão estabelecido como parte do processo de registro. Isso inclui as propriedades de dependência que fazem parte do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]. Uma classe que herda a propriedade de dependência por meio da herança de sua classe pode substituir os metadados originais para que as características da propriedade que podem ser alteradas por meio de metadados corresponderão a qualquer requisito específico de subclasse.  
+ Definindo seu <xref:System.Windows.PropertyMetadata>, uma classe pode definir os comportamentos da propriedade de dependência, como seus padrão valor e propriedade sistema retornos de chamada. Muitas classes de propriedades de dependência já tem metadados padrão estabelecido como parte do processo de registro. Isso inclui as propriedades de dependência que fazem parte do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API. Uma classe que herda a propriedade de dependência por meio da herança de sua classe pode substituir os metadados originais para que as características da propriedade que podem ser alteradas por meio de metadados corresponderão a qualquer requisito específico de subclasse.  
   
  A substituição de metadados em uma propriedade de dependência deve ser realizada antes da propriedade que está sendo colocada em uso pelo sistema de propriedades (isso é igual ao momento em que instâncias específicas de objetos que registram a propriedade são instanciadas). Chamadas para <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> deve ser executada dentro de construtores estáticos do tipo que fornece a próprio como o `forType` parâmetro de <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>. Se você tentar alterar os metadados quando existem instâncias do tipo proprietário, isso não gerará exceções, mas resultará em comportamentos inconsistentes no sistema de propriedade. Além disso, metadados só podem ser substituído uma vez por tipo. Tentativas subsequentes de substituir os metadados no mesmo tipo gerarão uma exceção.  
   

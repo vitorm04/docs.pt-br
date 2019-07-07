@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876871"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610559"
 ---
 # <a name="standard-query-operator-translation"></a>Conversão padrão de operador de consulta
 
@@ -198,7 +198,7 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não dá s
 
 ## <a name="sql-server-2000-support"></a>Suporte do SQL Server 2000
 
-As seguintes limitações do [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (em comparação com o [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]) afetam o suporte ao [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+O seguinte [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] limitações (em comparação comparadas o Microsoft SQL Server 2005) afetam [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dão suporte.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Operadores Cross Apply e Outer Apply
 
@@ -208,7 +208,7 @@ O `Cross Apply` e o `Outer Apply` são gerados para navegações de relacionamen
 
 ### <a name="text--ntext"></a>text/ntext
 
-Tipos de dados `text`  /  `ntext` não pode ser usado em determinadas operações de consulta em relação a `varchar(max)`  /  `nvarchar(max)`, que são suportados por [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].
+Tipos de dados `text`  /  `ntext` não pode ser usado em determinadas operações de consulta em relação a `varchar(max)`  /  `nvarchar(max)`, que são suportados pelo Microsoft SQL Server 2005.
 
 Nenhuma resolução está disponível para essa limitação. Especificamente, você não pode usar `Distinct()` em resultados que contêm membros que são mapeados para colunas `text` ou `ntext`.
 

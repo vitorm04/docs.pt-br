@@ -1,13 +1,13 @@
 ---
 title: Cadeias de caracteres
 description: Saiba como o F# tipo 'string' representa texto imutável, como uma sequência de caracteres Unicode.
-ms.date: 06/28/2019
-ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.date: 07/05/2019
+ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487765"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610172"
 ---
 # <a name="strings"></a>Cadeias de caracteres
 
@@ -22,14 +22,26 @@ Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O
 
 |Caractere|Sequência de escape|
 |---------|---------------|
+|Alerta|`\a`|
 |Backspace|`\b`|
+|Avanço de página|`\f`|
 |Nova linha|`\n`|
 |Retorno de carro|`\r`|
 |Tabulação|`\t`|
+|Tabulação vertical|`\v`|
 |Barra invertida|`\\`|
 |Marca de aspas|`\"`|
 |Apóstrofe|`\'`|
-|caractere Unicode|`\uXXXX` (UTF-16) ou `\U00XXXXXX` (UTF-32) (em que `X` indica um dígito hexadecimal)|
+|caractere Unicode|`\DDD` (onde `D` indica um decimal digit; o intervalo de 000 - 255; por exemplo, `\231` = "ç")|
+|caractere Unicode|`\xHH` (where `H` indicates a hexadecimal digit; range of 00 - FF; e.g. `\xE7` = "ç")|
+|caractere Unicode|`\uHHHH` (UTF-16) (where `H` indicates a hexadecimal digit; range of 0000 - FFFF;  e.g. `\u00E7` = "ç")|
+|caractere Unicode|`\U00HHHHHH` (UTF-32) (onde `H` indica um dígito hexadecimal; o intervalo de 000000 - 10FFFF;  Por exemplo, `\U0001F47D` = "👽")|
+
+> [!IMPORTANT]
+> O `\DDD` sequência de escape é a notação decimal, a notação octal não como na maioria das outras linguagens. Portanto, os dígitos `8` e `9` sejam válidas e uma sequência de `\032` representa um espaço (u+0020), enquanto esse mesmo ponto de código em notação octal seria `\040`.
+
+> [!NOTE]
+> Sendo restrita a um intervalo de 0 – 255 (0xFF), o `\DDD` e `\x` sequências de escape são efetivamente as [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) do conjunto de caracteres, desde que corresponde ao primeiro 256 pontos de código Unicode.
 
 Se precedido pelo símbolo @, o literal é uma cadeia de caracteres textual. Isso significa que as sequências de escape são ignoradas, exceto que dois caracteres de marca de aspas simples são interpretados como caracteres de uma marca de aspas simples.
 

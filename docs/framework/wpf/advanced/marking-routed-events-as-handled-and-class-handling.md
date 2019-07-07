@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598650"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610380"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcando eventos roteados como manipulados e tratamento de classes
 Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados do evento. Efetivamente, a manipulação do evento reduzirá a rota. A manipulação de classes é um conceito de programação com suporte nos eventos roteados. Um manipulador de classes tem a oportunidade de manipular um evento roteado específico no nível de uma classe com um manipulador que é invocado antes de qualquer manipulador de instâncias em uma instância da classe.  
@@ -49,7 +49,7 @@ Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Manipuladores de classe e de instância  
- Os eventos roteados consideram dois tipos diferentes de ouvintes para o evento: ouvintes de classes e ouvintes de instâncias. Ouvintes de classes existem porque os tipos chamaram uma determinada <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, em seu construtor estático ou substituíram um método virtual de manipulador de classe de uma classe base do elemento. Ouvintes de instância são instâncias/elementos de determinada classe em que um ou mais manipuladores foram anexados a esse evento roteado por uma chamada para <xref:System.Windows.UIElement.AddHandler%2A>. Existente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos roteados fazem chamadas para <xref:System.Windows.UIElement.AddHandler%2A> como parte do [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] adicionar wrapper de evento{} e remova{} implementações do evento, como também é simples [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mecanismo de anexar manipuladores de eventos por meio de uma sintaxe de atributo está habilitada. Assim, mesmo simples [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uso equivale a um <xref:System.Windows.UIElement.AddHandler%2A> chamar.  
+ Os eventos roteados consideram dois tipos diferentes de ouvintes para o evento: ouvintes de classes e ouvintes de instâncias. Ouvintes de classes existem porque os tipos chamaram uma determinada <xref:System.Windows.EventManager> API,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, em seu construtor estático ou substituíram um método virtual de manipulador de classe de uma classe base do elemento. Ouvintes de instância são instâncias/elementos de determinada classe em que um ou mais manipuladores foram anexados a esse evento roteado por uma chamada para <xref:System.Windows.UIElement.AddHandler%2A>. Existente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos roteados fazem chamadas para <xref:System.Windows.UIElement.AddHandler%2A> como parte do [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] adicionar wrapper de evento{} e remova{} implementações do evento, como também é simples [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mecanismo de anexar manipuladores de eventos por meio de uma sintaxe de atributo está habilitada. Assim, mesmo simples [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uso equivale a um <xref:System.Windows.UIElement.AddHandler%2A> chamar.  
   
  Elementos na árvore visual são verificados quanto a implementações de manipuladores registrados. Os manipuladores são potencialmente invocados em toda a rota, na ordem que é inerente ao tipo da estratégia de roteamento para esse evento roteado. Por exemplo, os eventos roteados de propagação primeiro invocarão os manipuladores anexados ao mesmo elemento que acionou o evento roteado. Em seguida, o evento roteado é “propagado” para o próximo elemento pai e assim por diante até chegar ao elemento raiz do aplicativo.  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053139"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610351"
 ---
 # <a name="wpf-architecture"></a>Arquitetura do WPF
 Este tópico fornece um tour guiado da hierarquia de classe do Windows Presentation Foundation (WPF). Ele aborda a maioria dos subsistemas principais do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve como eles interagem. Ele também detalha algumas das escolhas feitas pelos arquitetos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -62,7 +62,7 @@ Este tópico fornece um tour guiado da hierarquia de classe do Windows Presentat
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- Com um sistema definido, a próxima etapa é fazer com que pixels sejam desenhados na tela. O <xref:System.Windows.Media.Visual> classe fornece para criar uma árvore de objetos visuais, cada uma opcionalmente contendo instruções de desenho e metadados sobre como renderizar essas instruções (corte, transformação, etc.). <xref:System.Windows.Media.Visual> foi projetado para ser extremamente simples e flexível, portanto, a maioria dos recursos tem não público [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] exposição e dependem muito das funções de retorno de chamada protegidas.  
+ Com um sistema definido, a próxima etapa é fazer com que pixels sejam desenhados na tela. O <xref:System.Windows.Media.Visual> classe fornece para criar uma árvore de objetos visuais, cada uma opcionalmente contendo instruções de desenho e metadados sobre como renderizar essas instruções (corte, transformação, etc.). <xref:System.Windows.Media.Visual> foi projetado para ser extremamente simples e flexível, portanto, a maioria dos recursos não ter nenhuma exposição de API pública e dependem muito de funções de retorno de chamada protegidas.  
   
  <xref:System.Windows.Media.Visual> é realmente o ponto de entrada para o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sistema de composição. <xref:System.Windows.Media.Visual> é o ponto de conexão entre esses dois subsistemas, gerenciados [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] e o milcore não gerenciado.  
   
@@ -112,7 +112,7 @@ Este tópico fornece um tour guiado da hierarquia de classe do Windows Presentat
   
  A política primária introduzida pelo <xref:System.Windows.FrameworkElement> é em torno do layout do aplicativo. <xref:System.Windows.FrameworkElement> compila o contrato de layout básico introduzido por <xref:System.Windows.UIElement> e adiciona a noção de um "slot", o que torna mais fácil para autores de layout ter um conjunto consistente de semântica de layout de orientada a propriedade de layout. Propriedades como <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A> (para mencionar algumas) oferecem todos os componentes derivados de <xref:System.Windows.FrameworkElement> comportamento consistente dentro de contêineres de layout.  
   
- <xref:System.Windows.FrameworkElement> também fornece uma mais fácil [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] exposição a muitos recursos encontrados nas camadas principais de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Por exemplo, <xref:System.Windows.FrameworkElement> fornece acesso direto a animação através de <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> método. Um <xref:System.Windows.Media.Animation.Storyboard> fornece uma maneira de script para várias animações em relação a um conjunto de propriedades.  
+ <xref:System.Windows.FrameworkElement> também fornece a exposição de API mais fácil a muitos recursos encontrados nas camadas principais de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Por exemplo, <xref:System.Windows.FrameworkElement> fornece acesso direto a animação através de <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> método. Um <xref:System.Windows.Media.Animation.Storyboard> fornece uma maneira de script para várias animações em relação a um conjunto de propriedades.  
   
  As duas coisas mais importantes que <xref:System.Windows.FrameworkElement> introduz são a associação de dados e estilos.  
   

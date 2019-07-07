@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 01122991e99e41259c3b83a38eba002734d749ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a47f5a93cb161c9a87df25403cc86247619cd81
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655519"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610526"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-behind e XAML no WPF
 <a name="introduction"></a> Code-behind é um termo usado para descrever o código unido a objetos definidos com marcação quando uma página [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é compilada com marcação. Este tópico descreve os requisitos para code-behind, bem como um mecanismo de código embutido alternativo para o código em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "64655519"
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>Limitações de código embutido  
- Considere evitar ou limitar o uso de código embutido. Em termos de arquitetura e filosofia de código, manter uma separação entre a marcação e o code-behind mantém as funções de designer e de desenvolvedor muito mais distintas. Em um nível mais técnico, o código que você escreve para o código embutido pode ser complicado de escrever, porque você está sempre escrevendo na classe parcial [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] gerada e só pode usar os mapeamentos de namespace de XML padrão. Uma vez que não é possível adicionar instruções `using`, você deverá qualificar totalmente muitas das chamadas [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] realizadas. Os mapeamentos padrão de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluem a maioria dos namespaces [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] que estão presentes nos assemblies [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], mas não todos; você terá que qualificar completamente as chamadas para tipos e membros contidos dentro de outros namespaces CLR. Você também não poderá definir nada além da classe parcial no código embutido e todas as entidades de código de usuário que você referencia devem existir como um membro ou uma variável na classe parcial gerada. Outros recursos específicos da linguagem de programação, como as macros ou `#ifdef` contra as variáveis globais ou de build, também não estão disponíveis. Para obter mais informações, consulte [x:Code Intrinsic XAML Type](../../xaml-services/x-code-intrinsic-xaml-type.md) (Tipo intrínseco x:Code (XAML)).  
+ Considere evitar ou limitar o uso de código embutido. Em termos de arquitetura e filosofia de código, manter uma separação entre a marcação e o code-behind mantém as funções de designer e de desenvolvedor muito mais distintas. Em um nível mais técnico, o código que você escreve para o código embutido pode ser complicado de escrever, porque você está sempre escrevendo na classe parcial [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] gerada e só pode usar os mapeamentos de namespace de XML padrão. Porque você não pode adicionar `using` instruções, você deverá qualificar totalmente muitas das chamadas à API que você fizer. Os mapeamentos padrão de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluem a maioria dos namespaces [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] que estão presentes nos assemblies [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], mas não todos; você terá que qualificar completamente as chamadas para tipos e membros contidos dentro de outros namespaces CLR. Você também não poderá definir nada além da classe parcial no código embutido e todas as entidades de código de usuário que você referencia devem existir como um membro ou uma variável na classe parcial gerada. Outros recursos específicos da linguagem de programação, como as macros ou `#ifdef` contra as variáveis globais ou de build, também não estão disponíveis. Para obter mais informações, consulte [x:Code Intrinsic XAML Type](../../xaml-services/x-code-intrinsic-xaml-type.md) (Tipo intrínseco x:Code (XAML)).  
   
 ## <a name="see-also"></a>Consulte também
 

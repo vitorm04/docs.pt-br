@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 326900087f755b6c92d9ebb77dad36e5880fd2c0
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063890"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610432"
 ---
 # <a name="routed-events-overview"></a>Visão geral de eventos roteados
 Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. O tópico define a terminologia de eventos roteados, descreve como eventos roteados são roteados por uma árvore de elementos, resume como manipular eventos roteados e apresenta como criar seus próprios eventos roteados personalizados.
@@ -98,7 +98,7 @@ Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_wincli
   
  Os eventos roteados se tornam realmente poderosos quando você usa qualquer um dos cenários sugeridos: definição de manipuladores comuns em uma raiz comum, composição de seu próprio controle ou definição de sua própria classe de controle personalizado.  
   
- Ouvintes de eventos roteados e origens de eventos roteados não precisam compartilhar um evento em comum em sua hierarquia. Qualquer <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> pode ser um ouvinte de eventos para qualquer evento roteado. Portanto, você pode usar o conjunto completo de eventos roteados disponíveis em cada [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] definido como uma "interface" conceitual na qual diferentes elementos no aplicativo podem trocar informações de eventos. Esse conceito de "interface" para eventos roteados é especialmente aplicável para eventos de entrada.  
+ Ouvintes de eventos roteados e origens de eventos roteados não precisam compartilhar um evento em comum em sua hierarquia. Qualquer <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> pode ser um ouvinte de eventos para qualquer evento roteado. Portanto, você pode usar o conjunto completo de eventos roteados disponíveis em toda a API de trabalho definido como uma "interface" conceitual na qual diferentes elementos do aplicativo podem trocar informações de evento. Esse conceito de "interface" para eventos roteados é especialmente aplicável para eventos de entrada.  
   
  Eventos roteados também podem ser usados para se comunicar por meio da árvore de elementos, porque os dados do evento para o evento são perpetuados para cada elemento na rota. Um elemento poderia modificar algo nos dados do evento e essa alteração estaria disponível para o próximo elemento da rota.  
   
