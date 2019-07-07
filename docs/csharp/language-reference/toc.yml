@@ -225,8 +225,6 @@
               href: keywords/explicit.md
             - name: implicit
               href: keywords/implicit.md
-            - name: operator
-              href: keywords/operator.md
         - name: Palavras-chave de acesso
           items:
             - name: base
@@ -354,6 +352,8 @@
           href: operators/stackalloc.md
         - name: operadores true e false
           href: operators/true-false-operators.md
+        - name: Sobrecarga de operador
+          href: operators/operator-overloading.md
     - name: 'Caracteres especiais de C#'
       items:
         - name: Visão geral
