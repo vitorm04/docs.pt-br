@@ -4,16 +4,16 @@ description: Como usar o Construtor de Modelo do ML.NET para treinar automaticam
 author: natke
 ms.date: 06/26/2019
 ms.custom: overview
-ms.openlocfilehash: 6f5bbe3c389e3ca42550a48ef3e6edbc963ac2e9
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 6049db79753986544de18faebfd047aa190af153
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410584"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539800"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>O que é o Construtor de Modelo e como ele funciona?
 
-O Construtor de Modelo do ML.NET é uma extensão gráfica do Visual Studio fácil de entender para compilar, treinar e implantar modelos de aprendizado de máquina personalizados. 
+O Construtor de Modelo do ML.NET é uma extensão gráfica do Visual Studio fácil de entender para compilar, treinar e implantar modelos de aprendizado de máquina personalizados.
 
 O Construtor de Modelo usa o aprendizado de máquina automatizado (AutoML) para explorar os algoritmos diferentes de aprendizado de máquina e as configurações para ajudar você a encontrar o que melhor atende ao seu cenário.
 
@@ -52,7 +52,7 @@ A classificação binária é usada para classificar dados em duas classes (sim/
 - Essa transação de cartão de crédito é fraudulenta? (detecção de fraude)
 
 Se seu cenário exigir a classificação em duas categorias, você poderá usar esse modelo com seu próprio conjunto de dados.
- 
+
 #### <a name="issue-classification-multiclass-classification"></a>Classificação de problemas (classificação multiclasse)
 
 A classificação de problema pode ser usada para categorizar os problemas de comentários (por exemplo, sobre o GitHub) do cliente usando o título do problema e a descrição. É um exemplo da tarefa de classificação multiclasse.
@@ -142,10 +142,10 @@ Você pode oferecer um tempo de treinamento. Em geral, treinamento por mais temp
 Tamanho do conjunto de dados  | Tipo de conjunto de dados       | Média Hora de treinar
 ------------- | ------------------ | --------------
 0 a 10 Mb     | Numérico e texto   | 10 s
-10 a 100 Mb   | Numérico e texto   | 10 min 
-100 a 500 Mb  | Numérico e texto   | 30 min 
-500 a 1 Gb    | Numérico e texto   | 60 min 
-Mais de 1 Gb         | Numérico e texto   | Mais de 3 horas 
+10 a 100 Mb   | Numérico e texto   | 10 min
+100 a 500 Mb  | Numérico e texto   | 30 min
+500 a 1 Gb    | Numérico e texto   | 60 min
+Mais de 1 Gb         | Numérico e texto   | Mais de 3 horas
 
 O tempo exato para treinar também depende:
 
@@ -160,13 +160,13 @@ O Construtor de Modelo foi testado para escalar com um conjunto de dados de 1 TB
 
 A avaliação é o processo de usar o modelo treinado para fazer previsões com novos dados de teste e, em seguida, medir quão boas são as previsões.
 
-O Construtor de Modelo divide os dados de treinamento em um conjunto de treinamento e um conjunto de teste. Os dados de treinamento (80%) são usados para treinar seu modelo e os dados de teste (20%) são retidos para avaliar seu modelo.  As métricas usadas para avaliação dependem da tarefa de ML. Para obter mais informações, consulte [métricas de avaliação de modelo](resources/metrics.md).  
+O Construtor de Modelo divide os dados de treinamento em um conjunto de treinamento e um conjunto de teste. Os dados de treinamento (80%) são usados para treinar seu modelo e os dados de teste (20%) são retidos para avaliar seu modelo.  As métricas usadas para avaliação dependem da tarefa de ML. Para obter mais informações, consulte [métricas de avaliação de modelo](resources/metrics.md).
 
 ### <a name="sentiment-analysis-binary-classification"></a>Análise de sentimento (classificação binária)
 
 A métrica padrão para problemas de classificação binária é a **precisão**. A precisão define a proporção de previsões corretas feitas pelo seu modelo sobre o conjunto de dados de teste. Quanto **mais próximo de 100, melhor**.
 
-Outras métricas relatadas, como AUC (Área sob a curva), que mede a taxa positiva verdadeira versus a taxa de falsos positivos, devem ser maiores que 0,50 para que os modelos sejam aceitáveis. 
+Outras métricas relatadas, como AUC (Área sob a curva), que mede a taxa positiva verdadeira versus a taxa de falsos positivos, devem ser maiores que 0,50 para que os modelos sejam aceitáveis.
 
 Métricas adicionais, como a pontuação F1, podem ser usadas para controlar o equilíbrio entre a precisão (proporção de previsões corretas e as previsões totais dessa classe) e o recall (proporção de previsões corretas para o total de membros reais dessa classe).
 
@@ -176,15 +176,14 @@ A métrica padrão para problemas de classificação multiclasse é a **micropre
 
 Para problemas em que os dados são categorizados em várias classes, há dois tipos de precisão:
 
-- Microprecisão: a fração de previsões corretas em todas as instâncias. No cenário de problema de classificação, a microprecisão é a proporção dos problemas de entrada que são atribuídos à categoria correta. 
+- Microprecisão: a fração de previsões corretas em todas as instâncias. No cenário de problema de classificação, a microprecisão é a proporção dos problemas de entrada que são atribuídos à categoria correta.
 - Precisão macro é a precisão média no nível de classe. No cenário de classificação de problema, a precisão é medida para cada categoria, então as precisões de categoria estão na média. Para esta métrica, todas as classes recebem o mesmo peso. Para conjuntos de dados perfeitamente balanceados (onde há um número igual de exemplos de cada categoria), a microprecisão e a macroprecisão são iguais.
-
 
 ### <a name="price-prediction-regression"></a>Previsão de preços (regressão)
 
 A métrica padrão para problemas de regressão é **RSquared**. 1 é o melhor valor possível. Quanto mais próximo o RSquared estiver de 1, melhor será seu modelo.
 
-Outras métricas relatadas, como perda absoluta, perda quadrática e perda de RMS, podem ser usadas para entender seu modelo e compará-lo com outros modelos de regressão. 
+Outras métricas relatadas, como perda absoluta, perda quadrática e perda de RMS, podem ser usadas para entender seu modelo e compará-lo com outros modelos de regressão.
 
 ## <a name="improve"></a>Aprimorar
 
@@ -192,7 +191,7 @@ Se a sua pontuação de desempenho do modelo não for tão boa quanto deseja, vo
 
 * Treinar por um período maior de tempo. Com mais tempo, usar o mecanismo de aprendizado de máquina automatizado para experimentar mais algoritmos e configurações.
 
-* Adicionar mais dados. Às vezes, a quantidade de dados não é suficiente para treinar um modelo de machine learning de alta qualidade. 
+* Adicionar mais dados. Às vezes, a quantidade de dados não é suficiente para treinar um modelo de machine learning de alta qualidade.
 
 * Balancear seus dados. Para tarefas de classificação, certifique-se de que o conjunto de treinamento esteja equilibrado nas categorias. Por exemplo, se você tiver quatro classes para 100 exemplos de treinamento e as duas primeiras classes (tag1 e tag2) forem usadas para 90 registros, mas as outras duas (tag3 e tag4) forem usadas apenas nos 10 registros restantes, a falta de dados balanceados poderá fazer com que seu modelo tenha dificuldades para prever corretamente o tag3 ou o tag4.
 
