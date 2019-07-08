@@ -19,16 +19,16 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 5b6668e20e4d69b7d6bdf3e6283574f1b974ef54
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025214"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423963"
 ---
 # <a name="comparison-operators-c-reference"></a>Operadores de comparação (referência do C#)
 
-Os operadores de comparação [`<` (menor que)](#less-than-operator-), [`>` (maior que)](#greater-than-operator-), [`<=` (menor ou igual)](#less-than-or-equal-operator-) e [`>=` ( maior que ou igual)](#greater-than-or-equal-operator-), também conhecida como relacionais, comparam seus operandos. Esses operadores dão suporte a todos os tipos numéricos [integrais](../keywords/integral-types-table.md) e de [ponto flutuante](../keywords/floating-point-types-table.md).
+Os operadores de comparação [`<` (menor que)](#less-than-operator-), [`>` (maior que)](#greater-than-operator-), [`<=` (menor ou igual)](#less-than-or-equal-operator-) e [`>=` ( maior que ou igual)](#greater-than-or-equal-operator-), também conhecida como relacionais, comparam seus operandos. Esses operadores dão suporte a todos os tipos numéricos [integrais](../builtin-types/integral-numeric-types.md) e de [ponto flutuante](../keywords/floating-point-types-table.md).
 
 > [!NOTE]
 > Para os operadores `==`, `<`, `>`, `<=` e `>=`, se nenhum dos operandos for um número (<xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>), o resultado da operação será `false`. Isso significa que o valor `NaN` não é superior, inferior nem igual a nenhum outro valor `double` (ou `float`), incluindo `NaN`. Para obter mais informações e exemplos, consulte o artigo de referência <xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>.
@@ -39,25 +39,25 @@ Os operadores [`==` e `!=`](equality-operators.md) verificam se seus operandos s
 
 ## <a name="less-than-operator-"></a>Operador menor que \<
 
-O operador `<` retornará `true` se o primeiro operando for menor do que o segundo; caso contrário, `false`:
+O operador `<` retornará `true` se o operando à esquerda for menor do que o operando à direita, caso contrário, `false`:
 
 [!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>Operador maior que >
 
-O operador `>` retornará `true` se o primeiro operando for maior do que o segundo; caso contrário, `false`:
+O operador `>` retornará `true` se o operando à esquerda for maior do que o operando à direita, caso contrário, `false`:
 
 [!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>Operador menor ou igual \<=
 
-O operador `<=` retornará `true` se o primeiro operando for menor ou igual ao segundo; caso contrário, `false`:
+O operador `<=` retornará `true` se o operando à esquerda for menor ou igual ao operando à direita, caso contrário, `false`:
 
 [!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>Operador maior ou igual >=
 
-O operador `>=` retornará `true` se o primeiro operando for maior ou igual ao segundo; caso contrário, `false`:
+O operador `>=` retornará `true` se o operando à esquerda for maior ou igual ao operando à direita, caso contrário, `false`:
 
 [!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 
