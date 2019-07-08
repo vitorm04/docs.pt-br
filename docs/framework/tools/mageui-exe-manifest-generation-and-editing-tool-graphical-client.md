@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 029e4983ef270bb5272ad0bf541ee34febd9399c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3f303583b1cff785ab0020e616fee58ef02a1c58
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222335"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487040"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)
 
@@ -26,7 +26,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ## <a name="uielement-list"></a>Lista UIElement  
  A tabela a seguir lista os itens de menu e da barra de ferramentas disponíveis.  
   
-|Comando|Menu|Atalho|Descrição|  
+|Comando|Menu|Atalho|DESCRIÇÃO|  
 |-------------|----------|--------------|-----------------|  
 |**Manifesto do Aplicativo**|**Arquivo, Novo**||Cria um novo manifesto de aplicativo.|  
 |**Manifesto de Implantação**|**Arquivo, Novo**||Cria um novo manifesto de implantação.|  
@@ -47,10 +47,10 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ## <a name="preferences-dialog-box"></a>Caixa de Diálogo Preferências  
  A caixa de diálogo **Preferências** contém os elementos a seguir.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Assinar ao salvar**|Solicita a assinatura de um arquivo sempre que você salva as modificações.|  
-|**Usar certificado de assinatura padrão**|Usa a chave inserida na caixa de texto **Arquivo de certificado** para assinar todos os arquivos. Isso elimina o prompt de assinatura que normalmente é exibido quando você salva um arquivo e **Assinar ao Salvar** é selecionado. Use o botão de reticências (**…**) próximo à caixa de texto **Arquivo de certificado** para selecionar um arquivo de chave.|  
+|**Usar certificado de assinatura padrão**|Usa a chave inserida na caixa de texto **Arquivo de certificado** para assinar todos os arquivos. Isso elimina o prompt de assinatura que normalmente é exibido quando você salva um arquivo e **Assinar ao Salvar** é selecionado. Use o botão de reticências ( **…** ) próximo à caixa de texto **Arquivo de certificado** para selecionar um arquivo de chave.|  
 |Algoritmo de resumo|Especifica o algoritmo com o qual gerar resumos de dependência. O valor deve ser "sha256RSA" ou "sha1RSA". Usa SHA1 como o padrão. Usado em manifestos de aplicativo e implantação. Se o usuário fornecer um certificado ao salvar o manifesto, ele usará os algoritmos no certificado para produzir resumos de dependência.|  
   
 ## <a name="signing-options-dialog-box"></a>Caixa de Diálogo Opções de Assinatura  
@@ -58,12 +58,12 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
  Essa caixa de diálogo contém os elementos a seguir.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Assinar com arquivo de certificado**|Assina o manifesto com um certificado digital armazenado no sistema de arquivos.|  
 |**Arquivo**|Fornece uma área para digitar o caminho para o arquivo .pfx que representa o certificado.|  
 |**...**|Abre uma caixa de diálogo **Escolher Arquivo** para selecionar um arquivo .pfx existente.|  
-|**Novo**|Gera um novo .pfx que não é verificável por meio de uma CA (Autoridade de Certificação). Para obter mais informações sobre os tipos de certificados usados na assinatura de implantações de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], consulte [Visão geral sobre implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview).|  
+|**Novo**|Gera um novo .pfx que não é verificável por meio de uma CA (Autoridade de Certificação). Para obter mais informações sobre os tipos de certificados usados na assinatura de implantações ClickOnce, consulte [Visão geral sobre implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Senha**|Fornece uma área para digitar a senha usada na assinatura desse certificado. Se não for aplicável, poderá ser deixado em branco.|  
 |**Assinar com certificado armazenado**|Exibe uma lista selecionável de certificados digitais armazenados no repositório de certificados do computador.|  
 |**URI de Carimbo de Data/Hora**|Exibe a URL (Uniform Resource Identifier) de um serviço de carimbo de data/hora digital. O carimbo de data/hora dos manifestos evita que você precise assinar novamente os manifestos, caso o certificado digital expire antes de implantar a próxima versão do aplicativo. Para obter mais informações, consulte [Membros do programa de certificado raiz do Windows](https://go.microsoft.com/fwlink/?LinkId=159000) e [ClickOnce e Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
@@ -77,7 +77,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
  A guia **Manifesto do Aplicativo** contém as seguintes guias.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Nome**|Especifica informações de identificação sobre essa implantação.|  
 |**Descrição**|Especifica o publicador, o produto e as informações de suporte.|  
@@ -88,7 +88,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ### <a name="name-tab"></a>Guia Nome  
  A guia **Nome** é exibida quando você primeiro cria ou abre um manifesto do aplicativo. Ela identifica exclusivamente a implantação e, opcionalmente, especifica uma plataforma de destino válida.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Nome**|Necessário. O nome do manifesto do aplicativo. Normalmente o mesmo que o nome do arquivo.|  
 |**Versão**|Necessário. O número de versão da implantação no formato *N.N.N.N*. Somente o primeiro número de build principal é necessário. Por exemplo, para a versão 1.0 de um aplicativo, os valores válidos incluiriam `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
@@ -99,7 +99,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ### <a name="description-tab"></a>Guia Descrição  
  Essas informações geralmente são fornecidas no manifesto de implantação. Esses campos poderão ser modificados apenas se a caixa de seleção **Use Application Manifest Trust Information (Usar Informações de Confiança do Manifesto do Aplicativo)** estiver marcada na guia **Opções do Aplicativo**.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Publicador**|O nome da pessoa ou organização responsável pelo aplicativo. Esse valor é usado como o nome da pasta do menu Iniciar.|  
 |**Produto**|O nome completo do produto. Se você selecionou **Instalar Localmente** para o elemento **Tipo de Aplicativo** na guia **Opções de Implantação** do manifesto de implementação, esse nome será o que aparece no link do menu **Iniciar** e em **Adicionar ou Remover Programas** para esse aplicativo.|  
@@ -107,16 +107,16 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
 ### <a name="application-options-tab"></a>Guia Opções do Aplicativo  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Aplicativo de Navegador do Windows Presentation Foundation**|Especifica se este é um aplicativo WPF que é executado no navegador como um XBAP (aplicativo de navegador XAML).|  
 |**Use Application Manifest Trust Information (Usar Informações de Confiança do Manifesto do Aplicativo)**|Especifica se esse manifesto contém informações de confiança.|  
   
 ### <a name="files-tab"></a>Guia Arquivos  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
-|**Diretório de aplicativo**|O diretório no qual residem os arquivos do aplicativo. Use o botão de reticências (**...**) para selecionar o diretório.|  
+|**Diretório de aplicativo**|O diretório no qual residem os arquivos do aplicativo. Use o botão de reticências ( **...** ) para selecionar o diretório.|  
 |**Popular**|Adiciona todos os arquivos no diretório e subdiretórios do aplicativo ao manifesto do aplicativo. Se MageUI.exe localizar um único arquivo executável no diretório, ele o marcará automaticamente como o Ponto de Entrada, que é o arquivo executado primeiro quando o aplicativo ClickOnce é inicializado no cliente.|  
 |**Arquivos de Aplicativo**|Lista todos os arquivos no aplicativo. Cada arquivo tem três atributos editáveis, discutidos abaixo.|  
 |**Tipo de Arquivo**|O Tipo de Arquivo pode ser um dos quatro valores:<br /><br /> – Nenhum.<br />– Ponto de Entrada. O executável principal do aplicativo. Apenas um arquivo executável pode ser marcado como o ponto de entrada.<br />– Arquivo de Dados. Um arquivo, como um arquivo XML, que fornece dados para o aplicativo.<br />– Arquivo de Ícone. Um ícone do aplicativo, como aparece na área de trabalho ou no canto da janela do aplicativo.|  
@@ -126,7 +126,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ### <a name="permissions-required-tab"></a>Guia Permissões Necessárias  
  Use a guia **Permissões Necessárias** se precisar conceder ao aplicativo mais acesso ao computador local do que é concedido por padrão. Para obter mais informações, consulte [Securing ClickOnce Applications](/visualstudio/deployment/securing-clickonce-applications) (Protegendo aplicativos ClickOnce).  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Permission set type (Tipo do conjunto de permissões)**|O conjunto de permissões mínimas exigido por esse aplicativo para ser executado no cliente. Para obter uma descrição desses conjuntos de permissões e quais permissões eles exigem ou não, confira [Conjuntos de permissões nomeadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
 |**Detalhes**|O XML criado para o manifesto do aplicativo para representar o conjunto de permissões. A menos que tenha um bom entendimento do formato XML do manifesto do aplicativo, você não deve editar esse XML manualmente. Para obter mais informações, consulte [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest) (Manifesto do aplicativo ClickOnce).|  
@@ -134,18 +134,18 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ### <a name="deployment-manifest-tab"></a>Guia Manifesto de Implantação  
  A guia **Manifesto de Implantação** contém as seguintes guias.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Nome**|Especifica informações de identificação sobre essa implantação.|  
 |**Descrição**|Especifica o publicador, o produto e as informações de suporte.|  
 |**Opções de Implantação**|Especifica informações adicionais sobre a implantação, como o tipo de aplicativo e o local de início.|  
-|**Opções de Atualização**|Especifica com que frequência [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deve verificar se há atualizações de aplicativo.|  
+|**Opções de Atualização**|Especifica com que frequência o ClickOnce deve verificar se há atualizações de aplicativo.|  
 |**Referência do Aplicativo**|Especifica o manifesto do aplicativo para essa implantação.|  
   
 ### <a name="name-tab"></a>Guia Nome  
  A guia **Nome** é exibida quando você primeiro cria ou abre um manifesto de implantação. Ela identifica exclusivamente a implantação e, opcionalmente, especifica uma plataforma de destino válida.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Nome**|Necessário. O nome do manifesto de implantação. Normalmente o mesmo que o nome do arquivo.|  
 |**Versão**|Necessário. O número de versão da implantação no formato *N.N.N.N*. Somente o primeiro número de build principal é necessário. Por exemplo, para a versão 1.0 de um aplicativo, os valores válidos incluiriam `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
@@ -155,7 +155,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
 ### <a name="description-tab"></a>Guia Descrição  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Publicador**|Necessário. O nome da pessoa ou organização responsável pelo aplicativo. Esse valor é usado como o nome da pasta do menu Iniciar.|  
 |**Produto**|Necessário. O nome completo do produto. Se você selecionou **Instalar Localmente** para o elemento **Tipo de Aplicativo** na guia **Opções de Implantação**, esse nome será o que aparece no link do menu **Iniciar** e em **Adicionar ou Remover Programas** para esse aplicativo.|  
@@ -163,30 +163,30 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
 ### <a name="deployment-options-tab"></a>Guia Opções de Implantação  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Tipo de Aplicativo**|Opcional. Especifica se este aplicativo se instala no computador cliente (**Instalar Localmente**), é executado online (**Somente Online**) ou é um aplicativo do WPF que é executado no navegador (**Aplicativo de Navegador WPF**). O padrão é **Instalar Localmente**.|  
 |**Local Inicial**|Opcional. A URL da qual o aplicativo realmente deve ser iniciado. Útil ao implantar um aplicativo de um CD que deve se atualizar da Web.|  
-|**Include Start Location (ProviderURL) in the manifest (Incluir o Local Inicial (ProviderURL) no manifesto)**|Opcional. Especifica a URL que o [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] examinará em busca de atualizações de aplicativo.|  
-|**Automatically run application after installing (Executar o aplicativo automaticamente após a instalação)**|Necessário. Especifica que o aplicativo [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deve ser executado imediatamente após a instalação inicial de uma URL. O padrão é a caixa de seleção estar marcada.|  
-|**Permitir que parâmetros de URL sejam passados para o aplicativo**|Necessário. Permite a transferência de dados do parâmetro para o aplicativo [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] por meio de uma cadeia de caracteres de consulta acrescentada à URL do manifesto de implantação. O padrão é a caixa de seleção estar desmarcada.|  
+|**Include Start Location (ProviderURL) in the manifest (Incluir o Local Inicial (ProviderURL) no manifesto)**|Opcional. Especifica a URL que o ClickOnce examinará em busca de atualizações de aplicativo.|  
+|**Automatically run application after installing (Executar o aplicativo automaticamente após a instalação)**|Necessário. Especifica que o aplicativo ClickOnce deve ser executado imediatamente após a instalação inicial de uma URL. O padrão é a caixa de seleção estar marcada.|  
+|**Permitir que parâmetros de URL sejam passados para o aplicativo**|Necessário. Permite a transferência de dados do parâmetro para o aplicativo ClickOnce por meio de uma cadeia de caracteres de consulta acrescentada à URL do manifesto de implantação. O padrão é a caixa de seleção estar desmarcada.|  
 |**Usar a extensão de arquivo .deploy**|Necessário. Quando selecionada, todos os arquivos no manifesto do aplicativo devem ter a extensão .deploy. O padrão é a caixa de seleção estar desmarcada.|  
   
 ### <a name="update-options-tab"></a>Guia Opções de Atualização  
  A guia **Opções de Atualização** contém as opções mencionadas aqui apenas quando a caixa de seleção **Tipo de Aplicativo** na guia **Nome** está definida como **Instalar Localmente**.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
-|**This application should check for updates (Este aplicativo deve procurar atualizações)**|Especifica se [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deve verificar se há atualizações de aplicativo. Se essa caixa de seleção não estiver selecionada, o aplicativo não verificará se há atualizações, a menos que você o atualize programaticamente usando as APIs no namespace <xref:System.Deployment.Application>.|  
+|**This application should check for updates (Este aplicativo deve procurar atualizações)**|Especifica se o ClickOnce deve verificar se há atualizações de aplicativo. Se essa caixa de seleção não estiver selecionada, o aplicativo não verificará se há atualizações, a menos que você o atualize programaticamente usando as APIs no namespace <xref:System.Deployment.Application>.|  
 |**Escolha quando o aplicativo deve verificar se há atualizações**|Fornece duas opções para verificações de atualização:<br /><br /> -   **Antes do aplicativo ser inicializado**. A verificação de atualização é executada antes da execução do aplicativo.<br />-   **Depois de o aplicativo ser inicializado**. A verificação de atualização começa quando o formulário principal do aplicativo é inicializado e será executada na próxima vez que o aplicativo for iniciado.|  
-|**Update check frequency (Frequência de verificação de atualização)**|Determina a frequência com que [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deve verificar se há atualizações:<br /><br /> -   **Verificar toda vez que o aplicativo for executado**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] executará uma verificação de atualização sempre que o usuário abrir o aplicativo.<br />-   **Verifique cada**: selecione um intervalo de tempo e uma unidade (horas, dias ou semanas) que precisam ser percorridos antes da verificação de atualizações.|  
+|**Update check frequency (Frequência de verificação de atualização)**|Determina a frequência com que o ClickOnce deve verificar se há atualizações:<br /><br /> -   **Verificar toda vez que o aplicativo for executado**. O ClickOnce executará uma verificação de atualização sempre que o usuário abrir o aplicativo.<br />-   **Verifique cada**: selecione um intervalo de tempo e uma unidade (horas, dias ou semanas) que precisam ser percorridos antes da verificação de atualizações.|  
 |**Especifique a versão mínima necessária para este aplicativo**|Opcional. Especifica que uma versão específica do seu aplicativo é uma instalação obrigatória, impedindo que os usuários trabalhem com uma versão anterior.|  
 |**Versão**|Necessário se a caixa de seleção **Especifique a versão mínima necessária para este aplicativo** estiver marcada. O número de versão fornecido deve estar no formato *N.N.N.N*. Somente o primeiro número de build principal é necessário. Por exemplo, para a versão 1.0 de um aplicativo, os valores válidos incluiriam `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
   
 ### <a name="application-reference-tab"></a>Guia Referência do Aplicativo  
  A guia **Referência do Aplicativo** contém os mesmos campos que a guia **Nome** descrita anteriormente neste tópico. A única exceção é o campo a seguir.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da Interface do Usuário|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Select Manifest (Selecionar Manifesto)**|Permite que você escolha o manifesto do aplicativo. Todos os outros campos nesta página serão populados quando você escolher um manifesto do aplicativo.|  
   

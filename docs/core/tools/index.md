@@ -3,12 +3,12 @@ title: Ferramentas da CLI (Interface de Linha de Comando) do .NET Core
 description: Uma visão geral das ferramentas e recursos da CLI (Interface de linha de comando) do .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647418"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569524"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Ferramentas da CLI (Interface de linha de comando) do .NET Core
 
@@ -99,7 +99,7 @@ A CLI adota um modelo de extensibilidade que permite especificar ferramentas adi
 
 ## <a name="command-structure"></a>Estrutura de comando
 
-A estrutura de comando CLI consiste do [driver ("dotnet")](#driver), [do comando (ou "verbo")](#command-verb)e possivelmente de [opções](#options) e [argumentos](#arguments) de comando. É possível ver esse padrão na maioria das operações de CLI, como ao criar um novo aplicativo de console e executá-lo a partir da linha de comando, como mostram os comandos a seguir quando executados a partir de um diretório chamado *my_app*:
+A estrutura de comando CLI consiste no [driver ("dotnet")](#driver), [do comando](#command) e possivelmente de [opções](#options) e [argumentos](#arguments) de comando. É possível ver esse padrão na maioria das operações de CLI, como ao criar um novo aplicativo de console e executá-lo a partir da linha de comando, como mostram os comandos a seguir quando executados a partir de um diretório chamado *my_app*:
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -134,9 +134,9 @@ Quando você fornece um comando para o driver, `dotnet.exe` inicia o processo de
 
 Primeiro, o driver determina a versão do SDK a ser usada. Se não houver uma ['global.json'](global-json.md), a versão mais recente do SDK disponível será usada. Isso pode ser uma versão prévia ou estável, dependendo do que há de mais recente no computador.  Depois que a versão do SDK é determinada, ela executa o comando.
 
-### <a name="command-verb"></a>Comando ("verbo")
+### <a name="command"></a>Comando
 
-O comando (ou "verbo") é simplesmente um comando que executa uma ação. Por exemplo, `dotnet build` compila seu código. `dotnet publish` publica o código. Os comandos são implementados como um aplicativo de console usando uma convenção `dotnet {verb}`.
+O comando executa uma ação. Por exemplo, `dotnet build` compila código. `dotnet publish` publica o código. Os comandos são implementados como um aplicativo de console usando uma convenção `dotnet {command}`.
 
 ### <a name="arguments"></a>Arguments
 
@@ -148,7 +148,7 @@ As opções que você passa na linha de comando são aquelas do comando invocado
 
 ## <a name="migration-from-projectjson"></a>Migração do project.json
 
-Se você tiver usado as ferramentas da Visualização 2 para produzir projetos baseados em *project.json*, veja o tópico [dotnet migrate](dotnet-migrate.md) para saber mais sobre como migrar seu projeto para MSBuild/*.csproj* para uso com as ferramentas de versão. Para projetos do .NET Core criados antes do lançamento das ferramentas da Versão prévia 2, siga as orientações descritas em [Migrando do DNX para a CLI do .NET Core (project.json)](../migration/from-dnx.md) para atualizar o projeto manualmente e, depois, use `dotnet migrate` ou atualize os projetos diretamente.
+Se você tiver usado as ferramentas da Visualização 2 para produzir projetos baseados em *project.json*, veja o tópico [dotnet migrate](dotnet-migrate.md) para saber mais sobre como migrar seu projeto para MSBuild/ *.csproj* para uso com as ferramentas de versão. Para projetos do .NET Core criados antes do lançamento das ferramentas da Versão prévia 2, siga as orientações descritas em [Migrando do DNX para a CLI do .NET Core (project.json)](../migration/from-dnx.md) para atualizar o projeto manualmente e, depois, use `dotnet migrate` ou atualize os projetos diretamente.
 
 ## <a name="see-also"></a>Consulte também
 

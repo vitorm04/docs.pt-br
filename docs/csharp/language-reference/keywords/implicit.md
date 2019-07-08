@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: d3e1cb9d6fb37617c6e2aa7070b006c594d39762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00fe1a02b52ef2ddc393bc7424efa73fc4059a9c
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661705"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610117"
 ---
 # <a name="implicit-c-reference"></a>implicit (Referência de C#)
 
@@ -35,5 +35,5 @@ Com a eliminação de conversões desnecessárias, as conversões implícitas po
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [explicit](explicit.md)
-- [operator (Referência de C#)](operator.md)
+- [Sobrecarga de operador](../operators/operator-overloading.md)
 - [Como: implementar conversões definidas pelo usuário entre structs](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

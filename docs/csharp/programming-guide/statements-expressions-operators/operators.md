@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 60e7f7c25b525c6db856731bd16c1c0e60efe6d6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 551d4cd8bf26a1c1caf3cbf611d9f338ae2581be
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422932"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609499"
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guia de Programação em C#)
 
@@ -80,7 +80,7 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>Sobrecarga de operador
 
-Você pode define o comportamento de determinados operadores para classes e structs personalizados. Esse processo é chamado *sobrecarga de operador*. Para obter mais informações, veja [Operadores sobrecarregáveis](overloadable-operators.md) e o artigo de palavra-chave [operador](../../language-reference/keywords/operator.md).
+Você pode define o comportamento de determinados operadores para classes e structs personalizados. Esse processo é chamado *sobrecarga de operador*. Para obter mais informações, consulte [Sobrecarga de operador](../../language-reference/operators/operator-overloading.md).
   
 ## <a name="see-also"></a>Consulte também
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: b6f7450b4f682ea5ac69fd1bab434b27451e58df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586058"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610549"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (ferramenta de geração de código)
 A ferramenta de linha de comando SqlMetal gera o código e o mapeamento para o componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] do .NET Framework. Aplicando-se opções exibidas mais à frente neste tópico, é possível instruir SqlMetal para executar diversas ações diferentes, dentre as quais estão:  
@@ -43,18 +43,18 @@ sqlmetal [options] [<input file>]
   
  **Opções de Conexão**  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/server:** *\<name>*|Especifica o nome do servidor do banco de dados.|  
 |**/database:** *\<name>*|Especifica o catálogo do banco de dados no servidor.|  
 |**/user:** *\<name>*|Especifica a ID do usuário de logon. Valor padrão: usar a autenticação do Windows.|  
 |**/password:** *\<password>*|Especifica a senha de logon. Valor padrão: usar a autenticação do Windows.|  
-|**/conn:** *\<connection string>*|Especifica a cadeia de conexão do banco de dados. Não pode ser usada com as opções **/server**, **/database**, **/user** ou **/password**.<br /><br /> Não inclua o nome do arquivo na cadeia de conexão. Em vez disso, adicione o nome do arquivo à linha de comando como o arquivo de entrada. Por exemplo, a seguinte linha especifica “c:\northwnd.mdf” como o arquivo de entrada: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**.|  
+|**/conn:** *\<connection string>*|Especifica a cadeia de conexão do banco de dados. Não pode ser usada com as opções **/server**, **/database**, **/user** ou **/password**.<br /><br /> Não inclua o nome do arquivo na cadeia de conexão. Em vez disso, adicione o nome do arquivo à linha de comando como o arquivo de entrada. Por exemplo, a seguinte linha especifica “c:\northwnd.mdf” como o arquivo de entrada: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** .|  
 |**/timeout:** *\<seconds>*|Especifica o valor de tempo limite em que SqlMetal acessa o banco de dados. Valor padrão: 0 (ou seja, sem tempo limite).|  
   
  **Opções de extração**  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/views**|Extrai exibições do banco de dados.|  
 |**/functions**|Extrai funções do banco de dados.|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **Opções de saída**  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|Envia saídas como .dbml. Não pode ser usada com a opção **/map**.|  
 |**/code** *[:file]*|Envia saídas como código-fonte. Não pode ser usada com a opção **/dbml**.|  
@@ -70,9 +70,9 @@ sqlmetal [options] [<input file>]
   
  **Diversos**  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
-|**/language:** *\<language>*|Especifica a linguagem do código-fonte.<br /><br /> Valid *\<language>*: vb, csharp.<br /><br /> Valor padrão: derivado da extensão de nome de arquivo de código.|  
+|**/language:** *\<language>*|Especifica a linguagem do código-fonte.<br /><br /> Valid *\<language>* : vb, csharp.<br /><br /> Valor padrão: derivado da extensão de nome de arquivo de código.|  
 |**/namespace:** *\<name>*|Especifica o namespace do código gerado. Valor padrão: sem namespace.|  
 |**/context:** *\<type>*|Especifica o nome da classe de contexto dos dados. Valor padrão: derivado do nome do banco de dados.|  
 |**/entitybase:** *\<type>*|Especifica a classe base das classes de entidade no código gerado. Valor padrão: as entidades não têm classe base.|  
@@ -81,9 +81,9 @@ sqlmetal [options] [<input file>]
   
  **Arquivo de Entrada**  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
-|**\<input file>**|Especifica um arquivo .mdf do SQL Server Express, um arquivo .sdf do [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou um arquivo intermediário .dbml.|  
+|**\<input file>**|Especifica um arquivo .mdf do SQL Server Express, um arquivo .sdf do SQL Server Compact 3.5 ou um arquivo intermediário .dbml.|  
   
 ## <a name="remarks"></a>Comentários  
  A funcionalidade SqlMetal envolve, na realidade, duas etapas:  
@@ -98,7 +98,7 @@ sqlmetal [options] [<input file>]
   
  Se nenhum **/server** for especificado, **localhost/sqlexpress** será suposto.  
   
- [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] acionará uma exceção se uma ou mais das seguintes condições forem verdadeiras:  
+ O Microsoft SQL Server 2005 acionará uma exceção se uma ou mais das seguintes condições forem verdadeiras:  
   
 - SqlMetal tenta extrair um procedimento armazenado que se chama.  
   

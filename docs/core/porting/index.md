@@ -2,14 +2,14 @@
 title: Portabilidade de código do .NET Framework para o .NET Core
 description: Entenda o processo de compatibilidade e descubra ferramentas que podem ser úteis ao realizar a portabilidade de um projeto do .NET Framework para o .NET Core.
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 07/03/2019
 ms.custom: seodec18
-ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c408beb97290c41d2ab6944b9d1f68bbc5e946fb
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663216"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609244"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Faça a portabilidade do seu código do .NET Framework para o .NET Core
 
@@ -39,13 +39,13 @@ Este é o processo que recomendamos que você realize ao fazer a portabilidade d
 
 A lista a seguir mostra as ferramentas que podem ser úteis para usar durante o processo de portabilidade:
 
-* Analisador de Portabilidade do .NET – [ferramenta de linha de comando](https://github.com/Microsoft/dotnet-apiport/releases) ou [Extensão do Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), uma cadeia de ferramentas que pode gerar um relatório sobre a portabilidade do seu código entre o .NET Framework e .NET Core, com detalhamento dos problemas assembly por assembly. Para obter mais informações, consulte [Analisador de Portabilidade do .NET](../../standard/analyzers/portability-analyzer.md).
-* Analisador de API do .NET – é um analisador Roslyn que descobre riscos potenciais de compatibilidade para APIs do C# em diferentes plataformas e detecta chamadas a APIs preteridas. Para obter mais informações, confira [Analisador de API do .NET](../../standard/analyzers/api-analyzer.md).
+* Analisador de Portabilidade do .NET – [ferramenta de linha de comando](https://github.com/Microsoft/dotnet-apiport/releases) ou [Extensão do Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), uma ferramenta que pode gerar um relatório sobre a portabilidade do seu código entre o .NET Framework e a plataforma .NET Core de destino. O relatório contém um detalhamento assembly por assembly do tipo e das APIs ausentes na plataforma .NET Core de destino. Para obter mais informações, consulte [Analisador de Portabilidade do .NET](../../standard/analyzers/portability-analyzer.md). É recomendável executar a ferramenta .NET Portability Analyzer antes de começar a portabilidade, pois ela ajuda a identificar quaisquer lacunas em APIs ausentes.
+* Analisador de API do .NET – um analisador Roslyn que descobre a API do .NET Standard que gera <xref:System.PlatformNotSupportedException> em algumas plataformas, detecta chamadas a APIs preteridas e descobre alguns outros possíveis riscos de compatibilidade para APIs C# em diferentes plataformas. Para obter mais informações, confira [Analisador de API do .NET](../../standard/analyzers/api-analyzer.md). Esse analisador é útil depois que você já criou seu projeto .NET Core para identificar diferenças de comportamento de tempo de execução em diferentes plataformas.
 * Pesquisa Inversa de Pacotes – Um [serviço Web útil](https://packagesearch.azurewebsites.net) que permite pesquisar por um tipo e localizar os pacotes que contêm esse tipo.
 
 Além disso, você pode tentar fazer a portabilidade de soluções menores ou projetos individuais para o formato de arquivo de projeto do .NET Core com a ferramenta [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017).
 
-> [!WARNING] 
+> [!WARNING]
 > CsprojToVs2017 é uma ferramenta de terceiros. Não há nenhuma garantia de que ela funcionará para todos os seus projetos, e isso pode causar alterações sutis no comportamento que dependem de você. CsprojToVs2017 deve ser usada como um _ponto de partida_ que automatize as funções básicas que podem ser automatizadas. Não é uma solução garantida para a migração de formatos de arquivo de projeto.
 
 >[!div class="step-by-step"]

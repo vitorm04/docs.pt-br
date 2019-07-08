@@ -2,17 +2,21 @@
 title: Comando dotnet nuget push
 description: O comando dotnet nuget push efetua push de um pacote no servidor e o publica.
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: 7382cb93da3d7ed68f5731b3996c735c3f1461e4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 4d5efa94c6a4494158aea447be98256d2a307cd6
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631708"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539137"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
+**Este tópico aplica-se a: ✓** SDK do .NET Core 1.x e versões posteriores
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Nome
 
@@ -20,25 +24,13 @@ ms.locfileid: "65631708"
 
 ## <a name="synopsis"></a>Sinopse
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
-    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
-```
-
----
-
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comando push usa o servidor e detalhes de credencial encontradas no arquivo de configuração do sistema NuGet ou uma cadeia de arquivos de configuração. Para obter mais informações sobre arquivos de configuração, consulte [Configurando o comportamento do NuGet](/nuget/consume-packages/configuring-nuget-behavior). A configuração de padrão do NuGet é obtida ao carregar *%AppData%\NuGet\NuGet.config* (Windows) ou *$HOME/.local/share* (Linux/macOS) e, em seguida, carregar qualquer *nuget.config* ou *.nuget\nuget.config* da raiz da unidade e terminar no diretório atual.
 
@@ -49,8 +41,6 @@ O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comand
   Especifica o caminho do arquivo para o pacote a ser enviado por push.
 
 ## <a name="options"></a>Opções
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-d|--disable-buffering`**
 
@@ -96,46 +86,6 @@ Imprime uma ajuda breve para o comando.
 
   Especifica o tempo limite para enviar para um servidor em segundos. O padrão é 300 segundos (5 minutos). Especificar 0 (zero segundos) aplica o valor padrão.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-d|--disable-buffering`**
-
-  Desabilita o buffer durante o push para um servidor HTTP(S) a fim de reduzir o uso de memória.
-
-* **`--force-english-output`**
-
-  Força a execução do aplicativo usando uma cultura invariável com base em inglês.
-
-* **`-h|--help`**
-
-  Imprime uma ajuda breve para o comando.
-
-* **`-k|--api-key <API_KEY>`**
-
-  A chave da API para o servidor.
-
-* **`-n|--no-symbols`**
-
-  Não envia símbolos por push (mesmo se estiver presente).
-
-* **`-s|--source <SOURCE>`**
-
-  Especifica a URL do servidor. Essa opção será obrigatória, a menos que o valor de configuração `DefaultPushSource` seja definido no arquivo de configuração do NuGet.
-
-* **`-sk|--symbol-api-key <API_KEY>`**
-
-  A chave da API para o servidor de símbolos.
-
-* **`-ss|--symbol-source <SOURCE>`**
-
-  Especifica a URL do servidor de símbolos.
-
-* **`-t|--timeout <TIMEOUT>`**
-
-  Especifica o tempo limite para enviar para um servidor em segundos. O padrão é 300 segundos (5 minutos). Especificar 0 (zero segundos) aplica o valor padrão.
-
----
-
 ## <a name="examples"></a>Exemplos
 
 * Envia por push *foo.nupkg* à origem de push padrão, especificando uma chave de API:
@@ -173,3 +123,7 @@ Imprime uma ajuda breve para o comando.
   ```console
   dotnet nuget push *.nupkg
   ```
+  
+  > [!NOTE]
+  > Se esse comando não funcionar, talvez seja devido a um bug que existia em versões mais antigas do SDK (SDK do .NET Core 2.1 e versões anteriores).
+  > Para corrigir esse problema, atualize sua versão do SDK ou execute o seguinte comando em vez disso: `dotnet nuget push **/*.nupkg`

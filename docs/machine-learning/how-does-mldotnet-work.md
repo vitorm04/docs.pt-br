@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 58e79cf0b017d65644f25250d05d252b5635c21e
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152001"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610179"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>O que é ML.NET e como ele funciona?
 
@@ -164,16 +164,19 @@ Nesta seção, vamos repassar os padrões de arquitetura do ML.NET. Se você for
 Um aplicativo do ML.NET começa com um objeto <xref:Microsoft.ML.MLContext>. Esse objeto singleton contém **catálogos**. Um catálogo é uma fábrica para carregar e salvar dados, componentes de operação de modelo, treinadores e transformações. Cada objeto de catálogo tem métodos para criar os diferentes tipos de componentes:
 
 ||||
-|-|-|-|
-|Salvamento e carregamento de dados||<xref:Microsoft.ML.DataOperationsCatalog>|
-|Preparação de dados||<xref:Microsoft.ML.TransformsCatalog>|
-|Treinando algoritmos|Classificação binária|<xref:Microsoft.ML.BinaryClassificationCatalog>|
-||Classificação multiclasse|<xref:Microsoft.ML.MulticlassClassificationCatalog>|
-||Detecção de anomalias|<xref:Microsoft.ML.AnomalyDetectionCatalog>|
-||Classificação|<xref:Microsoft.ML.RankingCatalog>|
-||Regressão|<xref:Microsoft.ML.RegressionCatalog>|
-||Recomendação|<xref:Microsoft.ML.RecommendationCatalog>|
-|Uso do modelo ||<xref:Microsoft.ML.ModelOperationsCatalog>|
+|-|-|-|-|
+|Salvamento e carregamento de dados||<xref:Microsoft.ML.DataOperationsCatalog>||
+|Preparação de dados||<xref:Microsoft.ML.TransformsCatalog>||
+|Treinando algoritmos|Classificação binária|<xref:Microsoft.ML.BinaryClassificationCatalog>||
+||Classificação multiclasse|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
+||Detecção de anomalias|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
+||Clustering|<xref:Microsoft.ML.ClusteringCatalog>||
+||Previsão|<xref:Microsoft.ML.Forecasting>||
+||Classificação|<xref:Microsoft.ML.RankingCatalog>||
+||Regressão|<xref:Microsoft.ML.RegressionCatalog>||
+||Recomendação|<xref:Microsoft.ML.RecommendationCatalog>|adicionar Microsoft.ML.Recommender|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|adicionar Microsoft.ML.TimeSeries|
+|Uso do modelo ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 Você pode navegar para os métodos de criação em cada uma das categorias acima. Usando o Visual Studio, os catálogos aparecem por meio do IntelliSense.
 

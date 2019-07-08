@@ -1,20 +1,18 @@
 ---
 title: Selecionar qual versão do .NET Core usar
 description: Saiba como o .NET Core localiza e escolhe automaticamente versões de tempo de execução para o seu programa. Além disso, este artigo ensina como forçar uma versão específica.
-author: billwagner
-ms.author: wiwagn
-ms.date: 06/27/2018
+author: thraka
+ms.author: adegeo
+ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127232"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539297"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selecionar a versão do .NET Core a ser usada
-
-[!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
 Este artigo explica as políticas usadas pelas ferramentas do .NET Core, pelo SDK e pelo tempo de execução para a seleção de versões. Essas políticas fornecem um equilíbrio entre a execução de aplicativos usando as versões especificadas e a possibilidade de fácil atualização dos computadores de desenvolvedores e usuários finais. Essas políticas executam as seguintes ações:
 
@@ -87,19 +85,20 @@ O host escolhe a versão de patch mais recente instalada no computador. Por exem
 
 Se nenhuma versão `2.0.*` aceitável for encontrada, uma nova versão `2.*` será usada. Por exemplo, se você especificar `netcoreapp2.0` e só o `2.1.0` estiver instalado, o aplicativo será executado usando o tempo de execução `2.1.0`. Esse comportamento é conhecido como "roll forward de versão secundária". As versões inferiores também não serão consideradas. Quando nenhum tempo de execução aceitável estiver instalado, o aplicativo não será executado.
 
-Alguns exemplos de uso demonstram o comportamento:
+Veja alguns exemplos de uso que demonstram o comportamento, caso seu destino seja a versão 2.0:
 
-- A 2.0.4 é necessária. A 2.0.5 é a versão de patch mais recente instalada. A 2.0.5 é usada.
-- A 2.0.4 é necessária. Não há nenhuma versão 2.0.* instalada. O 1.1.1 é o tempo de execução mais recente instalado. Uma mensagem de erro é exibida.
-- A 2.0.4 é necessária. 2.0.0 é a versão mais recente instalada. Uma mensagem de erro é exibida.
-- A 2.0.4 é necessária. Não há nenhuma versão 2.0.* instalada. 2.2.2 é a versão de tempo de execução 2.x mais recente instalada. A 2.2.2 é usada.
-- A 2.0.4 é necessária. Não há nenhuma versão 2.x instalada. A 3.0.0 está instalada (não é uma versão disponível atualmente). Uma mensagem de erro é exibida.
+- A 2.0 é especificada. A 2.0.5 é a versão de patch mais recente instalada. A 2.0.5 é usada.
+- A 2.0 é especificada. Não há nenhuma versão 2.0.* instalada. O 1.1.1 é o tempo de execução mais recente instalado. Uma mensagem de erro é exibida.
+- A 2.0 é especificada. Não há nenhuma versão 2.0.* instalada. 2.2.2 é a versão de tempo de execução 2.x mais recente instalada. A 2.2.2 é usada.
+- A 2.0 é especificada. Não há nenhuma versão 2.x instalada. A 3.0.0 é instalada. Uma mensagem de erro é exibida.
 
 O roll forward de versão secundária tem um efeito colateral que pode afetar os usuários finais. Considere o seguinte cenário:
 
-- A 2.0.4 é necessária. Não há nenhuma versão 2.0.* instalada. A 2.2.2 está instalada. A 2.2.2 é usada.
-- A 2.0.5 é instalada mais tarde. A 2.0.5 será usada para as próximas inicializações do aplicativo, não a 2.2.2. O patch mais recente da versão secundária necessária é preferível em relação a uma versão secundária mais recente.
-- É possível que a 2.0.5 e a 2.2.2 se comportem de forma diferente, principalmente para cenários como serializar dados binários.
+1. O aplicativo especifica que a versão 2.0 é necessária.
+2. Quando ele é executado, a versão 2.0.* não está instalada, mas a 2.2.2 está. A versão 2.2.2 será usada.
+3. Posteriormente, o usuário instala a versão 2.0.5 e executa o aplicativo novamente. A 2.0.5 será então usada.
+
+É possível que a 2.0.5 e a 2.2.2 se comportem de forma diferente, principalmente para cenários como serializar dados binários.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>As implantações autossuficientes incluem o tempo de execução selecionado
 

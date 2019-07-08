@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585947"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504024"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introdução à linguagem C# e ao .NET Framework
 
@@ -54,7 +54,7 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
 
  Programas em C# são executados no .NET Framework, um componente integral do Windows que inclui um sistema de execução virtual chamado de CLR (Common Language Runtime) e um conjunto unificado de bibliotecas de classes. O CLR é a implementação comercial da Microsoft da CLI (Common Language Infrastructure), um padrão internacional que é a base para a criação de ambientes de execução e de desenvolvimento nos quais linguagens e bibliotecas funcionam de forma integrada.  
   
- O código-fonte escrito em C# é compilado em uma linguagem intermediária (IL) que está em conformidade com a especificação da CLI. O código e os recursos de IL, como bitmaps e cadeias de caracteres, são armazenados em disco em um arquivo executável chamado de assembly, normalmente com uma extensão .exe ou .dll. Um assembly contém um manifesto que fornece informações sobre os tipos, a versão, a cultura e os requisitos de segurança do assembly.  
+ O código-fonte escrito em C# é compilado em uma [IL (linguagem intermediária)](../../standard/managed-code.md) que está em conformidade com a especificação da CLI. O código e os recursos de IL, como bitmaps e cadeias de caracteres, são armazenados em disco em um arquivo executável chamado de assembly, normalmente com uma extensão .exe ou .dll. Um assembly contém um manifesto que fornece informações sobre os tipos, a versão, a cultura e os requisitos de segurança do assembly.  
   
  Quando o programa em C# é executado, o assembly é carregado no CLR, que pode executar várias ações de acordo com as informações no manifesto. Em seguida, se os requisitos de segurança forem atendidos, o CLR executará a compilação JIT (just in time) para converter o código de IL em instruções nativas da máquina. O CLR também oferece outros serviços relacionados à coleta automática de lixo, tratamento de exceções e gerenciamento de recursos. O código que é executado pelo CLR é, às vezes, chamado de "código gerenciado", ao contrário de "código não gerenciado", que é compilado em linguagem de máquina nativa e visa um sistema específico. O diagrama a seguir ilustra as relações em tempo de compilação e em tempo de execução dos arquivos de código-fonte em C#, as bibliotecas de classe do .NET Framework, assemblies e o CLR.  
   

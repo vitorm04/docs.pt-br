@@ -18,18 +18,18 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 0cd0a06dc919ecf11f1a3d343fe8ff023a5f8524
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401462"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609907"
 ---
 # <a name="c-operators-c-reference"></a>Operadores C# (Referência de C#)
 
 O C# Fornece um número de operadores predefinidos, compatíveis com os tipos internos. Por exemplo, [operadores aritméticos](arithmetic-operators.md) executam operações aritméticas com operandos de tipos numéricos internos e [operadores lógicos boolianos](boolean-logical-operators.md) executam operações lógicas com operandos [bool](../keywords/bool.md).
 
-Um tipo definido pelo usuário pode sobrecarregar determinados operadores para definir o comportamento correspondente para os operandos desse tipo. Para obter mais informações, consulte o artigo com a palavra-chave [operador](../keywords/operator.md).
+Um tipo definido pelo usuário pode sobrecarregar determinados operadores para definir o comportamento correspondente para os operandos desse tipo. Para obter mais informações, consulte [Sobrecarga de operador](operator-overloading.md).
 
 As seções a seguir listam operadores C#, começando com a precedência mais alta para a mais baixa. Os operadores em cada seção compartilham o mesmo nível de precedência.
 
@@ -223,4 +223,3 @@ Esses operadores têm precedência maior do que a próxima seção e precedênci
 
 - [Referência de C#](../index.md)
 - [Operadores](../../programming-guide/statements-expressions-operators/operators.md)
-- [Operadores sobrecarregáveis](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

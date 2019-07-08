@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d328f8e73824a4773c6e10f506f3021d3c88d085
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378046"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609645"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificadores de acesso (Guia de Programação em C#)
 Todos os tipos e membros de tipo têm um nível de acessibilidade, que controla se podem ser usados de outro código no seu assembly ou outros assemblies. Você pode usar os modificadores de acesso a seguir para especificar a acessibilidade de um tipo ou membro quando você o declarar:  
@@ -53,7 +53,7 @@ Todos os tipos e membros de tipo têm um nível de acessibilidade, que controla 
   
  O tipo de qualquer membro que seja um campo, propriedade ou evento deve ser pelo menos tão acessível quanto o próprio membro. Da mesma forma, o tipo de retorno e os tipos de parâmetro de qualquer membro que é um método, indexador ou delegado devem ser pelo menos tão acessíveis quanto o próprio membro. Por exemplo, você não pode ter um método público `M` que retorna uma classe `C`, a menos que `C` também seja público. Da mesma forma, você não pode ter uma propriedade protegida do tipo `A` se `A` for declarado como particular.  
   
- Os operadores definidos pelo usuário sempre devem ser declarados como públicos. Para obter mais informações, consulte [operador (Referência de C#)](../../../csharp/language-reference/keywords/operator.md).  
+ Os operadores definidos pelo usuário sempre devem ser declarados como públicos e estáticos. Para obter mais informações, consulte [Sobrecarga de operador](../../../csharp/language-reference/operators/operator-overloading.md).  
   
  Os finalizadores não podem ter modificadores de acessibilidade.  
   
