@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 5b6668e20e4d69b7d6bdf3e6283574f1b974ef54
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d354a1e899e6ea72ac1e65634e5cc1267d41fb07
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423963"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609886"
 ---
 # <a name="comparison-operators-c-reference"></a>Operadores de comparação (referência do C#)
 
@@ -63,7 +63,7 @@ O operador `>=` retornará `true` se o operando à esquerda for maior ou igual a
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
-Os tipos definidos pelo usuário podem [sobrecarregar](../keywords/operator.md) os operadores `<`, `>`, `<=` e `>=`.
+Os tipos definidos pelo usuário podem [sobrecarregar](operator-overloading.md) os operadores `<`, `>`, `<=` e `>=`.
 
 Se um tipo sobrecarregar um dos operadores `<` ou `>`, ele deverá sobrecarregar tanto `<` quanto `>`. Se um tipo sobrecarregar um dos operadores `<=` ou `>=`, ele deverá sobrecarregar tanto `<=` quanto `>=`.
 
