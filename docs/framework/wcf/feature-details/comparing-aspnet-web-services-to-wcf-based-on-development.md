@@ -2,12 +2,12 @@
 title: Comparando os serviços Web ASP.NET com o WCF baseado em desenvolvimento
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: e5d249514ecad7507235bb8bd354c80bdc17c5dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b0e26f0b76ee56d06c426cd3c11b169a74b1896
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857578"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663365"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Comparando os serviços Web ASP.NET com o WCF baseado em desenvolvimento
 
@@ -151,22 +151,22 @@ Esta é uma lista das diferenças importantes entre o uso do <xref:System.Runtim
 
 - O <xref:System.Xml.Serialization.XmlSerializer> e os atributos do namespace <xref:System.Xml.Serialization> são projetados para permitir que você mapeie os tipos do .NET Framework para qualquer tipo válido definido no Esquema XML e, portanto, oferecem um controle muito preciso sobre como um tipo é representado em XML. O <xref:System.Runtime.Serialization.DataContractSerializer>, o <xref:System.Runtime.Serialization.DataContractAttribute> e o <xref:System.Runtime.Serialization.DataMemberAttribute> fornecem muito pouco controle sobre como um tipo é representado em XML. Você pode especificar somente os namespaces e os nomes usados para representar o tipo e seus campos ou propriedades em XML, e a sequência na qual os campos e as propriedades aparecerão em XML:
 
-    ```csharp
-    [DataContract(
-    Namespace="urn:Contoso:2006:January:29",
-    Name="LineItem")]
-    public class LineItem
-    {
-         [DataMember(Name="ItemNumber",IsRequired=true,Order=0)]
-         public string itemNumber;
-         [DataMember(Name="Quantity",IsRequired=false,Order = 1)]
-         public decimal quantity;
-         [DataMember(Name="Price",IsRequired=false,Order = 2)]
-         public decimal unitPrice;
-    }
-    ```
+  ```csharp
+  [DataContract(
+  Namespace="urn:Contoso:2006:January:29",
+  Name="LineItem")]
+  public class LineItem
+  {
+        [DataMember(Name="ItemNumber",IsRequired=true,Order=0)]
+        public string itemNumber;
+        [DataMember(Name="Quantity",IsRequired=false,Order = 1)]
+        public decimal quantity;
+        [DataMember(Name="Price",IsRequired=false,Order = 2)]
+        public decimal unitPrice;
+  }
+  ```
 
-    Tudo o mais sobre a estrutura do XML usado para representar o tipo do .NET é determinado pelo <xref:System.Runtime.Serialization.DataContractSerializer>.
+  Tudo o mais sobre a estrutura do XML usado para representar o tipo do .NET é determinado pelo <xref:System.Runtime.Serialization.DataContractSerializer>.
 
 - Não permitindo muito controle sobre como um tipo será representado em XML, o processo de serialização fica altamente previsível para o <xref:System.Runtime.Serialization.DataContractSerializer> e, assim, mais fácil para otimizar. Um benefício prático do design do <xref:System.Runtime.Serialization.DataContractSerializer> é o melhor desempenho, uma melhora de aproximadamente 10% no desempenho.
 
@@ -180,9 +180,9 @@ Esta é uma lista das diferenças importantes entre o uso do <xref:System.Runtim
 
 - O <xref:System.Runtime.Serialization.DataContractSerializer> oferece algum suporte para controle de versão:
 
-    - O <xref:System.Runtime.Serialization.DataMemberAttribute> tem uma propriedade <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> que pode receber um valor false para membros adicionados às novas versões de um contrato de dados que não estavam presentes nas versões anteriores, permitindo assim que aplicativos com a versão mais recente do contrato possam processar versões anteriores.
+  - O <xref:System.Runtime.Serialization.DataMemberAttribute> tem uma propriedade <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> que pode receber um valor false para membros adicionados às novas versões de um contrato de dados que não estavam presentes nas versões anteriores, permitindo assim que aplicativos com a versão mais recente do contrato possam processar versões anteriores.
 
-    - Tendo um contrato de dados que implemente a interface <xref:System.Runtime.Serialization.IExtensibleDataObject>, uma pessoa pode permitir que o <xref:System.Runtime.Serialization.DataContractSerializer> passe os membros definidos nas versões mais recentes de um contrato de dados por meio de aplicativos com versões anteriores do contrato.
+  - Tendo um contrato de dados que implemente a interface <xref:System.Runtime.Serialization.IExtensibleDataObject>, uma pessoa pode permitir que o <xref:System.Runtime.Serialization.DataContractSerializer> passe os membros definidos nas versões mais recentes de um contrato de dados por meio de aplicativos com versões anteriores do contrato.
 
 Independentemente de todas as diferenças, o XML em que o <xref:System.Xml.Serialization.XmlSerializer> serializa um tipo é, por padrão, semanticamente idêntico ao XML em que o <xref:System.Runtime.Serialization.DataContractSerializer> serializa um tipo, desde que o namespace do XML seja explicitamente definido. A classe a seguir, que tem atributos para uso com ambos os serializadores, é convertida em um XML semanticamente idêntico pelo <xref:System.Xml.Serialization.XmlSerializer> e pelo <xref:System.Runtime.Serialization.DataContractAttribute>:
 
@@ -346,9 +346,9 @@ Para hospedar um serviço no IIS 5.1 ou 6.0, ou no WAS, siga estas etapas:
 
 4. Copie o arquivo de configuração para o diretório virtual e atribua o nome Web.config a ele.
 
- O aplicativo poderá, então, ser acessado através do URL do arquivo de serviço na raiz do aplicativo.
+O aplicativo poderá, então, ser acessado através do URL do arquivo de serviço na raiz do aplicativo.
 
- Para hospedar um serviço WCF em um aplicativo .NET, compile o tipo de serviço em um assembly de biblioteca de classes referenciado pelo aplicativo e programe o aplicativo para hospedar o serviço usando o <xref:System.ServiceModel.ServiceHost> classe. Este é um exemplo da programação básica necessária:
+Para hospedar um serviço WCF em um aplicativo .NET, compile o tipo de serviço em um assembly de biblioteca de classes referenciado pelo aplicativo e programe o aplicativo para hospedar o serviço usando o <xref:System.ServiceModel.ServiceHost> classe. Este é um exemplo da programação básica necessária:
 
 ```csharp
 string httpBaseAddress = "http://www.contoso.com:8000/";

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 786466cb0b94a96e629a1f173388ed7d40be7256
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052580"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661914"
 ---
 # <a name="local-type-inference-visual-basic"></a>Inferência de tipo local (Visual Basic)
 O compilador do Visual Basic usa *inferência* para determinar os tipos de dados de variáveis locais declaradas sem um `As` cláusula. O compilador infere o tipo da variável do tipo da expressão de inicialização. Isso permite que você declare variáveis sem especificar explicitamente um tipo, conforme mostrado no exemplo a seguir. Como resultado das declarações, ambos `num1` e `num2` são fortemente tipadas como inteiros.  
@@ -65,7 +65,7 @@ O compilador do Visual Basic usa *inferência* para determinar os tipos de dados
   
  `Option Infer Off`  
   
- Se você não especificar um valor para `Option Infer` em seu código, é o padrão do compilador `Option Infer On`. Para projetos atualizados do [!INCLUDE[vb_orcas_long](~/includes/vb-orcas-long-md.md)] ou versões anteriores, é o padrão do compilador `Option Infer Off`.  
+ Se você não especificar um valor para `Option Infer` em seu código, é o padrão do compilador `Option Infer On`. 
   
  Se o valor definido para `Option Infer` em um arquivo entrar em conflito com o valor definido no IDE ou na linha de comando, o valor no arquivo possui precedência.  
   

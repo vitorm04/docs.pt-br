@@ -2,12 +2,12 @@
 title: Escalonamento de gerenciamento de transações
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2597d6fcce7fbd51f6f17bd42469cb7fcf3fdf
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630565"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662458"
 ---
 # <a name="transaction-management-escalation"></a>Escalonamento de gerenciamento de transações
 Windows hospeda um conjunto de serviços e módulos que constituem uma transação manager. Escalonamento de gerenciamento de transações descreve o processo de migração de uma transação de um dos componentes do Gerenciador de transações para outro.  
@@ -25,7 +25,7 @@ Windows hospeda um conjunto de serviços e módulos que constituem uma transaç�
   
 - Pelo menos um recurso durável que não dá suporte a notificações de fase única é inscrita na transação.  
   
-- Pelo menos dois recursos duráveis que oferecem suporte a notificações de fase única estão inscritos na transação. Por exemplo, a inscrição de uma única conexão com [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] não faz com que uma transação seja promovido. No entanto, sempre que você abrir uma segunda conexão com um [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] banco de dados fazendo com que o banco de dados para se inscrever, o <xref:System.Transactions> infra-estrutura detecta que ele é o segundo recurso durável na transação e escala para uma transação MSDTC.  
+- Pelo menos dois recursos duráveis que oferecem suporte a notificações de fase única estão inscritos na transação. Por exemplo, a inscrição de uma única conexão com o SQL Server 2005 não causa uma transação seja promovido. No entanto, sempre que você abrir uma segunda conexão para um banco de dados do SQL Server 2005 fazendo com que o banco de dados para se inscrever, o <xref:System.Transactions> infra-estrutura detecta que ele é o segundo recurso durável na transação e escala para uma transação MSDTC.  
   
 - Uma solicitação de "empacotar" a transação para um domínio de aplicativo diferente ou outro processo é chamada. Por exemplo, a serialização do objeto de transação em um limite de domínio de aplicativo. O objeto de transação é empacotado por valor, que significa que qualquer tentativa de passá-lo em um limite de domínio de aplicativo (e até mesmo no mesmo processo) resulta na serialização do objeto de transação. Você pode passar os objetos de transação, fazendo uma chamada em um método remoto que usa um <xref:System.Transactions.Transaction> como um parâmetro ou você pode tentar acessar um componente remoto transacional é atendido. Isso serializa o objeto de transação e resulta em um escalonamento, como quando uma transação é serializada em um domínio de aplicativo. Ele é distribuído e o Gerenciador de transações local não é mais adequado.  
   

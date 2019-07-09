@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 061a8c7b73903b763de27e614e9b3067777afe58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85792aea8a72ffc0c9b579473332756c6ca3bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64756018"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663834"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Como: hospedar várias versões de um fluxo de trabalho lado a lado
 
@@ -27,11 +27,11 @@ Nesta etapa do tutorial, as atividades `WriteLine` no fluxo de trabalho são mod
 
 - [Para atualizar os fluxos de trabalho](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
 
-    - [Para atualizar o fluxo de trabalho StateMachine](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+  - [Para atualizar o fluxo de trabalho StateMachine](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
 
-    - [Para atualizar o fluxo de trabalho de fluxograma](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+  - [Para atualizar o fluxo de trabalho de fluxograma](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
 
-    - [Para atualizar o fluxo de trabalho sequencial](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+  - [Para atualizar o fluxo de trabalho sequencial](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
 
 - [Para atualizar WorkflowVersionMap para incluir as versões anteriores do fluxo de trabalho](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
 
@@ -68,7 +68,7 @@ Nesta etapa do tutorial, as atividades `WriteLine` no fluxo de trabalho são mod
 
 ### <a name="BKMK_UpdateWorkflows"></a> Para atualizar os fluxos de trabalho
 
- Nesta seção, as definições de fluxo de trabalho são atualizadas. As duas atividades `WriteLine` que fornecem comentários sobre o palpite do usuário são atualizadas, e uma nova atividade `WriteLine` é adicionada, que fornece informações adicionais sobre o jogo quando o número é acertado.
+Nesta seção, as definições de fluxo de trabalho são atualizadas. As duas atividades `WriteLine` que fornecem comentários sobre o palpite do usuário são atualizadas, e uma nova atividade `WriteLine` é adicionada, que fornece informações adicionais sobre o jogo quando o número é acertado.
 
 #### <a name="BKMK_UpdateStateMachine"></a> Para atualizar o fluxo de trabalho StateMachine
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762693"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663165"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configurações do Registro de renderização dos elementos gráficos
 Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] configurações do Registro de renderização de elementos gráficos que afetam [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  
@@ -33,7 +33,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
 |Configuração|Descrição|  
 |-------------|-----------------|  
 |**Desabilitar Opção de Aceleração de hardware**|Especifica se a aceleração de hardware deve ser habilitada.|  
-|**Valor máximo de Multisample**|Especifica o grau de multisampling para suavização [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] de conteúdo.|  
+|**Valor máximo de Multisample**|Especifica o grau de multisampling para suavização de conteúdo 3D.|  
 |**Driver de vídeo configuração de data necessário**|Especifica se o sistema desabilita a aceleração de hardware para drivers lançados antes de novembro de 2004.|  
 |**Use a opção de rasterizador de referência**|Especifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve utilizar o rasterizador de referência.|  
   
@@ -57,9 +57,9 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- O **valor máximo de multisample** permite que você ajuste a quantidade máxima de suavização do conteúdo [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]. Use esse nível para desabilitar [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] suavização em [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] ou habilitá-la no [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ O **valor máximo de multisample** permite que você ajuste a quantidade máxima de suavização do conteúdo 3D. Use esse nível para desabilitar a suavização 3D em [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] ou habilitá-lo na [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
   
- O **valor de multisample máximo** é um valor DWORD que varia de 0 a 16. Um valor de 0 especifica que a suavização de mutisample de conteúdo 3D deverá ser desabilitada e um valor de 16 tentará usar até 16x a suavização de multisample, se houver suporte da placa de vídeo. Lembre-se de que definir esse valor de chave do Registro em computadores que usam drivers XPDM fará com que aplicativos usem uma grande quantidade de memória de vídeo adicional, diminuindo o desempenho da renderização de [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], além de ter o potencial de apresentar erros de renderização e problemas de estabilidade.  
+ O **valor de multisample máximo** é um valor DWORD que varia de 0 a 16. Um valor de 0 especifica que a suavização de mutisample de conteúdo 3D deverá ser desabilitada e um valor de 16 tentará usar até 16x a suavização de multisample, se houver suporte da placa de vídeo. Lembre-se de que definir esse valor de chave de registro em computadores que usam drivers XPDM fará com que aplicativos usem uma grande quantidade de memória de vídeo adicional, diminuir o desempenho da renderização 3D, e tem o potencial de apresentar a estabilidade e erros de renderização problemas.  
   
  Quando essa chave do Registro não está definida, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] volta para o padrão 0 para drivers XPDM e 4 para drivers WDDM.  
   

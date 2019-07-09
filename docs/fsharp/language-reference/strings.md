@@ -2,12 +2,12 @@
 title: Cadeias de caracteres
 description: Saiba como o F# tipo 'string' representa texto imutável, como uma sequência de caracteres Unicode.
 ms.date: 07/05/2019
-ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: ec895723cc6d21a701a27b5d70d053bb681ce2b3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610172"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660603"
 ---
 # <a name="strings"></a>Cadeias de caracteres
 
@@ -33,8 +33,8 @@ Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O
 |Marca de aspas|`\"`|
 |Apóstrofe|`\'`|
 |caractere Unicode|`\DDD` (onde `D` indica um decimal digit; o intervalo de 000 - 255; por exemplo, `\231` = "ç")|
-|caractere Unicode|`\xHH` (where `H` indicates a hexadecimal digit; range of 00 - FF; e.g. `\xE7` = "ç")|
-|caractere Unicode|`\uHHHH` (UTF-16) (where `H` indicates a hexadecimal digit; range of 0000 - FFFF;  e.g. `\u00E7` = "ç")|
+|caractere Unicode|`\xHH` (onde `H` indica um dígito hexadecimal; o intervalo de 00 - FF; por exemplo, `\xE7` = "ç")|
+|caractere Unicode|`\uHHHH` (UTF-16) (onde `H` indica um dígito hexadecimal; intervalo 0000 - FFFF;  Por exemplo, `\u00E7` = "ç")|
 |caractere Unicode|`\U00HHHHHH` (UTF-32) (onde `H` indica um dígito hexadecimal; o intervalo de 000000 - 10FFFF;  Por exemplo, `\U0001F47D` = "👽")|
 
 > [!IMPORTANT]

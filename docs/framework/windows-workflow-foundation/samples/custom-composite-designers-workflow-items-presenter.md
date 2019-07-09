@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 403b0125e6b1966d201c891448ad25ec83f42be5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881930"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662862"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Designer de compostos personalizados - apresentador de itens de fluxo de trabalho
 
@@ -45,7 +45,7 @@ O código para esse exemplo mostra o seguinte:
   - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> é um modelo que pode ser fornecido para determinar o layout dos itens na coleção. Nesse caso, um painel horizontal de pilha é usado.
 
   Esse código de exemplo a seguir mostra isso.
-  
+
   ```xaml
   <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
                                 Items="{Binding Path=ModelItem.Branches}">
@@ -64,7 +64,7 @@ O código para esse exemplo mostra o seguinte:
 
 - Executar uma associação de `DesignerAttribute` para o tipo de `Parallel` e então saída que atributos relataram.
 
-    - Primeiro, para todos os designers padrão.
+  - Primeiro, para todos os designers padrão.
 
     A seguir está o exemplo de código.
 
@@ -82,7 +82,7 @@ O código para esse exemplo mostra o seguinte:
     RegisterCustomMetadata()
     ```
 
-    - Em seguida, substituir a paralela no método de `RegisterCustomMetadata` .
+  - Em seguida, substituir a paralela no método de `RegisterCustomMetadata` .
 
     O código a seguir mostra esse em C# e Visual Basic.
 

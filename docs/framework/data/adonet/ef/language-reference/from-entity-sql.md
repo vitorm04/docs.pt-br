@@ -2,12 +2,12 @@
 title: DE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489945"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662161"
 ---
 # <a name="from-entity-sql"></a>DE (Entity SQL)
 Especifica a coleção usada em [selecionar](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instruções.  
@@ -96,7 +96,7 @@ LOB.Customers
 >  Ao contrário em Transact-SQL, não é necessário para uma etapa mais unnest explícita em [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS` e operadores de `OUTER APPLY` foram introduzidos em [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. Em alguns casos, o canal de consulta pode gerar Transact-SQL que contém `CROSS APPLY` e/ou operadores de `OUTER APPLY` . Porque alguns provedores de back-end, incluindo versões do SQL Server anteriores ao [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], não dão suporte a esses operadores, essas consultas não podem ser executadas nesses provedores backend.  
+>  `CROSS` e `OUTER APPLY` operadores foram introduzidos no SQL Server 2005. Em alguns casos, o canal de consulta pode gerar Transact-SQL que contém `CROSS APPLY` e/ou operadores de `OUTER APPLY` . Porque alguns provedores de back-end, incluindo versões anteriores ao SQL Server 2005, do SQL Server não dá suporte a esses operadores, essas consultas não podem ser executadas nesses provedores backend.  
 >   
 >  Alguns cenários típicos que podem resultar na presença de `CROSS APPLY` e/ou operadores de `OUTER APPLY` na saída consulte são os seguintes: um subconsulta correlacionado com paginação; AnyElement sobre um subconsulta correlacionado ou em uma coleção gerada por navegação; LINQ consulta que uso que agrupa os métodos que aceitam um seletor do elemento; uma consulta em que `CROSS APPLY` ou `OUTER APPLY` são especificados explicitamente; uma consulta que tenha uma compilação de `DEREF` sobre uma compilação de `REF` .  
   

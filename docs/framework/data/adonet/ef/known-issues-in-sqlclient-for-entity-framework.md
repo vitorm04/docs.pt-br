@@ -2,12 +2,12 @@
 title: Problemas conhecidos em SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489538"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662263"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conhecidos em SqlClient para Entity Framework
 Esta seção descreve os problemas conhecidos relacionados ao provedor de dados. NET Framework para SQL Server (SqlClient).  
@@ -21,7 +21,7 @@ Esta seção descreve os problemas conhecidos relacionados ao provedor de dados.
  Se um valor de`null` não é passado como um argumento e primeiros 0 são passados como um segundo argumento para `RIGHT(nvarchar(max)`, 0`)` ou `RIGHT(varchar(max)`, 0`)`, um valor de `NULL` serão retornados em vez de uma cadeia de caracteres de `empty` .  
   
 ## <a name="cross-and-outer-apply-operators"></a>A CRUZ e EXTERIORES APLICAM operadores  
- A CRUZ e EXTERIORES APLICAM operadores foram introduzidos em [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. Em alguns casos o pipeline de consulta pode gerar uma instrução Transact-SQL que contém operadores CROSS APPLY e/ou OUTER APPLY. Porque alguns provedores de back-end, incluindo versões do SQL Server anteriores ao [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], não dão suporte a esses operadores, essas consultas não podem ser executadas nesses provedores backend.  
+ CRUZ e EXTERIORES aplicam operadores foram introduzidos no SQL Server 2005. Em alguns casos o pipeline de consulta pode gerar uma instrução Transact-SQL que contém operadores CROSS APPLY e/ou OUTER APPLY. Porque alguns provedores de back-end, incluindo versões anteriores ao SQL Server 2005, do SQL Server não dá suporte a esses operadores, essas consultas não podem ser executadas nesses provedores backend.  
   
  A seguir estão alguns cenários típicos que podem resultar na presença de CRUZ SE APLICAM e/ou OUTER APPLY operadores na consulta de saída:  
   
@@ -36,7 +36,7 @@ Esta seção descreve os problemas conhecidos relacionados ao provedor de dados.
 - Uma consulta que tenha uma compilação de DEREF sobre uma compilação de referência.  
   
 ## <a name="skip-operator"></a>Operador SKIP  
- Se você estiver usando [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], usar a SKIP com cláusula ORDER BY em colunas não chave pode retornar resultados incorretos. Mais do que o número de linhas especificado podem ser ignoradas se a coluna de chave não tem dados duplicados nele. Isso é devido a como SKIP é convertido para [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Por exemplo, a consulta a seguir, mais de cinco linhas podem ser ignoradas se `E.NonKeyColumn` tem valores duplicados:  
+ Se você estiver usando o SQL Server 2000, usar a SKIP com cláusula ORDER BY em colunas não chave pode retornar resultados incorretos. Mais do que o número de linhas especificado podem ser ignoradas se a coluna de chave não tem dados duplicados nele. Isso ocorre devido a como SKIP é convertido para o SQL Server 2000. Por exemplo, a consulta a seguir, mais de cinco linhas podem ser ignoradas se `E.NonKeyColumn` tem valores duplicados:  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  

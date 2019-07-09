@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: a0ed7bb48c0b8c81b44d4e321dec902ba68fc523
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77694b2a86c91f3e6946ecd50f4765404750f37b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640850"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664166"
 ---
 # <a name="graphics-rendering-tiers"></a>Camadas de renderização de gráficos
 Um nível de renderização define um nível de funcionalidade de hardware de gráficos e de desempenho para um dispositivo que executa um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -101,7 +101,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
 |Configuração|Descrição|  
 |-------------|-----------------|  
 |**Desabilitar Opção de Aceleração de hardware**|Especifica se a aceleração de hardware deve ser habilitada.|  
-|**Valor máximo de Multisample**|Especifica o grau de multisampling para suavização [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] de conteúdo.|  
+|**Valor máximo de Multisample**|Especifica o grau de multisampling para suavização de conteúdo 3D.|  
 |**Driver de vídeo configuração de data necessário**|Especifica se o sistema desabilita a aceleração de hardware para drivers lançados antes de novembro de 2004.|  
 |**Use a opção de rasterizador de referência**|Especifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve utilizar o rasterizador de referência.|  
   

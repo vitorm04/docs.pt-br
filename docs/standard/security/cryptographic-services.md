@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690525"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663999"
 ---
 # <a name="cryptographic-services"></a>Serviços criptográficos
 
@@ -207,19 +207,19 @@ Duas partes (Alice e Bob) poderiam usar uma função de hash para garantir a int
 
 - Alice envia a mensagem de texto sem formatação e a mensagem de hash (assinatura digital) para Bob. Carlos recebem e hashes de mensagem e compara seu valor de hash para o valor de hash que ele recebeu de Alice. Se os valores de hash forem idênticos, a mensagem não foi alterada. Se os valores não forem idênticos, a mensagem foi alterada depois que ele escreveu Alice.
 
-    Infelizmente, esse método não estabelece a autenticidade do remetente. Qualquer pessoa pode representar Alice e enviar uma mensagem para Bob. Eles podem usar o mesmo algoritmo de hash para assinar sua mensagem e tudo o que Bob pode determinar se é que a mensagem corresponda à sua assinatura. Isso é uma forma de um ataque man-in-the-middle. Para obter mais informações, consulte [geração CNG (Cryptography Next) exemplo de comunicação seguro](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Infelizmente, esse método não estabelece a autenticidade do remetente. Qualquer pessoa pode representar Alice e enviar uma mensagem para Bob. Eles podem usar o mesmo algoritmo de hash para assinar sua mensagem e tudo o que Bob pode determinar se é que a mensagem corresponda à sua assinatura. Isso é uma forma de um ataque man-in-the-middle. Para obter mais informações, consulte [geração CNG (Cryptography Next) exemplo de comunicação seguro](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
 - Alice envia a mensagem de texto sem formatação para Bob, por um canal público não seguro. Ela envia a mensagem de hash para Bob por um canal seguro de particular. Bob recebe a mensagem de texto sem formatação, coloca em hash e compara o hash para o hash em particular troca. Se os hashes corresponderem, Bob sabe duas coisas:
 
-    - A mensagem não foi alterada.
+  - A mensagem não foi alterada.
 
-    - O remetente da mensagem (Alice) é autêntico.
+  - O remetente da mensagem (Alice) é autêntico.
 
-    Para este sistema funcionar, Alice deve ocultar seu valor original de hash de todas as partes, exceto Carlos.
+  Para este sistema funcionar, Alice deve ocultar seu valor original de hash de todas as partes, exceto Carlos.
 
 - Alice envia a mensagem de texto sem formatação para Bob, por um canal público não seguro e coloca a mensagem de hash em seu site podem ser exibido publicamente.
 
-    Esse método evita a violação de mensagem, impedindo que qualquer pessoa modificar o valor de hash. Embora a mensagem e seu hash podem ser lidos por qualquer pessoa, o valor de hash pode ser alterado somente por Alice. Um invasor que deseja representar Alice exigiria acesso ao site de Web de Alice.
+  Esse método evita a violação de mensagem, impedindo que qualquer pessoa modificar o valor de hash. Embora a mensagem e seu hash podem ser lidos por qualquer pessoa, o valor de hash pode ser alterado somente por Alice. Um invasor que deseja representar Alice exigiria acesso ao site de Web de Alice.
 
 Nenhum dos métodos anteriores impedirá alguém de ler as mensagens de Alice, porque elas são transmitidas em texto sem formatação. Segurança completa normalmente requer assinaturas digitais (assinatura de mensagens) e criptografia.
 

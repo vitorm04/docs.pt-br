@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610559"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661869"
 ---
 # <a name="standard-query-operator-translation"></a>Conversão padrão de operador de consulta
 
@@ -198,13 +198,13 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não dá s
 
 ## <a name="sql-server-2000-support"></a>Suporte do SQL Server 2000
 
-O seguinte [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] limitações (em comparação comparadas o Microsoft SQL Server 2005) afetam [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dão suporte.
+As seguintes limitações do SQL Server 2000 (em comparação comparadas o Microsoft SQL Server 2005) afetam [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dão suporte.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Operadores Cross Apply e Outer Apply
 
-Esses operadores não estão disponíveis no [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta uma série de reescritas para substituí-los com junções apropriadas.
+Esses operadores não estão disponíveis no SQL Server 2000. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta uma série de reescritas para substituí-los com junções apropriadas.
 
-O `Cross Apply` e o `Outer Apply` são gerados para navegações de relacionamento. O conjunto de consultas para as quais essas reescritas são possíveis não é bem definido. Por esse motivo, o conjunto mínimo de consultas que é suportado para o [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] é o conjunto que não envolve a navegação de relacionamento.
+O `Cross Apply` e o `Outer Apply` são gerados para navegações de relacionamento. O conjunto de consultas para as quais essas reescritas são possíveis não é bem definido. Por esse motivo, o conjunto mínimo de consultas com suporte para SQL Server 2000 é o conjunto que não envolvem a navegação de relacionamento.
 
 ### <a name="text--ntext"></a>text/ntext
 
@@ -214,11 +214,11 @@ Nenhuma resolução está disponível para essa limitação. Especificamente, vo
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportamento disparado por consultas aninhadas
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (por meio do SP4) associador tem algumas Idiossincrasias que são disparadas por consultas aninhadas. O conjunto de consultas SQL que dispara essas Idiossincrasias não é bem definido. Por esse motivo, você não pode definir o conjunto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas que podem causar exceções do SQL Server.
+Associador do SQL Server 2000 (por meio do SP4) tem algumas Idiossincrasias que são disparadas por consultas aninhadas. O conjunto de consultas SQL que dispara essas Idiossincrasias não é bem definido. Por esse motivo, você não pode definir o conjunto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas que podem causar exceções do SQL Server.
 
 ### <a name="skip-and-take-operators"></a>Operadores Skip e Take
 
-<xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> possuem certas limitações quando são usados em consultas no [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Para obter mais informações, consulte a entrada "Exceções Skip e Take no SQL Server 2000" em [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
+<xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> possuem certas limitações quando são usados em consultas no SQL Server 2000. Para obter mais informações, consulte a entrada "Exceções Skip e Take no SQL Server 2000" em [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
 
 ## <a name="object-materialization"></a>Materialização de objetos
 

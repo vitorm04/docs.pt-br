@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 9123d59709b483c72ab49652bda1e547430fa33d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663245"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663340"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Estratégia de segurança do WPF - engenharia de segurança
 A Computação Confiável é uma iniciativa da Microsoft para garantir a produção de código seguro. Um elemento chave da iniciativa Computação Confiável é o [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. O [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] é uma prática de engenharia que é usada em conjunto com processos de engenharia padrão para facilitar o fornecimento de código seguro. O [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] consiste em dez fases que combinam melhores práticas com formalização, mensurabilidade e estruturas adicionais, incluindo:  
@@ -71,13 +71,13 @@ A Computação Confiável é uma iniciativa da Microsoft para garantir a produç
   
 - **Prefix/Prefast**: Localiza vulnerabilidades de segurança e problemas comuns de segurança no código não gerenciado, como saturações de buffer, problemas de cadeia de caracteres de formato e verificação de erros.  
   
-- **APIs banidas**: Pesquisas de código para identificar usos acidentais de funções que são conhecidas por causar problemas de segurança, como de fonte `strcpy`. Após serem identificadas, essas funções são substituídas por alternativas mais seguras.  
+- **APIs banidas**: Pesquisas de código para identificar usos acidentais de funções que são conhecidas por causar problemas de segurança, como de fonte `strcpy`. Uma vez identificado, essas funções são substituídas por alternativas mais seguras.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Técnicas de teste  
  O [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa uma variedade de técnicas teste de segurança que incluem:  
   
-- **Testes caixa branca**: Testadores Exibir código-fonte e, em seguida, criam testes de exploração  
+- **Testes caixa branca**: Testadores Exibir código-fonte e, em seguida, criam testes de exploração.
   
 - **Testes caixa preta**: Os testadores tentam localizar falhas de segurança examinando as API e recursos e, em seguida, tentam atacar o produto.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 4f2f9fa1cb1be421be57ae0671573150871ebd1d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6a6e057b45c1305a889ce4ed915b437a29ab2794
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880476"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662075"
 ---
 # <a name="adonet-and-linq-to-sql"></a>O ADO.NET e LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] faz parte da família de tecnologias do ADO.NET. Ele se baseia em serviços fornecidos pelo modelo de provedor do ADO.NET. Portanto, você pode misturar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de código com aplicativos existentes do ADO.NET e migrar soluções atuais do ADO.NET para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. A ilustração a seguir fornece uma exibição de alto nível de relacionamento.  
@@ -36,7 +36,7 @@ ms.locfileid: "65880476"
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- Você não pode usar essa abordagem para todos os bases de dados. Por exemplo, a conexão SqlClient não pode elevar transações do sistema quando trabalha em um servidor de [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] . Em vez disso, inscreve-se automaticamente para uma transação completa, distribuído consulta sempre que um escopo de transação que está sendo usado.  
+ Você não pode usar essa abordagem para todos os bases de dados. Por exemplo, a conexão SqlClient não pode elevar transações do sistema quando trabalha em um servidor do SQL Server 2000. Em vez disso, inscreve-se automaticamente para uma transação completa, distribuído consulta sempre que um escopo de transação que está sendo usado.  
   
 ## <a name="direct-sql-commands"></a>Comandos SQL diretos  
  Às vezes você pode encontrar situações onde a capacidade de <xref:System.Data.Linq.DataContext> de consulte ou enviar alterações insuficientes para a tarefa específica que você deseja executar. Nesteas circunstâncias você pode usar o método de <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> para emitir comandos SQL a base de dados e para converter os resultados da consulta a objetos.  
