@@ -1,9 +1,0 @@
----
-ms.openlocfilehash: 4f5a120316e9880c23719b103032ae474472c8ee
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65671368"
----
-<span data-ttu-id="a4886-101">SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="a4886-101">SQL Server 2008</span></span>
