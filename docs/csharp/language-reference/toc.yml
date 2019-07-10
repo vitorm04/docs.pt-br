@@ -19,16 +19,13 @@
                 - name: Tipos numéricos integrais
                   displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
                   href: builtin-types/integral-numeric-types.md
+                - name: Tipos numéricos de ponto flutuante
+                  displayName: 'float, decimal, double, rational, real'
+                  href: builtin-types/floating-point-numeric-types.md
                 - name: char
                   href: keywords/char.md
-                - name: decimal
-                  href: keywords/decimal.md
-                - name: double
-                  href: keywords/double.md
                 - name: enum
                   href: keywords/enum.md
-                - name: float
-                  href: keywords/float.md
                 - name: struct
                   href: keywords/struct.md
             - name: Tipos de referência
@@ -55,8 +52,6 @@
               items:
                 - name: Tabela de tipos internos
                   href: keywords/built-in-types-table.md
-                - name: Tabela de tipos de ponto flutuante
-                  href: keywords/floating-point-types-table.md
                 - name: Tabela de tipos de valor
                   href: keywords/value-types-table.md
                 - name: Tabela de valores padrão
