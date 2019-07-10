@@ -2,12 +2,12 @@
 title: Novidades no C# 8.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo está atualizado com a versão prévia 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151976"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397765"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -30,7 +30,12 @@ Há vários aprimoramentos da linguagem C# que você já pode experimentar.
 > [!NOTE]
 > Este artigo foi atualizado pela última vez para o C# 8.0 versão prévia 5.
 
-O restante deste artigo descreve rapidamente esses recursos. Quando houver artigos detalhados disponíveis, forneceremos links para esses tutoriais e visões gerais.
+O restante deste artigo descreve rapidamente esses recursos. Quando houver artigos detalhados disponíveis, forneceremos links para esses tutoriais e visões gerais. Você pode explorar esses recursos em seu ambiente usando a ferramenta global `dotnet try`:
+
+1. Instale a ferramenta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Clone o repositório [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Defina o diretório atual do subdiretório *csharp8* para o repositório *try-samples*.
+1. Execute `dotnet try`.
 
 ## <a name="readonly-members"></a>Membros somente leitura
 
@@ -425,7 +430,7 @@ Os exemplos a seguir criam intervalos abertos para o início, fim ou ambos:
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
 var firstPhrase = words[..4]; // contains "The" through "fox"
-var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
+var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
 Você também pode declarar intervalos como variáveis:

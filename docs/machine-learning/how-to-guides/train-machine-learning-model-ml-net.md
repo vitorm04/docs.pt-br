@@ -1,20 +1,20 @@
 ---
 title: Treinar e avaliar um modelo
-description: Saiba como criar modelos de machine learning, extrair parâmetros aprendidos e medir o desempenho do ML.NET. Embora este exemplo prepare um modelo de regressão, os conceitos são aplicáveis à maioria dos outros algoritmos.
-ms.date: 06/11/2019
+description: Saiba como criar modelos de machine learning, coletar métricas e medir o desempenho com o ML.NET. Um modelo de machine learning identifica padrões nos dados de treinamento para fazer previsões usando novos dados.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to, title-hack-0612
-ms.openlocfilehash: d93353a3503ba67bde5fb61dc88f45d26e2f4306
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307437"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397635"
 ---
 # <a name="train-and-evaluate-a-model"></a>Treinar e avaliar um modelo
 
-Saiba como criar modelos de machine learning, extrair parâmetros aprendidos e medir o desempenho do ML.NET. Embora este exemplo prepare um modelo de regressão, os conceitos são aplicáveis à maioria dos outros algoritmos.
+Saiba como criar modelos de machine learning, coletar métricas e medir o desempenho com o ML.NET. Embora este exemplo prepare um modelo de regressão, os conceitos são aplicáveis à maioria dos outros algoritmos.
 
 ## <a name="split-data-for-training-and-testing"></a>Dividir dados para treinamento e teste
 

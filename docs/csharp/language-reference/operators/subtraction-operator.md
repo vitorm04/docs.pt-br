@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024918"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609850"
 ---
 # <a name="--and---operators-c-reference"></a>Operadores - e -= (referência do C#)
 
@@ -30,17 +30,17 @@ Para obter informações sobre o operador `-` aritmético, consulte as seções 
 
 Para operandos do mesmo tipo [delegado](../keywords/delegate.md), o operador `-` retorna uma instância de delegado que é calculada da seguinte maneira:
 
-- Se ambos os operandos forem não nulos e a lista de invocação do segundo operando for uma sublista contígua apropriada da lista de invocação do primeiro operando, o resultado da operação será uma nova lista de invocação obtida removendo-se as entradas do segundo operando da lista de invocação do primeiro operando. Se a lista do segundo operando corresponder a várias sublistas contíguas na lista do primeiro operando, somente a sublista correspondente mais à direita será removida. Se a remoção resultar em uma lista vazia, o resultado será `null`.
+- Se ambos os operandos forem não nulos e a lista de invocação do operando à direita for uma sublista contígua apropriada da lista de invocação do operando à esquerda, o resultado da operação será uma nova lista de invocação obtida removendo-se as entradas do operando à direita da lista de invocação do operando à esquerda. Se a lista do operando à direita corresponder a várias sublistas contíguas na lista do operando à esquerda, somente a sublista correspondente mais à direita será removida. Se a remoção resultar em uma lista vazia, o resultado será `null`.
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- Se a lista de invocação do segundo operando não for uma sublista contígua apropriada da lista de invocação do primeiro operando, o resultado da operação será o primeiro operando. Por exemplo, a remoção de um delegado que não faz parte do delegado multicast não tem consequências, e o delegado multicast permanece inalterado.
+- Se a lista de invocação do operando à direita não for uma sublista contígua apropriada da lista de invocação do operando à esquerda, o resultado da operação será o operando à esquerda. Por exemplo, a remoção de um delegado que não faz parte do delegado multicast não tem consequências, e o delegado multicast permanece inalterado.
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
   O exemplo anterior também demonstra que, durante a remoção de delegados, as instâncias de delegado são comparadas. Por exemplo, delegados produzidos pela avaliação de [expressões lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) idênticas não são iguais. Para saber mais sobre a igualdade de delegados, confira a seção [Operadores de igualdade de delegados](~/_csharplang/spec/expressions.md#delegate-equality-operators) da [Especificação da linguagem C#](../language-specification/index.md).
 
-- Se o primeiro operando for `null`, o resultado da operação será `null`. Se o segundo operando for `null`, o resultado da operação será o primeiro operando.
+- Se o operando à esquerda for `null`, o resultado da operação será `null`. Se o operando à direita for `null`, o resultado da operação será o operando à esquerda.
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
@@ -72,7 +72,7 @@ Você também usará o operador `-=` para especificar um método de manipulador 
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
-Um tipo definido pelo usuário pode [sobrecarregar](../keywords/operator.md) o operador `-`. Quando um operador `-` binário é sobrecarregado, o operador `-=` também é implicitamente sobrecarregado. Um tipo definido pelo usuário não pode sobrecarregar explicitamente o operador `-=`.
+Um tipo definido pelo usuário pode [sobrecarregar](operator-overloading.md) o operador `-`. Quando um operador `-` binário é sobrecarregado, o operador `-=` também é implicitamente sobrecarregado. Um tipo definido pelo usuário não pode sobrecarregar explicitamente o operador `-=`.
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
