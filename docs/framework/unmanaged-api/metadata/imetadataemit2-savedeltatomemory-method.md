@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa95a737747e9153eb844cddd8e0684585b9108b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79b21613ba844ca4c749d9c04d75260e326e6512
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049967"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777135"
 ---
-# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="428fa-102">Método IMetaDataEmit2::SaveDeltaToMemory</span><span class="sxs-lookup"><span data-stu-id="428fa-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
-<span data-ttu-id="428fa-103">Salva as alterações da sessão atual de editar e continuar para a memória.</span><span class="sxs-lookup"><span data-stu-id="428fa-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
+# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="9ea4e-102">Método IMetaDataEmit2::SaveDeltaToMemory</span><span class="sxs-lookup"><span data-stu-id="9ea4e-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
+<span data-ttu-id="9ea4e-103">Salva as alterações da sessão atual de editar e continuar para a memória.</span><span class="sxs-lookup"><span data-stu-id="9ea4e-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="428fa-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="428fa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ea4e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9ea4e-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SaveDeltaToMemory (  
     [out] void        *pbData,   
     [in]  ULONG       cbData  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="428fa-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="428fa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9ea4e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9ea4e-105">Parameters</span></span>  
  `pbData`  
- <span data-ttu-id="428fa-106">[out] O endereço no qual começar a gravar o delta de metadados.</span><span class="sxs-lookup"><span data-stu-id="428fa-106">[out] The address at which to begin writing the metadata delta.</span></span>  
+ <span data-ttu-id="9ea4e-106">[out] O endereço no qual começar a gravar o delta de metadados.</span><span class="sxs-lookup"><span data-stu-id="9ea4e-106">[out] The address at which to begin writing the metadata delta.</span></span>  
   
  `cbData`  
- <span data-ttu-id="428fa-107">[in] O tamanho das alterações.</span><span class="sxs-lookup"><span data-stu-id="428fa-107">[in] The size of the changes.</span></span> <span data-ttu-id="428fa-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) para determinar o tamanho.</span><span class="sxs-lookup"><span data-stu-id="428fa-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
+ <span data-ttu-id="9ea4e-107">[in] O tamanho das alterações.</span><span class="sxs-lookup"><span data-stu-id="9ea4e-107">[in] The size of the changes.</span></span> <span data-ttu-id="9ea4e-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) para determinar o tamanho.</span><span class="sxs-lookup"><span data-stu-id="9ea4e-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="428fa-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="428fa-109">Requirements</span></span>  
- <span data-ttu-id="428fa-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="428fa-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ea4e-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9ea4e-109">Requirements</span></span>  
+ <span data-ttu-id="9ea4e-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ea4e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="428fa-111">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="428fa-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9ea4e-111">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9ea4e-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="428fa-112">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="428fa-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9ea4e-112">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="9ea4e-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="428fa-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="428fa-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9ea4e-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ea4e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="428fa-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="428fa-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ea4e-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9ea4e-114">See also</span></span>
 
-- [<span data-ttu-id="428fa-115">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="428fa-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="428fa-116">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="428fa-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="9ea4e-115">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="9ea4e-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="9ea4e-116">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="9ea4e-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

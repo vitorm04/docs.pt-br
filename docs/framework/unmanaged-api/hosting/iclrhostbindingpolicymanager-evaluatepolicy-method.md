@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad7856a9376880f867e35f1e63bc2cac1ca216fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d23b2371e7cc3c9d1e91af061c19b4fb0dbc69e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794479"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779689"
 ---
-# <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a><span data-ttu-id="a2c52-102">Método ICLRHostBindingPolicyManager::EvaluatePolicy</span><span class="sxs-lookup"><span data-stu-id="a2c52-102">ICLRHostBindingPolicyManager::EvaluatePolicy Method</span></span>
-<span data-ttu-id="a2c52-103">Avalia a política de associação em nome do host.</span><span class="sxs-lookup"><span data-stu-id="a2c52-103">Evaluates binding policy on behalf of the host.</span></span>  
+# <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a><span data-ttu-id="23975-102">Método ICLRHostBindingPolicyManager::EvaluatePolicy</span><span class="sxs-lookup"><span data-stu-id="23975-102">ICLRHostBindingPolicyManager::EvaluatePolicy Method</span></span>
+<span data-ttu-id="23975-103">Avalia a política de associação em nome do host.</span><span class="sxs-lookup"><span data-stu-id="23975-103">Evaluates binding policy on behalf of the host.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2c52-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a2c52-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23975-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="23975-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EvaluatePolicy (  
     [in] LPCWSTR     pwzReferenceIdentity,  
     [in] BYTE       *pbApplicationPolicy,  
@@ -40,50 +40,50 @@ HRESULT EvaluatePolicy (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a2c52-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="a2c52-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23975-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="23975-105">Parameters</span></span>  
  `pwzReferenceIdentity`  
- <span data-ttu-id="a2c52-106">[in] Uma referência ao assembly antes da avaliação da política.</span><span class="sxs-lookup"><span data-stu-id="a2c52-106">[in] A reference to the assembly before the policy evaluation.</span></span>  
+ <span data-ttu-id="23975-106">[in] Uma referência ao assembly antes da avaliação da política.</span><span class="sxs-lookup"><span data-stu-id="23975-106">[in] A reference to the assembly before the policy evaluation.</span></span>  
   
  `pbApplicationPolicy`  
- <span data-ttu-id="a2c52-107">[in] Um ponteiro para um buffer que contém os dados de política.</span><span class="sxs-lookup"><span data-stu-id="a2c52-107">[in] A pointer to a buffer that contains the policy data.</span></span>  
+ <span data-ttu-id="23975-107">[in] Um ponteiro para um buffer que contém os dados de política.</span><span class="sxs-lookup"><span data-stu-id="23975-107">[in] A pointer to a buffer that contains the policy data.</span></span>  
   
  `cbAppPolicySize`  
- <span data-ttu-id="a2c52-108">[in] O tamanho do `pbApplicationPolicy` buffer.</span><span class="sxs-lookup"><span data-stu-id="a2c52-108">[in] The size of the `pbApplicationPolicy` buffer.</span></span>  
+ <span data-ttu-id="23975-108">[in] O tamanho do `pbApplicationPolicy` buffer.</span><span class="sxs-lookup"><span data-stu-id="23975-108">[in] The size of the `pbApplicationPolicy` buffer.</span></span>  
   
  `pwzPostPolicyReferenceIdentity`  
- <span data-ttu-id="a2c52-109">[out] Uma referência ao assembly após a avaliação dos novos dados de política.</span><span class="sxs-lookup"><span data-stu-id="a2c52-109">[out] A reference to the assembly after the evaluation of the new policy data.</span></span>  
+ <span data-ttu-id="23975-109">[out] Uma referência ao assembly após a avaliação dos novos dados de política.</span><span class="sxs-lookup"><span data-stu-id="23975-109">[out] A reference to the assembly after the evaluation of the new policy data.</span></span>  
   
  `pcchPostPolicyReferenceIdentity`  
- <span data-ttu-id="a2c52-110">[no, out] Um ponteiro para o tamanho do buffer de referência de identidade de assembly após a avaliação dos novos dados de política.</span><span class="sxs-lookup"><span data-stu-id="a2c52-110">[in, out] A pointer to the size of the assembly identity reference buffer after the evaluation of the new policy data.</span></span>  
+ <span data-ttu-id="23975-110">[no, out] Um ponteiro para o tamanho do buffer de referência de identidade de assembly após a avaliação dos novos dados de política.</span><span class="sxs-lookup"><span data-stu-id="23975-110">[in, out] A pointer to the size of the assembly identity reference buffer after the evaluation of the new policy data.</span></span>  
   
  `pdwPoliciesApplied`  
- <span data-ttu-id="a2c52-111">[out] Um ponteiro para uma combinação OR lógico de [EBindPolicyLevels](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) valores, que indica quais diretivas foram aplicadas.</span><span class="sxs-lookup"><span data-stu-id="a2c52-111">[out] A pointer to a logical OR combination of [EBindPolicyLevels](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) values, indicating which policies have been applied.</span></span>  
+ <span data-ttu-id="23975-111">[out] Um ponteiro para uma combinação OR lógico de [EBindPolicyLevels](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) valores, que indica quais diretivas foram aplicadas.</span><span class="sxs-lookup"><span data-stu-id="23975-111">[out] A pointer to a logical OR combination of [EBindPolicyLevels](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) values, indicating which policies have been applied.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a2c52-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="a2c52-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="23975-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="23975-112">Return Value</span></span>  
   
-|<span data-ttu-id="a2c52-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a2c52-113">HRESULT</span></span>|<span data-ttu-id="a2c52-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="a2c52-114">Description</span></span>|  
+|<span data-ttu-id="23975-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="23975-113">HRESULT</span></span>|<span data-ttu-id="23975-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="23975-114">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a2c52-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="a2c52-115">S_OK</span></span>|<span data-ttu-id="a2c52-116">A avaliação foi concluída com êxito.</span><span class="sxs-lookup"><span data-stu-id="a2c52-116">The evaluation completed successfully.</span></span>|  
-|<span data-ttu-id="a2c52-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="a2c52-117">E_INVALIDARG</span></span>|<span data-ttu-id="a2c52-118">Tanto `pwzReferenceIdentity` ou `pbApplicationPolicy` é uma referência nula.</span><span class="sxs-lookup"><span data-stu-id="a2c52-118">Either `pwzReferenceIdentity` or `pbApplicationPolicy` is a null reference.</span></span>|  
-|<span data-ttu-id="a2c52-119">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="a2c52-119">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="a2c52-120">`cbAppPolicySize` é pequeno demais.</span><span class="sxs-lookup"><span data-stu-id="a2c52-120">`cbAppPolicySize` is too small.</span></span>|  
-|<span data-ttu-id="a2c52-121">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a2c52-121">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a2c52-122">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="a2c52-122">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="a2c52-123">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a2c52-123">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a2c52-124">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="a2c52-124">The call timed out.</span></span>|  
-|<span data-ttu-id="a2c52-125">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a2c52-125">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a2c52-126">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="a2c52-126">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="a2c52-127">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a2c52-127">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a2c52-128">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="a2c52-128">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="a2c52-129">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a2c52-129">E_FAIL</span></span>|<span data-ttu-id="a2c52-130">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="a2c52-130">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a2c52-131">Depois que um método retorna E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="a2c52-131">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a2c52-132">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="a2c52-132">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="23975-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="23975-115">S_OK</span></span>|<span data-ttu-id="23975-116">A avaliação foi concluída com êxito.</span><span class="sxs-lookup"><span data-stu-id="23975-116">The evaluation completed successfully.</span></span>|  
+|<span data-ttu-id="23975-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="23975-117">E_INVALIDARG</span></span>|<span data-ttu-id="23975-118">Tanto `pwzReferenceIdentity` ou `pbApplicationPolicy` é uma referência nula.</span><span class="sxs-lookup"><span data-stu-id="23975-118">Either `pwzReferenceIdentity` or `pbApplicationPolicy` is a null reference.</span></span>|  
+|<span data-ttu-id="23975-119">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="23975-119">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="23975-120">`cbAppPolicySize` é pequeno demais.</span><span class="sxs-lookup"><span data-stu-id="23975-120">`cbAppPolicySize` is too small.</span></span>|  
+|<span data-ttu-id="23975-121">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="23975-121">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="23975-122">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="23975-122">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="23975-123">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="23975-123">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="23975-124">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="23975-124">The call timed out.</span></span>|  
+|<span data-ttu-id="23975-125">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="23975-125">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="23975-126">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="23975-126">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="23975-127">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="23975-127">HOST_E_ABANDONED</span></span>|<span data-ttu-id="23975-128">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="23975-128">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="23975-129">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="23975-129">E_FAIL</span></span>|<span data-ttu-id="23975-130">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="23975-130">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="23975-131">Depois que um método retorna E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="23975-131">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="23975-132">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="23975-132">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a2c52-133">Comentários</span><span class="sxs-lookup"><span data-stu-id="a2c52-133">Remarks</span></span>  
- <span data-ttu-id="a2c52-134">O `EvaluatePolicy` método permite que o host para influenciar a política de associação de assembly específico de host de manter os requisitos de controle de versão.</span><span class="sxs-lookup"><span data-stu-id="a2c52-134">The `EvaluatePolicy` method allows the host to influence binding policy to maintain host-specific assembly versioning requirements.</span></span> <span data-ttu-id="a2c52-135">O mecanismo de políticas em si permanece dentro do CLR.</span><span class="sxs-lookup"><span data-stu-id="a2c52-135">The policy engine itself remains inside the CLR.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23975-133">Comentários</span><span class="sxs-lookup"><span data-stu-id="23975-133">Remarks</span></span>  
+ <span data-ttu-id="23975-134">O `EvaluatePolicy` método permite que o host para influenciar a política de associação de assembly específico de host de manter os requisitos de controle de versão.</span><span class="sxs-lookup"><span data-stu-id="23975-134">The `EvaluatePolicy` method allows the host to influence binding policy to maintain host-specific assembly versioning requirements.</span></span> <span data-ttu-id="23975-135">O mecanismo de políticas em si permanece dentro do CLR.</span><span class="sxs-lookup"><span data-stu-id="23975-135">The policy engine itself remains inside the CLR.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a2c52-136">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a2c52-136">Requirements</span></span>  
- <span data-ttu-id="a2c52-137">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2c52-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23975-136">Requisitos</span><span class="sxs-lookup"><span data-stu-id="23975-136">Requirements</span></span>  
+ <span data-ttu-id="23975-137">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23975-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2c52-138">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a2c52-138">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="23975-138">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="23975-138">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a2c52-139">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="a2c52-139">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="23975-139">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="23975-139">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a2c52-140">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2c52-140">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="23975-140">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23975-140">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2c52-141">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a2c52-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23975-141">Consulte também</span><span class="sxs-lookup"><span data-stu-id="23975-141">See also</span></span>
 
-- [<span data-ttu-id="a2c52-142">Interface ICLRHostBindingPolicyManager</span><span class="sxs-lookup"><span data-stu-id="a2c52-142">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [<span data-ttu-id="23975-142">Interface ICLRHostBindingPolicyManager</span><span class="sxs-lookup"><span data-stu-id="23975-142">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

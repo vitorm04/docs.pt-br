@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c54b2af6e7a200db89bfd7335868a629d7a886fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724090"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739455"
 ---
-# <a name="cordebuguserstate-enumeration"></a><span data-ttu-id="6526c-102">Enumeração CorDebugUserState</span><span class="sxs-lookup"><span data-stu-id="6526c-102">CorDebugUserState Enumeration</span></span>
-<span data-ttu-id="6526c-103">Indica o estado do usuário de um thread.</span><span class="sxs-lookup"><span data-stu-id="6526c-103">Indicates the user state of a thread.</span></span>  
+# <a name="cordebuguserstate-enumeration"></a><span data-ttu-id="9ecc2-102">Enumeração CorDebugUserState</span><span class="sxs-lookup"><span data-stu-id="9ecc2-102">CorDebugUserState Enumeration</span></span>
+<span data-ttu-id="9ecc2-103">Indica o estado do usuário de um thread.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-103">Indicates the user state of a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6526c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6526c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ecc2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9ecc2-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorDebugUserState {  
     USER_STOP_REQUESTED     =  0x01,  
     USER_SUSPEND_REQUESTED  =  0x02,  
@@ -42,34 +42,34 @@ typedef enum CorDebugUserState {
 } CorDebugUserState;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6526c-105">Membros</span><span class="sxs-lookup"><span data-stu-id="6526c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9ecc2-105">Membros</span><span class="sxs-lookup"><span data-stu-id="9ecc2-105">Members</span></span>  
   
-|<span data-ttu-id="6526c-106">Valor</span><span class="sxs-lookup"><span data-stu-id="6526c-106">Value</span></span>|<span data-ttu-id="6526c-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="6526c-107">Description</span></span>|  
+|<span data-ttu-id="9ecc2-106">Valor</span><span class="sxs-lookup"><span data-stu-id="9ecc2-106">Value</span></span>|<span data-ttu-id="9ecc2-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="9ecc2-107">Description</span></span>|  
 |-----------|-----------------|  
-|`USER_STOP_REQUESTED`|<span data-ttu-id="6526c-108">Um encerramento do thread foi solicitado.</span><span class="sxs-lookup"><span data-stu-id="6526c-108">A termination of the thread has been requested.</span></span>|  
-|`USER_SUSPEND_REQUESTED`|<span data-ttu-id="6526c-109">Foi solicitada uma suspensão do thread.</span><span class="sxs-lookup"><span data-stu-id="6526c-109">A suspension of the thread has been requested.</span></span>|  
-|`USER_BACKGROUND`|<span data-ttu-id="6526c-110">O thread está em execução em segundo plano.</span><span class="sxs-lookup"><span data-stu-id="6526c-110">The thread is running in the background.</span></span>|  
-|`USER_UNSTARTED`|<span data-ttu-id="6526c-111">O thread não foi iniciada para execução.</span><span class="sxs-lookup"><span data-stu-id="6526c-111">The thread has not started executing.</span></span>|  
-|`USER_STOPPED`|<span data-ttu-id="6526c-112">O thread foi encerrado.</span><span class="sxs-lookup"><span data-stu-id="6526c-112">The thread has been terminated.</span></span>|  
-|`USER_WAIT_SLEEP_JOIN`|<span data-ttu-id="6526c-113">O thread está aguardando outro thread concluir uma tarefa.</span><span class="sxs-lookup"><span data-stu-id="6526c-113">The thread is waiting for another thread to complete a task.</span></span>|  
-|`USER_SUSPENDED`|<span data-ttu-id="6526c-114">O thread foi suspenso.</span><span class="sxs-lookup"><span data-stu-id="6526c-114">The thread has been suspended.</span></span>|  
-|`USER_UNSAFE_POINT`|<span data-ttu-id="6526c-115">O thread está em um ponto que não é seguro.</span><span class="sxs-lookup"><span data-stu-id="6526c-115">The thread is at an unsafe point.</span></span> <span data-ttu-id="6526c-116">Ou seja, o thread está em um ponto na execução em que ele pode bloquear a coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="6526c-116">That is, the thread is at a point in execution where it may block garbage collection.</span></span><br /><br /> <span data-ttu-id="6526c-117">Depurar eventos podem ser despachados de pontos que não é seguros, mas a suspensão de um thread em um ponto que não é seguro muito provavelmente causará um deadlock até que o thread seja retomado.</span><span class="sxs-lookup"><span data-stu-id="6526c-117">Debug events may be dispatched from unsafe points, but suspending a thread at an unsafe point  will very likely cause a deadlock until the thread is resumed.</span></span> <span data-ttu-id="6526c-118">Os pontos seguros e são determinados pela implementação da coleta de lixo e just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="6526c-118">The safe and unsafe points are determined by the just-in-time (JIT) and garbage collection implementation.</span></span>|  
-|`USER_THREADPOOL`|<span data-ttu-id="6526c-119">É o thread do pool de threads.</span><span class="sxs-lookup"><span data-stu-id="6526c-119">The thread is from the thread pool.</span></span>|  
+|`USER_STOP_REQUESTED`|<span data-ttu-id="9ecc2-108">Um encerramento do thread foi solicitado.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-108">A termination of the thread has been requested.</span></span>|  
+|`USER_SUSPEND_REQUESTED`|<span data-ttu-id="9ecc2-109">Foi solicitada uma suspensão do thread.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-109">A suspension of the thread has been requested.</span></span>|  
+|`USER_BACKGROUND`|<span data-ttu-id="9ecc2-110">O thread está em execução em segundo plano.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-110">The thread is running in the background.</span></span>|  
+|`USER_UNSTARTED`|<span data-ttu-id="9ecc2-111">O thread não foi iniciada para execução.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-111">The thread has not started executing.</span></span>|  
+|`USER_STOPPED`|<span data-ttu-id="9ecc2-112">O thread foi encerrado.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-112">The thread has been terminated.</span></span>|  
+|`USER_WAIT_SLEEP_JOIN`|<span data-ttu-id="9ecc2-113">O thread está aguardando outro thread concluir uma tarefa.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-113">The thread is waiting for another thread to complete a task.</span></span>|  
+|`USER_SUSPENDED`|<span data-ttu-id="9ecc2-114">O thread foi suspenso.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-114">The thread has been suspended.</span></span>|  
+|`USER_UNSAFE_POINT`|<span data-ttu-id="9ecc2-115">O thread está em um ponto que não é seguro.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-115">The thread is at an unsafe point.</span></span> <span data-ttu-id="9ecc2-116">Ou seja, o thread está em um ponto na execução em que ele pode bloquear a coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-116">That is, the thread is at a point in execution where it may block garbage collection.</span></span><br /><br /> <span data-ttu-id="9ecc2-117">Depurar eventos podem ser despachados de pontos que não é seguros, mas a suspensão de um thread em um ponto que não é seguro muito provavelmente causará um deadlock até que o thread seja retomado.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-117">Debug events may be dispatched from unsafe points, but suspending a thread at an unsafe point  will very likely cause a deadlock until the thread is resumed.</span></span> <span data-ttu-id="9ecc2-118">Os pontos seguros e são determinados pela implementação da coleta de lixo e just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="9ecc2-118">The safe and unsafe points are determined by the just-in-time (JIT) and garbage collection implementation.</span></span>|  
+|`USER_THREADPOOL`|<span data-ttu-id="9ecc2-119">É o thread do pool de threads.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-119">The thread is from the thread pool.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6526c-120">Comentários</span><span class="sxs-lookup"><span data-stu-id="6526c-120">Remarks</span></span>  
- <span data-ttu-id="6526c-121">O estado do usuário de um thread é o estado que o thread tiver quando o depurador examina a ele.</span><span class="sxs-lookup"><span data-stu-id="6526c-121">The user state of a thread is the state that the thread has when the debugger examines it.</span></span> <span data-ttu-id="6526c-122">Um thread pode ter uma combinação de estados do usuário.</span><span class="sxs-lookup"><span data-stu-id="6526c-122">A thread may have a combination of user states.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9ecc2-120">Comentários</span><span class="sxs-lookup"><span data-stu-id="9ecc2-120">Remarks</span></span>  
+ <span data-ttu-id="9ecc2-121">O estado do usuário de um thread é o estado que o thread tiver quando o depurador examina a ele.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-121">The user state of a thread is the state that the thread has when the debugger examines it.</span></span> <span data-ttu-id="9ecc2-122">Um thread pode ter uma combinação de estados do usuário.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-122">A thread may have a combination of user states.</span></span>  
   
- <span data-ttu-id="6526c-123">Use o [icordebugthread:: Getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) método para recuperar o estado do usuário do thread.</span><span class="sxs-lookup"><span data-stu-id="6526c-123">Use the [ICorDebugThread::GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) method to retrieve a thread's user state.</span></span>  
+ <span data-ttu-id="9ecc2-123">Use o [icordebugthread:: Getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) método para recuperar o estado do usuário do thread.</span><span class="sxs-lookup"><span data-stu-id="9ecc2-123">Use the [ICorDebugThread::GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) method to retrieve a thread's user state.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6526c-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6526c-124">Requirements</span></span>  
- <span data-ttu-id="6526c-125">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6526c-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ecc2-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9ecc2-124">Requirements</span></span>  
+ <span data-ttu-id="9ecc2-125">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ecc2-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6526c-126">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6526c-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9ecc2-126">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9ecc2-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6526c-127">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6526c-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9ecc2-127">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9ecc2-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6526c-128">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6526c-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9ecc2-128">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ecc2-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6526c-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6526c-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ecc2-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9ecc2-129">See also</span></span>
 
-- [<span data-ttu-id="6526c-130">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="6526c-130">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="9ecc2-130">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="9ecc2-130">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

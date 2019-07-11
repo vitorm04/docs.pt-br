@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d51462017287d42fd468ed0a74a2e83203a3d94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6470bd04e3661e7d27798747abc4ef0757bf4f1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000617"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782145"
 ---
-# <a name="icorprofilerinfo3getfunctionleave3info-method"></a><span data-ttu-id="7a1e8-102">Método ICorProfilerInfo3::GetFunctionLeave3Info</span><span class="sxs-lookup"><span data-stu-id="7a1e8-102">ICorProfilerInfo3::GetFunctionLeave3Info Method</span></span>
-<span data-ttu-id="7a1e8-103">Fornece o quadro de pilha e o valor de retorno da função que está sendo relatada ao criador de perfil pela [função FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) função.</span><span class="sxs-lookup"><span data-stu-id="7a1e8-103">Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span> <span data-ttu-id="7a1e8-104">Esse método pode ser chamado somente durante o `FunctionLeave3WithInfo` retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="7a1e8-104">This method can be called only during the `FunctionLeave3WithInfo` callback.</span></span>  
+# <a name="icorprofilerinfo3getfunctionleave3info-method"></a><span data-ttu-id="d1e7b-102">Método ICorProfilerInfo3::GetFunctionLeave3Info</span><span class="sxs-lookup"><span data-stu-id="d1e7b-102">ICorProfilerInfo3::GetFunctionLeave3Info Method</span></span>
+<span data-ttu-id="d1e7b-103">Fornece o quadro de pilha e o valor de retorno da função que está sendo relatada ao criador de perfil pela [função FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) função.</span><span class="sxs-lookup"><span data-stu-id="d1e7b-103">Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span> <span data-ttu-id="d1e7b-104">Esse método pode ser chamado somente durante o `FunctionLeave3WithInfo` retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="d1e7b-104">This method can be called only during the `FunctionLeave3WithInfo` callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a1e8-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7a1e8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1e7b-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d1e7b-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFunctionLeave3Info(  
             [in]  FunctionID functionId,  
             [in]  COR_PRF_ELT_INFO eltInfo,  
@@ -37,35 +37,35 @@ HRESULT GetFunctionLeave3Info(
             [out] COR_PRF_FUNCTION_ARGUMENT_RANGE *pRetvalRange);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7a1e8-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7a1e8-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d1e7b-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d1e7b-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="7a1e8-107">[in] O `FunctionID` da função que está retornando.</span><span class="sxs-lookup"><span data-stu-id="7a1e8-107">[in] The `FunctionID` of the function that is returning.</span></span>  
+ <span data-ttu-id="d1e7b-107">[in] O `FunctionID` da função que está retornando.</span><span class="sxs-lookup"><span data-stu-id="d1e7b-107">[in] The `FunctionID` of the function that is returning.</span></span>  
   
  `eltInfo`  
- <span data-ttu-id="7a1e8-108">[in] Um identificador opaco que representa informações sobre um registro de ativação.</span><span class="sxs-lookup"><span data-stu-id="7a1e8-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="7a1e8-109">O criador de perfil deve fornecer os mesmos `eltInfo` que foi fornecido para o criador de perfil, o [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) função.</span><span class="sxs-lookup"><span data-stu-id="7a1e8-109">The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span>  
+ <span data-ttu-id="d1e7b-108">[in] Um identificador opaco que representa informações sobre um registro de ativação.</span><span class="sxs-lookup"><span data-stu-id="d1e7b-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="d1e7b-109">O criador de perfil deve fornecer os mesmos `eltInfo` que foi fornecido para o criador de perfil, o [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) função.</span><span class="sxs-lookup"><span data-stu-id="d1e7b-109">The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span>  
   
  `pFrameInfo`  
- <span data-ttu-id="7a1e8-110">[out] Um identificador opaco que representa as informações sobre um registro de ativação genéricos.</span><span class="sxs-lookup"><span data-stu-id="7a1e8-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="7a1e8-111">Esse identificador é válido somente durante o `FunctionLeave3WithInfo` retorno de chamada em que o criador de perfil chamado o `GetFunctionLeave3Info` método.</span><span class="sxs-lookup"><span data-stu-id="7a1e8-111">This handle is valid only during the `FunctionLeave3WithInfo` callback in which the profiler called the `GetFunctionLeave3Info` method.</span></span>  
+ <span data-ttu-id="d1e7b-110">[out] Um identificador opaco que representa as informações sobre um registro de ativação genéricos.</span><span class="sxs-lookup"><span data-stu-id="d1e7b-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="d1e7b-111">Esse identificador é válido somente durante o `FunctionLeave3WithInfo` retorno de chamada em que o criador de perfil chamado o `GetFunctionLeave3Info` método.</span><span class="sxs-lookup"><span data-stu-id="d1e7b-111">This handle is valid only during the `FunctionLeave3WithInfo` callback in which the profiler called the `GetFunctionLeave3Info` method.</span></span>  
   
  `pRetvalRange`  
- <span data-ttu-id="7a1e8-112">[out] Um ponteiro para um [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) estrutura que contém o valor retornado da função.</span><span class="sxs-lookup"><span data-stu-id="7a1e8-112">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function.</span></span> <span data-ttu-id="7a1e8-113">Para acessar informações de valor de retorno, o `COR_PRF_ENABLE_FUNCTION_RETVAL` sinalizador deve ser definido.</span><span class="sxs-lookup"><span data-stu-id="7a1e8-113">To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="7a1e8-114">O criador de perfil pode usar o [método ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento.</span><span class="sxs-lookup"><span data-stu-id="7a1e8-114">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.</span></span>  
+ <span data-ttu-id="d1e7b-112">[out] Um ponteiro para um [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) estrutura que contém o valor retornado da função.</span><span class="sxs-lookup"><span data-stu-id="d1e7b-112">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function.</span></span> <span data-ttu-id="d1e7b-113">Para acessar informações de valor de retorno, o `COR_PRF_ENABLE_FUNCTION_RETVAL` sinalizador deve ser definido.</span><span class="sxs-lookup"><span data-stu-id="d1e7b-113">To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="d1e7b-114">O criador de perfil pode usar o [método ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento.</span><span class="sxs-lookup"><span data-stu-id="d1e7b-114">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7a1e8-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="7a1e8-115">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d1e7b-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="d1e7b-115">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7a1e8-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7a1e8-116">Requirements</span></span>  
- <span data-ttu-id="7a1e8-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7a1e8-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1e7b-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d1e7b-116">Requirements</span></span>  
+ <span data-ttu-id="d1e7b-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d1e7b-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7a1e8-118">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7a1e8-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d1e7b-118">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d1e7b-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7a1e8-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7a1e8-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d1e7b-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d1e7b-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7a1e8-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a1e8-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="d1e7b-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1e7b-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7a1e8-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7a1e8-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1e7b-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d1e7b-121">See also</span></span>
 
-- [<span data-ttu-id="7a1e8-122">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="7a1e8-122">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [<span data-ttu-id="7a1e8-123">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="7a1e8-123">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="7a1e8-124">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="7a1e8-124">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [<span data-ttu-id="7a1e8-125">Interface ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="7a1e8-125">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="7a1e8-126">Interfaces de criação de perfil</span><span class="sxs-lookup"><span data-stu-id="7a1e8-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="7a1e8-127">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="7a1e8-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="d1e7b-122">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="d1e7b-122">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
+- [<span data-ttu-id="d1e7b-123">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="d1e7b-123">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
+- [<span data-ttu-id="d1e7b-124">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="d1e7b-124">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
+- [<span data-ttu-id="d1e7b-125">Interface ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="d1e7b-125">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="d1e7b-126">Interfaces de criação de perfil</span><span class="sxs-lookup"><span data-stu-id="d1e7b-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="d1e7b-127">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="d1e7b-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

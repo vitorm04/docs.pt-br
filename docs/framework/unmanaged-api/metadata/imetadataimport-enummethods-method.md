@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bab625b8415183b9cf90c35cba140c4d28095805
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 187a5e673457d2d1eebb60cc1795e9885426c6d3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992440"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781954"
 ---
-# <a name="imetadataimportenummethods-method"></a><span data-ttu-id="93b1a-102">Método IMetaDataImport::EnumMethods</span><span class="sxs-lookup"><span data-stu-id="93b1a-102">IMetaDataImport::EnumMethods Method</span></span>
-<span data-ttu-id="93b1a-103">Enumera os tokens MethodDef que representam os métodos do tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="93b1a-103">Enumerates MethodDef tokens representing methods of the specified type.</span></span>  
+# <a name="imetadataimportenummethods-method"></a><span data-ttu-id="28899-102">Método IMetaDataImport::EnumMethods</span><span class="sxs-lookup"><span data-stu-id="28899-102">IMetaDataImport::EnumMethods Method</span></span>
+<span data-ttu-id="28899-103">Enumera os tokens MethodDef que representam os métodos do tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="28899-103">Enumerates MethodDef tokens representing methods of the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93b1a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="93b1a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28899-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="28899-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumMethods (  
    [in, out] HCORENUM   *phEnum,   
    [in]  mdTypeDef      cl,   
@@ -39,39 +39,39 @@ HRESULT EnumMethods (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="93b1a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="93b1a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="28899-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="28899-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="93b1a-106">[no, out] Um ponteiro para o enumerador.</span><span class="sxs-lookup"><span data-stu-id="93b1a-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="93b1a-107">Isso deve ser NULL para a primeira chamada desse método.</span><span class="sxs-lookup"><span data-stu-id="93b1a-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="28899-106">[no, out] Um ponteiro para o enumerador.</span><span class="sxs-lookup"><span data-stu-id="28899-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="28899-107">Isso deve ser NULL para a primeira chamada desse método.</span><span class="sxs-lookup"><span data-stu-id="28899-107">This must be NULL for the first call of this method.</span></span>  
   
  `cl`  
- <span data-ttu-id="93b1a-108">[in] Um token de TypeDef que representa o tipo com os métodos para enumerar.</span><span class="sxs-lookup"><span data-stu-id="93b1a-108">[in] A TypeDef token representing the type with the methods to enumerate.</span></span>  
+ <span data-ttu-id="28899-108">[in] Um token de TypeDef que representa o tipo com os métodos para enumerar.</span><span class="sxs-lookup"><span data-stu-id="28899-108">[in] A TypeDef token representing the type with the methods to enumerate.</span></span>  
   
  `rMethods`  
- <span data-ttu-id="93b1a-109">[out] A matriz para armazenar os tokens MethodDef.</span><span class="sxs-lookup"><span data-stu-id="93b1a-109">[out] The array to store the MethodDef tokens.</span></span>  
+ <span data-ttu-id="28899-109">[out] A matriz para armazenar os tokens MethodDef.</span><span class="sxs-lookup"><span data-stu-id="28899-109">[out] The array to store the MethodDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="93b1a-110">[in] O tamanho máximo do MethodDef `rMethods` matriz.</span><span class="sxs-lookup"><span data-stu-id="93b1a-110">[in] The maximum size of the MethodDef `rMethods` array.</span></span>  
+ <span data-ttu-id="28899-110">[in] O tamanho máximo do MethodDef `rMethods` matriz.</span><span class="sxs-lookup"><span data-stu-id="28899-110">[in] The maximum size of the MethodDef `rMethods` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="93b1a-111">[out] O número de tokens MethodDef retornado no `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="93b1a-111">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
+ <span data-ttu-id="28899-111">[out] O número de tokens MethodDef retornado no `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="28899-111">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="93b1a-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="93b1a-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="28899-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="28899-112">Return Value</span></span>  
   
-|<span data-ttu-id="93b1a-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="93b1a-113">HRESULT</span></span>|<span data-ttu-id="93b1a-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="93b1a-114">Description</span></span>|  
+|<span data-ttu-id="28899-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="28899-113">HRESULT</span></span>|<span data-ttu-id="28899-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="28899-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="93b1a-115">`EnumMethods` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="93b1a-115">`EnumMethods` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="93b1a-116">Não há nenhum token MethodDef para enumerar.</span><span class="sxs-lookup"><span data-stu-id="93b1a-116">There are no MethodDef tokens to enumerate.</span></span> <span data-ttu-id="93b1a-117">Nesse caso, `pcTokens` é zero.</span><span class="sxs-lookup"><span data-stu-id="93b1a-117">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="28899-115">`EnumMethods` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="28899-115">`EnumMethods` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="28899-116">Não há nenhum token MethodDef para enumerar.</span><span class="sxs-lookup"><span data-stu-id="28899-116">There are no MethodDef tokens to enumerate.</span></span> <span data-ttu-id="28899-117">Nesse caso, `pcTokens` é zero.</span><span class="sxs-lookup"><span data-stu-id="28899-117">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="93b1a-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="93b1a-118">Requirements</span></span>  
- <span data-ttu-id="93b1a-119">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="93b1a-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="28899-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="28899-118">Requirements</span></span>  
+ <span data-ttu-id="28899-119">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28899-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="93b1a-120">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="93b1a-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="28899-120">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="28899-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="93b1a-121">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="93b1a-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="28899-121">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="28899-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="93b1a-122">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93b1a-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="28899-122">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28899-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93b1a-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="93b1a-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28899-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="28899-123">See also</span></span>
 
-- [<span data-ttu-id="93b1a-124">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="93b1a-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="93b1a-125">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="93b1a-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="28899-124">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="28899-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="28899-125">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="28899-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

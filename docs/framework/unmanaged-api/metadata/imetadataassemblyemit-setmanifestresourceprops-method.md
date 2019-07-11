@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6fbc3f41e95730e93bd907762dd8cd4205037c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d080a3077df2cb4ad57ef463b5e02a3a28d8429d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905362"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779403"
 ---
-# <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a><span data-ttu-id="b4bfe-102">Método IMetaDataAssemblyEmit::SetManifestResourceProps</span><span class="sxs-lookup"><span data-stu-id="b4bfe-102">IMetaDataAssemblyEmit::SetManifestResourceProps Method</span></span>
-<span data-ttu-id="b4bfe-103">Modifica especificado `ManifestResource` estrutura de metadados.</span><span class="sxs-lookup"><span data-stu-id="b4bfe-103">Modifies the specified `ManifestResource` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a><span data-ttu-id="d9e36-102">Método IMetaDataAssemblyEmit::SetManifestResourceProps</span><span class="sxs-lookup"><span data-stu-id="d9e36-102">IMetaDataAssemblyEmit::SetManifestResourceProps Method</span></span>
+<span data-ttu-id="d9e36-103">Modifica especificado `ManifestResource` estrutura de metadados.</span><span class="sxs-lookup"><span data-stu-id="d9e36-103">Modifies the specified `ManifestResource` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b4bfe-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b4bfe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9e36-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d9e36-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetManifestResourceProps (  
     [in] mdManifestResource  mr,  
     [in] mdToken             tkImplementation,   
@@ -38,31 +38,31 @@ HRESULT SetManifestResourceProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b4bfe-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b4bfe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d9e36-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d9e36-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="b4bfe-106">[in] O token que especifica o `ManifestResource` estrutura de metadados a ser modificado.</span><span class="sxs-lookup"><span data-stu-id="b4bfe-106">[in] The token that specifies the `ManifestResource` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="d9e36-106">[in] O token que especifica o `ManifestResource` estrutura de metadados a ser modificado.</span><span class="sxs-lookup"><span data-stu-id="d9e36-106">[in] The token that specifies the `ManifestResource` metadata structure to be modified.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="b4bfe-107">[in] O token, do tipo `File` ou `AssemblyRef`, que é mapeado para o provedor de recursos.</span><span class="sxs-lookup"><span data-stu-id="b4bfe-107">[in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.</span></span>  
+ <span data-ttu-id="d9e36-107">[in] O token, do tipo `File` ou `AssemblyRef`, que é mapeado para o provedor de recursos.</span><span class="sxs-lookup"><span data-stu-id="d9e36-107">[in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="b4bfe-108">[in] O deslocamento para o início do recurso dentro do arquivo.</span><span class="sxs-lookup"><span data-stu-id="b4bfe-108">[in] The offset to the beginning of the resource within the file.</span></span>  
+ <span data-ttu-id="d9e36-108">[in] O deslocamento para o início do recurso dentro do arquivo.</span><span class="sxs-lookup"><span data-stu-id="d9e36-108">[in] The offset to the beginning of the resource within the file.</span></span>  
   
  `dwResourceFlags`  
- <span data-ttu-id="b4bfe-109">[in] Uma combinação bit a bit dos valores de sinalizador que especificam os atributos do recurso.</span><span class="sxs-lookup"><span data-stu-id="b4bfe-109">[in] A bitwise combination of flag values that specify the attributes of the resource.</span></span>  
+ <span data-ttu-id="d9e36-109">[in] Uma combinação bit a bit dos valores de sinalizador que especificam os atributos do recurso.</span><span class="sxs-lookup"><span data-stu-id="d9e36-109">[in] A bitwise combination of flag values that specify the attributes of the resource.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b4bfe-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="b4bfe-110">Remarks</span></span>  
- <span data-ttu-id="b4bfe-111">Para criar uma `ManifestResource` estrutura de metadados, use o [imetadataassemblyemit:: Definemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="b4bfe-111">To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9e36-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="d9e36-110">Remarks</span></span>  
+ <span data-ttu-id="d9e36-111">Para criar uma `ManifestResource` estrutura de metadados, use o [imetadataassemblyemit:: Definemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="d9e36-111">To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b4bfe-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b4bfe-112">Requirements</span></span>  
- <span data-ttu-id="b4bfe-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b4bfe-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9e36-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d9e36-112">Requirements</span></span>  
+ <span data-ttu-id="d9e36-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9e36-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b4bfe-114">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b4bfe-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d9e36-114">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d9e36-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b4bfe-115">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="b4bfe-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d9e36-115">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="d9e36-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b4bfe-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4bfe-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d9e36-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9e36-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4bfe-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b4bfe-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9e36-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d9e36-117">See also</span></span>
 
-- [<span data-ttu-id="b4bfe-118">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="b4bfe-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="d9e36-118">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="d9e36-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

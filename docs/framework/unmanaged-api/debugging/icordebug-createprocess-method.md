@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 795392bc50d4b7c5eeb82b98230a52156f273f15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d6220270634dd8e2d15787d717020b8f6f86bb9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989515"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738333"
 ---
-# <a name="icordebugcreateprocess-method"></a><span data-ttu-id="f3c21-102">Método ICorDebug::CreateProcess</span><span class="sxs-lookup"><span data-stu-id="f3c21-102">ICorDebug::CreateProcess Method</span></span>
-<span data-ttu-id="f3c21-103">Inicia um processo e thread primário, sob o controle do depurador.</span><span class="sxs-lookup"><span data-stu-id="f3c21-103">Launches a process and its primary thread under the control of the debugger.</span></span>  
+# <a name="icordebugcreateprocess-method"></a><span data-ttu-id="b57d4-102">Método ICorDebug::CreateProcess</span><span class="sxs-lookup"><span data-stu-id="b57d4-102">ICorDebug::CreateProcess Method</span></span>
+<span data-ttu-id="b57d4-103">Inicia um processo e thread primário, sob o controle do depurador.</span><span class="sxs-lookup"><span data-stu-id="b57d4-103">Launches a process and its primary thread under the control of the debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3c21-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f3c21-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b57d4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b57d4-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateProcess (  
     [in]  LPCWSTR                     lpApplicationName,  
     [in]  LPWSTR                      lpCommandLine,  
@@ -46,61 +46,61 @@ HRESULT CreateProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f3c21-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f3c21-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b57d4-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b57d4-105">Parameters</span></span>  
  `lpApplicationName`  
- <span data-ttu-id="f3c21-106">[in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o módulo a ser executado, o processo iniciado.</span><span class="sxs-lookup"><span data-stu-id="f3c21-106">[in] Pointer to a null-terminated string that specifies the module to be executed by the launched process.</span></span> <span data-ttu-id="f3c21-107">O módulo é executado no contexto de segurança do processo de chamada.</span><span class="sxs-lookup"><span data-stu-id="f3c21-107">The module is executed in the security context of the calling process.</span></span>  
+ <span data-ttu-id="b57d4-106">[in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o módulo a ser executado, o processo iniciado.</span><span class="sxs-lookup"><span data-stu-id="b57d4-106">[in] Pointer to a null-terminated string that specifies the module to be executed by the launched process.</span></span> <span data-ttu-id="b57d4-107">O módulo é executado no contexto de segurança do processo de chamada.</span><span class="sxs-lookup"><span data-stu-id="b57d4-107">The module is executed in the security context of the calling process.</span></span>  
   
  `lpCommandLine`  
- <span data-ttu-id="f3c21-108">[in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica a linha de comando a ser executado, o processo iniciado.</span><span class="sxs-lookup"><span data-stu-id="f3c21-108">[in] Pointer to a null-terminated string that specifies the command line to be executed by the launched process.</span></span> <span data-ttu-id="f3c21-109">O nome do aplicativo (por exemplo, "SomeApp.exe") deve ser o primeiro argumento.</span><span class="sxs-lookup"><span data-stu-id="f3c21-109">The application name (for example, "SomeApp.exe") must be the first argument.</span></span>  
+ <span data-ttu-id="b57d4-108">[in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica a linha de comando a ser executado, o processo iniciado.</span><span class="sxs-lookup"><span data-stu-id="b57d4-108">[in] Pointer to a null-terminated string that specifies the command line to be executed by the launched process.</span></span> <span data-ttu-id="b57d4-109">O nome do aplicativo (por exemplo, "SomeApp.exe") deve ser o primeiro argumento.</span><span class="sxs-lookup"><span data-stu-id="b57d4-109">The application name (for example, "SomeApp.exe") must be the first argument.</span></span>  
   
  `lpProcessAttributes`  
- <span data-ttu-id="f3c21-110">[in] Ponteiro para um Win32 `SECURITY_ATTRIBUTES` estrutura que especifica o descritor de segurança para o processo.</span><span class="sxs-lookup"><span data-stu-id="f3c21-110">[in] Pointer to a Win32 `SECURITY_ATTRIBUTES` structure that specifies the security descriptor for the process.</span></span> <span data-ttu-id="f3c21-111">Se `lpProcessAttributes` é nulo, o processo obtém um descritor de segurança padrão.</span><span class="sxs-lookup"><span data-stu-id="f3c21-111">If `lpProcessAttributes` is null, the process gets a default security descriptor.</span></span>  
+ <span data-ttu-id="b57d4-110">[in] Ponteiro para um Win32 `SECURITY_ATTRIBUTES` estrutura que especifica o descritor de segurança para o processo.</span><span class="sxs-lookup"><span data-stu-id="b57d4-110">[in] Pointer to a Win32 `SECURITY_ATTRIBUTES` structure that specifies the security descriptor for the process.</span></span> <span data-ttu-id="b57d4-111">Se `lpProcessAttributes` é nulo, o processo obtém um descritor de segurança padrão.</span><span class="sxs-lookup"><span data-stu-id="b57d4-111">If `lpProcessAttributes` is null, the process gets a default security descriptor.</span></span>  
   
  `lpThreadAttributes`  
- <span data-ttu-id="f3c21-112">[in] Ponteiro para um Win32 `SECURITY_ATTRIBUTES` estrutura que especifica o descritor de segurança para o thread principal do processo.</span><span class="sxs-lookup"><span data-stu-id="f3c21-112">[in] Pointer to a Win32 `SECURITY_ATTRIBUTES` structure that specifies the security descriptor for the primary thread of the process.</span></span> <span data-ttu-id="f3c21-113">Se `lpThreadAttributes` é null, o thread obtém um descritor de segurança padrão.</span><span class="sxs-lookup"><span data-stu-id="f3c21-113">If `lpThreadAttributes` is null, the thread gets a default security descriptor.</span></span>  
+ <span data-ttu-id="b57d4-112">[in] Ponteiro para um Win32 `SECURITY_ATTRIBUTES` estrutura que especifica o descritor de segurança para o thread principal do processo.</span><span class="sxs-lookup"><span data-stu-id="b57d4-112">[in] Pointer to a Win32 `SECURITY_ATTRIBUTES` structure that specifies the security descriptor for the primary thread of the process.</span></span> <span data-ttu-id="b57d4-113">Se `lpThreadAttributes` é null, o thread obtém um descritor de segurança padrão.</span><span class="sxs-lookup"><span data-stu-id="b57d4-113">If `lpThreadAttributes` is null, the thread gets a default security descriptor.</span></span>  
   
  `bInheritHandles`  
- <span data-ttu-id="f3c21-114">[in] Definido como `true` para indicar que cada identificador herdável no processo de chamada é herdada pelo processo iniciado, ou `false` para indicar que os identificadores não são herdados.</span><span class="sxs-lookup"><span data-stu-id="f3c21-114">[in] Set to `true` to indicate that each inheritable handle in the calling process is inherited by the launched process, or `false` to indicate that the handles are not inherited.</span></span> <span data-ttu-id="f3c21-115">Os identificadores de herdados têm os mesmos direitos de acesso e o valor que as alças originais.</span><span class="sxs-lookup"><span data-stu-id="f3c21-115">The inherited handles have the same value and access rights as the original handles.</span></span>  
+ <span data-ttu-id="b57d4-114">[in] Definido como `true` para indicar que cada identificador herdável no processo de chamada é herdada pelo processo iniciado, ou `false` para indicar que os identificadores não são herdados.</span><span class="sxs-lookup"><span data-stu-id="b57d4-114">[in] Set to `true` to indicate that each inheritable handle in the calling process is inherited by the launched process, or `false` to indicate that the handles are not inherited.</span></span> <span data-ttu-id="b57d4-115">Os identificadores de herdados têm os mesmos direitos de acesso e o valor que as alças originais.</span><span class="sxs-lookup"><span data-stu-id="b57d4-115">The inherited handles have the same value and access rights as the original handles.</span></span>  
   
  `dwCreationFlags`  
- <span data-ttu-id="f3c21-116">[in] Uma combinação bit a bit do [sinalizadores de criação do processo Win32](https://go.microsoft.com/fwlink/?linkid=69981) que controlam a classe de prioridade e o comportamento do processo iniciado.</span><span class="sxs-lookup"><span data-stu-id="f3c21-116">[in] A bitwise combination of the [Win32 Process Creation Flags](https://go.microsoft.com/fwlink/?linkid=69981) that control the priority class and the behavior of the launched process.</span></span>  
+ <span data-ttu-id="b57d4-116">[in] Uma combinação bit a bit do [sinalizadores de criação do processo Win32](https://go.microsoft.com/fwlink/?linkid=69981) que controlam a classe de prioridade e o comportamento do processo iniciado.</span><span class="sxs-lookup"><span data-stu-id="b57d4-116">[in] A bitwise combination of the [Win32 Process Creation Flags](https://go.microsoft.com/fwlink/?linkid=69981) that control the priority class and the behavior of the launched process.</span></span>  
   
  `lpEnvironment`  
- <span data-ttu-id="f3c21-117">[in] Ponteiro para um bloco de ambiente para o novo processo.</span><span class="sxs-lookup"><span data-stu-id="f3c21-117">[in] Pointer to an environment block for the new process.</span></span>  
+ <span data-ttu-id="b57d4-117">[in] Ponteiro para um bloco de ambiente para o novo processo.</span><span class="sxs-lookup"><span data-stu-id="b57d4-117">[in] Pointer to an environment block for the new process.</span></span>  
   
  `lpCurrentDirectory`  
- <span data-ttu-id="f3c21-118">[in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o caminho completo para o diretório atual para o processo.</span><span class="sxs-lookup"><span data-stu-id="f3c21-118">[in] Pointer to a null-terminated string that specifies the full path to the current directory for the process.</span></span> <span data-ttu-id="f3c21-119">Se esse parâmetro for nulo, o novo processo terá a mesma unidade atual e o diretório como o processo de chamada.</span><span class="sxs-lookup"><span data-stu-id="f3c21-119">If this parameter is null, the new process will have the same current drive and directory as the calling process.</span></span>  
+ <span data-ttu-id="b57d4-118">[in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o caminho completo para o diretório atual para o processo.</span><span class="sxs-lookup"><span data-stu-id="b57d4-118">[in] Pointer to a null-terminated string that specifies the full path to the current directory for the process.</span></span> <span data-ttu-id="b57d4-119">Se esse parâmetro for nulo, o novo processo terá a mesma unidade atual e o diretório como o processo de chamada.</span><span class="sxs-lookup"><span data-stu-id="b57d4-119">If this parameter is null, the new process will have the same current drive and directory as the calling process.</span></span>  
   
  `lpStartupInfo`  
- <span data-ttu-id="f3c21-120">[in] Ponteiro para um Win32 `STARTUPINFOW` estrutura que especifica a estação de janela, área de trabalho, os identificadores padrão e aparência da janela principal para o processo iniciado.</span><span class="sxs-lookup"><span data-stu-id="f3c21-120">[in] Pointer to a Win32 `STARTUPINFOW` structure that specifies the window station, desktop, standard handles, and appearance of the main window for the launched process.</span></span>  
+ <span data-ttu-id="b57d4-120">[in] Ponteiro para um Win32 `STARTUPINFOW` estrutura que especifica a estação de janela, área de trabalho, os identificadores padrão e aparência da janela principal para o processo iniciado.</span><span class="sxs-lookup"><span data-stu-id="b57d4-120">[in] Pointer to a Win32 `STARTUPINFOW` structure that specifies the window station, desktop, standard handles, and appearance of the main window for the launched process.</span></span>  
   
  `lpProcessInformation`  
- <span data-ttu-id="f3c21-121">[in] Ponteiro para um Win32 `PROCESS_INFORMATION` estrutura que especifica as informações de identificação sobre o processo a ser iniciado.</span><span class="sxs-lookup"><span data-stu-id="f3c21-121">[in] Pointer to a Win32 `PROCESS_INFORMATION` structure that specifies the identification information about the process to be launched.</span></span>  
+ <span data-ttu-id="b57d4-121">[in] Ponteiro para um Win32 `PROCESS_INFORMATION` estrutura que especifica as informações de identificação sobre o processo a ser iniciado.</span><span class="sxs-lookup"><span data-stu-id="b57d4-121">[in] Pointer to a Win32 `PROCESS_INFORMATION` structure that specifies the identification information about the process to be launched.</span></span>  
   
  `debuggingFlags`  
- <span data-ttu-id="f3c21-122">[in] Um valor de enumeração CorDebugCreateProcessFlags que especifica as opções de depuração.</span><span class="sxs-lookup"><span data-stu-id="f3c21-122">[in] A value of the CorDebugCreateProcessFlags enumeration that specifies the debugging options.</span></span>  
+ <span data-ttu-id="b57d4-122">[in] Um valor de enumeração CorDebugCreateProcessFlags que especifica as opções de depuração.</span><span class="sxs-lookup"><span data-stu-id="b57d4-122">[in] A value of the CorDebugCreateProcessFlags enumeration that specifies the debugging options.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="f3c21-123">[out] Um ponteiro para o endereço de um objeto ICorDebugProcess que representa o processo.</span><span class="sxs-lookup"><span data-stu-id="f3c21-123">[out] A pointer to the address of a ICorDebugProcess object that represents the process.</span></span>  
+ <span data-ttu-id="b57d4-123">[out] Um ponteiro para o endereço de um objeto ICorDebugProcess que representa o processo.</span><span class="sxs-lookup"><span data-stu-id="b57d4-123">[out] A pointer to the address of a ICorDebugProcess object that represents the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f3c21-124">Comentários</span><span class="sxs-lookup"><span data-stu-id="f3c21-124">Remarks</span></span>  
- <span data-ttu-id="f3c21-125">Os parâmetros desse método são iguais do Win32 `CreateProcess` método.</span><span class="sxs-lookup"><span data-stu-id="f3c21-125">The parameters of this method are the same as those of the Win32 `CreateProcess` method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b57d4-124">Comentários</span><span class="sxs-lookup"><span data-stu-id="b57d4-124">Remarks</span></span>  
+ <span data-ttu-id="b57d4-125">Os parâmetros desse método são iguais do Win32 `CreateProcess` método.</span><span class="sxs-lookup"><span data-stu-id="b57d4-125">The parameters of this method are the same as those of the Win32 `CreateProcess` method.</span></span>  
   
- <span data-ttu-id="f3c21-126">Para habilitar a depuração não gerenciada de modo misto, defina `dwCreationFlags` para DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS.</span><span class="sxs-lookup"><span data-stu-id="f3c21-126">To enable unmanaged mixed-mode debugging, set `dwCreationFlags` to DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS.</span></span> <span data-ttu-id="f3c21-127">Se você quiser usar a depuração somente gerenciado, não defina esses sinalizadores.</span><span class="sxs-lookup"><span data-stu-id="f3c21-127">If you want to use only managed debugging, do not set these flags.</span></span>  
+ <span data-ttu-id="b57d4-126">Para habilitar a depuração não gerenciada de modo misto, defina `dwCreationFlags` para DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS.</span><span class="sxs-lookup"><span data-stu-id="b57d4-126">To enable unmanaged mixed-mode debugging, set `dwCreationFlags` to DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS.</span></span> <span data-ttu-id="b57d4-127">Se você quiser usar a depuração somente gerenciado, não defina esses sinalizadores.</span><span class="sxs-lookup"><span data-stu-id="b57d4-127">If you want to use only managed debugging, do not set these flags.</span></span>  
   
- <span data-ttu-id="f3c21-128">Se o depurador e o processo a ser depurado (o processo anexado) compartilham um único console, e se depuração interop for usado, é possível que o processo anexado manter bloqueios de console e parar em um evento de depuração.</span><span class="sxs-lookup"><span data-stu-id="f3c21-128">If the debugger and the process to be debugged (the attached process) share a single console, and if interop debugging is used, it is possible for the attached process to hold console locks and stop at a debug event.</span></span> <span data-ttu-id="f3c21-129">O depurador, em seguida, irá bloquear qualquer tentativa de usar o console.</span><span class="sxs-lookup"><span data-stu-id="f3c21-129">The debugger will then block any attempt to use the console.</span></span> <span data-ttu-id="f3c21-130">Para evitar esse problema, defina o sinalizador CREATE_NEW_CONSOLE `dwCreationFlags` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="f3c21-130">To avoid this problem, set the CREATE_NEW_CONSOLE flag in the `dwCreationFlags` parameter.</span></span>  
+ <span data-ttu-id="b57d4-128">Se o depurador e o processo a ser depurado (o processo anexado) compartilham um único console, e se depuração interop for usado, é possível que o processo anexado manter bloqueios de console e parar em um evento de depuração.</span><span class="sxs-lookup"><span data-stu-id="b57d4-128">If the debugger and the process to be debugged (the attached process) share a single console, and if interop debugging is used, it is possible for the attached process to hold console locks and stop at a debug event.</span></span> <span data-ttu-id="b57d4-129">O depurador, em seguida, irá bloquear qualquer tentativa de usar o console.</span><span class="sxs-lookup"><span data-stu-id="b57d4-129">The debugger will then block any attempt to use the console.</span></span> <span data-ttu-id="b57d4-130">Para evitar esse problema, defina o sinalizador CREATE_NEW_CONSOLE `dwCreationFlags` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="b57d4-130">To avoid this problem, set the CREATE_NEW_CONSOLE flag in the `dwCreationFlags` parameter.</span></span>  
   
- <span data-ttu-id="f3c21-131">Não há suporte para depuração Interop em plataformas Win9x e não x86 como plataformas baseadas em IA-64 e com base em AMD64.</span><span class="sxs-lookup"><span data-stu-id="f3c21-131">Interop debugging is not supported on Win9x and non-x86 platforms such as IA-64-based and AMD64-based platforms.</span></span>  
+ <span data-ttu-id="b57d4-131">Não há suporte para depuração Interop em plataformas Win9x e não x86 como plataformas baseadas em IA-64 e com base em AMD64.</span><span class="sxs-lookup"><span data-stu-id="b57d4-131">Interop debugging is not supported on Win9x and non-x86 platforms such as IA-64-based and AMD64-based platforms.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f3c21-132">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f3c21-132">Requirements</span></span>  
- <span data-ttu-id="f3c21-133">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f3c21-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b57d4-132">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b57d4-132">Requirements</span></span>  
+ <span data-ttu-id="b57d4-133">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b57d4-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f3c21-134">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f3c21-134">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b57d4-134">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b57d4-134">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f3c21-135">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3c21-135">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b57d4-135">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b57d4-135">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f3c21-136">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3c21-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b57d4-136">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b57d4-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3c21-137">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f3c21-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b57d4-137">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b57d4-137">See also</span></span>
 
-- [<span data-ttu-id="f3c21-138">Interface ICorDebug</span><span class="sxs-lookup"><span data-stu-id="f3c21-138">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="b57d4-138">Interface ICorDebug</span><span class="sxs-lookup"><span data-stu-id="b57d4-138">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

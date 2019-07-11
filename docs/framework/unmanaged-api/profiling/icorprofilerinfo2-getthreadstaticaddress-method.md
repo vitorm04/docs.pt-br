@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de0e46f4703479daeb96cb83276ec14150125e7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f8c18935069e4162236f99c411312087ce73bdc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587440"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782213"
 ---
-# <a name="icorprofilerinfo2getthreadstaticaddress-method"></a><span data-ttu-id="84d0c-102">Método ICorProfilerInfo2::GetThreadStaticAddress</span><span class="sxs-lookup"><span data-stu-id="84d0c-102">ICorProfilerInfo2::GetThreadStaticAddress Method</span></span>
-<span data-ttu-id="84d0c-103">Obtém o endereço do campo de thread estático especificado está no escopo do thread especificado.</span><span class="sxs-lookup"><span data-stu-id="84d0c-103">Gets the address of the specified thread-static field that is in the scope of the specified thread.</span></span>  
+# <a name="icorprofilerinfo2getthreadstaticaddress-method"></a><span data-ttu-id="ba265-102">Método ICorProfilerInfo2::GetThreadStaticAddress</span><span class="sxs-lookup"><span data-stu-id="ba265-102">ICorProfilerInfo2::GetThreadStaticAddress Method</span></span>
+<span data-ttu-id="ba265-103">Obtém o endereço do campo de thread estático especificado está no escopo do thread especificado.</span><span class="sxs-lookup"><span data-stu-id="ba265-103">Gets the address of the specified thread-static field that is in the scope of the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84d0c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="84d0c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba265-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ba265-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetThreadStaticAddress(  
     [in] ClassID     classId,  
     [in] mdFieldDef  fieldToken,  
@@ -37,38 +37,38 @@ HRESULT GetThreadStaticAddress(
     [out] void       **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="84d0c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="84d0c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ba265-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ba265-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="84d0c-106">[in] A ID da classe que contém o campo de thread estático solicitado.</span><span class="sxs-lookup"><span data-stu-id="84d0c-106">[in] The ID of the class that contains the requested thread-static field.</span></span>  
+ <span data-ttu-id="ba265-106">[in] A ID da classe que contém o campo de thread estático solicitado.</span><span class="sxs-lookup"><span data-stu-id="ba265-106">[in] The ID of the class that contains the requested thread-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="84d0c-107">[in] O token de metadados para o campo de thread estático solicitado.</span><span class="sxs-lookup"><span data-stu-id="84d0c-107">[in] The metadata token for the requested thread-static field.</span></span>  
+ <span data-ttu-id="ba265-107">[in] O token de metadados para o campo de thread estático solicitado.</span><span class="sxs-lookup"><span data-stu-id="ba265-107">[in] The metadata token for the requested thread-static field.</span></span>  
   
  `threadId`  
- <span data-ttu-id="84d0c-108">[in] A ID do thread que é o escopo para o campo estático solicitado.</span><span class="sxs-lookup"><span data-stu-id="84d0c-108">[in] The ID of the thread that is the scope for the requested static field.</span></span>  
+ <span data-ttu-id="ba265-108">[in] A ID do thread que é o escopo para o campo estático solicitado.</span><span class="sxs-lookup"><span data-stu-id="ba265-108">[in] The ID of the thread that is the scope for the requested static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="84d0c-109">[out] Um ponteiro para o endereço do campo estático que está dentro do thread especificado.</span><span class="sxs-lookup"><span data-stu-id="84d0c-109">[out] A pointer to the address of the static field that is within the specified thread.</span></span>  
+ <span data-ttu-id="ba265-109">[out] Um ponteiro para o endereço do campo estático que está dentro do thread especificado.</span><span class="sxs-lookup"><span data-stu-id="ba265-109">[out] A pointer to the address of the static field that is within the specified thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="84d0c-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="84d0c-110">Remarks</span></span>  
- <span data-ttu-id="84d0c-111">O `GetThreadStaticAddress` método pode retornar um dos seguintes:</span><span class="sxs-lookup"><span data-stu-id="84d0c-111">The `GetThreadStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ba265-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="ba265-110">Remarks</span></span>  
+ <span data-ttu-id="ba265-111">O `GetThreadStaticAddress` método pode retornar um dos seguintes:</span><span class="sxs-lookup"><span data-stu-id="ba265-111">The `GetThreadStaticAddress` method may return one of the following:</span></span>  
   
-- <span data-ttu-id="84d0c-112">Um HRESULT de CORPROF_E_DATAINCOMPLETE se o campo estático fornecido não foi atribuído um endereço no contexto especificado.</span><span class="sxs-lookup"><span data-stu-id="84d0c-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="ba265-112">Um HRESULT de CORPROF_E_DATAINCOMPLETE se o campo estático fornecido não foi atribuído um endereço no contexto especificado.</span><span class="sxs-lookup"><span data-stu-id="ba265-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
-- <span data-ttu-id="84d0c-113">Os endereços de objetos que podem estar no heap de coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="84d0c-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="84d0c-114">Esses endereços podem se tornar inválidos após a coleta de lixo, portanto, depois de criadores de perfil de coleta de lixo não devem presumir que eles são válidos.</span><span class="sxs-lookup"><span data-stu-id="84d0c-114">These addresses may become invalid after garbage collection, so after garbage collection profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="ba265-113">Os endereços de objetos que podem estar no heap de coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="ba265-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="ba265-114">Esses endereços podem se tornar inválidos após a coleta de lixo, portanto, depois de criadores de perfil de coleta de lixo não devem presumir que eles são válidos.</span><span class="sxs-lookup"><span data-stu-id="ba265-114">These addresses may become invalid after garbage collection, so after garbage collection profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="84d0c-115">Antes de construtor de classe uma classe do for concluída, `GetThreadStaticAddress` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos podem já ter sido inicializado e objetos de coleta de lixo de raiz.</span><span class="sxs-lookup"><span data-stu-id="84d0c-115">Before a class’s class constructor is completed, `GetThreadStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="ba265-115">Antes de construtor de classe uma classe do for concluída, `GetThreadStaticAddress` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos podem já ter sido inicializado e objetos de coleta de lixo de raiz.</span><span class="sxs-lookup"><span data-stu-id="ba265-115">Before a class’s class constructor is completed, `GetThreadStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84d0c-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="84d0c-116">Requirements</span></span>  
- <span data-ttu-id="84d0c-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84d0c-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba265-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ba265-116">Requirements</span></span>  
+ <span data-ttu-id="ba265-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ba265-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="84d0c-118">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="84d0c-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ba265-118">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ba265-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="84d0c-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="84d0c-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ba265-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ba265-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="84d0c-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84d0c-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ba265-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba265-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84d0c-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="84d0c-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba265-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ba265-121">See also</span></span>
 
-- [<span data-ttu-id="84d0c-122">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="84d0c-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="84d0c-123">Interface ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="84d0c-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="ba265-122">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="ba265-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="ba265-123">Interface ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="ba265-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

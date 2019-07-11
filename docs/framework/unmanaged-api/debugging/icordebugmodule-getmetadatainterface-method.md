@@ -17,44 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37710fbb7acc50b80d7acebe4194b019c0b64660
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 398c48bfd30020efdb57861991c9541d412d3e0d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994845"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763425"
 ---
-# <a name="icordebugmodulegetmetadatainterface-method"></a><span data-ttu-id="1befb-102">Método ICorDebugModule::GetMetaDataInterface</span><span class="sxs-lookup"><span data-stu-id="1befb-102">ICorDebugModule::GetMetaDataInterface Method</span></span>
-<span data-ttu-id="1befb-103">Obtém um objeto de interface de metadados que pode ser usado para examinar os metadados para o módulo.</span><span class="sxs-lookup"><span data-stu-id="1befb-103">Gets a metadata interface object that can be used to examine the metadata for the module.</span></span>  
+# <a name="icordebugmodulegetmetadatainterface-method"></a><span data-ttu-id="363be-102">Método ICorDebugModule::GetMetaDataInterface</span><span class="sxs-lookup"><span data-stu-id="363be-102">ICorDebugModule::GetMetaDataInterface Method</span></span>
+<span data-ttu-id="363be-103">Obtém um objeto de interface de metadados que pode ser usado para examinar os metadados para o módulo.</span><span class="sxs-lookup"><span data-stu-id="363be-103">Gets a metadata interface object that can be used to examine the metadata for the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1befb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1befb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="363be-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="363be-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetMetaDataInterface (  
     [in] REFIID      riid,  
     [out] IUnknown **ppObj  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1befb-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1befb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="363be-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="363be-105">Parameters</span></span>  
  `riid`  
- <span data-ttu-id="1befb-106">[in] A ID de referência que especifica a interface de metadados.</span><span class="sxs-lookup"><span data-stu-id="1befb-106">[in] The reference ID that specifies the metadata interface.</span></span>  
+ <span data-ttu-id="363be-106">[in] A ID de referência que especifica a interface de metadados.</span><span class="sxs-lookup"><span data-stu-id="363be-106">[in] The reference ID that specifies the metadata interface.</span></span>  
   
  `ppObj`  
- <span data-ttu-id="1befb-107">[out] Um ponteiro para o endereço de um `T:IUnknown` objeto que é um dos [interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="1befb-107">[out] A pointer to the address of an `T:IUnknown` object that is one of the [metadata interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span></span>  
+ <span data-ttu-id="363be-107">[out] Um ponteiro para o endereço de um `T:IUnknown` objeto que é um dos [interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="363be-107">[out] A pointer to the address of an `T:IUnknown` object that is one of the [metadata interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1befb-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="1befb-108">Remarks</span></span>  
- <span data-ttu-id="1befb-109">O depurador pode usar o `GetMetaDataInterface` método para fazer uma cópia dos metadados para um módulo, que deve ser feito para editar esse módulo original.</span><span class="sxs-lookup"><span data-stu-id="1befb-109">The debugger can use the `GetMetaDataInterface` method to make a copy of the original metadata for a module, which it must do in order to edit that module.</span></span> <span data-ttu-id="1befb-110">As chamadas do depurador `GetMetaDataInterface` para obter uma [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) objeto de interface do módulo, em seguida, chama [imetadataemit:: Savetomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md) para salvar uma cópia dos metadados do módulo para a memória.</span><span class="sxs-lookup"><span data-stu-id="1befb-110">The debugger calls `GetMetaDataInterface` to get an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interface object for the module, then calls [IMetaDataEmit::SaveToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md) to save a copy of the module's metadata to memory.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="363be-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="363be-108">Remarks</span></span>  
+ <span data-ttu-id="363be-109">O depurador pode usar o `GetMetaDataInterface` método para fazer uma cópia dos metadados para um módulo, que deve ser feito para editar esse módulo original.</span><span class="sxs-lookup"><span data-stu-id="363be-109">The debugger can use the `GetMetaDataInterface` method to make a copy of the original metadata for a module, which it must do in order to edit that module.</span></span> <span data-ttu-id="363be-110">As chamadas do depurador `GetMetaDataInterface` para obter uma [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) objeto de interface do módulo, em seguida, chama [imetadataemit:: Savetomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md) para salvar uma cópia dos metadados do módulo para a memória.</span><span class="sxs-lookup"><span data-stu-id="363be-110">The debugger calls `GetMetaDataInterface` to get an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interface object for the module, then calls [IMetaDataEmit::SaveToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md) to save a copy of the module's metadata to memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1befb-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1befb-111">Requirements</span></span>  
- <span data-ttu-id="1befb-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1befb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="363be-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="363be-111">Requirements</span></span>  
+ <span data-ttu-id="363be-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="363be-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1befb-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1befb-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="363be-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="363be-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1befb-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1befb-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="363be-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="363be-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1befb-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1befb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="363be-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="363be-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1befb-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1befb-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="363be-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="363be-116">See also</span></span>
 
-- [<span data-ttu-id="1befb-117">Metadados</span><span class="sxs-lookup"><span data-stu-id="1befb-117">Metadata</span></span>](../../../../docs/framework/unmanaged-api/metadata/index.md)
+- [<span data-ttu-id="363be-117">Metadados</span><span class="sxs-lookup"><span data-stu-id="363be-117">Metadata</span></span>](../../../../docs/framework/unmanaged-api/metadata/index.md)

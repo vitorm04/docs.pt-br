@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b50c87efeb8ad2311a75886da677a9dc901bca1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93b52e0faef0fa3cc22283d6b46c5fe5153c3eb2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763224"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779857"
 ---
-# <a name="icorconfigurationsetgcthreadcontrol-method"></a><span data-ttu-id="895ae-102">Método ICorConfiguration::SetGCThreadControl</span><span class="sxs-lookup"><span data-stu-id="895ae-102">ICorConfiguration::SetGCThreadControl Method</span></span>
-<span data-ttu-id="895ae-103">Define a interface de retorno de chamada para o agendamento de threads para tarefas de tempo de execução não caso contrário, seriam bloqueadas para uma coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="895ae-103">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>  
+# <a name="icorconfigurationsetgcthreadcontrol-method"></a><span data-ttu-id="ae522-102">Método ICorConfiguration::SetGCThreadControl</span><span class="sxs-lookup"><span data-stu-id="ae522-102">ICorConfiguration::SetGCThreadControl Method</span></span>
+<span data-ttu-id="ae522-103">Define a interface de retorno de chamada para o agendamento de threads para tarefas de tempo de execução não caso contrário, seriam bloqueadas para uma coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="ae522-103">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="895ae-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="895ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae522-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ae522-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetGCThreadControl (  
     [in] IGCThreadControl* pGCThreadControl  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="895ae-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="895ae-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ae522-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ae522-105">Parameters</span></span>  
  `pGCThreadControl`  
- <span data-ttu-id="895ae-106">[in] Um ponteiro para um [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) objeto que notifica o host sobre a suspensão de threads para tarefas sem tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="895ae-106">[in] A pointer to an [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) object that notifies the host about the suspension of threads for non-runtime tasks.</span></span>  
+ <span data-ttu-id="ae522-106">[in] Um ponteiro para um [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) objeto que notifica o host sobre a suspensão de threads para tarefas sem tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="ae522-106">[in] A pointer to an [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) object that notifies the host about the suspension of threads for non-runtime tasks.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="895ae-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="895ae-107">Remarks</span></span>  
- <span data-ttu-id="895ae-108">O host pode escolher dentro de [igcthreadcontrol:: Threadisblockingforsuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) retorno de chamada se reagendar um thread.</span><span class="sxs-lookup"><span data-stu-id="895ae-108">The host may choose within the [IGCThreadControl::ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback whether to reschedule a thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ae522-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="ae522-107">Remarks</span></span>  
+ <span data-ttu-id="ae522-108">O host pode escolher dentro de [igcthreadcontrol:: Threadisblockingforsuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) retorno de chamada se reagendar um thread.</span><span class="sxs-lookup"><span data-stu-id="ae522-108">The host may choose within the [IGCThreadControl::ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback whether to reschedule a thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="895ae-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="895ae-109">Requirements</span></span>  
- <span data-ttu-id="895ae-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="895ae-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae522-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ae522-109">Requirements</span></span>  
+ <span data-ttu-id="ae522-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ae522-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="895ae-111">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="895ae-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ae522-111">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ae522-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="895ae-112">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="895ae-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ae522-112">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="ae522-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="895ae-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="895ae-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ae522-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae522-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="895ae-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="895ae-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae522-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ae522-114">See also</span></span>
 
-- [<span data-ttu-id="895ae-115">Interface ICorConfiguration</span><span class="sxs-lookup"><span data-stu-id="895ae-115">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+- [<span data-ttu-id="ae522-115">Interface ICorConfiguration</span><span class="sxs-lookup"><span data-stu-id="ae522-115">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
