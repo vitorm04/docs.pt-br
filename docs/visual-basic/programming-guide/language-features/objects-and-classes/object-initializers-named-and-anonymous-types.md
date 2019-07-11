@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649769"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783249"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicializadores de objeto: Tipos nomeados e anônimos (Visual Basic)
 Inicializadores de objeto permitem que você especifique propriedades para um objeto complexo usando uma única expressão. Eles podem ser usados para criar instâncias de tipos nomeados e de tipos anônimos.  
@@ -32,7 +32,7 @@ Inicializadores de objeto permitem que você especifique propriedades para um ob
  Os requisitos e os resultados de duas declarações não são os mesmos. Para `namedCust`, um `Customer` classe que tem um `Name` propriedade já deve existir e a declaração cria uma instância dessa classe. Para `anonymousCust`, o compilador define uma nova classe que tem uma propriedade, uma cadeia de caracteres chamada `Name`e cria uma nova instância dessa classe.  
   
 ## <a name="named-types"></a>Tipos nomeados  
- Inicializadores de objeto fornecem uma maneira simple para chamar o construtor de um tipo e, em seguida, defina os valores de algumas ou todas as propriedades em uma única instrução. O compilador invoca o construtor apropriado para a instrução: o construtor padrão se nenhum argumento é apresentado ou um construtor com parâmetros, se um ou mais argumentos são enviados. Depois disso, as propriedades especificadas são inicializadas na ordem em que são apresentados na lista de inicializadores.  
+ Inicializadores de objeto fornecem uma maneira simple para chamar o construtor de um tipo e, em seguida, defina os valores de algumas ou todas as propriedades em uma única instrução. O compilador invoca o construtor apropriado para a instrução: o construtor sem parâmetros, se nenhum argumento é apresentado ou um construtor com parâmetros, se um ou mais argumentos são enviados. Depois disso, as propriedades especificadas são inicializadas na ordem em que são apresentados na lista de inicializadores.  
   
  Consiste em cada inicialização na lista de inicializadores a atribuição de um valor inicial a um membro da classe. Os nomes e tipos de dados dos membros são determinados quando a classe é definida. Nos exemplos a seguir, o `Customer` classe deve existir e devem ter membros nomeado `Name` e `City` que pode aceitar valores de cadeia de caracteres.  
   
@@ -42,7 +42,7 @@ Inicializadores de objeto permitem que você especifique propriedades para um ob
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- Cada uma dessas declarações é equivalente ao exemplo a seguir, que cria um `Customer` usando o construtor padrão de objeto e, em seguida, especifica os valores iniciais para o `Name` e `City` propriedades usando um `With` instrução.  
+ Cada uma dessas declarações é equivalente ao exemplo a seguir, que cria um `Customer` usando o construtor sem parâmetros de objeto e, em seguida, especifica os valores iniciais para o `Name` e `City` propriedades usando um `With` instrução.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   

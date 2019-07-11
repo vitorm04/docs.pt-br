@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591572"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755160"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos e classes no Visual Basic
 
@@ -28,7 +28,7 @@ Para entender a relação entre um objeto e sua classe, pense em cookies e corta
 
 Você deve criar um objeto antes de poder acessar seus membros.
 
-#### <a name="to-create-an-object-from-a-class"></a>Como criar um objeto de uma classe
+### <a name="to-create-an-object-from-a-class"></a>Como criar um objeto de uma classe
 
 1. Determine de qual classe você deseja criar um objeto.
 
@@ -135,7 +135,7 @@ Membros declarados com a palavra-chave `Shared` são *membros compartilhados*, q
 
 #### <a name="accessing-nonshared-members"></a>Acessando membros não compartilhados
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>Como acessar um membro não compartilhado de um objeto
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>Como acessar um membro não compartilhado de um objeto
 
 1. Verifique se o objeto foi criado com base na sua classe e atribuído a uma variável de objeto.
 
@@ -151,7 +151,7 @@ Membros declarados com a palavra-chave `Shared` são *membros compartilhados*, q
 
 #### <a name="accessing-shared-members"></a>Acessando membros compartilhados
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>Como acessar um membro compartilhado de um objeto
+##### <a name="to-access-a-shared-member-of-an-object"></a>Como acessar um membro compartilhado de um objeto
 
 - Siga o nome da classe com o *operador de acesso de membro* (`.`) e, em seguida, o nome do membro. Você sempre deve acessar um membro do objeto `Shared` diretamente pelo nome da classe.
 
@@ -204,7 +204,7 @@ Quando classes são derivadas de classes mais fundamentais, elas devem ter um *r
 
 No exemplo a seguir, suponha que você deseja definir um tipo especial de <xref:System.Windows.Forms.Button> que atua como um <xref:System.Windows.Forms.Button> normal, mas também expõe um método que reverte as cores de primeiro plano e da tela de fundo.
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Como definir uma classe derivada de uma classe já existente
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Como definir uma classe derivada de uma classe já existente
 
 1. Use uma [instrução Class](../../../../visual-basic/language-reference/statements/class-statement.md) para definir uma classe da qual criar o objeto que você precisa.
 
@@ -239,7 +239,7 @@ No exemplo a seguir, suponha que você deseja definir um tipo especial de <xref:
 
 As classes derivadas herdam membros da classe que eles se baseiam, permitindo que você adicione complexidade enquanto progride em uma hierarquia de classe. Para obter mais informações, consulte [Noções básicas de herança](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-#### <a name="compiling-the-code"></a>Compilando o código
+### <a name="compiling-the-code"></a>Compilando o código
 
 Certifique-se de que o compilador pode acessar a classe da qual você pretende derivar sua nova classe. Isso pode significar qualificar totalmente seu nome, como no exemplo anterior, ou identificar seu namespace em uma [Instrução Imports (Tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Se a classe estiver em um projeto diferente, você precisará adicionar uma referência ao projeto. Para obter mais informações, consulte [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project).
 

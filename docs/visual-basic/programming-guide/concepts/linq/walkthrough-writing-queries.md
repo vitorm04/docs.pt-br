@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: f3671b7071cc30f5fae0dbd85677987f441d846f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 55ded2f2fbd5c2c6e33627ce7fafe6bb4248d5ef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505984"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783251"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Passo a passo: Escrevendo consultas em Visual Basic
 Este passo a passo demonstra como você pode usar recursos de linguagem do Visual Basic para escrever [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressões de consulta. O passo a passo demonstra como criar consultas em uma lista de objetos do aluno, como executar as consultas e como modificá-los. As consultas incorporam vários recursos, incluindo tipos anônimos, inferência de tipo local e inicializadores de objeto.  
@@ -21,7 +21,7 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
   
 ## <a name="create-a-project"></a>Criar um projeto  
   
-#### <a name="to-create-a-console-application-project"></a>Para criar um projeto de aplicativo de console  
+### <a name="to-create-a-console-application-project"></a>Para criar um projeto de aplicativo de console  
   
 1. Inicie o Visual Studio.  
   
@@ -38,21 +38,21 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
 ## <a name="add-an-in-memory-data-source"></a>Adicionar uma Fonte de Dados na Memória  
  A fonte de dados para as consultas neste passo a passo é uma lista de `Student` objetos. Cada `Student` objeto contém um nome, sobrenome, um ano de classe e uma classificação acadêmica no corpo do aluno.  
   
-#### <a name="to-add-the-data-source"></a>Para adicionar a fonte de dados  
+### <a name="to-add-the-data-source"></a>Para adicionar a fonte de dados  
   
 - Definir um `Student` de classe e criar uma lista de instâncias da classe.  
   
     > [!IMPORTANT]
     >  O código necessário para definir a `Student` de classe e criar a lista usada no passo a passo exemplos é fornecido no [como: Criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Você pode copiá-lo a partir daí e cole-a no seu projeto. O novo código substitui o código que apareceu quando você criou o projeto.  
   
-#### <a name="to-add-a-new-student-to-the-students-list"></a>Para adicionar um novo aluno à lista de alunos  
+### <a name="to-add-a-new-student-to-the-students-list"></a>Para adicionar um novo aluno à lista de alunos  
   
 - Seguem o padrão no `getStudents` método para adicionar outra instância da `Student` classe à lista. Adicionar o aluno apresentará os inicializadores de objeto. Para obter mais informações, consulte [inicializadores de objeto: Tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Criar uma consulta  
  Quando executada, a consulta adicionada nesta seção produz uma lista dos alunos cuja classificação acadêmica coloca-os nos dez principais. Porque a consulta seleciona completo `Student` cada vez, o tipo do resultado da consulta de objeto é `IEnumerable(Of Student)`. No entanto, o tipo de consulta normalmente não é especificado nas definições de consulta. Em vez disso, o compilador usa a inferência de tipo local para determinar o tipo. Para obter mais informações, consulte [inferência de tipo Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Variável de intervalo da consulta, `currentStudent`, serve como uma referência a cada `Student` instância na origem, `students`, fornecendo acesso às propriedades de cada objeto no `students`.  
   
-#### <a name="to-create-a-simple-query"></a>Para criar uma consulta simples  
+### <a name="to-create-a-simple-query"></a>Para criar uma consulta simples  
   
 1. Encontre o local no `Main` método do projeto que é marcado da seguinte maneira:  
   
@@ -67,7 +67,7 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
 ## <a name="run-the-query"></a>Executar a Consulta  
  A variável `studentQuery` contém a definição da consulta, não os resultados da execução da consulta. Um mecanismo típico para executar uma consulta é um `For Each` loop. Cada elemento na sequência retornada é acessado por meio da variável de iteração do loop. Para obter mais informações sobre a execução da consulta, consulte [escrever sua primeira consulta de LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
-#### <a name="to-run-the-query"></a>Para executar a consulta  
+### <a name="to-run-the-query"></a>Para executar a consulta  
   
 1. Adicione o seguinte `For Each` loop abaixo da consulta em seu projeto.  
   
@@ -80,7 +80,7 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
 ## <a name="modify-the-query"></a>Modificar a Consulta  
  É mais fácil verificar os resultados da consulta, se eles estiverem em uma ordem especificada. Você pode classificar a sequência retornada com base em qualquer campo disponível.  
   
-#### <a name="to-order-the-results"></a>Para ordenar os resultados  
+### <a name="to-order-the-results"></a>Para ordenar os resultados  
   
 1. Adicione o seguinte `Order By` cláusula entre o `Where` instrução e o `Select` instrução da consulta. O `Order By` cláusula será ordenar os resultados em ordem alfabética de A a Z, de acordo com o para o último nome de cada aluno.  
   
@@ -98,7 +98,7 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
   
 3. Compile e execute o aplicativo pressionando CTRL + F5. Observe que os resultados na janela do console.  
   
-#### <a name="to-introduce-a-local-identifier"></a>Para introduzir um identificador local  
+### <a name="to-introduce-a-local-identifier"></a>Para introduzir um identificador local  
   
 1. Adicione o código nesta seção para introduzir um identificador de local na expressão de consulta. O identificador local conterá um resultado intermediário. No exemplo a seguir, `name` é um identificador que mantém uma concatenação do aluno do primeiro e último nome. Um identificador local pode ser usado para sua conveniência, ou ele pode melhorar o desempenho armazenando os resultados de uma expressão que deve ser calculado várias vezes.  
   
@@ -106,7 +106,7 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
   
 2. Compile e execute o aplicativo pressionando CTRL + F5. Observe que os resultados na janela do console.  
   
-#### <a name="to-project-one-field-in-the-select-clause"></a>Para projetar um campo na cláusula Select  
+### <a name="to-project-one-field-in-the-select-clause"></a>Para projetar um campo na cláusula Select  
   
 1. Adicione a consulta e `For Each` loop dessa seção para criar uma consulta que produz uma sequência cujos elementos são diferentes dos elementos na origem. No exemplo a seguir, a fonte é uma coleção de `Student` objetos, mas somente um membro de cada objeto é retornado: o nome de alunos cujo nome é Garcia. Porque `currentStudent.First` é uma cadeia de caracteres, o tipo de dados da sequência retornada por `studentQuery3` é `IEnumerable(Of String)`, uma sequência de cadeias de caracteres. Como nos exemplos anteriores, a atribuição de um dado tipo para `studentQuery3` é deixada para o compilador determine com o uso de inferência de tipo local.  
   
@@ -116,7 +116,7 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
   
 3. Compile e execute o aplicativo pressionando CTRL + F5. Observe que os resultados na janela do console.  
   
-#### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Para criar um tipo anônimo na cláusula Select  
+### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Para criar um tipo anônimo na cláusula Select  
   
 1. Adicione o código desta seção para ver como os tipos anônimos são usados em consultas. Usá-los em consultas quando você deseja retornar vários campos de fonte de dados em vez de registros completos (`currentStudent` registros nos exemplos anteriores) ou únicas campos (`First` na seção anterior). Em vez de definir um novo tipo nomeado que contém os campos que você deseja incluir no resultado, especifique os campos no `Select` cláusula e o compilador cria um tipo anônimo com esses campos como suas propriedades. Para obter mais informações, consulte [Tipos anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
