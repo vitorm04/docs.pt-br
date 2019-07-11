@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea615eacb30fd4e7a0fd7d730094c2ab4f9dc285
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be66e0e2c9aff788d1003878891b8d64d6353500
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988722"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754704"
 ---
 # <a name="icordebugfunctiongetcurrentversionnumber-method"></a>Método ICorDebugFunction::GetCurrentVersionNumber
 Obtém o número de versão da edição mais recente feita na função representada por esse objeto ICorDebugFunction.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetCurrentVersionNumber (  
     [out] ULONG32 *pnCurrentVersion  
 );  

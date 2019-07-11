@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457545"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762328"
 ---
 # <a name="xaml-overview-wpf"></a>Visão geral XAML (WPF)
 Este tópico descreve os recursos da linguagem XAML e demonstra como você pode usar o XAML para escrever aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Este tópico descreve especificamente o XAML como implementado por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O XAML em si é um conceito de linguagem maior que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -208,7 +208,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
  A implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do seu processador XAML inclui uma infraestrutura com reconhecimento dos assemblies de núcleo do WPF. O assemblies de núcleo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são conhecidos por conter os tipos que dão suporte a mapeamentos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para o namespace XAML padrão. Isso é habilitado por meio da configuração que faz parte de seu arquivo de build do projeto e dos sistemas de projeto e build do WPF. Portanto, a declaração de namespace XAML padrão como o `xmlns` padrão é tudo o que é necessário para fazer referência a elementos XAML que vêm de assemblies [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ### <a name="the-x-prefix"></a>O prefixo x:  
- No exemplo de elemento raiz anterior, o prefixo `x:` foi usado para mapear o namespace XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)], que é o namespace XAML dedicado que dá suporte a constructos de linguagem XAML. Esse prefixo `x:` é usado para mapear esse namespace XAML nos modelos para projetos, em exemplos e na documentação em todo este [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. O namespace XAML para a linguagem XAML contém vários constructos de programação que você usará com bastante frequência no XAML. A seguir está uma lista dos constructos de programação de prefixo `x:` mais comuns que você usará:  
+ No exemplo de elemento raiz anterior, o prefixo `x:` foi usado para mapear o namespace XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)], que é o namespace XAML dedicado que dá suporte a constructos de linguagem XAML. Esse prefixo `x:` é usado para mapear esse namespace XAML nos modelos para projetos, em exemplos e na documentação em todo este [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. O namespace XAML para a linguagem XAML contém várias construções de programação que você usará com bastante frequência em seu XAML. A seguir está uma lista dos constructos de programação de prefixo `x:` mais comuns que você usará:  
   
 - [X:Key](../../xaml-services/x-key-directive.md): Define uma chave exclusiva para cada recurso em um <xref:System.Windows.ResourceDictionary> (ou conceitos de dicionário similares em outras estruturas). `x:Key` provavelmente será responsável por 90% dos usos de `x:` que você verá na marcação de um aplicativo WPF típico.  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c95bed520e0a4687541f127c8b39ef7916ef104
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cfcf2c74a2a44bd0539bf78e237e42553696b16c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598617"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762992"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>Método ICorProfilerCallback::AssemblyUnloadStarted
 Notifica o criador de perfil que um assembly que está sendo descarregado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT AssemblyUnloadStarted(  
     [in] AssemblyID assemblyId);  
 ```  

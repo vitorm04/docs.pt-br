@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f929e6b338d4fd48b2a6ef9588523377e0dd8faa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777397"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755376"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>Método IMetaDataImport::ResolveTypeRef
 Resolve um <xref:System.Type> referência representada pelo token TypeRef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT ResolveTypeRef (  
    [in]  mdTypeRef       tr,  
    [in]  REFIID          riid,  

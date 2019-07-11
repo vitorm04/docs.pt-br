@@ -15,19 +15,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1da347fd85e1b3856615faf49c60b607cc7f0da
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: c7325e84d8fe4df9a31543426c6376d0941306fd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025844"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748459"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>Método ICorDebugComObjectValue::GetCachedInterfaceTypes
 Fornece um enumerador para os tipos de interface que o objeto atual foi convertido em ou usado como.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetCachedInterfaceTypes(  
     [in] BOOL bIInspectableOnly,  
     [out] ICorDebugTypeEnum **ppInterfacesEnum);  

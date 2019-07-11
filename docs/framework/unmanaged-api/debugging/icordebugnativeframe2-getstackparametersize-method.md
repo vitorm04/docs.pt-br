@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47968d7550c3d16d201680caab705c0d7c85c784
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a5f0f767a7057064e285bf6ac9dcefc86eb9d79
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994572"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757210"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>Método ICorDebugNativeFrame2::GetStackParameterSize
 Retorna o tamanho cumulativo dos parâmetros na pilha em sistemas operacionais x86.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetStackParameterSize([out] ULONG32 * pSize)  
 ```  
   

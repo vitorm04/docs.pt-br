@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4f16db1d35f8a0de1c755566e27b07bf9067dfe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21a727a5287f6eaad600fc37befc32790fc4cf26
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796585"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749303"
 ---
 # <a name="ihostthreadpoolmanagergetavailablethreads-method"></a>Método IHostThreadPoolManager::GetAvailableThreads
 Obtém o número de threads no pool de threads que não estão processando no momento, os itens de trabalho.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetAvailableThreads (  
     [out] DWORD *pdwAvailableWorkerThreads  
 );  

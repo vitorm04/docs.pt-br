@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 534afdd5990435c6b4db5ef8ea27a8065b199496
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2aefd79e251d751a6c8354fa827863cb5aedf305
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050006"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751057"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>Método IMetaDataEmit::SetMethodProps
 Define ou atualiza o recurso, armazenado do endereço virtual relativo especificado, de um método definido por uma chamada anterior a [imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT SetMethodProps (   
     [in]  mdMethodDef md,   
     [in]  DWORD       dwMethodFlags,  

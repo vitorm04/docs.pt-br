@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a59067f72005e87152680e4f990fc74e4acdaa9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ee186604529a3e77a0217c5688df5b62ff8b28c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948909"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736989"
 ---
 # <a name="icordebugprocess2getdesiredngencompilerflags-method"></a>Método ICorDebugProcess2::GetDesiredNGENCompilerFlags
 Obtém o compilador atual configurações de sinalizador de que o common language runtime (CLR) usa para selecionar o pré-compilado correto (ou seja, nativo) a imagem a ser carregado nesse processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetDesiredNGENCompilerFlags (  
     [out] DWORD   *pdwFlags  
 );  

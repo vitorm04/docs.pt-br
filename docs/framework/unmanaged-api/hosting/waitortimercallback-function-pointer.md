@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f938c7dcf08654eef1e2403426eb5c54d6d2a6b3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490127"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776490"
 ---
 # <a name="waitortimercallback-function-pointer"></a>Ponteiro de função WAITORTIMERCALLBACK
 Aponta para uma função que notifica o host que lidam com uma espera (<xref:System.Threading.WaitHandle>) foi sinalizado ou atingiu o tempo limite.  
@@ -30,7 +30,7 @@ Aponta para uma função que notifica o host que lidam com uma espera (<xref:Sys
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef VOID (__stdcall *WAITORTIMERCALLBACK) (  
     [in] PVOID lpParameter,  
     [in] BOOL  TimerOrWaitFired  

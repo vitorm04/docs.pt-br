@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: adc270be51988cba78c6e522b16b480baef725c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a33f71ef2e0b19a33255f3745ac4d5a84cdf4ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943502"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749745"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>Método IHostTaskManager::CallNeedsHostHook
 Permite que o host especificar se o common language runtime (CLR) pode embutir a chamada especificada para uma função não gerenciada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT CallNeedsHostHook (  
     [in]  SIZE_T target,   
     [out] BOOL   *pbCallNeedsHostHook  

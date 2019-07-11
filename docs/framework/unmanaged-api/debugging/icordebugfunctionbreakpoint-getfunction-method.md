@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1da93ea073d6ae9f2e79f251014b2db5282a22c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4f9ea741e545cc424dff450325c3f8d271c8554
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763783"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755581"
 ---
 # <a name="icordebugfunctionbreakpointgetfunction-method"></a>Método ICorDebugFunctionBreakpoint::GetFunction
 Obtém um ponteiro de interface para um ICorDebugFunction que faz referência à função na qual o ponto de interrupção é definido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetFunction (  
     [out] ICorDebugFunction  **ppFunction  
 );  

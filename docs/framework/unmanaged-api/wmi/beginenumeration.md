@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07396428dafbaa76e7771a4022bb493768f9f6c1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5ccf39c019094d896ca20534fccbbccf38ab1dd3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636800"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761809"
 ---
 # <a name="beginenumeration-function"></a>Função BeginEnumeration
 Redefine um enumerador para o início da enumeração.  
@@ -30,7 +30,7 @@ Redefine um enumerador para o início da enumeração.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT BeginEnumeration (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 

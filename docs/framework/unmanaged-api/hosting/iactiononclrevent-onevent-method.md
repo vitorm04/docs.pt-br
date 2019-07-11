@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e7045d3b095b6a35be8b55e1066b459e9583c93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 777cf1084f77587b83ff63a02ba84d474be0f87c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970229"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757840"
 ---
 # <a name="iactiononclreventonevent-method"></a>Método IActionOnCLREvent::OnEvent
 Executa os retornos de chamada em eventos que foram registrados por meio de uma chamada para o [iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT OnEvent (  
     [in] EClrEvent event,  
     [in] PVOID     data  

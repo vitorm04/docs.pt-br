@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eb5c7ec85c0adb301fb722155caaed3c14e0e19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59af484710dc0848d7712017021adc5f3dcb7bce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789461"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749763"
 ---
 # <a name="ihosttaskmanagerbeginthreadaffinity-method"></a>Método IHostTaskManager::BeginThreadAffinity
 Notifica o host que o código gerenciado está inserindo um período em que a tarefa atual não deve ser movida para outro thread do sistema operacional.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT BeginThreadAffinity ();  
 ```  
   

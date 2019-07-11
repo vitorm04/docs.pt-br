@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988969"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753656"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>Método ICorDebugEval2::NewParameterizedArray
 Aloca uma nova matriz do tipo de elemento especificado e dimensões.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT NewParameterizedArray(  
     [in] ICorDebugType          *pElementType,  
     [in] ULONG32                rank,  

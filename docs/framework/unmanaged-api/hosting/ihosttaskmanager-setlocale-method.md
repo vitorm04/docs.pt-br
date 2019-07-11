@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79d4c5b2b2bbe821ff546324fd3af04cb3472e4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f388a52c320c3f0d5f4ad7e073e1e8960d7947dc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796650"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749370"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>Método IHostTaskManager::SetLocale
 Notifica o host que o common language runtime (CLR) foi alterado de uma localidade ou cultura, a tarefa em execução no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT SetLocale (  
     [in] LCID lcid  
 );  

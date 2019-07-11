@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05f5d3fbe05ad1e97a1ae61ed0496f314c4ec5cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985680"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765962"
 ---
 # <a name="customdumpitem-structure"></a>Estrutura CustomDumpItem
 Descreve um item a ser adicionado a um despejo personalizado no relatório de erros.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 struct {  
     ECustomDumpItemKind itemKind;   
     union {  

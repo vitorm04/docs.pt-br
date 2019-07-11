@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb19f950122f7b0db66830e9ed5dff44ccd370c2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5f3e39d94996f14f1ae6593b9adaa5db3ef674c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490430"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769658"
 ---
 # <a name="eclrfailure-enumeration"></a>Enumeração EClrFailure
 Descreve o conjunto de falhas para o qual um host pode definir ações de política.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef enum {  
     FAIL_NonCriticalResource,  
     FAIL_CriticalResource,  

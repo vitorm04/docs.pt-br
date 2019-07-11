@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c30115a23f7f73662c9b3f4f4a09d45478ad687
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995469"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760003"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>Método ICorDebugInternalFrame2::GetFrameAddress
 Retorna o endereço de pilha do quadro interno.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);  
 ```  
   

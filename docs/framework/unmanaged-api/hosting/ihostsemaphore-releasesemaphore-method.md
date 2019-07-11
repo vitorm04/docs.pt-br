@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24ec56345a5b48540d2451769f739a236a85e47b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e977133d722edc7d090d07cd117ee282a8d29cb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696608"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753573"
 ---
 # <a name="ihostsemaphorereleasesemaphore-method"></a>Método IHostSemaphore::ReleaseSemaphore
 Aumenta a contagem do atual [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) instância pelo valor especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT ReleaseSemaphore (  
     [in]  LONG  lReleaseCount,  
     [out] LONG  *lpPreviousCount  

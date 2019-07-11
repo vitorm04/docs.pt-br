@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66f152279a21f28b54acebbf0be7c65bb73efa70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767469"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758152"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Método ICorProfilerCallback4::ReJITError
 Notifica o criador de perfil que o compilador just-in-time (JIT) encontrou um erro no processo de recompilação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT ReJITError(  
     [in] ModuleID    moduleId,  
     [in] mdMethodDef methodId,  

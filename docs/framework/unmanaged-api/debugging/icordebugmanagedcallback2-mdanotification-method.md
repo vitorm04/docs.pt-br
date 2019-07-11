@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 425c606b1f340bbd49cfe3497d394d5ad0dd37a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4011932af6f4b058906c19566e4c1abe96b409db
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763796"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762086"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>Método ICorDebugManagedCallback2::MDANotification
 Fornece notificação de que a execução de código encontrou um Assistente para depuração gerenciada (MDA) no aplicativo que está sendo depurado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT MDANotification(  
     [in] ICorDebugController  *pController,  
     [in] ICorDebugThread      *pThread,  

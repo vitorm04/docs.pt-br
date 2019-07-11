@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66f8804c911e053758442670afb3c3f27d0f7453
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ed618847d398bb4dcccb8ecebabdc947390c874
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986083"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778168"
 ---
 # <a name="isymunmanagedwriterclosenamespace-method"></a>Método ISymUnmanagedWriter::CloseNamespace
 Fecha abriu mais recentemente namespace.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT CloseNamespace();  
 ```  
   

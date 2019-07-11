@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aeb4ad1dffe4553b243b5168037aea8b68f8244b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f37fab4d877ae804996f46290e3576cecc5a25ca
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930202"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767620"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>Método ICorDebugProcess5::GetTypeForTypeID
 Converte um identificador de tipo em um valor de ICorDebugType.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetTypeForTypeID(  
     [in] COR_TYPEID id, [  
     out] ICorDebugType **ppType  

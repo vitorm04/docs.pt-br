@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4749bfee22e58ad7c3ca29ec992da88493ca2c5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9d42c85502c12d4d77694626a533c69af97da67
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763835"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750269"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>Método ICorDebugDataTarget::ReadVirtual
 Obtém um bloco de memória contígua, iniciando no endereço especificado e retorna-o no buffer fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT ReadVirtual(  
     [in] CORDB_ADDRESS   address,  
     [out, size_is(bytesRequested), length_is(*pBytesRead)]  

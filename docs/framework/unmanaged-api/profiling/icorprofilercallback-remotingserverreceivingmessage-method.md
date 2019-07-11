@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec6f7cf8c70292d586e58b5b6d8251aa4700dbac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2bc3e48185c3bc289a4f7bfd865f69d9c06a720c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662892"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750514"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>Método ICorProfilerCallback::RemotingServerReceivingMessage
 Notifica o criador de perfil que o processo tenha recebido uma solicitação de ativação ou invocação de método remoto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT RemotingClientSendingMessage(  
     [in] GUID *pCookie,  
     [in] BOOL fIsAsync);  

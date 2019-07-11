@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf36b9e09f5e9eeb28930a6adc48426927a60e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4cea67587e4a33b4b9f8cbaa23cb7d299004a46
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940355"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736167"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>Método INotifySink2::OnSyncCallOut
 É invocado quando uma chamada é horizontalmente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT OnSyncCallOut  
 (  
     [in]  CALL_ID  in_CallID,  

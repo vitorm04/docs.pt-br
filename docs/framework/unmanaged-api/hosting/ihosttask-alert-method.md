@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c153e6ae8558eeab2efa99765405fb7c84632b01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a5e3b82645456ffa574f63931abbf60a2194540
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992843"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764541"
 ---
 # <a name="ihosttaskalert-method"></a>Método IHostTask::Alert
 Solicitações que o host da tarefa representada pela atual wake [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) da instância, portanto, a tarefa pode ser anulada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT Alert ();  
 ```  
   

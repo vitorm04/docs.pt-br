@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd6a5d710f4b42ae8d1bedb535abface7a053cbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52ec268df38a12dfe7dac469eed9901d7c0646a1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654400"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769611"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Gerando chaves para criptografia e descriptografia
 Criação e gerenciamento de chaves é uma parte importante do processo de criptografia. Algoritmos simétricos exigem a criação de uma chave e um vetor de inicialização (IV). A chave deve ser mantida em segredo, qualquer pessoa que não deve descriptografar os dados. O IV não tem que ser secreta, mas deve ser alterado para cada sessão. Algoritmos assimétricos exigem a criação de uma chave pública e uma chave privada. A chave pública pode se tornar pública para qualquer pessoa, enquanto a chave privada deve conhecidos apenas pelo participante que descriptografará os dados criptografados com a chave pública. Esta seção descreve como gerar e gerenciar chaves simétricas e assimétricas algoritmos.  
   
 ## <a name="symmetric-keys"></a>Chaves Simétricas  
- As classes de criptografia simétrica fornecidas pelo .NET Framework exigem uma chave e um novo vetor de inicialização (IV) para criptografar e descriptografar dados. Sempre que você cria uma nova instância de uma das classes de criptografia simétricas gerenciadas usando o construtor padrão, uma nova chave e IV são criados automaticamente. Qualquer pessoa que permitem a você para descriptografar os dados deve ter a mesma chave e IV e usam o mesmo algoritmo. Em geral, uma nova chave e IV devem ser criado para cada sessão e a chave nem IV deve ser armazenado para uso em uma sessão posterior.  
+ As classes de criptografia simétrica fornecidas pelo .NET Framework exigem uma chave e um novo vetor de inicialização (IV) para criptografar e descriptografar dados. Sempre que você cria uma nova instância de uma das classes de criptografia simétricas gerenciadas usando o construtor sem parâmetros, uma nova chave e IV são criados automaticamente. Qualquer pessoa que permitem a você para descriptografar os dados deve ter a mesma chave e IV e usam o mesmo algoritmo. Em geral, uma nova chave e IV devem ser criado para cada sessão e a chave nem IV deve ser armazenado para uso em uma sessão posterior.  
   
  Para se comunicar um IV e a chave simétrica para uma parte remota, você normalmente seria criptografar a chave simétrica usando a criptografia assimétrica. Enviando a chave em uma rede insegura sem criptografá-los não é segura, pois, em seguida, qualquer pessoa que intercepta o IV e a chave pode descriptografar os dados. Para obter mais informações sobre a troca de dados usando a criptografia, consulte [criando um esquema criptográfico](../../../docs/standard/security/creating-a-cryptographic-scheme.md).  
   
@@ -60,7 +60,7 @@ tdes.GenerateKey();
  Quando o código anterior é executado, uma chave e IV são gerados quando a nova instância do **TripleDESCryptoServiceProvider** é feita. Outra chave e IV são criadas quando o **GenerateKey** e **GenerateIV** métodos são chamados.  
   
 ## <a name="asymmetric-keys"></a>Chaves Assimétricas  
- O .NET Framework fornece o <xref:System.Security.Cryptography.RSACryptoServiceProvider> e <xref:System.Security.Cryptography.DSACryptoServiceProvider> classes para a criptografia assimétrica. Essas classes de criar um par de chaves pública/privada quando você usa o construtor padrão para criar uma nova instância. Chaves assimétricas podem ser armazenadas para uso em várias sessões ou geradas em apenas uma única sessão. Enquanto a chave pública pode ser disponibilizada, a chave privada deve ser bastante protegida.  
+ O .NET Framework fornece o <xref:System.Security.Cryptography.RSACryptoServiceProvider> e <xref:System.Security.Cryptography.DSACryptoServiceProvider> classes para a criptografia assimétrica. Essas classes de criar um par de chaves pública/privada quando você usa o construtor sem parâmetros para criar uma nova instância. Chaves assimétricas podem ser armazenadas para uso em várias sessões ou geradas em apenas uma única sessão. Enquanto a chave pública pode ser disponibilizada, a chave privada deve ser bastante protegida.  
   
  Um par de chaves pública/privada é gerado sempre que uma nova instância de uma classe de algoritmo assimétrico é criada. Depois que uma nova instância da classe é criada, as informações de chave podem ser extraídas usando um destes dois métodos:  
   

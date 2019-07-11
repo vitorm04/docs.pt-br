@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2030a0da7a84695750d1dd9781adca9cd66f22ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 463416165d2dbd7724d5cf0d29e40d8243ade34b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797612"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778311"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>Método ISymUnmanagedVariable::GetAddressField2
 Obtém o segundo campo de endereço para essa variável. Seu significado depende do tipo de endereço.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetAddressField2(  
     [out, retval] ULONG32* pRetVal);  
 ```  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a2ccaf6f972fadd8396378dc7777ec4c85120d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bd983a41307a4244b5426b8f6b997569cd631e9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970047"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770500"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>Método IApartmentCallback::DoCallback
 Executa a função especificada em um apartment.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT _stdcall DoCallback(  
     [in] SIZE_T pFunc,  
     [in] SIZE_T pData  

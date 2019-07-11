@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f1c64615dae205161583c7a79575204932cd17b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9cd301ac9d82dd49fc9680d2724714f267ed88ae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586862"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763290"
 ---
 # <a name="functiontailcall3withinfo-function"></a>Função FunctionTailcall3WithInfo
 Notifica o criador de perfil que a função atualmente em execução está prestes a realizar uma chamada tail para outra função e fornece um identificador que pode ser passado para o [método ICorProfilerInfo3::GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) para recuperar o quadro de pilha.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 void __stdcall FunctionTailcall3WithInfo(  
                [in] FunctionIDOrClientID functionIDOrClientID,  
                [in] COR_PRF_ELT_INFO eltInfo);  

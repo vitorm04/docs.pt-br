@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d9239ccfe8ce08e5b50b762a6fede11ab8a439b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ebdf0dd2457cd10e31ff71c32b1c09d0e014431
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994481"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765991"
 ---
 # <a name="icordebugprocessgetid-method"></a>Método ICorDebugProcess::GetID
 Obtém a ID do sistema operacional (SO) do processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetID([out] DWORD *pdwProcessId);  
 ```  
   

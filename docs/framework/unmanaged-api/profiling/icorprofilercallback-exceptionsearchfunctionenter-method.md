@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3633665a3fcac0ca1d90ac562056b8b380ab2ca9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e631b0a90498ea1299d9448507014081bd2d3018
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598097"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756049"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>Método ICorProfilerCallback::ExceptionSearchFunctionEnter
 Notifica o criador de perfil que a fase de pesquisa de tratamento de exceção de começar a procurar uma função para localizar um manipulador para a exceção atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT ExceptionSearchFunctionEnter(  
     [in] FunctionID functionId);  
 ```  

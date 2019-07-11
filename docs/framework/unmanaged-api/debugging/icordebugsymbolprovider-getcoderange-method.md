@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52fd0e9dac1d255197909d153099d9c6f2bd8ff7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6d1f2bd903124773eaa20581f013bb41cf9cf99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953290"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771496"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>Método ICorDebugSymbolProvider::GetCodeRange
 Obtém o endereço de início do método e o tamanho fornecido um endereço virtual relativo (RVA) em um método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetCodeRange(  
    [in] ULONG32 codeRva,   
    [out] ULONG32* pCodeStartAddress,   
