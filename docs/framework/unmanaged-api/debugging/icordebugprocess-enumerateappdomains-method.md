@@ -17,35 +17,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02e051d311e447475bea724b0bd7420ee8b590f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3c0f20cc93b02e048c9d1952188af3d21d37221
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749079"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766125"
 ---
-# <a name="icordebugprocessenumerateappdomains-method"></a><span data-ttu-id="98b37-102">Método ICorDebugProcess::EnumerateAppDomains</span><span class="sxs-lookup"><span data-stu-id="98b37-102">ICorDebugProcess::EnumerateAppDomains Method</span></span>
-<span data-ttu-id="98b37-103">Enumera todos os domínios de aplicativo nesse processo.</span><span class="sxs-lookup"><span data-stu-id="98b37-103">Enumerates all the application domains in this process.</span></span>  
+# <a name="icordebugprocessenumerateappdomains-method"></a><span data-ttu-id="b9fcf-102">Método ICorDebugProcess::EnumerateAppDomains</span><span class="sxs-lookup"><span data-stu-id="b9fcf-102">ICorDebugProcess::EnumerateAppDomains Method</span></span>
+<span data-ttu-id="b9fcf-103">Enumera todos os domínios de aplicativo nesse processo.</span><span class="sxs-lookup"><span data-stu-id="b9fcf-103">Enumerates all the application domains in this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98b37-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="98b37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b9fcf-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b9fcf-104">Syntax</span></span>  
   
-```  
+``` cpp 
 HRESULT EnumerateAppDomains(  
     [out] ICorDebugAppDomainEnum **ppAppDomains);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="98b37-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="98b37-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b9fcf-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b9fcf-105">Parameters</span></span>  
  `ppAppDomains`  
- <span data-ttu-id="98b37-106">[out] Um ponteiro para o endereço de um [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) que é um enumerador para os domínios de aplicativo nesse processo.</span><span class="sxs-lookup"><span data-stu-id="98b37-106">[out] A pointer to the address of an [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) that is an enumerator for the application domains in this process.</span></span>  
+ <span data-ttu-id="b9fcf-106">[out] Um ponteiro para o endereço de um [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) que é um enumerador para os domínios de aplicativo nesse processo.</span><span class="sxs-lookup"><span data-stu-id="b9fcf-106">[out] A pointer to the address of an [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) that is an enumerator for the application domains in this process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="98b37-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="98b37-107">Remarks</span></span>  
- <span data-ttu-id="98b37-108">Esse método pode ser usado antes do [icordebugmanagedcallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="98b37-108">This method can be used before the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b9fcf-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="b9fcf-107">Remarks</span></span>  
+ <span data-ttu-id="b9fcf-108">Esse método pode ser usado antes do [icordebugmanagedcallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="b9fcf-108">This method can be used before the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98b37-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="98b37-109">Requirements</span></span>  
- <span data-ttu-id="98b37-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="98b37-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b9fcf-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b9fcf-109">Requirements</span></span>  
+ <span data-ttu-id="b9fcf-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b9fcf-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="98b37-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="98b37-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b9fcf-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b9fcf-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="98b37-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="98b37-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b9fcf-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b9fcf-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="98b37-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98b37-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="b9fcf-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9fcf-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -17,59 +17,59 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db331d75244d59aacf2207a6b83a3f337a64b989
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db34d56fd4d074551ca4823681bc5d94e76df758
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700951"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756622"
 ---
-# <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a><span data-ttu-id="33b70-102">Método ICorDebugHeapValue3::GetMonitorEventWaitList</span><span class="sxs-lookup"><span data-stu-id="33b70-102">ICorDebugHeapValue3::GetMonitorEventWaitList Method</span></span>
-<span data-ttu-id="33b70-103">Fornece uma lista ordenada de threads que estão na fila o evento que está associado com um bloqueio do monitor.</span><span class="sxs-lookup"><span data-stu-id="33b70-103">Provides an ordered list of threads that are queued on the event that is associated with a monitor lock.</span></span>  
+# <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a><span data-ttu-id="05235-102">Método ICorDebugHeapValue3::GetMonitorEventWaitList</span><span class="sxs-lookup"><span data-stu-id="05235-102">ICorDebugHeapValue3::GetMonitorEventWaitList Method</span></span>
+<span data-ttu-id="05235-103">Fornece uma lista ordenada de threads que estão na fila o evento que está associado com um bloqueio do monitor.</span><span class="sxs-lookup"><span data-stu-id="05235-103">Provides an ordered list of threads that are queued on the event that is associated with a monitor lock.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="33b70-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="33b70-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05235-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="05235-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetMonitorEventWaitList (  
     [out] ICorDebugThreadEnum **ppThreadEnum  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="33b70-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="33b70-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="05235-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="05235-105">Parameters</span></span>  
  `ppThreadEnum`  
- <span data-ttu-id="33b70-106">[out] O enumerador ICorDebugThreadEnum que fornece a lista ordenada de threads.</span><span class="sxs-lookup"><span data-stu-id="33b70-106">[out] The ICorDebugThreadEnum enumerator that provides the ordered list of threads.</span></span>  
+ <span data-ttu-id="05235-106">[out] O enumerador ICorDebugThreadEnum que fornece a lista ordenada de threads.</span><span class="sxs-lookup"><span data-stu-id="05235-106">[out] The ICorDebugThreadEnum enumerator that provides the ordered list of threads.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="33b70-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="33b70-107">Return Value</span></span>  
- <span data-ttu-id="33b70-108">Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="33b70-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="05235-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="05235-107">Return Value</span></span>  
+ <span data-ttu-id="05235-108">Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="05235-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="33b70-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="33b70-109">HRESULT</span></span>|<span data-ttu-id="33b70-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="33b70-110">Description</span></span>|  
+|<span data-ttu-id="05235-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="05235-109">HRESULT</span></span>|<span data-ttu-id="05235-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="05235-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="33b70-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="33b70-111">S_OK</span></span>|<span data-ttu-id="33b70-112">A lista não está vazia.</span><span class="sxs-lookup"><span data-stu-id="33b70-112">The list is not empty.</span></span>|  
-|<span data-ttu-id="33b70-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="33b70-113">S_FALSE</span></span>|<span data-ttu-id="33b70-114">A lista está vazia.</span><span class="sxs-lookup"><span data-stu-id="33b70-114">The list is empty.</span></span>|  
+|<span data-ttu-id="05235-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="05235-111">S_OK</span></span>|<span data-ttu-id="05235-112">A lista não está vazia.</span><span class="sxs-lookup"><span data-stu-id="05235-112">The list is not empty.</span></span>|  
+|<span data-ttu-id="05235-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="05235-113">S_FALSE</span></span>|<span data-ttu-id="05235-114">A lista está vazia.</span><span class="sxs-lookup"><span data-stu-id="05235-114">The list is empty.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="33b70-115">Exceções</span><span class="sxs-lookup"><span data-stu-id="33b70-115">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="05235-115">Exceções</span><span class="sxs-lookup"><span data-stu-id="05235-115">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="33b70-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="33b70-116">Remarks</span></span>  
- <span data-ttu-id="33b70-117">O primeiro thread na lista é o primeiro thread que é lançado pela próxima chamada para <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="33b70-117">The first thread in the list is the first thread that is released by the next call to <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>.</span></span> <span data-ttu-id="33b70-118">O próximo thread na lista é liberado na chamada a seguir e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="33b70-118">The next thread in the list is released on the following call, and so on.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="05235-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="05235-116">Remarks</span></span>  
+ <span data-ttu-id="05235-117">O primeiro thread na lista é o primeiro thread que é lançado pela próxima chamada para <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="05235-117">The first thread in the list is the first thread that is released by the next call to <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>.</span></span> <span data-ttu-id="05235-118">O próximo thread na lista é liberado na chamada a seguir e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="05235-118">The next thread in the list is released on the following call, and so on.</span></span>  
   
- <span data-ttu-id="33b70-119">Se a lista não estiver vazia, esse método retorna S_OK.</span><span class="sxs-lookup"><span data-stu-id="33b70-119">If the list is not empty, this method returns S_OK.</span></span> <span data-ttu-id="33b70-120">Se a lista estiver vazia, o método retorna S_FALSE; Nesse caso, a enumeração é ainda é válida, embora ele está vazio.</span><span class="sxs-lookup"><span data-stu-id="33b70-120">If the list is empty, the method returns S_FALSE; in this case, the enumeration is still valid, although it is empty.</span></span>  
+ <span data-ttu-id="05235-119">Se a lista não estiver vazia, esse método retorna S_OK.</span><span class="sxs-lookup"><span data-stu-id="05235-119">If the list is not empty, this method returns S_OK.</span></span> <span data-ttu-id="05235-120">Se a lista estiver vazia, o método retorna S_FALSE; Nesse caso, a enumeração é ainda é válida, embora ele está vazio.</span><span class="sxs-lookup"><span data-stu-id="05235-120">If the list is empty, the method returns S_FALSE; in this case, the enumeration is still valid, although it is empty.</span></span>  
   
- <span data-ttu-id="33b70-121">Em ambos os casos, a interface de enumeração é utilizável apenas para a duração do estado atual de sincronizado.</span><span class="sxs-lookup"><span data-stu-id="33b70-121">In either case, the enumeration interface is usable only for the duration of the current synchronized state.</span></span> <span data-ttu-id="33b70-122">No entanto, as interfaces do thread liberadas dele são válidos até que o thread seja encerrado.</span><span class="sxs-lookup"><span data-stu-id="33b70-122">However, the thread's interfaces dispensed from it are valid until the thread exits.</span></span>  
+ <span data-ttu-id="05235-121">Em ambos os casos, a interface de enumeração é utilizável apenas para a duração do estado atual de sincronizado.</span><span class="sxs-lookup"><span data-stu-id="05235-121">In either case, the enumeration interface is usable only for the duration of the current synchronized state.</span></span> <span data-ttu-id="05235-122">No entanto, as interfaces do thread liberadas dele são válidos até que o thread seja encerrado.</span><span class="sxs-lookup"><span data-stu-id="05235-122">However, the thread's interfaces dispensed from it are valid until the thread exits.</span></span>  
   
- <span data-ttu-id="33b70-123">Se `ppThreadEnum` não for um ponteiro válido, o resultado será indefinido.</span><span class="sxs-lookup"><span data-stu-id="33b70-123">If `ppThreadEnum` is not a valid pointer, the result is undefined.</span></span>  
+ <span data-ttu-id="05235-123">Se `ppThreadEnum` não for um ponteiro válido, o resultado será indefinido.</span><span class="sxs-lookup"><span data-stu-id="05235-123">If `ppThreadEnum` is not a valid pointer, the result is undefined.</span></span>  
   
- <span data-ttu-id="33b70-124">Se ocorrer um erro, de modo que ele não pode ser determinado que, se houver, segmentos estão aguardando o monitor, o método retorna um HRESULT que indica falha.</span><span class="sxs-lookup"><span data-stu-id="33b70-124">If an error occurs such that it cannot be determined which, if any, threads are waiting for the monitor, the method returns an HRESULT that indicates failure.</span></span>  
+ <span data-ttu-id="05235-124">Se ocorrer um erro, de modo que ele não pode ser determinado que, se houver, segmentos estão aguardando o monitor, o método retorna um HRESULT que indica falha.</span><span class="sxs-lookup"><span data-stu-id="05235-124">If an error occurs such that it cannot be determined which, if any, threads are waiting for the monitor, the method returns an HRESULT that indicates failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="33b70-125">Requisitos</span><span class="sxs-lookup"><span data-stu-id="33b70-125">Requirements</span></span>  
- <span data-ttu-id="33b70-126">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33b70-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05235-125">Requisitos</span><span class="sxs-lookup"><span data-stu-id="05235-125">Requirements</span></span>  
+ <span data-ttu-id="05235-126">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05235-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="33b70-127">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="33b70-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="05235-127">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="05235-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="33b70-128">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="33b70-128">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="05235-128">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05235-128">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="33b70-129">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33b70-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="05235-129">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05235-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="33b70-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="33b70-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05235-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="05235-130">See also</span></span>
 
-- [<span data-ttu-id="33b70-131">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="33b70-131">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="33b70-132">Depuração</span><span class="sxs-lookup"><span data-stu-id="33b70-132">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="05235-131">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="05235-131">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="05235-132">Depuração</span><span class="sxs-lookup"><span data-stu-id="05235-132">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

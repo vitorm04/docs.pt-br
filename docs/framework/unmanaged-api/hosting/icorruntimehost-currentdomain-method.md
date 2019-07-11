@@ -17,48 +17,48 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cb5ff5300a7fd2577e602b3077dd816cf7dfbe2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3aa6bc844d2c6629085b0596127c0b51b99357d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936910"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766361"
 ---
-# <a name="icorruntimehostcurrentdomain-method"></a><span data-ttu-id="8537e-102">Método ICorRuntimeHost::CurrentDomain</span><span class="sxs-lookup"><span data-stu-id="8537e-102">ICorRuntimeHost::CurrentDomain Method</span></span>
-<span data-ttu-id="8537e-103">Obtém um ponteiro de interface do tipo <xref:System.AppDomain?displayProperty=nameWithType> que representa o domínio carregado no thread atual.</span><span class="sxs-lookup"><span data-stu-id="8537e-103">Gets an interface pointer of type <xref:System.AppDomain?displayProperty=nameWithType> that represents the domain loaded on the current thread.</span></span>  
+# <a name="icorruntimehostcurrentdomain-method"></a><span data-ttu-id="49407-102">Método ICorRuntimeHost::CurrentDomain</span><span class="sxs-lookup"><span data-stu-id="49407-102">ICorRuntimeHost::CurrentDomain Method</span></span>
+<span data-ttu-id="49407-103">Obtém um ponteiro de interface do tipo <xref:System.AppDomain?displayProperty=nameWithType> que representa o domínio carregado no thread atual.</span><span class="sxs-lookup"><span data-stu-id="49407-103">Gets an interface pointer of type <xref:System.AppDomain?displayProperty=nameWithType> that represents the domain loaded on the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8537e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8537e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49407-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="49407-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CurrentDomain (  
     [out] IUnknown** pAppDomain  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8537e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="8537e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="49407-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="49407-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="8537e-106">[out] Um ponteiro de tipo <xref:System.AppDomain?displayProperty=nameWithType> que representa o domínio de aplicativo atual do thread.</span><span class="sxs-lookup"><span data-stu-id="8537e-106">[out] A pointer of type <xref:System.AppDomain?displayProperty=nameWithType> that represents the thread's current application domain.</span></span> <span data-ttu-id="8537e-107">Esse ponteiro é digitado `IUnknown`, de modo que os chamadores devem chamar geralmente `QueryInterface` para obter um ponteiro de tipo <xref:System._AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="8537e-107">This pointer is typed `IUnknown`, so callers should generally call `QueryInterface` to obtain a pointer of type <xref:System._AppDomain>.</span></span>  
+ <span data-ttu-id="49407-106">[out] Um ponteiro de tipo <xref:System.AppDomain?displayProperty=nameWithType> que representa o domínio de aplicativo atual do thread.</span><span class="sxs-lookup"><span data-stu-id="49407-106">[out] A pointer of type <xref:System.AppDomain?displayProperty=nameWithType> that represents the thread's current application domain.</span></span> <span data-ttu-id="49407-107">Esse ponteiro é digitado `IUnknown`, de modo que os chamadores devem chamar geralmente `QueryInterface` para obter um ponteiro de tipo <xref:System._AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="49407-107">This pointer is typed `IUnknown`, so callers should generally call `QueryInterface` to obtain a pointer of type <xref:System._AppDomain>.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8537e-108">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="8537e-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="49407-108">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="49407-108">Return Value</span></span>  
   
-|<span data-ttu-id="8537e-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8537e-109">HRESULT</span></span>|<span data-ttu-id="8537e-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="8537e-110">Description</span></span>|  
+|<span data-ttu-id="49407-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="49407-109">HRESULT</span></span>|<span data-ttu-id="49407-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="49407-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8537e-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="8537e-111">S_OK</span></span>|<span data-ttu-id="8537e-112">A operação foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="8537e-112">The operation was successful.</span></span>|  
-|<span data-ttu-id="8537e-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="8537e-113">S_FALSE</span></span>|<span data-ttu-id="8537e-114">Falha ao concluir a operação.</span><span class="sxs-lookup"><span data-stu-id="8537e-114">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="8537e-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8537e-115">E_FAIL</span></span>|<span data-ttu-id="8537e-116">Ocorreu uma falha catastrófica, desconhecida.</span><span class="sxs-lookup"><span data-stu-id="8537e-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="8537e-117">Se um método retornar E_FAIL, o common language runtime (CLR) não é mais utilizável no processo.</span><span class="sxs-lookup"><span data-stu-id="8537e-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="8537e-118">As chamadas subsequentes para todas as APIs de hospedagem retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="8537e-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="8537e-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="8537e-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="8537e-120">O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="8537e-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="49407-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="49407-111">S_OK</span></span>|<span data-ttu-id="49407-112">A operação foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="49407-112">The operation was successful.</span></span>|  
+|<span data-ttu-id="49407-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="49407-113">S_FALSE</span></span>|<span data-ttu-id="49407-114">Falha ao concluir a operação.</span><span class="sxs-lookup"><span data-stu-id="49407-114">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="49407-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="49407-115">E_FAIL</span></span>|<span data-ttu-id="49407-116">Ocorreu uma falha catastrófica, desconhecida.</span><span class="sxs-lookup"><span data-stu-id="49407-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="49407-117">Se um método retornar E_FAIL, o common language runtime (CLR) não é mais utilizável no processo.</span><span class="sxs-lookup"><span data-stu-id="49407-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="49407-118">As chamadas subsequentes para todas as APIs de hospedagem retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="49407-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="49407-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="49407-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="49407-120">O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="49407-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8537e-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8537e-121">Requirements</span></span>  
- <span data-ttu-id="8537e-122">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8537e-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49407-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="49407-121">Requirements</span></span>  
+ <span data-ttu-id="49407-122">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="49407-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8537e-123">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8537e-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="49407-123">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="49407-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8537e-124">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="8537e-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="49407-124">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="49407-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8537e-125">**Versões do .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="8537e-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="49407-125">**Versões do .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="49407-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8537e-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8537e-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="49407-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="49407-126">See also</span></span>
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="8537e-127">Interface ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="8537e-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="49407-127">Interface ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="49407-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
