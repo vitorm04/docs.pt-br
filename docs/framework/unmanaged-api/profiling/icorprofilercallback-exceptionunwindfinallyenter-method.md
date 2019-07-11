@@ -17,43 +17,43 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aebfc0d763fa1ea14c55a0c61fbf63db65fefe02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b25ae535bfe50d216ca64a2e8163c0e6df58535
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597966"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755967"
 ---
-# <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a><span data-ttu-id="81696-102">Método ICorProfilerCallback::ExceptionUnwindFinallyEnter</span><span class="sxs-lookup"><span data-stu-id="81696-102">ICorProfilerCallback::ExceptionUnwindFinallyEnter Method</span></span>
-<span data-ttu-id="81696-103">Notifica o criador de perfil que a fase de desenrolamento de exceção de manipulação está inserindo um `finally` cláusula contida na função especificada.</span><span class="sxs-lookup"><span data-stu-id="81696-103">Notifies the profiler that the unwind phase of exception handling is entering a `finally` clause contained in the specified function.</span></span>  
+# <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a><span data-ttu-id="4fe68-102">Método ICorProfilerCallback::ExceptionUnwindFinallyEnter</span><span class="sxs-lookup"><span data-stu-id="4fe68-102">ICorProfilerCallback::ExceptionUnwindFinallyEnter Method</span></span>
+<span data-ttu-id="4fe68-103">Notifica o criador de perfil que a fase de desenrolamento de exceção de manipulação está inserindo um `finally` cláusula contida na função especificada.</span><span class="sxs-lookup"><span data-stu-id="4fe68-103">Notifies the profiler that the unwind phase of exception handling is entering a `finally` clause contained in the specified function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81696-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="81696-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4fe68-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4fe68-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ExceptionUnwindFinallyEnter(  
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="81696-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="81696-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4fe68-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4fe68-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="81696-106">[in] A ID da função que contém o `finally` cláusula.</span><span class="sxs-lookup"><span data-stu-id="81696-106">[in] The ID of the function that contains the `finally` clause.</span></span>  
+ <span data-ttu-id="4fe68-106">[in] A ID da função que contém o `finally` cláusula.</span><span class="sxs-lookup"><span data-stu-id="4fe68-106">[in] The ID of the function that contains the `finally` clause.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="81696-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="81696-107">Remarks</span></span>  
- <span data-ttu-id="81696-108">O criador de perfil não deve bloquear em sua implementação desse método, porque a pilha não pode estar em um estado que permite a coleta de lixo e, portanto, a coleta de lixo preemptive não pode ser habilitada.</span><span class="sxs-lookup"><span data-stu-id="81696-108">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="81696-109">Se o criador de perfil bloqueia aqui e coleta de lixo é tentada, o tempo de execução será bloqueada até que esse retorno de chamada retorne.</span><span class="sxs-lookup"><span data-stu-id="81696-109">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4fe68-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="4fe68-107">Remarks</span></span>  
+ <span data-ttu-id="4fe68-108">O criador de perfil não deve bloquear em sua implementação desse método, porque a pilha não pode estar em um estado que permite a coleta de lixo e, portanto, a coleta de lixo preemptive não pode ser habilitada.</span><span class="sxs-lookup"><span data-stu-id="4fe68-108">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="4fe68-109">Se o criador de perfil bloqueia aqui e coleta de lixo é tentada, o tempo de execução será bloqueada até que esse retorno de chamada retorne.</span><span class="sxs-lookup"><span data-stu-id="4fe68-109">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="81696-110">Implementação do criador de perfil deste método não deve chamar código gerenciado ou em qualquer forma de causa uma alocação de memória gerenciada.</span><span class="sxs-lookup"><span data-stu-id="81696-110">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="4fe68-110">Implementação do criador de perfil deste método não deve chamar código gerenciado ou em qualquer forma de causa uma alocação de memória gerenciada.</span><span class="sxs-lookup"><span data-stu-id="4fe68-110">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81696-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="81696-111">Requirements</span></span>  
- <span data-ttu-id="81696-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81696-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4fe68-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4fe68-111">Requirements</span></span>  
+ <span data-ttu-id="4fe68-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4fe68-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="81696-113">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="81696-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4fe68-113">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4fe68-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="81696-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="81696-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4fe68-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4fe68-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="81696-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81696-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4fe68-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4fe68-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81696-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="81696-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4fe68-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4fe68-116">See also</span></span>
 
-- [<span data-ttu-id="81696-117">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="81696-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="81696-118">Método GetNotifiedExceptionClauseInfo</span><span class="sxs-lookup"><span data-stu-id="81696-118">GetNotifiedExceptionClauseInfo Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)
-- [<span data-ttu-id="81696-119">Método ExceptionUnwindFinallyLeave</span><span class="sxs-lookup"><span data-stu-id="81696-119">ExceptionUnwindFinallyLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)
+- [<span data-ttu-id="4fe68-117">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="4fe68-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="4fe68-118">Método GetNotifiedExceptionClauseInfo</span><span class="sxs-lookup"><span data-stu-id="4fe68-118">GetNotifiedExceptionClauseInfo Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)
+- [<span data-ttu-id="4fe68-119">Método ExceptionUnwindFinallyLeave</span><span class="sxs-lookup"><span data-stu-id="4fe68-119">ExceptionUnwindFinallyLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)

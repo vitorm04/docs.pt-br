@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 392254efcd099aca60e58b3cc0bc61ca85aa2c66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986512"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752464"
 ---
-# <a name="variablelocationtype-enumeration"></a><span data-ttu-id="86452-102">Enumeração VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="86452-102">VariableLocationType Enumeration</span></span>
-<span data-ttu-id="86452-103">Indica o tipo de local nativo de uma variável.</span><span class="sxs-lookup"><span data-stu-id="86452-103">Indicates the native location type of a variable.</span></span>  
+# <a name="variablelocationtype-enumeration"></a><span data-ttu-id="7a9fc-102">Enumeração VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="7a9fc-102">VariableLocationType Enumeration</span></span>
+<span data-ttu-id="7a9fc-103">Indica o tipo de local nativo de uma variável.</span><span class="sxs-lookup"><span data-stu-id="7a9fc-103">Indicates the native location type of a variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86452-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="86452-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a9fc-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7a9fc-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum VariableLocationType  
 {  
     VLT_REGISTER,               
@@ -37,26 +37,26 @@ typedef enum VariableLocationType
 } VariableLocationType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="86452-105">Membros</span><span class="sxs-lookup"><span data-stu-id="86452-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7a9fc-105">Membros</span><span class="sxs-lookup"><span data-stu-id="7a9fc-105">Members</span></span>  
   
-|<span data-ttu-id="86452-106">Membro</span><span class="sxs-lookup"><span data-stu-id="86452-106">Member</span></span>|<span data-ttu-id="86452-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="86452-107">Description</span></span>|  
+|<span data-ttu-id="7a9fc-106">Membro</span><span class="sxs-lookup"><span data-stu-id="7a9fc-106">Member</span></span>|<span data-ttu-id="7a9fc-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="7a9fc-107">Description</span></span>|  
 |------------|-----------------|  
-|`VLT_REGISTER`|<span data-ttu-id="86452-108">A variável está em um registro.</span><span class="sxs-lookup"><span data-stu-id="86452-108">The variable is in a register.</span></span>|  
-|`VLT_REGISTER_RELATIVE`|<span data-ttu-id="86452-109">A variável está em um local de memória relativo ao registro.</span><span class="sxs-lookup"><span data-stu-id="86452-109">The variable is in a register-relative memory location.</span></span>|  
-|`VLT_INVALID`|<span data-ttu-id="86452-110">A variável não é armazenada em um registro ou um local de memória relativo ao registro.</span><span class="sxs-lookup"><span data-stu-id="86452-110">The variable is not stored in a register or a register-relative memory location.</span></span>|  
+|`VLT_REGISTER`|<span data-ttu-id="7a9fc-108">A variável está em um registro.</span><span class="sxs-lookup"><span data-stu-id="7a9fc-108">The variable is in a register.</span></span>|  
+|`VLT_REGISTER_RELATIVE`|<span data-ttu-id="7a9fc-109">A variável está em um local de memória relativo ao registro.</span><span class="sxs-lookup"><span data-stu-id="7a9fc-109">The variable is in a register-relative memory location.</span></span>|  
+|`VLT_INVALID`|<span data-ttu-id="7a9fc-110">A variável não é armazenada em um registro ou um local de memória relativo ao registro.</span><span class="sxs-lookup"><span data-stu-id="7a9fc-110">The variable is not stored in a register or a register-relative memory location.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="86452-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="86452-111">Remarks</span></span>  
- <span data-ttu-id="86452-112">Um membro do `VariableLocationType` enumeração é retornada pelo [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="86452-112">A member of the `VariableLocationType` enumeration is returned by the [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7a9fc-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="7a9fc-111">Remarks</span></span>  
+ <span data-ttu-id="7a9fc-112">Um membro do `VariableLocationType` enumeração é retornada pelo [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="7a9fc-112">A member of the `VariableLocationType` enumeration is returned by the [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="86452-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="86452-113">Requirements</span></span>  
- <span data-ttu-id="86452-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="86452-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a9fc-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7a9fc-113">Requirements</span></span>  
+ <span data-ttu-id="7a9fc-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7a9fc-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86452-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="86452-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7a9fc-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7a9fc-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="86452-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="86452-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7a9fc-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7a9fc-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="86452-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86452-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="7a9fc-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a9fc-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86452-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="86452-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a9fc-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7a9fc-118">See also</span></span>
 
-- [<span data-ttu-id="86452-119">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="86452-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="7a9fc-119">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="7a9fc-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
