@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26b3de456bc28f51cb20ab72b3934041ec6b06ae
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490446"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760240"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>Ponteiro de função FExecuteInAppDomainCallback
 Aponta para uma função que é chamado pelo common language runtime (CLR) para executar código gerenciado.  
@@ -30,7 +30,7 @@ Aponta para uma função que é chamado pelo common language runtime (CLR) para 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (  
     [in] void  *cookie  
 );  

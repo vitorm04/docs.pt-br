@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6e4be2e05c573ec93cc23c8dd6eccc834b8b848
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d0f94949cdc82cdecd52f003f3400c43014fabf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992336"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780455"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>Método IMetaDataImport::EnumInterfaceImpls
 Enumera todas as interfaces implementadas por especificado `TypeDef`. 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT EnumInterfaceImpls (  
    [in, out]  HCORENUM       *phEnum,   
    [in]   mdTypeDef          td,  

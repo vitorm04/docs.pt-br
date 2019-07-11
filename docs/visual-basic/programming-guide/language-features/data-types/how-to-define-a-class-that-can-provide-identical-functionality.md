@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 829ff08fe3805f37bc6189a66a6675b3518da138
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601005"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757401"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Como: Definir uma classe que pode fornecer uma funcionalidade idêntica em tipos de dados diferentes (Visual Basic)
 Você pode definir uma classe da qual você pode criar objetos que fornecem uma funcionalidade idêntica em tipos de dados diferentes. Para fazer isso, você especifica um ou mais *parâmetros de tipo* na definição. A classe, em seguida, pode servir como um modelo para objetos que usam vários tipos de dados. Uma classe definida dessa maneira é chamada um *classe genérica*.  
@@ -62,7 +62,7 @@ Você pode definir uma classe da qual você pode criar objetos que fornecem uma 
   
 6. Certifique-se de que seu código usa somente operações e métodos que são suportados por qualquer tipo de dados que ele pode fornecer a `itemType`.  
   
-     O exemplo a seguir define uma classe que gerencia uma lista muito simples. Ele contém a lista da matriz interna `items`e o usando o código pode declarar o tipo de dados dos elementos de lista. Um construtor parametrizado permite o uso de código para definir o limite superior de `items`, e o construtor padrão define isso como 9 (para um total de 10 itens).  
+     O exemplo a seguir define uma classe que gerencia uma lista muito simples. Ele contém a lista da matriz interna `items`e o usando o código pode declarar o tipo de dados dos elementos de lista. Um construtor parametrizado permite o uso de código para definir o limite superior de `items`, e o construtor sem parâmetro define isso como 9 (para um total de 10 itens).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   

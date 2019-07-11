@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61e30cf4ffe45578f7ad37de8295d227dbf313c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf9340977c55c54b9a4683115000293d1c98dfcf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930189"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767462"
 ---
 # <a name="icordebugprocess5enumerateheapregions-method"></a>Método ICorDebugProcess5::EnumerateHeapRegions
 Obtém um enumerador para os intervalos de memória do heap gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT EnumerateHeapRegions(  
    [out] ICorDebugHeapSegmentEnum **ppRegions  
 );  

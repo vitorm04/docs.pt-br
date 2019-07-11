@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 5a20253e7164dabc22529d2238e9e85610d83706
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0637a2f32140081d310abf5f7254b526edc69fc6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624707"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743238"
 ---
 # <a name="how-to-map-database-relationships"></a>Como: mapear relações de banco de dados
 Você pode codificar como referências de propriedade em sua classe de entidade todas as relações de dados que serão sempre as mesmas. No banco de dados de exemplo Northwind, por exemplo, como os clientes geralmente fazem os pedidos, há sempre uma relação no modelo entre os clientes e seus pedidos.  
@@ -39,7 +39,7 @@ Você pode codificar como referências de propriedade em sua classe de entidade 
  No exemplo de um-para-muitos a seguir, a classe `Customer` tem uma propriedade que declara a relação entre os clientes e seus pedidos.  A propriedade `Orders` é do tipo <xref:System.Data.Linq.EntitySet%601>. Este tipo significa que essa relação é de um-para-muitos (um cliente para vários pedidos). A propriedade <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> é usada para descrever como essa associação é realizada, a saber, especificando o nome da propriedade na classe relacionada a ser comparada com essa. Neste exemplo, o `CustomerID` propriedade é comparada, assim como um banco de dados *junção* compararia esse valor da coluna.  
   
 > [!NOTE]
->  Se você estiver usando o Visual Studio, você pode usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para criar uma associação entre classes.  
+>  Se você estiver usando o Visual Studio, você pode usar o Object Relational Designer para criar uma associação entre classes.  
   
  [!code-csharp[DlinqCustomize#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#3)]
  [!code-vb[DlinqCustomize#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#3)]  

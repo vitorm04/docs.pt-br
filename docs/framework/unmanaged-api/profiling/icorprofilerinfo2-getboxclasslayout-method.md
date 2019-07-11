@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dac7e38d1e767a3edeef932a0c0916daffe24b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d00c28862036c21c44f46c23fb09e947628dcf3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049564"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783044"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>Método ICorProfilerInfo2::GetBoxClassLayout
 Obtém informações sobre onde o tipo de valor especificado está localizado quando ele é convertido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetBoxClassLayout(  
     [in] ClassID classId,  
     [out] ULONG32 *pBufferOffset);  

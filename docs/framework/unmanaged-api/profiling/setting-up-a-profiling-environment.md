@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490724"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775747"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurando um ambiente de criação de perfil
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "66490724"
   
 - COR_PROFILER: Se do COR_ENABLE_PROFILING verificar passa, o CLR se conecta ao criador de perfil que tem este CLSID ou ProgID, que deve ter sido armazenado anteriormente no registro. A variável de ambiente COR_PROFILER é definida como uma cadeia de caracteres, conforme mostrado nos dois exemplos a seguir.  
   
-    ```  
+    ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
     set COR_PROFILER="MyProfiler"  
     ```  
@@ -66,7 +66,7 @@ ms.locfileid: "66490724"
 ## <a name="initializing-the-profiler"></a>Inicializando o Profiler  
  Quando ambas as verificações da variável de ambiente passam, o CLR cria uma instância do criador de perfil de maneira semelhante para o COM `CoCreateInstance` função. O criador de perfil não foi carregado por meio de uma chamada direta para `CoCreateInstance`. Portanto, uma chamada para `CoInitialize`, que requer a definição do modelo de threading, é evitada. O CLR, em seguida, chama o [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) método no criador de perfil. A assinatura desse método é da seguinte maneira.  
   
-```  
+```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
@@ -75,7 +75,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
 ## <a name="setting-event-notifications"></a>Definindo notificações de eventos  
  O criador de perfil, em seguida, chama o [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) método para especificar quais categorias de notificações ele está interessado. Por exemplo, se o criador de perfil estiver interessado somente na função entrar e sair de notificações e notificações de coleta de lixo, ele especificará o seguinte.  
   
-```  
+```cpp  
 ICorProfilerInfo* pInfo;  
 pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);  
 pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  

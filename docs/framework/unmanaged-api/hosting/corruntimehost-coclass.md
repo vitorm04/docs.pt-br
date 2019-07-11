@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2143fc13db1757ac2fa8a9c5a43f104a0c519ca0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 942c9544a6ce868c3b6296569d4a16a44281cdba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985823"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758324"
 ---
 # <a name="corruntimehost-coclass"></a>Coclass CorRuntimeHost
 Fornece interfaces para gerenciar aplicativos que estão sendo executados pelo common language runtime.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 coclass CorRuntimeHost {  
     [default] interface ICorRuntimeHost;  
     interface IGCHost;  

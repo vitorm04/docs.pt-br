@@ -2,12 +2,12 @@
 title: 'Passo a passo: Inserindo tipos de assemblies gerenciados no Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c0de529a0005c9dbaf1f8d0f25957b217280e31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754824"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753016"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Passo a passo: Inserindo tipos de assemblies gerenciados no Visual Studio (Visual Basic)
 
@@ -51,7 +51,7 @@ Como a principal função da inserção de tipo é dar suporte à inserção de 
 
 ## <a name="creating-an-interface"></a>Criando uma interface
 
-#### <a name="to-create-the-type-equivalence-interface-project"></a>Para criar o projeto de interface de equivalência de tipo
+### <a name="to-create-the-type-equivalence-interface-project"></a>Para criar o projeto de interface de equivalência de tipo
 
 1. No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.
 
@@ -61,7 +61,7 @@ Como a principal função da inserção de tipo é dar suporte à inserção de 
 
 4. Clique com o botão direito do mouse no projeto TypeEquivalenceInterface e clique em **Propriedades**. Clique na guia **Compilar**. Defina o caminho de saída para um local válido no computador de desenvolvimento, como `C:\TypeEquivalenceSample`. Esse local também será usado em uma etapa posterior neste passo a passo.
 
-5. Enquanto ainda estiver editando as propriedades do projeto, clique na guia **Assinatura**. Selecione a opção **Assinar o assembly**. Na lista **Escolha um arquivo de chave de nome forte**, clique em **<Novo...>**. Na caixa **Nome de arquivo de chave**, digite `key.snk`. Desmarque a caixa de seleção **Proteger o arquivo de chaves com senha**. Clique em **OK**.
+5. Enquanto ainda estiver editando as propriedades do projeto, clique na guia **Assinatura**. Selecione a opção **Assinar o assembly**. Na lista **Escolha um arquivo de chave de nome forte**, clique em **<Novo...>** . Na caixa **Nome de arquivo de chave**, digite `key.snk`. Desmarque a caixa de seleção **Proteger o arquivo de chaves com senha**. Clique em **OK**.
 
 6. Abra o arquivo ISampleInterface.vb. Adicione o seguinte código ao arquivo de classe ISampleInterface para criar a interface ISampleInterface.
 
@@ -96,7 +96,7 @@ Como a principal função da inserção de tipo é dar suporte à inserção de 
 
 ## <a name="creating-a-runtime-class"></a>Criando uma classe de tempo de execução
 
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>Para criar o projeto de tempo de execução de equivalência de tipo
+### <a name="to-create-the-type-equivalence-runtime-project"></a>Para criar o projeto de tempo de execução de equivalência de tipo
 
 1. No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.
 
@@ -106,7 +106,7 @@ Como a principal função da inserção de tipo é dar suporte à inserção de 
 
 4. Clique com o botão direito do mouse no projeto TypeEquivalenceRuntime e clique em **Propriedades**. Clique na guia **Compilar**. Defina o caminho de saída para o mesmo local usado no projeto TypeEquivalenceInterface, por exemplo, `C:\TypeEquivalenceSample`.
 
-5. Enquanto ainda estiver editando as propriedades do projeto, clique na guia **Assinatura**. Selecione a opção **Assinar o assembly**. Na lista **Escolha um arquivo de chave de nome forte**, clique em **<Novo...>**. Na caixa **Nome de arquivo de chave**, digite `key.snk`. Desmarque a caixa de seleção **Proteger o arquivo de chaves com senha**. Clique em **OK**.
+5. Enquanto ainda estiver editando as propriedades do projeto, clique na guia **Assinatura**. Selecione a opção **Assinar o assembly**. Na lista **Escolha um arquivo de chave de nome forte**, clique em **<Novo...>** . Na caixa **Nome de arquivo de chave**, digite `key.snk`. Desmarque a caixa de seleção **Proteger o arquivo de chaves com senha**. Clique em **OK**.
 
 6. Clique com o botão direito do mouse no projeto TypeEquivalenceRuntime e clique em **Adicionar Referência**. Clique na guia **Procurar** e navegue até a pasta do caminho de saída. Selecione o arquivo TypeEquivalenceInterface.dll e clique em **OK**.
 
@@ -142,7 +142,7 @@ Como a principal função da inserção de tipo é dar suporte à inserção de 
 
 ## <a name="creating-a-client-project"></a>Criando um projeto de cliente
 
-#### <a name="to-create-the-type-equivalence-client-project"></a>Para criar o projeto de cliente de equivalência de tipo
+### <a name="to-create-the-type-equivalence-client-project"></a>Para criar o projeto de cliente de equivalência de tipo
 
 1. No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.
 
@@ -181,7 +181,7 @@ Como a principal função da inserção de tipo é dar suporte à inserção de 
 
 ## <a name="modifying-the-interface"></a>Modificando a interface
 
-#### <a name="to-modify-the-interface"></a>Para modificar a interface
+### <a name="to-modify-the-interface"></a>Para modificar a interface
 
 1. No Visual Studio, no menu **Arquivo**, aponte para **Abrir** e clique em **Projeto/Solução**.
 
@@ -201,7 +201,7 @@ Como a principal função da inserção de tipo é dar suporte à inserção de 
 
 ## <a name="modifying-the-runtime-class"></a>Modificar a classe de tempo de execução
 
-#### <a name="to-modify-the-runtime-class"></a>Para modificar a classe de tempo de execução
+### <a name="to-modify-the-runtime-class"></a>Para modificar a classe de tempo de execução
 
 1. No Visual Studio, no menu **Arquivo**, aponte para **Abrir** e clique em **Projeto/Solução**.
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd0c2da234fa89bbf92c2117d6428d64502da0c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6505995b128e31ed2a18881d31afa0bb1bfe150e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044739"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779415"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>Método IMetaDataAssemblyEmit::SetFileProps
 Modifica especificado `File` estrutura de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT SetFileProps (  
     [in] mdFile        file,  
     [in] const void    *pbHashValue,   

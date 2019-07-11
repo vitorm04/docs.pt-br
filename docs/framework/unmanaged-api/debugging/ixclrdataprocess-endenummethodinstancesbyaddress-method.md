@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 072e775d11d44dfbca27f1616889e388ae61d467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 378095aa2b363f4003a5372b4158df27412655e1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775473"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757858"
 ---
 # <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>Método IXCLRDataProcess::EndEnumMethodInstancesByAddress
 
@@ -30,7 +30,7 @@ Libera os recursos usados pelos iteradores internos usados durante a enumeraçã
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 HRESULT EndEnumMethodInstancesByAddress(
     [in] CLRDATA_ENUM handle
 );

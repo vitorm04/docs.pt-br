@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16dd1b895abbd2357c46361c6381b1625422403f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6742293c1970198ef3d5f5da7d75a0c78e78045c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490192"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768413"
 ---
 # <a name="lockclrversion-function"></a>Função LockClrVersion
 Permite que o host determine qual versão do common language runtime (CLR) será usado dentro do processo antes de inicializar explicitamente o CLR.  
@@ -31,7 +31,7 @@ Permite que o host determine qual versão do common language runtime (CLR) será
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT LockClrVersion (  
     [in] FLockClrVersionCallback   hostCallback,  
     [in] FLockClrVersionCallback  *pBeginHostSetup,  
@@ -60,7 +60,7 @@ HRESULT LockClrVersion (
 ## <a name="remarks"></a>Comentários  
  O host chama `LockClrVersion` antes de inicializar o CLR. `LockClrVersion` usa três parâmetros, que são os retornos de chamada do tipo [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Esse tipo é definido da seguinte maneira.  
   
-```  
+```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   

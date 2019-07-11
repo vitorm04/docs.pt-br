@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a553f2cbac6110e82803e6d0dd872cfaa15d773
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e215cf4f6d6c3cfde3fa723ecae67aa77e189917
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987825"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757065"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>Método ICorDebugNativeFrame2::IsMatchingParentFrame
 Determina se o quadro especificado é o pai do quadro atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2  
                                       *pPotentialParentFrame,  
                               [out] BOOL *pIsParent);  

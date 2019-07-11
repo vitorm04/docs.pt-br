@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b168673e76beddd8ae0479b8daae009c5f057b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b13fe65f892a222abb126aa9237b802507738b7f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987370"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771612"
 ---
 # <a name="icordebugstringvaluegetlength-method"></a>Método ICorDebugStringValue::GetLength
 Obtém o número de caracteres na cadeia de caracteres referenciada por este ICorDebugStringValue.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetLength (  
     [out] ULONG32   *pcchString  
 );  

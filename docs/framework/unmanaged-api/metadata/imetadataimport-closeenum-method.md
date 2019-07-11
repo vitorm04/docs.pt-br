@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7846eeceeb4d59c4e9aae73c79172c89184396e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7f27955467436d562c6a9acc9d7f666427e4c85b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123835"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770707"
 ---
 # <a name="imetadataimportcloseenum-method"></a>Método IMetaDataImport::CloseEnum
 Fecha o enumerador que é identificado pelo identificador especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 void CloseEnum (  
    [in] HCORENUM hEnum  
 );  

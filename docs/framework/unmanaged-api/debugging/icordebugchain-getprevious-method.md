@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fdcdf23dfee01e8bad1c95adb4de66f270d5e00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31c795c2fbbfdc45b6e1aac6684f730f55fc106a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645260"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746411"
 ---
 # <a name="icordebugchaingetprevious-method"></a>Método ICorDebugChain::GetPrevious
 Obtém a cadeia anterior de quadros do thread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetPrevious (  
     [out] ICorDebugChain     **ppChain  
 );  

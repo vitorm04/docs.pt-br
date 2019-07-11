@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 4a44bd3f55cf6c21bb785ff70bca80e2c003cd18
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dce706a9c09558bfb39f0d65bd56b57787488d06
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878259"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743263"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é um componente do .NET Framework versão 3.5 que fornece uma infraestrutura de tempo de execução para gerenciar dados relacionais como objetos.  
@@ -17,7 +17,7 @@ ms.locfileid: "65878259"
   
  No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], o modelo de dados de um banco de dados relacional é mapeado para um modelo de objeto expresso na linguagem de programação do desenvolvedor. Quando o aplicativo é executado, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte em SQL as consultas integradas à linguagem no modelo de objeto e as envia ao banco de dados para execução. Quando o banco de dados retorna os resultados, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte-os novamente em objetos com os quais você pode trabalhar em sua própria linguagem de programação.  
   
- Os desenvolvedores usando o Visual Studio normalmente usam o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], que fornece uma interface de usuário para implementar muitos dos recursos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Os desenvolvedores que usam o Visual Studio normalmente usam o Object Relational Designer, que fornece uma interface de usuário para implementar muitos dos recursos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  A documentação incluída nessa versão do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] descreve as técnicas, os processos e os blocos de construção básicos necessários para compilar aplicativos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Você também pode pesquisar Microsoft Docs para problemas específicos, e você pode participar de [Fórum do LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), onde você pode discutir tópicos mais complexos detalhadamente com especialistas. Por fim, o [LINQ to SQL: consulta integrada para dados relacionais](https://go.microsoft.com/fwlink/?LinkId=93205) white paper sobre detalhes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, com exemplos de código em Visual Basic e C#.  
   

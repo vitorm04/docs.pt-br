@@ -7,17 +7,17 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780829"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755203"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Como: Declarar um objeto usando um inicializador de objeto (Visual Basic)
 Inicializadores de objeto permitem que você declarar e instanciar uma instância de uma classe em uma única instrução. Além disso, você pode inicializar um ou mais membros da instância ao mesmo tempo, sem chamar um construtor com parâmetros.  
   
- Quando você usa um inicializador de objeto para criar uma instância de um tipo nomeado, o construtor padrão para a classe é chamado, seguido pela inicialização dos membros designados na ordem em que você especificar.  
+ Quando você usa um inicializador de objeto para criar uma instância de um tipo nomeado, o construtor sem parâmetros para a classe é chamado, seguido pela inicialização dos membros designados na ordem em que você especificar.  
   
  O procedimento a seguir mostra como criar uma instância de um `Student` classe de três maneiras diferentes. A classe tem nome, sobrenome e propriedades de ano de classe, entre outros. Cada uma das três declarações cria uma nova instância da `Student`, com a propriedade `First` definida como "Michael," propriedade `Last` definida como "Tucker", e todos os outros membros definidos para seus valores padrão. O resultado de cada declaração no procedimento é equivalente ao exemplo a seguir, que não usa um inicializador de objeto.  
   

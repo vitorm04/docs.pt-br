@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 383d7cd0e315089362b478eed6bdde6d0e4621a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e68178a71d7ba73b4956a7d23854c23300301d8e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586727"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747853"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>Método ICorProfilerInfo2::GetAppDomainStaticAddress
 Obtém o endereço do campo de domínio estáticos do aplicativo especificado que está no escopo do domínio do aplicativo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 RESULT GetAppDomainStaticAddress(  
     [in] ClassID classId,  
     [in] mdFieldDef fieldToken,  

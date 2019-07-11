@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59bfc6785d3ad195e219afc323b7fdb513d8fefc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d96881ce35dca1ee7a196507ef8d81a565eed82
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949052"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741509"
 ---
 # <a name="setassemblyfile2-method"></a>Método SetAssemblyFile2
 Define o nome e as opções para um novo assembly. Não chame este método quando você produzir módulos não associados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT SetAssemblyFile2(  
     LPCWSTR pszFilename,  
     IMetaDataEmit2* pEmitter,  

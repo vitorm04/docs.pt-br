@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13d564be68d6b49a1616be97710312f33f828d48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1e003ba23f680c4a5525a956d758aac6b823eb9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628653"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769712"
 ---
 # <a name="eclrevent-enumeration"></a>Enumeração EClrEvent
 Descreve os eventos de runtime (CLR) de linguagem comum para o qual o host pode registrar retornos de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef enum {  
     Event_ClrDisabled,  
     Event_DomainUnload,  

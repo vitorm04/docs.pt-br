@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95fc3caad0436bc2bf641c13f9e230e346c31060
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d5e4219b2a7541d4940103138e24a28b3a73c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672881"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757695"
 ---
 # <a name="itypenamebuilderopengenericargument-method"></a>Método ITypeNameBuilder::OpenGenericArgument
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT OpenGenericArgument ( );  
 ```  
   

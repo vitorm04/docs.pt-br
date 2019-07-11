@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7b384bb24cbf7ab7379949fd85a22121a1310e3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ab660769a49cf12b129cb7f44b8378053a231f8c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636865"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761619"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>Função CloneEnumWbemClassObject
 Faz uma cópia lógica de um enumerador, mantendo sua posição atual em uma enumeração.
@@ -30,7 +30,7 @@ Faz uma cópia lógica de um enumerador, mantendo sua posição atual em uma enu
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 HRESULT CloneEnumWbemClassObject (
    [out] IEnumWbemClassObject**  ppEnum, 
    [in] DWORD                    authLevel,
