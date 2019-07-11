@@ -2,28 +2,28 @@
 title: 'Como: gerar o modelo de objeto como um arquivo externo'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 828e92903447b5c7cd3d7d27ed72bfe61d0dc6a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033742"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743298"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="23bef-102">Como: gerar o modelo de objeto como um arquivo externo</span><span class="sxs-lookup"><span data-stu-id="23bef-102">How to: Generate the Object Model as an External File</span></span>
-<span data-ttu-id="23bef-103">Como uma alternativa para o mapeamento baseado em atributos, você pode gerar seu modelo de objeto como um arquivo externo XML usando a ferramenta de linha de comando SQLMetal.</span><span class="sxs-lookup"><span data-stu-id="23bef-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="23bef-104">Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="23bef-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="23bef-105">Usando um arquivo de mapeamento externo XML, você reduz a confusão em seu código.</span><span class="sxs-lookup"><span data-stu-id="23bef-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="23bef-106">Você também pode alterar o comportamento alterando o arquivo externo sem recompilar os binários do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="23bef-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="23bef-107">Para obter mais informações, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="23bef-107">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="e9c5e-102">Como: gerar o modelo de objeto como um arquivo externo</span><span class="sxs-lookup"><span data-stu-id="e9c5e-102">How to: Generate the Object Model as an External File</span></span>
+<span data-ttu-id="e9c5e-103">Como uma alternativa para o mapeamento baseado em atributos, você pode gerar seu modelo de objeto como um arquivo externo XML usando a ferramenta de linha de comando SQLMetal.</span><span class="sxs-lookup"><span data-stu-id="e9c5e-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="e9c5e-104">Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="e9c5e-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="e9c5e-105">Usando um arquivo de mapeamento externo XML, você reduz a confusão em seu código.</span><span class="sxs-lookup"><span data-stu-id="e9c5e-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="e9c5e-106">Você também pode alterar o comportamento alterando o arquivo externo sem recompilar os binários do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e9c5e-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="e9c5e-107">Para obter mais informações, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="e9c5e-107">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="23bef-108">[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] não oferece suporte a geração de um arquivo de mapeamento externo.</span><span class="sxs-lookup"><span data-stu-id="23bef-108">The [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] does not support generation of an external mapping file.</span></span>  
+>  <span data-ttu-id="e9c5e-108">O Object Relational Designer não oferece suporte a geração de um arquivo de mapeamento externo.</span><span class="sxs-lookup"><span data-stu-id="e9c5e-108">The Object Relational Designer does not support generation of an external mapping file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="23bef-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="23bef-109">Example</span></span>  
- <span data-ttu-id="23bef-110">O comando a seguir gerencia um arquivo externo de mapeamento de base de dados de exemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="23bef-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
+## <a name="example"></a><span data-ttu-id="e9c5e-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e9c5e-109">Example</span></span>  
+ <span data-ttu-id="e9c5e-110">O comando a seguir gerencia um arquivo externo de mapeamento de base de dados de exemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="e9c5e-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
   
 ```  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
-## <a name="example"></a><span data-ttu-id="23bef-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="23bef-111">Example</span></span>  
- <span data-ttu-id="23bef-112">O seguinte trecho de um arquivo de mapeamento externo mostra o mapeamento para a tabela clientes na base de dados de exemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="23bef-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="23bef-113">Este trecho foi gerado executando SQLMetal com a **/Map** opção.</span><span class="sxs-lookup"><span data-stu-id="23bef-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
+## <a name="example"></a><span data-ttu-id="e9c5e-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e9c5e-111">Example</span></span>  
+ <span data-ttu-id="e9c5e-112">O seguinte trecho de um arquivo de mapeamento externo mostra o mapeamento para a tabela clientes na base de dados de exemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="e9c5e-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="e9c5e-113">Este trecho foi gerado executando SQLMetal com a **/Map** opção.</span><span class="sxs-lookup"><span data-stu-id="e9c5e-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -48,8 +48,8 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="23bef-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="23bef-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9c5e-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e9c5e-114">See also</span></span>
 
-- [<span data-ttu-id="23bef-115">Criando o modelo de objeto</span><span class="sxs-lookup"><span data-stu-id="23bef-115">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [<span data-ttu-id="23bef-116">Mapeamento Externo</span><span class="sxs-lookup"><span data-stu-id="23bef-116">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [<span data-ttu-id="23bef-117">Como: gerar o modelo de objeto em Visual Basic ou em C#</span><span class="sxs-lookup"><span data-stu-id="23bef-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [<span data-ttu-id="e9c5e-115">Criando o modelo de objeto</span><span class="sxs-lookup"><span data-stu-id="e9c5e-115">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [<span data-ttu-id="e9c5e-116">Mapeamento Externo</span><span class="sxs-lookup"><span data-stu-id="e9c5e-116">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [<span data-ttu-id="e9c5e-117">Como: gerar o modelo de objeto em Visual Basic ou em C#</span><span class="sxs-lookup"><span data-stu-id="e9c5e-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

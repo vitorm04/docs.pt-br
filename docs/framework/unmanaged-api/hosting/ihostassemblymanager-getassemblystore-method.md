@@ -17,56 +17,56 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e38949ce945d93216daffd3c0d91dad6c8739b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 194b40b0873cee848124a5afc9a47740d59969c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763185"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779460"
 ---
-# <a name="ihostassemblymanagergetassemblystore-method"></a><span data-ttu-id="09a4b-102">Método IHostAssemblyManager::GetAssemblyStore</span><span class="sxs-lookup"><span data-stu-id="09a4b-102">IHostAssemblyManager::GetAssemblyStore Method</span></span>
-<span data-ttu-id="09a4b-103">Obtém um ponteiro de interface para um [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md) que representa a lista de assemblies carregados pelo host.</span><span class="sxs-lookup"><span data-stu-id="09a4b-103">Gets an interface pointer to an [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md) that represents the list of assemblies loaded by the host.</span></span>  
+# <a name="ihostassemblymanagergetassemblystore-method"></a><span data-ttu-id="f68a7-102">Método IHostAssemblyManager::GetAssemblyStore</span><span class="sxs-lookup"><span data-stu-id="f68a7-102">IHostAssemblyManager::GetAssemblyStore Method</span></span>
+<span data-ttu-id="f68a7-103">Obtém um ponteiro de interface para um [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md) que representa a lista de assemblies carregados pelo host.</span><span class="sxs-lookup"><span data-stu-id="f68a7-103">Gets an interface pointer to an [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md) that represents the list of assemblies loaded by the host.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09a4b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="09a4b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f68a7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f68a7-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetAssemblyStore (  
     [out] IHostAssemblyStore **ppAssemblyStore  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="09a4b-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="09a4b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f68a7-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f68a7-105">Parameters</span></span>  
  `ppAssemblyStore`  
- <span data-ttu-id="09a4b-106">[out] Um ponteiro de função para um `IHostAssemblyStore` da instância ou nulo, se o host não implementa `IHostAssemblyStore`.</span><span class="sxs-lookup"><span data-stu-id="09a4b-106">[out] A function pointer to an `IHostAssemblyStore` instance, or null, if the host does not implement `IHostAssemblyStore`.</span></span>  
+ <span data-ttu-id="f68a7-106">[out] Um ponteiro de função para um `IHostAssemblyStore` da instância ou nulo, se o host não implementa `IHostAssemblyStore`.</span><span class="sxs-lookup"><span data-stu-id="f68a7-106">[out] A function pointer to an `IHostAssemblyStore` instance, or null, if the host does not implement `IHostAssemblyStore`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="09a4b-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="09a4b-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f68a7-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="f68a7-107">Return Value</span></span>  
   
-|<span data-ttu-id="09a4b-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="09a4b-108">HRESULT</span></span>|<span data-ttu-id="09a4b-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="09a4b-109">Description</span></span>|  
+|<span data-ttu-id="f68a7-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f68a7-108">HRESULT</span></span>|<span data-ttu-id="f68a7-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="f68a7-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="09a4b-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="09a4b-110">S_OK</span></span>|<span data-ttu-id="09a4b-111">`GetAssemblyStore` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="09a4b-111">`GetAssemblyStore` returned successfully.</span></span>|  
-|<span data-ttu-id="09a4b-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="09a4b-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="09a4b-113">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="09a4b-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="09a4b-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="09a4b-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="09a4b-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="09a4b-115">The call timed out.</span></span>|  
-|<span data-ttu-id="09a4b-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="09a4b-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="09a4b-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="09a4b-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="09a4b-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="09a4b-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="09a4b-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="09a4b-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="09a4b-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="09a4b-120">E_FAIL</span></span>|<span data-ttu-id="09a4b-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="09a4b-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="09a4b-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="09a4b-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="09a4b-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="09a4b-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="09a4b-124">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="09a4b-124">E_NOINTERFACE</span></span>|<span data-ttu-id="09a4b-125">O host não fornece uma implementação de `IHostAssemblyStore`.</span><span class="sxs-lookup"><span data-stu-id="09a4b-125">The host does not provide an implementation of `IHostAssemblyStore`.</span></span>|  
+|<span data-ttu-id="f68a7-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="f68a7-110">S_OK</span></span>|<span data-ttu-id="f68a7-111">`GetAssemblyStore` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="f68a7-111">`GetAssemblyStore` returned successfully.</span></span>|  
+|<span data-ttu-id="f68a7-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f68a7-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f68a7-113">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="f68a7-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="f68a7-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f68a7-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f68a7-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="f68a7-115">The call timed out.</span></span>|  
+|<span data-ttu-id="f68a7-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f68a7-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f68a7-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="f68a7-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="f68a7-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f68a7-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f68a7-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="f68a7-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="f68a7-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f68a7-120">E_FAIL</span></span>|<span data-ttu-id="f68a7-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="f68a7-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f68a7-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="f68a7-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f68a7-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="f68a7-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="f68a7-124">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="f68a7-124">E_NOINTERFACE</span></span>|<span data-ttu-id="f68a7-125">O host não fornece uma implementação de `IHostAssemblyStore`.</span><span class="sxs-lookup"><span data-stu-id="f68a7-125">The host does not provide an implementation of `IHostAssemblyStore`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="09a4b-126">Comentários</span><span class="sxs-lookup"><span data-stu-id="09a4b-126">Remarks</span></span>  
- <span data-ttu-id="09a4b-127">`IHostAssemblyStore` fornece métodos que permitem que um host associar a assemblies e módulos independentemente do CLR.</span><span class="sxs-lookup"><span data-stu-id="09a4b-127">`IHostAssemblyStore` provides methods that allow a host to bind to assemblies and modules independently of the CLR.</span></span> <span data-ttu-id="09a4b-128">Hosts normalmente fornecem assembly armazenamentos para permitir que assemblies sejam carregados de formatos diferentes no sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="09a4b-128">Hosts typically provide assembly stores to allow assemblies to be loaded from formats other than the file system.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f68a7-126">Comentários</span><span class="sxs-lookup"><span data-stu-id="f68a7-126">Remarks</span></span>  
+ <span data-ttu-id="f68a7-127">`IHostAssemblyStore` fornece métodos que permitem que um host associar a assemblies e módulos independentemente do CLR.</span><span class="sxs-lookup"><span data-stu-id="f68a7-127">`IHostAssemblyStore` provides methods that allow a host to bind to assemblies and modules independently of the CLR.</span></span> <span data-ttu-id="f68a7-128">Hosts normalmente fornecem assembly armazenamentos para permitir que assemblies sejam carregados de formatos diferentes no sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="f68a7-128">Hosts typically provide assembly stores to allow assemblies to be loaded from formats other than the file system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="09a4b-129">Se o host não implementa `IHostAssemblyStore`, `GetAssemblyStore` deve retornar um valor HRESULT de E_NOINTERFACE e deve definir `ppAssemblyStore` como null.</span><span class="sxs-lookup"><span data-stu-id="09a4b-129">If the host does not implement `IHostAssemblyStore`, `GetAssemblyStore` should return an HRESULT value of E_NOINTERFACE, and should set `ppAssemblyStore` to null.</span></span>  
+>  <span data-ttu-id="f68a7-129">Se o host não implementa `IHostAssemblyStore`, `GetAssemblyStore` deve retornar um valor HRESULT de E_NOINTERFACE e deve definir `ppAssemblyStore` como null.</span><span class="sxs-lookup"><span data-stu-id="f68a7-129">If the host does not implement `IHostAssemblyStore`, `GetAssemblyStore` should return an HRESULT value of E_NOINTERFACE, and should set `ppAssemblyStore` to null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="09a4b-130">Requisitos</span><span class="sxs-lookup"><span data-stu-id="09a4b-130">Requirements</span></span>  
- <span data-ttu-id="09a4b-131">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="09a4b-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f68a7-130">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f68a7-130">Requirements</span></span>  
+ <span data-ttu-id="f68a7-131">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f68a7-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="09a4b-132">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="09a4b-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f68a7-132">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f68a7-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="09a4b-133">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="09a4b-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f68a7-133">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="f68a7-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="09a4b-134">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09a4b-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f68a7-134">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f68a7-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09a4b-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="09a4b-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f68a7-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f68a7-135">See also</span></span>
 
-- [<span data-ttu-id="09a4b-136">Interface IHostAssemblyManager</span><span class="sxs-lookup"><span data-stu-id="09a4b-136">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [<span data-ttu-id="09a4b-137">Interface IHostAssemblyStore</span><span class="sxs-lookup"><span data-stu-id="09a4b-137">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="f68a7-136">Interface IHostAssemblyManager</span><span class="sxs-lookup"><span data-stu-id="f68a7-136">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [<span data-ttu-id="f68a7-137">Interface IHostAssemblyStore</span><span class="sxs-lookup"><span data-stu-id="f68a7-137">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)

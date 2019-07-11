@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2df98728eec28ffca05b2e246575fc5c882a078
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b631b16334b7e5019376fbb9a3f65d7fc2ced7dc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939874"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776759"
 ---
-# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="9df1f-102">Método ISymUnmanagedDocument::GetCheckSumAlgorithmId</span><span class="sxs-lookup"><span data-stu-id="9df1f-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
-<span data-ttu-id="9df1f-103">Obtém o identificador de algoritmo de soma de verificação ou retorna um GUID de todos os zeros se não houver nenhuma soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="9df1f-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="18fd7-102">Método ISymUnmanagedDocument::GetCheckSumAlgorithmId</span><span class="sxs-lookup"><span data-stu-id="18fd7-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
+<span data-ttu-id="18fd7-103">Obtém o identificador de algoritmo de soma de verificação ou retorna um GUID de todos os zeros se não houver nenhuma soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="18fd7-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9df1f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9df1f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18fd7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="18fd7-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCheckSumAlgorithmId(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9df1f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9df1f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18fd7-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="18fd7-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="9df1f-106">[out] Um ponteiro para uma variável que recebe o identificador de algoritmo de soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="9df1f-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
+ <span data-ttu-id="18fd7-106">[out] Um ponteiro para uma variável que recebe o identificador de algoritmo de soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="18fd7-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9df1f-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="9df1f-107">Return Value</span></span>  
- <span data-ttu-id="9df1f-108">S_OK se o método for bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="9df1f-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="18fd7-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="18fd7-107">Return Value</span></span>  
+ <span data-ttu-id="18fd7-108">S_OK se o método for bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="18fd7-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9df1f-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9df1f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18fd7-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="18fd7-109">See also</span></span>
 
-- [<span data-ttu-id="9df1f-110">Interface ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="9df1f-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="18fd7-110">Interface ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="18fd7-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

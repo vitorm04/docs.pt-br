@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 690d556eb3991747d1627bae63b9c59ca68daaaa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cbecd5be9b1ac7c08e6970933a48eeb95f01a22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616223"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739384"
 ---
-# <a name="corgcreferencetype-enumeration"></a><span data-ttu-id="2bada-102">Enumeração CorGCReferenceType</span><span class="sxs-lookup"><span data-stu-id="2bada-102">CorGCReferenceType Enumeration</span></span>
-<span data-ttu-id="2bada-103">Identifica a fonte de um objeto para ser coletado do lixo.</span><span class="sxs-lookup"><span data-stu-id="2bada-103">Identifies the source of an object to be garbage-collected.</span></span>  
+# <a name="corgcreferencetype-enumeration"></a><span data-ttu-id="e43ab-102">Enumeração CorGCReferenceType</span><span class="sxs-lookup"><span data-stu-id="e43ab-102">CorGCReferenceType Enumeration</span></span>
+<span data-ttu-id="e43ab-103">Identifica a fonte de um objeto para ser coletado do lixo.</span><span class="sxs-lookup"><span data-stu-id="e43ab-103">Identifies the source of an object to be garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2bada-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2bada-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e43ab-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e43ab-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
     CorHandleStrong = 1,  
     CorHandleStrongPinning = 2,  
@@ -48,40 +48,40 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2bada-105">Membros</span><span class="sxs-lookup"><span data-stu-id="2bada-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e43ab-105">Membros</span><span class="sxs-lookup"><span data-stu-id="e43ab-105">Members</span></span>  
   
-|<span data-ttu-id="2bada-106">Nome do membro</span><span class="sxs-lookup"><span data-stu-id="2bada-106">Member name</span></span>|<span data-ttu-id="2bada-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="2bada-107">Description</span></span>|  
+|<span data-ttu-id="e43ab-106">Nome do membro</span><span class="sxs-lookup"><span data-stu-id="e43ab-106">Member name</span></span>|<span data-ttu-id="e43ab-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="e43ab-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorHandleStrong`|<span data-ttu-id="2bada-108">Uma alça para uma referência forte da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="2bada-108">A handle to a strong reference from the object handle table.</span></span>|  
-|`CorHandleStrongPinning`|<span data-ttu-id="2bada-109">Um identificador para uma referência forte fixa da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="2bada-109">A handle to a pinned strong reference from the object handle table.</span></span>|  
-|`CorHandleWeakShort`|<span data-ttu-id="2bada-110">Um identificador para uma referência fraca da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="2bada-110">A handle to a weak reference from the object handle table.</span></span>|  
-|`CorHandleWeakRefCount`|<span data-ttu-id="2bada-111">Um identificador para um objeto de contagem de referência fraco da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="2bada-111">A handle to a weak reference-counted object from the object handle table.</span></span>|  
-|`CorHandleStrongRefCount`|<span data-ttu-id="2bada-112">Um identificador para um objeto contado por referência da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="2bada-112">A handle to a reference-counted object from the object handle table.</span></span>|  
-|`CorHandleStrongDependent`|<span data-ttu-id="2bada-113">Um identificador para um objeto dependente da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="2bada-113">A handle to a dependent object from the object handle table.</span></span>|  
-|`CorHandleStrongAsyncPinned`|<span data-ttu-id="2bada-114">Um objeto fixo assíncrono da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="2bada-114">An asynchronous pinned object from the object handle table.</span></span>|  
-|`CorHandleStrongSizedByref`|<span data-ttu-id="2bada-115">Uma alça forte que mantém um tamanho aproximado do fechamento coletivo de todos os objetos e raízes de objeto no momento da coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="2bada-115">A strong handle that keeps an approximate size of the collective closure of all objects and object roots at garbage collection time.</span></span>|  
-|`CorReferenceStack`|<span data-ttu-id="2bada-116">Uma referência da pilha gerenciada.</span><span class="sxs-lookup"><span data-stu-id="2bada-116">A reference from the managed stack.</span></span>|  
-|`CorReferenceFinalizer`|<span data-ttu-id="2bada-117">Uma referência da fila do finalizador.</span><span class="sxs-lookup"><span data-stu-id="2bada-117">A reference from the finalizer queue.</span></span>|  
-|<span data-ttu-id="2bada-118">CorHandleStrongOnly</span><span class="sxs-lookup"><span data-stu-id="2bada-118">CorHandleStrongOnly</span></span>|<span data-ttu-id="2bada-119">Retorne apenas as referências fortes da tabela de identificador.</span><span class="sxs-lookup"><span data-stu-id="2bada-119">Return only strong references from the handle table.</span></span> <span data-ttu-id="2bada-120">Esse valor é usado o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) somente no método.</span><span class="sxs-lookup"><span data-stu-id="2bada-120">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
-|`CorHandleWeakOnly`|<span data-ttu-id="2bada-121">Retorne apenas as referências fracas da tabela de identificador.</span><span class="sxs-lookup"><span data-stu-id="2bada-121">Return only weak references from the handle table.</span></span> <span data-ttu-id="2bada-122">Esse valor é usado o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) somente no método.</span><span class="sxs-lookup"><span data-stu-id="2bada-122">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
-|`CorHandleAll`|<span data-ttu-id="2bada-123">Retorne todas as referências de tabela de identificador.</span><span class="sxs-lookup"><span data-stu-id="2bada-123">Return all references from the handle table.</span></span> <span data-ttu-id="2bada-124">Esse valor é usado o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) somente no método.</span><span class="sxs-lookup"><span data-stu-id="2bada-124">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleStrong`|<span data-ttu-id="e43ab-108">Uma alça para uma referência forte da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="e43ab-108">A handle to a strong reference from the object handle table.</span></span>|  
+|`CorHandleStrongPinning`|<span data-ttu-id="e43ab-109">Um identificador para uma referência forte fixa da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="e43ab-109">A handle to a pinned strong reference from the object handle table.</span></span>|  
+|`CorHandleWeakShort`|<span data-ttu-id="e43ab-110">Um identificador para uma referência fraca da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="e43ab-110">A handle to a weak reference from the object handle table.</span></span>|  
+|`CorHandleWeakRefCount`|<span data-ttu-id="e43ab-111">Um identificador para um objeto de contagem de referência fraco da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="e43ab-111">A handle to a weak reference-counted object from the object handle table.</span></span>|  
+|`CorHandleStrongRefCount`|<span data-ttu-id="e43ab-112">Um identificador para um objeto contado por referência da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="e43ab-112">A handle to a reference-counted object from the object handle table.</span></span>|  
+|`CorHandleStrongDependent`|<span data-ttu-id="e43ab-113">Um identificador para um objeto dependente da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="e43ab-113">A handle to a dependent object from the object handle table.</span></span>|  
+|`CorHandleStrongAsyncPinned`|<span data-ttu-id="e43ab-114">Um objeto fixo assíncrono da tabela de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="e43ab-114">An asynchronous pinned object from the object handle table.</span></span>|  
+|`CorHandleStrongSizedByref`|<span data-ttu-id="e43ab-115">Uma alça forte que mantém um tamanho aproximado do fechamento coletivo de todos os objetos e raízes de objeto no momento da coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="e43ab-115">A strong handle that keeps an approximate size of the collective closure of all objects and object roots at garbage collection time.</span></span>|  
+|`CorReferenceStack`|<span data-ttu-id="e43ab-116">Uma referência da pilha gerenciada.</span><span class="sxs-lookup"><span data-stu-id="e43ab-116">A reference from the managed stack.</span></span>|  
+|`CorReferenceFinalizer`|<span data-ttu-id="e43ab-117">Uma referência da fila do finalizador.</span><span class="sxs-lookup"><span data-stu-id="e43ab-117">A reference from the finalizer queue.</span></span>|  
+|<span data-ttu-id="e43ab-118">CorHandleStrongOnly</span><span class="sxs-lookup"><span data-stu-id="e43ab-118">CorHandleStrongOnly</span></span>|<span data-ttu-id="e43ab-119">Retorne apenas as referências fortes da tabela de identificador.</span><span class="sxs-lookup"><span data-stu-id="e43ab-119">Return only strong references from the handle table.</span></span> <span data-ttu-id="e43ab-120">Esse valor é usado o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) somente no método.</span><span class="sxs-lookup"><span data-stu-id="e43ab-120">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleWeakOnly`|<span data-ttu-id="e43ab-121">Retorne apenas as referências fracas da tabela de identificador.</span><span class="sxs-lookup"><span data-stu-id="e43ab-121">Return only weak references from the handle table.</span></span> <span data-ttu-id="e43ab-122">Esse valor é usado o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) somente no método.</span><span class="sxs-lookup"><span data-stu-id="e43ab-122">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleAll`|<span data-ttu-id="e43ab-123">Retorne todas as referências de tabela de identificador.</span><span class="sxs-lookup"><span data-stu-id="e43ab-123">Return all references from the handle table.</span></span> <span data-ttu-id="e43ab-124">Esse valor é usado o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) somente no método.</span><span class="sxs-lookup"><span data-stu-id="e43ab-124">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2bada-125">Comentários</span><span class="sxs-lookup"><span data-stu-id="2bada-125">Remarks</span></span>  
- <span data-ttu-id="2bada-126">O `CorGCReferenceType` enumeração é usada da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="2bada-126">The `CorGCReferenceType` enumeration is used as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e43ab-125">Comentários</span><span class="sxs-lookup"><span data-stu-id="e43ab-125">Remarks</span></span>  
+ <span data-ttu-id="e43ab-126">O `CorGCReferenceType` enumeração é usada da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="e43ab-126">The `CorGCReferenceType` enumeration is used as follows:</span></span>  
   
-- <span data-ttu-id="2bada-127">Como o valor da `type` campo do [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) estrutura, ele indica que a fonte de uma referência ou um identificador.</span><span class="sxs-lookup"><span data-stu-id="2bada-127">As the value of the `type` field of the [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) structure, it indicates the source of a reference or handle.</span></span>  
+- <span data-ttu-id="e43ab-127">Como o valor da `type` campo do [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) estrutura, ele indica que a fonte de uma referência ou um identificador.</span><span class="sxs-lookup"><span data-stu-id="e43ab-127">As the value of the `type` field of the [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) structure, it indicates the source of a reference or handle.</span></span>  
   
-- <span data-ttu-id="2bada-128">Como o `types` argumento para o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) método, ele especifica os tipos de identificadores para incluir na enumeração.</span><span class="sxs-lookup"><span data-stu-id="2bada-128">As the `types` argument to the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method, it specifies the types of handles to include in the enumeration.</span></span>  
+- <span data-ttu-id="e43ab-128">Como o `types` argumento para o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) método, ele especifica os tipos de identificadores para incluir na enumeração.</span><span class="sxs-lookup"><span data-stu-id="e43ab-128">As the `types` argument to the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method, it specifies the types of handles to include in the enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2bada-129">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2bada-129">Requirements</span></span>  
- <span data-ttu-id="2bada-130">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2bada-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e43ab-129">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e43ab-129">Requirements</span></span>  
+ <span data-ttu-id="e43ab-130">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e43ab-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2bada-131">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2bada-131">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e43ab-131">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e43ab-131">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2bada-132">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2bada-132">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e43ab-132">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e43ab-132">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2bada-133">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bada-133">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="e43ab-133">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e43ab-133">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2bada-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2bada-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e43ab-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e43ab-134">See also</span></span>
 
-- [<span data-ttu-id="2bada-135">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="2bada-135">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="e43ab-135">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="e43ab-135">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

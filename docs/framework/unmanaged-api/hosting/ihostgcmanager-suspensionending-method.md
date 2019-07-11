@@ -17,58 +17,58 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 527607d5c39e7f698ab44baf4af0e7600ae2f473
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a815d1a5e8b40aee84ca2b9971ae4be7fb2c725
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599377"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763735"
 ---
-# <a name="ihostgcmanagersuspensionending-method"></a><span data-ttu-id="6763a-102">Método IHostGCManager::SuspensionEnding</span><span class="sxs-lookup"><span data-stu-id="6763a-102">IHostGCManager::SuspensionEnding Method</span></span>
-<span data-ttu-id="6763a-103">Notifica o host que o common language runtime (CLR) está continuando a execução de tarefas em threads que tinham sido suspensos para uma coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="6763a-103">Notifies the host that the common language runtime (CLR) is resuming execution of tasks on threads that had been suspended for a garbage collection.</span></span>  
+# <a name="ihostgcmanagersuspensionending-method"></a><span data-ttu-id="32834-102">Método IHostGCManager::SuspensionEnding</span><span class="sxs-lookup"><span data-stu-id="32834-102">IHostGCManager::SuspensionEnding Method</span></span>
+<span data-ttu-id="32834-103">Notifica o host que o common language runtime (CLR) está continuando a execução de tarefas em threads que tinham sido suspensos para uma coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="32834-103">Notifies the host that the common language runtime (CLR) is resuming execution of tasks on threads that had been suspended for a garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6763a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6763a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32834-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="32834-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SuspensionEnding (  
     [in] DWORD generation  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6763a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6763a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="32834-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="32834-105">Parameters</span></span>  
  `generation`  
- <span data-ttu-id="6763a-106">[in] A geração de coleta de lixo está finalizando, do qual o thread está continuando.</span><span class="sxs-lookup"><span data-stu-id="6763a-106">[in] The garbage collection generation that is just finishing, from which the thread is resuming.</span></span>  
+ <span data-ttu-id="32834-106">[in] A geração de coleta de lixo está finalizando, do qual o thread está continuando.</span><span class="sxs-lookup"><span data-stu-id="32834-106">[in] The garbage collection generation that is just finishing, from which the thread is resuming.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6763a-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="6763a-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="32834-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="32834-107">Return Value</span></span>  
   
-|<span data-ttu-id="6763a-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="6763a-108">HRESULT</span></span>|<span data-ttu-id="6763a-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="6763a-109">Description</span></span>|  
+|<span data-ttu-id="32834-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="32834-108">HRESULT</span></span>|<span data-ttu-id="32834-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="32834-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="6763a-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="6763a-110">S_OK</span></span>|<span data-ttu-id="6763a-111">`SuspensionEnding` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="6763a-111">`SuspensionEnding` returned successfully.</span></span>|  
-|<span data-ttu-id="6763a-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="6763a-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="6763a-113">O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="6763a-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="6763a-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="6763a-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="6763a-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="6763a-115">The call timed out.</span></span>|  
-|<span data-ttu-id="6763a-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="6763a-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="6763a-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="6763a-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="6763a-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="6763a-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="6763a-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="6763a-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="6763a-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="6763a-120">E_FAIL</span></span>|<span data-ttu-id="6763a-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="6763a-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="6763a-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="6763a-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="6763a-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="6763a-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="32834-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="32834-110">S_OK</span></span>|<span data-ttu-id="32834-111">`SuspensionEnding` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="32834-111">`SuspensionEnding` returned successfully.</span></span>|  
+|<span data-ttu-id="32834-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="32834-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="32834-113">O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="32834-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="32834-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="32834-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="32834-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="32834-115">The call timed out.</span></span>|  
+|<span data-ttu-id="32834-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="32834-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="32834-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="32834-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="32834-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="32834-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="32834-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="32834-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="32834-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="32834-120">E_FAIL</span></span>|<span data-ttu-id="32834-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="32834-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="32834-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="32834-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="32834-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="32834-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6763a-124">Comentários</span><span class="sxs-lookup"><span data-stu-id="6763a-124">Remarks</span></span>  
- <span data-ttu-id="6763a-125">O CLR chama `SuspensionEnding` depois que ele executa uma coleta de lixo, para informar o host que o thread está continuando a execução.</span><span class="sxs-lookup"><span data-stu-id="6763a-125">The CLR calls `SuspensionEnding` after it performs a garbage collection, to inform the host that the thread is resuming execution.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32834-124">Comentários</span><span class="sxs-lookup"><span data-stu-id="32834-124">Remarks</span></span>  
+ <span data-ttu-id="32834-125">O CLR chama `SuspensionEnding` depois que ele executa uma coleta de lixo, para informar o host que o thread está continuando a execução.</span><span class="sxs-lookup"><span data-stu-id="32834-125">The CLR calls `SuspensionEnding` after it performs a garbage collection, to inform the host that the thread is resuming execution.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="6763a-126">Não reagende o thread de de que chamada de método foi feita.</span><span class="sxs-lookup"><span data-stu-id="6763a-126">Do not reschedule the thread the method call was made from.</span></span>  
+>  <span data-ttu-id="32834-126">Não reagende o thread de de que chamada de método foi feita.</span><span class="sxs-lookup"><span data-stu-id="32834-126">Do not reschedule the thread the method call was made from.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6763a-127">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6763a-127">Requirements</span></span>  
- <span data-ttu-id="6763a-128">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6763a-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="32834-127">Requisitos</span><span class="sxs-lookup"><span data-stu-id="32834-127">Requirements</span></span>  
+ <span data-ttu-id="32834-128">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32834-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6763a-129">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6763a-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="32834-129">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="32834-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="6763a-130">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="6763a-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="32834-130">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="32834-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6763a-131">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6763a-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="32834-131">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32834-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6763a-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6763a-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32834-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="32834-132">See also</span></span>
 
-- [<span data-ttu-id="6763a-133">Interface ICLRTask</span><span class="sxs-lookup"><span data-stu-id="6763a-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="6763a-134">Interface ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="6763a-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="6763a-135">Interface IHostTask</span><span class="sxs-lookup"><span data-stu-id="6763a-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="6763a-136">Interface IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="6763a-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [<span data-ttu-id="6763a-137">Interface IHostGCManager</span><span class="sxs-lookup"><span data-stu-id="6763a-137">IHostGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)
+- [<span data-ttu-id="32834-133">Interface ICLRTask</span><span class="sxs-lookup"><span data-stu-id="32834-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="32834-134">Interface ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="32834-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="32834-135">Interface IHostTask</span><span class="sxs-lookup"><span data-stu-id="32834-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="32834-136">Interface IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="32834-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="32834-137">Interface IHostGCManager</span><span class="sxs-lookup"><span data-stu-id="32834-137">IHostGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)
