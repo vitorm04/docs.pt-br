@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdee8491b22675fb8dd8fa89e77ebf8541185173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e78c4d7319a931ca7090d6f99651bc9660e4af8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043739"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782048"
 ---
-# <a name="imetadataemitsetpropertyprops-method"></a><span data-ttu-id="c2ebc-102">Método IMetaDataEmit::SetPropertyProps</span><span class="sxs-lookup"><span data-stu-id="c2ebc-102">IMetaDataEmit::SetPropertyProps Method</span></span>
-<span data-ttu-id="c2ebc-103">Define os recursos armazenados nos metadados para uma propriedade definida por uma chamada anterior ao [método DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span><span class="sxs-lookup"><span data-stu-id="c2ebc-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span></span>  
+# <a name="imetadataemitsetpropertyprops-method"></a><span data-ttu-id="23ca4-102">Método IMetaDataEmit::SetPropertyProps</span><span class="sxs-lookup"><span data-stu-id="23ca4-102">IMetaDataEmit::SetPropertyProps Method</span></span>
+<span data-ttu-id="23ca4-103">Define os recursos armazenados nos metadados para uma propriedade definida por uma chamada anterior ao [método DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span><span class="sxs-lookup"><span data-stu-id="23ca4-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2ebc-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c2ebc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23ca4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="23ca4-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetPropertyProps (   
     [in]  mdProperty      pr,   
     [in]  DWORD           dwPropFlags,   
@@ -42,41 +42,41 @@ HRESULT SetPropertyProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c2ebc-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c2ebc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23ca4-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="23ca4-105">Parameters</span></span>  
  `pr`  
- <span data-ttu-id="c2ebc-106">[in] O token para a propriedade a ser alterada</span><span class="sxs-lookup"><span data-stu-id="c2ebc-106">[in] The token for the property to be changed</span></span>  
+ <span data-ttu-id="23ca4-106">[in] O token para a propriedade a ser alterada</span><span class="sxs-lookup"><span data-stu-id="23ca4-106">[in] The token for the property to be changed</span></span>  
   
  `dwPropFlags`  
- <span data-ttu-id="c2ebc-107">[in] Sinalizadores de propriedade.</span><span class="sxs-lookup"><span data-stu-id="c2ebc-107">[in] Property flags.</span></span>  
+ <span data-ttu-id="23ca4-107">[in] Sinalizadores de propriedade.</span><span class="sxs-lookup"><span data-stu-id="23ca4-107">[in] Property flags.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="c2ebc-108">[in] O tipo de valor padrão da propriedade.</span><span class="sxs-lookup"><span data-stu-id="c2ebc-108">[in] The type of the property's default value.</span></span>  
+ <span data-ttu-id="23ca4-108">[in] O tipo de valor padrão da propriedade.</span><span class="sxs-lookup"><span data-stu-id="23ca4-108">[in] The type of the property's default value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="c2ebc-109">[in] O valor padrão para a propriedade.</span><span class="sxs-lookup"><span data-stu-id="c2ebc-109">[in] The default value for the property.</span></span>  
+ <span data-ttu-id="23ca4-109">[in] O valor padrão para a propriedade.</span><span class="sxs-lookup"><span data-stu-id="23ca4-109">[in] The default value for the property.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="c2ebc-110">[in] A contagem de (Unicode) caracteres em `pValue`.</span><span class="sxs-lookup"><span data-stu-id="c2ebc-110">[in] The count of (Unicode) characters in `pValue`.</span></span>  
+ <span data-ttu-id="23ca4-110">[in] A contagem de (Unicode) caracteres em `pValue`.</span><span class="sxs-lookup"><span data-stu-id="23ca4-110">[in] The count of (Unicode) characters in `pValue`.</span></span>  
   
  `mdSetter`  
- <span data-ttu-id="c2ebc-111">[in] O método que define o valor da propriedade.</span><span class="sxs-lookup"><span data-stu-id="c2ebc-111">[in] The method that sets the property value.</span></span>  
+ <span data-ttu-id="23ca4-111">[in] O método que define o valor da propriedade.</span><span class="sxs-lookup"><span data-stu-id="23ca4-111">[in] The method that sets the property value.</span></span>  
   
  `mdGetter`  
- <span data-ttu-id="c2ebc-112">[in] O método que obtém o valor da propriedade.</span><span class="sxs-lookup"><span data-stu-id="c2ebc-112">[in] The method that gets the property value.</span></span>  
+ <span data-ttu-id="23ca4-112">[in] O método que obtém o valor da propriedade.</span><span class="sxs-lookup"><span data-stu-id="23ca4-112">[in] The method that gets the property value.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="c2ebc-113">[in] Uma matriz de outros métodos associado à propriedade.</span><span class="sxs-lookup"><span data-stu-id="c2ebc-113">[in] An array of other methods associated with the property.</span></span> <span data-ttu-id="c2ebc-114">Encerrar essa matriz com um `mdTokenNil` token.</span><span class="sxs-lookup"><span data-stu-id="c2ebc-114">Terminate this array with an `mdTokenNil` token.</span></span>  
+ <span data-ttu-id="23ca4-113">[in] Uma matriz de outros métodos associado à propriedade.</span><span class="sxs-lookup"><span data-stu-id="23ca4-113">[in] An array of other methods associated with the property.</span></span> <span data-ttu-id="23ca4-114">Encerrar essa matriz com um `mdTokenNil` token.</span><span class="sxs-lookup"><span data-stu-id="23ca4-114">Terminate this array with an `mdTokenNil` token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c2ebc-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c2ebc-115">Requirements</span></span>  
- <span data-ttu-id="c2ebc-116">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2ebc-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23ca4-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="23ca4-115">Requirements</span></span>  
+ <span data-ttu-id="23ca4-116">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23ca4-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2ebc-117">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c2ebc-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="23ca4-117">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="23ca4-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c2ebc-118">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c2ebc-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="23ca4-118">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="23ca4-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c2ebc-119">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2ebc-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="23ca4-119">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23ca4-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2ebc-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c2ebc-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23ca4-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="23ca4-120">See also</span></span>
 
-- [<span data-ttu-id="c2ebc-121">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="c2ebc-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="c2ebc-122">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="c2ebc-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="23ca4-121">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="23ca4-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="23ca4-122">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="23ca4-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bdb14e8c3a61a2b94cef778660eeb5c85c34df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 100688ece4ebb984d3d03823ab01bbaae7d395db
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988232"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760275"
 ---
-# <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a><span data-ttu-id="fd8d2-102">Método ICorDebugManagedCallback::EditAndContinueRemap</span><span class="sxs-lookup"><span data-stu-id="fd8d2-102">ICorDebugManagedCallback::EditAndContinueRemap Method</span></span>
-<span data-ttu-id="fd8d2-103">Esse método foi substituído.</span><span class="sxs-lookup"><span data-stu-id="fd8d2-103">This method has been deprecated.</span></span> <span data-ttu-id="fd8d2-104">Notifica o depurador que um evento de remapeamento foi enviado para o ambiente de desenvolvimento integrado (IDE).</span><span class="sxs-lookup"><span data-stu-id="fd8d2-104">It notifies the debugger that a remap event has been sent to the integrated development environment (IDE).</span></span>  
+# <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a><span data-ttu-id="94415-102">Método ICorDebugManagedCallback::EditAndContinueRemap</span><span class="sxs-lookup"><span data-stu-id="94415-102">ICorDebugManagedCallback::EditAndContinueRemap Method</span></span>
+<span data-ttu-id="94415-103">Esse método foi substituído.</span><span class="sxs-lookup"><span data-stu-id="94415-103">This method has been deprecated.</span></span> <span data-ttu-id="94415-104">Notifica o depurador que um evento de remapeamento foi enviado para o ambiente de desenvolvimento integrado (IDE).</span><span class="sxs-lookup"><span data-stu-id="94415-104">It notifies the debugger that a remap event has been sent to the integrated development environment (IDE).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd8d2-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fd8d2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94415-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="94415-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EditAndContinueRemap (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread *pThread,  
@@ -38,18 +38,18 @@ HRESULT EditAndContinueRemap (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="fd8d2-106">Comentários</span><span class="sxs-lookup"><span data-stu-id="fd8d2-106">Remarks</span></span>  
- <span data-ttu-id="fd8d2-107">O `EditAndContinueRemap` método é chamado quando a execução do código em uma versão antiga de uma função atualizada foi tentada.</span><span class="sxs-lookup"><span data-stu-id="fd8d2-107">The `EditAndContinueRemap` method is called when the execution of the code in an old version of an updated function has been attempted.</span></span> <span data-ttu-id="fd8d2-108">As chamadas de tempo de execução de linguagem comum a `EditAndContinueRemap` método para enviar um evento de remapeamento ao IDE.</span><span class="sxs-lookup"><span data-stu-id="fd8d2-108">The common language runtime calls the `EditAndContinueRemap` method to send a remap event to the IDE.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="94415-106">Comentários</span><span class="sxs-lookup"><span data-stu-id="94415-106">Remarks</span></span>  
+ <span data-ttu-id="94415-107">O `EditAndContinueRemap` método é chamado quando a execução do código em uma versão antiga de uma função atualizada foi tentada.</span><span class="sxs-lookup"><span data-stu-id="94415-107">The `EditAndContinueRemap` method is called when the execution of the code in an old version of an updated function has been attempted.</span></span> <span data-ttu-id="94415-108">As chamadas de tempo de execução de linguagem comum a `EditAndContinueRemap` método para enviar um evento de remapeamento ao IDE.</span><span class="sxs-lookup"><span data-stu-id="94415-108">The common language runtime calls the `EditAndContinueRemap` method to send a remap event to the IDE.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fd8d2-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fd8d2-109">Requirements</span></span>  
- <span data-ttu-id="fd8d2-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd8d2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94415-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="94415-109">Requirements</span></span>  
+ <span data-ttu-id="94415-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94415-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd8d2-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fd8d2-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="94415-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="94415-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fd8d2-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fd8d2-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="94415-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="94415-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fd8d2-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd8d2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="94415-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94415-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd8d2-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fd8d2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94415-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="94415-114">See also</span></span>
 
-- [<span data-ttu-id="fd8d2-115">Interface ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="fd8d2-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="94415-115">Interface ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="94415-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

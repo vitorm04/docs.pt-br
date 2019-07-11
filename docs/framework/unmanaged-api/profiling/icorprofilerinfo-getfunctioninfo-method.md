@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dd262c8206fdd45ca8a14f860a0894b999b0730
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4b39e53af7abaf25cc4a563bfbec8450b1e57d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041217"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780661"
 ---
-# <a name="icorprofilerinfogetfunctioninfo-method"></a><span data-ttu-id="f09c6-102">Método ICorProfilerInfo::GetFunctionInfo</span><span class="sxs-lookup"><span data-stu-id="f09c6-102">ICorProfilerInfo::GetFunctionInfo Method</span></span>
-<span data-ttu-id="f09c6-103">Obtém a classe pai e os metadados de token para a função especificada.</span><span class="sxs-lookup"><span data-stu-id="f09c6-103">Gets the parent class and metadata token for the specified function.</span></span>  
+# <a name="icorprofilerinfogetfunctioninfo-method"></a><span data-ttu-id="6044e-102">Método ICorProfilerInfo::GetFunctionInfo</span><span class="sxs-lookup"><span data-stu-id="6044e-102">ICorProfilerInfo::GetFunctionInfo Method</span></span>
+<span data-ttu-id="6044e-103">Obtém a classe pai e os metadados de token para a função especificada.</span><span class="sxs-lookup"><span data-stu-id="6044e-103">Gets the parent class and metadata token for the specified function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f09c6-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f09c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6044e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6044e-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFunctionInfo(  
     [in]  FunctionID functionId,  
     [out] ClassID    *pClassId,  
@@ -37,33 +37,33 @@ HRESULT GetFunctionInfo(
     [out] mdToken    *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f09c6-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f09c6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6044e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6044e-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="f09c6-106">[in] A ID da função para o qual obter a classe pai e os metadados de token.</span><span class="sxs-lookup"><span data-stu-id="f09c6-106">[in] The ID of the function for which to get the parent class and metadata token.</span></span>  
+ <span data-ttu-id="6044e-106">[in] A ID da função para o qual obter a classe pai e os metadados de token.</span><span class="sxs-lookup"><span data-stu-id="6044e-106">[in] The ID of the function for which to get the parent class and metadata token.</span></span>  
   
  `pClassId`  
- <span data-ttu-id="f09c6-107">[out] Um ponteiro para a classe pai da função.</span><span class="sxs-lookup"><span data-stu-id="f09c6-107">[out] A pointer to the parent class of the function.</span></span>  
+ <span data-ttu-id="6044e-107">[out] Um ponteiro para a classe pai da função.</span><span class="sxs-lookup"><span data-stu-id="6044e-107">[out] A pointer to the parent class of the function.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="f09c6-108">[out] Um ponteiro para o módulo no qual a classe pai da função é definido.</span><span class="sxs-lookup"><span data-stu-id="f09c6-108">[out] A pointer to the module in which the function's parent class is defined.</span></span>  
+ <span data-ttu-id="6044e-108">[out] Um ponteiro para o módulo no qual a classe pai da função é definido.</span><span class="sxs-lookup"><span data-stu-id="6044e-108">[out] A pointer to the module in which the function's parent class is defined.</span></span>  
   
  `pToken`  
- <span data-ttu-id="f09c6-109">[out] Um ponteiro para o token de metadados para a função.</span><span class="sxs-lookup"><span data-stu-id="f09c6-109">[out] A pointer to the metadata token for the function.</span></span>  
+ <span data-ttu-id="6044e-109">[out] Um ponteiro para o token de metadados para a função.</span><span class="sxs-lookup"><span data-stu-id="6044e-109">[out] A pointer to the metadata token for the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f09c6-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="f09c6-110">Remarks</span></span>  
- <span data-ttu-id="f09c6-111">O código do criador de perfil pode chamar [ICorProfilerInfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) para obter uma interface de metadados para um determinado módulo.</span><span class="sxs-lookup"><span data-stu-id="f09c6-111">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module.</span></span> <span data-ttu-id="f09c6-112">O token de metadados que é retornado para o local referenciado pelo `pToken` , em seguida, pode ser usado para acessar os metadados para a função.</span><span class="sxs-lookup"><span data-stu-id="f09c6-112">The metadata token that is returned to the location referenced by `pToken` can then be used to access the metadata for the function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6044e-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="6044e-110">Remarks</span></span>  
+ <span data-ttu-id="6044e-111">O código do criador de perfil pode chamar [ICorProfilerInfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) para obter uma interface de metadados para um determinado módulo.</span><span class="sxs-lookup"><span data-stu-id="6044e-111">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module.</span></span> <span data-ttu-id="6044e-112">O token de metadados que é retornado para o local referenciado pelo `pToken` , em seguida, pode ser usado para acessar os metadados para a função.</span><span class="sxs-lookup"><span data-stu-id="6044e-112">The metadata token that is returned to the location referenced by `pToken` can then be used to access the metadata for the function.</span></span>  
   
- <span data-ttu-id="f09c6-113">O `ClassID` de uma função em uma classe genérica pode não ser obtido sem mais informações contextuais sobre o uso da função.</span><span class="sxs-lookup"><span data-stu-id="f09c6-113">The `ClassID` of a function on a generic class might not be obtainable without more contextual information about the use of the function.</span></span> <span data-ttu-id="f09c6-114">Nesse caso, `pClassId` será 0.</span><span class="sxs-lookup"><span data-stu-id="f09c6-114">In this case, `pClassId` will be 0.</span></span> <span data-ttu-id="f09c6-115">O código do Profiler deve usar [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) com um valor COR_PRF_FRAME_INFO para fornecer mais contexto.</span><span class="sxs-lookup"><span data-stu-id="f09c6-115">Profiler code should use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) with a COR_PRF_FRAME_INFO value to provide more context.</span></span>  
+ <span data-ttu-id="6044e-113">O `ClassID` de uma função em uma classe genérica pode não ser obtido sem mais informações contextuais sobre o uso da função.</span><span class="sxs-lookup"><span data-stu-id="6044e-113">The `ClassID` of a function on a generic class might not be obtainable without more contextual information about the use of the function.</span></span> <span data-ttu-id="6044e-114">Nesse caso, `pClassId` será 0.</span><span class="sxs-lookup"><span data-stu-id="6044e-114">In this case, `pClassId` will be 0.</span></span> <span data-ttu-id="6044e-115">O código do Profiler deve usar [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) com um valor COR_PRF_FRAME_INFO para fornecer mais contexto.</span><span class="sxs-lookup"><span data-stu-id="6044e-115">Profiler code should use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) with a COR_PRF_FRAME_INFO value to provide more context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f09c6-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f09c6-116">Requirements</span></span>  
- <span data-ttu-id="f09c6-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f09c6-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6044e-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6044e-116">Requirements</span></span>  
+ <span data-ttu-id="6044e-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6044e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f09c6-118">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f09c6-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6044e-118">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6044e-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f09c6-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f09c6-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6044e-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6044e-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f09c6-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f09c6-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6044e-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6044e-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f09c6-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f09c6-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6044e-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6044e-121">See also</span></span>
 
-- [<span data-ttu-id="f09c6-122">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="f09c6-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="6044e-122">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="6044e-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
