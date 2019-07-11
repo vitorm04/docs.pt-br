@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bd9f4029f5e4609ab1ef6f49a4364e83f1edfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8be30e8c3b6bc7c03ede5f897f176e04153003b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049902"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781975"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>Método IMetaDataImport::EnumMethodImpls
 Enumera MethodBody e MethodDeclaration tokens que representam os métodos do tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT EnumMethodImpls (  
    [in, out] HCORENUM    *phEnum,   
    [in]      mdTypeDef   td,   

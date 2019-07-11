@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83c9a4aa165057f1345de2c6f5bda80e4317d06c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 710a33583e45b27cec66278f4e20152acfae97dc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992141"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782874"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>Método ICorProfilerCallback::RemotingServerInvocationStarted
 Notifica o criador de perfil que o processo está invocando um método em resposta a uma solicitação de invocação de método remoto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT RemotingServerInvocationStarted();  
 ```  
   

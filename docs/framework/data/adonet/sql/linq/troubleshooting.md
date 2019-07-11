@@ -2,12 +2,12 @@
 title: Solução de problemas
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 697432dce5f7698a8b4eabde3586bb4f77fd62de
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661861"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742753"
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 As seguintes informações expostas alguns problemas que você pode encontrar em seus aplicativos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , e oferece sugestões para evitar ou reduzir de outra maneira o efeito desses problemas.  
@@ -26,7 +26,7 @@ As seguintes informações expostas alguns problemas que você pode encontrar em
  Para especificar um nome do arquivo de entrada, adicione o nome do arquivo à linha de comando como o arquivo de entrada. Não há suporte para a inclusão do nome de arquivo na cadeia de conexão (usando a opção **/conn**). Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Projetos de biblioteca de classe  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] cria uma cadeia de conexão no arquivo de `app.config` do projeto. Em projetos de biblioteca de classes, o arquivo de `app.config` não é usado. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa a cadeia de conexão fornecida em arquivos em tempo de design. Altere o valor em `app.config` não altera a base de dados que conecta seu aplicativo.  
+ O Object Relational Designer cria uma cadeia de caracteres de conexão no `app.config` arquivo do projeto. Em projetos de biblioteca de classes, o arquivo de `app.config` não é usado. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa a cadeia de conexão fornecida em arquivos em tempo de design. Altere o valor em `app.config` não altera a base de dados que conecta seu aplicativo.  
   
 ## <a name="cascade-delete"></a>Excluir em cascata  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte ou reconhece operações cascade-delete. Se você deseja excluir uma linha em uma tabela que possui restrições nele, você deve fazer:  

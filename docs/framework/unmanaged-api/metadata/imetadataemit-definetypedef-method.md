@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b6f5881f289bed258191baf4f43264ea6ba35db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0777151d10149ec7311a7761bc7f6bff5ba98e0e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992583"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777478"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Método IMetaDataEmit::DefineTypeDef
 Cria uma definição de tipo para um tipo common language runtime e obtém um token de metadados para essa definição de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT DefineTypeDef (   
     [in]  LPCWSTR     szTypeDef,   
     [in]  DWORD       dwTypeDefFlags,   

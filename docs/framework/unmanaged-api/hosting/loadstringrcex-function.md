@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5520aef09c72819ff2b3763cd43af13f013263c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4a0cac77d7bf7611acf6042298bfe6814d8f4352
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490216"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768443"
 ---
 # <a name="loadstringrcex-function"></a>Função LoadStringRCEx
 Converte um valor HRESULT a uma mensagem de erro apropriada para a cultura especificada.  
@@ -30,7 +30,7 @@ Converte um valor HRESULT a uma mensagem de erro apropriada para a cultura espec
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT LoadStringRCEx (  
     [in]  LCID    lcid,   
     [in]  UINT    iResouceID,   

@@ -3,12 +3,12 @@ title: 'Como: exibir o status de conexão usando o WIF'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: a41f24faa5b535c02feef99ae0d592bd7d13db4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d81bd2023886799f939fc9851db516a00aa92df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626095"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742447"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Como: exibir o status de conexão usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -54,7 +54,7 @@ ms.locfileid: "64626095"
 ## <a name="step-1--install-the-identity-and-access-extension"></a>Etapa 1 – instalar a extensão de Identidade e Acesso  
  Essa etapa descreve como configurar a extensão de Identidade e Acesso para o Visual Studio 2012. Essa extensão automatiza o processo de configurar seu aplicativo para se comunicar com pontos de extremidade do STS.  
   
-#### <a name="to-install-the-identity-and-access-extension"></a>Para instalar a extensão de Identidade e Acesso  
+### <a name="to-install-the-identity-and-access-extension"></a>Para instalar a extensão de Identidade e Acesso  
   
 1. Inicie o Visual Studio em modo elevado como administrador.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "64626095"
 ## <a name="step-2--create-a-relying-party-aspnet-application"></a>Etapa 2 – criar um aplicativo ASP.NET de terceira parte confiável  
  Essa etapa descreve como criar um aplicativo de ASP.NET Web Forms de terceira parte confiável que integrará o WIF.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Para criar um aplicativo ASP.NET simples  
+### <a name="to-create-a-simple-aspnet-application"></a>Para criar um aplicativo ASP.NET simples  
   
 1. Inicie o Visual Studio, clique em **Arquivo**, **Novo** e, depois, em **Projeto**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "64626095"
 ## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a>Etapa 3 – habilitar o STS de desenvolvimento local para autenticar usuários  
  Essa etapa descreve como habilitar o STS de desenvolvimento local em seu aplicativo. O STS de desenvolvimento local é habilitado usando a extensão de Identidade e Acesso para o Visual Studio.  
   
-#### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>Para habilitar o STS de desenvolvimento local em seu aplicativo ASP.NET  
+### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>Para habilitar o STS de desenvolvimento local em seu aplicativo ASP.NET  
   
 1. No Visual Studio, clique com o botão direito do mouse no projeto **TestApp** em **Gerenciador de Soluções** e selecione **Identidade e Acesso**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64626095"
 ## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>Etapa 4 – modificar seu aplicativo ASP.NET para exibir o status de entrada  
  Essa etapa descreve como modificar seu aplicativo ASP.NET para exibir dinamicamente se o usuário atual está conectado. Depois que o provedor de STS tiver sido configurado, o WIF manipulará as declarações de entrada. Agora você precisa configurar o código do aplicativo para exibir o resultado da autenticação.  
   
-#### <a name="to-display-sign-in-status"></a>Para exibir o status de entrada  
+### <a name="to-display-sign-in-status"></a>Para exibir o status de entrada  
   
 1. No Visual Studio, abra o arquivo **Default.aspx** no projeto **TestApp**.  
   
@@ -149,8 +149,8 @@ ms.locfileid: "64626095"
 ## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a>Etapa 5 – testar a integração entre o WIF e o seu aplicativo ASP.NET  
  Esta etapa descreve como você pode testar a integração entre o WIF e o seu aplicativo ASP.NET.  
   
-#### <a name="to-test-the-integration-between-wif-and-aspnet"></a>Para testar a integração entre o WIF e o ASP.NET  
+### <a name="to-test-the-integration-between-wif-and-aspnet"></a>Para testar a integração entre o WIF e o ASP.NET  
   
 1. No Visual Studio, pressione **F5** para iniciar a depuração de seu aplicativo. Se nenhum erro for encontrado, uma nova janela do navegador será aberta.  
   
-2. Você pode perceber que o navegador redireciona silenciosamente a solicitação para o STS e, em seguida, abre a página Default.aspx. Se o WIF estiver configurado corretamente, você verá o site exibir o seguinte texto: **"Você está conectado"**.
+2. Você pode perceber que o navegador redireciona silenciosamente a solicitação para o STS e, em seguida, abre a página Default.aspx. Se o WIF estiver configurado corretamente, você verá o site exibir o seguinte texto: **"Você está conectado"** .

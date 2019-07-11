@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5061750489c74e0385f2ce020c88518604b3167
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6403540f9641ce885edf2760370e35f48faf1f10
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041529"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780313"
 ---
 # <a name="icorprofilerfunctionenumgetcount-method"></a>Método ICorProfilerFunctionEnum::GetCount
 Obtém o número de funções que foram carregados pelo aplicativo ou à força pelo criador de perfil.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   

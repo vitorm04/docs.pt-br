@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c0b45e08f7b88d9374023f95c6e3e22139c8949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96e63d121bb64fd1aa6433881f7806b5c4058115
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768921"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774002"
 ---
 # <a name="icordebugvalue3getsize64-method"></a>Método ICorDebugValue3::GetSize64
 Obtém o tamanho, em bytes, isso [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetSize64(  
     [out] ULONG64 *pSize  
 );  

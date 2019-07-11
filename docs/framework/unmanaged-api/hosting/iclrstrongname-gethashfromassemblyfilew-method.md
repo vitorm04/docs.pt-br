@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 578dd7941ad7a2cf1d39a3aeed7fa823eb7efa79
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 371ed85f53109856d9c8f64e42aadca10302c269
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984588"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748209"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>Método ICLRStrongName::GetHashFromAssemblyFileW
 Gera um hash sobre o conteúdo do arquivo especificado por uma cadeia de caracteres Unicode.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetHashFromAssemblyFileW (  
     [in]  LPCWSTR   wszFilePath,  
     [in, out] unsigned int   *piHashAlg,  

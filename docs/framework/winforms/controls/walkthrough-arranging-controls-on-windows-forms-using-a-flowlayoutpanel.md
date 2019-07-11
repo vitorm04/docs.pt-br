@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 8cfcdf8595733434cc56c621428c31238dd166dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211163"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771655"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel
 
@@ -55,7 +55,7 @@ Quando tiver terminado, você terá um entendimento da função desempenhada por
 
  O <xref:System.Windows.Forms.FlowLayoutPanel> controle para redimensionar ou refluir seus controles filho conforme as dimensões do formulário pai são alteradas.
 
-#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Para organizar controles horizontalmente e verticalmente usando um FlowLayoutPanel
+### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Para organizar controles horizontalmente e verticalmente usando um FlowLayoutPanel
 
 1. Arraste uma <xref:System.Windows.Forms.FlowLayoutPanel> controlar do **caixa de ferramentas** para seu formulário.
 
@@ -76,7 +76,7 @@ Quando tiver terminado, você terá um entendimento da função desempenhada por
 ## <a name="changing-flow-direction"></a>Alterando a direção do fluxo
  O <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> propriedade permite que você altere a direção em que os controles são organizados. Você pode organizar os controles filho da esquerda para a direita, da direita para a esquerda, de cima para baixo ou de baixo para cima.
 
-#### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>Para alterar a direção do fluxo em um FlowLayoutPanel
+### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>Para alterar a direção do fluxo em um FlowLayoutPanel
 
 1. Altere o valor da <xref:System.Windows.Forms.FlowLayoutPanel> do controle <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> propriedade <xref:System.Windows.Forms.FlowDirection.TopDown>. Observe que os controles filho são reorganizados em uma ou mais colunas, dependendo da altura do controle.
 
@@ -85,7 +85,7 @@ Quando tiver terminado, você terá um entendimento da função desempenhada por
 ## <a name="inserting-flow-breaks"></a>Inserindo quebras de fluxo
  O <xref:System.Windows.Forms.FlowLayoutPanel> controle fornece uma propriedade FlowBreak para seus controles filho. Definindo o valor da propriedade FlowBreak como `true` faz com que o <xref:System.Windows.Forms.FlowLayoutPanel> controle para interromper o layout de controles na direção do fluxo atual e quebra automática de linha para a próxima linha ou coluna.
 
-#### <a name="to-insert-flow-breaks"></a>Para inserir quebras de fluxo
+### <a name="to-insert-flow-breaks"></a>Para inserir quebras de fluxo
 
 1. Altere o valor da <xref:System.Windows.Forms.FlowLayoutPanel> do controle <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> propriedade <xref:System.Windows.Forms.FlowDirection.TopDown>.
 
@@ -96,7 +96,7 @@ Quando tiver terminado, você terá um entendimento da função desempenhada por
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>Posicionando controles usando encaixe e ancoragem
  Os comportamentos de encaixe e ancoragem dos controles filho diferem dos comportamentos em outras caixas de controles. O encaixe e a ancoragem são relativos ao maior controle na direção do fluxo.
 
-#### <a name="to-position-controls-using-docking-and-anchoring"></a>Para posicionar controles usando encaixe e ancoragem
+### <a name="to-position-controls-using-docking-and-anchoring"></a>Para posicionar controles usando encaixe e ancoragem
 
 1. Aumentar o tamanho do <xref:System.Windows.Forms.FlowLayoutPanel> até que o <xref:System.Windows.Forms.Button> controles são organizados em uma coluna.
 
@@ -115,7 +115,7 @@ Quando tiver terminado, você terá um entendimento da função desempenhada por
 
  O <xref:System.Windows.Forms.Control.Margin%2A> propriedade permite que você controle o espaçamento entre controles.
 
-#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Para organizar controles usando as propriedades de preenchimento e margem
+### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Para organizar controles usando as propriedades de preenchimento e margem
 
 1. Altere o valor da <xref:System.Windows.Forms.FlowLayoutPanel> do controle <xref:System.Windows.Forms.Control.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.Fill>. Se o formulário for grande o suficiente, o <xref:System.Windows.Forms.Button> controles serão movidos para a primeira coluna do <xref:System.Windows.Forms.FlowLayoutPanel> controle.
 
@@ -126,7 +126,7 @@ Quando tiver terminado, você terá um entendimento da função desempenhada por
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Inserindo controles ao clicar duas vezes neles na caixa de ferramentas
  Você pode popular seu <xref:System.Windows.Forms.FlowLayoutPanel> controle clicando duas vezes em controles na **caixa de ferramentas**.
 
-#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Para inserir controles clicando duas vezes na caixa de ferramentas
+### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Para inserir controles clicando duas vezes na caixa de ferramentas
 
 1. Clique duas vezes o <xref:System.Windows.Forms.Button> ícone do controle no **caixa de ferramentas**. Observe que uma nova <xref:System.Windows.Forms.Button> controle aparece no <xref:System.Windows.Forms.FlowLayoutPanel> controle.
 
@@ -135,7 +135,7 @@ Quando tiver terminado, você terá um entendimento da função desempenhada por
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Inserindo um controle ao desenhar seu contorno
  Você pode inserir um controle em um <xref:System.Windows.Forms.FlowLayoutPanel> controlar e especificar seu tamanho, desenhando seu contorno em uma célula.
 
-#### <a name="to-insert-a-control-by-drawing-its-outline"></a>Para inserir um controle desenhando seu contorno
+### <a name="to-insert-a-control-by-drawing-its-outline"></a>Para inserir um controle desenhando seu contorno
 
 1. No **caixa de ferramentas**, clique no <xref:System.Windows.Forms.Button> ícone do controle. Não o arraste para o formulário.
 
@@ -148,7 +148,7 @@ Quando tiver terminado, você terá um entendimento da função desempenhada por
 ## <a name="inserting-controls-using-the-insertion-bar"></a>Inserindo controles usando a barra de inserção
  Você pode inserir controles em uma posição específica em um <xref:System.Windows.Forms.FlowLayoutPanel> controle. Quando você arrasta um controle para o <xref:System.Windows.Forms.FlowLayoutPanel> área de cliente do controle, uma barra de inserção é exibida para indicar onde o controle será inserido.
 
-#### <a name="to-insert-a-control-using-the-caret"></a>Para inserir um controle usando o sinal de interpolação
+### <a name="to-insert-a-control-using-the-caret"></a>Para inserir um controle usando o sinal de interpolação
 
 1. Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** no <xref:System.Windows.Forms.FlowLayoutPanel> controlar e aponte para o espaço entre dois <xref:System.Windows.Forms.Button> controles. Observe que uma barra de inserção é desenhada, indicando onde o <xref:System.Windows.Forms.Button> será colocado quando ele for solto no <xref:System.Windows.Forms.FlowLayoutPanel> controle. Antes de descartar o novo <xref:System.Windows.Forms.Button> controlar no <xref:System.Windows.Forms.FlowLayoutPanel> controlar, mova o ponteiro do mouse para observar como a barra de inserção se move.
 
@@ -157,7 +157,7 @@ Quando tiver terminado, você terá um entendimento da função desempenhada por
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>Reatribuição de controles existentes a um pai diferente
  Você pode atribuir controles existentes em seu formulário para um novo <xref:System.Windows.Forms.FlowLayoutPanel> controle.
 
-#### <a name="to-reparent-existing-controls"></a>Para reassociar os controles existentes
+### <a name="to-reparent-existing-controls"></a>Para reassociar os controles existentes
 
 1. Arraste três <xref:System.Windows.Forms.Button> controla a partir de **caixa de ferramentas** para o formulário. Posicione-os próximo entre si, mas deixe-os desalinhados.
 

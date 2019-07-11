@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc94c2de1a14842cc017e5c4ef6023154c20f2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cb314f2afce0cbbf1c5fb185f516a30ad8313af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699897"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780514"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a>Método IDebuggerThreadControl::StartBlockingForDebugger
 Notifica o host que os serviços de depuração estão prestes a começar a bloquear todos os threads.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT StartBlockingForDebugger (  
     [in] DWORD dwUnused  
 );  

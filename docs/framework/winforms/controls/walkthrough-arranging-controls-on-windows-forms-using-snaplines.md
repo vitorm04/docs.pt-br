@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606420"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771651"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Passo a passo: Organizar controles nos Windows Forms usando linhas de alinhamento
 O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O Designer de Formulários do Windows fornece várias ferramentas de layout para fazer isso. Um dos mais importantes é a <xref:System.Windows.Forms.Design.Behavior.SnapLine> recurso.  
@@ -53,7 +53,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="creating-the-project"></a>Criando o Projeto  
  A primeira etapa é criar o projeto e configurar o formulário.  
   
-#### <a name="to-create-the-project"></a>Para criar o projeto  
+### <a name="to-create-the-project"></a>Para criar o projeto  
   
 1. Criar um projeto de aplicativo baseado no Windows chamado "SnaplineExample" (**arquivo** > **New** > **projeto**  >  **Visual c#** ou **Visual Basic** > **área de trabalho clássica** > **aplicativo de formulários do Windows**).  
   
@@ -62,7 +62,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>Espaçando e alinhando controles usando guias de alinhamento  
  As guias de alinhamento oferecem uma maneira intuitiva e precisa de alinhar os controles no formulário. Elas aparecem quando você está movendo um controle ou controles selecionados para perto de uma posição que se alinha a outro controle ou conjunto de controles. Sua seleção será "ajustada" para a posição sugerida ao ser movida passando pelos outros controles.  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>Para organizar os controles usando guias de alinhamento  
+### <a name="to-arrange-controls-using-snaplines"></a>Para organizar os controles usando guias de alinhamento  
   
 1. Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** para seu formulário.  
   
@@ -85,7 +85,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="aligning-to-form-and-container-margins"></a>Alinhando às margens do formulário e do contêiner  
  As guias de alinhamento ajudam a alinhar os controles às margens do formulário e do contêiner de uma maneira consistente.  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>Para alinhar controles às margens do formulário e do contêiner  
+### <a name="to-align-controls-to-form-and-container-margins"></a>Para alinhar controles às margens do formulário e do contêiner  
   
 1. Selecione uma da <xref:System.Windows.Forms.Button> controla e mova-o perto da borda direita do formulário até que apareça um guia de alinhamento. A distância da guia de alinhamento da borda direita é a soma do controle <xref:System.Windows.Forms.Control.Margin%2A> propriedade e o formulário <xref:System.Windows.Forms.Control.Padding%2A> valores de propriedade.  
   
@@ -107,7 +107,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="aligning-to-grouped-controls"></a>Alinhando a controles agrupados  
  Você pode usar guias de alinhamento para alinhar controles agrupados, bem como controles dentro de um <xref:System.Windows.Forms.GroupBox> controle.  
   
-#### <a name="to-align-to-grouped-controls"></a>Para alinhar controles agrupados  
+### <a name="to-align-to-grouped-controls"></a>Para alinhar controles agrupados  
   
 1. Selecione dois dos controles no formulário. Mova um pouco a seleção e observe as guias de alinhamento que aparecem entre a seleção e os outros controles.  
   
@@ -120,7 +120,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>Usando guias de alinhamento para posicionar um controle descrevendo seu tamanho  
  As guias de alinhamento ajudam a alinhar os controles quando você os coloca em um formulário pela primeira vez.  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Para usar guias de alinhamento para posicionar um controle descrevendo seu tamanho  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Para usar guias de alinhamento para posicionar um controle descrevendo seu tamanho  
   
 1. No **caixa de ferramentas**, clique no <xref:System.Windows.Forms.Button> ícone do controle. Não o arraste para o formulário.  
   
@@ -137,7 +137,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>Usando guias de alinhamento ao arrastar um controle da caixa de ferramentas  
  As guias de alinhamento ajudam a alinhar os controles quando você os arrasta da **Caixa de ferramentas** para seu formulário.  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Para usar guias de alinhamento ao arrastar um controle da caixa de ferramentas  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Para usar guias de alinhamento ao arrastar um controle da caixa de ferramentas  
   
 1. Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** para seu formulário, mas não solte o botão do mouse.  
   
@@ -150,7 +150,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="resizing-controls-using-snaplines"></a>Redimensionando controles usando guias de alinhamento  
  As guias de alinhamento ajudam a alinhar os controles à medida que você os redimensiona.  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>Para redimensionar um controle usando guias de alinhamento  
+### <a name="to-resize-a-control-using-snaplines"></a>Para redimensionar um controle usando guias de alinhamento  
   
 1. Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** para seu formulário.  
   
@@ -163,7 +163,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="aligning-a-label-to-a-controls-text"></a>Alinhando um rótulo a um texto do controle  
  Alguns controles oferecem uma guia de alinhamento para alinhar outros controles ao texto exibido.  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>Para alinhar um rótulo a um texto do controle  
+### <a name="to-align-a-label-to-a-controls-text"></a>Para alinhar um rótulo a um texto do controle  
   
 1. Arraste uma <xref:System.Windows.Forms.TextBox> controlar do **caixa de ferramentas** para seu formulário. Quando você solta o <xref:System.Windows.Forms.TextBox> controle para o formulário, clique no glifo de marca inteligente e selecione o **definir texto para textBox1** opção. Para obter detalhes, consulte [passo a passo: Executar tarefas comuns usando Smart Tags em Windows Forms a controles](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
@@ -178,7 +178,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="using-snaplines-with-keyboard-navigation"></a>Usando guias de alinhamento com navegação do teclado  
  As guias de alinhamento ajudam a alinhar os controles ao organizá-los usando as teclas de direção do teclado.  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>Para usar guias de alinhamento com navegação do teclado  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>Para usar guias de alinhamento com navegação do teclado  
   
 1. Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** para seu formulário. Coloque-o no canto superior esquerdo do formulário.  
   
@@ -199,7 +199,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="snaplines-and-layout-panels"></a>Guias de alinhamento e painéis de layout  
  As guias de alinhamento são desabilitadas em painéis de layout.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Para desabilitar seletivamente as guias de alinhamento  
+### <a name="to-selectively-disable-snaplines"></a>Para desabilitar seletivamente as guias de alinhamento  
   
 1. Arraste uma <xref:System.Windows.Forms.TableLayoutPanel> controlar do **caixa de ferramentas** para seu formulário.  
   
@@ -214,13 +214,13 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 ## <a name="disabling-snaplines"></a>Desabilitando guias de alinhamento  
  As guias de alinhamento são habilitadas por padrão. Você pode desabilitar as guias de alinhamento seletivamente ou desabilitá-las no ambiente de design.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Para desabilitar seletivamente as guias de alinhamento  
+### <a name="to-selectively-disable-snaplines"></a>Para desabilitar seletivamente as guias de alinhamento  
   
 - Pressione a tecla ALT enquanto move um controle no formulário.  
   
      Observe que não aparece nenhuma guia de alinhamento e o controle não se ajusta a nenhuma posição de alinhamento possível.  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>Para desabilitar as guias de alinhamento no ambiente de design  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>Para desabilitar as guias de alinhamento no ambiente de design  
   
 1. No menu **Ferramentas**, abra a caixa de diálogo **Opções**. Abra a caixa de diálogo do Designer de Formulários do Windows. Para obter detalhes, consulte [General, Windows Forms Designer, Options Dialog Box](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)) (Designer de Formulários do Windows, caixa de diálogo Opções).  
   

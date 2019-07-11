@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9597b12b0da6df807b2d4eaa42c2035c518b71d9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 72b95b634ffc352b7fad006e0ccd68e6e159dee9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490633"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779113"
 ---
 # <a name="coinitializeee-function"></a>Função CoInitializeEE
 Garante que o mecanismo de execução do common language runtime é carregado em um processo. Essa função foi preterida no .NET Framework 4. Use o [iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT CoInitializeEE (  
    [in] DWORD fFlags  
 );  

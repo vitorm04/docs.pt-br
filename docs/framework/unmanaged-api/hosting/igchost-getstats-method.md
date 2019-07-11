@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14751b41809eeda5e6bd990fae368879d0f30492
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e374c03ca90c904cd4ef8a4585cb35ccf43cb43
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927239"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766514"
 ---
 # <a name="igchostgetstats-method"></a>Método IGCHost::GetStats
 Obtém as estatísticas para o estado atual do sistema de coleta de lixo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetStats (  
     [in, out] COR_GC_STATS *pStats  
 );  

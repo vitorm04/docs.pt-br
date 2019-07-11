@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b8a91a2c1ef9b68dcfc293a870ce3e9b9499a8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1e7181f50d94fa417bf9d00c3531747cefca82c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946772"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781472"
 ---
 # <a name="imetadatatablesgetnextblob-method"></a>Método IMetaDataTables::GetNextBlob
 Obtém o índice do próximo grande objeto binário (BLOB) na tabela.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetNextBlob (  
     [in]  ULONG   ixBlob,  
     [out] ULONG   *pNext  

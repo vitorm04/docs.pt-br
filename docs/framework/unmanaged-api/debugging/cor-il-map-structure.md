@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02a7bff021387f615c823b2df96615c1284cb82b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74f515626f5001cbea1a25e8268338c588524bde
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617710"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740538"
 ---
 # <a name="corilmap-structure"></a>Estrutura COR_IL_MAP
 Especifica mudanças no deslocamento relativo de uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef struct _COR_IL_MAP {  
     ULONG32 oldOffset;   
     ULONG32 newOffset;   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dfe2c98fd5898a0ad5a1d4fd9e89c7f20741bb0
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490688"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773768"
 ---
 # <a name="callfunctionshim-function"></a>Função CallFunctionShim
 Faz uma chamada para a função que tem o nome especificado e os parâmetros na biblioteca especificada.  
@@ -30,7 +30,7 @@ Faz uma chamada para a função que tem o nome especificado e os parâmetros na 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT CallFunctionShim (  
     [in] LPCWSTR     szDllName,  
     [in] LPCSTR      szFunctionName,  

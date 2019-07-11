@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 293ad30ebf47ca8684d158b1ae1772ab245d7981
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 658b88349bedcbcefd0b97226c7bd1fa34f656c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775083"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781916"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>Estrutura COR_PRF_FUNCTION_ARGUMENT_INFO
 Representa os argumentos de uma função, em ordem da esquerda para a direita.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {  
     ULONG numRanges;  
     ULONG totalArgumentSize;  

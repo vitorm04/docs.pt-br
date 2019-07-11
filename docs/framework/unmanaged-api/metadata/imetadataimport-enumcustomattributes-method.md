@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b80bb7b62d3a4ffee61cc6756b7d7d02f2b074bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c38b7f060c34f7408195484dec2c49305db422fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049941"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781314"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Método IMetaDataImport::EnumCustomAttributes
 Enumera os tokens de definição de atributo personalizado associados com o tipo especificado ou um membro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT EnumCustomAttributes (   
    [in, out] HCORENUM      *phEnum,  
    [in]  mdToken            tk,   

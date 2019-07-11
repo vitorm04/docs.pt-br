@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aff2c73eeb3360d4ed21c349e3b85194c73b6ec
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 8b25f73e9af77faadbc691255cb3139498f5d25c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380267"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779701"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>Método ICLRGCManager::SetGCStartupLimits
 Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração do sistema de coleta de lixo 0.  
@@ -32,7 +32,7 @@ Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geraç�
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT SetGCStartupLimits (  
     [in] DWORD SegmentSize,   
     [in] DWORD MaxGen0Size  

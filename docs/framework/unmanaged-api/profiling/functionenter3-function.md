@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d05475f06a206dcb88d198c713767618453d742e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 24c9077863ada4d1208f29755a70d2cf8abc1208
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586905"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782692"
 ---
 # <a name="functionenter3-function"></a>Função FunctionEnter3
 Notifica o criador de perfil que o controle está sendo passado para uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   

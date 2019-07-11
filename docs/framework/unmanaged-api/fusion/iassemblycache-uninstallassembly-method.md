@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9991d1b6ffb1ab2c89acf54af3234d31c0e06907
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 531f9167a931d6b972e47e120950197bed11c07e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623751"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778710"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>Método IAssemblyCache::UninstallAssembly
 Desinstala o assembly especificado do cache de assembly global.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT UninstallAssembly (  
     [in] DWORD dwFlags,  
     [in] LPCWSTR pszAssemblyName,  

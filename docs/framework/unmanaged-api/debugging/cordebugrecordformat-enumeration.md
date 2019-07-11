@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: add1458bb3a50a5e5433e8cc7baaf47d750c927d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adb13688791cd7d8f467780da1895d4f9fe6e990
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645702"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739636"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>Enumeração CorDebugRecordFormat
 Descreve o formato dos dados em uma matriz de bytes que contém informações sobre um evento de depuração de exceção nativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef enum CorDebugRecordFormat {  
     FORMAT_WINDOWS_EXCEPTIONRECORD32 = 1,  
     FORMAT_WINDOWS_EXCEPTIONRECORD64 = 2,  

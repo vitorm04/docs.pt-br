@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69897a7b646eb9f58e6b38588e302287b4241779
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b0a190ce57091434006421e6d8551c78cbe66b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043674"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777172"
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>Método IMetaDataEmit2::GetDeltaSaveSize
 Obtém um valor que indica qualquer alteração no tamanho de metadados que resulta da sessão atual de editar e continuar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetDeltaSaveSize (  
     [in]  CorSaveSize  fSave,  
     [out] DWORD        *pdwSaveSize  

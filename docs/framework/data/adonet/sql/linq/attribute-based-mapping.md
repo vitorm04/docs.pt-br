@@ -2,19 +2,19 @@
 title: Mapeamento baseado em atributos
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032962"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743624"
 ---
 # <a name="attribute-based-mapping"></a>Mapeamento baseado em atributos
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia um banco de dados do SQL Server para um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objeto aplicando atributos ou usando um arquivo de mapeamento externo. Este tópico descreve a abordagem baseada em atributos.  
   
  Em sua forma mais elementar, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia um banco de dados para um <xref:System.Data.Linq.DataContext>, uma tabela para uma classe e colunas e relações para propriedades nessas classes. Você também pode usar atributos para mapear uma hierarquia de herança no seu modelo de objeto. Para obter mais informações, confira [Como: Gerar o modelo de objeto no Visual Basic ou C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Os desenvolvedores que usam o Visual Studio normalmente realizar o mapeamento baseado em atributos usando o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Você também pode usar a ferramenta de linha de comando SQLMetal, ou você pode codificar manualmente os atributos por conta própria. Para obter mais informações, confira [Como: Gerar o modelo de objeto no Visual Basic ou C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Os desenvolvedores que usam o Visual Studio normalmente realizar mapeamento de atributo usando o Object Relational Designer. Você também pode usar a ferramenta de linha de comando SQLMetal, ou você pode codificar manualmente os atributos por conta própria. Para obter mais informações, confira [Como: Gerar o modelo de objeto no Visual Basic ou C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  Você também pode mapear usando um arquivo XML externo. Para obter mais informações, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  

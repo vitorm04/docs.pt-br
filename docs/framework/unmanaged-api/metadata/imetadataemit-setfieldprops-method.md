@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94ba607669b4b1ca68294470cf1cc4fb27464d28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ccafea78aa2497c52442a10ad1af1c05771df7e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992479"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737109"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>Método IMetaDataEmit::SetFieldProps
 Define ou atualiza o valor padrão para o campo referenciado pelo token de campo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT SetFieldProps (  
     [in]  mdFieldDef  fd,   
     [in]  DWORD       dwFieldFlags,   

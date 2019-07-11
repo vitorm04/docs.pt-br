@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a6c7fd48269a3e8291a548b3e13efe5c8e70652
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b17b36f66a9b8b78b16057ec37d3ee5f484f7ae2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919406"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779760"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>Método ICLRMetaHost::GetVersionFromFile
 Obtém do .NET Framework compilação versão original um assembly (armazenado nos metadados), dado seu caminho de arquivo. Esse método substitui o [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetVersionFromFile (  
     [in] LPCWSTR pwzFilePath,  
     [out, size_is(*pcchBuffer)] LPWSTR pwzBuffer,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4879af90aa06515a95b4d15f039ff3c2b1a88f62
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4297b21970fbca4b5aa53c31680394cab358d255
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665017"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777605"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>Método IMetaDataEmit::DefineMethod
 Cria uma definição para um método ou uma função global com a assinatura especificada e retorna um token para essa definição de método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT DefineMethod (      
     [in]  mdTypeDef         td,   
     [in]  LPCWSTR           szName,   

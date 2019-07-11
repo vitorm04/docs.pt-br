@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a37355365f337527bbc9254cae6e6f3d3f2f604
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28157d2ed223d89af4b4314035e7c03d572be7b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914727"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778560"
 ---
 # <a name="asmcmpflags-enumeration"></a>Enumeração ASM_CMP_FLAGS
 Indica a versão, compilação, cultura, assinatura e assim por diante, de dois assemblies a serem comparados o [iassemblyname:: Isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef enum {  
   
     ASM_CMPF_NAME                   = 0x1,  

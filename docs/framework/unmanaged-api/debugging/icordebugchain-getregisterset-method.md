@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f366a40e1e3cd196f480c5849c49419c7daeea9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89237c20cbb145d14b7afbda8c00eb14b441d0d4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989476"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745274"
 ---
 # <a name="icordebugchaingetregisterset-method"></a>Método ICorDebugChain::GetRegisterSet
 Obtém o conjunto de registros de parte ativa dessa cadeia.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetRegisterSet (  
     [out] ICorDebugRegisterSet **ppRegisters  
 );  

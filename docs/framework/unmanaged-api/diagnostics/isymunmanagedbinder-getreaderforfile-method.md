@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0414cadca910f3290f96a841e3f807f0de469606
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6081e2dfd64625697295f2ea2d1560bc597838da
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940082"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776864"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>Método ISymUnmanagedBinder::GetReaderForFile
 Dado uma interface de metadados e um nome de arquivo, retorna a correta [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface que lê os símbolos de depuração associados com o módulo.  
@@ -31,7 +31,7 @@ Dado uma interface de metadados e um nome de arquivo, retorna a correta [ISymUnm
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetReaderForFile(  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *fileName,  

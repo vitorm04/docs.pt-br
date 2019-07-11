@@ -2,18 +2,18 @@
 title: Aprendendo com explicações passo a passo
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582916"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743038"
 ---
 # <a name="learning-by-walkthroughs"></a>Aprendendo com explicações passo a passo
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação fornece várias explicações passo a passo. Este tópico aborda alguns problemas gerais da explicação passo a passo (incluindo solução de problemas) e fornece links para várias explicações passo a passo para iniciantes aprenderem sobre o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 > [!NOTE]
->  As explicações passo a passo desta seção de Introdução expõem o código básico que dá suporte à tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Na prática real, você normalmente usará o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] e projetos do Windows Forms para implementar seus aplicativos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. O [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] documentação fornece exemplos e explicações passo a passo para essa finalidade.  
+>  As explicações passo a passo desta seção de Introdução expõem o código básico que dá suporte à tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Na prática real, você normalmente usará os projetos de Object Relational Designer e do Windows Forms para implementar seu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplicativos. A documentação do / R Designer fornece exemplos e explicações passo a passo para essa finalidade.  
   
 ## <a name="getting-started-walkthroughs"></a>Tutoriais passo a passo de introdução  
  Várias explicações passo a passo estão disponíveis nesta seção. Essas explicações passo a passo são baseados no banco de dados de exemplo Northwind e apresentam os recursos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] em um ritmo tranquilo com complexidades mínimas.  

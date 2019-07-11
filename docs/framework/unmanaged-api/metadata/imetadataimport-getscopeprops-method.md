@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 17568a46c8e946989af0e401366d7eaa885886da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 061c482a7e674fd425fe627c741a11b39864ba5c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777544"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778864"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>Método IMetaDataImport::GetScopeProps
 Obtém o nome e, opcionalmente, o identificador de versão do assembly ou módulo no escopo atual de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetScopeProps (  
    [out] LPWSTR           szName,  
    [in]  ULONG            cchName,  

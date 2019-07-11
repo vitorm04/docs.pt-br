@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0074584ee5baba358db5bf3b0f2cfdd9a3d8f1d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 687fdd0735e6cb0f3a727c8a2da3cf33bffb6a39
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593534"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738976"
 ---
-# <a name="efnstacktrace-function"></a>Função _EFN_StackTrace
+# <a name="efnstacktrace-function"></a>\_EFN\_função StackTrace
 Fornece uma representação de texto de um rastreamento de pilha gerenciada e uma matriz de `CONTEXT` registra, um para cada transição entre não gerenciado e código gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT CALLBACK _EFN_StackTrace(  
     [in]  PDEBUG_CLIENT  Client,  
     [out] WCHAR          wszTextOut[],  

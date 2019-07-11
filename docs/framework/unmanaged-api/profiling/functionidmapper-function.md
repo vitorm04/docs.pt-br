@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2de19252b5c978fef38124636e4098ae5ece1b0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9dee1404a8da63208bba7b7529b16eabbee3254
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599020"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745770"
 ---
 # <a name="functionidmapper-function"></a>Função FunctionIDMapper
 Notifica o criador de perfil que o identificador fornecido de uma função pode ser remapeado para uma ID alternativa a ser usado na [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), e [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) retornos de chamada para essa função. `FunctionIDMapper` também permite que o criador de perfil indicar se deseja receber retornos de chamada para essa função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 UINT_PTR __stdcall FunctionIDMapper (  
     [in]  FunctionID  funcId,   
     [out] BOOL       *pbHookFunction  

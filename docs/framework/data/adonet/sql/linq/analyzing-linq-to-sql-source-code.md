@@ -2,18 +2,18 @@
 title: Para analisar o código-fonte LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: 35bc4988b8b9845ce6f45bab6849cd4b53a858ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e34364496a791031cc87cf07efd3d2adca39d93c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592480"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743597"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>Para analisar o código-fonte LINQ to SQL
 Usando as seguintes etapas, você pode produzir o código-fonte de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de base de dados de exemplo Northwind. Você pode comparar elementos modelo de objeto com os elementos de base de dados melhor para ver como os itens diferentes são mapeados.  
   
 > [!NOTE]
->  Os desenvolvedores usando o Visual Studio podem usar o [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para gerar este código.  
+>  Os desenvolvedores que usam o Visual Studio podem usar o O/R Designer para gerar este código.  
   
 1. Se você ainda não tiver o base de dados de exemplo Northwind no seu computador de desenvolvimento, você poderá baixá-lo gratuitamente. Para obter mais informações, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   

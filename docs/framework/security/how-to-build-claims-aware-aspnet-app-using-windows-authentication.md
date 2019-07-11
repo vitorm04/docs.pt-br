@@ -3,12 +3,12 @@ title: 'Como: criar um aplicativo ASP.NET baseado em declarações usando a Aute
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b58a4066538441a48bc6646f364e846a25cc8c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650403"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742505"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Como: criar um aplicativo ASP.NET baseado em declarações usando a Autenticação do Windows
 ## <a name="applies-to"></a>Aplica-se a  
@@ -56,7 +56,7 @@ ms.locfileid: "64650403"
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
  Nesta etapa, você criará um novo aplicativo ASP.NET Web Forms.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Para criar um aplicativo ASP.NET simples  
+### <a name="to-create-a-simple-aspnet-application"></a>Para criar um aplicativo ASP.NET simples  
   
 1. Inicie o Visual Studio, clique em **Arquivo**, **Novo** e, em seguida, em **Projeto**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64650403"
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Etapa 2 – Configurar um aplicativo ASP.NET Web Forms para declarações usando a Autenticação do Windows  
  Nesta etapa, você adicionará uma entrada de configuração ao arquivo de configuração *Web.config* e modifique o arquivo *Default.aspx* para exibir as informações de declarações de uma conta.  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Para configurar um aplicativo ASP.NET para declarações usando a autenticação do Windows  
+### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Para configurar um aplicativo ASP.NET para declarações usando a autenticação do Windows  
   
 1. No arquivo **Default.aspx** do projeto *TestApp*, substitua a marcação existente pela seguinte:  
   
@@ -136,6 +136,6 @@ ms.locfileid: "64650403"
 ## <a name="step-3--test-your-solution"></a>Etapa 3 – Testar a solução  
  Nesta etapa, você testará o aplicativo ASP.NET Web Forms e verificará se as declarações são apresentadas quando um usuário entra com a autenticação do Windows.  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Para testar o aplicativo ASP.NET Web Forms para declarações usando a autenticação do Windows  
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Para testar o aplicativo ASP.NET Web Forms para declarações usando a autenticação do Windows  
   
 1. Pressione **F5** para compilar e executar o aplicativo. Você deverá ver *Default.aspx* e o nome de sua conta do Windows (incluindo o nome de domínio) já deverá ser exibido como o usuário autenticado no canto superior direito da página. O conteúdo da página deverá incluir uma tabela preenchida com as declarações recuperadas de sua conta do Windows.

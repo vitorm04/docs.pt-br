@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edd83e62b08aa7892c01577cd8c46f9d965c0894
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41e79a4c9587e3e738039cbf6a84087a2e7fc9b1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789890"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741960"
 ---
 # <a name="getalinkmessagedll-function"></a>Função GetALinkMessageDll
 Localiza e carrega a DLL da mensagem. Retorna 0 se a DLL da mensagem não pode ser localizado ou carregado. A DLL de mensagem deve ser em um subdiretório, cujo nome é uma ID de idioma ou no diretório atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HINSTANCE WINAPI GetALinkMessageDll();  
 ```  
   

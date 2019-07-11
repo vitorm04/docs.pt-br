@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcd65f231ab0e05da0ec152b05878233558f2cd9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792178"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772066"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Passo a passo: Herdar de um controle do Windows Forms com Visual Basic
 Com o Visual Basic, você pode criar controles personalizados avançados por meio *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão herdará funcionalidades do formulários padrão do Windows <xref:System.Windows.Forms.Button> controlar e exporá uma propriedade personalizada chamada `ButtonValue`.  
@@ -26,7 +26,7 @@ Com o Visual Basic, você pode criar controles personalizados avançados por mei
 ## <a name="creating-the-project"></a>Criando o Projeto  
  Quando cria um novo projeto, você especifica seu nome para definir o namespace raiz, o nome do assembly e o nome do projeto e para garantir que o componente padrão estará no namespace correto.  
   
-#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Para criar a biblioteca de controle ValueButtonLib e o controle ValueButton  
+### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Para criar a biblioteca de controle ValueButtonLib e o controle ValueButton  
   
 1. No menu **Arquivo**, aponte para **Novo** e clique em **Projeto** para abrir a caixa de diálogo **Novo Projeto**.  
   
@@ -54,7 +54,7 @@ Com o Visual Basic, você pode criar controles personalizados avançados por mei
 ## <a name="adding-a-property-to-your-inherited-control"></a>Adicionando uma propriedade ao controle herdado  
  Um uso possível dos controles herdados dos Windows Forms é a criação de controles que são idênticos em termos de aparência e comportamento a controles padrão dos Windows Forms, mas que expõem propriedades personalizadas. Nesta seção, você adicionará uma propriedade chamada `ButtonValue` ao controle.  
   
-#### <a name="to-add-the-value-property"></a>Para adicionar a propriedade de valor  
+### <a name="to-add-the-value-property"></a>Para adicionar a propriedade de valor  
   
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **ValueButton.vb** e, depois, clique em **Exibir Código** no menu de atalho.  
   
@@ -84,13 +84,13 @@ Com o Visual Basic, você pode criar controles personalizados avançados por mei
 ## <a name="testing-your-control"></a>Testando seu controle  
  Controles não são projetos autônomos; eles devem ser hospedados em um contêiner. Para testar seu controle, você precisa fornecer um projeto de teste em que ele será executado. Você também precisa tornar seu controle acessível para o projeto de teste compilando-o. Nesta seção, você compilará seu controle e o testará em um Windows Form.  
   
-#### <a name="to-build-your-control"></a>Para compilar seu controle  
+### <a name="to-build-your-control"></a>Para compilar seu controle  
   
 1. No menu **Compilar**, clique em **Compilar Solução**.  
   
      O build deve ser bem-sucedido, sem avisos ou erros do compilador.  
   
-#### <a name="to-create-a-test-project"></a>Para criar um projeto de teste  
+### <a name="to-create-a-test-project"></a>Para criar um projeto de teste  
   
 1. No menu **Arquivo**, aponte para **Adicionar** e clique em **Novo Projeto** para abrir a caixa de diálogo **Adicionar Novo Projeto**.  
   
@@ -108,7 +108,7 @@ Com o Visual Basic, você pode criar controles personalizados avançados por mei
   
 8. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Testar** e selecione **Compilar**.  
   
-#### <a name="to-add-your-control-to-the-form"></a>Para adicionar o controle ao formulário  
+### <a name="to-add-your-control-to-the-form"></a>Para adicionar o controle ao formulário  
   
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Form1.vb** e selecione **Designer de Modo de Exibição** no menu de atalho.  
   

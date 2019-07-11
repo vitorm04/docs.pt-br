@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d3497d3167715d3e8a04f10a6687260949e4a36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd7131c55f9c06a8fcfc0cad859c18e410169c78
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934050"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778200"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>Método ISymUnmanagedWriter::Close
 Fecha o gravador de símbolo depois de confirmar os símbolos para o repositório de símbolos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT Close();  
 ```  
   
