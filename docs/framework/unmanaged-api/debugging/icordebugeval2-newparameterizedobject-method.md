@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c35baaee13782566c64dd8447c6a034f699b5cd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666996"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753591"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>Método ICorDebugEval2::NewParameterizedObject
 Cria uma instância de um novo objeto de tipo parametrizado e chama o método de construtor do objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT NewParameterizedObject (  
     [in] ICorDebugFunction     *pConstructor,  
     [in] ULONG32               nTypeArgs,  

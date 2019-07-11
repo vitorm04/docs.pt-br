@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f663f5134cf34bf9beb66da20bbb5886baff5415
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36a33b74a692761d772a888ce918aa28a2d92678
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987422"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760560"
 ---
 # <a name="icordebugstepperstepout-method"></a>Método ICorDebugStepper::StepOut
 Faz com que esse ICorDebugStepper a etapa única por meio de seu recipiente thread e para ser concluído quando o quadro atual retorna o controle para o quadro de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT StepOut ();  
 ```  
   

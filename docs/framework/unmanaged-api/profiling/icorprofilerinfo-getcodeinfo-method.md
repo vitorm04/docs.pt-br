@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d069446ecb0b630870f0d2c9c4bdc23232c40c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cc587edf763a352501a0d9097bdab2c54658d98
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991881"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762847"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>Método ICorProfilerInfo::GetCodeInfo
 Obtém a extensão do código nativo associado com a ID da função especificada.  
@@ -31,7 +31,7 @@ Obtém a extensão do código nativo associado com a ID da função especificada
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetCodeInfo(  
     [in]  FunctionID functionId,  
     [out] LPCBYTE    *pStart,  

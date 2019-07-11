@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0631afe149c7a179a6cda4b5e491ad28653ddee9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 405d5ff49ba7bc2e5204f00cf50c30822354e56d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991790"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775592"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>Método ICorProfilerInfo::GetThreadInfo
 Obtém a atual identidade do thread Win32 do thread especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetThreadInfo(  
     [in]  ThreadID threadId,  
     [out] DWORD    *pdwWin32ThreadId);  

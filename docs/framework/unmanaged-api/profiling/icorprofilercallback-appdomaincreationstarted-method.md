@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e42a8ab23705703770c8214b8c641b48c86094a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17f7c985b27adbbb2a5c7ddc2bb62fc93a099a45
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598273"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763135"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>Método ICorProfilerCallback::AppDomainCreationStarted
 Notifica o criador de perfil que está sendo criado um domínio de aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT AppDomainCreationStarted(  
     [in] AppDomainID appDomainId);  
 ```  

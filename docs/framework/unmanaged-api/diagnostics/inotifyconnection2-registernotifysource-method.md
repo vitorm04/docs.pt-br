@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9dac5ae2f0f77c7b6d2dbd7f908f3552823735b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d3c0d833208c91c548ea993bb6aa32e36e1f358
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940420"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776641"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>Método INotifyConnection2::RegisterNotifySource
 Instala uma fonte de notificação especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT RegisterNotifySource  
 (  
     [in]  INotifySource2*  in_pNotifySource,  

@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2dc3d350f5c97736b3b65c814a668195aceef2b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2921484cb2baa92593ddb0335cf7b20c5c0f33eb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969982"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773013"
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a>Método ICLRDebugManager::SetSymbolReadingPolicy
 Define a política para a leitura de arquivos de banco de dados (PDB) do programa. A política determina se a opção informações sobre arquivos e números de linha estão incluídas em pilhas de chamadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT SetSymbolReadingPolicy (  
     [in] ESymbolReadingPolicy policy  
 );  

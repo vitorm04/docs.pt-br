@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfb1cff3e95c5ff86d22913745b7d14982766b48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caf76fa7962de9392b06591777ac862aa548d20d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968591"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779549"
 ---
 # <a name="hosttype-enumeration"></a>Enumeração HOST_TYPE
 Contém valores que especificam o tipo de host que está iniciando um aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef enum {  
     HOST_TYPE_DEFAULT     = 0x0,  
     HOST_TYPE_APPLAUNCH   = 0x1,  

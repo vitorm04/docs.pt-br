@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: de3fc8b23bd132179fc7fb67d29010552138e3ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063100"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742833"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Modelo de objeto LINQ to SQL
 No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um modelo de objeto expressado na linguagem de programação do desenvolvedor é mapeado para o modelo de dados de um banco de dados relacional. Assim, as operações de dados são conduzidas de acordo com o modelo de objeto.  
@@ -72,7 +72,7 @@ No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um model
  O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia procedimentos armazenados e funções para métodos usando os atributos <xref:System.Data.Linq.Mapping.FunctionAttribute> e <xref:System.Data.Linq.Mapping.ParameterAttribute>. Os métodos que representam procedimentos armazenados são diferentes daqueles que representam funções definidas pelo usuário pela propriedade <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>. Se essa propriedade for definida como `false` (padrão), o método representará um procedimento armazenado. Se ela for definida como `true`, o método representará uma função de banco de dados.  
   
 > [!NOTE]
->  Se você estiver usando o Visual Studio, você pode usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para criar métodos mapeados para procedimentos armazenados e funções definidas pelo usuário.  
+>  Se você estiver usando o Visual Studio, você pode usar o Object Relational Designer para criar métodos mapeados para procedimentos armazenados e funções definidas pelo usuário.  
   
 ### <a name="example"></a>Exemplo  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

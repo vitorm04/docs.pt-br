@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd0a554535122b81f5812102c7951f56b294796a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b01c7cea477182c7590664ae9e850e99a89c4bc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757671"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773950"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>Método IInstallReferenceItem::GetReference
 Obtém um ponteiro para o [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) estrutura representada por este [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetReference (  
     [out] LPFUSION_INSTALL_REFERENCE *ppRefData,  
     [in]  DWORD dwFlags,  

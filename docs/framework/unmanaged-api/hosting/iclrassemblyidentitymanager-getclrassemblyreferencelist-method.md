@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de166a22350e49197ff6a5b5d6dc956cdcc2d1ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72bfb896ccff23938a4fc218fb1f95eebcf5bb93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985134"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773507"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>Método ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList
 Obtém um ponteiro de interface para um [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) instância na lista fornecida de identidades de assembly parcial.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT  GetCLRAssemblyReferenceList (  
     [in] LPCWSTR *ppwzAssemblyReferences,  
     [in] DWORD    dwNumOfReferences,  

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: ff2b2f6575c82f3769823431ec6363775bf9d698
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ff6f8b58e01c86ae1c1e2e1533b1997ba2eb6b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616077"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742895"
 ---
 # <a name="serialization"></a>Serialização
 Este tópico descreve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] recursos de serialização. Os parágrafos que seguem fornecem informações sobre como adicionar em tempo de design a serialização durante a geração de código e o comportamento de serialização de tempo de execução de classes de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
  Você pode adicionar código de serialização em tempo de design por qualquer um dos seguintes métodos:  
   
-- No [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], altere o **modo de serialização** propriedade **unidirecional**.  
+- Em Object Relational Designer, altere o **modo de serialização** propriedade **unidirecional**.  
   
 - Na linha de comando SQLMetal, adicione a **/serialization** opção. Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   

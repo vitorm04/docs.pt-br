@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 135ae21c2281c545aa701ac2a22a43cea63f5242
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b6ca8482de1eaf021d65f63a349f37cff15f8ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939705"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774702"
 ---
 # <a name="isymunmanagedencupdateinitializeforenc-method"></a>Método ISymUnmanagedENCUpdate::InitializeForEnc
 Permite que os limites de método a ser computado antes da primeira chamada para o [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT InitializeForEnc();  
 ```  
   

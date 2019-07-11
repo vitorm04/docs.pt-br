@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 726ac0e23f739f451e1a0ab66c4c36aa6edbe569
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9a36e094689696b746fcf7f10c282a1b0d9c570
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934089"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777829"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>Método ISymUnmanagedWriter::DefineDocument
 Define um documento de origem. GUIDs são fornecidos para linguagens mais conhecidas, fornecedores e tipos de documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT DefineDocument(  
     [in]  const WCHAR  *url,  
     [in]  const GUID   *language,  

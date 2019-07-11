@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63afd82ca88e1a7c61913ec7fcc4d77d03ae9927
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caec760cea52cb14d3fdb5d4cf0b59adcae5633b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777922"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782511"
 ---
 # <a name="imetadataimportfindmember-method"></a>Método IMetaDataImport::FindMember
 Obtém um ponteiro para o MemberDef token para o campo ou método que é incluído por especificado <xref:System.Type> e que tenha a assinatura de nome e os metadados especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT FindMember (  
    [in]  mdTypeDef         td,  
    [in]  LPCWSTR           szName,   

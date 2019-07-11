@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 490af9ca67b538e0093115a6b371b65d9788772f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e1a2358590b95b39b6495b74078f079c5b34876
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641353"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765683"
 ---
 # <a name="iclrruntimehostunloadappdomain-method"></a>Método ICLRRuntimeHost::UnloadAppDomain
 Descarrega o gerenciado <xref:System.AppDomain> que corresponde ao identificador numérico especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT UnloadAppDomain(  
     [in] DWORD dwAppDomainId  
     [in] BOOL  fWaitUntilDone  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf63b2641c4140b287a3932c2073b445211ad3aa
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: b1f5508e9ee41d8670b43d5b219846237e11fc8f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490375"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778150"
 ---
 # <a name="getfileversion-function"></a>Função GetFileVersion
 Obtém as informações de versão de runtime (CLR) de linguagem comum do arquivo especificado, usando o buffer especificado.  
@@ -30,7 +30,7 @@ Obtém as informações de versão de runtime (CLR) de linguagem comum do arquiv
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetFileVersion (  
     [in]  LPCWSTR      szFilename,   
     [in, out] LPWSTR   szBuffer,   

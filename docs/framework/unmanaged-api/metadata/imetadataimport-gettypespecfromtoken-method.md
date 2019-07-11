@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 362cbe9ff19e74bafc73fde857d231185179efbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7e060d2f72609b470dbd5060746a1458f5eed9d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777482"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782306"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>Método IMetaDataImport::GetTypeSpecFromToken
 Obtém a assinatura de metadados de binários da especificação do tipo representada pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetTypeSpecFromToken (   
    [in]  mdTypeSpec            typespec,   
    [out] PCCOR_SIGNATURE       *ppvSig,   

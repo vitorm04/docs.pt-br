@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697349"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751584"
 ---
 # <a name="identityattributeblob-structure"></a>Estrutura IDENTITY_ATTRIBUTE_BLOB
 Contém informações sobre um único atributo em um assembly e consiste em três `DWORD`s. Cada `DWORD` é um deslocamento em um buffer de caracteres produzido pela `CurrentIntoBuffer` método o [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
     DWORD  ofsNamespace;  
     DWORD  ofsName;  
@@ -57,7 +57,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 4. Chame o `CurrentIntoBuffer` método da `IEnumIDENTITY_ATTRIBUTE` interface. Esse método copia os atributos `Namespace`, `Name`, e `Value` no buffer de caractere. Os deslocamentos de três para essas cadeias de caracteres serão disponibilizadas no `IDENTITY_ATTRIBUTE_BLOB` estrutura.  
   
-```  
+```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
   
 #include "stdafx.h"  

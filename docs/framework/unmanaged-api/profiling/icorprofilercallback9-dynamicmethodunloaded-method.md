@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96cdfb79c1573648173305d6ee789aa8db030ff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 680bd351a64632e67432ee03352ee7caa8f4b2d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991998"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780383"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>Método ICorProfilerCallback9::DynamicMethodUnloaded
 [Com suporte no .NET Framework 4.7.2 e versões posteriores]  
@@ -24,7 +24,7 @@ Notifica o criador de perfil sempre que um método dinâmico é lixo coletado e,
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT DynamicMethodUnloaded(  
      [in]  FunctionID  functionId
 );  

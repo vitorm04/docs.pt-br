@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87ca5470fe5994d34d12a339c2d92a5f3917063d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 03bc5584d24efa790989f93426251f9f38e65904
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490230"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768528"
 ---
 # <a name="loadlibraryshim-function"></a>Função LoadLibraryShim
 Carrega uma versão especificada de uma DLL que está incluída no pacote redistribuível do .NET Framework.  
@@ -31,7 +31,7 @@ Carrega uma versão especificada de uma DLL que está incluída no pacote redist
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT LoadLibraryShim (  
     [in]  LPCWSTR  szDllName,  
     [in]  LPCWSTR  szVersion,  

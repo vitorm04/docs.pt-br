@@ -3,17 +3,17 @@ title: Visão geral do Windows Identity Foundation 4.5
 ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
-ms.openlocfilehash: d3076bbda47ac4aac0c8f0b9f9c69d17f370e765
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb896d2e702629e6339ee2b09ad6a1c96d64da33
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592408"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742423"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Visão geral do Windows Identity Foundation 4.5
 O Windows Identity Foundation 4.5 é um conjunto de classes do .NET Framework para implementar a identidade baseada em declarações em seus aplicativos. Com ele, você obterá mais facilmente os benefícios dos aplicativos e serviços com reconhecimento de declarações. O WIF 4.5 pode ser usado em qualquer aplicativo Web ou serviço Web que usa o .NET Framework versão 4.5 ou posterior. O WIF é apenas uma parte da família de softwares de identidade federada da Microsoft que implementa a visão compartilhada do setor com base em padrões abertos. Identidade federada compreende três componentes: [Serviços de Federação Active Directory Directory®](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [Windows Azure Access Control Services](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) e o WIF. Juntos, esses três componentes formam o núcleo da nova plataforma de identidade e acesso na nuvem baseada em declarações da Microsoft.  
   
- Para obter mais informações sobre o WIF, consulte o [site do Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=149009) no Security Developer Center no MSDN. Para obter uma introdução à criação de aplicativos usando o WIF, consulte [Programming Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=210158) de Vittorio Bertocci (publicado pela Microsoft Press).  
+ Para obter mais informações sobre o WIF, consulte o [site do Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=149009) no Security Developer Center no MSDN. Para obter uma introdução à criação de aplicativos usando o WIF, consulte [Programming Windows Identity Foundation](https://www.microsoftpressstore.com/store/programming-windows-identity-foundation-9780735627185) de Vittorio Bertocci (publicado pela Microsoft Press).  
   
 ## <a name="wif-45-features"></a>Recursos do WIF 4.5  
  O WIF 4.5 é um framework para criar aplicativos com reconhecimento de identidade. O framework abstrai os protocolos WS-Trust e WS-Federation e apresenta aos desenvolvedores as APIs para criar aplicativos com reconhecimento de declarações e, se necessário, os serviços de token de segurança (STSs). Os aplicativos podem usar o WIF para processar os tokens emitidos por STSs, como AD FS 2.0 e ACS, e tomam decisões baseadas em identidade no aplicativo Web ou no serviço Web.  

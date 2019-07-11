@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b45efb634ca9b88768d6e30884085f28ad17b7c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 84e4c70c973fb19be6800d2cbaf76ea137f58b28
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490593"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767958"
 ---
 # <a name="corbindtoruntimeex-function"></a>Função CorBindToRuntimeEx
 Habilita hosts não gerenciados para carregar o common language runtime (CLR) em um processo. O [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) e `CorBindToRuntimeEx` funções executam a mesma operação, mas o `CorBindToRuntimeEx` função permite que você defina sinalizadores para especificar o comportamento do CLR.  
@@ -46,7 +46,7 @@ Habilita hosts não gerenciados para carregar o common language runtime (CLR) em
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT CorBindToRuntimeEx (  
     [in]  LPCWSTR      pwszVersion,   
     [in]  LPCWSTR      pwszBuildFlavor,   

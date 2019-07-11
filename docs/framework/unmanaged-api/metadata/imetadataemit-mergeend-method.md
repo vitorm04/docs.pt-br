@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 99c1decf27685f027d6baa8412bf20fdf693d161
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6e512b7cd8869c6ede1472bbc5b6ec4c428b40ef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664016"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757649"
 ---
 # <a name="imetadataemitmergeend-method"></a>Método IMetaDataEmit::MergeEnd
 
@@ -30,7 +30,7 @@ Definir o escopo de mesclagens em atual todos os escopos de metadados especifica
 
 ## <a name="syntax"></a>Sintaxe
 
-```cpp
+```cppcpp
 HRESULT MergeEnd ();
 ```
 

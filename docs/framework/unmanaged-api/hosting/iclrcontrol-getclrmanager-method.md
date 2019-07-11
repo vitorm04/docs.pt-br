@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d97d75eb5fab396530a6f48314e96c8d47d06439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 86299a1f64120b3ca0ec858975b824b7e7288af9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656482"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773253"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>Método ICLRControl::GetCLRManager
 Obtém um ponteiro de interface para uma instância de qualquer um dos tipos de Gerenciador que o host pode usar para configurar o common language runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetCLRManager (  
     [in]  REFIID  riid,  
     [out] void  **ppObject  

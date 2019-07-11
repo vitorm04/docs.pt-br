@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b956ac1717ffcb73e819e985450249754f80af2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13f8a50f3fcbe9d6e7602ca3bbeb36587ecff32c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777436"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778791"
 ---
 # <a name="imetadataimportisglobal-method"></a>Método IMetaDataImport::IsGlobal
 Obtém um valor que indica se o campo, método ou tipo representado pelo token de metadados especificado tem escopo global.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT IsGlobal (  
    [in]  mdToken     pd,  
    [out] int         *pbGlobal  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663860"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780155"
 ---
 # <a name="animation-overview"></a>Visão geral da animação
 
@@ -242,7 +242,7 @@ A tabela a seguir mostra vários tipos de animação comuns e algumas propriedad
 
 Todos os tipos de animação herdam o <xref:System.Windows.Media.Animation.Timeline> classe; portanto, todas as animações são tipos especializados de linhas do tempo. Um <xref:System.Windows.Media.Animation.Timeline> define um segmento de tempo. Você pode especificar o *comportamentos de temporização* de uma linha do tempo: sua <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, quantas vezes ele é repetido e até mesmo rapidez o tempo avança nela.
 
-Como uma animação é um <xref:System.Windows.Media.Animation.Timeline>, ele também representa um segmento de tempo. Uma animação também calcula valores de saída enquanto Avançar pelo segmento de tempo especificado (ou <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Conforme a animação progride ou é "reproduzida", ela atualiza a propriedade com a qual está associada.
+Como uma animação é um <xref:System.Windows.Media.Animation.Timeline>, ele também representa um segmento de tempo. Uma animação também calcula valores de saída à medida que progride por meio do segmento de tempo especificado (ou <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Conforme a animação progride ou é "reproduzida", ela atualiza a propriedade com a qual está associada.
 
 Três propriedades de temporização frequentemente usadas são <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, e <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
 
@@ -372,7 +372,7 @@ As amostras a seguir podem ajudá-lo a começar a adicionar animações a seus a
 |[Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)|Descreve como o sistema de temporização usa a <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> classes, que permitem que você crie animações.|
 |[Dicas e truques de animação](animation-tips-and-tricks.md)|Lista dicas úteis para solucionar problemas com animações, por exemplo, desempenho.|
 |[Visão geral de animações personalizadas](custom-animations-overview.md)|Descreve como estender o sistema de animação com quadros chave, classes de animação ou retornos de chamada por quadro.|
-|Visão geral de animações de/para/por|Descreve como criar uma animação que faz a transição entre dois valores.|
+|[Visão geral de animações de/para/por](from-to-by-animations-overview.md)|Descreve como criar uma animação que faz a transição entre dois valores.|
 |[Visão geral das animações de quadro-chave](key-frame-animations-overview.md)|Descreve como criar uma animação com vários valores de destino, incluindo a capacidade de controlar o método de interpolação.|
 |[Funções de easing](easing-functions.md)|Explica como aplicar fórmulas matemáticas às suas animações para obter comportamento realista, assim como saltar.|
 |[Visão geral de animações de caminho](path-animations-overview.md)|Descreve como mover ou girar um objeto ao longo de um caminho complexo.|

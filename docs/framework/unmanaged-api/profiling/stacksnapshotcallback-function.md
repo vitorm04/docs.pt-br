@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 891423661f45a1167d53385e6e0306fb09487278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6140ecda1d12c26e1936daee4eaad11cbd9b6ba4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000409"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781234"
 ---
 # <a name="stacksnapshotcallback-function"></a>Função StackSnapshotCallback
 Fornece o criador de perfil com informações sobre cada quadro gerenciado e cada execução de quadros não gerenciados na pilha durante uma movimentação de pilha, que é iniciada com o [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT __stdcall StackSnapshotCallback (  
     [in] FunctionID funcId,  
     [in] UINT_PTR ip,  

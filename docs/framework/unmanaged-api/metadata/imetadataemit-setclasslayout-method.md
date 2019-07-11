@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28eb8124d201f474ac8029a4c2b8a908755d6f8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c455b5196ceafef924de59e9134b89ed62455520
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584666"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737218"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Método IMetaDataEmit::SetClassLayout
 Conclui o layout dos campos para uma classe que foi definido por uma chamada anterior ao [método DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT SetClassLayout (  
     [in]  mdTypeDef           td,   
     [in]  DWORD               dwPackSize,   

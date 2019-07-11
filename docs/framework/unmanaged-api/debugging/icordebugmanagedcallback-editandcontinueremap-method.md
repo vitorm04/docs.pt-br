@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bdb14e8c3a61a2b94cef778660eeb5c85c34df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 100688ece4ebb984d3d03823ab01bbaae7d395db
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988232"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760275"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>Método ICorDebugManagedCallback::EditAndContinueRemap
 Esse método foi substituído. Notifica o depurador que um evento de remapeamento foi enviado para o ambiente de desenvolvimento integrado (IDE).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT EditAndContinueRemap (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread *pThread,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08e4c395026a743323b40e5b1ace3db64e368078
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0b4074d9dab8ad46468930373ad44b0c72bd690
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967720"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763745"
 ---
 # <a name="ihostcrsttryenter-method"></a>Método IHostCrst::TryEnter
 Tentativas de entrar na seção crítica representada pelo atual [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT TryEnter (  
     [in]  DWORD  option,  
     [out] BOOL   *pbSucceeded  

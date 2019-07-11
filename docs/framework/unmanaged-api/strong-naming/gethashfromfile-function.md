@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5774b7cdcfedfc407b626ab5052f5b4a77461e9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38c663bc2db780c89ca666702534a75525ae189b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049382"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771961"
 ---
 # <a name="gethashfromfile-function"></a>Função GetHashFromFile
 Gera um hash sobre o conteúdo do arquivo especificado.  
@@ -30,7 +30,7 @@ Gera um hash sobre o conteúdo do arquivo especificado.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetHashFromFile (  
     [in]  LPCSTR   szFilePath,  
     [in, out] unsigned int   *piHashAlg,   

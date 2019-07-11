@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e32af790c755f65b5435455c326d011656da19ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 174e71fca8c59dbd4842d0fc0b84bb9a3d7b10df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597369"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763035"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>Método ICorProfilerCallback::AssemblyLoadFinished
 Notifica o criador de perfil um assembly terminou o carregamento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT AssemblyLoadFinished(  
     [in] AssemblyID assemblyId,  
     [in] HRESULT    hrStatus);  

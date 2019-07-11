@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81f4d5219865bf7f7c9e6d284d74d0c249729dfc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f05f349699b28262c1628cadc6e9a0fb0a3459c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040528"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783098"
 ---
 # <a name="spawnderivedclass-function"></a>Função SpawnDerivedClass
 Cria um objeto de classe derivada recentemente por meio de um objeto especificado.    
@@ -30,7 +30,7 @@ Cria um objeto de classe derivada recentemente por meio de um objeto especificad
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT SpawnDerivedClass (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 

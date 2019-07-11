@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46aa2ec5a282ef56f28d5fa0499571028e6602e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad87b6552df25926b5b4184b7884c1d444c4f1be
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987021"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769075"
 ---
 # <a name="icordebugthreadgetprocess-method"></a>Método ICorDebugThread::GetProcess
 Obtém um ponteiro de interface para o processo do qual este ICorDebugThread faz parte.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetProcess (  
     [out] ICorDebugProcess   **ppProcess  
 );  
