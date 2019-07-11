@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12a114ea65aca544d653704cdfb01ed15d19c581
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83dac3b9b2ac396cdef19695fcce0f7e20485a50
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609263"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740397"
 ---
 # <a name="cordebugblockingobject-structure"></a>Estrutura CorDebugBlockingObject
 Define um objeto que está bloqueando um thread e o motivo específico que o thread está bloqueado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 Typedef struct CorDebugBlockingObject  
 {  
 ICorDebugValue pBlockingObject;  

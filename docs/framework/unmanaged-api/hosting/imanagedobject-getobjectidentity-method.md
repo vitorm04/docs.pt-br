@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d014d2900ea790f84331ed933143513ae9e63f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 291246169a5cc2c95b117bc55bc269791885b2ea
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943501"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749108"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>Método IManagedObject::GetObjectIdentity
 Obtém a identidade do objeto gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetObjectIdentity (  
     [out] BSTR*   pBSTRGUID,  
     [out] int*    AppDomainID,  

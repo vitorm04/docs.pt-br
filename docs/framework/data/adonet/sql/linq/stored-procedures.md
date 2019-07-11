@@ -2,17 +2,17 @@
 title: Procedimentos armazenados
 ms.date: 03/30/2017
 ms.assetid: 4d23dd7a-a85f-44ff-a717-af7d0950c0fc
-ms.openlocfilehash: 9201965192f300de62679c1e5be75cf98a24e700
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b06dc19aa8b767da6a1c6b00bd5b465465db6060
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917937"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742840"
 ---
 # <a name="stored-procedures"></a>Procedimentos armazenados
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa métodos no seu modelo de objeto para representar procedimentos armazenados no banco de dados. Você designa métodos como procedimentos armazenados aplicando o atributo <xref:System.Data.Linq.Mapping.FunctionAttribute> e, quando for necessário, o atributo <xref:System.Data.Linq.Mapping.ParameterAttribute>. Para obter mais informações, consulte [o LINQ no modelo de objeto do SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
   
- Os desenvolvedores que usam o Visual Studio normalmente usaria o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para mapear procedimentos armazenados. Os tópicos nesta seção de apresentação como formar e chamar esses métodos em seu aplicativo se você escreve o código que você mesmo.  
+ Os desenvolvedores que usam o Visual Studio normalmente usaria o Object Relational Designer para mapear procedimentos armazenados. Os tópicos nesta seção de apresentação como formar e chamar esses métodos em seu aplicativo se você escreve o código que você mesmo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Como: Retornar conjuntos de linhas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 515d434e8d8f1c99cf5052ef9a2f1e098f6021b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9920627ed193e9741d65fddfc54f325cb1d3758c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915250"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761054"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>Método ICorDebugManagedCallback2::FunctionRemapComplete
 Notifica o depurador para que a execução de código mudou para uma nova versão de uma função editada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT FunctionRemapComplete (  
     [in] ICorDebugAppDomain   *pAppDomain,  
     [in] ICorDebugThread      *pThread,  

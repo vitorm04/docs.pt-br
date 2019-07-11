@@ -2,12 +2,12 @@
 title: SQL Server Compact e LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: a0cb45b31f7134264068297f54013f49b35f669d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5fa8f8ba2b0c5bdb92ad507bd48839a26837ba41
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651195"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742870"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact e LINQ to SQL
 SQL Server Compact é o banco de dados padrão instalado com o Visual Studio. Para obter mais informações, consulte [usando o SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110)).  
@@ -27,7 +27,7 @@ SQL Server Compact é o banco de dados padrão instalado com o Visual Studio. Pa
   
 - O tempo de execução do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e a ferramenta de linha de comando SQLMetal dão suporte ao SQL Server Compact.  
   
-- O [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] não dá suporte ao SQL Server Compact.  
+- O Object Relational Designer não suporta o SQL Server Compact.  
   
 ## <a name="feature-set"></a>Conjunto de recursos  
  O conjunto de recursos do SQL Server Compact é muito mais simples do que o conjunto de recursos do SQL Server das seguintes maneiras que podem afetar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplicativos:  

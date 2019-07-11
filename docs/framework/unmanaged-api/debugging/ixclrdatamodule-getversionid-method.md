@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6ec18bcf079c7687df4ac9b7c5db23b84383c517
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5bd84f784ea92e7b2ce2465e64972dc84e16a16c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632305"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744696"
 ---
 # <a name="ixclrdatamodulegetversionid-method"></a>Método IXCLRDataModule::GetVersionId
 
@@ -30,7 +30,7 @@ Obtém o identificador de versão do módulo.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 HRESULT GetVersionId(
     [out] GUID* vid
 );

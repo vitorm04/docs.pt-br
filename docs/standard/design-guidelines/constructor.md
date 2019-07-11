@@ -9,23 +9,23 @@ helpviewer_keywords:
 - type constructors
 - virtual members
 - constructors, types
-- default constructors
+- parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: KrzysztofCwalina
-ms.openlocfilehash: 68192e3b75a120c73b82c34005d4dee650540bf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 074aa391b71257584a01171e95da7472354cdc2c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925457"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746783"
 ---
 # <a name="constructor-design"></a>Design do construtor
 Há dois tipos dos construtores: construtores e construtores de instância de tipo.  
   
  Construtores de tipo são estáticos e são executados pelo CLR, antes do tipo é usado. Construtores de instância executados quando uma instância de um tipo é criada.  
   
- Construtores de tipo não podem receber quaisquer parâmetros. Construtores de instância podem. Construtores de instância que não usam todos os parâmetros são chamados de construtores padrão.  
+ Construtores de tipo não podem receber quaisquer parâmetros. Construtores de instância podem. Construtores de instância que não usam todos os parâmetros são chamados de construtores sem parâmetros.  
   
  Construtores são a maneira mais natural para criar instâncias de um tipo. A maioria dos desenvolvedores pesquisará e tentar usar um construtor antes que eles considerarem maneiras alternativas de criação de instâncias (como métodos de fábrica).  
   
@@ -49,15 +49,15 @@ Há dois tipos dos construtores: construtores e construtores de instância de ti
   
  **✓ DO** lançar exceções a partir de construtores de instância, se apropriado.  
   
- **✓ DO** declarar explicitamente o construtor padrão público em classes, se tal construtor for necessária.  
+ **FAZER ✓** declarar explicitamente o construtor público sem parâmetros em classes, se tal construtor for necessária.  
   
- Se você não declarar construtores explicitamente em um tipo, muitas linguagens (como c#) adiciona automaticamente um construtor padrão público. (As classes abstratas obterá um construtor protegido.)  
+ Se você não declarar explicitamente os construtores em um tipo, muitas linguagens (como C#) adiciona automaticamente um construtor público sem parâmetros. (As classes abstratas obterá um construtor protegido.)  
   
- Adicionando um construtor parametrizado a uma classe impede que o compilador adicione o construtor padrão. Com frequência isso causa alterações significativas acidental.  
+ Adicionando um construtor parametrizado a uma classe impede que o compilador adicione o construtor sem parâmetros. Com frequência isso causa alterações significativas acidental.  
   
- **X AVOID** explicitamente definir construtores padrão em estruturas.  
+ **X Evite** definindo explicitamente construtores sem parâmetros em structs.  
   
- Isso torna a criação de matriz rápida, porque se o construtor padrão não for definido, ele não tem que ser executado em cada slot na matriz. Observe que muitos compiladores, incluindo c#, não permitem structs ter construtores sem parâmetros por esse motivo.  
+ Isso torna a criação de matriz rápida, porque se o construtor sem parâmetros não estiver definido, ele não tem que ser executado em cada slot na matriz. Observe que muitos compiladores, incluindo c#, não permitem structs ter construtores sem parâmetros por esse motivo.  
   
  **X AVOID** chamando membros virtuais em um objeto dentro de seu construtor.  
   

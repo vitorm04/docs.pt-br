@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 078dfd7162c250f0279b8bc372aeb39662aa0119
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da5c5a12df5689f113857045ba4bcda696bda8f5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779880"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756720"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>Método ICorDebugHeapValue2::CreateHandle
 Cria um identificador do tipo especificado para o valor de heap representado por esse objeto ICorDebugHeapValue2.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT CreateHandle (  
     [in] CorDebugHandleType      type,   
     [out] ICorDebugHandleValue   **ppHandle  
