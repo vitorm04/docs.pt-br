@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 659497543d40c8eda18b55b4d98feac976c5abf5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664056"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860239"
 ---
 # <a name="custom-dependency-properties"></a>Propriedades de dependência personalizada
 
@@ -87,7 +87,7 @@ A definição de uma propriedade de dependência consiste em quatro conceitos di
 
 ### <a name="registering-the-property-with-the-property-system"></a>Registrando a propriedade no sistema de propriedades
 
-Para que a propriedade seja uma propriedade de dependência, é necessário registrá-la em uma tabela mantida pelo sistema de propriedades e fornecer a ela um identificador exclusivo, que é usado como o qualificador para operações posteriores do sistema de propriedades. Essas operações podem ser operações internas ou o próprio código chamando as [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] do sistema de propriedades. Para registrar a propriedade, você chama o <xref:System.Windows.DependencyProperty.Register%2A> método dentro do corpo de sua classe (dentro da classe, mas fora das definições de membro). O campo de identificador também é fornecido pelo <xref:System.Windows.DependencyProperty.Register%2A> chamada de método, como o valor retornado. O motivo pelo qual que o <xref:System.Windows.DependencyProperty.Register%2A> chamada é feita fora do outro membro definições é porque você usa esse valor de retorno para atribuir e criar um `public` `static` `readonly` campo do tipo <xref:System.Windows.DependencyProperty> como parte de sua classe. Esse campo se torna o identificador da propriedade de dependência.
+Para que a propriedade seja uma propriedade de dependência, é necessário registrá-la em uma tabela mantida pelo sistema de propriedades e fornecer a ela um identificador exclusivo, que é usado como o qualificador para operações posteriores do sistema de propriedades. Essas operações podem ser operações internas, ou seu próprio código chamando as APIs do sistema de propriedade. Para registrar a propriedade, você chama o <xref:System.Windows.DependencyProperty.Register%2A> método dentro do corpo de sua classe (dentro da classe, mas fora das definições de membro). O campo de identificador também é fornecido pelo <xref:System.Windows.DependencyProperty.Register%2A> chamada de método, como o valor retornado. O motivo pelo qual que o <xref:System.Windows.DependencyProperty.Register%2A> chamada é feita fora do outro membro definições é porque você usa esse valor de retorno para atribuir e criar um `public` `static` `readonly` campo do tipo <xref:System.Windows.DependencyProperty> como parte de sua classe. Esse campo se torna o identificador da propriedade de dependência.
 
 [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
@@ -174,7 +174,7 @@ As propriedades de dependência do tipo de coleção apresentam algumas outras q
 
 ## <a name="dependency-property-security-considerations"></a>Considerações sobre segurança das propriedades de dependência
 
-As propriedades de dependência devem ser declaradas como propriedades públicas. Os campos do identificador das propriedades de dependência devem ser declarados como campos estáticos públicos. Mesmo que você tente declarar outros níveis de acesso (como os protegidos), uma propriedade de dependência sempre pode ser acessada por meio do identificador em combinação com as [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] do sistema de propriedades. Até mesmo um campo de identificador protegido é potencialmente acessível devido a determinação de emissão de relatórios ou o valor de metadados [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] que fazem parte do sistema de propriedades, tais como <xref:System.Windows.LocalValueEnumerator>. Para obter mais informações, consulte [Segurança das propriedades de dependência](dependency-property-security.md).
+As propriedades de dependência devem ser declaradas como propriedades públicas. Os campos do identificador das propriedades de dependência devem ser declarados como campos estáticos públicos. Mesmo que você tente declarar outros níveis de acesso (tal como protegidos), uma propriedade de dependência sempre pode ser acessada por meio do identificador em combinação com as APIs do sistema de propriedade. Até mesmo um campo de identificador protegido é potencialmente acessível devido a metadados reporting ou determinação de valor APIs que fazem parte do sistema de propriedades, tais como <xref:System.Windows.LocalValueEnumerator>. Para obter mais informações, consulte [Segurança das propriedades de dependência](dependency-property-security.md).
 
 <a name="DPCtor"></a>
 

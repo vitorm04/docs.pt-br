@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 5835cfb633451025ed32c2a26228e33a1b24473e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610473"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857059"
 ---
 # <a name="input-overview"></a>Visão geral da entrada
 <a name="introduction"></a> O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] subsistema fornece um poderoso [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para obter a entrada de uma variedade de dispositivos, incluindo o mouse, teclado, toque e caneta. Este tópico descreve os serviços fornecidos pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e explica a arquitetura dos sistemas de entrada.
@@ -58,7 +58,7 @@ ms.locfileid: "67610473"
  O <xref:System.Windows.Input.Mouse> e <xref:System.Windows.Input.Keyboard> classes são abordadas em mais detalhes nesta visão geral.
 
 ### <a name="stylus-input"></a>Entrada de caneta
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem suporte integrado para o <xref:System.Windows.Input.Stylus>.  O <xref:System.Windows.Input.Stylus> é uma entrada de caneta popularizada pelo [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos podem tratar a caneta como um mouse com o mouse, API, mas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também expõe uma abstração de dispositivo de caneta que usam um modelo semelhante ao teclado e mouse.  Todas as [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] relacionadas à caneta contêm a palavra "Caneta".
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem suporte integrado para o <xref:System.Windows.Input.Stylus>.  O <xref:System.Windows.Input.Stylus> é uma entrada de caneta popularizada pelo [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos podem tratar a caneta como um mouse com o mouse, API, mas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também expõe uma abstração de dispositivo de caneta que usam um modelo semelhante ao teclado e mouse.  Todas as APIs relacionadas à caneta contêm a palavra "Caneta".
 
  Já que a caneta pode atuar como um mouse, aplicativos que dão suporte apenas à entrada de mouse ainda podem obter algum nível de suporte à caneta automaticamente. Quando a caneta é usada desse modo, o aplicativo tem a oportunidade de manipular o evento de caneta apropriado e, em seguida, manipular o evento de mouse correspondente. Além disso, os serviços de alto nível, por exemplo, a entrada de tinta, também estão disponíveis por meio da abstração do dispositivo de caneta.  Para obter mais informações sobre a tinta como entrada, consulte [Introdução à tinta](getting-started-with-ink.md).
 
@@ -354,7 +354,7 @@ ms.locfileid: "67610473"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>Captura do mouse
- Dispositivos de mouse mantêm especificamente uma característica modal conhecida como captura do mouse. A captura do mouse é usada para manter um estado de entrada de transição quando uma operação do tipo "arrastar e soltar" é iniciada, de modo que outras operações que envolvem a posição nominal do ponteiro do mouse na tela não necessariamente ocorrem. Durante a ação de arrastar, o usuário não poderá clicar sem anular a ação do tipo "arrastar e soltar", o que torna a maioria das indicações mouseover inadequadas; enquanto isso, a captura do mouse é mantida pela origem da ação de arrastar. O sistema de entrada expõe [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], que pode determinar o estado de captura do mouse, bem como [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], que pode forçar a captura do mouse em um elemento específico ou limpar o estado de captura do mouse. Para obter mais informações sobre operações do tipo "arrastar e soltar", consulte [Visão geral de arrastar e soltar](drag-and-drop-overview.md).
+ Dispositivos de mouse mantêm especificamente uma característica modal conhecida como captura do mouse. A captura do mouse é usada para manter um estado de entrada de transição quando uma operação do tipo "arrastar e soltar" é iniciada, de modo que outras operações que envolvem a posição nominal do ponteiro do mouse na tela não necessariamente ocorrem. Durante a ação de arrastar, o usuário não poderá clicar sem anular a ação do tipo "arrastar e soltar", o que torna a maioria das indicações mouseover inadequadas; enquanto isso, a captura do mouse é mantida pela origem da ação de arrastar. O sistema de entrada expõe APIs que pode determinar o estado de captura do mouse, bem como as APIs que pode forçar a captura do mouse para um elemento específico ou limpar o estado de captura do mouse. Para obter mais informações sobre operações do tipo "arrastar e soltar", consulte [Visão geral de arrastar e soltar](drag-and-drop-overview.md).
 
 <a name="commands"></a>
 ## <a name="commands"></a>Comandos

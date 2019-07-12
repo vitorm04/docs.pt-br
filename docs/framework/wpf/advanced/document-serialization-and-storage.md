@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: a1a3d422ea4d9766e6a9f8dda079c3739be4a626
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: b60b3964ff8e1b1f05b6c0820c63ec06d9ea0f4c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663672"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859650"
 ---
 # <a name="document-serialization-and-storage"></a>Serialização e armazenamento do documento
 
@@ -23,7 +23,7 @@ Microsoft .NET Framework fornece um ambiente potente para criar e exibir documen
 
 Idealmente, o processo de serialização e desserialização de um documento da e de volta para a memória é transparente para o aplicativo.  O aplicativo chama um método de "gravação" do serializador para salvar o documento, enquanto um método de "leitura" do desserializador acessa o armazenamento de dados e recria a instância original em memória.  O formato específico que os dados são armazenados, geralmente, não é uma preocupação do aplicativo, desde que o processo de serializar e desserializar recrie o documento em sua forma original.
 
-Geralmente, os aplicativos fornecem várias opções de serialização que permitem ao usuário salvar documentos em mídias diferentes ou em um formato diferente.  Por exemplo, um aplicativo pode oferecer opções "Salvar como" para armazenar um documento em um arquivo de disco, banco de dados ou serviço Web.  Da mesma forma, diferentes serializadores poderiam armazenar o documento em diferentes formatos, como HTML, RTF, XML, XPS ou em um formato de terceiros.  Para o aplicativo, a serialização define uma interface que isola os detalhes da mídia de armazenamento dentro da implementação de cada serializador específico.  Além dos benefícios de encapsular detalhes de armazenamento, o .NET Framework <xref:System.Windows.Documents.Serialization> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] fornecer vários outros recursos importantes.
+Geralmente, os aplicativos fornecem várias opções de serialização que permitem ao usuário salvar documentos em mídias diferentes ou em um formato diferente.  Por exemplo, um aplicativo pode oferecer opções "Salvar como" para armazenar um documento em um arquivo de disco, banco de dados ou serviço Web.  Da mesma forma, diferentes serializadores poderiam armazenar o documento em diferentes formatos, como HTML, RTF, XML, XPS ou em um formato de terceiros.  Para o aplicativo, a serialização define uma interface que isola os detalhes da mídia de armazenamento dentro da implementação de cada serializador específico.  Além dos benefícios de encapsular detalhes de armazenamento, o .NET Framework <xref:System.Windows.Documents.Serialization> APIs fornecem vários outros recursos importantes.
 
 ### <a name="features-of-net-framework-30-document-serializers"></a>Recursos dos serializadores de documento do .NET Framework 3.0
 

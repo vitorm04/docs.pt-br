@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: b83d9c972dbdadb721bae8b7d616c94a0c1c831f
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 020ea101ae38b9be854398a55ddd31e67b9fda35
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804740"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859664"
 ---
 # <a name="documents-in-wpf"></a>Documentos no WPF
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferece uma ampla gama de recursos de documento que permitem a criação de conteúdo de alta fidelidade, projetado para ser mais facilmente acessado e lido que nas gerações anteriores do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Além das capacidades e da qualidade aprimoradas, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também oferece serviços integrados para exibição, empacotamento e segurança de documentos. Este tópico fornece uma introdução aos tipos de documento e ao empacotamento de documento do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -59,7 +59,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Empacotamento de documento  
- O <xref:System.IO.Packaging> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] fornecem um meio eficaz para organizar dados de aplicativo, o conteúdo do documento e recursos relacionados em um único contêiner que é simples de acessar, portátil e fácil de distribuir. Um arquivo ZIP é um exemplo de um <xref:System.IO.Packaging.Package> tipo capaz de manter vários objetos como uma única unidade. O empacotamento [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] fornecer um padrão <xref:System.IO.Packaging.ZipPackage> implementação, criada usando um padrão Open Packaging Conventions com arquitetura de arquivos XML e ZIP. As [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] de empacotamento do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] simplificam a criação de pacotes e repositório e acesso de objetos dentro deles. Um objeto armazenado em uma <xref:System.IO.Packaging.Package> é conhecido como um <xref:System.IO.Packaging.PackagePart> ("parte"). Os pacotes também podem incluir certificados digitais assinados que podem ser usados para identificar o originador de uma parte e validar que o conteúdo de um pacote não foi modificado.  Pacotes também incluem uma <xref:System.IO.Packaging.PackageRelationship> recurso que permite que informações adicionais sejam adicionados a um pacote ou associada a partes específicas sem modificar de fato o conteúdo das partes existentes.  Os serviços de pacotes também dão suporte ao [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)].  
+ O <xref:System.IO.Packaging> APIs fornecem um meio eficaz para organizar dados de aplicativo, o conteúdo do documento e recursos relacionados em um único contêiner que é simples de acessar, portátil e fácil de distribuir. Um arquivo ZIP é um exemplo de um <xref:System.IO.Packaging.Package> tipo capaz de manter vários objetos como uma única unidade. As APIs de empacotamento fornecem um padrão <xref:System.IO.Packaging.ZipPackage> implementação, criada usando um padrão Open Packaging Conventions com arquitetura de arquivos XML e ZIP. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] empacotamento APIs tornam simples para criar pacotes e para armazenar e acessar objetos dentro deles. Um objeto armazenado em uma <xref:System.IO.Packaging.Package> é conhecido como um <xref:System.IO.Packaging.PackagePart> ("parte"). Os pacotes também podem incluir certificados digitais assinados que podem ser usados para identificar o originador de uma parte e validar que o conteúdo de um pacote não foi modificado.  Pacotes também incluem uma <xref:System.IO.Packaging.PackageRelationship> recurso que permite que informações adicionais sejam adicionados a um pacote ou associada a partes específicas sem modificar de fato o conteúdo das partes existentes.  Os serviços de pacotes também dão suporte ao [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)].  
   
  A arquitetura de pacote do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] serve como base para várias tecnologias-chave:  
   
@@ -71,7 +71,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  Com base em APIs de empacotamento, um <xref:System.Windows.Xps.Packaging.XpsDocument> foi projetado especificamente para armazenar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] documentos de conteúdo estático. Uma <xref:System.Windows.Xps.Packaging.XpsDocument> é um documento autocontido que pode ser aberto em um visualizador, exibido em um <xref:System.Windows.Controls.DocumentViewer> controle, roteado para um spool de impressão ou enviado diretamente para um [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-impressora compatível.  
   
- As seções a seguir fornecem informações adicionais sobre o <xref:System.IO.Packaging.Package> e <xref:System.Windows.Xps.Packaging.XpsDocument> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] fornecido com [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ As seções a seguir fornecem informações adicionais sobre o <xref:System.IO.Packaging.Package> e <xref:System.Windows.Xps.Packaging.XpsDocument> as APIs fornecidas com [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>Componentes do pacote  

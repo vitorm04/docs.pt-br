@@ -11,19 +11,19 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: 3876fd9c32d486b8ebecc9ee2428486a687a1624
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cb4d372d3ac228f29c6fa45f124796e5dfb6709
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608307"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859892"
 ---
 # <a name="andalso-operator-visual-basic"></a>Operador AndAlso (Visual Basic)
 Executa uma conjunção lógica em duas expressões.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb
 result = expression1 AndAlso expression2  
 ```  
   
@@ -47,7 +47,8 @@ result = expression1 AndAlso expression2
 |`False`|(não avaliado)|`False`|  
   
 ## <a name="data-types"></a>Tipos de Dados  
- O `AndAlso` operador está definido apenas para o [tipo de dados Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Cada operando conforme necessário para o Visual Basic converte `Boolean` e executa a operação completamente em `Boolean`. Se você atribuir o resultado a um tipo numérico, Visual Basic converte-o de `Boolean` a esse tipo. Isso pode produzir um comportamento inesperado. Por exemplo, `5 AndAlso 12` resulta em `–1` quando convertido em `Integer`.  
+ O `AndAlso` operador está definido apenas para o [tipo de dados Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic converte cada operando conforme necessário para `Boolean` antes de avaliar a expressão. Se você atribuir o resultado a um tipo numérico, Visual Basic converte-o de `Boolean` a esse tipo, de modo que `False` se torna `0` e `True` se torna `-1`.
+Para obter mais informações, consulte [conversões de tipo booliano](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>Sobrecarga  
  O [operador And](../../../visual-basic/language-reference/operators/and-operator.md) e o [Operador IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md) pode ser *sobrecarregado*, que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo que classe ou estrutura. Sobrecarregando o `And` e `IsFalse` operadores afeta o comportamento do `AndAlso` operador. Se seu código usa `AndAlso` em uma classe ou estrutura que sobrecarrega `And` e `IsFalse`, certifique-se de que você entende seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

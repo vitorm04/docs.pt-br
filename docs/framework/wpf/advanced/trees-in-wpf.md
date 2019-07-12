@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14ab9b5b36eee607679ee95423c2af912ed02310
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774992"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860011"
 ---
 # <a name="trees-in-wpf"></a>Árvores no WPF
 Em muitas tecnologias, elementos e componentes são organizados em uma estrutura de árvore em que os desenvolvedores manipulam diretamente os nós de objeto na árvore para afetar a renderização ou o comportamento de um aplicativo. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também usa várias metáforas de estrutura de árvore para definir relações entre elementos do programa. Em geral, os desenvolvedores de WPF conseguem criar um aplicativo em código ou definir partes do aplicativo em XAML enquanto pensam conceitualmente sobre a metáfora da árvore de objeto, mas chamarão uma API específica ou usarão marcação específica para fazer isso em vez de alguma API geral de manipulação de árvore de objeto, como a que poderia ser usada em XML DOM. Duas classes auxiliares que fornecem uma exibição da metáfora de árvore, o WPF expõe <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>. Os termos “árvore visual” e “árvore lógica” também são utilizados na documentação do WPF porque essas mesmas árvores são úteis para entender o comportamento de alguns recursos principais do WPF. Este tópico define o que a árvore visual e a árvore lógica representam, discute como tais árvores se relacionam com um conceito de árvore de objeto geral e apresenta <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -51,7 +51,7 @@ Em muitas tecnologias, elementos e componentes são organizados em uma estrutura
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>Substituindo a árvore lógica  
- Autores de controle avançados podem substituir a árvore lógica mediante a substituição de vários [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], que definem como um objeto geral ou modelo de conteúdo adiciona ou remove objetos dentro da árvore lógica. Para ver um exemplo de como substituir a árvore lógica, consulte [Substituir a árvore lógica](how-to-override-the-logical-tree.md).  
+ Autores de controle avançados podem substituir a árvore lógica, substituindo várias APIs que definem como um objeto geral ou modelo de conteúdo adiciona ou remove objetos dentro da árvore lógica. Para ver um exemplo de como substituir a árvore lógica, consulte [Substituir a árvore lógica](how-to-override-the-logical-tree.md).  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>Herança do valor de propriedade  

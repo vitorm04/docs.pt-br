@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c5547955a1d5d20938e3896406631da0fae0c5d
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981910"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860043"
 ---
 # <a name="property-value-inheritance"></a>Herança do valor de propriedade
 A herança do valor da propriedade é um recurso do sistema de propriedade [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. A herança do valor da propriedade permite que elementos filho em uma árvore de elementos obtenham o valor de uma propriedade específica dos elementos pai, herdando esse valor como ele foi definido em qualquer lugar do elemento pai mais próximo. O elemento pai também pode ter obtido seu valor por meio da herança do valor da propriedade, de modo que o sistema potencialmente é recursivo até a raiz da página. A herança do valor da propriedade não é o comportamento padrão do sistema de propriedade; uma propriedade deve ser estabelecida com uma configuração específica de metadados para fazer com que essa propriedade inicie a herança do valor da propriedade nos elementos filho.  
@@ -22,7 +22,7 @@ A herança do valor da propriedade é um recurso do sistema de propriedade [!INC
   
 <a name="Practical_Applications_of_Property_Value_Inheritance"></a>   
 ## <a name="practical-applications-of-property-value-inheritance"></a>Aplicativos práticos de herança do valor da propriedade  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] incluem várias propriedades que têm a herança de propriedades habilitada. Normalmente, o cenário é que eles envolvem uma propriedade em que é adequado que a propriedade seja definida apenas uma vez por página, mas em que essa propriedade também é membro de uma das classes de elementos base e, portanto, também existiria na maioria dos elementos filho. Por exemplo, o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade controla a direção na qual o conteúdo passado deve ser apresentada e organizada na página. Geralmente, você deseja que o conceito de fluxo de texto seja manipulado consistentemente em todos os elementos filho. Se a direção do fluxo fosse, por algum motivo, redefinida em algum nível da árvore de elementos por uma ação do usuário ou do ambiente, ela normalmente seria redefinida em todos os casos. Quando o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade é feita para herdar, o valor só precisa ser definido ou redefinido uma vez no nível na árvore de elementos que abrange as necessidades de apresentação de cada página no aplicativo. Até mesmo o valor padrão inicial herdará dessa forma. O modelo de herança do valor da propriedade ainda permite que elementos individuais redefinam o valor para os raros casos em que ter uma combinação de direções de fluxo é intencional.  
+ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] APIs incluem várias propriedades que têm a herança de propriedades habilitada. Normalmente, o cenário é que eles envolvem uma propriedade em que é adequado que a propriedade seja definida apenas uma vez por página, mas em que essa propriedade também é membro de uma das classes de elementos base e, portanto, também existiria na maioria dos elementos filho. Por exemplo, o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade controla a direção na qual o conteúdo passado deve ser apresentada e organizada na página. Geralmente, você deseja que o conceito de fluxo de texto seja manipulado consistentemente em todos os elementos filho. Se a direção do fluxo fosse, por algum motivo, redefinida em algum nível da árvore de elementos por uma ação do usuário ou do ambiente, ela normalmente seria redefinida em todos os casos. Quando o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade é feita para herdar, o valor só precisa ser definido ou redefinido uma vez no nível na árvore de elementos que abrange as necessidades de apresentação de cada página no aplicativo. Até mesmo o valor padrão inicial herdará dessa forma. O modelo de herança do valor da propriedade ainda permite que elementos individuais redefinam o valor para os raros casos em que ter uma combinação de direções de fluxo é intencional.  
   
 <a name="Making_a_Custom_Property_Inheritable"></a>   
 ## <a name="making-a-custom-property-inheritable"></a>Tornando uma propriedade personalizada herdável  

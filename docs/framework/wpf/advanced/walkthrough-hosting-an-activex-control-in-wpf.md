@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778385"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859944"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Passo a passo: hospedar um controle ActiveX no WPF
-Para permitir uma melhor interação com navegadores, você pode usar controles [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] nos seus aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essa instrução passo a passo demonstra como você pode hospedar o [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] como um controle em uma página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Para permitir melhor interação com navegadores, você pode usar controles ActiveX da Microsoft em seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-com base em aplicativo. Essa instrução passo a passo demonstra como você pode hospedar o [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] como um controle em uma página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
  As tarefas ilustradas neste passo a passo incluem:
 
@@ -26,7 +26,7 @@ Para permitir uma melhor interação com navegadores, você pode usar controles 
 
 - Hospedando o controle ActiveX em uma página do WPF.
 
- Quando concluir este passo a passo, você entenderá como usar controles [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] no seu aplicativo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+ Quando você concluiu este passo a passo, você entenderá como usar controles ActiveX da Microsoft em seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-com base em aplicativo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
@@ -60,7 +60,7 @@ Para permitir uma melhor interação com navegadores, você pode usar controles 
 9. Se for solicitado que você renomeie todas as referências, clique em **Sim**.
 
 ## <a name="creating-the-activex-control"></a>Criando o controle ActiveX
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] gera automaticamente um <xref:System.Windows.Forms.AxHost> classe wrapper para um [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controlar quando o controle é adicionado a uma superfície de design. O procedimento a seguir cria um assembly gerenciado chamado AxInterop.WMPLib.dll.
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] gera automaticamente um <xref:System.Windows.Forms.AxHost> classe wrapper para um controle ActiveX da Microsoft quando o controle é adicionado a uma superfície de design. O procedimento a seguir cria um assembly gerenciado chamado AxInterop.WMPLib.dll.
 
 ### <a name="to-create-the-activex-control"></a>Criar o controle ActiveX
 
@@ -76,7 +76,7 @@ Para permitir uma melhor interação com navegadores, você pode usar controles 
 
 ### <a name="to-host-the-activex-control"></a>Hospedar o controle ActiveX
 
-1. No projeto HostingAxInWpf, adicione uma referência ao assembly de interoperabilidade [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] gerado.
+1. No projeto HostingAxInWpf, adicione uma referência ao assembly de interoperabilidade ActiveX gerado.
 
      Esse assembly é chamado AxInterop.WMPLib.dll e foi adicionado à pasta Debug do projeto WmpAxLib quando você importou o controle do Windows Media Player.
 

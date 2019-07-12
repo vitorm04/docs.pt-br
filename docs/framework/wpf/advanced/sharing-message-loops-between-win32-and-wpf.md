@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611721"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860016"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Compartilhando loops de mensagem entre Win32 e WPF
 Este tópico descreve como implementar um loop de mensagem para interoperação com [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], usando existente de exposição de loop em mensagem <xref:System.Windows.Threading.Dispatcher> ou criando um loop de mensagem separado no [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] lado de seu código de interoperação.  
@@ -20,7 +20,7 @@ Este tópico descreve como implementar um loop de mensagem para interoperação 
 ## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher e o loop de mensagem  
  Um cenário comum para suporte de eventos de teclado e interoperação é implementar <xref:System.Windows.Interop.IKeyboardInputSink>, ou subclasses de classes que já implementam <xref:System.Windows.Interop.IKeyboardInputSink>, como <xref:System.Windows.Interop.HwndSource> ou <xref:System.Windows.Interop.HwndHost>. No entanto, o suporte ao coletor de teclado não trata de todas as necessidades de loop de mensagem possíveis que você pode ter ao enviar e receber mensagens entre os limites de interoperação. Para ajudar a formalizar uma arquitetura de loop de mensagem do aplicativo, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece o <xref:System.Windows.Interop.ComponentDispatcher> classe, que define um protocolo simples para um loop de mensagem a seguir.  
   
- <xref:System.Windows.Interop.ComponentDispatcher> é uma classe estática que expõe diversos membros. O escopo de cada método é unido implicitamente ao thread de chamada. Um loop de mensagem precisa chamar algumas desses [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] em momentos críticos (conforme definido na próxima seção).  
+ <xref:System.Windows.Interop.ComponentDispatcher> é uma classe estática que expõe diversos membros. O escopo de cada método é unido implicitamente ao thread de chamada. Um loop de mensagem precisa chamar algumas dessas APIs em momentos críticos (conforme definido na próxima seção).  
   
  <xref:System.Windows.Interop.ComponentDispatcher> Fornece eventos que outros componentes (como o coletor de teclado) podem aguardar. O <xref:System.Windows.Threading.Dispatcher> classe chama todos os <xref:System.Windows.Interop.ComponentDispatcher> métodos em uma sequência apropriada. Se você estiver implementando seu próprio loop de mensagem, seu código é responsável por chamar <xref:System.Windows.Interop.ComponentDispatcher> métodos de maneira semelhante.  
   
