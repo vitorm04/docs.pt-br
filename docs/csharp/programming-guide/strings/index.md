@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503993"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802312"
 ---
 # <a name="strings-c-programming-guide"></a>Cadeias de caracteres (Guia de Programação em C#)
 Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é texto. Internamente, o texto é armazenado como uma coleção sequencial somente leitura de objetos <xref:System.Char>. Não há um caractere de finalização null ao fim de uma cadeia em C#. Portanto, uma cadeia de caracteres em C# pode ter qualquer número de caracteres nulos inseridos ('\0'). A propriedade `Char` de uma cadeia de caracteres representa o número de objetos <xref:System.String.Length%2A> que ela contém e não o número de caracteres Unicode. Para acessar os pontos de código Unicode individuais em uma cadeia de caracteres, use o objeto <xref:System.Globalization.StringInfo>.  
@@ -62,10 +62,10 @@ Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é
 |\n|Nova linha|0x000A|  
 |\r|Retorno de carro|0x000D|  
 |\t|Tabulação horizontal|0x0009|  
-|\U|Sequência de escape Unicode (UTF-32)|`\U00nnnnnn` (por exemplo, `\U0001F47D` = "&#x1F47D;")|  
-|\u|Sequência de escape Unicode (UTF-16)|`\unnnn` (por exemplo, `\u0041` = "A")|  
 |\v|Tabulação vertical|0x000B|  
-|\x|Sequência de escape Unicode semelhante a "\u", exceto pelo comprimento variável.|`\x0041` ou `\x41` = "A"|  
+|\u|Sequência de escape Unicode (UTF-16)|`\uHHHH` (intervalo: 0000 - FFFF; exemplo: `\u00E7` = "ç")|  
+|\U|Sequência de escape Unicode (UTF-32)|`\U00HHHHHH` (intervalo: 000000 - 10FFFF; exemplo: `\U0001F47D` = "&#x1F47D;")|  
+|\x|Sequência de escape Unicode semelhante a "\u", exceto pelo comprimento variável|`\xH[H][H][H]` (intervalo: 0 - FFFF; exemplo: `\x00E7` ou `\x0E7` ou `\xE7` = "ç")|  
   
 > [!WARNING]
 >  Ao usar a sequência de escape `\x` e especificar menos de quatro dígitos hexadecimais, se os caracteres que seguem imediatamente a sequência de escape são dígitos hexadecimais válidos (ou seja, 0 a 9, A-F e a-f), eles serão interpretados como sendo parte da sequência de escape. Por exemplo, `\xA1` produz "&#161;", que é o ponto de código U+00A1. No entanto, se o próximo caractere é "A" ou "a", então a sequência de escape será, em vez disso, interpretada como sendo `\xA1A` e produzirá "&#x0A1A;", que é o ponto de código U+0A1A. Nesses casos, especificar todos os quatro dígitos hexadecimais (por exemplo, `\x00A1`) impedirá qualquer interpretação errônea possível.  

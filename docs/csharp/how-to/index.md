@@ -2,12 +2,12 @@
 title: Artigos de instruções (Guia de C#)
 description: Uma coleção de dicas rápidas e exemplos de código curtos e focados
 ms.date: 12/20/2017
-ms.openlocfilehash: 062ce64f4f369ae70074fd81f39b60de29e4d7d2
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609254"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744266"
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
@@ -66,7 +66,7 @@ Talvez seja necessário converter um objeto em um tipo diferente.
 - [Converta uma matriz de bytes em um ](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md) interno.
 - [Converta uma cadeia de caracteres em um número](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Use a correspondência de padrões, os operadores `as` e `is` para converter para um tipo diferente com segurança](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
-- [Defina operadores de conversão para `struct` tipos](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
+- [Define as conversões de tipo personalizado](../language-reference/operators/user-defined-conversion-operators.md).
 - [Determine se um tipo é um tipo de valor anulável](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
 - [Converta entre tipos de valor anuláveis e não anuláveis](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 
