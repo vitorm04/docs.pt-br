@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9e3f0941d2fd92b8657d2d9df5b050e7793eb1d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647207"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802217"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementação de Provedor de Automação de Interface de Usuário do Lado do Cliente
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "64647207"
   
  No entanto, controles mais antigos, como aqueles no [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] e [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] não diretamente suporte [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Esses controles são atendidos em vez disso, por provedores que existem no processo de cliente e obtêm informações sobre controles usando a comunicação entre processos; Por exemplo, ao monitorar as mensagens de e para os controles do windows. Esses provedores do lado do cliente são chamados proxies.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] fornece provedores para standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] e controles dos Windows Forms. Além disso, um provedor de fallback dá parcial [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dão suporte a qualquer controle que não é atendido por outro provedor do lado do servidor ou proxy, mas tem um [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] implementação. Esses provedores são automaticamente carregados e disponível para aplicativos cliente.  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] fornece provedores para standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] e controles dos Windows Forms. Além disso, um provedor de fallback dá parcial [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dão suporte a qualquer controle que não é atendido por outro provedor do lado do servidor ou proxy, mas tem uma implementação de acessibilidade ativa da Microsoft. Esses provedores são automaticamente carregados e disponível para aplicativos cliente.  
   
  Para obter mais informações sobre o suporte para [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] e controles dos Windows Forms, consulte [suporte de automação da interface do usuário para controles padrão](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   

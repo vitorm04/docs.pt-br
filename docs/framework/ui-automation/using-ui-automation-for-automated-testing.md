@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 0e5e2252225c824dfbc9d799b29a16ab6206eb3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1137052c13571cf31fdf98512f2fe62533387e80
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630650"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802245"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Usando automação de interface do usuário para testes automatizados
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "64630650"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Fornece um modelo de objeto unificada que permite que todos os [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] estruturas para expor funcionalidades complexas e avançadas de uma maneira acessível e facilmente automatizada.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] foi desenvolvido como um sucessor [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] uma estrutura existente foi projetada para fornecer uma solução para tornar acessíveis os controles e aplicativos. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] não foi projetado com a automação de teste em mente, mesmo que ela evoluiu e essa função devido aos requisitos de acessibilidade e automação muito semelhantes. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], além de fornecer soluções mais refinadas para acessibilidade, também projetado especificamente para fornecer funcionalidades robustas para testes automatizados. Por exemplo, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] se baseia em uma única interface para expor informações sobre a interface do usuário e para coletar as informações necessárias para produtos AT; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] separa os dois modelos.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] foi desenvolvido como um sucessor do Microsoft Active Accessibility. Acessibilidade ativa é uma estrutura projetada para fornecer uma solução para tornar acessíveis os controles e aplicativos. Acessibilidade ativa não foi projetada com a automação de teste em mente, embora ela evoluiu e essa função devido aos requisitos de acessibilidade e automação muito semelhantes. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], além de fornecer soluções mais refinadas para acessibilidade, também projetado especificamente para fornecer funcionalidades robustas para testes automatizados. Por exemplo, acessibilidade ativa se baseia em uma única interface para expor informações sobre a interface do usuário e para coletar as informações necessárias para produtos AT; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] separa os dois modelos.  
   
  Um provedor e do cliente são necessários para implementar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para que possa ser útil como uma ferramenta de teste automatizado. Provedores de automação de interface do usuário são aplicativos como o Microsoft Word, Excel, e outros aplicativos de terceiros ou controles com base no [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] sistema operacional. Clientes de automação de interface do usuário incluem aplicativos de tecnologia assistencial e scripts de teste automatizados.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "64630650"
   
 - Inspect.exe é um [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] aplicativo que pode ser usado para reunir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informações para o cliente e o provedor de desenvolvimento e depuração. Inspect.exe está incluído no [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
   
-- Expõe o MSAABridge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informações para [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] clientes. O principal objetivo da ponte [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] à [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] é permitir que o existente [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] os clientes a capacidade de interagir com qualquer estrutura que implementou [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+- O MSAABridge expõe [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informações aos clientes de acessibilidade ativa. O principal objetivo da ponte [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para acessibilidade ativa é permitir que os clientes existentes do Active Accessibility a capacidade de interagir com qualquer estrutura que implementou [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Security"></a>   
 ## <a name="security"></a>Segurança  
