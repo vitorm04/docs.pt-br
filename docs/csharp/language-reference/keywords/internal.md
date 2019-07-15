@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: aefb806b452452d4837b29b6ab11ce158ea412bc
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745415"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661178"
 ---
 # <a name="internal-c-reference"></a>internal (Referência de C#)
 A palavra-chave `internal` é um [modificador de acesso](../../../csharp/language-reference/keywords/access-modifiers.md) para tipos e membros de tipo. 
@@ -25,8 +25,8 @@ Tipos ou membros internos são acessíveis somente em arquivos no mesmo assembly
 ```csharp  
 public class BaseClass   
 {  
-    // Only accessible within the same assembly  
-    internal static int x = 0;  
+    // Only accessible within the same assembly.
+    internal static int x = 0;
 }  
 ```  
 
@@ -57,13 +57,13 @@ class TestAccess
 {  
    static void Main()   
    {  
-      BaseClass myBase = new BaseClass();   // CS0122  
+      var myBase = new BaseClass();   // CS0122  
    }  
 }  
 ```  
   
 ## <a name="example"></a>Exemplo  
- Neste exemplo, use os mesmos arquivos que você usou no exemplo 1 e altere o nível de acessibilidade da `BaseClass` para `public`. Também altere o nível de acessibilidade do membro `IntM` para `internal`. Nesse caso, você pode instanciar a classe, mas não pode acessar o membro interno.  
+ Neste exemplo, use os mesmos arquivos que você usou no exemplo 1 e altere o nível de acessibilidade da `BaseClass` para `public`. Também altere o nível de acessibilidade do membro `intM` para `internal`. Nesse caso, você pode instanciar a classe, mas não pode acessar o membro interno.  
   
 ```csharp  
 // Assembly2.cs  
@@ -81,7 +81,7 @@ public class TestAccess
 {  
    static void Main()   
    {  
-      BaseClass myBase = new BaseClass();   // Ok.  
+      var myBase = new BaseClass();   // Ok.  
       BaseClass.intM = 444;    // CS0117  
    }  
 }  

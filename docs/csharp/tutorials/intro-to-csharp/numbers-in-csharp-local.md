@@ -3,12 +3,12 @@ title: Tutorial Números em C# – introdução ao C#
 description: Aprenda C# explorando tipos numéricos, suas propriedades e métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 65b31c29fa9662619f92efb7977577f12d23fb30
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423418"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661058"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números de ponto flutuante e integrais em C\#
 
@@ -321,7 +321,7 @@ Você concluiu o início rápido "Números em C#". Continue com o início rápid
 Saiba mais sobre os números em C# nos tópicos a seguir:
 
 - [Tipos integrais](../../language-reference/builtin-types/integral-numeric-types.md)
-- [Tabela de tipos de ponto flutuante](../../language-reference/keywords/floating-point-types-table.md)
+- [Tabela de tipos de ponto flutuante](../../language-reference/builtin-types/floating-point-numeric-types.md)
 - [Tabela de tipos internos](../../language-reference/keywords/built-in-types-table.md)
 - [Tabela de conversões numéricas implícitas](../../language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabela de conversões numéricas explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md)

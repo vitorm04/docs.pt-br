@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424028"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661586"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 
@@ -41,7 +41,7 @@ Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o 
 Os *tipos simples* são um conjunto de tipos de struct predefinidos fornecidos por C# e incluem os seguintes tipos:
 
 - [Tipos integrais](../builtin-types/integral-numeric-types.md): tipos numéricos inteiros e o tipo [char](char.md)
-- [Tipos de ponto flutuante](floating-point-types-table.md)
+- [Tipos de ponto flutuante](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
 Os tipos simples são identificados por meio de palavras-chave, mas essas palavras-chave são simplesmente aliases para tipos de struct predefinidos no namespace <xref:System>. Por exemplo, [int](../builtin-types/integral-numeric-types.md) é um alias de <xref:System.Int32?displayProperty=nameWithType>. Para obter uma lista completa de aliases, consulte [Tabela de tipos internos](built-in-types-table.md).
@@ -93,7 +93,7 @@ Usando o operador [new](../operators/new-operator.md), chama o construtor sem pa
 Com tipos definidos pelo usuário, use [new](../operators/new-operator.md) para invocar o construtor sem parâmetro. Por exemplo, a instrução a seguir invoca o construtor sem parâmetro do struct `Point`:
 
 ```csharp
-Point p = new Point(); // Invoke parameterless constructor for the struct.
+var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 Após esta chamada, o struct é considerado para ser definitivamente atribuído, ou seja, todos os seus membros são inicializados com seus valores padrão.

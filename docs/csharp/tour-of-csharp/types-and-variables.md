@@ -3,12 +3,12 @@ title: Tipos e variáveis do C# - um tour pela linguagem C#
 description: Saiba mais sobre como definir tipos e declarar variáveis em C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: a3f31eca296265c1e7f0c14a9540e267a2165ec1
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: f06894d986973e4394b0586906d67ef41a9d9152
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423449"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661064"
 ---
 # <a name="types-and-variables"></a>Tipos e variáveis
 
@@ -55,7 +55,7 @@ O exemplo a seguir fornece uma visão geral do sistema de tipos do C#.
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-Para obter mais informações sobre tipos numéricos, veja a tabela [Tipos integrais](../language-reference/builtin-types/integral-numeric-types.md) e [Tipos de ponto flutuante](../language-reference/keywords/floating-point-types-table.md).
+Para obter mais informações sobre tipos numéricos, veja a tabela [Tipos integrais](../language-reference/builtin-types/integral-numeric-types.md) e [Tipos de ponto flutuante](../language-reference/builtin-types/floating-point-numeric-types.md).
 
 O tipo `bool` do C# é usado para representar valores boolianos — valores que são `true` ou `false`.
 
