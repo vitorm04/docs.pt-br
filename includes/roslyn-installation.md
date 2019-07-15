@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dab6b435a885d862d08f94dd31de79625f19bcc0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870501"
 ---
-## <a name="installation-instructions"></a>Instruções de instalação 
+## <a name="installation-instructions---visual-studio-installer"></a>Instruções de instalação – Instalador do Visual Studio
 
 Há duas maneiras diferentes de encontrar o **SDK da .NET Compiler Platform** no **Instalador do Visual Studio**:
 
-### <a name="install-using-the-workloads-view"></a>Instalar usando o modo de exibição de Cargas de Trabalho
+### <a name="install-using-the-visual-studio-installer---workloads-view"></a>Instalar usando o Instalador do Visual Studio – exibição de cargas de trabalho
 
 O SDK da .NET Compiler Platform não é selecionado automaticamente como parte da carga de trabalho de desenvolvimento da extensão do Visual Studio. É necessário selecioná-lo como um componente opcional.
 
@@ -25,7 +25,7 @@ Opcionalmente, você também poderá fazer o **Editor DGML** exibir gráficos no
 1. Abra o nó **Componentes individuais** na árvore de resumo.
 1. Marque a caixa do **Editor DGML**
 
-### <a name="install-using-the-individual-components-tab"></a>Instalar usando a guia Componentes individuais
+### <a name="install-using-the-visual-studio-installer---individual-components-tab"></a>Instalar usando o Instalador do Visual Studio – guia Componentes individuais
 
 1. Execute o **Instalador do Visual Studio** 
 1. Selecione **Modificar** 
