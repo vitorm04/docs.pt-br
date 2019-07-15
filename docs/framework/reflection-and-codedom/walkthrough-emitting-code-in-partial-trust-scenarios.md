@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690304"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742468"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Passo a passo: Emitindo o código em cenários de confiança parcial
 A emissão de reflexão usa a mesma API definida na confiança total ou parcial, porém alguns recursos exigem permissões especiais em código parcialmente confiável. Além disso, a emissão de reflexão tem um recurso, os métodos dinâmicos hospedados anonimamente, que é projetado para ser usado com confiança parcial e por assemblies transparentes de segurança.  
@@ -57,7 +57,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
   
  O procedimento a seguir cria um domínio do aplicativo em área restrita que executa seu código com confiança parcial para testar cenários em que o código emitido pode acessar somente membros públicos de tipos públicos. Um procedimento subsequente mostra como adicionar <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> para testar cenários em que o código emitido pode acessar tipos não públicos e membros em assemblies que recebem permissões iguais ou inferiores.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust"></a>Criar um domínio do aplicativo com confiança parcial  
+#### <a name="to-create-an-application-domain-with-partial-trust"></a>Criar um domínio do aplicativo com confiança parcial  
   
 1. Crie um conjunto de permissões que serão concedidas aos assemblies no domínio do aplicativo em área restrita. Nesse caso, o conjunto de permissões da zona da Internet é usado.  
   
@@ -87,7 +87,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
 > [!NOTE]
 >  Para evitar a elevação de privilégio, as informações de pilha para o assembly de emissão são incluídas quando ps métodos dinâmicos hospedados anonimamente são construídos. Quando o método é invocado, as informações de pilha são verificadas. Dessa forma, um método dinâmico hospedado anonimamente que é invocado do código totalmente confiável ainda é limitado ao nível de confiança do assembly de emissão.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Criar um domínio do aplicativo com confiança parcial mais ADM  
+#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Criar um domínio do aplicativo com confiança parcial mais ADM  
   
 1. Crie um novo objeto <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (ADM) e use o método <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> para adicionar a permissão ao conjunto de concessões.  
   
@@ -184,7 +184,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
 <a name="Example"></a>   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  O exemplo de código a seguir demonstra o uso do sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> para permitir que métodos dinâmicos hospedados anonimamente ignorem as verificações de visibilidade JIT, mas somente quando o membro de destino tiver um nível de confiança igual ou inferior ao assembly que emite o código.  
   
  O exemplo define uma classe `Worker` que pode passar por marshaling entre limites de domínio do aplicativo. A classe tem duas sobrecargas de método `AccessPrivateMethod` que emitem e executam métodos dinâmicos. A primeira sobrecarga emite um método dinâmico que chama o método `PrivateMethod` particular da classe `Worker` e pode emitir o método dinâmico com ou sem verificações de visibilidade JIT. A segunda sobrecarga emite um método dinâmico que acessa uma propriedade `internal` (propriedade `Friend` no Visual Basic) da classe <xref:System.String>.  

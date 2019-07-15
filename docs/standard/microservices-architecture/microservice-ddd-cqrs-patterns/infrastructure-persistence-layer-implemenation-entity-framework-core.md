@@ -2,12 +2,12 @@
 title: Implementando a camada de persistência da infraestrutura com o Entity Framework Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Explore os detalhes de implementação para a camada de persistência da infraestrutura usando o Entity Framework Core.
 ms.date: 10/08/2018
-ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639534"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778060"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementar a camada de persistência de infraestrutura com o Entity Framework Core
 
@@ -21,7 +21,7 @@ O Entity Framework (EF) Core é uma versão de multiplaforma leve, extensível e
 
 Como uma introdução ao EF Core já está disponível na documentação da Microsoft, aqui nós vamos fornecer apenas os links para as informações.
 
-#### <a name="additional-resources"></a>Recursos adicionais
+### <a name="additional-resources"></a>Recursos adicionais
 
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
@@ -230,7 +230,7 @@ builder.RegisterType<OrderRepository>()
 
 Observe que usar o tempo de vida singleton para o repositório poderá causar problemas graves de simultaneidade quando o DbContext estiver definido como tempo de vida no escopo (InstancePerLifetimeScope) (os tempos de vida padrão de um DBContext).
 
-#### <a name="additional-resources"></a>Recursos adicionais
+### <a name="additional-resources"></a>Recursos adicionais
 
 - **Implementando os padrões de repositório e de unidade de trabalho em um aplicativo ASP.NET MVC** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
@@ -447,7 +447,7 @@ Além de encapsular a lógica de filtragem, a especificação pode especificar a
 
 Embora não seja recomendado retornar IQueryable de um repositório, é perfeitamente normal usá-lo no repositório para criar um conjunto de resultados. Veja essa abordagem usada no método List acima, que usa expressões de IQueryable intermediárias para criar a lista de inclusões da consulta antes de executar a consulta com os critérios da especificação na última linha.
 
-#### <a name="additional-resources"></a>Recursos adicionais
+### <a name="additional-resources"></a>Recursos adicionais
 
 - **Mapeamento de tabela** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)

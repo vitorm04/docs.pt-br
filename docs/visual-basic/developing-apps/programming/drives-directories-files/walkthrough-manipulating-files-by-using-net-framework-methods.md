@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345268"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783209"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Passo a passo: Manipulando arquivos usando métodos do .NET Framework (Visual Basic)
 Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a classe <xref:System.IO.StreamReader>, verificar se um arquivo está sendo acessado, pesquisar uma cadeia de caracteres dentro de um arquivo lido com uma instância da classe <xref:System.IO.StreamReader> e gravar em um arquivo usando a classe <xref:System.IO.StreamWriter>.  
@@ -30,7 +30,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
 ## <a name="creating-the-application"></a>Criando o aplicativo  
  Inicie o Visual Studio e comece o projeto criando um formulário que o usuário pode usar para gravar no arquivo designado.  
   
-#### <a name="to-create-the-project"></a>Para criar o projeto  
+### <a name="to-create-the-project"></a>Para criar o projeto  
   
 1. No menu **Arquivo**, selecione **Novo Projeto**.  
   
@@ -51,7 +51,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
 ## <a name="writing-to-the-file"></a>Gravando no arquivo  
  Para adicionar a capacidade de gravar em um arquivo por meio do aplicativo, use a classe <xref:System.IO.StreamWriter>. <xref:System.IO.StreamWriter> foi criado para a saída de caracteres em uma determinada codificação, enquanto a classe <xref:System.IO.Stream> foi criada para entrada e saída em bytes. Use <xref:System.IO.StreamWriter> para gravar linhas de informações em um arquivo de texto padrão. Para saber mais sobre a classe <xref:System.IO.StreamWriter>, veja <xref:System.IO.StreamWriter>.  
   
-#### <a name="to-add-writing-functionality"></a>Para adicionar a funcionalidade de gravação  
+### <a name="to-add-writing-functionality"></a>Para adicionar a funcionalidade de gravação  
   
 1. No menu **Exibição**, escolha **Código** para abrir o Editor de código.  
   
@@ -96,7 +96,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`GetEntries`<br /><br /> **Obter entradas**|  
 |<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`PickEntries`<br /><br /> **Selecionar uma entrada**<br /><br /> `False`|  
   
-#### <a name="to-populate-the-combo-box"></a>Para popular a caixa de combinação  
+### <a name="to-populate-the-combo-box"></a>Para popular a caixa de combinação  
   
 1. A `PickEntries`<xref:System.Windows.Forms.ComboBox> é usada para exibir as datas em que um usuário envia cada entrada, para que o usuário possa selecionar uma entrada de uma data específica. Crie um identificador de evento <xref:System.Windows.Forms.Control.Click> para o botão `GetEntries` e adicione o seguinte código.  
   
@@ -104,7 +104,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
 2. Para testar seu código, pressione F5 para compilar o aplicativo e, então, clique em **Obter entradas**. Clique na seta do menu suspenso no <xref:System.Windows.Forms.ComboBox> para exibir as datas de entrada.  
   
-#### <a name="to-choose-and-display-individual-entries"></a>Para escolher e exibir entradas individuais  
+### <a name="to-choose-and-display-individual-entries"></a>Para escolher e exibir entradas individuais  
   
 1. Crie um manipulador de eventos <xref:System.Windows.Forms.Control.Click> para o botão `Display` e adicione o seguinte código.  
   
@@ -123,7 +123,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|  
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`SubmitEdit`<br /><br /> **Enviar edição**<br /><br /> `False`|  
   
-#### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar a exclusão e modificação de entradas  
+### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar a exclusão e modificação de entradas  
   
 1. Adicione o seguinte código ao evento <xref:System.Windows.Forms.Control.Click> do botão `Display` , depois de `DisplayEntry.Text = ReadString`.  
   

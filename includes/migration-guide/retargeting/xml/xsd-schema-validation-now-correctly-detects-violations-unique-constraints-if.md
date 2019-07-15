@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5844dbc2c3c89baeb39b69f16846f92ac10e97f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c0a281b05f453b68495e6fa6fca45f3f36a204a3
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803194"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804491"
 ---
 ### <a name="xsd-schema-validation-now-correctly-detects-violations-of-unique-constraints-if-compound-keys-are-used-and-one-key-is-empty"></a>A validação do Esquema XSD agora detecta corretamente as violações de restrições exclusivas se chaves compostas forem usadas e uma chave estiver vazia
 
@@ -15,3 +15,4 @@ ms.locfileid: "59803194"
 |Escopo|Microsoft Edge|
 |Versão|4.6|
 |Tipo|Redirecionando|
+

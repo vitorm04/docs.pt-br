@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4892f75e4ae673d9d9cc7e9eeb6fb9b1a73f572e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6d9f4b630e95d9a63393da3ae0ecd83c2b994712
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803193"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859356"
 ---
 ### <a name="rsacng-now-correctly-loads-rsa-keys-of-non-standard-key-size"></a>Agora, RSACng carrega corretamente as chaves RSA de tamanho não padrão
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803193"
 |Versão|4.6.2|
 |Tipo|Redirecionando|
 |APIs afetadas|<ul><li><xref:System.Security.Cryptography.RSA.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType></li></ul>|
+

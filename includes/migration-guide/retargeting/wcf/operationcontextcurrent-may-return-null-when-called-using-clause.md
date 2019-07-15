@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e08b78b49cab88d4435d75b04bd446b413a61340
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 62ba525a28960d96c5458aa1481e1f319d5bc875
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59234872"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859354"
 ---
 ### <a name="operationcontextcurrent-may-return-null-when-called-in-a-using-clause"></a>OperationContext.Current pode retornar nulo quando chamado usando cláusula
 
@@ -16,3 +16,4 @@ ms.locfileid: "59234872"
 |Versão|4.6.2|
 |Tipo|Redirecionando|
 |APIs afetadas|<ul><li><xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType></li></ul>|
+

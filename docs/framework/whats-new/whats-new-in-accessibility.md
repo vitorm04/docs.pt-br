@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19d9752e1c7cfbc0a7c85e7cf8053c09c5baca7a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425572"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661381"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novidades na acessibilidade do .NET Framework
 
@@ -257,39 +257,39 @@ A partir do .NET Framework 4.8, o WPF expõe essas duas propriedades para o UIAu
 
 - Usando propriedades de dependência.
 
-   O WPF adiciona duas novas propriedades de dependência, <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> e <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Um desenvolvedor pode usar o XAML para definir seus valores:
+  O WPF adiciona duas novas propriedades de dependência, <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> e <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Um desenvolvedor pode usar o XAML para definir seus valores:
 
-   ```xaml
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="1">Button 1</Button>
+  ```xaml
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="1">Button 1</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="2">Button 2</Button>
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="2">Button 2</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="3">Button 3</Button>
-   ```
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="3">Button 3</Button>
+  ```
 
 - Ao substituir métodos virtuais do AutomationPeer.
 
-   Os métodos virtuais <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> e <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> foram adicionados à classe AutomationPeer. Um desenvolvedor pode fornecer valores para `SizeOfSet` e `PositionInSet` por meio da substituição desses métodos, conforme mostrado no exemplo a seguir:
+  Os métodos virtuais <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> e <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> foram adicionados à classe AutomationPeer. Um desenvolvedor pode fornecer valores para `SizeOfSet` e `PositionInSet` por meio da substituição desses métodos, conforme mostrado no exemplo a seguir:
 
-   ```csharp
-   public class MyButtonAutomationPeer : ButtonAutomationPeer
-   {
-      protected override int GetSizeOfSetCore()
-      {
-         // Call into your own logic to provide a value for SizeOfSet
-         return CalculateSizeOfSet();
-      }
+  ```csharp
+  public class MyButtonAutomationPeer : ButtonAutomationPeer
+  {
+    protected override int GetSizeOfSetCore()
+    {
+        // Call into your own logic to provide a value for SizeOfSet
+        return CalculateSizeOfSet();
+    }
 
-      protected override int GetPositionInSetCore()
-      {
-         // Call into your own logic to provide a value for PositionInSet
-         return CalculatePositionInSet();
-      }
-   }
-   ```
+    protected override int GetPositionInSetCore()
+    {
+        // Call into your own logic to provide a value for PositionInSet
+        return CalculatePositionInSet();
+    }
+  }
+  ```
 
 Além disso, os itens nas instâncias <xref:System.Windows.Controls.ItemsControl> fornecem um valor para essas propriedades automaticamente sem ação adicional do desenvolvedor. Se um <xref:System.Windows.Controls.ItemsControl> for agrupado, a coleção de grupos será representada como um conjunto e cada grupo será contado como um conjunto separado, com cada item dentro desse grupo fornecendo sua posição dentro desse grupo, bem como o tamanho do grupo. Valores automáticos não são afetados pela virtualização. Mesmo que um item não seja percebido, ele ainda é contado para o tamanho total do conjunto e afeta a posição no conjunto de seus itens irmãos.
 
@@ -447,10 +447,10 @@ Para dar suporte a regiões dinâmicas, as seguintes APIs foram adicionadas ao W
 
 - A enumeração <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>, que define os seguintes possíveis valores de **LiveSetting**:
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. O elemento não envia notificações se o conteúdo da região dinâmica foi alterado.
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. O elemento enviará notificações não interruptivas se o conteúdo da região dinâmica tiver sido alterado.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. O elemento não envia notificações se o conteúdo da região dinâmica foi alterado.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. O elemento enviará notificações não interruptivas se o conteúdo da região dinâmica tiver sido alterado.
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. O elemento enviará notificações interruptivas se o conteúdo da região dinâmica tiver sido alterado.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. O elemento enviará notificações interruptivas se o conteúdo da região dinâmica tiver sido alterado.
 
 Crie uma LiveRegion configurar a propriedade **AutomationProperties.LiveSetting** no elemento de interesse, conforme mostrado no seguinte exemplo:
 
@@ -478,81 +478,81 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
 - Controle <xref:System.Windows.Controls.Expander>
 
-    O visual de foco do controle <xref:System.Windows.Controls.Expander> agora está visível. Os visuais de teclado dos controles <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.RadioButton> também estão visíveis. Por exemplo:
+  O visual de foco do controle <xref:System.Windows.Controls.Expander> agora está visível. Os visuais de teclado dos controles <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.RadioButton> também estão visíveis. Por exemplo:
 
-    Antes: 
+  Antes: 
 
-    ![Controle expansor com foco antes das melhorias de acessibilidade](media/expander-before.png)
+  ![Controle expansor com foco antes das melhorias de acessibilidade](media/expander-before.png)
 
-    Depois: 
+  Depois: 
 
-    ![Controle expansor com foco após as melhorias de acessibilidade](media/expander-after.png)
+  ![Controle expansor com foco após as melhorias de acessibilidade](media/expander-after.png)
 
 - Controles <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton>
 
-    O texto nos controles <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton> agora é de visualização mais fácil quando selecionado em temas de alto contraste. Por exemplo:
+  O texto nos controles <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton> agora é de visualização mais fácil quando selecionado em temas de alto contraste. Por exemplo:
 
-    Antes: 
+  Antes: 
 
-    ![Botão de opção de alto contraste com foco antes das melhorias de acessibilidade](media/radio-button-before.png)
+  ![Botão de opção de alto contraste com foco antes das melhorias de acessibilidade](media/radio-button-before.png)
 
-    Depois: 
+  Depois: 
 
-    ![Botão de opção de alto contraste com foco após as melhorias de acessibilidade](media/radio-button-after.png)
+  ![Botão de opção de alto contraste com foco após as melhorias de acessibilidade](media/radio-button-after.png)
 
 - Controle <xref:System.Windows.Controls.ComboBox>
 
-    A partir do .NET Framework 4.7.1, a borda de um controle <xref:System.Windows.Controls.ComboBox> desabilitado é da mesma cor do texto desabilitado. Por exemplo:
+  A partir do .NET Framework 4.7.1, a borda de um controle <xref:System.Windows.Controls.ComboBox> desabilitado é da mesma cor do texto desabilitado. Por exemplo:
 
-    Antes: 
+  Antes: 
 
-     ![Borda e texto desabilitados da ComboBox antes das melhorias de acessibilidade](media/combo-disabled-before.png)
+  ![Borda e texto desabilitados da ComboBox antes das melhorias de acessibilidade](media/combo-disabled-before.png)
 
-    Depois:   
+  Depois:   
 
-     ![Borda e texto desabilitados da ComboBox após as melhorias de acessibilidade](media/combo-disabled-after.png)
+  ![Borda e texto desabilitados da ComboBox após as melhorias de acessibilidade](media/combo-disabled-after.png)
 
-    Além disso, os botões desabilitados e com foco usam a cor de tema correta.
+  Além disso, os botões desabilitados e com foco usam a cor de tema correta.
 
-    Antes:
+  Antes:
 
-    ![Cores de tema do botão antes das melhorias de acessibilidade](media/button-themes-before.png) 
+  ![Cores de tema do botão antes das melhorias de acessibilidade](media/button-themes-before.png) 
 
-    Depois: 
+  Depois: 
 
-    ![Cores de tema do botão após as melhorias de acessibilidade](media/button-themes-after.png) 
+  ![Cores de tema do botão após as melhorias de acessibilidade](media/button-themes-after.png) 
 
-    Por fim, no .NET Framework 4.7 e em versões anteriores, a configuração do estilo de um controle <xref:System.Windows.Controls.ComboBox> como `Toolbar.ComboBoxStyleKey` fazia com que a seta suspensa ficasse invisível. Esse problema é corrigido a partir do .NET Framework 4.7.1. Por exemplo:
+  Por fim, no .NET Framework 4.7 e em versões anteriores, a configuração do estilo de um controle <xref:System.Windows.Controls.ComboBox> como `Toolbar.ComboBoxStyleKey` fazia com que a seta suspensa ficasse invisível. Esse problema é corrigido a partir do .NET Framework 4.7.1. Por exemplo:
 
-    Antes: 
+  Antes: 
 
-    ![Toolbar.ComboBoxStyleKey antes das melhorias de acessibilidade](media/comboboxstylekey-before.png) 
+  ![Toolbar.ComboBoxStyleKey antes das melhorias de acessibilidade](media/comboboxstylekey-before.png) 
 
-    Depois: 
+  Depois: 
 
-    ![Toolbar.ComboBoxStyleKey após as melhorias de acessibilidade](media/comboboxstylekey-after.png) 
+  ![Toolbar.ComboBoxStyleKey após as melhorias de acessibilidade](media/comboboxstylekey-after.png) 
 
 - Controle <xref:System.Windows.Controls.DataGrid>
 
-    A partir do .NET Framework 4.7.1, a seta do indicador de classificação nos controles <xref:System.Windows.Controls.DataGrid> agora usa as cores de tema corretas. Por exemplo:
+  A partir do .NET Framework 4.7.1, a seta do indicador de classificação nos controles <xref:System.Windows.Controls.DataGrid> agora usa as cores de tema corretas. Por exemplo:
 
-    Antes: 
+  Antes: 
 
-    ![Seta do indicador de classificação antes das melhorias de acessibilidade](media/sort-indicator-before.png) 
+  ![Seta do indicador de classificação antes das melhorias de acessibilidade](media/sort-indicator-before.png) 
 
-    Depois:   
+  Depois:   
 
-    ![Seta do indicador de classificação após as melhorias de acessibilidade](media/sort-indicator-after.png) 
+  ![Seta do indicador de classificação após as melhorias de acessibilidade](media/sort-indicator-after.png) 
 
-    Além disso, no .NET Framework 4.7 e em versões anteriores, o estilo de link padrão era alterado para uma cor incorreta ao passar o mouse nos modos de alto contraste. Isso é resolvido a partir do .NET Framework 4.7.1. Da mesma forma, as colunas da caixa de seleção <xref:System.Windows.Controls.DataGrid> usam as cores esperadas para os comentários do foco de teclado a partir do .NET Framework 4.7.1.
+  Além disso, no .NET Framework 4.7 e em versões anteriores, o estilo de link padrão era alterado para uma cor incorreta ao passar o mouse nos modos de alto contraste. Isso é resolvido a partir do .NET Framework 4.7.1. Da mesma forma, as colunas da caixa de seleção <xref:System.Windows.Controls.DataGrid> usam as cores esperadas para os comentários do foco de teclado a partir do .NET Framework 4.7.1.
 
-    Antes: 
+  Antes: 
 
-    ![Estilo de link padrão de DataGrid antes das melhorias de acessibilidade](media/default-link-style-before.png) 
+  ![Estilo de link padrão de DataGrid antes das melhorias de acessibilidade](media/default-link-style-before.png) 
 
-    Depois:    
+  Depois:    
 
-    ![Estilo de link padrão de DataGrid após as melhorias de acessibilidade](media/default-link-style-after.png) 
+  ![Estilo de link padrão de DataGrid após as melhorias de acessibilidade](media/default-link-style-after.png) 
 
 Para obter mais informações sobre as melhorias de acessibilidade do WPF no .NET Framework 4.7.1, consulte [Melhorias de acessibilidade no WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -581,13 +581,13 @@ Alguns exemplos de alterações de alto contraste incluem:
 
 - O texto desabilitado é mais fácil de ser lido. Por exemplo:
 
-    Antes:
+  Antes:
 
-    ![Texto desabilitado antes das melhorias de acessibilidade](media/wf-disabled-before.png) 
+  ![Texto desabilitado antes das melhorias de acessibilidade](media/wf-disabled-before.png) 
 
-    Depois:
+  Depois:
 
-    ![Texto desabilitado após as melhorias de acessibilidade](media/wf-disabled-after.png) 
+  ![Texto desabilitado após as melhorias de acessibilidade](media/wf-disabled-after.png) 
 
 - Melhorias de alto contraste na caixa de diálogo Exceção de Thread.
 

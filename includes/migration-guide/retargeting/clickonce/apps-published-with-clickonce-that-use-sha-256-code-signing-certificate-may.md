@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bc56a3437e16e5d2c9679847bf3a3035b9e34286
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd4e387f798b3f93f3eabccb5357399fbe5a4fc1
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379805"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804451"
 ---
 ### <a name="apps-published-with-clickonce-that-use-a-sha-256-code-signing-certificate-may-fail-on-windows-2003"></a>Os aplicativos publicados com ClickOnce que usam um certificado de autenticação de código SHA-256 podem falhar no Windows 2003
 
@@ -15,3 +15,4 @@ ms.locfileid: "66379805"
 |Escopo|Microsoft Edge|
 |Versão|4.5|
 |Tipo|Redirecionando|
+

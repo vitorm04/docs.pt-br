@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 22c4b61b293ac2366cae1dc73e0f6805a4a5fb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2bb40294685c987de84138ee889e6b88f7184bb0
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803178"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857269"
 ---
 ### <a name="chained-popups-with-staysopenfalse"></a>Pop-ups encadeados com StaysOpen=False
 
@@ -15,3 +15,4 @@ ms.locfileid: "59803178"
 |Versão|4.7.1|
 |Tipo|Tempo de execução|
 |APIs afetadas|<ul><li><xref:System.Windows.Controls.Primitives.Popup.StaysOpen?displayProperty=nameWithType></li></ul>|
+

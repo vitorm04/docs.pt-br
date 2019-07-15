@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654420"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755057"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Passo a passo: Usando um fluxo de dados em um aplicativo do Windows Forms
 Este documento demonstra como criar uma rede de blocos de fluxo de dados que executam o processamento de imagens em um Aplicativo do Windows Forms.  
@@ -41,7 +41,7 @@ Este documento demonstra como criar uma rede de blocos de fluxo de dados que exe
 ## <a name="creating-the-windows-forms-application"></a>Criar o aplicativo do Windows Forms  
  Esta seção descreve como criar o aplicativo básico do Windows Forms e adicionar controles ao formulário principal.  
   
-#### <a name="to-create-the-windows-forms-application"></a>Para criar o aplicativo do Windows Forms  
+### <a name="to-create-the-windows-forms-application"></a>Para criar o aplicativo do Windows Forms  
   
 1. No Visual Studio, crie um projeto de **aplicativo do Windows Forms** do Visual Basic ou do Visual C#. Neste documento, o projeto é chamado `CompositeImages`.  
   
@@ -57,7 +57,7 @@ Este documento demonstra como criar uma rede de blocos de fluxo de dados que exe
 ## <a name="creating-the-dataflow-network"></a>Criar a rede de fluxo de dados  
  Esta seção descreve como criar a rede de fluxo de dados que executa o processamento de imagem.  
   
-#### <a name="to-create-the-dataflow-network"></a>Para criar a rede de fluxo de dados  
+### <a name="to-create-the-dataflow-network"></a>Para criar a rede de fluxo de dados  
   
 1. Adicione uma referência a System.Threading.Tasks.Dataflow.dll ao seu projeto.  
   
@@ -86,7 +86,7 @@ Este documento demonstra como criar uma rede de blocos de fluxo de dados que exe
   
  A tabela a seguir descreve os membros da rede.  
   
-|Membro|Tipo|Descrição|  
+|Membro|Tipo|DESCRIÇÃO|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Usa um caminho de pasta como entrada e produz uma coleção de objetos <xref:System.Drawing.Bitmap> como saída.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Usa uma coleção de objetos <xref:System.Drawing.Bitmap> como entrada e produz um bitmap composto como saída.|  
@@ -107,7 +107,7 @@ Este documento demonstra como criar uma rede de blocos de fluxo de dados que exe
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Conectar a rede de fluxo de dados à interface do usuário  
  Esta seção descreve como conectar a rede de fluxo de dados à interface do usuário. A criação de uma imagem composta e o cancelamento da operação começa com os botões **Escolher Pasta** e **Cancelar**. Quando o usuário escolhe um desses botões, a ação apropriada é iniciada de maneira assíncrona.  
   
-#### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Para conectar a rede de fluxo de dados à interface do usuário  
+### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Para conectar a rede de fluxo de dados à interface do usuário  
   
 1. No designer de formulários, do formulário principal, crie um manipulador de eventos para o evento <xref:System.Windows.Forms.ToolStripItem.Click> para o botão **Escolher Pasta**.  
   
