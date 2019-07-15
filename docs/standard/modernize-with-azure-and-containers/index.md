@@ -2,12 +2,12 @@
 title: Modernizar os aplicativos de .NET existentes com nuvem de Azure e contêineres do Windows (2ª edição)
 description: Aprenda a comparação de precisão and -shift e modernizar aplicativos existentes para a nuvem do Azure e contêineres com este livro eletrônico.
 ms.date: 04/28/2018
-ms.openlocfilehash: 79e06c64867a7e1bb6c5d7da718886a713cb3c4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870594"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure (2ª edição)
 
@@ -98,7 +98,7 @@ A Tabela 1-1 descreve as principais vantagens e motivos para escolher cada abord
 | **Vantagens**|
 | <li>Nenhum código de rearquitetura, nenhum novo <li> Mínimo de esforço para migração rápida <li> Mínimo denominador comum com suporte no Azure <li> Garantias básicas de disponibilidade <li> Depois de mudar para a nuvem, é mais fácil modernizar ainda mais | <li> Não há refazendo a arquitetura <li> Alterações de código/configuração mínima <li> Melhoria na implantação e agilidade de DevOps para liberação devido a contêineres <li> Aumento da densidade e redução dos custos de implantação <li> Portabilidade de aplicativos e dependências <li> Flexibilidade de destinos de host: Abordagens de PaaS ou IaaS | <li> Arquiteto para a nuvem, você deve obter os melhores benefícios da nuvem, mas o novo código é necessária <li> Abordagens de microsserviços nativos de nuvem <li> Modernos aplicativos de missão crítica, resiliência de nuvem hiperescalonável <li> Serviços totalmente gerenciados <li> Otimizado para escala <li> Otimizado para agilidade autônoma por subsistema <li> Baseado em implantação e DevOps |
 | **Desafios** |
-| <li> Menor valor de nuvem, diferente da mudança no custo de operação ou o fechamento de datacenters <li> Pouco é gerenciado: Nenhum sistema operacional ou o middleware aplicação de patch; pode usar soluções de infraestrutura como Terraform, Spinnaker ou Puppet | <li> Desenvolvimento de contêineres é uma etapa adicional na curva de aprendizado para desenvolvedores e operações de TI <li> Pipelines de CI/CD e DevOps é geralmente '' para essa abordagem. Se não estão presentes atualmente na cultura da organização, pode ser um desafio adicional| <li> Requer a nova arquitetura para aplicativos nativos de nuvem e arquiteturas de microsserviço e geralmente requer significativa de código do refatorar ou rescrever ao modernizar (aumento no tempo e orçamento) <li> Pipelines de CI/CD e DevOps é geralmente '' para essa abordagem. Se não estão presentes atualmente na cultura da organização, pode ser um desafio adicional|
+| <li> Menor valor de nuvem, diferente da mudança no custo de operação ou o fechamento de datacenters <li> Pouco é gerenciado: Nenhum sistema operacional ou o middleware aplicação de patch; pode usar soluções de infraestrutura como Terraform, Spinnaker ou Puppet | <li> Desenvolvimento de contêineres é uma etapa adicional na curva de aprendizado para desenvolvedores e operações de TI <li> DevOps e pipelines de CI/CD são geralmente 'obrigatórios' para essa abordagem. Se não estão presentes atualmente na cultura da organização, pode ser um desafio adicional| <li> Requer a nova arquitetura para aplicativos nativos de nuvem e arquiteturas de microsserviço e geralmente requer significativa de código do refatorar ou rescrever ao modernizar (aumento no tempo e orçamento)|
 > **Tabela 1-1.** Benefícios e desafios de caminhos de modernização para serviços e aplicativos .NET existentes
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Principais tecnologias e arquiteturas por nível de maturidade
