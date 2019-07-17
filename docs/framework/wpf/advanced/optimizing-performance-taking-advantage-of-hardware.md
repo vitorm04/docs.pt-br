@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: d40d1636b510fcfe667ab3e728d1688ce38641d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611937"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238447"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Otimizando desempenho: Aproveitar o hardware
 A arquitetura interna do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem dois pipelines de renderização, hardware e software. Este tópico apresenta informações sobre esses pipelines de renderização para ajudá-lo a tomar decisões sobre otimizações de desempenho de seus aplicativos.  
@@ -30,7 +30,7 @@ A arquitetura interna do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2
 ### <a name="graphics-rendering-tiers"></a>Camadas de renderização de gráficos  
  Pode ser muito difícil prever a configuração de hardware em que seu aplicativo será executado. No entanto, convém considerar um design que permita ao seu aplicativo mudar continuamente entre os recursos ao executar em hardware diferente para que possa se beneficiar totalmente de cada configuração de hardware diferente.  
   
- Para fazer isso, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece funcionalidade para determinar a capacidade gráfica de um sistema em tempo de execução. A capacidade gráfica é determinada categorizando a placa de vídeo como uma das três camadas de capacidade de renderização. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expõe um [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] que permite que um aplicativo consulte a camada da capacidade de renderização. Seu aplicativo então pode adotar diferentes caminhos de código no tempo de execução, dependendo da camada de renderização que tem suporte no hardware.  
+ Para fazer isso, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece funcionalidade para determinar a capacidade gráfica de um sistema em tempo de execução. A capacidade gráfica é determinada categorizando a placa de vídeo como uma das três camadas de capacidade de renderização. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expõe uma API que permite que um aplicativo para a camada de capacidade de processamento de consulta. Seu aplicativo então pode adotar diferentes caminhos de código no tempo de execução, dependendo da camada de renderização que tem suporte no hardware.  
   
  Os recursos do hardware gráfico que mais afetam os níveis de camada de renderização são:  
   

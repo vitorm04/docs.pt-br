@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d5ff09bb9cc8da45f44cf6fe952411e7cd3f4c4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663407"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238541"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedência do valor de propriedade da dependência
 <a name="introduction"></a> Este tópico explica como o funcionamento do sistema de propriedades do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode afetar o valor de uma propriedade de dependência e descreve a precedência pela qual os aspectos do sistema de propriedades são aplicados ao valor efetivo de uma propriedade.  
@@ -43,7 +43,7 @@ ms.locfileid: "64663407"
   
 2. **Animações ativas ou animações com um comportamento Em Espera.** Para obter um efeito prático, uma animação de uma propriedade deve conseguir ter precedência sobre o valor base (não animado), mesmo que esse valor tenha sido definido localmente. Para obter detalhes, consulte [Coerção, animação e valor base](#animations) mais adiante neste tópico.  
   
-3. **Valor local.** Um valor local pode ser definido por meio da conveniência da propriedade "wrapper", que também equivale à configuração como um elemento de propriedade ou atributo em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ou por uma chamada para o <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] usando uma propriedade de uma instância específica. Se você definir um valor local usando uma associação ou um recurso, cada um deles atuará na precedência como se um valor direto fosse definido.  
+3. **Valor local.** Um valor local pode ser definido por meio da conveniência da propriedade "wrapper", que também equivale à configuração como um elemento de propriedade ou atributo em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ou por uma chamada para o <xref:System.Windows.DependencyObject.SetValue%2A> usando uma propriedade de uma instância específica de API. Se você definir um valor local usando uma associação ou um recurso, cada um deles atuará na precedência como se um valor direto fosse definido.  
   
 4. **Propriedades de modelo TemplatedParent.** Um elemento tem um <xref:System.Windows.FrameworkElement.TemplatedParent%2A> se ele foi criado como parte de um modelo (um <xref:System.Windows.Controls.ControlTemplate> ou <xref:System.Windows.DataTemplate>). Para obter detalhes sobre quando isso se aplica, consulte [TemplatedParent](#templatedparent) mais adiante neste tópico. No modelo, a seguinte precedência se aplica:  
   

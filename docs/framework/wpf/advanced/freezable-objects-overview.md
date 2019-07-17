@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610517"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238525"
 ---
 # <a name="freezable-objects-overview"></a>Visão geral de objetos congeláveis
 Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Freezable> objetos, que oferecem recursos especiais que podem ajudar a melhorar o desempenho do aplicativo. Exemplos de objetos congeláveis incluem pincéis, canetas, transformações, geometrias e animações.  
@@ -148,7 +148,7 @@ mc:Ignorable="PresentationOptions"
   
  Você também deve observar as seguintes regras para o acesso e gravação em membros de dados que não são propriedades de dependência:  
   
-- No início de qualquer [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] que lê membros de dados de propriedade não são de dependência, chame o <xref:System.Windows.Freezable.ReadPreamble%2A> método.  
+- No início de qualquer API que lê membros de dados de propriedade não são de dependência, chame o <xref:System.Windows.Freezable.ReadPreamble%2A> método.  
   
 - No início de qualquer API que grava os membros de dados de propriedade não são de dependência, chame o <xref:System.Windows.Freezable.WritePreamble%2A> método. (Depois de ter chamado <xref:System.Windows.Freezable.WritePreamble%2A> em uma API, você não precisa fazer uma chamada adicional para <xref:System.Windows.Freezable.ReadPreamble%2A> se você também pode ler membros de dados de propriedade não são de dependência.)  
   

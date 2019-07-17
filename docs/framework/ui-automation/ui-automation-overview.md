@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a914f2c54e5e5b368533b686b1926f7f7ef2e12a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802239"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237330"
 ---
 # <a name="ui-automation-overview"></a>Visão geral de automação da interface do usuário
 > [!NOTE]
@@ -36,9 +36,9 @@ ms.locfileid: "67802239"
   
 |Componente|Descrição|  
 |---------------|-----------------|  
-|Provedor [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] (UIAutomationProvider. dll e UIAutomationTypes. dll)|Um conjunto de definições de interface que são implementadas por provedores de automação de interface do usuário, objetos que fornecem informações sobre [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementos e respondem a entrada programática.|  
+|Provedor de API (UIAutomationProvider. dll e UIAutomationTypes. dll)|Um conjunto de definições de interface que são implementadas por provedores de automação de interface do usuário, objetos que fornecem informações sobre [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementos e respondem a entrada programática.|  
 |API (UIAutomationClient. dll e UIAutomationTypes. dll) do cliente|Um conjunto de tipos para código gerenciado que permite que aplicativos de cliente de automação de interface do usuário obter informações sobre o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e enviem dados a controles de entrada.|  
-|UiAutomationCore.dll|O código subjacente (às vezes chamado de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core) que gerencia a comunicação entre clientes e provedores.|  
+|UIAutomationCore|O código subjacente (às vezes chamado de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core) que gerencia a comunicação entre clientes e provedores.|  
 |UIAutomationClientsideProviders.dll|Um conjunto de provedores de automação de interface do usuário para controles padrão herdados. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] controles têm suporte nativo para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Esse suporte está automaticamente disponível para aplicativos cliente.|  
   
  Da perspectiva do desenvolvedor de software, há duas maneiras de usar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: para criar suporte para controles personalizados (usando a API de provedor) e criar aplicativos que usam o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core para se comunicar com [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementos (usando a API do cliente). Dependendo do seu foco, você deve consultar a diferentes partes da documentação. Você pode saber mais sobre os conceitos e obter conhecimento prático nas seções a seguir.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8546516124b2156e02446e15d7bdcaf3cdbd717d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703420"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238601"
 ---
 # <a name="focus-overview"></a>Visão geral do foco
 Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], há dois conceitos principais relativos ao foco: foco do teclado e foco lógico.  O foco do teclado refere-se ao elemento que recebe entrada do teclado e foco lógico refere-se ao elemento em um escopo de foco que tem foco.  Esses conceitos são discutidos em detalhes nesta visão geral.  Noções básicas sobre a diferença entre esses conceitos é importante para a criação de aplicativos complexos que têm várias regiões no qual o foco pode ser obtido.  
@@ -82,7 +82,7 @@ Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>Foco de navegação por meio de programação  
- Adicional [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para trabalhar com foco são <xref:System.Windows.UIElement.MoveFocus%2A> e <xref:System.Windows.UIElement.PredictFocus%2A>.  
+ API adicional para trabalhar com foco são <xref:System.Windows.UIElement.MoveFocus%2A> e <xref:System.Windows.UIElement.PredictFocus%2A>.  
   
  <xref:System.Windows.FrameworkElement.MoveFocus%2A> Altera o foco para o próximo elemento no aplicativo.  Um <xref:System.Windows.Input.TraversalRequest> é usado para especificar a direção.   O <xref:System.Windows.Input.FocusNavigationDirection> passado para <xref:System.Windows.UIElement.MoveFocus%2A> Especifica o direções diferentes foco pode ser movido, tais como <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> e <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
   
