@@ -1,0 +1,19 @@
+---
+ms.openlocfilehash: df13f6938ebaf8e96bb2825c1495044621f1c31b
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802598"
+---
+### <a name="aspnet-validationcontextmembername-is-not-null-when-using-custom-dataannotationsvalidationattribute"></a><span data-ttu-id="1a70c-101">ASP.NET ValidationContext.MemberName não é NULL ao usar o DataAnnotations.ValidationAttribute personalizado</span><span class="sxs-lookup"><span data-stu-id="1a70c-101">ASP.NET ValidationContext.MemberName is not NULL when using custom DataAnnotations.ValidationAttribute</span></span>
+
+|   |   |
+|---|---|
+|<span data-ttu-id="1a70c-102">Detalhes</span><span class="sxs-lookup"><span data-stu-id="1a70c-102">Details</span></span>|<span data-ttu-id="1a70c-103">No .NET Framework 4.7.2 e versões anteriores, ao usar um <xref:System.ComponentModel.DataAnnotations.ValidationAttribute?displayProperty=nameWithType> personalizado, a propriedade <xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName?displayProperty=nameWithType> retorna <code>null</code>.</span><span class="sxs-lookup"><span data-stu-id="1a70c-103">In .NET Framework 4.7.2 and earlier versions, when using a custom <xref:System.ComponentModel.DataAnnotations.ValidationAttribute?displayProperty=nameWithType>, the <xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName?displayProperty=nameWithType> property returns <code>null</code>.</span></span>  <span data-ttu-id="1a70c-104">No .NET Framework 4.8, ela retorna o nome do membro.</span><span class="sxs-lookup"><span data-stu-id="1a70c-104">In .NET Framework 4.8, it returns the member name.</span></span>|
+|<span data-ttu-id="1a70c-105">Sugestão</span><span class="sxs-lookup"><span data-stu-id="1a70c-105">Suggestion</span></span>|<span data-ttu-id="1a70c-106">O comportamento padrão da propriedade <xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName?displayProperty=nameWithType> permanece o mesmo.</span><span class="sxs-lookup"><span data-stu-id="1a70c-106">The default behavior of the <xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName?displayProperty=nameWithType> property remains the same.</span></span>  <span data-ttu-id="1a70c-107">Para recuperar um valor válido da propriedade <code>ValidationContext.MemberName</code>, adicione a seguinte configuração ao seu arquivo de configuração de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="1a70c-107">To retrieve a valid value from the <code>ValidationContext.MemberName</code> property, add the following setting to your app config file:</span></span><pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;appSettings&gt;&#13;&#10;...&#13;&#10;&lt;add key=&quot;aspnet:GetValidationMemberName&quot;  value=&quot;true&quot;/&gt;&#13;&#10;...&#13;&#10;&lt;/appSettings&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
+|<span data-ttu-id="1a70c-108">Escopo</span><span class="sxs-lookup"><span data-stu-id="1a70c-108">Scope</span></span>|<span data-ttu-id="1a70c-109">Unknown</span><span class="sxs-lookup"><span data-stu-id="1a70c-109">Unknown</span></span>|
+|<span data-ttu-id="1a70c-110">Versão</span><span class="sxs-lookup"><span data-stu-id="1a70c-110">Version</span></span>|<span data-ttu-id="1a70c-111">4.8</span><span class="sxs-lookup"><span data-stu-id="1a70c-111">4.8</span></span>|
+|<span data-ttu-id="1a70c-112">Tipo</span><span class="sxs-lookup"><span data-stu-id="1a70c-112">Type</span></span>|<span data-ttu-id="1a70c-113">Tempo de execução</span><span class="sxs-lookup"><span data-stu-id="1a70c-113">Runtime</span></span>|
+|<span data-ttu-id="1a70c-114">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="1a70c-114">Affected APIs</span></span>|<ul><li><xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName?displayProperty=nameWithType></li></ul>|
+
