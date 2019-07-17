@@ -15,7 +15,7 @@ sections:
   - title: Introdução
     items:
       - type: paragraph
-        text: 'Para saber como um aplicativo de aprendizado de máquina é criado com o ML.NET, leia <a href="/dotnet/machine-learning/how-does-mldotnet-work">O que é ML.NET e como ele funciona</a>? Ou comece adicionando o pacote do nuget <b>Microsoft.ML</b> a seu aplicativo.'
+        text: 'Para saber como um aplicativo de aprendizado de máquina é criado com o ML.NET, leia <a href="/dotnet/machine-learning/how-does-mldotnet-work">O que é ML.NET e como ele funciona</a>? Ou comece adicionando o pacote do NuGet <b>Microsoft.ML</b> a seu aplicativo.'
   - title: Tutoriais passo a passo
     items:
       - type: paragraph

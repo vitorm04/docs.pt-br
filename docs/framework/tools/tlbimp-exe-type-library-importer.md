@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 314977cb55d9c927ddf96a9279ebb83d8f69e936
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4f9741944dcf8a5fcc05c169a1c3c3f679902474
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200916"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859677"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importador de Biblioteca de Tipos)
 O Importador da Biblioteca de Tipos converte as definições de tipo encontradas dentro de uma biblioteca de tipos COM em definições equivalentes em um assembly do Common Language Runtime. A saída de Tlbimp.exe é um arquivo binário (um assembly) que contém os metadados do tempo de execução para os tipos definidos na biblioteca de tipos original. É possível examinar esse arquivo com ferramentas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -34,16 +34,16 @@ tlbimp tlbFile [options]
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento|Descrição|  
+|Argumento|DESCRIÇÃO|  
 |--------------|-----------------|  
 |*tlbFile*|O nome de qualquer arquivo que contenha uma biblioteca de tipos COM.|  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|Especifica o número de versão do assembly a ser produzido. Especifique *versionnumber* no formato *principal.secundária.build.revisão*.|  
 |**/company:** `companyinformation`|Adiciona informações da empresa ao assembly de saída.|  
 |**/copyright:** `copyrightinformation`|Adiciona informações de direito autoral ao assembly de saída. Essas informações podem ser exibidas na caixa de diálogo **Propriedades de arquivo** do assembly.|  
-|**/delaysign**|Especifica Tlbimp.exe para assinar o assembly resultante com um nome forte usando a assinatura com atraso. Você deve especificar essa opção com a opção **/keycontainer:**, **/keyfile:** ou **/publickey:**. Para obter mais informações sobre o processo de assinatura com atraso, consulte [Assinatura com Atraso de um Assembly](../app-domains/delay-sign-assembly.md).|  
+|**/delaysign**|Especifica Tlbimp.exe para assinar o assembly resultante com um nome forte usando a assinatura com atraso. Você deve especificar essa opção com a opção **/keycontainer:** , **/keyfile:** ou **/publickey:** . Para obter mais informações sobre o processo de assinatura com atraso, consulte [Assinatura com Atraso de um Assembly](../app-domains/delay-sign-assembly.md).|  
 |**/help**|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**/keycontainer:** *containername*|Assina o assembly resultante com um nome forte usando o par de chaves pública/privada encontrado no contêiner de chave especificado por *containername*.|  
 |**/keyfile:** *filename*|Assina o assembly resultante com um nome forte usando o par de chaves pública/privada oficial do editor encontrado em *filename*.|  
@@ -55,7 +55,7 @@ tlbimp tlbFile [options]
 |**/primary**|Produz um assembly de interoperabilidade primário para a biblioteca de tipos especificada. As informações são adicionadas ao assembly, o que indica que o editor da biblioteca de tipos produziu o assembly. Especificando um assembly de interoperabilidade primária, você diferencia o assembly de um editor de todos os outros assemblies criados na biblioteca de tipos usando Tlbimp.exe. Use a opção **/primary** somente se você for o editor da biblioteca de tipos que está sendo importado com Tlbimp.exe. Você deve assinar um assembly de interoperabilidade primário com um [nome forte](../app-domains/strong-named-assemblies.md). Para obter mais informações, consulte [Assemblies de Interoperabilidade Primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).|  
 |**/product:** `productinformation`|Adiciona informações do produto ao assembly de saída. Essas informações podem ser exibidas na caixa de diálogo **Propriedades de arquivo** do assembly.|  
 |**/productversion:** `productversioninformation`|Adiciona informações da versão ao assembly de saída. Não há restrições de formato. Essas informações podem ser exibidas na caixa de diálogo **Propriedades de arquivo** do assembly.|  
-|**/publickey:** *filename*|Especifica o arquivo que contém a chave pública a ser usada na assinatura do assembly resultante. Se você especificar a opção **/keyfile:** ou **/keycontainer:** em vez de **/publickey:**, Tlbimp.exe gerará a chave pública do par de chaves pública/privada fornecido com **/keyfile:** ou **/keycontainer:**. A opção **/publickey:** dá suporte aos cenários de chave de teste e de assinatura com atraso. O arquivo está no formato gerado por Sn.exe. Para obter mais informações, consulte a opção **-p** de Sn.exe em [Ferramenta Nome Forte (Sn.exe)](sn-exe-strong-name-tool.md).|  
+|**/publickey:** *filename*|Especifica o arquivo que contém a chave pública a ser usada na assinatura do assembly resultante. Se você especificar a opção **/keyfile:** ou **/keycontainer:** em vez de **/publickey:** , Tlbimp.exe gerará a chave pública do par de chaves pública/privada fornecido com **/keyfile:** ou **/keycontainer:** . A opção **/publickey:** dá suporte aos cenários de chave de teste e de assinatura com atraso. O arquivo está no formato gerado por Sn.exe. Para obter mais informações, consulte a opção **-p** de Sn.exe em [Ferramenta Nome Forte (Sn.exe)](sn-exe-strong-name-tool.md).|  
 |**/reference:** *filename*|Especifica o arquivo do assembly a ser usado para resolver referências para tipos definidos fora da biblioteca de tipos atual. Se você não especificar a opção **/reference**, Tlbimp.exe importará recursivamente de maneira automática qualquer biblioteca de tipos externa a que a biblioteca de tipos está fazendo referência. Se você especificar a opção **/reference**, a ferramenta tentará resolver tipos externos nos assemblies referenciados antes de importar outras bibliotecas de tipos.|  
 |**/silence:** `warningnumber`|Suprime a exibição do aviso especificado. Essa opção não pode ser usada com **/silent**.|  
 |**/silent**|Suprime a exibição de mensagens de sucesso. Essa opção não pode ser usada com **/silence**.|  
@@ -78,8 +78,10 @@ tlbimp tlbFile [options]
   
  Costuma ser útil ou necessário atribuir [nomes fortes](../app-domains/strong-named-assemblies.md) a assemblies. Por isso, Tlbimp.exe inclui opções para fornecer as informações necessárias à geração dos assemblies fortemente nomeados. As opções **/keyfile:** e **/keycontainer:** assinam assemblies com nomes fortes. Por isso, é lógico fornecer apenas uma dessas opções por vez.  
   
- É possível especificar vários assemblies de referência usando a opção **/reference** várias vezes.  
-  
+ É possível especificar vários assemblies de referência usando a opção **/reference** várias vezes.
+ 
+ Devido à maneira na qual Tlbimp.exe gera assemblies, não é possível redirecionar um assembly para uma versão `mscorlib` diferente. Por exemplo, se desejar gerar um assembly que direciona o .NET Framework 2.0, o Tlbimp.exe que acompanha o SDK do .NET Framework 2.0/3.0/3.5 deverá ser usado. Para direcionar o .NET Framework 4.x, o Tlbimp.exe que acompanha um SDK do .NET Framework 4.x deverá ser usado.
+ 
  Uma ID de recurso pode ser acrescentada a um arquivo da biblioteca de tipos durante a importação de uma biblioteca de tipos de um módulo que contém várias bibliotecas de tipos. Tlbimp.exe só poderá localizar esse arquivo se estiver no diretório atual ou se você especificar o caminho completo. Consulte o exemplo mais à frente neste tópico.  
   
 ## <a name="examples"></a>Exemplos  

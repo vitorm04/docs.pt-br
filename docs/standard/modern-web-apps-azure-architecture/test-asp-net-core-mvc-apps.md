@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463703"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804713"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos ASP.NET Core MVC
 
@@ -34,7 +34,7 @@ Embora seja uma boa ideia encapsular o código que interage com a infraestrutura
 
 Os testes de integração costumam ter procedimentos de instalação e de desinstalação mais complexos em comparação com os testes de unidade. Por exemplo, um teste de integração feito em um banco de dados real precisará de uma maneira de retornar o banco de dados para um estado conhecido antes de cada execução de teste. Conforme novos testes forem adicionados e o esquema de banco de dados de produção evoluir, esses scripts de teste tenderão a aumentar em tamanho e complexidade. Em muitos sistemas grandes, não é prático executar conjuntos completos de testes de integração em estações de trabalho do desenvolvedor antes de fazer check-in das alterações no controle do código-fonte compartilhado. Nesses casos, os testes de integração podem ser executados em um servidor de build.
 
-A classe de implementação LocalFileImageService implementa a lógica para buscar e retornar os bytes de um arquivo de imagem de uma pasta específica, considerando uma ID:
+A classe de implementação `LocalFileImageService` implementa a lógica para buscar e retornar os bytes de um arquivo de imagem de uma pasta específica, considerando uma ID:
 
 ```csharp
 public class LocalFileImageService : IImageService
@@ -147,7 +147,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Submeter esse método ao teste de unidade é dificultado por sua dependência direta de System.IO.File, que ele usa para ler o sistema de arquivos. Você pode testar esse comportamento para garantir que ele funciona conforme esperado, mas fazer isso com arquivos reais é um teste de integração. Vale a pena observar que não é possível submeter a rota desse método a um teste de unidade. Você verá como fazer isso com um teste funcional em breve.
+Submeter esse método ao teste de unidade é dificultado por sua dependência direta de `System.IO.File`, que ele usa para ler o sistema de arquivos. Você pode testar esse comportamento para garantir que ele funciona conforme esperado, mas fazer isso com arquivos reais é um teste de integração. Vale a pena observar que não é possível submeter a rota desse método a um teste de unidade. Você verá como fazer isso com um teste funcional em breve.
 
 Se você não pode realizar o teste de unidade no comportamento do sistema de arquivos diretamente e não pode testar a rota, o que há para testar? Bem, depois de fazer a refatoração para possibilitar o teste de unidade, talvez você descubra alguns casos de teste e um comportamento ausente, como o tratamento de erro. O que o método faz quando um arquivo não é encontrado? O que ele deve fazer? Neste exemplo, o método refatorado tem esta aparência:
 
@@ -175,7 +175,7 @@ Na maioria dos casos, será melhor usar manipuladores de exceção globais em se
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Realizando testes de integração em aplicativos ASP.NET Core
 
-A maioria dos testes de integração em seus aplicativos ASP.NET Core deve testar serviços e outros tipos de implementação definidos no projeto de infraestrutura. A melhor maneira de testar se o projeto ASP.NET Core MVC está se comportando corretamente é com testes funcionais executados no aplicativo em execução em um host de teste. Um exemplo de um teste de integração de uma classe de acesso a dados é mostrado na seção Testes de Integração anterior neste capítulo.
+A maioria dos testes de integração em seus aplicativos ASP.NET Core deve testar serviços e outros tipos de implementação definidos no projeto de infraestrutura. Por exemplo, você poderia [testar se o EF Core estava atualizando e recuperando com êxito os dados que você espera](https://docs.microsoft.com/ef/core/miscellaneous/testing/) de suas classes de acesso a dados que residem no projeto de infraestrutura. A melhor maneira de testar se o projeto ASP.NET Core MVC está se comportando corretamente é com testes funcionais executados no aplicativo em execução em um host de teste.
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Realizando teste funcional em aplicativos ASP.NET Core
 
@@ -308,6 +308,15 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 ```
 
 Esse teste funcional emprega a pilha completa do aplicativo ASP.NET Core MVC/Razor Pages, incluindo todos os middlewares, filtros, associadores e outros que possam estar em vigor. Ele verifica se uma determinada rota ("/") retorna o código de status de êxito esperado e a saída HTML. Ele faz isso sem configurar um servidor Web real e, portanto, evita grande parte da fragilidade decorrente do uso de um servidor Web real (por exemplo, problemas com as configurações de firewall). Em geral, os testes funcionais executados no TestServer são mais lentos do que os testes de integração e de unidade, mas são muito mais rápidos do que os testes que seriam executados na rede em um servidor Web de teste. Use os testes funcionais para garantir a que pilha de front-end do aplicativo funcione conforme o esperado. Esses testes são úteis principalmente quando você encontra duplicação em seus controladores ou páginas e soluciona a duplicação adicionando filtros. O ideal é que essa refatoração não altere o comportamento do aplicativo. Um conjunto de testes funcionais pode verificar isso.
+
+> ### <a name="references--test-aspnet-core-mvc-apps"></a>Referências – Testar aplicativos ASP.NET Core MVC
+>
+> - **Teste no ASP.NET Core**  
+>   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **Convenção de nomenclatura de teste de unidade**  
+>   <https://ardalis.com/unit-test-naming-convention>
+> - **Testar EF Core**  
+>   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 
 >[!div class="step-by-step"]
 >[Anterior](work-with-data-in-asp-net-core-apps.md)

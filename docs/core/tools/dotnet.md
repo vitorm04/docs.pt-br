@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Saiba mais sobre o comando dotnet (o driver genérico para as ferramentas da CLI do .NET Core) e seu uso.
 ms.date: 06/04/2018
-ms.openlocfilehash: 5278adf44d12e428cdeacf1d475377ce9155c314
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 2134bf8ed66157619499b027f01d39e03e84411f
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612999"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859549"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -42,7 +42,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ---
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 `dotnet` é uma ferramenta para gerenciar o código-fonte e os binários do .NET. Ela expõe comandos que realizam tarefas específicas, como [`dotnet build`](dotnet-build.md) e [`dotnet run`](dotnet-run.md). Cada comando define seus próprios argumentos. Digite `--help` após cada comando para acessar uma breve documentação de ajuda.
 
@@ -304,7 +304,7 @@ Execute a DLL de um aplicativo, como `myapp.dll`:
 
 `DOTNET_PACKAGES`
 
-O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%HOME%\NuGet\Packages` no Windows.
+A pasta de pacotes globais. Se não estiver definido, o padrão será `~/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.
 
 `DOTNET_SERVICING`
 
@@ -326,7 +326,7 @@ Desabilita o roll forward da versão secundária, se definido como `0`. Para sab
 
 `DOTNET_PACKAGES`
 
-O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%HOME%\NuGet\Packages` no Windows.
+O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.
 
 `DOTNET_SERVICING`
 
@@ -344,7 +344,7 @@ Especifica se o tempo de execução, a estrutura compartilhada ou o SDK do .NET 
 
 `DOTNET_PACKAGES`
 
-O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%HOME%\NuGet\Packages` no Windows.
+O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.
 
 `DOTNET_SERVICING`
 

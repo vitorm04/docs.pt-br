@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Pr
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442978"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775895"
 ---
 # <a name="architectural-principles"></a>Princípios de arquitetura
 
@@ -50,7 +50,7 @@ A **inversão de dependência** é uma parte fundamental da criação de aplicat
 
 ### <a name="explicit-dependencies"></a>Dependências explícitas
 
-**Métodos e classes devem exigir explicitamente os objetos de colaboração de que precisam para funcionarem corretamente.** Os construtores de classe oferecem uma oportunidade para que as classes identifiquem os itens necessários para que estejam em um estado válido e funcionem corretamente. Se você definir classes que podem ser construídas e chamadas, mas que só funcionarão corretamente se certos componentes globais ou da infraestrutura estiverem em vigor, essas classes estarão sendo *desonestas* com seus clientes. O contrato do construtor informa o cliente de que ele precisa apenas dos itens especificados (possivelmente nada se a classe está usando apenas um construtor padrão), mas, em seguida, em tempo de execução, acontece que o objeto realmente precisou de outra coisa.
+**Métodos e classes devem exigir explicitamente os objetos de colaboração de que precisam para funcionarem corretamente.** Os construtores de classe oferecem uma oportunidade para que as classes identifiquem os itens necessários para que estejam em um estado válido e funcionem corretamente. Se você definir classes que podem ser construídas e chamadas, mas que só funcionarão corretamente se certos componentes globais ou da infraestrutura estiverem em vigor, essas classes estarão sendo *desonestas* com seus clientes. O contrato do construtor informa o cliente de que ele precisa apenas dos itens especificados (possivelmente nada se a classe estiver usando apenas um construtor sem parâmetros), mas, em seguida, em tempo de execução, acontece que o objeto realmente precisou de outra coisa.
 
 Seguindo o princípio da dependência explícita, os métodos e as classes estão sendo honestos com seus clientes sobre o que precisam para funcionar. Isso torna o código mais autodocumentado e os contratos de codificação mais amigáveis, pois os usuários confiarão que, desde que eles forneçam o que é necessário na forma de método ou de parâmetros do construtor, os objetos com os quais eles estão trabalhando se comportarão corretamente em tempo de execução.
 
@@ -85,7 +85,7 @@ Alguns exemplos de violações desse princípio incluem:
 
 - Classes responsáveis por salvar a si mesmas (como o padrão de Registro Ativo).
 
-- Construtor padrão necessário.
+- Construtor sem parâmetros necessário.
 
 - Propriedades que exigem uma palavra-chave virtual.
 

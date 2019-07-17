@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634636"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782628"
 ---
 # <a name="common-type-system"></a>Common Type System
 O Common Type System define como os tipos são declarados, usados e gerenciados no Common Language Runtime e também é uma parte importante do suporte do tempo de execução para a integração entre linguagens. O Common Type System executa as seguintes funções:  
@@ -73,7 +73,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
  A tabela a seguir descreve algumas das características que uma classe pode ter. Cada linguagem que dá suporte ao tempo de execução fornece uma maneira para indicar que uma classe ou um membro da classe tem uma ou mais dessas características. No entanto, as linguagens de programação individuais que segmentam o .NET não podem disponibilizar todas essas características.  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |sealed|Especifica que outra classe não pode ser derivada desse tipo.|  
 |implementa|Indica que a classe usa uma ou mais interfaces, fornecendo implementações de membros da interface.|  
@@ -86,7 +86,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
  Membros da classe que não tenham implementação são membros abstratos. Uma classe que tenha um ou mais membros abstratos é ela própria abstrata. Não é possível criar novas instâncias dessa classe. Algumas linguagens que segmentam o tempo de execução permitem marcar uma classe como abstrata mesmo que nenhum de seus membros seja abstrato. É possível usar uma classe abstrata quando você deseja encapsular um conjunto básico de funcionalidades que as classes derivadas podem herdar ou substituir quando apropriado. Classes que não são abstratas são chamadas de classes concretas.  
   
- Uma classe pode implementar qualquer número de interfaces, mas pode herdar apenas de uma classe base além de <xref:System.Object?displayProperty=nameWithType>, de que todas as classes herdam implicitamente. Todas as classes devem ter pelo menos um construtor, que inicializa novas instâncias da classe. Se você não definir explicitamente um construtor, a maioria dos compiladores fornecerá automaticamente um construtor padrão (sem parâmetros).  
+ Uma classe pode implementar qualquer número de interfaces, mas pode herdar apenas de uma classe base além de <xref:System.Object?displayProperty=nameWithType>, de que todas as classes herdam implicitamente. Todas as classes devem ter pelo menos um construtor, que inicializa novas instâncias da classe. Se você não definir explicitamente um construtor, a maioria dos compiladores fornecerá automaticamente um construtor sem parâmetros.  
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Estruturas  
@@ -190,7 +190,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ### <a name="type-accessibility"></a>Acessibilidade de tipo  
  Todos os tipos têm um modificador que rege sua acessibilidade de outros tipos. A tabela a seguir descreve as acessibilidades de tipo que o tempo de execução dá suporte.  
   
-|Acessibilidade|Descrição|  
+|Acessibilidade|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |public|O tipo é acessível por todos os assemblies.|  
 |assembly|O tipo é acessível somente dentro do assembly.|  
@@ -273,9 +273,9 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ### <a name="constructors"></a>Construtores  
  Um construtor é um tipo especial de método que cria novas instâncias de uma classe ou estrutura. Assim como qualquer outro método, um construtor pode incluir parâmetros. No entanto, os construtores não têm nenhum valor retornado (ou seja, eles retornam `void`).  
   
- Se o código-fonte para uma classe não definir explicitamente um construtor, o compilador incluirá um construtor padrão (sem parâmetros). No entanto, se o código-fonte de uma classe definir apenas construtores com parâmetros, os compiladores do Visual Basic e do C# não gerarão um construtor sem parâmetros.  
+ Se o código-fonte para uma classe não definir explicitamente um construtor, o compilador incluirá um construtor sem parâmetros. No entanto, se o código-fonte de uma classe definir apenas construtores com parâmetros, os compiladores do Visual Basic e do C# não gerarão um construtor sem parâmetros.  
   
- Se o código-fonte de uma estrutura definir construtores, eles deverão ser parametrizados. Uma estrutura não pode definir um construtor padrão (sem parâmetros) e os compiladores não geram construtores sem parâmetros para estruturas ou outros tipos de valor. Todos os tipos de valor têm um construtor padrão implícito. Esse construtor é implementado pelo Common Language Runtime e inicializa todos os campos da estrutura com seus valores padrão.  
+ Se o código-fonte de uma estrutura definir construtores, eles deverão ser parametrizados. Uma estrutura não pode definir um construtor sem parâmetros e os compiladores não geram construtores sem parâmetros para estruturas ou outros tipos de valor. Todos os tipos de valor têm um construtor sem parâmetros implícito. Esse construtor é implementado pelo Common Language Runtime e inicializa todos os campos da estrutura com seus valores padrão.  
   
 <a name="Events"></a>   
 ### <a name="events"></a>Eventos  
@@ -291,7 +291,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ## <a name="characteristics-of-type-members"></a>Características de membros de tipo  
  O Common Type System permite que os membros de tipo tenham várias características. No entanto, as linguagens não necessariamente dão suporte a todas elas. A tabela a seguir descreve as características de um membro.  
   
-|Característica|Pode ser aplicado a|Descrição|  
+|Característica|Pode ser aplicado a|DESCRIÇÃO|  
 |--------------------|------------------|-----------------|  
 |abstract|Métodos, propriedades e eventos|O tipo não fornece a implementação do método. Tipos que herdam ou implementam métodos abstratos devem fornecer uma implementação para o método. A única exceção é quando o tipo derivado é um tipo abstrato. Todos os métodos abstratos são virtuais.|  
 |privado, família, assembly, família e assembly, família ou assembly ou público|Todos|Define a acessibilidade de um membro:<br /><br /> particulares<br /> Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.<br /><br /> família<br /> Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.<br /><br /> assembly<br /> Acessível somente no assembly no qual o tipo é definido.<br /><br /> família e assembly<br /> Acessíveis somente em tipos qualificados para acesso de família e assembly.<br /><br /> família ou assembly<br /> Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.<br /><br /> públicos<br /> Acessíveis dentro de qualquer tipo.|  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: ef9c9bab5c1cebb06edf934254507180e2197349
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 1277b35723777760deebb6606ddc90bd21e654ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306564"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744108"
 ---
 # <a name="-operator-c-reference"></a>Operador = (Referência de C#)
 
@@ -64,7 +64,7 @@ A atribuição composta é tem suporte dos operadores [aritmético](arithmetic-o
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
-Um tipo definido pelo usuário não pode sobrecarregar o operador de atribuição. No entanto, um tipo definido pelo usuário pode definir uma conversão implícita em outro tipo. Dessa forma, o valor de um tipo definido pelo usuário pode ser atribuído a uma variável, uma propriedade ou um elemento do indexador de outro tipo. Para saber mais, confira o artigo de palavra-chave [implícito](../keywords/implicit.md).
+Um tipo definido pelo usuário não pode sobrecarregar o operador de atribuição. No entanto, um tipo definido pelo usuário pode definir uma conversão implícita em outro tipo. Dessa forma, o valor de um tipo definido pelo usuário pode ser atribuído a uma variável, uma propriedade ou um elemento do indexador de outro tipo. Para saber mais, confira [Operadores de conversão definidos pelo usuário](user-defined-conversion-operators.md).
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
