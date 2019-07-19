@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 0639becb1620daf7d457995392d134d40b90e826
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: b6a1cc3ced3205037eb5b83ac3841efbfbd1b5b9
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68235935"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331221"
 ---
 # <a name="c-operators-c-reference"></a>Operadores C# (Referência de C#)
 
@@ -63,7 +63,7 @@ Esses são os operadores de precedência mais alta.
 
 [nameof](nameof.md) – obtém o nome simples (não qualificado) de uma variável, tipo ou membro como uma cadeia de caracteres constante.
 
-[delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md) – declara e retorna uma instância delegada.
+[delegate](delegate-operator.md) – declara e retorna uma instância delegada.
 
 [sizeof](../keywords/sizeof.md) – retorna o tamanho em bytes do operando do tipo.
 
