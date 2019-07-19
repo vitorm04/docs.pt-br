@@ -22,28 +22,30 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15fd79a1289bd54b81db551abbdfcd63deef3e24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 862d520073dde1b935510bc7c68782c1204c6111
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795246"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331644"
 ---
 # <a name="cryptographic-signatures"></a>Assinaturas criptográficas
 
-<a name="top"></a> As assinaturas digitais de criptografia usam algoritmos de chave pública para fornecer integridade de dados. Quando você assina dados com uma assinatura digital, alguém pode verificar a assinatura e pode provar que os dados origem de você e não foi alterados depois que você assinou. Para obter mais informações sobre assinaturas digitais, consulte [serviços de criptografia](../../../docs/standard/security/cryptographic-services.md).
+<a name="top"></a>As assinaturas digitais de criptografia usam algoritmos de chave pública para fornecer integridade de dados. Quando você assina dados com uma assinatura digital, outra pessoa pode verificar a assinatura e pode provar que os dados foram originados de você e não foram alterados depois que você o assinou. Para obter mais informações sobre assinaturas digitais, consulte [serviços de criptografia](../../../docs/standard/security/cryptographic-services.md).
 
 Este tópico explica como gerar e verificar assinaturas digitais usando classes no <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace.
 
-- [Geração de assinaturas](#generate)
+- [Gerando assinaturas](#generate)
 
 - [Verificando assinaturas](#verify)
 
 <a name="generate"></a>
 
-## <a name="generating-signatures"></a>Geração de assinaturas
+## <a name="generating-signatures"></a>Gerando assinaturas
 
-Assinaturas digitais geralmente são aplicadas aos valores de hash que representam dados maiores. O exemplo a seguir se aplica a uma assinatura digital a um valor de hash. Primeiro, uma nova instância do <xref:System.Security.Cryptography.RSACryptoServiceProvider> classe é criada para gerar um par de chaves pública/privada. Em seguida, o <xref:System.Security.Cryptography.RSACryptoServiceProvider> é passado para uma nova instância do <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> classe. Isso transfere a chave privada para o <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, que, na verdade, executa a assinatura digital. Antes de poder assinar o código hash, você deve especificar um algoritmo de hash a ser usado. Este exemplo usa o algoritmo SHA1. Por fim, o <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> método é chamado para executar a assinatura.
+Geralmente, as assinaturas digitais são aplicadas a valores de hash que representam dados maiores. O exemplo a seguir aplica uma assinatura digital a um valor de hash. Primeiro, uma nova instância da <xref:System.Security.Cryptography.RSACryptoServiceProvider> classe é criada para gerar um par de chaves pública/privada. Em seguida, <xref:System.Security.Cryptography.RSACryptoServiceProvider> o é passado para uma nova instância <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> da classe. Isso transfere a chave privada para <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>o, que realmente executa a assinatura digital. Antes de poder assinar o código hash, você deve especificar um algoritmo de hash a ser usado. Este exemplo usa o algoritmo SHA1. Por fim, <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> o método é chamado para executar a assinatura.
+
+Devido a problemas de colisão com o SHA1, a Microsoft recomenda SHA256 ou melhor.
 
 ```vb
 Imports System
@@ -105,11 +107,11 @@ class Class1
 }
 ```
 
-### <a name="signing-xml-files"></a>Assinatura de arquivos XML
+### <a name="signing-xml-files"></a>Assinando arquivos XML
 
-O .NET Framework fornece o <xref:System.Security.Cryptography.Xml> namespace, que permite que você entrar XML. Assinatura XML é importante quando você deseja verificar se o XML provém de uma fonte de determinadas. Por exemplo, se você estiver usando um serviço de cotação de ações que usa o XML, você pode verificar a origem do XML, se ele for assinado.
+O .NET Framework fornece o <xref:System.Security.Cryptography.Xml> namespace, que permite que você assine o XML. A assinatura de XML é importante quando você deseja verificar se o XML provém de uma determinada fonte. Por exemplo, se você estiver usando um serviço de cotação de ações que usa XML, poderá verificar a origem do XML se ele estiver assinado.
 
-Siga as classes neste namespace de [recomendação de processamento e a sintaxe de assinatura XML](https://www.w3.org/TR/xmldsig-core/) da World Wide Web Consortium.
+As classes neste namespace seguem a [sintaxe de assinatura XML e a recomendação de processamento](https://www.w3.org/TR/xmldsig-core/) do World Wide Web Consortium.
 
 [Voltar ao início](#top)
 
@@ -117,19 +119,19 @@ Siga as classes neste namespace de [recomendação de processamento e a sintaxe 
 
 ## <a name="verifying-signatures"></a>Verificando assinaturas
 
-Para verificar se os dados foi assinados por uma pessoa específica, você deve ter as seguintes informações:
+Para verificar se os dados foram assinados por uma entidade específica, você deve ter as seguintes informações:
 
-- A chave pública da parte que os dados assinados.
+- A chave pública da entidade que assinou os dados.
 
 - A assinatura digital.
 
 - Os dados que receberam um sinal.
 
-- O algoritmo de hash usado pelo signatário.
+- O algoritmo de hash usado pelo assinante.
 
-Para verificar uma assinatura assinada pela <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> classe, use o <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> classe. O <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> classe deve ser fornecido a chave pública do assinante. Você precisará dos valores do módulo e o expoente para especificar a chave pública. (A parte que gerou o par de chaves pública/privada deve fornecer esses valores.) Primeiro crie uma <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto para conter a chave pública que verificam a assinatura e, em seguida, inicialize um <xref:System.Security.Cryptography.RSAParameters> estrutura para os valores de módulo e um expoente que especificam a chave pública.
+Para verificar uma assinatura assinada pela <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> classe, use a <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> classe. A <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> classe deve ser fornecida à chave pública do Assinante. Você precisará dos valores do módulo e do expoente para especificar a chave pública. (A parte que gerou o par de chaves pública/privada deve fornecer esses valores.) Primeiro, crie <xref:System.Security.Cryptography.RSACryptoServiceProvider> um objeto para manter a chave pública que verificará a assinatura e, em seguida <xref:System.Security.Cryptography.RSAParameters> , inicialize uma estrutura para os valores de módulo e expoente que especificam a chave pública.
 
-O código a seguir mostra a criação de um <xref:System.Security.Cryptography.RSAParameters> estrutura. O `Modulus` estiver definida como o valor de uma matriz de bytes chamada `modulusData` e o `Exponent` estiver definida como o valor de uma matriz de bytes chamada `exponentData`.
+O código a seguir mostra a criação de <xref:System.Security.Cryptography.RSAParameters> uma estrutura. A `Modulus` propriedade é definida como o valor de uma matriz de bytes `modulusData` chamada e `Exponent` a propriedade é definida como o valor de uma matriz de `exponentData`bytes chamada.
 
 ```vb
 Dim rsaKeyInfo As RSAParameters
@@ -143,9 +145,9 @@ rsaKeyInfo.Modulus = modulusData;
 rsaKeyInfo.Exponent = exponentData;
 ```
 
-Depois que você criou o <xref:System.Security.Cryptography.RSAParameters> do objeto, você pode inicializar uma nova instância dos <xref:System.Security.Cryptography.RSACryptoServiceProvider> classe para os valores especificados na <xref:System.Security.Cryptography.RSAParameters>. O <xref:System.Security.Cryptography.RSACryptoServiceProvider> é, por sua vez, passado para o construtor de um <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> para transferir a chave.
+Depois de criar o <xref:System.Security.Cryptography.RSAParameters> objeto, você pode inicializar uma nova instância <xref:System.Security.Cryptography.RSACryptoServiceProvider> da classe para os valores especificados em <xref:System.Security.Cryptography.RSAParameters>. O <xref:System.Security.Cryptography.RSACryptoServiceProvider> é, por sua vez, passado para o construtor de <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> um para transferir a chave.
 
-O exemplo a seguir ilustra esse processo. Neste exemplo, `hashValue` e `signedHashValue` são matrizes de bytes fornecidas por uma parte remota. A parte remota tiver se conectado a `hashValue` usando o algoritmo SHA1, produzindo a assinatura digital `signedHashValue`. O <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> método verifica se a assinatura digital é válida e foi usada para assinar o `hashValue`.
+O exemplo a seguir ilustra esse processo. Neste exemplo, `hashValue` e `signedHashValue` são matrizes de bytes fornecidos por uma parte remota. A parte remota assinou o `hashValue` usando o algoritmo SHA1, produzindo a assinatura `signedHashValue`digital. O <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> método verifica se a assinatura digital é válida e se foi usada para assinar o `hashValue`.
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()
@@ -174,7 +176,7 @@ else
 }
 ```
 
-Este fragmento de código exibirá "`The signature is valid`" se a assinatura é válida e "`The signature is not valid`" se não for.
+Esse fragmento de código exibirá`The signature is valid`"" se a assinatura for válida e`The signature is not valid`"" se não for.
 
 ## <a name="see-also"></a>Consulte também
 

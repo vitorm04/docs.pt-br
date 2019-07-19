@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: a242dc1f69c79b2c1a67c1a9235d3e942553caf1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598737"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330987"
 ---
 # <a name="localization-attributes-and-comments"></a>Atributos de localização e comentários
 Os comentários de localização de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] são propriedades, dentro do código-fonte [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], fornecidas pelos desenvolvedores para conceder as regras e dar dicas de localização. Os comentários de localização de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contêm dois conjuntos de informações: atributos de possibilidade de localização e comentários de localização de forma livre. Os atributos de possibilidade de localização são usados pela API de localização [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para indicar quais recursos devem ser localizados. Os comentários de forma livre são todas as informações que o criador do aplicativo desejar incluir.  
@@ -33,7 +33,7 @@ Os comentários de localização de [!INCLUDE[TLA#tla_winclient](../../../../inc
   
     - **All** – remove os comentários e os atributos do assembly e os coloca em um LocFile separado.  
   
-4. Quando os recursos localizáveis são extraídos do [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], os atributos de possibilidade de localização são respeitados pela API de localização [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)].  
+4. Quando recursos localizáveis são extraídos do BAML, os atributos de possibilidade de localização são respeitados pela API de localizações de BAML.  
   
 5. Os arquivos de comentário de localização, que contém apenas comentários de forma livre, são incorporados ao processo de localização em um momento posterior.  
   
