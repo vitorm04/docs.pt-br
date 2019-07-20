@@ -10,19 +10,19 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: 4f1bac24d7742066d2b472f52b7d85c84c243670
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6335d09a89225ae1e202a781a73bfd149608f5fc
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589032"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364196"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Como: Encapsular um controle do Windows Forms com ToolStripControlHost
-<xref:System.Windows.Forms.ToolStripControlHost> foi projetado para habilitar a hospedagem de controles de Windows Forms arbitrários, usando o <xref:System.Windows.Forms.ToolStripControlHost> construtor ou estendendo <xref:System.Windows.Forms.ToolStripControlHost> em si. É mais fácil encapsular o controle estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementar métodos e propriedades que expõem frequentemente usadas propriedades e métodos do controle. Você também pode expor eventos de controle no <xref:System.Windows.Forms.ToolStripControlHost> nível.  
+<xref:System.Windows.Forms.ToolStripControlHost>foi projetado para habilitar a hospedagem de controles de Windows Forms arbitrários <xref:System.Windows.Forms.ToolStripControlHost> usando o construtor ou <xref:System.Windows.Forms.ToolStripControlHost> estendendo-se. É mais fácil encapsular o controle estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando Propriedades e métodos que expõem propriedades e métodos usados com frequência do controle. Você também pode expor eventos para o controle no <xref:System.Windows.Forms.ToolStripControlHost> nível.  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>Para hospedar um controle em um ToolStripControlHost por derivação  
   
-1. Estender <xref:System.Windows.Forms.ToolStripControlHost>. Implemente um construtor padrão que chama o construtor de classe base que passa no controle desejado.  
+1. Estender <xref:System.Windows.Forms.ToolStripControlHost>. Implemente um construtor sem parâmetros que chama o construtor da classe base passando o controle desejado.  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#10)]
@@ -40,7 +40,7 @@ ms.locfileid: "65589032"
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#12)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#12)]  
   
-4. Opcionalmente, substituir os <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A>, e <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> métodos e adicionar os eventos de controle que você deseja expor.  
+4. Opcionalmente, substitua os <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A>métodos e <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> e adicione os eventos de controle que você deseja expor.  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#16](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#16)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#16)]

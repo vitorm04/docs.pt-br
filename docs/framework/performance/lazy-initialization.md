@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616379"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364055"
 ---
 # <a name="lazy-initialization"></a>Inicialização lenta
 *Inicialização lenta* de um objeto significa que a criação dele é adiada até que ele seja usado pela primeira vez. (Para este tópico, os termos *inicialização lenta* e *instanciação lenta* são sinônimos.) A inicialização lenta é usada principalmente para melhorar o desempenho, evitar a computação dispendiosa e reduzir os requisitos de memória do programa. Estes são os cenários mais comuns:  
@@ -34,7 +34,7 @@ ms.locfileid: "64616379"
 |<xref:System.Threading.LazyInitializer>|Fornece métodos `static` avançados (`Shared` no Visual Basic) para inicialização lenta de objetos sem a sobrecarga de uma classe.|  
   
 ## <a name="basic-lazy-initialization"></a>Inicialização lenta básica  
- Para definir um tipo de inicialização lenta, por exemplo, `MyType`, use `Lazy<MyType>` (`Lazy(Of MyType)` no Visual Basic), conforme mostrado no exemplo a seguir. Se nenhum delegado é passado ao construtor <xref:System.Lazy%601>, o tipo encapsulado é criado usando <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> quando a propriedade de valor é acessada pela primeira vez. Se o tipo não tem um construtor padrão, uma exceção de tempo de execução é gerada.  
+ Para definir um tipo de inicialização lenta, por exemplo, `MyType`, use `Lazy<MyType>` (`Lazy(Of MyType)` no Visual Basic), conforme mostrado no exemplo a seguir. Se nenhum delegado é passado ao construtor <xref:System.Lazy%601>, o tipo encapsulado é criado usando <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> quando a propriedade de valor é acessada pela primeira vez. Se o tipo não tiver um construtor sem parâmetros, uma exceção de tempo de execução será lançada.  
   
  No exemplo a seguir, suponha que `Orders` é uma classe que contém uma matriz de objetos `Order` recuperados de um banco de dados. Um objeto `Customer` contém uma instância de `Orders`, mas, dependendo de ações do usuário, os dados do objeto `Orders` talvez não sejam necessário.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "64616379"
   
 <a name="ExceptionsInLazyObjects"></a>   
 ## <a name="exceptions-in-lazy-objects"></a>Exceções em objetos lentos  
- Conforme mencionado anteriormente, um objeto <xref:System.Lazy%601> sempre retorna o mesmo objeto ou valor com o qual ele foi inicializado e, portanto, a propriedade <xref:System.Lazy%601.Value%2A> é somente leitura. Se você habilitar o cache de exceção, essa imutabilidade também se estenderá ao comportamento de exceção. Se um objeto de inicialização lenta tem o cache de exceção habilitado e gera uma exceção de seu método de inicialização quando o <xref:System.Lazy%601.Value%2A> propriedade é acessada pela primeira vez, essa mesma exceção será gerada em cada tentativa subsequente de acessar o <xref:System.Lazy%601.Value%2A> propriedade . Em outras palavras, o construtor do tipo encapsulado nunca será invocado novamente, mesmo em cenários com vários threads. Portanto, o objeto <xref:System.Lazy%601> não é capaz de gerar uma exceção em um acesso e retorna um valor em um acesso subsequente.  
+ Conforme mencionado anteriormente, um objeto <xref:System.Lazy%601> sempre retorna o mesmo objeto ou valor com o qual ele foi inicializado e, portanto, a propriedade <xref:System.Lazy%601.Value%2A> é somente leitura. Se você habilitar o cache de exceção, essa imutabilidade também se estenderá ao comportamento de exceção. Se um objeto inicializado por Lazy tiver o cache de exceção habilitado e lançar uma exceção de seu método <xref:System.Lazy%601.Value%2A> de inicialização quando a propriedade for acessada pela primeira vez, essa mesma exceção será <xref:System.Lazy%601.Value%2A> lançada em todas as tentativas subsequentes de acessar a propriedade . Em outras palavras, o construtor do tipo encapsulado nunca será invocado novamente, mesmo em cenários com vários threads. Portanto, o objeto <xref:System.Lazy%601> não é capaz de gerar uma exceção em um acesso e retorna um valor em um acesso subsequente.  
   
- O cache de exceção é habilitado quando você usar qualquer construtor <xref:System.Lazy%601?displayProperty=nameWithType> que usa um método de inicialização (parâmetro `valueFactory`); por exemplo, ele é habilitado quando você usa o construtor `Lazy(T)(Func(T))`. Se o construtor também usa um valor <xref:System.Threading.LazyThreadSafetyMode> (parâmetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> ou <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Especificar um método de inicialização permite o cache de exceções para esses dois modos. O método de inicialização pode ser muito simples. Por exemplo, ele pode chamar o construtor padrão para `T`: `new Lazy<Contents>(() => new Contents(), mode)` em C# ou `New Lazy(Of Contents)(Function() New Contents())` no Visual Basic. Se você usar um construtor <xref:System.Lazy%601?displayProperty=nameWithType> que não especifica um método de inicialização, exceções que serão geradas pelo construtor padrão para `T` não são armazenadas em cache. Para obter mais informações, consulte a enumeração <xref:System.Threading.LazyThreadSafetyMode>.  
+ O cache de exceção é habilitado quando você usar qualquer construtor <xref:System.Lazy%601?displayProperty=nameWithType> que usa um método de inicialização (parâmetro `valueFactory`); por exemplo, ele é habilitado quando você usa o construtor `Lazy(T)(Func(T))`. Se o construtor também usa um valor <xref:System.Threading.LazyThreadSafetyMode> (parâmetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> ou <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Especificar um método de inicialização permite o cache de exceções para esses dois modos. O método de inicialização pode ser muito simples. Por exemplo, ele pode chamar o construtor sem parâmetros para `T`: `new Lazy<Contents>(() => new Contents(), mode)` in C#ou `New Lazy(Of Contents)(Function() New Contents())` em Visual Basic. Se você usar um <xref:System.Lazy%601?displayProperty=nameWithType> Construtor que não especifique um método de inicialização, as exceções geradas pelo construtor sem parâmetros para `T` não serão armazenadas em cache. Para obter mais informações, consulte a enumeração <xref:System.Threading.LazyThreadSafetyMode>.  
   
 > [!NOTE]
 >  Se você criar um objeto <xref:System.Lazy%601> com o parâmetro de construtor `isThreadSafe` definido como `false` ou o parâmetro de construtor `mode` definido como <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, você deverá acessar o objeto <xref:System.Lazy%601> de um único thread ou fornecer sua própria sincronização. Isso se aplica a todos os aspectos do objeto, incluindo o cache de exceção.  
@@ -157,4 +157,4 @@ ms.locfileid: "64616379"
 - [Noções básicas de threading gerenciado](../../../docs/standard/threading/managed-threading-basics.md)
 - [Threads e threading](../../../docs/standard/threading/threads-and-threading.md)
 - [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Como: Executar a inicialização lenta de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Como: Executar inicialização lenta de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

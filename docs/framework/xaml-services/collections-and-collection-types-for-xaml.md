@@ -2,49 +2,49 @@
 title: Coleções e tipos de coleção para XAML
 ms.date: 03/30/2017
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-ms.openlocfilehash: 4123b64545f7c47a96c4cae496046a89b7e576b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63f6346837f77dbdbdcb4a90ec5af725be69ee02
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954174"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364331"
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>Coleções e tipos de coleção para XAML
 
-Este tópico descreve como definir propriedades de tipos que se destinam para dar suporte a uma coleção e para dar suporte a sintaxe XAML para criar uma instância de coleção de itens como filhos do elemento de um elemento de propriedade ou elemento do objeto pai.
+Este tópico descreve como definir propriedades de tipos que se destinam a dar suporte a uma coleção e para dar suporte à sintaxe XAML para criar uma instância de itens de coleção como filhos de elemento de um elemento de objeto pai ou elemento de propriedade.
 
-## <a name="xaml-collection-concepts"></a>Conceitos de coleção de XAML
+## <a name="xaml-collection-concepts"></a>Conceitos da coleção XAML
 
-Conceitualmente, qualquer relacionamento no XAML, onde há vários itens filho dentro do escopo de um elemento de objeto XAML ou elemento de propriedade XAML deve ser implementado como uma coleção. Essa coleção deve ser associada uma determinada propriedade XAML do tipo XAML que é o pai na relação. A propriedade deve ser uma coleção porque espera que um processador XAML atribuir a cada item na marcação para ser um item recém-adicionado da propriedade de coleção de backup.
+Conceitualmente, qualquer relação em XAML em que há vários itens filho dentro do escopo de um elemento de objeto XAML ou elemento de propriedade XAML deve ser implementado como uma coleção. Essa coleção deve ser associada a uma propriedade XAML específica do tipo XAML que é o pai nessa relação. A propriedade deve ser uma coleção porque um processador XAML espera atribuir cada item na marcação a ser um item recém-adicionado da propriedade de coleção de backup.
 
-No nível da linguagem XAML, os requisitos exatos de suporte de coleção não são totalmente definidos. O conceito que uma coleção pode ser tanto uma lista ou um dicionário (mas não ambos) é definido no nível da linguagem XAML, mas quais tipos de suporte representam ambos listas ou dicionários não é definido pela linguagem XAML.
+No nível da linguagem XAML, os requisitos exatos do suporte à coleta não estão totalmente definidos. O conceito de que uma coleção pode ser uma lista ou um dicionário (mas não ambos) é definido no nível de linguagem XAML, mas os tipos de suporte que representam listas ou dicionários não são definidos pela linguagem XAML.
 
-Nos serviços de XAML do .NET Framework, o conceito de suporte de coleção de XAML é mais claramente definido em termos de tipos de suporte do .NET Framework. Especificamente, o suporte a XAML para coleções baseia-se em várias APIs que são usadas para listas e dicionários na programação do .NET Framework geral e conceitos do .NET Framework.
+Em .NET Framework serviços XAML, o conceito de suporte à coleção XAML é definido mais claramente em termos de .NET Framework tipos de backup. Especificamente, o suporte a XAML para coleções baseia-se em vários conceitos .NET Framework e APIs que são usadas para listas e dicionários em geral .NET Framework programação.
 
-1. O <xref:System.Collections.IList> interface indica uma coleção de lista.
+1. A <xref:System.Collections.IList> interface indica uma coleção de listas.
 
-2. O <xref:System.Collections.IDictionary> interface indica uma coleção de dicionário.
+2. A <xref:System.Collections.IDictionary> interface indica uma coleção de dicionário.
 
-3. <xref:System.Array> representa uma matriz e uma matriz dá suporte a <xref:System.Collections.IList> métodos.
+3. <xref:System.Array>representa uma matriz e uma matriz dá suporte <xref:System.Collections.IList> a métodos.
 
-Em cada um desses conceitos de coleção, um processador XAML de serviços de XAML do .NET Framework espera chamar o `Add` método em uma instância específica do tipo da propriedade de coleção. Ou, em um cenário de serialização, um processador XAML produz instâncias de tipo XAML discretas para cada item encontrado na lista, dicionário ou matriz com base no conceito de específico da cada coleção de "Itens". Esses são: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; explícita <xref:System.Array.System%23Collections%23IList%23Item%2A> para <xref:System.Array>.
+Em cada um desses conceitos de coleção, um processador XAML .NET Framework serviços XAML espera chamar o `Add` método em uma instância específica do tipo da propriedade de coleção. Ou, em um cenário de serialização, um processador XAML produz instâncias de tipo XAML discretas para cada item encontrado na lista, no dicionário ou na matriz com base no conceito específico da coleção de "itens". Estes são: <xref:System.Collections.IList.Item%2A>; ; o explícito <xref:System.Array.System%23Collections%23IList%23Item%2A> para <xref:System.Array>. <xref:System.Collections.IDictionary.Item%2A>
 
 ## <a name="generic-collections"></a>Coleções genéricas
 
-Coleções genéricas podem ser útil para gerais de programação .NET Framework e também podem ser usadas para propriedades de coleção de XAML. No entanto, o genérico interfaces <xref:System.Collections.Generic.IList%601> e <xref:System.Collections.Generic.IDictionary%602> não são identificadas pelos processadores XAML de serviços de XAML do .NET Framework como sendo equivalente não genérico <xref:System.Collections.IList> ou <xref:System.Collections.IDictionary>. Em vez de implementar as interfaces, uma abordagem recomendada para tipos de propriedade de coleção genérica é derivar de classes <xref:System.Collections.Generic.List%601> ou <xref:System.Collections.Generic.Dictionary%602>. Essas classes implementam as interfaces não genéricas e, portanto, incluem o suporte esperado para coleções de XAML na implementação de base.
+As coleções genéricas podem ser úteis para programação de .NET Framework geral e também podem ser usadas para propriedades da coleção XAML. No entanto, as <xref:System.Collections.Generic.IList%601> interfaces <xref:System.Collections.Generic.IDictionary%602> genéricas e não são identificadas por .NET Framework processadores XAML serviços XAML como sendo equivalentes ao <xref:System.Collections.IList> não <xref:System.Collections.IDictionary>genérico ou. Em vez de implementar as interfaces, uma abordagem recomendada para tipos de propriedade de coleção genérica é derivar <xref:System.Collections.Generic.List%601> das <xref:System.Collections.Generic.Dictionary%602>classes ou. Essas classes implementam as interfaces não genéricas e, portanto, incluem o suporte esperado para coleções XAML na implementação de base.
 
-## <a name="read-only-collections-and-initialization-logic"></a>Coleções somente leitura e a lógica de inicialização
+## <a name="read-only-collections-and-initialization-logic"></a>Coleções somente leitura e lógica de inicialização
 
-Na programação do .NET Framework, é um padrão de design comum para tornar qualquer propriedade que contém um valor de uma coleção como uma coleção somente leitura. Esse padrão permite que a instância que possui a propriedade de coleção para controlar melhor o que acontece com a coleção... Especificamente, o padrão impede a substituição acidental de toda a coleção já existente, definindo a propriedade. Nesse padrão, qualquer acesso à coleção por chamadores em vez disso, deve ser feito ao chamar métodos ou propriedades como compatíveis com o tipo de coleção e/ou as interfaces de coleção relevantes, como <xref:System.Collections.IList>.
+Em .NET Framework programação, é um padrão de design comum fazer qualquer propriedade que contenha um valor de uma coleção como uma coleção somente leitura. Esse padrão permite que a instância proprietária da propriedade de coleção controle melhor o que acontece com a coleção. Especificamente, o padrão impede a substituição acidental de toda a coleção preexistente, definindo a propriedade. Nesse padrão, qualquer acesso à coleção por chamadores deve ser feito chamando métodos ou propriedades com suporte pelo tipo de coleção e/ou pelas interfaces de coleção relevantes, <xref:System.Collections.IList>como.
 
-Usando esse padrão significa que qualquer classe que expõe uma propriedade de coleção somente leitura deve inicializar primeiro essa propriedade para manter uma coleção vazia. Normalmente, a inicialização é executada como parte do comportamento de construção para a classe. Para ser útil para XAML, é importante que tal lógica sempre é referenciada pelo construtor padrão, pois o XAML geralmente chama o construtor padrão antes do processamento das propriedades (Propriedades de coleção ou de outra forma).
+O uso desse padrão implica que qualquer classe que expõe uma propriedade de coleção somente leitura deve primeiro inicializar essa propriedade para manter uma coleção vazia. Normalmente, a inicialização é executada como parte do comportamento de construção da classe. Para ser útil para XAML, é importante que essa lógica seja sempre referenciada pelo construtor sem parâmetros, porque o XAML geralmente chama o construtor sem parâmetros antes de processar as propriedades (Propriedades de coleção ou de outra forma).
 
-## <a name="xaml-type-system-support-and-collections"></a>Coleções e suporte do sistema de tipo XAML
+## <a name="xaml-type-system-support-and-collections"></a>Suporte e coleções do sistema de tipos XAML
 
-Além da mecânica básica da análise de XAML e preencher ou serializar as propriedades de coleção, o sistema de tipos XAML como implementado no serviços de XAML do .NET Framework inclui vários recursos de design que pertencem às coleções em XAML.
+Além da mecânica básica de análise de XAML e preenchimento ou serialização de propriedades de coleção, o sistema de tipos XAML conforme implementado em .NET Framework serviços XAML inclui vários recursos de design que pertencem a coleções em XAML.
 
-1. <xref:System.Xaml.XamlType.IsCollection%2A> Retorna VERDADEIRO se o tipo XAML é apoiado por um tipo que fornece suporte de coleção de XAML.
+1. <xref:System.Xaml.XamlType.IsCollection%2A>retornará true se o tipo XAML for apoiado por um tipo que fornece suporte à coleção XAML.
 
-2. <xref:System.Xaml.XamlType.IsDictionary%2A> e <xref:System.Xaml.XamlType.IsArray%2A> possível identificar o tipo XAML dá suporte ao modo de coleta. Para XAML personalizado processadores que são baseados em serviços de XAML do .NET Framework e o XAML sistema de tipo, mas não com base em existente <xref:System.Xaml.XamlWriter> implementações, saber o modo de coleta é usado pode ser necessário para saber qual método chamar para processamento de coleção.
+2. <xref:System.Xaml.XamlType.IsDictionary%2A>e <xref:System.Xaml.XamlType.IsArray%2A> pode identificar ainda mais qual modo de coleta o tipo XAML dá suporte. Para processadores XAML personalizados baseados em .NET Framework serviços XAML e o sistema de tipos XAML, mas não com base em <xref:System.Xaml.XamlWriter> implementações existentes, saber qual modo de coleta é usado pode ser necessário para saber qual método invocar processamento da coleção.
 
-3. Cada um dos valores de propriedade anterior potencialmente são influenciados por substituições de <xref:System.Xaml.XamlType.LookupCollectionKind%2A> em um tipo XAML.
+3. Cada um dos valores de propriedade anteriores é potencialmente influenciado por <xref:System.Xaml.XamlType.LookupCollectionKind%2A> substituições de em um tipo XAML.
