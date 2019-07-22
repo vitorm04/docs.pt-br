@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 03687b56d05d2b3b9e1ecadd75b83fd48156b7fe
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: aa0859e70389fda3bc7bb304de4979c54467f2c0
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67859017"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235680"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls"></a>Melhorias de acessibilidade em controles do Windows Forms
 
@@ -16,4 +16,3 @@ ms.locfileid: "67859017"
 |Versão|4.7.1|
 |Tipo|Redirecionando|
 |APIs afetadas|<ul><li><xref:System.Windows.Forms.ToolStripDropDownButton.CreateAccessibilityInstance?displayProperty=nameWithType></li><li><xref:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject.Name?displayProperty=nameWithType></li><li>[MonthCalendar.AccessibilityObject](xref:System.Windows.Forms.Control.AccessibilityObject)</li></ul>|
-

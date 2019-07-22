@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5b1547f596a0ff1c52a402f90457dced6ef604a0
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611790"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238644"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -122,7 +122,7 @@ Quando você atribui o valor de elementos de tupla com base em variáveis, o Vis
 
 **Opções adicionais do compilador**
 
-O compilador de linha de comando do Visual Basic agora é compatível com as opções do compilador [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) e [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) para controlar a saída de assemblies de referência. A **-refout** define o diretório de saída do assembly de referência e a **-refonly** especifica que somente um assembly de referência deve ser produzido pela compilação.
+O compilador de linha de comando do Visual Basic agora é compatível com as opções do compilador [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) e [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) para controlar a saída de assemblies de referência. A **-refout** define o diretório de saída do assembly de referência e a **-refonly** especifica que somente um assembly de referência deve ser produzido pela compilação.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -150,7 +150,7 @@ Você pode definir um literal binário usando o prefixo `&B` ou `&b`. Além diss
 
 Para obter mais informações, consulte a seção "Atribuições de literal" dos tipos de dados [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) e [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-[**Suporte para valores retornados por referência em C#**](../programming-guide/language-features/procedures/ref-return-values.md)
+[**Suporte para valores retornados por referência em C#** ](../programming-guide/language-features/procedures/ref-return-values.md)
 
 Começando com o C# 7.0, o C# é compatível com valores retornados de referência. Isto é, quando o método de chamada recebe um valor retornado por referência, ele pode alterar o valor da referência. O Visual Basic não permite a criação de métodos com valores retornados de referência, mas isso não permite o consumo e a modificação de valores de retorno de referência.
 
@@ -174,7 +174,7 @@ Para obter mais informações, consulte [Reference return values](../programming
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[Nameof](../../csharp/language-reference/keywords/nameof.md)
+[Nameof](../../csharp/language-reference/operators/nameof.md)
 
 Você pode obter o nome da cadeia de caracteres não qualificada de um tipo ou de um membro para uso em uma mensagem de erro sem realizar hard-coding de uma cadeia de caracteres.  Isso permite que seu código permaneça correto ao refatorar.  Esse recurso também é útil para conectar links MVC do tipo modelo-exibição-controlador e acionar eventos de alteração de propriedade.
 

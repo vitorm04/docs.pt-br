@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423242"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363883"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -56,7 +56,7 @@ Neste momento, as coisas começam a ficar interessantes. Vamos dar uma olhada em
 
 - [Genéricos](../programming-guide/generics/index.md)
 - [Tipos parciais](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [Métodos anônimos](../programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Métodos anônimos](../language-reference/operators/delegate-operator.md)
 - [Tipos que permitem valor nulo](../programming-guide/nullable-types/index.md)
 - [Iteradores](../programming-guide/concepts/iterators.md)
 - [Covariância e contravariância](../programming-guide/concepts/covariance-contravariance/index.md)
@@ -122,7 +122,7 @@ O C# versão 5.0 era uma versão focada da linguagem. Quase todo o esforço para
 - [Membros assíncronos](../async.md)
 - [Atributos de informações do chamador](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Veja também
 
 * [Projeto de código: Atributos de informações do chamador no C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 

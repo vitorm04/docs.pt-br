@@ -4,12 +4,12 @@ description: Este tutorial mostra como criar um aplicativo de console do .NET Co
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 833aeeb045ef1fd7bb0e6dbd2236bc3d9da2e8fc
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 2dc4d68eb6a3aa5890e4d091e33c4624d79317e9
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506155"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238365"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Analisar sentimento de comentários de um site com classificação binária em ML.NET
 
@@ -361,7 +361,6 @@ F1Score: 84.04%
 
 Sentiment: This was a very bad steak | Prediction: Negative | Probability: 0.1027377
 =============== End of Predictions ===============
-
 
 =============== Prediction Test of loaded model with a multiple samples ===============
 

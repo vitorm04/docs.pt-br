@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634782"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331759"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construtores de alternância em expressões regulares
 <a name="top"></a> Os constructos de alternância modificam uma expressão regular para permitir uma correspondência condicional ou do tipo um/ou outro. O .NET dá suporte a três constructos de alternância:  
@@ -45,7 +45,7 @@ ms.locfileid: "64634782"
   
  A expressão regular que usa o caractere `|`, `\bgr(a|e)y\b` é interpretada conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`gr`|Corresponder aos caracteres "gr".|  
@@ -59,7 +59,7 @@ ms.locfileid: "64634782"
   
  A expressão regular `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` é interpretada conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Corresponde a uma das seguintes opções: dois dígitos decimais seguidos por um hífen seguido por sete dígitos decimais ou três dígitos decimais, um hífen, dois dígitos decimais, outro hífen e quatro dígitos decimais.|  
@@ -89,7 +89,7 @@ ms.locfileid: "64634782"
   
  O padrão da expressão regular `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` é interpretado conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`(?(\d{2}-)`|Determinar se os próximos três caracteres são compostos por dois dígitos seguidos por um hífen.|  
@@ -120,12 +120,12 @@ ms.locfileid: "64634782"
   
  O padrão da expressão regular `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` é interpretado conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`(?<n2>\d{2}-)?`|Corresponder a zero ou uma ocorrência de dois dígitos seguidos por um hífen. Atribua um nome ao grupo de captura `n2`.|  
 |`(?(n2)`|Testar se `n2` foi correspondido na cadeia de caracteres de entrada.|  
-|`)\d{7}`|Se `n2` tiver sido correspondido, corresponder a sete dígitos decimais.|  
+|`\d{7}`|Se `n2` tiver sido correspondido, corresponder a sete dígitos decimais.|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|Se `n2` não tiver sido correspondido, corresponder a três dígitos decimais, um hífen, dois dígitos decimais, outro hífen e quatro dígitos decimais.|  
 |`\b`|Corresponder a um limite de palavra.|  
   

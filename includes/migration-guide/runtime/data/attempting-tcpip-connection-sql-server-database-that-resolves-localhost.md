@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8ac6d50b192001f6d924b2ffe4a367a33fc2c689
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: e36dac19beb6251debef100656670a6623344eea
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67857555"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237833"
 ---
 ### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>Falha ao tentar uma conexão TCP/IP com um banco de dados do SQL Server resolvida para `localhost`
 
@@ -15,4 +15,3 @@ ms.locfileid: "67857555"
 |Escopo|Secundário|
 |Versão|4.6|
 |Tipo|Tempo de execução|
-
