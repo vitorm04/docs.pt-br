@@ -1,4 +1,4 @@
-- name: Bem-vindo
+- name: Bem-Vindo
   href: welcome.md
 - name: Guia do .NET
   href: standard/index.md
@@ -296,6 +296,8 @@
           href: core/testing/unit-testing-published-output.md
         - name: Testando projetos do .NET Core em unidade ao vivo com o Visual Studio
           href: /visualstudio/test/live-unit-testing-start
+    - name: Integração contínua
+      href: core/tools/using-ci-with-cli.md
     - name: Controle de versão
       href: core/versions/index.md
       items:
@@ -303,86 +305,88 @@
           href: core/versions/selection.md
         - name: Como remover SDKs e tempos de execução desatualizados
           href: core/versions/remove-runtime-sdk-versions.md
-    - name: Catálogo de Identificador de Tempo de Execução
+    - name: Catálogo de RID (Identificador de Tempo de Execução)
       href: core/rid-catalog.md
     - name: Visão geral do SDK do .NET Core
       href: core/sdk.md
-    - name: Ferramentas da CLI do .NET Core
+    - name: CLI do .NET Core
       items:
-        - name: Visão geral da CLI do .NET Core
+        - name: Visão geral
           href: core/tools/index.md
-        - name: Telemetria
-          href: core/tools/telemetry.md
         - name: Ferramentas Globais
-          href: core/tools/global-tools.md
+          expanded: true
           items:
+            - name: Visão geral
+              href: core/tools/global-tools.md
             - name: Criar uma ferramenta global
               href: core/tools/global-tools-how-to-create.md
         - name: Acesso elevado
           href: core/tools/elevated-access.md
         - name: Modelo de extensibilidade
           href: core/tools/extensibility.md
-        - name: Integração contínua
-          href: core/tools/using-ci-with-cli.md
         - name: Modelos personalizados
           href: core/tools/custom-templates.md
         - name: Habilitar o preenchimento com TAB
           href: core/tools/enable-tab-autocomplete.md
-        - name: dotnet
-          href: core/tools/dotnet.md
-        - name: dotnet build
-          href: core/tools/dotnet-build.md
-        - name: dotnet build-server
-          href: core/tools/dotnet-build-server.md
-        - name: dotnet clean
-          href: core/tools/dotnet-clean.md
-        - name: dotnet help
-          href: core/tools/dotnet-help.md
-        - name: dotnet migrate
-          href: core/tools/dotnet-migrate.md
-        - name: dotnet msbuild
-          href: core/tools/dotnet-msbuild.md
-        - name: dotnet new
-          href: core/tools/dotnet-new.md
-        - name: dotnet nuget
+        - name: Telemetria
+          href: core/tools/telemetry.md
+        - name: Visão geral do global.json
+          href: core/tools/global-json.md
+        - name: Referência
           items:
-            - name: dotnet nuget delete
-              href: core/tools/dotnet-nuget-delete.md
-            - name: dotnet nuget locals
-              href: core/tools/dotnet-nuget-locals.md
-            - name: dotnet nuget push
-              href: core/tools/dotnet-nuget-push.md
-        - name: dotnet pack
-          href: core/tools/dotnet-pack.md
-        - name: dotnet publish
-          href: core/tools/dotnet-publish.md
-        - name: dotnet restore
-          href: core/tools/dotnet-restore.md
-        - name: dotnet run
-          href: core/tools/dotnet-run.md
-        - name: dotnet sln
-          href: core/tools/dotnet-sln.md
-        - name: dotnet store
-          href: core/tools/dotnet-store.md
-        - name: dotnet test
-          href: core/tools/dotnet-test.md
-        - name: dotnet tool
-          items:
-            - name: dotnet tool install
-              href: core/tools/dotnet-tool-install.md
-            - name: dotnet tool list
-              href: core/tools/dotnet-tool-list.md
-            - name: dotnet tool uninstall
-              href: core/tools/dotnet-tool-uninstall.md
-            - name: dotnet tool update
-              href: core/tools/dotnet-tool-update.md
-        - name: dotnet vstest
-          href: core/tools/dotnet-vstest.md
-        - name: Scripts dotnet-install
-          href: core/tools/dotnet-install-script.md
-        - name: Comandos de modificação de projeto
-          items:
-            - name: Referências
+            - name: dotnet
+              href: core/tools/dotnet.md
+            - name: dotnet build
+              href: core/tools/dotnet-build.md
+            - name: dotnet build-server
+              href: core/tools/dotnet-build-server.md
+            - name: dotnet clean
+              href: core/tools/dotnet-clean.md
+            - name: dotnet help
+              href: core/tools/dotnet-help.md
+            - name: dotnet migrate
+              href: core/tools/dotnet-migrate.md
+            - name: dotnet msbuild
+              href: core/tools/dotnet-msbuild.md
+            - name: dotnet new
+              href: core/tools/dotnet-new.md
+            - name: dotnet nuget
+              items:
+                - name: dotnet nuget delete
+                  href: core/tools/dotnet-nuget-delete.md
+                - name: dotnet nuget locals
+                  href: core/tools/dotnet-nuget-locals.md
+                - name: dotnet nuget push
+                  href: core/tools/dotnet-nuget-push.md
+            - name: dotnet pack
+              href: core/tools/dotnet-pack.md
+            - name: dotnet publish
+              href: core/tools/dotnet-publish.md
+            - name: dotnet restore
+              href: core/tools/dotnet-restore.md
+            - name: dotnet run
+              href: core/tools/dotnet-run.md
+            - name: dotnet sln
+              href: core/tools/dotnet-sln.md
+            - name: dotnet store
+              href: core/tools/dotnet-store.md
+            - name: dotnet test
+              href: core/tools/dotnet-test.md
+            - name: dotnet tool
+              items:
+                - name: dotnet tool install
+                  href: core/tools/dotnet-tool-install.md
+                - name: dotnet tool list
+                  href: core/tools/dotnet-tool-list.md
+                - name: dotnet tool uninstall
+                  href: core/tools/dotnet-tool-uninstall.md
+                - name: dotnet tool update
+                  href: core/tools/dotnet-tool-update.md
+            - name: dotnet vstest
+              href: core/tools/dotnet-vstest.md
+            - name: Scripts dotnet-install
+              href: core/tools/dotnet-install-script.md
+            - name: Comandos de referência do projeto
               items:
                 - name: dotnet add reference
                   href: core/tools/dotnet-add-reference.md
@@ -390,7 +394,7 @@
                   href: core/tools/dotnet-list-reference.md
                 - name: dotnet remove reference
                   href: core/tools/dotnet-remove-reference.md
-            - name: Pacotes
+            - name: Comandos de pacote de projeto
               items:
                 - name: dotnet add package
                   href: core/tools/dotnet-add-package.md
@@ -398,8 +402,6 @@
                   href: core/tools/dotnet-list-package.md
                 - name: dotnet remove package
                   href: core/tools/dotnet-remove-package.md
-        - name: global.json
-          href: core/tools/global-json.md
     - name: Ferramentas adicionais do .NET Core
       href: core/additional-tools/index.md
       items:
@@ -440,7 +442,7 @@
 - name: Guia do .NET Framework
   href: framework/index.md
   items:
-    - name: O Que Há de Novo
+    - name: O que há de novo
       href: framework/whats-new/
     - name: Introdução
       href: framework/get-started/
@@ -517,7 +519,7 @@
           items:
             - name: Escolha sua primeira lição
               href: csharp/tutorials/intro-to-csharp/index.md
-            - name: Hello world
+            - name: 'Olá, Mundo'
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'Números em C#'
               href: csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -557,7 +559,7 @@
           href: csharp/tutorials/generate-consume-asynchronous-stream.md
         - name: Estender as funcionalidades de dados usando a correspondência de padrões
           href: csharp/tutorials/pattern-matching.md
-        - name: Aplicativo do Console
+        - name: Aplicativo de console
           href: csharp/tutorials/console-teleprompter.md
         - name: Cliente REST
           href: csharp/tutorials/console-webapiclient.md
@@ -613,7 +615,7 @@
           href: csharp/methods.md
         - name: Expressões lambda
           href: csharp/programming-guide/statements-expressions-operators/lambda-expressions.md
-        - name: Propriedades
+        - name: propriedades
           href: csharp/properties.md
         - name: Indexadores
           href: csharp/indexers.md
@@ -847,7 +849,7 @@
               href: fsharp/language-reference/members/let-bindings-in-classes.md
             - name: Associações do em classes
               href: fsharp/language-reference/members/do-bindings-in-classes.md
-            - name: Propriedades
+            - name: propriedades
               href: fsharp/language-reference/members/properties.md
             - name: Propriedades indexadas
               href: fsharp/language-reference/members/indexed-properties.md
@@ -873,7 +875,7 @@
           href: fsharp/language-reference/object-expressions.md
         - name: Conversões cast e conversões
           href: fsharp/language-reference/casting-and-conversions.md
-        - name: Controle de acesso
+        - name: Controle de Acesso
           href: fsharp/language-reference/access-control.md
         - name: 'Expressões condicionais: if...then...else'
           href: fsharp/language-reference/conditional-expressions-if-then-else.md
@@ -1106,7 +1108,7 @@
           href: visual-basic/programming-guide/language-features/constants-enums/index.md
         - name: Fluxo de controle
           href: visual-basic/programming-guide/language-features/control-flow/index.md
-        - name: Tipos de Dados
+        - name: Tipos de dados
           href: visual-basic/programming-guide/language-features/data-types/index.md
           items:
             - name: Caracteres de tipo
@@ -1330,7 +1332,7 @@
               href: visual-basic/language-reference/functions/conversion-functions.md
             - name: Funções Matemáticas
               href: visual-basic/language-reference/functions/math-functions.md
-            - name: Funções da cadeia de caracteres
+            - name: Funções de Cadeia de Caracteres
               href: visual-basic/language-reference/functions/string-functions.md
             - name: Funções de conversão do tipo
               href: visual-basic/language-reference/functions/type-conversion-functions.md
@@ -1346,7 +1348,7 @@
               href: visual-basic/language-reference/modifiers/ansi.md
             - name: Assembly
               href: visual-basic/language-reference/modifiers/assembly.md
-            - name: Async
+            - name: Assíncrono
               href: visual-basic/language-reference/modifiers/async.md
             - name: Automático
               href: visual-basic/language-reference/modifiers/auto.md
@@ -1390,7 +1392,7 @@
               href: visual-basic/language-reference/modifiers/paramarray.md
             - name: Parcial
               href: visual-basic/language-reference/modifiers/partial.md
-            - name: Particular
+            - name: Privado
               href: visual-basic/language-reference/modifiers/private.md
             - name: Protegido de forma particular
               href: visual-basic/language-reference/modifiers/private-protected.md
@@ -1406,7 +1408,7 @@
               href: visual-basic/language-reference/modifiers/shadows.md
             - name: Compartilhado
               href: visual-basic/language-reference/modifiers/shared.md
-            - name: Estático
+            - name: estático
               href: visual-basic/language-reference/modifiers/static.md
             - name: Unicode
               href: visual-basic/language-reference/modifiers/unicode.md
@@ -1580,7 +1582,7 @@
                   href: visual-basic/language-reference/operators/like-operator.md
                 - name: Operador Mod
                   href: visual-basic/language-reference/operators/mod-operator.md
-                - name: Operador New
+                - name: Novo Operador
                   href: visual-basic/language-reference/operators/new-operator.md
                 - name: Operador Not
                   href: visual-basic/language-reference/operators/not-operator.md
@@ -1596,7 +1598,7 @@
                   href: visual-basic/language-reference/operators/typeof-operator.md
                 - name: Operador Xor
                   href: visual-basic/language-reference/operators/xor-operator.md
-        - name: Propriedades
+        - name: propriedades
           href: visual-basic/language-reference/properties.md
         - name: Consultas
           href: visual-basic/language-reference/queries/index.md
