@@ -1,4 +1,4 @@
-- name: Referência de linguagem
+- name: Referência da linguagem
   items:
     - name: 'Referência da linguagem C#'
       href: index.md
@@ -32,7 +32,7 @@
               items:
                 - name: Recursos dos tipos de referência
                   href: keywords/reference-types.md
-                - name: classe
+                - name: class
                   href: keywords/class.md
                 - name: Tipos de referência internos
                   displayName: 'object, delegate, dynamic, string'
@@ -71,11 +71,11 @@
                   href: keywords/restrictions-on-using-accessibility-levels.md
                 - name: interno
                   href: keywords/internal.md
-                - name: particulares
+                - name: privado
                   href: keywords/private.md
                 - name: protegidos
                   href: keywords/protected.md
-                - name: públicos
+                - name: público
                   href: keywords/public.md
                 - name: internos protegidos
                   href: keywords/protected-internal.md
@@ -103,7 +103,7 @@
               href: keywords/readonly.md
             - name: sealed
               href: keywords/sealed.md
-            - name: static
+            - name: estático
               href: keywords/static.md
             - name: unsafe
               href: keywords/unsafe.md
@@ -139,7 +139,7 @@
                   href: keywords/continue.md
                 - name: goto
                   href: keywords/goto.md
-                - name: return
+                - name: retorno
                   href: keywords/return.md
             - name: Instruções para manipulação de exceções
               items:
@@ -165,7 +165,7 @@
               href: keywords/lock-statement.md
         - name: Parâmetros de método
           items:
-            - name: Passando parâmetros
+            - name: Passagem de parâmetros
               href: keywords/method-parameters.md
             - name: params
               href: keywords/params.md
@@ -211,23 +211,23 @@
           items:
             - name: base
               href: keywords/base.md
-            - name: this
+            - name: este
               href: keywords/this.md
         - name: Palavras-chave literais
           items:
             - name: nulo
               href: keywords/null.md
-            - name: 'true'
+            - name: verdadeiro
               href: keywords/true-literal.md
-            - name: 'false'
+            - name: falso
               href: keywords/false-literal.md
-            - name: default
+            - name: padrão
               href: keywords/default.md
         - name: Palavras-chave contextuais
           items:
             - name: Referência rápida
               href: keywords/contextual-keywords.md
-            - name: adicionar
+            - name: Adicionar
               href: keywords/add.md
             - name: get
               href: keywords/get.md
@@ -243,7 +243,7 @@
               href: keywords/set.md
             - name: when (condição de filtro)
               href: keywords/when.md
-            - name: Valor
+            - name: value
               href: keywords/value.md
             - name: yield
               href: keywords/yield.md
@@ -265,7 +265,7 @@
               href: keywords/orderby-clause.md
             - name: Cláusula join
               href: keywords/join-clause.md
-            - name: Cláusula let
+            - name: cláusula Let
               href: keywords/let-clause.md
             - name: ascending
               href: keywords/ascending.md
@@ -273,11 +273,11 @@
               href: keywords/descending.md
             - name: em
               href: keywords/on.md
-            - name: é igual a
+            - name: equals
               href: keywords/equals.md
             - name: by
               href: keywords/by.md
-            - name: em
+            - name: mergulhar
               href: keywords/in.md
     - name: 'Operadores C#'
       items:
@@ -331,6 +331,9 @@
         - name: 'Operador ::'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: operador de representante
+          href: operators/delegate-operator.md
+          displayName: anonymous
         - name: operador nameof
           href: operators/nameof.md
         - name: Operador new
@@ -521,7 +524,7 @@
           href: ../../../_csharplang/spec/basic-concepts.md
         - name: Tipos
           href: ../../../_csharplang/spec/types.md
-        - name: Variáveis
+        - name: variáveis
           href: ../../../_csharplang/spec/variables.md
         - name: Conversões
           href: ../../../_csharplang/spec/conversions.md
