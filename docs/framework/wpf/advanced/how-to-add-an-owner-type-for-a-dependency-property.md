@@ -8,19 +8,19 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ddc85d159b4bf81751428c13c234c5e53be8ad4
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777111"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401126"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Como: Adicionar um tipo de proprietário para uma propriedade de dependência
 Este exemplo mostra como adicionar uma classe como um proprietário de uma propriedade de dependência registrado para um tipo diferente. Ao fazer isso, o leitor de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e o sistema de propriedade podem reconhecer a classe como um proprietário adicional da propriedade. Adicionar como proprietário opcionalmente permite que a classe de adição forneça os metadados específicos do tipo.  
   
- No exemplo a seguir, `StateProperty` é uma propriedade registrada pela classe `MyStateControl`. A classe `UnrelatedStateControl` adiciona a mesma como um proprietário do `StateProperty` usando o <xref:System.Windows.DependencyProperty.AddOwner%2A> método, especificamente usando a assinatura que permite novos metadados para a propriedade de dependência como ela existe no tipo de adição. Observe que você deve fornecer acessadores de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] para a propriedade semelhantes ao exemplo mostrado no exemplo o [Implemente uma propriedade de dependência](how-to-implement-a-dependency-property.md), bem como expor novamente o identificador de propriedade de dependência na classe que está sendo adicionado como proprietário.  
+ No exemplo a seguir, `StateProperty` é uma propriedade registrada pela classe `MyStateControl`. A classe `UnrelatedStateControl` se adiciona como um proprietário `StateProperty` do usando o <xref:System.Windows.DependencyProperty.AddOwner%2A> método, especificamente usando a assinatura que permite novos metadados para a propriedade de dependência como ela existe no tipo de adição. Observe que você deve fornecer acessadores de Common Language Runtime (CLR) para a propriedade semelhante ao exemplo mostrado no exemplo de [implementação de uma propriedade de dependência](how-to-implement-a-dependency-property.md) , bem como expor novamente o identificador de propriedade de dependência na classe que está sendo adicionada como proprietário.  
   
- Sem wrappers, a propriedade de dependência ainda funcionaria da perspectiva do uso do acesso programático <xref:System.Windows.DependencyObject.GetValue%2A> ou <xref:System.Windows.DependencyObject.SetValue%2A>. Mas, geralmente, você deseja corresponder esse comportamento de propriedade e sistema com os wrappers da propriedade [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Os wrappers facilitam a definição da propriedade de dependência de forma programática e tornam possível definir as propriedades como atributos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Sem os wrappers, a propriedade de dependência ainda funcionaria a partir da perspectiva do <xref:System.Windows.DependencyObject.GetValue%2A> acesso <xref:System.Windows.DependencyObject.SetValue%2A>programático usando o ou o. Mas, normalmente, você deseja paralelizar esse comportamento de sistema de propriedades com os wrappers de propriedade CLR. Os wrappers facilitam a definição da propriedade de dependência de forma programática e tornam possível definir as propriedades como atributos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Para saber como substituir metadados padrão, consulte [Substituir metadados para uma propriedade de dependência](how-to-override-metadata-for-a-dependency-property.md).  
   

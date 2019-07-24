@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 32e3926bb4c519b7be14a26484603d6d4ea88b6a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665791"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401169"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Como: Adicionar um manipulador de eventos usando código
 Esse exemplo mostra como adicionar um manipulador de eventos a um elemento usando código.  
@@ -21,11 +21,11 @@ Esse exemplo mostra como adicionar um manipulador de eventos a um elemento usand
  Se você desejar adicionar um manipulador de eventos a um elemento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e a página de marcação que contém o elemento já foi carregada, será necessário adicionar o manipulador usando código. Como alternativa, se estiver compilando a árvore de elementos para um aplicativo usando inteiramente código e não declarando nenhum elemento usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], você poderá chamar métodos específicos para adicionar manipuladores de eventos à árvore de elementos construídos.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir adiciona um novo <xref:System.Windows.Controls.Button> a uma página existente que está inicialmente definida em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Um arquivo code-behind implementa um método de manipulador de eventos e, em seguida, adiciona esse método como um novo manipulador de eventos sobre o <xref:System.Windows.Controls.Button>.  
+ O exemplo a seguir adiciona um <xref:System.Windows.Controls.Button> novo a uma página existente que é inicialmente definida [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]em. Um arquivo code-behind implementa um método manipulador de eventos e, em seguida, adiciona esse método como um novo <xref:System.Windows.Controls.Button>manipulador de eventos no.  
   
- O C# exemplo usa o `+=` operador para atribuir um manipulador a um evento. Este é o mesmo operador que é usado para atribuir um manipulador no modelo de manipulação de eventos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Microsoft Visual Basic não suporta este operador como um meio de adicionar manipuladores de eventos. Em vez disso, ele requer uma de duas técnicas:  
+ O C# exemplo usa o `+=` operador para atribuir um manipulador a um evento. Esse é o mesmo operador usado para atribuir um manipulador no modelo de manipulação de eventos Common Language Runtime (CLR). O Microsoft Visual Basic não oferece suporte a esse operador como um meio de adicionar manipuladores de eventos. Em vez disso, ele requer uma de duas técnicas:  
   
-- Use o <xref:System.Windows.UIElement.AddHandler%2A> método, junto com um `AddressOf` operador, para fazer referência a implementação do manipulador de eventos.  
+- Use o <xref:System.Windows.UIElement.AddHandler%2A> método, junto com um `AddressOf` operador, para fazer referência à implementação do manipulador de eventos.  
   
 - Use a palavra-chave `Handles` como parte da definição do manipulador de eventos. Essa técnica não é mostrada aqui. Consulte [Manipulação de eventos do Visual Basic e WPF](visual-basic-and-wpf-event-handling.md).  
   

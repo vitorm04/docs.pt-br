@@ -1,5 +1,5 @@
 ---
-title: 'Otimizando desempenho: Comportamento do objeto'
+title: 'Otimizando o desempenho: Comportamento do objeto'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 025c8691eb1aaf9483a222530a5590670ede486b
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772990"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400471"
 ---
-# <a name="optimizing-performance-object-behavior"></a>Otimizando desempenho: Comportamento do objeto
+# <a name="optimizing-performance-object-behavior"></a>Otimizando o desempenho: Comportamento do objeto
 O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ajudará você a fazer o balanceamento correto entre desempenho e funcionalidade.  
 
 <a name="Not_Removing_Event_Handlers"></a>   
@@ -31,10 +31,10 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
   
 <a name="DPs_and_Objects"></a>   
 ## <a name="dependency-properties-and-objects"></a>Propriedades de dependência e objetos  
- Em geral, ao acessar uma propriedade de dependência de um <xref:System.Windows.DependencyObject> não é mais lento do que acessar um [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] propriedade. Enquanto há uma pequena sobrecarga de desempenho para configurar um valor da propriedade, obter um valor é tão rápido quanto obter o valor de uma propriedade do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. O fato de as propriedades de dependência darem suporte a recursos robustos, como vinculação de dados, animação, herança e estilos é a compensação pela pequena sobrecarga de desempenho. Para obter mais informações, consulte [Visão geral sobre propriedades de dependência](dependency-properties-overview.md).  
+ Em geral, o acesso a uma propriedade de <xref:System.Windows.DependencyObject> dependência de um não é mais lento do que acessar uma propriedade CLR. Embora haja uma pequena sobrecarga de desempenho para definir um valor de propriedade, obter um valor é tão rápido quanto obter o valor de uma propriedade CLR. O fato de as propriedades de dependência darem suporte a recursos robustos, como vinculação de dados, animação, herança e estilos é a compensação pela pequena sobrecarga de desempenho. Para obter mais informações, consulte [Visão geral sobre propriedades de dependência](dependency-properties-overview.md).  
   
 ### <a name="dependencyproperty-optimizations"></a>Otimizações de DependencyProperty  
- Você deve definir as propriedades de dependência em seu aplicativo com muito cuidado. Se sua <xref:System.Windows.DependencyProperty> afeta somente renderizar as opções de metadados de tipo, em vez de outras opções de metadados, como <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, você deve marcá-la como tal, substituindo seus metadados. Para obter mais informações sobre como substituir ou obter metadados de propriedades, consulte [Metadados de propriedades de dependência](dependency-property-metadata.md).  
+ Você deve definir as propriedades de dependência em seu aplicativo com muito cuidado. Se o <xref:System.Windows.DependencyProperty> afetar apenas as opções de metadados do tipo de renderização, em vez de <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>outras opções de metadados, como, você deve marcá-lo como tal, substituindo seus metadados. Para obter mais informações sobre como substituir ou obter metadados de propriedades, consulte [Metadados de propriedades de dependência](dependency-property-metadata.md).  
   
  Talvez seja mais eficiente fazer com que um manipulador de alterações de propriedade invalide as passagens de medida, organização e renderização manualmente se nem todas as alterações de propriedade afetarem, na verdade, a medida, a organização e a renderização. Por exemplo, você pode decidir renderizar novamente uma tela de fundo apenas quando um valor for maior que um limite definido. Nesse caso, seu manipulador de alteração de propriedade só invalidaria a renderização quando o valor excedesse o limite definido.  
   
@@ -42,33 +42,33 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
  Por padrão, as propriedades de dependência registradas são não herdáveis. No entanto, você pode explicitamente tornar qualquer propriedade herdável. Embora esse seja um recurso útil, converter uma propriedade para se tornar herdável afeta o desempenho, aumentando o período de tempo para a invalidação da propriedade.  
   
 ### <a name="use-registerclasshandler-carefully"></a>Usar o RegisterClassHandler com cuidado  
- Ao chamar <xref:System.Windows.EventManager.RegisterClassHandler%2A> permite que você salve o estado da instância, é importante estar ciente de que o manipulador é chamado em cada instância, o que pode causar problemas de desempenho. Use somente <xref:System.Windows.EventManager.RegisterClassHandler%2A> quando seu aplicativo requer que você salve o estado da instância.  
+ Embora a <xref:System.Windows.EventManager.RegisterClassHandler%2A> chamada permita que você salve o estado da instância, é importante estar ciente de que o manipulador é chamado em cada instância, o que pode causar problemas de desempenho. Use <xref:System.Windows.EventManager.RegisterClassHandler%2A> somente quando seu aplicativo exigir que você salve o estado da instância.  
   
 ### <a name="set-the-default-value-for-a-dependencyproperty-during-registration"></a>Definir o valor padrão para uma DependencyProperty durante o registro  
- Ao criar uma <xref:System.Windows.DependencyProperty> que requer um valor padrão, defina o valor usando os metadados padrão passados como um parâmetro para o <xref:System.Windows.DependencyProperty.Register%2A> método o <xref:System.Windows.DependencyProperty>. Use esta técnica em vez de configurar o valor da propriedade em um construtor ou em cada instância de um elemento.  
+ Ao criar um <xref:System.Windows.DependencyProperty> que exija um valor padrão, defina o valor usando os metadados padrão passados como um parâmetro para o <xref:System.Windows.DependencyProperty.Register%2A> método do <xref:System.Windows.DependencyProperty>. Use esta técnica em vez de configurar o valor da propriedade em um construtor ou em cada instância de um elemento.  
   
 ### <a name="set-the-propertymetadata-value-using-register"></a>Definir o valor de PropertyMetadata usando o registro  
- Ao criar uma <xref:System.Windows.DependencyProperty>, você tem a opção de configuração o <xref:System.Windows.PropertyMetadata> usando o <xref:System.Windows.DependencyProperty.Register%2A> ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> métodos. Embora o objeto possa ter um construtor estático para chamar <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, isso não é a solução ideal e afetará o desempenho. Para melhor desempenho, defina as <xref:System.Windows.PropertyMetadata> durante a chamada para <xref:System.Windows.DependencyProperty.Register%2A>.  
+ Ao criar um <xref:System.Windows.DependencyProperty>, você tem a opção de definir o <xref:System.Windows.PropertyMetadata> usando os <xref:System.Windows.DependencyProperty.Register%2A> métodos ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> . Embora seu objeto possa ter um construtor estático para chamar <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, essa não é a solução ideal e afetará o desempenho. Para obter o melhor desempenho, <xref:System.Windows.PropertyMetadata> defina o durante a <xref:System.Windows.DependencyProperty.Register%2A>chamada para.  
   
 <a name="Freezable_Objects"></a>   
 ## <a name="freezable-objects"></a>Objetos congeláveis  
- Um <xref:System.Windows.Freezable> é um tipo especial de objeto que tem dois estados: descongelado e congelado. Congelar objetos sempre que possível melhora o desempenho do seu aplicativo e reduz seu conjunto de trabalho. Para obter mais informações, consulte a [Visão geral de objetos congeláveis](freezable-objects-overview.md).  
+ Um <xref:System.Windows.Freezable> é um tipo especial de objeto que tem dois Estados: descongelado e congelado. Congelar objetos sempre que possível melhora o desempenho do seu aplicativo e reduz seu conjunto de trabalho. Para obter mais informações, consulte a [Visão geral de objetos congeláveis](freezable-objects-overview.md).  
   
- Cada <xref:System.Windows.Freezable> tem um <xref:System.Windows.Freezable.Changed> evento que é gerado sempre que ele é alterado. No entanto, as notificações de alteração são dispendiosas em termos de desempenho do aplicativo.  
+ Cada <xref:System.Windows.Freezable> um tem <xref:System.Windows.Freezable.Changed> um evento que é gerado sempre que é alterado. No entanto, as notificações de alteração são dispendiosas em termos de desempenho do aplicativo.  
   
- Considere o exemplo a seguir em que cada <xref:System.Windows.Shapes.Rectangle> usa o mesmo <xref:System.Windows.Media.Brush> objeto:  
+ Considere o exemplo a seguir no qual <xref:System.Windows.Shapes.Rectangle> cada um usa <xref:System.Windows.Media.Brush> o mesmo objeto:  
   
  [!code-csharp[Performance#PerformanceSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet2)]
  [!code-vb[Performance#PerformanceSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet2)]  
   
- Por padrão, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um manipulador de eventos para o <xref:System.Windows.Media.SolidColorBrush> do objeto <xref:System.Windows.Freezable.Changed> evento para invalidar os <xref:System.Windows.Shapes.Rectangle> do objeto <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade. Nesse caso, cada vez que o <xref:System.Windows.Media.SolidColorBrush> tiver que disparar seu <xref:System.Windows.Freezable.Changed> evento é necessário para invocar a função de retorno de chamada para cada <xref:System.Windows.Shapes.Rectangle>— o acúmulo dessas invocações de função de retorno de chamada impõe uma penalidade de desempenho significativa. Além disso, adicionar e remover manipuladores neste ponto exigiria muito do desempenho, já que o aplicativo teria que percorrer toda a lista para fazer isso. Se seu cenário de aplicativo nunca muda de <xref:System.Windows.Media.SolidColorBrush>, você estará pagando o custo de manutenção <xref:System.Windows.Freezable.Changed> manipuladores de eventos desnecessariamente.  
+ Por padrão, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o fornece um manipulador de eventos <xref:System.Windows.Media.SolidColorBrush> para o <xref:System.Windows.Freezable.Changed> evento do objeto a fim de invalidar <xref:System.Windows.Shapes.Rectangle> a propriedade <xref:System.Windows.Shapes.Shape.Fill%2A> do objeto. Nesse caso, cada vez que o <xref:System.Windows.Media.SolidColorBrush> tem que disparar seu <xref:System.Windows.Freezable.Changed> evento, é necessário invocar a função de retorno de <xref:System.Windows.Shapes.Rectangle>chamada para cada um — o acúmulo dessas invocações de função de retorno de chamada impõe uma penalidade de desempenho significativa. Além disso, adicionar e remover manipuladores neste ponto exigiria muito do desempenho, já que o aplicativo teria que percorrer toda a lista para fazer isso. Se o cenário do aplicativo nunca alterar <xref:System.Windows.Media.SolidColorBrush>o, você pagará o custo de manter <xref:System.Windows.Freezable.Changed> os manipuladores de eventos desnecessariamente.  
   
- Congelando uma <xref:System.Windows.Freezable> pode melhorar seu desempenho, porque ele não precisa mais gastar recursos em manter as notificações de alteração. A tabela a seguir mostra o tamanho de um simples <xref:System.Windows.Media.SolidColorBrush> quando sua <xref:System.Windows.Freezable.IsFrozen%2A> estiver definida como `true`, comparado a quando não é. Isso pressupõe a aplicação de um pincel para o <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade de dez <xref:System.Windows.Shapes.Rectangle> objetos.  
+ Congelar um <xref:System.Windows.Freezable> pode melhorar seu desempenho, pois ele não precisa mais gastar recursos para manter notificações de alteração. A tabela a seguir mostra o tamanho de um <xref:System.Windows.Media.SolidColorBrush> simples quando <xref:System.Windows.Freezable.IsFrozen%2A> sua propriedade é definida `true`como, em comparação com quando não é. Isso pressupõe a aplicação de um pincel <xref:System.Windows.Shapes.Shape.Fill%2A> à propriedade de <xref:System.Windows.Shapes.Rectangle> dez objetos.  
   
 |**Estado**|**Size**|  
 |---------------|--------------|  
-|Frozen <xref:System.Windows.Media.SolidColorBrush>|212 bytes|  
-|Não congelado <xref:System.Windows.Media.SolidColorBrush>|972 bytes|  
+|Daquela<xref:System.Windows.Media.SolidColorBrush>|212 bytes|  
+|Não congelado<xref:System.Windows.Media.SolidColorBrush>|972 bytes|  
   
  O exemplo de código a seguir demonstra esse conceito:  
   
@@ -76,32 +76,32 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
  [!code-vb[Performance#PerformanceSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet3)]  
   
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>Manipuladores alterados em Congeláveis descongelados podem manter objetos ativos  
- O delegado que um objeto passa para um <xref:System.Windows.Freezable> do objeto <xref:System.Windows.Freezable.Changed> evento é efetivamente uma referência a esse objeto. Portanto, <xref:System.Windows.Freezable.Changed> manipuladores de eventos podem manter objetos ativos mais do que o esperado. Ao executar a limpeza de um objeto que tenha sido registrado para escutar uma <xref:System.Windows.Freezable> do objeto <xref:System.Windows.Freezable.Changed> eventos, é essencial remover esse delegado antes de liberar o objeto.  
+ O delegado que um objeto passa para o <xref:System.Windows.Freezable> evento de <xref:System.Windows.Freezable.Changed> um objeto é efetivamente uma referência a esse objeto. Portanto, <xref:System.Windows.Freezable.Changed> os manipuladores de eventos podem manter os objetos ativos por mais tempo do que o esperado. Ao executar a limpeza de um objeto que foi registrado para escutar o <xref:System.Windows.Freezable> <xref:System.Windows.Freezable.Changed> evento de um objeto, é essencial remover esse delegado antes de liberar o objeto.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também interliga <xref:System.Windows.Freezable.Changed> eventos internamente. Por exemplo, todas as propriedades de dependência que levam <xref:System.Windows.Freezable> como um valor escutarão <xref:System.Windows.Freezable.Changed> eventos automaticamente. O <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade, que usa um <xref:System.Windows.Media.Brush>, ilustra esse conceito.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]também conecta <xref:System.Windows.Freezable.Changed> eventos internamente. Por exemplo, todas as propriedades de dependência <xref:System.Windows.Freezable> que assumem como um valor <xref:System.Windows.Freezable.Changed> escutarão eventos automaticamente. A <xref:System.Windows.Shapes.Shape.Fill%2A> Propriedade, que usa um <xref:System.Windows.Media.Brush>, ilustra esse conceito.  
   
  [!code-csharp[Performance#PerformanceSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
  [!code-vb[Performance#PerformanceSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
   
- Na atribuição de `myBrush` para `myRectangle.Fill`, um representante apontando de volta para o <xref:System.Windows.Shapes.Rectangle> objeto será adicionado para o <xref:System.Windows.Media.SolidColorBrush> do objeto <xref:System.Windows.Freezable.Changed> eventos. Isso significa que o código a seguir, na verdade, não torna o `myRect` qualificado para a coleta de lixo:  
+ Na `myBrush` atribuição de <xref:System.Windows.Freezable.Changed> para `myRectangle.Fill`, um delegado apontando de volta para o <xref:System.Windows.Shapes.Rectangle> objeto será adicionado ao <xref:System.Windows.Media.SolidColorBrush> evento do objeto. Isso significa que o código a seguir, na verdade, não torna o `myRect` qualificado para a coleta de lixo:  
   
  [!code-csharp[Performance#PerformanceSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet5)]
  [!code-vb[Performance#PerformanceSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet5)]  
   
- Nesse caso `myBrush` ainda está mantendo `myRectangle` ativo e irá chamá-lo de volta quando ele dispara seu <xref:System.Windows.Freezable.Changed> eventos. Observe que atribuir `myBrush` para o <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade de uma nova <xref:System.Windows.Shapes.Rectangle> simplesmente adicionará outro manipulador de eventos para `myBrush`.  
+ Nesse caso `myBrush` , ainda está se `myRectangle` mantendo ativa e irá chamá-la de volta quando ele <xref:System.Windows.Freezable.Changed> acionar seu evento. `myBrush` Observe que a atribuição <xref:System.Windows.Shapes.Shape.Fill%2A> à propriedade de um novo <xref:System.Windows.Shapes.Rectangle> irá simplesmente adicionar outro manipulador de eventos a `myBrush`.  
   
- A maneira recomendada para limpar esses tipos de objetos é remover o <xref:System.Windows.Media.Brush> do <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade, que por sua vez removerá o <xref:System.Windows.Freezable.Changed> manipulador de eventos.  
+ A maneira recomendada para limpar esses tipos de objetos é remover o <xref:System.Windows.Media.Brush> <xref:System.Windows.Shapes.Shape.Fill%2A> da propriedade, o que, por sua vez, removerá <xref:System.Windows.Freezable.Changed> o manipulador de eventos.  
   
  [!code-csharp[Performance#PerformanceSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet6)]
  [!code-vb[Performance#PerformanceSnippet6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet6)]  
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>Virtualização da interface do usuário  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também fornece uma variação do <xref:System.Windows.Controls.StackPanel> elemento que "virtualiza" automaticamente conteúdo filho associado a dados. Nesse contexto, a palavra virtualizar refere-se a uma técnica pela qual um subconjunto dos objetos são gerados de um grande número de itens de dados com base em quais itens estão visíveis na tela. É intensivo, tanto em termos de memória quanto de processador, gerar um grande número de elementos de interface do usuário quando apenas alguns podem estar na tela em um determinado momento. <xref:System.Windows.Controls.VirtualizingStackPanel> (por meio da funcionalidade fornecida pelo <xref:System.Windows.Controls.VirtualizingPanel>) calcula os itens visíveis e funciona com o <xref:System.Windows.Controls.ItemContainerGenerator> de uma <xref:System.Windows.Controls.ItemsControl> (como <xref:System.Windows.Controls.ListBox> ou <xref:System.Windows.Controls.ListView>) apenas para criar elementos para os itens visíveis.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]também fornece uma variação do elemento <xref:System.Windows.Controls.StackPanel> que "virtualiza" automaticamente o conteúdo filho associado a dados. Nesse contexto, a palavra virtualizar refere-se a uma técnica pela qual um subconjunto dos objetos são gerados de um grande número de itens de dados com base em quais itens estão visíveis na tela. É intensivo, tanto em termos de memória quanto de processador, gerar um grande número de elementos de interface do usuário quando apenas alguns podem estar na tela em um determinado momento. <xref:System.Windows.Controls.VirtualizingStackPanel>(por meio da <xref:System.Windows.Controls.VirtualizingPanel> <xref:System.Windows.Controls.ItemsControl> <xref:System.Windows.Controls.ListView> <xref:System.Windows.Controls.ItemContainerGenerator> funcionalidadefornecidapor)calculaositensvisíveisetrabalhacomodeum(comoou)paracriarapenaselementosparaitensvisíveis.<xref:System.Windows.Controls.ListBox>  
   
  Como uma otimização de desempenho, os objetos visuais para esses itens serão gerados ou mantidos ativos somente se estiverem visíveis na tela. Quando não estão mais na área visível do controle, os objetos visuais podem ser removidos. Isso não deve ser confundido com virtualização de dados, em que os objetos de dados não estão todos presentes na coleção local mas, em vez disso, são transmitidos conforme necessário.  
   
- A tabela a seguir mostra o tempo decorrido, adicionar e renderizar 5000 <xref:System.Windows.Controls.TextBlock> elementos a uma <xref:System.Windows.Controls.StackPanel> e um <xref:System.Windows.Controls.VirtualizingStackPanel>. Nesse cenário, as medidas representam o tempo entre anexar uma cadeia de caracteres de texto para o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade de um <xref:System.Windows.Controls.ItemsControl> objeto para a hora quando os elementos do painel exibem a cadeia de caracteres de texto.  
+ A tabela a seguir mostra o tempo decorrido adicionando e renderizando 5000 <xref:System.Windows.Controls.TextBlock> elementos <xref:System.Windows.Controls.StackPanel> a a e a. <xref:System.Windows.Controls.VirtualizingStackPanel> Nesse cenário, as medidas representam o tempo entre anexar uma cadeia de caracteres de texto <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> à propriedade de <xref:System.Windows.Controls.ItemsControl> um objeto até a hora em que os elementos do painel exibem a cadeia de texto.  
   
 |**Painel de host**|**Tempo de renderização (ms)**|  
 |--------------------|----------------------------|  

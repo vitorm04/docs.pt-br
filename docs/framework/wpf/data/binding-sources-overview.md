@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364211"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401442"
 ---
 # <a name="binding-sources-overview"></a>Visão geral das fontes de associação
 Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados. Este tópico discute os tipos de objetos que você pode usar como a origem da associação.  
@@ -22,7 +22,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
   
 |Origem da associação|Descrição|  
 |--------------------|-----------------|  
-|Objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]|Você pode associar a propriedades públicas, subpropriedades, bem como a indexadores de qualquer objeto [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. O mecanismo de associação usa a reflexão do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] para obter os valores das propriedades. Como alternativa, os objetos que <xref:System.ComponentModel.ICustomTypeDescriptor> implementam ou têm <xref:System.ComponentModel.TypeDescriptionProvider> um registrado também funcionam com o mecanismo de associação.<br /><br /> Para obter mais informações sobre como implementar uma classe que pode servir como uma origem da associação, consulte [Implementando uma classe para a origem da associação](#classes) mais adiante neste tópico.|  
+|objetos Common Language Runtime (CLR)|Você pode associar a propriedades públicas, subpropriedades, bem como indexadores, de qualquer objeto Common Language Runtime (CLR). O mecanismo de associação usa a reflexão do CLR para obter os valores das propriedades. Como alternativa, os objetos que <xref:System.ComponentModel.ICustomTypeDescriptor> implementam ou têm <xref:System.ComponentModel.TypeDescriptionProvider> um registrado também funcionam com o mecanismo de associação.<br /><br /> Para obter mais informações sobre como implementar uma classe que pode servir como uma origem da associação, consulte [Implementando uma classe para a origem da associação](#classes) mais adiante neste tópico.|  
 |objetos dinâmicos|Você pode associar a propriedades disponíveis e indexadores de um objeto que implementa a <xref:System.Dynamic.IDynamicMetaObjectProvider> interface. Se você pode acessar o membro no código, pode associar a ele. Por exemplo, se um objeto dinâmico permite que você acesse um membro no código por meio de `someObjet.AProperty`, você pode associar a ele, definindo o caminho de associação como `AProperty`.|  
 |Objetos ADO.NET|Você pode associar a objetos ADO.NET, <xref:System.Data.DataTable>como. O ADO.NET <xref:System.Data.DataView> implementa a <xref:System.ComponentModel.IBindingList> interface, que fornece notificações de alteração que o mecanismo de associação escuta.|  
 |Objetos [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]|Você `XPath` pode associar e executar consultas em um <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>ou <xref:System.Xml.XmlElement>. Uma maneira conveniente de acessar [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados que é a origem da associação na marcação é usar um <xref:System.Windows.Data.XmlDataProvider> objeto. Para obter mais informações, consulte [Associar a dados XML usando um XMLDataProvider e consultas XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Você também pode associar a um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>associar aos resultados de consultas executadas em objetos desses tipos usando LINQ to XML. Uma maneira conveniente de usar LINQ to XML para acessar dados XML que é a origem da associação na marcação é usar um <xref:System.Windows.Data.ObjectDataProvider> objeto. Para obter mais informações, consulte [Associar a XDocument, XElement ou LINQ para resultados de Consulta XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
@@ -33,9 +33,9 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
  Você pode criar suas próprias origens da associação. Esta seção aborda as coisas que você precisa saber caso esteja implementando uma classe para servir como uma origem da associação.  
   
 ### <a name="providing-change-notifications"></a>Fornecendo notificações de alteração  
- Se você estiver usando uma <xref:System.Windows.Data.BindingMode.OneWay> Associação <xref:System.Windows.Data.BindingMode.TwoWay> ou (porque deseja que o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] atualize quando as propriedades de origem da Associação forem alteradas dinamicamente), você deverá implementar um mecanismo de notificação de alteração de propriedade adequado. O mecanismo recomendado é para a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] classe dinâmica ou para implementar a <xref:System.ComponentModel.INotifyPropertyChanged> interface. Para obter mais informações, consulte [Implementar notificação de alteração da propriedade](how-to-implement-property-change-notification.md).  
+ Se você estiver usando uma <xref:System.Windows.Data.BindingMode.OneWay> Associação <xref:System.Windows.Data.BindingMode.TwoWay> ou (porque deseja que o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] atualize quando as propriedades de origem da Associação forem alteradas dinamicamente), você deverá implementar um mecanismo de notificação de alteração de propriedade adequado. O mecanismo recomendado é para a classe CLR ou dinâmica implementar a <xref:System.ComponentModel.INotifyPropertyChanged> interface. Para obter mais informações, consulte [Implementar notificação de alteração da propriedade](how-to-implement-property-change-notification.md).  
   
- Se você criar um [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto que não é implementado <xref:System.ComponentModel.INotifyPropertyChanged>, deverá organizar seu próprio sistema de notificação para certificar-se de que os dados usados em uma associação permaneçam atuais. Você pode fornecer notificações de alteração, oferecendo suporte ao padrão `PropertyChanged` para cada propriedade que você deseja receber notificações de alteração. Para dar suporte a esse padrão, você define um evento *PropertyName*Changed para cada propriedade, em que *PropertyName* é o nome da propriedade. Você aciona o evento sempre que a propriedade é alterada.  
+ Se você criar um objeto CLR que não implementa <xref:System.ComponentModel.INotifyPropertyChanged>, será necessário organizar seu próprio sistema de notificação para certificar-se de que os dados usados em uma associação permaneçam atuais. Você pode fornecer notificações de alteração, oferecendo suporte ao padrão `PropertyChanged` para cada propriedade que você deseja receber notificações de alteração. Para dar suporte a esse padrão, você define um evento *PropertyName*Changed para cada propriedade, em que *PropertyName* é o nome da propriedade. Você aciona o evento sempre que a propriedade é alterada.  
   
  Se a sua origem da associação implementa um desses mecanismos de notificação, as atualizações de destino ocorrem automaticamente. Se por algum motivo sua fonte de associação não fornecer as notificações de propriedade alteradas adequadas, você terá a opção de <xref:System.Windows.Data.BindingExpression.UpdateTarget%2A> usar o método para atualizar a propriedade de destino explicitamente.  
   
@@ -80,7 +80,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
   
  Essa tabela descreve os seguintes pontos importantes sobre requisitos de permissão na associação de dados:  
   
-- Para propriedades do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], a associação de dados funciona enquanto o mecanismo de associação é capaz de acessar a propriedade da origem da associação usando reflexão. Caso contrário, o mecanismo de associação emitirá um aviso de que a propriedade não pôde ser encontrada e usará o valor de fallback ou o valor padrão, se estiver disponível.  
+- Para propriedades CLR, a vinculação de dados funciona contanto que o mecanismo de associação seja capaz de acessar a propriedade de origem da Associação usando reflexão. Caso contrário, o mecanismo de associação emitirá um aviso de que a propriedade não pôde ser encontrada e usará o valor de fallback ou o valor padrão, se estiver disponível.  
   
 - Você pode associar a propriedades em objetos dinâmicos que são definidos em tempo de execução ou tempo de compilação.  
   

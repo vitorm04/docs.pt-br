@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860169"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401422"
 ---
 # <a name="dependency-properties-overview"></a>Visão geral das propriedades de dependência
 
 O WPF (Windows Presentation Foundation) fornece um conjunto de serviços que podem ser usados para estender a funcionalidade de uma [propriedade](../../../standard/base-types/common-type-system.md#Properties) de um tipo. Em conjunto, esses serviços são normalmente conhecidos como o sistema de propriedades do WPF. Uma propriedade que tem o suporte do sistema de propriedades do WPF é conhecida como uma propriedade de dependência. Esta visão geral descreve o sistema de propriedades do WPF e as funcionalidades de uma propriedade de dependência. Isso inclui como usar as propriedades de dependência existentes no XAML e no código. Esta visão geral também apresenta aspectos especializados de propriedades de dependência, como metadados de propriedades de dependência e como criar sua própria propriedade de dependência em uma classe personalizada.
 
 ## <a name="prerequisites"></a>Pré-requisitos
-Este tópico pressupõe que você tenha algum conhecimento básico sobre o sistema de tipos .NET e sobre programação orientada a objeto. Para seguir os exemplos deste tópico, você também deve ter noções básicas de XAML e saber como escrever aplicativos do WPF. Para obter mais informações, confira [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+Este tópico pressupõe que você tenha algum conhecimento básico sobre o sistema de tipos .NET e sobre programação orientada a objeto. Para seguir os exemplos deste tópico, você também deve ter noções básicas de XAML e saber como escrever aplicativos do WPF. Para obter mais informações, confira [Passo a passo: Meu primeiro aplicativo](../getting-started/walkthrough-my-first-wpf-desktop-application.md)de área de trabalho do WPF.  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Propriedades de dependência e propriedades CLR
  No WPF, as propriedades normalmente são expostas como [propriedades](../../../standard/base-types/common-type-system.md#Properties) padrão do .NET. Em um nível básico, você poderá interagir com essas propriedades diretamente e nunca saber que elas são implementadas como uma propriedade de dependência. No entanto, você deve se familiarizar com algumas ou todas as funcionalidades do sistema de propriedades do WPF para poder aproveitá-las.
@@ -42,9 +42,9 @@ A seguinte lista relaciona a terminologia usada com propriedades de dependência
 
 - **Propriedade de dependência:** Uma propriedade que é apoiada por um <xref:System.Windows.DependencyProperty>.
 
-- **Identificador de propriedade de dependência:** Um <xref:System.Windows.DependencyProperty> instância, que é obtida como um valor de retorno ao registrar uma propriedade de dependência e, em seguida, armazenada como um membro estático de uma classe. Esse identificador é usado como um parâmetro para muitas das APIs que interagem com o sistema de propriedades do WPF.
+- **Identificador da propriedade de dependência:** Uma <xref:System.Windows.DependencyProperty> instância, que é obtida como um valor de retorno ao registrar uma propriedade de dependência e, em seguida, armazenada como um membro estático de uma classe. Esse identificador é usado como um parâmetro para muitas das APIs que interagem com o sistema de propriedades do WPF.
 
-- **CLR "wrapper":** O valor real get e set implementações para a propriedade. Essas implementações incorporam o identificador de propriedade de dependência com seu uso em chamadas <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A>, fornecendo o suporte para a propriedade usando o sistema de propriedades do WPF.
+- **CLR "wrapper":** As implementações Get e Set reais para a propriedade. Essas implementações incorporam o identificador de propriedade de dependência com seu uso em chamadas <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A>, fornecendo o suporte para a propriedade usando o sistema de propriedades do WPF.
 
 O exemplo a seguir define a propriedade de dependência `IsSpinning` e mostra a relação entre o identificador <xref:System.Windows.DependencyProperty> e a propriedade à qual ele dá suporte.
 
@@ -68,7 +68,7 @@ Como um exemplo de sintaxe não atributo, o exemplo de XAML a seguir mostra outr
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>Configurando propriedades no código
- Normalmente, a configuração de valores de propriedades de dependência no código é apenas uma chamada à implementação set exposta pelo “wrapper” [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)].
+ A definição de valores de propriedade de dependência no código normalmente é apenas uma chamada para a implementação do conjunto exposta pelo "wrapper" do CLR.
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ Obter um valor da propriedade também é basicamente uma chamada à implementaç
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-Você também pode chamar as APIs do sistema de propriedade <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> diretamente. Isso não é geralmente necessário se você estiver usando as propriedades existentes (os wrappers são mais convenientes e fornecem uma melhor exposição da propriedade para ferramentas de desenvolvedor), mas chamar as APIs diretamente é apropriado para determinados cenários.
+Você também pode chamar as APIs <xref:System.Windows.DependencyObject.GetValue%2A> do sistema de propriedades e <xref:System.Windows.DependencyObject.SetValue%2A> diretamente. Isso normalmente não é necessário se você estiver usando propriedades existentes (os wrappers são mais convenientes e fornece uma melhor exposição da propriedade para ferramentas de desenvolvedor), mas chamar as APIs diretamente é apropriado para determinados cenários.
 
 As propriedades também podem ser definidas em XAML e, em seguida, acessadas no código posteriormente, por meio do code-behind. Para obter detalhes, consulte [Code-behind e XAML no WPF](code-behind-and-xaml-in-wpf.md).
 
@@ -190,7 +190,7 @@ Normalmente, você não desejará que os estilos sempre sejam aplicados e oculte
 
 ## <a name="learning-more-about-dependency-properties"></a>Mais informações sobre propriedades de dependência  
 
-- Uma propriedade anexada é um tipo de propriedade que dá suporte a uma sintaxe especializada em XAML. Uma propriedade anexada não costuma ter uma correspondência 1:1 com uma propriedade [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e não é necessariamente uma propriedade de dependência. A finalidade típica de uma propriedade anexada é permitir que os elementos filho relatem valores de propriedade para um elemento pai, mesmo que o elemento pai e o elemento filho não tenham essa propriedade como parte das listagens de membros de classe. Um cenário principal é permitir que os elementos filhos informem o pai como devem ser apresentados no [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; por exemplo, confira <xref:System.Windows.Controls.DockPanel.Dock%2A> ou <xref:System.Windows.Controls.Canvas.Left%2A>. Para obter detalhes, consulte [Visão geral das propriedades anexadas](attached-properties-overview.md).
+- Uma propriedade anexada é um tipo de propriedade que dá suporte a uma sintaxe especializada em XAML. Uma propriedade anexada geralmente não tem uma correspondência de 1:1 com uma propriedade Common Language Runtime (CLR) e não é necessariamente uma propriedade de dependência. A finalidade típica de uma propriedade anexada é permitir que os elementos filho relatem valores de propriedade para um elemento pai, mesmo que o elemento pai e o elemento filho não tenham essa propriedade como parte das listagens de membros de classe. Um cenário principal é permitir que os elementos filhos informem o pai como devem ser apresentados no [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; por exemplo, confira <xref:System.Windows.Controls.DockPanel.Dock%2A> ou <xref:System.Windows.Controls.Canvas.Left%2A>. Para obter detalhes, consulte [Visão geral das propriedades anexadas](attached-properties-overview.md).
 
 - Os desenvolvedores de componentes ou de aplicativos podem desejar criar sua própria propriedade de dependência, a fim de habilitar funcionalidades como vinculação de dados ou suporte a estilos ou para o suporte à invalidação e coerção de valor. Para obter detalhes, consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md).
 

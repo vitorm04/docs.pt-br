@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 66158d14b7686f520260cd24fbf6c1b0e7dda1d4
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364102"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400779"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
 Este tópico define os termos que são usados para descrever os elementos da sintaxe XAML. Esses termos são usados com frequência durante o restante desta documentação, tanto especificamente para a documentação do WPF quanto para as outras estruturas que usam XAML ou os conceitos básicos do XAML habilitados pelo suporte à linguagem XAML no nível de System.Xaml. Este tópico trata mais a fundo da terminologia básica introduzida no tópico [Visão geral de XAML (WPF)](xaml-overview-wpf.md).  
@@ -47,7 +47,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML e CLR  
- XAML é uma linguagem de marcação. O [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], como o nome diz, permite a execução em tempo de execução. XAML por si só não é uma das linguagens comuns diretamente consumidas pelo tempo de execução de CLR. Em vez disso, você pode pensar em XAML como dando suporte a seu próprio sistema de tipos. O sistema de análise de XAML específico que é usado pelo WPF se baseia no CLR e o sistema de tipos do CLR. Tipos XAML são mapeados para tipos do CLR para instanciar uma representação de tempo de execução quando o XAML para WPF é analisado. Por esse motivo, o restante da discussão de sintaxe neste documento incluirá referências ao sistema de tipos do CLR, embora as discussões de sintaxe equivalentes na especificação da linguagem XAML não o façam. (Segundo o nível de especificação da linguagem XAML, tipos de XAML podem ser mapeados para qualquer outro sistema de tipos, o que significa que esse sistema não precisa ser o CLR; no entanto, isso exigiria a criação e uso de um analisador XAML diferente.)  
+ XAML é uma linguagem de marcação. O Common Language Runtime (CLR), como implícito pelo nome, permite a execução em tempo de execução. XAML por si só não é uma das linguagens comuns diretamente consumidas pelo tempo de execução de CLR. Em vez disso, você pode pensar em XAML como dando suporte a seu próprio sistema de tipos. O sistema de análise de XAML específico que é usado pelo WPF se baseia no CLR e o sistema de tipos do CLR. Tipos XAML são mapeados para tipos do CLR para instanciar uma representação de tempo de execução quando o XAML para WPF é analisado. Por esse motivo, o restante da discussão de sintaxe neste documento incluirá referências ao sistema de tipos do CLR, embora as discussões de sintaxe equivalentes na especificação da linguagem XAML não o façam. (Segundo o nível de especificação da linguagem XAML, tipos de XAML podem ser mapeados para qualquer outro sistema de tipos, o que significa que esse sistema não precisa ser o CLR; no entanto, isso exigiria a criação e uso de um analisador XAML diferente.)  
   
 #### <a name="members-of-types-and-class-inheritance"></a>Membros de tipos e herança de classe  
  Propriedades e eventos, tal como aparecem como membros XAML de um tipo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], muitas vezes são herdados de tipos base. Considere este exemplo: `<Button Background="Blue" .../>`. A <xref:System.Windows.Controls.Control.Background%2A> propriedade não é uma propriedade imediatamente declarada <xref:System.Windows.Controls.Button> na classe, se você examinar a definição de classe, os resultados de reflexo ou a documentação. Em vez <xref:System.Windows.Controls.Control.Background%2A> disso, é herdado <xref:System.Windows.Controls.Control> da classe base.  

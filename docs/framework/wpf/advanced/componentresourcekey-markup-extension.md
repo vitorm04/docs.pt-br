@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 93735d12426042fd6517c10a55d1a9bd32f906bb
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: b373b33fcc962e49aa220f31e24b1484a0a8cd98
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363062"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401592"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Extensão de marcação ComponentResourceKey
 Define e referencia chaves para recursos carregados de assemblies externos. Isso permite que um recurso de pesquisa especifique um tipo de destino em um assembly, em vez de um dicionário de recurso explícito em um assembly ou em uma classe.  
@@ -46,7 +46,7 @@ Define e referencia chaves para recursos carregados de assemblies externos. Isso
   
 |||  
 |-|-|  
-|`targetTypeName`|O nome do tipo [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] público definido no assembly de recurso.|  
+|`targetTypeName`|O nome do tipo de Common Language Runtime público (CLR) que é definido no assembly de recurso.|  
 |`targetID`|A chave para o recurso. Quando recursos forem pesquisados, `targetID` será análogo à [Diretiva X:Key](../../xaml-services/x-key-directive.md) do recurso.|  
   
 ## <a name="remarks"></a>Comentários  
