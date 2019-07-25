@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400679"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434081"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Visão Geral de Padrões de Controle de Automação de Interface de Usuário
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "68400679"
   
 - As propriedades e os eventos fornecem informações sobre a funcionalidade do padrão de controle, bem como informações sobre o estado do controle.  
   
- Os padrões de controle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] se relacionam a [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] objetos do as. No [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)], você pode consultar um objeto para perguntar a quais interfaces ele dá suporte e, em seguida, usar essas interfaces para acessar a funcionalidade. No [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], os clientes de automação da interface do usuário podem pedir a um controle quais padrões de controle ele oferece suporte e interagir com o controle por meio de propriedades, métodos, eventos e estruturas expostas pelos padrões de controle com suporte. Por exemplo, para uma caixa de edição de várias linhas, os <xref:System.Windows.Automation.Provider.IScrollProvider>provedores de automação da interface do usuário implementam. Quando um cliente sabe que um <xref:System.Windows.Automation.AutomationElement> dá suporte <xref:System.Windows.Automation.ScrollPattern> ao padrão de controle, ele pode usar as propriedades, os métodos e os eventos expostos por esse padrão de controle para manipular o controle ou acessar informações sobre o controle.  
+ Os padrões de controle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] estão relacionados a como interfaces do as Component Object Model (com). Em COM, você pode consultar um objeto para perguntar a quais interfaces ele dá suporte e, em seguida, usar essas interfaces para acessar a funcionalidade. No [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], os clientes de automação da interface do usuário podem pedir a um controle quais padrões de controle ele oferece suporte e interagir com o controle por meio de propriedades, métodos, eventos e estruturas expostas pelos padrões de controle com suporte. Por exemplo, para uma caixa de edição de várias linhas, os <xref:System.Windows.Automation.Provider.IScrollProvider>provedores de automação da interface do usuário implementam. Quando um cliente sabe que um <xref:System.Windows.Automation.AutomationElement> dá suporte <xref:System.Windows.Automation.ScrollPattern> ao padrão de controle, ele pode usar as propriedades, os métodos e os eventos expostos por esse padrão de controle para manipular o controle ou acessar informações sobre o controle.  
   
 <a name="uiautomation_control_pattern_client_provider"></a>   
 ## <a name="ui-automation-providers-and-clients"></a>Provedores e clientes de automação da interface do usuário  

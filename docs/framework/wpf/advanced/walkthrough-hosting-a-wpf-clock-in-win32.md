@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 98e48060bbb82764e1e541797c666ca33f247c39
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 27e1a2e88beeacf8c2cd98f61b11542ee2341e8f
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400483"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433970"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Passo a passo: hospedar um relógio do WPF no Win32
 
@@ -85,7 +85,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)
 ```
 
-Esse atributo informa ao Common Language Runtime (CLR) que quando ele é [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]inicializado, ele deve usar um STA (modelo de apartamento de thread único), que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é necessário [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]para o (e).
+Esse atributo informa ao Common Language Runtime (CLR) que quando ele é inicializado Component Object Model (com), ele deve usar um STA (modelo de apartamento de thread único), que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é necessário [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]para o (e).
 
 ## <a name="create-a-windows-presentation-framework-page"></a>Criar uma página do Windows Presentation Framework
 
