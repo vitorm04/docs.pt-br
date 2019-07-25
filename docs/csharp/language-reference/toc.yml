@@ -1,4 +1,4 @@
-- name: Referência da linguagem
+- name: Referência de linguagem
   items:
     - name: 'Referência da linguagem C#'
       href: index.md
@@ -32,7 +32,7 @@
               items:
                 - name: Recursos dos tipos de referência
                   href: keywords/reference-types.md
-                - name: class
+                - name: classe
                   href: keywords/class.md
                 - name: Tipos de referência internos
                   displayName: 'object, delegate, dynamic, string'
@@ -43,6 +43,8 @@
               href: keywords/void.md
             - name: var
               href: keywords/var.md
+            - name: Tipos não gerenciados
+              href: builtin-types/unmanaged-types.md
             - name: Tabelas de referência de tipos
               items:
                 - name: Tabela de tipos internos
@@ -71,11 +73,11 @@
                   href: keywords/restrictions-on-using-accessibility-levels.md
                 - name: interno
                   href: keywords/internal.md
-                - name: privado
+                - name: particulares
                   href: keywords/private.md
                 - name: protegidos
                   href: keywords/protected.md
-                - name: público
+                - name: públicos
                   href: keywords/public.md
                 - name: internos protegidos
                   href: keywords/protected-internal.md
@@ -103,7 +105,7 @@
               href: keywords/readonly.md
             - name: sealed
               href: keywords/sealed.md
-            - name: estático
+            - name: static
               href: keywords/static.md
             - name: unsafe
               href: keywords/unsafe.md
@@ -139,7 +141,7 @@
                   href: keywords/continue.md
                 - name: goto
                   href: keywords/goto.md
-                - name: retorno
+                - name: return
                   href: keywords/return.md
             - name: Instruções para manipulação de exceções
               items:
@@ -165,7 +167,7 @@
               href: keywords/lock-statement.md
         - name: Parâmetros de método
           items:
-            - name: Passagem de parâmetros
+            - name: Passando parâmetros
               href: keywords/method-parameters.md
             - name: params
               href: keywords/params.md
@@ -211,23 +213,23 @@
           items:
             - name: base
               href: keywords/base.md
-            - name: este
+            - name: this
               href: keywords/this.md
         - name: Palavras-chave literais
           items:
             - name: nulo
               href: keywords/null.md
-            - name: verdadeiro
+            - name: 'true'
               href: keywords/true-literal.md
-            - name: falso
+            - name: 'false'
               href: keywords/false-literal.md
-            - name: padrão
+            - name: default
               href: keywords/default.md
         - name: Palavras-chave contextuais
           items:
             - name: Referência rápida
               href: keywords/contextual-keywords.md
-            - name: Adicionar
+            - name: adicionar
               href: keywords/add.md
             - name: get
               href: keywords/get.md
@@ -243,7 +245,7 @@
               href: keywords/set.md
             - name: when (condição de filtro)
               href: keywords/when.md
-            - name: value
+            - name: Valor
               href: keywords/value.md
             - name: yield
               href: keywords/yield.md
@@ -265,7 +267,7 @@
               href: keywords/orderby-clause.md
             - name: Cláusula join
               href: keywords/join-clause.md
-            - name: cláusula Let
+            - name: Cláusula let
               href: keywords/let-clause.md
             - name: ascending
               href: keywords/ascending.md
@@ -273,11 +275,11 @@
               href: keywords/descending.md
             - name: em
               href: keywords/on.md
-            - name: equals
+            - name: é igual a
               href: keywords/equals.md
             - name: by
               href: keywords/by.md
-            - name: mergulhar
+            - name: em
               href: keywords/in.md
     - name: 'Operadores C#'
       items:
@@ -524,7 +526,7 @@
           href: ../../../_csharplang/spec/basic-concepts.md
         - name: Tipos
           href: ../../../_csharplang/spec/types.md
-        - name: variáveis
+        - name: Variáveis
           href: ../../../_csharplang/spec/variables.md
         - name: Conversões
           href: ../../../_csharplang/spec/conversions.md
