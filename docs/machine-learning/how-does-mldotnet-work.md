@@ -1,21 +1,21 @@
 ---
 title: O que é ML.NET e como ele funciona?
-description: O ML.NET permite adicionar aprendizado de máquina a aplicativos .NET. Com essa funcionalidade, você pode fazer previsões automáticas usando os dados disponíveis ao seu aplicativo. Este artigo explica os conceitos básicos do aprendizado de máquina em ML.NET.
-ms.date: 04/10/2019
+description: O ML.NET oferece a capacidade de adicionar aprendizado de máquina a aplicativos .NET, em cenários online ou offline. Com essa funcionalidade, você pode fazer previsões automáticas usando os dados disponíveis para o aplicativo sem precisar estar conectado a uma rede para usar o ML.NET. Este artigo explica os conceitos básicos do aprendizado de máquina em ML.NET.
+ms.date: 07/17/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660645"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331586"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>O que é ML.NET e como ele funciona?
 
-O ML.NET permite adicionar aprendizado de máquina a aplicativos .NET. Com essa funcionalidade, você pode fazer previsões automáticas usando os dados disponíveis ao seu aplicativo. Este artigo explica os conceitos básicos do aprendizado de máquina em ML.NET. 
+O ML.NET oferece a capacidade de adicionar aprendizado de máquina a aplicativos .NET, em cenários online ou offline. Com essa funcionalidade, você pode fazer previsões automáticas usando os dados disponíveis para o aplicativo sem precisar estar conectado a uma rede. Este artigo explica os conceitos básicos do aprendizado de máquina em ML.NET. 
 
 Exemplos do tipo de previsões que você pode fazer com o ML.NET incluem:
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586010"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364056"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Como: Conectar um delegado usando a reflexão
 Quando você usa a reflexão para carregar e executar assemblies, não pode usar recursos de linguagem como o operador `+=` do C# ou a [instrução AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) do Visual Basic para conectar eventos. Os procedimentos a seguir mostram como conectar um método existente a um evento obtendo todos os tipos necessários por meio de reflexão e como criar um método dinâmico usando a emissão de reflexão e conectá-lo a um evento.  
@@ -33,7 +33,7 @@ Quando você usa a reflexão para carregar e executar assemblies, não pode usar
      [!code-csharp[HookUpDelegate#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#3)]
      [!code-vb[HookUpDelegate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#3)]  
   
-2. Obtenha um objeto <xref:System.Type> que representa o tipo e crie uma instância do tipo. O método <xref:System.Activator.CreateInstance%28System.Type%29> é usado no código a seguir porque o formulário tem um construtor padrão. Há várias outras sobrecargas do método <xref:System.Activator.CreateInstance%2A> que poderão ser usadas se o tipo sendo criado não tiver um construtor padrão. A nova instância é armazenada como o tipo <xref:System.Object> para manter a ficção de que nada é conhecido sobre o assembly. (A reflexão permite que você obtenha os tipos em um assembly sem saber seus nomes com antecedência.)  
+2. Obtenha um objeto <xref:System.Type> que representa o tipo e crie uma instância do tipo. O método <xref:System.Activator.CreateInstance%28System.Type%29> é usado no código a seguir porque o formulário tem um construtor sem parâmetros. Há várias outras sobrecargas do método <xref:System.Activator.CreateInstance%2A> que poderão ser usadas se o tipo sendo criado não tiver um construtor sem parâmetros. A nova instância é armazenada como o tipo <xref:System.Object> para manter a ficção de que nada é conhecido sobre o assembly. (A reflexão permite que você obtenha os tipos em um assembly sem saber seus nomes com antecedência.)  
   
      [!code-cpp[HookUpDelegate#4](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#4)]
      [!code-csharp[HookUpDelegate#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#4)]

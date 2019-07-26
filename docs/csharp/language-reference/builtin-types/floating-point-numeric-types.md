@@ -17,30 +17,39 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 738368abd9db75fbd97d1913324cab3b6e869c56
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0d97b3ffd587e8398e5572706a47937716a6e709
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664186"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236054"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de ponto flutuante (Referência de C#)
 
 Os **tipos de ponto flutuante** são um subconjunto dos **tipos simples** e podem ser inicializados com [*literais*](#floating-point-literals). Todos os tipos de ponto flutuante também são tipos de valor. Todos os tipos numéricos de ponto flutuante dão suporte a operadores [aritméticos](../operators/arithmetic-operators.md) [de comparação e de igualdade](../operators/equality-operators.md).
 
-A tabela a seguir mostra os intervalos de precisão e aproximados para os tipos de ponto flutuante:
+## <a name="characteristics-of-the-floating-point-types"></a>Características dos tipos de ponto flutuante
+
+O C# é compatível com os seguintes tipos de pontos flutuantes predefinidos:
   
-|Tipo|Intervalo aproximado|Precisão|  
-|----------|-----------------------|---------------|  
-|`float`|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|Aproximadamente de 6 a 9 dígitos|  
-|`double`|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|Aproximadamente de 15 a 17 dígitos|  
-|`decimal`|±1,0 x 10<sup>-28</sup> para ±7,9228 x 10<sup>28</sup>|28 a 29 dígitos|  
+|palavra-chave/tipo C#|Intervalo aproximado|Precisão|Tipo .NET|
+|----------|-----------------------|---------------|--------------|
+|`float`|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|Aproximadamente de 6 a 9 dígitos|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|Aproximadamente de 15 a 17 dígitos|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|±1,0 x 10<sup>-28</sup> para ±7,9228 x 10<sup>28</sup>|28 a 29 dígitos|<xref:System.Decimal?displayProperty=nameWithType>|
 
-O valor padrão para todos os tipos de ponto flutuante é `0`. Cada um dos tipos de ponto flutuante tem constantes denominadas `MinValue` e `MaxValue` para o valor mínimo e máximo desse tipo. Os tipos `float` e `double` têm outras constantes para `PositiveInfinity`, `NegativeInfinity`e `NaN` (para "Não é um número"). O tipo `decimal` inclui constantes para `Zero`, `One` e `MinusOne`.
+Na tabela anterior, cada palavra-chave do tipo C# da coluna mais à esquerda é um alias do tipo .NET correspondente. Eles são intercambiáveis. Por exemplo, as declarações a seguir declaram variáveis do mesmo tipo:
 
-O tipo `decimal` tem mais precisão e um intervalo menor do que `float` e `double`, o que o torna apropriado para cálculos financeiros e monetários.
+```csharp
+double a = 12.3;
+System.Double b = 12.3;
+```
 
-É possível misturar tipos integrais e de ponto flutuante em uma expressão. Nesse caso, os tipos integrais são convertidos em tipos de ponto flutuante. A avaliação da expressão é executada de acordo com as regras a seguir:
+O valor padrão de cada tipo de ponto flutuante é zero, `0`. Cada um dos tipos de ponto flutuante possui as constantes `MinValue` e `MaxValue` que fornecem o valor mínimo e máximo desse tipo. Os tipos `float` e `double` também fornecem constantes que representam valores não numéricos e infinitos. Por exemplo, o tipo `double` fornece as seguintes constantes: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> e <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.
+
+Como o tipo `decimal` tem mais precisão e um intervalo menor que `float` e `double`, ele é apropriado para cálculos financeiros e monetários.
+
+É possível misturar tipos [integrais](integral-numeric-types.md) e de ponto flutuante em uma expressão. Nesse caso, os tipos integrais são convertidos em tipos de ponto flutuante. A avaliação da expressão é executada de acordo com as regras a seguir:
 
 - Se um dos tipos de ponto flutuante for `double`, a expressão será avaliada como `double` ou como [bool](../keywords/bool.md) em comparações relacionais ou de igualdade.
 - Se não houver nenhum tipo `double` na expressão, ela será avaliada como `float` ou como [bool](../keywords/bool.md) em comparações relacionais ou de igualdade.
@@ -77,7 +86,7 @@ myMoney = 400.75M;
 
 ## <a name="conversions"></a>Conversões
 
-Há uma conversão implícita (chamada de *conversão de expansão*) de `float` em `double` porque o intervalo dos valores `float` é um subconjunto adequado de `double` e não há perda de precisão de `float` para `double`. 
+Há uma conversão implícita (chamada de *conversão de expansão*) de `float` em `double` porque o intervalo dos valores `float` é um subconjunto adequado de `double` e não há perda de precisão de `float` para `double`.
 
 É necessário usar uma conversão explícita para converter um tipo de ponto flutuante em outro quando uma conversão implícita não está definida do tipo de origem para o tipo de destino. Isso é chamado de *conversão de estreitamento*. O caso explícito é necessário porque a conversão pode resultar em perda de dados. Não há conversão implícita entre outros tipos de ponto flutuante e o tipo `decimal` porque o tipo `decimal` tem maior precisão do que `float` ou `double`.
 
@@ -89,15 +98,11 @@ Para obter mais informações sobre as conversões numéricas explícitas, consu
 
 - [Referência de C#](../index.md)
 - [Tipos integrais](integral-numeric-types.md)
-- [Tabela de valores padrão](../keywords/default-values-table.md)
-- [Tabela de formatação de resultados numéricos](../keywords/formatting-numeric-results-table.md)
 - [Tabela de tipos internos](../keywords/built-in-types-table.md)
 - [Numéricos no .NET](../../../standard/numerics.md)
 - [Transmissões e conversões de tipo](../../programming-guide/types/casting-and-type-conversions.md)
 - [Tabela de conversões numéricas implícitas](../keywords/implicit-numeric-conversions-table.md)
 - [Tabela de conversões numéricas explícitas](../keywords/explicit-numeric-conversions-table.md)
-- <xref:System.Single?displayProperty=nameWithType>
-- <xref:System.Double?displayProperty=nameWithType>
-- <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [Tabela de formatação de resultados numéricos](../keywords/formatting-numeric-results-table.md)
 - [Cadeias de Caracteres de Formato Numérico Padrão](../../../standard/base-types/standard-numeric-format-strings.md)

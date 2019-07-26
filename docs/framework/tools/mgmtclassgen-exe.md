@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e018d8c83165b3e025ad4db7f3d59b6ba58b72a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616087"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364026"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Gerador de Classe Fortemente Tipada de Gerenciamento)
 A ferramenta Gerador de Classes Fortemente Tipadas de Gerenciamento permite gerar rapidamente uma classe gerenciada Early Bound para uma classe WMI (Instrumentação de Gerenciamento do Windows) especificada. A classe gerada simplifica o código que você deve gravar para acessar uma instância da classe WMI.  
@@ -30,11 +30,11 @@ mgmtclassgen
 WMIClass [options]   
 ```  
   
-|Argumento|Descrição|  
+|Argumento|DESCRIÇÃO|  
 |--------------|-----------------|  
 |*WMIClass*|A classe WMI para a qual uma classe gerenciada Early Bound deve ser gerada.|  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/l**  *language*|Especifica a linguagem na qual gerar a classe gerenciada Early Bound. É possível especificar **CS** (C#, padrão), **VB** (Visual Basic), **MC** (C++) ou **JS** (JScript) como o argumento da linguagem.|  
 |**/m**  *machine*|Especifica o computador ao qual se conectar, em que a classe WMI reside. O padrão é o computador local.|  
@@ -83,7 +83,7 @@ WMIClass [options]
   
 - Uma propriedade numérica pode ser modificada pelos qualificadores **Values** e **ValueMaps** para indicar que a propriedade pode ser definida somente como valores permitidos especificados. Uma enumeração é gerada com **Values** e **ValueMaps** e a propriedade é mapeada para a enumeração.  
   
-- O WMI usa o termo singleton para descrever uma classe que só pode ter uma instância. Por isso, o construtor padrão de uma classe singleton inicializará a classe com a única instância da classe.  
+- O WMI usa o termo singleton para descrever uma classe que só pode ter uma instância. Por isso, o construtor sem parâmetros de uma classe singleton inicializará a classe com a única instância da classe.  
   
 - Uma classe WMI pode ter as propriedades que são objetos. Ao gerar uma classe fortemente tipada para esse tipo de classe WMI, você deve levar em consideração a geração de classes fortemente tipadas para os tipos das propriedades de objeto inseridas. Isso permitirá acessar os objetos inseridos de maneira fortemente tipada. Observe que o código gerado talvez não seja capaz de detectar o tipo de objeto inserido. Nesse caso, um comentário será criado no código gerado para notificar você desse problema. Em seguida, é possível modificar o código gerado para tipar a propriedade para a outra classe gerada.  
   

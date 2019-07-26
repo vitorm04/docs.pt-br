@@ -4,12 +4,12 @@ description: Saiba como criar um aplicativo do .NET Core compatível com plug-in
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: a9431ee28c7df21a8688f845be20e062eca21887
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 308fd2f853261e87da71892c42e17e36984d1978
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773422"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330983"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Criar um aplicativo do .NET Core com plug-ins
 
@@ -175,7 +175,7 @@ Agora o aplicativo pode carregar os comandos e criar uma instância deles corret
 
 [!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
 
-O tipo `PluginLoadContext` é derivado do tipo <xref:System.Runtime.Loader.AssemblyLoadContext>. O tipo `AssemblyLoadContext` é um tipo especial no tempo de execução que permite que os desenvolvedores isolem os assemblies carregados em grupos diferentes para garantir que as versões do assembly não entrem em conflito. Além disso, um `AssemblyLoadContext` personalizado pode escolher caminhos diferentes de onde carregar os assemblies e substituir o comportamento padrão. O `PluginLoadContext` usa uma instância do tipo `AssemblyDependencyResolver` introduzida no .NET Core 3.0 para resolver nomes de assembly para caminhos. O objeto `AssemblyDependencyResolver` é construído com o caminho para uma biblioteca de classes .NET. Ele resolve assemblies e bibliotecas nativas para seus caminhos relativos, com base no arquivo *deps.json* da biblioteca de classes cujo caminho foi passado para o construtor `AssemblyDependencyResolver`. O `AssemblyLoadContext` personalizado permite que os plug-ins tenham suas próprias dependências e o `AssemblyDependencyResolver` facilita o carregamento correto das dependências.
+O tipo `PluginLoadContext` é derivado do tipo <xref:System.Runtime.Loader.AssemblyLoadContext>. O tipo `AssemblyLoadContext` é um tipo especial no tempo de execução que permite que os desenvolvedores isolem os assemblies carregados em grupos diferentes para garantir que as versões do assembly não entrem em conflito. Além disso, um `AssemblyLoadContext` personalizado pode escolher caminhos diferentes de onde carregar os assemblies e substituir o comportamento padrão. O `PluginLoadContext` usa uma instância do tipo `AssemblyDependencyResolver` introduzida no .NET Core 3.0 para resolver nomes de assembly para caminhos. O objeto `AssemblyDependencyResolver` é construído com o caminho para uma biblioteca de classes .NET. Ele resolve assemblies e bibliotecas nativas para seus caminhos relativos com base no arquivo *.deps.json* da biblioteca de classes cujo caminho foi passado para o construtor `AssemblyDependencyResolver`. O `AssemblyLoadContext` personalizado permite que os plug-ins tenham suas próprias dependências e o `AssemblyDependencyResolver` facilita o carregamento correto das dependências.
 
 Agora que o projeto `AppWithPlugin` tem o tipo `PluginLoadContext`, atualize o método `Program.LoadPlugin` com o seguinte corpo:
 
@@ -260,4 +260,4 @@ Isso impede que os assemblies `A.PluginBase` sejam copiados para o diretório de
 
 ## <a name="plugin-target-framework-recommendations"></a>Recomendações de estrutura de destino do plug-in
 
-Como o carregamento de dependência do plug-in usa os arquivos *deps.json*, há uma pegadinha em relação à estrutura de destino do plug-in. Especificamente, os plug-ins devem ser direcionados a um tempo de execução como o .NET Core 3.0 e não a uma versão do .NET Standard. O arquivo `deps.json` é gerado com base na estrutura de destino do projeto e, como muitos pacotes compatíveis com o .NET Standard enviam assemblies de referência para compilar no .NET Standard e assemblies de implementação para tempos de execução específicos, o `deps.json` pode não reconhecer corretamente os assemblies de implementação ou obter a versão do .NET Standard de um assembly em vez da versão do .NET Core esperada.
+Como o carregamento de dependência do plug-in usa o arquivo *.deps.json*, há uma pegadinha em relação à estrutura de destino do plug-in. Especificamente, os plug-ins devem ser direcionados a um tempo de execução como o .NET Core 3.0 e não a uma versão do .NET Standard. O arquivo *.deps.json* é gerado com base na estrutura de destino do projeto e, como muitos pacotes compatíveis com o .NET Standard enviam assemblies de referência para compilar no .NET Standard e assemblies de implementação para tempos de execução específicos, o *.deps.json* pode não reconhecer corretamente os assemblies de implementação ou obter a versão do .NET Standard de um assembly em vez da versão do .NET Core esperada.

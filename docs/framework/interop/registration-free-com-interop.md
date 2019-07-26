@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ed8525cad7dd56fe026070786b0f0cf51c0fec2d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648518"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363967"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidade COM sem registro
 A interoperabilidade COM sem registro ativa um componente sem usar o Registro do Windows para armazenar informações de assembly. Em vez de registrar um componente em um computador durante a implantação, você pode criar arquivos de manifesto estilo Win32 em tempo de design que contêm informações sobre associação e a ativação. Esses arquivos de manifesto, em vez de chaves do Registro, direcionam a ativação de um objeto.  
@@ -41,7 +41,7 @@ A interoperabilidade COM sem registro ativa um componente sem usar o Registro do
   
      A família Windows Server 2003 também dá suporte à interoperabilidade COM sem registro para assemblies com base em .NET.  
   
-     Para que uma classe com base em .NET seja compatível com a ativação sem registro do COM, a classe deve ter um construtor padrão e deve ser pública.  
+     Para que uma classe com base em .NET seja compatível com a ativação sem registro do COM, a classe deve ter um construtor sem parâmetros e deve ser pública.  
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Configurando componentes COM para ativação sem registro  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661586"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363076"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 
@@ -88,7 +88,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Usando o operador [new](../operators/new-operator.md), chama o construtor sem parâmetro do tipo específico e atribui o valor padrão à variável. No exemplo anterior, o construtor sem parâmetro atribuiu o valor `0` para `myInt`. Para obter mais informações sobre valores atribuídos ao chamar construtores padrão, consulte [Tabela de valores padrão](default-values-table.md).
+Usando o operador [new](../operators/new-operator.md), chama o construtor sem parâmetro do tipo específico e atribui o valor padrão à variável. No exemplo anterior, o construtor sem parâmetro atribuiu o valor `0` para `myInt`. Para saber mais sobre valores atribuídos ao chamar construtores sem parâmetros, confira [Tabela de valores padrão](default-values-table.md).
 
 Com tipos definidos pelo usuário, use [new](../operators/new-operator.md) para invocar o construtor sem parâmetro. Por exemplo, a instrução a seguir invoca o construtor sem parâmetro do struct `Point`:
 

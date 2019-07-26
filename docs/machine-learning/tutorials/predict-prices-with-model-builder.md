@@ -3,19 +3,19 @@ title: Prever os preços usando regressão com o Construtor de Modelo
 description: Este tutorial mostra como criar um modelo de regressão usando o Construtor de Modelo do ML.NET para prever os preços, especificamente, as tarifas de táxi de Nova York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/26/2019
+ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d9a6f193d877fc1a679b7a3cafd7491e021cb2ad
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539629"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331702"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Prever os preços usando regressão com o Construtor de Modelo
 
-Saiba como usar o Construtor de Modelo do ML.NET para criar um [modelo de regressão](../resources/glossary.md#regression) e prever preços.  O aplicativo de console do .NET que você desenvolve neste tutorial prevê as tarifas de táxi com base em dados históricos de tarifas de táxi em Nova York.
+Saiba como usar o Construtor de Modelo do ML.NET para criar um modelo de regressão() e prever preços.  O aplicativo de console do .NET que você desenvolve neste tutorial prevê as tarifas de táxi com base em dados históricos de tarifas de táxi em Nova York.
 
 O modelo de previsão de preço do Construtor de Modelo pode ser usado em qualquer cenário que exija um valor de previsão numérico. Exemplos de cenários incluem: previsão de preço, previsão de demanda e previsão de vendas de casas.
 
@@ -39,15 +39,17 @@ Para obter uma lista de pré-requisitos e instruções de instalação, visite o
 
 1. Crie um **Aplicativo de Console do .NET Core** chamado "TaxiFarePrediction".
 
-1. Instale o pacote NuGet **Microsoft.ML**:
-
-    No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto *TaxiFarePrediction* e selecione **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a origem do pacote, selecione a guia **Procurar**, pesquise por **Microsoft.ML**, selecione o pacote na lista e selecione o botão **Instalar**. Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.
-
 ## <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 
 1. Crie um diretório chamado *Data* no projeto para armazenar os arquivos do conjunto de dados.
 
-1. Baixe o conjunto de dados [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) e salve-o na pasta *Dados* criada na etapa anterior. Esse conjunto de dados é usado para treinar e avaliar o modelo de machine learning. Esse conjunto de dados é originalmente do [Conjunto de dados NYC TLC Taxi Trip](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
+1. O conjunto de dados usado para treinar e avaliar o modelo de machine learning pertence originalmente ao conjunto de dados Corrida de Táxi da NYC TLC.
+
+    Para baixar o conjunto de dados, navegue até o link de download [taxi-fare-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv).
+
+    Quando a página for carregada, clique com o botão direito do mouse em qualquer lugar da página e escolha **Salvar como**.
+
+    Use a opção **Salvar como Diálogo** para salvar o arquivo na pasta *Dados* criada na etapa anterior.
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo *taxi-fare-train.csv* e selecione **Propriedades**. Em **Avançado**, altere o valor de **Copiar para Diretório de Saída** para **Copiar se for mais novo**.
 
@@ -60,7 +62,7 @@ Cada linha no conjunto de dados `taxi-fare-train.csv` contém os detalhes de cor
     * **vendor_id:** A ID do taxista é um recurso.
     * **rate_code:** O tipo de tarifa da corrida de táxi é um recurso.
     * **passenger_count:** O número de passageiros na corrida é um recurso.
-    * **trip_time_in_secs:** O tempo que levou a corrida. Você deseja prever a tarifa da viagem antes de sua conclusão. No momento, você não sabe a duração da viagem. Portanto, o tempo da viagem não é um recurso e você excluirá essa coluna do modelo.
+    * **trip_time_in_secs:** O tempo que levou a corrida.
     * **trip_distance:** A distância da corrida é um recurso.
     * **payment_type:** A forma de pagamento (dinheiro ou cartão de crédito) é um recurso.
     * **fare_amount:** A tarifa total de táxi paga é o rótulo.
@@ -69,14 +71,14 @@ O `label` é a coluna que você deseja prever. Ao executar uma tarefa de regress
 
 ## <a name="choose-a-scenario"></a>Escolha um cenário
 
-Para treinar seu modelo, você precisa selecionar na lista de cenários disponíveis de aprendizado de máquina fornecidos pelo Construtor de Modelo. Nesse caso, o cenário é `Price Prediction`. Para obter uma lista mais abrangente, visite o [artigo de visão geral do Construtor de Modelo](../automate-training-with-model-builder.md#scenarios).
+Para treinar seu modelo, você precisa selecionar na lista de cenários disponíveis de aprendizado de máquina fornecidos pelo Construtor de Modelo. Nesse caso, o cenário é `Price Prediction`.
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto *TaxiFarePrediction* e selecione **Adicionar** > **Aprendizado de Máquina**.
 1. Na etapa de cenário da ferramenta do Construtor de Modelo, selecione cenário de *Previsão de Preço*.
 
 ## <a name="load-the-data"></a>Carregar os dados
 
-O Construtor do Modelo aceita dados de duas fontes: um banco de dados do SQL Server ou um arquivo local csv ou tsv. Para obter mais informações sobre os requisitos de formato de dados, visite o seguinte [link](../how-to-guides/install-model-builder.md#limitations).
+O Construtor de Modelo aceita dados de duas fontes: um banco de dados do SQL Server ou um arquivo local no formato csv ou tsv.
 
 1. Na etapa de dados da ferramenta do Construtor de Modelo, selecione *Arquivo* na lista suspensa da fonte de dados.
 1. Selecione o botão ao lado da caixa de texto *Selecionar um arquivo* e use o Explorador de Arquivos para procurar e selecionar o *taxi-fare-test.csv* no diretório de *Dados*
@@ -110,23 +112,21 @@ Após a conclusão do treinamento, navegue até a etapa de avaliação.
 
 ## <a name="evaluate-the-model"></a>Avaliar o modelo
 
-O resultado da etapa de treinamento será um modelo que tinha o melhor desempenho. Na etapa de avaliação da ferramenta do Construtor de Modelo, a seção de saída terá o algoritmo usado pelo modelo com melhor desempenho na entrada *Melhor Modelo*, juntamente com as métricas na *Qualidade do Melhor Modelo (RSquared)* . Além disso, uma tabela de resumo contém os cinco modelos principais e suas métricas. Visite o link a seguir para saber mais sobre [métricas de modelo de avaliação](https://docs.microsoft.com/dotnet/machine-learning/resources/metrics).
+O resultado da etapa de treinamento será um modelo que tinha o melhor desempenho. Na etapa de avaliação da ferramenta do Construtor de Modelo, a seção de saída terá o algoritmo usado pelo modelo com melhor desempenho na entrada *Melhor Modelo*, juntamente com as métricas na *Qualidade do Melhor Modelo (RSquared)* . Além disso, uma tabela de resumo contém os cinco modelos principais e suas métricas.
 
-Se você não estiver satisfeito com suas métricas de precisão, algumas maneiras fáceis de experimentar e aprimorar a precisão do modelo serão aumentar a quantidade de tempo para treinar o modelo ou usar mais dados.
+Se você não estiver satisfeito com suas métricas de precisão, algumas maneiras fáceis de experimentar e aprimorar a precisão do modelo serão aumentar a quantidade de tempo para treinar o modelo ou usar mais dados. Ou navegue até a etapa do código.
 
-## <a name="use-the-model-for-predictions"></a>Usar o modelo para previsões
+## <a name="add-the-code-to-make-predictions"></a>Adicionar o código para fazer previsões
 
 Dois projetos serão criados como resultado do processo de treinamento.
 
-- TaxiFarePredictionML.ConsoleApp: Um aplicativo do Console do .NET que contém o código de consumo e de modelo de treinamento.
+- TaxiFarePredictionML.ConsoleApp: Um aplicativo do Console do .NET Core que contém o código de consumo e de modelo de treinamento.
 - TaxiFarePredictionML.Model: Uma biblioteca de classes .NET Standard que contém os modelos de dados que definem o esquema de dados de modelo de entrada e saída, bem como a versão persistente do modelo com melhor desempenho durante o treinamento.
 
-1. Na seção de código da ferramenta do Construtor de Modelo, selecione **Projetos Adicionados** para adicionar os projetos à solução.
-2. No gerenciador de soluções, clique com o botão direito do mouse no projeto *TaxiFarePrediction*. Em seguida, selecione **Adicionar > Item Existente**. Para a lista suspensa de tipo de arquivo, selecione `All Files`, navegue até o diretório do projeto *TaxiFarePredictionML.Model* e selecione o arquivo `MLModel.zip`. Em seguida, clique com o botão direito do mouse no arquivo `MLModel.zip` adicionado e selecione *Propriedades*. Para a opção Copiar para Diretório de Saída, selecione *Copiar se for mais recente* na lista suspensa.
-3. Clique com botão direito do mouse no projeto *TaxiFarePrediction*. Em seguida, **Adicionar > Referência**. Escolha o nó **Projetos > Solução** e, na lista, confira o projeto *TaxiFarePredictionML.Model* e selecione OK.
-
-4. Abra o arquivo *Program.cs* no projeto *TaxiFarePrediction*.
-5. Adicione as seguintes instruções using:
+1. Na etapa de código da ferramenta do Construtor de Modelo, escolha **Adicionar Projetos** para adicionar os projetos gerados automaticamente à solução.
+1. Clique com botão direito do mouse no projeto *TaxiFarePrediction*. Em seguida, **Adicionar > Referência**. Escolha o nó **Projetos > Solução** e, na lista, confira o projeto *TaxiFarePredictionML.Model* e selecione OK.
+1. Abra o arquivo *Program.cs* no projeto *TaxiFarePrediction*.
+1. Adicione o seguinte usando instruções para fazer referência ao pacote NuGet *Microsoft.ML* e ao projeto *TaxiFarePredictionML.Model*:
 
     ```csharp
     using System;
@@ -134,7 +134,7 @@ Dois projetos serão criados como resultado do processo de treinamento.
     using TaxiFarePredictionML.Model.DataModels;
     ```
 
-6. Adicione o método `ConsumeModel` à classe `Program`. O `ConsumeModel` criará um `PredictionEngine` com base no modelo gerado pelo Construtor de Modelo para fazer previsões sobre novos dados e imprimi-las no console.
+1. Adicione o método `ConsumeModel` à classe `Program`.
 
     ```csharp
     static ModelOutput ConsumeModel(ModelInput input)
@@ -154,7 +154,9 @@ Dois projetos serão criados como resultado do processo de treinamento.
     }
     ```
 
-7. Adicione o código a seguir ao método `Main` para executar o aplicativo.
+    O `ConsumeModel` vai carregar o modelo treinado, criar um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para o modelo e usá-lo para fazer previsões sobre novos dados.
+
+1. Para fazer uma previsão sobre novos dados usando o modelo, crie uma nova instância da classe `ModelInput` e use o método `ConsumeModel`. Observe que o valor da tarifa não faz parte da entrada. Isso acontece porque o modelo gerará a previsão para ela. Adicionar o código a seguir ao método `Main` para executar o aplicativo
 
     ```csharp
     // Create sample data
@@ -195,9 +197,12 @@ Neste tutorial, você aprendeu como:
 > * Avaliar o modelo
 > * Usar o modelo para previsões
 
-Avance para qualquer um dos artigos de instruções a seguir para aprender a implantar seu modelo.
+### <a name="additional-resources"></a>Recursos adicionais
 
-> [!div class="nextstepaction"]
-> [Implantar um modelo no Azure Functions](../how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
-> [!div class="nextstepaction"]
-> [Implantar um modelo em uma API Web](../how-to-guides/serve-model-web-api-ml-net.md)
+Para saber mais sobre os tópicos mencionados neste tutorial, visite os seguintes recursos:
+
+- [Cenários do Construtor de Modelo](../automate-training-with-model-builder.md#scenarios)
+- [Formatos de Dados do Construtor de Modelo](../automate-training-with-model-builder.md#data-formats)
+- [Regressão](../resources/glossary.md#regression)
+- [Métricas do Modelo de Regressão](../resources/metrics.md#metrics-for-regression)
+- [Conjunto de dados Corrida de Táxi da NYC TLC](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

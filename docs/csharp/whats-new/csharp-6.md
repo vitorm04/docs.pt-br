@@ -2,12 +2,12 @@
 title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 12/12/2018
-ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920669"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235720"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -137,7 +137,7 @@ Os *Filtros de Exceção* são cláusulas que determinam quando uma determinada 
 
 ## <a name="the-nameof-expression"></a>A expressão `nameof`
 
-A expressão `nameof` é avaliada para o nome de um símbolo. É uma ótima maneira de fazer com que as ferramentas funcionem sempre que você precisar do nome de uma variável, de uma propriedade ou de um campo de membro. Um dos usos mais comuns para `nameof` é fornecer o nome de um símbolo que causou uma exceção:
+A expressão [nameof](../language-reference/operators/nameof.md) é avaliada como o nome de um símbolo. É uma ótima maneira de fazer com que as ferramentas funcionem sempre que você precisar do nome de uma variável, de uma propriedade ou de um campo de membro. Um dos usos mais comuns para `nameof` é fornecer o nome de um símbolo que causou uma exceção:
 
 [!code-csharp[nameof](../../../samples/snippets/csharp/new-in-6/NewCode.cs#UsingStaticString)]
 

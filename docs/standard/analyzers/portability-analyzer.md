@@ -1,15 +1,15 @@
 ---
 title: O .NET Portability Analyzer – .NET
 description: Saiba como usar a ferramenta .NET Portability Analyzer para avaliar a portabilidade do seu código entre as várias implementações de .NET, incluindo .NET Core, .NET Standard, UWP e Xamarin.
-ms.date: 07/10/2019
+ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f05d4f4a2fce8fa9a4d2e334f44190ea37335038
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859760"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331737"
 ---
 # <a name="the-net-portability-analyzer"></a>O .NET Portability Analyzer
 
@@ -52,7 +52,7 @@ Apenas as APIs que não são compatíveis com uma Plataforma de Destino são exi
 
 ![Resumo de Portabilidade](./media/portability-analyzer/portabilitysummary.png)
 
-A seção Resumo de Portabilidade do relatório mostra o percentual de portabilidade para cada assembly incluído na execução. No exemplo anterior, 89,74% das APIs do .NET Framework usadas no aplicativo `ConsoleAppFramework` estão disponíveis no .NET Core + extensões de plataforma v2.2. Se você executar a ferramenta Analisador de Portabilidade do .NET em vários assemblies, cada um deles deverá ter uma linha no relatório Resumo de Portabilidade.
+A seção Resumo de Portabilidade do relatório mostra o percentual de portabilidade para cada assembly incluído na execução. No exemplo anterior, 71,24% das APIs do .NET Framework usadas no aplicativo `svcutil` estão disponíveis no .NET Core + Extensões de plataforma. Se você executar a ferramenta Analisador de Portabilidade do .NET em vários assemblies, cada um deles deverá ter uma linha no relatório Resumo de Portabilidade.
 
 #### <a name="details"></a>Detalhes
 
@@ -60,11 +60,11 @@ A seção Resumo de Portabilidade do relatório mostra o percentual de portabili
 
 A seção Detalhes do relatório lista as APIs ausentes de uma das Plataformas de Destino. 
 
- - Tipo de destino: o tipo tem uma API ausente de uma Plataforma de Destino 
- - Membro de destino: o método está ausente de uma Plataforma de Destino 
- - Nome do assembly: o assembly do .NET Framework no qual a API ausente reside. 
- - Cada uma das Plataformas de Destino selecionada é uma coluna, como “.NET Core”: O valor "Sem suporte" significa que não há suporte para a API nesta Plataforma de Destino. 
- - Alterações recomendadas: a API ou a tecnologia recomendada para a qual alterar. No momento, esse campo está vazio ou desatualizado para muitas APIs. Devido ao grande número de APIs, é um grande desafio mantê-las em funcionamento. Estamos examinando soluções alternativas para fornecer informações úteis aos clientes.
+- Tipo de destino: o tipo tem uma API ausente de uma Plataforma de Destino 
+- Membro de destino: o método está ausente de uma Plataforma de Destino 
+- Nome do assembly: o assembly do .NET Framework no qual a API ausente reside. 
+- Cada uma das Plataformas de Destino selecionada é uma coluna, como “.NET Core”: O valor "Sem suporte" significa que não há suporte para a API nesta Plataforma de Destino. 
+- Alterações recomendadas: a API ou a tecnologia recomendada para a qual alterar. No momento, esse campo está vazio ou desatualizado para muitas APIs. Devido ao grande número de APIs, é um grande desafio mantê-las em funcionamento. Estamos examinando soluções alternativas para fornecer informações úteis aos clientes.
 
 #### <a name="missing-assemblies"></a>Assemblies Ausentes
 
@@ -73,5 +73,3 @@ A seção Detalhes do relatório lista as APIs ausentes de uma das Plataformas d
 Você pode encontrar uma seção Assemblies Ausentes em seu relatório. Ele informa que essa lista de assemblies é referenciada por seus assemblies analisados e não foi analisada. Se for um assembly de sua propriedade, inclua-o na execução do analisador de portabilidade de Api para que você possa obter um relatório de portabilidade detalhado no nível da API para ele. Se for uma biblioteca de terceiros, pesquise se eles têm uma versão mais recente compatível com sua plataforma de destino. Em caso afirmativo, considere migrar para a versão mais recente. Por fim, seria esperado que essa lista incluísse todos os assemblies de terceiros do qual seu aplicativo depende e confirmasse que eles têm uma versão compatível com sua plataforma de destino.  
 
 Para obter mais informações sobre o Analisador de Portabilidade do .NET, acesse a [documentação do GitHub](https://github.com/Microsoft/dotnet-apiport#documentation) e assista ao vídeo [A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) (Uma análise breve do Analisador de Portabilidade do .NET) do Channel 9.
-
-

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0536acbcc71ae7792ec668ac352e95e604bd979
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591363"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364038"
 ---
 # <a name="reflection-and-generic-types"></a>Reflexão e tipos genéricos
 <a name="top"></a> Do ponto de vista da reflexão, a diferença entre um tipo genérico e um tipo comum é que um tipo genérico tem associado a ele um conjunto de parâmetros de tipo (se for uma definição de tipo genérico) ou argumentos de tipo (se for um tipo construído). Um método genérico é diferente de um método comum da mesma maneira.  
@@ -134,7 +134,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  Para determinar se um parâmetro de tipo é covariante ou contravariante, aplique a máscara <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> ao valor <xref:System.Reflection.GenericParameterAttributes> retornado pela propriedade <xref:System.Type.GenericParameterAttributes%2A>. Se o resultado for <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, o parâmetro de tipo será invariável. Consulte [Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 #### <a name="special-constraints"></a>Restrições especiais  
- Para determinar as restrições especiais de um parâmetro de tipo, aplique a máscara <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> ao valor <xref:System.Reflection.GenericParameterAttributes> retornado pela propriedade <xref:System.Type.GenericParameterAttributes%2A>. Se o resultado for <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, não haverá nenhuma restrição especial. Um parâmetro de tipo pode ser restringido para ser um tipo de referência, para ser um tipo de valor não nulo e para ter um construtor padrão.  
+ Para determinar as restrições especiais de um parâmetro de tipo, aplique a máscara <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> ao valor <xref:System.Reflection.GenericParameterAttributes> retornado pela propriedade <xref:System.Type.GenericParameterAttributes%2A>. Se o resultado for <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, não haverá nenhuma restrição especial. Um parâmetro de tipo pode ser restringido para ser um tipo de referência, para ser um tipo de valor não nulo e para ter um construtor sem parâmetros.  
   
  [Voltar ao início](#top)  
   
@@ -147,7 +147,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Título|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Como: Examinar tipos genéricos e criar instâncias deles com a reflexão](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Mostra como usar as propriedades e os métodos de <xref:System.Type> e <xref:System.Reflection.MethodInfo> para examinar tipos genéricos.|  
 |[Genéricos](../../../docs/standard/generics/index.md)|Descreve o recurso de genéricos e como ele tem suporte no .NET Framework.|  
