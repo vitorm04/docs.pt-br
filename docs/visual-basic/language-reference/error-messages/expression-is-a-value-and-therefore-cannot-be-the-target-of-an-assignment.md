@@ -7,58 +7,59 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d5aae4d30abbf9ed2af260412352a5e0452e0dcc
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665148"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513030"
 ---
-# <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a><span data-ttu-id="3b67a-102">Expressão é um valor e, por isso, não pode ser o destino de uma atribuição</span><span class="sxs-lookup"><span data-stu-id="3b67a-102">Expression is a value and therefore cannot be the target of an assignment</span></span>
-<span data-ttu-id="3b67a-103">Uma declaração tenta atribuir um valor a uma expressão.</span><span class="sxs-lookup"><span data-stu-id="3b67a-103">A statement attempts to assign a value to an expression.</span></span> <span data-ttu-id="3b67a-104">Você pode atribuir um valor apenas para uma variável gravável, propriedade ou elemento de matriz no tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="3b67a-104">You can assign a value only to a writable variable, property, or array element at run time.</span></span> <span data-ttu-id="3b67a-105">O exemplo a seguir ilustra como esse erro pode ocorrer.</span><span class="sxs-lookup"><span data-stu-id="3b67a-105">The following example illustrates how this error can occur.</span></span>  
-  
-```  
-Dim yesterday As Integer  
-ReadOnly maximum As Integer = 45  
-yesterday + 1 = DatePart(DateInterval.Day, Now)  
-' The preceding line is an ERROR because of an expression on the left.  
-maximum = 50  
-' The preceding line is an ERROR because maximum is declared ReadOnly.  
-```  
-  
- <span data-ttu-id="3b67a-106">Exemplos semelhantes pode aplicar a propriedades e os elementos da matriz.</span><span class="sxs-lookup"><span data-stu-id="3b67a-106">Similar examples could apply to properties and array elements.</span></span>  
-  
- <span data-ttu-id="3b67a-107">**Acesso indireto.**</span><span class="sxs-lookup"><span data-stu-id="3b67a-107">**Indirect Access.**</span></span> <span data-ttu-id="3b67a-108">Acesso indireto por meio de um tipo de valor também pode gerar esse erro.</span><span class="sxs-lookup"><span data-stu-id="3b67a-108">Indirect access through a value type can also generate this error.</span></span> <span data-ttu-id="3b67a-109">Considere o seguinte exemplo de código, que tenta definir o valor de <xref:System.Drawing.Point> acessando indiretamente por meio das <xref:System.Windows.Forms.Control.Location%2A>.</span><span class="sxs-lookup"><span data-stu-id="3b67a-109">Consider the following code example, which attempts to set the value of <xref:System.Drawing.Point> by accessing it indirectly through <xref:System.Windows.Forms.Control.Location%2A>.</span></span>  
-  
-```  
-' Assume this code runs inside Form1.  
-Dim exitButton As New System.Windows.Forms.Button()  
-exitButton.Text = "Exit this form"  
-exitButton.Location.X = 140  
-' The preceding line is an ERROR because of no storage for Location.  
-```  
-  
- <span data-ttu-id="3b67a-110">A última instrução do exemplo anterior falhará porque cria apenas uma alocação temporária para o <xref:System.Drawing.Point> estrutura retornada pelo <xref:System.Windows.Forms.Control.Location%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="3b67a-110">The last statement of the preceding example fails because it creates only a temporary allocation for the <xref:System.Drawing.Point> structure returned by the <xref:System.Windows.Forms.Control.Location%2A> property.</span></span> <span data-ttu-id="3b67a-111">Uma estrutura é um tipo de valor e a estrutura temporária não é mantida depois que a instrução for executada.</span><span class="sxs-lookup"><span data-stu-id="3b67a-111">A structure is a value type, and the temporary structure is not retained after the statement runs.</span></span> <span data-ttu-id="3b67a-112">O problema seja resolvido, declarando e usando uma variável para <xref:System.Windows.Forms.Control.Location%2A>, que cria uma alocação mais permanente para o <xref:System.Drawing.Point> estrutura.</span><span class="sxs-lookup"><span data-stu-id="3b67a-112">The problem is resolved by declaring and using a variable for <xref:System.Windows.Forms.Control.Location%2A>, which creates a more permanent allocation for the <xref:System.Drawing.Point> structure.</span></span> <span data-ttu-id="3b67a-113">O exemplo a seguir mostra o código que pode substituir a última instrução do exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="3b67a-113">The following example shows code that can replace the last statement of the preceding example.</span></span>  
-  
-```  
-Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)  
-exitButton.Location = exitLocation  
-```  
-  
- <span data-ttu-id="3b67a-114">**ID do erro:** BC30068</span><span class="sxs-lookup"><span data-stu-id="3b67a-114">**Error ID:** BC30068</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="3b67a-115">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="3b67a-115">To correct this error</span></span>  
-  
-- <span data-ttu-id="3b67a-116">Se a instrução atribui um valor a uma expressão, substitua a expressão com uma única variável gravável, propriedade ou elemento da matriz.</span><span class="sxs-lookup"><span data-stu-id="3b67a-116">If the statement assigns a value to an expression, replace the expression with a single writable variable, property, or array element.</span></span>  
-  
-- <span data-ttu-id="3b67a-117">Se a instrução faz acesso indireto por meio de um tipo de valor (normalmente, uma estrutura), crie uma variável para conter o tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="3b67a-117">If the statement makes indirect access through a value type (usually a structure), create a variable to hold the value type.</span></span>  
-  
-- <span data-ttu-id="3b67a-118">Atribua a estrutura apropriada (ou outro tipo de valor) à variável.</span><span class="sxs-lookup"><span data-stu-id="3b67a-118">Assign the appropriate structure (or other value type) to the variable.</span></span>  
-  
-- <span data-ttu-id="3b67a-119">Use a variável para acessar a propriedade para atribuir a ele um valor.</span><span class="sxs-lookup"><span data-stu-id="3b67a-119">Use the variable to access the property to assign it a value.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="3b67a-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3b67a-120">See also</span></span>
+# <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a><span data-ttu-id="22d9e-102">Expressão é um valor e, por isso, não pode ser o destino de uma atribuição</span><span class="sxs-lookup"><span data-stu-id="22d9e-102">Expression is a value and therefore cannot be the target of an assignment</span></span>
 
-- [<span data-ttu-id="3b67a-121">Operadores e Expressões</span><span class="sxs-lookup"><span data-stu-id="3b67a-121">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [<span data-ttu-id="3b67a-122">Instruções</span><span class="sxs-lookup"><span data-stu-id="3b67a-122">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
-- [<span data-ttu-id="3b67a-123">Solução de problemas de Procedimentos</span><span class="sxs-lookup"><span data-stu-id="3b67a-123">Troubleshooting Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+<span data-ttu-id="22d9e-103">Uma instrução tenta atribuir um valor a uma expressão.</span><span class="sxs-lookup"><span data-stu-id="22d9e-103">A statement attempts to assign a value to an expression.</span></span> <span data-ttu-id="22d9e-104">Você pode atribuir um valor somente a uma variável, propriedade ou elemento de matriz gravável em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="22d9e-104">You can assign a value only to a writable variable, property, or array element at run time.</span></span> <span data-ttu-id="22d9e-105">O exemplo a seguir ilustra como esse erro pode ocorrer.</span><span class="sxs-lookup"><span data-stu-id="22d9e-105">The following example illustrates how this error can occur.</span></span>
+
+```vb
+Dim yesterday As Integer
+ReadOnly maximum As Integer = 45
+yesterday + 1 = DatePart(DateInterval.Day, Now)
+' The preceding line is an ERROR because of an expression on the left.
+maximum = 50
+' The preceding line is an ERROR because maximum is declared ReadOnly.
+```
+
+<span data-ttu-id="22d9e-106">Exemplos semelhantes podem ser aplicados a propriedades e elementos de matriz.</span><span class="sxs-lookup"><span data-stu-id="22d9e-106">Similar examples could apply to properties and array elements.</span></span>
+
+<span data-ttu-id="22d9e-107">**Acesso indireto.**</span><span class="sxs-lookup"><span data-stu-id="22d9e-107">**Indirect Access.**</span></span> <span data-ttu-id="22d9e-108">O acesso indireto por meio de um tipo de valor também pode gerar esse erro.</span><span class="sxs-lookup"><span data-stu-id="22d9e-108">Indirect access through a value type can also generate this error.</span></span> <span data-ttu-id="22d9e-109">Considere o exemplo de código a seguir, que tenta definir o valor <xref:System.Drawing.Point> de acessando- <xref:System.Windows.Forms.Control.Location%2A>o indiretamente por meio de.</span><span class="sxs-lookup"><span data-stu-id="22d9e-109">Consider the following code example, which attempts to set the value of <xref:System.Drawing.Point> by accessing it indirectly through <xref:System.Windows.Forms.Control.Location%2A>.</span></span>
+
+```vb
+' Assume this code runs inside Form1.
+Dim exitButton As New System.Windows.Forms.Button()
+exitButton.Text = "Exit this form"
+exitButton.Location.X = 140
+' The preceding line is an ERROR because of no storage for Location.
+```
+
+<span data-ttu-id="22d9e-110">A última instrução do exemplo anterior falha porque ela cria apenas uma alocação temporária para a <xref:System.Drawing.Point> estrutura retornada <xref:System.Windows.Forms.Control.Location%2A> pela propriedade.</span><span class="sxs-lookup"><span data-stu-id="22d9e-110">The last statement of the preceding example fails because it creates only a temporary allocation for the <xref:System.Drawing.Point> structure returned by the <xref:System.Windows.Forms.Control.Location%2A> property.</span></span> <span data-ttu-id="22d9e-111">Uma estrutura é um tipo de valor e a estrutura temporária não é mantida após a execução da instrução.</span><span class="sxs-lookup"><span data-stu-id="22d9e-111">A structure is a value type, and the temporary structure is not retained after the statement runs.</span></span> <span data-ttu-id="22d9e-112">O problema é resolvido declarando e usando uma variável <xref:System.Windows.Forms.Control.Location%2A>para, que cria uma alocação mais permanente para <xref:System.Drawing.Point> a estrutura.</span><span class="sxs-lookup"><span data-stu-id="22d9e-112">The problem is resolved by declaring and using a variable for <xref:System.Windows.Forms.Control.Location%2A>, which creates a more permanent allocation for the <xref:System.Drawing.Point> structure.</span></span> <span data-ttu-id="22d9e-113">O exemplo a seguir mostra o código que pode substituir a última instrução do exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="22d9e-113">The following example shows code that can replace the last statement of the preceding example.</span></span>
+
+```vb
+Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)
+exitButton.Location = exitLocation
+```
+
+<span data-ttu-id="22d9e-114">**ID do erro:** BC30068</span><span class="sxs-lookup"><span data-stu-id="22d9e-114">**Error ID:** BC30068</span></span>
+
+## <a name="to-correct-this-error"></a><span data-ttu-id="22d9e-115">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="22d9e-115">To correct this error</span></span>
+
+- <span data-ttu-id="22d9e-116">Se a instrução atribuir um valor a uma expressão, substitua a expressão por uma única variável, propriedade ou elemento de matriz gravável.</span><span class="sxs-lookup"><span data-stu-id="22d9e-116">If the statement assigns a value to an expression, replace the expression with a single writable variable, property, or array element.</span></span>
+
+- <span data-ttu-id="22d9e-117">Se a instrução fizer acesso indireto por meio de um tipo de valor (geralmente uma estrutura), crie uma variável para conter o tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="22d9e-117">If the statement makes indirect access through a value type (usually a structure), create a variable to hold the value type.</span></span>
+
+- <span data-ttu-id="22d9e-118">Atribua a estrutura apropriada (ou outro tipo de valor) à variável.</span><span class="sxs-lookup"><span data-stu-id="22d9e-118">Assign the appropriate structure (or other value type) to the variable.</span></span>
+
+- <span data-ttu-id="22d9e-119">Use a variável para acessar a propriedade para atribuir um valor a ela.</span><span class="sxs-lookup"><span data-stu-id="22d9e-119">Use the variable to access the property to assign it a value.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="22d9e-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="22d9e-120">See also</span></span>
+
+- [<span data-ttu-id="22d9e-121">Operadores e Expressões</span><span class="sxs-lookup"><span data-stu-id="22d9e-121">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [<span data-ttu-id="22d9e-122">Instruções</span><span class="sxs-lookup"><span data-stu-id="22d9e-122">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+- [<span data-ttu-id="22d9e-123">Solução de problemas de Procedimentos</span><span class="sxs-lookup"><span data-stu-id="22d9e-123">Troubleshooting Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
