@@ -13,6 +13,9 @@
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
           items:
+            - name: Assemblies no .NET
+              tocHref: /dotnet/standard/assembly
+              topicHref: /dotnet/standard/assembly/index
             - name: Diretrizes da biblioteca de software livre
               tocHref: /dotnet/standard/library-guidance/
               topicHref: /dotnet/standard/library-guidance/index
@@ -115,7 +118,7 @@
             - name: Domínios do aplicativo e assemblies
               tocHref: /dotnet/framework/app-domains/
               topicHref: /dotnet/framework/app-domains/index
-            - name: 'Configurando aplicativos usando arquivos de configuração '
+            - name: Configurando aplicativos usando arquivos de configuração
               tocHref: /dotnet/framework/configure-apps/
               topicHref: /dotnet/framework/configure-apps/index
               items:

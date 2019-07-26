@@ -1,4 +1,4 @@
-- name: Bem-Vindo
+- name: Bem-vindo
   href: welcome.md
 - name: Guia do .NET
   href: standard/index.md
@@ -68,12 +68,7 @@
     - name: Tratamento e geração de exceções
       href: standard/exceptions/
     - name: Assemblies no .NET
-      href: standard/assembly/index.md
-      items:
-        - name: Formato de arquivo do Assembly .NET
-          href: standard/assembly/file-format.md
-        - name: 'Como: Usar e depurar a capacidade de descarregamento de assembly no .NET Core'
-          href: standard/assembly/unloadability-howto.md
+      href: standard/assembly/
     - name: Coleta de Lixo
       href: standard/garbage-collection/
     - name: Tipos genéricos
@@ -442,7 +437,7 @@
 - name: Guia do .NET Framework
   href: framework/index.md
   items:
-    - name: O que há de novo
+    - name: O Que Há de Novo
       href: framework/whats-new/
     - name: Introdução
       href: framework/get-started/
@@ -519,7 +514,7 @@
           items:
             - name: Escolha sua primeira lição
               href: csharp/tutorials/intro-to-csharp/index.md
-            - name: 'Olá, Mundo'
+            - name: Hello world
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'Números em C#'
               href: csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -559,7 +554,7 @@
           href: csharp/tutorials/generate-consume-asynchronous-stream.md
         - name: Estender as funcionalidades de dados usando a correspondência de padrões
           href: csharp/tutorials/pattern-matching.md
-        - name: Aplicativo de console
+        - name: Aplicativo do Console
           href: csharp/tutorials/console-teleprompter.md
         - name: Cliente REST
           href: csharp/tutorials/console-webapiclient.md
@@ -615,7 +610,7 @@
           href: csharp/methods.md
         - name: Expressões lambda
           href: csharp/programming-guide/statements-expressions-operators/lambda-expressions.md
-        - name: propriedades
+        - name: Propriedades
           href: csharp/properties.md
         - name: Indexadores
           href: csharp/indexers.md
@@ -849,7 +844,7 @@
               href: fsharp/language-reference/members/let-bindings-in-classes.md
             - name: Associações do em classes
               href: fsharp/language-reference/members/do-bindings-in-classes.md
-            - name: propriedades
+            - name: Propriedades
               href: fsharp/language-reference/members/properties.md
             - name: Propriedades indexadas
               href: fsharp/language-reference/members/indexed-properties.md
@@ -875,7 +870,7 @@
           href: fsharp/language-reference/object-expressions.md
         - name: Conversões cast e conversões
           href: fsharp/language-reference/casting-and-conversions.md
-        - name: Controle de Acesso
+        - name: Controle de acesso
           href: fsharp/language-reference/access-control.md
         - name: 'Expressões condicionais: if...then...else'
           href: fsharp/language-reference/conditional-expressions-if-then-else.md
@@ -1108,7 +1103,7 @@
           href: visual-basic/programming-guide/language-features/constants-enums/index.md
         - name: Fluxo de controle
           href: visual-basic/programming-guide/language-features/control-flow/index.md
-        - name: Tipos de dados
+        - name: Tipos de Dados
           href: visual-basic/programming-guide/language-features/data-types/index.md
           items:
             - name: Caracteres de tipo
@@ -1332,7 +1327,7 @@
               href: visual-basic/language-reference/functions/conversion-functions.md
             - name: Funções Matemáticas
               href: visual-basic/language-reference/functions/math-functions.md
-            - name: Funções de Cadeia de Caracteres
+            - name: Funções da cadeia de caracteres
               href: visual-basic/language-reference/functions/string-functions.md
             - name: Funções de conversão do tipo
               href: visual-basic/language-reference/functions/type-conversion-functions.md
@@ -1348,7 +1343,7 @@
               href: visual-basic/language-reference/modifiers/ansi.md
             - name: Assembly
               href: visual-basic/language-reference/modifiers/assembly.md
-            - name: Assíncrono
+            - name: Async
               href: visual-basic/language-reference/modifiers/async.md
             - name: Automático
               href: visual-basic/language-reference/modifiers/auto.md
@@ -1392,7 +1387,7 @@
               href: visual-basic/language-reference/modifiers/paramarray.md
             - name: Parcial
               href: visual-basic/language-reference/modifiers/partial.md
-            - name: Privado
+            - name: Particular
               href: visual-basic/language-reference/modifiers/private.md
             - name: Protegido de forma particular
               href: visual-basic/language-reference/modifiers/private-protected.md
@@ -1408,7 +1403,7 @@
               href: visual-basic/language-reference/modifiers/shadows.md
             - name: Compartilhado
               href: visual-basic/language-reference/modifiers/shared.md
-            - name: estático
+            - name: Estático
               href: visual-basic/language-reference/modifiers/static.md
             - name: Unicode
               href: visual-basic/language-reference/modifiers/unicode.md
@@ -1582,7 +1577,7 @@
                   href: visual-basic/language-reference/operators/like-operator.md
                 - name: Operador Mod
                   href: visual-basic/language-reference/operators/mod-operator.md
-                - name: Novo Operador
+                - name: Operador New
                   href: visual-basic/language-reference/operators/new-operator.md
                 - name: Operador Not
                   href: visual-basic/language-reference/operators/not-operator.md
@@ -1598,7 +1593,7 @@
                   href: visual-basic/language-reference/operators/typeof-operator.md
                 - name: Operador Xor
                   href: visual-basic/language-reference/operators/xor-operator.md
-        - name: propriedades
+        - name: Propriedades
           href: visual-basic/language-reference/properties.md
         - name: Consultas
           href: visual-basic/language-reference/queries/index.md

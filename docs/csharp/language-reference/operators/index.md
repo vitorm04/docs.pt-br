@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: b6a1cc3ced3205037eb5b83ac3841efbfbd1b5b9
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331221"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512247"
 ---
 # <a name="c-operators-c-reference"></a>Operadores C# (Referência de C#)
 
@@ -65,7 +65,7 @@ Esses são os operadores de precedência mais alta.
 
 [delegate](delegate-operator.md) – declara e retorna uma instância delegada.
 
-[sizeof](../keywords/sizeof.md) – retorna o tamanho em bytes do operando do tipo.
+[sizeof](sizeof.md) – retorna o tamanho em bytes do operando do tipo.
 
 [stackalloc](stackalloc.md) – aloca um bloco de memória na pilha.
 
