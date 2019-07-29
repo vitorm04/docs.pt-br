@@ -1,0 +1,11 @@
+- name: Assemblies no .NET
+  href: index.md
+  items:
+    - name: Assemblies amigáveis
+      items:
+        - name: Visão geral
+          href: friend-assemblies.md
+    - name: Formato de arquivo do assembly .NET
+      href: file-format.md
+    - name: Como usar e depurar a capacidade de descarregamento de assembly no .NET Core
+      href: unloadability-howto.md
