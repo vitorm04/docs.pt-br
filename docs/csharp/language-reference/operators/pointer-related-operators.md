@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401438"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512349"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operadores relacionados a ponteiro (referência do C#)
 
@@ -124,7 +124,7 @@ Para um ponteiro `p` do tipo `T*` e uma expressão `n` de um tipo implicitamente
 - As expressões `p + n` e `n + p` produzem um ponteiro do tipo `T*` que resulta da adição de `n * sizeof(T)` ao endereço fornecido pelo `p`.
 - A expressão `p - n` produz um ponteiro do tipo `T*` que resulta da subtração de `n * sizeof(T)` ao endereço fornecido pelo `p`.
 
-O [operador `sizeof`](../keywords/sizeof.md) obtém o tamanho de um tipo em bytes.
+O [operador `sizeof`](sizeof.md) obtém o tamanho de um tipo em bytes.
 
 O exemplo a seguir demonstra o uso do operador `+` com um ponteiro:
 
@@ -193,4 +193,4 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Palavra-chave unsafe](../keywords/unsafe.md)
 - [Palavra-chave fixed](../keywords/fixed-statement.md)
 - [Operador stackalloc](stackalloc.md)
-- [Operador sizeof](../keywords/sizeof.md)
+- [Operador sizeof](sizeof.md)

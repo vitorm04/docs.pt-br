@@ -4,16 +4,16 @@ description: Conheça os recursos de telemetria da CLI do ML.NET que coletam inf
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053582"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433790"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Coleta de telemetria pela CLI do ML.NET
 
-A [CLI do ML.NET](http://aka.ms/mlnet-cli) inclui um recurso de telemetria que coleta dados anônimos de uso que são agregados para uso pela Microsoft.
+A [CLI do ML.NET](https://aka.ms/mlnet-cli) inclui um recurso de telemetria que coleta dados anônimos de uso que são agregados para uso pela Microsoft.
 
 ## <a name="how-microsoft-uses-the-data"></a>Como a Microsoft usa os dados
 

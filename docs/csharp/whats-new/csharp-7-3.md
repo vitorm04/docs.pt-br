@@ -2,12 +2,12 @@
 title: Novidades no C# 7.3
 description: Uma visão geral dos novos recursos no C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: ca53073db1b61300186a483001f79bf0caa79169
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397786"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433517"
 ---
 # <a name="whats-new-in-c-73"></a>Novidades no C# 7.3
 
@@ -129,7 +129,7 @@ Para saber mais, confira o artigo [Instrução `fixed`](../language-reference/ke
 
 Agora é possível especificar o tipo <xref:System.Enum?displayProperty=nameWithType> ou <xref:System.Delegate?displayProperty=nameWithType> como restrições de classe base para um parâmetro de tipo.
 
-Você também pode usar a nova restrição `unmanaged` para especificar que um parâmetro de tipo deve ser um **tipo não gerenciado**. Um **tipo não gerenciado** é um tipo que não é um tipo de referência e não contém campos de tipo de referência em nenhum nível de aninhamento.
+Você também pode usar a nova restrição `unmanaged` para especificar que um parâmetro de tipo deve ser um [tipo não gerenciado](../language-reference/builtin-types/unmanaged-types.md).
 
 Para saber mais, confira os artigos sobre [restrições genéricas `where`](../language-reference/keywords/where-generic-type-constraint.md) e [Restrições a parâmetros de tipo](../programming-guide/generics/constraints-on-type-parameters.md).
 
