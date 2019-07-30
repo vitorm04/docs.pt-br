@@ -1,18 +1,18 @@
 ---
 title: Copiar e atualizar expressões de registro
-description: Saiba como gravar um 'Copiar e atualizar expression' que copia um registro existente ou registro anônimo, as atualizações especificadas campos e retorna o registro atualizado ou o registro anônimo.
+description: Saiba como escrever uma ' copiar e atualizar expressão ' que copia um registro ou registro anônimo existente, atualiza campos especificados e retorna o registro atualizado ou o registro anônimo.
 author: ChrSteinert
 ms.date: 06/12/2019
-ms.openlocfilehash: d16f5ca337047ab2eecc8828b21d8a423bf39a1f
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: dfb20a6ff8282ae5988772cc0f0841db23aad942
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041737"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630382"
 ---
 # <a name="copy-and-update-record-expressions"></a>Copiar e atualizar expressões de registro
 
-Um *copiar e atualizar registro expressão* é uma expressão que copia um registro existente, atualiza os campos especificados e retorna o registro atualizado.
+Uma *expressão para copiar e atualizar registro* é uma expressão que copia um registro existente, atualiza campos especificados e retorna o registro atualizado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,17 +26,17 @@ Um *copiar e atualizar registro expressão* é uma expressão que copia um regis
 
 ## <a name="remarks"></a>Comentários
 
-Registros e registros anônimos são imutáveis por padrão, para que nenhuma atualização para um registro existente seja possível. Para criar um registro atualizado em todos os campos de um registro precisa ser especificado novamente. Para simplificar essa tarefa uma *copiar e atualizar expressão* pode ser usado. Essa expressão usa um registro existente, cria um novo do mesmo tipo usando campos especificados da expressão e o campo ausente especificados pela expressão.
+Registros e registros anônimos são imutáveis por padrão, para que não haja nenhuma atualização para um registro existente possível. Para criar um registro atualizado, todos os campos de um registro teriam que ser especificados novamente. Para simplificar essa tarefa, é possível usar uma *expressão de cópia e atualização* . Essa expressão usa um registro existente, cria um novo do mesmo tipo usando campos especificados da expressão e o campo ausente especificado pela expressão.
 
-Isso pode ser útil quando você tem que copiar um registro existente e, possivelmente, alterar alguns dos valores de campo.
+Isso pode ser útil quando você precisa copiar um registro existente e, possivelmente, alterar alguns dos valores de campo.
 
-Veja, por exemplo, um registro recém-criado.
+Considere uma instância de um registro recém-criado.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-Se você atualizar somente no campo desse registro, você pode usar o *copiar e atualizar registro expressão* semelhante ao seguinte:
+Se você atualizar apenas no campo do registro, poderá usar a *expressão copiar e atualizar registro* como a seguinte:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
 ## <a name="see-also"></a>Consulte também
 

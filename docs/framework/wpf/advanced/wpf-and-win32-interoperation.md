@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: a942d72f27d394d31a52fd02ecaa158add4d2e0f
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 860e8f11859bfbd85d6a5f0e4420fda3047bb236
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484629"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629836"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interoperação Win32 e WPF
 Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente sofisticado para criação de aplicativos. No entanto, quando você tem um investimento significativo em código do [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], pode ser mais eficiente reutilizar parte desse código.  
@@ -33,9 +33,9 @@ Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE
   
  Uma complicação no nível do projeto é que você [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] não pode compilar C++ arquivos em um projeto.  Há várias técnicas de divisão de projeto para compensar isso.  
   
-- Crie uma C# dll que contenha todas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] as suas páginas como um assembly compilado e, em C++ seguida, faça [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] com que o executável inclua isso como uma referência.  
+- Crie uma C# dll que contenha todas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] as suas páginas como um assembly compilado e, em C++ seguida, faça com que o executável inclua essa dll como referência.  
   
-- Crie um C# executável para o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo e faça referência a um C++ [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] que contenha o [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] conteúdo.  
+- Crie um C# executável para o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo e faça com que ele faça C++ referência a uma dll [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] que contém o conteúdo.  
   
 - Use <xref:System.Windows.Markup.XamlReader.Load%2A> para carregar qualquer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] em tempo de execução, em vez de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]compilar seu.  
   
@@ -48,7 +48,7 @@ Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>Como o WPF usa Hwnds  
- Para aproveitar ao máximo a "Interoperabilidade de HWND" do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], você precisa entender como o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa HWNDs. Para qualquer HWND, você não pode combinar a renderização do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] com a renderização do [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] ou a renderização do [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] / [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]. Isso tem várias implicações. Basicamente, para combinar esses modelos de renderização, você deve criar uma solução de interoperabilidade e usar segmentos de interoperação designados para cada modelo de renderização que optar usar. Além disso, o comportamento de renderização cria uma restrição de "espaço aéreo" para o que sua solução de interoperação pode realizar. O conceito de "espaço aéreo" é explicado com mais detalhes no tópico [Visão geral das regiões de tecnologia](technology-regions-overview.md).  
+ Para aproveitar ao máximo a "Interoperabilidade de HWND" do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], você precisa entender como o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa HWNDs. Para qualquer HWND, você não pode [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] misturar renderização com renderização ou [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]  /  [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] renderização DirectX. Isso tem várias implicações. Basicamente, para combinar esses modelos de renderização, você deve criar uma solução de interoperabilidade e usar segmentos de interoperação designados para cada modelo de renderização que optar usar. Além disso, o comportamento de renderização cria uma restrição de "espaço aéreo" para o que sua solução de interoperação pode realizar. O conceito de "espaço aéreo" é explicado com mais detalhes no tópico [Visão geral das regiões de tecnologia](technology-regions-overview.md).  
   
  Todos os elementos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] na tela, por fim, contam com um HWND. Quando você cria um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window>, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o cria um HWND de nível superior e usa um <xref:System.Windows.Interop.HwndSource> para colocar o <xref:System.Windows.Window> e seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo dentro do HWND.  O restante do seu conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no aplicativo compartilha aquele único HWND. Uma exceção são menus, caixas de combinação suspensas e outros pop-ups. Esses elementos criam sua própria janela de nível superior, razão pela qual um menu do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode passar da borda do HWND da janela que o contém. Quando você usa <xref:System.Windows.Interop.HwndHost> para colocar um HWND dentro [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] o informa como posicionar o novo HWND filho em relação ao [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> HWND.  
   

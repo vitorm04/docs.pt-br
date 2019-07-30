@@ -1,43 +1,43 @@
 ---
 title: Funções embutidas
-description: Saiba como usar F# funções embutidas que são integradas diretamente ao código de chamada.
+description: Saiba como usar F# funções embutidas que são integradas diretamente no código de chamada.
 ms.date: 05/16/2016
-ms.openlocfilehash: d1c3fb3d2721024febc95b3c5e01e06cd547f81e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2830d1ada5b3005c3fcae975a44e85a7c84554f7
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642065"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630683"
 ---
 # <a name="inline-functions"></a>Funções embutidas
 
-*Funções embutidas* são funções que são integradas diretamente ao código de chamada.
+*Funções embutidas* são funções integradas diretamente no código de chamada.
 
 ## <a name="using-inline-functions"></a>Usando funções embutidas
 
-Quando você usa os parâmetros de tipo estático, todas as funções que são parametrizadas pelos parâmetros de tipo devem ser embutida. Isso garante que o compilador pode resolver esses parâmetros de tipo. Quando você usa os parâmetros de tipo genérico comum, não há nenhuma restrição.
+Quando você usa parâmetros de tipo estático, todas as funções parametrizadas por parâmetros de tipo devem ser embutidas. Isso garante que o compilador possa resolver esses parâmetros de tipo. Quando você usa parâmetros de tipo genérico comuns, não há essa restrição.
 
-Além de habilitar o uso de restrições de membro, funções embutidas podem ser útil para otimizar o código. No entanto, uso excessivo de funções embutidas pode fazer com que seu código seja menos resistentes a alterações em otimizações do compilador e a implementação das funções de biblioteca. Por esse motivo, você deve evitar o uso de funções embutidas para a otimização, a menos que você tenha tentado todas as outras técnicas de otimização. Tornar um método ou função embutida, às vezes, pode melhorar desempenho, mas que não é sempre o caso. Portanto, você também deve usar medidas de desempenho para verificar o que fazer qualquer determinada função embutida de fato, tem um efeito positivo.
+Além de habilitar o uso de restrições de membro, as funções embutidas podem ser úteis para otimizar o código. No entanto, o uso excessivo de funções embutidas pode fazer com que seu código seja menos resistente a alterações em otimizações de compilador e a implementação de funções de biblioteca. Por esse motivo, evite usar funções embutidas para otimização, a menos que você tenha tentado todas as outras técnicas de otimização. Tornar uma função ou método embutido pode, às vezes, melhorar o desempenho, mas esse nem sempre é o caso. Portanto, você também deve usar medidas de desempenho para verificar se a criação de qualquer função embutida na verdade tem um efeito positivo.
 
-O `inline` modificador pode ser aplicado a funções de nível superior, no nível de módulo ou no nível de método em uma classe.
+O `inline` modificador pode ser aplicado a funções no nível superior, no nível do módulo ou no nível do método em uma classe.
 
-O exemplo de código a seguir ilustra uma função embutida no nível superior, um método de instância embutidos e um método estático em linha.
+O exemplo de código a seguir ilustra uma função embutida no nível superior, um método de instância embutida e um método estático embutido.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet201.fs)]
 
-## <a name="inline-functions-and-type-inference"></a>Funções embutidas e Inferência de tipo
+## <a name="inline-functions-and-type-inference"></a>Funções embutidas e inferência de tipos
 
-A presença de `inline` afeta inferência de tipos. Isso é porque as funções embutidas podem resolveram estaticamente os parâmetros de tipo, enquanto funções não embutidas não podem. O exemplo de código a seguir mostra um caso em que `inline` é útil porque você está usando uma função que tem um parâmetro de tipo estaticamente resolvidos, o `float` operador de conversão.
+A presença de `inline` afeta a inferência de tipos. Isso ocorre porque as funções embutidas podem ter parâmetros de tipo estaticamente resolvidos, enquanto funções não embutidas não podem. O exemplo de código a seguir mostra um `inline` caso em que é útil porque você está usando uma função que tem um parâmetro de tipo resolvido `float` estaticamente, o operador de conversão.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet202.fs)]
 
-Sem o `inline` modificador, força a inferência de tipo para levar a um tipo específico, nesse caso, a função `int`. Mas com o `inline` modificador, a função também é inferida para ter um parâmetro de tipo estaticamente resolvidos. Com o `inline` modificador, o tipo é inferido para ser o seguinte:
+Sem o `inline` modificador, a inferência de tipos força a função a usar um tipo específico `int`, nesse caso. Mas com o `inline` modificador, a função também é inferida para ter um parâmetro de tipo estaticamente resolvido. Com o `inline` modificador, o tipo é inferido para ser o seguinte:
 
 ```fsharp
 ^a -> unit when ^a : (static member op_Explicit : ^a -> float)
 ```
 
-Isso significa que a função aceita qualquer tipo que dá suporte a uma conversão **float**.
+Isso significa que a função aceita qualquer tipo que ofereça suporte a uma conversão para **float**.
 
 ## <a name="see-also"></a>Consulte também
 

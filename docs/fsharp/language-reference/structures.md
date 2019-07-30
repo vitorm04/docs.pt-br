@@ -1,17 +1,17 @@
 ---
 title: Estruturas
-description: Saiba mais sobre o F# estruturar um tipo de objeto compacto geralmente mais eficiente do que uma classe para tipos com uma pequena quantidade de dados e comportamento simples.
+description: Saiba mais sobre F# a estrutura, um tipo de objeto compacto geralmente mais eficiente do que uma classe para tipos com uma pequena quantidade de dados e comportamento simples.
 ms.date: 05/16/2016
-ms.openlocfilehash: dc302b975604bebcd145a385fb59b21417547c5e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e638b450fe43e0993c9980cade246c3f26d25e2d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645338"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630766"
 ---
 # <a name="structures"></a>Estruturas
 
-Um *estrutura* é um tipo de objeto compacto que pode ser mais eficiente do que uma classe para tipos que têm uma pequena quantidade de dados e comportamento simples.
+Uma *estrutura* é um tipo de objeto compacto que pode ser mais eficiente do que uma classe para tipos que têm uma pequena quantidade de dados e comportamento simples.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,27 +30,27 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>Comentários
 
-Estruturas são *tipos de valor*, que significa que eles são armazenados diretamente na pilha ou, quando eles são usados como campos ou elementos de matriz, embutido no pai de tipo. Ao contrário de classes e registros, as estruturas têm semântica de passar-por-valor. Isso significa que elas são úteis principalmente para pequenos agregados de dados que são acessados e copiados com frequência.
+Estruturas são *tipos de valor*, o que significa que elas são armazenadas diretamente na pilha ou, quando são usadas como campos ou elementos de matriz, embutidos no tipo pai. Ao contrário de classes e registros, as estruturas têm semântica de passar-por-valor. Isso significa que elas são úteis principalmente para pequenos agregados de dados que são acessados e copiados com frequência.
 
 Na sintaxe anterior, duas formas são mostradas. A primeira não é a sintaxe leve, mas ela é usada com frequência, pois quando você usa as palavras-chave `struct` e `end`, é possível omitir o atributo `StructAttribute`, que aparece na segunda forma. É possível abreviar `StructAttribute` como apenas `Struct`.
 
-O *-definição-elementos-e-membros de tipo* na sintaxe anterior representa definições e declarações de membro. As estruturas podem ter construtores e campos mutáveis e imutáveis e podem declarar membros e implementações de interface. Para obter mais informações, consulte [membros](members/index.md).
+Os *elementos Type-Definition-Elements-and-Members* na sintaxe anterior representam definições e declarações de membros. As estruturas podem ter construtores e campos mutáveis e imutáveis e podem declarar membros e implementações de interface. Para obter mais informações, consulte [Membros](./members/index.md).
 
 As estruturas não podem participar da herança, não podem conter associações `let` ou `do` e não podem conter recursivamente campos de seu próprio tipo (embora possam conter células de referência que fazem referência ao seu próprio tipo).
 
 Como as estruturas não permitem associações `let`, você deve declarar campos em estruturas usando a palavra-chave `val`. A palavra-chave `val` define um campo e seu tipo, mas não permite inicialização. Em vez disso, as declarações `val` são inicializadas como zero ou nulo. Por esse motivo, as estruturas que possuem um construtor implícito (ou seja, parâmetros que são fornecidos imediatamente após o nome da estrutura na declaração) requerem que declarações `val` sejam anotadas com o atributo `DefaultValue`. As estruturas que tenham um construtor definido ainda oferecem suporte à inicialização como zero. Portanto, o atributo `DefaultValue` é uma declaração de que um valor zero é válido para o campo. Construtores implícitos para estruturas não executam nenhuma ação, pois as associações `let` e `do` não são permitidas no tipo, mas os valores de parâmetro construtor implícito passados estão disponíveis como campos particulares.
 
-Construtores explícitos podem envolver inicialização de valores do campo. Quando você tem uma estrutura que possui um construtor explícito, ela ainda suporta inicialização como zero; no entanto, você não usa o atributo `DefaultValue` nas declarações `val`, pois ela entra em conflito com o construtor explícito. Para obter mais informações sobre `val` declarações, consulte [campos explícitos: O `val` palavra-chave](members/explicit-fields-the-val-keyword.md).
+Construtores explícitos podem envolver inicialização de valores do campo. Quando você tem uma estrutura que possui um construtor explícito, ela ainda suporta inicialização como zero; no entanto, você não usa o atributo `DefaultValue` nas declarações `val`, pois ela entra em conflito com o construtor explícito. Para obter mais informações `val` sobre declarações, [consulte campos explícitos: A `val` palavra](./members/explicit-fields-the-val-keyword.md)-chave.
 
 Modificadores de atributos e de acessibilidade são permitidos em estruturas e seguem as mesmas regras dos outros tipos. Para obter mais informações, consulte [atributos](attributes.md) e [controle de acesso](access-control.md).
 
 Os exemplos de código a seguir ilustram definições de estrutura.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
 
-## <a name="byreflike-structs"></a>Structs ByRefLike
+## <a name="byreflike-structs"></a>ByRefLike structs
 
-Você pode definir seus próprios structs que pode seguem `byref`-semântica, como: ver [Byrefs](byrefs.md) para obter mais informações. Isso é feito com o <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> atributo:
+Você pode definir suas próprias estruturas que podem aderir a `byref`semânticas semelhantes: consulte [byrefs](byrefs.md) para obter mais informações. Isso é feito com o <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> atributo:
 
 ```fsharp
 open System
@@ -62,20 +62,20 @@ type S(count1: Span<int>, count2: Span<int>) =
     member x.Count2 = count2
 ```
 
-`IsByRefLike` não implica `Struct`. Ambos devem estar presentes no tipo.
+`IsByRefLike`Não implica `Struct`. Ambos devem estar presentes no tipo.
 
-Um "`byref`-como" struct no F# é um tipo de valor de limite de pilha. Ele nunca é alocado no heap gerenciado. Um `byref`-como o struct é útil para programação de alto desempenho, como ela é imposta com o conjunto de verificações forte sobre tempo de vida e não captura. As regras são:
+Um struct`byref`"-Like" no F# é um tipo de valor de associação de pilha. Ele nunca é alocado no heap gerenciado. Um `byref`struct semelhante é útil para programação de alto desempenho, pois é imposta com o conjunto de verificações fortes sobre o tempo de vida e a não captura. As regras são:
 
-* Eles podem ser usados como parâmetros de função, os parâmetros de método, variáveis locais, método retorna.
-* Eles não podem ser estáticos ou membros de uma classe ou struct normal da instância.
-* Eles não podem ser capturados por qualquer construção de fechamento (`async` métodos ou expressões lambda).
+* Eles podem ser usados como parâmetros de função, parâmetros de método, variáveis locais, método retorna.
+* Eles não podem ser membros estáticos ou de instância de uma classe ou estrutura normal.
+* Eles não podem ser capturados por nenhuma construção`async` de fechamento (métodos ou expressões lambda).
 * Eles não podem ser usados como um parâmetro genérico.
 
-Embora essas regras altamente restringem o uso, eles fazem isso para cumprir a promessa de computação de alto desempenho de maneira segura.
+Embora essas regras restrinjam muito o uso, elas fazem isso para atender à promessa de computação de alto desempenho de maneira segura.
 
-## <a name="readonly-structs"></a>Structs somente leitura
+## <a name="readonly-structs"></a>Structs ReadOnly
 
-Você pode anotar os structs com o <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> atributo. Por exemplo:
+Você pode anotar structs com o <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> atributo. Por exemplo:
 
 ```fsharp
 [<IsReadOnly; Struct>]
@@ -84,13 +84,13 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-`IsReadOnly` não implica `Struct`. Você deve adicionar ambos para ter um `IsReadOnly` struct.
+`IsReadOnly`Não implica `Struct`. Você deve adicionar ambos para ter uma `IsReadOnly` struct.
 
-O uso desse atributo emite metadados deixar F# e C# sabe tratá-la como `inref<'T>` e `in ref`, respectivamente.
+O uso desse atributo emite metadados que permitem F# e C# sabem que o tratam `inref<'T>` como `in ref`e, respectivamente.
 
-Definindo um valor mutável dentro de um struct readonly produz um erro.
+A definição de um valor mutável dentro de uma struct ReadOnly produz um erro.
 
-## <a name="struct-records-and-discriminated-unions"></a>Struct registros e uniões discriminadas
+## <a name="struct-records-and-discriminated-unions"></a>Registros de struct e uniões discriminadas
 
 Você pode representar [registros](records.md) e [uniões discriminadas](discriminated-unions.md) como structs com o `[<Struct>]` atributo.  Consulte cada artigo para saber mais.
 
@@ -99,4 +99,4 @@ Você pode representar [registros](records.md) e [uniões discriminadas](discrim
 - [Referência da Linguagem F#](index.md)
 - [Classes](classes.md)
 - [Registros](records.md)
-- [Membros](members/index.md)
+- [Membros](./members/index.md)

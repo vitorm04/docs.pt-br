@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e32e4b490f0824cf97a1ae5910d7c74801c7b439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2c7a558af17493c955b4f148d0abf7f42c9dd6f8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592686"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629426"
 ---
-# <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > elemento
-Especifica se o tempo de execução usará a interoperabilidade COM em vez de comunicação remota para todas as chamadas entre limites de domínio de aplicativo.  
+# <a name="prefercominsteadofmanagedremoting-element"></a>\<Elemento de > PreferComInsteadOfManagedRemoting
+Especifica se o tempo de execução usará a interoperabilidade COM em vez de comunicação remota para todas as chamadas entre limites de domínio do aplicativo.  
   
  \<configuration>  
 \<runtime>  
@@ -34,14 +34,14 @@ Especifica se o tempo de execução usará a interoperabilidade COM em vez de co
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Indica se o tempo de execução usará a interoperabilidade COM em vez de comunicação remota entre limites de domínio de aplicativo.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Indica se o tempo de execução usará a interoperabilidade COM em vez da comunicação remota entre os limites do domínio do aplicativo.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|O tempo de execução usará a comunicação remota entre limites de domínio de aplicativo. Esse é o padrão.|  
-|`true`|O tempo de execução usará a interoperabilidade entre os limites de domínio de aplicativo.|  
+|`false`|O tempo de execução usará a comunicação remota entre os limites do domínio do aplicativo. Esse é o padrão.|  
+|`true`|O tempo de execução usará a interoperabilidade COM entre limites de domínio do aplicativo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -54,16 +54,16 @@ Especifica se o tempo de execução usará a interoperabilidade COM em vez de co
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando você define o `enabled` atributo `true`, o tempo de execução se comporta da seguinte maneira:  
+ Quando você define o `enabled` atributo como `true`, o tempo de execução se comporta da seguinte maneira:  
   
-- O tempo de execução não chama [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) para um [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface quando um [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) interface entra no domínio por meio de uma interface COM. Em vez disso, ele cria um [(Runtime Callable Wrapper)](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) em torno do objeto.  
+- O tempo de execução não chama [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) para uma interface [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) quando uma interface [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) entra no domínio por meio de uma interface com. Em vez disso, ele constrói um RCW ( [Runtime Callable Wrapper](../../../../../docs/standard/native-interop/runtime-callable-wrapper.md) ) em volta do objeto.  
   
-- O tempo de execução retorna E_NOINTERFACE quando ele recebe um `QueryInterface` chamar para um [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface para qualquer [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) que foi criado neste domínio.  
+- O tempo de execução retorna E_NOINTERFACE quando recebe `QueryInterface` uma chamada para uma interface [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) para qualquer CCW ( [com callable wrapper](../../../../../docs/standard/native-interop/com-callable-wrapper.md) ) criado nesse domínio.  
   
- Esses dois comportamentos Certifique-se de que todas as chamadas sobre COM interfaces entre os objetos gerenciados entre o uso de limites de domínio do aplicativo COM e interoperabilidade de COM em vez de comunicação remota.  
+ Esses dois comportamentos garantem que todas as chamadas sobre interfaces COM entre objetos gerenciados entre os limites de domínio do aplicativo usem a interoperabilidade com e COM em vez de comunicação remota.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar que o tempo de execução deve usar COM interoperabilidade entre os limites de isolamento:  
+ O exemplo a seguir mostra como especificar que o tempo de execução deve usar a interoperabilidade COM entre limites de isolamento:  
   
 ```xml  
 <configuration>  

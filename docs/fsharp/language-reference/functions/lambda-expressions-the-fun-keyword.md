@@ -1,17 +1,17 @@
 ---
-title: 'Expressões lambda: A palavra-chave fun'
-description: Saiba como usar o F# palavra-chave de 'divertido' para definir uma expressão lambda, que é uma função anônima.
+title: 'Expressões lambda: A palavra-chave Fun'
+description: Saiba como usar a F# palavra-chave ' Fun ' para definir uma expressão lambda, que é uma função anônima.
 ms.date: 05/16/2016
-ms.openlocfilehash: c59d32bd4226384213453f1a9d362209e68a6fb5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9818724686dd83a7e352fb36819289fa19b002df
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645384"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630668"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a>Expressões lambda: A palavra-chave fun (F#)
+# <a name="lambda-expressions-the-fun-keyword-f"></a>Expressões lambda: A palavra-chaveF#Fun ()
 
-O `fun` palavra-chave é usada para definir uma expressão lambda, ou seja, uma função anônima.
+A `fun` palavra-chave é usada para definir uma expressão lambda, ou seja, uma função anônima.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,7 +21,7 @@ fun parameter-list -> expression
 
 ## <a name="remarks"></a>Comentários
 
-O *lista de parâmetros* normalmente consiste em nomes e, opcionalmente, tipos de parâmetros. De modo geral, o *lista de parâmetros* podem ser compostos de qualquer F# padrões. Para obter uma lista completa de padrões possíveis, consulte [correspondência de padrões](../pattern-matching.md). Listas de parâmetros válidos incluem os exemplos a seguir.
+A *lista de parâmetros* normalmente consiste em nomes e, opcionalmente, tipos de parâmetros. Em geral, a *lista de parâmetros* pode ser composta de qualquer F# padrão. Para obter uma lista completa de padrões possíveis, consulte [correspondência de padrões](../pattern-matching.md). As listas de parâmetros válidos incluem os exemplos a seguir.
 
 ```fsharp
 // Lambda expressions with parameter lists.
@@ -36,15 +36,15 @@ fun (a, b) -> …
 fun head :: tail -> …
 ```
 
-O *expressão* é o corpo da função, a última expressão que gera um valor de retorno. Exemplos de expressões lambda válidos incluem o seguinte:
+A *expressão* é o corpo da função, a última expressão que gera um valor de retorno. Exemplos de expressões lambda válidas incluem o seguinte:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet301.fs)]
 
 ## <a name="using-lambda-expressions"></a>Usando Expressões Lambda
 
-Expressões lambda são especialmente úteis quando você deseja realizar operações em uma lista ou outra coleção e quiser evitar o trabalho extra de definir uma função. Muitos F# funções de biblioteca usam valores como argumentos de função e pode ser especialmente conveniente usar uma expressão lambda nesses casos. O código a seguir aplica uma expressão lambda para elementos de uma lista. Nesse caso, a função anônima adiciona 1 a cada elemento de uma lista.
+As expressões lambda são especialmente úteis quando você deseja executar operações em uma lista ou em outra coleção e deseja evitar o trabalho extra de definir uma função. Muitas F# funções de biblioteca usam valores de função como argumentos e podem ser especialmente convenientes para usar uma expressão lambda nesses casos. O código a seguir aplica uma expressão lambda a elementos de uma lista. Nesse caso, a função anônima adiciona 1 a todos os elementos de uma lista.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 
 ## <a name="see-also"></a>Consulte também
 

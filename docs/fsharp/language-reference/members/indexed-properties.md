@@ -1,17 +1,17 @@
 ---
 title: Propriedades indexadas
-description: Saiba mais sobre as propriedades indexadas no F#, que permitem acesso de matriz aos dados ordenados.
+description: Saiba mais sobre propriedades indexadas no F#, que permitem o acesso do tipo matriz a dados ordenados.
 ms.date: 10/17/2018
-ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489484"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627564"
 ---
 # <a name="indexed-properties"></a>Propriedades indexadas
 
-Ao definir uma classe que abstrai sobre dados ordenados, às vezes, pode ser útil fornecer acesso indexado para dados sem expor a implementação subjacente. Isso é feito com o `Item` membro.
+Ao definir uma classe que abstrai os dados ordenados, às vezes pode ser útil fornecer acesso indexado a esses dados sem expor a implementação subjacente. Isso é feito com o `Item` membro.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,19 +36,19 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>Comentários
 
-As formas de sintaxe anterior mostram como definir as propriedades indexadas com as duas uma `get` e uma `set` método, ter um `get` somente, no método ou tem um `set` somente no método. Você também pode combinar dois a sintaxe mostrada para somente get e a sintaxe mostrada para apenas o conjunto e produzir uma propriedade que tem get e set. Este último formulário permite que você coloque os modificadores de acessibilidade diferente e atributos em get e métodos definidos.
+Os formulários da sintaxe anterior mostram como `get` definir propriedades indexadas que têm um e um `set` método, só têm um `get` método ou só têm um `set` método. Você também pode combinar a sintaxe mostrada somente para get e a sintaxe mostrada somente para Set e produzir uma propriedade que tenha Get e Set. Este último formulário permite que você coloque atributos e modificadores de acessibilidade diferentes nos métodos get e Set.
 
-Usando o nome `Item`, o compilador trata a propriedade como uma propriedade indexada padrão. Um *propriedade default indexada* é uma propriedade que você pode acessar usando a sintaxe de matriz na instância do objeto. Por exemplo, se `o` é um objeto do tipo que define essa propriedade, a sintaxe `o.[index]` é usado para acessar a propriedade.
+Usando o nome `Item`, o compilador trata a propriedade como uma propriedade indexada padrão. Uma *propriedade indexada padrão* é uma propriedade que você pode acessar usando a sintaxe do tipo matriz na instância do objeto. Por exemplo, se `o` for um objeto do tipo que define essa propriedade, a sintaxe `o.[index]` será usada para acessar a propriedade.
 
-A sintaxe para acessar uma propriedade indexada de não-padrão é fornecer o nome da propriedade e o índice entre parênteses, assim como um membro regular. Por exemplo, se a propriedade em `o` é chamado `Ordinal`, você escreve `o.Ordinal(index)` para acessá-lo.
+A sintaxe para acessar uma propriedade indexada não padrão é fornecer o nome da propriedade e o índice entre parênteses, assim como um membro regular. Por exemplo, se a propriedade on `o` for chamada `Ordinal`, você escreverá `o.Ordinal(index)` para acessá-la.
 
-Independentemente de qual formulário usar, você sempre deve usar o formulário na forma curried para o método set em uma propriedade indexada. Para obter informações sobre funções via currying, consulte [funções](../functions/index.md).
+Independentemente do formulário usado, você sempre deve usar o formulário na forma curried para o método set em uma propriedade indexada. Para obter informações sobre as funções do na forma curried, consulte [funções](../functions/index.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo de código a seguir ilustra a definição e uso do padrão e propriedades indexadas de não-padrão obter e definir métodos.
+O exemplo de código a seguir ilustra a definição e o uso de propriedades indexadas padrão e não padrão que têm métodos get e Set.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
 ## <a name="output"></a>Saída
 
@@ -60,7 +60,7 @@ seven seventh eight eighth nine ninth ten tenth
 
 ## <a name="indexed-properties-with-multiple-index-values"></a>Propriedades indexadas com vários valores de índice
 
-Propriedades indexadas podem ter mais de um valor de índice. Nesse caso, os valores são separados por vírgulas quando a propriedade é usada. O método set em tal propriedade deve ter dois argumentos na forma curried, o primeiro deles é uma tupla que contém as chaves e o segundo é o valor a ser definido.
+As propriedades indexadas podem ter mais de um valor de índice. Nesse caso, os valores são separados por vírgulas quando a propriedade é usada. O método set em tal propriedade deve ter dois argumentos na forma curried, o primeiro deles é uma tupla que contém as chaves e o segundo é o valor a ser definido.
 
 O código a seguir demonstra o uso de uma propriedade indexada com vários valores de índice.
 

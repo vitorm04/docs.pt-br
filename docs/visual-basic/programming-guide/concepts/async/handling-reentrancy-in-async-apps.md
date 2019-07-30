@@ -1,20 +1,20 @@
 ---
-title: Tratando a reentrada em aplicativos assíncronos (Visual Basic)
+title: Manipulando a reentrância em aplicativos assíncronos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 35d2b75e14d6223463b45d585c6742e62cdad2a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bc8156b1d2baa53255870364e680d62d7b93a50f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751019"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630942"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Tratando a reentrada em aplicativos assíncronos (Visual Basic)
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Manipulando a reentrância em aplicativos assíncronos (Visual Basic)
 
 Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possivelmente, evitar a reentrância, que se refere à reinserção de uma operação assíncrona antes de ela ser concluída. Se você não identificar e tratar as possibilidades de reentrância, isso poderá causar resultados inesperados.
 
 > [!NOTE]
->  Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.
+> Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Reconhecendo a reentrância
 
@@ -94,7 +94,7 @@ Você pode examinar o código que produz esta saída fazendo a rolagem até o fi
 
 Você pode bloquear o botão **Iniciar** enquanto uma operação estiver em execução, desabilitando o botão na parte superior do manipulador de eventos `StartButton_Click`. Você pode reativar o botão de dentro um bloco `Finally` quando a operação for concluída para que os usuários possam executar o aplicativo novamente.
 
-O código a seguir mostra essas alterações, que estão marcadas com asteriscos. Você pode adicionar as alterações ao código no final deste tópico, ou você pode baixar o aplicativo concluído em [exemplos assíncronos: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é DisableStartButton.
+O código a seguir mostra essas alterações, que estão marcadas com asteriscos. Você pode adicionar as alterações ao código no final deste tópico ou pode baixar o aplicativo concluído de [amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é DisableStartButton.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -123,7 +123,7 @@ Como resultado das alterações, o botão não responderá enquanto `AccessTheWe
 
 Em vez de desabilitar o botão **Iniciar**, você pode manter o botão ativo, mas, se o usuário escolher esse botão novamente, cancele a operação que já está em execução e permita que a operação iniciada mais recentemente continue.
 
-Para obter mais informações sobre cancelamento, consulte [ajuste fino de seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Para obter mais informações sobre cancelamento, consulte ajustar [seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
 Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Baixe também o aplicativo concluído em [Amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é CancelAndRestart.
 
@@ -136,7 +136,7 @@ Para configurar esse cenário, faça as seguintes alterações no código básic
         Dim cts As CancellationTokenSource
     ```
 
-2. Em `StartButton_Click`, determine se uma operação já está em andamento. Se o valor de `cts` é `Nothing`, nenhuma operação já está ativa. Se o valor não for `Nothing`, a operação que já está em execução é cancelada.
+2. Em `StartButton_Click`, determine se uma operação já está em andamento. Se o valor de `cts` for `Nothing`, nenhuma operação já estará ativa. Se o valor não `Nothing`for, a operação que já está em execução será cancelada.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -153,7 +153,7 @@ Para configurar esse cenário, faça as seguintes alterações no código básic
     cts = newCTS
     ```
 
-4. No final da `StartButton_Click`, o processo atual for concluído, então, defina o valor da `cts` voltar ao `Nothing`.
+4. No final do `StartButton_Click`, o processo atual é concluído, portanto, defina o valor de `cts` de volta `Nothing`para.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -513,7 +513,7 @@ A saída mostra os padrões a seguir.
   TOTAL bytes returned:  915908
   ```
 
-- O `pendingWork` tarefa é `Nothing` no início de `FinishOneGroupAsync` apenas para um grupo, que foi iniciado primeiro. O grupo A ainda não concluiu uma expressão await quando alcança o `FinishOneGroupAsync`. Portanto, o controle não foi retornado ao `AccessTheWebAsync` e a primeira atribuição para `pendingWork` não ocorreu.
+- A `pendingWork` tarefa está `Nothing` no início de `FinishOneGroupAsync` apenas para o grupo A, que foi iniciado primeiro. O grupo A ainda não concluiu uma expressão await quando alcança o `FinishOneGroupAsync`. Portanto, o controle não foi retornado ao `AccessTheWebAsync` e a primeira atribuição para `pendingWork` não ocorreu.
 
 - As duas linhas a seguir sempre aparecem juntas na saída. O código nunca é interrompido entre o início de uma operação de um grupo em `StartButton_Click` e a atribuição de uma tarefa para o grupo para `pendingWork`.
 
@@ -557,7 +557,7 @@ A seção a seguir fornece o código para compilar o exemplo como um aplicativo 
 
      A caixa de diálogo **Novo Projeto** é aberta.
 
-3. No **modelos instalados** painel, expanda **Visual Basic**e, em seguida, expanda **Windows**.
+3. No painel **modelos instalados** , expanda **Visual Basic**e, em seguida, expanda **Windows**.
 
 4. Na lista de tipos de projeto, escolha **Aplicativo WPF**.
 
@@ -591,9 +591,9 @@ A seção a seguir fornece o código para compilar o exemplo como um aplicativo 
 
 8. Adicione uma referência para <xref:System.Net.Http>.
 
-9. Na **Gerenciador de soluções**, abra o menu de atalho para XAML. vb e, em seguida, escolha **Exibir código**.
+9. No **Gerenciador de soluções**, abra o menu de atalho para MainWindow. XAML. vb e escolha **Exibir código**.
 
-10. No XAML. vb, substitua o código pelo código a seguir.
+10. Em MainWindow. XAML. vb, substitua o código pelo código a seguir.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.

@@ -1,24 +1,24 @@
 ---
 title: Cadeias de caracteres
-description: Saiba como o F# tipo 'string' representa texto imutável, como uma sequência de caracteres Unicode.
+description: Saiba como o F# tipo ' String ' representa texto imutável como uma sequência de caracteres Unicode.
 ms.date: 07/05/2019
-ms.openlocfilehash: ec895723cc6d21a701a27b5d70d053bb681ce2b3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 284de939c90c4d9d4ea064fb4db1fb90a37038e2
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660603"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627110"
 ---
 # <a name="strings"></a>Cadeias de caracteres
 
 > [!NOTE]
 > Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
 
-O `string` tipo representa texto imutável, como uma sequência de caracteres Unicode. `string` é um alias para `System.String` no .NET Framework.
+O `string` tipo representa texto imutável como uma sequência de caracteres Unicode. `string` é um alias para `System.String` no .NET Framework.
 
 ## <a name="remarks"></a>Comentários
 
-Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O caractere de barra invertida ( \\ ) é usado para codificar determinados caracteres especiais. A barra invertida e o próximo caractere junto são conhecidos como uma *sequência de escape*. Suportada de sequências de escape F# literais de cadeia de caracteres são mostrados na tabela a seguir.
+Literais de cadeia de caracteres são delimitadas pelo caractere de aspas ("). O caractere de barra invertida ( \\ ) é usado para codificar determinados caracteres especiais. A barra invertida e o próximo caractere juntos são conhecidos como uma *sequência de escape*. As sequências de F# escape com suporte em literais de cadeia de caracteres são mostradas na tabela a seguir.
 
 |Caractere|Sequência de escape|
 |---------|---------------|
@@ -30,22 +30,22 @@ Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O
 |Tabulação|`\t`|
 |Tabulação vertical|`\v`|
 |Barra invertida|`\\`|
-|Marca de aspas|`\"`|
-|Apóstrofe|`\'`|
-|caractere Unicode|`\DDD` (onde `D` indica um decimal digit; o intervalo de 000 - 255; por exemplo, `\231` = "ç")|
-|caractere Unicode|`\xHH` (onde `H` indica um dígito hexadecimal; o intervalo de 00 - FF; por exemplo, `\xE7` = "ç")|
-|caractere Unicode|`\uHHHH` (UTF-16) (onde `H` indica um dígito hexadecimal; intervalo 0000 - FFFF;  Por exemplo, `\u00E7` = "ç")|
-|caractere Unicode|`\U00HHHHHH` (UTF-32) (onde `H` indica um dígito hexadecimal; o intervalo de 000000 - 10FFFF;  Por exemplo, `\U0001F47D` = "👽")|
+|Aspas|`\"`|
+|Apóstrofo|`\'`|
+|caractere Unicode|`\DDD`(onde `D` indica um dígito decimal; intervalo de 000-255; por exemplo, `\231` = "ç")|
+|caractere Unicode|`\xHH`(onde `H` indica um dígito hexadecimal; intervalo de 00-FF; por exemplo, `\xE7` = "ç")|
+|caractere Unicode|`\uHHHH`(UTF-16) (onde `H` indica um dígito hexadecimal; intervalo de 0000-ffff;  por exemplo, `\u00E7` = "ç")|
+|caractere Unicode|`\U00HHHHHH`(UTF-32) (onde `H` indica um dígito hexadecimal; intervalo de 000000-10FFFF;  por exemplo, `\U0001F47D` = "👽")|
 
 > [!IMPORTANT]
-> O `\DDD` sequência de escape é a notação decimal, a notação octal não como na maioria das outras linguagens. Portanto, os dígitos `8` e `9` sejam válidas e uma sequência de `\032` representa um espaço (u+0020), enquanto esse mesmo ponto de código em notação octal seria `\040`.
+> A `\DDD` sequência de escape é notação decimal, não notação octal, como na maioria das outras linguagens. Portanto, os `8` dígitos `9` e são válidos, e uma sequência `\032` de representa um espaço (U + 0020), enquanto que o `\040`mesmo ponto de código na notação octal seria.
 
 > [!NOTE]
-> Sendo restrita a um intervalo de 0 – 255 (0xFF), o `\DDD` e `\x` sequências de escape são efetivamente as [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) do conjunto de caracteres, desde que corresponde ao primeiro 256 pontos de código Unicode.
+> Sendo restrito a um intervalo de 0-255 (0xFF), as `\DDD` sequências de escape e `\x` são efetivamente o conjunto de caracteres [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) , pois isso corresponde aos primeiros 256 pontos de código Unicode.
 
-Se precedido pelo símbolo @, o literal é uma cadeia de caracteres textual. Isso significa que as sequências de escape são ignoradas, exceto que dois caracteres de marca de aspas simples são interpretados como caracteres de uma marca de aspas simples.
+Se for precedido pelo símbolo @, o literal é uma cadeia de caracteres textual. Isso significa que todas as sequências de escape são ignoradas, exceto que dois caracteres de aspas são interpretados como um caractere de aspas.
 
-Além disso, uma cadeia de caracteres pode ser delimitada por aspas triplas. Nesse caso, todas as sequências de escape são ignoradas, incluindo caracteres de aspas duplas. Para especificar uma cadeia de caracteres que contém um embedded caracteres entre aspas, você pode usar uma cadeia de caracteres textual ou uma cadeia de caracteres entre aspas triplas. Se você usar uma cadeia de caracteres textual, você deve especificar dois caracteres de aspas para indicar um caractere de aspa simples. Se você usar uma cadeia de caracteres entre aspas triplas, você pode usar os caracteres de aspas simples sem que eles que está sendo analisado como o fim da cadeia de caracteres. Essa técnica pode ser útil ao trabalhar com XML ou outras estruturas que incluem as aspas internas.
+Além disso, uma cadeia de caracteres pode estar entre aspas triplas. Nesse caso, todas as sequências de escape são ignoradas, incluindo caracteres de aspas duplas. Para especificar uma cadeia de caracteres que contenha uma cadeia de caracteres entre aspas incorporada, você pode usar uma cadeia de caracteres textual ou uma cadeia de caracteres entre aspas triplas. Se você usar uma cadeia de caracteres textual, deverá especificar dois caracteres de aspas para indicar um caractere de aspas simples. Se você usar uma cadeia de caracteres entre aspas triplas, poderá usar os caracteres de aspas simples sem que eles sejam analisados como o final da cadeia de caracteres. Essa técnica pode ser útil quando você trabalha com XML ou outras estruturas que incluem aspas incorporadas.
 
 ```fsharp
 // Using a verbatim string
@@ -55,19 +55,19 @@ let xmlFragment1 = @"<book author=""Milton, John"" title=""Paradise Lost"">"
 let xmlFragment2 = """<book author="Milton, John" title="Paradise Lost">"""
 ```
 
-No código, cadeias de caracteres com quebras de linha são aceitas e as quebras de linha são interpretadas literalmente como novas linhas, a menos que um caractere de barra invertida é o último caractere antes da quebra de linha. Espaço em branco à esquerda na próxima linha é ignorado quando o caractere de barra invertida é usado. O código a seguir produz uma cadeia de caracteres `str1` que tem o valor `"abc\ndef"` e uma cadeia de caracteres `str2` que tem o valor `"abcdef"`.
+No código, as cadeias de caracteres com quebras de linha são aceitas e as quebras de linha são interpretadas literalmente como novas linhas, a menos que um caractere de barra invertida seja o último caractere antes da quebra de linha. O espaço em branco à esquerda na próxima linha é ignorado quando o caractere de barra invertida é usado. O código a seguir produz uma `str1` cadeia de caracteres `"abc\ndef"` com valor e `str2` uma cadeia de `"abcdef"`caracteres com valor.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
 
-Você pode acessar os caracteres individuais em uma cadeia de caracteres usando a sintaxe de matriz, da seguinte maneira.
+Você pode acessar caracteres individuais em uma cadeia de caracteres usando a sintaxe do tipo matriz, da seguinte maneira.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1002.fs)]
 
 A saída é `b`.
 
-Ou você pode extrair subcadeias de caracteres usando a sintaxe de fatia de matriz, conforme mostrado no código a seguir.
+Ou você pode extrair subcadeias de caracteres usando a sintaxe da fatia de matriz, conforme mostrado no código a seguir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1003.fs)]
 
 A saída é a seguinte.
 
@@ -76,29 +76,29 @@ abc
 def
 ```
 
-Cadeias de caracteres ASCII pode ser representado usando matrizes de bytes sem sinal, o tipo `byte[]`. Adicione o sufixo `B` para uma cadeia de caracteres literal para indicar que ele é uma cadeia de caracteres ASCII. As sequências de escape mesmo como cadeias de caracteres Unicode, exceto para as sequências de escape Unicode dão suporte a literais de cadeia de caracteres ASCII usados com matrizes de bytes.
+Você pode representar cadeias de caracteres ASCII por matrizes de bytes não `byte[]`assinados, digite. Você adiciona o sufixo `B` a um literal de cadeia de caracteres para indicar que é uma cadeia de caracteres ASCII. Literais de cadeia de caracteres ASCII usados com matrizes de bytes dão suporte às mesmas sequências de escape que as cadeias de caracteres Unicode, exceto as sequências de escape Unicode
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
 
 ## <a name="string-operators"></a>Operadores da cadeia de caracteres
 
-Concatenar cadeias de caracteres de duas maneiras: usando o `+` operador ou usando o `^` operador. O `+` operador mantém a compatibilidade com a cadeia de caracteres do .NET Framework que recursos de tratamento.
+Há duas maneiras de concatenar cadeias de caracteres: usando `+` o operador ou usando o `^` operador. O `+` operador mantém a compatibilidade com os recursos de manipulação de cadeia de caracteres .NET Framework.
 
 O exemplo a seguir ilustra a concatenação de cadeia de caracteres.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
 
-## <a name="string-class"></a>Classe de cadeia de caracteres
+## <a name="string-class"></a>Classe String
 
-Porque o tipo de cadeia de caracteres no F# é, na verdade, um .NET Framework `System.String` digitar tudo a `System.String` membros estão disponíveis. Isso inclui o `+` operador, que é usado para concatenar cadeias de caracteres, o `Length` propriedade e o `Chars` propriedade, que retorna a cadeia de caracteres como uma matriz de caracteres Unicode. Para obter mais informações sobre cadeias de caracteres, consulte `System.String`.
+Como o tipo de cadeia F# de caracteres no é `System.String` , na verdade, `System.String` um tipo de .NET Framework, todos os membros estão disponíveis. Isso inclui o `+` operador, que é usado para concatenar cadeias de `Length` caracteres, a propriedade `Chars` e a propriedade, que retorna a cadeia de caracteres como uma matriz de caractere Unicode. Para obter mais informações sobre cadeias `System.String`de caracteres, consulte.
 
-Usando o `Chars` propriedade de `System.String`, você pode acessar os caracteres individuais em uma cadeia de caracteres especificando um índice, conforme mostrado no código a seguir.
+Usando a `Chars` propriedade de `System.String`, você pode acessar os caracteres individuais em uma cadeia de caracteres especificando um índice, como é mostrado no código a seguir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
 
 ## <a name="string-module"></a>Módulo de cadeia de caracteres
 
-Funcionalidade adicional para a manipulação de cadeia de caracteres está incluída na `String` módulo no `FSharp.Core` namespace. Para obter mais informações, consulte [módulo Core. String](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
+A funcionalidade adicional para manipulação de cadeia de caracteres `String` está incluída no `FSharp.Core` módulo no namespace. Para obter mais informações, consulte [Core. String Module](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
 
 ## <a name="see-also"></a>Consulte também
 

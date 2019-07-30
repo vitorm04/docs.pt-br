@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 0fe09c0c261f36f1e9f241a6a6a8aacf3bf07d29
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: a29c31e93523e0843728d2fd7fa555946b139c55
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331485"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629606"
 ---
 # <a name="accessibility-best-practices"></a>Práticas recomendadas de Acessibilidade
 > [!NOTE]
@@ -66,7 +66,7 @@ ms.locfileid: "68331485"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Garantir que toda a interface do usuário seja dimensionada corretamente por qualquer configuração de DPI  
- Certifique-se [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] de que todos possam ser [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] dimensionados corretamente por qualquer configuração. Além disso, verifique [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] se os elementos se encaixam em uma tela de [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)]1024 x 768 com 120.  
+ Verifique se todos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] podem ser dimensionados corretamente por qualquer configuração de pontos por polegada (DPI). Além disso, verifique [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] se os elementos se encaixam em uma tela de 1024 x 768 com 120 pontos por polegada (DPI).  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navegação  

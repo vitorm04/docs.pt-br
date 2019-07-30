@@ -1,17 +1,17 @@
 ---
 title: Classes abstratas
-description: Saiba mais sobre F# classes abstratas, que deixar alguns ou todos os membros não implementados e representam a funcionalidade comum de um conjunto diversificado de tipos de objeto.
+description: Saiba mais F# sobre as classes abstratas, que deixam alguns ou todos os membros não implementados e representam a funcionalidade comum de um conjunto diversificado de tipos de objetos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8251d481c9056d40a0b13ae3c89353406986c116
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a6bbfc23b858d5f3833f3f52b6dca46753080f03
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645536"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629684"
 ---
 # <a name="abstract-classes"></a>Classes abstratas
 
-*Classes abstratas* são classes que deixam alguns ou todos os membros não implementados, para que as implementações podem ser fornecidas por classes derivadas.
+*Classes abstratas* são classes que deixam alguns ou todos os membros não implementados, para que as implementações possam ser fornecidas por classes derivadas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,23 +28,23 @@ abstract member member-name : type-signature
 
 ## <a name="remarks"></a>Comentários
 
-Na programação orientada a objeto, uma classe abstrata é usada como uma classe base de uma hierarquia e representa a funcionalidade comum de um conjunto diversificado de tipos de objeto. Como o "abstrato" nome implica, classes abstratas geralmente não correspondem diretamente em entidades concretas no domínio do problema. No entanto, elas representam o que muitas entidades concretas diferentes têm em comum.
+Na programação orientada a objeto, uma classe abstrata é usada como uma classe base de uma hierarquia e representa a funcionalidade comum de um conjunto diversificado de tipos de objeto. Como o nome "Abstract" implica, as classes abstratas geralmente não correspondem diretamente às entidades concretas no domínio problemático. No entanto, elas representam o que muitas entidades concretas diferentes têm em comum.
 
-Classes abstratas devem ter o `AbstractClass` atributo. Eles podem ter implementado e não implementados membros. O uso do termo *abstrata* quando aplicado a uma classe é o mesmo como em outras linguagens .NET; no entanto, o uso do termo *abstrata* quando aplicado a (propriedades e métodos) é um pouco diferente em F# do seu uso em outras linguagens .NET. No F#, quando um método é marcado com o `abstract` palavra-chave, isso indica que um membro tem uma entrada, conhecida como um *slot de expedição virtual*, na tabela de funções virtuais para esse tipo interna. Em outras palavras, o método é virtual, embora a `virtual` palavra-chave não é usado o F# idioma. A palavra-chave `abstract` é usado em métodos virtuais, independentemente se o método é implementado. A declaração de um slot de expedição virtual é separada da definição de um método para esse slot de expedição. Portanto, o F# equivalente a uma declaração de método virtual e uma definição em outra linguagem .NET é uma combinação de uma declaração de método abstrato e uma definição separada, com qualquer um de `default` palavra-chave ou o `override` palavra-chave. Para obter mais informações e exemplos, consulte [métodos](members/methods.md).
+Classes abstratas devem ter `AbstractClass` o atributo. Eles podem ter membros implementados e não implementados. O uso do termo *abstract* quando aplicado a uma classe é o mesmo que em outras linguagens .net; no entanto, o uso do termo *abstract* quando aplicado a métodos (e propriedades) é um pouco diferente F# de seu uso em outras linguagens do .net. No F#, quando um método é marcado com a `abstract` palavra-chave, isso indica que um membro tem uma entrada, conhecida como um *slot de expedição virtual*, na tabela interna de funções virtuais para esse tipo. Em outras palavras, o método é virtual, embora a `virtual` palavra-chave não seja usada F# no idioma. A palavra `abstract` -chave é usada em métodos virtuais, independentemente de o método ser implementado ou não. A declaração de um slot de expedição virtual é separada da definição de um método para esse slot de expedição. Portanto, o F# equivalente a uma declaração de método virtual e definição em outra linguagem .net é uma combinação de uma declaração de método abstrato e uma definição separada, com a `default` palavra-chave `override` ou a palavra-chave. Para obter mais informações e exemplos, consulte [métodos](./members/methods.md).
 
-Uma classe é considerada abstrata somente se houver métodos abstratos que são declarados, mas não definidos. Portanto, as classes que têm os métodos abstratos não são necessariamente abstratas de classes. A menos que uma classe tem indefinido métodos abstratos, não use o **AbstractClass** atributo.
+Uma classe será considerada abstrata somente se houver métodos abstratos declarados, mas não definidos. Portanto, as classes que têm métodos abstratos não são necessariamente classes abstratas. A menos que uma classe tenha métodos abstratos indefinidos, não use o atributo **AbstractClass** .
 
-Na sintaxe anterior, *modificador de acessibilidade* pode ser `public`, `private` ou `internal`. Para saber mais, veja [Controle de acesso](access-control.md).
+Na sintaxe anterior, o *modificador de acessibilidade* pode `public`ser `private` ou `internal`. Para saber mais, veja [Controle de acesso](access-control.md).
 
-Assim como acontece com outros tipos, classes abstratas podem ter uma classe base e um ou mais interfaces base. Cada classe base ou interface é exibida em uma linha separada, junto com o `inherit` palavra-chave.
+Assim como ocorre com outros tipos, as classes abstratas podem ter uma classe base e uma ou mais interfaces base. Cada classe base ou interface aparece em uma linha separada junto com a `inherit` palavra-chave.
 
-A definição de tipo de uma classe abstrata pode conter membros totalmente definidos, mas ele também pode conter membros abstratos. A sintaxe para membros abstratos é exibida separadamente na sintaxe anterior. Nesta sintaxe, o *assinatura de tipo* de um membro é uma lista que contém os tipos de parâmetros na ordem e os tipos de retorno, separados por `->` tokens de e/ou `*` tokens conforme apropriado para via currying e tupled parâmetros. A sintaxe para assinaturas de tipo de membro abstrato é o mesmo que o usado em arquivos de assinatura e se mostrado pelo IntelliSense no Editor de código do Visual Studio.
+A definição de tipo de uma classe abstrata pode conter membros totalmente definidos, mas também pode conter membros abstratos. A sintaxe para membros abstratos é mostrada separadamente na sintaxe anterior. Nessa sintaxe, a *assinatura de tipo* de um membro é uma lista que contém os tipos de parâmetro em ordem e os tipos de retorno, `->` separados por tokens `*` e/ou tokens, conforme apropriado para os na forma curried e os parâmetros de tupla. A sintaxe para assinaturas de tipo de membro abstrato é a mesma usada em arquivos de assinatura e mostrada pelo IntelliSense no editor de Visual Studio Code.
 
-O código a seguir ilustra uma classe abstrata Shape, que tem duas classes de derivada não abstrata, círculo e um quadrado. O exemplo mostra como usar propriedades, métodos e classes abstratas. No exemplo, a forma de classe abstrata representa os elementos comuns do círculo de entidades concreta e quadrado. Os recursos comuns de todas as formas (em um sistema de coordenadas bidimensional) são abstraídos out em classe Shape: a posição na grade, um ângulo de rotação e as propriedades de área e perímetro. Elas podem ser substituídas, exceto para a posição, o comportamento dos quais formas individuais não é possível alterar.
+O código a seguir ilustra uma forma de classe abstrata, que tem duas classes derivadas não abstratas, Square e Circle. O exemplo mostra como usar classes, métodos e propriedades abstratos. No exemplo, a forma da classe abstrata representa os elementos comuns do círculo e do quadrado das entidades concretas. Os recursos comuns de todas as formas (em um sistema de coordenadas bidimensional) são abstraidos na classe Shape: a posição na grade, um ângulo de rotação e as propriedades de área e de perímetro. Elas podem ser substituídas, exceto a posição, o comportamento de quais formas individuais não podem ser alteradas.
 
-O método de rotação pode ser substituído, como na classe do círculo, o que é invariável da rotação devido a seu simetria. Portanto, na classe do círculo, o método de rotação é substituído por um método que não faz nada.
+O método de rotação pode ser substituído, como na classe Circle, que é invariável de rotação devido à sua simetria. Portanto, na classe Circle, o método Rotation é substituído por um método que não faz nada.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
 
 **Saída:**
 
@@ -58,6 +58,6 @@ Area of Circle: 78.539816
 ## <a name="see-also"></a>Consulte também
 
 - [Classes](classes.md)
-- [Membros](members/index.md)
-- [Métodos](members/methods.md)
-- [Propriedades](members/Properties.md)
+- [Membros](./members/index.md)
+- [Métodos](./members/methods.md)
+- [Propriedades](./members/Properties.md)

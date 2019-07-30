@@ -1,17 +1,17 @@
 ---
 title: Diretivas de compilador
-description: Saiba mais sobre F# diretivas de pré-processador de linguagem, diretivas de compilação condicional, diretivas de linha e diretivas de compilador.
+description: Saiba mais F# sobre as diretivas de pré-processador de linguagem, diretivas de compilação condicional, diretivas de linha e diretivas de compilador.
 ms.date: 12/10/2018
-ms.openlocfilehash: 2b62fb930a3b0c55103d6b0edbe20ae056ba86bd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 16db2efb2fee2c2c5e94aa98eb0a13183a4e0e0b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645506"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630408"
 ---
 # <a name="compiler-directives"></a>Diretivas de compilador
 
-Este tópico descreve as diretivas de processador e diretivas de compilador.
+Este tópico descreve as diretivas do processador e as diretivas do compilador.
 
 ## <a name="preprocessor-directives"></a>Diretivas de pré-processador
 
@@ -21,32 +21,32 @@ A tabela a seguir lista as diretivas de pré-processador que estão disponíveis
 
 |Diretiva|Descrição|
 |---------|-----------|
-|`#if` *symbol*|Dá suporte à compilação condicional. Código na seção após o `#if` está incluído se o *símbolo* é definido. O símbolo também pode ser negado com `!`.|
-|`#else`|Dá suporte à compilação condicional. Marca uma seção de código para incluir se o símbolo usado com o anterior `#if` não está definido.|
-|`#endif`|Dá suporte à compilação condicional. Marca o final de uma seção condicional do código.|
-|`#`[line] *int*,<br/>`#`[line] *int* *string*,<br/>`#`[line] *int* *verbatim-string*|Indica o nome original da fonte código linha e o arquivo, para depuração. Esse recurso é fornecido para as ferramentas que geram F# código-fonte.|
-|`#nowarn` *warningcode*|Desabilita um aviso do compilador ou avisos. Para desabilitar um aviso, localize seu número de saída do compilador e incluí-lo entre aspas. Omita o prefixo "FS". Para desabilitar vários números de aviso na mesma linha, incluir cada número entre aspas e separe cada cadeia de caracteres por um espaço. Por exemplo:
+|`#if` *symbol*|Dá suporte à compilação condicional. O código na seção após o `#if` será incluído se o *símbolo* for definido. O símbolo também pode ser negado com `!`.|
+|`#else`|Dá suporte à compilação condicional. Marca uma seção de código a ser incluída se o símbolo usado com o `#if` anterior não estiver definido.|
+|`#endif`|Dá suporte à compilação condicional. Marca o final de uma seção condicional de código.|
+|`#`descritos *int*,<br/>`#`descritos *int* *cadeia de caracteres*,<br/>`#`descritos *int* *cadeia de caracteres textual*|Indica a linha de código-fonte original e o nome do arquivo para depuração. Esse recurso é fornecido para ferramentas que geram F# código-fonte.|
+|`#nowarn`*WarningCode*|Desabilita um aviso do compilador ou avisos. Para desabilitar um aviso, localize o número da saída do compilador e inclua-o entre aspas. Omita o prefixo "FS". Para desabilitar vários números de aviso na mesma linha, inclua cada número entre aspas e separe cada cadeia de caracteres por um espaço. Por exemplo:
 
 `#nowarn "9" "40"`
 
-O efeito de desabilitar um aviso se aplica a todo o arquivo, incluindo partes do arquivo que precedem a diretiva. |
+O efeito de desabilitar um aviso se aplica ao arquivo inteiro, incluindo partes do arquivo que precede a diretiva. |
 
 ## <a name="conditional-compilation-directives"></a>Diretivas de compilação condicional
 
-Código que é desativado por um dessas diretivas aparece esmaecido no Editor de código do Visual Studio.
+O código que é desativado por uma dessas diretivas aparece esmaecido no editor de Visual Studio Code.
 
 > [!NOTE]
-> O comportamento das diretivas de compilação condicional não é o mesmo que ele esteja em outras linguagens. Por exemplo, é possível usar expressões Boolianas que envolvem símbolos, e `true` e `false` não têm significado especial. Símbolos que você usar o `if` diretiva deve ser definida pela linha de comando ou nas configurações do projeto; não há nenhum `define` diretiva de pré-processador.
+> O comportamento das diretivas de compilação condicional não é o mesmo que em outros idiomas. Por exemplo, você não pode usar expressões boolianas que envolvam `false` símbolos `true` e não têm nenhum significado especial. Os símbolos que você usa na `if` diretiva devem ser definidos pela linha de comando ou nas configurações do projeto; não há nenhuma `define` diretiva de pré-processador.
 
-O código a seguir ilustra o uso do `#if`, `#else`, e `#endif` diretivas. Neste exemplo, o código contém duas versões da definição de `function1`. Quando `VERSION1` é definido usando o [-definir a opção de compilador](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), o código entre as `#if` diretiva e a `#else` diretiva é ativada. Caso contrário, o código entre `#else` e `#endif` é ativado.
+O código a seguir ilustra o uso das `#if`diretivas `#else`, e `#endif` . Neste exemplo, o código contém duas versões da definição de `function1`. Quando `VERSION1` é definido usando a [opção-define do compilador](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), o código entre a `#if` diretiva e a `#else` diretiva é ativado. Caso contrário, o código `#else` entre `#endif` e é ativado.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
-Não há nenhuma `#define` diretiva de pré-processador em F#. Você deve usar as configurações de projeto ou a opção do compilador para definir os símbolos usados pelo `#if` diretiva.
+Não há nenhuma `#define` diretiva de pré-processador no. F# Você deve usar a opção do compilador ou as configurações do projeto para definir os símbolos `#if` usados pela diretiva.
 
-Diretivas de compilação condicional podem ser aninhadas. Recuo não é significativo para diretivas de pré-processador.
+As diretivas de compilação condicional podem ser aninhadas. O recuo não é significativo para diretivas de pré-processador.
 
-Você também pode negar um símbolo com `!`. Neste exemplo, o valor da cadeia de caracteres é algo somente quando _não_ depuração:
+Você também pode negar um símbolo com `!`. Neste exemplo, o valor de uma cadeia de caracteres é algo somente quando _não_ está Depurando:
 
 ```fsharp
 #if !DEBUG
@@ -58,25 +58,25 @@ let str = "Debugging!"
 
 ## <a name="line-directives"></a>Diretivas de linha
 
-Durante a criação, o compilador relata erros em F# números de código, fazendo referência a linha na qual ocorre a cada erro. Esses números de linha iniciam em 1 para a primeira linha em um arquivo. No entanto, se você estiver gerando F# código-fonte da ferramenta de outro, os números de linha no código gerado geralmente não são de interesse, pois os erros no gerado F# código provavelmente são provenientes de outra fonte. O `#line` diretiva fornece uma maneira para autores de ferramentas que geram F# código-fonte para passar informações sobre a linha original números e arquivos de origem para o gerado F# código.
+Ao compilar, o compilador relata erros no F# código referenciando números de linha nos quais cada erro ocorre. Esses números de linha começam em 1 para a primeira linha em um arquivo. No entanto, se você F# estiver gerando código-fonte de outra ferramenta, os números de linha no código gerado geralmente não são de interesse, pois os F# erros no código gerado provavelmente surgirão de outra fonte. A `#line` diretiva fornece uma maneira para os autores de ferramentas que F# geram código-fonte para passar informações sobre os números de linha e os arquivos F# de origem originais para o código gerado.
 
-Quando você usa o `#line` diretiva, nomes de arquivo devem ser colocados entre aspas. A menos que o token textual (`@`) aparece na frente da cadeia de caracteres, você deve escapar caracteres de barra invertida, usando dois caracteres de barra invertida em vez de um para usá-los no caminho. Estes são os tokens de linha válido. Nestes exemplos, suponha que o arquivo original `Script1` resulta em uma gerada automaticamente F# arquivo de código quando ele é executado por meio de uma ferramenta e o código no local dessas diretivas é gerado a partir de alguns tokens na linha 25 no arquivo `Script1`.
+Quando você usa a `#line` diretiva, os nomes de arquivo devem ser colocados entre aspas. A menos que o token`@`textual () apareça na frente da cadeia de caracteres, você deve escapar dos caracteres de barra invertida usando dois caracteres de barra invertida em vez de um para usá-los no caminho. A seguir estão os tokens de linha válidos. Nestes exemplos, suponha que o arquivo `Script1` original resulte em um arquivo de código gerado F# automaticamente quando ele é executado por meio de uma ferramenta e que o código no local dessas diretivas é gerado de alguns tokens na linha 25 no arquivo `Script1`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7303.fs)]
 
-Esses símbolos indicam que o F# código gerado neste local é derivado do algumas construções em ou próximo à linha `25` na `Script1`.
+Esses tokens indicam que F# o código gerado nesse local é derivado de algumas construções na linha `25` `Script1`ou Near.
 
 ## <a name="compiler-directives"></a>Diretivas de compilador
 
-Diretivas de compilador se parecer com diretivas de pré-processador, porque eles são prefixados com um sinal #, mas em vez de ser interpretado pelo pré-processador, eles são deixados para o compilador a interpretar e agir.
+As diretivas de compilador assemelham-se a diretivas de pré-processador, porque elas são prefixadas com um sinal #, mas em vez de serem interpretadas pelo pré-processador, elas são deixadas para o compilador interpretar e agir.
 
-A tabela a seguir lista a diretiva de compilador que está disponível no F#.
+A tabela a seguir lista a diretiva de compilador que está F#disponível no.
 
 |Diretiva|Descrição|
 |---------|-----------|
-|`#light` ["on"&#124;"off"]|Habilita ou desabilita a sintaxe leve, para compatibilidade com outras versões do ML. Por padrão, a sintaxe leve está habilitada. Sintaxe detalhada está sempre habilitado. Portanto, você pode usar a sintaxe leve e a sintaxe detalhada. A diretiva `#light` por si só é equivalente a `#light "on"`. Se você especificar `#light "off"`, você deve usar a sintaxe detalhada para todas as construções de linguagem. Sintaxe na documentação do F# é apresentado com a suposição de que você está usando a sintaxe leve. Para obter mais informações, consulte [sintaxe detalhada](verbose-syntax.md).|
+|`#light` ["on"&#124;"off"]|Habilita ou desabilita a sintaxe leve, para compatibilidade com outras versões do ML. Por padrão, a sintaxe leve está habilitada. A sintaxe detalhada está sempre habilitada. Portanto, você pode usar a sintaxe leve e a sintaxe detalhada. A diretiva `#light` por si só é equivalente `#light "on"`a. Se você especificar `#light "off"`, deverá usar a sintaxe detalhada para todas as construções de linguagem. A sintaxe na documentação do F# é apresentada com a suposição de que você esteja usando a sintaxe leve. Para obter mais informações, consulte [sintaxe detalhada](verbose-syntax.md).|
 
-Para diretivas de interpretador (fsi.exe), consulte [programação interativa com F# ](../tutorials/fsharp-interactive/index.md).
+Para diretivas do intérprete (FSI. exe), consulte [programação interativa com F# ](../tutorials/fsharp-interactive/index.md)o.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2988b054030df23ae8ccd8840f83c239f0401321
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70c60461f3ddd6bdabd151f60c7bc81eef18e650
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607257"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629476"
 ---
-# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> Element
+# <a name="gcallowverylargeobjects-element"></a>\<Elemento de > gcAllowVeryLargeObjects
 Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tamanho total.  
   
- \<Configuração > elemento  
-\<tempo de execução > elemento  
-\<gcAllowVeryLargeObjects> Element  
+ \<Elemento de > de configuração  
+\<Elemento de > de tempo de execução  
+\<Elemento de > gcAllowVeryLargeObjects  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,14 +35,14 @@ Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tam
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se as matrizes que são maiores que 2 GB de tamanho total estão habilitadas em plataformas de 64 bits.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se as matrizes maiores que 2 GB no tamanho total estão habilitadas em plataformas de 64 bits.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Matrizes maiores que 2 GB de tamanho total não estão habilitados. Esse é o padrão.|  
-|`true`|Matrizes maiores que 2 GB de tamanho total são habilitadas em plataformas de 64 bits.|  
+|`false`|Matrizes maiores que 2 GB no tamanho total não estão habilitadas. Esse é o padrão.|  
+|`true`|Matrizes maiores que 2 GB no tamanho total são habilitadas em plataformas de 64 bits.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -55,16 +55,16 @@ Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tam
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Usando esse elemento em seu arquivo de configuração de aplicativo permite matrizes que são maiores que 2 GB de tamanho, mas não altere outros limites de tamanho do objeto ou matriz:  
+ O uso desse elemento em seu arquivo de configuração de aplicativo permite que matrizes com mais de 2 GB de tamanho, mas não alteram outros limites no tamanho do objeto ou tamanho da matriz:  
   
 - O número máximo de elementos em uma matriz é <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
   
-- O índice máximo em uma única dimensão é 2,147,483,591 (0x7FFFFFC7) para matrizes de bytes e matrizes de estruturas de byte único e 2,146,435,071 (0X7FEFFFFF) para outros tipos.  
+- O índice máximo em qualquer dimensão única é 2.147.483.591 (0x7FFFFFC7) para matrizes de bytes e matrizes de estruturas de byte único e 2.146.435.071 (0X7FEFFFFF) para outros tipos.  
   
-- O tamanho máximo de cadeias de caracteres e outros objetos não matriz não é alterado.  
+- O tamanho máximo para cadeias de caracteres e outros objetos que não são da matriz não são alterados.  
   
 > [!CAUTION]
->  Antes de habilitar esse recurso, certifique-se de que seu aplicativo não inclui o código não seguro que pressupõe que todas as matrizes são menores que 2 GB de tamanho. Por exemplo, o código não seguro que usa matrizes como buffers pode ser suscetível a estouros de buffer se ele é gravado na suposição de que matrizes não deve exceder 2 GB.  
+>  Antes de habilitar esse recurso, verifique se o seu aplicativo não inclui um código não seguro que assuma que todas as matrizes tenham menos de 2 GB de tamanho. Por exemplo, o código não seguro que usa matrizes como buffers pode ser suscetível a estouros de buffer se ele for escrito na suposição de que as matrizes não excederão 2 GB.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como habilitar esse recurso para um aplicativo.  
@@ -77,6 +77,10 @@ Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tam
 </configuration>  
 ```  
   
+## <a name="supported-in"></a>Com suporte em
+
+.NET Framework 4,5 e versões posteriores
+
 ## <a name="see-also"></a>Consulte também
 
 - [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)

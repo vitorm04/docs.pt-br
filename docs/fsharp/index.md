@@ -3,30 +3,30 @@ title: Guia de F#
 description: Este guia fornece uma visão geral dos vários materiais de aprendizagem para F#, uma linguagem de programação funcional que é executado no .NET.
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd878fc907d1ebfe4c96a0b5a77151b70d74fb29
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772795"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629708"
 ---
 # <a name="f-guide"></a>Guia de F#
 
 O guia de F# fornece muitos recursos para aprender a linguagem F#.
 
-## <a name="learning-f"></a>Aprendizado F\#
+## <a name="learning-f"></a>Aprendendo F\#
 
 [O que é a linguagem F#](what-is-fsharp.md) explica o que é a linguagem F# e como programar nela, com exemplos curtos de código. Esse artigo é recomendado se você é iniciante na linguagem F#.
 
 [Tour do F#](tour.md) fornece uma visão geral dos principais recursos da linguagem, com muitos exemplos de código. Esse artigo é recomendado se você está interessado em conhecer os principais recursos do F# na prática.
 
-Veja [Introdução ao F# no Visual Studio](get-started/get-started-visual-studio.md) se você está no Windows e deseja ter a experiência completa do IDE (ambiente de desenvolvimento integrado) do Visual Studio.
+Veja [Introdução ao F# no Visual Studio](./get-started/get-started-visual-studio.md) se você está no Windows e deseja ter a experiência completa do IDE (ambiente de desenvolvimento integrado) do Visual Studio.
 
-Veja [Introdução ao F# no Visual Studio para Mac](get-started/get-started-with-visual-studio-for-mac.md) se você está no macOS e quer usar o IDE do Visual Studio.
+Veja [Introdução ao F# no Visual Studio para Mac](./get-started/get-started-with-visual-studio-for-mac.md) se você está no macOS e quer usar o IDE do Visual Studio.
 
-Veja [Introdução ao F# no Visual Studio Code](get-started/get-started-vscode.md) se desejar um editor leve e multiplataforma, porém com a experiência de recursos de um IDE.
+Veja [Introdução ao F# no Visual Studio Code](./get-started/get-started-vscode.md) se desejar um editor leve e multiplataforma, porém com a experiência de recursos de um IDE.
 
-Veja [Introdução ao F# com a CLI do .NET Core](get-started/get-started-command-line.md) se você quiser usar ferramentas de linha de comando.
+Veja [Introdução ao F# com a CLI do .NET Core](./get-started/get-started-command-line.md) se você quiser usar ferramentas de linha de comando.
 
 Veja [Introdução ao F# e Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) para programação de aplicativos móveis com o F#.
 
@@ -34,7 +34,7 @@ Veja [Introdução ao F# e Xamarin](https://docs.microsoft.com/xamarin/cross-pla
 
 ## <a name="references"></a>Referências
 
-[Referência da linguagem F#](language-reference/index.md) é a referência oficial, que abrange todos os recursos do F#. Cada artigo explica a sintaxe e mostra exemplos de código. Você pode usar a barra de filtro na tabela de conteúdo para encontrar artigos específicos.
+[Referência da linguagem F#](./language-reference/index.md) é a referência oficial, que abrange todos os recursos do F#. Cada artigo explica a sintaxe e mostra exemplos de código. Você pode usar a barra de filtro no sumário para encontrar artigos específicos.
 
 [Referência da biblioteca principal F#](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) é a referência de API para a biblioteca principal F#.
 

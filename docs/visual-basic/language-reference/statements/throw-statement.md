@@ -14,44 +14,37 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6d10982cf199e9285334e0d72e6622275d51b4d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766630"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626201"
 ---
 # <a name="throw-statement-visual-basic"></a>Instrução Throw (Visual Basic)
-Gera uma exceção dentro de um procedimento.  
+Gera uma exceção em um procedimento.
+
+## <a name="syntax"></a>Sintaxe
+
+```vb
+Throw [ expression ]
+```
+
+## <a name="part"></a>Parte
+ `expression`Fornece informações sobre a exceção a ser gerada. Opcional ao residir em uma `Catch` instrução, caso contrário, é necessário.
   
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-Throw [ expression ]  
-```  
-  
-## <a name="part"></a>Parte  
- `expression`  
- Fornece informações sobre a exceção seja lançada. Opcional quando residente em um `Catch` instrução, caso contrário, é necessária.  
-  
-## <a name="remarks"></a>Comentários  
- O `Throw` instrução gera uma exceção que você pode manipular com código de tratamento de exceções estruturado (`Try`... `Catch`... `Finally`) ou código de manipulação de exceção não estruturado (`On Error GoTo`). Você pode usar o `Throw` instrução para interceptar erros em seu código, porque o Visual Basic move para cima a pilha de chamadas até encontrar o código de manipulação de exceção apropriado.  
-  
- Um `Throw` instrução com nenhuma expressão somente pode ser usada em uma `Catch` instrução, em que a instrução case Relança a exceção atualmente sendo tratada pela `Catch` instrução.  
-  
- O `Throw` instrução redefine a pilha de chamadas para o `expression` exceção. Se `expression` não for fornecido, a pilha de chamadas é deixada inalterada. Você pode acessar a pilha de chamadas para a exceção por meio de <xref:System.Exception.StackTrace%2A> propriedade.  
-  
-## <a name="example"></a>Exemplo  
- O código a seguir usa o `Throw` instrução para gerar uma exceção:  
-  
- [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
-  
-## <a name="requirements"></a>Requisitos  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
-  
- **Módulo:** `Interaction`  
-  
- **Assembly:** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
+## <a name="remarks"></a>Comentários
+ A `Throw` instrução gera uma exceção que você pode manipular com o código de manipulação de exceção`Try`estruturado (... `Catch`... ) ou código de tratamento de exceção não estruturado`On Error GoTo`(). `Finally` Você pode usar a `Throw` instrução para interceptar erros em seu código porque Visual Basic move para cima a pilha de chamadas até encontrar o código de tratamento de exceção apropriado.
+ 
+ Uma `Throw` instrução sem expressão só pode ser usada em uma `Catch` instrução; nesse caso, a instrução gera novamente a exceção que está sendo manipulada pela `Catch` instrução.
+
+ A `Throw` instrução redefine a pilha de chamadas para `expression` a exceção. Se `expression` não for fornecido, a pilha de chamadas permanecerá inalterada. Você pode acessar a pilha de chamadas para a exceção por <xref:System.Exception.StackTrace%2A> meio da propriedade.
+
+## <a name="example"></a>Exemplo
+ O código a seguir usa `Throw` a instrução para gerar uma exceção:
+ 
+ [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
+
   
 ## <a name="see-also"></a>Consulte também
 

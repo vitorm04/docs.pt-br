@@ -1,17 +1,17 @@
 ---
 title: 'Exceções: A expressão try...finally'
-description: Saiba como o F# ' try... finally' expressão permite que você execute o código de limpeza, mesmo se um bloco de código gera uma exceção.
+description: Saiba como o F# ' Try... Finally ' permite que você execute código de limpeza mesmo que um bloco de código gere uma exceção.
 ms.date: 05/16/2016
-ms.openlocfilehash: d246bce52b5f30d5e8d7e3c36e9f7d7c48627913
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 03fbda1ef5d55560232f0217f603fc04c0af0eb4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645459"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630278"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Exceções: A expressão try...finally
 
-O `try...finally` expressão permite que você execute o código de limpeza, mesmo se um bloco de código gera uma exceção.
+A `try...finally` expressão permite que você execute o código de limpeza mesmo que um bloco de código gere uma exceção.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,30 +24,30 @@ finally
 
 ## <a name="remarks"></a>Comentários
 
-O `try...finally` expressão pode ser usada para executar o código na *expression2* na sintaxe anterior, independentemente de se uma exceção é gerada durante a execução da *expression1*.
+A `try...finally` expressão pode ser usada para executar o código em *expression2* na sintaxe anterior, independentemente de uma exceção ser gerada durante a execução de *expressão1*.
 
-O tipo de *expression2* não contribui para o valor da expressão inteira; o tipo retornado quando ocorre uma exceção é o último valor no *expression1*. Quando ocorre uma exceção, nenhum valor é retornado e o fluxo de controle transfere para o próximo manipulador de exceções correspondente a pilha de chamadas. Se nenhum manipulador de exceção é encontrada, o programa é encerrado. Antes do código em um manipulador correspondente é executado ou o programa é encerrado, o código a `finally` ramificação é executado.
+O tipo de *expression2* não contribui para o valor da expressão inteira; o tipo retornado quando uma exceção não ocorre é o último valor em *expression1*. Quando ocorre uma exceção, nenhum valor é retornado e o fluxo de controle é transferido para o próximo manipulador de exceção correspondente na pilha de chamadas. Se nenhum manipulador de exceção for encontrado, o programa será encerrado. Antes que o código em um manipulador correspondente seja executado ou o programa seja encerrado, o código `finally` na ramificação será executado.
 
-O código a seguir demonstra o uso do `try...finally` expressão.
+O código a seguir demonstra o uso da `try...finally` expressão.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
 
-A saída para o console é da seguinte maneira.
+A saída para o console é a seguinte:
 
 ```
 Closing stream
 Exception handled.
 ```
 
-Como você pode ver na saída, o fluxo foi fechado antes que a exceção externa foi tratada e o arquivo `test.txt` contém o texto `test1`, que indica que os buffers foram liberados e gravados no disco, mesmo que a exceção transferidos o controle para o manipulador de exceção externa.
+Como você pode ver na saída, o fluxo foi fechado antes que a exceção externa fosse tratada e o arquivo `test.txt` contém o texto `test1`, o que indica que os buffers foram liberados e gravados no disco, mesmo que a exceção seja transferida controle para o manipulador de exceção externa.
 
-Observe que o `try...with` constructo é uma construção separada do `try...finally` construir. Portanto, se seu código exigir ambos um `with` bloco e um `finally` bloco, é necessário aninhar as duas construções, como no exemplo de código a seguir.
+Observe que a `try...with` construção é uma construção separada `try...finally` da construção. Portanto, se o seu código exigir um `with` bloco e um `finally` bloco, você precisará aninhar as duas construções, como no exemplo de código a seguir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-No contexto de expressões de computação, incluindo expressões de sequência e fluxos de trabalho assíncronos **try... finally** expressões podem ter uma implementação personalizada. Para obter mais informações, consulte [expressões de computação](../computation-expressions.md).
+No contexto de expressões de computação, incluindo expressões de sequência e fluxos de trabalho assíncronos, **tente...** as expressões finally podem ter uma implementação personalizada. Para obter mais informações, consulte [expressões de computação](../computation-expressions.md).
 
 ## <a name="see-also"></a>Consulte também
 
 - [Tratamento de Exceção](index.md)
-- [Exceções: O `try...with` expressão](the-try-with-expression.md)
+- [Exceções: A `try...with` expressão](the-try-with-expression.md)

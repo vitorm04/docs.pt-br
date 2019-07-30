@@ -1,13 +1,13 @@
 ---
 title: Arquivos de assinatura
-description: Saiba como usar F# arquivos de assinatura para manter informações sobre as assinaturas públicas de um conjunto de F# elementos, como tipos, namespaces e módulos do programa.
+description: Saiba como usar F# arquivos de assinatura para manter informações sobre as assinaturas públicas de um conjunto de F# elementos de programa, como tipos, namespaces e módulos.
 ms.date: 06/15/2018
-ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c04ac8bf4ee360a2caa15be8f2bbea41105bd160
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770442"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627158"
 ---
 # <a name="signatures"></a>Assinaturas
 
@@ -15,56 +15,56 @@ Um arquivo de assinatura contém informações sobre as assinaturas públicas de
 
 ## <a name="remarks"></a>Comentários
 
-Para cada F# arquivo de código, você pode ter um *arquivo de assinatura*, que é um arquivo que tem o mesmo nome que o arquivo de código, mas com o. FSI de extensão em vez de. FS. Arquivos de assinatura também podem ser adicionados à compilação de linha de comando se você estiver usando a linha de comando diretamente. Para distinguir entre arquivos de código e arquivos de assinatura, arquivos de código são às vezes chamados de *arquivos de implementação*. Em um projeto, o arquivo de assinatura deve preceder o arquivo de código associado.
+Para cada F# arquivo de código, você pode ter um *arquivo de assinatura*, que é um arquivo que tem o mesmo nome que o arquivo de código, mas com a extensão. FSI em vez de. FS. Os arquivos de assinatura também podem ser adicionados à linha de comando de compilação se você estiver usando a linha de comando diretamente. Para distinguir entre arquivos de código e arquivos de assinatura, os arquivos de código, às vezes, são chamados de *arquivos de implementação*. Em um projeto, o arquivo de assinatura deve preceder o arquivo de código associado.
 
-Um arquivo de assinatura descreve os namespaces, módulos, tipos e membros no arquivo de implementação correspondente. Use as informações em um arquivo de assinatura para especificar quais partes do código na implementação correspondente arquivo pode ser acessado pelo código fora do arquivo de implementação e quais partes são internos ao arquivo de implementação. Os namespaces, módulos e tipos que são incluídos no arquivo de assinatura devem ser um subconjunto dos namespaces, módulos e tipos que são incluídos no arquivo de implementação. Com algumas exceções indicadas neste tópico, os elementos de linguagem que não estão listados no arquivo de assinatura são considerados particulares para o arquivo de implementação. Se nenhum arquivo de assinatura for encontrado no projeto ou na linha de comando, a acessibilidade padrão será usada.
+Um arquivo de assinatura descreve os namespaces, os módulos, os tipos e os membros no arquivo de implementação correspondente. Você usa as informações em um arquivo de assinatura para especificar quais partes do código no arquivo de implementação correspondente podem ser acessadas do código fora do arquivo de implementação e quais partes são internas ao arquivo de implementação. Os namespaces, os módulos e os tipos incluídos no arquivo de assinatura devem ser um subconjunto dos namespaces, módulos e tipos incluídos no arquivo de implementação. Com algumas exceções mencionadas posteriormente neste tópico, os elementos de idioma que não estão listados no arquivo de assinatura são considerados particulares para o arquivo de implementação. Se nenhum arquivo de assinatura for encontrado no projeto ou na linha de comando, a acessibilidade padrão será usada.
 
 Para obter mais informações sobre a acessibilidade padrão, consulte [controle de acesso](access-control.md).
 
-Em um arquivo de assinatura, você não se repetem a definição dos tipos e as implementações de cada método ou função. Em vez disso, você deve usar a assinatura para cada método e a função, que atua como uma especificação completa da funcionalidade que é implementada por um fragmento de um módulo ou namespace. A sintaxe para uma assinatura de tipo é o mesmo usado em declarações de método abstrato em interfaces e classes abstratas e também é mostrada pelo IntelliSense e pelo F# interpretador fsi.exe quando ela for exibida corretamente compilado de entrada.
+Em um arquivo de assinatura, você não repete a definição dos tipos e as implementações de cada método ou função. Em vez disso, você usa a assinatura para cada método e função, que atua como uma especificação completa da funcionalidade implementada por um fragmento de módulo ou de namespace. A sintaxe de uma assinatura de tipo é igual à usada em declarações de método abstratas em interfaces e classes abstratas, e também é mostrada pelo IntelliSense F# e pelo intérprete FSI. exe quando exibe a entrada compilada corretamente.
 
-Se não há informações suficientes na assinatura de tipo para indicar se um tipo seja selado ou se ele é um tipo de interface, você deve adicionar um atributo que indica a natureza do tipo para o compilador. Atributos que você pode usar para essa finalidade são descritos na tabela a seguir.
+Se não houver informações suficientes na assinatura de tipo para indicar se um tipo é lacrado ou se é um tipo de interface, você deve adicionar um atributo que indique a natureza do tipo ao compilador. Os atributos que você usa para essa finalidade são descritos na tabela a seguir.
 
 |Atributo|Descrição|
 |---------|-----------|
-|`[<Sealed>]`|Um tipo que não tem nenhum membro abstrato, ou que não deve ser estendido.|
-|`[<Interface>]`|Um tipo que é uma interface.|
+|`[<Sealed>]`|Para um tipo que não tem membros abstratos ou que não deve ser estendido.|
+|`[<Interface>]`|Para um tipo que é uma interface.|
 
-O compilador produz um erro se os atributos não são consistentes entre a assinatura e a declaração no arquivo de implementação.
+O compilador produzirá um erro se os atributos não forem consistentes entre a assinatura e a declaração no arquivo de implementação.
 
-Use a palavra-chave `val` para criar uma assinatura para um valor ou o valor da função. A palavra-chave `type` apresenta uma assinatura de tipo.
+Use a palavra `val` -chave para criar uma assinatura para um valor ou valor de função. A palavra `type` -chave apresenta uma assinatura de tipo.
 
-Você pode gerar um arquivo de assinatura usando o `--sig` opção de compilador. Em geral, você não gravar arquivos. FSI manualmente. Em vez disso, você pode gerar arquivos. FSI, usando o compilador, adicioná-los ao seu projeto, se você tiver um e editá-los, removendo os métodos e as funções que você não deseja ser acessível.
+Você pode gerar um arquivo de assinatura usando a `--sig` opção do compilador. Em geral, você não grava arquivos. FSI manualmente. Em vez disso, você gera arquivos. FSI usando o compilador, adiciona-os ao seu projeto, se você tiver um, e editá-los removendo métodos e funções que você não deseja que sejam acessíveis.
 
 Há várias regras para assinaturas de tipo:
 
-- Abreviações de tipo em um arquivo de implementação não devem corresponder a um tipo sem uma abreviação em um arquivo de assinatura.
+- As abreviações de tipo em um arquivo de implementação não devem corresponder a um tipo sem uma abreviação em um arquivo de assinatura.
 
-- Registros e uniões discriminadas devem expor todos ou nenhum dos seus construtores e campos, e a ordem em que a assinatura deve corresponder à ordem no arquivo de implementação. As classes podem revelar alguns, todos ou nenhum dos seus campos e métodos na assinatura.
+- Registros e uniões discriminadas devem expor todos ou nenhum dos seus campos e construtores, e a ordem na assinatura deve corresponder à ordem no arquivo de implementação. As classes podem revelar alguns, todos ou nenhum dos seus campos e métodos na assinatura.
 
-- Classes e estruturas que têm construtores devem expor as declarações de suas classes base (o `inherits` declaração). Além disso, classes e estruturas que têm construtores devem expor todos os seus métodos abstratos e declarações de interface.
+- Classes e estruturas que têm construtores devem expor as declarações de suas classes base (a `inherits` declaração). Além disso, as classes e estruturas que têm construtores devem expor todos os seus métodos abstratos e declarações de interface.
 
-- Tipos de interface devem revelar todos os seus métodos e interfaces.
+- Os tipos de interface devem revelar todos os seus métodos e interfaces.
 
-As regras para assinaturas de valor são da seguinte maneira:
+As regras para as assinaturas de valor são as seguintes:
 
-- Modificadores de acessibilidade (`public`, `internal`e assim por diante) e o `inline` e `mutable` modificadores na assinatura devem corresponder na implementação.
+- Os modificadores para acessibilidade`public`( `internal`, e assim por diante) e `inline` os `mutable` modificadores e na assinatura devem corresponder aos da implementação.
 
-- O número de parâmetros de tipo genérico (ou inferido implicitamente ou explicitamente declarado) deve corresponder ao, e os tipos e as restrições de tipo em parâmetros de tipo genérico devem corresponder.
+- O número de parâmetros de tipo genérico (implicitamente inferido ou declarado explicitamente) deve corresponder, e os tipos e as restrições de tipo em parâmetros de tipo genérico devem corresponder.
 
-- Se o `Literal` atributo é usado, ele deverá aparecer na assinatura do e a implementação e o mesmo valor literal deve ser usado para ambos.
+- Se o `Literal` atributo for usado, ele deverá aparecer na assinatura e na implementação, e o mesmo valor literal deverá ser usado para ambos.
 
-- O padrão de parâmetros (também conhecido como o *arity*) de assinaturas e implementações devem ser consistentes.
+- O padrão de parâmetros (também conhecido como *arity*) de assinaturas e implementações deve ser consistente.
 
-- Se os nomes de parâmetro em um arquivo de assinatura forem diferentes do arquivo de implementação correspondente, o nome no arquivo de assinatura será usado em vez disso, que pode causar problemas ao depurar ou criação de perfil. Se você quiser ser notificado sobre tais incompatibilidades, habilitar 3218 de aviso no arquivo de projeto ou ao invocar o compilador (consulte `--warnon` sob [opções do compilador](compiler-options.md)).
+- Se os nomes de parâmetro em um arquivo de assinatura forem diferentes do arquivo de implementação correspondente, o nome no arquivo de assinatura será usado em vez disso, o que pode causar problemas durante a depuração ou a criação de perfil. Se você quiser ser notificado sobre tais incompatibilidades, habilite o aviso 3218 em seu arquivo de projeto ou ao invocar o `--warnon` compilador (consulte em [Opções do compilador](compiler-options.md)).
 
-O exemplo de código a seguir mostra um exemplo de um arquivo de assinatura que tem o namespace, módulo, o valor de função e as assinaturas de tipo junto com os atributos apropriados. Ele também mostra o arquivo de implementação correspondente.
+O exemplo de código a seguir mostra um exemplo de um arquivo de assinatura que tem o namespace, módulo, valor de função e assinaturas de tipo junto com os atributos apropriados. Ele também mostra o arquivo de implementação correspondente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9002.fs)]
 
 O código a seguir mostra o arquivo de implementação.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9001.fs)]
 
 ## <a name="see-also"></a>Consulte também
 

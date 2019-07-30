@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c3544769480a45068be0ca64e90f91253daf3e16
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663165"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629782"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configurações do Registro de renderização dos elementos gráficos
 Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] configurações do Registro de renderização de elementos gráficos que afetam [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  
@@ -33,7 +33,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
 |Configuração|Descrição|  
 |-------------|-----------------|  
 |**Desabilitar Opção de Aceleração de hardware**|Especifica se a aceleração de hardware deve ser habilitada.|  
-|**Valor máximo de Multisample**|Especifica o grau de multisampling para suavização de conteúdo 3D.|  
+|**Valor máximo de Multisample**|Especifica o grau de multiamostragem para conteúdo de anti-aliasing 3-D.|  
 |**Driver de vídeo configuração de data necessário**|Especifica se o sistema desabilita a aceleração de hardware para drivers lançados antes de novembro de 2004.|  
 |**Use a opção de rasterizador de referência**|Especifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve utilizar o rasterizador de referência.|  
   
@@ -57,9 +57,9 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- O **valor máximo de multisample** permite que você ajuste a quantidade máxima de suavização do conteúdo 3D. Use esse nível para desabilitar a suavização 3D em [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] ou habilitá-lo na [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ O **valor máximo** de multiamostrações permite ajustar a quantidade máxima de anti-aliasing do conteúdo de 3 D. Use esse nível para desabilitar a anti-aliasing [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 3D ou habilitá-la no. [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]  
   
- O **valor de multisample máximo** é um valor DWORD que varia de 0 a 16. Um valor de 0 especifica que a suavização de mutisample de conteúdo 3D deverá ser desabilitada e um valor de 16 tentará usar até 16x a suavização de multisample, se houver suporte da placa de vídeo. Lembre-se de que definir esse valor de chave de registro em computadores que usam drivers XPDM fará com que aplicativos usem uma grande quantidade de memória de vídeo adicional, diminuir o desempenho da renderização 3D, e tem o potencial de apresentar a estabilidade e erros de renderização problemas.  
+ O **valor de multisample máximo** é um valor DWORD que varia de 0 a 16. Um valor de 0 especifica que a suavização de mutisample de conteúdo 3D deverá ser desabilitada e um valor de 16 tentará usar até 16x a suavização de multisample, se houver suporte da placa de vídeo. Lembre-se de que definir esse valor de chave do registro em computadores que usam drivers XPDM fará com que os aplicativos usem uma grande quantidade de memória de vídeo adicional, diminua o desempenho da renderização 3D e tenha o potencial de introduzir erros de renderização e estabilidade ocorre.  
   
  Quando essa chave do Registro não está definida, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] volta para o padrão 0 para drivers XPDM e 4 para drivers WDDM.  
   
@@ -89,7 +89,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- A **opção usar rasterizador de referência** permite que você force [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em um modo de renderização de hardware simulado para depuração: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entra no modo de hardware, mas usa o rasterizador de software de referência de [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)], d3dref9.dll, em vez de um dispositivo de hardware real.  
+ A **opção usar rasterizador de referência** permite forçar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] um modo de renderização de hardware simulado para depuração: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entra no modo de hardware, mas usa o rasterizador de software de referência do Microsoft Direct3D, d3dref9. dll, em vez de um dispositivo de hardware real.  
   
  O rasterizador de referência é muito lento, mas ignora o driver de vídeo para evitar problemas de renderização causados por problemas de driver. Por esse motivo, você pode usar o rasterizador de referência para determinar se os problemas de renderização são causados pelo driver de vídeo. O arquivo d3dref9.dll deve estar em um local onde o aplicativo pode acessá-lo, como em qualquer local no caminho do sistema ou no diretório local do aplicativo.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400798"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629803"
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
 <a name="introduction"></a>Ao desenvolver Windows Presentation Foundation (WPF) aplicativos autônomos e hospedados em navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]os aplicativos autônomos são executados com permissões irrestritas (conjunto de permissões do CAS**FullTrust** ), sejam implantados usando Windows Installer (. msi), xcopy ou ClickOnce. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo de host totalmente confiável pode criar uma confiança <xref:System.AppDomain> parcial usando o modelo de suplemento .NET Framework. Para obter mais informações, consulte [visão geral dos suplementos do WPF](./app-development/wpf-add-ins-overview.md).  
@@ -216,9 +216,9 @@ ms.locfileid: "68400798"
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Desabilitando os assemblies APTCA para aplicativos cliente parcialmente confiáveis  
- Quando os assemblies gerenciados são instalados [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]no, eles se tornam totalmente confiáveis, pois o usuário deve fornecer permissão explícita para instalá-los. Como são totalmente confiáveis, apenas aplicativos clientes gerenciados totalmente confiáveis podem usá-los. Para permitir que aplicativos parcialmente confiáveis os usem, eles devem ser marcados com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Somente assemblies que foram testados em relação à segurança para execução com confiança parcial devem ser marcados com tal atributo.  
+ Quando os assemblies gerenciados são instalados no GAC (cache de assembly global), eles se tornam totalmente confiáveis, pois o usuário deve fornecer permissão explícita para instalá-los. Como são totalmente confiáveis, apenas aplicativos clientes gerenciados totalmente confiáveis podem usá-los. Para permitir que aplicativos parcialmente confiáveis os usem, eles devem ser marcados com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Somente assemblies que foram testados em relação à segurança para execução com confiança parcial devem ser marcados com tal atributo.  
   
- No entanto, é possível que um assembly APTCA exiba uma falha de segurança depois de ser instalado [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]no. Após a descoberta de uma falha de segurança, os publicadores de assembly podem produzir uma atualização de segurança para corrigir o problema em instalações existentes, além de protege de instalações que poderão ocorrer após a descoberta do problema. Uma opção para a atualização é desinstalar o assembly, embora isso possa interromper outros aplicativos clientes totalmente confiáveis que o utilizam.  
+ No entanto, é possível que um assembly APTCA exiba uma falha de segurança depois de ser instalado no GAC. Após a descoberta de uma falha de segurança, os publicadores de assembly podem produzir uma atualização de segurança para corrigir o problema em instalações existentes, além de protege de instalações que poderão ocorrer após a descoberta do problema. Uma opção para a atualização é desinstalar o assembly, embora isso possa interromper outros aplicativos clientes totalmente confiáveis que o utilizam.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]fornece um mecanismo pelo qual um assembly APTCA pode ser desabilitado para parcialmente [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] confiável sem desinstalar o assembly APTCA.  
   

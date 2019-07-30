@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: dc7129e11a82741f5a095d7f1824de3f90421056
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331770"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629848"
 ---
 # <a name="imaging-overview"></a>Visão geral da geração de imagens
 Este tópico é uma introdução ao [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. O [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] permite aos desenvolvedores exibir, transformar e formatar imagens.  
@@ -165,7 +165,7 @@ Os pincéis de imagem podem preencher formas, controles, texto e muito mais
 ## <a name="image-metadata"></a>Metadados de imagem  
  Alguns arquivos de imagem contêm metadados que descrevem o conteúdo ou as características do arquivo. Por exemplo, a maioria das câmeras digitais criam imagens que contêm metadados sobre a marca e modelo da câmera usada para capturar a imagem. Cada formato de imagem manipula os metadados de maneira diferente, mas o [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] fornece uma maneira uniforme de armazenar e recuperar metadados para cada formato de imagem com suporte.  
   
- O acesso aos metadados é fornecido por <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> meio da propriedade <xref:System.Windows.Media.Imaging.BitmapSource> de um objeto. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Retorna um <xref:System.Windows.Media.Imaging.BitmapMetadata> objeto que inclui todos os metadados contidos na imagem. Esses dados podem estar em um esquema de metadados ou em uma combinação de esquemas diferentes. O [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] dá suporte aos seguintes esquemas de metadados de imagem: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tEXt (dados textuais PNG), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] e [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ O acesso aos metadados é fornecido por <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> meio da propriedade <xref:System.Windows.Media.Imaging.BitmapSource> de um objeto. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Retorna um <xref:System.Windows.Media.Imaging.BitmapMetadata> objeto que inclui todos os metadados contidos na imagem. Esses dados podem estar em um esquema de metadados ou em uma combinação de esquemas diferentes. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]o dá suporte aos seguintes esquemas de metadados de imagem: Arquivo de imagem intercambiável (EXIF), texto (dados textuais de png) [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], e [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
   
  Para simplificar o processo de leitura de metadados, <xref:System.Windows.Media.Imaging.BitmapMetadata> o fornece várias propriedades nomeadas que podem ser acessadas <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>facilmente, <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>como, e. Muitas dessas propriedades nomeadas também podem ser usadas para gravar metadados. O suporte adicional para a leitura de metadados é fornecido pelo leitor de consulta de metadados. O <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> método é usado para recuperar um leitor de consulta de metadados, fornecendo uma consulta de cadeia de caracteres como *"/app1/exif/"* . No exemplo a seguir, <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> é usado para obter o texto armazenado no local *"/Text/Description"* .  
   

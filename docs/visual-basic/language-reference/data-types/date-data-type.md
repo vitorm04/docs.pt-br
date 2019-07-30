@@ -15,65 +15,73 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 970c69b36eecd110dd81b6a3700fbb0a7eea2834
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: ee966cdfcc957f1164c73f577fa668b203a82113
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66424029"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630124"
 ---
 # <a name="date-data-type-visual-basic"></a>Tipo de dados Data (Visual Basic)
-Contém os valores de (8 bytes) do IEEE de 64 bits que representam datas desde 1 de janeiro do ano de 0001 até 31 de dezembro do ano 9999 e horas de 12:00:00 AM (meia-noite) por meio de 11:59:59.9999999 PM. Cada incremento representa 100 nanossegundos de tempo decorrido desde o início de 1º de janeiro do ano 1 no calendário gregoriano. O valor máximo representará 100 nanosegundos antes do início do dia 1º de janeiro do ano 10000.  
-  
-## <a name="remarks"></a>Comentários  
- Use o `Date` tipo de dados para conter os valores de data, hora valores ou valores de data e hora.  
-  
- O valor padrão de `Date` é 0:00:00 (meia-noite) em 1º de janeiro de 0001.  
-  
- Você pode obter a data e hora atuais do <xref:Microsoft.VisualBasic.DateAndTime> classe.  
-  
-## <a name="format-requirements"></a>Requisitos de formato  
- Você deve incluir um `Date` literal entre sinais numéricos (`# #`). Você deve especificar o valor de data no formato dd/aaaa, por exemplo `#5/31/1993#`, ou AAAA-MM-dd, por exemplo `#1993-5-31#`. Ao especificar o ano pela primeira vez, você pode usar barras "/".  Esse requisito é independente de sua localidade e data do seu computador e configurações de formato de hora.  
-  
- O motivo para essa restrição é que o significado do seu código nunca deve alterar dependendo da localidade na qual seu aplicativo está em execução. Suponha que você codifique uma `Date` literal de `#3/4/1998#` e pretender dizer 4 de março de 1998. Em uma localidade que utilize mm/dd/aaaa, 4/3/1998 compila como você deseja. Mas suponha que você implanta seu aplicativo em muitos países/regiões. Em uma localidade que utilize dd/mm/aaaa, o literal embutido em código seria compiladas para 3 de abril de 1998. Em uma localidade que utilize aaaa/mm/dd, o literal seriam inválido (abril de 1998, 0003) e causa um erro do compilador.  
-  
-## <a name="workarounds"></a>Soluções alternativas  
- Para converter um `Date` literal para o formato de sua localidade, ou para um formato personalizado, forneça o literal para o <xref:Microsoft.VisualBasic.Strings.Format%2A> função, especificando um formato de data predefinidos ou definidos pelo usuário. O exemplo a seguir demonstra isso.  
-  
-```  
-MsgBox("The formatted date is " & Format(#5/31/1993#, "dddd, d MMM yyyy"))  
-```  
-  
- Como alternativa, você pode usar um dos construtores sobrecarregados do <xref:System.DateTime> estrutura para montar um valor de data e hora. O exemplo a seguir cria um valor para representar a 31 de maio de 1993 em 12:14, à tarde.  
-  
-```  
-Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)  
-```  
-  
-## <a name="hour-format"></a>Formato de hora  
- Você pode especificar o valor de hora no formato de 12 horas ou 24 horas, por exemplo `#1:15:30 PM#` ou `#13:15:30#`. No entanto, se você não especificar os minutos ou segundos, você deve especificar AM ou PM.  
-  
-## <a name="date-and-time-defaults"></a>Data e hora padrão  
- Se você não incluir uma data em uma literal de data/hora, o Visual Basic define a parte da data do valor de 1 de janeiro, 0001. Se você não incluir um tempo em um literal de data/hora, o Visual Basic define a parte de hora do valor para o início do dia, ou seja, meia-noite (0: 00:00).  
-  
-## <a name="type-conversions"></a>Conversões de tipo  
- Se você converter um `Date` de valor para o `String` tipo, Visual Basic renderiza a data de acordo com o formato de data abreviada especificado pela localidade do tempo de execução e o renderiza a hora de acordo com o formato de hora (12 horas ou 24 horas) especificada pelo localidade do tempo de execução.  
-  
-## <a name="programming-tips"></a>Dicas de programação  
-  
-- **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos Automation ou COM, tenha em mente que os tipos em outros ambientes de data/hora não são compatíveis com o Visual Basic `Date` tipo. Se você estiver passando um argumento de data/hora para esse componente, declare-o como `Double` em vez de `Date` em seu novo Visual Basic de código e usar os métodos de conversão <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> e <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
-  
-- **Caracteres de tipo.** `Date` não tem nenhum caractere de tipo literal ou um caractere de tipo identificador. No entanto, o compilador trata literais entre sinais numéricos (`# #`) como `Date`.  
-  
-- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.DateTime?displayProperty=nameWithType>.  
-  
-## <a name="example"></a>Exemplo  
- Uma variável ou constante do `Date` tipo de dados contém a data e a hora. O exemplo a seguir ilustra essa situação.  
-  
-```  
-Dim someDateAndTime As Date = #8/13/2002 12:14 PM#  
-```  
-  
+
+Mantém os valores do IEEE 64 bits (8 bytes) que representam datas desde 1º de Janeiro do ano de 0001 até 31 de dezembro do ano 9999 e horas da 12:00:00 AM (meia-noite) até 11:59:59.9999999 PM. Cada incremento representa 100 nanossegundos de tempo decorrido desde o início de 1º de Janeiro do ano 1 no calendário gregoriano. O valor máximo representa 100 nanossegundos antes do início de 1º de Janeiro do ano 10000.
+
+## <a name="remarks"></a>Comentários
+
+Use o `Date` tipo de dados para conter valores de data, valores de tempo ou valores de data e hora.
+
+O valor padrão de `Date` é 0:00:00 (meia-noite) em 1º de janeiro de 0001.
+
+Você pode obter a data e a hora atuais da <xref:Microsoft.VisualBasic.DateAndTime> classe.
+
+## <a name="format-requirements"></a>Requisitos de formato
+
+Você deve colocar um `Date` literal dentro de sinais numéricos (`# #`). Você deve especificar o valor de data no formato M/d/AAAA, por exemplo `#5/31/1993#`, ou aaaa-mm-dd, por exemplo `#1993-5-31#`. Você pode usar barras ao especificar o ano primeiro.  Esse requisito é independente da sua localidade e das configurações de data e formato de hora do computador.
+
+O motivo para essa restrição é que o significado do seu código nunca deve ser alterado dependendo da localidade em que seu aplicativo está sendo executado. Suponha que você codifique um `Date` literal de `#3/4/1998#` e pretenda que ele signifique 4 de março de 1998. Em uma localidade que usa mm/dd/aaaa, o 3/4/1998 é compilado como pretendido. Mas suponha que você implante seu aplicativo em muitos países/regiões. Em uma localidade que usa dd/mm/aaaa, seu literal embutido em código seria compilado em 3 de abril de 1998. Em uma localidade que usa aaaa/mm/dd, o literal seria inválido (abril de 1998, 0003) e causa um erro do compilador.
+
+## <a name="workarounds"></a>Soluções alternativas
+
+Para converter um `Date` literal para o formato de sua localidade, ou para um formato personalizado, forneça o literal para a <xref:Microsoft.VisualBasic.Strings.Format%2A> função, especificando um formato de data predefinido ou definido pelo usuário. O exemplo a seguir demonstra isso.
+
+```vb
+MsgBox("The formatted date is " & Format(#5/31/1993#, "dddd, d MMM yyyy"))
+```
+
+Como alternativa, você pode usar um dos construtores sobrecarregados da <xref:System.DateTime> estrutura para montar um valor de data e hora. O exemplo a seguir cria um valor para representar 31 de maio de 1993 às 12:14 na tarde.
+
+```vb
+Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
+```
+
+## <a name="hour-format"></a>Formato de hora
+
+Você pode especificar o valor de hora em formato de 12 horas ou 24 horas, por exemplo `#1:15:30 PM#` , ou. `#13:15:30#` No entanto, se você não especificar os minutos ou os segundos, deverá especificar AM ou PM.
+
+## <a name="date-and-time-defaults"></a>Padrões de data e hora
+
+Se você não incluir uma data em um literal de data/hora, Visual Basic definirá a parte de data do valor como 1º de janeiro de 0001. Se você não incluir uma hora em um literal de data/hora, Visual Basic definirá a parte de hora do valor como o início do dia, ou seja, meia-noite (0:00:00).
+
+## <a name="type-conversions"></a>Conversões de tipo
+
+Se você converter um `Date` valor para o `String` tipo, o Visual Basic renderiza a data de acordo com o formato de data abreviada especificado pela localidade de tempo de execução e renderiza a hora de acordo com o formato de hora (12 horas ou 24 horas) especificado pelo localidade de tempo de execução.
+
+## <a name="programming-tips"></a>Dicas de programação
+
+- **Considerações sobre interoperabilidade.** Se você estiver fazendo a interface com componentes não escritos para o .NET Framework, por exemplo, automação ou objetos com, tenha em mente que os tipos de data/hora em outros ambientes não são `Date` compatíveis com o tipo de Visual Basic. Se você estiver passando um argumento de data/hora para esse componente, declare-o `Double` como em `Date` vez de em seu novo código de Visual Basic e use os <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> métodos <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>de conversão e.
+
+- **Digite os caracteres.** `Date`Não tem caractere de tipo literal ou caractere de tipo de identificador. No entanto, o compilador trata literais delimitados`# #`entre sinais `Date`numéricos () como.
+
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.DateTime?displayProperty=nameWithType>.
+
+## <a name="example"></a>Exemplo
+
+Uma variável ou constante do tipo `Date` de dados contém a data e a hora. O exemplo a seguir ilustra essa situação.
+
+```vb
+Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
+```
+
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.DateTime?displayProperty=nameWithType>

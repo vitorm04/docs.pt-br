@@ -5,15 +5,15 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 7bf04e7c22bf13ed681be7afb582176edc2f3072
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: c9d86cadd5f2115d0214d9a1b1dce7e6682341e0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484693"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629732"
 ---
 # <a name="cleartype-overview"></a>Visão geral de ClearType
-Este tópico fornece uma visão geral da tecnologia [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] encontrada no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+Este tópico fornece uma visão geral da tecnologia Microsoft ClearType encontrada no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Visão geral da tecnologia  

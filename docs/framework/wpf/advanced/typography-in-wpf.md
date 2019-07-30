@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: ffbd59cb398d417a36d75ff0ef9ef4ef143c30c0
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 743b9ec45c138053fcfcb5cbb1ea9c8490ba919e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484644"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629910"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem melhor qualidade e desempenho de renderização de texto, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] suporte a tipografia, texto internacional aperfeiçoado, suporte de fonte aperfeiçoado e APIs (interfaces de programação de aplicativo).  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Melhor qualidade e desempenho de texto  
- Texto no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é processado usando [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], que melhora a clareza e legibilidade do texto. O ClearType é uma tecnologia de software [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] desenvolvida pelo que melhora a legibilidade do texto em LCDs existentes (monitores Liquid Crystal), como telas de laptops, telas de Pocket PC e monitores de tela plana. O ClearType usa renderização de sub-pixel, que permite que o texto seja exibido com uma maior fidelidade à sua forma verdadeira alinhando caracteres em uma parte fracionária de um pixel. A resolução extra aumenta a nitidez dos detalhes mínimos na exibição de texto, tornando a leitura por longos períodos muito mais fácil. Outra melhoria do ClearType no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é a suavização da direção y, que suaviza as partes superiores e inferiores das curvas superficiais em caracteres de texto. Para obter mais detalhes sobre os recursos de ClearType, consulte [visão geral de ClearType](cleartype-overview.md).  
+ O texto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no é renderizado usando o Microsoft ClearType, o que aumenta a clareza e a legibilidade do texto. O ClearType é uma tecnologia de software [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] desenvolvida pelo que melhora a legibilidade do texto em LCDs existentes (monitores Liquid Crystal), como telas de laptops, telas de Pocket PC e monitores de tela plana. O ClearType usa renderização de sub-pixel, que permite que o texto seja exibido com uma maior fidelidade à sua forma verdadeira alinhando caracteres em uma parte fracionária de um pixel. A resolução extra aumenta a nitidez dos detalhes mínimos na exibição de texto, tornando a leitura por longos períodos muito mais fácil. Outra melhoria do ClearType no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é a suavização da direção y, que suaviza as partes superiores e inferiores das curvas superficiais em caracteres de texto. Para obter mais detalhes sobre os recursos de ClearType, consulte [visão geral de ClearType](cleartype-overview.md).  
   
  ![Texto com suavização de direção y ClearType](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Texto com suavização da direção y do ClearType  

@@ -19,42 +19,44 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 6273f6c9e71f286bdbebc3fe1953988b43de3101
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92adb26702d94dee08e51decd845d019c797e195
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663214"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630091"
 ---
 # <a name="double-data-type-visual-basic"></a>Tipo de dados double (Visual Basic)
-Mantém conectado IEEE de 64 bits (8 bytes) de precisão dupla números de ponto flutuante que variam em valor de - 1, 79769313486231570E + 308 a - 4.94065645841246544-324 para valores negativos e de 4.94065645841246544-324 1.79769313486231570 + 308 para valores positivos. Números de precisão dupla armazenam uma aproximação de um número real.  
-  
-## <a name="remarks"></a>Comentários  
- O `Double` tipo de dados fornece o maior e menor magnitude possível para um número.  
-  
- O valor padrão de `Double` é 0.  
-  
-## <a name="programming-tips"></a>Dicas de programação  
-  
-- **Precisão.** Quando você trabalha com números de ponto flutuante, lembre-se de que eles nem sempre têm uma representação precisa na memória. Isso pode levar a resultados inesperados em certas operações, como comparação de valor e o `Mod` operador. Para obter mais informações, consulte [solução de problemas de tipos de dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
-  
-- **Zeros à direita.** Os tipos de dados de ponto flutuante não possuem uma representação interna de zero caracteres à direita. Por exemplo, eles não fazem distinção entre 4,2000 e 4.2. Consequentemente, zero caracteres à direita não aparecem quando você exibe ou valores de ponto flutuante de impressão.  
-  
-- **Caracteres de tipo.** Acrescentar o caractere de tipo literal `R` a um literal o força ao tipo de dados `Double`. Por exemplo, se um valor inteiro é seguido por `R`, o valor é alterado para um `Double`.  
-  
-    ```  
-    ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
-    Dim dub As Double = 4.0R  
-    ```  
-  
-     Acrescentar o caractere de tipo identificador `#` a qualquer identificador o força ao tipo `Double`. No exemplo a seguir, a variável `num` é digitada como um `Double`:  
-  
-    ```  
-    Dim num# = 3  
-    ```  
-  
-- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Double?displayProperty=nameWithType>.  
-  
+
+Contém números de ponto flutuante de precisão dupla IEEE 64 (8 bytes) assinados que variam em valor de-1.79769313486231570 E + 308 a-4.94065645841246544 E-324 para valores negativos e de 4.94065645841246544 E-324 a 1.79769313486231570 E + 308 para valores positivos. Números de precisão dupla armazenam uma aproximação de um número real.
+
+## <a name="remarks"></a>Comentários
+
+O `Double` tipo de dados fornece as maiores e menores magnitudes possíveis para um número.
+
+O valor padrão de `Double` é 0.
+
+## <a name="programming-tips"></a>Dicas de programação
+
+- **Preciso.** Quando você trabalha com números de ponto flutuante, lembre-se de que eles nem sempre têm uma representação precisa na memória. Isso pode levar a resultados inesperados de determinadas operações, como comparação de valor `Mod` e o operador. Para obter mais informações, consulte [Solucionando problemas de tipos de dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+
+- **Zeros à direita.** Os tipos de dados de ponto flutuante não têm nenhuma representação interna de zero caracteres à direita. Por exemplo, eles não fazem distinção entre 4,2000 e 4,2. Consequentemente, os zero caracteres à direita não aparecem quando você exibe ou imprime valores de ponto flutuante.
+
+- **Digite os caracteres.** Acrescentar o caractere de tipo literal `R` a um literal o força ao tipo de dados `Double`. Por exemplo, se um valor inteiro for seguido por `R`, o valor será alterado para um `Double`.
+
+  ```vb
+  ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
+  Dim dub As Double = 4.0R
+  ```
+
+  Acrescentar o caractere de tipo identificador `#` a qualquer identificador o força ao tipo `Double`. No exemplo a seguir, a variável `num` é digitada como `Double`um:
+
+  ```vb
+  Dim num# = 3
+  ```
+
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Double?displayProperty=nameWithType>.
+
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Double?displayProperty=nameWithType>

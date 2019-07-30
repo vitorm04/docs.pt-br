@@ -1,17 +1,17 @@
 ---
 title: Associações do em classes
-description: Saiba como usar um F# 'do' associação em uma definição de classe, que executa ações quando o objeto é criado ou quando o tipo é usado pela primeira vez.
+description: Saiba como usar uma F# Associação ' do ' em uma definição de classe, que executa ações quando o objeto é construído ou quando o tipo é usado pela primeira vez.
 ms.date: 05/16/2016
-ms.openlocfilehash: c924c882974989436d8ea404ebee0a7ef3c54fd3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ced4f1bb17d9e23bf51cc79b5a275cc334cca013
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641791"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627581"
 ---
 # <a name="do-bindings-in-classes"></a>Associações do em classes
 
-Um `do` associação em uma definição de classe executa ações quando o objeto é construído ou, para um estático `do` associação, quando o tipo é usado primeiro.
+Uma `do` associação em uma definição de classe executa ações quando o objeto é construído ou, para uma `do` associação estática, quando o tipo é usado pela primeira vez.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,21 +21,21 @@ Um `do` associação em uma definição de classe executa ações quando o objet
 
 ## <a name="remarks"></a>Comentários
 
-Um `do` associação é exibida junto com ou após `let` associações, mas antes de definições de membro em uma definição de classe. Embora o `do` palavra-chave é opcional para o `do` associações no nível de módulo, não é opcional para `do` ligações em uma definição de classe.
+Uma `do` Associação aparece junto com ou após `let` associações, mas antes das definições de membro em uma definição de classe. Embora a `do` palavra-chave seja `do` opcional para associações no nível do módulo, ela não é opcional `do` para associações em uma definição de classe.
 
-Para a construção de cada objeto de qualquer determinado tipo, não estáticos `do` associações e não-estático `let` associações são executadas na ordem em que aparecem na definição de classe. Vários `do` associações podem ocorrer em um tipo. O não-estático `let` associações e não-estático `do` associações tornam-se o corpo do construtor primário. O código não-estático `do` seção de associações pode fazer referência a parâmetros do construtor primário e todos os valores ou funções que são definidas na `let` seção de associações.
+Para a construção de todos os objetos de qualquer tipo, associações não estáticas `do` e associações não-estáticas `let` são executadas na ordem em que aparecem na definição de classe. Várias `do` associações podem ocorrer em um tipo. As associações não estáticas `let` e as vinculações não-estáticas `do` se tornam o corpo do construtor primário. O código na seção de associações não `do` estáticas pode referenciar os parâmetros do construtor primário e quaisquer valores ou funções que estejam definidos `let` na seção associações.
 
-Não-estático `do` associações podem acessar membros da classe, desde que a classe tem um identificador de autoatendimento que é definido por um `as` palavra-chave na classe de título e, desde que todos os usos desses membros são qualificados com o identificador de autoatendimento para a classe.
+As associações não `do` estáticas podem acessar os membros da classe, desde que a classe tenha um autoidentifier definido por uma `as` palavra-chave no título da classe e, desde que todos os usos desses membros sejam qualificados com o autoidentificador da classe.
 
-Porque `let` associações inicializar os campos privados de uma classe, que é geralmente necessário para garantir que os membros se comportam conforme o esperado, `do` associações geralmente são colocadas depois `let` associações de forma que o código a `do` associação pode Execute com um objeto totalmente inicializado. Se seu código tentar usar um membro antes que a inicialização é concluída, uma InvalidOperationException é gerada.
+Como `let` as associações inicializam os campos privados de uma classe, o que geralmente é necessário para garantir que os membros se `do` comportem conforme o esperado `let` , as associações geralmente são colocadas após `do` associações para que o código na associação possa Execute com um objeto totalmente inicializado. Se o seu código tentar usar um membro antes da conclusão da inicialização, um InvalidOperationException será gerado.
 
-Estático `do` ligações podem fazer referência a membros estáticos ou campos de fechamento de classe, mas não campos ou membros de instância. Estático `do` associações se tornam parte do inicializador estático para a classe, que é a garantia de serem executados antes que a classe é usada pela primeira vez.
+As `do` associações estáticas podem referenciar membros estáticos ou campos da classe delimitadora, mas não membros ou campos de instância. As `do` associações estáticas tornam-se parte do inicializador estático para a classe, que tem a garantia de executar antes de a classe ser usada pela primeira vez.
 
-Atributos são ignorados para `do` associações de tipos. Se um atributo é necessário para o código que é executado em um `do` de associação, ela deverá ser aplicada para o construtor primário.
+Os atributos são ignorados para `do` associações em tipos. Se um atributo for necessário para o código que é executado em `do` uma associação, ele deve ser aplicado ao Construtor principal.
 
-No código a seguir, uma classe tem um estático `do` associação e um não-estático `do` associação. O objeto tem um construtor que tem dois parâmetros, `a` e `b`, e dois campos particulares são definidos na `let` associações para a classe. Duas propriedades também são definidas. Todos eles estão no escopo em não-estático `do` seção de associações, conforme é ilustrado pela linha que imprime todos esses valores.
+No código a seguir, uma classe tem uma associação `do` estática e uma associação não estática `do` . O objeto tem um construtor que tem dois parâmetros, `a` `b`e dois `let` campos privados são definidos nas associações para a classe. Duas propriedades também são definidas. Todos eles estão no escopo na seção de associações não estáticas `do` , como é ilustrado pela linha que imprime todos esses valores.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3101.fs)]
 
 A saída é a seguinte.
 
@@ -50,4 +50,4 @@ Initializing object 1 2 2 4 8 16
 - [Classes](../classes.md)
 - [Construtores](constructors.md)
 - [`let`Associações em Classes](let-bindings-in-classes.md)
-- [`do` Associações](../functions/do-Bindings.md)
+- [`do`Associações](../functions/do-Bindings.md)

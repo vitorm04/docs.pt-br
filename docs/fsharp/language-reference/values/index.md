@@ -1,13 +1,13 @@
 ---
 title: Valores
-description: Saiba como os valores em F# são as quantidades que têm um tipo específico.
+description: Saiba como os valores F# em são quantidades que têm um tipo específico.
 ms.date: 05/16/2016
-ms.openlocfilehash: fe87bb568591b862737456ff92ba202ba7795e3d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed7a5b069a5a47aacf0cce4cfa754ded46f6e84a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641625"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630790"
 ---
 # <a name="values"></a>Valores
 
@@ -17,11 +17,11 @@ Os valores em F# podem ser números inteiros ou de ponto flutuante, caracteres o
 
 O termo *associação* significa associar um nome a uma definição. A palavra-chave `let` associa um valor, como nos exemplos a seguir:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
 O tipo de um valor é inferido da definição. Para um tipo primitivo, como um número de ponto flutuante ou integral, o tipo é determinado pelo tipo do literal. Portanto, no exemplo anterior, o compilador infere o tipo de `b` como `unsigned int`, enquanto o compilador infere o tipo de `a` como `int`. O tipo de valor de uma função é determinado pelo valor de retorno no corpo da função. Para saber mais sobre tipos de valor de função, veja [Funções](../functions/index.md). Para saber mais sobre tipos de literal, veja [Literais](../literals.md).
 
-O compilador não emite diagnóstico sobre associações não utilizados por padrão. Para receber essas mensagens, habilitar o aviso 1182 no arquivo de projeto ou ao invocar o compilador (consulte `--warnon` sob [opções do compilador](../compiler-options.md)).
+O compilador não emite diagnósticos sobre associações não utilizadas por padrão. Para receber essas mensagens, habilite o aviso 1182 em seu arquivo de projeto ou ao invocar o `--warnon` compilador (consulte em [Opções do compilador](../compiler-options.md)).
 
 ## <a name="why-immutable"></a>Por que imutável?
 
@@ -37,15 +37,15 @@ Você pode usar a palavra-chave `mutable` para especificar uma variável que pod
 
 Você pode atribuir um valor inicial para uma variável mutável usando a palavra-chave `let` da mesma maneira que você definira um valor. No entanto, a diferença é que você pode atribuir posteriormente novos valores a variáveis mutáveis usando o operador `<-`, como no exemplo a seguir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
 
-Os valores marcados `mutable` pode ser elevada automaticamente a `'a ref` se capturadas por um fechamento, incluindo formulários que criar fechamentos, tais como `seq` construtores. Se você quiser ser notificado quando isso ocorre, habilitar o aviso 3180 no arquivo de projeto ou ao invocar o compilador.
+Os valores `mutable` marcados podem ser automaticamente promovidos para `'a ref` se forem capturados por um fechamento, incluindo formulários que criam `seq` fechamentos, como construtores. Se você quiser ser notificado quando isso ocorrer, habilite o aviso 3180 em seu arquivo de projeto ou ao invocar o compilador.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 |Título|Descrição|
 |-----|-----------|
-|[Associações let](../functions/let-bindings.md)|Fornece informações sobre como usar o `let` palavra-chave para associar nomes a valores e funções.|
+|[Associações let](../functions/let-bindings.md)|Fornece informações sobre como usar `let` a palavra-chave para associar nomes a valores e funções.|
 |[Funções](../functions/index.md)|Fornece uma visão geral das funções em F#.|
 
 ## <a name="see-also"></a>Consulte também

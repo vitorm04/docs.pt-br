@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400725"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629799"
 ---
 # <a name="wpf-partial-trust-security"></a>Segurança parcialmente confiável do WPF
 <a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e as linguagens de script do lado do cliente não são capazes de acessar recursos críticos do sistema. Como os aplicativos hospedados no navegador Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade com um conjunto semelhante de restrições. Para impor essas restrições, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] baseia-se na CAS (segurança de acesso do código) e no ClickOnce (consulte [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Por padrão, aplicativos hospedados em navegador solicitam o conjunto de permissões de CAS de zona da Internet, independentemente de serem iniciados da Internet, da intranet local ou do computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  
@@ -113,7 +113,7 @@ ms.locfileid: "68400725"
   
  Em muitos casos, você deve ser capaz de encontrar uma alternativa de confiança parcial.  
   
- Em um ambiente controlado, como uma intranet, estruturas gerenciadas personalizadas podem ser instaladas na base do cliente no [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Essas bibliotecas podem executar código que requer confiança total e são referenciadas de aplicativos que só têm permissão de confiança parcial usando <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (para obter mais informações, consulte [segurança](security-wpf.md) e [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)).  
+ Em um ambiente controlado, como uma intranet, estruturas gerenciadas personalizadas podem ser instaladas na base do cliente no GAC (cache de assembly global). Essas bibliotecas podem executar código que requer confiança total e são referenciadas de aplicativos que só têm permissão de confiança parcial usando <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (para obter mais informações, consulte [segurança](security-wpf.md) e [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Detecção de Host do navegador  

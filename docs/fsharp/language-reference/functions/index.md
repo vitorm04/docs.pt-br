@@ -1,13 +1,13 @@
 ---
 title: Funções
-description: Saiba mais sobre funções em F# e como F# dá suporte a construções de programação funcionais comuns.
+description: Saiba mais sobre o F# Functions F# no e como o dá suporte a construções de programação funcional comuns.
 ms.date: 05/16/2016
-ms.openlocfilehash: f68a36de7af2bdb803b0b633929aa472806f61aa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645393"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630709"
 ---
 # <a name="functions"></a>Funções
 
@@ -42,11 +42,11 @@ As funções podem ser marcadas como `inline`. Para saber mais sobre `inline`, v
 
 Em qualquer nível de escopo diferente do escopo do módulo, não é errado reutilizar um nome de função ou valor. Se você reutilizar um nome, o nome declarado posteriormente cobrirá o nome declarado anteriormente. No entanto, no escopo de nível superior em um módulo, os nomes devem ser exclusivos. Por exemplo, o código a seguir gera um erro quando é exibido no escopo do módulo, mas não quando aparece dentro de uma função:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
 
 Mas o código a seguir é aceitável em qualquer nível do escopo:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
 
 ### <a name="parameters"></a>Parâmetros
 
@@ -74,7 +74,7 @@ A função cria uma tupla de um argumento de qualquer tipo. Como o tipo não foi
 
 O corpo de uma função pode conter definições de funções e variáveis locais. Essas variáveis e funções estão no escopo no corpo da função atual, mas não fora dela. Quando a opção de sintaxe leve está habilitada, é necessário usar o recuo para indicar que uma definição está em um corpo de função, conforme mostra o exemplo a seguir:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 Para saber mais, veja [Diretrizes de formatação de código](../code-formatting-guidelines.md) e [Sintaxe detalhada](../verbose-syntax.md).
 
@@ -84,7 +84,7 @@ O compilador usa a expressão final em um corpo de função para determinar o va
 
 Para especificar explicitamente o valor de retorno, escreva o código da seguinte maneira:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
 
 À medida que o código é escrito acima, o compilador aplica **float** à função inteira; se você também pretende aplicá-lo aos tipos de parâmetro, use o código a seguir:
 
@@ -104,17 +104,17 @@ let vol = cylinderVolume 2.0 3.0
 
 Se você fornecer uma quantidade inferior ao número especificado de argumentos, criará uma nova função que esperará os argumentos restantes. Esse método de manipulação de argumentos é conhecido como *currying*, e é uma característica de linguagens de programação funcionais como F#. Por exemplo, vamos supor que você esteja trabalhando com dois tamanhos de pipe: uma com um raio de **2.0** e outro com um raio de **3.0**. Você poderia criar funções que determinam o volume do pipe da seguinte maneira:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
 Em seguida, você forneceria o argumento adicional, conforme o necessário, para várias durações de pipe dos dois tamanhos diferentes:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
 
 ## <a name="recursive-functions"></a>Funções Recursivas
 
-As *funções recursivas* são funções que chamam a si próprias. Eles exigem que você especifique a palavra-chave **rec** logo após a palavra-chave **let**. Invoque a função recursiva de dentro do corpo da função, exatamente como você invocaria qualquer chamada de função. A função recursiva a seguir calcula a *n*<sup>th</sup> número Fibonacci. A sequência numérica de Fibonacci é conhecida desde a antiguidade e é uma sequência na qual cada número sucessivo é a soma dos dois números anteriores na sequência.
+As *funções recursivas* são funções que chamam a si próprias. Eles exigem que você especifique a palavra-chave **rec** logo após a palavra-chave **let**. Invoque a função recursiva de dentro do corpo da função, exatamente como você invocaria qualquer chamada de função. A função recursiva a seguir computa o número *n*<sup>ésimo</sup> Fibonacci. A sequência numérica de Fibonacci é conhecida desde a antiguidade e é uma sequência na qual cada número sucessivo é a soma dos dois números anteriores na sequência.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 Algumas funções recursivas podem estourar a pilha do programa ou executar de maneira ineficiente se não forem escritas com cuidado e com conhecimento de técnicas especiais, como o uso de acumuladores e continuações.
 
@@ -122,17 +122,17 @@ Algumas funções recursivas podem estourar a pilha do programa ou executar de m
 
 Em F#, todas as funções são consideradas valores; na verdade, elas são conhecidas como *valores de função*. Como as funções são valores, elas podem ser usadas como argumentos de outras funções ou em outros contextos nos quais os valores são usados. Veja a seguir um exemplo de uma função que usa um valor de função como argumento:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
 Especifique o tipo de valor de uma função usando o token `->`. À esquerda desse token está o tipo do argumento, e à direita está o valor de retorno. No exemplo anterior, `apply1` é uma função que use uma função `transform` como um argumento, em que `transform` é uma função que usa um inteiro e retorna outro inteiro. O código a seguir mostra como usar `apply1`:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
 O valor de `result` será 101 após a execução do código anterior.
 
 Vários argumentos são separados por tokens `->` sucessivos, conforme mostra o exemplo a seguir:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
 O resultado é 200.
 
@@ -140,15 +140,15 @@ O resultado é 200.
 
 Uma *expressão lambda* é uma função sem nome. Nos exemplos anteriores, em vez de definir as funções nomeadas **increment** e **mul**, use expressões lambda, da seguinte maneira:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Defina expressões lambda usando a palavra-chave `fun`. Uma expressão lambda é semelhante a uma definição de função, com exceção de que em vez do token `=`, o token `->` é usado para separar a lista de argumentos do corpo da função. Assim como em uma definição de função normal, os tipos de argumento podem ser inferidos ou explicitamente especificados, e o tipo de retorno da expressão lambda é inferido do tipo da última expressão no corpo. Para obter mais informações, consulte [expressões Lambda: O `fun` palavra-chave](../functions/lambda-expressions-the-fun-keyword.md).
+Defina expressões lambda usando a palavra-chave `fun`. Uma expressão lambda é semelhante a uma definição de função, com exceção de que em vez do token `=`, o token `->` é usado para separar a lista de argumentos do corpo da função. Assim como em uma definição de função normal, os tipos de argumento podem ser inferidos ou explicitamente especificados, e o tipo de retorno da expressão lambda é inferido do tipo da última expressão no corpo. Para obter mais informações, [consulte expressões lambda: A `fun` palavra](../functions/lambda-expressions-the-fun-keyword.md)-chave.
 
 ## <a name="function-composition-and-pipelining"></a>Composição de Função e Pipelining
 
 As funções em F# podem ser compostas de outras funções. A composição de duas funções **função1** e **função2** é outra função que representa a aplicação da **função1** seguida pela aplicação da **função2**:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
 O resultado é 202.
 

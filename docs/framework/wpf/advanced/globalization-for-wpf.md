@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: fd99d97d677ef588c3f7e2a178190377d72c74ce
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400631"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629930"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
 Este tópico apresenta problemas que você deve estar atento ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] são `System.Globalization`definidos no no.
@@ -127,7 +127,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
  [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]as fontes permitem a manipulação de grandes conjuntos de [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] glifos usando codificação. Tal codificação permite um amplo suporte internacional, bem como para variantes tipográficas de glifos.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]a renderização de texto é [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] alimentada por uma tecnologia de subpixel que dá suporte à independência de resolução. Isso significativamente melhora a legibilidade e fornece a capacidade de dar suporte a documentos no estilo de revista de alta qualidade para todos os scripts.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]a renderização de texto é alimentada pela tecnologia de subpixel do Microsoft ClearType que dá suporte à independência de resolução. Isso significativamente melhora a legibilidade e fornece a capacidade de dar suporte a documentos no estilo de revista de alta qualidade para todos os scripts.
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>Layout internacional

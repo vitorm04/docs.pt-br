@@ -1,23 +1,23 @@
 ---
 title: Correspondência padrão
-description: Saiba como os padrões são usados no F# para comparar dados com estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados.
+description: Saiba como os padrões são usados F# no para comparar dados com estruturas lógicas, decompor dados em partes constituintes ou extrair informações de dados.
 ms.date: 05/16/2016
-ms.openlocfilehash: f76a5fb675f83df87dd896f471a3552495f39e7e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641758"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627302"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
-Os padrões são regras para transformar dados de entrada. Eles são usados em todo o F# linguagem para comparar dados com uma estrutura lógica ou estruturas, decompor os dados em partes constituintes ou extrair informações de dados de várias maneiras.
+Padrões são regras para transformar dados de entrada. Eles são usados em toda F# a linguagem para comparar dados com estruturas lógicas, decompor dados em partes constituintes ou extrair informações de dados de várias maneiras.
 
 ## <a name="remarks"></a>Comentários
 
-Padrões são usados em muitas construções de linguagem, tais como o `match` expressão. Eles são usados quando você estiver processando argumentos para funções em `let` associações, expressões lambda e nos manipuladores de exceção associados com o `try...with` expressão. Para obter mais informações, consulte [expressões de correspondência](match-expressions.md), [associações let](functions/let-bindings.md), [expressões Lambda: O `fun` palavra-chave](functions/lambda-expressions-the-fun-keyword.md), e [exceções: O `try...with` expressão](exception-handling/the-try-with-expression.md).
+Padrões são usados em muitas construções de linguagem, como a `match` expressão. Eles são usados quando você está processando argumentos para funções `let` em associações, expressões lambda e nos manipuladores de exceção associados `try...with` à expressão. Para obter mais informações, consulte [corresponder expressões](match-expressions.md), [permitir associações](./functions/let-bindings.md), [expressões lambda: A `fun` palavra](./functions/lambda-expressions-the-fun-keyword.md)-chave [e as exceções: A `try...with` expressão](/.exception-handling/the-try-with-expression.md).
 
-Por exemplo, nos `match` expressão, o *padrão* é o que segue o símbolo de pipe.
+Por exemplo, na `match` expressão, o *padrão* é o que segue o símbolo de pipe.
 
 ```fsharp
 match expression with
@@ -25,56 +25,56 @@ match expression with
 ...
 ```
 
-Cada padrão atua como uma regra de transformação de entrada de alguma maneira. No `match` expressão, cada padrão é examinado em turnos para verificar se os dados de entrada serão compatíveis com o padrão. Se uma correspondência for encontrada, a expressão resultante é executada. Se uma correspondência não for encontrada, a próxima regra padrão será testada. Opcional quando *condição* parte é explicada [expressões de correspondência](match-expressions.md).
+Cada padrão atua como uma regra para transformar a entrada de alguma maneira. `match` Na expressão, cada padrão é examinado, por sua vez, para ver se os dados de entrada são compatíveis com o padrão. Se uma correspondência for encontrada, a expressão de resultado será executada. Se uma correspondência não for encontrada, a próxima regra de padrão será testada. A parte de *condição* opcional quando é explicada em [expressões de correspondência](match-expressions.md).
 
-Padrões suportados são mostrados na tabela a seguir. Em tempo de execução, a entrada é testada em relação a cada um dos seguintes padrões na ordem listada na tabela e padrões são aplicados recursivamente, do primeiro ao último como aparecem no seu código e da esquerda para a direita para os padrões em cada linha.
+Os padrões com suporte são mostrados na tabela a seguir. Em tempo de execução, a entrada é testada em relação a cada um dos seguintes padrões na ordem listada na tabela, e os padrões são aplicados recursivamente, de primeiro até o último, conforme aparecem no seu código e da esquerda para a direita para os padrões em cada linha.
 
 |Nome|Descrição|Exemplo|
 |----|-----------|-------|
-|Padrão de constante|Qualquer numérico, caractere ou cadeia de caracteres literal, uma constante de enumeração ou um identificador literal definido|`1.0`, `"test"`, `30`, `Color.Red`|
-|Padrão de identificador|Um valor de caso de uma união discriminada, um rótulo de exceção ou um caso de padrão do Active Directory|`Some(x)`<br /><br />`Failure(msg)`|
+|Padrão de constante|Qualquer literal numérico, de caractere ou de cadeia de caracteres, uma constante de enumeração ou um identificador literal definido|`1.0`, `"test"`, `30`, `Color.Red`|
+|Padrão de identificador|Um valor de case de uma união discriminada, um rótulo de exceção ou um caso de padrão ativo|`Some(x)`<br /><br />`Failure(msg)`|
 |Padrão de variável|*identifier*|`a`|
-|`as` Padrão|*padrão de* como *identificador*|`(a, b) as tuple1`|
+|`as`padrão|*padrão* como *identificador*|`(a, b) as tuple1`|
 |OU padrão|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
-|E o padrão|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
-|Padrão constante|*identifier* :: *list-identifier*|`h :: t`|
+|E padrão|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
+|Padrão de contras|*identificador* :: *lista-identificador*|`h :: t`|
 |Padrão de lista|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
 |Padrão de matriz|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|Padrão posto entre parênteses|( *pattern* )|`( a )`|
+|Padrão entre parênteses|( *pattern* )|`( a )`|
 |Padrão de tupla|( *pattern_1*, ... , *pattern_n* )|`( a, b )`|
-|Padrão de registro|{ *identifier1* = *pattern_1*; ... ; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
+|Padrão de registro|{ *identifier1* = *pattern_1*;...; *identifier_n*  =  *pattern_n* }|`{ Name = name; }`|
 |Padrão de curinga|_|`_`|
-|Padrão juntamente com a anotação de tipo|*pattern* : *type*|`a : int`|
-|Padrão de teste de tipo|:? *type* [ as *identifier* ]|`:? System.DateTime as dt`|
-|Padrão zero|nulo|`null`|
+|Padrão junto com a anotação de tipo|*padrão* : *tipo*|`a : int`|
+|Padrão de teste de tipo|:? *tipo* de [como *identificador* ]|`:? System.DateTime as dt`|
+|Padrão nulo|nulo|`null`|
 
-## <a name="constant-patterns"></a>Padrões constante
+## <a name="constant-patterns"></a>Padrões constantes
 
-Os padrões constantes são numéricos, caracteres e literais de cadeia de caracteres, constantes de enumeração (com o nome de tipo de enumeração incluído). Um `match` expressão que possui apenas constantes padrão pode ser comparado a uma instrução case em outras linguagens. A entrada é comparada com o valor literal e o padrão corresponde se os valores forem iguais. O tipo do literal deve ser compatível com o tipo da entrada.
+Os padrões constantes são numéricos, caracteres e literais de cadeia de caracteres, constantes de enumeração (com o nome do tipo de enumeração incluído). Uma `match` expressão que tem apenas padrões constantes pode ser comparada a uma instrução Case em outras linguagens. A entrada é comparada com o valor literal e o padrão corresponde se os valores são iguais. O tipo do literal deve ser compatível com o tipo de entrada.
 
-O exemplo a seguir demonstra o uso de padrões de literal e também usa um padrão de variável e um padrão OR.
+O exemplo a seguir demonstra o uso de padrões literais e também usa um padrão variável e um padrão ou.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
 
-Outro exemplo de um padrão literal é um padrão baseado em constantes de enumeração. Você deve especificar o nome do tipo de enumeração quando usa constantes de enumeração.
+Outro exemplo de um padrão literal é um padrão baseado em constantes de enumeração. Você deve especificar o nome do tipo de enumeração ao usar constantes de enumeração.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
 
-## <a name="identifier-patterns"></a>Padrões do identificador
+## <a name="identifier-patterns"></a>Padrões de identificador
 
-Se o padrão é uma cadeia de caracteres que forme um identificador válido, o formato do identificador determina como o padrão é correspondido. Se o identificador tem mais de um único caractere e começa com um caractere maiusculo, o compilador tentará fazer uma correspondência com o padrão do identificador. O identificador para esse padrão pode ser um valor marcado com o atributo Literal, um caso união discriminado, um identificador de exceção ou um caso de padrão do Active Directory. Se nenhum identificador correspondente for encontrado, a correspondência falhará e a próxima regra padrão, o padrão de variável é comparada à entrada.
+Se o padrão for uma cadeia de caracteres que forma um identificador válido, a forma do identificador determinará como o padrão é correspondido. Se o identificador for maior que um único caractere e começar com um caractere maiúsculo, o compilador tentará fazer uma correspondência com o padrão de identificador. O identificador desse padrão pode ser um valor marcado com o atributo literal, um caso união discriminado, um identificador de exceção ou um caso de padrão ativo. Se nenhum identificador correspondente for encontrado, a correspondência falhará e a próxima regra de padrão, o padrão variável, será comparada com a entrada.
 
-Padrões de união discriminados podem ser casos nomeados simples ou eles podem ter um valor ou uma tupla que contém vários valores. Se houver um valor, você deve especificar um identificador para o valor. No caso de uma tupla, você deve fornecer um padrão de tupla com um identificador para cada elemento da tupla ou um identificador com um nome de campo para um ou mais campos nomeados de união. Consulte os exemplos nesta seção para obter exemplos de código.
+Os padrões de União discriminados podem ser casos nomeados simples ou podem ter um valor, ou uma tupla contendo vários valores. Se houver um valor, você deverá especificar um identificador para o valor. No caso de uma tupla, você deve fornecer um padrão de tupla com um identificador para cada elemento da tupla ou um identificador com um nome de campo para um ou mais campos de União nomeados. Consulte os exemplos de código nesta seção para obter exemplos.
 
-O `option` o tipo é uma união discriminada que tem dois casos, `Some` e `None`. Um caso (`Some`) tem um valor, mas o outro (`None`) é apenas um caso nomeado. Portanto, `Some` precisa ter uma variável para o valor associado a `Some` caso, mas `None` deve aparecer sozinho. No código a seguir, a variável `var1` recebe o valor obtido pela correspondência para o `Some` caso.
+O `option` tipo é uma união discriminada que tem dois `Some` casos e `None`. Um case (`Some`) tem um valor, mas o outro (`None`) é apenas um caso nomeado. Portanto, `Some` o precisa ter uma variável para o valor associado `Some` ao caso, mas `None` deve aparecer por si só. No código a seguir, a variável `var1` recebe o valor obtido pela correspondência `Some` ao caso.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
 
-No exemplo a seguir, o `PersonName` união discriminada contém uma mistura de cadeias de caracteres e caracteres que representam possíveis formas de nomes. São os casos da união discriminada `FirstOnly`, `LastOnly`, e `FirstLast`.
+No exemplo a seguir, a `PersonName` união discriminada contém uma mistura de cadeias e caracteres que representam possíveis formas de nomes. Os casos da união discriminada são `FirstOnly`, `LastOnly`e `FirstLast`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
 
-Para as uniões discriminadas com campos nomeados, use o sinal de igual (=) para extrair o valor de um campo nomeado. Por exemplo, considere uma união discriminada com uma declaração semelhante ao seguinte.
+Para uniões discriminadas que têm campos nomeados, use o sinal de igual (=) para extrair o valor de um campo nomeado. Por exemplo, considere uma união discriminada com uma declaração como a seguinte.
 
 ```fsharp
 type Shape =
@@ -82,7 +82,7 @@ type Shape =
     | Circle of radius : float
 ```
 
-Você pode usar os campos nomeados em uma expressão de correspondência de padrão da seguinte maneira.
+Você pode usar os campos nomeados em uma expressão de correspondência de padrões da seguinte maneira.
 
 ```fsharp
 let matchShape shape =
@@ -93,7 +93,7 @@ let matchShape shape =
 
 O uso do campo nomeado é opcional, portanto, no exemplo anterior, ambos `Circle(r)` e `Circle(radius = r)` têm o mesmo efeito.
 
-Quando você especifica vários campos, use o ponto e vírgula (;) como um separador.
+Quando você especifica vários campos, use o ponto-e-vírgula (;) como um separador.
 
 ```
 match shape with
@@ -101,105 +101,105 @@ match shape with
 | _ -> ()
 ```
 
-Padrões ativos permitem que você defina a correspondência de padrão personalizado mais complexa. Para obter mais informações sobre padrões ativos, consulte [padrões ativos](active-patterns.md).
+Os padrões ativos permitem definir correspondência de padrões personalizados mais complexos. Para obter mais informações sobre padrões ativos, consulte [padrões ativos](active-patterns.md).
 
-O caso em que o identificador é uma exceção é usado na correspondência de padrões no contexto de manipuladores de exceção. Para obter informações sobre correspondência de padrões no tratamento de exceções, consulte [exceções: O `try...with` expressão](exception-handling/the-try-with-expression.md).
+O caso em que o identificador é uma exceção é usado na correspondência de padrões no contexto de manipuladores de exceção. Para obter informações sobre correspondência de padrões no tratamento de [exceção, consulte exceções: A `try...with` expressão](/.exception-handling/the-try-with-expression.md).
 
-## <a name="variable-patterns"></a>Padrões variáveis
+## <a name="variable-patterns"></a>Padrões de variáveis
 
-O padrão de variável atribui o valor que está sendo correspondido para um nome de variável, em seguida, está disponível para uso na expressão de execução à direita do `->` símbolo. Um padrão variável sozinho corresponde a qualquer entrada, mas padrões variáveis geralmente aparecem dentro de outros padrões, portanto, ativando estruturas mais complexas, como tuples e matrizes a serem decompostos em variáveis.
+O padrão variável atribui o valor que está sendo correspondido a um nome de variável, que está disponível para uso na expressão de execução à direita do `->` símbolo. Um padrão variável sozinho corresponde A qualquer entrada, mas padrões de variáveis geralmente aparecem dentro de outros padrões, permitindo, portanto, estruturas mais complexas, como tuplas e matrizes a serem decompostas em variáveis.
 
 O exemplo a seguir demonstra um padrão variável dentro de um padrão de tupla.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
 
 ## <a name="as-pattern"></a>como padrão
 
-O `as` padrão é um padrão que tem um `as` cláusula anexada a ele. O `as` cláusula associa o valor correspondente a um nome que pode ser usado na expressão de execução de um `match` expressão, ou, no caso em que esse padrão é usado em um `let` de associação, o nome é adicionado como uma associação para o escopo local.
+O `as` padrão é um padrão que tem uma `as` cláusula acrescentada a ele. A `as` cláusula associa o valor correspondente a um nome que pode ser usado na expressão de execução de uma `match` expressão ou, no caso em que esse padrão é usado em uma `let` associação, o nome é adicionado como uma associação ao escopo local.
 
-O exemplo a seguir usa um `as` padrão.
+O exemplo a seguir usa `as` um padrão.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
 
 ## <a name="or-pattern"></a>OU padrão
 
-O padrão OR é usado quando os dados de entrada podem corresponder a vários padrões, e você deseja executar o mesmo código como resultado. Os tipos de ambos os lados do padrão OR devem ser compatíveis.
+O padrão ou é usado quando os dados de entrada podem corresponder a vários padrões e você deseja executar o mesmo código como resultado. Os tipos de ambos os lados do padrão ou devem ser compatíveis.
 
-O exemplo a seguir demonstra o padrão OR.
+O exemplo a seguir demonstra o padrão ou.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
 
-## <a name="and-pattern"></a>E o padrão
+## <a name="and-pattern"></a>E padrão
 
-O padrão AND requer que a entrada corresponda a dois padrões. Os tipos de ambos os lados do padrão AND devem ser compatíveis.
+O padrão AND requer que a entrada corresponda a dois padrões. Os tipos de ambos os lados do padrão e devem ser compatíveis.
 
-O exemplo a seguir é semelhante `detectZeroTuple` mostra a [padrão de tupla](https://msdn.microsoft.com/library/#tuple) seção mais adiante neste tópico, mas aqui `var1` e `var2` são obtidos como valores usando o padrão AND.
+O exemplo a seguir é `detectZeroTuple` como mostrado na seção [padrão de tupla](https://msdn.microsoft.com/library/#tuple) mais adiante neste tópico `var1` , mas aqui e `var2` são obtidos como valores usando o padrão e.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
-## <a name="cons-pattern"></a>Padrão constante
+## <a name="cons-pattern"></a>Padrão de contras
 
-O padrão cons é usado para decompor uma lista no primeiro elemento, o *head*e uma lista que contém os elementos restantes, o *tail*.
+O padrão de contras de contras é usado para decompor uma lista no primeiro elemento, no *cabeçalho*e em uma lista que contém os elementos restantes, a *parte final*.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
 ## <a name="list-pattern"></a>Padrão de lista
 
-O padrão de lista permite que as listas sejam decompostas em um número de elementos. O padrão de lista pode corresponder apenas às listas de um número específico de elementos.
+O padrão de lista permite que as listas sejam decompostas em vários elementos. O próprio padrão de lista pode corresponder apenas a listas de um número específico de elementos.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
 
 ## <a name="array-pattern"></a>Padrão de matriz
 
-O padrão de matriz lembra o padrão de lista e pode ser usado para decompor matrizes de um período específico.
+O padrão de matriz é semelhante ao padrão de lista e pode ser usado para decompor matrizes de um comprimento específico.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
 
-## <a name="parenthesized-pattern"></a>Padrão posto entre parênteses
+## <a name="parenthesized-pattern"></a>Padrão entre parênteses
 
-Parênteses podem ser agrupados em torno dos padrões para obter a associatividade desejada. No exemplo a seguir, os parênteses são usados para controlar a associatividade entre padrão e e um padrão de constante.
+Os parênteses podem ser agrupados de acordo com os padrões para alcançar a associação desejada. No exemplo a seguir, os parênteses são usados para controlar a associação entre um padrão e um padrão de contras.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
 
 ## <a name="tuple-pattern"></a>Padrão de tupla
 
-O padrão de tupla corresponde à entrada no formulário de tupla e permite que a tupla seja decomposta em seus elementos constituintes usando variáveis para cada posição na tupla de correspondência de padrão.
+O padrão de tupla corresponde à entrada no formulário de tupla e permite que a tupla seja decomposta em seus elementos constituintes usando variáveis de correspondência de padrões para cada posição na tupla.
 
-O exemplo a seguir demonstra o padrão de tupla e também usa padrões de literal, padrões de variável e o padrão de curinga.
+O exemplo a seguir demonstra o padrão de tupla e também usa padrões literais, padrões variáveis e o padrão curinga.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
 
 ## <a name="record-pattern"></a>Padrão de registro
 
-O padrão de registro é usado para decompor registros para extrair os valores dos campos. O padrão não precisa fazer referência a todos os campos do registro; apenas, os campos omitidos não participam da correspondência e não são extraídos.
+O padrão de registro é usado para decompor registros para extrair os valores dos campos. O padrão não precisa fazer referência a todos os campos do registro; os campos omitidos simplesmente não participam da correspondência e não são extraídos.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
 
 ## <a name="wildcard-pattern"></a>Padrão de curinga
 
-O padrão de curinga é representado por um sublinhado (`_`) de caracteres e corresponde a qualquer entrada, assim como o padrão de variável, exceto que a entrada é descartada, em vez de atribuída a uma variável. O padrão de curinga geralmente é usado em outros padrões como um espaço reservado para valores que não são necessários na expressão à direita do `->` símbolo. O padrão de curinga também frequentemente é usado no final de uma lista de padrões para corresponder a qualquer entrada sem correspondência. O padrão de curinga é demonstrado em muitos exemplos de código neste tópico. Consulte o código anterior para obter um exemplo.
+O padrão de caractere curinga é representado pelo caractere de`_`sublinhado () e corresponde a qualquer entrada, assim como o padrão de variável, exceto que a entrada é descartada em vez de atribuída a uma variável. O padrão de caractere curinga geralmente é usado em outros padrões como um espaço reservado para valores que não são necessários na expressão à direita do `->` símbolo. O padrão curinga também é usado frequentemente no final de uma lista de padrões para corresponder a qualquer entrada sem correspondência. O padrão de curinga é demonstrado em muitos exemplos de código neste tópico. Consulte o código anterior para obter um exemplo.
 
-## <a name="patterns-that-have-type-annotations"></a>Padrões que possuem anotações de tipo
+## <a name="patterns-that-have-type-annotations"></a>Padrões que têm anotações de tipo
 
-Os padrões podem ter anotações de tipo. Eles se comportam como outras anotações de tipo e Inferência de tipos, como outras anotações de tipo de guia. Os parênteses são necessários em torno de anotações de tipo em padrões. O código a seguir mostra um padrão que tem uma anotação de tipo.
+Os padrões podem ter anotações de tipo. Eles se comportam como outras anotações de tipo e inferência de guia como outras anotações de tipo. Os parênteses são necessários em relação a anotações de tipo em padrões. O código a seguir mostra um padrão que tem uma anotação de tipo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
 
 ## <a name="type-test-pattern"></a>Padrão de teste de tipo
 
-O padrão de teste de tipo é usado para corresponder à entrada com relação a um tipo. Se o tipo de entrada é uma correspondência (ou um tipo derivado de) o tipo especificado no padrão, a correspondência será bem-sucedida.
+O padrão de teste de tipo é usado para corresponder à entrada em relação a um tipo. Se o tipo de entrada for uma correspondência (ou um tipo derivado) do tipo especificado no padrão, a correspondência será realizada com sucesso.
 
-O exemplo a seguir demonstra o padrão de teste de tipo.
+O exemplo a seguir demonstra o tipo de padrão de teste.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
 
-## <a name="null-pattern"></a>Padrão zero
+## <a name="null-pattern"></a>Padrão nulo
 
-O padrão nulo corresponde ao valor nulo que pode aparecer quando você estiver trabalhando com tipos que permitem que um valor nulo. Padrões nulos são frequentemente usados ao interoperar com código do .NET Framework. Por exemplo, o valor retornado de uma API do .NET pode ser a entrada para um `match` expressão. Você pode controlar o fluxo do programa com base em se o valor de retorno é nulo e também em outras características do valor retornado. Você pode usar o padrão de null para impedir que valores nulos propaguem para o restante do seu programa.
+O padrão nulo corresponde ao valor nulo que pode aparecer quando você está trabalhando com tipos que permitem um valor nulo. Padrões nulos são usados frequentemente quando interoperam com código .NET Framework. Por exemplo, o valor de retorno de uma API do .net pode ser a entrada `match` para uma expressão. Você pode controlar o fluxo do programa com base em se o valor de retorno é nulo e também em outras características do valor retornado. Você pode usar o padrão nulo para impedir que valores nulos se propaguem para o restante do seu programa.
 
-O exemplo a seguir usa o padrão de null e o padrão de variável.
+O exemplo a seguir usa o padrão nulo e o padrão de variável.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
 ## <a name="see-also"></a>Consulte também
 

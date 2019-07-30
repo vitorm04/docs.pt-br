@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 144b137550ff44a8ea4927e6cf611d4761fcb01a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981923"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629616"
 ---
 # <a name="typography"></a>Tipografia
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui suporte para apresentação avançada de conteúdo de texto. Texto no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é processado usando [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], que melhora a clareza e legibilidade do texto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também dá suporte à [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes, que fornecem funcionalidades adicionais além daqueles definidos pelo [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]inclui suporte para apresentação rica de conteúdo de texto. O texto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no é renderizado usando o Microsoft ClearType, o que aumenta a clareza e a legibilidade do texto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]o também [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] oferece suporte a [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] fontes, que fornecem recursos adicionais além daqueles definidos pelo formato.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Tipografia no WPF](typography-in-wpf.md)  
