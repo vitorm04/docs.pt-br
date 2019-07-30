@@ -1,0 +1,42 @@
+- name: Introdução
+  href: index.md
+  items:
+    - name: Migração lift-and-shift de aplicativos existentes para o IaaS do Azure
+      href: lift-and-shift-existing-apps-azure-iaas.md
+    - name: Migrar seus bancos de dados relacionais para o Azure
+      href: migrate-your-relational-databases-to-azure.md
+    - name: Modernizar os aplicativos .NET existentes para aplicativos otimizados para a nuvem
+      href: ./modernize-existing-apps-to-cloud-optimized/index.md
+      items:
+        - name: Motivos para modernizar aplicativos .NET existentes para aplicativos otimizados para a nuvem
+          href: ./modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md
+        - name: Tecnologias da Microsoft em aplicativos otimizados para a nuvem
+          href: ./modernize-existing-apps-to-cloud-optimized/microsoft-technologies-in-cloud-optimized-applications.md
+        - name: E quanto aos aplicativos nativos na nuvem?
+          href: ./modernize-existing-apps-to-cloud-optimized/what-about-cloud-native-applications.md
+        - name: Implantar aplicativos .NET existentes como contêineres do Windows
+          href: ./modernize-existing-apps-to-cloud-optimized/deploy-existing-net-apps-as-windows-containers.md
+        - name: Quando não implantar Contêineres do Windows
+          href: ./modernize-existing-apps-to-cloud-optimized/when-not-to-deploy-to-windows-containers.md
+        - name: Quando implantar contêineres do Windows em sua infraestrutura de VM de IaaS local
+          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md
+        - name: Quando implantar Contêineres do Windows para VMs do Azure (nuvem de IaaS)
+          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
+        - name: Quando implantar Contêineres do Windows em ACI (Instâncias de Contêiner do Windows)
+          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
+        - name: Quando implantar Contêineres do Windows no Serviço de Contêiner do Azure (ACS-Kubernetes)
+          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
+        - name: Escolher plataformas de computação do Azure para aplicativos baseados em contêiner
+          href: ./modernize-existing-apps-to-cloud-optimized/choosing-azure-compute-options-for-container-based-applications.md
+        - name: 'Crie serviços resilientes prontos para a nuvem: adote as falhas transitórias na nuvem'
+          href: ./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md
+        - name: Modernizar seus aplicativos com o monitoramento e telemetria
+          href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md
+        - name: Modernizar o ciclo de vida do seu aplicativo com pipelines de CI/CD e ferramentas de DevOps na nuvem
+          href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md
+        - name: Migrar para cenários de nuvem híbrida
+          href: ./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md
+    - name: Visão geral de tutoriais passo a passo e introduções técnicas
+      href: walkthroughs-technical-get-started-overview.md
+    - name: Conclusões
+      href: conclusions.md

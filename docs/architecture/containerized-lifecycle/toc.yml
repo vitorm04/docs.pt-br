@@ -1,0 +1,63 @@
+- name: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+  href: index.md
+  items:
+    - name: O que é o Docker?
+      href: what-is-docker.md
+    - name: Terminologia do Docker
+      href: docker-terminology.md
+    - name: 'Registros, imagens e contêineres do Docker'
+      href: docker-containers-images-and-registries.md
+    - name: Caminho para aplicativos modernos baseados em contêineres
+      href: road-to-modern-applications-based-on-containers.md
+    - name: Introdução ao ciclo de vida do aplicativo do Docker
+      href: Docker-application-lifecycle/index.md
+      items:
+        - name: Contêineres de base para colaboração de DevOps
+          href: Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md
+    - name: Introdução à plataforma e ferramentas da Microsoft para aplicativos em contêineres
+      href: Microsoft-platform-tools-containerized-apps/index.md
+    - name: Projetar e desenvolver aplicativos em contêineres usando o Docker e o Microsoft Azure
+      href: design-develop-containerized-apps/index.md
+      items:
+        - name: Criar aplicativos de Docker
+          href: design-develop-containerized-apps/design-docker-applications.md
+        - name: Noções básicas de criação de contêiner comum
+          href: design-develop-containerized-apps/common-container-design-principles.md
+        - name: Aplicativos monolíticos
+          href: design-develop-containerized-apps/monolithic-applications.md
+        - name: Estado e dados em aplicativos do Docker
+          href: design-develop-containerized-apps/state-and-data-in-docker-applications.md
+        - name: Aplicativos orientados a serviços
+          href: design-develop-containerized-apps/soa-applications.md
+        - name: Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
+          href: design-develop-containerized-apps/orchestrate-high-scalability-availability.md
+        - name: Implantar no AKS (Serviço de Kubernetes do Azure)
+          href: design-develop-containerized-apps/deploy-azure-kubernetes-service.md
+        - name: Ambiente de desenvolvimento para aplicativos do Docker
+          href: design-develop-containerized-apps/docker-apps-development-environment.md
+        - name: Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
+          href: design-develop-containerized-apps/docker-apps-inner-loop-workflow.md
+        - name: Ferramentas do Visual Studio para Docker
+          href: design-develop-containerized-apps/visual-studio-tools-for-docker.md
+        - name: Usar comandos do Windows PowerShell em um DockerFile para configurar contêineres do Windows (baseado em Docker padrão)
+          href: design-develop-containerized-apps/set-up-windows-containers-with-powershell.md
+        - name: Criar aplicativos ASP.NET Core 2.0 implantados como contêineres do Linux para o orquestrador do AKS/Kubernetes
+          href: design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md
+    - name: Fluxo de trabalho de DevOps de aplicativos do Docker com as ferramentas da Microsoft
+      href: docker-devops-workflow/index.md
+      items:
+        - name: Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
+          href: docker-devops-workflow/docker-application-outer-loop-devops-workflow.md
+        - name: Criar pipelines de CI/CD nos Azure DevOps Services para um aplicativo .NET Core 2.0 em contêineres e implantar em um cluster do Kubernetes
+          href: docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md
+    - name: 'Executar, gerenciar e monitorar ambientes de produção do Docker'
+      href: run-manage-monitor-docker-environments/index.md
+      items:
+        - name: Executar aplicativos compostos e microsserviços em ambientes de produção
+          href: run-manage-monitor-docker-environments/run-microservices-based-applications-in-production.md
+        - name: Gerenciar ambientes de produção do Docker
+          href: run-manage-monitor-docker-environments/manage-production-docker-environments.md
+        - name: Monitorar serviços de aplicativos em contêineres
+          href: run-manage-monitor-docker-environments/monitor-containerized-application-services.md
+    - name: Principais aspectos a serem lembrados
+      href: key-takeaways/index.md
