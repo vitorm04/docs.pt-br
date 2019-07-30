@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: d7c5946f5df8a94bf8b54c10f33234b40338a622
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 5d37f9567570666c280be437aa0472a620a16c63
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348155"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400396"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Desconstruindo tuplas e outros tipos
 
@@ -64,9 +64,9 @@ O exemplo a seguir ilustra o uso de tuplas com descartes. O método `QueryCityDa
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-### <a name="deconstructing-user-defined-types"></a>Desconstruindo tipos definidos pelo usuário
+## <a name="deconstructing-user-defined-types"></a>Desconstruindo tipos definidos pelo usuário
 
-Tipos não tupla não dão suporte interno a descartes. No entanto, como o autor de uma classe, um struct ou uma interface, você pode permitir instâncias do tipo a ser desconstruído implementando um ou mais métodos `Deconstruct`. O método retorna void e cada valor a ser desconstruído é indicado por um parâmetro [out](language-reference/keywords/out-parameter-modifier.md) na assinatura do método. Por exemplo, o método `Deconstruct` a seguir de uma classe `Person` retorna o nome, o segundo nome e o sobrenome:
+O C# não oferece suporte interno para desconstrução de tipos não tupla. No entanto, como o autor de uma classe, um struct ou uma interface, você pode permitir instâncias do tipo a ser desconstruído implementando um ou mais métodos `Deconstruct`. O método retorna void e cada valor a ser desconstruído é indicado por um parâmetro [out](language-reference/keywords/out-parameter-modifier.md) na assinatura do método. Por exemplo, o método `Deconstruct` a seguir de uma classe `Person` retorna o nome, o segundo nome e o sobrenome:
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 

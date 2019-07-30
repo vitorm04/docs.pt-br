@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 365ea55a112a4a04964a8271f2f7e5591a3b0d5d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 777eb3be5cbefe0a136bf49f826ad67685a8456d
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301037"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401082"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como: realizar e cancelar a assinatura de eventos (Guia de Programação em C#)
 Você assina um evento publicado por outra classe quando quer escrever um código personalizado que é chamado quando esse evento é gerado. Por exemplo, você pode assinar o evento `click` de um botão para fazer com que seu aplicativo faça algo útil quando o usuário clicar no botão.  
@@ -46,7 +46,7 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
     }  
     ```  
   
-2. Use o operador de atribuição de adição (`+=`) para anexar seu manipulador de eventos ao evento. No exemplo a seguir, suponha que um objeto chamado `publisher` tem um evento chamado `RaiseCustomEvent`. Observe que a classe do assinante precisa de uma referência à classe do editor para assinar seus eventos.  
+2. Use o operador de atribuição de adição (`+=`) para anexar um manipulador de eventos ao evento. No exemplo a seguir, suponha que um objeto chamado `publisher` tem um evento chamado `RaiseCustomEvent`. Observe que a classe do assinante precisa de uma referência à classe do editor para assinar seus eventos.  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
@@ -58,19 +58,18 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     Um manipulador de eventos também pode ser adicionado usando uma expressão lambda:  
+     Você também pode usar uma [expressão lambda](../statements-expressions-operators/lambda-expressions.md) para especificar um manipulador de eventos:
   
     ```csharp
     public Form1()  
     {  
         InitializeComponent();  
-        // Use a lambda expression to define an event handler.  
-        this.Click += (s,e) => { MessageBox.Show(  
-           ((MouseEventArgs)e).Location.ToString());};  
+        this.Click += (s,e) =>
+            {
+                MessageBox.Show(((MouseEventArgs)e).Location.ToString());
+            };
     }  
     ```  
-  
-     Para obter mais informações, confira [Como: usar expressões lambda fora do LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Para assinar eventos usando um método anônimo  
   

@@ -5,18 +5,18 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: c396be926d743b672cb4611dc5569ecb48b09fec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 9d34b946dd13af4636b58a70c19721c5e381b69c
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397479"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484592"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>C# de teste de unidade com MSTest e .NET Core
 
 Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="creating-the-source-project"></a>Criando o projeto de origem
+### <a name="create-the-source-project"></a>Crie o projeto de origem
 
 Abra uma janela do shell. Crie um diretório chamado *unit-testing-using-mstest* no qual manter a solução. Nesse diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) a fim de criar um novo arquivo de solução para a biblioteca de classes e o projeto de teste. Em seguida, crie um diretório *PrimeService*. O seguinte esquema mostra a estrutura de arquivo e diretório até aqui:
 
@@ -45,7 +45,7 @@ namespace Prime.Services
 
 Altere o diretório de volta para o diretório *unit-testing-using-mstest*. Execute [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) para adicionar o projeto de biblioteca de classes à solução. 
 
-### <a name="creating-the-test-project"></a>Criando o projeto de teste
+### <a name="create-the-test-project"></a>Criar um projeto de teste
 
 Em seguida, crie o diretório *PrimeService.Tests*. O seguinte esquema mostra a estrutura do diretório:
 
@@ -91,7 +91,7 @@ O seguinte esquema mostra o layout da solução final:
 
 Execute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) no diretório *unit-testing-using-mstest*. 
 
-## <a name="creating-the-first-test"></a>Criando o primeiro teste
+## <a name="create-the-first-test"></a>Crie o primeiro teste
 
 Escreva um teste com falha, faça-o ser aprovado e, em seguida, repita o processo. Remova *UnitTest1.cs* do diretório *PrimeService.Tests* e crie um novo arquivo C# chamado *PrimeService_IsPrimeShould.cs* com o seguinte conteúdo:
 
@@ -122,7 +122,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-O atributo `[TestClass]` indica uma classe que contém testes de unidade. O atributo `[TestMethod]` indica um método que é um método de teste. 
+O [atributo TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) indica uma classe que contém testes de unidade. O [atributo TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) indica um método que é um método de teste. 
 
 Salve esse arquivo e execute [`dotnet test`](../tools/dotnet-test.md) para compilar os testes e a biblioteca de classes e, em seguida, execute os testes. O executor de teste do MSTest contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
 
@@ -141,9 +141,9 @@ public bool IsPrime(int candidate)
 
 No diretório *unit-testing-using-mstest*, execute `dotnet test` novamente. O comando `dotnet test` executa uma compilação para o projeto `PrimeService` e, depois, para o projeto `PrimeService.Tests`. Depois de compilar os dois projetos, ele executará esse teste único. Ele é aprovado.
 
-## <a name="adding-more-features"></a>Adicionando mais recursos
+## <a name="add-more-features"></a>Adicionar mais recursos
 
-Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0 e -1. Você pode adicionar novos testes com o atributo `[TestMethod]`, mas isso se torna entediante rapidamente. Há outros atributos do MSTest que permitem escrever um pacote de testes semelhantes.  Um atributo `[DataTestMethod]` representa um pacote de testes que executa o mesmo código, mas têm diferentes argumentos de entrada. Você pode usar o atributo `[DataRow]` para especificar valores para essas entradas.
+Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0 e -1. Você pode adicionar novos testes com o [atributo TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute), mas isso se torna rapidamente entediante. Há outros atributos do MSTest que permitem escrever um pacote de testes semelhantes.  Um [atributo DataTestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute) representa um pacote de testes que executa o mesmo código, mas com diferentes argumentos de entrada. Você pode usar o [atributo DataRow](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute) para especificar valores para essas entradas.
 
 Em vez de criar novos testes, aplique esses dois atributos para criar um único teste orientado a dados. O teste controlado por dados é um método que testa vários valores menores que dois, que é o menor número primo:
 
@@ -158,3 +158,9 @@ if (candidate < 2)
 Continue iterando adicionando mais testes, mais teorias e mais código na biblioteca principal. Você tem a [versão concluída dos testes](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs) e a [implementação completa da biblioteca](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService/PrimeService.cs).
 
 Você criou uma pequena biblioteca e um conjunto de testes de unidade para essa biblioteca. Você estruturou a solução para que a adição de novos pacotes e testes fizesse parte do fluxo de trabalho normal. Você concentrou grande parte do seu tempo e esforço em resolver as metas do aplicativo.
+
+## <a name="see-also"></a>Consulte também
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
+- [Usar a estrutura do MSTest em testes de unidade](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)
+- [Documentos da estrutura de teste do MSTest V2](https://github.com/Microsoft/testfx-docs)

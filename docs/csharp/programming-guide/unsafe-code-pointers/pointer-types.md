@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 704af9aae23571abdb82ae851066e3c03dbe7161
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661077"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433542"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -21,16 +21,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-O tipo especificado antes do `*` em um tipo de ponteiro é chamado de **tipo referent**. Qualquer um dos tipos a seguir pode ser do tipo referent:
-
-- Qualquer tipo integral: [sbyte](../../language-reference/builtin-types/integral-numeric-types.md), [byte](../../language-reference/builtin-types/integral-numeric-types.md), [short](../../language-reference/builtin-types/integral-numeric-types.md), [ushort](../../language-reference/builtin-types/integral-numeric-types.md), [int](../../language-reference/builtin-types/integral-numeric-types.md), [uint](../../language-reference/builtin-types/integral-numeric-types.md), [long](../../language-reference/builtin-types/integral-numeric-types.md), [ulong](../../language-reference/builtin-types/integral-numeric-types.md).
-- Qualquer tipo de ponto flutuante: [float](../../language-reference/builtin-types/floating-point-numeric-types.md), [double](../../language-reference/builtin-types/floating-point-numeric-types.md).
-- [char](../../language-reference/keywords/char.md).
-- [bool](../../language-reference/keywords/bool.md).
-- [decimal](../../language-reference/builtin-types/floating-point-numeric-types.md).
-- Qualquer tipo [enum](../../language-reference/keywords/enum.md).
-- Qualquer tipo de ponteiro. Isso permite expressões como `void**`.
-- Qualquer struct definido pelo usuário que contenha somente campos de tipos não gerenciados.
+O tipo especificado antes do `*` em um tipo de ponteiro é chamado de **tipo referent**. Somente um [tipo não gerenciado](../../language-reference/builtin-types/unmanaged-types.md) pode ser um tipo referent.
 
 Os tipos de ponteiro não são herdados de [objeto](../../language-reference/keywords/object.md) e não há nenhuma conversão entre tipos de ponteiro e `object`. Além disso, as conversões boxing e unboxing não oferecem suporte a ponteiros. No entanto, você pode converter entre diferentes tipos de ponteiro e tipos de ponteiro e tipos integrais.
 

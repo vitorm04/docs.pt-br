@@ -7,22 +7,22 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: f09f93f27aa4f50cfb7e09b9d6d4f98f22e1ac9a
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423542"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433562"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
 
 Restrições informam o compilador sobre as funcionalidades que um argumento de tipo deve ter. Sem nenhuma restrição, o argumento de tipo poderia ser qualquer tipo. O compilador pode assumir somente os membros de <xref:System.Object?displayProperty=nameWithType>, que é a classe base definitiva para qualquer tipo .NET. Para obter mais informações, consulte [Por que usar restrições](#why-use-constraints). Se o código de cliente tentar criar uma instância da classe usando um tipo não permitido por uma restrição, o resultado será um erro em tempo de compilação. Restrições são especificadas usando a palavra-chave contextual `where`. A tabela a seguir lista os sete tipos de restrições:
 
-|Restrição|Descrição|
+|Restrição|DESCRIÇÃO|
 |----------------|-----------------|
 |`where T : struct`|O argumento de tipo deve ser um tipo de valor. Qualquer valor de tipo com exceção de <xref:System.Nullable%601> pode ser especificado. Para obter mais informações sobre tipos que permitem valor nulo, consulte [Tipos que permitem valor nulo](../nullable-types/index.md).|
 |`where T : class`|O argumento de tipo deve ser um tipo de referência. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
-|`where T : unmanaged`|O argumento de tipo não deve ser um tipo de referência e não deve conter nenhum membro de tipo de referência em nenhum nível de aninhamento.|
+|`where T : unmanaged`|O argumento de tipo deve ser um [tipo não gerenciado](../../language-reference/builtin-types/unmanaged-types.md).|
 |`where T : new()`|O argumento de tipo deve ter um construtor público sem parâmetros. Quando usado em conjunto com outras restrições, a restrição `new()` deve ser a última a ser especificada.|
 |`where T :` *\<nome de classe base>*|O argumento de tipo deve ser ou derivar da classe base especificada.|
 |`where T :` *\<nome da interface>*|O argumento de tipo deve ser ou implementar a interface especificada. Várias restrições de interface podem ser especificadas. A interface de restrição também pode ser genérica.|
@@ -78,7 +78,7 @@ A utilidade dos parâmetros de tipo como restrições com classes genéricas é 
 
 ## <a name="unmanaged-constraint"></a>Restrição não gerenciada
 
-Começando com o C# 7.3, você pode usar a restrição `unmanaged` para especificar que o parâmetro de tipo deve ser um **tipo não gerenciado**. Um **tipo não gerenciado** é um tipo que não é um tipo de referência e não contém campos de tipo de referência em nenhum nível de aninhamento. A restrição `unmanaged` permite que você escreva rotinas reutilizáveis para trabalhar com tipos que podem ser manipulados como blocos de memória, conforme mostrado no exemplo a seguir:
+Começando com o C# 7.3, você pode usar a restrição `unmanaged` para especificar que o parâmetro de tipo deve ser um [tipo não gerenciado](../../language-reference/builtin-types/unmanaged-types.md). A restrição `unmanaged` permite que você escreva rotinas reutilizáveis para trabalhar com tipos que podem ser manipulados como blocos de memória, conforme mostrado no exemplo a seguir:
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
