@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 4f3d8a9f275a41b96b6518d63552ce9873cca0fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ee5318b8ba1284f2805b80b3e41fab3ae739158c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400823"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672004"
 ---
 # <a name="xaml-overview-wpf"></a>Visão geral do XAML (WPF)
+
 Este tópico descreve os recursos da linguagem XAML e demonstra como você pode usar o XAML para escrever aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Este tópico descreve especificamente o XAML como implementado por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O XAML em si é um conceito de linguagem maior que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>O que é XAML?  
- O XAML é uma linguagem de marcação declarativa. Conforme aplicado ao modelo de programação .NET Framework, o XAML simplifica a criação [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de um para um aplicativo .NET Framework. Você pode criar elementos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] visíveis na marcação declarativa do XAML e, em seguida, separar a definição do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da lógica de tempo de execução usando arquivos code-behind, associados à marcação por meio de definições de classe parcial. O XAML representa diretamente a instanciação de objetos em um conjunto específico de tipos de suporte definidos em assemblies. Isso é diferente da maioria das outras linguagens de marcação, que são geralmente uma linguagem interpretada sem um vínculo direto para um sistema de tipos de suporte. O XAML habilita um fluxo de trabalho em que partes separadas podem trabalhar na [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e na lógica de um aplicativo, usando ferramentas potencialmente diferentes.  
+ O XAML é uma linguagem de marcação declarativa. Conforme aplicado ao modelo de programação .NET Framework, o XAML simplifica a criação [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de um para um aplicativo .NET Framework. Você pode criar elementos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] visíveis na marcação XAML declarativa e, em seguida, separar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a definição da lógica de tempo de execução usando arquivos de código-behind que são adicionados à marcação por meio de definições de classe parcial. O XAML representa diretamente a instanciação de objetos em um conjunto específico de tipos de suporte definidos em assemblies. Isso é diferente da maioria das outras linguagens de marcação, que são geralmente uma linguagem interpretada sem um vínculo direto para um sistema de tipos de suporte. O XAML habilita um fluxo de trabalho em que partes separadas podem trabalhar na [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e na lógica de um aplicativo, usando ferramentas potencialmente diferentes.  
   
  Quando representados como texto, arquivos XAML são arquivos XML que geralmente tem a extensão `.xaml`. Os arquivos podem ser codificados por qualquer codificação XML, mas a codificação como UTF-8 é a usual.  
   
@@ -104,7 +105,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
   
  Como uma regra da linguagem XAML, o valor de uma propriedade de conteúdo XAML deve ser fornecido inteiramente antes ou inteiramente depois de todos os outros elementos de propriedade nesse elemento de objeto. Por exemplo, a marcação a seguir não compila:  
   
-```  
+```xaml
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -188,7 +189,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  Há também um número limitado de objetos em que a conversão de tipo é a única maneira pública de definir uma propriedade para esse tipo sem envolver uma subclasse, porque o próprio tipo não tem um construtor com parâmetros. Um exemplo é <xref:System.Windows.Input.Cursor>.  
+> Há também um número limitado de objetos em que a conversão de tipo é a única maneira pública de definir uma propriedade para esse tipo sem envolver uma subclasse, porque o próprio tipo não tem um construtor com parâmetros. Um exemplo é <xref:System.Windows.Input.Cursor>.  
   
  Para obter mais informações sobre como a conversão de tipo e seu uso da sintaxe de atributo têm suporte, consulte [TypeConverters e XAML](typeconverters-and-xaml.md).  
   
@@ -228,7 +229,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
   
  A seguir, um exemplo bem básico de como prefixos personalizados funcionam na marcação XAML. O prefixo `custom` é definido na marca do elemento raiz e mapeado para um assembly específico que é empacotado e está disponível com o aplicativo. Esse assembly contém um tipo `NumericUpDown`, que é implementado para dar suporte ao uso geral do XAML, bem como usar uma herança de classe que permite sua inserção, nesse momento específico, em um modelo de conteúdo XAML WPF. Uma instância desse controle `NumericUpDown` é declarada como um elemento de objeto, usando o prefixo para que um analisador XAML saiba qual namespace XAML contém o tipo e, portanto, a localização do assembly de suporte que contém a definição de tipo.  
   
-```  
+```xaml
 <Page  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   

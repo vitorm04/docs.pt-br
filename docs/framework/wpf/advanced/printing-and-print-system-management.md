@@ -5,22 +5,22 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 637911b3-0c78-4493-a4fb-91db56d767cd
-ms.openlocfilehash: 9a1d1974320a07614c9ff80e010425df056e1080
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 5d2380db3b8d2c5c41d04a34f9b86a97eb7b27b1
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860078"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672023"
 ---
 # <a name="printing-and-print-system-management"></a>Impressão e gerenciamento do sistema de impressão
-[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] e o Microsoft .NET Framework introduz um novo caminho de impressão — uma alternativa ao [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] impressão — e um conjunto muito maior de APIs de gerenciamento do sistema de impressão.  
+[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]e Microsoft .NET Framework apresentam um novo caminho de impressão — uma alternativa à impressão do Microsoft Windows Graphics Device Interface (GDI) — e um conjunto amplamente expandido de APIs de gerenciamento do sistema de impressão.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão Geral da Impressão](printing-overview.md)  
- Uma discussão sobre as APIs e o novo caminho de impressão.  
+ Uma discussão sobre o novo caminho de impressão e APIs.  
   
  [Tópicos de instruções](printing-how-to-topics.md)  
- Um conjunto de artigos que mostram como usar as APIs e o novo caminho de impressão.  
+ Um conjunto de artigos mostrando como usar o novo caminho de impressão e APIs.  
   
 ## <a name="see-also"></a>Consulte também
 

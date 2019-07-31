@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 39cf4b60262afb1e3745a82c734391385669f5d3
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629821"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671915"
 ---
 # <a name="wpf-architecture"></a>Arquitetura do WPF
 Este tópico fornece um tour guiado pela hierarquia de classes do Windows Presentation Foundation (WPF). Ele aborda a maioria dos subsistemas principais do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve como eles interagem. Ele também detalha algumas das escolhas feitas pelos arquitetos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -76,9 +76,9 @@ Este tópico fornece um tour guiado pela hierarquia de classes do Windows Presen
   
  Outro detalhe importante que não é realmente perceptível no diagrama é o modo como o sistema realmente executa a composição.  
   
- No User32 e [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)], o sistema funciona em um sistema de recorte de modo imediato. Quando um componente precisa ser renderizado, o sistema estabelece os limites de recorte fora dos quais o componente não tem permissão para tocar nos pixels e, em seguida, é solicitado ao componente que ele pinte os pixels dentro dessa caixa. Este sistema funciona muito bem em sistemas com restrição de memória porque quando algo é alterado, você só tem que tocar o componente afetado – não há jamais dois componentes que contribuam para a cor de um único pixel.  
+ No User32 e no GDI, o sistema funciona em um sistema de recorte de modo imediato. Quando um componente precisa ser renderizado, o sistema estabelece os limites de recorte fora dos quais o componente não tem permissão para tocar nos pixels e, em seguida, é solicitado ao componente que ele pinte os pixels dentro dessa caixa. Este sistema funciona muito bem em sistemas com restrição de memória porque quando algo é alterado, você só tem que tocar o componente afetado – não há jamais dois componentes que contribuam para a cor de um único pixel.  
   
- O [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa um modelo de pintura de "algoritmo de pincel". Isso significa que, em vez de cortar cada componente, é solicitado a cada componente que renderize da parte de trás da exibição para a parte da frente. Isso permite que cada componente pinte sobre a exibição do componente anterior. A vantagem desse modelo é que você pode ter formas complexas, parcialmente transparentes. Com o hardware gráfico moderno de hoje, esse modelo é relativamente rápido (que não era o caso quando User32/[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] foram criados).  
+ O [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa um modelo de pintura de "algoritmo de pincel". Isso significa que, em vez de cortar cada componente, é solicitado a cada componente que renderize da parte de trás da exibição para a parte da frente. Isso permite que cada componente pinte sobre a exibição do componente anterior. A vantagem desse modelo é que você pode ter formas complexas, parcialmente transparentes. Com o hardware de gráficos moderno de hoje, esse modelo é relativamente rápido (que não era o caso quando user32/GDI foram criados).  
   
  Conforme mencionado anteriormente, uma filosofia central do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é mover para um modelo de programação mais declarativo, "centrado em propriedades". No sistema visual, isso aparece em alguns locais interessantes.  
   

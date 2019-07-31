@@ -9,36 +9,36 @@ helpviewer_keywords:
 - templates [WPF], ScrollBar
 - parts [WPF], ScrollBar
 ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
-ms.openlocfilehash: 22b2206067302f621a94a1e9abca1607792b3393
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 016556fb825ddf60af7dc572d6fda7323b9bb09d
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052879"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671976"
 ---
 # <a name="scrollbar-styles-and-templates"></a>Estilos e modelos ScrollBar
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Primitives.ScrollBar> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="scrollbar-parts"></a>Partes da barra de rolagem  
- A tabela a seguir lista as partes nomeadas para o <xref:System.Windows.Controls.Primitives.ScrollBar> controle.  
+ A tabela a seguir lista as partes nomeadas <xref:System.Windows.Controls.Primitives.ScrollBar> para o controle.  
   
 |Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|O contêiner para o elemento que indica a posição do <xref:System.Windows.Controls.Primitives.ScrollBar>.|  
   
-## <a name="scrollbar-states"></a>Estados de barra de rolagem  
- A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.Primitives.ScrollBar> controle.  
+## <a name="scrollbar-states"></a>Estados da barra de rolagem  
+ A tabela a seguir lista os Estados visuais para <xref:System.Windows.Controls.Primitives.ScrollBar> o controle.  
   
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|O estado padrão.|  
 |MouseOver|CommonStates|O ponteiro do mouse é posicionado sobre o controle.|  
 |Disabled|CommonStates|O controle está desabilitado.|  
-|Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
+|Válido|ValidationStates|O controle usa a <xref:System.Windows.Controls.Validation> classe e a <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Propriedade anexada `false`é.|  
+|InvalidFocused|ValidationStates|A <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Propriedade anexada `true` é e o controle tem foco.|  
+|InvalidUnfocused|ValidationStates|A <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Propriedade anexada `true` é e o controle não tem foco.|  
   
-## <a name="scrollbar-controltemplate-example"></a>Exemplo de ControlTemplate de barra de rolagem  
+## <a name="scrollbar-controltemplate-example"></a>Exemplo de ControlTemplate de ScrollBar  
  O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.Primitives.ScrollBar> controle.  
   
  [!code-xaml[ControlTemplateExamples#ScrollBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollbar.xaml#scrollbar)]  

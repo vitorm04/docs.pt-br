@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: e2c93f4471db2d72851a5d5bd8806b59a3e5ee28
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629854"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671827"
 ---
 # <a name="technology-regions-overview"></a>Visão geral das regiões de tecnologia
 Se várias tecnologias de apresentação forem usadas em um aplicativo, como WPF, Win32 ou DirectX, elas deverão compartilhar as áreas de renderização em uma janela de nível superior comum. Este tópico descreve problemas que podem influenciar a apresentação e a entrada para seu aplicativo de interoperação do WPF.  
@@ -52,13 +52,13 @@ Se várias tecnologias de apresentação forem usadas em um aplicativo, como WPF
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]dá suporte a HRGNs; no entanto, não há APIs gerenciadas para essa funcionalidade. Você pode usar a invocação <xref:System.Windows.Interop.HwndSource> de plataforma e chamar [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] as APIs relevantes. Para obter mais informações, consulte [Chamando funções nativas do código gerenciado](/cpp/dotnet/calling-native-functions-from-managed-code).  
   
- As janelas em camadas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] têm recursos diferentes em sistemas operacionais distintos. Isso ocorre porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o usa o DirectX para renderizar, e as janelas em camadas [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] foram projetadas principalmente para renderização, e não para a renderização do DirectX.  
+ As janelas em camadas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] têm recursos diferentes em sistemas operacionais distintos. Isso ocorre porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o usa o DirectX para renderizar, e as janelas em camadas foram projetadas principalmente para a renderização GDI, não para a renderização do DirectX.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dá suporte para janelas em camadas aceleradas por hardware no [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] e em versões posteriores. Hardware acelerado janelas em camadas ao [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] exigir suporte do Microsoft DirectX, portanto, os recursos dependerão da versão do Microsoft DirectX nesse computador.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não dá suporte para as chaves de cores de transparência porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não pode assegurar a renderização da cor exata solicitada, especialmente quando a renderização é acelerada por hardware.  
   
-- Se seu aplicativo estiver em execução [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]no, janelas em camadas sobre a cintilação de superfícies do DirectX quando o aplicativo do DirectX for renderizado.  (A sequência de renderização real é [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] que oculta a janela em camadas, em seguida, o DirectX desenha [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] e, em seguida, coloca a janela em camadas de volta).  As janelas em camadas não [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também têm essa limitação.  
+- Se seu aplicativo estiver em execução [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]no, janelas em camadas sobre a cintilação de superfícies do DirectX quando o aplicativo do DirectX for renderizado.  (A sequência de renderização real é que o Microsoft Windows Graphics Device Interface (GDI) oculta a janela em camadas, em seguida, o DirectX desenha e, em seguida, o Microsoft Windows Graphics Device Interface (GDI) coloca a janela em camadas de volta).  As janelas em camadas não [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também têm essa limitação.  
   
 ## <a name="see-also"></a>Consulte também
 
