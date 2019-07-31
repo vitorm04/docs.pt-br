@@ -9,6 +9,25 @@
         - name: Navegador de API .NET
           tocHref: /dotnet/api/
           topicHref: /dotnet/api/index
+        - name: Guia de arquitetura do aplicativo .NET
+          tocHref: /dotnet/architecture/
+          topicHref: /dotnet/architecture/index
+          items:
+            - name: Livro eletrônico de Aplicativos Web ASP.NET modernos
+              tocHref: /dotnet/architecture/modern-web-apps-azure/
+              topicHref: /dotnet/architecture/modern-web-apps-azure/index
+            - name: Microsserviços do .NET – Livro eletrônico de arquitetura
+              tocHref: /dotnet/architecture/microservices/
+              topicHref: /dotnet/architecture/microservices/index
+            - name: Livro eletrônico Modernização de aplicativos .NET
+              tocHref: /dotnet/architecture/modernize-with-azure-containers/
+              topicHref: /dotnet/architecture/modernize-with-azure-containers/index
+            - name: Microsserviços do .NET – Livro eletrônico de DevOps
+              tocHref: /dotnet/architecture/containerized-lifecycle/
+              topicHref: /dotnet/architecture/containerized-lifecycle/index
+            - name: Livro eletrônico sobre aplicativos sem servidor
+              tocHref: /dotnet/architecture/serverless/
+              topicHref: /dotnet/architecture/serverless/index
         - name: Guia do .NET
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
@@ -19,21 +38,6 @@
             - name: Diretrizes da biblioteca de software livre
               tocHref: /dotnet/standard/library-guidance/
               topicHref: /dotnet/standard/library-guidance/index
-            - name: Livro eletrônico de Aplicativos Web ASP.NET modernos
-              tocHref: /dotnet/standard/modern-web-apps-azure-architecture/
-              topicHref: /dotnet/standard/modern-web-apps-azure-architecture/index
-            - name: Microsserviços do .NET – Livro eletrônico de arquitetura
-              tocHref: /dotnet/standard/microservices-architecture/
-              topicHref: /dotnet/standard/microservices-architecture/index
-            - name: Livro eletrônico Modernização de aplicativos .NET
-              tocHref: /dotnet/standard/modernize-with-azure-and-containers/
-              topicHref: /dotnet/standard/modernize-with-azure-and-containers/index
-            - name: Microsserviços do .NET – Livro eletrônico de DevOps
-              tocHref: /dotnet/standard/containerized-lifecycle-architecture/
-              topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
-            - name: Livro eletrônico sobre aplicativos sem servidor
-              tocHref: /dotnet/standard/serverless-architecture/
-              topicHref: /dotnet/standard/serverless-architecture/index
             - name: Padrões de programação assíncrona
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
@@ -439,7 +443,7 @@
                   tocHref: /dotnet/csharp/programming-guide/concepts/
                   topicHref: /dotnet/csharp/programming-guide/concepts/index
                   items:
-                    - name: Assemblies e o GAC
+                    - name: Assemblies
                       tocHref: /dotnet/csharp/programming-guide/concepts/assemblies-gac/
                       topicHref: /dotnet/csharp/programming-guide/concepts/assemblies-gac/index
                     - name: Programação assíncrona
@@ -535,7 +539,7 @@
               tocHref: /dotnet/visual-basic/programming-guide/concepts/
               topicHref: /dotnet/visual-basic/programming-guide/concepts/index
               items:
-                - name: Assemblies e o GAC
+                - name: Assemblies
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/assemblies-gac/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/assemblies-gac/index
                 - name: Programação assíncrona
