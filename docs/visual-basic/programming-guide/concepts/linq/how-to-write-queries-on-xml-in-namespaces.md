@@ -1,23 +1,23 @@
 ---
-title: 'Como: Escrever consultas no XML nos Namespaces (Visual Basic)'
+title: 'Como: Gravar consultas em XML em namespaces (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b910e8b46632fbff2228baef44a45e8c22d731e
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614824"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709870"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a><span data-ttu-id="9e538-102">Como: Escrever consultas no XML nos Namespaces (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e538-102">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>
-<span data-ttu-id="9e538-103">Para escrever uma consulta em XML que está em um namespace, você deve usar os objetos <xref:System.Xml.Linq.XName> que têm o namespace correto.</span><span class="sxs-lookup"><span data-stu-id="9e538-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a><span data-ttu-id="ed49d-102">Como: Gravar consultas em XML em namespaces (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed49d-102">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>
+<span data-ttu-id="ed49d-103">Para escrever uma consulta em XML que está em um namespace, você deve usar os objetos <xref:System.Xml.Linq.XName> que têm o namespace correto.</span><span class="sxs-lookup"><span data-stu-id="ed49d-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
   
- <span data-ttu-id="9e538-104">No Visual Basic, a abordagem mais comum é definir um namespace global e, em seguida, usar os literais XML e as propriedades XML que usam o namespace global.</span><span class="sxs-lookup"><span data-stu-id="9e538-104">In Visual Basic, the most common approach is to define a global namespace, and then use XML literals and XML properties that use the global namespace.</span></span> <span data-ttu-id="9e538-105">Você pode definir um namespace global padrão nesse caso, no qual os elementos nos literais XML estarão no namespace por padrão.</span><span class="sxs-lookup"><span data-stu-id="9e538-105">You can define a global default namespace, in which case elements in the XML literals will be in the namespace by default.</span></span> <span data-ttu-id="9e538-106">Como alternativa, você pode definir um namespace global com um prefixo e, em seguida, usar o prefixo como necessário nos literais XML e nas propriedades XML.</span><span class="sxs-lookup"><span data-stu-id="9e538-106">Alternatively, you can define a global namespace with a prefix, and then use the prefix as required in the XML literals, and in XML properties.</span></span> <span data-ttu-id="9e538-107">Como ocorre com outros formatos de XML, os atributos estão sempre em nenhum namespace por padrão.</span><span class="sxs-lookup"><span data-stu-id="9e538-107">As with other forms of XML, attributes are always in no namespace by default.</span></span>  
+ <span data-ttu-id="ed49d-104">No Visual Basic, a abordagem mais comum é definir um namespace global e, em seguida, usar os literais XML e as propriedades XML que usam o namespace global.</span><span class="sxs-lookup"><span data-stu-id="ed49d-104">In Visual Basic, the most common approach is to define a global namespace, and then use XML literals and XML properties that use the global namespace.</span></span> <span data-ttu-id="ed49d-105">Você pode definir um namespace global padrão nesse caso, no qual os elementos nos literais XML estarão no namespace por padrão.</span><span class="sxs-lookup"><span data-stu-id="ed49d-105">You can define a global default namespace, in which case elements in the XML literals will be in the namespace by default.</span></span> <span data-ttu-id="ed49d-106">Como alternativa, você pode definir um namespace global com um prefixo e, em seguida, usar o prefixo como necessário nos literais XML e nas propriedades XML.</span><span class="sxs-lookup"><span data-stu-id="ed49d-106">Alternatively, you can define a global namespace with a prefix, and then use the prefix as required in the XML literals, and in XML properties.</span></span> <span data-ttu-id="ed49d-107">Como ocorre com outros formatos de XML, os atributos estão sempre em nenhum namespace por padrão.</span><span class="sxs-lookup"><span data-stu-id="ed49d-107">As with other forms of XML, attributes are always in no namespace by default.</span></span>  
   
- <span data-ttu-id="9e538-108">O primeiro conjunto de exemplos neste tópico mostra como criar uma árvore XML em um namespace padrão.</span><span class="sxs-lookup"><span data-stu-id="9e538-108">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="9e538-109">O segundo conjunto mostra como criar uma árvore XML em um namespace com um prefixo.</span><span class="sxs-lookup"><span data-stu-id="9e538-109">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
+ <span data-ttu-id="ed49d-108">O primeiro conjunto de exemplos neste tópico mostra como criar uma árvore XML em um namespace padrão.</span><span class="sxs-lookup"><span data-stu-id="ed49d-108">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="ed49d-109">O segundo conjunto mostra como criar uma árvore XML em um namespace com um prefixo.</span><span class="sxs-lookup"><span data-stu-id="ed49d-109">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9e538-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9e538-110">Example</span></span>  
- <span data-ttu-id="9e538-111">O exemplo a seguir cria uma árvore XML que está em um namespace padrão.</span><span class="sxs-lookup"><span data-stu-id="9e538-111">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="9e538-112">Ele então recupera uma coleção de elementos.</span><span class="sxs-lookup"><span data-stu-id="9e538-112">It then retrieves a collection of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="ed49d-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ed49d-110">Example</span></span>  
+ <span data-ttu-id="ed49d-111">O exemplo a seguir cria uma árvore XML que está em um namespace padrão.</span><span class="sxs-lookup"><span data-stu-id="ed49d-111">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="ed49d-112">Ele então recupera uma coleção de elementos.</span><span class="sxs-lookup"><span data-stu-id="ed49d-112">It then retrieves a collection of elements.</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -43,7 +43,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="9e538-113">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="9e538-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="ed49d-113">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="ed49d-113">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -51,10 +51,10 @@ End Module
 3  
 ```  
   
-## <a name="example"></a><span data-ttu-id="9e538-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9e538-114">Example</span></span>  
- <span data-ttu-id="9e538-115">No Visual Basic, no entanto, escrever consultas em uma árvore XML que usa um namespace com um prefixo é bastante suficiente de consultar uma árvore XML em um namespace padrão.</span><span class="sxs-lookup"><span data-stu-id="9e538-115">In Visual Basic, however, writing queries on an XML tree that uses a namespace with a prefix is quite different from querying an XML tree in a default namespace.</span></span> <span data-ttu-id="9e538-116">Normalmente você usa a instrução `Imports` para importar o namespace com um prefixo.</span><span class="sxs-lookup"><span data-stu-id="9e538-116">Typically you use the `Imports` statement to import the namespace with a prefix.</span></span> <span data-ttu-id="9e538-117">Você em seguida usa o prefixo em nomes de elementos e atributos quando constrói a árvore XML.</span><span class="sxs-lookup"><span data-stu-id="9e538-117">You then use the prefix in the element and attribute names when you construct the XML tree.</span></span> <span data-ttu-id="9e538-118">Você também usa o prefixo para consultar uma árvore XML usando propriedades XML.</span><span class="sxs-lookup"><span data-stu-id="9e538-118">You also use the prefix when querying an XML tree using XML properties.</span></span>  
+## <a name="example"></a><span data-ttu-id="ed49d-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ed49d-114">Example</span></span>  
+ <span data-ttu-id="ed49d-115">No Visual Basic, no entanto, escrever consultas em uma árvore XML que usa um namespace com um prefixo é bastante suficiente de consultar uma árvore XML em um namespace padrão.</span><span class="sxs-lookup"><span data-stu-id="ed49d-115">In Visual Basic, however, writing queries on an XML tree that uses a namespace with a prefix is quite different from querying an XML tree in a default namespace.</span></span> <span data-ttu-id="ed49d-116">Normalmente você usa a instrução `Imports` para importar o namespace com um prefixo.</span><span class="sxs-lookup"><span data-stu-id="ed49d-116">Typically you use the `Imports` statement to import the namespace with a prefix.</span></span> <span data-ttu-id="ed49d-117">Você em seguida usa o prefixo em nomes de elementos e atributos quando constrói a árvore XML.</span><span class="sxs-lookup"><span data-stu-id="ed49d-117">You then use the prefix in the element and attribute names when you construct the XML tree.</span></span> <span data-ttu-id="ed49d-118">Você também usa o prefixo para consultar uma árvore XML usando propriedades XML.</span><span class="sxs-lookup"><span data-stu-id="ed49d-118">You also use the prefix when querying an XML tree using XML properties.</span></span>  
   
- <span data-ttu-id="9e538-119">O exemplo a seguir cria uma árvore XML que está em um namespace com um prefixo.</span><span class="sxs-lookup"><span data-stu-id="9e538-119">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="9e538-120">Ele então recupera uma coleção de elementos.</span><span class="sxs-lookup"><span data-stu-id="9e538-120">It then retrieves a collection of elements.</span></span>  
+ <span data-ttu-id="ed49d-119">O exemplo a seguir cria uma árvore XML que está em um namespace com um prefixo.</span><span class="sxs-lookup"><span data-stu-id="ed49d-119">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="ed49d-120">Ele então recupera uma coleção de elementos.</span><span class="sxs-lookup"><span data-stu-id="ed49d-120">It then retrieves a collection of elements.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -80,7 +80,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="9e538-121">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="9e538-121">This example produces the following output:</span></span>  
+ <span data-ttu-id="ed49d-121">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="ed49d-121">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -88,6 +88,6 @@ End Module
 3  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9e538-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9e538-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed49d-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ed49d-122">See also</span></span>
 
-- [<span data-ttu-id="9e538-123">Trabalhando com Namespaces XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e538-123">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [<span data-ttu-id="ed49d-123">Visão geral de namespaces (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed49d-123">Namespaces Overview (LINQ to XML) (Visual Basic)</span></span>](namespaces-overview-linq-to-xml.md)
