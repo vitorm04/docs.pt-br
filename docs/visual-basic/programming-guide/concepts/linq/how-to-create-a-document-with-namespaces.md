@@ -1,15 +1,15 @@
 ---
-title: 'Como: Criar um documento com Namespaces (LINQ to XML) (Visual Basic)'
+title: 'Como: Criar um documento com namespaces (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: b65d22451d900f7b20226f25b61bb235241dd84f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c61076da5616d98673c4b9258125e3ff0c8821aa
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855511"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710451"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Como: Criar um documento com Namespaces (LINQ to XML) (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Como: Criar um documento com namespaces (LINQ to XML) (Visual Basic)
 Este tópico mostra como criar um documento com namespaces no Visual Basic.  
   
  Ao usar literais XML no Visual Basic, os usuários podem definir um namespace XML global padrão. Este namespace é o namespace padrão para literais XML e propriedades XML. O namespace XML padrão pode ser definida no nível de projeto ou nível de arquivo. Se for definida em nível de arquivo, substitui o namespace padrão no nível do projeto.  
@@ -18,7 +18,7 @@ Este tópico mostra como criar um documento com namespaces no Visual Basic.
   
  Você define dois namespaces padrão e namespaces com um prefixo usando a palavra-chave `Imports` .  
   
- Para obter mais informações, consulte [Introdução aos literais XML no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ Para obter mais informações, consulte [introdução aos literais XML no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
   
  Observe que o namespace XML padrão se aplica somente aos elementos e não a atributos. Atributos são sempre por padrão em qualquer namespace. No entanto, você pode usar um prefixo de namespace para colocar um atributo em um namespace.  
   
@@ -116,4 +116,4 @@ End Module
   
 ## <a name="see-also"></a>Consulte também
 
-- [Trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

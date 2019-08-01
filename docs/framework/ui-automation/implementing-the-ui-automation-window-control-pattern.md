@@ -6,38 +6,38 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 07b17ae1ed89c84bac4ac40e9934a0d36fda357f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9cab4dbbcd3302a6e74783eaefdbbd8463332224
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625835"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710249"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementando o Padrão Controle de Window de Automação de Interface de Usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
- Este tópico apresenta diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.IWindowProvider>, incluindo informações sobre <xref:System.Windows.Automation.WindowPattern> propriedades, métodos e eventos. Links para referências adicionais são listadas no final do tópico.  
+ Este tópico apresenta as diretrizes e convenções para <xref:System.Windows.Automation.Provider.IWindowProvider>implementar o, incluindo <xref:System.Windows.Automation.WindowPattern> informações sobre propriedades, métodos e eventos. Links para referências adicionais são listados no final do tópico.  
   
- O <xref:System.Windows.Automation.WindowPattern> padrão de controle é usado para dar suporte a controles que fornecem funcionalidade de baseados em janela fundamental dentro de um tradicional [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]. Exemplos de controles que devem implementar esse padrão de controle incluem janelas de aplicativos de nível superior, [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] janelas filho, controles de painel de divisão redimensionável, caixas de diálogo modais e balão de ajudam do windows.  
+ O <xref:System.Windows.Automation.WindowPattern> padrão de controle é usado para dar suporte a controles que fornecem funcionalidade básica baseada em janela dentro de uma GUI (interface gráfica do usuário) tradicional. Exemplos de controles que devem implementar esse padrão de controle incluem janelas de aplicativo de nível [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] superior, janelas filhas, controles de painel dividido redimensionável, caixas de diálogo modais e janelas de ajuda de balão.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
- Ao implementar o padrão de controle de janela, observe as seguintes diretrizes e convenções:  
+## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
+ Ao implementar o padrão de controle Window, observe as seguintes diretrizes e convenções:  
   
-- Para dar suporte a capacidade de modificar tanto o tamanho da janela e posição na tela usando automação de interface do usuário, um controle deve implementar <xref:System.Windows.Automation.Provider.ITransformProvider> além <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Para dar suporte à capacidade de modificar o tamanho da janela e a posição da tela usando a automação da <xref:System.Windows.Automation.Provider.ITransformProvider> interface do usuário <xref:System.Windows.Automation.Provider.IWindowProvider>, um controle deve implementar além do.  
   
-- Controles que contêm as barras de título e elementos de barra de título que permitem o controle a ser movido, redimensionado, maximizada, minimizada ou fechada são geralmente necessários para implementar <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Controles que contêm barras de título e elementos de barra de título que permitem que o controle seja movido, redimensionado, maximizado, minimizado ou fechado normalmente são necessários <xref:System.Windows.Automation.Provider.IWindowProvider>para implementar.  
   
-- Controles como pop-ups de dica de ferramenta e combinação caixa ou menus suspensos normalmente não implementam <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Controles como pop-ups de dica de ferramenta e caixas suspensas de caixa de combinação ou de menu <xref:System.Windows.Automation.Provider.IWindowProvider>normalmente não implementam.  
   
-- Janelas da Ajuda de balão são diferenciadas de pop-ups de dica de ferramenta básica pela provisão de um botão de fechar janela semelhante.  
+- As janelas de ajuda de balão são diferenciadas de pop-ups de dica de ferramenta básica pelo provisionamento de um botão de fechamento de janela.  
   
-- Modo de tela inteira não é suportado por IWindowProvider conforme ele é um recurso específico a um aplicativo e não é o comportamento de janela típica.  
+- O modo de tela inteira não tem suporte do IWindowProvider, pois ele é específico ao recurso para um aplicativo e não é um comportamento de janela típico.  
   
 <a name="Required_Members_for_IWindowProvider"></a>   
 ## <a name="required-members-for-iwindowprovider"></a>Membros necessários para IWindowProvider  
- As seguintes propriedades, métodos e eventos são necessários para a interface IWindowProvider.  
+ As propriedades, os métodos e os eventos a seguir são necessários para a interface IWindowProvider.  
   
 |Membro necessário|Tipo de membro|Observações|  
 |---------------------|-----------------|-----------|  
@@ -52,15 +52,15 @@ ms.locfileid: "64625835"
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Método|Nenhum|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|evento|Nenhum|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|evento|Nenhum|  
-|<xref:System.Windows.Automation.WindowInteractionState>|evento|Não é garantido para ser <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.WindowInteractionState>|evento|Não é garantido que seja<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  
- Provedores devem lançar as exceções a seguir.  
+ Os provedores devem lançar as seguintes exceções.  
   
 |Tipo de exceção|Condição|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -Quando um controle não oferece suporte a um comportamento solicitado.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -Quando um controle não dá suporte a um comportamento solicitado.|  
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -Quando o parâmetro não é um número válido.|  
   
 ## <a name="see-also"></a>Consulte também

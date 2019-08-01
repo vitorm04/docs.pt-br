@@ -1,15 +1,15 @@
 ---
-title: Escopo de namespace padrão no Visual Basic
+title: Escopo de namespaces padrão no Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: e33505dd8e8ad94e3c758f15f245d0cbaf6987bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af868454c9d1dce7d8bf5a1902f64eff8db8780c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786796"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710349"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Escopo de namespace padrão no Visual Basic
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Escopo de namespaces padrão no Visual Basic
 Namespaces padrões como representadas na árvore XML não estiver no escopo para consultas. Se você tiver XML que é em um namespace padrão, você ainda deve declarar uma variável de <xref:System.Xml.Linq.XNamespace> , e combina-o com o nome local para fazer um nome qualificado para ser usado na consulta.  
   
  Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.  
@@ -58,7 +58,7 @@ End of result set
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como criar XML em um namespace, e uma consulta que é codificado corretamente.  
   
- Em contraste com incorretamente codificado o exemplo acima, a abordagem correta ao usar o Visual Basic é declarar e inicializar um namespace global padrão. Isso coloca todas as propriedades XML no namespace padrão. Outras alterações necessárias ao exemplo para fazê-lo funcionar corretamente.  
+ Ao contrário do exemplo codificado incorretamente acima, a abordagem correta ao usar Visual Basic é declarar e inicializar um namespace padrão global. Isso coloca todas as propriedades XML no namespace padrão. Outras alterações necessárias ao exemplo para fazê-lo funcionar corretamente.  
   
 ### <a name="code"></a>Código  
   
@@ -101,4 +101,4 @@ End of result set
   
 ## <a name="see-also"></a>Consulte também
 
-- [Trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

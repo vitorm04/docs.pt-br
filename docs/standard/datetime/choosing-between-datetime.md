@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4c86ab618f6434a6a9ce4f056eeb001cacc84bc
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026556"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709196"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
 
@@ -83,7 +83,7 @@ O tipo <xref:System.DateTimeOffset> inclui toda a funcionalidade do tipo <xref:S
 * Preserve vários tempos relacionados contanto que esses tempos sejam armazenados como dois valores separados ou como dois membros de uma estrutura.
 
 > [!NOTE]
-> Esses usos para os valores <xref:System.DateTimeOffset> são muito mais comuns do que aqueles para valores <xref:System.DateTime>. Como resultado, <xref:System.DateTimeOffset> deve ser considerado o tipo de data e hora padrão para o desenvolvimento de aplicativo.
+> Esses usos para os valores <xref:System.DateTimeOffset> são muito mais comuns do que aqueles para valores <xref:System.DateTime>. Como resultado, <xref:System.DateTimeOffset> deve ser considerado o tipo de data e hora padrão para o desenvolvimento de aplicativos.
 
 Um valor <xref:System.DateTimeOffset> não está vinculado a um determinado fuso horário, mas pode se originar de qualquer um dentre vários fusos horários. Para ilustrar isso, o exemplo a seguir lista os fusos horários aos quais vários valores <xref:System.DateTimeOffset> (incluindo um valor local da hora padrão do Pacífico) podem pertencer.
 
@@ -100,7 +100,7 @@ A estrutura <xref:System.TimeSpan> representa um intervalo de tempo. Seus dois u
 
 * Calcular o tempo decorrido. Por exemplo, a propriedade <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> retorna um valor <xref:System.TimeSpan> que reflete o intervalo de tempo decorrido desde a chamada de um método <xref:System.Diagnostics.Stopwatch> que começa a medir o tempo decorrido.
 
-Um valor <xref:System.TimeSpan> também pode ser usado como uma substituição para um valor <xref:System.DateTime> quando esse valor reflete um tempo sem referência a uma determinada hora do dia. Esse uso é semelhante para as propriedades <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, que retornam um valor <xref:System.TimeSpan> que representa o tempo sem referência a uma data. Por exemplo, a estrutura <xref:System.TimeSpan> pode ser usada para refletir a abertura diária ou a hora de fechamento de uma loja ou ela pode ser usada para representar a hora em que qualquer evento regular ocorre.
+Um <xref:System.TimeSpan> valor também pode ser usado como uma substituição para um <xref:System.DateTime> valor quando esse valor reflete uma hora sem referência a um dia específico. Esse uso é semelhante para as propriedades <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, que retornam um valor <xref:System.TimeSpan> que representa o tempo sem referência a uma data. Por exemplo, a estrutura <xref:System.TimeSpan> pode ser usada para refletir a abertura diária ou a hora de fechamento de uma loja ou ela pode ser usada para representar a hora em que qualquer evento regular ocorre.
 
 O exemplo a seguir define uma estrutura `StoreInfo` que inclui objetos <xref:System.TimeSpan> para armazenar a hora de abertura e fechamento da loja, bem como um objeto <xref:System.TimeZoneInfo> que representa o fuso horário da loja. A estrutura também inclui dois métodos, `IsOpenNow` e `IsOpenAt`, que indicam se a loja está aberta em um momento especificado pelo usuário, que se considera estar no fuso horário local.
 

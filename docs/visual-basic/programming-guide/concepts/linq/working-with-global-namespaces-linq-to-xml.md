@@ -2,15 +2,15 @@
 title: Trabalhar com namespaces globais (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9aab6f7175c905fcb3e82829f131f52b3d9368ac
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908005"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710377"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Trabalhar com namespaces globais (Visual Basic) (LINQ to XML)
-Um dos principais recursos dos literais XML no Visual Basic é a capacidade de declarar namespaces XML usando o `Imports` instrução. Usando esse recurso, você pode declarar um namespace XML que usa um prefixo, ou você pode declarar um namespace XML padrão.  
+Um dos principais recursos de literais XML no Visual Basic é a capacidade de declarar namespaces XML usando a `Imports` instrução. Usando esse recurso, você pode declarar um namespace XML que usa um prefixo, ou você pode declarar um namespace XML padrão.  
   
  Esse recurso é útil em duas situações. Primeiro, namespaces declaradas em literais XML não transferem em expressões inseridas. Declarar namespaces globais reduz a quantidade de trabalho que você tem que fazer para usar expressões inseridas com namespaces. Segundo, você deve declarar namespaces globais para usar namespaces com propriedades XML.  
   
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>Consulte também
 
-- [Trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

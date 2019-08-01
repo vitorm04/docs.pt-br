@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400651"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710388"
 ---
 # <a name="threading-model"></a>Modelo de threading
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] foi projetado para livrar os desenvolvedores das dificuldades de threading. Como resultado, a maioria dos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] desenvolvedores não precisará escrever uma interface que use mais de um thread. Como os programas multi-threaded são complexos e difíceis de serem depurados, deve-se evitá-los quando existem soluções single-threaded.  
@@ -56,7 +56,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Um aplicativo single-threaded com um cálculo de execução longa  
- A [!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)] maioria das vezes passa uma grande parte do tempo ocioso enquanto aguarda eventos gerados em resposta às interações do usuário. Com a programação cuidadosa, esse tempo ocioso pode ser usado crítica, sem afetar a capacidade de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]resposta do. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo de threading não permite que a entrada interrompa uma operação acontecendo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no thread. Isso significa que você deve se certificar de retornar ao <xref:System.Windows.Threading.Dispatcher> periodicamente para processar eventos de entrada pendentes antes que eles fiquem obsoletos.  
+ A maioria das GUIs (interfaces gráficas do usuário) passam uma grande parte do tempo ocioso enquanto aguarda eventos gerados em resposta às interações do usuário. Com a programação cuidadosa, esse tempo ocioso pode ser usado crítica, sem afetar a capacidade de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]resposta do. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo de threading não permite que a entrada interrompa uma operação acontecendo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no thread. Isso significa que você deve se certificar de retornar ao <xref:System.Windows.Threading.Dispatcher> periodicamente para processar eventos de entrada pendentes antes que eles fiquem obsoletos.  
   
  Considere o exemplo a seguir:  
   
@@ -103,7 +103,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Manipulando uma operação de bloqueio com um thread de segundo plano  
- A manipulação de operações de bloqueio em um aplicativo gráfico pode ser difícil. Não desejamos chamar métodos de bloqueio por meio de manipuladores de eventos, pois o aplicativo parecerá congelado. Podemos usar um thread separado para lidar com essas operações, mas quando terminarmos, temos que sincronizar com o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread porque não podemos modificar diretamente o [!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)] de nosso thread de trabalho. Podemos usar <xref:System.Windows.Threading.Dispatcher.Invoke%2A> ou <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> <xref:System.Windows.Threading.Dispatcher> Inserir[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] delegados no do thread. Eventualmente, esses delegados serão executados com permissão para modificar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos.  
+ A manipulação de operações de bloqueio em um aplicativo gráfico pode ser difícil. Não desejamos chamar métodos de bloqueio por meio de manipuladores de eventos, pois o aplicativo parecerá congelado. Podemos usar um thread separado para lidar com essas operações, mas quando terminarmos, temos que sincronizar com o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread porque não podemos modificar diretamente a GUI de nosso thread de trabalho. Podemos usar <xref:System.Windows.Threading.Dispatcher.Invoke%2A> ou <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> <xref:System.Windows.Threading.Dispatcher> Inserir[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] delegados no do thread. Eventualmente, esses delegados serão executados com permissão para modificar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos.  
   
  Neste exemplo, simulamos uma chamada de procedimento remoto que recupera uma previsão do tempo. Usamos um thread de trabalho separado para executar essa chamada e agendamos um método Update no <xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do thread quando terminarmos.  
   

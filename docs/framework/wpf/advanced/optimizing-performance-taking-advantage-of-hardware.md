@@ -9,18 +9,18 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a47a4aae785d817904c30fe7c865a1c033eb3cca
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629656"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709217"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Otimizando o desempenho: Aproveitar o hardware
 A arquitetura interna do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem dois pipelines de renderização, hardware e software. Este tópico apresenta informações sobre esses pipelines de renderização para ajudá-lo a tomar decisões sobre otimizações de desempenho de seus aplicativos.  
   
 ## <a name="hardware-rendering-pipeline"></a>Pipeline de renderização de hardware  
- Um dos fatores mais importantes para determinar o desempenho de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é o limite de renderização: quanto mais pixels há para renderizar, maior o custo de desempenho. No entanto, quanto mais renderização pode ser descarregada para o [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], mais benefícios de desempenho você pode obter. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pipeline de processamento de hardware do aplicativo aproveita totalmente os recursos do Microsoft DirectX em hardware que oferece suporte a um mínimo de Microsoft DirectX versão 7,0. Otimizações adicionais podem ser obtidas por hardware que dá suporte ao Microsoft DirectX versão 7,0 e aos recursos do PixelShader 2.0 +.  
+ Um dos fatores mais importantes para determinar o desempenho de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é o limite de renderização: quanto mais pixels há para renderizar, maior o custo de desempenho. No entanto, quanto mais renderização puder ser descarregada na GPU (unidade de processamento gráfico), mais benefícios de desempenho você poderá obter. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pipeline de processamento de hardware do aplicativo aproveita totalmente os recursos do Microsoft DirectX em hardware que oferece suporte a um mínimo de Microsoft DirectX versão 7,0. Otimizações adicionais podem ser obtidas por hardware que dá suporte ao Microsoft DirectX versão 7,0 e aos recursos do PixelShader 2.0 +.  
   
 ## <a name="software-rendering-pipeline"></a>Pipeline de renderização de software  
  O pipeline [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de processamento de software é totalmente vinculado à CPU. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aproveita os conjuntos de instruções SSE e SSE2 na CPU para implementar um rasterizador otimizado de software com todos os recursos. Fazer fallback para o software é uma funcionalidade de aplicativo contínua disponível a qualquer momento e não pode ser renderizada usando o pipeline de renderização de hardware.  
