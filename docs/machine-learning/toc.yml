@@ -23,6 +23,8 @@
       href: tutorials/image-classification.md
     - name: Análise de vendas do produto (detecção de anomalias)
       href: tutorials/sales-anomaly-detection.md
+    - name: Detectar objetos em imagens (detecção de objetos)
+      href: tutorials/object-detection-onnx.md
 - name: Guias de instruções
   items:
     - name: Carregar dados
@@ -57,7 +59,7 @@
           href: how-to-guides/matchup-app-infer-net.md
 - name: Referência
   items:
-    - name: Referência API
+    - name: Referência de API
       href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
     - name: Referência da API de versão prévia
       href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
@@ -104,5 +106,5 @@
       items:
         - name: Usar a API de ML automatizado
           href: how-to-guides/how-to-use-the-automl-api.md
-        - name: Reference API
+        - name: Referência de API
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
