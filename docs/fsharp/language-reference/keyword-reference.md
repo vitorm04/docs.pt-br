@@ -2,12 +2,12 @@
 title: Referência de palavras-chave
 description: Encontre links para informações sobre todas as palavras F# -chave de idioma.
 ms.date: 05/16/2016
-ms.openlocfilehash: f845db74fd7ffd4164cc74acd192e39df7d2d6b1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627626"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733476"
 ---
 # <a name="keyword-reference"></a>Referência de palavras-chave
 
@@ -35,10 +35,10 @@ A tabela a seguir mostra F# todas as palavras-chave em ordem alfabética, juntam
 |`elif`|[Expressões condicionais: `if...then...else`](conditional-expressions-if-then-else.md)|Usado em ramificação condicional. Uma forma abreviada `else if`de.|
 |`else`|[Expressões condicionais: `if...then...else`](conditional-expressions-if-then-else.md)|Usado em ramificação condicional.|
 |`end`|[Estruturas](structures.md)<br /><br />[Uniões Discriminadas](discriminated-unions.md)<br /><br />[Registros](records.md)<br /><br />[Extensões de Tipo](type-extensions.md)<br /><br />[Sintaxe Detalhada](verbose-syntax.md)|Em definições de tipo e extensões de tipo, indica o fim de uma seção de definições de membro.<br /><br />Na sintaxe detalhada, usada para especificar o final de um bloco de código que começa com `begin` a palavra-chave.|
-|`exception`|[Tratamento de Exceção](/.exception-handling/index.md)<br /><br />[Tipos de Exceção](/.exception-handling/exception-types.md)|Usado para declarar um tipo de exceção.|
+|`exception`|[Tratamento de Exceção](./exception-handling/index.md)<br /><br />[Tipos de Exceção](./exception-handling/exception-types.md)|Usado para declarar um tipo de exceção.|
 |`extern`|[Funções Externas](./functions/external-functions.md)|Indica que um elemento de programa declarado está definido em outro binário ou assembly.|
 |`false`|[Tipos Primitivos](primitive-types.md)|Usado como um literal booliano.|
-|`finally`|[Exceções: A `try...finally` expressão](/.exception-handling/the-try-finally-expression.md)|Usado junto com `try` para introduzir um bloco de código que é executado independentemente de ocorrer uma exceção.|
+|`finally`|[Exceções: A `try...finally` expressão](./exception-handling/the-try-finally-expression.md)|Usado junto com `try` para introduzir um bloco de código que é executado independentemente de ocorrer uma exceção.|
 |`fixed`|[Fixado](fixed.md)|Usado para "fixar" um ponteiro na pilha para impedir que ele seja coletado pelo lixo.|
 |`for`|[Loops `for...to`Expressão](loops-for-to-expression.md)<br /><br />[Loops: Expressão for...in](loops-for-in-expression.md)|Usado em construções de looping.|
 |`fun`|[Expressões lambda: A Palavra-chave `fun` ](./functions/lambda-expressions-the-fun-keyword.md)|Usado em expressões lambda, também conhecidas como funções anônimas.|
@@ -62,7 +62,7 @@ A tabela a seguir mostra F# todas as palavras-chave em ordem alfabética, juntam
 |`new`|[Construtores](./members/constructors.md)<br /><br />[Restrições](./generics/constraints.md)|Usado para declarar, definir ou invocar um construtor que cria ou que pode criar um objeto.<br /><br />Também usado em restrições de parâmetro genérico para indicar que um tipo deve ter um determinado Construtor.|
 |`not`|[Referência de Símbolos e Operadores](./symbol-and-operator-reference/index.md)<br /><br />[Restrições](./generics/constraints.md)|Na verdade, não é uma palavra-chave. No entanto, `not struct` em combinação é usada como uma restrição de parâmetro genérico.|
 |`null`|[Valores Nulos](./values/null-values.md)<br /><br />[Restrições](./generics/constraints.md)|Indica a ausência de um objeto.<br /><br />Também usado em restrições de parâmetro genérico.|
-|`of`|[Uniões Discriminadas](discriminated-unions.md)<br /><br />[Delegados](delegates.md)<br /><br />[Tipos de Exceção](/.exception-handling/exception-types.md)|Usado em uniões discriminadas para indicar o tipo de categorias de valores e em declarações de delegado e exceção.|
+|`of`|[Uniões Discriminadas](discriminated-unions.md)<br /><br />[Delegados](delegates.md)<br /><br />[Tipos de Exceção](./exception-handling/exception-types.md)|Usado em uniões discriminadas para indicar o tipo de categorias de valores e em declarações de delegado e exceção.|
 |`open`|[Declarações de importação: A Palavra-chave `open` ](import-declarations-the-open-keyword.md)|Usado para tornar o conteúdo de um namespace ou módulo disponível sem qualificação.|
 |`or`|[Referência de Símbolos e Operadores](./symbol-and-operator-reference/index.md)<br /><br />[Restrições](./generics/constraints.md)|Usado com condições booleanas como um operador `or` booliano. Equivalente a `||`.<br /><br />Também usado em restrições de membro.|
 |`override`|[Membros](./members/index.md)|Usado para implementar uma versão de um método abstrato ou virtual que difere da versão base.|
@@ -77,7 +77,7 @@ A tabela a seguir mostra F# todas as palavras-chave em ordem alfabética, juntam
 |`then`|[Expressões condicionais: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Construtores](./members/constructors.md)|Usado em expressões condicionais.<br /><br />Também usado para executar efeitos colaterais após a construção do objeto.|
 |`to`|[Loops `for...to`Expressão](loops-for-to-expression.md)|Usado em `for` loops para indicar um intervalo.|
 |`true`|[Tipos Primitivos](primitive-types.md)|Usado como um literal booliano.|
-|`try`|[Exceções: A tentativa... Expressão with](/.exception-handling/the-try-with-expression.md)<br /><br />[Exceções: A tentativa... Expressão finally](/.exception-handling/the-try-finally-expression.md)|Usado para introduzir um bloco de código que pode gerar uma exceção. Usado junto com `with` ou `finally`.|
+|`try`|[Exceções: A tentativa... Expressão with](./exception-handling/the-try-with-expression.md)<br /><br />[Exceções: A tentativa... Expressão finally](./exception-handling/the-try-finally-expression.md)|Usado para introduzir um bloco de código que pode gerar uma exceção. Usado junto com `with` ou `finally`.|
 |`type`|[Tipos F#](fsharp-types.md)<br /><br />[Classes](classes.md)<br /><br />[Registros](records.md)<br /><br />[Estruturas](structures.md)<br /><br />[Enumerações](enumerations.md)<br /><br />[Uniões Discriminadas](discriminated-unions.md)<br /><br />[Abreviações de Tipo](type-abbreviations.md)<br /><br />[Unidades de Medida](units-of-measure.md)|Usado para declarar uma classe, registro, estrutura, união discriminada, tipo de enumeração, unidade de medida ou abreviação de tipo.|
 |`upcast`|[Conversões Cast e conversões](casting-and-conversions.md)|Usado para converter para um tipo que é superior na cadeia de herança.|
 |`use`|[Gerenciamento de recursos: A Palavra-chave `use` ](resource-management-the-use-keyword.md)|Usado em vez `let` de para valores que `Dispose` precisam ser chamados para liberar recursos.|
@@ -86,7 +86,7 @@ A tabela a seguir mostra F# todas as palavras-chave em ordem alfabética, juntam
 |`void`|[Tipos Primitivos](primitive-types.md)|Indica o tipo `void` .net. Usado ao interoperar com outras linguagens .NET.|
 |`when`|[Restrições](./generics/constraints.md)|Usado para condições booleanas (*quando protetores*) em correspondências de padrões e para introduzir uma cláusula de restrição para um parâmetro de tipo genérico.|
 |`while`|[Loops `while...do`Expressão](loops-while-do-expression.md)|Apresenta uma construção de looping.|
-|`with`|[Expressões Match](match-expressions.md)<br /><br />[Expressões de Objeto](object-expressions.md)<br /><br />[Copiar e Atualizar Expressões de Registro](copy-and-update-record-expressions.md)<br /><br />[Extensões de Tipo](type-extensions.md)<br /><br />[Exceções: A `try...with` expressão](/.exception-handling/the-try-with-expression.md)|Usado junto com a `match` palavra-chave em expressões de correspondência de padrões. Também usado em expressões de objeto, expressões de cópia de registro e extensões de tipo para introduzir definições de membro e para introduzir manipuladores de exceção.|
+|`with`|[Expressões Match](match-expressions.md)<br /><br />[Expressões de Objeto](object-expressions.md)<br /><br />[Copiar e Atualizar Expressões de Registro](copy-and-update-record-expressions.md)<br /><br />[Extensões de Tipo](type-extensions.md)<br /><br />[Exceções: A `try...with` expressão](./exception-handling/the-try-with-expression.md)|Usado junto com a `match` palavra-chave em expressões de correspondência de padrões. Também usado em expressões de objeto, expressões de cópia de registro e extensões de tipo para introduzir definições de membro e para introduzir manipuladores de exceção.|
 |`yield`|[Sequências](sequences.md)|Usado em uma expressão de sequência para produzir um valor para uma sequência.|
 |`yield!`|[Expressões de Computação](computation-expressions.md)<br /><br />[Fluxos de Trabalho Assíncronos](asynchronous-workflows.md)|Usado em uma expressão de computação para acrescentar o resultado de uma determinada expressão de computação a uma coleção de resultados para a expressão de computação que a contém.|
 

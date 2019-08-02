@@ -2,12 +2,12 @@
 title: Correspondência padrão
 description: Saiba como os padrões são usados F# no para comparar dados com estruturas lógicas, decompor dados em partes constituintes ou extrair informações de dados.
 ms.date: 05/16/2016
-ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627302"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733474"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -15,7 +15,7 @@ Padrões são regras para transformar dados de entrada. Eles são usados em toda
 
 ## <a name="remarks"></a>Comentários
 
-Padrões são usados em muitas construções de linguagem, como a `match` expressão. Eles são usados quando você está processando argumentos para funções `let` em associações, expressões lambda e nos manipuladores de exceção associados `try...with` à expressão. Para obter mais informações, consulte [corresponder expressões](match-expressions.md), [permitir associações](./functions/let-bindings.md), [expressões lambda: A `fun` palavra](./functions/lambda-expressions-the-fun-keyword.md)-chave [e as exceções: A `try...with` expressão](/.exception-handling/the-try-with-expression.md).
+Padrões são usados em muitas construções de linguagem, como a `match` expressão. Eles são usados quando você está processando argumentos para funções `let` em associações, expressões lambda e nos manipuladores de exceção associados `try...with` à expressão. Para obter mais informações, consulte [corresponder expressões](match-expressions.md), [permitir associações](./functions/let-bindings.md), [expressões lambda: A `fun` palavra](./functions/lambda-expressions-the-fun-keyword.md)-chave [e as exceções: A `try...with` expressão](./exception-handling/the-try-with-expression.md).
 
 Por exemplo, na `match` expressão, o *padrão* é o que segue o símbolo de pipe.
 
@@ -103,7 +103,7 @@ match shape with
 
 Os padrões ativos permitem definir correspondência de padrões personalizados mais complexos. Para obter mais informações sobre padrões ativos, consulte [padrões ativos](active-patterns.md).
 
-O caso em que o identificador é uma exceção é usado na correspondência de padrões no contexto de manipuladores de exceção. Para obter informações sobre correspondência de padrões no tratamento de [exceção, consulte exceções: A `try...with` expressão](/.exception-handling/the-try-with-expression.md).
+O caso em que o identificador é uma exceção é usado na correspondência de padrões no contexto de manipuladores de exceção. Para obter informações sobre correspondência de padrões no tratamento de [exceção, consulte exceções: A `try...with` expressão](./exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Padrões de variáveis
 
