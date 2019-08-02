@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331559"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629879"
 ---
 # <a name="how-to-localize-an-application"></a>Como: Localizar um aplicativo
 Esse tutorial explica como criar um aplicativo localizado usando a ferramenta LocBaml.  
@@ -66,7 +66,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>Criar o assembly satélite de recursos de idioma neutro  
  Depois que o aplicativo está configurado para gerar um assembly satélite de recursos de idioma neutro, você compila o aplicativo. Isso gera o assembly principal do aplicativo, bem como o assembly satélite de recursos de idioma neutro exigido pela LocBaml para a localização. Para compilar o aplicativo:  
   
-1. Compile HelloApp para criar um [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
+1. Compile HelloApp para criar uma DLL (biblioteca de vínculo dinâmico):  
   
      **msbuild helloapp.csproj**  
   
@@ -91,7 +91,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 4. As opções que você pode especificar ao executar a LocBaml são as seguintes:  
   
-    - **Parse** ou **-p:** Analisa BAML, recursos ou [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] arquivos para gerar um arquivo. csv ou. txt.  
+    - **Parse** ou **-p:** Analisa arquivos BAML, recursos ou DLL para gerar um arquivo. csv ou. txt.  
   
     - **gerar** ou **-g:** Gera um arquivo binário localizado usando um arquivo traduzido.  
   
