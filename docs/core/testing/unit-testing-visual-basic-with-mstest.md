@@ -4,15 +4,13 @@ description: Aprenda os conceitos de teste de unidade no .NET Core por meio de u
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-dev_langs:
-- vb
 ms.custom: seodec18
-ms.openlocfilehash: 035daf2ec7fa487c171317fd67e7c39fea7fc951
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 6081e7b6b52d85615cfde701e364eb87d69f42bf
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397611"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626422"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Bibliotecas do .NET Core no Visual Basic de teste de unidade usando dotnet test e MSTest
 
@@ -105,7 +103,7 @@ Namespace PrimeService.Tests
         Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
 
         <TestMethod>
-        Sub ReturnFalseGivenValueOf1()
+        Sub IsPrime_InputIs1_ReturnFalse()
             Dim result As Boolean = _primeService.IsPrime(1)
 
             Assert.IsFalse(result, "1 should not be prime")
@@ -117,14 +115,14 @@ End Namespace
 
 O atributo `<TestClass>` indica uma classe que contém testes. O atributo `<TestMethod>` indica um método que é executado pelo executor de teste. Em *unit-testing-vb-mstest*, execute [`dotnet test`](../tools/dotnet-test.md) para criar os testes e a biblioteca de classes e, em seguida, execute os testes. O executor de teste do MSTest contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
 
-O teste falha. Você ainda não criou a implementação. Faça esse teste escrevendo o código mais simples na classe `PrimeService` que funciona:
+O teste falha. Você ainda não criou a implementação. Faça esse teste ser aprovado escrevendo o código mais simples na classe `PrimeService` que funciona:
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first")
+    Throw New NotImplementedException("Please create a test first.")
 End Function
 ```
 

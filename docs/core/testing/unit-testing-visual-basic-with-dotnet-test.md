@@ -4,15 +4,13 @@ description: Aprenda os conceitos de teste de unidade no .NET Core por meio de u
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-dev_langs:
-- vb
 ms.custom: seodec18
-ms.openlocfilehash: 193746e8efda5d7bc9e086bb0abf934cfeb1741a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e8d5b565bc04a0beb30142247b4ee8d94dcce86b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748590"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626443"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Bibliotecas do .NET Core no Visual Basic de teste de unidade usando dotnet test e xUnit
 
@@ -102,7 +100,7 @@ Namespace PrimeService.Tests
         Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
 
         <Fact>
-        Sub ReturnFalseGivenValueOf1()
+        Sub IsPrime_InputIs1_ReturnFalse()
             Dim result As Boolean = _primeService.IsPrime(1)
 
             Assert.False(result, "1 should not be prime")
@@ -114,14 +112,14 @@ End Namespace
 
 O atributo `<Fact>` indica um método de teste que é executado pelo executor de teste. Em *unit-testing-using-dotnet-test*, execute [`dotnet test`](../tools/dotnet-test.md) para criar os testes e a biblioteca de classes e execute os testes. O executor de teste do xUnit contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
 
-O teste falha. Você ainda não criou a implementação. Faça esse teste escrevendo o código mais simples na classe `PrimeService` que funciona:
+O teste falha. Você ainda não criou a implementação. Faça esse teste ser aprovado escrevendo o código mais simples na classe `PrimeService` que funciona:
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first")
+    Throw New NotImplementedException("Please create a test first.")
 End Function
 ```
 

@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 926e47c277c8649627482a8036ca3704be142f33
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7b559d94c03081a8ef67cf91ccfb7d08ff5b6c60
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631874"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626452"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do F# no .NET Core usando dotnet test e NUnit
 
@@ -154,7 +154,7 @@ Observe que a sequência `expected` foi convertida em uma lista. A estrutura do 
 
 Ao executar o teste, você verá que ele falha. Você ainda não criou a implementação. Faça esse teste passar escrevendo o código mais simples na classe *Library.fs* em seu projeto MathService que funciona:
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```

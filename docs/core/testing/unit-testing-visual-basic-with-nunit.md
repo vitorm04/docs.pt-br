@@ -3,15 +3,13 @@ title: Teste de unidade do Visual Basic no .NET Core com dotnet test e NUnit
 description: Aprenda os conceitos de teste de unidade no .NET Core por meio de uma experiência interativa de criação passo a passo de uma solução de exemplo do Visual Basic usando NUnit.
 author: rprouse
 ms.date: 10/04/2018
-dev_langs:
-- vb
 ms.custom: seodec18
-ms.openlocfilehash: cf8a81241c93a6eeecf04052aba57750774aa050
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 84287a94504594c731c0fbccf2e61a957a15a36f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397499"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626405"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do .NET Core do Visual Basic usando dotnet test e NUnit
 
@@ -52,7 +50,7 @@ Imports System
 Namespace Prime.Services
     Public Class PrimeService
         Public Function IsPrime(candidate As Integer) As Boolean
-            Throw New NotImplementedException("Please create a test first")
+            Throw New NotImplementedException("Please create a test first.")
         End Function
     End Class
 End Namespace
@@ -127,7 +125,7 @@ Namespace PrimeService.Tests
         Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
 
         <Test>
-        Sub ReturnFalseGivenValueOf1()
+        Sub IsPrime_InputIs1_ReturnFalse()
             Dim result As Boolean = _primeService.IsPrime(1)
 
             Assert.False(result, "1 should not be prime")
@@ -139,14 +137,14 @@ End Namespace
 
 O atributo `<TestFixture>` indica uma classe que contém testes. O atributo `<Test>` indica um método que é executado pelo executor de teste. Em *unit-testing-vb-nunit*, execute [`dotnet test`](../tools/dotnet-test.md) para criar os testes e a biblioteca de classes e, em seguida, execute os testes. O executor de teste do NUnit contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
 
-O teste falha. Você ainda não criou a implementação. Faça esse teste escrevendo o código mais simples na classe `PrimeService` que funciona:
+O teste falha. Você ainda não criou a implementação. Faça esse teste ser aprovado escrevendo o código mais simples na classe `PrimeService` que funciona:
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first")
+    Throw New NotImplementedException("Please create a test first.")
 End Function
 ```
 

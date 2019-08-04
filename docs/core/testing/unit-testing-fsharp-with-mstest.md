@@ -4,15 +4,13 @@ description: Aprenda os conceitos de teste de unidade para F# no .NET Core por m
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 1765c16cb55857b83a8206ae97327d0fd2809019
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 3b93f4ed21d9d5eccf1dd02f253e7456aec02807
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747486"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626469"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Bibliotecas do F# de teste de unidade no .NET Core usando dotnet test e MSTest
 
@@ -123,9 +121,9 @@ member this.TestEvenSequence() =
 
 Observe que a sequência `expected` foi convertida em uma lista. A biblioteca do MSTest depende de muitos tipos padrão de .NET. Essa dependência significa que sua interface pública e os resultados esperados dão suporte a <xref:System.Collections.ICollection> em vez de <xref:System.Collections.IEnumerable>.
 
-Ao executar o teste, você verá que ele falha. Você ainda não criou a implementação. Faça esse teste escrevendo o código mais simples na classe `Mathservice` que funciona:
+Ao executar o teste, você verá que ele falha. Você ainda não criou a implementação. Faça esse teste ser aprovado escrevendo o código mais simples na classe `Mathservice` que funciona:
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int> |> Seq.toList
 ```
