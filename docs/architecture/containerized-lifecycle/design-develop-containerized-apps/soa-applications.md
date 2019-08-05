@@ -1,0 +1,25 @@
+---
+title: Aplicativos de SOA
+description: Tenha em mente que os contêineres também podem ser uma opção de implantação útil para aplicativos de SOA.
+ms.date: 02/15/2019
+ms.openlocfilehash: aa56ada7b14a465fb3dafd02b03b815782ac765b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68672353"
+---
+# <a name="service-oriented-applications"></a><span data-ttu-id="5e005-103">Aplicativos orientados a serviços</span><span class="sxs-lookup"><span data-stu-id="5e005-103">Service-oriented applications</span></span>
+
+<span data-ttu-id="5e005-104">A SOA (Arquitetura Orientada a Serviços) era um termo usado de maneira exagerada que significava diferentes coisas para diferentes pessoas.</span><span class="sxs-lookup"><span data-stu-id="5e005-104">Service-Oriented Architecture (SOA) was an overused term that meant many different things to different people.</span></span> <span data-ttu-id="5e005-105">Mas, como um denominador comum, a SOA significa que você estrutura a arquitetura de seu aplicativo o decompondo em vários serviços (mais comumente, como serviços HTTP) que podem ser classificados em diferentes tipos, como subsistemas ou, em outros casos, como camadas.</span><span class="sxs-lookup"><span data-stu-id="5e005-105">But as a common denominator, SOA means that you structure the architecture of your application by decomposing it into several services (most commonly as HTTP services) that can be classified in different types like subsystems or, in other cases, as tiers.</span></span>
+
+<span data-ttu-id="5e005-106">Atualmente, é possível implantar esses serviços como contêineres do Docker, que resolve problemas de implantação, porque todas as dependências estão incluídas na imagem de contêiner.</span><span class="sxs-lookup"><span data-stu-id="5e005-106">Today, you can deploy those services as Docker containers, which solve deployment-related issues because all of the dependencies are included in the container image.</span></span> <span data-ttu-id="5e005-107">No entanto, quando precisar expandir SOAs, você poderá encontrar desafios se estiver implantando com base em instâncias únicas.</span><span class="sxs-lookup"><span data-stu-id="5e005-107">However, when you need to scale out SOAs, you might encounter challenges if you're deploying based on single instances.</span></span> <span data-ttu-id="5e005-108">Esse desafio pode ser solucionado usando softwares de clustering ou um orquestrador do Docker.</span><span class="sxs-lookup"><span data-stu-id="5e005-108">This challenge can be handled using Docker clustering software or an orchestrator.</span></span> <span data-ttu-id="5e005-109">Vamos examinar mais detalhadamente os orquestradores na próxima seção, quando explorarmos as abordagens de microsserviços.</span><span class="sxs-lookup"><span data-stu-id="5e005-109">We'll look at orchestrators in greater detail in the next section, when we explore microservices approaches.</span></span>
+
+<span data-ttu-id="5e005-110">Os contêineres do Docker são úteis (mas não necessários) para arquiteturas tradicionais orientadas a serviço e para as arquiteturas de microsserviços mais avançadas.</span><span class="sxs-lookup"><span data-stu-id="5e005-110">Docker containers are useful (but not required) for both traditional service-oriented architectures and the more advanced microservices architectures.</span></span>
+
+<span data-ttu-id="5e005-111">Ao considerar tudo, as soluções de clustering de contêiner são úteis para uma arquitetura de SOA tradicional e para uma arquitetura de microsserviços mais avançada na qual cada microsserviço tem seu próprio modelo de dados.</span><span class="sxs-lookup"><span data-stu-id="5e005-111">At the end of the day, the container clustering solutions are useful for both a traditional SOA architecture and for a more advanced microservices architecture in which each microservice owns its data model.</span></span> <span data-ttu-id="5e005-112">E, graças aos vários bancos de dados, você também pode expandir a camada de dados em vez de trabalhar com bancos de dados monolíticos compartilhados pelos serviços de SOA.</span><span class="sxs-lookup"><span data-stu-id="5e005-112">And thanks to multiple databases, you also can scale out the data tier instead of working with monolithic databases shared by the SOA services.</span></span> <span data-ttu-id="5e005-113">No entanto, a discussão sobre divisão dos dados é puramente sobre arquitetura e design.</span><span class="sxs-lookup"><span data-stu-id="5e005-113">However, the discussion about splitting the data is purely about architecture and design.</span></span>
+
+>[!div class="step-by-step"]
+><span data-ttu-id="5e005-114">[Anterior](state-and-data-in-docker-applications.md)
+>[Próximo](orchestrate-high-scalability-availability.md)</span><span class="sxs-lookup"><span data-stu-id="5e005-114">[Previous](state-and-data-in-docker-applications.md)
+[Next](orchestrate-high-scalability-availability.md)</span></span>
