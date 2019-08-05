@@ -595,14 +595,16 @@
       items:
         - name: 'Sistemas do tipo C#'
           href: csharp/programming-guide/types/index.md
+        - name: Tipos de referência anuláveis
+          href: csharp/nullable-references.md
+        - name: Descrever APIs anuláveis usando atributos e restrições
+          href: csharp/nullable-attributes.md
         - name: Namespaces
           href: csharp/programming-guide/namespaces/index.md
         - name: Tipos Básicos
           href: csharp/basic-types.md
         - name: Classes
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: Tipos de referência anuláveis
-          href: csharp/nullable-references.md
         - name: Structs
           href: csharp/structs.md
         - name: Tuplas
