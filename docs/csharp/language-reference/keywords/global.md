@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 8932c16a-6959-42c2-86e7-2c4221ab788b
-ms.openlocfilehash: 1c0177c52e21ae60477a283085a2893e2e067c54
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9a8c7b5134cc29668aae53e8a3f86ddae4c8263a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633473"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627687"
 ---
 # <a name="global-c-reference"></a>global (Referência de C#)
 
-Quando a palavra-chave contextual `global` vem antes do [operador ::](../operators/namespace-alias-qualifer.md), refere-se ao namespace global, que é o namespace padrão para qualquer programa em C#, que não foi nomeado de outra maneira. Para obter mais informações, confira [Como: usar o alias de namespace global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
+Quando a palavra-chave contextual `global` vem antes do [operador ::](../operators/namespace-alias-qualifier.md), refere-se ao namespace global, que é o namespace padrão para qualquer programa em C#, que não foi nomeado de outra maneira. Para obter mais informações, confira [Como: usar o alias de namespace global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
 
 ## <a name="example"></a>Exemplo
 

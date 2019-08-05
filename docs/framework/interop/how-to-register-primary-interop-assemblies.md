@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b859f109cc224ebf1a8fd62a1d3d3440cf906c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636098"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629374"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Como: Registrar assemblies de interoperabilidade primários
 
-As classes podem ter o marshaling realizado somente pela interoperabilidade COM e sempre têm o marshaling realizado como interfaces. Em alguns casos, a interface usada para realizar marshaling da classe é conhecida como a interface de classe. Para obter informações sobre como substituir a interface de classe por uma interface de sua preferência, consulte [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md).
+As classes podem ter o marshaling realizado somente pela interoperabilidade COM e sempre têm o marshaling realizado como interfaces. Em alguns casos, a interface usada para realizar marshaling da classe é conhecida como a interface de classe. Para obter informações sobre como substituir a interface de classe por uma interface de sua preferência, consulte [COM Callable Wrapper](../../../docs/standard/native-interop/com-callable-wrapper.md).
 
  Embora qualquer desenvolvedor que deseje usar tipos COM de um aplicativo do .NET Framework possa gerar um assembly de interoperabilidade, fazer isso cria um problema. Cada vez que um desenvolvedor importa e assina uma biblioteca de tipos COM, o desenvolvedor cria um conjunto de tipos exclusivos que são incompatíveis com aqueles importados e assinados por outro desenvolvedor. A solução para esse problema de incompatibilidade de tipo é que cada desenvolvedor obtenha o assembly de interoperabilidade primário assinado e fornecido pelo fornecedor.
 

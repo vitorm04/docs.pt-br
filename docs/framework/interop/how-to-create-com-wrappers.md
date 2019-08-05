@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e10b6fd7df003de739b57bbb3e17deb46215763f
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363996"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629348"
 ---
 # <a name="how-to-create-com-wrappers"></a>Como: Criar wrappers COM
 
 Você pode criar wrappers COM (Component Object Model) usando recursos do Visual Studio 2005 ou as ferramentas Tlbimp.exe e Regasm.exe do .NET Framework. Ambos os métodos geram dois tipos de wrappers COM:
 
-- Um [RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md) de uma biblioteca de tipos para executar um objeto COM em um código gerenciado.
+- Um [RCW (Runtime Callable Wrapper)](../../../docs/standard/native-interop/runtime-callable-wrapper.md) de uma biblioteca de tipos para executar um objeto COM em um código gerenciado.
 
-- Um [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md) com as configurações do Registro necessárias para executar um objeto gerenciado em um aplicativo nativo.
+- Um [COM Callable Wrapper](../../../docs/standard/native-interop/com-callable-wrapper.md) com as configurações do Registro necessárias para executar um objeto gerenciado em um aplicativo nativo.
 
 No Visual Studio 2005, você pode adicionar o wrapper COM como uma referência ao projeto.
 
@@ -75,5 +75,5 @@ Execute o Regasm.exe em um assembly localizado em qualquer diretório e, em segu
   
 ## <a name="see-also"></a>Consulte também
 
-- [RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)
+- [RCW (Runtime Callable Wrapper)](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
+- [COM Callable Wrapper](../../../docs/standard/native-interop/com-callable-wrapper.md)
