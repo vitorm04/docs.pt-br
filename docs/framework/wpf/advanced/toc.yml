@@ -1,4 +1,4 @@
-- name: Avançado
+- name: Áreas do WPF avançado
   href: index.md
   items:
     - name: Arquitetura do WPF
@@ -56,7 +56,7 @@
               href: mc-ignorable-attribute.md
             - name: 'Atributo mc:ProcessContent'
               href: mc-processcontent-attribute.md
-    - name: Elementos base
+    - name: Classes de elementos base
       href: base-elements.md
       items:
         - name: Visão geral de elementos base
@@ -65,7 +65,7 @@
           href: freezable-objects-overview.md
         - name: 'Visão geral de alinhamento, margens e preenchimento'
           href: alignment-margins-and-padding-overview.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: base-elements-how-to-topics.md
           items:
             - name: Deixar um UIElement transparente ou semitransparente
@@ -97,14 +97,14 @@
           href: serialization-limitations-of-xamlwriter-save.md
         - name: Inicialização de elementos de objeto que não estejam em uma árvore de objetos
           href: initialization-for-object-elements-not-in-an-object-tree.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: element-tree-and-serialization-how-to-topics.md
           items:
             - name: Localizar um elemento pelo nome
               href: how-to-find-an-element-by-its-name.md
             - name: Substituir a árvore lógica
               href: how-to-override-the-logical-tree.md
-    - name: Propriedades
+    - name: Sistema de propriedades do WPF
       href: properties-wpf.md
       items:
         - name: Visão geral de propriedades da dependência
@@ -133,7 +133,7 @@
           href: collection-type-dependency-properties.md
         - name: Carregamento de XAML e propriedades da dependência
           href: xaml-loading-and-dependency-properties.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: properties-how-to-topics.md
           items:
             - name: Implementar uma propriedade de dependência
@@ -163,7 +163,7 @@
           href: visual-basic-and-wpf-event-handling.md
         - name: Padrões de evento fraco
           href: weak-event-patterns.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: events-how-to-topics.md
           items:
             - name: Adicionar um manipulador de eventos usando código
@@ -189,7 +189,7 @@
           href: styling-for-focus-in-controls-and-focusvisualstyle.md
         - name: 'Passo a passo: criar o primeiro aplicativo sensível ao toque'
           href: walkthrough-creating-your-first-touch-application.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: input-and-commands-how-to-topics.md
           items:
             - name: Habilitar um comando
@@ -241,7 +241,7 @@
                       href: creating-an-ink-input-control.md
                     - name: O modelo de threading da tinta
                       href: the-ink-threading-model.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: digital-ink-how-to-topics.md
               items:
                 - name: Selecionar tinta em um controle personalizado
@@ -271,7 +271,7 @@
           href: data-and-data-objects.md
         - name: 'Passo a passo: habilitar arrastar e soltar em um controle de usuário'
           href: walkthrough-enabling-drag-and-drop-on-a-user-control.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: drag-and-drop-how-to-topics.md
           items:
             - name: Abrir um arquivo solto em um controle RichTextBox
@@ -296,7 +296,7 @@
               href: resources-and-code.md
             - name: Dicionários de recursos mesclados
               href: merged-resource-dictionaries.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: resources-how-to-topics.md
               items:
                 - name: Definir e referenciar um recurso
@@ -334,7 +334,7 @@
               href: textelement-content-model-overview.md
             - name: Visão geral da tabela
               href: table-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: flow-content-elements-how-to-topics.md
               items:
                 - name: Ajustar o espaçamento entre parágrafos
@@ -389,7 +389,7 @@
                   href: packaging-fonts-with-applications.md
                 - name: Pacote de fontes OpenType de amostra
                   href: sample-opentype-font-pack.md
-                - name: 'Tópicos explicativos '
+                - name: Tópicos explicativos
                   href: fonts-how-to-topics.md
                   items:
                     - name: Enumerar fontes de sistema
@@ -403,7 +403,7 @@
                   href: introduction-to-the-glyphrun-object-and-glyphs-element.md
                 - name: 'Como: Desenhar texto usando glifos'
                   href: draw-text-using-glyphs.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: typography-how-to-topics.md
               items:
                 - name: Criar uma decoração de texto
@@ -429,7 +429,7 @@
           items:
             - name: Visão geral da impressão
               href: printing-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: printing-how-to-topics.md
               items:
                 - name: Invocar uma caixa de diálogo Imprimir
@@ -463,7 +463,7 @@
           href: localization-attributes-and-comments.md
         - name: Visão geral dos recursos bidirecionais no WPF
           href: bidirectional-features-in-wpf-overview.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: globalization-and-localization-how-to-topics.md
           items:
             - name: Localizar um aplicativo
