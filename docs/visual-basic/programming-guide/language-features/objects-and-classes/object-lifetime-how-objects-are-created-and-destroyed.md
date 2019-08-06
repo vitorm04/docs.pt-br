@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 5b092f50ddff5c432fbd6396b5fedafe7a6acba0
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 932f56a9a277360b11c551aaa1faf819f8e07fe6
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512838"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796677"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Tempo de vida do objeto: Como os objetos são criados e destruídos (Visual Basic)
 
 Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`. Tarefas de inicialização geralmente devem ser executadas em novos objetos antes de serem usadas. Tarefas comuns de inicialização incluem abrir arquivos, conectar-se aos bancos de dados e ler os valores das chaves do registro. Visual Basic controla a inicialização de novos objetos usando procedimentos chamados *construtores* (métodos especiais que permitem o controle sobre a inicialização).
 
-Depois que um objeto sai do escopo, ele é liberado pelo common language runtime (CLR). Visual Basic controla a versão dos recursos do sistema usando procedimentos chamados destruidores. Juntos, os construtores e os destruidores oferecem suporte à criação de bibliotecas de classe robusta e previsível.
+Depois que um objeto sai do escopo, ele é liberado pelo common language runtime (CLR). Visual Basic controla a versão dos recursos do sistema usando procedimentoschamados destruidores. Juntos, os construtores e os destruidores oferecem suporte à criação de bibliotecas de classe robusta e previsível.
 
 ## <a name="using-constructors-and-destructors"></a>Usando construtores e destruidores
 
@@ -41,7 +41,7 @@ Os construtores e os destruidores controlam a criação e a destruição de obje
 
 ### <a name="sub-new"></a>Sub New
 
-O construtor `Sub New` pode ser executado apenas uma vez quando uma classe é criada. Não pode ser chamado explicitamente em qualquer lugar que não seja na primeira linha do código de outro construtor da mesma classe ou de uma classe derivada. Além disso, o código no método `Sub New` sempre é executado antes de qualquer outro código em uma classe. Visual Basic e versões posteriores criam implicitamente `Sub New` um construtor em tempo de execução se você não definir explicitamente `Sub New` um procedimento para uma classe.
+O construtor `Sub New` pode ser executado apenas uma vez quando uma classe é criada. Não pode ser chamado explicitamente em qualquer lugar que não seja na primeira linha do código de outro construtor da mesma classe ou de uma classe derivada. Além disso, o código no método `Sub New` sempre é executado antes de qualquer outro código em uma classe. Visual Basic cria implicitamente um `Sub New` Construtor em tempo de execução se você não definir explicitamente um `Sub New` procedimento para uma classe.
 
 Para criar um construtor para uma classe, crie um procedimento denominado `Sub New` em qualquer lugar na definição de classe. Para criar um construtor com parâmetros, especifique os nomes e tipos de dados dos argumentos para `Sub New` exatamente como você faria para qualquer outro procedimento, como no seguinte código:
 
@@ -64,7 +64,7 @@ Antes da liberação de objetos, o CLR chama automaticamente o método `Finalize
 
 O destruidor `Finalize` é um método protegido que pode ser chamado somente da classe à qual pertence ou de classes derivadas. O sistema automaticamente chama `Finalize` quando um objeto é destruído, assim, você não deve chamar explicitamente o `Finalize` de fora de uma implementação `Finalize` de classe derivada.
 
-Diferentemente de `Class_Terminate`, que é executado assim que um objeto é definido como nada, normalmente existe um atraso entre o momento em que um objeto perde o escopo e o momento em que o Visual Basic chama o destruidor `Finalize`. Visual Basic e versões posteriores permitem um segundo tipo de destruidor, <xref:System.IDisposable.Dispose%2A>, que pode ser chamado explicitamente a qualquer momento para liberar recursos imediatamente.
+Diferentemente de `Class_Terminate`, que é executado assim que um objeto é definido como nada, normalmente existe um atraso entre o momento em que um objeto perde o escopo e o momento em que o Visual Basic chama o destruidor `Finalize`. Visual Basic .net permite um segundo tipo de destruidor, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, que pode ser chamado explicitamente a qualquer momento para liberar recursos imediatamente.
 
 > [!NOTE]
 > Um destruidor `Finalize` não deve lançar exceções, já que elas não podem ser tratadas pelo aplicativo e podem fazer com que o aplicativo seja finalizado.

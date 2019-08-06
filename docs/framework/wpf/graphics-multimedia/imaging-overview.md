@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b6fb530bbc4132b09cc17ad692e6e9e23cd75598
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 9adceb78f53d9c855ec05859a0b3449a1623e62b
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671852"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796849"
 ---
 # <a name="imaging-overview"></a>Visão geral da geração de imagens
 Este tópico é uma introdução ao [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. O [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] permite aos desenvolvedores exibir, transformar e formatar imagens.  
@@ -165,7 +165,7 @@ Os pincéis de imagem podem preencher formas, controles, texto e muito mais
 ## <a name="image-metadata"></a>Metadados de imagem  
  Alguns arquivos de imagem contêm metadados que descrevem o conteúdo ou as características do arquivo. Por exemplo, a maioria das câmeras digitais criam imagens que contêm metadados sobre a marca e modelo da câmera usada para capturar a imagem. Cada formato de imagem manipula os metadados de maneira diferente, mas o [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] fornece uma maneira uniforme de armazenar e recuperar metadados para cada formato de imagem com suporte.  
   
- O acesso aos metadados é fornecido por <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> meio da propriedade <xref:System.Windows.Media.Imaging.BitmapSource> de um objeto. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Retorna um <xref:System.Windows.Media.Imaging.BitmapMetadata> objeto que inclui todos os metadados contidos na imagem. Esses dados podem estar em um esquema de metadados ou em uma combinação de esquemas diferentes. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]o dá suporte aos seguintes esquemas de metadados de imagem: Arquivo de imagem intercambiável (EXIF), texto (dados textuais de png) [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], e [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ O acesso aos metadados é fornecido por <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> meio da propriedade <xref:System.Windows.Media.Imaging.BitmapSource> de um objeto. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Retorna um <xref:System.Windows.Media.Imaging.BitmapMetadata> objeto que inclui todos os metadados contidos na imagem. Esses dados podem estar em um esquema de metadados ou em uma combinação de esquemas diferentes. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]o dá suporte aos seguintes esquemas de metadados de imagem: Arquivo de imagem intercambiável (EXIF), texto (dados textuais de png), IFD (diretório de arquivos de [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]imagem) [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)], e.  
   
  Para simplificar o processo de leitura de metadados, <xref:System.Windows.Media.Imaging.BitmapMetadata> o fornece várias propriedades nomeadas que podem ser acessadas <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>facilmente, <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>como, e. Muitas dessas propriedades nomeadas também podem ser usadas para gravar metadados. O suporte adicional para a leitura de metadados é fornecido pelo leitor de consulta de metadados. O <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> método é usado para recuperar um leitor de consulta de metadados, fornecendo uma consulta de cadeia de caracteres como *"/app1/exif/"* . No exemplo a seguir, <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> é usado para obter o texto armazenado no local *"/Text/Description"* .  
   

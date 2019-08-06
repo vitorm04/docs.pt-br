@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ffb397c673333b26649a815fce7a5d4e63e5b987
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401730"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796777"
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
 Os usuários interagem com aplicativos autônomos do Windows Presentation Foundation (WPF) por meio do Windows. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Os [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos fornecem suas próprias janelas usando <xref:System.Windows.Window> a classe. Este tópico apresenta <xref:System.Windows.Window> antes de abranger os conceitos básicos da criação e gerenciamento de janelas em aplicativos autônomos.  
@@ -167,7 +167,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
   
 - Ser minimizada, maximizada e restaurada sem afetar a outra.  
   
- Algumas janelas requerem uma relação com a janela que as abre. Por exemplo, um [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] aplicativo pode abrir janelas de propriedades e janelas de ferramentas cujo comportamento típico é abordar a janela que as cria. Além disso, janelas desse tipo devem sempre fechar, minimizar, maximizar e restaurar em conjunto com a janela que as criou. Tal relação pode ser estabelecida fazendo uma janela *própria* e é obtida definindo a <xref:System.Windows.Window.Owner%2A> propriedade da janela de *Propriedade* com uma referência à janela do *proprietário*. Isso é mostrado no exemplo a seguir.  
+ Algumas janelas requerem uma relação com a janela que as abre. Por exemplo, um aplicativo IDE (ambiente de desenvolvimento integrado) pode abrir janelas de propriedades e janelas de ferramentas cujo comportamento típico é abordar a janela que as cria. Além disso, janelas desse tipo devem sempre fechar, minimizar, maximizar e restaurar em conjunto com a janela que as criou. Tal relação pode ser estabelecida fazendo uma janela *própria* e é obtida definindo a <xref:System.Windows.Window.Owner%2A> propriedade da janela de *Propriedade* com uma referência à janela do *proprietário*. Isso é mostrado no exemplo a seguir.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -239,7 +239,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
   
 - Um item de **fechamento** no menu **arquivo** , normalmente em uma janela de aplicativo secundário.  
   
-- Um  botão de cancelamento, normalmente em uma caixa de diálogo modal.  
+- Um botão de cancelamento, normalmente em uma caixa de diálogo modal.  
   
 - Um botão **fechar** , normalmente em uma caixa de diálogo sem janela restrita.  
   
@@ -372,9 +372,9 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
 ## <a name="window-state"></a>Estado da janela  
  Durante o tempo de vida de uma janela redimensionável, ela pode ter três estados: normal, minimizada e maximizada. Uma janela com um estado *normal* é o estado padrão de uma janela. Uma janela com esse estado permitirá que um usuário a mova e a redimensione usando uma alça de redimensionamento ou a borda, se ela for redimensionável.  
   
- Uma janela com um  estado minimizado será recolhida ao botão da barra de <xref:System.Windows.Window.ShowInTaskbar%2A> tarefas se for `true`definido como; caso contrário, ele será recolhido para o menor tamanho possível que pode ser e realocado para o canto inferior esquerdo da área de trabalho. Nenhum tipo de janela minimizada pode ser redimensionado usando uma borda ou alça redimensionável, embora uma janela minimizada não mostrada na barra de tarefas possa ser arrastada pela área de trabalho.  
+ Uma janela com um estado minimizado será recolhida ao botão da barra de <xref:System.Windows.Window.ShowInTaskbar%2A> tarefas se for `true`definido como; caso contrário, ele será recolhido para o menor tamanho possível que pode ser e realocado para o canto inferior esquerdo da área de trabalho. Nenhum tipo de janela minimizada pode ser redimensionado usando uma borda ou alça redimensionável, embora uma janela minimizada não mostrada na barra de tarefas possa ser arrastada pela área de trabalho.  
   
- Uma janela com um  estado maximizado se expande para o tamanho máximo que pode ser, que será tão grande quanto suas <xref:System.Windows.FrameworkElement.MaxWidth%2A>Propriedades, <xref:System.Windows.FrameworkElement.MaxHeight%2A>e <xref:System.Windows.Window.SizeToContent%2A> ditadas. Assim como ocorre com uma janela minimizada, uma janela maximizada não pode ser redimensionada usando uma alça de redimensionamento ou arrastando a borda.  
+ Uma janela com um estado maximizado se expande para o tamanho máximo que pode ser, que será tão grande quanto suas <xref:System.Windows.FrameworkElement.MaxWidth%2A>Propriedades, <xref:System.Windows.FrameworkElement.MaxHeight%2A>e <xref:System.Windows.Window.SizeToContent%2A> ditadas. Assim como ocorre com uma janela minimizada, uma janela maximizada não pode ser redimensionada usando uma alça de redimensionamento ou arrastando a borda.  
   
 > [!NOTE]
 >  Os <xref:System.Windows.Window.Top%2A>valores das <xref:System.Windows.Window.Left%2A> Propriedades<xref:System.Windows.FrameworkElement.Height%2A> ,, <xref:System.Windows.FrameworkElement.Width%2A>e de uma janela sempre representam os valores para o estado normal, mesmo quando a janela está atualmente maximizada ou minimizada.  
@@ -401,7 +401,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Modo de redimensionamento  
- Dependendo da <xref:System.Windows.Window.WindowStyle%2A> Propriedade, você pode controlar como (e se) os usuários podem redimensionar a janela. A escolha do estilo de janela afeta se um usuário pode redimensionar a janela arrastando sua borda com o mouse, se os botões **minimizar**, **maximizar**e redimensionar aparecem na área não cliente e, se forem exibidos, se eles estão  habilitado.  
+ Dependendo da <xref:System.Windows.Window.WindowStyle%2A> Propriedade, você pode controlar como (e se) os usuários podem redimensionar a janela. A escolha do estilo de janela afeta se um usuário pode redimensionar a janela arrastando sua borda com o mouse, se os botões **minimizar**, **maximizar**e redimensionar aparecem na área não cliente e, se forem exibidos, se eles estão habilitado.  
   
  Você pode configurar como uma janela é redimensionada definindo sua <xref:System.Windows.Window.ResizeMode%2A> Propriedade, que pode ser um dos seguintes <xref:System.Windows.ResizeMode> valores de enumeração:  
   

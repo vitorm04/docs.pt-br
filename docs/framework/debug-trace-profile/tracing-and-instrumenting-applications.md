@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 42665b3b971f9026bf49aeb081017521eab0117f
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469528"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796742"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Rastreamento e instrumentação de aplicativos
 O rastreamento é uma maneira de monitorar a execução do aplicativo enquanto ele está em execução. É possível adicionar a instrumentação de rastreamento e depuração ao aplicativo do .NET Framework durante seu desenvolvimento e usar essa instrumentação enquanto você estiver desenvolvendo o aplicativo e depois de implantá-lo. É possível usar as classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar informações sobre erros e a execução do aplicativo em logs, arquivos de texto ou outros dispositivos para análise posterior.  
@@ -60,7 +60,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  Isso permite depurar os aplicativos e otimizar seu desempenho com base em seu comportamento no ambiente de teste. É possível depurar o aplicativo no build de depuração com o atributo condicional <xref:System.Diagnostics.Debug> ativado, de modo que toda a saída de depuração seja recebida. Quando o aplicativo está pronto para liberação, é possível compilar o build de versão sem ativar o atributo condicional <xref:System.Diagnostics.Debug>, de modo que o compilador não inclua o código de depuração no executável final. Para obter mais informações, confira [Como: compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Para obter mais informações sobre diferentes configurações de build para o aplicativo, consulte [Compilando e criando](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
- Você também pode rastrear a execução de código em um aplicativo instalado, usando métodos da classe <xref:System.Diagnostics.Trace>. Colocando [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md) no código, você pode controlar se o rastreamento ocorre e sua extensão. Isso permite monitorar o status do aplicativo em um ambiente de produção. Isso é especialmente importante em um aplicativo de negócios que usa vários componentes executados em vários computadores. É possível controlar como as opções são usadas após a implantação por meio do arquivo de configuração. Para obter mais informações, confira [Como: Criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+ Você também pode rastrear a execução de código em um aplicativo instalado, usando métodos da classe <xref:System.Diagnostics.Trace>. Colocando [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md) no código, você pode controlar se o rastreamento ocorre e sua extensão. Isso permite monitorar o status do aplicativo em um ambiente de produção. Isso é especialmente importante em um aplicativo de negócios que usa vários componentes executados em vários computadores. É possível controlar como as opções são usadas após a implantação por meio do arquivo de configuração. Para obter mais informações, confira [Como: Criar, inicializar e configurar opções](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)de rastreamento.  
   
  Quando você estiver desenvolvendo um aplicativo para o qual pretende usar o rastreamento, você geralmente incluirá mensagens de rastreamento e depuração no código do aplicativo. Quando estiver pronto para implantar o aplicativo, compile o build de versão sem ativar o atributo condicional **Debug**. No entanto, você pode ativar o atributo condicional **Trace**, de modo que o compilador inclua o código de rastreamento no executável. Para obter mais informações, confira [Como: compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
   
@@ -81,7 +81,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1. Considere qual saída de rastreamento você desejará receber no local depois de implantar o aplicativo.  
   
-2. Crie um conjunto de opções. Para obter mais informações, confira [Como: Configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2. Crie um conjunto de opções. Para obter mais informações, confira [Como: Configurar opções](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)de rastreamento.  
   
 3. Adicione as instruções de rastreamento ao código do aplicativo.  
   
@@ -111,7 +111,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Com instruções de rastreamento, você pode evitar a difícil tarefa de examinar o código-fonte original, modificá-lo, recompilá-lo e tentar produzir o erro em tempo de execução no ambiente de depuração. Lembre-se de que é possível instrumentar um aplicativo não apenas para exibir erros, mas também para monitorar o desempenho.  
   
 ## <a name="strategic-placement-of-trace-statements"></a>Posicionamento estratégico de instruções de rastreamento  
- Tenha cuidado especial ao colocar as instruções de rastreamento para uso durante o tempo de execução. Considere quais informações de rastreamento são provavelmente necessárias em um aplicativo implantado, para que todos os prováveis cenários de rastreamento sejam abordados de forma adequada. No entanto, como os aplicativos que usam o rastreamento variam muito, não há diretrizes gerais para o posicionamento estratégico de rastreamento. Para obter mais informações sobre como colocar instruções de rastreamento, consulte [como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
+ Tenha cuidado especial ao colocar as instruções de rastreamento para uso durante o tempo de execução. Considere quais informações de rastreamento são provavelmente necessárias em um aplicativo implantado, para que todos os prováveis cenários de rastreamento sejam abordados de forma adequada. No entanto, como os aplicativos que usam o rastreamento variam muito, não há diretrizes gerais para o posicionamento estratégico de rastreamento. Para obter mais informações sobre como colocar instruções de [rastreamento, consulte Como: Adicione instruções de rastreamento ao código](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)do aplicativo.  
   
 ## <a name="output-from-tracing"></a>Saída de rastreamento  
  A saída de rastreamento é coletada por objetos chamados *ouvintes*. Um ouvinte é um objeto que recebe a saída de rastreamento e grava-a em um dispositivo de saída (geralmente, uma janela, um log ou um arquivo de texto). Quando um ouvinte de rastreamento é criado, normalmente, ele é adicionado à coleção <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, permitindo que o ouvinte receba toda a saída de rastreamento.  
@@ -133,13 +133,10 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  Produza resultados personalizados implementando seu próprio ouvinte. Um ouvinte de rastreamento personalizado pode, por exemplo, exibir as mensagens em uma caixa de mensagem ou se conectar a um banco de dados para adicionar mensagens a uma tabela. Todos os ouvintes personalizados devem dar suporte aos seis métodos mencionados acima. Para obter mais informações sobre como criar ouvintes definidos pelo desenvolvedor, consulte <xref:System.Diagnostics.TraceListener> na referência do .NET Framework.  
   
-> [!NOTE]
->  No Visual Basic, o **Debug. Write**, **Debug. WriteIf**, **Debug. WriteLine**, e **Debug. WriteLineIf** métodos substituíram o **Debug. Print** método que estava disponível em versões anteriores do Visual Basic.  
-  
- Os métodos **Write** e **WriteLine** sempre gravam o texto especificado. **Assert**, **WriteIf** e **WriteLineIf** exigem um argumento booliano que controla se eles gravam o texto especificado; eles gravam o texto especificado somente se a expressão é **true** (para **WriteIf** e **WriteLineIf**) ou **false** (para **Assert**). O método **Fail** sempre grava o texto especificado. Para obter mais informações, confira [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) e a referência do .NET Framework.  
+ Os métodos **Write** e **WriteLine** sempre gravam o texto especificado. **Assert**, **WriteIf** e **WriteLineIf** exigem um argumento booliano que controla se eles gravam o texto especificado; eles gravam o texto especificado somente se a expressão é **true** (para **WriteIf** e **WriteLineIf**) ou **false** (para **Assert**). O método **Fail** sempre grava o texto especificado. Para obter mais informações, confira [Como: Adicione instruções de rastreamento ao código](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) do aplicativo e à referência de .NET Framework.  
   
 ## <a name="security-concerns"></a>Problemas de segurança  
- Se você não desabilitar o rastreamento e a depuração antes de implantar um aplicativo ASP.NET, o aplicativo poderá revelar informações sobre si mesmo que podem ser exploradas por um programa mal-intencionado. Para obter mais informações, confira [Como: Compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [compilando e criando](/visualstudio/ide/compiling-and-building-in-visual-studio), e [como: Criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). A depuração também é configurável por meio do IIS (Serviços de Informações da Internet).  
+ Se você não desabilitar o rastreamento e a depuração antes de implantar um aplicativo ASP.NET, o aplicativo poderá revelar informações sobre si mesmo que podem ser exploradas por um programa mal-intencionado. Para obter mais informações, confira [Como: Compile condicionalmente com rastreamento e depuração](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [compilação e](/visualstudio/ide/compiling-and-building-in-visual-studio) [compilação e como: Criar, inicializar e configurar opções](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)de rastreamento. A depuração também é configurável por meio do IIS (Serviços de Informações da Internet).  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -150,7 +147,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Como: compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [Como: Criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Como: Criar e inicializar origens de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Como: Usar TraceSource e filtros com ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Como: Criar e inicializar fontes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Como: Usar rastreamento e filtros com ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)

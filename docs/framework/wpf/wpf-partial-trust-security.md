@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 34beee309f080c53ecb16436beb0c4c6be7733e5
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629799"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796793"
 ---
 # <a name="wpf-partial-trust-security"></a>Segurança parcialmente confiável do WPF
-<a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e as linguagens de script do lado do cliente não são capazes de acessar recursos críticos do sistema. Como os aplicativos hospedados no navegador Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade com um conjunto semelhante de restrições. Para impor essas restrições, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] baseia-se na CAS (segurança de acesso do código) e no ClickOnce (consulte [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Por padrão, aplicativos hospedados em navegador solicitam o conjunto de permissões de CAS de zona da Internet, independentemente de serem iniciados da Internet, da intranet local ou do computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  
+<a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, as linguagens de script HTML e do lado do cliente não são capazes de acessar recursos críticos do sistema. Como os aplicativos hospedados no navegador Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade com um conjunto semelhante de restrições. Para impor essas restrições, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] baseia-se na CAS (segurança de acesso do código) e no ClickOnce (consulte [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Por padrão, aplicativos hospedados em navegador solicitam o conjunto de permissões de CAS de zona da Internet, independentemente de serem iniciados da Internet, da intranet local ou do computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]fornece uma ampla variedade de suporte para garantir que a maior funcionalidade possível possa ser usada com segurança em confiança parcial e, juntamente com o CAS, fornece suporte adicional para programação de confiança parcial.  
   
