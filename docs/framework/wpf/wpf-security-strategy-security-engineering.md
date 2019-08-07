@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: d5bcd5b06f6d922b29c2a494f1f63da1217e2b2d
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663340"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817875"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Estratégia de segurança do WPF - engenharia de segurança
 A Computação Confiável é uma iniciativa da Microsoft para garantir a produção de código seguro. Um elemento chave da iniciativa Computação Confiável é o [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. O [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] é uma prática de engenharia que é usada em conjunto com processos de engenharia padrão para facilitar o fornecimento de código seguro. O [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] consiste em dez fases que combinam melhores práticas com formalização, mensurabilidade e estruturas adicionais, incluindo:  
@@ -67,27 +67,27 @@ A Computação Confiável é uma iniciativa da Microsoft para garantir a produç
 ### <a name="source-analysis-and-editing-tools"></a>Ferramentas de edição e análise de código-fonte  
  Além dos elementos manuais de revisão de código de segurança do [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], a equipe do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa várias ferramentas para análise do código-fonte e das edições associadas para diminuir as vulnerabilidades de segurança. Uma ampla variedade de ferramentas de código são usadas e incluem o seguinte:  
   
-- **FXCop**: Localiza problemas comuns de segurança no código gerenciado, variando de regras de herança ao uso de segurança de acesso do código como interoperar com segurança com código não gerenciado. Consulte [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
+- **FXCop**: Localiza problemas comuns de segurança no código gerenciado, desde regras de herança até o uso de segurança de acesso ao código para a interoperação segura com código não gerenciado. Consulte [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
-- **Prefix/Prefast**: Localiza vulnerabilidades de segurança e problemas comuns de segurança no código não gerenciado, como saturações de buffer, problemas de cadeia de caracteres de formato e verificação de erros.  
+- **Prefixo/PREfast**: Localiza vulnerabilidades de segurança e problemas comuns de segurança em código não gerenciado, como saturações de buffer, problemas de cadeia de caracteres de formato e verificação de erros.  
   
-- **APIs banidas**: Pesquisas de código para identificar usos acidentais de funções que são conhecidas por causar problemas de segurança, como de fonte `strcpy`. Uma vez identificado, essas funções são substituídas por alternativas mais seguras.  
+- **APIs banidas**: Pesquisa o `strcpy`código-fonte para identificar o uso acidental de funções que são conhecidas por causar problemas de segurança, como. Depois de identificado, essas funções são substituídas por alternativas que são mais seguras.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Técnicas de teste  
  O [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa uma variedade de técnicas teste de segurança que incluem:  
   
-- **Testes caixa branca**: Testadores Exibir código-fonte e, em seguida, criam testes de exploração.
+- **Teste de whitebox**: Os testadores exibem o código-fonte e criam testes de exploração.
   
-- **Testes caixa preta**: Os testadores tentam localizar falhas de segurança examinando as API e recursos e, em seguida, tentam atacar o produto.  
+- **Teste de Blackbox**: Os testadores tentam encontrar explorações de segurança examinando a API e os recursos e, em seguida, tentam atacar o produto.  
   
-- **Problemas de regressão de segurança de outros produtos**: Quando for relevante, problemas de segurança de produtos relacionados são testados. Por exemplo, variantes apropriadas de cerca de sessenta problemas de segurança para [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] foram identificadas e sua aplicabilidade foi testada para [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+- **Regressão de problemas de segurança de outros produtos**: Quando relevante, os problemas de segurança de produtos relacionados são testados. Por exemplo, as variantes apropriadas de aproximadamente 60 problemas de segurança do Internet Explorer foram identificadas e tentaram sua [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]aplicabilidade ao.  
   
-- **Testes de penetração baseados em ferramentas de manipulação de arquivos**: Manipulação de arquivos é que a exploração de um leitor de arquivos do intervalo por meio de uma variedade de entradas de entrada. Um exemplo de uso dessa técnica no [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] é para verificar se há falhas no código de decodificação de imagens.  
+- **Teste de penetração baseado em ferramentas por meio de difusão de arquivos**: A difusão de arquivos é a exploração do intervalo de entrada de um leitor de arquivo por meio de uma variedade de entradas. Um exemplo de uso dessa técnica no [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] é para verificar se há falhas no código de decodificação de imagens.  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Gerenciamento de código crítico  
- Para [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] baseia-se uma proteção de segurança, usando o suporte do .NET Framework para marcar e acompanhar o código de segurança crítica que elevam privilégios (consulte **metodologia crítica para segurança** em [WPF Estratégia de segurança – segurança da plataforma](wpf-security-strategy-platform-security.md)). Considerando os altos requisitos de qualidade da segurança em códigos críticos para a segurança, esse código recebe um nível adicional de auditoria de segurança e controle de gerenciamento de código-fonte. Aproximadamente 5% a 10% do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] consiste em código crítico para a segurança, que é revisado por uma equipe de revisão dedicada. O código-fonte e o processo de check-in são gerenciados acompanhando o código crítico para segurança e mapeando cada entidade crítica (isto é, um método que contém código crítico) quanto ao seu estado de aprovação. O estado de aprovação inclui os nomes de um ou mais revisores. Cada build diária de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compara o código crítico com o dos builds anteriores para verificar se há alterações não aprovadas. Se um engenheiro modificar o código crítico sem a aprovação da equipe de revisão, isso será identificado e corrigido imediatamente. Esse processo permite a aplicação e a manutenção de um nível especialmente alto de investigação do código na área restrita [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Para [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , o cria uma área restrita de segurança usando .NET Framework suporte para marcação e rastreamento de código crítico de segurança que eleva privilégios (consulte **metodologia de segurança crítica** na [estratégia de segurança do WPF – plataforma Segurança](wpf-security-strategy-platform-security.md)). Considerando os altos requisitos de qualidade da segurança em códigos críticos para a segurança, esse código recebe um nível adicional de auditoria de segurança e controle de gerenciamento de código-fonte. Aproximadamente 5% a 10% do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] consiste em código crítico para a segurança, que é revisado por uma equipe de revisão dedicada. O código-fonte e o processo de check-in são gerenciados acompanhando o código crítico para segurança e mapeando cada entidade crítica (isto é, um método que contém código crítico) quanto ao seu estado de aprovação. O estado de aprovação inclui os nomes de um ou mais revisores. Cada build diária de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compara o código crítico com o dos builds anteriores para verificar se há alterações não aprovadas. Se um engenheiro modificar o código crítico sem a aprovação da equipe de revisão, isso será identificado e corrigido imediatamente. Esse processo permite a aplicação e a manutenção de um nível especialmente alto de investigação do código na área restrita [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: d8e26ff197e22ffa18b4acdd020b80879023c0f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364082"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818014"
 ---
 # <a name="application-management-overview"></a>Visão geral de gerenciamento do aplicativo
 Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades que se aplicam à implementação e ao gerenciamento do aplicativo. Este tópico fornece uma visão geral da funcionalidade na <xref:System.Windows.Application> classe para criar e gerenciar aplicativos.  
@@ -293,7 +293,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
 - Um XBAP é navegado para fora do.  
   
-- No [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], quando a guia que está hospedando o XBAP é fechada.  
+- No Internet Explorer, quando a guia que está hospedando o XBAP é fechada.  
   
 - Quando o navegador é fechado.  
   
