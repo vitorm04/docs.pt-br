@@ -1,5 +1,5 @@
 ---
-title: CorElementType Enumeration1
+title: Enumeração CorElementType
 ms.date: 03/30/2017
 api_name:
 - CorElementType
@@ -16,16 +16,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d47e250a35640d15bd494d99442271a070a1dd0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6057bd48ff4fe3f852f82de2bab972d95fef138c
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781908"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868561"
 ---
-# <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
+# <a name="corelementtype-enumeration"></a>Enumeração CorElementType
 
-Especifica um common language runtime <xref:System.Type>, um modificador de tipo ou informações sobre um tipo em uma assinatura de tipo de metadados.
+Especifica um Common Language Runtime <xref:System.Type>, um modificador de tipo ou informações sobre um tipo em uma assinatura de tipo de metadados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -83,19 +83,19 @@ typedef enum CorElementType {
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|Usado internamente.|
 |`ELEMENT_TYPE_VOID`|Um tipo void.|
-|`ELEMENT_TYPE_BOOLEAN`|Um tipo booleano|
+|`ELEMENT_TYPE_BOOLEAN`|Um tipo booliano|
 |`ELEMENT_TYPE_CHAR`|Um tipo de caractere.|
-|`ELEMENT_TYPE_I1`|Um inteiro de 1 byte com sinal.|
+|`ELEMENT_TYPE_I1`|Um inteiro de 1 byte assinado.|
 |`ELEMENT_TYPE_U1`|Um inteiro de 1 byte sem sinal.|
-|`ELEMENT_TYPE_I2`|Um inteiro com sinal de 2 bytes.|
+|`ELEMENT_TYPE_I2`|Um inteiro de 2 bytes assinado.|
 |`ELEMENT_TYPE_U2`|Um inteiro sem sinal de 2 bytes.|
-|`ELEMENT_TYPE_I4`|Um inteiro com sinal de 4 bytes.|
-|`ELEMENT_TYPE_U4`|Um inteiro sem sinal de 4 bytes.|
-|`ELEMENT_TYPE_I8`|Um inteiro com sinal de 8 bytes.|
-|`ELEMENT_TYPE_U8`|Um inteiro sem sinal de 8 bytes.|
+|`ELEMENT_TYPE_I4`|Um inteiro de 4 bytes assinado.|
+|`ELEMENT_TYPE_U4`|Um inteiro de 4 bytes sem sinal.|
+|`ELEMENT_TYPE_I8`|Um inteiro de 8 bytes assinado.|
+|`ELEMENT_TYPE_U8`|Um inteiro de 8 bytes sem sinal.|
 |`ELEMENT_TYPE_R4`|Um ponto flutuante de 4 bytes.|
 |`ELEMENT_TYPE_R8`|Um ponto flutuante de 8 bytes.|
-|`ELEMENT_TYPE_STRING`|Um tipo de System. String.|
+|`ELEMENT_TYPE_STRING`|Um tipo System. String.|
 |`ELEMENT_TYPE_PTR`|Um modificador de tipo de ponteiro.|
 |`ELEMENT_TYPE_BYREF`|Um modificador de tipo de referência.|
 |`ELEMENT_TYPE_VALUETYPE`|Um modificador de tipo de valor.|
@@ -105,44 +105,44 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_GENERICINST`|Um modificador de tipo para tipos genéricos.|
 |`ELEMENT_TYPE_TYPEDBYREF`|Uma referência com tipo.|
 |`ELEMENT_TYPE_I`|Tamanho de um inteiro nativo.|
-|`ELEMENT_TYPE_U`|Tamanho de um inteiro sem sinal de nativo.|
+|`ELEMENT_TYPE_U`|Tamanho de um inteiro nativo não assinado.|
 |`ELEMENT_TYPE_FNPTR`|Um ponteiro para uma função.|
-|`ELEMENT_TYPE_OBJECT`|Um tipo de System. Object.|
-|`ELEMENT_TYPE_SZARRAY`|Um unidimensionais, zero modificador de tipo de matriz de limite inferior.|
-|`ELEMENT_TYPE_MVAR`|Um modificador de tipo de variável do método.|
-|`ELEMENT_TYPE_CMOD_REQD`|Uma linguagem C necessário modificador.|
-|`ELEMENT_TYPE_CMOD_OPT`|Um modificador opcional do idioma de C.|
+|`ELEMENT_TYPE_OBJECT`|Um tipo System. Object.|
+|`ELEMENT_TYPE_SZARRAY`|Um modificador de tipo de matriz de limite inferior de zero unidimensional.|
+|`ELEMENT_TYPE_MVAR`|Um modificador de tipo de variável de método.|
+|`ELEMENT_TYPE_CMOD_REQD`|Um modificador necessário de linguagem C.|
+|`ELEMENT_TYPE_CMOD_OPT`|Um modificador opcional de linguagem C.|
 |`ELEMENT_TYPE_INTERNAL`|Usado internamente.|
 |`ELEMENT_TYPE_MAX`|Um tipo inválido.|
 |`ELEMENT_TYPE_MODIFIER`|Usado internamente.|
-|`ELEMENT_TYPE_SENTINEL`|Um modificador de tipo que é uma Sentinela para obter uma lista de um número variável de parâmetros.|
+|`ELEMENT_TYPE_SENTINEL`|Um modificador de tipo que é um sentinela para uma lista de um número variável de parâmetros.|
 |`ELEMENT_TYPE_PINNED`|Usado internamente.|
 
 ## <a name="remarks"></a>Comentários
 
-Os modificadores de tipo formam a base para representar tipos mais complexos. Um `CorElementType` valor do modificador de tipo é aplicado ao valor que vem imediatamente a seguir na assinatura de tipo. O valor que segue o `CorElementType` valor do modificador de tipo pode ser um `CorElementType` valor de tipo simples, um token de metadados ou outro valor, conforme especificado na tabela a seguir.
+Os modificadores de tipo formam a base para representar tipos mais complexos. Um `CorElementType` valor de modificador de tipo é aplicado ao valor que imediatamente o segue na assinatura de tipo. O valor que segue o `CorElementType` valor do modificador de tipo `CorElementType` pode ser um valor de tipo simples, um token de metadados ou outro valor, conforme especificado na tabela a seguir.
 
 > [!NOTE]
-> Todos os números (*número*, *argumento contagem*, *token de metadados*, *classificação*, *contagem*e *vinculado*) são armazenadas como inteiros compactados. Ver [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) no site da ECMA para obter detalhes.
+> Todos os números (*número*, *contagem de argumentos*, token de *metadados*, *classificação*, *contagem*e *associado*) são armazenados como inteiros compactados. Consulte [Standard ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) no site da ECMA para obter detalhes.
 
 |Modificador de tipo|Formatar|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<um `CorElementType` valor >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<um `CorElementType` valor >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \< um`CorElementType` valor >|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \< um`CorElementType` valor >|
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<um `mdTypeDef` token de metadados >|
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<um `mdTypeDef` token de metadados >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<uma `CorElementType` valor > \<classificação > \<count1 > \<bound1 >... \<countN > \<boundN >|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<uma `mdTypeDef` token de metadados > \<argumento contagem > \<arg1 >... \<argN >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<assinatura completa para a função, incluindo a convenção de chamada >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<um `CorElementType` valor >|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE _\<uma `mdTypeRef` ou `mdTypeDef` token de metadados >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<uma `mdTypeRef` ou `mdTypeDef` token de metadados >|
+|`ELEMENT_TYPE_VAR`|Número \<de ELEMENT_TYPE_VAR >|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<um `CorElementType` valor > \<Rank > \<count1 >\<bound1 >... \<contagem >\<> associadas|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<um `mdTypeDef` token de metadados \<> contagem de \<argumentos > arg1 >... \<> argN|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<a assinatura completa para a função, incluindo a Convenção de chamada >|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \< um`CorElementType` valor >|
+|`ELEMENT_TYPE_MVAR`|Número \<de ELEMENT_TYPE_MVAR >|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<um `mdTypeRef` token `mdTypeDef` de metadados ou >|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<um `mdTypeRef` token `mdTypeDef` de metadados ou >|
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
 **Cabeçalho:** CorHdr.h
 

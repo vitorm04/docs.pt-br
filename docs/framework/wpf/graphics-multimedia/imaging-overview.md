@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 9adceb78f53d9c855ec05859a0b3449a1623e62b
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 845095567459fc486dd2f1c52e575444612c7bb8
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796849"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869130"
 ---
 # <a name="imaging-overview"></a>Visão geral da geração de imagens
 Este tópico é uma introdução ao [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. O [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] permite aos desenvolvedores exibir, transformar e formatar imagens.  
@@ -57,7 +57,7 @@ Este tópico é uma introdução ao [!INCLUDE[TLA#tla_wic](../../../../includes/
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Formatos de imagem do WPF  
- Um codec é usado para decodificar ou codificar um formato de mídia específico. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]inclui um codec para formatos de [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]imagem [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]BMP, [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)],, [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)],, GIF e ícone. Cada um desses codecs habilitam aplicativos a decodificar e, com exceção do ÍCONE, codificar seus respectivos formatos de imagem.  
+ Um codec é usado para decodificar ou codificar um formato de mídia específico. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]inclui um codec para formatos de imagem BMP [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]JPEG [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)],,,, GIF e ícone. Cada um desses codecs habilitam aplicativos a decodificar e, com exceção do ÍCONE, codificar seus respectivos formatos de imagem.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>é uma classe importante usada na decodificação e codificação de imagens. É o bloco de construção básico do pipeline do [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] e representa um conjunto de pixels único e constante em um determinado tamanho e resolução. Um <xref:System.Windows.Media.Imaging.BitmapSource> pode ser um quadro individual de uma imagem de vários quadros ou pode ser o resultado de uma transformação executada em um <xref:System.Windows.Media.Imaging.BitmapSource>. É o pai de muitas das principais classes usadas na geração de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] imagens <xref:System.Windows.Media.Imaging.BitmapFrame>, como.  
   

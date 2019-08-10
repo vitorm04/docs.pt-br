@@ -1,13 +1,13 @@
 ---
-title: Contract1
+title: Contrato
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 10789f9a2940c239ae20c8fd1e9d48bca0e820ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a21e95a6f1f1860ed36c968d17bb8ac8465dce
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963690"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868431"
 ---
 # <a name="contract"></a>Contrato
 Contrato  
@@ -30,24 +30,24 @@ class Contract
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe de contrato não define quaisquer métodos.  
+ A classe Contract não define nenhum método.  
   
 ## <a name="properties"></a>Propriedades  
- A classe de contrato tem as seguintes propriedades:  
+ A classe Contract tem as seguintes propriedades:  
   
 ### <a name="appdomainid"></a>AppDomainId  
  Tipo de dados: sint32  
   
  Tipo de acesso: Somente leitura  
   
- A id appdomain do appdomain que hospeda o contrato.  
+ A ID de AppDomain do AppDomain que hospeda o contrato.  
   
 ### <a name="behaviors"></a>Comportamentos  
  Tipo de dados: Matriz de comportamento  
   
  Tipo de acesso: Somente leitura  
   
- Os comportamentos associados a esse contrato.  
+ Os comportamentos associados a este contrato.  
   
 ### <a name="name"></a>Nome  
  Tipo de dados: cadeia de caracteres  
@@ -68,14 +68,14 @@ class Contract
   
  Tipo de acesso: Somente leitura  
   
- As operações do contrato.  
+ As operações deste contrato.  
   
 ### <a name="processid"></a>ProcessId  
  Tipo de dados: sint32  
   
  Tipo de acesso: Somente leitura  
   
- O processo de identificação do processo que hospeda o contrato.  
+ A ID do processo que hospeda o contrato.  
   
 ### <a name="ref"></a>ref  
  Tipo de dados: Contrato  
@@ -89,7 +89,7 @@ class Contract
   
  Tipo de acesso: Somente leitura  
   
- Indica se o contrato requer a associação associada a este contrato para usar sessões de canal.  
+ Indica se o contrato requer que a associação associada a este contrato use sessões de canal.  
   
 ### <a name="type"></a>Tipo  
  Tipo de dados: cadeia de caracteres  
@@ -100,9 +100,9 @@ class Contract
   
 ## <a name="requirements"></a>Requisitos  
   
-|MOF|Declarado em Servicemodel.mof.|  
+|MOF|Declarado em ServiceModel. mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido no root\ServiceModel|  
+|Namespace|Definido em root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também
 

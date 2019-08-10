@@ -1,13 +1,13 @@
 ---
-title: 'Arquivo XML de exemplo: Clientes e pedidos em um Namespace1'
+title: 'Arquivo XML de exemplo: Clientes e ordens em um namespace'
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-ms.openlocfilehash: ca12478ab81d114759c07b5d44749aee5a620bbb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63bb6cf5065e2189380bbcd67812c5ae8d6dd372
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787045"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869110"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Arquivo XML de exemplo: Clientes e ordens em um namespace
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém clientes e pedidos. XML é em um namespace.  

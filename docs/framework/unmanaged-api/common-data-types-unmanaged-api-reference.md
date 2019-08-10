@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b56840ce68caa3eed50773668c64e2622a646ddf
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651630"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892084"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Tipos de dados comuns (referência API não gerenciada)
 Este tópico lista tipos de dados simples usados pelas APIs não gerenciadas para o .NET Framework que são definidas por instruções `typedef` do C/C++. Esses tipos de dados são geralmente aliases para tipos de dados primitivos do C/C++. Geralmente, os valores desses tipos de dados são opacos, ou seja, eles são retornados por uma função ou um método específico para que possam ser transmitidos para outras funções ou métodos sem modificação.  
@@ -34,9 +34,11 @@ Este tópico lista tipos de dados simples usados pelas APIs não gerenciadas par
 |mdToken|`typedef UINT32 mdToken;`|corprof.h|Um token de metadados (uma linha em uma tabela de metadados).|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|O identificador de um módulo de assembly.|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|O identificador de um objeto.|  
+|PCCOR_SIGNATURE|`typedef SIZE_T PCCOR_SIGNATURE;`|cordebug.h|Um ponteiro para um membro ou assinatura de metadados.|
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|O identificador de um processo gerenciado.|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|O identificador de uma função com compilação JIT.|  
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|O identificador de um [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instância.|  
+|SIZE_T|`typedef ULONG_PTR SIZE_T;`|corsym. h|Um ponteiro para um endereço de memória de 64 bits.|
+|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|O identificador de uma instância de [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) .|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|O identificador de um thread gerenciado.|  
   
 ## <a name="see-also"></a>Consulte também

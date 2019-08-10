@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 5eaf83f259abe4ee574dfd4d2269dfa1e9373c94
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818044"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869070"
 ---
 # <a name="input-overview"></a>Visão geral da entrada
 <a name="introduction"></a>O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] subsistema fornece uma API poderosa para obter a entrada de uma variedade de dispositivos, incluindo o mouse, o teclado, o toque e a caneta. Este tópico descreve os serviços fornecidos pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e explica a arquitetura dos sistemas de entrada.
@@ -115,7 +115,7 @@ ms.locfileid: "68818044"
 
  Para entrada de teclado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , o primeiro envia <xref:System.Windows.ContentElement.KeyDown> os eventos apropriados /. <xref:System.Windows.ContentElement.KeyUp> Se esses eventos não forem manipulados e a chave for textual (em vez de uma chave de controle, como setas direcionais ou teclas de <xref:System.Windows.ContentElement.TextInput> função), um evento será gerado.  Nem sempre há um mapeamento um-para <xref:System.Windows.ContentElement.KeyDown> -um simples entre / <xref:System.Windows.ContentElement.KeyUp> os eventos <xref:System.Windows.ContentElement.TextInput> e porque vários pressionamentos de teclas podem gerar um único caractere de entrada de texto e pressionamentos de teclas únicos podem gerar vários caracteres seqüências.  Isso é especialmente verdadeiro para linguagens como chinês, japonês e coreano, que usam IMEs (Input Method Editors) para gerar os milhares de caracteres possíveis em seus alfabetos correspondentes.
 
- Quando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o envia <xref:System.Windows.ContentElement.KeyUp> um / evento,<xref:System.Windows.Input.KeyEventArgs.Key%2A> é definido como<xref:System.Windows.Input.Key.System?displayProperty=nameWithType> se os pressionamentos de teclas pudessem se tornar <xref:System.Windows.ContentElement.TextInput> parte de um evento (se ALT + S for pressionado, por exemplo). <xref:System.Windows.ContentElement.KeyDown> Isso permite que o código <xref:System.Windows.ContentElement.KeyDown> em um manipulador de eventos <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> Verifique e, se encontrado, deixe o processamento para o manipulador do evento <xref:System.Windows.ContentElement.TextInput> gerado posteriormente. Nesses casos, as várias propriedades do <xref:System.Windows.Input.TextCompositionEventArgs> argumento podem ser usadas para determinar os pressionamentos de tecla originais. Da mesma forma, [!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] se um estiver <xref:System.Windows.Input.Key> ativo, tem o <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>valor de <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> e fornece a tecla ou pressionamentos de teclas originais.
+ Quando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o envia <xref:System.Windows.ContentElement.KeyUp> um / evento,<xref:System.Windows.Input.KeyEventArgs.Key%2A> é definido como<xref:System.Windows.Input.Key.System?displayProperty=nameWithType> se os pressionamentos de teclas pudessem se tornar <xref:System.Windows.ContentElement.TextInput> parte de um evento (se ALT + S for pressionado, por exemplo). <xref:System.Windows.ContentElement.KeyDown> Isso permite que o código <xref:System.Windows.ContentElement.KeyDown> em um manipulador de eventos <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> Verifique e, se encontrado, deixe o processamento para o manipulador do evento <xref:System.Windows.ContentElement.TextInput> gerado posteriormente. Nesses casos, as várias propriedades do <xref:System.Windows.Input.TextCompositionEventArgs> argumento podem ser usadas para determinar os pressionamentos de tecla originais. Da mesma forma, se um IME estiver <xref:System.Windows.Input.Key> ativo, o terá <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>o valor <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> de e dará o pressionamento de tecla ou teclas originais.
 
  O exemplo a seguir define um manipulador para <xref:System.Windows.Controls.Primitives.ButtonBase.Click> o evento e um manipulador para <xref:System.Windows.UIElement.KeyDown> o evento.
 
