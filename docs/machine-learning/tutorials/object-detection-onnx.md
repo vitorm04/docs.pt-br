@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/01/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3e5b6b482dfbd1ff06347883a93a561944200a9f
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733407"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868721"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detectar objetos usando ONNX no ML.NET
 
@@ -344,7 +344,6 @@ Agora que as classes para dimensões e caixas delimitadoras estão criadas, é h
     - `CELL_HEIGHT` é a altura de uma célula na grade de imagens.
     - `channelStride` é a posição inicial da célula atual na grade.
 
-
     Quando o modelo pontua uma imagem, ele divide a entrada `416px x 416px` em uma grade de células com o tamanho de `13 x 13`. O conteúdo de cada célula é `32px x 32px`. Dentro de cada célula, há cinco caixas delimitadoras que contêm cinco recursos (x, y, largura, altura, confiança). Além disso, cada caixa delimitadora contém a probabilidade de cada uma das classes que, nesse caso, é 20. Portanto, cada célula contém 125 partes de informações (cinco recursos + 20 probabilidades de classe). 
 
 Crie uma lista de âncoras abaixo de `channelStride` para todas as cinco caixas delimitadoras:
@@ -654,7 +653,6 @@ Abaixo disso, use o método `DrawBoundingBox` para desenhar as caixas delimitado
 Por fim, adicione uma lógica de registro em log com o método `LogDetectedObjects`.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
-
 
 Após a instrução try-catch, adicione a lógica complementar para indicar que o processo terminou a execução.
 
