@@ -2,12 +2,12 @@
 title: Criando a interface do usuário composta baseada em microsserviços
 description: A arquitetura de microsserviços não se destina apenas ao back-end. Obtenha uma visão rápida e saiba como usá-la no front-end.
 ms.date: 09/20/2018
-ms.openlocfilehash: 55cb2a8096cc8122c94cae50af4384e9392868cf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672993"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817836"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Criando a interface do usuário composta baseada em microsserviços
 
@@ -43,7 +43,7 @@ No entanto, recomendamos que você use as seguintes referências para saber mais
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
 - **Ruben Oostinga. O front-end monolítico na arquitetura de microsserviços** \
-  <https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/>
+  <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
 - **Mauro Servienti. O segredo de uma composição melhor de interface do usuário** \
   <https://particular.net/blog/secret-of-better-ui-composition>

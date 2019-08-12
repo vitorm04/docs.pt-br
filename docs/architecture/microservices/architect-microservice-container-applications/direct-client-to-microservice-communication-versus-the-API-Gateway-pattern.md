@@ -2,12 +2,12 @@
 title: Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 description: Entenda as diferenças e os usos do padrão de gateway de API e da comunicação direta de cliente com microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673163"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892229"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -128,7 +128,7 @@ Pode haver muitos outros interesses paralelos oferecidos pelos produtos de Gatew
 
 O [Gerenciamento de API do Azure](https://azure.microsoft.com/services/api-management/) (conforme mostrado na Figura 4-14) não apenas soluciona as necessidades do Gateway de API, mas também fornece funcionalidades como coleta de insights das APIs. Se você estiver usando uma solução de gerenciamento de API, um Gateway de API será apenas um componente nessa solução completa de gerenciamento de API.
 
-![O Gerenciamento de API do Azure soluciona as necessidades do Gerenciamento e do Gateway de API, como log, segurança, medição, etc.](./media/image14.png)
+![O Gerenciamento de API do Azure soluciona as necessidades do Gerenciamento e do Gateway de API, como log, segurança, medição, etc.](./media/api-gateway-azure-api-management.png)
 
 **Figura 4-14**. Usando o Gerenciamento de API do Azure para o Gateway de API
 
