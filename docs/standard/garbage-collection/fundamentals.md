@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 364ac31744d41d95ba20b598f8f137257ddbc608
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663649"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796850"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 
 <a name="top"></a> No CLR (Common Language Runtime), o coletor de lixo atua como um gerenciador automático de memória. Ele oferece os seguintes benefícios:
 
-- Permite que você desenvolva seu aplicativo sem a necessidade de liberar memória.
+- Permite que você desenvolva seu aplicativo sem precisar liberar a memória manualmente para objetos criados.
 
 - Aloca objetos no heap gerenciado com eficiência.
 

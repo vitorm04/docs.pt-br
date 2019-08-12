@@ -2,13 +2,14 @@
 title: Glossário de aprendizado de máquina
 description: Um glossário de termos essenciais sobre o aprendizado de máquina, que são úteis ao criar seus modelos personalizados no ML.NET.
 ms.custom: seodec18
-ms.date: 05/09/2019
-ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.topic: reference
+ms.date: 07/31/2019
+ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557977"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710534"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossário de aprendizado de máquina com termos importantes
 
@@ -109,6 +110,10 @@ Um caso de [classificação](#classification) em que o [rótulo](#label) é uma 
 
 Um esquema de extração de recursos para dados de texto: qualquer sequência de N palavras se transforma em um valor de [recurso](#feature).
 
+## <a name="normalization"></a>Normalização
+
+A normalização é o processo de escala de dados de ponto flutuante para valores entre 0 e 1. Muitos dos algoritmos de treinamento usados no ML.NET exigem que os dados do recurso de entrada sejam normalizados. O ML.NET fornece uma série de [transformações para normalização](transforms.md#normalization-and-scaling)
+
 ## <a name="numerical-feature-vector"></a>Vetor de recurso numérico
 
 Um vetor de [recurso](#feature) consistindo apenas em valores numéricos. Similar ao `double[]`.
@@ -147,6 +152,10 @@ Na [regressão](#regression), uma métrica de avaliação que é a soma de todos
 ## <a name="root-of-mean-squared-error-rmse"></a>Raiz do erro quadrático médio (RMSE)
 
 Na [regressão](#regression), uma métrica de avaliação que é a raiz quadrada da média dos quadrados dos erros.
+
+## <a name="scoring"></a>Pontuação
+
+A pontuação é o processo de aplicar novos dados a um modelo de machine learning treinado e gerar previsões. A pontuação também é conhecida como inferência. Dependendo do tipo de modelo, a pontuação pode ser um valor bruto, uma probabilidade ou uma categoria.
 
 ## <a name="supervised-machine-learning"></a>Aprendizado de máquina supervisionado
 

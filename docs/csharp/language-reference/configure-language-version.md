@@ -2,12 +2,12 @@
 title: Controle de versão da linguagem C# – Guia de C#
 description: Saiba mais como a versão da linguagem C# é determinada com base em seu projeto e os diferentes valores para os quais você pode ajustá-la manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236092"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796537"
 ---
 # <a name="c-language-versioning"></a>Controle de versão da linguagem C#
 
@@ -28,7 +28,7 @@ O compilador determina um padrão com base nestas regras:
 
 Quando seu projeto se destina a uma estrutura de visualização que tem uma versão da linguagem correspondente da visualização, a versão de linguagem usada é a de visualização. Com isso, é possível usar os recursos mais recentes que são garantidos para trabalhar com essa versão prévia em qualquer ambiente sem afetar seus projetos que direcionam uma versão lançada do .NET Core.
 
-## <a name="overriding-a-default"></a>Substituir um padrão
+## <a name="override-a-default"></a>Substituir um padrão
 
 Se precisar especificar sua versão do C# explicitamente, poderá fazer isso de várias maneiras:
 
@@ -38,7 +38,7 @@ Se precisar especificar sua versão do C# explicitamente, poderá fazer isso de 
 
 ### <a name="edit-the-project-file"></a>Editar o arquivo de projeto
 
-É possível definir a versão da linguagem em seu arquivo de projeto. Por exemplo, se você quisesse explicitamente acesso às versões prévias do recurso, poderia adicionar um elemento como este:
+É possível definir a versão da linguagem em seu arquivo de projeto. Por exemplo, se você quiser explicitamente acesso às versões prévias dos recursos, adicione um elemento como este:
 
 ```xml
 <PropertyGroup>

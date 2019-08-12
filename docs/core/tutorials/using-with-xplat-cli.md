@@ -1,16 +1,17 @@
 ---
 title: Introdução ao .NET Core, usando as ferramentas da CLI
 description: Um tutorial passo a passo que mostra como começar a usar o .NET Core no Windows, Linux ou macOS com a CLI (interface de linha de comando) do .NET Core.
-author: cartermp
-ms.date: 09/10/2018
+author: thraka
+ms.author: adegeo
+ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 88e9501a776a026a311c5002674c15acf2324f2b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545358"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868586"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando
 
@@ -153,10 +154,23 @@ Vamos nos basear no exemplo de Fibonacci anterior armazenando em cache alguns va
    377
    ```
 
-E pronto. Agora, é possível começar a usar os conceitos básicos aprendidos aqui para criar seus próprios programas.
+## <a name="publish-your-app"></a>Publicar seu aplicativo
 
-Observe que os comandos e as etapas mostradas neste tutorial para executar o aplicativo são usadas somente durante o tempo de desenvolvimento. Quando estiver pronto para implantar o aplicativo, você desejará dar uma olhada nas diferentes [estratégias de implantação](../deploying/index.md) para aplicativos .NET Core e no comando [`dotnet publish`](../tools/dotnet-publish.md).
+Quando você estiver pronto para distribuir seu aplicativo, use o comando [`dotnet publish`](../tools/dotnet-publish.md) para gerar a pasta _publicar_ em _bin\\debug\\netcoreapp2.1\\publicar\\_ (use `/` para sistemas não Windows). Você pode distribuir o conteúdo da pasta _publicar_ para outras plataformas, desde que já tenha instalado o tempo de execução dotnet.
+
+Você pode executar o aplicativo publicado com o comando [dotnet](../tools/dotnet.md):
+
+```console
+$ dotnet bin\Debug\netcoreapp2.1\publish\Hello.dll
+Hello World!
+```
+
+## <a name="conclusion"></a>Conclusão
+
+E pronto. Agora, é possível começar a usar os conceitos básicos aprendidos aqui para criar seus próprios programas.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Organizando e testando projetos com as ferramentas da CLI do .NET Core](testing-with-cli.md)
+- [Publicar aplicativos .NET Core com a CLI](../deploying/deploy-with-cli.md)
+- [Saiba mais sobre a implantação do aplicativo](../deploying/index.md)

@@ -4,12 +4,12 @@ description: Saiba como os diferentes valores de um conjunto de caracteres podem
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c50c58ad639b1efb29c13e5124fe3c32e8af96fc
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cac71c5d09514dfe1244d16224944e05826edfa9
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063331"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817847"
 ---
 # <a name="charsets-and-marshaling"></a>Conjuntos de caracteres e marshaling
 
@@ -19,7 +19,7 @@ A tabela a seguir mostra um mapeamento entre cada conjunto de caracteres e como 
 
 | Valor `CharSet` | Windows            | .NET Core 2.2 e anteriores no Unix | .NET Core 3.0 e posteriores e Mono no Unix |
 |-----------------|--------------------|-----------------------------------|------------------------------------------|
-| Ansi            | `char` (ANSI)      | `char` (UTF-8)                    | `char` (UTF-8)                           |
+| Ansi            | `char` (a [página de códigos do Windows (ANSI)](/windows/win32/intl/code-pages) padrão do sistema)      | `char` (UTF-8)                    | `char` (UTF-8)                           |
 | Unicode         | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char16_t` (UTF-16)                      |
 | Automático            | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char` (UTF-8)                           |
 

@@ -2,12 +2,12 @@
 title: Novidades no C# 7.1
 description: Uma visão geral dos novos recursos no C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347613"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796600"
 ---
 # <a name="whats-new-in-c-71"></a>Novidades no C# 7.1
 
@@ -86,9 +86,7 @@ Agora você pode omitir o tipo no lado direito da inicialização:
 Func<string, bool> whereClause = default;
 ```
 
-Saiba mais sobre essa melhoria no artigo do Guia de Programação do C# em [expressões de valor padrão](../programming-guide/statements-expressions-operators/default-value-expressions.md).
-
-Essa melhoria também altera algumas das regras de análise da [palavra-chave padrão](../language-reference/keywords/default.md).
+Para saber mais, confira a seção [Literais padrão](../language-reference/operators/default.md#default-literal) do artigo do [operador padrão](../language-reference/operators/default.md).
 
 ## <a name="inferred-tuple-element-names"></a>Nomes de elementos de tupla inferidos
 

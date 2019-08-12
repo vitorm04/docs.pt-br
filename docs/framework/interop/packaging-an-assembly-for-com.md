@@ -1,5 +1,5 @@
 ---
-title: Empacotando um assembly para o COM
+title: Como empacotar um assembly .NET Framework para o COM
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662365"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629330"
 ---
-# <a name="packaging-an-assembly-for-com"></a>Empacotando um assembly para o COM
+# <a name="packaging-a-net-framework-assembly-for-com"></a>Como empacotar um assembly .NET Framework para o COM
 
 Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos gerenciados que pretendem incorporar em seus aplicativos:
 
@@ -33,13 +33,13 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
 
   Alguns tipos gerenciados são visíveis para COM; alguns são visíveis, mas não instanciável; e alguns são visíveis e instanciáveis. Um assembly pode incluir qualquer combinação de tipos invisíveis, visíveis, não instanciáveis e instanciáveis. Para fins de integridade, identifique os tipos em um assembly que você pretende expor ao COM, especialmente quando esses tipos são um subconjunto dos tipos expostos ao .NET Framework.
 
-  Para obter mais informações, consulte [Qualificando tipos do .NET para interoperação](qualifying-net-types-for-interoperation.md).
+  Para obter mais informações, consulte [Qualificando tipos do .NET para interoperação](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).
 
 - Instruções de controle de versão
 
   Classes gerenciadas que implementam a interface de classe (uma interface gerada por interoperabilidade COM) estão sujeitas a restrições de controle de versão.
 
-  Para obter diretrizes de como usar a interface de classe, consulte [Introdução à interface de classe](com-callable-wrapper.md#introducing-the-class-interface).
+  Para obter diretrizes de como usar a interface de classe, consulte [Introdução à interface de classe](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
 
 - Instruções de implantação
 
@@ -94,8 +94,8 @@ A [ferramenta de instalação de serviços .NET (Regsvcs.exe)](../tools/regsvcs-
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
-- [Qualificando tipos .NET para interoperação](qualifying-net-types-for-interoperation.md)
-- [Apresentando a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
+- [Qualificando tipos .NET para interoperação](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Apresentando a interface de classe](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Considerações sobre segurança de assembly](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrando assemblies usando COM](registering-assemblies-with-com.md)

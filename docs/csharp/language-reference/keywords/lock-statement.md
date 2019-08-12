@@ -1,5 +1,5 @@
 ---
-title: Instrução lock – Referência em C#
+title: instrução lock – referência em C#
 ms.custom: seodec18
 description: Use a instrução lock do C# para sincronizar o acesso de thread com um recurso compartilhado
 ms.date: 10/01/2018
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306651"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796460"
 ---
-# <a name="lock-statement-c-reference"></a>Instrução lock (referência em C#)
+# <a name="lock-statement-c-reference"></a>instrução lock (referência em C#)
 
 A instrução `lock` obtém o bloqueio de exclusão mútua para um determinado objeto, executa um bloco de instruções e, em seguida, libera o bloqueio. Embora um bloqueio seja mantido, o thread que mantém o bloqueio pode adquiri-lo novamente e liberá-lo. Qualquer outro thread é impedido de adquirir o bloqueio e aguarda até que ele seja liberado.
 
@@ -65,7 +65,7 @@ O exemplo a seguir define uma classe `Account` que sincroniza o acesso com seu c
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para saber mais, confira a seção [A instrução lock](~/_csharplang/spec/statements.md#the-lock-statement) na [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Consulte também
 
@@ -74,5 +74,4 @@ O exemplo a seguir define uma classe `Account` que sincroniza o acesso com seu c
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)
-- [Palavras-chave de instrução](statement-keywords.md)
 - [Visão geral dos primitivos de sincronização](../../../standard/threading/overview-of-synchronization-primitives.md)

@@ -4,16 +4,21 @@ description: Explore os componentes de engenharia de recursos com suporte no ML.
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65558022"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671866"
 ---
 # <a name="data-transformations"></a>Transformações de dados
 
-Transformações de dados são usadas para preparar dados para o treinamento de modelo. As transformações neste guia retornam classes que implementam a interface [IEstimator](xref:Microsoft.ML.IEstimator%601). Transformações de dados podem ser encadeadas. Cada transformação espera e produz dados de tipos e formatos específicos, especificados na documentação de referência vinculada.
+As transformações de dados são usadas para:
+- preparar dados para treinamento de modelo
+- aplicar um modelo importado no formato TensorFlow ou ONNX
+- pós-processar dados após passá-los por um modelo
+
+As transformações neste guia retornam classes que implementam a interface [IEstimator](xref:Microsoft.ML.IEstimator%601). Transformações de dados podem ser encadeadas. Cada transformação espera e produz dados de tipos e formatos específicos, especificados na documentação de referência vinculada.
 
 Algumas transformações de dados requerem dados de treinamento para calcular seus parâmetros. Por exemplo: o transformador <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> calcula a média e a variância dos dados de treinamento durante a operação `Fit()` e usa esses parâmetros na operação `Transform()`. 
 
@@ -78,13 +83,25 @@ Outras transformações de dados não requerem dados de treinamento. Por exemplo
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | Converter pixels de imagem de entrada em um vetor de números |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | Carregar imagens de uma pasta na memória |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | Redimensionar imagens |
+| <xref:Microsoft.ML.OnnxCatalog.DnnFeaturizeImage*> | Aplica um modelo de DNN (rede neural profunda) pré-treinado para transformar uma imagem de entrada em um vetor de recurso |
 
 ## <a name="categorical-data-transformations"></a>Transformações de dados categóricos
 
 | Transformar | Definição |
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | Converter uma ou mais colunas de texto em vetores codificados [one-hot](https://en.wikipedia.org/wiki/One-hot) |
-| <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | Converter mais uma coluna de texto em vetores codificados one-hot com base em hash |
+| <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | Converter uma ou mais colunas de texto em vetores codificados em one-hot com base em hash |
+
+## <a name="time-series-data-transformations"></a>Transformações de dados de série temporal
+
+| Transformar | Definição |
+| --- | --- |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn*> | Detectar anomalias nos dados de série temporal de entrada usando o algoritmo SR (Spectral Residual) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa*> | Detectar pontos de alteração nos dados de série temporal usando SSA (análise de espectro singular) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidChangePoint*> | Detectar pontos de alteração em dados de série temporal IID (independentes e distribuídos de forma idêntica) usando estimativas de densidade de kernel adaptável e pontuações de Martingale |
+| <xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*> | Prever dados de série temporal usando SSA (análise de espectro singular) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa*> | Detectar picos nos dados de série temporal usando a SSA (análise de espectro singular) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike*> | Detectar picos em dados de série temporal IID (independentes e distribuídos de forma idêntica) usando estimativas de densidade de kernel adaptável e pontuações de Martingale |
 
 ## <a name="missing-values"></a>Valores ausentes
 
@@ -99,6 +116,35 @@ Outras transformações de dados não requerem dados de treinamento. Por exemplo
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | Selecionar recursos cujos valores não padrão são maiores que um limite |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | Selecione os recursos nos quais os dados na coluna de rótulo são mais dependentes |
+
+## <a name="feature-transformations"></a>Transformações de recurso
+
+| Transformar | Definição |
+| --- | --- |
+| <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap*> | Mapear cada vetor de entrada em um espaço de recurso dimensional inferior, em que os produtos internos aproximam uma função de kernel, para que os recursos possam ser usados como entradas para os algoritmos lineares |
+| <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents*> | Reduzir as dimensões do vetor de recurso de entrada aplicando o algoritmo de Análise de Componente Principal |
+
+## <a name="explainability-transformations"></a>Transformações de explicabilidade
+
+| Transformar | Definição |
+| --- | --- |
+| <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution*> | Calcular pontuações de contribuição para cada elemento de um vetor de recurso |
+
+## <a name="calibration-transformations"></a>Transformações de calibração
+
+| Transformar | Definição |
+| --- | --- |
+|<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | Transforma uma pontuação bruta de classificador binário em uma probabilidade de classe usando a regressão logística com parâmetros estimados usando os dados de treinamento |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | Transforma uma pontuação bruta de classificador binário em uma probabilidade de classe usando a regressão logística com parâmetros fixos |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Naive*> | Transforma uma pontuação bruta de classificador binário em uma probabilidade de classe atribuindo pontuações a compartimentos e calculando a probabilidade com base na distribuição entre os compartimentos |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Isotonic*> | Transforma uma pontuação bruta de classificador binário em uma probabilidade de classe atribuindo pontuações a compartimentos, em que a posição dos limites e o tamanho dos compartimentos são estimados usando os dados de treinamento  |
+
+## <a name="deep-learning-transformations"></a>Transformações de aprendizado profundo
+
+| Transformar | Definição |
+| --- | --- |
+| <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*> | Transformar os dados de entrada com um modelo ONNX importado |
+| <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel*> | Transformar os dados de entrada com um modelo TensorFlow importado |
 
 ## <a name="custom-transformations"></a>Transformações personalizadas
 

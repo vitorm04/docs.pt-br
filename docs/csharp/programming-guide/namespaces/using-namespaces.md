@@ -8,17 +8,19 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: bf194e207262ecea0511a0b67bbafeadd8d5d31d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 06ebb9edfaf4753b98c3305a90b52e93ee7b4486
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629496"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796642"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
+
 Os namespaces são usados intensamente em programas em C# de duas maneiras. Em primeiro lugar, as classes do .NET Framework usam namespaces para organizar suas muitas classes. Em segundo lugar, declarar seus próprios namespaces pode ajudar a controlar o escopo dos nomes de classe e de método em projetos de programação maiores.  
   
-## <a name="accessing-namespaces"></a>Acessando namespaces  
+## <a name="accessing-namespaces"></a>Acessar namespaces
+
  A maioria dos aplicativos do C# começam com uma seção de diretivas `using`. Essa seção lista os namespaces que o aplicativo usará com frequência e evita que o programador tenha que especificar um nome totalmente qualificado sempre que um método que está contido é usado.  
   
  Por exemplo, ao incluir a linha:  
@@ -33,17 +35,20 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
-## <a name="namespace-aliases"></a>Aliases de Namespace  
- A [diretiva using](../../../csharp/language-reference/keywords/using-directive.md) também pode ser usada para criar um alias para um [namespace](../../../csharp/language-reference/keywords/namespace.md). Por exemplo, se você estiver usando um namespace gravado anteriormente que contém namespaces aninhados, convém declarar um alias para fornecer uma forma abreviada de fazer referênia a um namespace em particular, como no exemplo a seguir:  
+## <a name="namespace-aliases"></a>aliases de namespace
+
+ Você também pode usar a [diretiva `using`](../../language-reference/keywords/using-directive.md) para criar um alias para um namespace. Use o [qualificador de alias de namespace `::`](../../language-reference/operators/namespace-alias-qualifier.md) para acessar os membros do namespace com alias. O exemplo a seguir mostra como criar e usar um alias de namespace:
   
- [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
+[!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
-## <a name="using-namespaces-to-control-scope"></a>Usando namespaces para controlar o escopo  
+## <a name="using-namespaces-to-control-scope"></a>Usar namespaces para controlar o escopo
+
  A palavra-chave `namespace` é usada para declarar um escopo. A capacidade de criar escopos dentro de seu projeto ajuda a organizar o código e permite que você crie tipos globalmente exclusivos. No exemplo a seguir, uma classe denominada `SampleClass` é definida em dois namespaces, um aninhado no outro. O [operador `.` de acesso de membro](../../language-reference/operators/member-access-operators.md#member-access-operator-) é usado para diferenciar qual método é chamado.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
-## <a name="fully-qualified-names"></a>Nomes totalmente qualificados  
+## <a name="fully-qualified-names"></a>Nomes totalmente qualificados
+
  Os namespaces e os tipos têm títulos exclusivos descritos por nomes totalmente qualificados que indicam uma hierarquia lógica. Por exemplo, a instrução `A.B` implica que `A` é o nome do namespace ou do tipo e `B` é aninhado dentro dele.  
   
  No exemplo a seguir, há namespaces e classes aninhadas. O nome totalmente qualificado é indicado como um comentário após cada entidade.  
@@ -92,6 +97,6 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
-- [. ??](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: ??](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [Operador .](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
+- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
 - [Alias extern](../../../csharp/language-reference/keywords/extern-alias.md)

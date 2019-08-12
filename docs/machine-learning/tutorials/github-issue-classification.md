@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Categorizar problemas de suporte – classificação multiclasse'
 description: Descubra como usar o ML.NET em um cenário de classificação multiclasse para classificar os problemas do GitHub a fim de atribuí-los a uma determinada área.
-ms.date: 05/16/2019
+ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195582"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710298"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: Categorizar problemas de suporte usando a classificação multiclasse com ML.NET
 
@@ -285,6 +285,25 @@ Use o código a seguir para exibir as métricas, compartilhar os resultados e, e
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
+### <a name="save-the-model-to-a-file"></a>Salvar o modelo em um arquivo
+
+Quando estiver satisfeito com seu modelo, salve-o em um arquivo para fazer previsões posteriormente ou em outro aplicativo. Adicione o seguinte código ao método de `Evaluate` . 
+
+[!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
+
+Crie o método `SaveModelAsFile` abaixo de seu método `Evaluate`.
+
+```csharp
+private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
+{
+
+}
+```
+
+Adicione o código a seguir ao método `SaveModelAsFile`. Esse código usa o método [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) para serializar e armazenar o modelo treinado como um arquivo zip.
+
+[!code-csharp[SnippetSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetSaveModel)]
+
 ## <a name="deploy-and-predict-with-a-model"></a>Implantar e prever com um modelo
 
 Adicione uma chamada ao novo método a partir do método `Main`, logo abaixo da chamada do método `Evaluate`, usando o seguinte código:
@@ -302,10 +321,15 @@ private static void PredictIssue()
 
 O método `PredictIssue` executa as seguintes tarefas:
 
+* Carrega o modelo salvo
 * Cria um único problema dos dados de teste.
 * Prevê a área com base em dados de teste.
 * Combina dados de teste e previsões para relatórios.
 * Exibe os resultados previstos.
+
+Carregue o modelo salvo em seu aplicativo adicionando o seguinte código ao método `PredictIssue`:
+
+[!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
 Adicione um problema do GitHub para testar a previsão do modelo treinado no método `Predict` ao criar uma instância de `GitHubIssue`:
 

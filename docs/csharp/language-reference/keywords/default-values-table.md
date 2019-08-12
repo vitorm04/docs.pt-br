@@ -1,49 +1,32 @@
 ---
 title: Tabela de valores padrão – Referência de C#
 ms.custom: seodec18
-description: Saiba quais são os valores padrão dos tipos de valor do C#.
-ms.date: 08/23/2018
+description: Saiba quais são os valores padrão dos tipos C#.
+ms.date: 07/29/2019
 helpviewer_keywords:
-- constructors [C#], return values
-- keywords [C#], new
+- default [C#]
 - parameterless constructor [C#]
-- defaults [C#]
-- value types [C#], initializing
-- variables [C#], value types
-- constructors [C#], parameterless constructor
-- types [C#], parameterless constructor return values
-ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661409"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627748"
 ---
-# <a name="default-values-table-c-reference"></a>Tabela de valores padrão (Referência de C#)
+# <a name="default-values-table-c-reference"></a>Tabela de valores padrão (referência de C#)
 
-A tabela a seguir mostra os valores padrão dos [tipos de valor](value-types.md).
+A seguinte tabela mostra os valores padrão de tipos C#:
 
-|Tipo de valor|Valor padrão|
-|----------------|-------------------|
+|Tipo|Valor padrão|
+|---------|------------------|
+|Qualquer tipo de referência|`null`|
+|Qualquer [tipo numérico integral interno](../builtin-types/integral-numeric-types.md)|0 (zero)|
+|Qualquer [tipo numérico de ponto flutuante interno](../builtin-types/floating-point-numeric-types.md)|0 (zero)|
 |[bool](bool.md)|`false`|
-|[byte](../builtin-types/integral-numeric-types.md)|0|
-|[char](char.md)|'\0'|
-|[decimal](../builtin-types/floating-point-numeric-types.md)|0M|
-|[double](../builtin-types/floating-point-numeric-types.md)|0,0D|
+|[char](char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|O valor é produzido pela expressão `(E)0`, em que `E` é o identificador de enumeração.|
-|[float](../builtin-types/floating-point-numeric-types.md)|0,0F|
-|[int](../builtin-types/integral-numeric-types.md)|0|
-|[long](../builtin-types/integral-numeric-types.md)|0L|
-|[sbyte](../builtin-types/integral-numeric-types.md)|0|
-|[short](../builtin-types/integral-numeric-types.md)|0|
 |[struct](struct.md)|O valor produzido pela configuração de todos os campos tipo-valor para seus valores padrão e todos os campos tipo-referência para `null`.|
-|[uint](../builtin-types/integral-numeric-types.md)|0|
-|[ulong](../builtin-types/integral-numeric-types.md)|0|
-|[ushort](../builtin-types/integral-numeric-types.md)|0|
-
-## <a name="remarks"></a>Comentários
-
-Não é possível usar variáveis não inicializadas em C#. É possível inicializar uma variável com o valor padrão de seu tipo. Também é possível usar o valor padrão de um tipo para especificar o valor padrão do [argumento opcional](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments) de um método.
+|Qualquer [tipo de valor que permite valor nulo](../../programming-guide/nullable-types/index.md)|Uma instância para a qual a propriedade <xref:System.Nullable%601.HasValue%2A> é `false` e a propriedade <xref:System.Nullable%601.Value%2A> não está definida. Esse valor padrão também é conhecido como o valor *null* do tipo de valor que permite valor nulo.|
 
 Use a [expressão de valor padrão](../../programming-guide/statements-expressions-operators/default-value-expressions.md) para produzir o valor padrão de um tipo, como mostra o exemplo a seguir:
 
@@ -57,19 +40,23 @@ Começando no C# 7.1, você pode usar o [`default` literal](../../programming-gu
 int a = default;
 ```
 
-Você também pode usar o construtor sem parâmetros ou o construtor sem parâmetros implícito para produzir o valor padrão de um tipo de valor, como mostra o exemplo a seguir. Para obter mais informações sobre construtores, confira o artigo [Construtores](../../programming-guide/classes-and-structs/constructors.md).
+Para um tipo de valor, o construtor implícito sem parâmetros também produz o valor padrão do tipo, como mostra o seguinte exemplo:
 
-```csharp
-int a = new int();
+```csharp-interactive
+var n = new System.Numerics.Complex();
+Console.WriteLine(n);  // output: (0, 0)
 ```
 
-O valor padrão de qualquer [tipo de referência](reference-types.md) é `null`. O valor padrão de um [tipo que permite valor nulo](../../programming-guide/nullable-types/index.md) é uma instância cuja propriedade <xref:System.Nullable%601.HasValue%2A> é `false` e a propriedade <xref:System.Nullable%601.Value%2A> é indefinida.
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
+
+- [Valores padrão](~/_csharplang/spec/variables.md#default-values)
+- [Construtores padrão](~/_csharplang/spec/types.md#default-constructors)
 
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Tipos de valor](value-types.md)
-- [Tabela de tipos de valor](value-types-table.md)
 - [Tabela de tipos internos](built-in-types-table.md)
+- [Construtores](../../programming-guide/classes-and-structs/constructors.md)
