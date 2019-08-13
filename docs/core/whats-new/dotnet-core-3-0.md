@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 06/14/2019
-ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.date: 07/25/2019
+ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484653"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733362"
 ---
-# <a name="whats-new-in-net-core-30-preview-6"></a>Novidades do .NET Core 3.0 (Versão Prévia 6)
+# <a name="whats-new-in-net-core-30-preview-7"></a>Novidades do .NET Core 3.0 (Versão Prévia 7)
 
-Este artigo descreve as novidades do .NET Core 3.0 (por meio da versão prévia 6). Um dos maiores avanços é o suporte para aplicativos Windows de área de trabalho (somente Windows). Usando a Área de Trabalho do Windows do componente de SDK do .NET Core 3.0, você pode portar seus aplicativos Windows Forms e WPF (Windows Presentation Foundation). Para deixar claro, o componente Windows Desktop só é compatível com o Windows e só é incluído nele. Para obter mais informações, consulte a seção [Área de Trabalho do Windows](#windows-desktop) mais adiante neste artigo.
+Este artigo descreve as novidades do .NET Core 3.0 (por meio da versão prévia 7). Um dos maiores avanços é o suporte para aplicativos Windows de área de trabalho (somente Windows). Usando a Área de Trabalho do Windows do componente de SDK do .NET Core 3.0, você pode portar seus aplicativos Windows Forms e WPF (Windows Presentation Foundation). Para deixar claro, o componente Windows Desktop só é compatível com o Windows e só é incluído nele. Para obter mais informações, consulte a seção [Área de Trabalho do Windows](#windows-desktop) mais adiante neste artigo.
 
 O .NET Core 3.0 adiciona suporte para C# 8.0. É altamente recomendável que você use a [versão mais recente do Visual Studio Versão Prévia](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) ou Visual Studio Code com a extensão OmniSharp.
 
-[Baixe e comece a trabalhar com o .NET Core 3.0 Versão Prévia 6](https://aka.ms/netcore3download) agora no Windows, Mac e Linux.
+[Baixe e comece a usar o .NET Core 3.0 Versão Prévia 7](https://aka.ms/netcore3download) agora no Windows, Mac e Linux.
 
 Para obter mais informações sobre cada versão prévia, veja os seguintes avisos:
 
+- [Comunicado do .NET Core 3.0 Versão Prévia 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [Comunicado do .NET Core 3.0 Versão Prévia 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [Comunicado do .NET Core 3.0 Versão Prévia 5](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [Comunicado do .NET Core 3.0 Versão Prévia 4](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
@@ -31,9 +32,13 @@ Para obter mais informações sobre cada versão prévia, veja os seguintes avis
 - [Comunicado do .NET Core 3.0 Versão Prévia 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 - [Comunicado do .NET Core 3.0 Versão Prévia 1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
 
+## <a name="production-supported-preview"></a>Versão prévia com suporte de produção
+
+O .NET Core Versão Prévia 7 é considerado uma produção pronta pela Microsoft e tem suporte total. Começando na versão prévia 7, as versões se concentrarão em aprimorar o .NET Core 3.0 em vez de adicionar novos recursos. Para obter mais informações sobre o que mudou na versão prévia 7, consulte o [comunicado da versão prévia 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/).
+
 ## <a name="net-core-sdk-windows-installer"></a>Windows Installer do SDK do .NET Core
 
-O instalador MSI para Windows foi alterado do .NET Core 3.0 em diante. Os instaladores de SDK agora atualizarão versões de faixa de recurso do SDK no local. Faixas de recurso são definidas nos grupos de *centenas* na seção *patch* do número de versão. Por exemplo, **3.0._101_** e **3.0._201_** são versões em duas faixas de recurso diferentes, enquanto **3.0._101_** e **3.0._199_** estão na mesma faixa de recurso. Além disso, quando o SDK do .NET Core **3.0._101_** for instalado, o SDK do .NET Core **3.0._100_** será removido do computador se ele existir. Quando o SDK do .NET Core **3.0._200_** for instalado no mesmo computador, o SDK do .NET Core **3.0._101_** não será removido.
+O instalador MSI para Windows foi alterado do .NET Core 3.0 em diante. Os instaladores de SDK agora atualizarão versões de faixa de recurso do SDK no local. Faixas de recurso são definidas nos grupos de *centenas* na seção *patch* do número de versão. Por exemplo, **3.0. _** e **3.0. _** são versões em duas faixas de recurso diferentes, enquanto **3.0. _** e **3.0. _** estão na mesma faixa de recurso. Além disso, quando o SDK do .NET Core **3.0. _** for instalado, o SDK do .NET Core **3.0. _** será removido do computador se ele existir. Quando o SDK do .NET Core **3.0. _** for instalado no mesmo computador, o SDK do .NET Core **3.0. _** não será removido.
 
 Para obter mais informações sobre controle de versão, consulte [Visão geral de como é o controle de versão no .NET Core](../versions/index.md).
 
@@ -174,23 +179,23 @@ Para desabilitar completamente a TC, use esta configuração em seu arquivo de p
 
 Você pode melhorar o tempo de inicialização do seu aplicativo .NET Core compilando seus assemblies de aplicativos como o formato ReadyToRun (R2R). R2R é uma forma de compilação antecipada (AOT).
 
-Os binários R2R melhoram o desempenho de inicialização reduzindo a quantidade de trabalho que o compilador just-in-time (JIT) precisa fazer à medida que seu aplicativo é carregado. Os binários contêm código nativo similar comparado ao que o JIT produziria.
+Os binários R2R melhoram o desempenho de inicialização reduzindo a quantidade de trabalho que o compilador just-in-time (JIT) precisa fazer à medida que seu aplicativo é carregado. Os binários contêm código nativo similar comparado ao que o JIT produziria. Entretanto, os binários R2R são maiores porque contêm código de IL (linguagem intermediária), que ainda é necessário para alguns cenários, e a versão nativa do mesmo código. O R2R só está disponível quando você publica um aplicativo autocontido que tenha como alvo um RID (Runtime Environment) específico, como o Linux x64 ou o Windows x64.
 
-Os binários R2R são maiores porque contêm código de linguagem intermediária (IL), que ainda é necessário para alguns cenários, e a versão nativa do mesmo código. O R2R só está disponível quando você publica um aplicativo autônomo que tenha como alvo um RID (Runtime Environment) específico, como o Linux x64 ou o Windows x64.
+Para compilar seu projeto como ReadyToRun, faça o seguinte:
 
-Para compilar seu aplicativo como R2R, adicione a configuração `<PublishReadyToRun>`:
+01. Adicione a configuração `<PublishReadyToRun>` ao seu projeto
 
-```xml
-<PropertyGroup>
-  <PublishReadyToRun>true</PublishReadyToRun>
-</PropertyGroup>
-```
+    ```xml
+    <PropertyGroup>
+      <PublishReadyToRun>true</PublishReadyToRun>
+    </PropertyGroup>
+    ```
 
-Publique um aplicativo autossuficiente. Por exemplo, esse comando cria um aplicativo autossuficiente para a versão de 64 bits do Windows:
+01. Publique um aplicativo autossuficiente. Por exemplo, esse comando cria um aplicativo autossuficiente para a versão de 64 bits do Windows:
 
-```console
-dotnet publish -c Release -r win-x64 --self-contained true
-```
+    ```console
+    dotnet publish -c Release -r win-x64 --self-contained true
+    ```
 
 ### <a name="cross-platformarchitecture-restrictions"></a>Restrições de plataforma cruzada/arquitetura
 
@@ -406,7 +411,7 @@ Aqui está um exemplo em C# 8.0 de leitura por meio do arquivo [**launch.json**]
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType> baseia-se em <xref:System.Text.Json.Utf8JsonReader> e <xref:System.Text.Json.Utf8JsonWriter> para fornecer uma opção de serialização rápida e de pouca memória ao trabalhar com fragmentos e documentos JSON.
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> baseia-se em <xref:System.Text.Json.Utf8JsonReader> e <xref:System.Text.Json.Utf8JsonWriter> para fornecer uma opção de serialização rápida e de pouca memória ao trabalhar com fragmentos e documentos JSON.
 
 EXAMINE: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md para obter um exemplo para portar para este artigo
 
