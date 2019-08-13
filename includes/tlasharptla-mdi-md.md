@@ -1,9 +1,0 @@
----
-ms.openlocfilehash: 12fca24716b11bb5bb325aab4aa9de5973287965
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65672390"
----
-<span data-ttu-id="44b0d-101">MDI (interface MDI)</span><span class="sxs-lookup"><span data-stu-id="44b0d-101">multiple-document interface (MDI)</span></span>
