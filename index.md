@@ -6,12 +6,12 @@ title: Documentação .NET
 description: Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589995"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972381"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,7 +77,7 @@ ms.locfileid: "65589995"
         <h1>Documentação .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Documentos</a>
+                <a data-default="true" href="#docs">Documentação</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">Introdução</a>
@@ -309,7 +309,7 @@ ms.locfileid: "65589995"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +319,8 @@ ms.locfileid: "65589995"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>O que é ASP.NET?</h3>
-                                                    <p>Aprenda a fazer build de aplicativos web ASP.NET.</p>
+                                                    <h3>O que é ASP.NET Core?</h3>
+                                                    <p>Aprenda a criar aplicativos Web ASP.NET Core.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,7 +453,7 @@ ms.locfileid: "65589995"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Dispositivo móvel</a>
+                        <a href="#mobile">Móvel</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -515,7 +515,7 @@ ms.locfileid: "65589995"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">Área de trabalho</a>
+                        <a href="#desktop">Desktop</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp">
