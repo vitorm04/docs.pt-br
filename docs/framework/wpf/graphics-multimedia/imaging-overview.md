@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 845095567459fc486dd2f1c52e575444612c7bb8
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869130"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971954"
 ---
 # <a name="imaging-overview"></a>Visão geral da geração de imagens
 Este tópico é uma introdução ao [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. O [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] permite aos desenvolvedores exibir, transformar e formatar imagens.  
 
-<a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>Componente de geração de imagens do WPF  
  O [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] proporciona melhorias significativas em recursos de geração de imagens no [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Os recursos de geração de imagens, como a exibição de um bitmap ou o uso de uma imagem em um controle comum, eram dependentes do Microsoft Windows Graphics Device Interface (GDI) ou das bibliotecas do Microsoft Windows GDI+. Essas APIs fornecem funcionalidade de geração de imagens de linha de base, mas não têm recursos como suporte para extensibilidade de codec e suporte a imagens de alta fidelidade. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]foi projetado para superar as deficiências do GDI e do GDI+ e fornecer um novo conjunto de API para exibir e usar imagens em seus aplicativos.  
   
@@ -39,7 +38,7 @@ Este tópico é uma introdução ao [!INCLUDE[TLA#tla_wic](../../../../includes/
   
 - Modelo de extensibilidade para formatos de imagem novos ou proprietários.  
   
-- Desempenho e segurança aprimorados em formatos de imagem nativa, incluindo bitmap ( [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]BMP [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]) [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)],,,, Graphics Interchange Format (GIF) e ícone (. ico).  
+- Desempenho e segurança aprimorados em formatos de imagem nativa, incluindo bitmap (BMP), grupo de especialistas em joint- [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]Graphics [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]( [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]JPEG),,,, Graphics Interchange Format (GIF) e ícone (. ico).  
   
 - Preservação de dados de alta intensidade de bits de imagem de até 8 bits por canal (32 bits por pixel).  
   
@@ -165,7 +164,7 @@ Os pincéis de imagem podem preencher formas, controles, texto e muito mais
 ## <a name="image-metadata"></a>Metadados de imagem  
  Alguns arquivos de imagem contêm metadados que descrevem o conteúdo ou as características do arquivo. Por exemplo, a maioria das câmeras digitais criam imagens que contêm metadados sobre a marca e modelo da câmera usada para capturar a imagem. Cada formato de imagem manipula os metadados de maneira diferente, mas o [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] fornece uma maneira uniforme de armazenar e recuperar metadados para cada formato de imagem com suporte.  
   
- O acesso aos metadados é fornecido por <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> meio da propriedade <xref:System.Windows.Media.Imaging.BitmapSource> de um objeto. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Retorna um <xref:System.Windows.Media.Imaging.BitmapMetadata> objeto que inclui todos os metadados contidos na imagem. Esses dados podem estar em um esquema de metadados ou em uma combinação de esquemas diferentes. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]o dá suporte aos seguintes esquemas de metadados de imagem: Arquivo de imagem intercambiável (EXIF), texto (dados textuais de png), IFD (diretório de arquivos de [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]imagem) [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)], e.  
+ O acesso aos metadados é fornecido por <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> meio da propriedade <xref:System.Windows.Media.Imaging.BitmapSource> de um objeto. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Retorna um <xref:System.Windows.Media.Imaging.BitmapMetadata> objeto que inclui todos os metadados contidos na imagem. Esses dados podem estar em um esquema de metadados ou em uma combinação de esquemas diferentes. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]o dá suporte aos seguintes esquemas de metadados de imagem: Arquivo de imagem intercambiável (EXIF), texto (dados textuais de PNG), IFD (diretório de arquivos de imagem), IPTC (International Press Telecommunications Council) e [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
   
  Para simplificar o processo de leitura de metadados, <xref:System.Windows.Media.Imaging.BitmapMetadata> o fornece várias propriedades nomeadas que podem ser acessadas <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>facilmente, <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>como, e. Muitas dessas propriedades nomeadas também podem ser usadas para gravar metadados. O suporte adicional para a leitura de metadados é fornecido pelo leitor de consulta de metadados. O <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> método é usado para recuperar um leitor de consulta de metadados, fornecendo uma consulta de cadeia de caracteres como *"/app1/exif/"* . No exemplo a seguir, <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> é usado para obter o texto armazenado no local *"/Text/Description"* .  
   

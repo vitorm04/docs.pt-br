@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 9cab4dbbcd3302a6e74783eaefdbbd8463332224
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1d40b133beb68c14e7392139bf0753cedb67a4ef
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710249"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971828"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementando o Padrão Controle de Window de Automação de Interface de Usuário
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "68710249"
   
  Este tópico apresenta as diretrizes e convenções para <xref:System.Windows.Automation.Provider.IWindowProvider>implementar o, incluindo <xref:System.Windows.Automation.WindowPattern> informações sobre propriedades, métodos e eventos. Links para referências adicionais são listados no final do tópico.  
   
- O <xref:System.Windows.Automation.WindowPattern> padrão de controle é usado para dar suporte a controles que fornecem funcionalidade básica baseada em janela dentro de uma GUI (interface gráfica do usuário) tradicional. Exemplos de controles que devem implementar esse padrão de controle incluem janelas de aplicativo de nível [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] superior, janelas filhas, controles de painel dividido redimensionável, caixas de diálogo modais e janelas de ajuda de balão.  
+ O <xref:System.Windows.Automation.WindowPattern> padrão de controle é usado para dar suporte a controles que fornecem funcionalidade básica baseada em janela dentro de uma GUI (interface gráfica do usuário) tradicional. Exemplos de controles que devem implementar esse padrão de controle incluem janelas de aplicativo de nível superior, janelas filhas de MDI (interface de vários documentos), controles de painel dividido redimensionável, caixas de diálogo modais e janelas de ajuda de balão.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  

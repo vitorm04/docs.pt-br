@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 818d013356c3ca8151e9b5bb675bce4726759f6c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5f3560c899373b9835e2ead79590cf73777b2375
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710343"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972413"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem melhor qualidade e desempenho de renderização de texto, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] suporte a tipografia, texto internacional aperfeiçoado, suporte de fonte aperfeiçoado e APIs (interfaces de programação de aplicativo).  
@@ -29,7 +29,7 @@ Texto com suavização da direção y do ClearType
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Tipografia rica  
- O [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] formato de fonte é uma extensão do formato de fonte [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]. O formato de fonte [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] foi desenvolvido em conjunto pela [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] e a Adobe e fornece um conjunto rico de características tipográficas avançadas. O <xref:System.Windows.Documents.Typography> objeto expõe muitos dos recursos avançados de [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] fontes, como alternativas estilísticos e traços violentos. O [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] fornece um conjunto de fontes de amostra [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] que são criadas com recursos avançados, como as fontes Pericles e Pescadero. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
+ O [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] formato de fonte é uma extensão do formato de fonte [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]. O formato de fonte [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] foi desenvolvido em conjunto pela [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] e a Adobe e fornece um conjunto rico de características tipográficas avançadas. O <xref:System.Windows.Documents.Typography> objeto expõe muitos dos recursos avançados de [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] fontes, como alternativas estilísticos e traços violentos. O SDK do Windows fornece um conjunto de fontes [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] de exemplo projetadas com recursos avançados, como as fontes Pericles e Pescadero. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
   
  A fonte Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] contém glifos adicionais que fornecem alternativos estilísticos para o conjunto padrão de glifos. O texto a seguir exibe glifos alternativos estilísticos.  
   

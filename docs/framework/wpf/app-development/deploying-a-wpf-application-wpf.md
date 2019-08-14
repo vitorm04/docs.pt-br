@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818031"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972265"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implantando um aplicativo do WPF (WPF)
 Depois que os aplicativos do Windows Presentation Foundation (WPF) são criados, eles precisam ser implantados. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]e o .NET Framework incluem várias tecnologias de implantação. A tecnologia de implantação que é usada para implantar um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende do tipo de aplicativo. Este tópico fornece uma breve visão geral de cada tecnologia de implantação e como elas são usadas em conjunto com os requisitos de implantação de cada tipo de aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -114,7 +114,7 @@ Depois que os aplicativos do Windows Presentation Foundation (WPF) são criados,
 ## <a name="installing-the-net-framework"></a>Instalando o .NET Framework  
  Para executar um [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativo, a estrutura de Microsoft .NET deve ser instalada no cliente. O Internet Explorer detecta automaticamente se os clientes estão instalados com [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] .NET Framework quando aplicativos hospedados em navegador são exibidos. Se o .NET Framework não estiver instalado, o Internet Explorer solicitará que os usuários o instalem.  
   
- Para detectar se o .NET Framework está instalado, o Internet Explorer inclui um aplicativo bootstrapper que é registrado como o [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] manipulador de fallback para arquivos de conteúdo com as seguintes extensões:. XAML,. XPS,. XBAP e. Application. Se você navegar para esses tipos de arquivo e o .NET Framework não estiver instalado no cliente, o aplicativo bootstrapper solicitará permissão para instalá-lo. Se a permissão não for fornecida, nem a .NET Framework nem o aplicativo será instalado.  
+ Para detectar se o .NET Framework está instalado, o Internet Explorer inclui um aplicativo bootstrapper que é registrado como o manipulador MIME (Multipurpose Internet Mail Extensions) de fallback para arquivos de conteúdo com as seguintes extensões:. XAML,. XPS,. XBAP e. Application. Se você navegar para esses tipos de arquivo e o .NET Framework não estiver instalado no cliente, o aplicativo bootstrapper solicitará permissão para instalá-lo. Se a permissão não for fornecida, nem a .NET Framework nem o aplicativo será instalado.  
   
  Se a permissão for concedida, o Internet Explorer baixará e instalará o .NET Framework usando o Microsoft Serviço de Transferência Inteligente em Segundo Plano (BITS). Após a instalação bem-sucedida do .NET Framework, o arquivo originalmente solicitado é aberto em uma nova janela do navegador.  
   

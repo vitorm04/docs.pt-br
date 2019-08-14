@@ -3,12 +3,12 @@ title: 'Como: criar um aplicativo ASP.NET baseado em declarações usando a Aute
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75db96a621d7863ef445efb24814111b34da6960
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792737"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971841"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Como: criar um aplicativo ASP.NET baseado em declarações usando a Autenticação Baseada em Formulários
 
@@ -60,7 +60,7 @@ A autenticação de Formulários se beneficiou com a inclusão do WIF no .NET 4.
 
 Nesta etapa, você criará um novo aplicativo ASP.NET Web Forms.
 
-#### <a name="to-create-a-simple-aspnet-application"></a>Para criar um aplicativo ASP.NET simples
+### <a name="to-create-a-simple-aspnet-application"></a>Para criar um aplicativo ASP.NET simples
 
 1. Inicie o Visual Studio, clique em **Arquivo**, **Novo** e, depois, em **Projeto**.
 
@@ -72,7 +72,7 @@ Nesta etapa, você criará um novo aplicativo ASP.NET Web Forms.
 
 Nesta etapa, você adicionará uma entrada de configuração ao arquivo de configuração *Web.config* e edite o arquivo *Default.aspx* para exibir as informações de declarações de uma conta.
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Para configurar um aplicativo ASP.NET para declarações usando a autenticação de Formulários
+### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Para configurar um aplicativo ASP.NET para declarações usando a autenticação de Formulários
 
 1. No arquivo *Default.aspx*, substitua a marcação existente pela seguinte:
 
@@ -126,7 +126,7 @@ Nesta etapa, você adicionará uma entrada de configuração ao arquivo de confi
 
 Nesta etapa, você testará o aplicativo ASP.NET Web Forms e verificará se as declarações são apresentadas quando um usuário entra com a autenticação de formulários.
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Testar o aplicativo ASP.NET Web Forms para declarações usando a autenticação de formulários
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Testar o aplicativo ASP.NET Web Forms para declarações usando a autenticação de formulários
 
 1. Pressione **F5** para compilar e executar o aplicativo. Você deverá ver o *Default.aspx*, que tem os links **Registrar** e **Fazer logon** na parte superior direita da página. Clique em **Registrar**.
 
