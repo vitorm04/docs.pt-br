@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 265d3edbd3175eebcf6fd35be24f5b66144c960f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746664"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037949"
 ---
 # <a name="get-function"></a>Função Get
 
-Recupera o valor da propriedade especificado se ele existir.
+Recupera o valor da propriedade especificada, se existir.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -46,35 +46,35 @@ HRESULT Get (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`\
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`\
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-[in] O nome da propriedade.
+no O nome da propriedade.
 
 `lFlags`\
 [in] Reservado. Esse parâmetro deve ser 0.
 
 `pVal`\
-[out] Se a função retornar com êxito, contém o valor da `wszName` propriedade. O `pval` argumento é atribuído o tipo correto e o valor do qualificador.
+fora Se a função retornar com êxito, conterá o valor da `wszName` propriedade. O `pval` argumento recebe o tipo e o valor corretos para o qualificador.
 
 `pvtType`\
-[out] Se a função retornar com êxito, contém um [constante de tipo CIM](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) que indica o tipo de propriedade. Seu valor também pode ser `null`. 
+fora Se a função retornar com êxito, conterá uma [constante do tipo CIM](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) que indica o tipo de propriedade. Seu valor também pode ser `null`. 
 
 `plFlavor`\
-[out] Se a função retornar com êxito, recebe informações sobre a origem da propriedade. Seu valor pode ser `null`, ou uma das seguintes constantes WBEM_FLAVOR_TYPE definidas na *WbemCli.h* arquivo de cabeçalho: 
+fora Se a função retornar com êxito, o receberá informações sobre a origem da propriedade. Seu valor pode ser `null`ou uma das seguintes constantes WBEM_FLAVOR_TYPE definidas no arquivo de cabeçalho *WbemCli. h* : 
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | A propriedade é uma propriedade de sistema padrão. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para uma classe: A propriedade é herdada da classe pai. <br> Para uma instância: A propriedade, enquanto herdada da classe pai, não foi modificada pela instância.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para uma classe: A propriedade pertence à classe derivada. <br> Para uma instância: A propriedade é modificada pela instância; ou seja, foi fornecido um valor ou um qualificador foi adicionado ou modificado. |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | A propriedade é uma propriedade padrão do sistema. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para uma classe: A propriedade é herdada da classe pai. <br> Para uma instância: A propriedade, embora herdada da classe pai, não foi modificada pela instância.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para uma classe: A propriedade pertence à classe derivada. <br> Para uma instância: A propriedade é modificada pela instância; ou seja, um valor foi fornecido ou um qualificador foi adicionado ou modificado. |
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -86,15 +86,15 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) .
 
-O `Get` função também pode retornar propriedades do sistema.
+A `Get` função também pode retornar propriedades do sistema.
 
-O `pVal` argumento é atribuído o tipo correto e o valor para o qualificador e o COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) função
+O argumento recebe o tipo e o valor corretos para o qualificador e a função [VariantInit com](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) `pVal`
 
 ## <a name="requirements"></a>Requisitos
 
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
  **Cabeçalho:** WMINet_Utils.idl
 

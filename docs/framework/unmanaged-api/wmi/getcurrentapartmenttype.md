@@ -1,6 +1,6 @@
 ---
 title: Função GetCurrentApartmentType (referência de API não gerenciada)
-description: A função GetCurrentApartmentType recupera o tipo do compartimento em que o chamador está em execução.
+description: A função GetCurrentApartmentType recupera o tipo de apartamento no qual o chamador está sendo executado.
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76c852ac81126895ea3a2e1b40473722c8445201
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68eb4ba653098d847022da45e610cb4fa5496a8c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746562"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037960"
 ---
 # <a name="getcurrentapartmenttype-function"></a>Função GetCurrentApartmentType
 Recupera o tipo de apartment no qual o chamador está sendo executado.   
@@ -41,27 +41,27 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instância.
+no Um ponteiro para uma instância de [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) .
 
 `aptType`  
-[out] Um ponteiro para um [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) valor de enumeração que indica o apartment do chamador.
+fora Um ponteiro para um valor de enumeração [APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype) que indica o apartamento do chamador.
 
 ## <a name="return-value"></a>Valor retornado
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 | `S_OK` | 0 | A função foi concluída com êxito. |
-| `E_FAIL` | 0x80000008 | O chamador não está em execução em um apartment. |
+| `E_FAIL` | 0x80000008 | O chamador não está sendo executado em um apartamento. |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) método.
+Essa função encapsula uma chamada para o método [IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

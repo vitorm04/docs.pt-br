@@ -8,41 +8,39 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: ed479c04db094b5fc0c42bfecbfe5a7753c16358
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: e5069dd46a31a65f65a17d750b685d82762e3d11
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960187"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038203"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Como: Adicionar botões a um controle ToolBar usando o designer
 
 > [!NOTE]
 > O controle <xref:System.Windows.Forms.ToolStrip> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.ToolBar>, no entanto, o controle <xref:System.Windows.Forms.ToolBar> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.
 
-Parte integrante do <xref:System.Windows.Forms.ToolBar> controle é os botões que você adicionar a ele. Eles podem ser usados para fornecer acesso fácil aos comandos de menu ou, como alternativa, podem ser colocados em outra área da interface do usuário do seu aplicativo para expor comandos para os usuários que não estão disponíveis na estrutura do menu.
+Uma parte integral do <xref:System.Windows.Forms.ToolBar> controle são os botões que você adiciona a ele. Eles podem ser usados para fornecer acesso fácil aos comandos de menu ou, como alternativa, podem ser colocados em outra área da interface do usuário do seu aplicativo para expor comandos para os usuários que não estão disponíveis na estrutura do menu.
 
-O procedimento a seguir exige um **aplicativo do Windows** projeto com um formulário que contém um <xref:System.Windows.Forms.ToolBar> controle. Para obter informações sobre como configurar um projeto desse tipo, consulte [como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md).
+O procedimento a seguir requer um projeto de **aplicativo do Windows** com um <xref:System.Windows.Forms.ToolBar> formulário que contém um controle. Para obter informações sobre como configurar esse projeto, consulte [como: Crie um projeto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicativo Windows Forms [e como: Adicione controles a Windows Forms](how-to-add-controls-to-windows-forms.md).
 
-> [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ### <a name="to-add-buttons-at-design-time"></a>Adicionar botões no tempo de design
 
 1. Selecione o <xref:System.Windows.Forms.ToolBar> controle.
 
-2. No **propriedades** janela, clique no <xref:System.Windows.Forms.ToolBar.Buttons%2A> propriedade para selecioná-lo e clique no **reticências** (![botão do botão de reticências (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) Para abrir o **Editor de coleção ToolBarButton**.
+2. Na janela **Propriedades** , clique na <xref:System.Windows.Forms.ToolBar.Buttons%2A> propriedade para selecioná-la e clique nas **reticências** (![o botão de reticências (...) no botão janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) para abrir o **ToolBarButton Editor de coleção**.
 
-3. Use o **Add** e **remover** botões Adicionar e remover botões do <xref:System.Windows.Forms.ToolBar> controle.
+3. Use os botões **Adicionar** e **remover** para adicionar e remover <xref:System.Windows.Forms.ToolBar> botões do controle.
 
 4. Configure as propriedades dos botões individuais na janela **Propriedades** que aparece no painel à direita do editor. A tabela a seguir mostra algumas propriedades importantes a considerar.
 
     |Propriedade|Descrição|
     |--------------|-----------------|
-    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|Define o menu a ser exibido no botão de barra de ferramentas da lista suspensa. O botão de barra de ferramentas <xref:System.Windows.Forms.ToolBarButton.Style%2A> propriedade deve ser definida como <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>. Esta propriedade usa uma instância do <xref:System.Windows.Forms.ContextMenu> classe como uma referência.|
-    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|Define se um botão de alternância de barra de ferramentas é parcialmente pressionado. O botão de barra de ferramentas <xref:System.Windows.Forms.ToolBarButton.Style%2A> propriedade deve ser definida como <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>.|
-    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|Define se um botão de alternância da barra de ferramentas está no estado pressionado. O botão de barra de ferramentas <xref:System.Windows.Forms.ToolBarButton.Style%2A> propriedade deve ser definida como <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton> ou <xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>.|
-    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|Define o estilo do botão de barra de ferramentas. Deve ser um dos valores a <xref:System.Windows.Forms.ToolBarButtonStyle> enumeração.|
+    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|Define o menu a ser exibido no botão de barra de ferramentas da lista suspensa. A propriedade do <xref:System.Windows.Forms.ToolBarButton.Style%2A> botão da barra de ferramentas deve <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>ser definida como. Essa propriedade usa uma instância da <xref:System.Windows.Forms.ContextMenu> classe como uma referência.|
+    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|Define se um botão de alternância de barra de ferramentas é parcialmente pressionado. A propriedade do <xref:System.Windows.Forms.ToolBarButton.Style%2A> botão da barra de ferramentas deve <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>ser definida como.|
+    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|Define se um botão de alternância da barra de ferramentas está no estado pressionado. A propriedade do <xref:System.Windows.Forms.ToolBarButton.Style%2A> botão da barra de ferramentas deve ser <xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>definida como <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton> ou.|
+    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|Define o estilo do botão de barra de ferramentas. Deve ser um dos valores na <xref:System.Windows.Forms.ToolBarButtonStyle> enumeração.|
     |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|A cadeia de caracteres de texto exibida pelo botão.|
     |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|O texto que aparece como uma ToolTip para o botão.|
 
@@ -51,7 +49,7 @@ O procedimento a seguir exige um **aplicativo do Windows** projeto com um formul
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Como: Definir um ícone para um botão de barra de ferramentas](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Como: Disparar eventos de Menu para botões da barra de ferramentas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Como: Definir um ícone para um botão da barra de ferramentas](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Como: Eventos do menu disparar para botões da barra de ferramentas](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Visão geral do controle de barra de ferramentas](toolbar-control-overview-windows-forms.md)
 - [Controle de barra de ferramentas](toolbar-control-windows-forms.md)

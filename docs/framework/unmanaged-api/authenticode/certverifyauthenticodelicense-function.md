@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf7e997282351cc10dd6da1fc405366ea67c7307
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8736da6c8db876b3dadb3b906a586633be176cf6
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741102"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038319"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>Função CertVerifyAuthenticodeLicense
 Verifica a validade de uma licença XrML Authenticode.  
@@ -35,7 +35,7 @@ HRESULT CertVerifyAuthenticodeLicense (
  `pLicenseBlob`  
  [In] A licença XrML Authenticode a ser verificada.  
   
- Consulte a [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estrutura.  
+ Consulte a estrutura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `dwFlags`  
  [in] Opcional. Uma combinação dos seguintes valores:  
@@ -53,14 +53,14 @@ HRESULT CertVerifyAuthenticodeLicense (
 - AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
- [out] Para receber informações do assinante. Se a licença não foi assinada, `dwError` é definido como TRUST_E_NOSIGNATURE. É responsabilidade do chamador liberar recursos por meio de [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) função após o uso.  
+ [out] Para receber informações do assinante. Se a licença não foi assinada, `dwError` é definido como TRUST_E_NOSIGNATURE. É responsabilidade do chamador liberar recursos usando a função [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) após o uso.  
   
- Ver [estrutura AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md).  
+ Consulte [estrutura AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md).  
   
  `pTimestamperInfo`  
- [out] Para receber informações do carimbo de hora, se disponível. Se a licença não recebeu carimbo de hora, `dwError` é definido como TRUST_E_NOSIGNATURE. É responsabilidade do chamador liberar recursos por meio de [CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md) função após o uso.  
+ [out] Para receber informações do carimbo de hora, se disponível. Se a licença não recebeu carimbo de hora, `dwError` é definido como TRUST_E_NOSIGNATURE. É responsabilidade do chamador liberar recursos usando a função [CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md) após o uso.  
   
- Ver [estrutura AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md).  
+ Consulte [estrutura AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md).  
   
 ## <a name="return-value"></a>Valor de retorno  
  Retorna `S_OK` se houver êxito. Caso contrário, retornará um código de erro.  

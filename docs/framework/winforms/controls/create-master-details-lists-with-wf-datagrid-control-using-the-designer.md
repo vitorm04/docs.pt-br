@@ -6,55 +6,52 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 46825eeb2befab7f11a87451da53a773a6ce2ad2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1e598831954f17bdf3bc03ab880c344ca36aa5a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648222"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039939"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Como: Criar listas mestre e de detalhes com o controle DataGrid do Windows Forms usando o Designer
 
 > [!NOTE]
->  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
-  
- Se sua <xref:System.Data.DataSet> contém uma série de tabelas relacionadas, você pode usar dois <xref:System.Windows.Forms.DataGrid> controles para exibir os dados em um formato de mestre / detalhes. Um <xref:System.Windows.Forms.DataGrid> é designada como a grade mestre, e o segundo é designado como a grade de detalhes. Quando você seleciona uma entrada na lista mestra, todas as entradas filho relacionados são mostradas na lista de detalhes. Por exemplo, se seu <xref:System.Data.DataSet> contém uma tabela de clientes e uma tabela Pedidos relacionada, você deve especificar a tabela de clientes para a grade mestra e a tabela de pedidos para a grade de detalhes. Quando um cliente é selecionado na grade principal, todos os pedidos associados a ele na tabela Pedidos serão exibidos na grade de detalhes.  
-  
- O procedimento a seguir exige um **aplicativo do Windows** projeto (**arquivo** > **novo** > **projeto**  >  **Visual c#** ou **Visual Basic** > **área de trabalho clássica** > **Windows Forms Aplicativo**).  
-  
-> [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-create-a-master-details-list-in-the-designer"></a>Criar uma lista mestre/detalhes no designer  
-  
-1. Adicione dois <xref:System.Windows.Forms.DataGrid> controles ao formulário. Para obter mais informações, confira [Como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md). No Visual Studio 2005, o <xref:System.Windows.Forms.DataGrid> controle não está na **caixa de ferramentas** por padrão. Para obter mais informações, confira [Como: Adicionar itens à caixa de ferramentas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
-  
+>  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+
+ Se o <xref:System.Data.DataSet> contiver uma série de tabelas relacionadas, você poderá usar <xref:System.Windows.Forms.DataGrid> dois controles para exibir os dados em um formato mestre/de detalhes. Uma <xref:System.Windows.Forms.DataGrid> é designada para ser a grade mestre e a segunda é designada para ser a grade de detalhes. Quando você seleciona uma entrada na lista mestra, todas as entradas filho relacionados são mostradas na lista de detalhes. Por exemplo, se o <xref:System.Data.DataSet> contiver uma tabela Customers e uma tabela Orders relacionadas, você deverá especificar a tabela Customers como a grade mestre e a tabela Orders como a grade details. Quando um cliente é selecionado na grade principal, todos os pedidos associados a ele na tabela Pedidos serão exibidos na grade de detalhes.
+
+ O procedimento a seguir requer um projeto de **aplicativo do Windows** (**arquivo** > **novo** >  **C# Visual** de**projeto** > ou **Visual Basic**  >  > **Aplicativo Windows Forms**de área de trabalho clássica).
+
+## <a name="to-create-a-master-details-list-in-the-designer"></a>Criar uma lista mestre/detalhes no designer
+
+1. Adicione dois <xref:System.Windows.Forms.DataGrid> controles ao formulário. Para obter mais informações, confira [Como: Adicione controles a Windows Forms](how-to-add-controls-to-windows-forms.md). No Visual Studio 2005, o <xref:System.Windows.Forms.DataGrid> controle não está na **caixa de ferramentas** por padrão. Para obter mais informações, confira [Como: Adicionar itens à caixa de](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))ferramentas.
+
     > [!NOTE]
-    >  As etapas a seguir não são aplicáveis ao Visual Studio 2005, que usa o **fontes de dados** janela para vinculação de dados de tempo de design. Para obter mais informações, consulte [associar controles a dados no Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) e [como: Exibir relacionados a dados em um Windows Forms Application](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120)).  
-  
-2. Arraste duas ou mais tabelas de **Gerenciador de Servidores** ao formulário.  
-  
-3. No menu **Dados**, selecione **Gerar conjunto de dados**.  
-  
-4. Defina as relações entre as tabelas usando o XML Designer. Para obter detalhes, consulte "como: Criar relações um-para-muitos em esquemas XML e conjuntos de dados"no MSDN.  
-  
-5. Salve os relacionamentos selecionando **Salvar tudo** do menu **Arquivo**.  
-  
-6. Configurar o <xref:System.Windows.Forms.DataGrid> controle que você deseja designar como a grade mestre da seguinte maneira:  
-  
-    1. Selecione o <xref:System.Data.DataSet> na lista suspensa no <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade.  
-  
-    2. Selecione a tabela mestre (por exemplo, "clientes") na lista suspensa no <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade.  
-  
-7. Configurar o <xref:System.Windows.Forms.DataGrid> controle que você deseja designar como a grade de detalhes, da seguinte maneira:  
-  
-    1. Selecione o <xref:System.Data.DataSet> na lista suspensa no <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade.  
-  
-    2. Selecione a relação (por exemplo, "custord") entre as tabelas mestre e de detalhes da lista suspensa no <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade. Para ver a relação, expanda o nó clicando no sinal de mais (**+**) ao lado da tabela mestre na lista suspensa.  
-  
+    >  As etapas a seguir não são aplicáveis ao Visual Studio 2005, que usa a janela **fontes de dados** para a associação de dados de tempo de design. Para obter mais informações, consulte [associar controles a dados no Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) e [como: Exibir dados relacionados em um aplicativo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))Windows Forms.
+
+2. Arraste duas ou mais tabelas de **Gerenciador de Servidores** ao formulário.
+
+3. No menu **Dados**, selecione **Gerar conjunto de dados**.
+
+4. Defina as relações entre as tabelas usando o XML Designer. Para obter detalhes, consulte "como: Crie relações um-para-muitos em esquemas XML e conjuntos de valores "no MSDN.
+
+5. Salve os relacionamentos selecionando **Salvar tudo** do menu **Arquivo**.
+
+6. Configure o <xref:System.Windows.Forms.DataGrid> controle que você deseja designar a grade mestra, da seguinte maneira:
+
+    1. Selecione o <xref:System.Data.DataSet> na lista suspensa <xref:System.Windows.Forms.DataGrid.DataSource%2A> na propriedade.
+
+    2. Selecione a tabela mestra (por exemplo, "Customers") na lista suspensa na <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade.
+
+7. Configure o <xref:System.Windows.Forms.DataGrid> controle que você deseja designar a grade de detalhes, da seguinte maneira:
+
+    1. Selecione o <xref:System.Data.DataSet> na lista suspensa <xref:System.Windows.Forms.DataGrid.DataSource%2A> na propriedade.
+
+    2. Selecione a relação (por exemplo, "Customers. CustOrd") entre as tabelas mestre e de detalhes da lista suspensa na <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade. Para ver a relação, expanda o nó clicando no sinal de mais ( **+** ) ao lado da tabela mestre na lista suspensa.
+
 ## <a name="see-also"></a>Consulte também
 
 - [Controle DataGrid](datagrid-control-windows-forms.md)
 - [Visão geral do controle DataGrid](datagrid-control-overview-windows-forms.md)
-- [Como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Como: Associar o Windows Forms controle DataGrid a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Associar controles a dados no Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

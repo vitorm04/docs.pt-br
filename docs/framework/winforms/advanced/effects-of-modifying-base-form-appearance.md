@@ -8,23 +8,21 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5239017eb63ca6360ae8811a76497256fafbd1b1
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756813"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040142"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>Efeitos da modificação da aparência de um formulário base
-Durante o desenvolvimento de aplicativo, geralmente você precisará alterar a aparência do formulário base do qual outros formulários no projeto (ou em outros projetos) estão herdando.  
-  
- No tempo de design, as alterações de aparência do formulário base (seja a configuração de propriedades ou a adição e subtração de controles) são refletidas nos formulários herdados quando o projeto que contém o formulário básico é criado. Não é suficiente para que você possa simplesmente salvar as alterações para o formulário básico. Para criar um projeto, escolha **construir** da **Build** menu.  
-  
-> [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
- As modificações feitas no formulário de base no tempo de execução tem afetam formulários herdados que já são instanciados.  
-  
+
+Durante o desenvolvimento de aplicativos, você geralmente precisa alterar a aparência do formulário base do qual outros formulários no projeto (ou em outros projetos) estão herdando.
+
+No momento do design, as alterações na aparência do formulário base (seja a configuração das propriedades ou a adição e a subtração de controles) são refletidas nos formulários herdados quando o projeto que contém o formulário base é criado. Não é suficiente para você simplesmente salvar as alterações no formulário base. Para criar um projeto, escolha **Compilar** no menu **Compilar** .
+
+As modificações feitas no formulário base em tempo de execução não afetam os formulários herdados já instanciados.
+
 ## <a name="see-also"></a>Consulte também
 
 - [base](~/docs/csharp/language-reference/keywords/base.md)

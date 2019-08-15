@@ -8,19 +8,17 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: eb3d453a22ecdc40e7d0cac019e784bf74bb372e
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: fa6881614725ddf7628ddc484a9a4130bb23bc77
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972329"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040233"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Passo a passo: Criando um controle composto com o Visual C\#
 
 Os controles de composição fornecem um meio pelo qual as interfaces gráficas personalizadas podem ser criadas e reutilizadas. Basicamente, um controle de composição é um componente com uma representação visual. Assim, ele pode consistir em um ou mais controles, componentes ou blocos de código dos Windows Forms que podem estender a funcionalidade ao validar a entrada do usuário, modificar propriedades de exibição ou executar outras tarefas exigidas pelo autor. Os controles de composição podem ser colocados nos Windows Forms da mesma maneira que outros controles. Na primeira parte deste passo a passo, você cria um controle de composição simples chamado `ctlClock`. Na segunda parte do passo a passo, você estende a funcionalidade de `ctlClock` por meio da herança.
 
-> [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ## <a name="creating-the-project"></a>Criando o Projeto
 

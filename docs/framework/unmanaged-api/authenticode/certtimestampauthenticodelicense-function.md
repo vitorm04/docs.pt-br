@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: beb9a848a55c71259e4f7421658d56ae95a2f3e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c2bb6f0324c461f59bd98a70333b176e79a16a6
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741219"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039586"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>Função CertTimestampAuthenticodeLicense
 Carimbo de data/hora em uma licença Authenticode XrML.  
@@ -32,13 +32,13 @@ HRESULT CertTimestampAuthenticodeLicense (
   
 ## <a name="parameters"></a>Parâmetros  
  `pSignedLicenseBlob`  
- [in] A licença Authenticode XrML assinada a receber o carimbo de data/hora. Consulte a [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estrutura.  
+ [in] A licença Authenticode XrML assinada a receber o carimbo de data/hora. Consulte a estrutura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `pwszTimestampURI`  
  [in] O URI do servidor de carimbo de data/hora.  
   
  `pTimestampSignatureBlob`  
- [out] Um ponteiro para CRYPT_DATA_BLOB para receber a assinatura do carimbo de data/hora codificado por base64. É responsabilidade do chamador liberar `pTimestampSignatureBlob` -> `pbData` com `HepFree()` após o uso. Consulte a [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estrutura.  
+ [out] Um ponteiro para CRYPT_DATA_BLOB para receber a assinatura do carimbo de data/hora codificado por base64. É `pTimestampSignatureBlob` responsabilidade do chamador gratuita -> `pbData` com `HepFree()` após o uso. Consulte a estrutura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
 ## <a name="remarks"></a>Comentários  
  A assinatura do carimbo de data/hora é, na realidade, uma mensagem PKCS #7 SignedData cujo conteúdo é o formulário binário do SignatureValue da assinatura da licença. Basicamente, isso funciona como uma referenda da licença.  

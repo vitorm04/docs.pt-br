@@ -1,18 +1,18 @@
 ---
-title: Método ICorDebugMutableDataTarget::SetThreadContext
+title: 'Método ICorDebugMutableDataTarget:: SetThreadContext'
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6629af393eeadb68292f8f2360ecb60c09a0cd03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21a24b3ae3563db09f1f7e9229f388abf8de654c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764618"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038306"
 ---
-# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>Método ICorDebugMutableDataTarget::SetThreadContext
-Define o contexto (valores do registro) para um thread.  
+# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>Método ICorDebugMutableDataTarget:: SetThreadContext
+Define o contexto (valores de registro) para um thread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -24,23 +24,23 @@ HRESULT SetThreadContext(
   
 ## <a name="parameters"></a>Parâmetros  
  `dwThreadID`  
- [in] O identificador de thread definidos pelo sistema operacional.  
+ no O identificador de thread definido pelo sistema operacional.  
   
  `contextSize`  
- [in] O tamanho do `pContext` buffer a ser gravado.  
+ no O tamanho do `pContext` buffer a ser gravado.  
   
  `pContext`  
- [in] Um ponteiro para os bytes a serem gravados.  
+ no Um ponteiro para os bytes a serem gravados.  
   
 ## <a name="remarks"></a>Comentários  
- O `SetThreadContext` método atualiza o contexto atual para o thread especificado pelo sistema operacional definido `dwThreadID` argumento. O formato do registro de contexto é determinado pela plataforma indicada pela [icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) método. No Windows, essa é uma [contexto](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) estrutura.  
+ O `SetThreadContext` método atualiza o contexto atual para o thread especificado pelo argumento definido `dwThreadID` pelo sistema operacional. O formato do registro de contexto é determinado pela plataforma indicada pelo método [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . No Windows, essa é uma estrutura de [contexto](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   

@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7966cfb6e775bee567221eef2a5d99b90399f322
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b667ac16a4bbe6bdab1814b66fb1121b34b2d945
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697908"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039579"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>Método ICLRDataTarget3::GetExceptionRecord
-Chamado pelo serviço de acesso a dados do CLR (Common Language Runtime) para recuperar o registro de exceção associado ao processo de destino. Por exemplo, para um destino de despejo, isso seria equivalente ao registro de exceção passado por meio de `ExceptionParam` argumento para o [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) função no Windows ajudar a biblioteca de depuração (DbgHelp).  
+Chamado pelo serviço de acesso a dados do CLR (Common Language Runtime) para recuperar o registro de exceção associado ao processo de destino. Por exemplo, para um destino de despejo, isso seria equivalente ao registro de exceção passado por meio do `ExceptionParam` argumento para a função [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) na biblioteca de ajuda de depuração do Windows (dbghelp).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +36,13 @@ HRESULT GetExceptionRecord(
   
 ## <a name="parameters"></a>Parâmetros  
  `bufferSize`  
- [in] O tamanho do buffer de entrada, em bytes. Isso deve ser igual a `sizeof(` [{1&gt;{2&gt;minidump_exception&lt;2}{3&gt; http://msdn.microsoft.com/library/Windows/Desktop/ms680367.aspx&lt;3}&lt;1](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.  
+ [in] O tamanho do buffer de entrada, em bytes. Isso deve ser igual a `sizeof(` [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception)`)`.  
   
  `bufferUsed`  
  [out] Um ponteiro para um tipo `ULONG32` que recebe o número de bytes realmente gravados no buffer.  
   
  `buffer`  
- [out] Um ponteiro para um buffer de memória que recebe uma cópia do registro de exceção. O registro de exceção é retornado como um [{1&gt;{2&gt;minidump_exception&lt;2}{3&gt; http://msdn.microsoft.com/library/Windows/Desktop/ms680367.aspx&lt;3}&lt;1](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) tipo.  
+ [out] Um ponteiro para um buffer de memória que recebe uma cópia do registro de exceção. O registro de exceção é retornado como um tipo [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) .  
   
 ## <a name="return-value"></a>Valor de retorno  
  O valor retornado é `S_OK` em caso de êxito, ou um código de falha `HRESULT` em caso de falha. Os códigos `HRESULT` podem incluir, entre outros:  
@@ -54,16 +54,16 @@ HRESULT GetExceptionRecord(
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|O tamanho do buffer de entrada não é igual à `sizeof(MINIDUMP_EXCEPTION)`.|  
   
 ## <a name="remarks"></a>Comentários  
- [{1&gt;{2&gt;minidump_exception&lt;2}{3&gt; http://msdn.microsoft.com/library/Windows/Desktop/ms680367.aspx&lt;3}&lt;1](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) é uma estrutura definida em dbghelp. h e Imagehlp no SDK do Windows.  
+ [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) é uma estrutura definida em dbghelp. h e imagehlp. h no SDK do Windows.  
   
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   

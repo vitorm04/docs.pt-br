@@ -5,31 +5,28 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 9106a69ea9f28442da6e3270f7cf5abb9374b62d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6519add6789485d41146633abb5e11f80913649
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913647"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039820"
 ---
 # <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Como: Remover um ToolStrip de um ToolStripContainer para um formulário
-Use o procedimento a seguir para mover uma <xref:System.Windows.Forms.ToolStrip> fora de um <xref:System.Windows.Forms.ToolStripContainer> para um formulário.  
-  
-> [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Para mover um ToolStrip fora de um ToolStripContainer para um formulário  
-  
-1. Selecione o <xref:System.Windows.Forms.ToolStrip>.  
-  
-2. Recortar a <xref:System.Windows.Forms.ToolStrip> por pressionando CTRL + X ou clique com botão direito do <xref:System.Windows.Forms.ToolStrip> e escolha **Recortar** no menu de contexto.  
-  
-3. Selecione o formulário.  
-  
-4. Cole a <xref:System.Windows.Forms.ToolStrip> por pressionando CTRL + V ou escolha **colar** da **editar** menu.  
-  
-5. Defina a <xref:System.Windows.Forms.ToolStrip.Dock%2A> propriedade do <xref:System.Windows.Forms.ToolStrip> para **superior**.  
-  
+Use o procedimento a seguir para mover <xref:System.Windows.Forms.ToolStrip> um <xref:System.Windows.Forms.ToolStripContainer> de um para um formulário.
+
+## <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Para mover uma ToolStrip de um ToolStripContainer para um formulário
+
+1. Selecione o <xref:System.Windows.Forms.ToolStrip>.
+
+2. Recorte <xref:System.Windows.Forms.ToolStrip> o pressionando CTRL + X ou clique com o botão direito <xref:System.Windows.Forms.ToolStrip> do mouse no e escolha Recortar no menu de contexto.
+
+3. Selecione o formulário.
+
+4. Cole o <xref:System.Windows.Forms.ToolStrip> pressionando Ctrl + V ou escolha **colar** no menu **Editar** .
+
+5. Defina a <xref:System.Windows.Forms.ToolStrip.Dock%2A> propriedade <xref:System.Windows.Forms.ToolStrip> de como **superior**.
+
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolStrip>

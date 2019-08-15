@@ -1,6 +1,6 @@
 ---
 title: Função FormatFromRawValue (referência de API não gerenciada)
-description: A função FormatFromRawValue converte dados de desempenho bruto em um formato especificado.
+description: A função FormatFromRawValue converte dados brutos de desempenho em um formato especificado.
 ms.date: 11/21/2017
 api_name:
 - FormatFromRawValue
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f92122eddf3cc8e6aec19d75fd2a95f76e9973
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 681d7ce42b2b8d16353e4f5b3523f1a953a49d95
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746700"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037894"
 ---
 # <a name="formatfromrawvalue-function"></a>Função FormatFromRawValue
 Converte um valor de dados de desempenho brutos para o formato especificado, ou dois valores de dados de desempenho brutos se a conversão de formato é baseada em tempo. 
@@ -44,54 +44,54 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parâmetros
 
 `dwCounterType`\
-[in] O tipo de contador. Para obter uma lista dos tipos de contador, consulte [tipos de contador de desempenho WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` pode ser qualquer tipo de contador, exceto `PERF_LARGE_RAW_FRACTION` e `PERF_LARGE_RAW_BASE`. 
+no O tipo de contador. Para obter uma lista de tipos de contadores, consulte [tipos de contador de desempenho WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`pode ser qualquer tipo de contador, `PERF_LARGE_RAW_FRACTION` exceto `PERF_LARGE_RAW_BASE`para e. 
 
 `dwFormat`\
-[in] O formato para o qual converter os dados de desempenho bruto. Ele pode ser um dos seguintes valores:
+no O formato para o qual converter os dados de desempenho brutos. Pode ser um dos seguintes valores:
 
 |Constante  |Valor  |Descrição |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | Retorna o valor calculado como um valor de ponto flutuante de precisão dupla. | 
-| `PDH_FMT_LARGE` | 0x00000400 | Retorna o valor calculado como um inteiro de 64 bits. |
-| `PDH_FMT_LONG` | 0x00000100 | Retorna o valor calculado como um inteiro de 32 bits. |
+| `PDH_FMT_LARGE` | 0x00000400 | Retorne o valor calculado como um inteiro de 64 bits. |
+| `PDH_FMT_LONG` | 0x00000100 | Retorne o valor calculado como um inteiro de 32 bits. |
 
-Um dos valores anteriores pode estar ORed com um dos seguintes sinalizadores de colocação em escala:
+Um dos valores anteriores pode ser vinculada com um dos seguintes sinalizadores de dimensionamento:
 
 |Constante  |Valor  |Descrição |
 |---------|---------|---------|
-| `PDH_FMT_NOSCALE` | 0x00001000 | Não se aplicam os fatores de dimensionamento do contador. |
+| `PDH_FMT_NOSCALE` | 0x00001000 | Não aplique os fatores de dimensionamento do contador. |
 | `PDH_FMT_1000` | 0x00002000 | Multiplique o valor final por 1.000. | 
 
 `pTimeBase`\
-[in] Um ponteiro para a base de tempo, se necessário para a conversão de formato. Se as informações de base de tempo não são necessárias para a conversão de formato, o valor desse parâmetro é ignorado.
+no Um ponteiro para a base de tempo, se necessário para a conversão de formato. Se as informações de base de tempo não forem necessárias para a conversão de formato, o valor desse parâmetro será ignorado.
 
-`pRawValue1`\ [in] um ponteiro para um [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) estrutura que representa um valor de desempenho bruto.
+`pRawValue1`\ [in] um ponteiro para uma [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) estrutura que representa um valor de desempenho bruto.
 
 `pRawValue2`\
-[in] Um ponteiro para um [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) estrutura que representa um segundo valor de desempenho bruto. Se um segundo valor de desempenho bruto não é necessário, esse parâmetro deve ser `null`.
+no Um ponteiro para uma [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) estrutura que representa um segundo valor de desempenho bruto. Se um segundo valor de desempenho bruto não for necessário, esse parâmetro deverá `null`ser.
 
 `pFmtValue`\
-[out] Um ponteiro para um [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) estrutura que recebe o valor formatado de desempenho.
+fora Um ponteiro para uma [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) estrutura que recebe o valor de desempenho formatado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores são retornados por essa função:
+Os valores a seguir são retornados por essa função:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `ERROR_SUCCESS` | 0 | A chamada de função for bem-sucedida. |
+| `ERROR_SUCCESS` | 0 | A chamada de função foi bem-sucedida. |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Um argumento necessário está ausente ou incorreto. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | O identificador não é um objeto PDH válido. |
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) função.
+Essa função encapsula uma chamada para a função [FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) .
 
 ## <a name="requirements"></a>Requisitos
 
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
- **Biblioteca:** PerfCounter.dll
+ **Biblioteca** PerfCounter. dll
 
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

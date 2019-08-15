@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b43ab8cdeff3866bb51e8634f367cf86ee483d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07065b15f449c2bcb84df7bbdcce65d61de007ee
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698012"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038343"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::Método GetExceptionContextRecord
-Chamado pelo serviço de acesso a dados do CLR (Common Language Runtime) para recuperar o registro de contexto associado ao processo de destino. Por exemplo, para um destino de despejo, isso seria equivalente ao registro de contexto passado por meio de `ExceptionParam` argumento para o [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) função no Windows ajudar a biblioteca de depuração (DbgHelp).  
+Chamado pelo serviço de acesso a dados do CLR (Common Language Runtime) para recuperar o registro de contexto associado ao processo de destino. Por exemplo, para um destino de despejo, isso seria equivalente ao registro de contexto passado por meio do `ExceptionParam` argumento para a função [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) na biblioteca de ajuda de depuração do Windows (dbghelp).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ HRESULT GetExceptionContextRecord(
  [out] Um ponteiro para um tipo `ULONG32` que recebe o número de bytes realmente gravados no buffer.  
   
  `buffer`  
- [out] Um ponteiro para um buffer de memória que recebe uma cópia do registro de contexto. O registro de exceção é retornado como um [contexto](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) tipo.  
+ [out] Um ponteiro para um buffer de memória que recebe uma cópia do registro de contexto. O registro de exceção é retornado como um tipo de [contexto](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
   
 ## <a name="return-value"></a>Valor de retorno  
  O valor retornado é `S_OK` em caso de êxito, ou um código de falha `HRESULT` em caso de falha. Os códigos `HRESULT` podem incluir, entre outros:  
@@ -54,16 +54,16 @@ HRESULT GetExceptionContextRecord(
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|O tamanho do buffer de entrada não é grande o suficiente para acomodar o registro de contexto.|  
   
 ## <a name="remarks"></a>Comentários  
- [CONTEXTO](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) é uma estrutura de específico da plataforma definida nos cabeçalhos fornecidos pelo SDK do Windows.  
+ O [contexto](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) é uma estrutura específica da plataforma definida nos cabeçalhos fornecidos pelo SDK do Windows.  
   
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   

@@ -5,19 +5,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 5c92b7bfd5026b0569397dc05cca216fbdab0753
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689312"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039503"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Como: criar um controle associado simples em um Windows Form
 
 Com a *associação simples*, é possível exibir um elemento de dados simples, como um valor de coluna de uma tabela de dados em um controle. Você pode associar de maneira simples qualquer propriedade de um controle a um valor de dados.
-
-> [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ### <a name="to-simple-bind-a-control"></a>Para associar de maneira simples um controle
 
@@ -29,7 +26,7 @@ Com a *associação simples*, é possível exibir um elemento de dados simples, 
 
      As propriedades geralmente mais associadas são exibidas sob a propriedade **(DataBindings)** . Por exemplo, na maioria dos controles, a propriedade **Text** é vinculada com mais frequência.
 
-4. Se a propriedade você deseja associar não for uma das propriedades comumente vinculadas, clique no **reticências** botão (![o botão (...) na janela Propriedades do Visual Studio.](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) na **( Avançado)** caixa para exibir o **formatação e associação avançada** caixa de diálogo com uma lista completa de propriedades para o controle.
+4. Se a propriedade que você deseja associar não for uma das propriedades geralmente associadas, clique no botão de reticências![(o botão de reticências (...) na janela Propriedades do Visual](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)Studio.) na caixa **(avançado)** para exibir o  **Caixa de diálogo formatação e Associação avançada** com uma lista completa de propriedades para esse controle.
 
 5. Selecione a propriedade que deseja associar e clique na seta suspensa em **Associação**.
 

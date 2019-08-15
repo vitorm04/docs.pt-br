@@ -10,27 +10,27 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: f8d50cb4d0112232f86579542650418a1906bda2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238598"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039841"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Estender quadro com efeito de transparência em um aplicativo WPF
 
-Este tópico demonstra como estender o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] quadro de vidro na área do cliente de um aplicativo Windows Presentation Foundation (WPF).
+Este tópico demonstra como estender o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] quadro de vidro para a área do cliente de um aplicativo Windows Presentation Foundation (WPF).
 
 > [!NOTE]
 > Este exemplo só funcionará em um computador [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] que executa o DWM (Gerenciador de Janelas da Área de Trabalho) com efeito de transparência habilitado. O [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic edition não dá suporte ao efeito de transparência. Áreas que normalmente seriam renderizadas com efeito de transparência nas outras edições do [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] são renderizadas opacas.
 
 ## <a name="example"></a>Exemplo
 
-A imagem a seguir ilustra o quadro com efeito de transparência estendido em barra de endereços do Internet Explorer 7:
+A imagem a seguir ilustra o quadro de vidro estendido na barra de endereços do Internet Explorer 7:
 
-![Captura de tela mostrando o quadro com efeito de transparência estendido por trás da barra de endereços do IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
+![Captura de tela mostrando o quadro de vidro estendido atrás da barra de endereços do IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Para estender o quadro transparente em um [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativo, é necessário acesso à API não gerenciada. O exemplo de código a seguir faz uma invocação de plataforma (pinvoke) para a API de dois necessárias para estender o quadro para a área de cliente. Cada uma dessas APIs são declarados em uma classe chamada **NonClientRegionAPI**.
+Para estender o quadro de vidro em [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] um aplicativo, é necessário ter acesso à API não gerenciada. O exemplo de código a seguir faz uma invocação de plataforma (PInvoke) para as duas APIs necessárias para estender o quadro para a área do cliente. Cada uma dessas APIs é declarada em uma classe chamada **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -62,11 +62,11 @@ Public Shared Function DwmExtendFrameIntoClientArea(ByVal hwnd As IntPtr, ByRef 
 End Function
 ```
 
-[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) é a função de DWM que estende o quadro para a área de cliente. Ela recebe dois parâmetros: um identificador de janela e uma estrutura [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins). [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) é usado para instruir o DWM sobre quanto a mais o quadro deve ser estendido para a área de cliente.
+[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) é a função de DWM que estende o quadro para a área de cliente. Ela recebe dois parâmetros: um identificador de janela e uma estrutura [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins). [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) é usado para instruir o DWM sobre quanto a mais o quadro deve ser estendido para a área de cliente.
 
 ## <a name="example"></a>Exemplo
 
-Para usar a função [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), é necessário obter um identificador de janela. Na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], o identificador de janela pode ser obtido de <xref:System.Windows.Interop.HwndSource.Handle%2A> propriedade de um <xref:System.Windows.Interop.HwndSource>. No exemplo a seguir, o quadro é estendido para a área de cliente sobre o <xref:System.Windows.FrameworkElement.Loaded> eventos da janela.
+Para usar a função [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), é necessário obter um identificador de janela. No [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], o identificador de janela pode ser obtido <xref:System.Windows.Interop.HwndSource.Handle%2A> na propriedade de um <xref:System.Windows.Interop.HwndSource>. No exemplo a seguir, o quadro é estendido para a área do cliente <xref:System.Windows.FrameworkElement.Loaded> no evento da janela.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -111,7 +111,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra uma janela simples em que o quadro é estendido para a área de cliente. O quadro é estendido por trás da borda superior que contém os dois <xref:System.Windows.Controls.TextBox> objetos.
+O exemplo a seguir mostra uma janela simples em que o quadro é estendido para a área de cliente. O quadro é estendido para trás da borda superior que contém <xref:System.Windows.Controls.TextBox> os dois objetos.
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,12 +145,12 @@ O exemplo a seguir mostra uma janela simples em que o quadro é estendido para a
 </Window>
 ```
 
-A imagem a seguir ilustra o quadro com efeito de transparência estendido em um [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativo:
+A imagem a seguir ilustra o quadro de vidro estendido em um [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativo:
 
-![Captura de tela mostrando um quadro com efeito de transparência estendido em um aplicativo WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
+![Captura de tela mostrando um quadro de vidro estendido em um aplicativo WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral do Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview)
-- [Visão geral de desfoque do Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/blur-ovw)
+- [Visão geral de Gerenciador de Janelas da Área de Trabalho](/windows/desktop/dwm/dwm-overview)
+- [Visão geral do Desfoque Gerenciador de Janelas da Área de Trabalho](/windows/desktop/dwm/blur-ovw)
 - [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

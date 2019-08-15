@@ -7,27 +7,24 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
-ms.openlocfilehash: 71ada3235343aa7e014e12ebf5b367ec744b00d3
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: ef3a963b5621f0b972b02a007681f600fbdb1050
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959666"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040074"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>Como: Adicionar e remover nós com o componente TreeView do Windows Forms usando o designer
 
-Porque o Windows Forms <xref:System.Windows.Forms.TreeView> controle exibe nós de forma hierárquica, ao adicionar um nó que você deve prestar atenção a qual é seu nó pai.
+Como o controle <xref:System.Windows.Forms.TreeView> de Windows Forms exibe nós de maneira hierárquica, ao adicionar um nó, você deve prestar atenção ao que é seu nó pai.
 
-O procedimento a seguir exige um **aplicativo do Windows** projeto com um formulário que contém um <xref:System.Windows.Forms.TreeView> controle. Para obter informações sobre como configurar um projeto desse tipo, consulte [como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md).
-
-> [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+O procedimento a seguir requer um projeto de **aplicativo do Windows** com um <xref:System.Windows.Forms.TreeView> formulário que contém um controle. Para obter informações sobre como configurar esse projeto, consulte [como: Crie um projeto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicativo Windows Forms [e como: Adicione controles a Windows Forms](how-to-add-controls-to-windows-forms.md).
 
 ### <a name="to-add-or-remove-nodes-in-the-designer"></a>Para adicionar ou remover nós no designer
 
 1. Selecione o <xref:System.Windows.Forms.TreeView> controle.
 
-2. No **propriedades** janela, clique no **reticências** (![botão do botão de reticências (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) lado a <xref:System.Windows.Forms.TreeView.Nodes%2A> propriedade .
+2. Na janela **Propriedades** , clique nas **reticências** (![o botão de reticências (...) no janela Propriedades do Visual Studio](./media/visual-studio-ellipsis-button.png).) botão ao lado <xref:System.Windows.Forms.TreeView.Nodes%2A> da propriedade.
 
      O **Editor TreeNode** é exibido.
 
@@ -39,7 +36,7 @@ O procedimento a seguir exige um **aplicativo do Windows** projeto com um formul
 
 - [Controle TreeView](treeview-control-windows-forms.md)
 - [Visão geral do controle TreeView](treeview-control-overview-windows-forms.md)
-- [Como: Definir ícones para o controle TreeView dos Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [Como: Iterar em todos os nós de um controle TreeView dos Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Como: Definir ícones para o Windows Forms controle TreeView](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [Como: Iterar em todos os nós de um Windows Forms controle TreeView](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
 - [Como: Determinar qual nó TreeView foi clicado](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
 - [Como: Adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

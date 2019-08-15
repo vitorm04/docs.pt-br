@@ -10,31 +10,28 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a215b2b4e05bab5c81d2779d4b67d5b9d57b6ba5
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012965"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039693"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Como: Abranger linhas e colunas em um controle TableLayoutPanel
-Controles em um <xref:System.Windows.Forms.TableLayoutPanel> controle pode abranger linhas e colunas adjacentes.  
-  
-> [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-span-columns-and-rows"></a>Para abranger linhas e colunas  
-  
-1. Arraste uma <xref:System.Windows.Forms.TableLayoutPanel> controlar do **caixa de ferramentas** para seu formulário.  
-  
-2. Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** a célula do canto superior esquerdo do <xref:System.Windows.Forms.TableLayoutPanel> controle.  
-  
-3. Defina as <xref:System.Windows.Forms.Button> do controle **ColumnSpan** propriedade **2**. Observe que o <xref:System.Windows.Forms.Button> controle abrange a primeira e segunda colunas.  
-  
-4. Defina as <xref:System.Windows.Forms.Button> do controle **RowSpan** propriedade **2**. Observe que o <xref:System.Windows.Forms.Button> controle abrange as primeira e segunda linhas.  
-  
-5. Defina as <xref:System.Windows.Forms.Button> do controle **ColumnSpan** propriedade **1**. Observe que o <xref:System.Windows.Forms.Button> controle passa para a primeira coluna e abrange as primeira e segunda linhas.  
-  
+Controles em um <xref:System.Windows.Forms.TableLayoutPanel> controle podem abranger linhas e colunas adjacentes.
+
+## <a name="to-span-columns-and-rows"></a>Para abranger colunas e linhas
+
+1. Arraste um <xref:System.Windows.Forms.TableLayoutPanel> controle da **caixa de ferramentas** para seu formulário.
+
+2. Arraste um <xref:System.Windows.Forms.Button> controle da **caixa de ferramentas** para a célula superior <xref:System.Windows.Forms.TableLayoutPanel> esquerda do controle.
+
+3. Defina a <xref:System.Windows.Forms.Button> propriedade **ColumnSpan** do controle como **2**. Observe que o <xref:System.Windows.Forms.Button> controle abrange a primeira e a segunda colunas.
+
+4. Defina a <xref:System.Windows.Forms.Button> propriedade **RowSpan** do controle como **2**. Observe que o <xref:System.Windows.Forms.Button> controle abrange a primeira e a segunda linhas.
+
+5. Defina a <xref:System.Windows.Forms.Button> propriedade **ColumnSpan** do controle como **1**. Observe que o <xref:System.Windows.Forms.Button> controle é movido para a primeira coluna e abrange a primeira e a segunda linhas.
+
 ## <a name="see-also"></a>Consulte também
 
 - [Controle TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

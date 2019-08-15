@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1397188b38066bac6375da0c76e7d66724a75d7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636238"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038255"
 ---
 # <a name="getpropertyhandle-function"></a>Função GetPropertyHandle
 
@@ -44,42 +44,42 @@ HRESULT GetPropertyHandle (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`\
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`\
-[in] Um ponteiro para um [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instância.
+no Um ponteiro para uma instância de [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) .
 
 `wszPropertyName`\
-[in] Uma terminação nula cadeia de caracteres codificada em UTF16 que contém o nome da propriedade.
+no Uma cadeia de caracteres com o caractere codificado por nulo que contém o nome da propriedade.
 
 `pType`\
-[out] Um ponteiro para um [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) membro de enumeração que representa o tipo CIM da propriedade.
+fora Um ponteiro para um [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) membro de enumeração que representa o tipo CIM da propriedade.
 
 `pHandle`\
-[out] Um ponteiro para um inteiro que contém o identificador de propriedade.
+fora Um ponteiro para um inteiro que contém o identificador de propriedade.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Nome da propriedade especificada não foi encontrado. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | O nome de propriedade especificado não foi encontrado. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
-|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | A propriedade solicitada é do tipo são `CIM_OBJECT` ou `CIM_ARRAY`. |
+|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | A propriedade solicitada é do tipo `CIM_OBJECT` is `CIM_ARRAY`ou. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) .
 
-Você pode usar esse identificador para identificar as propriedades ao usar [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) métodos para ler ou gravar valores de propriedade.
+Você pode usar esse identificador para identificar Propriedades ao usar métodos [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) para ler ou gravar valores de propriedade.
 
-Identificadores podem ser recuperados para propriedades de todos os tipos de dados diferente de `CIM_OBJECT` e `CIM_ARRAY`. Retornou o trabalho de identificadores em todas as instâncias de uma classe.
+Os identificadores podem ser recuperados para propriedades de todos os `CIM_OBJECT` tipos `CIM_ARRAY`de dados diferentes de e. Os identificadores retornados funcionam em todas as instâncias de uma classe.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
 **Cabeçalho:** WMINet_Utils.idl
 
