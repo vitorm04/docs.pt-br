@@ -2,12 +2,12 @@
 title: Artigos de instruções (Guia de C#)
 description: Uma coleção de dicas rápidas e exemplos de código curtos e focados
 ms.date: 12/20/2017
-ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 92f7e94d8003823c0b166cc617563e63aba78027
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400741"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038016"
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
@@ -19,7 +19,6 @@ Há vários truques e dicas que são práticas comuns do desenvolvedor de C#.
 
 - [Inicializar objetos usando um inicializador de objeto](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Aprenda as diferenças entre passar um struct e uma classe para um método](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
-- [Resolva conflitos de nome de tipo usando o alias de namespace global](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
 - [Use a sobrecarga de operador](../language-reference/operators/operator-overloading.md).
 - [Implemente e chame um método de extensão personalizado](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Até os programadores de C# podem querer [usar o `My`namespace do VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
