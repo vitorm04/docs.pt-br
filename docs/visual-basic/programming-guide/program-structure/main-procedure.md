@@ -8,115 +8,115 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: a1eebc3d384d2efef050672a9c589b14559977f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648752"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039980"
 ---
-# <a name="main-procedure-in-visual-basic"></a><span data-ttu-id="616f2-102">Procedimento principal no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="616f2-102">Main Procedure in Visual Basic</span></span>
-<span data-ttu-id="616f2-103">Todos os aplicativos Visual Basic devem conter um procedimento chamado `Main`.</span><span class="sxs-lookup"><span data-stu-id="616f2-103">Every Visual Basic application must contain a procedure called `Main`.</span></span> <span data-ttu-id="616f2-104">Esse procedimento serve como o início do ponto e controle geral para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="616f2-104">This procedure serves as the starting point and overall control for your application.</span></span> <span data-ttu-id="616f2-105">O .NET Framework chama seu `Main` procedimento quando ele tiver carregado seu aplicativo e está pronto para transmitir o controle a ele.</span><span class="sxs-lookup"><span data-stu-id="616f2-105">The .NET Framework calls your `Main` procedure when it has loaded your application and is ready to pass control to it.</span></span> <span data-ttu-id="616f2-106">A menos que você estiver criando um aplicativo do Windows Forms, você deve escrever o `Main` procedimento para aplicativos que executam suas próprias.</span><span class="sxs-lookup"><span data-stu-id="616f2-106">Unless you are creating a Windows Forms application, you must write the `Main` procedure for applications that run on their own.</span></span>  
-  
- <span data-ttu-id="616f2-107">`Main` contém o código que é executado primeiro.</span><span class="sxs-lookup"><span data-stu-id="616f2-107">`Main` contains the code that runs first.</span></span> <span data-ttu-id="616f2-108">No `Main`, determinar qual formulário está para ser carregado pela primeira vez quando o programa é iniciado, descubra se uma cópia do seu aplicativo já está em execução no sistema, estabelecer um conjunto de variáveis para seu aplicativo ou abrir um banco de dados que o aplicativo requer.</span><span class="sxs-lookup"><span data-stu-id="616f2-108">In `Main`, you can determine which form is to be loaded first when the program starts, find out if a copy of your application is already running on the system, establish a set of variables for your application, or open a database that the application requires.</span></span>  
-  
-## <a name="requirements-for-the-main-procedure"></a><span data-ttu-id="616f2-109">Requisitos para o procedimento principal</span><span class="sxs-lookup"><span data-stu-id="616f2-109">Requirements for the Main Procedure</span></span>  
- <span data-ttu-id="616f2-110">Um arquivo que é executado em seu próprio (normalmente com uma extensão .exe) deve conter um `Main` procedimento.</span><span class="sxs-lookup"><span data-stu-id="616f2-110">A file that runs on its own (usually with extension .exe) must contain a `Main` procedure.</span></span> <span data-ttu-id="616f2-111">Uma biblioteca (por exemplo, com extensão. dll) não é executado em seu próprio e não requer um `Main` procedimento.</span><span class="sxs-lookup"><span data-stu-id="616f2-111">A library (for example with extension .dll) does not run on its own and does not require a `Main` procedure.</span></span> <span data-ttu-id="616f2-112">Os requisitos para os diferentes tipos de projetos que você pode criar são da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="616f2-112">The requirements for the different types of projects you can create are as follows:</span></span>  
-  
-- <span data-ttu-id="616f2-113">Execute aplicativos de console seus próprios, e você deve fornecer pelo menos um `Main` procedimento.</span><span class="sxs-lookup"><span data-stu-id="616f2-113">Console applications run on their own, and you must supply at least one `Main` procedure.</span></span> <span data-ttu-id="616f2-114">.</span><span class="sxs-lookup"><span data-stu-id="616f2-114">.</span></span>  
-  
-- <span data-ttu-id="616f2-115">Aplicativos de formulários do Windows executados suas próprias.</span><span class="sxs-lookup"><span data-stu-id="616f2-115">Windows Forms applications run on their own.</span></span> <span data-ttu-id="616f2-116">No entanto, o compilador do Visual Basic gera automaticamente um `Main` procedimento como um aplicativo e você não precisará escrevê-lo.</span><span class="sxs-lookup"><span data-stu-id="616f2-116">However, the Visual Basic compiler automatically generates a `Main` procedure in such an application, and you do not need to write one.</span></span>  
-  
-- <span data-ttu-id="616f2-117">Bibliotecas de classes não exigem um `Main` procedimento.</span><span class="sxs-lookup"><span data-stu-id="616f2-117">Class libraries do not require a `Main` procedure.</span></span> <span data-ttu-id="616f2-118">Isso inclui bibliotecas de controle do Windows e bibliotecas de controle de Web.</span><span class="sxs-lookup"><span data-stu-id="616f2-118">These include Windows Control Libraries and Web Control Libraries.</span></span> <span data-ttu-id="616f2-119">Aplicativos Web são implantados como bibliotecas de classes.</span><span class="sxs-lookup"><span data-stu-id="616f2-119">Web applications are deployed as class libraries.</span></span>  
-  
-## <a name="declaring-the-main-procedure"></a><span data-ttu-id="616f2-120">Declarando o procedimento principal</span><span class="sxs-lookup"><span data-stu-id="616f2-120">Declaring the Main Procedure</span></span>  
- <span data-ttu-id="616f2-121">Há quatro maneiras de declarar o `Main` procedimento.</span><span class="sxs-lookup"><span data-stu-id="616f2-121">There are four ways to declare the `Main` procedure.</span></span> <span data-ttu-id="616f2-122">Pode levar argumentos ou não, e ele pode retornar um valor ou não.</span><span class="sxs-lookup"><span data-stu-id="616f2-122">It can take arguments or not, and it can return a value or not.</span></span>  
-  
+# <a name="main-procedure-in-visual-basic"></a><span data-ttu-id="2cdcd-102">Procedimento principal no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2cdcd-102">Main Procedure in Visual Basic</span></span>
+<span data-ttu-id="2cdcd-103">Cada aplicativo de Visual Basic deve conter um procedimento `Main`chamado.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-103">Every Visual Basic application must contain a procedure called `Main`.</span></span> <span data-ttu-id="2cdcd-104">Esse procedimento serve como o ponto de partida e o controle geral para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-104">This procedure serves as the starting point and overall control for your application.</span></span> <span data-ttu-id="2cdcd-105">O .NET Framework chama o `Main` procedimento quando ele carregou seu aplicativo e está pronto para passar o controle para ele.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-105">The .NET Framework calls your `Main` procedure when it has loaded your application and is ready to pass control to it.</span></span> <span data-ttu-id="2cdcd-106">A menos que você esteja criando um aplicativo Windows Forms, você deve `Main` escrever o procedimento para aplicativos que são executados por conta própria.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-106">Unless you are creating a Windows Forms application, you must write the `Main` procedure for applications that run on their own.</span></span>
+
+ <span data-ttu-id="2cdcd-107">`Main`contém o código que é executado primeiro.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-107">`Main` contains the code that runs first.</span></span> <span data-ttu-id="2cdcd-108">No `Main`, você pode determinar qual formulário deve ser carregado primeiro quando o programa for iniciado, descobrir se uma cópia do seu aplicativo já está em execução no sistema, estabelecer um conjunto de variáveis para seu aplicativo ou abrir um banco de dados que o aplicativo requer.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-108">In `Main`, you can determine which form is to be loaded first when the program starts, find out if a copy of your application is already running on the system, establish a set of variables for your application, or open a database that the application requires.</span></span>
+
+## <a name="requirements-for-the-main-procedure"></a><span data-ttu-id="2cdcd-109">Requisitos para o procedimento principal</span><span class="sxs-lookup"><span data-stu-id="2cdcd-109">Requirements for the Main Procedure</span></span>
+ <span data-ttu-id="2cdcd-110">Um arquivo que é executado por conta própria (normalmente com extensão. exe) deve conter `Main` um procedimento.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-110">A file that runs on its own (usually with extension .exe) must contain a `Main` procedure.</span></span> <span data-ttu-id="2cdcd-111">Uma biblioteca (por exemplo, com extensão. dll) não é executada por conta própria e não requer um `Main` procedimento.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-111">A library (for example with extension .dll) does not run on its own and does not require a `Main` procedure.</span></span> <span data-ttu-id="2cdcd-112">Os requisitos para os diferentes tipos de projetos que você pode criar são os seguintes:</span><span class="sxs-lookup"><span data-stu-id="2cdcd-112">The requirements for the different types of projects you can create are as follows:</span></span>
+
+- <span data-ttu-id="2cdcd-113">Os aplicativos de console são executados por conta própria e você deve fornecer pelo `Main` menos um procedimento.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-113">Console applications run on their own, and you must supply at least one `Main` procedure.</span></span>
+
+- <span data-ttu-id="2cdcd-114">Windows Forms aplicativos são executados por conta própria.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-114">Windows Forms applications run on their own.</span></span> <span data-ttu-id="2cdcd-115">No entanto, o compilador de Visual Basic `Main` gera automaticamente um procedimento em tal aplicativo, e você não precisa escrever um.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-115">However, the Visual Basic compiler automatically generates a `Main` procedure in such an application, and you do not need to write one.</span></span>
+
+- <span data-ttu-id="2cdcd-116">As bibliotecas de classes não exigem `Main` um procedimento.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-116">Class libraries do not require a `Main` procedure.</span></span> <span data-ttu-id="2cdcd-117">Isso inclui bibliotecas de controle do Windows e bibliotecas de controle da Web.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-117">These include Windows Control Libraries and Web Control Libraries.</span></span> <span data-ttu-id="2cdcd-118">Os aplicativos Web são implantados como bibliotecas de classes.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-118">Web applications are deployed as class libraries.</span></span>
+
+## <a name="declaring-the-main-procedure"></a><span data-ttu-id="2cdcd-119">Declarando o procedimento principal</span><span class="sxs-lookup"><span data-stu-id="2cdcd-119">Declaring the Main Procedure</span></span>
+ <span data-ttu-id="2cdcd-120">Há quatro maneiras de declarar o `Main` procedimento.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-120">There are four ways to declare the `Main` procedure.</span></span> <span data-ttu-id="2cdcd-121">Ele pode usar argumentos ou não, e pode retornar um valor ou não.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-121">It can take arguments or not, and it can return a value or not.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="616f2-123">Se você declarar `Main` em uma classe, você deve usar o `Shared` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="616f2-123">If you declare `Main` in a class, you must use the `Shared` keyword.</span></span> <span data-ttu-id="616f2-124">Em um módulo `Main` não precisa ser `Shared`.</span><span class="sxs-lookup"><span data-stu-id="616f2-124">In a module, `Main` does not need to be `Shared`.</span></span>  
+>  <span data-ttu-id="2cdcd-122">Se você declarar `Main` em uma classe, deverá usar a `Shared` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-122">If you declare `Main` in a class, you must use the `Shared` keyword.</span></span> <span data-ttu-id="2cdcd-123">Em um módulo, `Main` não precisa ser. `Shared`</span><span class="sxs-lookup"><span data-stu-id="2cdcd-123">In a module, `Main` does not need to be `Shared`.</span></span>
+
+- <span data-ttu-id="2cdcd-124">A maneira mais simples é declarar um `Sub` procedimento que não use argumentos nem retornar um valor.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-124">The simplest way is to declare a `Sub` procedure that does not take arguments or return a value.</span></span>
+
+    ```vb
+    Module mainModule
+        Sub Main()
+            MsgBox("The Main procedure is starting the application.")
+            ' Insert call to appropriate starting place in your code.
+            MsgBox("The application is terminating.")
+        End Sub
+    End Module
+    ```
+
+- <span data-ttu-id="2cdcd-125">`Main`também pode retornar um `Integer` valor, que o sistema operacional usa como o código de saída para seu programa.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-125">`Main` can also return an `Integer` value, which the operating system uses as the exit code for your program.</span></span> <span data-ttu-id="2cdcd-126">Outros programas podem testar esse código examinando o valor ERRORLEVEL do Windows.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-126">Other programs can test this code by examining the Windows ERRORLEVEL value.</span></span> <span data-ttu-id="2cdcd-127">Para retornar um código de saída, você deve `Main` declarar como `Function` um procedimento em vez `Sub` de um procedimento.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-127">To return an exit code, you must declare `Main` as a `Function` procedure instead of a `Sub` procedure.</span></span>
+
+    ```vb
+    Module mainModule
+        Function Main() As Integer
+            MsgBox("The Main procedure is starting the application.")
+            Dim returnValue As Integer = 0
+            ' Insert call to appropriate starting place in your code.
+            ' On return, assign appropriate value to returnValue.
+            ' 0 usually means successful completion.
+            MsgBox("The application is terminating with error level " &
+                 CStr(returnValue) & ".")
+            Return returnValue
+        End Function
+    End Module
+    ```
+
+- <span data-ttu-id="2cdcd-128">`Main`também pode pegar uma `String` matriz como um argumento.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-128">`Main` can also take a `String` array as an argument.</span></span> <span data-ttu-id="2cdcd-129">Cada cadeia de caracteres na matriz contém um dos argumentos de linha de comando usados para invocar seu programa.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-129">Each string in the array contains one of the command-line arguments used to invoke your program.</span></span> <span data-ttu-id="2cdcd-130">Você pode executar ações diferentes dependendo de seus valores.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-130">You can take different actions depending on their values.</span></span>
+
+    ```vb
+    Module mainModule
+        Function Main(ByVal cmdArgs() As String) As Integer
+            MsgBox("The Main procedure is starting the application.")
+            Dim returnValue As Integer = 0
+            ' See if there are any arguments.
+            If cmdArgs.Length > 0 Then
+                For argNum As Integer = 0 To UBound(cmdArgs, 1)
+                    ' Insert code to examine cmdArgs(argNum) and take
+                    ' appropriate action based on its value.
+                Next
+            End If
+            ' Insert call to appropriate starting place in your code.
+            ' On return, assign appropriate value to returnValue.
+            ' 0 usually means successful completion.
+            MsgBox("The application is terminating with error level " &
+                 CStr(returnValue) & ".")
+            Return returnValue
+        End Function
+    End Module
+    ```
+
+- <span data-ttu-id="2cdcd-131">Você pode declarar `Main` para examinar os argumentos de linha de comando, mas não retornar um código de saída, da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="2cdcd-131">You can declare `Main` to examine the command-line arguments but not return an exit code, as follows.</span></span>
+
+    ```vb
+    Module mainModule
+        Sub Main(ByVal cmdArgs() As String)
+            MsgBox("The Main procedure is starting the application.")
+            Dim returnValue As Integer = 0
+            ' See if there are any arguments.
+            If cmdArgs.Length > 0 Then
+                For argNum As Integer = 0 To UBound(cmdArgs, 1)
+                    ' Insert code to examine cmdArgs(argNum) and take
+                    ' appropriate action based on its value.
+                Next
+            End If
+            ' Insert call to appropriate starting place in your code.
+            MsgBox("The application is terminating.")
+        End Sub
+    End Module
+    ```
   
-- <span data-ttu-id="616f2-125">A maneira mais simples é declarar uma `Sub` procedimento que não usam argumentos ou retornar um valor.</span><span class="sxs-lookup"><span data-stu-id="616f2-125">The simplest way is to declare a `Sub` procedure that does not take arguments or return a value.</span></span>  
-  
-    ```  
-    Module mainModule  
-        Sub Main()  
-            MsgBox("The Main procedure is starting the application.")  
-            ' Insert call to appropriate starting place in your code.  
-            MsgBox("The application is terminating.")  
-        End Sub  
-    End Module  
-    ```  
-  
-- <span data-ttu-id="616f2-126">`Main` também pode retornar um `Integer` valor, que usa o sistema operacional como o código de saída para o seu programa.</span><span class="sxs-lookup"><span data-stu-id="616f2-126">`Main` can also return an `Integer` value, which the operating system uses as the exit code for your program.</span></span> <span data-ttu-id="616f2-127">Outros programas podem testar esse código, examinando o valor de ERRORLEVEL do Windows.</span><span class="sxs-lookup"><span data-stu-id="616f2-127">Other programs can test this code by examining the Windows ERRORLEVEL value.</span></span> <span data-ttu-id="616f2-128">Para retornar um código de saída, você deve declarar `Main` como um `Function` procedimento em vez de um `Sub` procedimento.</span><span class="sxs-lookup"><span data-stu-id="616f2-128">To return an exit code, you must declare `Main` as a `Function` procedure instead of a `Sub` procedure.</span></span>  
-  
-    ```  
-    Module mainModule  
-        Function Main() As Integer  
-            MsgBox("The Main procedure is starting the application.")  
-            Dim returnValue As Integer = 0  
-            ' Insert call to appropriate starting place in your code.  
-            ' On return, assign appropriate value to returnValue.  
-            ' 0 usually means successful completion.  
-            MsgBox("The application is terminating with error level " &  
-                 CStr(returnValue) & ".")  
-            Return returnValue  
-        End Function  
-    End Module  
-    ```  
-  
-- <span data-ttu-id="616f2-129">`Main` também pode tirar uma `String` matriz como um argumento.</span><span class="sxs-lookup"><span data-stu-id="616f2-129">`Main` can also take a `String` array as an argument.</span></span> <span data-ttu-id="616f2-130">Cada cadeia de caracteres na matriz contém um dos argumentos de linha de comando usados para invocar o seu programa.</span><span class="sxs-lookup"><span data-stu-id="616f2-130">Each string in the array contains one of the command-line arguments used to invoke your program.</span></span> <span data-ttu-id="616f2-131">Você pode executar ações diferentes dependendo dos seus valores.</span><span class="sxs-lookup"><span data-stu-id="616f2-131">You can take different actions depending on their values.</span></span>  
-  
-    ```  
-    Module mainModule  
-        Function Main(ByVal cmdArgs() As String) As Integer  
-            MsgBox("The Main procedure is starting the application.")  
-            Dim returnValue As Integer = 0  
-            ' See if there are any arguments.  
-            If cmdArgs.Length > 0 Then  
-                For argNum As Integer = 0 To UBound(cmdArgs, 1)  
-                    ' Insert code to examine cmdArgs(argNum) and take  
-                    ' appropriate action based on its value.  
-                Next argNum  
-            End If  
-            ' Insert call to appropriate starting place in your code.  
-            ' On return, assign appropriate value to returnValue.  
-            ' 0 usually means successful completion.  
-            MsgBox("The application is terminating with error level " &  
-                 CStr(returnValue) & ".")  
-            Return returnValue  
-        End Function  
-    End Module  
-    ```  
-  
-- <span data-ttu-id="616f2-132">Você pode declarar `Main` para examinar os argumentos de linha de comando, mas não retornar um código de saída, da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="616f2-132">You can declare `Main` to examine the command-line arguments but not return an exit code, as follows.</span></span>  
-  
-    ```  
-    Module mainModule  
-        Sub Main(ByVal cmdArgs() As String)  
-            MsgBox("The Main procedure is starting the application.")  
-            Dim returnValue As Integer = 0  
-            ' See if there are any arguments.  
-            If cmdArgs.Length > 0 Then  
-                For argNum As Integer = 0 To UBound(cmdArgs, 1)  
-                    ' Insert code to examine cmdArgs(argNum) and take  
-                    ' appropriate action based on its value.  
-                Next argNum  
-            End If  
-            ' Insert call to appropriate starting place in your code.  
-            MsgBox("The application is terminating.")  
-        End Sub  
-    End Module  
-    ```  
-  
-## <a name="see-also"></a><span data-ttu-id="616f2-133">Consulte também</span><span class="sxs-lookup"><span data-stu-id="616f2-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2cdcd-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2cdcd-132">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
-- [<span data-ttu-id="616f2-134">Estrutura de um programa Visual Basic</span><span class="sxs-lookup"><span data-stu-id="616f2-134">Structure of a Visual Basic Program</span></span>](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
-- [<span data-ttu-id="616f2-135">/main</span><span class="sxs-lookup"><span data-stu-id="616f2-135">/main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)
-- [<span data-ttu-id="616f2-136">Compartilhado</span><span class="sxs-lookup"><span data-stu-id="616f2-136">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)
-- [<span data-ttu-id="616f2-137">Instrução Sub</span><span class="sxs-lookup"><span data-stu-id="616f2-137">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="616f2-138">Instrução Function</span><span class="sxs-lookup"><span data-stu-id="616f2-138">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="616f2-139">Tipo de Dados Integer</span><span class="sxs-lookup"><span data-stu-id="616f2-139">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [<span data-ttu-id="616f2-140">Tipo de Dados String</span><span class="sxs-lookup"><span data-stu-id="616f2-140">String Data Type</span></span>](../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [<span data-ttu-id="2cdcd-133">Estrutura de um programa de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2cdcd-133">Structure of a Visual Basic Program</span></span>](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [<span data-ttu-id="2cdcd-134">/main</span><span class="sxs-lookup"><span data-stu-id="2cdcd-134">/main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)
+- [<span data-ttu-id="2cdcd-135">Compartilhado</span><span class="sxs-lookup"><span data-stu-id="2cdcd-135">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)
+- [<span data-ttu-id="2cdcd-136">Instrução Sub</span><span class="sxs-lookup"><span data-stu-id="2cdcd-136">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="2cdcd-137">Instrução Function</span><span class="sxs-lookup"><span data-stu-id="2cdcd-137">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="2cdcd-138">Tipo de Dados Integer</span><span class="sxs-lookup"><span data-stu-id="2cdcd-138">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [<span data-ttu-id="2cdcd-139">Tipo de Dados String</span><span class="sxs-lookup"><span data-stu-id="2cdcd-139">String Data Type</span></span>](../../../visual-basic/language-reference/data-types/string-data-type.md)
