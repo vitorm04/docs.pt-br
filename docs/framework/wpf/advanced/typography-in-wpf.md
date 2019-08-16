@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 5f3560c899373b9835e2ead79590cf73777b2375
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972413"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545241"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
-Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem melhor qualidade e desempenho de renderização de texto, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] suporte a tipografia, texto internacional aperfeiçoado, suporte de fonte aperfeiçoado e APIs (interfaces de programação de aplicativo).  
+Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem qualidade e desempenho aprimorados de renderização de texto, suporte a tipografia OpenType, texto internacional aprimorado, suporte avançado a fontes e novas APIs (interfaces de programação de aplicativo) de texto.  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Melhor qualidade e desempenho de texto  
@@ -29,9 +29,9 @@ Texto com suavização da direção y do ClearType
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Tipografia rica  
- O [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] formato de fonte é uma extensão do formato de fonte [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]. O formato de fonte [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] foi desenvolvido em conjunto pela [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] e a Adobe e fornece um conjunto rico de características tipográficas avançadas. O <xref:System.Windows.Documents.Typography> objeto expõe muitos dos recursos avançados de [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] fontes, como alternativas estilísticos e traços violentos. O SDK do Windows fornece um conjunto de fontes [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] de exemplo projetadas com recursos avançados, como as fontes Pericles e Pescadero. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
+ O formato de fonte OpenType é uma extensão do [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato de fonte. O formato de fonte OpenType foi desenvolvido em conjunto [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] pelo e pela Adobe e fornece uma variedade avançada de recursos tipográficos avançados. O <xref:System.Windows.Documents.Typography> objeto expõe muitos dos recursos avançados de fontes OpenType, como alternativas estilísticos e traços violentos. O SDK do Windows fornece um conjunto de fontes OpenType de exemplo que são projetadas com recursos avançados, como as fontes Pericles e Pescadero. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
   
- A fonte Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] contém glifos adicionais que fornecem alternativos estilísticos para o conjunto padrão de glifos. O texto a seguir exibe glifos alternativos estilísticos.  
+ A fonte OpenType de Pericles contém glifos adicionais que fornecem alternativas estilísticos ao conjunto padrão de glifos. O texto a seguir exibe glifos alternativos estilísticos.  
   
  ![Texto usando glifos alternativos estilísticos OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "Texto usando glifos alternativos estilísticos OpenType")  
   
@@ -39,7 +39,7 @@ Texto com suavização da direção y do ClearType
   
  ![Texto usando glifos padrão OpenType e traços violentos](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "Texto usando glifos padrão OpenType e traços violentos")  
   
- Para obter mais detalhes sobre recursos [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)], consulte [Recursos da fonte OpenType](opentype-font-features.md).  
+ Para obter mais detalhes sobre os recursos do OpenType, consulte [recursos de fonte OpenType](opentype-font-features.md).  
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>Suporte a texto internacional melhorado  

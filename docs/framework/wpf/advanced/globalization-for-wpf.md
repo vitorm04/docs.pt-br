@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bcd0a11aef2372cc6e5830892eb3b71fa841ba2f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629930"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545257"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
 Este tópico apresenta problemas que você deve estar atento ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] são `System.Globalization`definidos no no.
@@ -123,9 +123,9 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 - Sinhala
 
- Todos os mecanismos do sistema de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] escrita dão suporte a fontes. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]as fontes podem incluir [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] as tabelas de layout que permitem que os criadores de fontes projetem melhores fontes tipográficas internacionais e de ponta. As [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tabelas de layout de fonte contêm informações sobre substituições de glifos, posicionamento de glifo, justificação e posicionamento de linha de base, permitindo que aplicativos de processamento de texto aprimorem o layout de texto.
+ Todos os mecanismos do sistema de escrita dão suporte a fontes OpenType. As fontes OpenType podem incluir as tabelas de layout OpenType que permitem aos criadores de fontes criar melhores fontes tipográficas internacionais e de ponta. As tabelas de layout de fonte OpenType contêm informações sobre substituições de glifos, posicionamento de glifo, justificação e posicionamento de linha de base, permitindo que aplicativos de processamento de texto aprimorem o layout de texto.
 
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]as fontes permitem a manipulação de grandes conjuntos de [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] glifos usando codificação. Tal codificação permite um amplo suporte internacional, bem como para variantes tipográficas de glifos.
+ As fontes OpenType permitem a manipulação de grandes conjuntos de [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] glifos usando a codificação. Tal codificação permite um amplo suporte internacional, bem como para variantes tipográficas de glifos.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]a renderização de texto é alimentada pela tecnologia de subpixel do Microsoft ClearType que dá suporte à independência de resolução. Isso significativamente melhora a legibilidade e fornece a capacidade de dar suporte a documentos no estilo de revista de alta qualidade para todos os scripts.
 

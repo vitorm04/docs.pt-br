@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401269"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545262"
 ---
 # <a name="panels-overview"></a>Visão geral de painéis
 <xref:System.Windows.Controls.Panel>elementos são componentes que controlam a renderização de elementos — seu tamanho e dimensões, sua posição e a organização de seu conteúdo filho. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece vários elementos predefinidos <xref:System.Windows.Controls.Panel> , bem como a capacidade de construir elementos <xref:System.Windows.Controls.Panel> personalizados.  
@@ -118,7 +118,7 @@ ms.locfileid: "68401269"
 ### <a name="dockpanel"></a>DockPanel  
  O <xref:System.Windows.Controls.DockPanel> elemento usa a <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Propriedade anexada como definida em elementos de conteúdo filho para posicionar o conteúdo ao longo das bordas de um contêiner. Quando <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> é definido como <xref:System.Windows.Controls.Dock.Top> ou <xref:System.Windows.Controls.Dock.Bottom>, ele posiciona elementos filho acima ou abaixo uns dos outros. Quando <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> é definido como <xref:System.Windows.Controls.Dock.Left> ou <xref:System.Windows.Controls.Dock.Right>, ele posiciona os elementos filho à esquerda ou à direita uns dos outros. A <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> propriedade determina a posição do elemento final adicionado como um filho de um <xref:System.Windows.Controls.DockPanel>.  
   
- Você pode usar <xref:System.Windows.Controls.DockPanel> para posicionar um grupo de controles relacionados, como um conjunto de botões. Como alternativa, é possível usá-lo para criar uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] com “painéis”, semelhante àquela encontrada no [!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)].  
+ Você pode usar <xref:System.Windows.Controls.DockPanel> para posicionar um grupo de controles relacionados, como um conjunto de botões. Como alternativa, você pode usá-lo para criar um "painel" [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], semelhante ao encontrado no Microsoft Outlook.  
   
 #### <a name="sizing-to-content"></a>Dimensionando para o conteúdo  
  Se suas <xref:System.Windows.FrameworkElement.Height%2A> propriedades <xref:System.Windows.FrameworkElement.Width%2A> e não forem especificadas, <xref:System.Windows.Controls.DockPanel> tamanhos para seu conteúdo. O tamanho pode aumentar ou diminuir para acomodar o tamanho de seus elementos filho. No entanto, quando essas propriedades são especificadas e não há mais espaço para o próximo elemento filho especificado <xref:System.Windows.Controls.DockPanel> , o não exibe esse elemento filho ou elementos filho subsequentes e não mede os elementos filho subsequentes.  
