@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629524"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039488"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (Guia de Programação em C#)
 
@@ -42,15 +42,14 @@ Os namespaces têm as seguintes propriedades:
 - A diretiva `using` elimina a necessidade de especificar o nome do namespace para cada classe.  
 - O namespace `global` é o namespace "raiz": `global::System` sempre fará referência ao namespace do .NET <xref:System>.  
 
-## <a name="c-language-specification"></a>Especificação da Linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+Para saber mais, confira a seção [Namespaces](~/_csharplang/spec/namespaces.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../index.md)
 - [Usando namespaces](using-namespaces.md)
-- [Como: usar o alias de namespace global](how-to-use-the-global-namespace-alias.md)
 - [Como: usar o My Namespace](how-to-use-the-my-namespace.md)
 - [Nomes de identificadores](../inside-a-program/identifier-names.md)
 - [Diretiva using](../../language-reference/keywords/using-directive.md)
