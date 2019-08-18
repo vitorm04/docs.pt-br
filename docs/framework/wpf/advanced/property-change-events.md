@@ -13,18 +13,18 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: f8d0d5e65101ffda0edaaeabdea2870287ba0f1f
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 06056b492439531aa60becbb7bca250a439bfb68
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400845"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567431"
 ---
 # <a name="property-change-events"></a>Eventos de alteração na propriedade
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] define vários eventos que são gerados em resposta a uma alteração no valor de uma propriedade. Geralmente, a propriedade é uma propriedade de dependência. O evento em si é, às vezes, um evento roteado e, às vezes, é um evento padrão de Common Language Runtime (CLR). A definição do evento varia dependendo do cenário, porque algumas alterações de propriedades são mais adequadamente roteadas por uma árvore de elemento, enquanto outras alterações de propriedades são geralmente apenas de interesse ao objeto no qual a propriedade foi alterada.  
   
 ## <a name="identifying-a-property-change-event"></a>Identificando um evento de alteração de propriedade  
- Nem todos os eventos que reportam uma alteração de propriedade são explicitamente identificados como um evento de propriedade alterado, em virtude de um padrão de assinatura ou de um padrão de nomenclatura. Em geral, a descrição do evento na documentação [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] indica se o evento está diretamente vinculado a uma alteração de valor da propriedade e fornece referências cruzadas entre a propriedade e o evento.  
+ Nem todos os eventos que reportam uma alteração de propriedade são explicitamente identificados como um evento de propriedade alterado, em virtude de um padrão de assinatura ou de um padrão de nomenclatura. Em geral, a descrição do evento na documentação do SDK indica se o evento está diretamente vinculado a uma alteração de valor de propriedade e fornece referências cruzadas entre a propriedade e o evento.  
   
 ### <a name="routedpropertychanged-events"></a>Eventos RoutedPropertyChanged  
  Determinados eventos usam um tipo de dados de eventos e delegado explicitamente usados para eventos de alteração de propriedade. O tipo de dados do <xref:System.Windows.RoutedPropertyChangedEventArgs%601>evento é, e o <xref:System.Windows.RoutedPropertyChangedEventHandler%601>delegado é. Os dados do evento e o delegado têm um parâmetro de tipo genérico que é usado para especificar o tipo real da propriedade a alterar quando você define o manipulador. Os dados do evento contêm duas propriedades <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> e <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>, que são passadas como o argumento de tipo nos dados do evento.  

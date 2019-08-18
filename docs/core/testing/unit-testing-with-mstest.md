@@ -5,18 +5,18 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: f6c1580d3f596c638969e668a87ee70d75e6d9bf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8100add17b61424624f27de705728935f3a1160b
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626392"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038031"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>C# de teste de unidade com MSTest e .NET Core
 
 Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="create-the-source-project"></a>Crie o projeto de origem
+## <a name="create-the-source-project"></a>Crie o projeto de origem
 
 Abra uma janela do shell. Crie um diretório chamado *unit-testing-using-mstest* no qual manter a solução. Nesse diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) a fim de criar um novo arquivo de solução para a biblioteca de classes e o projeto de teste. Em seguida, crie um diretório *PrimeService*. O seguinte esquema mostra a estrutura de arquivo e diretório até aqui:
 
@@ -45,7 +45,7 @@ namespace Prime.Services
 
 Altere o diretório de volta para o diretório *unit-testing-using-mstest*. Execute [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) para adicionar o projeto de biblioteca de classes à solução. 
 
-### <a name="create-the-test-project"></a>Criar um projeto de teste
+## <a name="create-the-test-project"></a>Criar um projeto de teste
 
 Em seguida, crie o diretório *PrimeService.Tests*. O seguinte esquema mostra a estrutura do diretório:
 

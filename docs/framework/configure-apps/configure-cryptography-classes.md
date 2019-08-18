@@ -9,15 +9,15 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: 23bf831a4374add55258f5fb41c17a5d4a8f14c3
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 77f26405792ac782f2a04e174e8165a09b7f22f6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832810"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567336"
 ---
 # <a name="configuring-cryptography-classes"></a>Configurando classes de criptografia
-O Windows Software Development Kit (SDK) permite que os administradores do computador configurar os algoritmos de criptografia padrão e implementações de algoritmo que usam o .NET Framework e aplicativos escritos corretamente.  Por exemplo, uma empresa que tem sua própria implementação de um algoritmo de criptografia pode fazer essa implementação padrão em vez da implementação é fornecido no SDK do Windows. Embora os aplicativos gerenciados que usam criptografia sempre podem optar por associar explicitamente a uma implementação específica, é recomendável que criar objetos criptográficos usando o sistema de configuração de criptografia.  
+O SDK do Windows permite que os administradores de computador configurem os algoritmos de criptografia e as implementações de algoritmo padrão que o .NET Framework e os aplicativos escritos de forma apropriada usam.  Por exemplo, uma empresa que tem sua própria implementação de um algoritmo criptográfico pode tornar essa implementação o padrão em vez da implementação fornecida no SDK do Windows. Embora os aplicativos gerenciados que usam a criptografia possam sempre optar por ligar explicitamente a uma implementação específica, é recomendável que eles criem objetos criptográficos usando o sistema de configuração de criptografia.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Mapeando nomes de algoritmo para classes de criptografia](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400703"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567518"
 ---
 # <a name="data-binding-overview"></a>Visão geral da vinculação de dados
 A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados a dados de uma variedade de fontes de dados na forma de objetos Common Language Runtime (CLR) [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]e. <xref:System.Windows.Controls.ContentControl>s como <xref:System.Windows.Controls.ItemsControl> <xref:System.Windows.Controls.ListBox>es como<xref:System.Windows.Controls.ListView> e têm funcionalidade interna para habilitar o estilo flexível de itens de dados individuais ou coleções de itens de dados. <xref:System.Windows.Controls.Button> É possível gerar exibições com classificação, filtragem e agrupamento dos dados.  
@@ -70,7 +70,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
 - Embora não seja especificado na figura, deve-se observar que o objeto de origem da associação não está restrito a ser um objeto CLR personalizado. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]a vinculação de dados dá suporte a dados na forma de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]objetos CLR e. Para fornecer alguns exemplos, sua fonte de associação pode ser <xref:System.Windows.UIElement>um, qualquer objeto de lista, um objeto CLR associado a dados de ADO.net ou Web Services, ou um XmlNode que contém [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] seus dados. Para obter mais informações, consulte [Visão geral de origens da associação](binding-sources-overview.md).  
   
- Conforme você lê outros tópicos do [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)], é importante lembrar que quando você está estabelecendo uma associação, você está associando um destino da associação *a* uma origem da associação. Por exemplo, se você estiver exibindo alguns [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados subjacentes <xref:System.Windows.Controls.ListBox> em um usando Associação de dados, você <xref:System.Windows.Controls.ListBox> [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] está ligando seus aos dados.  
+ À medida que você lida com outros tópicos do SDK, é importante lembrar que ao estabelecer uma associação, você está associando um destino de associação a uma fonte *de* associação. Por exemplo, se você estiver exibindo alguns [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados subjacentes <xref:System.Windows.Controls.ListBox> em um usando Associação de dados, você <xref:System.Windows.Controls.ListBox> [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] está ligando seus aos dados.  
   
  Para estabelecer uma associação, use o <xref:System.Windows.Data.Binding> objeto. O restante deste tópico aborda muitos dos conceitos associados a e algumas das propriedades e do uso do <xref:System.Windows.Data.Binding> objeto.  
   
@@ -133,7 +133,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
  ![Diagrama que mostra a propriedade de plano de fundo de ligação de dados.](./media/data-binding-overview/data-binding-button-background-example.png)  
   
- Você pode imaginar por que isso funciona, embora  a propriedade colorname seja do tipo cadeia de <xref:System.Windows.Controls.Control.Background%2A> caracteres enquanto a propriedade <xref:System.Windows.Media.Brush>for do tipo. Trata-se da conversão de tipo padrão em operação, a qual é abordada na seção [Conversão de dados](#data_conversion).  
+ Você pode imaginar por que isso funciona, embora a propriedade colorname seja do tipo cadeia de <xref:System.Windows.Controls.Control.Background%2A> caracteres enquanto a propriedade <xref:System.Windows.Media.Brush>for do tipo. Trata-se da conversão de tipo padrão em operação, a qual é abordada na seção [Conversão de dados](#data_conversion).  
   
 <a name="specifying_the_binding_source"></a>   
 ### <a name="specifying-the-binding-source"></a>Especificar a origem da associação  
@@ -165,7 +165,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 ### <a name="binding-and-bindingexpression"></a>Associação e BindingExpression  
  Antes de entrar em outros recursos e usos da vinculação de dados, seria útil introduzir a <xref:System.Windows.Data.BindingExpression> classe. Como você viu nas seções anteriores, a <xref:System.Windows.Data.Binding> classe é a classe de alto nível para a declaração de uma associação; a <xref:System.Windows.Data.Binding> classe fornece muitas propriedades que permitem que você especifique as características de uma associação. Uma classe relacionada, <xref:System.Windows.Data.BindingExpression>, é o objeto subjacente que mantém a conexão entre a origem e o destino. Uma associação contém todas as informações que podem ser compartilhadas entre várias expressões de associação. Um <xref:System.Windows.Data.BindingExpression> é uma expressão <xref:System.Windows.Data.Binding>de instância que não pode ser compartilhada e contém todas as informações de instância do.  
   
- Por exemplo, considere o seguinte, em  que myDataObject é uma instância da classe MyData, myBinding é <xref:System.Windows.Data.Binding> o objeto de origem e a classe MyData é uma classe definida que contém uma propriedade de cadeia de caracteres chamada    MyDataProperty. Este exemplo associa o conteúdo de texto de *MyText*, uma instância de <xref:System.Windows.Controls.TextBlock>, a MyDataProperty.  
+ Por exemplo, considere o seguinte, em que myDataObject é uma instância da classe MyData, myBinding é <xref:System.Windows.Data.Binding> o objeto de origem e a classe MyData é uma classe definida que contém uma propriedade de cadeia de caracteres chamadaMyDataProperty. Este exemplo associa o conteúdo de texto de *MyText*, uma instância de <xref:System.Windows.Controls.TextBlock>, aMyDataProperty.  
   
  [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
@@ -186,7 +186,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
  ![Diagrama que mostra a propriedade padrão de associação de dados.](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
- No entanto, e se, em vez de ter uma propriedade do tipo String, seu  objeto de origem de <xref:System.Windows.Media.Color>associação tiver uma Propriedade Color do tipo? Nesse caso, para que a ligação funcione, você precisaria primeiro transformar o valor da propriedade *Color* em algo que a <xref:System.Windows.Controls.Control.Background%2A> Propriedade aceite. Você precisaria criar um conversor personalizado implementando a <xref:System.Windows.Data.IValueConverter> interface, como no exemplo a seguir:  
+ No entanto, e se, em vez de ter uma propriedade do tipo String, seu objeto de origem de <xref:System.Windows.Media.Color>associação tiver uma Propriedade Color do tipo? Nesse caso, para que a ligação funcione, você precisaria primeiro transformar o valor da propriedade *Color* em algo que a <xref:System.Windows.Controls.Control.Background%2A> Propriedade aceite. Você precisaria criar um conversor personalizado implementando a <xref:System.Windows.Data.IValueConverter> interface, como no exemplo a seguir:  
   
  [!code-csharp[ColorPicker_snip#16](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/ColorPicker.cs#16)]
  [!code-vb[ColorPicker_snip#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ColorPicker_snip/visualbasic/colorpickerlib/colorpicker.vb#16)]  

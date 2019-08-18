@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 47cba2344071ecf9b85f4b0235e02ea88deb6498
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710234"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566952"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Usando automação de interface do usuário para testes automatizados
 > [!NOTE]
@@ -103,7 +103,7 @@ ms.locfileid: "68710234"
 ## <a name="related-tools-and-technologies"></a>Ferramentas e tecnologias relacionadas  
  Há uma série de ferramentas e tecnologias relacionadas que dão suporte a testes automatizados com [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]o.  
   
-- O inspecionar. exe é um aplicativo de GUI (interface gráfica do usuário) que pode [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ser usado para coletar informações para desenvolvimento e depuração de provedor e cliente. O [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]inspeciona. exe está incluído no.  
+- O inspecionar. exe é um aplicativo de GUI (interface gráfica do usuário) que pode [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ser usado para coletar informações para desenvolvimento e depuração de provedor e cliente. O inspeciona. exe está incluído no SDK do Windows.  
   
 - O MSAABridge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] expõe informações para acessibilidade ativa clientes. O objetivo principal da ponte [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para o acessibilidade ativa é permitir que os clientes acessibilidade ativa existentes interajam com qualquer estrutura implementada. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]  
   
