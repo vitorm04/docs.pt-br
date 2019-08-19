@@ -1,0 +1,33 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Documentação do .NET para Apache Spark
+metadata:
+  document_id: na
+  title: 'Documentação do .NET para Apache Spark-tutoriais, referência de API'
+  meta.description: 'Learn how to use .NET for Apache Spark, the .NET bindings for Spark written on the Spark interop layer. You can process batches of data, real-time streams, machine learning, and ad-hoc query with Apache Spark anywhere you write .NET code.'
+  ms.prod: dotnet-spark
+  ms.topic: landing-page
+  ms.date: 05/17/2019
+  ms.author: mamccrea
+  author: mamccrea
+abstract:
+  description: 'Saiba como usar o .NET para Apache Spark, as associações .NET para Spark escritas na camada de interoperabilidade do Spark. Você pode processar lotes de dados, fluxos em tempo real, aprendizado de máquina e consulta ad-hoc com Apache Spark em qualquer lugar em que você escreve o código .NET. Tutoriais, exemplos de código, referência de API e outras documentações mostram como.'
+sections:
+  - title: Tutoriais passo a passo
+    items:
+      - type: paragraph
+        text: 'Traga o poder do Apache Spark para seus aplicativos .NET:'
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/spark/tutorials/get-started">Introdução ao .NET para Apache Spark</a>
+          - html: <a href="/dotnet/spark/tutorials/hdinsight-deployment">Implantar um aplicativo .NET para Apache Spark no Azure HDInsight</a>
+          - html: <a href="/dotnet/spark/tutorials/amazon-emr-spark-deployment">Implantar um aplicativo .NET para Apache Spark no Amazon EMR Spark</a>
+          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">Implantar um aplicativo .NET para Apache Spark no databricks</a>
+  - title: Referências e recursos
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/?view=spark-dotnet">.NET para API de Apache Spark</a>
+          - html: '<a href="https://github.com/dotnet/spark">.NET para Apache Spark no Hub git</a>'
