@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724707"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038469"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Melhores práticas do TLS (Transport Layer Security) com o .NET Framework
 
@@ -242,7 +242,7 @@ Comece com a chave do Registro do `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\C
 Quando ele é habilitado (por padrão, por uma opção `AppContext` ou pelo Registro do Windows), o .NET Framework usa o sinalizador `SCH_USE_STRONG_CRYPTO` quando seu aplicativo solicita o protocolo de segurança TLS. O sinalizador `SCH_USE_STRONG_CRYPTO` pode ser habilitado por padrão, com a opção `AppContext` ou com o Registro. O sistema operacional passa o sinalizador para o `Schannel` para instruí-lo a desativar algoritmos criptográficos fracos conhecidos, pacotes de codificação e versões do protocolo TLS/SSL que possam ser habilitadas para uma melhor interoperabilidade. Para obter mais informações, consulte:
 
 - [Canal Seguro](/windows/desktop/SecAuthN/secure-channel)
-- [Estrutura SCHANNEL_CRED](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
+- [Estrutura SCHANNEL_CRED](/windows/win32/api/schannel/ns-schannel-schannel_cred)
 
 O sinalizador `SCH_USE_STRONG_CRYPTO` também é transmitido para o `Schannel` quando você usa explicitamente valores enumerados do `Tls` (TLS 1.0), `Tls11` ou `Tls12` de <xref:System.Net.SecurityProtocolType> ou <xref:System.Security.Authentication.SslProtocols>.
 
@@ -255,7 +255,7 @@ Para atualizar o .NET Framework para permitir que o sistema operacional escolha 
 - A [Prévia do Pacote Cumulativo de Atualizações de Qualidade de agosto de 2017 do .NET Framework](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/).
 - **Ou** o [Pacote Cumulativo de Atualizações de Segurança e Qualidade de setembro de 2017 do .NET Framework](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/).
 
-Confira também: 
+Confira também:
 
 - [Versões e dependências do .NET Framework](../migration-guide/versions-and-dependencies.md)
 - [Como: Determinar quais versões do .NET Framework estão instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md).

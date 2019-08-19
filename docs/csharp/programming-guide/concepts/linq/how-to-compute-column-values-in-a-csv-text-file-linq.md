@@ -2,21 +2,21 @@
 title: 'Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585805"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012936"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (C#)
 Este exemplo mostra como executar cálculos de agregação, como soma, média, mín. e máx. nas colunas de um arquivo .csv. Os princípios de exemplo mostrados aqui podem ser aplicados a outros tipos de texto estruturado.  
   
-### <a name="to-create-the-source-file"></a>Para criar o arquivo de origem  
+## <a name="to-create-the-source-file"></a>Para criar o arquivo de origem  
   
 1. Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto. Suponha que a primeira coluna representa uma ID do aluno e as colunas subsequentes representam as notas de quatro provas.  
   
-    ```  
+    ```csv
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  

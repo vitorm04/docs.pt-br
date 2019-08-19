@@ -4,12 +4,12 @@ description: Conheça os recursos de telemetria da CLI do ML.NET que coletam inf
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433790"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567496"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Coleta de telemetria pela CLI do ML.NET
 
@@ -36,7 +36,7 @@ A telemetria *está habilitado* quando você executa um [comando da CLI do ML.NE
 
 O recurso de telemetria da CLI do ML.NET Core está habilitado por padrão.
 
-Recuse o recurso de telemetria configurando a variável de ambiente `DOTNET_CLI_TELEMETRY_OPTOUT` como `1` ou `true`. Essa variável de ambiente se aplica globalmente à ferramenta de CLI do .NET.
+Recuse o recurso de telemetria configurando a variável de ambiente `MLDOTNET_CLI_TELEMETRY_OPTOUT` como `1` ou `true`. Essa variável de ambiente se aplica globalmente à ferramenta de CLI do .NET.
 
 ## <a name="data-points-collected"></a>Pontos de dados coletados
 

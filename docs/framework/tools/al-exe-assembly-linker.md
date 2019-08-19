@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832770"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567197"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -108,7 +108,7 @@ A tabela a seguir lista os erros gerados por *Al.exe*.
 |al1015|Não é possível localizar o arquivo de mensagens 'alinkui.dll'<br /><br /> O *Al.exe* requer o *Alinkui.dll*. Verifique se esse arquivo está em seu caminho. Se necessário, copie-o do CD do produto.|
 |al1016|Nenhum arquivo de entrada válido foi especificado<br /><br /> O *Al.exe* requer um ou mais arquivos de entrada que não têm informações do assembly.|
 |al1017|Nenhum nome de arquivo de destino foi especificado<br /><br /> Não existia a opção **/out** necessária que especifica o nome do arquivo de destino.|
-|al1018|O arquivo 'file' necessário não pôde ser carregado<br /><br /> Certos arquivos DLL não podem ser carregados. Reinstale o Visual Studio ou o SDK (Software Development Kit) do Windows.|
+|al1018|O arquivo 'file' necessário não pôde ser carregado<br /><br /> Certos arquivos DLL não podem ser carregados. Reinstale o Visual Studio ou o SDK do Windows.|
 |al1019|Falha de metadados ao criar assembly — motivo<br /><br /> A geração do assembly foi interrompida pelo motivo especificado. Por exemplo, este erro ocorrerá se um arquivo especificado com a opção **/win32res** não for encontrado.|
 |al1020|Ignorando o assembly 'file' incluído<br /><br /> Um arquivo de entrada que continha um assembly foi especificado. Os arquivos de entrada do *Al.exe* não podem conter assemblies.|
 |al1021|'setting': substituindo configuração anterior<br /><br /> Um módulo tinha um valor para uma determinada configuração, possivelmente atribuída com atributos personalizados, que foi substituído por um valor passado usando uma opção da linha de comando do *Al.exe*.|

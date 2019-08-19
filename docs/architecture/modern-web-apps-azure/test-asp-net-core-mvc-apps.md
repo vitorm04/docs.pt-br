@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672873"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69038117"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos ASP.NET Core MVC
 
@@ -33,32 +33,6 @@ Os testes de unidade, devido ao fato de testarem apenas uma única unidade do c�
 Embora seja uma boa ideia encapsular o código que interage com a infraestrutura, como bancos de dados e sistemas de arquivos, você ainda terá uma parte do código e, provavelmente, desejará testá-lo. Além disso, você deve verificar se as camadas do código interagem conforme esperado quando as dependências do aplicativo são totalmente resolvidas. Essa é a responsabilidade dos testes de integração. Os testes de integração tendem a ser mais lentos e mais difíceis de serem configurados do que os testes de unidade, porque geralmente dependem de infraestrutura e dependências externas. Portanto, você deve evitar testar coisas que podem ser testadas com testes de unidade em testes de integração. Se puder testar determinado cenário com um teste de unidade, você deverá testá-lo com um teste de unidade. Caso contrário, considere o uso de um teste de integração.
 
 Os testes de integração costumam ter procedimentos de instalação e de desinstalação mais complexos em comparação com os testes de unidade. Por exemplo, um teste de integração feito em um banco de dados real precisará de uma maneira de retornar o banco de dados para um estado conhecido antes de cada execução de teste. Conforme novos testes forem adicionados e o esquema de banco de dados de produção evoluir, esses scripts de teste tenderão a aumentar em tamanho e complexidade. Em muitos sistemas grandes, não é prático executar conjuntos completos de testes de integração em estações de trabalho do desenvolvedor antes de fazer check-in das alterações no controle do código-fonte compartilhado. Nesses casos, os testes de integração podem ser executados em um servidor de build.
-
-A classe de implementação `LocalFileImageService` implementa a lógica para buscar e retornar os bytes de um arquivo de imagem de uma pasta específica, considerando uma ID:
-
-```csharp
-public class LocalFileImageService : IImageService
-{
-    private readonly IHostingEnvironment _env;
-    public LocalFileImageService(IHostingEnvironment env)
-    {
-        _env = env;
-    }
-    public byte[] GetImageBytesById(int id)
-    {
-        try
-        {
-            var contentRoot = _env.ContentRootPath + "//Pics";
-            var path = Path.Combine(contentRoot, id + ".png");
-            return File.ReadAllBytes(path);
-        }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
 
 ### <a name="functional-tests"></a>Testes funcionais
 
@@ -152,7 +126,7 @@ Submeter esse método ao teste de unidade é dificultado por sua dependência di
 Se você não pode realizar o teste de unidade no comportamento do sistema de arquivos diretamente e não pode testar a rota, o que há para testar? Bem, depois de fazer a refatoração para possibilitar o teste de unidade, talvez você descubra alguns casos de teste e um comportamento ausente, como o tratamento de erro. O que o método faz quando um arquivo não é encontrado? O que ele deve fazer? Neste exemplo, o método refatorado tem esta aparência:
 
 ```csharp
-[HttpGet("[controller]/pic/{id}")\]
+[HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
     byte[] imageBytes;

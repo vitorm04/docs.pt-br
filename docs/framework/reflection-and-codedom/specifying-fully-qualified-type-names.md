@@ -17,11 +17,11 @@ ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612856"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "61792997"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nomes de tipo totalmente qualificado
 
@@ -143,7 +143,7 @@ Se o namespace fosse `Ozzy.Out+Back`, o sinal de adição deve ser precedido por
 
 A informação mínima necessária em uma especificação de nome do assembly é o nome textual (IDENTIFIER) do assembly. Você pode seguir o IDENTIFIER de uma lista separada por vírgulas de pares propriedade/valor, conforme descrito na tabela a seguir. A nomenclatura do IDENTIFIER deve seguir as regras de nomenclatura de arquivo. O IDENTIFIER não diferencia maiúsculas de minúsculas.
 
-|Property name|Descrição|Valores permitidos|
+|Property name|DESCRIÇÃO|Valores permitidos|
 |-------------------|-----------------|----------------------|
 |**Versão**|Número de versão do assembly|*Major.Minor.Build.Revision*, em que *Major*, *Minor*, *Build* e *Revision* são inteiro entre 0 e 65535, inclusive.|
 |**PublicKey**|Chave pública completa|O valor da cadeia de caracteres da chave pública completa em formato hexadecimal. Especifique uma referência nula (**Nothing** no Visual Basic) para indicar explicitamente um assembly particular.|

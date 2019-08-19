@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: da36f2a703fe817c171e192b9c94e473c93447a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065979"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040149"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalização do marshaling de estrutura
 
@@ -319,7 +319,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Personalização do marshaling de campo decimal
 
-Se você estiver trabalhando no Windows, poderá encontrar algumas APIs que usam a estrutura [`CY` ou `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy) nativa. Por padrão, o tipo .NET `decimal` realizar marshal da estrutura nativa [`DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec). No entanto, você pode usar um <xref:System.Runtime.InteropServices.MarshalAsAttribute> com o valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para instruir o marshaler para converter um valor `decimal` para um valor nativo `CY`.
+Se você estiver trabalhando no Windows, poderá encontrar algumas APIs que usam a estrutura [`CY` ou `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) nativa. Por padrão, o tipo .NET `decimal` realizar marshal da estrutura nativa [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1). No entanto, você pode usar um <xref:System.Runtime.InteropServices.MarshalAsAttribute> com o valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para instruir o marshaler para converter um valor `decimal` para um valor nativo `CY`.
 
 ```csharp
 public struct Currency
@@ -339,7 +339,7 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>`System.Object`s de marshaling
 
 No Windows, você pode realizar marshal dos campos tipados de `object` para o código nativo. Você pode realizar marshal desses campos para um dos três tipos:
-- [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
+- [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 

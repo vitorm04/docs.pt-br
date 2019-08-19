@@ -6,16 +6,16 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306357"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566277"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Como converter com segurança usando a correspondência de padrões e os operadores is e as
 
-Como os objetos são polimórficos, é possível que uma variável de tipo de classe base tenha um [tipo](../programming-guide/types/index.md) derivado. Para acessar os métodos de instância do tipo derivado, é necessário [converter](../programming-guide/types/casting-and-type-conversions.md) o valor de volta no tipo derivado. No entanto, uma conversão cria o risco de lançar um <xref:System.InvalidCastException>. O C# fornece instruções de [correspondência de padrões](../pattern-matching.md) que executarão uma conversão condicionalmente somente quando ela tiver êxito. O C# também oferece os operadores [is](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) e [as](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator) para testar se um valor é de um determinado tipo.
+Como os objetos são polimórficos, é possível que uma variável de tipo de classe base tenha um [tipo](../programming-guide/types/index.md) derivado. Para acessar os métodos de instância do tipo derivado, é necessário [converter](../programming-guide/types/casting-and-type-conversions.md) o valor de volta no tipo derivado. No entanto, uma conversão cria o risco de lançar um <xref:System.InvalidCastException>. O C# fornece instruções de [correspondência de padrões](../pattern-matching.md) que executarão uma conversão condicionalmente somente quando ela tiver êxito. O C# também oferece os operadores [is](../language-reference/operators/type-testing-and-cast.md#is-operator) e [as](../language-reference/operators/type-testing-and-cast.md#as-operator) para testar se um valor é de um determinado tipo.
 
 O código a seguir demonstra a instrução `is` da correspondência de padrões. Ele contém métodos que testam um argumento de método para determinar se ele é um argumento de um possível conjunto de tipos derivados:
 

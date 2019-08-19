@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751827"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545314"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Criar um aplicativo de serviço Windows
 
@@ -37,7 +37,7 @@ Para começar, crie o projeto e defina os valores necessários para o serviço f
 
 3. Em **Nome**, insira *MyNewService* e, em seguida, selecione **OK**.
 
-   A guia **Design** será exibida (**Service1.cs [Design]** ou **Service1.vb [Design]**).
+   A guia **Design** será exibida (**Service1.cs [Design]** ou **Service1.vb [Design]** ).
 
    O modelo de projeto inclui uma classe de componente denominada `Service1` herdada de <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Isso inclui grande parte do código de serviço básico, como o código para iniciar o serviço.
 
@@ -67,7 +67,7 @@ Na próxima seção, adicione um log de eventos personalizado ao serviço Window
 
 1. No **Gerenciador de Soluções**, no menu de atalho de **MyNewService.cs** ou **MyNewService.vb**, escolha **Designer de Exibição**.
 
-2. Na **Caixa de Ferramentas**, expanda **Componentes** e, em seguida, arraste o componente **EventLog** para a guia **Service1.cs [Design]** ou **Service1.vb [Design]**.
+2. Na **Caixa de Ferramentas**, expanda **Componentes** e, em seguida, arraste o componente **EventLog** para a guia **Service1.cs [Design]** ou **Service1.vb [Design]** .
 
 3. No **Gerenciador de Soluções**, no menu de atalho de **MyNewService.cs** ou **MyNewService.vb**, escolha **Exibir Código**.
 
@@ -249,7 +249,7 @@ Você pode implementar as configurações de status SERVICE_START_PENDING e SERV
     ```
 
     > [!NOTE]
-    > O Gerenciador de Controle de Serviço usa os membros `dwWaitHint` e `dwCheckpoint` da [estrutura SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) para determinar quanto tempo aguardar um serviço Windows ser iniciado ou desligado. Se os métodos `OnStart` e `OnStop` tiverem uma execução longa, o serviço poderá solicitar mais tempo chamando `SetServiceStatus` novamente com um valor `dwCheckPoint` incrementado.
+    > O Gerenciador de Controle de Serviço usa os membros `dwWaitHint` e `dwCheckpoint` da [estrutura SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) para determinar quanto tempo aguardar um serviço Windows ser iniciado ou desligado. Se os métodos `OnStart` e `OnStop` tiverem uma execução longa, o serviço poderá solicitar mais tempo chamando `SetServiceStatus` novamente com um valor `dwCheckPoint` incrementado.
 
 3. Na classe `MyNewService`, declare a função [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) usando a [inovação de plataforma](../interop/consuming-unmanaged-dll-functions.md):
 
@@ -482,7 +482,7 @@ Agora que você criou o serviço Windows, poderá instalá-lo. Para instalar um 
 
     Se o serviço for instalado com êxito, o comando relatará o êxito.
 
-    Se o sistema não puder localizar *installutil.exe*, verifique se ele existe no computador. Essa ferramenta é instalada com o .NET Framework na pasta *%windir%\Microsoft.NET\Framework[64]\\&lt;versão do Framework&gt;*. Por exemplo, o caminho padrão da versão de 64 bits é *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
+    Se o sistema não puder localizar *installutil.exe*, verifique se ele existe no computador. Essa ferramenta é instalada com o .NET Framework na pasta *%windir%\Microsoft.NET\Framework[64]\\&lt;versão do Framework&gt;* . Por exemplo, o caminho padrão da versão de 64 bits é *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
     Se o processo **installutil.exe** falhar, verifique o log de instalação para saber o motivo. Por padrão, o log está localizado na mesma pasta do executável do serviço. A instalação poderá falhar se:
     - A classe <xref:System.ComponentModel.RunInstallerAttribute> não estiver presente na classe `ProjectInstaller`.
@@ -538,7 +538,7 @@ Caso não precise mais do aplicativo serviço Windows, remova-o.
 
 Agora que você criou o serviço, você poderá:
 
-- Criar um programa de instalação autônoma para que outros possam usá-lo para instalar o serviço Windows. Usar o [Conjunto de ferramentas do WiX](http://wixtoolset.org/) para criar um instalador para um serviço Windows. Para ver outras ideias, confira [Create an installer package](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop) (Criar um pacote do instalador).
+- Criar um programa de instalação autônoma para que outros possam usá-lo para instalar o serviço Windows. Usar o [Conjunto de ferramentas do WiX](https://wixtoolset.org/) para criar um instalador para um serviço Windows. Para ver outras ideias, confira [Create an installer package](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop) (Criar um pacote do instalador).
 
 - Explorar o componente <xref:System.ServiceProcess.ServiceController>, que permite enviar comandos ao serviço instalado.
 

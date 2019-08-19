@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 0b36c25742757f2606d103d6af05eee7bc175ea0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b058e9df6b8ba5a9dd0066f9df1f4b233a00e162
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697304"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69039395"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>Como desenvolver aplicativos Web com o ASP.NET
 
@@ -31,7 +31,7 @@ O ASP.NET Core é uma reformulação do ASP.NET 4. x. Alguns dos benefícios, o 
 - Mais enxuto e mais modular.
 - Uma história unificada para a criação da interface do usuário da Web e das APIs Web.
 
-Confira [Por que usar o ASP.NET Core?](/aspnet/core#why-use-aspnet-core) para obter uma lista expandida de benefícios.
+Confira [Por que usar o ASP.NET Core?](/aspnet/core#why-choose-aspnet-core) para obter uma lista expandida de benefícios.
 
 Para saber mais sobre o ASP.NET Core](/aspnet/core), confira:
 
