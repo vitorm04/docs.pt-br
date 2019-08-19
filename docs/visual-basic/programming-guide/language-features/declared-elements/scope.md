@@ -15,130 +15,140 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 806e4605411304f58d0428f2588454ba9652946e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7f7e32d6ac838e250c260987d3d5c375f8697c45
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610363"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512856"
 ---
 # <a name="scope-in-visual-basic"></a>Escopo no Visual Basic
-O *escopo* de um elemento declarado é o conjunto de todo o código que pode fazer referência a ele sem qualificar seu nome ou tornando-os disponíveis por meio de uma [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Um elemento pode ter escopo em um dos seguintes níveis:  
-  
-|Nível|Descrição|  
-|-----------|-----------------|  
-|Escopo de bloco|Disponível somente dentro do código de bloco no qual ele é declarado|  
-|Escopo do procedimento|Disponível para todo o código dentro do procedimento no qual ela é declarada|  
-|Escopo de módulo|Disponível para todo o código dentro do módulo, classe ou estrutura na qual ele está declarado|  
-|Escopo de Namespace|Disponível para todo o código no namespace no qual ela é declarada|  
-  
- Esses níveis de progresso de escopo de menor (bloco) para o mais amplo (namespace), onde *menor escopo* significa o menor conjunto de código que pode se referir ao elemento sem qualificação. Para obter mais informações, consulte "Níveis de escopo" nesta página.  
-  
-## <a name="specifying-scope-and-defining-variables"></a>Especificar o escopo e definir variáveis  
- Especifique o escopo de um elemento quando você declará-la. O escopo pode depender dos seguintes fatores:  
-  
-- A região (bloco, procedimento, módulo, classe ou estrutura) em que você declara o elemento  
-  
-- O namespace que contém a declaração do elemento  
-  
-- O nível de acesso que você declarar para o elemento  
-  
- Tenha cuidado ao definir variáveis com o mesmo nome mas com escopo diferente, porque isso pode levar a resultados inesperados. Para obter mais informações, consulte [referências a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
-  
-## <a name="levels-of-scope"></a>Níveis de escopo  
- Um elemento de programação está disponível em toda a região na qual você declará-la. Todo o código na mesma região pode se referir ao elemento sem qualificar seu nome.  
-  
-### <a name="block-scope"></a>Escopo de bloco  
- Um bloco é um conjunto de instruções entre Iniciando e encerrando instruções de declaração, como o seguinte:  
-  
-- `Do` e `Loop`  
-  
-- `For` [`Each`] e `Next`  
-  
-- `If` e `End If`  
-  
-- `Select` e `End Select`  
-  
-- `SyncLock` e `End SyncLock`  
-  
-- `Try` e `End Try`  
-  
-- `While` e `End While`  
-  
-- `With` e `End With`  
-  
- Se você declarar uma variável dentro de um bloco, você pode usá-lo apenas dentro desse bloco. No exemplo a seguir, o escopo da variável de inteiro `cube` é o bloco entre `If` e `End If`, e você não pode consultar `cube` quando a execução passa para fora do bloco.  
-  
-```  
-If n < 1291 Then  
-    Dim cube As Integer  
-    cube = n ^ 3  
-End If  
-```  
-  
+
+O *escopo* de um elemento declarado é o conjunto de todo o código que pode fazer referência a ele sem qualificar seu nome ou disponibilizá-lo por meio de uma [instrução Imports (namespace e tipo do .net)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Um elemento pode ter um escopo em um dos seguintes níveis:
+
+|Nível|Descrição|
+|-----------|-----------------|
+|Escopo de bloco|Disponível somente dentro do bloco de código no qual ele é declarado|
+|Escopo do procedimento|Disponível para todo o código dentro do procedimento no qual ele é declarado|
+|Escopo do módulo|Disponível para todo o código dentro do módulo, da classe ou da estrutura na qual ele é declarado|
+|Escopo do namespace|Disponível para todo o código no namespace no qual ele é declarado|
+
+Esses níveis de progresso do escopo do mais estreito (bloco) para o mais largo (namespace), em que o *escopo mais estreito* significa o menor conjunto de código que pode se referir ao elemento sem qualificação. Para obter mais informações, consulte "níveis de escopo" nesta página.
+
+## <a name="specifying-scope-and-defining-variables"></a>Especificando o escopo e Definindo variáveis
+
+Você especifica o escopo de um elemento ao declará-lo. O escopo pode depender dos seguintes fatores:
+
+- A região (bloco, procedimento, módulo, classe ou estrutura) na qual você declara o elemento
+
+- O namespace que contém a declaração do elemento
+
+- O nível de acesso que você declara para o elemento
+
+Tenha cuidado ao definir variáveis com o mesmo nome, mas com escopo diferente, porque isso pode levar a resultados inesperados. Para obter mais informações, consulte [referências a elementos](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)declarados.
+
+## <a name="levels-of-scope"></a>Níveis de escopo
+
+Um elemento de programação está disponível em toda a região em que você o declara. Todo o código na mesma região pode se referir ao elemento sem qualificar seu nome.
+
+### <a name="block-scope"></a>Escopo do bloco
+
+Um bloco é um conjunto de instruções incluídas em instruções de declaração de início e término, como a seguinte:
+
+- `Do` e `Loop`
+
+- `For`[`Each`] e`Next`
+
+- `If` e `End If`
+
+- `Select` e `End Select`
+
+- `SyncLock` e `End SyncLock`
+
+- `Try` e `End Try`
+
+- `While` e `End While`
+
+- `With` e `End With`
+
+Se você declarar uma variável em um bloco, poderá usá-la somente dentro desse bloco. No exemplo a seguir, `cube` o escopo da variável de inteiro é o bloco entre `If` e `End If`, e você não pode mais se referir quando a execução passa para `cube` fora do bloco.
+
+```vb
+If n < 1291 Then
+    Dim cube As Integer
+    cube = n ^ 3
+End If
+```
+
 > [!NOTE]
->  Mesmo se o escopo de uma variável é limitado a um bloco, seu tempo de vida ainda é que todo o procedimento. Se você inserir o bloco mais de uma vez durante o procedimento, cada variável de bloco reterá seu valor anterior. Para evitar resultados inesperados, nesse caso, é prudente inicializar variáveis de bloco no início do bloco.  
-  
-### <a name="procedure-scope"></a>Escopo do procedimento  
- Um elemento declarado dentro de um procedimento não está disponível fora desse procedimento. Somente o procedimento que contém a declaração pode usá-lo. Variáveis com esse nível também são conhecidos como *variáveis locais*. Você declará-las com o [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md), com ou sem o [estático](../../../../visual-basic/language-reference/modifiers/static.md) palavra-chave.  
-  
- Escopo de procedimento e bloco estão intimamente relacionados. Se você declarar uma variável dentro de um procedimento, mas fora de qualquer bloco dentro desse procedimento, você pode pensar a variável como tendo o escopo de bloco, onde o bloco é todo o procedimento.  
-  
+> Mesmo que o escopo de uma variável seja limitado a um bloco, seu tempo de vida ainda é o de todo o procedimento. Se você inserir o bloco mais de uma vez durante o procedimento, cada variável de bloco manterá seu valor anterior. Para evitar resultados inesperados nesse caso, é recomendável inicializar variáveis de bloco no início do bloco.
+
+### <a name="procedure-scope"></a>Escopo do procedimento
+
+Um elemento declarado em um procedimento não está disponível fora desse procedimento. Somente o procedimento que contém a declaração pode usá-lo. As variáveis nesse nível também são conhecidas como *variáveis locais*. Você os declara com a [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md), com ou sem a palavra-chave [static](../../../../visual-basic/language-reference/modifiers/static.md) .
+
+O procedimento e o escopo do bloco estão fortemente relacionados. Se você declarar uma variável dentro de um procedimento, mas fora de qualquer bloco dentro desse procedimento, você pode considerar a variável como tendo o escopo de bloco, onde o bloco é o procedimento inteiro.
+
 > [!NOTE]
->  Todos os elementos locais, mesmo se forem `Static` as variáveis são particulares ao procedimento em que aparecem. Você não pode declarar qualquer elemento usando o [pública](../../../../visual-basic/language-reference/modifiers/public.md) palavra-chave dentro de um procedimento.  
-  
-### <a name="module-scope"></a>Escopo de módulo  
- Para sua conveniência, o termo simples *nível de módulo* se aplica igualmente a módulos, classes e estruturas. Você pode declarar elementos nesse nível, colocando a instrução de declaração fora de qualquer procedimento ou bloco, mas dentro do módulo, classe ou estrutura.  
-  
- Quando você fizer uma declaração no nível de módulo, o nível de acesso que você escolha determina o escopo. O namespace que contém o módulo, classe ou estrutura também afeta o escopo.  
-  
- Os elementos para os quais você deve declarar [privada](../../../../visual-basic/language-reference/modifiers/private.md) nível de acesso estão disponíveis para cada procedimento desse módulo, mas não para qualquer código em um módulo diferente. O `Dim` instrução no nível de módulo padrão é `Private` se você não usar quaisquer palavras-chave de nível de acesso. No entanto, você pode fazer o nível de escopo e o acesso mais óbvio, usando o `Private` palavra-chave no `Dim` instrução.  
-  
- No exemplo a seguir, todos os procedimentos definidos no módulo podem se referir à variável de cadeia de caracteres `strMsg`. Quando o segundo procedimento é chamado, ele exibe o conteúdo da variável de cadeia de caracteres `strMsg` em uma caixa de diálogo.  
-  
-```  
-' Put the following declaration at module level (not in any procedure).  
-Private strMsg As String  
-' Put the following Sub procedure in the same module.  
-Sub initializePrivateVariable()  
-    strMsg = "This variable cannot be used outside this module."  
-End Sub  
-' Put the following Sub procedure in the same module.  
-Sub usePrivateVariable()  
-    MsgBox(strMsg)  
-End Sub  
-```  
-  
-### <a name="namespace-scope"></a>Escopo de Namespace  
- Se você declarar um elemento no nível de módulo usando o [amigo](../../../../visual-basic/language-reference/modifiers/friend.md) ou [público](../../../../visual-basic/language-reference/modifiers/public.md) palavra-chave, ele fica disponível para todos os procedimentos em todo o namespace no qual o elemento é declarado. Com a seguinte alteração ao exemplo anterior, a variável de cadeia de caracteres `strMsg` pode ser chamada pelo código em qualquer lugar no namespace da sua declaração.  
-  
-```  
-' Include this declaration at module level (not inside any procedure).  
-Public strMsg As String  
-```  
-  
- Escopo de Namespace inclui namespaces aninhados. Um elemento disponível dentro de um namespace também está disponível de dentro de qualquer namespace aninhado dentro desse namespace.  
-  
- Se seu projeto não contém nenhum [declaração de Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md), tudo no projeto está no mesmo namespace. Nesse caso, o escopo de namespace pode ser pensado como escopo do projeto. `Public` elementos em um módulo, classe ou estrutura também estão disponíveis para qualquer projeto que referencia o seu projeto.  
-  
-## <a name="choice-of-scope"></a>Opção de escopo  
- Quando você declara uma variável, você deve manter em mente os seguintes pontos ao escolher seu escopo.  
-  
-### <a name="advantages-of-local-variables"></a>Vantagens de variáveis locais  
- Variáveis locais são uma boa escolha para qualquer tipo de cálculo temporário, pelos seguintes motivos:  
-  
-- **Prevenção de conflitos de nome.** Nomes de variável local não são suscetíveis a entrar em conflito. Por exemplo, você pode criar vários procedimentos diferentes que contém uma variável chamada `intTemp`. Desde que cada `intTemp` é declarado como uma variável local, cada procedimento reconhece apenas sua própria versão do `intTemp`. Qualquer procedimento pode alterar o valor em seu local `intTemp` sem afetar `intTemp` variáveis em outros procedimentos.  
-  
-- **Consumo de memória.** As variáveis locais consomem memória somente enquanto seu procedimento está sendo executado. Sua memória é liberada quando o procedimento retorna ao código de chamada. Por outro lado, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) e [estático](../../../../visual-basic/language-reference/modifiers/static.md) variáveis consomem recursos de memória até que seu aplicativo é interrompido, portanto, use-as quando necessário. *Variáveis de instância* consomem memória enquanto sua instância continuará a existir, o que as torna menos eficiente do que as variáveis locais, mas potencialmente mais eficiente do que `Shared` ou `Static` variáveis.  
-  
-### <a name="minimizing-scope"></a>Minimizando o escopo  
- Em geral, ao declarar qualquer variável ou constante, é boa prática para tornar o escopo tão restrito quanto possível (o escopo de bloco é o menor). Isso ajuda a conservar a memória e minimiza as chances de seu código erroneamente referir-se a variável errada. Da mesma forma, você deve declarar uma variável para ser [estático](../../../../visual-basic/language-reference/modifiers/static.md) somente quando for necessário preservar seu valor entre chamadas de procedimento.  
-  
+> Todos os elementos locais, mesmo que sejam `Static` variáveis, são privados para o procedimento no qual aparecem. Você não pode declarar nenhum elemento usando a palavra-chave [Public](../../../../visual-basic/language-reference/modifiers/public.md) em um procedimento.
+
+### <a name="module-scope"></a>Escopo do módulo
+
+Para sua conveniência, o *nível de módulo* de termo único aplica-se igualmente a módulos, classes e estruturas. Você pode declarar elementos nesse nível colocando a instrução de declaração fora de qualquer procedimento ou bloco, mas dentro do módulo, da classe ou da estrutura.
+
+Quando você faz uma declaração no nível do módulo, o nível de acesso que você escolhe determina o escopo. O namespace que contém o módulo, a classe ou a estrutura também afeta o escopo.
+
+Os elementos para os quais você declara o nível de acesso [privado](../../../../visual-basic/language-reference/modifiers/private.md) estão disponíveis para cada procedimento nesse módulo, mas não para qualquer código em um módulo diferente. A `Dim` instrução no nível do módulo será padronizada se você não usar nenhuma palavra-chave de nível de `Private` acesso. No entanto, você pode tornar o nível de escopo e de acesso mais `Private` óbvio usando a `Dim` palavra-chave na instrução.
+
+No exemplo a seguir, todos os procedimentos definidos no módulo podem se referir à variável `strMsg`de cadeia de caracteres. Quando o segundo procedimento é chamado, ele exibe o conteúdo da variável `strMsg` de cadeia de caracteres em uma caixa de diálogo.
+
+```vb
+' Put the following declaration at module level (not in any procedure).
+Private strMsg As String
+' Put the following Sub procedure in the same module.
+Sub initializePrivateVariable()
+    strMsg = "This variable cannot be used outside this module."
+End Sub
+' Put the following Sub procedure in the same module.
+Sub usePrivateVariable()
+    MsgBox(strMsg)
+End Sub
+```
+
+### <a name="namespace-scope"></a>Escopo do namespace
+
+Se você declarar um elemento no nível do módulo usando a palavra-chave [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) ou [Public](../../../../visual-basic/language-reference/modifiers/public.md) , ele ficará disponível para todos os procedimentos em todo o namespace no qual o elemento é declarado. Com a seguinte alteração no exemplo anterior, a variável `strMsg` de cadeia de caracteres pode ser referenciada pelo código em qualquer lugar no namespace de sua declaração.
+
+```vb
+' Include this declaration at module level (not inside any procedure).
+Public strMsg As String
+```
+
+O escopo do namespace inclui namespaces aninhados. Um elemento disponível de dentro de um namespace também está disponível de dentro de qualquer namespace aninhado dentro desse namespace.
+
+Se o seu projeto não contiver nenhuma [instrução de namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, tudo no projeto estará no mesmo namespace. Nesse caso, o escopo do namespace pode ser considerado como escopo do projeto. `Public`os elementos em um módulo, classe ou estrutura também estão disponíveis para qualquer projeto que faça referência a seu projeto.
+
+## <a name="choice-of-scope"></a>Escolha do escopo
+
+Ao declarar uma variável, você deve ter em mente os seguintes pontos ao escolher seu escopo.
+
+### <a name="advantages-of-local-variables"></a>Vantagens das variáveis locais
+
+As variáveis locais são uma boa opção para qualquer tipo de cálculo temporário, pelos seguintes motivos:
+
+- **Prevenção de conflito de nomes.** Nomes de variáveis locais não são suscetíveis a conflitos. Por exemplo, você pode criar vários procedimentos diferentes contendo uma variável chamada `intTemp`. Desde que cada `intTemp` um seja declarado como uma variável local, cada procedimento reconhece apenas sua própria versão do `intTemp`. Qualquer procedimento pode alterar o valor em seu local `intTemp` sem afetar `intTemp` as variáveis em outros procedimentos.
+
+- **Consumo de memória.** As variáveis locais consomem memória somente enquanto o procedimento está em execução. Sua memória é liberada quando o procedimento retorna ao código de chamada. Por outro lado, variáveis [compartilhadas](../../../../visual-basic/language-reference/modifiers/shared.md) e [estáticas](../../../../visual-basic/language-reference/modifiers/static.md) consomem recursos de memória até que seu aplicativo pare de funcionar, portanto, use-os somente quando necessário. As *variáveis de instância* consomem memória enquanto sua instância continua a existir, o que as torna menos eficiente do que as variáveis `Shared` locais, mas potencialmente mais eficientes do que ou `Static` variáveis.
+
+### <a name="minimizing-scope"></a>Minimizando o escopo
+
+Em geral, ao declarar qualquer variável ou constante, é uma boa prática de programação tornar o escopo o mais estreito possível (o escopo do bloco é o mais estreito). Isso ajuda a conservar a memória e minimiza as chances de seu código se referir erroneamente à variável errada. Da mesma forma, você deve declarar uma variável para ser [estática](../../../../visual-basic/language-reference/modifiers/static.md) somente quando for necessário preservar seu valor entre chamadas de procedimento.
+
 ## <a name="see-also"></a>Consulte também
 
 - [Características do Elemento Declarado](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Como: Controlar o escopo de uma variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [Tempo de vida no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Tempo de vida em Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Níveis de acesso no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Declaração de Variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

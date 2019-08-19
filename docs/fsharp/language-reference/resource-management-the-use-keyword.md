@@ -1,62 +1,62 @@
 ---
 title: 'Gerenciamento de recursos: A palavra-chave use'
-description: Saiba mais sobre o F# palavra-chave 'use' e a função 'using', o que pode controlar a inicialização e a liberação de recursos.
+description: Saiba mais sobre F# a palavra-chave ' use ' e a função ' Using ', que podem controlar a inicialização e a versão dos recursos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3389f84713ec7cf5459dd0132249970f0e2ef3e0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5e0838401bee02050343b2f6dcc646a8dc8b4dc0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641703"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627262"
 ---
 # <a name="resource-management-the-use-keyword"></a>Gerenciamento de recursos: A palavra-chave use
 
-Este tópico descreve a palavra-chave `use` e o `using` função, que pode controlar a inicialização e a liberação de recursos.
+Este tópico descreve a palavra `use` -chave `using` e a função, que podem controlar a inicialização e a liberação de recursos.
 
 ## <a name="resources"></a>Recursos
 
-O termo *recurso* é usado em mais de uma maneira. Sim, os recursos podem ser dados que usa um aplicativo, como cadeias de caracteres, gráficos e assim por diante, mas nesse contexto, *recursos* refere-se aos recursos de software ou sistema operacional, como os contextos de dispositivo de gráficos, identificadores de arquivos, rede banco de dados e conexões, objetos de simultaneidade, como identificadores de espera e assim por diante. O uso desses recursos por aplicativos envolve a aquisição do recurso do sistema operacional ou outro provedor de recursos, seguido da versão mais recente do recurso para o pool para que ele pode ser fornecido para outro aplicativo. Problemas ocorrem quando os aplicativos não liberar recursos de volta para o pool comum.
+O termo *recurso* é usado de mais de uma maneira. Sim, os recursos podem ser dados que um aplicativo usa, como cadeias de caracteres, gráficos e similares, mas neste contexto, os *recursos* referem-se a recursos de software ou do sistema operacional, como contextos de dispositivo de gráficos, identificadores de arquivos, rede e banco de dados conexões, objetos de simultaneidade, como identificadores de espera e assim por diante. O uso desses recursos por aplicativos envolve a aquisição do recurso do sistema operacional ou de outro provedor de recursos, seguido pela versão posterior do recurso para o pool, para que ele possa ser fornecido a outro aplicativo. Os problemas ocorrem quando os aplicativos não liberam recursos de volta para o pool comum.
 
-## <a name="managing-resources"></a>Gerenciamento de recursos
+## <a name="managing-resources"></a>Gerenciando recursos
 
-Para gerenciar os recursos em um aplicativo com responsabilidade e com eficiência, você deve liberar recursos imediatamente e de maneira previsível. O .NET Framework ajuda você a fazer isso, fornecendo o `System.IDisposable` interface. Um tipo que implementa `System.IDisposable` tem o `System.IDisposable.Dispose` método, que libera os recursos corretamente. Aplicativos bem escritos garantem que `System.IDisposable.Dispose` é chamado imediatamente quando qualquer objeto que contém um recurso limitado não é mais necessário. Felizmente, a maioria das linguagens .NET dão suporte para facilitar essa tarefa, e F# não é exceção. Há duas construções de linguagem úteis que suportam o padrão dispose: o `use` associação e o `using` função.
+Para gerenciar com eficiência e responsabilidade os recursos em um aplicativo, você deve liberar recursos de forma imediata e de maneira previsível. O .NET Framework ajuda você a fazer isso fornecendo a `System.IDisposable` interface. Um tipo que implementa `System.IDisposable` o tem `System.IDisposable.Dispose` o método, que libera corretamente os recursos. Os aplicativos bem escritos garantem `System.IDisposable.Dispose` que o seja chamado imediatamente quando qualquer objeto que mantém um recurso limitado não for mais necessário. Felizmente, a maioria das linguagens .NET oferece suporte para tornar isso F# mais fácil e não é exceção. Há duas construções de linguagem úteis que dão suporte ao padrão Dispose: a `use` associação e a `using` função.
 
-## <a name="use-binding"></a>Usar associação
+## <a name="use-binding"></a>usar Associação
 
-O `use` palavra-chave tem um formulário que é semelhante do `let` associação:
+A `use` palavra-chave tem um formulário semelhante ao `let` da associação:
 
-Use *valor* = *expressão*
+usar*expressão* de *valor* = 
 
-Ele fornece a mesma funcionalidade que um `let` vinculação, mas adiciona uma chamada para `Dispose` no valor quando o valor sai do escopo. Observe que o compilador insere uma verificação de nulos no valor, assim que, se o valor é `null`, a chamada para `Dispose` não foi tentada.
+Ele fornece a mesma funcionalidade que uma `let` associação, mas adiciona uma chamada `Dispose` para no valor quando o valor sai do escopo. Observe que o compilador insere uma verificação nula no valor, de modo que, se o valor `null`for, a chamada `Dispose` para não será tentada.
 
-O exemplo a seguir mostra como fechar um arquivo automaticamente usando o `use` palavra-chave.
+O exemplo a seguir mostra como fechar um arquivo automaticamente usando a `use` palavra-chave.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
 > [!NOTE]
-> Você pode usar `use` em expressões de cálculo, caso em que uma versão personalizada do `use` expressão é usada. Para obter mais informações, consulte [sequências](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md), e [expressões de computação](computation-expressions.md).
+> Você pode usar `use` em expressões de computação, caso em que uma versão personalizada `use` da expressão é usada. Para obter mais informações, consulte [Sequências](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md)e [expressões de computação](computation-expressions.md).
 
 ## <a name="using-function"></a>usando a função
 
-O `using` função tem a seguinte forma:
+A `using` função tem o seguinte formato:
 
 `using` (*expression1*) *function-or-lambda*
 
-Em um `using` expressão, *expression1* cria o objeto que deve ser descartado. O resultado de *expression1* (o objeto que deve ser descartado) se torna um argumento *valor*, para *função ou lambda*, que é qualquer função que espera um único restante do argumento de um tipo que corresponde ao valor produzido pela *expression1*, ou uma expressão lambda que espera um argumento desse tipo. No final da execução da função, o tempo de execução chama `Dispose` e libera os recursos (a menos que o valor é `null`, caso em que a chamada de Dispose não é realizada).
+Em uma `using` expressão, *expressão1* cria o objeto que deve ser Descartado. O resultado de *expression1* (o objeto que deve ser descartado) torna-se um argumento, um *valor*, para *Function-ou-lambda*, que é uma função que espera um único argumento restante de um tipo que corresponda ao valor produzido por  *expression1*ou uma expressão lambda que espera um argumento desse tipo. No final da execução da função, o tempo de execução chama `Dispose` e libera os recursos (a menos que o valor seja `null`; nesse caso, a chamada para Dispose não é tentada).
 
-O exemplo a seguir demonstra o `using` expressão com uma expressão lambda.
+O exemplo a seguir demonstra `using` a expressão com uma expressão lambda.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6302.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6302.fs)]
 
-A exemplo a seguir mostra o `using` expressão com uma função.
+O exemplo a seguir mostra `using` a expressão com uma função.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
-Observe que a função pode ser uma função que tem alguns argumentos aplicados já. O código de exemplo a seguir demonstra isso. Ele cria um arquivo que contém a cadeia de caracteres `XYZ`.
+Observe que a função pode ser uma função que já tem alguns argumentos aplicados. O código de exemplo a seguir demonstra isso. Ele cria um arquivo que contém a cadeia `XYZ`de caracteres.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 
-O `using` função e o `use` associação são quase equivalentes maneiras de realizar a mesma coisa. O `using` palavra-chave fornece mais controle sobre quando `Dispose` é chamado. Quando você usa `using`, `Dispose` é chamado no final da expressão lambda ou função; quando você usa o `use` palavra-chave, `Dispose` é chamado no final do bloco de código. Em geral, você deve preferir usar `use` em vez do `using` função.
+A `using` função e a `use` associação são praticamente equivalentes a realizar a mesma coisa. A `using` palavra-chave fornece mais controle `Dispose` sobre quando é chamado. Quando você usa `using`, `Dispose` é chamado no final da função ou expressão lambda; quando você usa a `use` palavra-chave, `Dispose` é chamado no final do bloco de código que o contém. Em geral, você deve preferir usar `use` em vez `using` da função.
 
 ## <a name="see-also"></a>Consulte também
 

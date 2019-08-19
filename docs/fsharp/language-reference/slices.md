@@ -1,25 +1,25 @@
 ---
-title: Fatias (F#)
-description: Saiba mais sobre como usar fatias existentes F# tipos de dados e como definir seus próprios fatias para outros tipos de dados.
+title: FatiasF#()
+description: Saiba mais sobre como usar fatias para F# tipos de dados existentes e como definir suas próprias fatias para outros tipos de dados.
 ms.date: 01/22/2019
-ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925977"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627140"
 ---
 # <a name="slices"></a>Fatias
 
-No F#, uma fatia é um subconjunto de um tipo de dados. Para poder tirar uma fatia de um tipo de dados, o tipo de dados deve definir um `GetSlice` método ou em um [extensão de tipo](type-extensions.md) que é em escopo. Este artigo explica como aproveitar as fatias de existente F# tipos e como definir seus próprios.
+No F#, uma fatia é um subconjunto de um tipo de dados. Para poder tirar uma fatia de um tipo de dados, o tipo de dados deve definir um `GetSlice` método ou uma extensão de [tipo](type-extensions.md) que esteja no escopo. Este artigo explica como obter fatias de tipos F# existentes e como definir seus próprios.
 
-Fatias são semelhantes às [indexadores](members/indexed-properties.md), mas em vez da estrutura de dados subjacente que rende um valor único, geram várias dessas classes.
+As fatias são semelhantes aos [indexadores](./members/indexed-properties.md), mas em vez de produzir um único valor da estrutura de dados subjacente, elas produzem várias delas.
 
-F#no momento tem suporte intrínseco para matrizes 2D, listas, matrizes e cadeias de caracteres de divisão.
+F#atualmente tem suporte intrínseco para cadeias de caracteres de divisão, listas, matrizes e matrizes 2D.
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a>Divisão básica com o F# matrizes e listas
+## <a name="basic-slicing-with-f-lists-and-arrays"></a>Divisão básica com F# listas e matrizes
 
-Os tipos de dados mais comuns que são subconjuntos são F# matrizes e listas. O exemplo a seguir demonstra como fazer isso com listas:
+Os tipos de dados mais comuns que são segmentados F# são listas e matrizes. O exemplo a seguir demonstra como fazer isso com listas:
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-Matrizes de divisão é exatamente como listas de divisão:
+As matrizes de divisão são apenas como listas de fatias:
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a>Divisão de matrizes multidimensionais
+## <a name="slicing-multidimensional-arrays"></a>Fatiando matrizes multidimensionais
 
-F#dá suporte a matrizes multidimensionais no F# biblioteca principal. Assim como ocorre com matrizes unidimensionais, fatias de matrizes multidimensionais também podem ser útil. No entanto, a introdução de dimensões adicionais exige uma sintaxe ligeiramente diferente para que você possa tomar as fatias de linhas e colunas específicas.
+F#dá suporte a F# matrizes multidimensionais na biblioteca principal. Assim como acontece com matrizes unidimensionais, as fatias de matrizes multidimensionais também podem ser úteis. No entanto, a introdução de dimensões adicionais exige uma sintaxe ligeiramente diferente para que você possa colocar fatias de linhas e colunas específicas.
 
-Os exemplos a seguir demonstram como uma matriz de 2D de fatia:
+Os exemplos a seguir demonstram como dividir uma matriz 2D:
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-O F# biblioteca principal não define `GetSlice`para matrizes 3D. Se você quiser dividir aqueles ou outras matrizes ou mais dimensões, você deve definir o `GetSlice` membro por conta própria.
+A F# biblioteca principal não define `GetSlice`para matrizes 3D. Se você quiser segmentar essas ou outras matrizes de mais dimensões, você deve definir `GetSlice` o membro por conta própria.
 
-## <a name="defining-slices-for-other-data-structures"></a>Definir fatias para outras estruturas de dados
+## <a name="defining-slices-for-other-data-structures"></a>Definindo fatias para outras estruturas de dados
 
-O F# biblioteca principal define fatias para um conjunto limitado de tipos. Se você quiser definir fatias para mais tipos de dados, você pode fazer isso na definição de tipo em si ou em uma extensão de tipo.
+A F# biblioteca principal define fatias para um conjunto limitado de tipos. Se você quiser definir fatias para mais tipos de dados, poderá fazer isso na própria definição de tipo ou em uma extensão de tipo.
 
-Por exemplo, aqui está como você pode definir fatias para o <xref:System.ArraySegment%601> classe para permitir a manipulação de dados conveniente:
+Por exemplo, veja como você pode definir fatias para a <xref:System.ArraySegment%601> classe para permitir uma manipulação de dados conveniente:
 
 ```fsharp
 open System
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Use inlining para evitar a conversão boxing se for necessário
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Use o Outlining para evitar boxing, se necessário
 
-Se você estiver definindo fatias para um tipo que é, na verdade, um struct, recomendamos que você `inline` o `GetSlice` membro. O F# compilador otimizará os argumentos opcionais, evitando as alocações de heap como resultado da divisão. Isso é extremamente importante para construções de divisão, como <xref:System.Span%601> que não podem ser alocados no heap.
+Se você estiver definindo fatias para um tipo que é, na verdade, um struct, `inline` recomendamos que você o `GetSlice` membro. O F# compilador otimiza os argumentos opcionais, evitando qualquer alocação de heap como resultado de divisão. Isso é extremamente importante para as construções de fatias, <xref:System.Span%601> como aquelas que não podem ser alocadas no heap.
 
 ```fsharp
 open System
@@ -137,4 +137,4 @@ printSpan sp.[1..2] // |2; 3|]
 
 ## <a name="see-also"></a>Consulte também
 
-- [Propriedades indexadas](members/indexed-properties.md)
+- [Propriedades indexadas](./members/indexed-properties.md)
