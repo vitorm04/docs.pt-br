@@ -3,12 +3,12 @@ title: Modelo de extensibilidade da CLI do .NET Core
 description: Saiba como você pode estender as ferramentas da CLI (interface de linha de comando).
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331008"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012979"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidade das ferramentas da CLI do .NET Core
 
@@ -44,7 +44,7 @@ Consumir essas ferramentas requer a adição de um elemento `<DotNetCliToolRefer
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Para ferramentas que precisam carregar a saída do build do projeto para execução, geralmente há outra dependência listada nas dependências regulares no arquivo de projeto. Como a CLI usa o MSBuild como seu mecanismo de build, é recomendável que essas partes da ferramenta sejam gravadas como [destinos](/visualstudio/msbuild/msbuild-targets) e [tarefas](/visualstudio/msbuild/msbuild-tasks) personalizados do MSBuild, pois eles podem participar do processo geral de build. Além disso, eles podem obter todos os dados produzidos por meio do build facilmente, como o local dos arquivos de saída, a configuração atual que está sendo compilada, etc. Todas essas informações se tornam um conjunto de propriedades do MSBuild que pode ser lido de qualquer destino. Você pode ver como adicionar um destino personalizado usando o NuGet mais adiante neste documento.
+Para ferramentas que precisam carregar a saída do build do projeto para execução, geralmente há outra dependência listada nas dependências regulares no arquivo de projeto. Como a CLI usa o MSBuild como seu mecanismo de build, é recomendável que essas partes da ferramenta sejam gravadas como [destinos](/visualstudio/msbuild/msbuild-targets) e [tarefas](/visualstudio/msbuild/msbuild-tasks) personalizados do MSBuild, pois eles podem participar do processo geral de build. Além disso, eles podem obter todos os dados produzidos por meio do build facilmente, como o local dos arquivos de saída, a configuração atual que está sendo compilada e assim por diante. Todas essas informações se tornam um conjunto de propriedades do MSBuild que pode ser lido de qualquer destino. Você pode ver como adicionar um destino personalizado usando o NuGet mais adiante neste documento.
 
 Vamos examinar um exemplo de como adicionar uma ferramenta única simples a um projeto simples. Dado um exemplo de comando chamado `dotnet-api-search` que permite que você pesquise os pacotes NuGet para a API especificada, veja este arquivo de projeto do aplicativo de console que usa essa ferramenta:
 
@@ -79,7 +79,8 @@ Você pode encontrar exemplos mais sofisticados e diferentes combinações disso
 Você também pode ver a [implementação das ferramentas utilizadas](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) no mesmo repositório.
 
 ## <a name="custom-targets"></a>Destinos personalizados
-O NuGet tem a capacidade de [criar um pacote com os arquivos de propriedades e destinos personalizados do MSBuild](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Com a mudança das ferramentas da CLI do .NET Core para usar o MSBuild, o mesmo mecanismo de extensibilidade agora se aplica a projetos .NET Core. Você deve usar esse tipo de extensibilidade quando desejar estender o processo de build ou quando desejar acessar qualquer um dos artefatos no processo de build, como arquivos gerados, ou desejar inspecionar a configuração pela qual o build é invocado, etc.
+
+O NuGet tem a capacidade de [criar um pacote com os arquivos de propriedades e destinos personalizados do MSBuild](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package). Com a mudança das ferramentas da CLI do .NET Core para usar o MSBuild, o mesmo mecanismo de extensibilidade agora se aplica a projetos .NET Core. Você deve usar esse tipo de extensibilidade quando desejar estender o processo de build ou quando desejar acessar qualquer um dos artefatos no processo de build, como arquivos gerados, ou desejar inspecionar a configuração pela qual o build é invocado e assim por diante.
 
 No exemplo a seguir, você pode ver o arquivo de projeto de destino usando a sintaxe `csproj`. Isso instrui ao comando [`dotnet pack`](dotnet-pack.md) o que empacotar, colocando os arquivos de destino e os assemblies na pasta *build* dentro do pacote. Observe o elemento `<ItemGroup>` que tem a propriedade `Label` definida como `dotnet pack instructions` e o destino definido abaixo dele.
 

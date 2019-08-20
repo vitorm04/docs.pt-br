@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733362"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039445"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>Novidades do .NET Core 3.0 (Versão Prévia 7)
 
@@ -38,7 +38,7 @@ O .NET Core Versão Prévia 7 é considerado uma produção pronta pela Microsof
 
 ## <a name="net-core-sdk-windows-installer"></a>Windows Installer do SDK do .NET Core
 
-O instalador MSI para Windows foi alterado do .NET Core 3.0 em diante. Os instaladores de SDK agora atualizarão versões de faixa de recurso do SDK no local. Faixas de recurso são definidas nos grupos de *centenas* na seção *patch* do número de versão. Por exemplo, **3.0. _** e **3.0. _** são versões em duas faixas de recurso diferentes, enquanto **3.0. _** e **3.0. _** estão na mesma faixa de recurso. Além disso, quando o SDK do .NET Core **3.0. _** for instalado, o SDK do .NET Core **3.0. _** será removido do computador se ele existir. Quando o SDK do .NET Core **3.0. _** for instalado no mesmo computador, o SDK do .NET Core **3.0. _** não será removido.
+O instalador MSI para Windows foi alterado do .NET Core 3.0 em diante. Os instaladores de SDK agora atualizarão versões de faixa de recurso do SDK no local. Faixas de recurso são definidas nos grupos de *centenas* na seção *patch* do número de versão. Por exemplo, **3.0._101_** e **3.0._201_** são versões em duas faixas de recurso diferentes, enquanto **3.0._101_** e **3.0._199_** estão na mesma faixa de recurso. Além disso, quando o SDK do .NET Core **3.0._101_** for instalado, o SDK do .NET Core **3.0._100_** será removido do computador se ele existir. Quando o SDK do .NET Core **3.0._200_** for instalado no mesmo computador, o SDK do .NET Core **3.0._101_** não será removido.
 
 Para obter mais informações sobre controle de versão, consulte [Visão geral de como é o controle de versão no .NET Core](../versions/index.md).
 
@@ -159,7 +159,7 @@ Para saber mais sobre a ferramenta Vinculador de IL, confira a [documentação](
 
 A TC ([compilação em camadas](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o tempo de execução use de modo mais adaptável o compilador JIT (just-in-time) para obter um melhor desempenho.
 
-O principal benefício de TC é habilitar métodos de (re)jitting com um perfil para produzir o código, que pode ser de qualidade inferior mas mais rápido ou de qualidade superior mas mais lento. Isso ajuda a aumentar o desempenho de um aplicativo quando ele passa por vários estágios da execução, desde a inicialização até o estado estável. Isso contrasta com a abordagem de não TC, em que cada método é compilado de uma única maneira (o mesmo que a camada de alta qualidade) que é mais voltada para o estado estável em detrimento do desempenho de inicialização.
+O principal benefício de TC é habilitar métodos de (re)jitting com uma camada de qualidade inferior, porém mais rápida, ou uma camada de qualidade superior, porém mais lenta. Isso ajuda a aumentar o desempenho de um aplicativo quando ele passa por vários estágios da execução, desde a inicialização até o estado estável. Isso contrasta com a abordagem de não TC, em que cada método é compilado de uma única maneira (o mesmo que a camada de alta qualidade) que é mais voltada para o estado estável em detrimento do desempenho de inicialização.
 
 Para habilitar o JIT rápido (código com compilação JIT de camada 0), use esta configuração em seu arquivo de projeto:
 
@@ -291,9 +291,9 @@ O arquivo de projeto do .NET Core precisa especificar os tempos de execução co
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
 ```
 
-## <a name="winforms-highdpi"></a>WinForms HighDPI
+## <a name="winforms-high-dpi"></a>WinForms com DPI alto
 
-Aplicativos do Windows Forms do .NET Core podem definir o modo de DPI Alto com <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>. O método `SetHighDpiMode` define o modo de DPI Alto correspondente, a menos que a configuração tenha sido definida por outros meios, tais como `App.Manifest` ou P/Invoke antes de `Application.Run`.
+Aplicativos do Windows Forms do .NET Core podem definir o modo de DPI alto com <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>. O método `SetHighDpiMode` define o modo de DPI alto correspondente, a menos que a configuração tenha sido definida por outros meios, tais como `App.Manifest` ou P/Invoke antes de `Application.Run`.
 
 Os valores `highDpiMode` possíveis, conforme expressos pelo enum <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType>, são:
 
@@ -303,9 +303,9 @@ Os valores `highDpiMode` possíveis, conforme expressos pelo enum <xref:System.W
 * `PerMonitorV2`
 * `DpiUnawareGdiScaled`
 
-Para obter mais informações sobre os modos de DPI Alto, consulte [Desenvolvimento de aplicativos de área de trabalho de DPI Alto no Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
+Para obter mais informações sobre os modos de DPI alto, confira [Desenvolvimento de aplicativos de área de trabalho de DPI alto no Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
 
-### <a name="ranges-and-indices"></a>Intervalos e índices
+## <a name="ranges-and-indices"></a>Intervalos e índices
 
 O novo tipo <xref:System.Index?displayProperty=nameWithType> pode ser usado para indexação. É possível criar um a partir de um `int` que conta desde o início, ou com um operador `^` de prefixo (C#) que conta do final:
 
@@ -324,7 +324,7 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 Para obter mais informações, consulte o [tutorial de intervalos e índices](../../csharp/tutorials/ranges-indexes.md).
 
-### <a name="async-streams"></a>Fluxos assíncronos
+## <a name="async-streams"></a>Fluxos assíncronos
 
 O tipo <xref:System.Collections.Generic.IAsyncEnumerable%601> é uma nova versão assíncrona de <xref:System.Collections.Generic.IEnumerable%601>. A linguagem permite o uso de `await foreach` em `IAsyncEnumerable<T>` para consumir seus elementos e o uso de `yield return` neles para produzir elementos.
 
@@ -403,17 +403,15 @@ Aqui está um exemplo de leitura por meio do arquivo [**launch.json**](https://g
 
 Este é um uso de exemplo de `JsonDocument` e `JsonElement` que pode ser usado como ponto de partida:
 
-Aqui está um exemplo em C# 8.0 de leitura por meio do arquivo [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) criado pelo Visual Studio Code:
-
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
+
+Aqui está um exemplo em C# 8.0 de leitura por meio do arquivo [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) criado pelo Visual Studio Code:
 
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
 <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> baseia-se em <xref:System.Text.Json.Utf8JsonReader> e <xref:System.Text.Json.Utf8JsonWriter> para fornecer uma opção de serialização rápida e de pouca memória ao trabalhar com fragmentos e documentos JSON.
-
-EXAMINE: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md para obter um exemplo para portar para este artigo
 
 Aqui está um exemplo de como serializar um objeto para JSON:
 
