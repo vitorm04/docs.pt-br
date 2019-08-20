@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ebaa5c2f3a2e1770a50a401fb6771d8c5ad3ba63
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972222"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611477"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Visão geral dos aplicativos de navegador XAML do WPF
 <a name="introduction"></a>
@@ -52,7 +52,7 @@ ms.locfileid: "68972222"
 |Manifesto do aplicativo (.manifest)|Este arquivo contém os metadados associados ao aplicativo e tem uma extensão .manifest.|  
 |Manifesto de implantação (.xbap)|Esse arquivo contém as informações que o ClickOnce usa para implantar o aplicativo e tem a extensão. XBAP.|  
   
- Você implanta XBAPs em um servidor Web, por exemplo o [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] ou versões posteriores. Não é necessário instalar o .NET Framework no servidor Web, mas você precisa registrar os [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tipos MIME (Multipurpose Internet Mail Extensions) e as extensões de nome de arquivo. Para obter mais informações, consulte [Configurar o IIS 5.0 e o IIS 6.0 para implantar aplicativos WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ Você implanta XBAPs em um servidor Web, por exemplo, Microsoft Serviços de Informações da Internet (IIS) 5,0 ou versões posteriores. Não é necessário instalar o .NET Framework no servidor Web, mas você precisa registrar os [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tipos MIME (Multipurpose Internet Mail Extensions) e as extensões de nome de arquivo. Para obter mais informações, consulte [Configurar o IIS 5.0 e o IIS 6.0 para implantar aplicativos WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Para preparar seu XBAP para implantação, copie o .exe e os manifestos associados para o servidor Web. Crie uma página HTML que contenha um hiperlink para abrir o manifesto de implantação, que é o arquivo que tem a extensão .xbap. Quando o usuário clica no link para o arquivo. XBAP, o ClickOnce manipula automaticamente a mecânica de download e inicialização do aplicativo. O exemplo de código a seguir mostra uma página HTML que contém um hiperlink que aponta para um XBAP.  
   

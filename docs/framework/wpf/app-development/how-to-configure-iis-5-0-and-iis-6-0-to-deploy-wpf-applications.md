@@ -13,18 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 3179679abcf32e40374c7f02e64466a326a73195
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 3a9bf79a9d505fef53b62cb589920adcf95ae92a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69013019"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611495"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Como: Configurar o IIS 5.0 e o IIS 6.0 para implantar aplicativos WPF
 
-Você pode implantar um [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativo da maioria dos servidores Web, desde que eles estejam configurados com os tipos de MIME (Multipurpose Internet Mail Extensions) apropriados. Por padrão, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] o é configurado com esses tipos MIME, [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] mas [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] e não.
+Você pode implantar um [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativo da maioria dos servidores Web, desde que eles estejam configurados com os tipos de MIME (Multipurpose Internet Mail Extensions) apropriados. Por padrão, o Microsoft Serviços de Informações da Internet (IIS) 7,0 é configurado com esses tipos MIME, mas o Microsoft Serviços de Informações da Internet (IIS) 5,0 e o Microsoft Serviços de Informações da Internet (IIS) 6,0 não são.
 
-Este tópico descreve como configurar [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] e [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] para implantar aplicativos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Este tópico descreve como configurar o Microsoft serviços de informações da Internet (IIS) 5,0 e o Microsoft serviços de informações da Internet (IIS) 6,0 para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implantar aplicativos.
 
 > [!NOTE]
 > Você pode verificar a cadeia de caracteres UserAgent no registro para determinar se um sistema tem .NET Framework instalado. Para obter detalhes e um script que examina a cadeia de caracteres UserAgent para determinar se o .NET Framework está instalado em um sistema, consulte [detectar se o .NET Framework 3,0 está instalado](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
@@ -33,11 +33,11 @@ Este tópico descreve como configurar [!INCLUDE[TLA#tla_iis50](../../../../inclu
 
 ## <a name="adjust-the-content-expiration-setting"></a>Ajustar a configuração de expiração de conteúdo
 
-É recomendável ajustar a configuração de expiração de conteúdo para 1 minuto. O procedimento a seguir descreve como fazer isso com [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].
+É recomendável ajustar a configuração de expiração de conteúdo para 1 minuto. O procedimento a seguir descreve como fazer isso com o IIS.
 
 1. Clique no menu **Iniciar**, aponte para **Ferramentas Administrativas** e clique em **Gerenciador dos ISS (Serviços de Informações da Internet)** . Você também pode iniciar este aplicativo da linha de comando com “%SystemRoot%\system32\inetsrv\iis.msc”.
 
-2. Expanda a árvore [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] até localizar o nó **Site da Web Padrão**.
+2. Expanda a árvore do IIS até encontrar o nó do **site da Web padrão** .
 
 3. Clique com o botão direito do mouse em **Site da Web padrão** e selecione **Propriedades** no menu de contexto.
 
@@ -63,7 +63,7 @@ Você deve registrar vários tipos MIME e extensões de arquivo para que o naveg
 > [!NOTE]
 > Você não precisa registrar tipos MIME ou extensões de arquivo em sistemas cliente. Eles são registrados automaticamente quando você instala o Microsoft .NET Framework.
 
-O exemplo a seguir do Microsoft Visual Basic Scripting Edition (VBScript) adiciona automaticamente os tipos MIME [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]necessários ao. Para usar o script, copie o código para um arquivo .vbs no seu servidor. Em seguida, execute o script executando o arquivo na linha de comando ou clicando duas vezes no arquivo em [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
+O exemplo a seguir do Microsoft Visual Basic Scripting Edition (VBScript) adiciona automaticamente os tipos MIME necessários ao IIS. Para usar o script, copie o código para um arquivo .vbs no seu servidor. Em seguida, execute o script executando o arquivo na linha de comando ou clicando duas vezes no arquivo em [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types
@@ -126,9 +126,9 @@ End Sub
 ```
 
 > [!NOTE]
-> Executar esse script várias vezes cria várias entradas de mapa MIME na [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] metabase [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] ou.
+> A execução desse script várias vezes cria várias entradas de mapa MIME na metabase do Microsoft Serviços de Informações da Internet (IIS) 5,0 ou do Microsoft Serviços de Informações da Internet (IIS) 6,0.
 
-Depois de executar esse script, talvez você não veja tipos MIME adicionais no [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] ou [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] no console de gerenciamento Microsoft (MMC). No entanto, esses tipos MIME foram adicionados à [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] metabase [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] ou. O script a seguir exibirá todos os tipos de MIME [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] na [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabase ou.
+Depois de executar esse script, você não poderá ver tipos MIME adicionais do Microsoft Serviços de Informações da Internet (IIS) 5,0 ou do Microsoft Serviços de Informações da Internet (IIS) 6,0 Microsoft Management Console (MMC). No entanto, esses tipos MIME foram adicionados à metabase do Microsoft Serviços de Informações da Internet (IIS) 5,0 ou do Microsoft Serviços de Informações da Internet (IIS) 6,0. O script a seguir exibirá todos os tipos de MIME na metabase do Microsoft Serviços de Informações da Internet (IIS) 5,0 ou do Microsoft Serviços de Informações da Internet (IIS) 6,0.
 
 ```vb
 ' This script lists the MIME types for an IIS Server.
