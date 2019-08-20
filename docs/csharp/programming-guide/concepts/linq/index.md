@@ -2,12 +2,12 @@
 title: LINQ (Consulta Integrada à Linguagem) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 1f2cbab6295fd9a2c2b3458f520dbf231d9b5413
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 185e2cfc84a4134eec8eea1433f0cef43845aa2a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484551"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592154"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Consulta Integrada à Linguagem)
 
@@ -58,4 +58,4 @@ Para começar a trabalhar com o LINQ em C#, consulte o tutorial [Trabalhando com
 
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ (consulta integrada à linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (consulta integrada à linguagem) (C#)](./index.md)

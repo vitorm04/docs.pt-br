@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: c4ece5ccf8c31beb2847a50f9cf894959acf23b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3714223209a3298706960625ea383e42dc2b2154
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61975254"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69607175"
 ---
 # <a name="c-compiler-errors"></a>Erros do compilador de C#
 
@@ -31,8 +31,8 @@ Alguns erros do compilador do C# têm tópicos correspondentes que explicam por 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Infelizmente, não há informações específicas sobre este erro de C#](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [Opções do compilador de C#](../compiler-options/index.md)
+- [Infelizmente, não há informações específicas sobre este erro de C#](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [Página de Build, Designer de Projeto (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-- [/warn (Opções do compilador C#)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)
-- [/nowarn (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
+- [/warn (Opções do compilador C#)](../compiler-options/warn-compiler-option.md)
+- [/nowarn (opções do compilador do C#)](../compiler-options/nowarn-compiler-option.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 0373d9150349dc24653270600a317b0d41b945b1
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 7a8a8e6b6a393f151d69d1879f475e04f44df5fa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859639"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590374"
 ---
 # <a name="events-c-programming-guide"></a>Eventos (Guia de Programação em C#)
-Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/class.md) ou objeto notifique outras classes ou objetos quando algo interessante ocorre. A classe que envia (ou *aciona*) o evento é chamada de *editor* e as classes que recebem (ou *manipulam*) os eventos são chamadas *assinantes*.  
+Eventos permitem que uma [classe](../../language-reference/keywords/class.md) ou objeto notifique outras classes ou objetos quando algo interessante ocorre. A classe que envia (ou *aciona*) o evento é chamada de *editor* e as classes que recebem (ou *manipulam*) os eventos são chamadas *assinantes*.  
   
- Em um aplicativo Windows Forms em C# ou Web típico, você assina eventos acionados pelos controles, como botões e caixas de listagem. Você pode usar o IDE (ambiente de desenvolvimento integrado) do Visual C# para procurar os eventos que um controle publica e selecionar aqueles que você deseja manipular. O IDE oferece uma maneira fácil de adicionar automaticamente um método de manipulador de eventos vazio e o código para assinar o evento. Para obter mais informações, confira [Como: realizar e cancelar a assinatura de eventos](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
+ Em um aplicativo Windows Forms em C# ou Web típico, você assina eventos acionados pelos controles, como botões e caixas de listagem. Você pode usar o IDE (ambiente de desenvolvimento integrado) do Visual C# para procurar os eventos que um controle publica e selecionar aqueles que você deseja manipular. O IDE oferece uma maneira fácil de adicionar automaticamente um método de manipulador de eventos vazio e o código para assinar o evento. Para obter mais informações, confira [Como: realizar e cancelar a assinatura de eventos](./how-to-subscribe-to-and-unsubscribe-from-events.md).  
   
 ## <a name="events-overview"></a>Visão geral sobre eventos  
  Os eventos têm as seguintes propriedades:  
@@ -30,22 +30,22 @@ Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/cl
   
 - Normalmente, os eventos são usados para sinalizar ações do usuário, como cliques de botão ou seleções de menu em interfaces gráficas do usuário.  
   
-- Quando um evento tem vários assinantes, os manipuladores de eventos são invocados sincronicamente quando um evento é acionado. Para invocar eventos de forma assíncrona, consulte [Chamando métodos síncronos assincronamente](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+- Quando um evento tem vários assinantes, os manipuladores de eventos são invocados sincronicamente quando um evento é acionado. Para invocar eventos de forma assíncrona, consulte [Chamando métodos síncronos assincronamente](../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
   
 - Na biblioteca de classes .NET Framework, os eventos são baseados no delegado <xref:System.EventHandler> e na classe base <xref:System.EventArgs>.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  Para obter mais informações, consulte:  
   
-- [Como: realizar e cancelar a assinatura de eventos](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
+- [Como: realizar e cancelar a assinatura de eventos](./how-to-subscribe-to-and-unsubscribe-from-events.md)  
   
-- [Como: publicar eventos em conformidade com as diretrizes do .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [Como: publicar eventos em conformidade com as diretrizes do .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
   
-- [Como: acionar eventos de classe base em classes derivadas](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
+- [Como: acionar eventos de classe base em classes derivadas](./how-to-raise-base-class-events-in-derived-classes.md)  
   
-- [Como:  implementar eventos de interface](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
+- [Como:  implementar eventos de interface](./how-to-implement-interface-events.md)  
   
-- [Como: implementar acessadores de eventos personalizados](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
+- [Como: implementar acessadores de eventos personalizados](./how-to-implement-custom-event-accessors.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
@@ -59,6 +59,6 @@ Para obter mais informações, veja [Eventos](~/_csharplang/spec/classes.md#even
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.EventHandler>
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Delegados](../../../csharp/programming-guide/delegates/index.md)
-- [Criando manipuladores de eventos no Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Guia de Programação em C#](../index.md)
+- [Delegados](../delegates/index.md)
+- [Criando manipuladores de eventos no Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)

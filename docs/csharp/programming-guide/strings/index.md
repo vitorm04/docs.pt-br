@@ -6,27 +6,27 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 1b80082d10ad9ee760a184f496793ad5c69202da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67802312"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588485"
 ---
 # <a name="strings-c-programming-guide"></a>Cadeias de caracteres (Guia de Programação em C#)
 Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é texto. Internamente, o texto é armazenado como uma coleção sequencial somente leitura de objetos <xref:System.Char>. Não há um caractere de finalização null ao fim de uma cadeia em C#. Portanto, uma cadeia de caracteres em C# pode ter qualquer número de caracteres nulos inseridos ('\0'). A propriedade `Char` de uma cadeia de caracteres representa o número de objetos <xref:System.String.Length%2A> que ela contém e não o número de caracteres Unicode. Para acessar os pontos de código Unicode individuais em uma cadeia de caracteres, use o objeto <xref:System.Globalization.StringInfo>.  
   
 ## <a name="string-vs-systemstring"></a>cadeia de caracteres vs. System.String  
- Em C#, a palavra-chave `string` é um alias para <xref:System.String>. Portanto, `String` e `string` são equivalentes, e você pode usar a convenção de nomenclatura que preferir. A classe `String` fornece vários métodos para criar, manipular e comparar cadeias de caracteres com segurança. Além disso, a linguagem C# sobrecarrega alguns operadores para simplificar operações comuns de cadeia de caracteres. Para saber mais sobre a palavra-chave, confira [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md). Para obter mais informações sobre o tipo e seus métodos, consulte <xref:System.String>.  
+ Em C#, a palavra-chave `string` é um alias para <xref:System.String>. Portanto, `String` e `string` são equivalentes, e você pode usar a convenção de nomenclatura que preferir. A classe `String` fornece vários métodos para criar, manipular e comparar cadeias de caracteres com segurança. Além disso, a linguagem C# sobrecarrega alguns operadores para simplificar operações comuns de cadeia de caracteres. Para saber mais sobre a palavra-chave, confira [cadeia de caracteres](../../language-reference/keywords/string.md). Para obter mais informações sobre o tipo e seus métodos, consulte <xref:System.String>.  
   
 ## <a name="declaring-and-initializing-strings"></a>Declaração e inicialização de cadeias de caracteres  
  Você pode declarar e inicializar cadeias de caracteres de várias maneiras, conforme mostrado no seguinte exemplo:  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Observe que você não usa o operador [new](../../../csharp/language-reference/operators/new-operator.md) para criar um objeto de cadeia de caracteres, exceto ao inicializar a cadeia de caracteres com uma matriz de caracteres.  
+ Observe que você não usa o operador [new](../../language-reference/operators/new-operator.md) para criar um objeto de cadeia de caracteres, exceto ao inicializar a cadeia de caracteres com uma matriz de caracteres.  
   
- Inicialize uma cadeia de caracteres com o valor constante <xref:System.String.Empty> para criar um novo objeto <xref:System.String> cuja cadeia de caracteres tem comprimento zero. A representação de cadeia de caracteres literal de uma cadeia de caracteres de comprimento zero é "". Ao inicializar cadeias de caracteres com o valor <xref:System.String.Empty> em vez de [nulo](../../../csharp/language-reference/keywords/null.md), você poderá reduzir as chances de uma <xref:System.NullReferenceException> ocorrer. Use o método estático <xref:System.String.IsNullOrEmpty%28System.String%29> para verificar o valor de uma cadeia de caracteres antes de tentar acessá-la.  
+ Inicialize uma cadeia de caracteres com o valor constante <xref:System.String.Empty> para criar um novo objeto <xref:System.String> cuja cadeia de caracteres tem comprimento zero. A representação de cadeia de caracteres literal de uma cadeia de caracteres de comprimento zero é "". Ao inicializar cadeias de caracteres com o valor <xref:System.String.Empty> em vez de [nulo](../../language-reference/keywords/null.md), você poderá reduzir as chances de uma <xref:System.NullReferenceException> ocorrer. Use o método estático <xref:System.String.IsNullOrEmpty%28System.String%29> para verificar o valor de uma cadeia de caracteres antes de tentar acessá-la.  
   
 ## <a name="immutability-of-string-objects"></a>Imutabilidade de objetos de cadeia de caracteres  
  Objetos de cadeia de caracteres são *imutáveis*: não pode ser alterados após serem criados. Todos os métodos <xref:System.String> e operadores C# que aparecem para modificar uma cadeia de caracteres retornam, na verdade, os resultados em um novo objeto de cadeia de caracteres. No exemplo a seguir, quando o conteúdo de `s1` e `s2` é concatenado para formar uma única cadeia de caracteres, as duas cadeias de caracteres originais são modificadas. O operador `+=` cria uma nova cadeia de caracteres que tem o conteúdo combinado. Esse novo objeto é atribuído à variável `s1`, e o objeto original que foi atribuído a `s1` é liberado para coleta de lixo, pois nenhuma outra variável contém uma referência a ele.  
@@ -125,7 +125,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Cadeias de caracteres, métodos de extensão e LINQ  
- Uma vez que o tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, você pode usar os métodos de extensão definidos na classe <xref:System.Linq.Enumerable> em cadeias de caracteres. Para evitar a desordem visual, esses métodos são excluídos do IntelliSense para o tipo <xref:System.String>, mas estão disponíveis mesmo assim. Você também pode usar expressões [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] em cadeias de caracteres de consulta. Para saber mais, confira [LINQ e cadeias de caracteres](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
+ Uma vez que o tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, você pode usar os métodos de extensão definidos na classe <xref:System.Linq.Enumerable> em cadeias de caracteres. Para evitar a desordem visual, esses métodos são excluídos do IntelliSense para o tipo <xref:System.String>, mas estão disponíveis mesmo assim. Você também pode usar expressões [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] em cadeias de caracteres de consulta. Para saber mais, confira [LINQ e cadeias de caracteres](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
@@ -136,12 +136,12 @@ string s = String.Empty;
 |[Como: concatenar várias cadeias de caracteres](../../how-to/concatenate-multiple-strings.md)|Demonstra várias maneiras de unir diversas cadeias de caracteres em uma só.|
 |[Como: analisar cadeias de caracteres usando String.Split](../../how-to/parse-strings-using-split.md)|Contém exemplos de código que descrevem como usar o método `String.Split` para analisar cadeias de caracteres.|  
 |[Como: pesquisar cadeias de caracteres](../../how-to/search-strings.md)|Explica como usar a pesquisa para texto específico ou padrões em cadeias de caracteres.|  
-|[Como: determinar se uma cadeia de caracteres representa um valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Mostra como analisar com segurança uma cadeia de caracteres para ver se ela tem um valor numérico válido.|  
+|[Como: determinar se uma cadeia de caracteres representa um valor numérico](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Mostra como analisar com segurança uma cadeia de caracteres para ver se ela tem um valor numérico válido.|  
 |[Interpolação de cadeia de caracteres](../../language-reference/tokens/interpolated.md)|Descreve o recurso de interpolação de cadeia de caracteres que fornece uma sintaxe prática para cadeias de caracteres de formato.|
-|[Operações básicas de cadeias de caracteres](../../../../docs/standard/base-types/basic-string-operations.md)|Fornece links para tópicos que usam os métodos <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> para executar operações básicas de cadeia de caracteres.|  
+|[Operações básicas de cadeias de caracteres](../../../standard/base-types/basic-string-operations.md)|Fornece links para tópicos que usam os métodos <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> para executar operações básicas de cadeia de caracteres.|  
 |[Análise de cadeias de caracteres](../../../standard/base-types/parsing-strings.md)|Descreve como converter representações de cadeia de caracteres de tipos base do .NET em instâncias de tipos correspondentes.|  
 |[Como analisar cadeias de caracteres de data e hora no .NET](../../../standard/base-types/parsing-datetime.md)|Mostra como converter uma cadeia de caracteres como "24/01/2008" em um objeto <xref:System.DateTime?displayProperty=nameWithType>.|  
-|[Comparação de cadeias de caracteres](../../../../docs/standard/base-types/comparing.md)|Inclui informações sobre como comparar cadeias de caracteres e fornece exemplos em C# e Visual Basic.|  
+|[Comparação de cadeias de caracteres](../../../standard/base-types/comparing.md)|Inclui informações sobre como comparar cadeias de caracteres e fornece exemplos em C# e Visual Basic.|  
 |[Uso da classe StringBuilder](../../../standard/base-types/stringbuilder.md)|Descreve como criar e modificar objetos de cadeia de caracteres dinâmica usando a classe <xref:System.Text.StringBuilder>.|  
-|[LINQ e Cadeias de Caracteres](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Fornece informações sobre como executar várias operações de cadeia de caracteres usando consultas LINQ.|  
-|[Guia de Programação em C#](../../../csharp/programming-guide/index.md)|Fornece links para tópicos que explicam as construções de programação em C#.|  
+|[LINQ e Cadeias de Caracteres](../concepts/linq/linq-and-strings.md)|Fornece informações sobre como executar várias operações de cadeia de caracteres usando consultas LINQ.|  
+|[Guia de Programação em C#](../index.md)|Fornece links para tópicos que explicam as construções de programação em C#.|  

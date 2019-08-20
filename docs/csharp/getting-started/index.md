@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ba5d2a9fb74b877c9b847343a9012ccb9624335e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062965"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604225"
 ---
 # <a name="get-started-with-c"></a>Introdução ao C\#
 
@@ -43,15 +43,15 @@ Os seguintes tópicos estão disponíveis:
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-* [Guia de Programação em C#](../../csharp/programming-guide/index.md)
+* [Guia de Programação em C#](../programming-guide/index.md)
 
     Fornece informações sobre conceitos de programação C# e descreve como executar várias tarefas no C#.
 
-* [Referência de C#](../../csharp/language-reference/index.md)
+* [Referência de C#](../language-reference/index.md)
 
     Fornece informações de referência detalhadas sobre palavras-chave, operadores, diretivas de pré-processamento, opções do compilador, erros do compilador e avisos do #C.
 
-* [Explicações Passo a Passo](../../csharp/walkthroughs.md)
+* [Explicações Passo a Passo](../walkthroughs.md)
 
     Fornece links para explicações passo a passo sobre programação em C# e uma breve descrição sobre cada explicação passo a passo.
 

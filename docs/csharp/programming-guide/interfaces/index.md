@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 330e4e8b36f03b028786920422cd325b31d814e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711194"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589186"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
 
@@ -31,7 +31,7 @@ A definição de `IEquatable<T>` não fornece uma implementação para `Equals`.
   
 Para obter mais informações sobre classes abstratas, consulte [Classes e membros de classes abstratos e lacrados](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
-As interfaces podem conter métodos, propriedades, eventos, indexadores ou qualquer combinação desses quatro tipos de membro. Para obter links para exemplos, consulte as [seções relacionadas](../interfaces/index.md#BKMK_RelatedSections). Uma interface não pode conter constantes, campos, operadores, construtores de instância, finalizadores ou tipos. Os membros da interface são automaticamente públicos e eles não podem incluir nenhum modificador de acesso. Os membros também não podem ser [estáticos](../../language-reference/keywords/static.md).  
+As interfaces podem conter métodos, propriedades, eventos, indexadores ou qualquer combinação desses quatro tipos de membro. Para obter links para exemplos, consulte as [seções relacionadas](./index.md#BKMK_RelatedSections). Uma interface não pode conter constantes, campos, operadores, construtores de instância, finalizadores ou tipos. Os membros da interface são automaticamente públicos e eles não podem incluir nenhum modificador de acesso. Os membros também não podem ser [estáticos](../../language-reference/keywords/static.md).  
   
 Para implementar um membro de interface, o membro correspondente da classe de implementação deve ser público, não estático e ter o mesmo nome e assinatura do membro de interface.  
   

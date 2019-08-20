@@ -8,23 +8,23 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 130cc68906be433afc906cfb22759f4ae3dba447
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596118"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589450"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexadores (Guia de Programação em C#)
 
-Os indexadores permitem que instâncias de uma classe ou struct sejam indexados como matrizes. O valor indexado pode ser definido ou recuperado sem especificar explicitamente um membro de instância ou tipo. Os indexadores parecem com [propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md), a diferença é que seus acessadores usam parâmetros.  
+Os indexadores permitem que instâncias de uma classe ou struct sejam indexados como matrizes. O valor indexado pode ser definido ou recuperado sem especificar explicitamente um membro de instância ou tipo. Os indexadores parecem com [propriedades](../classes-and-structs/properties.md), a diferença é que seus acessadores usam parâmetros.  
  
- O exemplo a seguir define uma classe genérica com métodos de acesso [get](../../../csharp/language-reference/keywords/get.md) e [set](../../../csharp/language-reference/keywords/set.md) simples para atribuir e recuperar valores. A classe `Program` cria uma instância dessa classe para armazenar cadeias de caracteres.  
+ O exemplo a seguir define uma classe genérica com métodos de acesso [get](../../language-reference/keywords/get.md) e [set](../../language-reference/keywords/set.md) simples para atribuir e recuperar valores. A classe `Program` cria uma instância dessa classe para armazenar cadeias de caracteres.  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  Para mais exemplos, consulte as [seções relacionadas](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).  
+>  Para mais exemplos, consulte as [seções relacionadas](./index.md#BKMK_RelatedSections).  
   
 ## <a name="expression-body-definitions"></a>Definições de corpo de expressão  
  
@@ -44,9 +44,9 @@ Começando do C# 7.0, os acessadores get e set podem ser implementados como memb
   
 - Um acessador `get` retorna um valor. Um acessador `set` atribui um valor.  
   
-- A palavra-chave [this](../../../csharp/language-reference/keywords/this.md) é usada para definir o indexador.  
+- A palavra-chave [this](../../language-reference/keywords/this.md) é usada para definir o indexador.  
   
-- A palavra-chave [value](../../../csharp/language-reference/keywords/value.md) é usada para definir o valor que está sendo atribuído pelo indexador `set`.  
+- A palavra-chave [value](../../language-reference/keywords/value.md) é usada para definir o valor que está sendo atribuído pelo indexador `set`.  
   
 - Os indexadores não precisam ser indexados por um valor inteiro. Você deve definir o mecanismo de pesquisa específico.  
   
@@ -56,13 +56,13 @@ Começando do C# 7.0, os acessadores get e set podem ser implementados como memb
   
 ## <a name="BKMK_RelatedSections"></a> Seções relacionadas  
   
-- [Usando indexadores](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [Usando indexadores](./using-indexers.md)  
   
-- [Indexadores em interfaces](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [Indexadores em interfaces](./indexers-in-interfaces.md)  
   
-- [Comparação entre propriedades e indexadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Comparação entre propriedades e indexadores](./comparison-between-properties-and-indexers.md)  
   
-- [Restringindo a acessibilidade ao acessador](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Restringindo a acessibilidade ao acessador](../classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
@@ -70,5 +70,5 @@ Para obter mais informações, veja [Indexadores](~/_csharplang/spec/classes.md#
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Guia de Programação em C#](../index.md)
+- [Propriedades](../classes-and-structs/properties.md)

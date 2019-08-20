@@ -6,15 +6,15 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 62785753cf0eb11965f93e517d6a784081b41a13
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: dfb957247a50d16d2aa4c3c4be147e6badf0703a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363803"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590608"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guia de Programação em C#)
-Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tipo que representa referências aos métodos com lista de parâmetros e tipo de retorno específicos. Ao instanciar um delegado, você pode associar sua instância a qualquer método com assinatura e tipo de retorno compatíveis. Você pode invocar (ou chamar) o método através da instância de delegado.  
+Um [delegado](../../language-reference/keywords/delegate.md) é um tipo que representa referências aos métodos com lista de parâmetros e tipo de retorno específicos. Ao instanciar um delegado, você pode associar sua instância a qualquer método com assinatura e tipo de retorno compatíveis. Você pode invocar (ou chamar) o método através da instância de delegado.  
   
  Delegados são usados para passar métodos como argumentos a outros métodos. Os manipuladores de eventos nada mais são do que métodos chamados por meio de delegados. Ao criar um método personalizado, uma classe como um controle do Windows poderá chamá-lo quando um determinado evento ocorrer. O seguinte exemplo mostra uma declaração de delegado:  
   
@@ -38,23 +38,23 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tip
   
 - Os delegados podem ser encadeados juntos; por exemplo, vários métodos podem ser chamados um único evento.  
   
-- Os métodos não precisam corresponder ao tipo delegado exatamente. Para obter mais informações, confira [Usando a variação delegados](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
+- Os métodos não precisam corresponder ao tipo delegado exatamente. Para obter mais informações, confira [Usando a variação delegados](../concepts/covariance-contravariance/using-variance-in-delegates.md).  
   
-- O C# versão 2.0 introduziu o conceito de [métodos anônimos](../../../csharp/language-reference/operators/delegate-operator.md) que permitem que blocos de código sejam passados como parâmetros em vez de um método definido separadamente. O C# 3.0 introduziu expressões lambda como uma maneira mais concisa de escrever blocos de código embutidos. Os métodos anônimos e as expressões lambda (em determinados contextos) são compilados para tipos delegados. Juntos, esses recursos são agora conhecidos como funções anônimas. Para saber mais sobre expressões lambda, confira o artigo sobre [expressões lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).
+- O C# versão 2.0 introduziu o conceito de [métodos anônimos](../../language-reference/operators/delegate-operator.md) que permitem que blocos de código sejam passados como parâmetros em vez de um método definido separadamente. O C# 3.0 introduziu expressões lambda como uma maneira mais concisa de escrever blocos de código embutidos. Os métodos anônimos e as expressões lambda (em determinados contextos) são compilados para tipos delegados. Juntos, esses recursos são agora conhecidos como funções anônimas. Para saber mais sobre expressões lambda, confira o artigo sobre [expressões lambda](../statements-expressions-operators/lambda-expressions.md).
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-- [Usando delegados](../../../csharp/programming-guide/delegates/using-delegates.md)  
+- [Usando delegados](./using-delegates.md)  
   
 - [Quando usar delegados em vez de interfaces (Guia de Programação em C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
-- [Delegados com métodos nomeados vs. métodos anônimos](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+- [Delegados com métodos nomeados vs. métodos anônimos](./delegates-with-named-vs-anonymous-methods.md)  
   
-- [Usando Variação em Delegações](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
+- [Usando Variação em Delegações](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [Como: combinar delegados (delegados multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [Como: combinar delegados (delegados multicast)](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [Como: declarar, instanciar e usar um delegado](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
+- [Como: declarar, instanciar e usar um delegado](./how-to-declare-instantiate-and-use-a-delegate.md)  
 
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
@@ -68,5 +68,5 @@ Para obter mais informações, veja [Delegados](~/_csharplang/spec/delegates.md)
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Delegate>
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Eventos](../../../csharp/programming-guide/events/index.md)
+- [Guia de Programação em C#](../index.md)
+- [Eventos](../events/index.md)
