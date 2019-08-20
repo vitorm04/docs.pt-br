@@ -21,10 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "66378160"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retrocesso em expressões regulares
@@ -164,7 +164,7 @@ ms.locfileid: "66378160"
   
  O primeiro padrão de expressão regular, `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`, é definido como mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`[0-9A-Z]`|Corresponde a um caractere alfanumérico. Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -175,7 +175,7 @@ ms.locfileid: "66378160"
   
  O segundo padrão de expressão regular, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, usa uma asserção lookbehind positiva. Ele é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`[0-9A-Z]`|Corresponde a um caractere alfanumérico. Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -196,7 +196,7 @@ ms.locfileid: "66378160"
   
  O primeiro padrão de expressão regular, `^(([A-Z]\w*)+\.)*[A-Z]\w*$`, é definido como mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`([A-Z]\w*)+\.`|Corresponde a um caractere alfabético (A-Z) seguido por zero ou mais caracteres de palavra uma ou mais vezes, seguidos de um ponto. Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -206,7 +206,7 @@ ms.locfileid: "66378160"
   
  O segundo padrão de expressão regular, `^((?=[A-Z])\w+\.)*[A-Z]\w*$`, usa uma asserção lookahead positiva. Ele é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`(?=[A-Z])`|Examine além do primeiro caractere e continue a correspondência se ele for alfabético (A-Z). Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
