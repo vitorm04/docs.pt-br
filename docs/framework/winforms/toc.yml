@@ -35,8 +35,6 @@
           items:
             - name: 'Como: responder a alterações no esquema de fontes em um aplicativo do Windows Forms'
               href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
-            - name: Desabilitar o reconhecimento de DPI no Visual Studio
-              href: disable-dpi-awareness-visual-studio.md
         - name: Suporte a alto a DPI no Windows Forms
           href: high-dpi-support-in-windows-forms.md
     - name: Alterando a aparência do Windows Forms
