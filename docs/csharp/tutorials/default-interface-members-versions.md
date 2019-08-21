@@ -3,12 +3,12 @@ title: Atualizar interfaces com segurança usando membros de interface padrão e
 description: Este tutorial avançado explora como adicionar novos recursos com segurança às definições de interface existentes sem interromper todas as classes e structs que implementam essa interface.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877910"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971431"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Atualizar interfaces com membros da interface padrão no C# 8.0
 
@@ -87,6 +87,6 @@ Em uma implementação de uma classe que implementa essa interface, a substitui�
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
-Você pode ver todo o código concluído em nosso [repositório de exemplos no GitHub] (Você pode obter o aplicativo de iniciante em nosso [repositório de exemplos no GitHub)](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship).
+Você pode ver todo o código concluído no nosso [repositório de amostras no GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship). Você pode obter o aplicativo de iniciante em nosso [repositório de exemplos no GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship).
 
 Esses novos recursos significam que interfaces podem ser atualizadas com segurança quando há uma implementação padrão razoável para os novos membros. Projete interfaces cuidadosamente para expressar ideias funcionais únicas que possam ser implementadas por várias classes. Isso torna mais fácil atualizar essas definições de interface quando são descobertos novos requisitos para a mesma ideia funcional.

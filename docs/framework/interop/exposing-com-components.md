@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4472adf2c309803d4d5ac57f3522cc260782d85
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 230853abf73a368bfcd8b88375c216fdadfc7d46
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833666"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567266"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Expondo componentes do COM para o .NET Framework
 Esta seção resume o processo necessário para expor um componente COM existente ao código gerenciado. Para obter detalhes sobre como escrever servidores COM que são totalmente integrados ao .NET Framework, consulte [Considerações sobre design para interoperação](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -32,7 +32,7 @@ Esta seção resume o processo necessário para expor um componente COM existent
   
 3. [Compile um projeto de interoperabilidade](compiling-an-interop-project.md).  
   
-     O SDK (Software Development Kit) do Windows fornece compiladores para várias linguagens em conformidade com a CLS (Common Language Specification), incluindo Visual Basic, C# e C++.  
+     O SDK do Windows fornece compiladores para várias linguagens em conformidade com CLS (Common Language Specification), incluindo Visual Basic, C# e C++.  
   
 4. [Implante um aplicativo de interoperabilidade](deploying-an-interop-application.md).  
   

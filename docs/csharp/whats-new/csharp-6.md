@@ -2,12 +2,12 @@
 title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 12/12/2018
-ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68235720"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971378"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -21,7 +21,7 @@ As *Propriedades automáticas somente leitura* fornecem uma sintaxe mais concisa
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
-As propriedades `FirstName` e `LastName` só podem ser definidas no corpo de um construtor:
+As propriedades `FirstName` e `LastName` podem ser definidas apenas no corpo do construtor da mesma classe:
 
 [!code-csharp[ReadOnlyAutoPropertyConstructor](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoPropertyConstructor)]
 

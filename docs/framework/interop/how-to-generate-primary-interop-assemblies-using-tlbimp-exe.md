@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b093f9bb633578cc0051cfca7b1362f8bf097d7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 67b9b48587802b43e90a7f35ab8cbb3b2ee025b0
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662443"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567252"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Como: Gerar assemblies de interoperabilidade primários usando Tlbimp.exe
 
 Há duas maneiras de gerar um assembly de interoperabilidade primário:
 
-- Usando o [Importador de Biblioteca de Tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) fornecido pelo SDK (Software Development Kit) do Windows.
+- Usando o [Importador de Biblioteca de Tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) fornecido pelo SDK do Windows.
 
   A maneira mais simples de gerar assemblies de interoperabilidade primários é usar o [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). O Tlbimp.exe fornece as seguintes garantias:
 

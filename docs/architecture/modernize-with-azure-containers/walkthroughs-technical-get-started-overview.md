@@ -2,12 +2,12 @@
 title: Visão geral de tutoriais passo a passo e introduções técnicas
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Visão geral de orientações técnicas e de introdução técnica
 ms.date: 04/28/2018
-ms.openlocfilehash: 81f7d9fbf596a23b83e2dc9251788b33a8817e16
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577849"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660892"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Visão geral de tutoriais passo a passo e introduções técnicas
 
@@ -308,4 +308,4 @@ Explore este conteúdo mais detalhadamente no wiki do GitHub:<https://github.com
 
 > [!div class="step-by-step"]
 > [Anterior](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)
-> [Próximo](conclusions.md)
+> [Próximo](conclusions.md) <!-- Next Chapter -->

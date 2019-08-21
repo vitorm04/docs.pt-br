@@ -1,5 +1,5 @@
 ---
-title: Usando namespaces – Guia de Programação em C#
+title: Usar namespaces – Guia de Programação em C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 06ebb9edfaf4753b98c3305a90b52e93ee7b4486
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 32e36a3ebc0de3e5f4a850e0af0261c1e7fd5a07
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796642"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039465"
 ---
-# <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
+# <a name="using-namespaces-c-programming-guide"></a>Usar namespaces (Guia de Programação em C#)
 
 Os namespaces são usados intensamente em programas em C# de duas maneiras. Em primeiro lugar, as classes do .NET Framework usam namespaces para organizar suas muitas classes. Em segundo lugar, declarar seus próprios namespaces pode ajudar a controlar o escopo dos nomes de classe e de método em projetos de programação maiores.  
   
@@ -69,7 +69,7 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
  [!code-csharp[csProgGuideNamespaces#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#10)]  
   
- Em geral, use `::` para fazer referência a um alias de namespace ou `global::` para referenciar o namespace global e `.` para qualificar os tipos ou membros.  
+ Em geral, use o [qualificador de alias de namespace `::`](../../language-reference/operators/namespace-alias-qualifier.md) para fazer referência a um alias de namespace ou `global::` para fazer referência ao namespace global e `.` para qualificar tipos ou membros.  
   
  É um erro usar `::` com um alias que faz referência a um tipo em vez de um namespace. Por exemplo:  
   
@@ -90,9 +90,7 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
  [!code-csharp[csProgGuideNamespaces#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#15)]  
   
  Isso funciona, mas se um tipo nomeado `Alias` fosse subsequentemente introduzido, `Alias.` se associaria a esse tipo. O uso de `Alias::Exception` garante que `Alias` seja tratado como um alias de namespace e não seja confundido com um tipo.  
-  
- Confira o tópico [Como usar o alias de namespace global](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) para obter mais informações sobre o alias `global`.  
-  
+
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)

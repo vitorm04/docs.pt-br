@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422749"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039458"
 ---
 # <a name="namespace-c-reference"></a>namespace (Referência de C#)
 
@@ -52,24 +52,15 @@ O exemplo a seguir mostra como chamar um método estático em um namespace aninh
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="related-resources"></a>Recursos relacionados
-
-Para obter mais informações sobre o uso de namespaces, consulte os seguintes tópicos:
-
-- [Namespaces](../../programming-guide/namespaces/index.md)
-
-- [Usando namespaces](../../programming-guide/namespaces/using-namespaces.md)
-
-- [Como: usar o alias de namespace global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para saber mais, confira a seção [Namespaces](~/_csharplang/spec/namespaces.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../language-reference/index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)
 - [using](using-directive.md)
 - [using static](using-static.md)
+- [Qualificador de alias de namespace `::`](../operators/namespace-alias-qualifier.md)
+- [Namespaces](../../programming-guide/namespaces/index.md)

@@ -1,51 +1,70 @@
 ---
 title: 'Operador :: – referência do C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
+- global_CSharpKeyword
 helpviewer_keywords:
 - ':: operator [C#]'
-- 'namespaces [C#], :: operator'
-- namespace alias qualifier operator (::) [C#]
+- namespace alias qualifier [C#]
+- namespace [C#]
+- global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2aceb51747708b12fb3059b097b72206c78a9d5d
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631360"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971238"
 ---
 # <a name="-operator-c-reference"></a>Operador :: (referência do C#)
 
-O qualificador alias de namespace (`::`) é usado para pesquisar identificadores. Ele sempre está posicionado entre dois identificadores, como neste exemplo:
+Use o qualificador de alias de namespace `::` para acessar membros de um namespace com alias. Você usa o qualificador `::` entre dois identificadores. O identificador à esquerda pode ser qualquer um dos seguintes aliases:
 
-[!code-csharp[csRefOperators#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#27)]
+- Um alias de namespace criado com o [usando a diretiva de alias](../keywords/using-directive.md):
+  
+  ```csharp
+  using forwinforms = System.Drawing;
+  using forwpf = System.Windows;
+  
+  public class Converters
+  {
+      public static forwpf::Point Convert(forwinforms::Point point) => new forwpf::Point(point.X, point.Y);
+  }
+  ```
 
-O operador `::` também pode ser usado com uma *diretiva alias de uso*:
+- Um [alias extern](../keywords/extern-alias.md).
+- O alias `global`, que é o alias do namespace global. O namespace global é o namespace que contém namespaces e tipos que não são declarados dentro de um namespace com nome. Quando usado com o qualificador `::`, o alias `global` sempre faz referência ao namespace global, mesmo se houver o alias de namespace `global` definido pelo usuário.
+  
+  O exemplo a seguir usa o alias `global` para acessar o namespace .NET <xref:System>, que é um membro do namespace global. Sem o alias `global`, o namespace `System` definido pelo usuário, que é um membro do namespace `MyCompany.MyProduct`, seria acessado:
 
-```csharp
-// using Col=System.Collections.Generic;
-var numbers = new Col::List<int> { 1, 2, 3 };
-```
+  ```csharp
+  namespace MyCompany.MyProduct.System
+  {
+      class Program
+      {
+          static void Main() => global::System.Console.WriteLine("Using global alias");
+      }
+  
+      class Console
+      {
+          string Suggestion => "Consider renaming this class";
+      }
+  }
+  ```
+  
+  > [!NOTE]
+  > A palavra-chave `global` é o alias do namespace global apenas quando é o identificador à esquerda do qualificador `::`.
 
-## <a name="remarks"></a>Comentários
-
-O qualificador alias de namespace pode ser `global`. Isso invoca uma pesquisa no namespace global, em vez de um namespace com alias.
-
-## <a name="for-more-information"></a>Para obter mais informações
-
-Para obter um exemplo de como usar o operador `::`, consulte a seção a seguir:
-
-- [Como: usar o alias de namespace global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+Você também pode usar o [operador `.` de acesso de membro](member-access-operators.md#member-access-operator-) para acessar membros de um namespace com alias. No entanto, o operador `.` também é usado para acessar membros de um tipo. O qualificador `::` garante que o identificador à esquerda dele sempre faça referência a um alias de namespace, mesmo que exista um tipo ou namespace com o mesmo nome.
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Saiba mais na seção [Qualificadores de alias de namespace](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)
-- [Operador .](member-access-operators.md#member-access-operator-)
-- [Alias extern](../keywords/extern-alias.md)
+- [Usar namespaces](../../programming-guide/namespaces/using-namespaces.md)

@@ -5,24 +5,25 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f8dc21b407e7286010b7425b835a481cc90287a
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708435"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971314"
 ---
 # <a name="contextual-keywords-c-reference"></a>Palavras-chave contextuais (Referência de C#)
+
 Uma palavra-chave contextual é usada para fornecer um significado específico no código, mas não é uma palavra reservada no C#. As seguintes palavras-chave contextuais são apresentadas nesta seção:  
   
-|Palavra-chave|Descrição|  
+|Palavra-chave|DESCRIÇÃO|  
 |-------------|-----------------|  
 |[add](../../../csharp/language-reference/keywords/add.md)|Define um acessador de evento personalizado que é invocado quando o código de cliente assina o evento.|  
 |[async](../../../csharp/language-reference/keywords/async.md)|Indica que o método modificado, expressão lambda ou método anônimo é assíncrono.|  
 |[await](../../../csharp/language-reference/keywords/await.md)|Suspende um método assíncrono até que uma tarefa esperada seja concluída.|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|Define um tipo de referência, que habilita operações nas quais ele ocorre, para ignorar a verificação de tipo em tempo de compilação.|  
 |[get](../../../csharp/language-reference/keywords/get.md)|Define um método do acessador de uma propriedade ou um indexador.|  
-|[global](../../../csharp/language-reference/keywords/global.md)|Especifica o namespace global padrão, que é, de outra forma, sem nome.|  
+|[global](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)|Alias do namespace global que, de outra forma, não tem nome.|  
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|Define classes parciais, structs e interfaces ao longo da mesma unidade de compilação.|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|Define um acessador de evento personalizado que é invocado quando o código de cliente cancela a assinatura do evento.|  
 |[set](../../../csharp/language-reference/keywords/set.md)|Define um método do acessador de uma propriedade ou um indexador.|  

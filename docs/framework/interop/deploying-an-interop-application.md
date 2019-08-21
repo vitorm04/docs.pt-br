@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acb4d3820d06845834b127d8f03763e7dd346f53
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 080ef48ade496a55f414b64158a40fe0e551c2aa
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833693"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567293"
 ---
 # <a name="deploying-an-interop-application"></a>Implantando um aplicativo de interoperabilidade
-Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do .NET, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipos COM e um ou mais componentes COM registrados. O Visual Studio e o SDK (Software Development Kit) do Windows fornecem ferramentas para importar e converter uma biblioteca de tipos em um assembly de interoperabilidade, conforme abordado em [Como importar uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md). Há duas maneiras de implantar um aplicativo de interoperabilidade:  
+Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do .NET, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipos COM e um ou mais componentes COM registrados. O Visual Studio e o SDK do Windows fornecem ferramentas para importar e converter uma biblioteca de tipos em um assembly de interoperabilidade, conforme abordado em [Importar uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md). Há duas maneiras de implantar um aplicativo de interoperabilidade:  
   
 - Usando tipos de interoperabilidade inseridos: Do .NET Framework 4 em diante, é possível instruir o compilador a inserir informações de tipo de um assembly de interoperabilidade ao seu executável. O compilador insere apenas as informações de tipo usadas pelo aplicativo. Não é necessário implantar o assembly de interoperabilidade com o aplicativo. Esta é a técnica recomendada.  
   
@@ -48,6 +48,6 @@ Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do 
 ## <a name="see-also"></a>Consulte também
 
 - [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
-- [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)
+- [Importar uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)
 - [Usando tipos COM no código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilando um projeto de interoperabilidade](compiling-an-interop-project.md)
