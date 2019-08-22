@@ -10,18 +10,18 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674461"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659232"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<Remover > elemento para bypasslist (configurações de rede)
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<remover o elemento > para BypassList (configurações de rede)
 
 Remove um endereço IP ou nome DNS da lista de bypass de proxy.
 
-\<configuration>\
+\<> de configuração \
 \<system.net>\
 \<defaultProxy>\
 \<bypasslist>\
@@ -53,19 +53,19 @@ nenhuma.
 
 |**Elemento**|**Descrição**|
 |-----------------|---------------------|
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.|
+|[bypasslist](bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.|
 
 ## <a name="remarks"></a>Comentários
 
-O `remove` elemento remove as expressões regulares que descrevem endereços IP ou nomes de servidores DNS da lista de endereços que ignora um servidor proxy. Os endereços foram definidos anteriormente no arquivo de configuração ou em um nível mais alto na hierarquia de configuração.
+O `remove` elemento remove expressões regulares que descrevem endereços IP ou nomes de servidores DNS da lista de endereços que ignoram um servidor proxy. Os endereços foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.
 
-O valor para o `address` atributo deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.
+O valor do `address` atributo deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.
 
-Para obter mais informações sobre expressões regulares, consulte. [Expressões regulares do .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).
+Para obter mais informações sobre expressões regulares, consulte. [.NET Framework expressões regulares](../../../../../docs/standard/base-types/regular-expressions.md).
 
 ## <a name="configuration-files"></a>Arquivos de Configuração
 
-Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).
+Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).
 
 ## <a name="example"></a>Exemplo
 
@@ -87,4 +87,4 @@ O exemplo a seguir remove qualquer definição anterior para o domínio adventur
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

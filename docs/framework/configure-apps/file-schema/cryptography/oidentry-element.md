@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013994e36c4c63410a753967cbac92c38783ae62
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674737"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659583"
 ---
-# <a name="oidentry-element"></a>\<oidEntry > elemento
+# <a name="oidentry-element"></a>\<Elemento de > oidEntry
 Mapeia um OID (identificador de objeto) do ASN.1 para um nome amigável.  
   
  \<configuration>  
@@ -37,8 +37,8 @@ Mapeia um OID (identificador de objeto) do ASN.1 para um nome amigável.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|**OID**|Atributo obrigatório.<br /><br /> Especifica o OID do ASN.1 correspondente para o algoritmo implementado por sua classe.|  
-|**name**|Atributo obrigatório.<br /><br /> Especifica o valor para o **nome** atributo na [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) marca.|  
+|**OID**|Atributo obrigatório.<br /><br /> Especifica a OID ASN. 1 correspondente ao algoritmo implementado pela sua classe.|  
+|**name**|Atributo obrigatório.<br /><br /> Especifica o valor do atributo **Name** na marca [ \<> de nameEntry](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -50,13 +50,13 @@ Mapeia um OID (identificador de objeto) do ASN.1 para um nome amigável.
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
 |`cryptographySettings`|Contém configurações de criptografia.|  
 |`mscorlib`|Contém o `cryptographySettings` elemento.|  
-|`oidMap`|Contém mapeamentos OID (identificador) de objeto do ASN.1 para classes.|  
+|`oidMap`|Contém mapeamentos de OID (identificador de objeto) ASN para classes.|  
   
 ## <a name="remarks"></a>Comentários  
- Identificadores de objeto do ASN.1 identificam algoritmos em alguns formatos de criptografia. Mapeie os identificadores de objeto para nomes amigáveis para os algoritmos que você deseja identificar.  
+ Os identificadores de objeto ASN. 1 identificam algoritmos em alguns formatos criptográficos. Mapeie identificadores de objeto para nomes amigáveis para os algoritmos que você deseja identificar.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o  **\<oidEntry >** elemento para mapear um identificador de objeto para o algoritmo de hash RIPEMD-160 para uma implementação do algoritmo hash.  
+ O exemplo a seguir mostra como usar o  **\<elemento > oidEntry** para mapear um identificador de objeto para o algoritmo de hash RIPEMD-160 para uma implementação desse algoritmo de hash.  
   
 ```xml  
 <configuration>  
@@ -80,8 +80,8 @@ Mapeia um OID (identificador de objeto) do ASN.1 para um nome amigável.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [Esquema de configurações de criptografia](index.md)
 - [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)
-- [Configurando classes de criptografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Mapeando identificadores de objeto para algoritmos de criptografia](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Configurando classes de criptografia](../../configure-cryptography-classes.md)
+- [Mapeando identificadores de objeto para algoritmos de criptografia](../../map-object-identifiers-to-cryptography-algorithms.md)

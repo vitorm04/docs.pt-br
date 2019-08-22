@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9758e009e012c8af5f5f7bd19dcd21f34b8c7d96
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: e9ee6bdb7094ea2bc9e283e331c0f6ad9b68e4f9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689741"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663420"
 ---
-# <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups > elemento
+# <a name="thread_useallcpugroups-element"></a>\<Elemento de > Thread_UseAllCpuGroups
 
 Especifica se o tempo de execução distribui threads gerenciados entre todos os grupos de CPU.
 
-\<configuration>\
+\<> de configuração \
 \<runtime>\
 \<Thread_UseAllCpuGroups>
 
@@ -41,7 +41,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |Valor|Descrição|
 |-----------|-----------------|
 |`false`|O tempo de execução não distribui threads gerenciados entre vários grupos de CPU. Esse é o padrão.|
-|`true`|O tempo de execução distribui threads gerenciados entre vários grupos de CPU, se o computador tiver vários grupos de CPU e o [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) elemento está habilitado.|
+|`true`|O tempo de execução distribui threads gerenciados entre vários grupos de CPU, se o computador tiver vários grupos de CPU e o elemento de [ \<> GCCpuGroup](gccpugroup-element.md) estiver habilitado.|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -56,7 +56,7 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-Quando um computador tiver vários grupos de CPU, a ativação deste elemento faz com que o tempo de execução distribui threads gerenciados entre todos os grupos de CPU. Para usar esse recurso, você deve habilitar também a [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) elemento, que estende a coleta de lixo para todos os grupos de CPU e leva em conta durante a criação e heaps de balanceamento a todos os núcleos. Habilitando a [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) elemento requer a habilitação de [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento. Se esses elementos não estiverem habilitados, habilitando o `<Thread_UseAllCpuGroups>` elemento não tem nenhum efeito.
+Quando um computador tem vários grupos de CPU, a habilitação desse elemento faz com que o tempo de execução distribua threads gerenciados em todos os grupos de CPU. Para usar esse recurso, você também deve habilitar o elemento de [ \<> GCCpuGroup](gccpugroup-element.md) , que estende a coleta de lixo para todos os grupos de CPU e leva todos os núcleos em conta ao criar e balancear heaps. Habilitar o [ \<elemento > GCCpuGroup](gccpugroup-element.md) requer a habilitação do [ \<elemento gcServer >](gcserver-element.md) . Se esses elementos não estiverem habilitados, a `<Thread_UseAllCpuGroups>` habilitação do elemento não terá nenhum efeito.
 
 ## <a name="example"></a>Exemplo
 
@@ -74,6 +74,6 @@ O exemplo a seguir mostra como habilitar o suporte para vários grupos de CPU.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<GCCpuGroup > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [\<Elemento de > GCCpuGroup](gccpugroup-element.md)

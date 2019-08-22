@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c2ed46e1d26d829fbe832e44efb40844ae7d56f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba74907e2f6fc2ca14e12a24113fa7654c9b967e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592723"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663795"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > elemento
-Especifica se é necessário desabilitar o cache de falhas que ocorrem porque o assembly não foi encontrado por investigação de associação.  
+# <a name="disablecachingbindingfailures-element"></a>\<Elemento de > disableCachingBindingFailures
+Especifica se é para desabilitar o cache de falhas de associação que ocorrem porque o assembly não foi encontrado pela investigação.  
   
- \<Configuração > elemento  
-\<tempo de execução > elemento  
+ \<Elemento de > de configuração  
+\<Elemento de > de tempo de execução  
 \<disableCachingBindingFailures>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,14 +39,14 @@ Especifica se é necessário desabilitar o cache de falhas que ocorrem porque o 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|habilitado|Atributo obrigatório.<br /><br /> Especifica se é necessário desabilitar o cache de falhas que ocorrem porque o assembly não foi encontrado por investigação de associação.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se é para desabilitar o cache de falhas de associação que ocorrem porque o assembly não foi encontrado pela investigação.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0|Não desabilite o cache de falhas que ocorrem porque o assembly não foi encontrado por investigação de associação. Esse é o comportamento de associação padrão começando com o .NET Framework versão 2.0.|  
-|1|Desabilite o cache de falhas que ocorrem porque o assembly não foi encontrado por investigação de associação. Essa configuração será revertido para o comportamento de associação do .NET Framework versão 1.1.|  
+|0|Não desabilite o cache de falhas de associação que ocorrem porque o assembly não foi encontrado pela investigação. Esse é o comportamento de associação padrão a partir do .NET Framework versão 2,0.|  
+|1|Desabilite o cache de falhas de associação que ocorrem porque o assembly não foi encontrado pela investigação. Essa configuração reverte para o comportamento de associação do .NET Framework versão 1,1.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -59,18 +59,18 @@ Especifica se é necessário desabilitar o cache de falhas que ocorrem porque o 
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Começando com o .NET Framework versão 2.0, o comportamento padrão de carregamento de assemblies é armazenar em cache todos os associação e falhas de carregamento. Ou seja, se uma tentativa de carregar um assembly falhar, as solicitações subsequentes para carregar o mesmo assembly falham imediatamente, sem qualquer tentativa de localizar o assembly. Esse elemento desabilita o comportamento padrão para falhas que ocorrem porque o assembly não pôde ser encontrado no caminho de investigação de associação. Essas falhas lançar <xref:System.IO.FileNotFoundException>.  
+ A partir do .NET Framework versão 2,0, o comportamento padrão para carregar assemblies é armazenar em cache todas as falhas de associação e carregamento. Ou seja, se uma tentativa de carregar um assembly falhar, as solicitações subsequentes para carregar o mesmo assembly falharão imediatamente, sem nenhuma tentativa de localizar o assembly. Esse elemento desabilita esse comportamento padrão para falhas de associação que ocorrem porque o assembly não foi encontrado no caminho de investigação. Essas falhas geram <xref:System.IO.FileNotFoundException>.  
   
- Alguns associação e falhas de carregamento não são afetados por este elemento e sempre são armazenados em cache. Essas falhas ocorrem porque o assembly foi encontrado, mas não pôde ser carregado. Elas geram <xref:System.BadImageFormatException> ou <xref:System.IO.FileLoadException>. A lista a seguir inclui alguns exemplos de tais falhas.  
+ Algumas falhas de ligação e carregamento não são afetadas por esse elemento e sempre são armazenadas em cache. Essas falhas ocorrem porque o assembly foi encontrado, mas não pôde ser carregado. Eles <xref:System.BadImageFormatException> lançam <xref:System.IO.FileLoadException>ou. A lista a seguir inclui alguns exemplos de tais falhas.  
   
-- Se você tentar carregar um arquivo não é um assembly válido, as tentativas subsequentes para carregar o assembly falhará mesmo se o arquivo inválido é substituído com o assembly correto.  
+- Se você tentar carregar um arquivo não for um assembly válido, as tentativas subsequentes de carregar o assembly falharão mesmo que o arquivo incorreto seja substituído pelo assembly correto.  
   
-- Se você tentar carregar um assembly que está bloqueado pelo sistema de arquivos, as tentativas subsequentes para carregar o assembly falhará mesmo depois que o assembly é liberado pelo sistema de arquivos.  
+- Se você tentar carregar um assembly que está bloqueado pelo sistema de arquivos, as tentativas subsequentes de carregar o assembly falharão mesmo depois que o assembly for liberado pelo sistema de arquivos.  
   
-- Se uma ou mais versões do assembly que você está tentando carregar está no caminho de investigação, mas a versão específica que você está solicitando não está entre eles, tentativas subsequentes para carregar dessa versão falhará, mesmo se a versão correta é movida para o caminho de investigação.  
+- Se uma ou mais versões do assembly que você está tentando carregar estiver no caminho de investigação, mas a versão específica que você está solicitando não estiver entre elas, as tentativas subsequentes de carregar essa versão falharão mesmo que a versão correta seja movida para o caminho de investigação.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como desabilitar o cache de falhas de associação de assembly que ocorrem porque o assembly não foi encontrado por sondagem.  
+ O exemplo a seguir mostra como desabilitar o cache de falhas de associação de assembly que ocorrem porque o assembly não foi encontrado pela investigação.  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ Especifica se é necessário desabilitar o cache de falhas que ocorrem porque o 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [Como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)

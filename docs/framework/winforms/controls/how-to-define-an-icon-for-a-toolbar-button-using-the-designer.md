@@ -9,12 +9,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 5de7645ecbf2123df849046a152643cd629b4898
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 49e93f12bebbf409e6b3a06634556b9103c85f44
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038232"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666198"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Como: Definir um ícone para um botão de barra de ferramentas usando o Designer
 
@@ -24,7 +24,6 @@ ms.locfileid: "69038232"
 <xref:System.Windows.Forms.ToolBar>os botões podem exibir ícones dentro deles para facilitar a identificação pelos usuários. Isso é obtido por meio da <xref:System.Windows.Forms.ImageList> <xref:System.Windows.Forms.ToolBar> adição de imagens ao componente e sua associação ao controle.
 
 O procedimento a seguir requer um projeto de **aplicativo do Windows** com um <xref:System.Windows.Forms.ToolBar> formulário que contém <xref:System.Windows.Forms.ImageList> um controle e um componente. Para obter informações sobre como configurar esse projeto, consulte [como: Crie um projeto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicativo Windows Forms [e como: Adicione controles a Windows Forms](how-to-add-controls-to-windows-forms.md).
-
 
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>Para definir um ícone para um botão de barra de ferramentas em tempo de design
 

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674630"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664195"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<Limpar > elemento para bypasslist (configurações de rede)
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<limpar > elemento para BypassList (configurações de rede)
 Limpa a lista de bypass de proxy.  
   
  \<configuration>  
 \<system.net>  
 \<defaultProxy>  
-\<bypasslist>  
+\<> BypassList  
 \<clear>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -45,16 +45,16 @@ Limpa a lista de bypass de proxy.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.|  
+|[bypasslist](bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.|  
   
 ## <a name="remarks"></a>Comentários  
- O `clear` elemento limpa todas as entradas da lista de ignoráveis.  
+ O `clear` elemento limpa todas as entradas da lista de bypass.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir limpa a lista de bypass e, em seguida, adiciona dois endereços à lista de bypass. A primeira ignora o proxy para todos os servidores no domínio contoso.com; o segundo ignora o proxy para todos os servidores cujo endereço IP começa com 192.168.  
+ O exemplo a seguir limpa a lista de bypass e, em seguida, adiciona dois endereços à lista de bypass. O primeiro ignora o proxy para todos os servidores no domínio contoso.com; o segundo ignora o proxy para todos os servidores cujo endereço IP começa com 192,168.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ Limpa a lista de bypass de proxy.
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

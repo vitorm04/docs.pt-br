@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a46e6af97f37974805812fb0d19801d618eee4d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705149"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664246"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>\<Adicionar > elemento para authenticationModules (configurações de rede)
 Adiciona um módulo de autenticação ao aplicativo.  
@@ -40,7 +40,7 @@ Adiciona um módulo de autenticação ao aplicativo.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`type`|O nome do tipo totalmente qualificado (indicado pelo <xref:System.Type.FullName%2A> propriedade) e o nome do assembly (indicado pelo <xref:System.Reflection.Assembly.FullName%2A> propriedade), separados por uma vírgula.|  
+|`type`|O nome do tipo totalmente qualificado (indicado pela <xref:System.Type.FullName%2A> Propriedade) e o nome do assembly (indicado <xref:System.Reflection.Assembly.FullName%2A> pela propriedade), separados por uma vírgula.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -49,18 +49,18 @@ Adiciona um módulo de autenticação ao aplicativo.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Especifica os módulos usados para autenticar solicitações de rede.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica os módulos usados para autenticar solicitações de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `add` elemento adiciona um módulo de autenticação para o final da lista de módulos de autenticação registrados. Módulos de autenticação são chamados na ordem em que foram adicionados à lista.  
+ O `add` elemento adiciona um módulo de autenticação ao final da lista de módulos de autenticação registrados. Os módulos de autenticação são chamados na ordem em que foram adicionados à lista.  
   
- O valor para o `type` atributo deve ser um nome de tipo válido e o nome do assembly correspondente, separados por vírgula.  
+ O valor do `type` atributo deve ser um nome de tipo válido e um nome de assembly correspondente, separados por uma vírgula.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir permite que os módulos de autenticação padrão. Você deve substituir os valores de versão e PublicKeyToken com os valores corretos para o módulo especificado.  
+ O exemplo a seguir habilita os módulos de autenticação padrão. Você deve substituir os valores de Version e PublicKeyToken pelos valores corretos para o módulo especificado.  
   
 ```xml  
 <configuration>  
@@ -85,4 +85,4 @@ Adiciona um módulo de autenticação ao aplicativo.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5bfa5449ece1b24d4f47fe3e77e36b26bbe430c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689837"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663567"
 ---
-# <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > elemento
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<Elemento de > NetFx40_LegacySecurityPolicy
 
 Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso do Código) herdada.
 
-\<configuration>\
+\<> de configuração \
 \<runtime>\
 \<NetFx40_LegacySecurityPolicy>
 
@@ -59,24 +59,24 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-No .NET Framework versão 3.5 e versões anteriores, a política de CAS está sempre em vigor. No .NET Framework 4, a política de CAS deve estar habilitada.
+No .NET Framework versão 3,5 e versões anteriores, a política de CAS está sempre em vigor. No .NET Framework 4, a política de CAS deve ser habilitada.
 
-Política de CAS é específico da versão. As políticas personalizadas do CAS que existem nas versões anteriores do .NET Framework devem ser especificadas novamente no .NET Framework 4.
+A política de CAS é específica da versão. As políticas de CAS personalizadas que existem em versões anteriores do .NET Framework devem ser reespecificadas no .NET Framework 4.
 
-Aplicando o `<NetFx40_LegacySecurityPolicy>` não afeta o elemento a um assembly do .NET Framework 4 [código transparente de segurança](../../../../../docs/framework/misc/security-transparent-code.md); as regras de transparência ainda se aplicam.
+Aplicar o `<NetFx40_LegacySecurityPolicy>` elemento a um assembly .NET Framework 4 não afeta o [código de segurança transparente](../../../misc/security-transparent-code.md); as regras de transparência ainda se aplicam.
 
 > [!IMPORTANT]
-> Aplicando o `<NetFx40_LegacySecurityPolicy>` elemento pode resultar em penalidades de desempenho significativos para os assemblies de imagem nativa criados pelo [gerador de imagem nativa (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) que não estão instaladas no [cache de assembly global ](../../../../../docs/framework/app-domains/gac.md). A degradação do desempenho é causada pela incapacidade do tempo de execução para carregar os assemblies como imagens nativas, quando o atributo é aplicado, resultando em seus que está sendo carregado assemblies como just-in-time.
+> A aplicação `<NetFx40_LegacySecurityPolicy>` do elemento pode resultar em penalidades de desempenho significativas para assemblies de imagem nativa criados pelo [gerador de imagem nativa (NGen. exe)](../../../tools/ngen-exe-native-image-generator.md) que não estão instalados no [cache de assembly global](../../../app-domains/gac.md). A degradação do desempenho é causada pela incapacidade do tempo de execução de carregar os assemblies como imagens nativas quando o atributo é aplicado, resultando no carregamento de assemblies just-in-time.
 
 > [!NOTE]
-> Se você especificar uma versão do .NET Framework de destino que é anterior ao .NET Framework 4, nas configurações do projeto para o seu projeto do Visual Studio, política de CAS será habilitada, incluindo as políticas personalizadas de CAS especificado para essa versão. No entanto, você não poderá usar os novos tipos do .NET Framework 4 e membros. Você também pode especificar uma versão anterior do .NET Framework usando o [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no esquema de configurações de inicialização em seu [arquivo de configuração de aplicativo](../../../../../docs/framework/configure-apps/index.md).
+> Se você especificar uma versão de .NET Framework de destino que seja anterior à .NET Framework 4 nas configurações do projeto para seu projeto do Visual Studio, a política de CAS será habilitada, incluindo as políticas CAS personalizadas especificadas para essa versão. No entanto, você não poderá usar novos .NET Framework 4 tipos e membros. Você também pode especificar uma versão anterior do .NET Framework usando o [ \<elemento supportedRuntime >](../startup/supportedruntime-element.md) no esquema de configurações de inicialização no arquivo de [configuração do aplicativo](../../index.md).
 
 > [!NOTE]
-> Sintaxe do arquivo de configuração diferencia maiusculas de minúsculas. Você deve usar a sintaxe conforme fornecidos nas seções de sintaxe e exemplo.
+> A sintaxe do arquivo de configuração diferencia maiúsculas de minúsculas. Você deve usar a sintaxe conforme fornecido nas seções sintaxe e exemplo.
 
 ## <a name="configuration-file"></a>Arquivo de Configuração
 
-Esse elemento pode ser usado apenas no arquivo de configuração do aplicativo.
+Esse elemento só pode ser usado no arquivo de configuração do aplicativo.
 
 ## <a name="example"></a>Exemplo
 
@@ -92,5 +92,5 @@ O exemplo a seguir mostra como habilitar a política CAS herdada para um aplicat
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)

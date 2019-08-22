@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bf1a15ff27f4390f1985a2d2730b1acfcaab2c1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704772"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663821"
 ---
-# <a name="dependentassembly-element"></a>\<dependentAssembly > elemento
+# <a name="dependentassembly-element"></a>\<Elemento de > dependentAssembly
 Encapsula local do assembly e política de associação para cada assembly. Use um `dependentAssembly` elemento para cada assembly.  
   
  \<configuration>  
@@ -46,7 +46,7 @@ Encapsula local do assembly e política de associação para cada assembly. Use 
 |`assemblyIdentity`|Contém informações de identificação sobre o assembly. Esse elemento deve ser incluído em cada `dependentAssembly` elemento.|  
 |`codeBase`|Especifica onde o tempo de execução pode encontrar um assembly compartilhado se ele não estiver instalado no computador.|  
 |`bindingRedirect`|Redireciona uma versão do assembly para outra.|  
-|`publisherPolicy`|Especifica se o tempo de execução se aplica a política de editor para esse assembly.|  
+|`publisherPolicy`|Especifica se o tempo de execução aplica a política de Publicador para este assembly.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -57,7 +57,7 @@ Encapsula local do assembly e política de associação para cada assembly. Use 
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como encapsular as informações de assembly para dois assemblies.  
+ O exemplo a seguir mostra como encapsular informações de assembly para dois assemblies.  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ Encapsula local do assembly e política de associação para cada assembly. Use 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Redirecionando versões de assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [Redirecionando versões de assembly](../../redirect-assembly-versions.md)

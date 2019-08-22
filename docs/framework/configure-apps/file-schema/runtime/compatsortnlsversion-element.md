@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b426eaaa2dab4d54ea4c82483c079428f3bfac57
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689916"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663846"
 ---
-# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > elemento
+# <a name="compatsortnlsversion-element"></a>\<Elemento de > CompatSortNLSVersion
 Especifica que o tempo de execução deve usar as ordens de classificação herdadas ao executar comparações de cadeias de caracteres.  
   
  \<configuration>  
 \<runtime>  
-\<CompatSortNLSVersion > elemento  
+\<Elemento de > CompatSortNLSVersion  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ Especifica que o tempo de execução deve usar as ordens de classificação herd
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|4096|A ID de localidade que representa uma ordem de classificação alternativa. Nesse caso, 4096 representa a ordem de classificação do .NET Framework 3.5 e versões anteriores.|  
+|4096|A ID de localidade que representa uma ordem de classificação alternativa. Nesse caso, 4096 representa a ordem de classificação do .NET Framework 3,5 e versões anteriores.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -57,7 +57,7 @@ Especifica que o tempo de execução deve usar as ordens de classificação herd
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Pois operações de maiusculas e minúsculas, classificação e comparação de cadeia de caracteres executada pela <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> classe no .NET Framework 4 está em conformidade com o padrão Unicode 5,1, os resultados dos métodos de comparação de cadeia de caracteres, como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> podem diferir das versões anteriores do .NET Framework. Se seu aplicativo depender de comportamento herdado, você pode restaurar a comparação de cadeia de caracteres e classificação regras usadas no .NET Framework 3.5 e versões anteriores, incluindo o `<CompatSortNLSVersion>` elemento no arquivo de configuração do seu aplicativo.  
+ Como as operações de comparação de cadeia de caracteres, classificação e <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> maiúsculas e minúsculas executadas pela classe no .NET Framework 4 estão em conformidade com o padrão Unicode 5,1, <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> os <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> resultados dos métodos de comparação de cadeia de caracteres, como e podem ser diferentes de versões anteriores do .NET Framework. Se seu aplicativo depender de comportamento herdado, você poderá restaurar a comparação de cadeias de caracteres e as regras de classificação usadas no .NET Framework 3,5 `<CompatSortNLSVersion>` e versões anteriores, incluindo o elemento no arquivo de configuração do aplicativo.  
   
 > [!IMPORTANT]
 >  Restaurar a comparação e as regras de classificação de cadeia de caracteres herdadas também requer que a biblioteca de vínculo dinâmico do arquivo sort00001000.dll esteja disponível no sistema local.  
@@ -70,19 +70,19 @@ Especifica que o tempo de execução deve usar as ordens de classificação herd
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- Quando você executar o exemplo no .NET Framework 4, ele exibe a saída a seguir.  
+ Quando você executa o exemplo no .NET Framework 4, ele exibe a saída a seguir.  
   
 ```  
 sta follows a in the sort order.  
 ```  
   
- Isso é completamente diferente da saída que é exibida quando você executa o exemplo no .NET Framework 3.5.  
+ Isso é completamente diferente da saída que é exibida quando você executa o exemplo no .NET Framework 3,5.  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- No entanto, se você adicionar o seguinte arquivo de configuração para o diretório de exemplo e, em seguida, executar o exemplo no .NET Framework 4, a saída é idêntica à produzida pelo exemplo quando ele é executado sobre o .NET Framework 3.5.  
+ No entanto, se você adicionar o seguinte arquivo de configuração ao diretório do exemplo e, em seguida, executar o exemplo no .NET Framework 4, a saída será idêntica à produzida pelo exemplo quando for executada no .NET Framework 3,5.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -95,5 +95,5 @@ sta equals a in the sort order.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)

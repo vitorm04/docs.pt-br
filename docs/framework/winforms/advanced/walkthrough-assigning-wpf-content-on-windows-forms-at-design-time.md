@@ -8,24 +8,19 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 09427bfc836f40ca9c7aa76f4904bfe7083bf8dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: bc5f5e2d8808c0a60df721bf2c0ed76b45ef49a0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211231"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666256"
 ---
-# <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>Passo a passo: Atribuir o conteúdo do WPF nos Windows Forms em tempo de design
+# <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>Passo a passo: Atribuir conteúdo do WPF em Windows Forms em tempo de design
 
-Essa instrução passo a passo mostra como selecionar os tipos de controle do WPF (Windows Presentation Foundation) que você deseja exibir em seu formulário. Você pode selecionar qualquer tipo de controle WPF incluído no seu projeto.
-
-Nesta instrução passo a passo, as seguintes tarefas serão executadas:
-
-- Crie o projeto.
-
-- Crie os tipos de controle WPF.
-
-- Selecione os controles de WPF.
+Este artigo mostra como selecionar os tipos de controle Windows Presentation Foundation (WPF) que você deseja exibir no formulário. Você pode selecionar qualquer tipo de controle WPF incluído no seu projeto.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -33,56 +28,55 @@ Nesta instrução passo a passo, as seguintes tarefas serão executadas:
 
 ## <a name="create-the-project"></a>Criar o projeto
 
-Abra o Visual Studio e crie um novo projeto de aplicativo do Windows Forms no Visual Basic ou Visual C# nomeado `SelectingWpfContent`.
+Abra o Visual Studio e crie um novo projeto de aplicativo Windows Forms em Visual Basic C# ou `SelectingWpfContent`Visual chamado.
 
 > [!NOTE]
 > Ao hospedar conteúdo do WPF, haverá suporte apenas para projetos em C# e Visual Basic.
 
 ## <a name="create-the-wpf-control-types"></a>Criar os tipos de controle do WPF
 
-Depois de adicionar tipos de controle WPF ao projeto, você pode hospedá-los em diferentes <xref:System.Windows.Forms.Integration.ElementHost> controles.
+Depois de adicionar tipos de controle do WPF ao projeto, você pode hospedá-los <xref:System.Windows.Forms.Integration.ElementHost> em controles diferentes.
 
-## <a name="create-wpf-control-types"></a>Criar tipos de controle WPF
+1. Adicione um novo projeto <xref:System.Windows.Controls.UserControl> do WPF à solução. Use o nome padrão do tipo de controle, `UserControl1.xaml`. Para obter mais informações, confira [Passo a passo: Criando novo conteúdo do WPF em Windows Forms em tempo](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)de design.
 
-1. Adicione um novo WPF <xref:System.Windows.Controls.UserControl> projeto à solução. Use o nome padrão do tipo de controle, `UserControl1.xaml`. Para obter mais informações, confira [Passo a passo: Criando novo conteúdo WPF nos Windows Forms em tempo de Design](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+2. No modo de exibição de Design, verifique se `UserControl1` está selecionado.
 
-2. No modo de exibição de Design, verifique se `UserControl1` está selecionado. Para obter mais informações, confira [Como: Selecionar e mover elementos na superfície de Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+3. Na janela **Propriedades** , defina o valor das <xref:System.Windows.FrameworkElement.Width%2A> Propriedades e <xref:System.Windows.FrameworkElement.Height%2A> como **200**.
 
-3. No **propriedades** janela, defina o valor da <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> propriedades a serem `200`.
-
-4. Adicionar um <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> o controle para o <xref:System.Windows.Controls.UserControl> e defina o valor da <xref:System.Windows.Controls.TextBox.Text%2A> propriedade **conteúdo hospedado**.
+4. Adicione um <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> <xref:System.Windows.Controls.UserControl> controle ao e <xref:System.Windows.Controls.TextBox.Text%2A> defina o valor da propriedade como **conteúdo hospedado**.
 
 5. Adicione um segundo WPF <xref:System.Windows.Controls.UserControl> ao projeto. Use o nome padrão do tipo de controle, `UserControl2.xaml`.
 
-6. No **propriedades** janela, defina o valor da <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> propriedades a serem `200`.
+6. Na janela **Propriedades** , defina o valor das <xref:System.Windows.FrameworkElement.Width%2A> Propriedades e <xref:System.Windows.FrameworkElement.Height%2A> como **200**.
 
-7. Adicionar um <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> o controle para o <xref:System.Windows.Controls.UserControl> e defina o valor da <xref:System.Windows.Controls.TextBox.Text%2A> propriedade **conteúdo hospedado 2**.
+7. Adicione um <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> <xref:System.Windows.Controls.UserControl> controle ao e <xref:System.Windows.Controls.TextBox.Text%2A> defina o valor da propriedade como **conteúdo hospedado 2**.
 
- **Observação** Em geral, é recomendável hospedar conteúdos WPF mais sofisticados. O <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> controle é usado aqui apenas para fins ilustrativos.
+   > [!NOTE]
+   > No geral, é necessário hospedar conteúdos do WPF mais sofisticados. O <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> controle é usado aqui apenas para fins ilustrativos.
 
-1. Compile o projeto.
+8. Compile o projeto.
 
-## <a name="select-wpf-controls"></a>Selecione controles WPF
+## <a name="select-wpf-controls"></a>Selecionar controles WPF
 
-Você pode atribuir diferentes conteúdos WPF a um <xref:System.Windows.Forms.Integration.ElementHost> controle, que já está hospedando o conteúdo.
+Você pode atribuir conteúdo WPF diferente a um <xref:System.Windows.Forms.Integration.ElementHost> controle, que já está hospedando conteúdo.
 
 1. Abra `Form1` no Designer de Formulários do Windows.
 
 2. Na **Caixa de ferramentas**, clique duas vezes em `UserControl1` para criar uma instância de `UserControl1` no formulário.
 
-     Uma instância do `UserControl1` é hospedado em uma nova <xref:System.Windows.Forms.Integration.ElementHost> controle chamado `elementHost1`.
+   Uma instância do `UserControl1` é hospedada em um <xref:System.Windows.Forms.Integration.ElementHost> novo controle `elementHost1`chamado.
 
 3. No painel de smart tag para `elementHost1`, abra a lista suspensa **Selecionar conteúdo hospedado**.
 
 4. Selecione **UserControl2** na caixa de listagem suspensa.
 
-     O controle `elementHost1` agora hospeda uma instância do tipo `UserControl2`.
+   O controle `elementHost1` agora hospeda uma instância do tipo `UserControl2`.
 
-5. No **propriedades** janela, confirme se o <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> estiver definida como **UserControl2**.
+5. Na janela **Propriedades** , confirme se a <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> Propriedade está definida como **UserControl2**.
 
-6. Dos **caixa de ferramentas**, no **interoperabilidade do WPF** de grupo, arraste um <xref:System.Windows.Forms.Integration.ElementHost> controle para o formulário.
+6. Na **caixa de ferramentas**, no grupo de interoperabilidade do **WPF** , arraste um <xref:System.Windows.Forms.Integration.ElementHost> controle para o formulário.
 
-     O nome padrão do novo controle é `elementHost2`.
+   O nome padrão do novo controle é `elementHost2`.
 
 7. No painel de smart tag para `elementHost2`, abra a lista suspensa **Selecionar conteúdo hospedado**.
 

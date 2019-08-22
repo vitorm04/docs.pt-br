@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 733f22c122dd6acdad41371419375e55e977c016
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c8d04725a576c9e24a4b7d4aec1251516a8c544c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039924"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666224"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Passo a passo: Criar um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio
 
@@ -62,7 +62,6 @@ Quando você terminar, seu controle personalizado terá aparência semelhante à
 ![O aplicativo que mostra um letreiro que informa o texto e os botões iniciar e parar.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 Para obter a listagem de código completa [, consulte Como: Crie um controle de Windows Forms que aproveita os recursos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))de tempo de design.
-
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 318473d2913d62404c58b9d3681800ae22a9ecbf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: cf97cc1ec544c7cf640c43b1b45760fca8cffe89
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689857"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663550"
 ---
-# <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > elemento
+# <a name="netfx40_pinvokestackresilience-element"></a>\<Elemento de > NetFx40_PInvokeStackResilience
 
 Especifica se o tempo de execução corrige automaticamente declarações de invocação de plataforma incorretas em tempo de execução, às custas de transições mais lentas entre o código gerenciado e não gerenciado.
 
-\<configuration>\
+\<> de configuração \
 \<runtime>\
 \<NetFx40_PInvokeStackResilience>
 
@@ -36,14 +36,14 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução detecta plataforma incorreta declarações de invocação e corrige automaticamente a pilha em tempo de execução em plataformas de 32 bits.|
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução detecta declarações incorretas de invocação de plataforma e corrige automaticamente a pilha em tempo de execução em plataformas de 32 bits.|
 
 ## <a name="enabled-attribute"></a>Atributo habilitado
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`0`|O tempo de execução usa a arquitetura introduzida no .NET Framework 4, que não detecta de marshaling de interoperabilidade mais rápida e declarações de invocação de plataforma incorreta de correção. Esse é o padrão.|
-|`1`|Declarações de invocação de tempo de execução usa mais lentas transições que detectam e corrigir a plataforma incorreta.|
+|`0`|O tempo de execução usa a arquitetura de marshaling de interoperabilidade mais rápida introduzida no .NET Framework 4, que não detecta e corrige declarações de invocação de plataforma incorretas. Esse é o padrão.|
+|`1`|O tempo de execução usa transições mais lentas que detectam e corrigem declarações de invocação de plataforma incorretas.|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -58,21 +58,21 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-Esse elemento permite que você troque o marshaling de interoperabilidade mais rápido para declarações de invocação de resiliência de tempo de execução na plataforma incorreta.
+Esse elemento permite que você negocie o marshaling de interoperabilidade mais rápido para resiliência em tempo de execução contra declarações de invocação de plataforma incorretas.
 
-Uma arquitetura de marshaling de interoperabilidade simplificada começando com o .NET Framework 4, fornece uma melhoria significativa de desempenho para transições do código gerenciado para código não gerenciado. Em versões anteriores do .NET Framework, a plataforma incorreta de camada detectada marshaling declarações em plataformas de 32 bits de invocação e corrigidas automaticamente a pilha. A nova arquitetura de marshaling elimina essa etapa. Como resultado, as transições são muito rápidas, mas a declaração de invocação de uma plataforma incorreta pode causar uma falha no programa.
+A partir do .NET Framework 4, uma arquitetura de marshaling de interoperabilidade simplificada fornece uma melhoria significativa de desempenho para transições de código gerenciado para código não gerenciado. Em versões anteriores do .NET Framework, a camada de marshaling detectou declarações incorretas de invocação de plataforma em plataformas de 32 bits e corrigiu a pilha automaticamente. A nova arquitetura de marshaling elimina essa etapa. Como resultado, as transições são muito rápidas, mas uma declaração de invocação de plataforma incorreta pode causar uma falha do programa.
 
-Para que seja fácil detectar declarações incorretas durante o desenvolvimento, a experiência de depuração do Visual Studio foi aprimorado. O [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) Assistente para depuração gerenciada (MDA) notifica você da plataforma incorreta de declarações de invocação quando seu aplicativo está em execução com o depurador anexado.
+Para facilitar a detecção de declarações incorretas durante o desenvolvimento, a experiência de depuração do Visual Studio foi aprimorada. O MDA (Assistente de depuração gerenciada) [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md) notifica sobre declarações de invocação de plataforma incorretas quando seu aplicativo está em execução com o depurador anexado.
 
-Para lidar com cenários em que o seu aplicativo usa os componentes que você não pode recompilar e que têm invocação de plataforma incorretas declarações, você pode usar o `NetFx40_PInvokeStackResilience` elemento. Adição deste elemento ao arquivo de configuração de aplicativo com `enabled="1"` aceitar um modo de compatibilidade com o comportamento de versões anteriores do .NET Framework, às custas de transições mais lentas. Assemblies que foram compilados em relação a versões anteriores do .NET Framework são aceitos automaticamente esse modo de compatibilidade e não é necessário para esse elemento.
+Para abordar cenários em que seu aplicativo usa componentes que você não pode recompilar e que têm declarações de invocação de plataforma incorretas, você pode usar o `NetFx40_PInvokeStackResilience` elemento. Adicionar esse elemento ao arquivo de configuração do aplicativo `enabled="1"` com optas por um modo de compatibilidade com o comportamento de versões anteriores do .NET Framework, às custas de transições mais lentas. Os assemblies que foram compilados em relação às versões anteriores do .NET Framework são automaticamente optados por esse modo de compatibilidade e não precisam desse elemento.
 
 ## <a name="configuration-file"></a>Arquivo de Configuração
 
-Esse elemento pode ser usado apenas no arquivo de configuração do aplicativo.
+Esse elemento só pode ser usado no arquivo de configuração do aplicativo.
 
 ## <a name="example"></a>Exemplo
 
-A exemplo a seguir mostra como as declarações para um aplicativo, às custas de transições mais lentas entre de invocação de plataforma para aceitar o aumento da resiliência contra incorreto gerenciado e código não gerenciado.
+O exemplo a seguir mostra como aceitar maior resiliência contra declarações de invocação de plataforma incorretas para um aplicativo, ao custo de transições mais lentas entre códigos gerenciados e não gerenciados.
 
 ```xml
 <configuration>
@@ -84,6 +84,6 @@ A exemplo a seguir mostra como as declarações para um aplicativo, às custas d
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 1b5f7406f995a86f0a192dbf3249c067dff570ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9405fdc6123a5a1352de06f94fefb6d7d4014b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674396"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659116"
 ---
-# <a name="smtp-element-network-settings"></a>\<SMTP > (configurações de rede)
-Configura o formato de entrega, o método de entrega e o endereço para envio de emails.  
+# <a name="smtp-element-network-settings"></a>\<Elemento de > SMTP (configurações de rede)
+Configura o formato de entrega, o método de entrega e o endereço de remetente para enviar emails.  
   
  \<configuration>  
 \<system.net>  
@@ -43,24 +43,24 @@ Configura o formato de entrega, o método de entrega e o endereço para envio de
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`deliveryFormat`|Especifica o formato de entrega para emails de saída. Os valores aceitáveis são SevenBit e International.|  
-|`deliveryMethod`|Especifica o método de entrega para emails. Os valores aceitáveis são rede, PickupDirectoryFromIis e SpecifiedPickupDirectory.|  
-|`from`|Especifica o endereço para emails de saída.|  
+|`deliveryMethod`|Especifica o método de entrega para emails. Os valores aceitáveis são Network, PickupDirectoryFromIis e SpecifiedPickupDirectory.|  
+|`from`|Especifica o endereço de para emails de saída.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|Configura o diretório local para um servidor de transporte protocolo SMTP (Simple Mail).|  
+|`specifiedPickupDirectory`|Configura o diretório local para um servidor SMTP (Simple Mail Transport Protocol).|  
 |`network`|Configura as opções de rede para um servidor SMTP externo.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[\<mailSettings> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md) [Elemento mailSettings> (configurações de rede)]|Configura as opções de envio de email.|  
+|[\<mailSettings> Element (Network Settings)](mailsettings-element-network-settings.md) [Elemento mailSettings> (configurações de rede)]|Configura as opções de envio de email.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir especifica os parâmetros apropriados de SMTP para enviar email usando as credenciais de rede padrão.  
+ O exemplo a seguir especifica os parâmetros de SMTP apropriados para enviar email usando as credenciais de rede padrão.  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ Configura o formato de entrega, o método de entrega e o endereço para envio de
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

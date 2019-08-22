@@ -10,12 +10,12 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705266"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664224"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>\<Adicionar > elemento para connectionManagement (configurações de rede)
 Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.  
@@ -42,7 +42,7 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
 |`address`|Uma cadeia de caracteres que descreve um endereço IP ou nome DNS.|  
-|`maxconnection`|O número máximo de conexões permitido para um servidor. Se não for fornecido, o padrão é 2.|  
+|`maxconnection`|O número máximo de conexões permitidas a um servidor. Se não for fornecido, o padrão será 2.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -51,15 +51,15 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões para um host de rede.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões com um host de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O valor de `address` atributo deve ser um asterisco para indicar todas as conexões ou uma cadeia de caracteres do formulário `<schema>://<idn_hostname>[:<port>]`.  
+ O valor do `address` atributo deve ser um asterisco para indicar todas as conexões ou uma cadeia de caracteres do formulário `<schema>://<idn_hostname>[:<port>]`.  
   
- Se o URI passado para quaisquer APIs HTTP contém Unicode, o nome será convertido internamente usando <xref:System.Uri.DnsSafeHost%2A> que podem retornar uma cadeia de caracteres punicode (comportamento depende da configuração atual de IDN).  
+ Se o URI passado para qualquer API http contiver Unicode, o nome será convertido internamente usando <xref:System.Uri.DnsSafeHost%2A> o que pode retornar uma cadeia de caracteres Punicode (comportamento dependente da configuração de IDN atual).  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir configura um aplicativo para usar quatro conexões com o servidor `www.contoso.com` e duas conexões com todos os outros servidores.  
@@ -79,4 +79,4 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

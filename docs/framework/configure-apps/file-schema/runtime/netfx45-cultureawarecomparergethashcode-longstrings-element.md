@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23917977add2343732957eaa8dad5d2176315acf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: bd59d1bcc489f248cbeb397afffb638071df17b6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689866"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663597"
 ---
-# <a name="netfx45cultureawarecomparergethashcodelongstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > elemento
+# <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<Elemento de > NetFx45_CultureAwareComparerGetHashCode_LongStrings
 
 Especifica se o tempo de execução usa uma quantidade fixa de memória para calcular códigos hash para o método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>.
 
-\<configuration>\
+\<> de configuração \
 \<runtime>\
 \<NetFx45_CultureAwareComparerGetHashCode_LongStrings>
 
@@ -68,5 +68,5 @@ Por padrão, o Common Language Runtime aloca uma quantidade variável de memóri
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)

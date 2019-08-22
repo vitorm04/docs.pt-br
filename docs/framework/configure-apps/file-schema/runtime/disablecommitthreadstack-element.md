@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5852579758e85bb033af9b6d036fe76444bb8e4
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4b1f55f056ef1aed4a5eff655650cefe778c97ae
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583860"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663791"
 ---
-# <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > elemento
-Especifica se a pilha completa de threads é confirmada quando um thread é iniciado.  
+# <a name="disablecommitthreadstack-element"></a>\<Elemento de > disableCommitThreadStack
+Especifica se a pilha de threads completa é confirmada quando um thread é iniciado.  
   
  \<configuration>  
 \<runtime>  
@@ -37,14 +37,14 @@ Especifica se a pilha completa de threads é confirmada quando um thread é inic
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|habilitado|Atributo obrigatório.<br /><br /> Especifica se a confirmação a pilha completa de threads na inicialização de thread (o comportamento padrão) está desabilitado.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se a confirmação da pilha de threads completa na inicialização do thread (o comportamento padrão) está desabilitada.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0|Não desabilite o comportamento padrão do common language runtime, que é para confirmar a pilha completa de threads quando um thread é iniciado.|  
-|1|Desabilite o comportamento padrão do common language runtime, que é para confirmar a pilha completa de threads quando um thread é iniciado.|  
+|0|Não desabilite o comportamento padrão do Common Language Runtime, que é confirmar a pilha de threads completa quando um thread é iniciado.|  
+|1|Desabilite o comportamento padrão do Common Language Runtime, que é confirmar a pilha de threads completa quando um thread é iniciado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -57,13 +57,13 @@ Especifica se a pilha completa de threads é confirmada quando um thread é inic
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- O comportamento padrão do common language runtime é a pilha completa de threads de confirmação quando um thread é iniciado. Se um grande número de threads deve ser criado em um servidor que tem memória limitada, e a maioria desses threads usará muito pouco espaço de pilha, o servidor pode executar melhor se o common language runtime não confirma a pilha completa de threads imediatamente quando um thread está st iniciado.  
+ O comportamento padrão da Common Language Runtime é confirmar a pilha de threads completa quando um thread é iniciado. Se um grande número de threads precisar ser criado em um servidor com memória limitada e a maioria desses threads usarem muito pouco espaço de pilha, o servidor poderá executar melhor se o Common Language Runtime não confirmar a pilha de thread completa imediatamente quando um thread for St iniciado.  
   
 > [!NOTE]
->  Hosts não gerenciados podem usar o `STARTUP_DISABLE_COMMITTHREADSTACK` sinalizador de inicialização na [STARTUP_FLAGS](../../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumeração para alcançar o mesmo resultado.  
+>  Os hosts não gerenciados podem `STARTUP_DISABLE_COMMITTHREADSTACK` usar o sinalizador de inicialização na enumeração [STARTUP_FLAGS](../../../unmanaged-api/hosting/startup-flags-enumeration.md) para realizar o mesmo resultado.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como desabilitar o comportamento padrão do common language runtime, que é para confirmar a pilha completa de threads na inicialização do thread.  
+ O exemplo a seguir mostra como desabilitar o comportamento padrão do Common Language Runtime, que é confirmar a pilha de threads completa na inicialização do thread.  
   
 ```xml  
 <configuration>  
@@ -75,5 +75,5 @@ Especifica se a pilha completa de threads é confirmada quando um thread é inic
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: e5069dd46a31a65f65a17d750b685d82762e3d11
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 4d7a49633599aabc96153e4793e50c1a4d6d092d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038203"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666217"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Como: Adicionar botões a um controle ToolBar usando o designer
 
@@ -24,10 +24,9 @@ Uma parte integral do <xref:System.Windows.Forms.ToolBar> controle são os botõ
 
 O procedimento a seguir requer um projeto de **aplicativo do Windows** com um <xref:System.Windows.Forms.ToolBar> formulário que contém um controle. Para obter informações sobre como configurar esse projeto, consulte [como: Crie um projeto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicativo Windows Forms [e como: Adicione controles a Windows Forms](how-to-add-controls-to-windows-forms.md).
 
-
 ### <a name="to-add-buttons-at-design-time"></a>Adicionar botões no tempo de design
 
-1. Selecione o <xref:System.Windows.Forms.ToolBar> controle.
+1. Selecione o controle <xref:System.Windows.Forms.ToolBar>.
 
 2. Na janela **Propriedades** , clique na <xref:System.Windows.Forms.ToolBar.Buttons%2A> propriedade para selecioná-la e clique nas **reticências** (![o botão de reticências (...) no botão janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) para abrir o **ToolBarButton Editor de coleção**.
 

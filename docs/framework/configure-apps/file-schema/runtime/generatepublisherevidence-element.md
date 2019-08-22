@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a0861436ca727d63cdae58e3222826bf6414610
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: caec297f8d0f6febad5cf46adb0a2658960c6bb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489448"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663669"
 ---
-# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > elemento
-Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher> evidência de segurança de acesso do código (CAS).  
+# <a name="generatepublisherevidence-element"></a>\<Elemento de > generatePublisherEvidence
+Especifica se o tempo de <xref:System.Security.Policy.Publisher> execução cria evidências para a CAS (segurança de acesso do código).  
   
  \<configuration>  
 \<runtime>  
-\<generatePublisherEvidence>  
+\<> generatePublisherEvidence  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,14 +35,14 @@ Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher>
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher> evidência.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de <xref:System.Security.Policy.Publisher> execução cria evidências.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Não cria <xref:System.Security.Policy.Publisher> evidência.|  
-|`true`|Cria <xref:System.Security.Policy.Publisher> evidência. Esse é o padrão.|  
+|`false`|Não cria <xref:System.Security.Policy.Publisher> evidências.|  
+|`true`|Cria <xref:System.Security.Policy.Publisher> evidências. Esse é o padrão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -57,18 +57,18 @@ Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher>
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  No .NET Framework 4 e posterior, esse elemento não tem efeito sobre os tempos de carregamento de assembly. Para obter mais informações, consulte a seção de "Simplificação de política de segurança" em [alterações de segurança](../../../../../docs/framework/security/security-changes.md).  
+>  No .NET Framework 4 e posterior, esse elemento não tem nenhum efeito sobre os tempos de carregamento do assembly. Para obter mais informações, consulte a seção "simplificação da política de segurança" em [alterações de segurança](../../../security/security-changes.md).  
   
- O common language runtime (CLR) tenta verificar a assinatura Authenticode no tempo de carregamento para criar <xref:System.Security.Policy.Publisher> evidência para o assembly. No entanto, por padrão, a maioria dos aplicativos não precisam <xref:System.Security.Policy.Publisher> evidência. Política de CAS padrão não depende do <xref:System.Security.Policy.PublisherMembershipCondition>. Você deve evitar o custo de inicialização desnecessários associado ao verificar a assinatura do publicador, a menos que seu aplicativo é executado em um computador com a política de CAS personalizada ou pretende atender às demandas de <xref:System.Security.Permissions.PublisherIdentityPermission> em um ambiente de confiança parcial. (Demandas de permissões de identidade sempre terá êxito em um ambiente de confiança total).  
+ O Common Language Runtime (CLR) tenta verificar a assinatura Authenticode no tempo de carregamento para criar <xref:System.Security.Policy.Publisher> evidências para o assembly. No entanto, por padrão, a maioria dos <xref:System.Security.Policy.Publisher> aplicativos não precisa de evidências. A política de CAS padrão não depende do <xref:System.Security.Policy.PublisherMembershipCondition>. Você deve evitar o custo de inicialização desnecessário associado à verificação da assinatura do Publicador, a menos que seu aplicativo seja executado em um computador com uma política de CAS personalizada ou que <xref:System.Security.Permissions.PublisherIdentityPermission> pretenda atender às demandas de em um ambiente de confiança parcial. (As demandas de permissões de identidade sempre tiveram sucesso em um ambiente de confiança total.)  
   
 > [!NOTE]
->  É recomendável que os serviços usam o `<generatePublisherEvidence>` elemento para melhorar o desempenho de inicialização.  Usar esse elemento também pode ajudar a evitar atrasos que podem causar um tempo limite e o cancelamento da inicialização do serviço.  
+>  Recomendamos que os serviços usem `<generatePublisherEvidence>` o elemento para melhorar o desempenho de inicialização.  O uso desse elemento também pode ajudar a evitar atrasos que podem causar um tempo limite e o cancelamento da inicialização do serviço.  
   
 ## <a name="configuration-file"></a>Arquivo de Configuração  
- Esse elemento pode ser usado apenas no arquivo de configuração do aplicativo.  
+ Esse elemento só pode ser usado no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o `<generatePublisherEvidence>` elemento para desabilitar a verificação de política de editor de autoridades de certificação para um aplicativo.  
+ O exemplo a seguir mostra como usar o `<generatePublisherEvidence>` elemento para desabilitar a verificação da política de editor de CAS para um aplicativo.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher>
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)

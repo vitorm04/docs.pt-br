@@ -14,18 +14,18 @@ helpviewer_keywords:
 - OnRender method [WPF], overriding
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
-ms.openlocfilehash: c4539847368c1a5789e99ec92106d17077ed5943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23c3353e130585ed83726816a467ca73f6aa9152
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770832"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666709"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>Como: Substituir o método OnRender do painel
-Este exemplo mostra como substituir a <xref:System.Windows.Controls.Panel.OnRender%2A> método de <xref:System.Windows.Controls.Panel> para adicionar efeitos gráficos personalizados a um elemento de layout.  
+Este exemplo mostra como substituir o <xref:System.Windows.Controls.Panel.OnRender%2A> método de para adicionar efeitos gráficos personalizados a um elemento de <xref:System.Windows.Controls.Panel> layout.  
   
 ## <a name="example"></a>Exemplo  
- Use o <xref:System.Windows.Controls.Panel.OnRender%2A> método para adicionar efeitos gráficos a um elemento de painel renderizado. Por exemplo, você pode usar esse método para adicionar efeitos de plano de fundo ou borda personalizada. Um <xref:System.Windows.Media.DrawingContext> objeto é passado como um argumento, que fornece métodos para desenhar formas, texto, imagens ou vídeos. Como resultado, esse método é útil para a personalização de um objeto de painel.  
+ Use o <xref:System.Windows.Controls.Panel.OnRender%2A> método para adicionar efeitos gráficos a um elemento do painel renderizado. Por exemplo, você pode usar esse método para adicionar efeitos de borda ou de plano de fundo personalizados. Um <xref:System.Windows.Media.DrawingContext> objeto é passado como um argumento, que fornece métodos para desenhar formas, texto, imagens ou vídeos. Como resultado, esse método é útil para a personalização de um objeto de painel.  
   
  [!code-csharp[LightWeightCustomPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LightWeightCustomPanel/CSharp/OffsetPanel.cs#1)]
  [!code-vb[LightWeightCustomPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LightWeightCustomPanel/visualbasic/offsetpanel.vb#1)]  
@@ -34,5 +34,4 @@ Este exemplo mostra como substituir a <xref:System.Windows.Controls.Panel.OnRend
 
 - <xref:System.Windows.Controls.Panel>
 - [Visão geral de painéis](panels-overview.md)
-- [Exemplo de painel Radial personalizado](https://go.microsoft.com/fwlink/?LinkID=159982)
 - [Tópicos de instruções](panel-how-to-topics.md)

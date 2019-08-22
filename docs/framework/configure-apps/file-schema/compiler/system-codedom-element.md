@@ -9,18 +9,18 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 0f47255bb4073007a847e4a8b85ccfd34100582b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674786"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659691"
 ---
-# <a name="systemcodedom-element"></a>\<System. CodeDom > elemento
+# <a name="systemcodedom-element"></a>\<Elemento de > System. CodeDom
 Especifica as definições de configuração do compilador para provedores de linguagem disponíveis.  
   
- \<Configuração > elemento  
-\<System. CodeDom > elemento  
+ \<Elemento de > de configuração  
+\<Elemento de > System. CodeDom  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,34 +40,34 @@ Especifica as definições de configuração do compilador para provedores de li
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Contêiner de elementos de configuração do compilador. Contém zero ou mais elementos [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md).|  
+|[\<compilers>](compilers-element.md)|Contêiner de elementos de configuração do compilador. Contém zero ou mais elementos [\<compiler>](compiler-element.md).|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
+|[\<configuration>](../configuration-element.md)|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="net-framework-version-20"></a>.NET framework versão 2.0  
- O [ \<System. CodeDom >](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) elemento contém definições de configuração do compilador para provedores de linguagem instalados em um computador, além de provedores padrão que são instalados com o .NET Framework, como o <xref:Microsoft.CSharp.CSharpCodeProvider> e o <xref:Microsoft.VisualBasic.VBCodeProvider>. O [ \<compiladores >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) elemento contém zero ou mais [ \<compilador >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elementos. Cada [ \<compilador >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elemento Especifica os atributos de configuração do compilador para um provedor de idioma específico.  
+## <a name="net-framework-version-20"></a>.NET Framework versão 2,0  
+ <xref:Microsoft.CSharp.CSharpCodeProvider> O [ \<elemento System. CodeDom >](system-codedom-element.md) contém definições de configuração de compilador para provedores de idiomas instalados em um computador além dos provedores padrão instalados com o .NET Framework, como o e o <xref:Microsoft.VisualBasic.VBCodeProvider>. O elemento [ \<>](compilers-element.md) de compiladores contém zero ou mais [ \<](compiler-element.md) elementos de > do compilador. Cada elemento > do compilador Especifica os atributos de configuração do compilador para um provedor de idioma específico. [ \<](compiler-element.md)  
   
- Os desenvolvedores e fornecedores do compilador podem adicionar definições de configuração para o arquivo de configuração de máquina (Machine. config) para um novo <xref:System.CodeDom.Compiler.CodeDomProvider> implementação. Use o <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> método para enumerar programaticamente os provedores de linguagem padrão e de provedores de linguagem identificados pelos parâmetros de configuração do compilador em um computador.  
+ Os desenvolvedores e fornecedores de compilador podem adicionar definições de configuração ao arquivo de configuração da máquina (Machine. config <xref:System.CodeDom.Compiler.CodeDomProvider> ) para uma nova implementação. Use o <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> método para enumerar programaticamente os provedores de idioma padrão e os provedores de idiomas identificados pelas definições de configuração do compilador em um computador.  
   
 > [!NOTE]
->  Nas versões do .NET Framework 1.0 e 1.1, o idioma padrão provedores fornecidos pelo .NET Framework são identificados na [ \<compiladores >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) elemento. O .NET Framework versão 2.0, os provedores de linguagem padrão não são identificados na [ \<compiladores >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) elemento, mas podem ser enumerados usando o <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> método.  
+>  No .NET Framework versões 1,0 e 1,1, os provedores de idioma padrão fornecidos pelo .NET Framework são identificados no [ \<elemento compiladores >](compilers-element.md) . No .NET Framework versão 2,0, os provedores de idioma padrão não são identificados no <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> [ \<elemento compiladores >](compilers-element.md) , mas podem ser enumerados usando o método.  
   
-## <a name="net-framework-versions-10-and-11"></a>Versões 1.0 e 1.1 do .NET framework  
- O [ \<System. CodeDom >](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) elemento contém as definições de configuração do compilador para provedores de linguagem em um computador. O [ \<compiladores >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) elemento contém zero ou mais [ \<compilador >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elementos. Cada [ \<compilador >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elemento Especifica os atributos de configuração do compilador para um provedor de idioma específico.  
+## <a name="net-framework-versions-10-and-11"></a>.NET Framework versões 1,0 e 1,1  
+ O elemento System [. CodeDom > contém as definições de configuração do compilador para os provedores de idioma em um computador. \<](system-codedom-element.md) O elemento [ \<>](compilers-element.md) de compiladores contém zero ou mais [ \<](compiler-element.md) elementos de > do compilador. Cada elemento > do compilador Especifica os atributos de configuração do compilador para um provedor de idioma específico. [ \<](compiler-element.md)  
   
  O .NET Framework define as configurações do compilador iniciais no arquivo de configuração do computador (Machine.config). Os desenvolvedores e fornecedores do compilador podem adicionar parâmetros de configuração em uma nova implementação do <xref:System.CodeDom.Compiler.CodeDomProvider>. Use o método <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> para enumerar programaticamente as definições de configuração do compilador e do provedor de linguagem em um computador.  
   
 ## <a name="configuration-file"></a>Arquivo de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do computador e o arquivo de configuração do aplicativo.  
+ Esse elemento pode ser usado no arquivo de configuração da máquina e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir ilustra uma configuração típica do compilador.  
+ O exemplo a seguir ilustra uma configuração de compilador típica.  
   
 ```xml  
 <configuration>  
@@ -91,6 +91,6 @@ Especifica as definições de configuração do compilador para provedores de li
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Esquema de configurações de compilador e de provedor de idiomas](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [Esquema de configurações de compilador e de provedor de idiomas](index.md)
+- [\<compiler> Element](compiler-element.md)

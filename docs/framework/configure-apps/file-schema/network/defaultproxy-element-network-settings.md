@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 5947808cd137fc4cd280ac683a3e9a14b0d4644d
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 7e49762ee017564734bfb2b2f7074d94b7eabe11
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363868"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659386"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<Elemento de > de defaultProxy (configurações de rede)
 Configura o servidor proxy HTTP (Hypertext Transfer Protocol).  
@@ -48,20 +48,20 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam o proxy.|  
-|[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Adiciona um novo módulo de proxy ao aplicativo.|  
-|[acionista](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Define um servidor proxy.|  
+|[bypasslist](bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam o proxy.|  
+|[module](module-element-network-settings.md)|Adiciona um novo módulo de proxy ao aplicativo.|  
+|[acionista](proxy-element-network-settings.md)|Define um servidor proxy.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contém configurações que especificam como o .NET Framework se conecta à rede.|  
+|[system.net](system-net-element-network-settings.md)|Contém configurações que especificam como o .NET Framework se conecta à rede.|  
   
 ## <a name="remarks"></a>Comentários  
  Se o elemento defaultProxy estiver vazio, as configurações de proxy do Internet Explorer serão usadas. Esse comportamento é diferente da versão 1,1 do .NET Framework.  
   
- Uma exceção é gerada se o elemento [Module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) especifica um tipo não público, o tipo não é derivado da <xref:System.Net.IWebProxy> classe, uma exceção do construtor sem parâmetros desse objeto ocorreu ou ocorreu uma exceção ao recuperar o proxy padrão especificado pelo sistema. A <xref:System.Exception.InnerException%2A> Propriedade na exceção deve ter mais informações sobre a causa raiz do erro.  
+ Uma exceção é gerada se o elemento [Module](module-element-network-settings.md) especifica um tipo não público, o tipo não é derivado da <xref:System.Net.IWebProxy> classe, uma exceção do construtor sem parâmetros desse objeto ocorreu ou ocorreu uma exceção ao recuperar o proxy padrão especificado pelo sistema. A <xref:System.Exception.InnerException%2A> Propriedade na exceção deve ter mais informações sobre a causa raiz do erro.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
@@ -89,4 +89,4 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: a459fee557285935c383dcfaf512c8a8a9aea570
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2e31dee4f5aff2bf6cedf5c4e9ca235695b0a53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674358"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659090"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > (configurações de rede)
-Configura o diretório local para um servidor de transporte protocolo SMTP (Simple Mail).  
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<Elemento de > specifiedPickupDirectory (configurações de rede)
+Configura o diretório local para um servidor SMTP (Simple Mail Transport Protocol).  
   
  \<configuration>  
 \<system.net>  
@@ -39,7 +39,7 @@ Configura o diretório local para um servidor de transporte protocolo SMTP (Simp
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|O diretório em que os aplicativos salvam email para processamento posterior pelo servidor SMTP.|  
+|`pickupDirectoryLocation`|O diretório em que os aplicativos salvam o email para processamento posterior pelo servidor SMTP.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -48,10 +48,10 @@ Configura o diretório local para um servidor de transporte protocolo SMTP (Simp
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<SMTP > (configurações de rede)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Configura as opções de envio de mensagens de transporte protocolo SMTP (Simple Mail).|  
+|[\<Elemento de > SMTP (configurações de rede)](smtp-element-network-settings.md)|Configura as opções de envio de email do protocolo SMTP.|  
   
 ## <a name="remarks"></a>Comentários  
- O `specifiedPickupDirectory` atributo define o diretório em que os aplicativos salvam as mensagens de email a ser processada pelo servidor SMTP.  
+ O `specifiedPickupDirectory` atributo define o diretório em que os aplicativos salvam mensagens de email a serem processadas pelo servidor SMTP.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir especifica c:\maildrop como o diretório de recebimento de email.  
@@ -75,4 +75,4 @@ Configura o diretório local para um servidor de transporte protocolo SMTP (Simp
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: d5766b76f18dce441cb260887a753dcf64642a6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 815e1c26a328d986f91992a1e67e438a563ffea6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674227"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663894"
 ---
-# <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity > elemento para \<tempo de execução >
+# <a name="assemblyidentity-element-for-runtime"></a>\<elemento de > AssemblyIdentity \<para tempo de execução >
 Contém informações de identificação sobre o assembly.  
   
  \<configuration>  
@@ -42,18 +42,18 @@ culture="assembly culture"/>
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`name`|Atributo obrigatório.<br /><br /> O nome do assembly|  
-|`culture`|Atributo opcional.<br /><br /> Uma cadeia de caracteres que especifica o idioma e país/região do assembly.|  
+|`culture`|Atributo opcional.<br /><br /> Uma cadeia de caracteres que especifica o idioma e o país/região do assembly.|  
 |`publicKeyToken`|Atributo opcional.<br /><br /> Um valor hexadecimal que especifica o nome forte do assembly.|  
-|`processorArchitecture`|Atributo opcional.<br /><br /> Um dos valores "x86", "amd64", "msil" ou "ia64", especificando a arquitetura do processador para um assembly que contém o código específico do processador. Os valores não diferenciam maiusculas de minúsculas. Se o atributo é atribuído a qualquer outro valor, toda a `<assemblyIdentity>` elemento será ignorado. Consulte <xref:System.Reflection.ProcessorArchitecture>.|  
+|`processorArchitecture`|Atributo opcional.<br /><br /> Um dos valores "x86", "amd64", "MSIL" ou "IA64", especificando a arquitetura do processador para um assembly que contém código específico do processador. Os valores não diferenciam maiúsculas de minúsculas. Se o atributo for atribuído a qualquer outro valor, todo `<assemblyIdentity>` o elemento será ignorado. Consulte <xref:System.Reflection.ProcessorArchitecture>.|  
   
-## <a name="processorarchitecture-attribute"></a>processorArchitecture atributo  
+## <a name="processorarchitecture-attribute"></a>Atributo processorArchitecture  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`amd64`|AMD 64 x86 somente a arquitetura.|  
-|`ia64`|Somente arquitetura Intel Itanium.|  
+|`amd64`|Somente arquitetura AMD x86-64.|  
+|`ia64`|Somente a arquitetura Itanium da Intel.|  
 |`msil`|Neutro em relação ao processador e bits por palavra.|  
-|`x86`|Um x86 de 32 bits processador, nativo ou no Windows no ambiente do Windows (WOW) em uma plataforma de 64 bits.|  
+|`x86`|Um processador x86 de 32 bits, nativo ou no ambiente Windows no Windows (WOW) em uma plataforma de 64 bits.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -68,11 +68,11 @@ culture="assembly culture"/>
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Cada  **\<dependentAssembly >** elemento deve ter uma  **\<assemblyIdentity >** elemento filho.  
+ **Cada\<elemento de > dependentAssembly** deve ter um  **\<AssemblyIdentity >** elemento filho.  
   
- Se o `processorArchitecture` atributo estiver presente, o `<assemblyIdentity>` elemento se aplica apenas ao assembly com a arquitetura do processador correspondente. Se o `processorArchitecture` atributo não estiver presente, o `<assemblyIdentity>` elemento pode ser aplicado a um assembly com qualquer arquitetura de processador.  
+ Se o `processorArchitecture` atributo estiver presente, o `<assemblyIdentity>` elemento se aplicará somente ao assembly com a arquitetura de processador correspondente. Se o `processorArchitecture` atributo não estiver presente, o `<assemblyIdentity>` elemento poderá ser aplicado a um assembly com qualquer arquitetura de processador.  
   
- O exemplo a seguir mostra um arquivo de configuração para dois assemblies com o mesmo nome que tenham como alvo duas diferentes arquiteturas de processador dois e cujas versões não tem sido mantidas em sincronia. Quando o aplicativo é executado em x86 plataforma primeiro `<assemblyIdentity>` elemento se aplica e o outro é ignorado. Se o aplicativo é executado em uma plataforma diferente x86 ou ia64, ambos serão ignoradas.  
+ O exemplo a seguir mostra um arquivo de configuração para dois assemblies com o mesmo nome direcionado a duas arquiteturas de processador diferentes, e cujas versões não foram mantidas em sincronia. Quando o aplicativo é executado na plataforma x86, o primeiro `<assemblyIdentity>` elemento se aplica e o outro é ignorado. Se o aplicativo for executado em uma plataforma diferente de x86 ou ia64, ambos serão ignorados.  
   
 ```xml  
 <configuration>  
@@ -99,7 +99,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- Se um arquivo de configuração contém um `<assemblyIdentity>` elemento sem nenhuma `processorArchitecture` de atributos e não contém um elemento que corresponda à plataforma, o elemento sem o `processorArchitecture` atributo é usado.  
+ Se um arquivo de configuração contiver um `<assemblyIdentity>` elemento `processorArchitecture` sem atributo e não contiver um elemento que corresponda à plataforma, o elemento sem o `processorArchitecture` atributo será usado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como fornecer informações sobre um assembly.  
@@ -121,6 +121,6 @@ culture="assembly culture"/>
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Redirecionando versões de assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [Redirecionando versões de assembly](../../redirect-assembly-versions.md)

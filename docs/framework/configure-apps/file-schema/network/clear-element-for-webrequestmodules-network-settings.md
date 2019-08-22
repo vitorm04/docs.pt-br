@@ -10,14 +10,14 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e175c70bd4932d6a8f9428e8cd9159a47df52558
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674591"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659434"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Limpar > elemento para webRequestModules (configurações de rede)
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<limpar > elemento para webRequestModules (configurações de rede)
 Remove todos os módulos de solicitação da Web registrados do aplicativo.  
   
  \<configuration>  
@@ -44,16 +44,16 @@ Remove todos os módulos de solicitação da Web registrados do aplicativo.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica os módulos para usá-lo para solicitar informações de hosts da rede.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Especifica os módulos a serem usados para solicitar informações de hosts de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `clear` elemento remove todos os módulos de solicitação da Web que foram definidos anteriormente no arquivo de configuração ou em um nível mais alto na hierarquia de configuração.  
+ O `clear` elemento remove todos os módulos de solicitação da Web registrados que foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir limpa todos os módulos de solicitação da Web e, em seguida, registra um módulo de solicitação da Web para HTTP.  
+ O exemplo a seguir limpa todos os módulos de solicitação da Web e registra um módulo de solicitação da Web para HTTP.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Remove todos os módulos de solicitação da Web registrados do aplicativo.
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Net.WebRequest>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

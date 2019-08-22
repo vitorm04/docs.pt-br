@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1251f286a4e6168ef1d18b05288e0c5f353ad828
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 197ab9dbc1ec85bf8961f60bb26496eab788e63f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689875"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663695"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup > elemento
+# <a name="gccpugroup-element"></a>\<Elemento de > GCCpuGroup
 
 Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.
 
-\<configuration>\
+\<> de configuração \
 \<runtime>\
 \<GCCpuGroup>
 
@@ -43,8 +43,8 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`false`|Coleta de lixo não oferece suporte a vários grupos de CPU. Esse é o padrão.|
-|`true`|Coleta de lixo dá suporte a vários grupos de CPU, se a coleta de lixo do servidor estiver habilitada.|
+|`false`|A coleta de lixo não dá suporte a vários grupos de CPU. Esse é o padrão.|
+|`true`|A coleta de lixo oferece suporte a vários grupos de CPU, se a coleta de lixo do servidor estiver habilitada.|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -59,10 +59,10 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-Quando um computador tiver vários grupos de CPU e coleta de lixo do servidor está habilitada (consulte a [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento), permitindo que esse elemento se estende a coleta de lixo em todos os grupos de CPU e usa todos os núcleos em conta durante a criação e heaps de balanceamento.
+Quando um computador tem vários grupos de CPU e a coleta de lixo do servidor está habilitada (consulte o elemento [ \<gcServer >](gcserver-element.md) ), a habilitação desse elemento estende a coleta de lixo em todos os grupos de CPU e leva todos os núcleos em conta ao criar e balanceamento de heaps.
 
 > [!NOTE]
-> Esse elemento só se aplica a threads de coleta de lixo. Para habilitar o tempo de execução distribui threads de usuário em todos os grupos de CPU, você deve habilitar também a [ \<Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) elemento.
+> Este elemento aplica-se somente a threads de coleta de lixo. Para habilitar o tempo de execução para distribuir threads de usuário em todos os grupos de CPU, você também deve habilitar o elemento de [ \<> Thread_UseAllCpuGroups](thread-useallcpugroups-element.md) .
 
 ## <a name="example"></a>Exemplo
 
@@ -79,7 +79,7 @@ O exemplo a seguir mostra como habilitar a coleta de lixo para vários grupos de
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)
 - [Para desabilitar a coleta de lixo simultânea](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Coleta de lixo de estação de trabalho ou de servidor](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

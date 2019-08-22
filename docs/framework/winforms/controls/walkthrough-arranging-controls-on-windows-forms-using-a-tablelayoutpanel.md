@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 7566f19282ffd5a3cac86693a64899f25ce37b9f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 289a8427540c713758c3f155e72efffe9f3c85bc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040287"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666800"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Passo a passo: Organizar controles nos Windows Forms usando um TableLayoutPanel
 
@@ -46,7 +46,6 @@ As tarefas ilustradas neste passo a passo incluem:
 - Reatribuição de controles existentes a um pai diferente
 
 Ao terminar, você terá um entendimento da função desempenhada por esses importantes recursos de layout.
-
 
 ## <a name="creating-the-project"></a>Criando o Projeto
 
@@ -142,7 +141,7 @@ Quando você estiver inserindo controles no <xref:System.Windows.Forms.TableLayo
 
 2. Quando o <xref:System.Windows.Forms.TableLayoutPanel> controle estiver cheio <xref:System.Windows.Forms.Button> , clique duas vezes no ícone na **caixa de ferramentas** para inserir <xref:System.Windows.Forms.Button> outro controle. Observe que o <xref:System.Windows.Forms.TableLayoutPanel> controle cria novas células para acomodar o novo controle. Insira mais alguns controles e observe o comportamento de redimensionamento.
 
-3. Altere o valor da <xref:System.Windows.Forms.TableLayoutPanel> Propriedade do <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> controle para <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>. Clique <xref:System.Windows.Forms.Button> duas vezes no ícone na **caixa de ferramentas** para <xref:System.Windows.Forms.Button> inserir controles até <xref:System.Windows.Forms.TableLayoutPanel> que o controle esteja cheio. Clique <xref:System.Windows.Forms.Button> duas vezes no ícone na **caixa de ferramentas** novamente. Observe que você receberá uma mensagem de erro do **Designer de Formulários do Windows**, informando que não possível criar mais linhas e colunas.
+3. Altere o valor da propriedade <xref:System.Windows.Forms.TableLayoutPanel> do controle <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> para <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>. Clique <xref:System.Windows.Forms.Button> duas vezes no ícone na **caixa de ferramentas** para <xref:System.Windows.Forms.Button> inserir controles até <xref:System.Windows.Forms.TableLayoutPanel> que o controle esteja cheio. Clique <xref:System.Windows.Forms.Button> duas vezes no ícone na **caixa de ferramentas** novamente. Observe que você receberá uma mensagem de erro do **Designer de Formulários do Windows**, informando que não possível criar mais linhas e colunas.
 
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Inserindo um controle ao desenhar seu contorno
 

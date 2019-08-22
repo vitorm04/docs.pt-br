@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8ea08cbd76e60a3665703bc50924dd94500cd87
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674482"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659328"
 ---
-# <a name="mailsettings-element-network-settings"></a>\<mailSettings > (configurações de rede)
+# <a name="mailsettings-element-network-settings"></a>\<Elemento de > mailSettings (configurações de rede)
 Configura as opções de envio de email.  
 
 \<configuration>  
@@ -40,16 +40,16 @@ Configura as opções de envio de email.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|[\<SMTP > (configurações de rede)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Configura as opções de Simple Mail Transport Protocol.|  
+|[\<Elemento de > SMTP (configurações de rede)](smtp-element-network-settings.md)|Configura opções de protocolo de transporte de email simples.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|Elemento [\<system.Net> (configurações de rede)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contém configurações que especificam como o .NET Framework se conecta à rede.|  
+|Elemento [\<system.Net> (configurações de rede)](system-net-element-network-settings.md)|Contém configurações que especificam como o .NET Framework se conecta à rede.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir especifica os parâmetros apropriados de SMTP para enviar email usando as credenciais de rede padrão.  
+ O exemplo a seguir especifica os parâmetros de SMTP apropriados para enviar email usando as credenciais de rede padrão.  
   
 ```xml  
 <configuration>  
@@ -70,4 +70,4 @@ Configura as opções de envio de email.
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Net.Mail.SmtpClient>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

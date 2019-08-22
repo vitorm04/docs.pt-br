@@ -10,14 +10,14 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 733c70b0575de7e2635afaab58ad48591f035fc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86a7a0ab402c8c40ec3b824402a1dba984412b68
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705228"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659440"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<Limpar > elemento para connectionManagement (configurações de rede)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<limpar > elemento para connectionManagement (configurações de rede)
 Limpa a lista de gerenciamento de conexão.  
   
  \<configuration>  
@@ -44,16 +44,16 @@ Limpa a lista de gerenciamento de conexão.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões para um host de rede.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões com um host de rede.|  
   
 ## <a name="remarks"></a>Comentários  
  O `clear` elemento limpa todas as entradas da lista de gerenciamento de conexão.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir limpa a lista de gerenciamento de conexão e, em seguida, adiciona novas entradas de gerenciamento de conexão para o servidor `www.contoso.com` e todos os outros hosts de rede.  
+ O exemplo a seguir limpa a lista de gerenciamento de conexão e, em seguida, adiciona novas entradas `www.contoso.com` de gerenciamento de conexão para o servidor e todos os outros hosts de rede.  
   
 ```xml  
 <configuration>  
@@ -71,4 +71,4 @@ Limpa a lista de gerenciamento de conexão.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

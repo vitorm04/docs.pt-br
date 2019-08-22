@@ -5,19 +5,18 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding column headers
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
-ms.openlocfilehash: e82fbcf63047873ebc6e5c40b8b9fbeb14a672e5
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 10963fcb6d87ed74f73ecf4f1831a56eae5a392d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038175"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658452"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>Como: Adicionar colunas ao controle ListView do Windows Forms usando o Designer
 
 O controle <xref:System.Windows.Forms.ListView> Windows Forms pode exibir várias colunas para cada item de lista quando estiver na exibição de **detalhes** . Você pode usar as colunas para exibir vários tipos de informações sobre cada item de lista. Por exemplo, uma lista de arquivos pode exibir o nome do arquivo, tipo de arquivo, tamanho e data da última modificação do arquivo. Para obter informações sobre como preencher as colunas depois que elas são [criadas, consulte Como: Exibir subitens em colunas com o controle](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)ListView Windows Forms.
 
 O procedimento a seguir requer um projeto de **aplicativo do Windows** com um <xref:System.Windows.Forms.ListView> formulário que contém um controle. Para obter informações sobre como configurar esse projeto, consulte [como: Crie um projeto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicativo Windows Forms [e como: Adicione controles a Windows Forms](how-to-add-controls-to-windows-forms.md).
-
 
 ### <a name="to-add-columns-in-the-designer"></a>Para adicionar colunas no designer
 

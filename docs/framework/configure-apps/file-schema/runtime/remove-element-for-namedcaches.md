@@ -5,12 +5,12 @@ helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 053e2776153489dfdd61547fdc039980646ae697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9b126cee83bc8109606d915ea48549beea970c9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704711"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663471"
 ---
 # <a name="remove-element-for-namedcaches"></a>\<Remover > elemento para \<namedCaches >
 Remove uma entrada de cache nomeado da coleção de `namedCaches` para um cache de memória.  
@@ -45,11 +45,11 @@ Remove uma entrada de cache nomeado da coleção de `namedCaches` para um cache 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Contém uma coleção de definições de configuração para nomeado <xref:System.Runtime.Caching.MemoryCache> instâncias.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Contém uma coleção de definições de configuração para as <xref:System.Runtime.Caching.MemoryCache> instâncias nomeadas.|  
   
 ## <a name="remarks"></a>Comentários  
- O `remove` elemento remove uma `namedCache` entrada da coleção para um cache de memória cache nomeado.  
+ O `remove` elemento remove uma `namedCache` entrada da coleção de cache nomeado para um cache de memória.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [\<namedCaches > (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<Elemento de > namedCaches (configurações de cache)](namedcaches-element-cache-settings.md)

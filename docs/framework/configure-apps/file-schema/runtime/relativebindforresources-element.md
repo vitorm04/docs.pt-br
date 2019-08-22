@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15156eaf883fc9ec162e0a85525564d49522b01d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 859e8a12421ea92aa48c54317e052683eb8e83f8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592664"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663491"
 ---
-# <a name="relativebindforresources-element"></a>\<relativeBindForResources > elemento
+# <a name="relativebindforresources-element"></a>\<Elemento de > relativeBindForResources
 Otimiza o teste para assemblies satélites.  
   
- \<Configuração > elemento  
-\<tempo de execução > elemento  
-\<relativeBindForResources > elemento  
+ \<Elemento de > de configuração  
+\<Elemento de > de tempo de execução  
+\<Elemento de > relativeBindForResources  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,14 +35,14 @@ Otimiza o teste para assemblies satélites.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o common language runtime otimiza a investigação de assemblies satélite.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o Common Language Runtime otimiza a investigação para assemblies satélite.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|O tempo de execução não otimiza a investigação de assemblies satélite. Este é o valor padrão.|  
-|`true`|O tempo de execução otimiza a investigação de assemblies satélite.|  
+|`false`|O tempo de execução não otimiza a investigação para assemblies satélite. Este é o valor padrão.|  
+|`true`|O tempo de execução otimiza a investigação para assemblies satélite.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -55,24 +55,24 @@ Otimiza o teste para assemblies satélites.
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Em geral, o Gerenciador de recursos de investigações para recursos, conforme documentado na [Empacotando e implantando recursos](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) tópico. Isso significa que quando investigações do Gerenciador de recursos para uma versão localizada específica de um recurso, ele pode procurar no cache de assembly global, procurar em uma pasta específicas da cultura na consulta do aplicativo de base, de código do Windows Installer para assemblies satélite e acionar o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos. O `<relativeBindForResources>` elemento otimiza a maneira na qual o Gerenciador de recursos investigações para assemblies satélite. Ele pode melhorar o desempenho quando a investigação para recursos nas seguintes condições:  
+ Em geral, as investigações do Resource Manager para recursos, conforme documentado no tópico [empacotando e implantando recursos](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) . Isso significa que quando o Gerenciador de recursos investiga uma versão localizada específica de um recurso, ele pode procurar no cache de assembly global, examinar uma pasta específica de cultura na base de código do aplicativo, consultar Windows Installer para assemblies satélites e gerar o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento. O `<relativeBindForResources>` elemento otimiza a maneira como as investigações do Gerenciador de recursos para assemblies satélite. Ele pode melhorar o desempenho ao investigar os recursos sob as seguintes condições:  
   
-- Quando o assembly satélite é implantado no mesmo local que o assembly de código. Em outras palavras, se o assembly de código estiver instalado no cache de assembly global, os assemblies satélites também devem ser instalados lá. Se o assembly de código estiver instalado na base de código do aplicativo, os assemblies satélites também devem ser instalados em uma pasta específica de cultura na base de código.  
+- Quando o assembly satélite é implantado no mesmo local que o assembly de código. Em outras palavras, se o assembly de código estiver instalado no cache de assembly global, os assemblies satélite também deverão ser instalados lá. Se o assembly de código estiver instalado na base de código do aplicativo, os assemblies satélite também deverão ser instalados em uma pasta específica de cultura na base de código.  
   
-- Quando o Windows Installer não é usado ou apenas raramente é usado para instalação sob demanda dos assemblies satélites.  
+- Quando Windows Installer não é usado ou é usado apenas raramente para a instalação sob demanda de assemblies satélite.  
   
-- Quando o código do aplicativo não processa o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
+- Quando o código do aplicativo não manipula <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> o evento.  
   
- Definindo o `enabled` atributo o `<relativeBindForResources>` elemento a ser `true` otimiza a investigação do Gerenciador de recursos para assemblies satélite da seguinte maneira:  
+ Definir o `enabled` atributo `<relativeBindForResources>` do elemento para `true` otimizar a investigação do Gerenciador de recursos para assemblies satélite da seguinte maneira:  
   
 - Ele usa o local do assembly de código pai para investigar o assembly satélite.  
   
-- Ele não consulta do Windows Installer para assemblies satélite.  
+- Ele não consulta Windows Installer para assemblies satélite.  
   
-- Ele não gere a <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
+- Ele não gera o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Empacotando e implantando recursos](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Empacotando e implantando recursos](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)

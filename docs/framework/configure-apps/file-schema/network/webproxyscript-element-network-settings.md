@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a77c2567401fd80e355bb7fcee17b6684653ebe
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674357"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659041"
 ---
-# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > (configurações de rede)
-Configura as características do script usado para descobrir os proxies da Web.  
+# <a name="webproxyscript-element-network-settings"></a>\<Elemento de > webProxyScript (configurações de rede)
+Configura as características do script usado para descobrir proxies da Web.  
   
  \<configuration>  
 \<system.net>  
-\<Configurações >  
+\<> de configurações  
 \<webProxyScript>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -47,13 +47,13 @@ Configura as características do script usado para descobrir os proxies da Web.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
+|[settings](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)

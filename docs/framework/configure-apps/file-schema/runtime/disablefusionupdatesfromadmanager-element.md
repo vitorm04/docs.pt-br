@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a1923e70143ea2a158447eccdb35d347fe4f51ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487671"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663777"
 ---
-# <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > elemento
+# <a name="disablefusionupdatesfromadmanager-element"></a>\<Elemento de > disableFusionUpdatesFromADManager
 Especifica se o comportamento padrão, que é permitir que o host de tempo de execução substitua as definições de configuração de um domínio de aplicativo, está desabilitado.  
   
- \<Configuração > elemento  
-\<tempo de execução > elemento  
+ \<Elemento de > de configuração  
+\<Elemento de > de tempo de execução  
 \<disableFusionUpdatesFromADManager>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,14 +34,14 @@ Especifica se o comportamento padrão, que é permitir que o host de tempo de ex
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|habilitado|Atributo obrigatório.<br /><br /> Especifica se a capacidade de padrão para substituir as definições de fusão está desabilitada.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se a capacidade padrão de substituir as configurações de fusão está desabilitada.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0|Não desabilite a capacidade de substituir as configurações de fusão. Isso é o comportamento padrão, começando com o .NET Framework 4.|  
-|1|Desabilite a capacidade de substituir as configurações de fusão. Isso será revertido para o comportamento de versões anteriores do .NET Framework.|  
+|0|Não desabilite a capacidade de substituir as configurações de fusão. Esse é o comportamento padrão, começando com o .NET Framework 4.|  
+|1|Desabilite a capacidade de substituir as configurações de fusão. Isso reverte para o comportamento de versões anteriores do .NET Framework.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -54,18 +54,18 @@ Especifica se o comportamento padrão, que é permitir que o host de tempo de ex
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Começando com o .NET Framework 4, o comportamento padrão é permitir que o <xref:System.AppDomainManager> objeto a substituir as definições de configuração usando o <xref:System.AppDomainSetup.ConfigurationFile%2A> propriedade ou o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método da <xref:System.AppDomainSetup> objeto que é passado para sua implementação dos <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método, em sua subclasse de <xref:System.AppDomainManager>. Para o domínio de aplicativo padrão, as configurações alteradas substituirão as configurações que foram especificadas pelo arquivo de configuração de aplicativo. Para outros domínios de aplicativo, elas substituirão as configurações de configuração que foram passadas para o <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> ou <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> método.  
+ Começando com o .NET Framework 4, o comportamento padrão é permitir que o <xref:System.AppDomainManager> objeto substitua as definições de configuração usando a <xref:System.AppDomainSetup.ConfigurationFile%2A> propriedade <xref:System.AppDomainSetup> ou o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método do objeto que é passado para sua implementação do método, em sua subclasse de <xref:System.AppDomainManager>. <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> Para o domínio de aplicativo padrão, as configurações alteradas substituem as configurações que foram especificadas pelo arquivo de configuração do aplicativo. Para outros domínios de aplicativo, eles substituem as definições de configuração que foram <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> passadas para o método ou <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> .  
   
- Você pode passar novas informações de configuração ou passar null (`Nothing` no Visual Basic) para eliminar informações de configuração que foi passadas.  
+ Você pode passar novas informações de configuração ou passar NULL (`Nothing` em Visual Basic) para eliminar informações de configuração que foram passadas.  
   
- Não passe informações de configuração para ambos os <xref:System.AppDomainSetup.ConfigurationFile%2A> propriedade e o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método. Se você passar informações de configuração como "ambas", as informações que você passa para o <xref:System.AppDomainSetup.ConfigurationFile%2A> propriedade será ignorada, pois o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método substitui as informações de configuração do arquivo de configuração de aplicativo. Se você usar o <xref:System.AppDomainSetup.ConfigurationFile%2A> propriedade, você pode passar nulo (`Nothing` no Visual Basic) para o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método para eliminar quaisquer bytes de configuração que foram especificados na chamada para o <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> ou <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> método.  
+ Não transmita informações de configuração para a <xref:System.AppDomainSetup.ConfigurationFile%2A> Propriedade e o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método. Se você passar informações de configuração para ambos, as informações passadas para <xref:System.AppDomainSetup.ConfigurationFile%2A> a propriedade serão ignoradas, <xref:System.AppDomainSetup.SetConfigurationBytes%2A> pois o método substitui as informações de configuração do arquivo de configuração do aplicativo. Se você usar a <xref:System.AppDomainSetup.ConfigurationFile%2A> Propriedade, poderá passar NULL (`Nothing` em Visual Basic) para o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método para eliminar quaisquer bytes de configuração que foram especificados na chamada para o <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> método ou <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> .  
   
- Além das informações de configuração, você pode alterar as configurações a seguir na <xref:System.AppDomainSetup> objeto que é passado para sua implementação do <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, e <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
+ Além das informações de configuração, você pode alterar as seguintes <xref:System.AppDomainSetup> configurações no objeto que é passado para a implementação <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> do <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>método: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A> <xref:System.AppDomainSetup.CachePath%2A>,,, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> ,,,,<xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>,, ,<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>e. <xref:System.AppDomainSetup.ShadowCopyFiles%2A> <xref:System.AppDomainSetup.PrivateBinPathProbe%2A> <xref:System.AppDomainSetup.DisallowCodeDownload%2A> <xref:System.AppDomainSetup.DynamicBase%2A> <xref:System.AppDomainSetup.LoaderOptimization%2A> <xref:System.AppDomainSetup.PrivateBinPath%2A>  
   
- Como uma alternativa ao uso de `<disableFusionUpdatesFromADManager>` elemento, você pode desabilitar o comportamento padrão ao criar uma configuração do registro ou definindo uma variável de ambiente. No registro, crie um valor DWORD denominado `COMPLUS_disableFusionUpdatesFromADManager` sob `HKCU\Software\Microsoft\.NETFramework` ou `HKLM\Software\Microsoft\.NETFramework`e defina o valor como 1. Na linha de comando, defina a variável de ambiente `COMPLUS_disableFusionUpdatesFromADManager` como 1.  
+ Como alternativa ao uso do `<disableFusionUpdatesFromADManager>` elemento, você pode desabilitar o comportamento padrão criando uma configuração do registro ou definindo uma variável de ambiente. No registro, crie um valor DWORD chamado `COMPLUS_disableFusionUpdatesFromADManager` em `HKCU\Software\Microsoft\.NETFramework` ou `HKLM\Software\Microsoft\.NETFramework`e defina o valor como 1. Na linha de comando, defina a variável `COMPLUS_disableFusionUpdatesFromADManager` de ambiente como 1.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como desabilitar a capacidade de substituir as configurações de fusão, usando o `<disableFusionUpdatesFromADManager>` elemento.  
+ O exemplo a seguir mostra como desabilitar a capacidade de substituir as configurações de fusão usando `<disableFusionUpdatesFromADManager>` o elemento.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ Especifica se o comportamento padrão, que é permitir que o host de tempo de ex
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [Como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)

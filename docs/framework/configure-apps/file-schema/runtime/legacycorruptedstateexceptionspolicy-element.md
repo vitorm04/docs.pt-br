@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2715548a40579375cebbdd5fb9003738a42ff714
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489439"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663660"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > elemento
-Especifica se o common language runtime permite código gerenciado detecte violações de acesso e outras exceções de estado corrompido.  
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<Elemento de > legacyCorruptedStateExceptionsPolicy
+Especifica se o Common Language Runtime permite que o código gerenciado Capture violações de acesso e outras exceções de estado corrompidas.  
   
  \<configuration>  
 \<runtime>  
@@ -34,14 +34,14 @@ Especifica se o common language runtime permite código gerenciado detecte viola
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica que o aplicativo irá capturar corrompendo falhas de exceção de estado, como violações de acesso.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica que o aplicativo irá detectar falhas de exceção de estado corrompido, como violações de acesso.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|O aplicativo não capturará corrompendo falhas de exceção de estado, como violações de acesso. Esse é o padrão.|  
-|`true`|O aplicativo irá capturar corrompendo falhas de exceção de estado, como violações de acesso.|  
+|`false`|O aplicativo não detectará falhas de exceção de estado corrompido, como violações de acesso. Esse é o padrão.|  
+|`true`|O aplicativo detectará falhas de exceção de estado corrompido, como violações de acesso.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -54,20 +54,20 @@ Especifica se o common language runtime permite código gerenciado detecte viola
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- No .NET Framework versão 3.5 e anteriores, o common language runtime permitido código gerenciado capturar exceções que foram geradas por estados de processo corrompido. Uma violação de acesso é um exemplo desse tipo de exceção.  
+ No .NET Framework versão 3,5 e anteriores, o Common Language Runtime permitia código gerenciado para capturar exceções que foram geradas por Estados de processo corrompidos. Uma violação de acesso é um exemplo desse tipo de exceção.  
   
- Começando com o .NET Framework 4, código gerenciado não captura esses tipos de exceções em `catch` blocos. No entanto, você pode substituir essa alteração e manter o tratamento de exceções de estado corrompido de duas maneiras:  
+ A partir do .NET Framework 4, o código gerenciado não captura mais esses tipos de exceções em `catch` blocos. No entanto, você pode substituir essa alteração e manter a manipulação de exceções de estado corrompidas de duas maneiras:  
   
-- Defina as `<legacyCorruptedStateExceptionsPolicy>` do elemento `enabled` atributo `true`. Essa configuração é aplicada processwide e afeta todos os métodos.  
+- Defina o `<legacyCorruptedStateExceptionsPolicy>` atributo do `enabled` elemento como `true`. Essa configuração é aplicada processwide e afeta todos os métodos.  
   
  - ou -  
   
-- Aplicar a <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> de atributo para o método que contém as exceções `catch` bloco.  
+- Aplique o <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> atributo ao método que contém o bloco de `catch` exceções.  
   
  Este elemento de configuração está disponível apenas no .NET Framework 4 e posterior.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar que o aplicativo deve reverter para o comportamento antes do .NET Framework 4 e detectar corrompam todas as falhas de exceção de estado.  
+ O exemplo a seguir mostra como especificar que o aplicativo deve reverter para o comportamento antes do .NET Framework 4 e capturar todas as falhas de exceção de estado corrompido.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ Especifica se o common language runtime permite código gerenciado detecte viola
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)

@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704603"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663531"
 ---
-# <a name="probing-element"></a>\<investigação > elemento
-Especifica os subdiretórios do aplicativo base para o common language runtime quando o carregamento de assemblies de pesquisa.  
+# <a name="probing-element"></a>\<Elemento de > de investigação
+Especifica subdiretórios base do aplicativo para a Common Language Runtime Pesquisar ao carregar assemblies.  
   
  \<configuration>  
 \<runtime>  
 \<assemblyBinding>  
-\<investigação >  
+\<> de investigação  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ Especifica os subdiretórios do aplicativo base para o common language runtime q
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`privatePath`|Atributo obrigatório.<br /><br /> Especifica os subdiretórios do diretório de base do aplicativo que podem conter assemblies. Delimite cada subdiretório com um ponto e vírgula.|  
+|`privatePath`|Atributo obrigatório.<br /><br /> Especifica subdiretórios do diretório base do aplicativo que pode conter assemblies. Delimite cada subdiretório com um ponto e vírgula.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -53,7 +53,7 @@ Especifica os subdiretórios do aplicativo base para o common language runtime q
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar o tempo de execução deve procurar assemblies de base e subdiretórios do aplicativo.  
+ O exemplo a seguir mostra como especificar subdiretórios base do aplicativo em que o tempo de execução deve pesquisar assemblies.  
   
 ```xml  
 <configuration>  
@@ -67,7 +67,7 @@ Especifica os subdiretórios do aplicativo base para o common language runtime q
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Especificando o local de um assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [Especificando o local de um assembly](../../specify-assembly-location.md)
+- [Como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)

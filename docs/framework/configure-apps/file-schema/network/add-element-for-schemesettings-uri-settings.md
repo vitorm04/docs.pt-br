@@ -2,14 +2,14 @@
 title: Elemento <add> para schemeSettings (Configurações de URI)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 027c7aaffea7950739f532309255d77afa031ada
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674695"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659548"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>\<Adicionar > elemento para schemeSettings (configurações de Uri)
+# <a name="add-element-for-schemesettings-uri-settings"></a>\<Adicionar > elemento para schemeSettings (configurações de URI)
 Adiciona uma configuração de esquema para um nome de esquema.  
   
  \<configuration>  
@@ -33,13 +33,13 @@ Adiciona uma configuração de esquema para um nome de esquema.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|name|O nome do esquema para o qual essa configuração se aplica. O somente valores com suporte são nome = "http" e o nome = "https".|  
+|name|O nome do esquema ao qual essa configuração se aplica. Os únicos valores com suporte são Name = "http" e Name = "https".|  
   
-## <a name="attribute-name-attribute"></a>{Nome do atributo} Atributo  
+## <a name="attribute-name-attribute"></a>{Nome do atributo} Attribute  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|genericUriParserOptions|As opções de analisador para este esquema. O somente valor com suporte é genericUriParserOptions = "DontUnescapePathDotsAndSlashes".|  
+|genericUriParserOptions|As opções do analisador para este esquema. O único valor com suporte é genericUriParserOptions = "DontUnescapePathDotsAndSlashes".|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -48,28 +48,28 @@ Adiciona uma configuração de esquema para um nome de esquema.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<schemeSettings> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md) [Elemento schemeSettings> (configurações de URI)]|Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.|  
+|[\<schemeSettings> Element (Uri Settings)](schemesettings-element-uri-settings.md) [Elemento schemeSettings> (configurações de URI)]|Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, o <xref:System.Uri?displayProperty=nameWithType> por cento un-escapes de classe codificado delimitadores de caminho antes de executar a compactação de caminho. Isso era implementado como um mecanismo de segurança contra ataques, como o seguinte:  
+ Por padrão, a <xref:System.Uri?displayProperty=nameWithType> classe não escapa os delimitadores de caminho codificados por porcentagem antes de executar a compactação de caminho. Isso foi implementado como um mecanismo de segurança contra ataques como o seguinte:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Se esse URI é passado para baixo para módulos de manipulação não % caracteres codificados corretamente, isso poderá resultar no comando a seguir, que está sendo executado pelo servidor:  
+ Se esse URI for passado para os módulos que não manipulam a porcentagem de caracteres codificados corretamente, isso pode fazer com que o seguinte comando seja executado pelo servidor:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Por esse motivo, <xref:System.Uri?displayProperty=nameWithType> delimitadores de caminho primeiro cancelar escapes de classe e, em seguida, aplica-se a compactação de caminho. O resultado de passar a URL mal-intencionado acima para <xref:System.Uri?displayProperty=nameWithType> classe resultados construtor no seguinte URI:  
+ Por esse motivo, <xref:System.Uri?displayProperty=nameWithType> a classe não escapa primeiro os delimitadores de caminho e, em seguida, aplica a compactação de caminho. O resultado da passagem da URL mal-intencionada acima para <xref:System.Uri?displayProperty=nameWithType> o construtor de classe resulta no seguinte URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Esse comportamento padrão pode ser modificado para não cancelar escape porcentagem codificado delimitadores de caminho usando a opção de configuração schemeSettings para um esquema específico.  
+ Esse comportamento padrão pode ser modificado para não cancelar o escape de delimitadores de caminho codificados por porcentagem usando a opção de configuração schemeSettings para um esquema específico.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra uma configuração usada pelo <xref:System.Uri> classe para dar suporte a escape não delimitadores de caminho codificado por percentual para o esquema de http.  
+ O exemplo a seguir mostra uma configuração usada pela <xref:System.Uri> classe para dar suporte a não escapar delimitadores de caminho codificados por porcentagem para o esquema http.  
   
 ```xml  
 <configuration>  
@@ -89,4 +89,4 @@ Adiciona uma configuração de esquema para um nome de esquema.
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](index.md)
