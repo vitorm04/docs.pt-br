@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634415"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567473"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalhes do comportamento de expressões regulares
 O mecanismo de expressões regulares do .NET Framework é um correspondente de expressão regular de retrocesso que incorpora um mecanismo de NFA (Automação Finita Não Determinística) tradicional, como o usado pelo Perl, Python, Emacs e Tcl. Isso o distingue de mecanismos de DFA (Autômato finito determinístico) de expressões regulares puras mais rápidos, porém mais limitados, como os encontrados em awk, egrep ou lex. Também o distingue de NFAs POSIX padronizados, porém mais lentos. A seção a seguir descreve os três tipos de mecanismos de expressões regulares e explica por que as expressões regulares no .NET Framework são implementadas usando um mecanismo de NFA tradicional.  
@@ -43,9 +43,9 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
-     As versões Greedy e lenta dessa expressão regular são definidas como mostrado na tabela a seguir.  
+     As versões Greedy e lenta dessa expressão regular são definidas como mostrado na tabela a seguir:
   
-    |Padrão|Descrição|  
+    |Padrão|DESCRIÇÃO|  
     |-------------|-----------------|  
     |`.+` (quantificador Greedy)|Corresponder a pelo menos uma ocorrência de qualquer caractere. Isso faz com que o mecanismo de expressões regulares corresponda à cadeia de caracteres inteira e, em seguida, retroceda da forma necessária para corresponder ao restante do padrão.|  
     |`.+?` (quantificador lento)|Corresponder a pelo menos uma ocorrência de qualquer caractere, mas ao menor número possível.|  
@@ -61,7 +61,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
   
      A expressão regular `\b[A-Z]+\b(?=\P{P})` é definida conforme mostrado na tabela a seguir.  
   
-    |Padrão|Descrição|  
+    |Padrão|DESCRIÇÃO|  
     |-------------|-----------------|  
     |`\b`|Começa a correspondência em um limite de palavra.|  
     |`[A-Z]+`|Corresponder a qualquer caractere alfabético uma ou mais vezes. Como o método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, essa comparação não diferencia maiúsculas de minúsculas.|  
@@ -77,7 +77,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
   
      O padrão de expressão regular `\b(?!non)\w+\b` é definido conforme mostrado na tabela a seguir.  
   
-    |Padrão|Descrição|  
+    |Padrão|DESCRIÇÃO|  
     |-------------|-----------------|  
     |`\b`|Começa a correspondência em um limite de palavra.|  
     |`(?!non)`|Antecipar para garantir que a cadeia de caracteres atual não comece com “non”. Se isso acontecer, a correspondência falha.|  
@@ -93,7 +93,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
   
      O padrão de expressão regular é definido como mostra a tabela a seguir.  
   
-    |Padrão|Descrição|  
+    |Padrão|DESCRIÇÃO|  
     |-------------|-----------------|  
     |`^`|Começar a correspondência no início de uma linha.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Corresponder a zero ou uma ocorrência da cadeia de caracteres `<PRIVATE>` seguida para um caractere de espaço em branco. Atribuir a correspondência a um grupo de captura chamado `Pvt`.|  
@@ -129,13 +129,13 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     A expressão regular `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` é definida conforme mostrado na tabela a seguir.  
+     A expressão regular ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` é definida conforme mostrado na tabela a seguir.  
   
-    |Padrão|Descrição|  
+    |Padrão|DESCRIÇÃO|  
     |-------------|-----------------|  
     |`^`|Começar a correspondência no início da cadeia de caracteres.|  
     |`[A-Z0-9]`|Corresponder a qualquer caractere numérico ou alfanumérico. (A comparação não diferencia maiúsculas de minúsculas.)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|Corresponder a zero ou mais ocorrências de qualquer caractere de palavra ou qualquer um destes caracteres:  -, !, #, $, %, &, ', ., \*, +, /, =, ?, ^, \`, {, }, &#124;, ou ~.|  
     |`(?<=[A-Z0-9])`|Olhar para o caractere anterior, que precisa ser numérico ou alfanumérico. (A comparação não diferencia maiúsculas de minúsculas.)|  
     |`$`|Encerrar a correspondência ao final da cadeia de caracteres.|  
   
@@ -143,7 +143,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Título|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Fornece informações sobre como o retrocesso de expressões regulares se ramifica para encontrar correspondências alternativas.|  
 |[Compilação e reutilização](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Fornece informações sobre a compilação e a reutilização de expressões regulares para aumentar o desempenho.|  
