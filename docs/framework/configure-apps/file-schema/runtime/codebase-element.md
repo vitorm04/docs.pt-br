@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: b5825efcc613689e73fb56b6695fe7c75ff09136
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674188"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663860"
 ---
-# <a name="codebase-element"></a>\<Base de código > elemento
+# <a name="codebase-element"></a>\<Elemento de > codeBase
 
-Especifica onde o common language runtime pode encontrar um assembly.
+Especifica onde o Common Language Runtime pode encontrar um assembly.
 
-\<Configuração > \<runtime > \<assemblyBinding > \<dependentAssembly > \<codeBase >
+\<> \<de tempo de \<execução de configuração \<> assemblyBinding > dependentAssembly > \<codebase >
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,14 +38,14 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|`href`|Atributo obrigatório.<br /><br /> Especifica a URL onde o tempo de execução pode encontrar a versão especificada do assembly.|
-|`version`|Atributo obrigatório.<br /><br /> Especifica a versão do assembly a que a base de código aplica-se. O formato de um número de versão do assembly é *Major*.|
+|`href`|Atributo obrigatório.<br /><br /> Especifica a URL em que o tempo de execução pode encontrar a versão especificada do assembly.|
+|`version`|Atributo obrigatório.<br /><br /> Especifica a versão do assembly à qual a codebase se aplica. O formato de um número de versão do assembly é *Major. Minor. Build. Revision*.|
 
 ## <a name="version-attribute"></a>Atributo de versão
 
 |Valor|Descrição|
 |-----------|-----------------|
-|Para cada parte do número de versão, os valores válidos são 0 a 65535.|Não aplicável.|
+|Os valores válidos para cada parte do número de versão são de 0 a 65535.|Não aplicável.|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -55,18 +55,18 @@ nenhuma.
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|`buildproviders`|Define uma coleção de provedores de compilação usado para compilar os arquivos de recurso personalizado. Você pode ter qualquer número de provedores de compilação.|
-|`compilation`|Configura todas as configurações de compilação que o ASP.NET usa.|
+|`buildproviders`|Define uma coleção de provedores de compilação usados para compilar arquivos de recursos personalizados. Você pode ter qualquer número de provedores de compilação.|
+|`compilation`|Define todas as configurações de compilação que o ASP.NET usa.|
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|
-|`System.web`|Especifica o elemento raiz para a seção de configuração do ASP.NET.|
+|`System.web`|Especifica o elemento raiz para a seção de configuração ASP.NET.|
 
 ## <a name="remarks"></a>Comentários
 
-Para o tempo de execução usar o  **\<codeBase >** configuração em um arquivo de configuração do computador ou arquivo de política de editor, o arquivo também deve redirecionar a versão do assembly. Arquivos de configuração de aplicativo podem ter uma configuração de base de código sem redirecionar a versão do assembly. Depois de determinar qual versão de assembly a ser usada, o tempo de execução se aplica a configuração de base de código do arquivo que determina a versão. Se nenhuma base de código estiver indicado, o tempo de execução investiga o assembly como de costume.
+Para que o tempo de execução use a configuração de  **\<> codebase** em um arquivo de configuração de máquina ou arquivo de política do Publicador, o arquivo também deve redirecionar a versão do assembly. Os arquivos de configuração do aplicativo podem ter uma configuração de CodeBase sem redirecionar a versão do assembly. Depois de determinar qual versão do assembly usar, o tempo de execução aplica a configuração de codebase do arquivo que determina a versão. Se nenhuma codebase for indicada, o tempo de execução investigará o assembly da maneira usual.
 
-Se o assembly tiver um nome forte, a configuração de base de código pode estar em qualquer lugar na intranet local ou na Internet. Se o assembly é um assembly particular, a configuração de base de código deve ser um caminho relativo ao diretório do aplicativo.
+Se o assembly tiver um nome forte, a configuração de CodeBase poderá estar em qualquer lugar na intranet local ou na Internet. Se o assembly for um assembly particular, a configuração de CodeBase deverá ser um caminho relativo ao diretório do aplicativo.
 
-Para assemblies sem um nome forte, a versão é ignorado e o carregador usará a primeira ocorrência desse \<codebase > dentro de \<dependentAssembly >. Se houver uma entrada no arquivo de configuração do aplicativo que redireciona associação a outro assembly, o redirecionamento terá precedência mesmo se a versão do assembly não corresponde a solicitação de associação.
+Para assemblies sem um nome forte, a versão é ignorada e o carregador usa a primeira \<aparência da base \<de código > dentro do dependentAssembly >. Se houver uma entrada no arquivo de configuração de aplicativo que redireciona a associação a outro assembly, o redirecionamento terá precedência mesmo que a versão do assembly não corresponda à solicitação de associação.
 
 ## <a name="example"></a>Exemplo
 
@@ -90,7 +90,7 @@ O exemplo a seguir mostra como especificar onde o tempo de execução pode encon
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Especificando o local de um assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [Especificando o local de um assembly](../../specify-assembly-location.md)
+- [Como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)

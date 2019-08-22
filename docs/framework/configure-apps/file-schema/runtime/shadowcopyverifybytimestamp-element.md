@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4187d266d82783ebb72073c1da92faff95352884
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6f3ea57364832553d16c7e34fc887b1c9f821602
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489383"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663445"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<Elemento shadowCopyVerifyByTimestamp>
-Especifica se a cópia de sombra usa o comportamento de inicialização padrão introduzido no .NET Framework 4, ou será revertido para o comportamento de inicialização de versões anteriores do .NET Framework.  
+Especifica se a cópia de sombra usa o comportamento de inicialização padrão introduzido no .NET Framework 4 ou reverte para o comportamento de inicialização de versões anteriores do .NET Framework.  
   
- \<Configuração > elemento  
-\<tempo de execução > elemento  
+ \<Elemento de > de configuração  
+\<Elemento de > de tempo de execução  
 \<Elemento shadowCopyVerifyByTimestamp>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,14 +34,14 @@ Especifica se a cópia de sombra usa o comportamento de inicialização padrão 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|habilitado|Atributo obrigatório.<br /><br /> Especifica se os domínios de aplicativos que usam a cópia de sombra comparam carimbos de data / hora do assembly ao iniciar, para determinar se um assembly foi atualizado antes do conjunto de cópias de sombra.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se os domínios de aplicativo que usam a cópia de sombra comparam carimbos de data/hora ao iniciar, para determinar se um assembly foi atualizado antes de copiar a sombra do assembly.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|true|Na inicialização, copia apenas os assemblies tenham sido atualizados desde a última foram copiados para o diretório de cópia de sombra. Esse é o padrão para o .NET Framework 4.|  
-|false|Reverte para o comportamento de inicialização de versões anteriores do .NET Framework, que foi copiar todos os arquivos na inicialização.|  
+|true|Na inicialização, o copia somente os assemblies que foram atualizados desde a última vez que foram copiados para o diretório de cópia de sombra. Esse é o padrão para o .NET Framework 4.|  
+|false|Reverte para o comportamento de inicialização de versões anteriores do .NET Framework, que era copiar todos os arquivos na inicialização.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -54,10 +54,10 @@ Especifica se a cópia de sombra usa o comportamento de inicialização padrão 
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Começando com o .NET Framework 4, os assemblies são apenas se seus carimbos de data / hora que indicam que eles foram alterados desde que eles pela última vez foram copiados para o diretório de cópia de sombra de cópia de sombra. Isso melhora os tempos de inicialização para muitos aplicativos que usam a cópia de sombra, conforme descrito em [cópias de sombra de Assemblies](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md). Aplicativos que têm um alto percentual e uma frequência de atualizações do assembly não podem se beneficiar dessa mudança no comportamento. Nesse caso, você pode usar esse elemento para restaurar o comportamento de versões anteriores do .NET Framework.  
+ A partir do .NET Framework 4, os assemblies serão copiados por sombra somente se os carimbos de data/hora indicarem que foram alterados desde que foram copiados pela última vez para o diretório de cópia de sombra. Isso melhora os tempos de inicialização para muitos aplicativos que usam cópia de sombra, conforme descrito em [assemblies de cópia de sombra](../../../app-domains/shadow-copy-assemblies.md). Aplicativos que têm uma alta porcentagem e frequência de atualizações de assembly podem não se beneficiar dessa alteração no comportamento. Nesse caso, você pode usar esse elemento para restaurar o comportamento de versões anteriores do .NET Framework.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como desabilitar o comportamento de inicialização padrão de no .NET Framework 4 a cópia de sombra e reverter para o comportamento de inicialização de versões anteriores do .NET Framework.  
+ O exemplo a seguir mostra como desabilitar o comportamento de inicialização padrão da cópia de sombra no .NET Framework 4 e reverter para o comportamento de inicialização de versões anteriores do .NET Framework.  
   
 ```xml  
 <configuration>  
@@ -69,6 +69,6 @@ Especifica se a cópia de sombra usa o comportamento de inicialização padrão 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Cópias de sombra de assemblies](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)
+- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de arquivos de configuração](../index.md)
+- [Cópias de sombra de assemblies](../../../app-domains/shadow-copy-assemblies.md)
