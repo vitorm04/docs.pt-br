@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06c91a813a80af5cf09914ca134ac9935ed787c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee1c30809567097e67b6b1e40f5534429d748abd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750063"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964364"
 ---
-# <a name="icordebugcontrollerterminate-method"></a><span data-ttu-id="ab515-102">Método ICorDebugController::Terminate</span><span class="sxs-lookup"><span data-stu-id="ab515-102">ICorDebugController::Terminate Method</span></span>
-<span data-ttu-id="ab515-103">Encerra o processo com o código de saída especificado.</span><span class="sxs-lookup"><span data-stu-id="ab515-103">Terminates the process with the specified exit code.</span></span>  
+# <a name="icordebugcontrollerterminate-method"></a><span data-ttu-id="ac9b4-102">Método ICorDebugController::Terminate</span><span class="sxs-lookup"><span data-stu-id="ac9b4-102">ICorDebugController::Terminate Method</span></span>
+<span data-ttu-id="ac9b4-103">Encerra o processo com o código de saída especificado.</span><span class="sxs-lookup"><span data-stu-id="ac9b4-103">Terminates the process with the specified exit code.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ab515-104">Esse método é um wrapper do Win32 `TerminateProcess` função.</span><span class="sxs-lookup"><span data-stu-id="ab515-104">This method is a wrapper for the Win32 `TerminateProcess` function.</span></span> <span data-ttu-id="ab515-105">Portanto, `Terminate` usa o código de saída da mesma forma que o Win32 `TerminateProcess` função utiliza.</span><span class="sxs-lookup"><span data-stu-id="ab515-105">Thus, `Terminate` uses the exit code in the same way that the Win32 `TerminateProcess` function uses it.</span></span>  
+> <span data-ttu-id="ac9b4-104">Esse método é um wrapper para a função `TerminateProcess` do Win32.</span><span class="sxs-lookup"><span data-stu-id="ac9b4-104">This method is a wrapper for the Win32 `TerminateProcess` function.</span></span> <span data-ttu-id="ac9b4-105">Portanto, `Terminate` o usa o código de saída da mesma maneira que a `TerminateProcess` função do Win32 o utiliza.</span><span class="sxs-lookup"><span data-stu-id="ac9b4-105">Thus, `Terminate` uses the exit code in the same way that the Win32 `TerminateProcess` function uses it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab515-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ab515-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac9b4-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ac9b4-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT Terminate (  
@@ -38,23 +38,23 @@ HRESULT Terminate (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ab515-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ab515-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ac9b4-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ac9b4-107">Parameters</span></span>  
  `exitCode`  
- <span data-ttu-id="ab515-108">[in] Um valor numérico que é o código de saída.</span><span class="sxs-lookup"><span data-stu-id="ab515-108">[in] A numeric value that is the exit code.</span></span> <span data-ttu-id="ab515-109">Os valores numéricos válidos são definidos em Winbase.</span><span class="sxs-lookup"><span data-stu-id="ab515-109">The valid numeric values are defined in Winbase.h.</span></span>  
+ <span data-ttu-id="ac9b4-108">no Um valor numérico que é o código de saída.</span><span class="sxs-lookup"><span data-stu-id="ac9b4-108">[in] A numeric value that is the exit code.</span></span> <span data-ttu-id="ac9b4-109">Os valores numéricos válidos são definidos em Winbase. h.</span><span class="sxs-lookup"><span data-stu-id="ac9b4-109">The valid numeric values are defined in Winbase.h.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ab515-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="ab515-110">Remarks</span></span>  
- <span data-ttu-id="ab515-111">Se o processo é interrompido quando `Terminate` é chamado, o processo deve ser continuado, usando o [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) método para que o depurador recebe uma confirmação do encerramento por meio do [ Icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) ou [icordebugmanagedcallback:: Exitappdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="ab515-111">If the process is stopped when `Terminate` is called, the process should be continued by using the [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) method so that the debugger receives confirmation of the termination through the [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) or [ICorDebugManagedCallback::ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ac9b4-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="ac9b4-110">Remarks</span></span>  
+ <span data-ttu-id="ac9b4-111">Se o processo for interrompido quando `Terminate` for chamado, o processo deverá continuar usando o método [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para que o depurador receba a confirmação do encerramento por meio do [ICorDebugManagedCallback:: ](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)Retorno de chamada ExitProcess ou [ICorDebugManagedCallback:: ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) .</span><span class="sxs-lookup"><span data-stu-id="ac9b4-111">If the process is stopped when `Terminate` is called, the process should be continued by using the [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) method so that the debugger receives confirmation of the termination through the [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) or [ICorDebugManagedCallback::ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) callback.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ab515-112">Este método não é implementado por um domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ab515-112">This method is not implemented by an application domain.</span></span> <span data-ttu-id="ab515-113">Ou seja, ele não está implementado de <xref:System.AppDomain> nível.</span><span class="sxs-lookup"><span data-stu-id="ab515-113">That is, it is not implemented at the <xref:System.AppDomain> level.</span></span>  
+> <span data-ttu-id="ac9b4-112">Esse método não é implementado por um domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ac9b4-112">This method is not implemented by an application domain.</span></span> <span data-ttu-id="ac9b4-113">Ou seja, ele não é implementado no <xref:System.AppDomain> nível.</span><span class="sxs-lookup"><span data-stu-id="ac9b4-113">That is, it is not implemented at the <xref:System.AppDomain> level.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab515-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ab515-114">Requirements</span></span>  
- <span data-ttu-id="ab515-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab515-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac9b4-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ac9b4-114">Requirements</span></span>  
+ <span data-ttu-id="ac9b4-115">**Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac9b4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab515-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ab515-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ac9b4-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ac9b4-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ab515-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab515-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ac9b4-117">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac9b4-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ab515-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab515-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ac9b4-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac9b4-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab515-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ab515-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac9b4-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ac9b4-119">See also</span></span>
