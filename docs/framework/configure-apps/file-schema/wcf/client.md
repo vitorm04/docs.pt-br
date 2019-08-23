@@ -5,15 +5,15 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dce5984882e48c3e62efc44ef00b6256d9eb64e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704291"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919536"
 ---
 # <a name="client"></a>\<client>
-O `client` elemento define uma lista de pontos de extremidade que um cliente pode se conectar ao.  
+O `client` elemento define uma lista de pontos de extremidade aos quais um cliente pode se conectar.  
   
  \<system.ServiceModel>  
 \<client>  
@@ -41,19 +41,19 @@ O `client` elemento define uma lista de pontos de extremidade que um cliente pod
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Contém uma coleção de elementos de ponto de extremidade, que especificam os pontos de extremidade que esse cliente pode se conectar ao.|  
-|[\<metadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Contém configurações para metadados de processamento.|  
+|[\<endpoint>](endpoint-of-client.md)|Contém uma coleção de elementos EndPoint, que especificam os pontos de extremidade aos quais esse cliente pode se conectar.|  
+|[\<metadata>](metadata.md)|Contém configurações para processar metadados.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|O elemento raiz de todos os elementos de configuração do Windows Communication Foundation (WCF).|  
+|[\<system.serviceModel>](system-servicemodel.md)|O elemento raiz de todos os elementos de configuração de Windows Communication Foundation (WCF).|  
   
 ## <a name="remarks"></a>Comentários  
- O `client` seção define uma lista de pontos de extremidade que um cliente pode se conectar ao. Cada ponto de extremidade listado na seção cliente define sua própria associação, o comportamento e o contrato. Ele é identificado exclusivamente pela combinação da `name` e `contract` atributos. Especifica o código do cliente a `name` para se conectar a um ponto de extremidade para o serviço que implementa o cliente. Se o `name` atributo for omitido, o ponto de extremidade atua como o ponto de extremidade padrão para o contrato ele implementa.  
+ A `client` seção define uma lista de pontos de extremidade aos quais um cliente pode se conectar. Cada ponto de extremidade listado na seção cliente define sua própria associação, comportamento e contrato. Ele é identificado exclusivamente pela combinação dos `name` atributos e. `contract` O código do cliente especifica `name` o para se conectar a um ponto de extremidade para o serviço que o cliente implementa. Se o `name` atributo for omitido, o ponto de extremidade atua como o ponto de extremidade padrão para o contrato que ele implementa.  
   
- Além disso, esta seção também especifica configurações para metadados de processamento.  
+ Além disso, esta seção também especifica configurações para processar metadados.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -76,5 +76,5 @@ O `client` elemento define uma lista de pontos de extremidade que um cliente pod
 
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
-- [Configuração de cliente do WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Clientes](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [Configuração de cliente do WCF](../../../wcf/feature-details/client-configuration.md)
+- [Clientes](../../../wcf/feature-details/clients.md)
