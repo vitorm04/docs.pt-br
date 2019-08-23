@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 62913face910ae9500aa5e6f2f443db67ffd4240
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301272"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921289"
 ---
-# <a name="remove-element-for-appsettings"></a><span data-ttu-id="e9015-102">\<Remover > elemento para \<appSettings ></span><span class="sxs-lookup"><span data-stu-id="e9015-102">\<remove> element for \<appSettings></span></span>
+# <a name="remove-element-for-appsettings"></a><span data-ttu-id="c1af7-102">\<remover o elemento > \<para appSettings ></span><span class="sxs-lookup"><span data-stu-id="c1af7-102">\<remove> element for \<appSettings></span></span>
 
-<span data-ttu-id="e9015-103">Remove as configurações de aplicativo personalizado.</span><span class="sxs-lookup"><span data-stu-id="e9015-103">Removes custom application settings.</span></span>
+<span data-ttu-id="c1af7-103">Remove as configurações de aplicativo personalizadas.</span><span class="sxs-lookup"><span data-stu-id="c1af7-103">Removes custom application settings.</span></span>
 
-<span data-ttu-id="e9015-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="e9015-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="e9015-105">&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="e9015-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span></span>  
-<span data-ttu-id="e9015-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**</span><span class="sxs-lookup"><span data-stu-id="e9015-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+<span data-ttu-id="c1af7-104">[ **\<configuration>** ](../configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="c1af7-104">[**\<configuration>**](../configuration-element.md) </span></span>  
+<span data-ttu-id="c1af7-105">&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="c1af7-105">&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md) </span></span>  
+<span data-ttu-id="c1af7-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**</span><span class="sxs-lookup"><span data-stu-id="c1af7-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e9015-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e9015-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="c1af7-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c1af7-107">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -32,25 +32,25 @@ ms.locfileid: "66301272"
 </appSettings>
 ```
 
-### <a name="attribute"></a><span data-ttu-id="e9015-108">Atributo</span><span class="sxs-lookup"><span data-stu-id="e9015-108">Attribute</span></span>
+### <a name="attribute"></a><span data-ttu-id="c1af7-108">Atributo</span><span class="sxs-lookup"><span data-stu-id="c1af7-108">Attribute</span></span>
 
-|         | <span data-ttu-id="e9015-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="e9015-109">Description</span></span> |
+|         | <span data-ttu-id="c1af7-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="c1af7-109">Description</span></span> |
 | ------- | ----------- |
-| <span data-ttu-id="e9015-110">**key**</span><span class="sxs-lookup"><span data-stu-id="e9015-110">**key**</span></span> | <span data-ttu-id="e9015-111">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="e9015-111">Required attribute.</span></span><br><br><span data-ttu-id="e9015-112">Especifica o nome da chave a ser removido.</span><span class="sxs-lookup"><span data-stu-id="e9015-112">Specifies the name of the key to remove.</span></span> |
+| <span data-ttu-id="c1af7-110">**key**</span><span class="sxs-lookup"><span data-stu-id="c1af7-110">**key**</span></span> | <span data-ttu-id="c1af7-111">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="c1af7-111">Required attribute.</span></span><br><br><span data-ttu-id="c1af7-112">Especifica o nome da chave a ser removida.</span><span class="sxs-lookup"><span data-stu-id="c1af7-112">Specifies the name of the key to remove.</span></span> |
 
-### <a name="parent-element"></a><span data-ttu-id="e9015-113">Elemento pai</span><span class="sxs-lookup"><span data-stu-id="e9015-113">Parent element</span></span>
+### <a name="parent-element"></a><span data-ttu-id="c1af7-113">Elemento pai</span><span class="sxs-lookup"><span data-stu-id="c1af7-113">Parent element</span></span>
 
-|     | <span data-ttu-id="e9015-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="e9015-114">Description</span></span> |
+|     | <span data-ttu-id="c1af7-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="c1af7-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="e9015-115"> *\*\<appSettings>** </span><span class="sxs-lookup"><span data-stu-id="e9015-115">**\<appSettings>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | <span data-ttu-id="e9015-116">Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço da Web em XML ou qualquer outra informação de configuração personalizada para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e9015-116">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
+| [<span data-ttu-id="c1af7-115"> **\<appSettings>** </span><span class="sxs-lookup"><span data-stu-id="c1af7-115">**\<appSettings>**</span></span>](appsettings-element-for-configuration.md) | <span data-ttu-id="c1af7-116">Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço da Web em XML ou qualquer outra informação de configuração personalizada para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="c1af7-116">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="e9015-117">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="e9015-117">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="c1af7-117">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="c1af7-117">Child elements</span></span>
 
-<span data-ttu-id="e9015-118">Nenhum</span><span class="sxs-lookup"><span data-stu-id="e9015-118">None</span></span>
+<span data-ttu-id="c1af7-118">Nenhum</span><span class="sxs-lookup"><span data-stu-id="c1af7-118">None</span></span>
 
-## <a name="example"></a><span data-ttu-id="e9015-119">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e9015-119">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c1af7-119">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c1af7-119">Example</span></span>
 
-<span data-ttu-id="e9015-120">O exemplo a seguir mostra como remover uma configuração personalizada para `ApplicationName`:</span><span class="sxs-lookup"><span data-stu-id="e9015-120">The following example shows how to remove a custom configuration setting for `ApplicationName`:</span></span>
+<span data-ttu-id="c1af7-120">O exemplo a seguir mostra como remover uma configuração personalizada para `ApplicationName`:</span><span class="sxs-lookup"><span data-stu-id="c1af7-120">The following example shows how to remove a custom configuration setting for `ApplicationName`:</span></span>
 
 ```xml
 <appSettings>
@@ -58,6 +58,6 @@ ms.locfileid: "66301272"
 </appSettings>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e9015-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e9015-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1af7-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c1af7-121">See also</span></span>
 
-- [<span data-ttu-id="e9015-122">Esquema de arquivo de configuração para o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e9015-122">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="c1af7-122">Esquema do arquivo de configuração para o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c1af7-122">Configuration file schema for the .NET Framework</span></span>](../index.md)
