@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671817"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963541"
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrução On Error (Visual Basic)
 Habilita uma rotina de tratamento de erros e especifica o local da rotina dentro de um procedimento; também pode ser usado para desabilitar uma rotina de tratamento de erros. A `On Error` instrução é usada no tratamento de erros não estruturado e pode ser usada em vez de manipulação de exceção estruturada. A [manipulação de exceção estruturada](../../../standard/exceptions/index.md) é criada no .net, geralmente é mais eficiente e, portanto, é recomendada ao lidar com erros de tempo de execução em seu aplicativo.
@@ -35,7 +35,7 @@ Habilita uma rotina de tratamento de erros e especifica o local da rotina dentro
  Sem tratamento de erro ou tratamento de exceção, qualquer erro de tempo de execução que ocorra é fatal: uma mensagem de erro é exibida e a execução é interrompida.
 
 > [!NOTE]
->  A `Error` palavra-chave também é usada na [instrução de erro](../../../visual-basic/language-reference/statements/error-statement.md), que tem suporte para compatibilidade com versões anteriores.
+> A `Error` palavra-chave também é usada na [instrução de erro](../../../visual-basic/language-reference/statements/error-statement.md), que tem suporte para compatibilidade com versões anteriores.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -55,7 +55,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
->  É recomendável que você use manipulação de exceção estruturada em seu código sempre que possível, em vez de usar a manipulação `On Error` de exceção não estruturada e a instrução. Para obter mais informações, consulte [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+> É recomendável que você use manipulação de exceção estruturada em seu código sempre que possível, em vez de usar a manipulação `On Error` de exceção não estruturada e a instrução. Para obter mais informações, consulte [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
  Um manipulador de erro "habilitado" é um que é ativado por uma `On Error` instrução. Um manipulador de erro "ativo" é um manipulador habilitado que está no processo de tratamento de um erro.
 
@@ -66,7 +66,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Cada vez que o manipulador de erro passa o controle de volta para um procedimento de chamada, esse procedimento torna-se o procedimento atual. Depois que um erro é manipulado por um manipulador de erro em qualquer procedimento, a execução é retomada no procedimento atual no `Resume` ponto designado pela instrução.
   
 > [!NOTE]
->  Uma rotina de tratamento de erros não é `Sub` um procedimento ou `Function` um procedimento. É uma seção de código marcada por um rótulo de linha ou um número de linha.
+> Uma rotina de tratamento de erros não é `Sub` um procedimento ou `Function` um procedimento. É uma seção de código marcada por um rótulo de linha ou um número de linha.
   
 ## <a name="number-property"></a>Propriedade Number
  As rotinas de tratamento de erros dependem do valor `Number` na propriedade `Err` do objeto para determinar a causa do erro. A rotina deve testar ou salvar valores de propriedade relevantes no `Err` objeto antes que qualquer outro erro possa ocorrer ou antes que um procedimento que possa causar um erro seja chamado. Os valores de propriedade no `Err` objeto refletem apenas o erro mais recente. A mensagem de erro associada `Err.Number` a está contida `Err.Description`em.  
@@ -82,7 +82,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error Resume Next`faz com que a execução continue com a instrução imediatamente após a instrução que causou o erro de tempo de execução, ou com a instrução imediatamente após a chamada mais recente do procedimento que `On Error Resume Next` contém a instrução. Essa instrução permite que a execução continue apesar de um erro de tempo de execução. Você pode colocar a rotina de tratamento de erros em que o erro ocorreria em vez de transferir o controle para outro local dentro do procedimento. Uma `On Error Resume Next` instrução se torna inativa quando outro procedimento é chamado, portanto, você deve `On Error Resume Next` executar uma instrução em cada rotina chamada se desejar tratamento de erro embutido dentro dessa rotina.
   
 > [!NOTE]
->  A `On Error Resume Next` construção pode ser preferível `On Error GoTo` ao manipular erros gerados durante o acesso a outros objetos. A `Err` verificação após cada interação com um objeto remove a ambiguidade sobre qual objeto foi acessado pelo código. Você pode ter certeza de qual objeto colocou o código de `Err.Number`erro em, bem como qual objeto gerou originalmente o erro (o objeto especificado `Err.Source`em).
+> A `On Error Resume Next` construção pode ser preferível `On Error GoTo` ao manipular erros gerados durante o acesso a outros objetos. A `Err` verificação após cada interação com um objeto remove a ambiguidade sobre qual objeto foi acessado pelo código. Você pode ter certeza de qual objeto colocou o código de `Err.Number`erro em, bem como qual objeto gerou originalmente o erro (o objeto especificado `Err.Source`em).
 
 ## <a name="on-error-goto-0"></a>Se houver erro, GoTo 0
  `On Error GoTo 0`desabilita o tratamento de erros no procedimento atual. Ele não especifica a linha 0 como o início do código de tratamento de erros, mesmo que o procedimento contenha uma linha numerada como 0. Sem uma `On Error GoTo 0` instrução, um manipulador de erro é desabilitado automaticamente quando um procedimento é encerrado.

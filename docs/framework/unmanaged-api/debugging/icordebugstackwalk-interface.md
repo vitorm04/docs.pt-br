@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e33e9be112a6a10f89b88005496ce2e63dff2d54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06ce2da435df9458ca59d76fa426becbede2e619
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782675"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959669"
 ---
 # <a name="icordebugstackwalk-interface"></a>Interface ICorDebugStackWalk
 Fornece métodos para colocar os métodos gerenciados, ou quadros, em uma pilha de thread.  
@@ -30,22 +30,22 @@ Fornece métodos para colocar os métodos gerenciados, ou quadros, em uma pilha 
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Retorna o contexto para o quadro atual no `ICorDebugStackWalk` objeto.|  
-|[Método SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Define o `ICorDebugStackWalk` o contexto atual de objeto para um contexto válido para o thread.|  
+|[Método GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Retorna o contexto do quadro atual no `ICorDebugStackWalk` objeto.|  
+|[Método SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Define o `ICorDebugStackWalk` contexto atual do objeto como um contexto válido para o thread.|  
 |[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Move o `ICorDebugStackWalk` objeto para o próximo quadro.|  
 |[Método GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Obtém o quadro atual no `ICorDebugStackWalk` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
+> Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

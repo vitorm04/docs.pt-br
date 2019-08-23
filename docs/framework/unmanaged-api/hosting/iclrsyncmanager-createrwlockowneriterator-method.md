@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1951efecca6c81322c3a0753eaaf06e9651e3d39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64179e132cfaffbb1fcdc2cd0a47bbcc11be2ff0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759156"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943266"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>Método ICLRSyncManager::CreateRWLockOwnerIterator
-Solicita que o common language runtime (CLR) cria um iterador para o host a usar para determinar o conjunto de tarefas aguardando um bloqueio de leitor-gravador.  
+Solicita que o Common Language Runtime (CLR) crie um iterador para o host usar para determinar o conjunto de tarefas que estão aguardando um bloqueio do gravador de leitor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,39 +38,39 @@ HRESULT CreateRWLockOwnerIterator (
   
 ## <a name="parameters"></a>Parâmetros  
  `cookie`  
- [in] O cookie associado com o bloqueio de leitor-gravador desejado.  
+ no O cookie associado ao bloqueio de leitor-gravador desejado.  
   
  `pIterator`  
- [out] Um ponteiro para um iterador que pode ser passado para o [GetRWLockOwnerNext](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md) e [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) métodos.  
+ fora Um ponteiro para um iterador que pode ser passado para os métodos [GetRWLockOwnerNext](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md) e [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) .  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockOwnerIterator` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|S_OK|`CreateRWLockOwnerIterator`retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator` foi chamado em um thread que está executando o código gerenciado.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator`foi chamado em um thread que está executando código gerenciado no momento.|  
   
 ## <a name="remarks"></a>Comentários  
- Hosts normalmente chamam o `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, e `GetRWLockOwnerNext` métodos durante a detecção de deadlock. O host é responsável por garantir que o bloqueio de leitor-gravador ainda é válido, pois o CLR não faz tentativa de manter o bloqueio de leitor-gravador ativo. Várias estratégias estão disponíveis para o host garantir a validade do bloqueio:  
+ Normalmente, os hosts `DeleteRWLockOwnerIterator`chamam os `GetRWLockOwnerNext` `CreateRWLockOwnerIterator`métodos, e durante a detecção de deadlock. O host é responsável por garantir que o bloqueio do gravador de leitor ainda seja válido, pois o CLR não faz nenhuma tentativa de manter o bloqueio do gravador de leitor ativo. Várias estratégias estão disponíveis para o host garantir a validade do bloqueio:  
   
-- O host pode bloquear chamadas de versão sobre o bloqueio de leitor-gravador (por exemplo, [ihostsemaphore:: Releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)), garantindo que este bloco não causar um deadlock.  
+- O host pode bloquear chamadas de versão no bloqueio do gravador Reader (por exemplo, [IHostSemaphore:: ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) ao garantir que esse bloco não cause deadlock.  
   
-- O host pode bloquear a saída do aguardando o objeto de evento associado com o bloqueio de leitor-gravador, novamente, garantindo que este bloco não causar um deadlock.  
+- O host pode impedir que a saída Espere no objeto de evento associado ao bloqueio do gravador de leitor, garantindo novamente que esse bloco não cause o deadlock.  
   
 > [!NOTE]
->  `CreateRWLockOwnerIterator` deve ser chamado apenas em threads que estão executando o código não gerenciado.  
+> `CreateRWLockOwnerIterator`deve ser chamado somente em threads que estão executando código não gerenciado no momento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

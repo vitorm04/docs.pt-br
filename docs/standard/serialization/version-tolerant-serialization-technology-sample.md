@@ -2,12 +2,12 @@
 title: Exemplo de tecnologia de serialização básica tolerante a versões
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: 6c30c39848be02785b6b808ecf4af711c0c9e95d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 317a47d46b839417e01eed9deca2459a96aaa201
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483002"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960774"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Exemplo de tecnologia de serialização básica tolerante a versões
 [Baixar Exemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -22,7 +22,7 @@ ms.locfileid: "66483002"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Para criar o exemplo usando Visual Studio  
   
-1. Abra o Explorador de arquivos e navegue até um dos subdiretórios específicos do idioma para o exemplo.  
+1. Abra o explorador de arquivos e navegue até um dos subdiretórios específicos do idioma para o exemplo.  
   
 2. Navegue para o subdiretório V1 Application do diretório que você selecionou na etapa anterior.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66483002"
  Como alternativa, navegue para os diretórios que contêm os novos executáveis e execute-os sequencialmente.  
   
 > [!NOTE]
->  O exemplo cria aplicativos de console. Você deve lançá-los e executá-los em uma janela do prompt de comando para exibir sua saída.  
+> O exemplo cria aplicativos de console. Você deve lançá-los e executá-los em uma janela do prompt de comando para exibir sua saída.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a29efbc1b4d886afe4329df011b522e4d589e2ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949499"
 ---
 # <a name="connection-string-builders"></a>Construtores de cadeia de conexão
-Em versões anteriores do ADO.NET, verificação de cadeias de caracteres de conexão com os valores de cadeia de caracteres concatenada de tempo de compilação não ocorreu, para que no tempo de execução, uma palavra-chave incorreta gerada uma <xref:System.ArgumentException>. Cada um dos provedores de dados .NET Framework compatível com diferentes sintaxes de conexão palavras-chave, que dificultava a construir cadeias de caracteres de conexão válidas manualmente. Para resolver esse problema, o ADO.NET 2.0 introduziu novos construtores de cadeia de caracteres de conexão para cada provedor de dados .NET Framework. Cada provedor de dados inclui uma classe de construtor de cadeia de conexão fortemente tipada que herda de <xref:System.Data.Common.DbConnectionStringBuilder>. A tabela a seguir lista os provedores de dados .NET Framework e suas classes de construtor de cadeia de caracteres de conexão associado.  
+Em versões anteriores do ADO.NET, a verificação de tempo de compilação de cadeias de conexão com valores de cadeia de caracteres concatenados não ocorreu, de modo que, em <xref:System.ArgumentException>tempo de execução, uma palavra-chave incorreta gerou um. Cada um dos provedores de dados .NET Framework com suporte para uma sintaxe diferente para palavras-chave da cadeia de conexão, o que tornaria a construção de cadeias de conexão válidas é difícil se feito manualmente. Para resolver esse problema, o ADO.NET 2,0 introduziu novos construtores de cadeia de conexão para cada provedor de dados de .NET Framework. Cada provedor de dados inclui uma classe de construtor de cadeia de conexão fortemente tipada que herda de <xref:System.Data.Common.DbConnectionStringBuilder>. A tabela a seguir lista os provedores de dados .NET Framework e suas classes de construtor de cadeia de conexão associadas.  
   
 |Provider|Classe ConnectionStringBuilder|  
 |--------------|-----------------------------------|  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  Um dos construtores sobrecarregados de um construtor de cadeias de conexão obtém um <xref:System.String> como argumento, o que permite a você fornecer uma cadeia de conexão parcial que depois poderá ser concluída pela entrada do usuário. A cadeia de conexão parcial pode ser armazenada em um arquivo de configuração e recuperada em tempo de execução.  
   
 > [!NOTE]
->  O namespace <xref:System.Configuration> permite acesso programático aos arquivos de configuração que usam <xref:System.Web.Configuration.WebConfigurationManager> para aplicativos Web e <xref:System.Configuration.ConfigurationManager> para aplicativos do Windows. Para obter mais informações sobre como trabalhar com cadeias de caracteres de conexão e arquivos de configuração, consulte [cadeias de caracteres de Conexão e arquivos de configuração](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+> O namespace <xref:System.Configuration> permite acesso programático aos arquivos de configuração que usam <xref:System.Web.Configuration.WebConfigurationManager> para aplicativos Web e <xref:System.Configuration.ConfigurationManager> para aplicativos do Windows. Para obter mais informações sobre como trabalhar com cadeias de conexão e arquivos de configuração, consulte [cadeias de conexão e arquivos de configuração](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ### <a name="example"></a>Exemplo  
  Este exemplo demonstra como recuperar uma cadeia de conexão parcial de um arquivo de configuração e concluí-la definindo as propriedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> do <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. O arquivo de configuração é definido como a seguir.  
@@ -74,7 +74,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ```  
   
 > [!NOTE]
->  Você deve definir uma referência à `System.Configuration.dll` em seu projeto para que o código seja executado.  
+> Você deve definir uma referência à `System.Configuration.dll` em seu projeto para que o código seja executado.  
   
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  

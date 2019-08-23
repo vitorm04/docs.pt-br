@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 448c212e4afe547dc6342b000fe06d5340db112c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818014"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958734"
 ---
 # <a name="application-management-overview"></a>Visão geral de gerenciamento do aplicativo
 Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades que se aplicam à implementação e ao gerenciamento do aplicativo. Este tópico fornece uma visão geral da funcionalidade na <xref:System.Windows.Application> classe para criar e gerenciar aplicativos.  
@@ -74,7 +74,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
 - No code-behind, a classe deve ser uma `partial` classe com o mesmo nome que é especificado `x:Class` pelo atributo na marcação e deve derivar de <xref:System.Windows.Application>. Isso permite que o arquivo code-behind seja associado `partial` à classe gerada para o arquivo de marcação quando o aplicativo é compilado (consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
->  Quando você cria um novo projeto de aplicativo WPF ou projeto de aplicativo de navegador WPF usando o Visual Studio, uma definição de aplicativo é incluída por padrão e é definida usando a marcação e o code-behind.  
+> Quando você cria um novo projeto de aplicativo WPF ou projeto de aplicativo de navegador WPF usando o Visual Studio, uma definição de aplicativo é incluída por padrão e é definida usando a marcação e o code-behind.  
   
  Esse código é o mínimo necessário para implementar uma definição de aplicativo. No entanto, uma configuração adicional do MSBuild precisa ser feita à definição do aplicativo antes de compilar e executar o aplicativo.  
   
@@ -148,7 +148,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  O primeiro <xref:System.Windows.Window> a ser instanciado em um aplicativo autônomo torna-se a janela principal do aplicativo por padrão. Esse <xref:System.Windows.Window> objeto é referenciado <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> pela propriedade. O valor da <xref:System.Windows.Application.MainWindow%2A> propriedade pode ser alterado programaticamente se uma janela diferente da primeira <xref:System.Windows.Window> instanciada deve ser a janela principal.  
+> O primeiro <xref:System.Windows.Window> a ser instanciado em um aplicativo autônomo torna-se a janela principal do aplicativo por padrão. Esse <xref:System.Windows.Window> objeto é referenciado <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> pela propriedade. O valor da <xref:System.Windows.Application.MainWindow%2A> propriedade pode ser alterado programaticamente se uma janela diferente da primeira <xref:System.Windows.Window> instanciada deve ser a janela principal.  
   
  Quando um XBAP é iniciado pela primeira vez, é mais provável que <xref:System.Windows.Controls.Page>ele navegue para um. Isso será mostrado no código a seguir.  
   
@@ -170,7 +170,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
  Essa marcação tem o mesmo efeito que o código anterior para abrir uma janela.  
   
 > [!NOTE]
->  Para obter mais informações sobre navegação, consulte [visão geral de navegação](navigation-overview.md).  
+> Para obter mais informações sobre navegação, consulte [visão geral de navegação](navigation-overview.md).  
   
  Você precisa manipular o <xref:System.Windows.Application.Startup> evento para abrir um <xref:System.Windows.Window> se precisar instanciá-lo usando um construtor sem parâmetros ou se precisar definir suas propriedades ou assinar seus eventos antes de mostrá-lo ou precisar processar quaisquer argumentos de linha de comando que foram fornecidos quando o aplicativo foi iniciado.  
   
@@ -219,7 +219,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
  Um <xref:System.Windows.Window> também pode ser ativado e desativado. Consulte <xref:System.Windows.Window.Activated?displayProperty=nameWithType> e <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType> para obter mais informações.  
   
 > [!NOTE]
->  Nem <xref:System.Windows.Application.Activated?displayProperty=nameWithType> nem<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> é gerado para XBAPs.  
+> Nem <xref:System.Windows.Application.Activated?displayProperty=nameWithType> nem<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> é gerado para XBAPs.  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>Desligamento do aplicativo  
@@ -236,7 +236,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
  Para ajudá-lo a gerenciar o <xref:System.Windows.Application> desligamento de aplicativo <xref:System.Windows.Application.ShutdownMode%2A> , o fornece o <xref:System.Windows.Application.SessionEnding> <xref:System.Windows.Application.Shutdown%2A> método <xref:System.Windows.Application.Exit> , a propriedade e os eventos e.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>Só pode ser chamado a partir de aplicativos <xref:System.Security.Permissions.UIPermission>que tenham o. Os aplicativos autônomos do WPF sempre têm essa permissão. No entanto, os XBAPs executados na área de segurança de confiança parcial da zona da Internet não têm.  
+> <xref:System.Windows.Application.Shutdown%2A>Só pode ser chamado a partir de aplicativos <xref:System.Security.Permissions.UIPermission>que tenham o. Os aplicativos autônomos do WPF sempre têm essa permissão. No entanto, os XBAPs executados na área de segurança de confiança parcial da zona da Internet não têm.  
   
 #### <a name="shutdown-mode"></a>Modo de desligamento  
  A maioria dos aplicativos é desligada quando todas as janelas são fechadas ou quando a janela principal é fechada. No entanto, às vezes, outras condições específicas ao aplicativo podem determinar quando um aplicativo é desligado. Você pode especificar as condições sob as quais seu aplicativo será desligado Configurando <xref:System.Windows.Application.ShutdownMode%2A> com um dos seguintes <xref:System.Windows.ShutdownMode> valores de enumeração:  
@@ -254,7 +254,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
  Quando você tiver condições de desligamento específicas do aplicativo <xref:System.Windows.Application.ShutdownMode%2A> , <xref:System.Windows.ShutdownMode.OnExplicitShutdown>defina como. Nesse caso, é sua responsabilidade encerrar um aplicativo chamando explicitamente o <xref:System.Windows.Application.Shutdown%2A> método; caso contrário, seu aplicativo continuará em execução mesmo se todas as janelas estiverem fechadas. Observe que <xref:System.Windows.Application.Shutdown%2A> é chamado implicitamente quando o <xref:System.Windows.Application.ShutdownMode%2A> é <xref:System.Windows.ShutdownMode.OnLastWindowClose> ou <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>pode ser definido de um XBAP, mas é ignorado; um XBAP é sempre desligado quando é navegado para fora de um navegador ou quando o navegador que hospeda o XBAP é fechado. Para obter mais informações, consulte [Visão geral de navegação](navigation-overview.md).  
+> <xref:System.Windows.Application.ShutdownMode%2A>pode ser definido de um XBAP, mas é ignorado; um XBAP é sempre desligado quando é navegado para fora de um navegador ou quando o navegador que hospeda o XBAP é fechado. Para obter mais informações, consulte [Visão geral de navegação](navigation-overview.md).  
   
 #### <a name="session-ending"></a>Encerramento da sessão  
  As condições de desligamento que são <xref:System.Windows.Application.ShutdownMode%2A> descritas pela propriedade são específicas de um aplicativo. No entanto, em alguns casos, um aplicativo pode ser desligado como resultado de uma condição externa. A condição externa mais comum ocorre quando um usuário encerra a sessão do Windows seguindo as seguintes ações:  
@@ -277,7 +277,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
  Neste exemplo, o código inspeciona a <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> propriedade para determinar como a sessão do Windows está terminando. Ele usa esse valor para exibir uma mensagem de confirmação para o usuário. Se o usuário não quiser que a sessão seja encerrada, o código <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> será `true` definido como para impedir que a sessão do Windows seja encerrada.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>Não é gerado para XBAPs.
+> <xref:System.Windows.Application.SessionEnding>Não é gerado para XBAPs.
 
 #### <a name="exit"></a>Sair  
  Quando um aplicativo é desligado, ele pode precisar executar algum processamento final, como persistir o estado do aplicativo. Para essas situações, você pode manipular o <xref:System.Windows.Application.Exit> evento, como o `App_Exit` manipulador de eventos faz no exemplo a seguir. Ele é definido como um manipulador de eventos no arquivo *app. XAML* . Sua implementação é realçada nos arquivos *app.XAML.cs* e *Application. XAML. vb* .
@@ -301,7 +301,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
  Na maioria das vezes, os aplicativos são iniciados pelo sistema operacional em resposta a uma solicitação do usuário. No entanto, um aplicativo pode ser iniciado por outro aplicativo para executar uma tarefa específica. Quando o aplicativo iniciado é desligado, o aplicativo que o iniciou talvez deseje saber a condição na qual o aplicativo iniciado foi desligado. Nessas situações, o Windows permite que os aplicativos retornem um código de saída do aplicativo no desligamento. Por padrão, os aplicativos do WPF retornam um valor de código de saída de 0.  
   
 > [!NOTE]
->  Quando você depura do Visual Studio, o código de saída do aplicativo é exibido na janela de **saída** quando o aplicativo é desligado, em uma mensagem semelhante à seguinte:  
+> Quando você depura do Visual Studio, o código de saída do aplicativo é exibido na janela de **saída** quando o aplicativo é desligado, em uma mensagem semelhante à seguinte:  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
@@ -315,7 +315,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
  Você pode detectar o valor do código de saída e alterá-lo, manipulando <xref:System.Windows.Application.Exit> o evento. O <xref:System.Windows.Application.Exit> manipulador de eventos é passado <xref:System.Windows.ExitEventArgs> para um que fornece acesso ao código de saída <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> com a propriedade. Para obter mais informações, consulte <xref:System.Windows.Application.Exit>.  
   
 > [!NOTE]
->  Você pode definir o código de saída em aplicativos autônomos e XBAPs. No entanto, o valor do código de saída é ignorado para XBAPs.  
+> Você pode definir o código de saída em aplicativos autônomos e XBAPs. No entanto, o valor do código de saída é ignorado para XBAPs.  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>Exceções sem tratamento  

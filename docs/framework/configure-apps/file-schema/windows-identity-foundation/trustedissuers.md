@@ -3,15 +3,15 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: cebfc2f3598f32f233db6039dfe82076d2ffce46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32aad3529ded6d0234b1bcb388ecbbc3b0a11c87
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790475"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944266"
 ---
 # <a name="trustedissuers"></a>\<trustedIssuers>
-Configura a lista de certificados do emissor confiável usado pelo registro de nome do emissor e baseada em configuração (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
+Configura a lista de certificados de emissor confiável usados pelo registro de nome do emissor baseado em configuração (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -50,7 +50,7 @@ Configura a lista de certificados do emissor confiável usado pelo registro de n
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`<add thumbprint=xs:string name=xs:string>`|Adiciona um certificado para a coleção de emissores confiáveis. O certificado é especificado com o `thumbprint` atributo. Esse atributo é obrigatório e deve conter o formulário codificado do ASN.1 da impressão digital do certificado. O `name` atributo é opcional e pode ser usado para especificar um nome amigável para o certificado.|  
+|`<add thumbprint=xs:string name=xs:string>`|Adiciona um certificado à coleção de emissores confiáveis. O certificado é especificado com o `thumbprint` atributo. Esse atributo é necessário e deve conter a forma codificada ASN. 1 da impressão digital do certificado. O `name` atributo é opcional e pode ser usado para especificar um nome amigável para o certificado.|  
 |`<clear>`|Limpa todos os certificados da coleção de emissores confiáveis.|  
 |`<remove thumbprint=xs:string>`|Remove um certificado da coleção de emissores confiáveis. O certificado é especificado com o `thumbprint` atributo. Esse atributo é necessário.|  
   
@@ -58,15 +58,15 @@ Configura a lista de certificados do emissor confiável usado pelo registro de n
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configura o registro do nome do emissor. **Importante:**  O `type` atributo do `<issuerNameRegistry>` deve fazer referência a elemento o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe para o `<trustedIssuers>` elemento a ser válido.|  
+|[\<issuerNameRegistry>](issuernameregistry.md)|Configura o registro de nome do emissor. **Importante:**  O `type` atributo <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `<trustedIssuers>` do elemento deve fazer referência à classe para que o elemento seja válido. `<issuerNameRegistry>`|  
   
 ## <a name="remarks"></a>Comentários  
- Windows Identity Foundation (WIF) fornece uma única implementação do <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe imediato, o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. O registro do nome de emissor configuração mantém uma lista de emissores confiáveis carregado a partir da configuração. A lista associa cada nome do emissor do certificado X.509 que é necessário para verificar a assinatura de tokens produzidos pelo emissor. A lista de certificados do emissor confiável é especificada sob o `<trustedIssuers>` elemento. Cada elemento na lista associa um nome de emissor mnemônico com o certificado X.509 que é necessário para verificar a assinatura de tokens produzidos por esse emissor. Certificados de confiança são especificados usar o ASN. 1 codificada em forma de impressão digital do certificado e são adicionados a coleção usando `<add>` elemento. Você pode limpar e remover emissores (certificados) da lista usando o `<clear>` e `<remove>` elementos.  
+ O Windows Identity Foundation (WIF) fornece uma única implementação da <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe pronta para uso, a <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. O registro de nome do emissor de configuração mantém uma lista de emissores confiáveis que são carregados da configuração. A lista associa cada nome de emissor com o certificado X. 509 necessário para verificar a assinatura de tokens produzidos pelo emissor. A lista de certificados de emissor confiável é especificada no `<trustedIssuers>` elemento. Cada elemento na lista associa um nome de emissor mnemônico ao certificado X. 509 necessário para verificar a assinatura dos tokens produzidos por esse emissor. Os certificados confiáveis são especificados usando a forma codificada ASN. 1 da impressão digital do certificado e são adicionados a `<add>` coleção usando o elemento. Você pode limpar ou remover os emissores (certificados) da lista usando os `<clear>` elementos `<remove>` e.  
   
- O `type` atributo do `<issuerNameRegistry>` deve fazer referência a elemento o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe para o `<trustedIssuers>` elemento a ser válido.  
+ O `type` atributo <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `<trustedIssuers>` do elemento deve fazer referência à classe para que o elemento seja válido. `<issuerNameRegistry>`  
   
 ## <a name="example"></a>Exemplo  
- O XML a seguir mostra como especificar o emissor de configuração com base em registro do nome.  
+ O XML a seguir mostra como especificar o registro de nome do emissor baseado em configuração.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

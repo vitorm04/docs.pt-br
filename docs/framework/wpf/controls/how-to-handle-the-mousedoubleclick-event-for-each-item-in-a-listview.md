@@ -7,30 +7,30 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e51c810a2e1e4bf4157aa1311255c5547021b60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770988"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962070"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>Como: Tratar o evento MouseDoubleClick para cada item em um ListView
-Para manipular um evento de um item em uma <xref:System.Windows.Controls.ListView>, você precisará adicionar um manipulador de eventos a cada <xref:System.Windows.Controls.ListViewItem>. Quando um <xref:System.Windows.Controls.ListView> está associado a uma fonte de dados, você não crie explicitamente um <xref:System.Windows.Controls.ListViewItem>, mas você pode manipular o evento para cada item adicionando um <xref:System.Windows.EventSetter> de um estilo de um <xref:System.Windows.Controls.ListViewItem>.  
+Para manipular um evento para um item em um <xref:System.Windows.Controls.ListView>, você precisa adicionar um manipulador de eventos a cada <xref:System.Windows.Controls.ListViewItem>um. Quando um <xref:System.Windows.Controls.ListView> está associado a uma fonte de dados, você não cria explicitamente <xref:System.Windows.Controls.ListViewItem>um, mas pode manipular o evento para cada item adicionando um <xref:System.Windows.EventSetter> a um estilo de um <xref:System.Windows.Controls.ListViewItem>.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria uma associação de dados <xref:System.Windows.Controls.ListView> e cria um <xref:System.Windows.Style> para adicionar um manipulador de eventos a cada <xref:System.Windows.Controls.ListViewItem>.  
+ O exemplo a seguir cria uma associação <xref:System.Windows.Controls.ListView> de dados e cria um <xref:System.Windows.Style> para adicionar um manipulador de eventos <xref:System.Windows.Controls.ListViewItem>a cada um.  
   
  [!code-xaml[ListViewHowTos#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
 [!code-xaml[ListViewHowTos#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
 [!code-xaml[ListViewHowTos#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- A exemplo a seguir manipula o <xref:System.Windows.Controls.Control.MouseDoubleClick> eventos.  
+ O exemplo a seguir trata <xref:System.Windows.Controls.Control.MouseDoubleClick> o evento.  
   
  [!code-csharp[ListViewHowTos#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml.cs#6)]
  [!code-vb[ListViewHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
   
 > [!NOTE]
->  Embora seja mais comum para associar uma <xref:System.Windows.Controls.ListView> a uma fonte de dados, você pode usar um estilo para adicionar um manipulador de eventos a cada <xref:System.Windows.Controls.ListViewItem> em uma não-associação de dados <xref:System.Windows.Controls.ListView> independentemente se você criar explicitamente um <xref:System.Windows.Controls.ListViewItem>.  Para obter mais informações sobre explícita e implicitamente criado <xref:System.Windows.Controls.ListViewItem> controles, consulte <xref:System.Windows.Controls.ItemsControl>.  
+> Embora seja mais comum associar <xref:System.Windows.Controls.ListView> um a uma fonte de dados, você pode usar um estilo para adicionar um manipulador de eventos a cada <xref:System.Windows.Controls.ListViewItem> um em um não associado <xref:System.Windows.Controls.ListView> a dados, independentemente de você criar explicitamente um <xref:System.Windows.Controls.ListViewItem>.  Para obter mais informações sobre controles criados <xref:System.Windows.Controls.ListViewItem> explicitamente e implicitamente, consulte. <xref:System.Windows.Controls.ItemsControl>  
   
 ## <a name="see-also"></a>Consulte também
 

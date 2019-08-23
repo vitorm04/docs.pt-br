@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039980"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962767"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedimento principal no Visual Basic
 Cada aplicativo de Visual Basic deve conter um procedimento `Main`chamado. Esse procedimento serve como o ponto de partida e o controle geral para seu aplicativo. O .NET Framework chama o `Main` procedimento quando ele carregou seu aplicativo e está pronto para passar o controle para ele. A menos que você esteja criando um aplicativo Windows Forms, você deve `Main` escrever o procedimento para aplicativos que são executados por conta própria.
@@ -33,7 +33,7 @@ Cada aplicativo de Visual Basic deve conter um procedimento `Main`chamado. Esse 
  Há quatro maneiras de declarar o `Main` procedimento. Ele pode usar argumentos ou não, e pode retornar um valor ou não.
 
 > [!NOTE]
->  Se você declarar `Main` em uma classe, deverá usar a `Shared` palavra-chave. Em um módulo, `Main` não precisa ser. `Shared`
+> Se você declarar `Main` em uma classe, deverá usar a `Shared` palavra-chave. Em um módulo, `Main` não precisa ser. `Shared`
 
 - A maneira mais simples é declarar um `Sub` procedimento que não use argumentos nem retornar um valor.
 

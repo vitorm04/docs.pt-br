@@ -6,16 +6,16 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85ca55e976a010a4875d260b3da30f5bc3cf2ffb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 611ad0a6f4ec8b8c63010938372b733a0ac66052
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723609"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955762"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Eventos ETW na biblioteca de tarefas paralelas e em PLINQ
 
-A Biblioteca de Paralelismo de Tarefas e o PLINQ geram eventos ETW (Rastreamento de Eventos para Windows) que podem ser usados para criar o perfil e solucionar problemas de aplicativos usando ferramentas como o Windows Performance Analyzer. No entanto, na maioria dos cenários, a melhor maneira de código do aplicativo paralelo de perfil é usar o [simultânea](/visualstudio/profiling/concurrency-visualizer) no Visual Studio.
+A Biblioteca de Paralelismo de Tarefas e o PLINQ geram eventos ETW (Rastreamento de Eventos para Windows) que podem ser usados para criar o perfil e solucionar problemas de aplicativos usando ferramentas como o Windows Performance Analyzer. No entanto, na maioria dos cenários, a melhor maneira de criar o perfil de código de aplicativo paralelo é usar o [Visualizador](/visualstudio/profiling/concurrency-visualizer) de simultaneidade no Visual Studio.
 
 ## <a name="task-parallel-library-etw-events"></a>Eventos ETW da Biblioteca de Paralelismo de Tarefas
 
@@ -121,5 +121,5 @@ EVENT_DESCRIPTOR.Id = 1
 ## <a name="see-also"></a>Consulte também
 
 - [Eventos ETW no .NET Framework](../../../docs/framework/performance/etw-events.md)
-- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [TPL (Biblioteca de Paralelismo de Tarefas)](../../standard/parallel-programming/task-parallel-library-tpl.md)
+- [PLINQ (LINQ paralelo)](../../standard/parallel-programming/parallel-linq-plinq.md)

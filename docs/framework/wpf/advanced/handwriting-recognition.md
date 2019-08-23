@@ -8,27 +8,27 @@ helpviewer_keywords:
 - handwriting recognition [WPF]
 - recognition of handwriting [WPF]
 ms.assetid: f4e8576d-e731-4bac-9818-22e2ae636636
-ms.openlocfilehash: 417af272514ac9ce68c8faa72339f2befc2dd7c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6c09f063b6bd0eef2cb9f6bb444eac980ad4832
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923377"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956524"
 ---
 # <a name="handwriting-recognition"></a>Reconhecimento de manuscrito
-Esta seção aborda os conceitos básicos do reconhecimento relacionada à tinta digital na plataforma do WPF.  
+Esta seção aborda os conceitos básicos do reconhecimento que pertencem à tinta digital na plataforma WPF.  
   
 ## <a name="recognition-solutions"></a>Soluções de reconhecimento  
- O exemplo a seguir mostra como reconhecer tinta usando o [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)) classe.  
+ O exemplo a seguir mostra como reconhecer a tinta usando a classe [Microsoft. Ink. InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)) .  
   
 > [!NOTE]
->  Este exemplo requer que os reconhecedores de manuscrito seja instalado no sistema.  
+> Este exemplo requer que os reconhecedores de manuscrito estejam instalados no sistema.  
   
- Criar um novo projeto de aplicativo do WPF no Visual Studio chamado **InkRecognition**. Substitua o conteúdo do arquivo Window1.xaml pelo seguinte código XAML. Esse código renderiza a interface do usuário do aplicativo.  
+ Crie um novo projeto de aplicativo WPF no Visual Studio chamado **InkRecognition**. Substitua o conteúdo do arquivo Window1. XAML pelo código XAML a seguir. Esse código processa a interface do usuário do aplicativo.  
   
  [!code-xaml[InkRecognition#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkRecognition/CSharp/Window1.xaml#1)]  
   
- Adicione uma referência ao assembly Microsoft Ink, Ink, que pode ser encontrado em \Program Files\Microsoft Shared\Ink. Substitua o conteúdo do arquivo code-behind com o código a seguir.  
+ Adicione uma referência ao assembly de tinta da Microsoft, Microsoft. Ink. dll, que pode ser encontrado em \Program Files\Common Files\Microsoft Shared\Ink. Substitua o conteúdo do arquivo code-behind pelo código a seguir.  
   
  [!code-csharp[InkRecognition#2](~/samples/snippets/csharp/VS_Snippets_Wpf/InkRecognition/CSharp/Window1.xaml.cs#2)]
  [!code-vb[InkRecognition#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkRecognition/VisualBasic/Window1.xaml.vb#2)]  

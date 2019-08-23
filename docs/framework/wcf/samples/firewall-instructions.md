@@ -2,89 +2,89 @@
 title: Instruções do firewall
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 06e5ba64ab0ec3558e4c773c9cb21f961384e0c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e557963c415cf39c4f25b4854c9863652201146
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650048"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961400"
 ---
 # <a name="firewall-instructions"></a>Instruções do firewall
-Você deve habilitar várias portas ou programas no firewall para que os exemplos do Windows Communication Foundation (WCF) podem funcionar. Muitos dos exemplos de se comunicar por meio de portas no intervalo 8000-8003 e porta 9000. O firewall está ativado por padrão e impede o acesso a essas portas. Para habilitar o firewall para os exemplos, conclua um dos procedimentos a seguir, dependendo de suas necessidades e ambiente de segurança:  
+Você deve habilitar várias portas ou programas no firewall para que os exemplos de Windows Communication Foundation (WCF) possam funcionar. Muitos dos exemplos se comunicam usando portas no intervalo de 8000-8003 e a porta 9000. O firewall é ativado por padrão e impede o acesso a essas portas. Para habilitar o firewall para os exemplos, conclua um dos seguintes procedimentos, dependendo de seus requisitos e ambiente de segurança:  
   
-- Opção 1: Habilite interativamente amostras durante a execução. Não fazer nenhuma alteração de avanço em sua configuração de firewall e prossiga para começar a criar e executar os exemplos. Quando um exemplo é executado, uma **o alerta de segurança do Windows** caixa de diálogo é exibida. O programa de exemplo em questão, em seguida, pode ser adicionado interativamente a uma lista desbloqueada. Com esse procedimento, você terá que reiniciar, em seguida, o exemplo.  
+- Opção 1: Habilite de modo interativo os exemplos durante a execução. Não faça nenhuma alteração antecipada na configuração do firewall e continue para começar a criar e executar os exemplos. Quando um exemplo é executado, uma caixa de diálogo **alerta de segurança do Windows** é exibida. O programa de exemplo em questão pode ser adicionado interativamente a uma lista desbloqueada. Com esse procedimento, talvez seja necessário reiniciar o exemplo.  
   
-- Opção 2: Habilite programas de exemplo com antecedência. Iniciar o **painel de controle do Windows Firewall** miniaplicativo e habilitar o exemplo de programas que deseja executar. Portanto, os arquivos executáveis existirem, você deve criar os programas de primeiro. Você pode encontrar instruções mais detalhadas no procedimento a seguir.  
+- Opção 2: Habilite os programas de exemplo com antecedência. Inicie o miniaplicativo do **painel de controle do firewall do Windows** e habilite os programas de exemplo que você planeja executar. Você deve criar os programas primeiro para que os arquivos executáveis existam. Você pode encontrar instruções mais detalhadas no procedimento a seguir.  
   
-- Opção 3: Habilite um intervalo de portas com antecedência. Iniciar o **Firewall do Windows** **painel de controle** miniaplicativo e habilite as portas 80, 443, 8000 8003 e 9000, que são usados pelos exemplos. Você pode encontrar instruções mais detalhadas no procedimento a seguir. Essa opção é menos segura do que os outros porque ele permite que qualquer programa usam essas portas, não apenas os exemplos.  
+- Opção 3: Habilite um intervalo de portas com antecedência. Inicie o miniaplicativo do **painel de controle** do **Firewall do Windows** e habilite as portas 80, 443, 8000-8003 e 9000, que são usadas pelos exemplos. Você pode encontrar instruções mais detalhadas no procedimento a seguir. Essa opção é menos segura do que as outras porque permite que qualquer programa use essas portas, não apenas os exemplos.  
   
- Se você não tiver certeza de qual procedimento para usar, escolha a primeira opção. Se você estiver executando um firewall de outro fornecedor, talvez você precise fazer alterações semelhantes.  
+ Se você não tiver certeza de qual procedimento usar, escolha a primeira opção. Se você estiver executando um firewall de outro fornecedor, talvez seja necessário fazer alterações semelhantes.  
   
 > [!IMPORTANT]
->  Alterar sua configuração de firewall afeta sua segurança. É recomendável que você registre as alterações que você fizer e removê-los quando tiver terminado de trabalhar com os exemplos.  
+>  A alteração da configuração do firewall afeta sua segurança. É recomendável que você registre as alterações feitas e remova-as quando terminar de trabalhar com os exemplos.  
   
-### <a name="to-enable-samples-programs-in-advance"></a>Para habilitar programas de exemplos com antecedência  
+### <a name="to-enable-samples-programs-in-advance"></a>Para habilitar os programas de exemplo com antecedência  
   
-1. Crie o exemplo.  
+1. Compile o exemplo.  
   
-2. Clique em **inicie**, clique em **execute**e o tipo `firewall.cpl`. Isso abre o **painel de controle do Windows Firewall** miniaplicativo.  
+2. Clique em **Iniciar**, **executar**e digite `firewall.cpl`. Isso abre o miniaplicativo do **painel de controle do firewall do Windows** .  
   
     > [!NOTE]
-    >  Você deve ter permissão para alterar as configurações de Firewall para executar os exemplos que exigem a capacidade de se comunicar através do Firewall do Windows. Se algumas configurações do firewall não estão disponíveis e o computador está conectado a um domínio, o administrador do sistema talvez esteja controlando essas configurações por meio de diretiva de grupo.  
+    >  Você deve ter permissão para alterar as configurações de firewall para executar exemplos que exigem a capacidade de comunicação por meio do firewall do Windows. Se algumas configurações de firewall estiverem indisponíveis e o computador estiver conectado a um domínio, o administrador do sistema poderá estar controlando essas configurações por meio de Política de Grupo.  
   
-3. Conclua uma das seguintes etapas específicas operacionais para permitir um programa pelo Firewall do Windows:  
+3. Conclua uma das seguintes etapas específicas de operação para permitir um programa por meio do firewall do Windows:  
   
-    - No Windows 7 ou Windows Server 2008 r2, clique em **permitem que um programa ou recurso pelo Firewall do Windows**. Clique em **alterar configurações**, permitir **outro programa...** .  
+    - No Windows 7 ou no Windows Server 2008 R2, clique em **permitir um programa ou recurso pelo firewall do Windows**. Clique em **alterar configurações**, permitir **outro programa...** .  
   
-    - Na [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], clique em **permitir um programa pelo Firewall do Windows**.  
+    - Em [!INCLUDE[wv](../../../../includes/wv-md.md)] ou[!INCLUDE[lserver](../../../../includes/lserver-md.md)], clique em **permitir um programa pelo firewall do Windows**.  
   
-4. Sobre o **exceções** , clique em **adicionar programa**.  
+4. Na guia **exceções** , clique em **Adicionar programa**.  
   
-5. Clique o **procurar** botão e selecione o arquivo executável do exemplo que você pretende executar.  
+5. Clique no botão **procurar** e selecione o arquivo executável do exemplo que você planeja executar.  
   
-6. Repita as etapas 4 e 5 até ter adicionado os arquivos executáveis de todos os exemplos que você pretende executar.  
+6. Repita as etapas 4 e 5 até adicionar os arquivos executáveis de todos os exemplos que você planeja executar.  
   
-7. Clique em **Okey** para fechar o miniaplicativo de firewall.  
+7. Clique em **OK** para fechar o miniaplicativo firewall.  
   
 ### <a name="to-enable-a-port-range-in-advance"></a>Para habilitar um intervalo de portas com antecedência  
   
-1. Clique em **inicie**, clique em **execute**e o tipo `firewall.cpl`. Isso abre o **painel de controle do Windows Firewall** miniaplicativo.  
+1. Clique em **Iniciar**, **executar**e digite `firewall.cpl`. Isso abre o miniaplicativo do **painel de controle do firewall do Windows** .  
   
-2. No Windows 7 ou Windows Server 2008 R2, siga estas etapas.  
+2. No Windows 7 ou no Windows Server 2008 R2, siga estas etapas.  
   
-    1. Clique em **configurações avançadas** na coluna esquerda da janela do Firewall do Windows.  
+    1. Clique em **Configurações avançadas** na coluna esquerda da janela Firewall do Windows.  
   
-    2. Clique em **regras de entrada** na coluna à esquerda.  
+    2. Clique em **regras de entrada** na coluna esquerda.  
   
     3. Clique em **novas regras** na coluna à direita.  
   
-    4. Selecione **porta** e clique em **próxima**.  
+    4. Selecione **porta** e clique em **Avançar**.  
   
-    5. Selecione **TCP** e insira `8000, 8001, 8002, 8003, 9000, 80, 443` no **portas locais específicas** campo.  
+    5. Selecione **TCP** e insira `8000, 8001, 8002, 8003, 9000, 80, 443` no campo **portas locais específicas** .  
   
     6. Clique em **Avançar**.  
   
-    7. Selecione **permitir a conexão**e clique em **próxima** .  
+    7. Selecione **permitir a conexão**e clique em **Avançar** .  
   
-    8. Selecione **domínio** e **privada**e clique em **próxima**.  
+    8. Selecione **domínio** e **privado**e clique em **Avançar**.  
   
     9. Nomeie essa regra `WCF-WF 4.0 Samples`e clique em **concluir**.  
   
-    10. Clique em **regras de saída** e repita as etapas de c para h.  
+    10. Clique em **regras de saída** e repita as etapas de c a h.  
   
-3. Na [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], siga estas etapas.  
+3. No [!INCLUDE[wv](../../../../includes/wv-md.md)] ou[!INCLUDE[lserver](../../../../includes/lserver-md.md)], siga estas etapas.  
   
-    1. Clique em **permitir um programa pelo Firewall do Windows**.  
+    1. Clique em **permitir um programa pelo firewall do Windows**.  
   
-    2. Sobre o **exceções** , clique em **adicionar porta**.  
+    2. Na guia **exceções** , clique em **Adicionar porta**.  
   
-    3. Insira um nome, digite 8000 como o número da porta e selecione o **TCP** opção.  
+    3. Insira um nome, insira 8000 como o número da porta e selecione a opção **TCP** .  
   
-    4. Clique o **Alterar escopo** botão, selecione o **minha rede** única opção de (sub-rede) e clique em **Okey**.  
+    4. Clique no botão **alterar escopo** , selecione a opção **minha rede** (sub-rede) somente e clique em **OK**.  
   
-    5. Repita as etapas de b a d para portas 8001, 8002, 8003, 9000, 80 e 443.  
+    5. Repita as etapas de b a d para as portas 8001, 8002, 8003, 9000, 80 e 443.  
   
-4. Clique em **Okey** para fechar o miniaplicativo de firewall.  
+4. Clique em **OK** para fechar o miniaplicativo firewall.  
   
 > [!NOTE]
->  Remova todas as exceções de firewall quando tiver terminado de trabalhar com os exemplos. Para fazer isso, abra o **painel de controle do Windows Firewall** miniaplicativo e remove nenhum programa ou porta entradas que foram adicionadas por procedimentos anteriores.
+> Remova as exceções de firewall quando terminar de trabalhar com os exemplos. Para fazer isso, abra o miniaplicativo do **painel de controle do firewall do Windows** e remova todos os programas ou entradas de porta que foram adicionados pelos procedimentos anteriores.

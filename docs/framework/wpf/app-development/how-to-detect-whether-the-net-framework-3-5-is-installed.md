@@ -7,24 +7,24 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 69dfa0eb8d9ad9b780d258a874d255484f270cfe
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 220fb3236786eb894bb78d12104025d24c9876ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690443"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960901"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Como: Detectar se o .NET Framework 3.5 está instalado
-Antes dos administradores podem implantar aplicativos do Windows Presentation Foundation (WPF) em um sistema que tem como alvo o .NET Framework 3.5, eles devem primeiro confirmar que o tempo de execução do .NET Framework 3.5 está presente. Este tópico fornece um script escrito em HTML/JavaScript que os administradores podem usar para determinar se o .NET Framework 3.5 está presente em um sistema.  
+Antes que os administradores possam implantar aplicativos Windows Presentation Foundation (WPF) em um sistema que tenha como destino o .NET Framework 3,5, eles devem primeiro confirmar que o tempo de execução do .NET Framework 3,5 está presente. Este tópico fornece um script escrito em HTML/JavaScript que os administradores podem usar para determinar se o .NET Framework 3,5 está presente em um sistema.  
   
 > [!NOTE]
->  Para obter mais informações sobre como instalar, implantar e detectar o .NET Framework, consulte [instalar o .NET Framework para desenvolvedores](../../install/guide-for-developers.md).  
+> Para obter informações mais detalhadas sobre como instalar, implantar e detectar o .NET Framework, consulte [instalar o .NET Framework para desenvolvedores](../../install/guide-for-developers.md).  
   
 ## <a name="example"></a>Exemplo  
- Quando o .NET Framework 3.5 está instalado, o MSI adiciona ".NET CLR" e o número de versão para a cadeia de caracteres UserAgent. O exemplo a seguir mostra um script inserido em uma página HTML simples. O script procura a cadeia de caracteres UserAgent para determinar se o .NET Framework 3.5 está instalado e exibe uma mensagem de status nos resultados da pesquisa.  
+ Quando o .NET Framework 3,5 é instalado, o MSI adiciona ".NET CLR" e o número de versão à cadeia de caracteres UserAgent. O exemplo a seguir mostra um script inserido em uma página HTML simples. O script pesquisa a cadeia de caracteres UserAgent para determinar se o .NET Framework 3,5 está instalado e exibe uma mensagem de status nos resultados da pesquisa.  
   
 > [!NOTE]
->  Este script foi desenvolvido para o Internet Explorer. Outros navegadores podem não incluir informações de CLR do .NET na cadeia de caracteres UserAgent.  
+> Esse script foi criado para o Internet Explorer. Outros navegadores podem não incluir informações do .NET CLR na cadeia de caracteres UserAgent.  
   
 ```  
 <HTML>  

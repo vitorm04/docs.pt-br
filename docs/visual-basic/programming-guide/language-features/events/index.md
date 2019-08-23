@@ -5,15 +5,15 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 65b4f5633e589ae02e9ed495074000181864428a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586708"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956364"
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
-Enquanto você visualiza um projeto do Visual Studio como uma série de procedimentos que executam em uma sequência, na realidade, a maioria dos programas são orientados a eventos — ou seja, o fluxo de execução é determinado pelas ocorrências externas chamadas *eventos*.  
+Embora você possa visualizar um projeto do Visual Studio como uma série de procedimentos executados em uma sequência, na realidade, a maioria dos programas são controlados por eventos, o que significa que o fluxo de execução é determinado por ocorrências externas chamadas de *eventos*.  
   
  Um evento é um sinal que informa a um aplicativo que algo importante ocorreu. Por exemplo, quando um usuário clica em um controle em um formulário, o formulário pode lançar um evento `Click` e chamar um procedimento que manipula o evento. Os eventos também permitem que tarefas separadas se comuniquem. Por exemplo, digamos que seu aplicativo executa uma tarefa de classificação separadamente do aplicativo principal. Se um usuário cancelar a classificação, seu aplicativo poderá enviar um evento de cancelamento instruindo o processo de classificação para parar.  
   
@@ -26,7 +26,7 @@ Enquanto você visualiza um projeto do Visual Studio como uma série de procedim
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>Acionando eventos  
- Um evento é como uma mensagem anunciando que algo importante ocorreu. O ato de transmitir a mensagem é chamado para *acionar* o evento. No Visual Basic, você aciona eventos com o `RaiseEvent` instrução, como no exemplo a seguir:  
+ Um evento é como uma mensagem anunciando que algo importante ocorreu. O ato de transmitir a mensagem é chamado para *acionar* o evento. No Visual Basic, você gera eventos com a `RaiseEvent` instrução, como no exemplo a seguir:  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
@@ -38,10 +38,10 @@ Enquanto você visualiza um projeto do Visual Studio como uma série de procedim
 ### <a name="event-handlers"></a>Manipuladores de Eventos  
  *Manipuladores de eventos* são procedimentos que são chamados quando ocorre um evento correspondente. Você pode usar qualquer sub-rotina válida com uma assinatura correspondente como um manipulador de eventos. Você não pode usar uma função como um manipulador de eventos, porque ela não retorna um valor para a origem do evento.  
   
- Visual Basic usa uma convenção de nomenclatura padrão para manipuladores de eventos que combina o nome do emissor do evento, um sublinhado e o nome do evento. Por exemplo, o evento `Click` de um botão chamado `button1` seria nomeado `Sub button1_Click`.  
+ Visual Basic usa uma Convenção de nomenclatura padrão para manipuladores de eventos que combina o nome do remetente do evento, um sublinhado e o nome do evento. Por exemplo, o evento `Click` de um botão chamado `button1` seria nomeado `Sub button1_Click`.  
   
 > [!NOTE]
->  É recomendável que você use esta convenção de nomenclatura ao definir manipuladores de eventos para seus próprios eventos, mas não é necessário. Você pode usar qualquer nome de sub-rotina válido.  
+> É recomendável que você use esta convenção de nomenclatura ao definir manipuladores de eventos para seus próprios eventos, mas não é necessário. Você pode usar qualquer nome de sub-rotina válido.  
   
 ## <a name="associating-events-with-event-handlers"></a>Associar eventos a manipuladores de eventos  
  Antes de um manipulador de eventos se tornar útil, você deve primeiro associá-lo a um evento usando a instrução `Handles` ou `AddHandler`.  
@@ -55,7 +55,7 @@ Enquanto você visualiza um projeto do Visual Studio como uma série de procedim
   
 - Não é possível usar uma variável `WithEvents` como uma variável de objeto. Ou seja, você não pode declará-la como `Object`— você deve especificar o nome da classe quando declarar a variável.  
   
-- Como eventos compartilhados não são ligados às instâncias de classe, é possível usar `WithEvents` para manipular eventos compartilhados declarativamente. Da mesma forma, você não pode usar `WithEvents` ou `Handles` para manipular eventos de um `Structure`. Em ambos os casos, você pode usar a instrução `AddHandler` para manipular esses eventos.  
+- Como os eventos compartilhados não estão vinculados a instâncias de classe, `WithEvents` você não pode usar o para manipular eventos compartilhados de forma declarativa. Da mesma forma, você não pode usar `WithEvents` ou `Handles` para manipular eventos de um `Structure`. Em ambos os casos, você pode usar a instrução `AddHandler` para manipular esses eventos.  
   
 - Não é possível criar matrizes de variáveis `WithEvents`.  
   
@@ -63,7 +63,7 @@ Enquanto você visualiza um projeto do Visual Studio como uma série de procedim
   
  Embora a cláusula `Handles` seja a maneira padrão de associar um evento a um manipulador de eventos, ela é limitada a associar eventos a manipuladores de eventos em tempo de compilação.  
   
- Em alguns casos, como com os eventos associados aos formulários ou controles, Visual Basic automaticamente extingue um manipulador de eventos vazio e a associa com um evento. Por exemplo, quando você clique duas vezes em um botão de comando em um formulário no modo de design, o Visual Basic cria um manipulador de eventos vazio e um `WithEvents` variável para o botão de comando, como no código a seguir:  
+ Em alguns casos, como com eventos associados a formulários ou controles, Visual Basic stubs automaticamente de um manipulador de eventos vazio e o associa a um evento. Por exemplo, quando você clica duas vezes em um botão de comando em um formulário no modo de design, Visual Basic cria um manipulador de `WithEvents` eventos vazio e uma variável para o botão de comando, como no código a seguir:  
   
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
@@ -99,9 +99,9 @@ Enquanto você visualiza um projeto do Visual Studio como uma série de procedim
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Passo a passo: Declarando e acionando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Fornece uma descrição passo a passo de como declarar e acionar eventos para uma classe.|  
-|[Passo a passo: Manipulação de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Demonstra como escrever um procedimento de manipulador de eventos.|  
-|[Como: Declarar eventos personalizados para evitar bloqueio](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Demonstra como definir um evento personalizado que permite que seus manipuladores de eventos sejam chamados assincronicamente.|  
+|[Passo a passo: Declarando e gerando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Fornece uma descrição passo a passo de como declarar e acionar eventos para uma classe.|  
+|[Passo a passo: Manipulando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Demonstra como escrever um procedimento de manipulador de eventos.|  
+|[Como: Declarar eventos personalizados para evitar o bloqueio](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Demonstra como definir um evento personalizado que permite que seus manipuladores de eventos sejam chamados assincronicamente.|  
 |[Como: Declarar eventos personalizados para conservar a memória](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Demonstra como definir um evento personalizado que utiliza memória somente quando o evento é manipulado.|  
 |[Solucionando problemas de manipuladores de eventos herdados no Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Lista problemas comuns que ocorrem com os manipuladores de eventos em componentes herdados.|  
 |[Eventos](../../../../standard/events/index.md)|Apresenta uma visão geral do modelo de evento no .NET Framework.|  

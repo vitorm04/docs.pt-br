@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abcbfaf803e930baaaf798986a585a7da5f9134d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9bb5a2629e435d76691d48feef6689191b66373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780794"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957894"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>Método ICorProfilerInfo4::InitializeCurrentThread
-Inicializa o thread atual com antecedência sobre o criador de perfil subsequente, chamadas de API no mesmo thread, portanto, esse deadlock pode ser evitado.  
+Inicializa o thread atual antes das chamadas de API do criador de perfil subsequentes no mesmo thread, para que o deadlock possa ser evitado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,17 +34,17 @@ HRESULT InitializeCurrentThread ();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- É recomendável que você chame `InitializeCurrentThread` em qualquer thread que chama um criador de perfil de API, embora haja suspenso threads. Esse método é normalmente usado por criadores de perfil de amostragem que criar seu próprio thread para chamar o [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método para executar a pilha orienta enquanto o thread-alvo é suspenso. Chamando `InitializeCurrentThread` depois de quando o criador de perfil primeiro cria o thread de amostragem, os criadores de perfis podem garantir que a inicialização lenta por thread que o CLR executaria durante a primeira chamada para `DoStackSnapshot` agora pode ocorrer com segurança quando nenhum outro thread está suspenso.  
+ Recomendamos que você chame `InitializeCurrentThread` em qualquer thread que chamará uma API do profiler enquanto houver threads suspensos. Esse método é normalmente usado por infilers de amostragem que criam seu próprio thread para chamar o método [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) para executar movimentações de pilha enquanto o thread-alvo é suspenso. Chamando `InitializeCurrentThread` uma vez quando o criador de perfil cria primeiro o thread de amostragem, os profileres podem garantir a inicialização lenta por thread que o CLR executaria durante a primeira `DoStackSnapshot` chamada para que agora possa ocorrer com segurança quando nenhum outro thread estiver suspenso.  
   
 > [!NOTE]
->  `InitializeCurrentThread` faz a inicialização de antemão para concluir as tarefas que aplicarão bloqueios e poderá ser bloqueada. Chamar `InitializeCurrentThread` somente quando não há nenhum thread suspenso.  
+> `InitializeCurrentThread`faz a inicialização com antecedência para concluir as tarefas que usam bloqueios e pode travar. Chame `InitializeCurrentThread` somente quando não houver threads suspensos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl, CorProf.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: eb1680ba8ca2fab5511dc20c94ad997ef04974fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9e8cf238d35ec9a6fc9c6d013c4d92b00dced78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614980"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955783"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>Exemplos de sintaxe de expressão de consulta: Filtragem
-Os exemplos neste tópico demonstram como usar o `Where` e `Where…Contains` métodos para consultar o [modelo de vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando a sintaxe de expressão de consulta. Observe que, em que...`Contains` não pode ser usado como parte de um [consulta compilada](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+Os exemplos neste tópico demonstram como usar os métodos `Where` e `Where…Contains` para consultar o [modelo de vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando a sintaxe de expressão de consulta. Observação, onde...`Contains` Não pode ser usado como parte de uma [consulta compilada](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
   
  O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   
- Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:  
+ Os exemplos neste tópico usam as seguintes `using` / `Imports` instruções:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -57,7 +57,7 @@ Os exemplos neste tópico demonstram como usar o `Where` e `Where…Contains` m�
  [!code-vb[DP L2E ArraysAndListsInQueries#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#1)]  
   
 > [!NOTE]
->  Como parte do predicado em uma cláusula `Where…Contains`, você pode usar um <xref:System.Array>, <xref:System.Collections.Generic.List%601> ou uma coleção de qualquer tipo que implemente a interface de <xref:System.Collections.Generic.IEnumerable%601>. Você também pode declarar e inicializar uma coleção em uma consulta LINQ to Entities. Consulte o próximo exemplo para obter mais informações.  
+> Como parte do predicado em uma cláusula `Where…Contains`, você pode usar um <xref:System.Array>, <xref:System.Collections.Generic.List%601> ou uma coleção de qualquer tipo que implemente a interface de <xref:System.Collections.Generic.IEnumerable%601>. Você também pode declarar e inicializar uma coleção em uma consulta LINQ to Entities. Consulte o próximo exemplo para obter mais informações.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir declara e inicializa matrizes em uma cláusula `Where…Contains` para localizar todos os produtos que têm um `ProductModelID` ou `Size` que coincidem com valores na matriz.  

@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cda3e87a4b0eb680d374eb0419a6b6b3157dc4a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747388"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957129"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Passo a passo: executar uma operação do tipo "arrastar e soltar" no Windows Forms
-Para executar operações de arrastar e soltar em aplicativos baseados em Windows no você deve lidar com uma série de eventos, mais notavelmente os <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, e <xref:System.Windows.Forms.Control.DragDrop> eventos. Trabalhando com as informações disponíveis no evento argumentos desses eventos, você pode facilmente orientar as operações do tipo "arrastar e soltar".  
+Para executar operações de arrastar e soltar em aplicativos baseados no Windows, você deve lidar com uma série de eventos, principalmente os <xref:System.Windows.Forms.Control.DragEnter>eventos <xref:System.Windows.Forms.Control.DragLeave>, e <xref:System.Windows.Forms.Control.DragDrop> . Trabalhando com as informações disponíveis no evento argumentos desses eventos, você pode facilmente orientar as operações do tipo "arrastar e soltar".  
   
 ## <a name="dragging-data"></a>Arrastando dados  
- Todas as operações do tipo "arrastar e soltar" começam com arrastar. A funcionalidade para permitir que dados sejam coletados quando arrastar começa é implementada no <xref:System.Windows.Forms.Control.DoDragDrop%2A> método.  
+ Todas as operações do tipo "arrastar e soltar" começam com arrastar. A funcionalidade para habilitar os dados a serem coletados ao arrastar iniciar é implementada no <xref:System.Windows.Forms.Control.DoDragDrop%2A> método.  
   
- No exemplo a seguir, o <xref:System.Windows.Forms.Control.MouseDown> evento é usado para iniciar a operação de arrastar porque ele é o mais intuitivo (a maioria das ações de arrastar-e-soltar começa com o botão do mouse sendo pressionado). No entanto, lembre-se de que qualquer evento pode ser usado para iniciar um procedimento do tipo "arrastar e soltar".  
+ No exemplo a seguir, o <xref:System.Windows.Forms.Control.MouseDown> evento é usado para iniciar a operação de arrastar porque ela é a mais intuitiva (a maioria das ações de arrastar e soltar começa com o botão do mouse que está sendo pressionado). No entanto, lembre-se de que qualquer evento pode ser usado para iniciar um procedimento do tipo "arrastar e soltar".  
   
 > [!NOTE]
->  Determinados controles têm eventos específicos de arrastar personalizados. O <xref:System.Windows.Forms.ListView> e <xref:System.Windows.Forms.TreeView> controles, por exemplo, tem um <xref:System.Windows.Forms.TreeView.ItemDrag> eventos.  
+> Determinados controles têm eventos específicos de arrastar personalizados. Os <xref:System.Windows.Forms.ListView> controles <xref:System.Windows.Forms.TreeView> e, por exemplo, têm um <xref:System.Windows.Forms.TreeView.ItemDrag> evento.  
   
 #### <a name="to-start-a-drag-operation"></a>Para iniciar uma operação de arrastar  
   
-1. No <xref:System.Windows.Forms.Control.MouseDown> evento para o controle em que a operação de arrastar começará, use o `DoDragDrop` método para definir os dados a serem arrastados e o efeito permitido terá. Para obter mais informações, consulte <xref:System.Windows.Forms.DragEventArgs.Data%2A> e <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
+1. No evento para o controle em que o arrastar será iniciado, use o `DoDragDrop` método para definir os dados a serem arrastados e o efeito permitido ao arrastar terá. <xref:System.Windows.Forms.Control.MouseDown> Para obter mais informações, consulte <xref:System.Windows.Forms.DragEventArgs.Data%2A> e <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
   
-     O exemplo a seguir mostra como iniciar uma operação de arrastar. O controle em que a operação de arrastar começa é um <xref:System.Windows.Forms.Button> controle, os dados que está sendo arrastados é a cadeia de caracteres que representa o <xref:System.Windows.Forms.Control.Text%2A> propriedade do <xref:System.Windows.Forms.Button> controle e os efeitos permitidos são copiar ou mover.  
+     O exemplo a seguir mostra como iniciar uma operação de arrastar. O controle em que o arrastar começa é <xref:System.Windows.Forms.Button> um controle, os dados que estão sendo arrastados são <xref:System.Windows.Forms.Control.Text%2A> a cadeia de <xref:System.Windows.Forms.Button> caracteres que representa a propriedade do controle e os efeitos permitidos estão sendo copiados ou movidos.  
   
     ```vb  
     Private Sub Button1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button1.MouseDown  
@@ -48,18 +48,18 @@ Para executar operações de arrastar e soltar em aplicativos baseados em Window
     ```  
   
     > [!NOTE]
-    >  Qualquer dado pode ser usado como um parâmetro na `DoDragDrop` método; no exemplo acima, o <xref:System.Windows.Forms.Control.Text%2A> propriedade do <xref:System.Windows.Forms.Button> controle foi usada (em vez de embutir um valor ou recuperar dados de um conjunto de dados) porque a propriedade estava relacionada com o local que está sendo arrastada (o <xref:System.Windows.Forms.Button> controle). Lembre-se disso ao incorporar operações do tipo "arrastar e soltar" em seus aplicativos baseados em Windows.  
+    > Todos os dados podem ser usados como um parâmetro no `DoDragDrop` método; no exemplo acima, a <xref:System.Windows.Forms.Control.Text%2A> Propriedade do <xref:System.Windows.Forms.Button> controle foi usada (em vez de embutir em código um valor ou recuperar dados de um DataSet) porque a propriedade estava relacionada ao local que está sendo arrastado <xref:System.Windows.Forms.Button> (o controle). Lembre-se disso ao incorporar operações do tipo "arrastar e soltar" em seus aplicativos baseados em Windows.  
   
- Enquanto uma operação de arrastar estiver em vigor, você pode manipular o <xref:System.Windows.Forms.Control.QueryContinueDrag> evento, que "pede permissão" do sistema para continuar a operação de arrastar. Ao lidar com esse método, ele também é o ponto apropriado para você chamar métodos que terão um efeito sobre a operação de arrastar, como expandir um <xref:System.Windows.Forms.TreeNode> em um <xref:System.Windows.Forms.TreeView> controlar quando o cursor passa sobre ele.  
+ Embora uma operação de arrastar esteja em vigor, você pode manipular <xref:System.Windows.Forms.Control.QueryContinueDrag> o evento, que "pede permissão" do sistema para continuar a operação de arrastar. Ao lidar com esse método, também é o ponto apropriado para você chamar métodos que terão um efeito na operação de arrastar, como expandir um <xref:System.Windows.Forms.TreeNode> em um <xref:System.Windows.Forms.TreeView> controle quando o cursor passar sobre ele.  
   
 ## <a name="dropping-data"></a>Descartando dados  
- Depois de começar a arrastar dados de um local em um Formulário ou controle do Windows, você naturalmente desejará soltá-los em algum lugar. O cursor mudará ao cruzar uma área de um formulário ou controle que esteja configurado corretamente para receber os dados soltados. Qualquer área dentro de um controle ou formulário do Windows pode ser feita para aceitar dados soltos, definindo a <xref:System.Windows.Forms.Control.AllowDrop%2A> propriedade e tratamento de <xref:System.Windows.Forms.Control.DragEnter> e <xref:System.Windows.Forms.Control.DragDrop> eventos.  
+ Depois de começar a arrastar dados de um local em um Formulário ou controle do Windows, você naturalmente desejará soltá-los em algum lugar. O cursor mudará ao cruzar uma área de um formulário ou controle que esteja configurado corretamente para receber os dados soltados. Qualquer área dentro de um formulário ou controle do Windows pode ser feita para aceitar dados eliminados <xref:System.Windows.Forms.Control.AllowDrop%2A> definindo a propriedade e <xref:System.Windows.Forms.Control.DragEnter> manipulando os eventos e <xref:System.Windows.Forms.Control.DragDrop> .  
   
 #### <a name="to-perform-a-drop"></a>Para executar uma operação de soltar  
   
-1. Defina o <xref:System.Windows.Forms.Control.AllowDrop%2A> propriedade como true.  
+1. Defina a <xref:System.Windows.Forms.Control.AllowDrop%2A> Propriedade como true.  
   
-2. No `DragEnter` evento para o controle em que a operação de soltar ocorrerá, certifique-se de que os dados sendo arrastados são de um tipo aceitável (neste caso, <xref:System.Windows.Forms.Control.Text%2A>). O código então define o efeito que acontecerá quando a operação de soltar ocorre para um valor no <xref:System.Windows.Forms.DragDropEffects> enumeração. Para obter mais informações, consulte <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2. No caso do controle onde o descarte ocorrerá, verifique se os dados que estão sendo arrastados são de um tipo aceitável (nesse caso, <xref:System.Windows.Forms.Control.Text%2A>). `DragEnter` Em seguida, o código define o efeito que ocorrerá quando a ação de soltar ocorrer em <xref:System.Windows.Forms.DragDropEffects> um valor na enumeração. Para obter mais informações, consulte <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,11 +83,11 @@ Para executar operações de arrastar e soltar em aplicativos baseados em Window
     ```  
   
     > [!NOTE]
-    >  Você pode definir seus próprios <xref:System.Windows.Forms.DataFormats> , especificando seu próprio objeto como o <xref:System.Object> parâmetro do <xref:System.Windows.Forms.DataObject.SetData%2A> método. Ao fazer isso, verifique se o objeto especificado é serializável. Para obter mais informações, consulte <xref:System.Runtime.Serialization.ISerializable>.  
+    > Você pode definir seu próprio <xref:System.Windows.Forms.DataFormats> especificando seu próprio objeto como o <xref:System.Object> parâmetro do <xref:System.Windows.Forms.DataObject.SetData%2A> método. Ao fazer isso, verifique se o objeto especificado é serializável. Para obter mais informações, consulte <xref:System.Runtime.Serialization.ISerializable>.  
   
-3. No <xref:System.Windows.Forms.Control.DragDrop> evento para o controle em que a operação de soltar ocorrerá, use o <xref:System.Windows.Forms.DataObject.GetData%2A> método para recuperar os dados que estão sendo arrastados. Para obter mais informações, consulte <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3. No caso do controle em que o drop ocorrerá, use o <xref:System.Windows.Forms.DataObject.GetData%2A> método para recuperar os dados que estão sendo arrastados. <xref:System.Windows.Forms.Control.DragDrop> Para obter mais informações, consulte <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
-     No exemplo a seguir, um <xref:System.Windows.Forms.TextBox> controle é o controle que está sendo arrastado para (onde a operação de soltar ocorrerá). O código define a <xref:System.Windows.Forms.Control.Text%2A> propriedade do <xref:System.Windows.Forms.TextBox> controlar igual aos dados que estão sendo arrastados.  
+     No exemplo a seguir, um <xref:System.Windows.Forms.TextBox> controle é o controle que está sendo arrastado para (onde o descarte ocorrerá). O código define a <xref:System.Windows.Forms.Control.Text%2A> propriedade <xref:System.Windows.Forms.TextBox> do controle igual aos dados que estão sendo arrastados.  
   
     ```vb  
     Private Sub TextBox1_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragDrop  
@@ -104,7 +104,7 @@ Para executar operações de arrastar e soltar em aplicativos baseados em Window
     ```  
   
     > [!NOTE]
-    >  Além disso, você pode trabalhar com o <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> propriedade, para que, dependendo das teclas pressionadas durante a operação de arrastar e soltar, determinados efeitos ocorram (por exemplo, ele é padrão para copiar os dados arrastados quando a tecla CTRL está pressionada).  
+    > Além disso, você pode trabalhar com <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> a propriedade, de modo que, dependendo das chaves pressionadas durante a operação de arrastar e soltar, certos efeitos ocorram (por exemplo, é padrão para copiar os dados arrastados quando a tecla CTRL é pressionada).  
   
 ## <a name="see-also"></a>Consulte também
 

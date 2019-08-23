@@ -2,12 +2,12 @@
 title: Expressões-WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 092272db2f7979cf12917dfe35e116295db79bf3
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 93d437ae6d20f5d31d80ef3a40f409c589ae084e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868889"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962414"
 ---
 # <a name="expressions"></a>Expressões
 Uma expressão Windows Workflow Foundation (WF) é qualquer atividade que retorne um resultado. Todas as atividades de expressão derivam indiretamente de <xref:System.Activities.Activity%601>, que contém uma propriedade de <xref:System.Activities.OutArgument> nomeada <xref:System.Activities.Activity%601.Result%2A> como o valor de retorno da atividade. O [!INCLUDE[wf1](../../../includes/wf1-md.md)] é fornecido com uma ampla gama de atividades de expressão simples como <xref:System.Activities.Expressions.VariableValue%601> e <xref:System.Activities.Expressions.VariableReference%601>, que fornecem acesso à variável única de fluxo de trabalho por meio de atividades do operador, a atividades complexas como <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> e <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> que oferecem acesso à largura máxima da linguagem Visual Basic para produzir o resultado. As atividades adicionais da expressão podem ser criadas derivando de <xref:System.Activities.CodeActivity%601> ou <xref:System.Activities.NativeActivity%601>.  
@@ -16,7 +16,7 @@ Uma expressão Windows Workflow Foundation (WF) é qualquer atividade que retorn
  O designer de fluxo de trabalho usa <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> e <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> para todas as expressões em projetos do Visual Basic, e <xref:Microsoft.CSharp.Activities.CSharpValue%601> e <xref:Microsoft.CSharp.Activities.CSharpReference%601> para expressões em projetos de fluxo de trabalho C#.  
   
 > [!NOTE]
->  O suporte C# para expressões em projetos de fluxo de trabalho foi introduzido no .NET Framework 4,5. Para obter mais informações, consulte [ C# expressões](csharp-expressions.md).  
+> O suporte C# para expressões em projetos de fluxo de trabalho foi introduzido no .NET Framework 4,5. Para obter mais informações, consulte [ C# expressões](csharp-expressions.md).  
   
  Os fluxos de trabalho gerados pelo designer são salvos em XAML, onde as expressões aparecem incluídas entre colchetes, como no exemplo a seguir.  
   

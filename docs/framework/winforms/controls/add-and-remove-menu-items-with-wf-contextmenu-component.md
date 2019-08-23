@@ -16,26 +16,26 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: cf70a5cc426b6c6075d1deb11aa2685c39a065c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d1862b1fc1398f0f8c2217b51c4efb93db639af
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640329"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957027"
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Como: Adicionar e remover itens de menu com o componente ContextMenu do Windows Forms
 Explica como adicionar e remover itens de menu de atalho no Windows Forms.  
   
- Os formulários do Windows <xref:System.Windows.Forms.ContextMenu> componente fornece um menu de comandos usados com frequência que são relevantes para o objeto selecionado. Você pode adicionar itens ao menu de atalho, adicionando <xref:System.Windows.Forms.MenuItem> objetos para o <xref:System.Windows.Forms.Menu.MenuItems%2A> coleção.  
+ O componente <xref:System.Windows.Forms.ContextMenu> Windows Forms fornece um menu de comandos usados com frequência que são relevantes para o objeto selecionado. Você pode adicionar itens ao menu de atalho adicionando <xref:System.Windows.Forms.MenuItem> objetos <xref:System.Windows.Forms.Menu.MenuItems%2A> à coleção.  
   
- Você pode remover itens de um menu de atalho permanentemente; No entanto, em tempo de execução pode ser mais apropriado ocultar ou desabilitar os itens em vez disso.  
+ Você pode remover itens de um menu de atalho permanentemente; no entanto, em tempo de execução, pode ser mais apropriado ocultar ou desabilitar os itens em vez disso.  
   
 > [!IMPORTANT]
->  Embora <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.ContextMenuStrip> substituam e adicionem funcionalidade para o <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> de versões anteriores, os controles <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> são mantidos para compatibilidade com versões anteriores e uso futuro, se você escolher.  
+> Embora <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.MainMenu> substituam e adicionem funcionalidade aos controles e de versões anteriores, e são mantidos para compatibilidade com versões anteriores e uso futuro, se você escolher. <xref:System.Windows.Forms.ContextMenuStrip>  
   
 ### <a name="to-remove-items-from-a-shortcut-menu"></a>Para remover itens de um menu de atalho  
   
-1. Use o <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> ou <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> método o <xref:System.Windows.Forms.Menu.MenuItems%2A> coleção do <xref:System.Windows.Forms.ContextMenu> componente a ser removido de um determinado item do menu.  
+1. Use o <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> método <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> <xref:System.Windows.Forms.Menu.MenuItems%2A> ou<xref:System.Windows.Forms.ContextMenu> da coleção do componente para remover um item de menu específico.  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -60,7 +60,7 @@ Explica como adicionar e remover itens de menu de atalho no Windows Forms.
   
      - ou -  
   
-2. Use o `Clear` método da `MenuItems` coleção do <xref:System.Windows.Forms.ContextMenu> componente para remover todos os itens de menu.  
+2. Use o `Clear` método `MenuItems` da coleção do <xref:System.Windows.Forms.ContextMenu> componente para remover todos os itens do menu.  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  

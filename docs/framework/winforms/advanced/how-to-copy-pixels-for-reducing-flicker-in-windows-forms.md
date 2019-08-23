@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a18539153c64a5059d8079f6e245115b026bb91
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937742"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950144"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Como: copiar pixels para reduzir a cintilação no Windows Forms
 Ao animar um gráfico simples, os usuários podem encontrar cintilação ou outro efeito visual indesejado. Uma forma de limitar esse problema é usar um processo de “transferência de bits” no gráfico. Transferência de bits é a "transferência de blocos de bit" dos dados de cor de um retângulo de pixels de origem para um retângulo de pixels de destino.  
   
- Com o Windows Forms, bitblt é feito usando o <xref:System.Drawing.Graphics.CopyFromScreen%2A> método da <xref:System.Drawing.Graphics> classe. Nos parâmetros do método, você especifica a origem e o destino (como pontos), o tamanho da área a ser copiada e o objeto gráfico usado para desenhar a nova forma.  
+ Com Windows Forms, BitBlt é realizado usando o <xref:System.Drawing.Graphics.CopyFromScreen%2A> método <xref:System.Drawing.Graphics> da classe. Nos parâmetros do método, você especifica a origem e o destino (como pontos), o tamanho da área a ser copiada e o objeto gráfico usado para desenhar a nova forma.  
   
- No exemplo a seguir, uma forma é desenhada no formulário em seu <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Em seguida, o <xref:System.Drawing.Graphics.CopyFromScreen%2A> método é usado para duplicar a forma.  
+ No exemplo a seguir, uma forma é desenhada no formulário em <xref:System.Windows.Forms.Control.Paint> seu manipulador de eventos. Em seguida, <xref:System.Drawing.Graphics.CopyFromScreen%2A> o método é usado para duplicar a forma.  
   
 > [!NOTE]
->  Configuração do formulário <xref:System.Windows.Forms.Control.DoubleBuffered%2A> propriedade para `true` fará o código com base em elementos gráficos no <xref:System.Windows.Forms.Control.Paint> evento ser armazenada em buffer duplo. Embora isso não terá qualquer ganho de desempenho perceptível ao usar o código a seguir, é algo para ter em mente ao trabalhar com código de manipulação de gráficos mais complexo.  
+> Definir a propriedade do <xref:System.Windows.Forms.Control.DoubleBuffered%2A> formulário como `true` fará com que o código baseado em gráficos <xref:System.Windows.Forms.Control.Paint> no evento seja armazenado em buffer duplo. Embora isso não tenha nenhum ganho de desempenho de discerníveis ao usar o código abaixo, é algo a ter em mente ao trabalhar com um código de manipulação de gráficos mais complexo.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -60,7 +60,7 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O código acima é executado no formulário de <xref:System.Windows.Forms.Control.Paint> manipulador de eventos, de modo que os gráficos persistem quando o formulário é redesenhado. Como tal, não chame métodos relacionados a elementos gráficos <xref:System.Windows.Forms.Form.Load> manipulador de eventos, porque o conteúdo desenhado não será redesenhado se o formulário for redimensionado ou obscurecido por outro formulário.  
+ O código acima é executado no manipulador de eventos <xref:System.Windows.Forms.Control.Paint> do formulário para que os elementos gráficos persistam quando o formulário é redesenhado. Como tal, não chame métodos relacionados a gráficos no <xref:System.Windows.Forms.Form.Load> manipulador de eventos, pois o conteúdo desenhado não será redesenhado se o formulário for redimensionado ou obscurecido por outro formulário.  
   
 ## <a name="see-also"></a>Consulte também
 

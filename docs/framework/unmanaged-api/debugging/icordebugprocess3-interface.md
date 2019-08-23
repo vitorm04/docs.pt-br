@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05900f55885f8f3a4c470d6842c42d0fc3e0171e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987695"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957452"
 ---
 # <a name="icordebugprocess3-interface"></a>Interface ICorDebugProcess3
 Controla as notificações personalizadas do depurador.  
@@ -30,20 +30,20 @@ Controla as notificações personalizadas do depurador.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Habilita e desabilita as notificações do depurador personalizados do tipo especificado.|  
+|[Método SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Habilita e desabilita as notificações do depurador personalizado do tipo especificado.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa interface estende logicamente as interfaces ICorDebugProcess e ICorDebugProcess2.  
   
 > [!NOTE]
->  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
+> Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

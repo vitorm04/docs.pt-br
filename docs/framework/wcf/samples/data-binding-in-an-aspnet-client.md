@@ -2,38 +2,38 @@
 title: Associação de dados em um cliente do ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 0cc6fee822ad300969ccf8556a3eeb410660f256
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7b466c8282544f00ae314aa54845644e7215f8d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876987"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953509"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Associação de dados em um cliente do ASP.NET
-Este exemplo demonstra como associar dados retornados por um serviço típico do Windows Communication Foundation (WCF) em um aplicativo de formulários da Web.  
+Este exemplo demonstra como associar dados retornados por um serviço de Windows Communication Foundation típico (WCF) em um aplicativo Web Forms.  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Este exemplo demonstra um serviço que implementa um contrato que define um padrão de comunicação de solicitação-resposta. O exemplo consiste em um aplicativo de formulários da Web acessível a partir de um navegador e um serviço WCF hospedado pelo Internet Information Services (IIS) do cliente.  
+ Este exemplo demonstra um serviço que implementa um contrato que define um padrão de comunicação de solicitação-resposta. O exemplo consiste em um cliente Web Forms aplicativo acessível de um navegador e um serviço WCF hospedado pelo Serviços de Informações da Internet (IIS).  
   
- O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido o `IWeatherService` interface, que expõe uma operação denominada `GetWeatherData`. Esta operação aceita uma matriz de cidades e retorna uma matriz de `WeatherData` objetos que representam a temperatura alta e baixa prevista para uma cidade.  
+ O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela `IWeatherService` interface, que expõe uma operação chamada. `GetWeatherData` Esta operação aceita uma matriz de cidades e retorna uma matriz de `WeatherData` objetos que representam a temperatura alta e baixa prevista para uma cidade.  
   
- Na página. aspx do cliente do ASP.NET, um controle de DataGrid Web é definido, que contém a representação gráfica dos dados retornados pelo serviço. O código na página. aspx chama o serviço WCF de clima e retorna os dados para uma matriz de `WeatherData` objetos. A grade de dados especifica onde obter seus dados, definindo seu `DataSource` propriedade para essa matriz. A associação de dados ocorre com uma chamada para o DataGrid `DataBind` método. Todo esse código está contido dentro do.`aspx` da página `Page_Load` método, portanto, sempre que o usuário atualiza a página do navegador, os dados é atualizado na DataGrid.  
+ Na página ASP.NET Client. aspx, um controle Web DataGrid é definido, que contém a representação gráfica dos dados retornados pelo serviço. O código na página. aspx chama o serviço WCF para dados meteorológicos e retorna os dados para uma matriz `WeatherData` de objetos. O DataGrid especifica para onde obter seus dados definindo sua `DataSource` propriedade para essa matriz. A vinculação de dados ocorre com uma chamada para o método `DataBind` do DataGrid. Todo esse código está contido no.`aspx` o método `Page_Load` da página, portanto, sempre que o usuário atualiza a página do navegador, os dados são atualizados no DataGrid.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Cliente de trabalho deste exemplo é um site da Web que é executado em um servidor Web de desenvolvimento. Para iniciar o servidor Web de desenvolvimento, digite o seguinte no prompt de comando: `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`. Em seguida, navegue até `http://localhost:8000/client`. Para executar este exemplo entre computadores, substitua todas as referências a `localhost` no arquivo de Web. config do cliente com o nome do computador do servidor.  
+3. O cliente deste exemplo é um site da Web que é executado em um servidor Web de desenvolvimento. Para iniciar o servidor Web de desenvolvimento, digite o seguinte no prompt de comando `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`:. Em seguida, `http://localhost:8000/client`navegue até. Para executar esse exemplo nos computadores, substitua todas as referências `localhost` no arquivo Web. config do cliente pelo nome do computador do servidor.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`

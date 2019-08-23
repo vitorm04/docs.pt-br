@@ -10,27 +10,27 @@ helpviewer_keywords:
 - events, subscribing to
 - listening for events
 ms.assetid: b688effa-b3e8-4b05-944d-05ed89a245aa
-ms.openlocfilehash: 9c5308192ca122e9c25fa8e845f2b8f89345dda8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa3e289f042af3e55e8fc56528c29d5701c33d25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61983002"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961140"
 ---
 # <a name="subscribe-to-ui-automation-events"></a>Assinar eventos de automação de interface do usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
- Este tópico mostra como assinar eventos gerados por provedores de automação de interface do usuário.  
+ Este tópico mostra como assinar eventos gerados por provedores de automação da interface do usuário.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir registra um manipulador de eventos para o evento que é gerado quando um controle como um botão é invocado e o remove quando fecha o formulário do aplicativo. O evento é identificado por um <xref:System.Windows.Automation.AutomationEvent> passado como um parâmetro para <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.  
+ O código de exemplo a seguir registra um manipulador de eventos para o evento que é gerado quando um controle como um botão é invocado e o Remove quando o formulário do aplicativo é fechado. O evento é identificado por um <xref:System.Windows.Automation.AutomationEvent> passado como parâmetro para. <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>  
   
  [!code-csharp[UIAClient_snip#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#101)]
  [!code-vb[UIAClient_snip#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#101)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para assinar um evento que é gerado quando o foco é alterado. O manipulador de eventos é não registrado em um método que poderia ser chamado no encerramento do aplicativo, ou quando a notificação de eventos de interface do usuário não é mais necessária.  
+ O exemplo a seguir mostra como usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] o para assinar um evento que é gerado quando o foco é alterado. O manipulador de eventos tem o registro cancelado em um método que pode ser chamado no desligamento do aplicativo ou quando a notificação de eventos da interface do usuário não é mais necessária.  
   
  [!code-csharp[UIAClient_snip#102](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#102)]
  [!code-vb[UIAClient_snip#102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#102)]  

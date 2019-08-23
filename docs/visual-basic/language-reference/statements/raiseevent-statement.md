@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee52b4adf893ea0926c4016fcb6a89d0010ee6ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783952"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957774"
 ---
 # <a name="raiseevent-statement"></a>Instrução RaiseEvent
 Dispara um evento declarado no nível de módulo dentro de uma classe, formulário ou documento.  
@@ -28,52 +28,52 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>Partes  
  `eventname`  
- Necessário. Nome do evento para disparar.  
+ Necessário. Nome do evento a ser disparado.  
   
  `argumentlist`  
- Opcional. Lista delimitada por vírgulas de variáveis, matrizes ou expressões. O `argumentlist` argumento deve estar entre parênteses. Se não houver nenhum argumento, os parênteses devem ser omitidos.  
+ Opcional. Lista delimitada por vírgula de variáveis, matrizes ou expressões. O `argumentlist` argumento deve ser colocado entre parênteses. Se não houver argumentos, os parênteses deverão ser omitidos.  
   
 ## <a name="remarks"></a>Comentários  
- Necessário `eventname` é o nome de um evento declarado dentro do módulo. Ele segue as convenções de nomenclatura variável do Visual Basic.  
+ O necessário `eventname` é o nome de um evento declarado dentro do módulo. Ele segue Visual Basic convenções de nomenclatura de variáveis.  
   
- Se o evento não foi declarado dentro do módulo no qual ele é disparado, ocorrerá um erro. O fragmento de código a seguir ilustra uma declaração de evento e um procedimento no qual o evento é gerado.  
+ Se o evento não tiver sido declarado dentro do módulo no qual ele é gerado, ocorrerá um erro. O fragmento de código a seguir ilustra uma declaração de evento e um procedimento no qual o evento é gerado.  
   
  [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
- Não é possível usar `RaiseEvent` para gerar eventos que não são explicitamente declarados no módulo. Por exemplo, todos os formulários herdam uma <xref:System.Windows.Forms.Control.Click> evento a partir de <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, ele não pode ser gerado usando `RaiseEvent` em um formulário derivado. Se você declarar uma `Click` eventos no módulo de formulário, ele sombreia do formulário próprio <xref:System.Windows.Forms.Control.Click> eventos. Você ainda pode invocar o formulário <xref:System.Windows.Forms.Control.Click> evento chamando o <xref:System.Windows.Forms.Control.OnClick%2A> método.  
+ Você não pode `RaiseEvent` usar o para gerar eventos que não são declarados explicitamente no módulo. Por exemplo, todos os formulários herdam <xref:System.Windows.Forms.Control.Click> um <xref:System.Windows.Forms.Form?displayProperty=nameWithType>evento de, não podem ser `RaiseEvent` gerados usando em um formulário derivado. Se você declarar um `Click` evento no módulo de formulário, ele sombreia o próprio <xref:System.Windows.Forms.Control.Click> evento do formulário. Você ainda pode invocar o evento <xref:System.Windows.Forms.Control.Click> do formulário chamando o <xref:System.Windows.Forms.Control.OnClick%2A> método.  
   
- Por padrão, um evento definido no Visual Basic gera seus manipuladores de eventos na ordem em que as conexões são estabelecidas. Como os eventos podem ter `ByRef` parâmetros, um processo que se conecta tardia pode receber parâmetros que foram alterados por um manipulador de eventos anterior. Depois de executar os manipuladores de eventos, o controle é retornado para a sub-rotina que acionou o evento.  
-  
-> [!NOTE]
->  Eventos não compartilhados não devem ser gerados dentro do construtor da classe na qual eles são declarados. Embora esses eventos não causam erros de tempo de execução, eles poderão falhar ao ser capturada pelos manipuladores de evento associado. Use o `Shared` modificador para criar um evento compartilhado, se você precisar disparar um evento de um construtor.  
+ Por padrão, um evento definido em Visual Basic gera seus manipuladores de eventos na ordem em que as conexões são estabelecidas. Como os eventos podem `ByRef` ter parâmetros, um processo que se conecta tardiamente pode receber parâmetros que foram alterados por um manipulador de eventos anterior. Depois que os manipuladores de eventos são executados, o controle é retornado para a sub-rotina que gerou o evento.  
   
 > [!NOTE]
->  Você pode alterar o comportamento padrão de eventos, definindo um evento personalizado. Para eventos personalizados, o `RaiseEvent` instrução invoca o evento `RaiseEvent` acessador. Para obter mais informações sobre eventos personalizados, consulte [declaração de evento](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Eventos não compartilhados não devem ser gerados dentro do construtor da classe na qual eles são declarados. Embora tais eventos não causem erros em tempo de execução, eles podem não ser detectados por manipuladores de eventos associados. Use o `Shared` modificador para criar um evento compartilhado se você precisar gerar um evento a partir de um construtor.  
+  
+> [!NOTE]
+> Você pode alterar o comportamento padrão de eventos definindo um evento personalizado. Para eventos personalizados, a `RaiseEvent` instrução invoca o acessador `RaiseEvent` do evento. Para obter mais informações sobre eventos personalizados, consulte [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa os eventos a contagem regressiva de 10 segundos para 0. O código ilustra vários dos métodos relacionados a eventos, propriedades e instruções, inclusive o `RaiseEvent` instrução.  
+ O exemplo a seguir usa eventos para contar os segundos de 10 a 0. O código ilustra vários dos métodos, propriedades e instruções relacionados ao evento, incluindo a `RaiseEvent` instrução.  
   
- A classe que gera um evento é a origem do evento e os métodos que processam o evento são os manipuladores de eventos. Uma origem do evento pode ter vários manipuladores para eventos que ela gera. Quando a classe gera o evento, esse evento é gerado em cada classe que decidiu manipular eventos para essa instância do objeto.  
+ A classe que gera um evento é a origem do evento, e os métodos que processam o evento são os manipuladores de eventos. Uma origem de evento pode ter vários manipuladores para os eventos que ele gera. Quando a classe gera o evento, esse evento é gerado em todas as classes que escolheram manipular eventos para essa instância do objeto.  
   
- O exemplo também usa um formulário (`Form1`) com um botão (`Button1`) e uma caixa de texto (`TextBox1`). Quando você clica no botão, a primeira caixa de texto exibe uma contagem regressiva de 10 para 0 segundos. Depois de decorrido o tempo total (10 segundos), a primeira caixa de texto exibe "Concluído".  
+ O exemplo também usa um formulário (`Form1`) com um botão (`Button1`) e uma caixa de texto`TextBox1`(). Quando você clica no botão, a primeira caixa de texto exibe uma contagem regressiva de 10 a 0 segundos. Quando o tempo total (10 segundos) tiver decorrido, a primeira caixa de texto exibirá "concluído".  
   
- O código para `Form1` Especifica os estados iniciais e de terminal do formulário. Ele também contém o código executado quando os eventos são gerados.  
+ O código para `Form1` especifica os Estados inicial e de terminal do formulário. Ele também contém o código executado quando eventos são gerados.  
   
- Para usar este exemplo, abra um novo projeto de aplicativo do Windows, adicione um botão denominado `Button1` e uma caixa de texto denominada `TextBox1` ao formulário principal, chamado `Form1`. Em seguida, clique com botão direito do formulário e clique em **Exibir código** para abrir o Editor de código.  
+ Para usar este exemplo, abra um novo projeto de aplicativo do Windows, adicione um `Button1` botão chamado e uma caixa `TextBox1` de texto nomeada ao formulário principal `Form1`, denominada. Em seguida, clique com o botão direito do mouse no formulário e clique em **Exibir código** para abrir o editor de código.  
   
- Adicionar um `WithEvents` à seção declarations da variável a `Form1` classe.  
+ Adicione uma `WithEvents` variável à seção `Form1` de declarações da classe.  
   
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Exemplo  
- Adicione o seguinte código para o código para `Form1`. Substituir qualquer procedimentos duplicados que podem existir, tal como `Form_Load`, ou `Button_Click`.  
+ Adicione o código a seguir ao código para `Form1`. Substitua quaisquer procedimentos duplicados que possam existir, `Form_Load`como ou. `Button_Click`  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- Pressione F5 para executar o exemplo anterior e clique no botão rotulado **iniciar**. A primeira caixa de texto começa a contagem regressiva de segundos. Depois de decorrido o tempo total (10 segundos), a primeira caixa de texto exibe "Concluído".  
+ Pressione F5 para executar o exemplo anterior e clique no botão chamado **Iniciar**. A primeira caixa de texto começa a contar os segundos. Quando o tempo total (10 segundos) tiver decorrido, a primeira caixa de texto exibirá "concluído".  
   
 > [!NOTE]
->  O `My.Application.DoEvents` método não processa os eventos exatamente da mesma maneira como faz o formulário. Para permitir que o formulário manipular os eventos diretamente, você pode usar multithreading. Para obter mais informações, consulte [Threading gerenciado](../../../standard/threading/index.md).  
+> O `My.Application.DoEvents` método não processa eventos exatamente da mesma forma que o formulário. Para permitir que o formulário manipule os eventos diretamente, você pode usar multithreading. Para obter mais informações, consulte [Threading gerenciado](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Consulte também
 

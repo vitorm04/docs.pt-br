@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040252"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950067"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Passo a passo: Organizar controles nos Windows Forms usando linhas de alinhamento
 O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O Designer de Formulários do Windows fornece várias ferramentas de layout para fazer isso. Uma das mais importantes é o <xref:System.Windows.Forms.Design.Behavior.SnapLine> recurso.
@@ -87,7 +87,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 1. Selecione um dos <xref:System.Windows.Forms.Button> controles e mova-o para a borda direita do formulário até que um snapline seja exibido. A distância do snapline da borda direita é a soma da Propriedade do <xref:System.Windows.Forms.Control.Margin%2A> controle e os valores de Propriedade do <xref:System.Windows.Forms.Control.Padding%2A> formulário.
 
 > [!NOTE]
->  Se a propriedade do <xref:System.Windows.Forms.Control.Padding%2A> formulário for definida como 0, 0, 0, a designer de formulários do Windows dará ao formulário um <xref:System.Windows.Forms.Control.Padding%2A> valor sombreado de 9, 9, 9, 9. Para substituir esse comportamento, atribua um valor diferente de 0,0,0,0.
+> Se a propriedade do <xref:System.Windows.Forms.Control.Padding%2A> formulário for definida como 0, 0, 0, a designer de formulários do Windows dará ao formulário um <xref:System.Windows.Forms.Control.Padding%2A> valor sombreado de 9, 9, 9, 9. Para substituir esse comportamento, atribua um valor diferente de 0,0,0,0.
 
 1. <xref:System.Windows.Forms.Button> Altere o valor da Propriedade do <xref:System.Windows.Forms.Control.Margin%2A> controle expandindo a <xref:System.Windows.Forms.Control.Margin%2A> entrada na janela **Propriedades** e definindo a <xref:System.Windows.Forms.Padding.All%2A> Propriedade como 0. Para obter detalhes, [consulte Passo a passos: Dispor Windows Forms controles com preenchimento, margens e a propriedade](windows-forms-controls-padding-autosize.md)AutoSize.
 
@@ -166,7 +166,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 
 2. Arraste um <xref:System.Windows.Forms.Label> controle da **caixa de ferramentas** para seu formulário.
 
-3. Altere o valor da <xref:System.Windows.Forms.Label> Propriedade do <xref:System.Windows.Forms.Control.AutoSize%2A> controle para `true`. Observe que as bordas do controle são ajustadas para se ajustar ao texto de exibição.
+3. Altere o valor da propriedade <xref:System.Windows.Forms.Label> do controle <xref:System.Windows.Forms.Control.AutoSize%2A> para `true`. Observe que as bordas do controle são ajustadas para se ajustar ao texto de exibição.
 
 4. Mova o <xref:System.Windows.Forms.Label> controle para a esquerda <xref:System.Windows.Forms.TextBox> do controle, para que ele seja alinhado com <xref:System.Windows.Forms.TextBox> a borda inferior do controle. Observe a guia de alinhamento que aparece ao longo das bordas inferiores dos dois controles.
 

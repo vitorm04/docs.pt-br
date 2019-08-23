@@ -2,12 +2,12 @@
 title: 'Passo a passo: modelo e consulta de objeto simples (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 43092eb7490d5629f1ababac1d8f8b3aff94299b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971860"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946918"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Passo a passo: modelo e consulta de objeto simples (C#)
 
@@ -117,7 +117,7 @@ Você também declara um `Table<Customer>` para atuar como a tabela lógica tipa
 
 ## <a name="creating-a-simple-query"></a>Criando uma consulta simples
 
-Nesta etapa, você cria uma consulta para localizar quais clientes da tabela Customers do banco de dados estão localizados em Londres. O código da consulta nesta etapa apenas descreve a consulta. Não a executa. Essa abordagem é conhecida como *execução adiada*. Para obter mais informações, consulte [Introdução a Consultas de LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
+Nesta etapa, você cria uma consulta para localizar quais clientes da tabela Customers do banco de dados estão localizados em Londres. O código da consulta nesta etapa apenas descreve a consulta. Não a executa. Essa abordagem é conhecida como *execução adiada*. Para obter mais informações, consulte [Introdução a Consultas de LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 Você também gerará uma saída de log para mostrar os comandos SQL gerados pelo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Este recurso de log (que usa <xref:System.Data.Linq.DataContext.Log%2A>) é útil para depuração e para determinar se os comandos que estão sendo enviados ao banco de dados representam precisamente sua consulta.
 
@@ -140,7 +140,7 @@ Nesta etapa, você realmente executa a consulta. As expressões de consulta que 
 2. Pressione F5 para depurar o aplicativo.
 
     > [!NOTE]
-    >  Se seu aplicativo gerar um erro de tempo de execução, consulte a seção de solução de problemas do [Learning by passo a passos](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
+    > Se seu aplicativo gerar um erro de tempo de execução, consulte a seção de solução de problemas do [Learning by passo a passos](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
 
      Os resultados da consulta na janela do console devem aparecer da seguinte maneira:
 

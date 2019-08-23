@@ -8,18 +8,18 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 8e8f1bf193a41530a19e1046e3907b4c926b779f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8821f6170b8ba588e3197ef54eab14c2719a6cc3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637027"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947827"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Como: definir paradas de tabulação em um texto desenhado
-Você pode definir paradas de tabulação para texto chamando o <xref:System.Drawing.StringFormat.SetTabStops%2A> método de um <xref:System.Drawing.StringFormat> objeto e, em seguida, passando <xref:System.Drawing.StringFormat> do objeto para o <xref:System.Drawing.Graphics.DrawString%2A> método da <xref:System.Drawing.Graphics> classe.  
+Você pode definir tabulações de tabulação para texto <xref:System.Drawing.StringFormat.SetTabStops%2A> chamando o método <xref:System.Drawing.StringFormat> de um objeto e, <xref:System.Drawing.StringFormat> em seguida, <xref:System.Drawing.Graphics.DrawString%2A> passando esse objeto <xref:System.Drawing.Graphics> para o método da classe.  
   
 > [!NOTE]
->  O <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> faz não oferecem suporte à adição de paradas de tabulação para texto desenhado, embora você possa expandir uma guia existente deixará de usar o <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> sinalizador.  
+> O <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> não oferece suporte à adição de paradas de tabulação para texto desenhado, embora você possa expandir <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> as paradas de tabulação existentes usando o sinalizador.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir define as paradas de tabulação em 150, 250 e 350. Em seguida, o código exibe uma lista com guias de nomes e pontuações de teste.  
@@ -28,14 +28,14 @@ Você pode definir paradas de tabulação para texto chamando o <xref:System.Dra
   
  ![Captura de tela que mostra uma lista com guias de nomes e pontuações.](./media/how-to-set-tab-stops-in-drawn-text/tab-list-names-test-scores.png)  
   
- O código a seguir passa dois argumentos para o <xref:System.Drawing.StringFormat.SetTabStops%2A> método. O segundo argumento é uma matriz que contém os deslocamentos de guia. O primeiro argumento passado para <xref:System.Drawing.StringFormat.SetTabStops%2A> é 0, que indica que o primeiro deslocamento na matriz é medido da posição 0, a borda esquerda do retângulo delimitador.  
+ O código a seguir passa dois argumentos para <xref:System.Drawing.StringFormat.SetTabStops%2A> o método. O segundo argumento é uma matriz que contém os deslocamentos de guia. O primeiro argumento passado para <xref:System.Drawing.StringFormat.SetTabStops%2A> é 0, o que indica que o primeiro deslocamento na matriz é medido da posição 0, a borda esquerda do retângulo delimitador.  
   
  [!code-csharp[System.Drawing.FontsAndText#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.FontsAndText#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
-- O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+- O exemplo anterior foi projetado para uso com Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
 

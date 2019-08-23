@@ -3,15 +3,15 @@ title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: 5202e162a7eb5fc4e36d6a6c0a2c18af48872a69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47366c5bb2bd9228268fce3ae6e1fb5ad457dab1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791593"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942614"
 ---
 # <a name="nameclaimtype"></a>\<nameClaimType>
-Define o tipo de declaração que especifica o <xref:System.Security.Principal.IIdentity.Name%2A> propriedade. O tipo de declaração é usado para pesquisar um <xref:System.Security.Claims.Claim> na coleção de <xref:System.Security.Claims.ClaimsIdentity> objetos retornados pelo <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> método desse manipulador de token. O valor da declaração correspondente, em seguida, é definido como o nome da <xref:System.Security.Principal.IIdentity> gerado deste manipulador de token.  
+Define o tipo de declaração que especifica <xref:System.Security.Principal.IIdentity.Name%2A> a propriedade. O tipo de declaração é usado para pesquisar um <xref:System.Security.Claims.Claim> na coleção de <xref:System.Security.Claims.ClaimsIdentity> objetos retornados pelo <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> método desse manipulador de tokens. O valor da declaração de correspondência é definido como o nome do gerado a <xref:System.Security.Principal.IIdentity> partir desse manipulador de token.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -44,7 +44,7 @@ Define o tipo de declaração que especifica o <xref:System.Security.Principal.I
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|Valor |Uma cadeia de caracteres que especifica o URI que representa o tipo de declaração da declaração a ser usado para o <xref:System.Security.Principal.IIdentity.Name%2A> propriedade. Necessário.|  
+|value|Uma cadeia de caracteres que especifica o URI que representa o tipo de declaração da declaração a ser <xref:System.Security.Principal.IIdentity.Name%2A> usada para a propriedade. Necessário.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -53,10 +53,10 @@ Define o tipo de declaração que especifica o <xref:System.Security.Principal.I
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Fornece configuração para o <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> classe, o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe ou uma classe derivada de qualquer uma dessas classes.|  
+|[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|Fornece a configuração para <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> a classe, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> a classe ou uma classe derivada de qualquer uma dessas classes.|  
   
 ## <a name="remarks"></a>Comentários  
- O `<nameClaimType>` conjuntos de elemento de <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> propriedade quando um <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> objeto é inicializado da configuração.  
+ O `<nameClaimType>` elemento define a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> Propriedade quando um <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> objeto é inicializado a partir da configuração.  
   
 ## <a name="example"></a>Exemplo  
   

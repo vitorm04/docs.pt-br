@@ -10,16 +10,16 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: a59223bfbe9506aa0028933d55b74e24d5595c32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9f6c82144031cb2bf4824985b8211453bb7f51ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629545"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959176"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automação da Interface do Usuário e Escala da Tela
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]permite que os usuários alterem a configuração de pontos por polegada (DPI) [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] para que a maioria dos elementos na tela pareçam maiores. Embora esse recurso tenha sido muito disponível no [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], em versões anteriores, o dimensionamento precisava ser implementado por aplicativos. No [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], o Gerenciador de janelas da área de trabalho executa o dimensionamento padrão para todos os aplicativos que não manipulam seu próprio dimensionamento. Os aplicativos cliente de automação da interface do usuário devem levar esse recurso em conta.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68629545"
  Em vigor, quando o usuário define o fator de escala como 120 dpi, uma polegada vertical ou horizontal na tela se torna maior em 25%. Todas as dimensões são dimensionadas de acordo. O deslocamento de uma janela de aplicativo a partir das bordas superior e esquerda da tela aumenta em 25%. Se o dimensionamento de aplicativos estiver habilitado e o aplicativo não reconhecer dpi, o tamanho da janela aumentará na mesma proporção, juntamente com os deslocamentos e tamanhos de todos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] os elementos que ele contém.  
   
 > [!NOTE]
->  Por padrão, o DWM não executa o dimensionamento para aplicativos que não reconhecem dpi quando o usuário define o DPI como 120, mas o executa quando o DPI é definido como um valor personalizado de 144 ou superior. No entanto, o usuário pode substituir o comportamento padrão.  
+> Por padrão, o DWM não executa o dimensionamento para aplicativos que não reconhecem dpi quando o usuário define o DPI como 120, mas o executa quando o DPI é definido como um valor personalizado de 144 ou superior. No entanto, o usuário pode substituir o comportamento padrão.  
   
  O dimensionamento de tela cria novos desafios para aplicativos que se preocupam de qualquer forma com coordenadas de tela. A tela agora contém dois sistemas de coordenadas: físico e lógico. As coordenadas físicas de um ponto são o deslocamento real em pixels da parte superior esquerda da origem. As coordenadas lógicas são os deslocamentos como seriam se os próprios pixels fossem dimensionados.  
   

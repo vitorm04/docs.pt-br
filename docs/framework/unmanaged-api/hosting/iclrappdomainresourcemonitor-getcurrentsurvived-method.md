@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10df17f2f21928ab89c65be7fd07afe81c468a07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf285b6e1f703c8776937fa33c7ab5801f04f80f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766550"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950155"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>Método ICLRAppDomainResourceMonitor::GetCurrentSurvived
-Obtém o número de bytes que sobreviveram o última completo, bloqueio de coleta de lixo e que são referenciados pelo domínio do aplicativo atual.  
+Obtém o número de bytes que sobreviveram o último total, bloqueando a coleta de lixo e que são referenciados pelo domínio do aplicativo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +38,16 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
   
 ## <a name="parameters"></a>Parâmetros  
  `dwAppDomainId`  
- [in] A ID do domínio do aplicativo solicitado.  
+ no A ID do domínio do aplicativo solicitado.  
   
  `pAppDomainBytesSurvived`  
- [out] Um ponteiro para o número de bytes que sobreviveram após a última coleta de lixo que são mantidos por esse domínio de aplicativo. Após uma coleta completa, esse número é preciso e completo. Após uma coleta efêmera, esse número é potencialmente incompleto. Esse parâmetro pode ser `null`.  
+ fora Um ponteiro para o número de bytes que sobreviveram após a última coleta de lixo que é mantida por esse domínio de aplicativo. Após uma coleção completa, esse número é preciso e completo. Após uma coleção efêmera, esse número é potencialmente incompleto. Esse parâmetro pode ser `null`.  
   
  `pRuntimeBytesSurvived`  
- [out] Um ponteiro para o número total de bytes que sobreviveram da última coleta de lixo. Após uma coleta completa, esse número representa o número de bytes que são mantidos em heaps gerenciados. Após uma coleta efêmera, esse número representa o número de bytes que são mantidos ativos em gerações efêmeras. Esse parâmetro pode ser `null`.  
+ fora Um ponteiro para o número total de bytes que sobreviveram da última coleta de lixo. Após uma coleção completa, esse número representa o número de bytes que são mantidos em heaps gerenciados. Após uma coleção efêmera, esse número representa o número de bytes que são mantidos ao vivo em gerações efêmeras. Esse parâmetro pode ser `null`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -55,22 +55,22 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |COR_E_APPDOMAINUNLOADED|O domínio do aplicativo foi descarregado ou não existe.|  
   
 ## <a name="remarks"></a>Comentários  
- As estatísticas são atualizadas somente depois de completa, o bloqueio de coleta de lixo; ou seja, uma coleção que inclui todas as gerações e que interrompe o aplicativo durante a coleta ocorre. Por exemplo, o <xref:System.GC.Collect?displayProperty=nameWithType> sobrecarga do método executa uma completa de coleta de bloqueio. Coleta de lixo simultânea ocorre em segundo plano e não bloqueia o aplicativo.  
+ As estatísticas são atualizadas somente após um total, bloqueando a coleta de lixo; ou seja, uma coleção que inclui todas as gerações e que interrompe o aplicativo enquanto a coleta ocorre. Por exemplo, a <xref:System.GC.Collect?displayProperty=nameWithType> sobrecarga do método executa uma coleção de bloqueio completa. A coleta de lixo simultânea ocorre em segundo plano e não bloqueia o aplicativo.  
   
- O `GetCurrentSurvived` método é não gerenciado equivalente gerenciado <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> propriedade.  
+ O `GetCurrentSurvived` método é o equivalente não gerenciado da propriedade gerenciada <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Interface ICLRAppDomainResourceMonitor](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [Monitoramento de recursos de domínio do aplicativo](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Monitoramento de recursos de domínio do aplicativo](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)

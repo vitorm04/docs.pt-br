@@ -13,38 +13,38 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: ac2f89619c3e87ebfe5e568bbf27274834b0866d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9900b96bf04668805b841c842f7c625b86e76d39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012445"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960546"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Como: Executar procedimentos em intervalos definidos com o componente de temporizador do Windows Forms
-Às vezes, pode ser útil criar um procedimento que é executado em intervalos de tempo específicos até que um loop termine ou que seja executado quando um determinado período tiver decorrido. O <xref:System.Windows.Forms.Timer> componente possibilita tal procedimento.  
+Às vezes, pode ser útil criar um procedimento que é executado em intervalos de tempo específicos até que um loop termine ou que seja executado quando um determinado período tiver decorrido. O <xref:System.Windows.Forms.Timer> componente torna esse procedimento possível.  
   
  Esse componente foi projetado para um ambiente do Windows Forms. Se você precisar de um temporizador que seja adequado para um ambiente de servidor, consulte [Introdução a temporizadores baseados em servidor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 > [!NOTE]
->  Há algumas limitações ao usar o <xref:System.Windows.Forms.Timer> componente. Para obter mais informações, consulte [Limitações da propriedade de intervalo do componente de temporizador do Windows Forms](limitations-of-the-timer-component-interval-property.md).  
+> Há algumas limitações ao usar o <xref:System.Windows.Forms.Timer> componente. Para obter mais informações, consulte [Limitações da propriedade de intervalo do componente de temporizador do Windows Forms](limitations-of-the-timer-component-interval-property.md).  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Executar um procedimento em intervalos definidos com o componente Timer  
   
-1. Adicionar um <xref:System.Windows.Forms.Timer> ao seu formulário. Consulte a seção Exemplo a seguir para obter ver como fazer isso com programação. Visual Studio também tem suporte para adicionar componentes a um formulário. Consulte também [como: Adicionar controles sem uma Interface do usuário ao Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md).  
+1. Adicione um <xref:System.Windows.Forms.Timer> ao seu formulário. Consulte a seção Exemplo a seguir para obter ver como fazer isso com programação. O Visual Studio também tem suporte para a adição de componentes a um formulário. Consulte [também como: Adicione controles sem uma interface do usuário para](how-to-add-controls-without-a-user-interface-to-windows-forms.md)Windows Forms.  
   
-2. Defina o <xref:System.Windows.Forms.Timer.Interval%2A> propriedade (em milissegundos) para o temporizador. Essa propriedade determina quanto tempo passará antes do procedimento ser executado novamente.  
+2. Defina a <xref:System.Windows.Forms.Timer.Interval%2A> Propriedade (em milissegundos) para o temporizador. Essa propriedade determina quanto tempo passará antes do procedimento ser executado novamente.  
   
     > [!NOTE]
-    >  Quanto maior a frequência do evento do temporizador, mais tempo do processador é usado em resposta ao evento. Isso pode diminuir o desempenho geral. Não defina um intervalo menor do que o necessário.  
+    > Quanto maior a frequência do evento do temporizador, mais tempo do processador é usado em resposta ao evento. Isso pode diminuir o desempenho geral. Não defina um intervalo menor do que o necessário.  
   
-3. Escreva o código apropriado <xref:System.Windows.Forms.Timer.Tick> manipulador de eventos. O código que você escreve neste evento será executado no intervalo especificado na <xref:System.Windows.Forms.Timer.Interval%2A> propriedade.  
+3. Escreva o código apropriado no <xref:System.Windows.Forms.Timer.Tick> manipulador de eventos. O código que você escreve neste evento será executado no intervalo especificado na <xref:System.Windows.Forms.Timer.Interval%2A> propriedade.  
   
-4. Defina as <xref:System.Windows.Forms.Timer.Enabled%2A> propriedade para `true` para iniciar o temporizador. O <xref:System.Windows.Forms.Timer.Tick> evento começará a ocorrer, executando o procedimento no intervalo definido.  
+4. Defina a <xref:System.Windows.Forms.Timer.Enabled%2A> Propriedade como `true` para iniciar o temporizador. O <xref:System.Windows.Forms.Timer.Tick> evento começará a ocorrer, executando o procedimento no intervalo definido.  
   
-5. No momento apropriado, defina as <xref:System.Windows.Forms.Timer.Enabled%2A> propriedade para `false` para impedir que o procedimento seja executado novamente. Definir o intervalo como `0` não faz o temporizador parar.  
+5. No momento apropriado, defina a <xref:System.Windows.Forms.Timer.Enabled%2A> Propriedade como `false` para impedir que o procedimento seja executado novamente. Definir o intervalo como `0` não faz o temporizador parar.  
   
 ## <a name="example"></a>Exemplo  
- Esse primeiro exemplo de código rastreia a hora do dia em incrementos de um segundo. Ele usa um <xref:System.Windows.Forms.Button>, um <xref:System.Windows.Forms.Label>e um <xref:System.Windows.Forms.Timer> componente em um formulário. O <xref:System.Windows.Forms.Timer.Interval%2A> estiver definida como 1000 (igual a um segundo). No <xref:System.Windows.Forms.Timer.Tick> evento, a legenda do rótulo é definida para a hora atual. Quando o botão é clicado, o <xref:System.Windows.Forms.Timer.Enabled%2A> estiver definida como `false`, interrompendo o timer de atualização de legenda do rótulo. O exemplo de código a seguir exige que você tenha um formulário com um <xref:System.Windows.Forms.Button> controle chamado `Button1`, um <xref:System.Windows.Forms.Timer> controle denominado `Timer1`e um <xref:System.Windows.Forms.Label> controle chamado `Label1`.  
+ Esse primeiro exemplo de código rastreia a hora do dia em incrementos de um segundo. Ele usa um <xref:System.Windows.Forms.Button>, um <xref:System.Windows.Forms.Label>e um <xref:System.Windows.Forms.Timer> componente em um formulário. A <xref:System.Windows.Forms.Timer.Interval%2A> propriedade é definida como 1000 (igual a um segundo). <xref:System.Windows.Forms.Timer.Tick> No evento, a legenda do rótulo é definida como a hora atual. Quando o botão é clicado, <xref:System.Windows.Forms.Timer.Enabled%2A> a propriedade é definida `false`como, parando que o temporizador atualize a legenda do rótulo. O exemplo de código a seguir requer que você tenha um formulário <xref:System.Windows.Forms.Button> com um `Button1`controle chamado <xref:System.Windows.Forms.Timer> , um `Timer1`controle chamado e <xref:System.Windows.Forms.Label> um controle `Label1`chamado.  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -149,7 +149,7 @@ private:
 ```  
   
 ## <a name="example"></a>Exemplo  
- Este segundo exemplo de código executa um procedimento a cada 600 milissegundos até que um loop seja concluído. O exemplo de código a seguir exige que você tenha um formulário com um <xref:System.Windows.Forms.Button> controle chamado `Button1`, um <xref:System.Windows.Forms.Timer> controle denominado `Timer1`e um <xref:System.Windows.Forms.Label> controle chamado `Label1`.  
+ Este segundo exemplo de código executa um procedimento a cada 600 milissegundos até que um loop seja concluído. O exemplo de código a seguir requer que você tenha um formulário <xref:System.Windows.Forms.Button> com um `Button1`controle chamado <xref:System.Windows.Forms.Timer> , um `Timer1`controle chamado e <xref:System.Windows.Forms.Label> um controle `Label1`chamado.  
   
 ```vb  
 ' This variable will be the loop counter.  

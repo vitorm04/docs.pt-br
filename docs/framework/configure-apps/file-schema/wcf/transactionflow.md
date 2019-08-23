@@ -2,20 +2,20 @@
 title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: 626ae03d622221ab3e956bd03898b6cc30482c98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 206a684e1279871eee4aed95a087921123f8efb9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758022"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918654"
 ---
 # <a name="transactionflow"></a>\<transactionFlow>
-Especifica o suporte ao fluxo de transação para a associação personalizada.  
+Especifica o suporte do fluxo de transações para a associação personalizada.  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<> de associação  
 \<transactionFlow>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,22 +40,22 @@ Especifica o suporte ao fluxo de transação para a associação personalizada.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
+|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento permite que você habilitar ou desabilitar o fluxo de transações de entrada nas configurações de associação de um ponto de extremidade, bem como para especificar o formato de protocolo desejado para transações de entrada. Para obter mais informações sobre como usar este elemento de configuração, consulte [configuração de transação de ServiceModel](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md) e [habilitando o fluxo de transação](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ Esse elemento permite habilitar ou desabilitar o fluxo de transações de entrada nas configurações de associação de um ponto de extremidade, bem como especificar o formato de protocolo desejado para as transações de entrada. Para obter mais informações sobre como usar esse elemento de configuração, consulte [configuração de transação ServiceModel](../../../wcf/feature-details/servicemodel-transaction-configuration.md) e habilitação do [fluxo de transações](../../../wcf/feature-details/enabling-transaction-flow.md).  
   
 > [!CAUTION]
->  Ao usar o `OleTransactions` do ponto de extremidade ao ponto de extremidade de protocolo para transações de fluxo, o tempo limite da transação pode ser perdido se o ponto de extremidade de destino tenta novamente usando qualquer protocolo diferente de fluxo `OleTransactions`. Isso pode causar uma todos os nós de nível inferior após o salto OleTransactions mais tarde do que o esperado para o tempo limite.  
+>  Ao usar o `OleTransactions` protocolo para transmitir transações do ponto de extremidade para o ponto de extremidade, o tempo limite da transação poderá ser perdido se o ponto de extremidade de `OleTransactions`destino tentar fluir novamente usando qualquer protocolo diferente de. Isso pode causar todos os nós de nível inferior após o salto de OleTransactions para o tempo limite mais tarde do esperado.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.Configuration.TransactionFlowElement>
 - <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Configuração de transação de ServiceModel](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)
-- [Habilitando o fluxo de transação](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Configuração de transação de ServiceModel](../../../wcf/feature-details/servicemodel-transaction-configuration.md)
+- [Habilitando o fluxo de transação](../../../wcf/feature-details/enabling-transaction-flow.md)
+- [Associações](../../../wcf/bindings.md)
+- [Estendendo associações](../../../wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

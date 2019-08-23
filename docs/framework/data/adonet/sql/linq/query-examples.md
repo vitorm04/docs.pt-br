@@ -2,18 +2,18 @@
 title: Exemplos de consulta
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7be01abf568ed089089b1bc25d2a175f78ae7f7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783104"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962736"
 ---
 # <a name="query-examples"></a>Exemplos de consulta
-Esta seção fornece exemplos de Visual Basic e c# de típico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas. Os desenvolvedores que usam o Visual Studio podem encontrar muitos outros exemplos em uma solução de exemplo disponível na seção de exemplos. Para obter mais informações, consulte [exemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+Esta seção fornece Visual Basic e C# exemplos de consultas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] típicas. Os desenvolvedores que usam o Visual Studio podem encontrar muitos outros exemplos em uma solução de exemplo disponível na seção de exemplos. Para obter mais informações, consulte [exemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
->  *BD* geralmente é usado em exemplos de código [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação. *BD* será considerado como uma instância de um *Northwind* classe que herda de <xref:System.Data.Linq.DataContext>.  
+> o *BD* é geralmente usado em exemplos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código na documentação do. o *DB* é considerado uma instância de uma classe *Northwind* , que é herdada <xref:System.Data.Linq.DataContext>de.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Consultas agregadas](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -66,10 +66,10 @@ Esta seção fornece exemplos de Visual Basic e c# de típico [!INCLUDE[vbtecdli
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Visão geral de operadores de consulta padrão (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Explica o conceito de operadores de consulta padrão usando o C#.  
+ Explica o conceito de operadores de consulta padrão C#usando o.  
   
  [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Explica o conceito de operadores de consulta padrão usando o Visual Basic.  
+ Explica o conceito de operadores de consulta padrão usando Visual Basic.  
   
  [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Explica como o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa conceitos que se aplicam às consultas.  

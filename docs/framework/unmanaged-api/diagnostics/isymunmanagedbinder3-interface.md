@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdfd8e8fc419809a3a490639ada1c533f286fe8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6f514cc070a0a38eb09a5387efc8611100765b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939991"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944103"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>Interface ISymUnmanagedBinder3
-Estende a interface de associador de símbolo. Obtenha essa interface chamando `QueryInterface` em um objeto que implementa o `ISymUnmanagedBinder` interface.  
+Estende a interface do fichário de símbolos. Obtenha essa interface chamando `QueryInterface` um objeto que implementa a `ISymUnmanagedBinder` interface.  
   
 > [!IMPORTANT]
->  É um risco de segurança para abrir um arquivo de programa (PDB) do banco de dados de uma fonte não confiável.  
+> É um risco de segurança abrir um arquivo de banco de dados do programa (PDB) de uma fonte não confiável.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Permite ao usuário implementar ou fornecer por meio do retorno de chamada ou um `IID_IDiaReadExeAtRVACallback` ou `IID_IDiaReadExeAtOffsetCallback` para obter as informações de diretório de depuração da memória|  
+|[Método GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Permite que o usuário implemente ou forneça por meio de `IID_IDiaReadExeAtRVACallback` um `IID_IDiaReadExeAtOffsetCallback` retorno de chamada ou para obter as informações do diretório de depuração da memória|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  

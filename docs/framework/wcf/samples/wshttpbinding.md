@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Profile binding
 ms.assetid: 22d85b19-0135-4141-9179-a0e9c343ad73
-ms.openlocfilehash: 9eed3cbef75981b2b57eb24298aef1a5b0b4f15c
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5d76cb2e4d9f3173c1eb3fda45e1f1c65efeadde
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876010"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959815"
 ---
 # <a name="wshttpbinding"></a>WSHttpBinding
-Este exemplo demonstra como implementar um serviço típico e um cliente típico usando o Windows Communication Foundation (WCF). Esse exemplo consiste em um programa de console de cliente (client.exe) e uma biblioteca de serviço hospedado pelo Internet Information Services (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido o `ICalculator` interface, que expõe operações matemáticas (Adicionar, subtrair, multiplicar e dividir). O cliente faz solicitações síncronas para uma operação matemática determinado e as respostas de serviço com o resultado. Atividade do cliente está visível na janela do console.  
+Este exemplo demonstra como implementar um serviço típico e um cliente típico usando Windows Communication Foundation (WCF). Este exemplo consiste em um programa de console do cliente (Client. exe) e uma biblioteca de serviços hospedado pelo Serviços de Informações da Internet (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela `ICalculator` interface, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir). O cliente faz solicitações síncronas para uma determinada operação matemática e o serviço responde com o resultado. A atividade do cliente fica visível na janela do console.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsHttp`  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Este exemplo exibe a `ICalculator` contrato usando o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). A configuração desta associação foi expandida no arquivo Web. config.  
+ Este exemplo expõe o `ICalculator` contrato usando o [ \<> de WSHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). A configuração dessa associação foi expandida no arquivo Web. config.  
   
 ```xml
 <bindings>  
@@ -60,13 +60,13 @@ Este exemplo demonstra como implementar um serviço típico e um cliente típico
 </bindings>  
 ```  
   
- Na base `binding` elemento, o `maxReceivedMessageSize` valor permite que você configure o tamanho máximo de uma mensagem de entrada (em bytes). O `hostNameComparisonMode` valor permite que você configure se o nome do host é considerado ao demultiplexação mensagens para o serviço. O `messageEncoding` valor permite que você configure se é necessário usar a codificação para mensagens de texto ou MTOM. O `textEncoding` valor permite que você configure a codificação de caracteres de mensagens. O `bypassProxyOnLocal` valor lhe permite configurar se deseja usar um proxy HTTP para comunicação local. O `transactionFlow` valor configura se flui a transação atual (se uma operação está configurada para o fluxo de transações).  
+ No elemento base `binding` , o `maxReceivedMessageSize` valor permite que você configure o tamanho máximo de uma mensagem de entrada (em bytes). O `hostNameComparisonMode` valor permite que você configure se o nome de host é considerado ao Desmultiplexar mensagens para o serviço. O `messageEncoding` valor permite que você configure se deseja usar a codificação de texto ou MTOM para mensagens. O `textEncoding` valor permite configurar a codificação de caracteres para mensagens. O `bypassProxyOnLocal` valor permite que você configure se deseja usar um proxy http para comunicação local. O `transactionFlow` valor define se a transação atual está fluindo (se uma operação estiver configurada para o fluxo de transações).  
   
- Sobre o [ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) elemento, o valor booliano habilitado configura se sessões confiáveis são habilitadas. O `ordered` valor configura se a mensagem de ordenação é preservada. O `inactivityTimeout` valor configura quanto tempo uma sessão pode ficar ociosa antes que está sendo com defeito.  
+ No elemento [> ReliableSession,ovalorboolianohabilitadodefineseassessõesconfiáveisestãohabilitadas.\<](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) O `ordered` valor define se a ordenação da mensagem é preservada. O `inactivityTimeout` valor configura quanto tempo uma sessão pode ficar ociosa antes de ter falhado.  
   
- Sobre o [ \<segurança >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md), o `mode` valor configura o modo de segurança deve ser usado. Neste exemplo, segurança de mensagens está sendo usada, que é por isso que o [ \<mensagem >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) especificado dentro de [ \<segurança >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md).  
+ No [ \<> de segurança](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md), o valor configura qual modo de `mode` segurança deve ser usado. Neste exemplo, a segurança das mensagens está sendo usada, motivo pelo qual a [ \<> da mensagem](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) é especificada dentro do > de [ \<segurança](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md).  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -79,14 +79,14 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Instale usando o seguinte comando do ASP.NET 4.0.  
+1. Instale o ASP.NET 4,0 usando o comando a seguir.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  

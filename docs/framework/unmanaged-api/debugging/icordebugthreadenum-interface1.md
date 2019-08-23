@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7edf103e397c6e3e1577b5ed4bc8fc0df264b843
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b7e5b0a9f4166923a559eb3886aa0f9cabbcd72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993844"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962955"
 ---
 # <a name="icordebugthreadenum-interface"></a>Interface ICorDebugThreadEnum
-Implementa métodos ICorDebugEnum e enumera matrizes de ICorDebugThread.  
+Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugThread.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Obtém o número especificado de `ICorDebugThread` instâncias de enumeração, começando na posição atual.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Obtém o número especificado de `ICorDebugThread` instâncias da enumeração, começando na posição atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
+> Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

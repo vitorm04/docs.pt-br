@@ -2,41 +2,41 @@
 title: Estados e controle de alterações de objeto
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 704c5271f71c3709bbf48cf6a5af0a60828e6244
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8de415ba68ca1b0a5c4214e586ad2a4d4940690a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610091"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953229"
 ---
 # <a name="object-states-and-change-tracking"></a>Estados e controle de alterações de objeto
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos sempre participam em qualquer *estado*. Por exemplo, quando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cria um novo objeto, o objeto está no estado de `Unchanged` . Um novo objeto que você mesmo criar for desconhecido para o <xref:System.Data.Linq.DataContext> e está em `Untracked` estado. Após a execução com êxito de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, todos os objetos conhecidos a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] estão no estado de `Unchanged` . (A única exceção é representada por aqueles que foram excluídas com êxito de base de dados, que estão no estado de `Deleted` e inutilizável que a instância de <xref:System.Data.Linq.DataContext> .)  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]os objetos sempre participam de algum *estado*. Por exemplo, quando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cria um novo objeto, o objeto está no estado de `Unchanged` . Um novo objeto que você mesmo cria é desconhecido para o <xref:System.Data.Linq.DataContext> e está em `Untracked` estado. Após a execução com êxito de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, todos os objetos conhecidos a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] estão no estado de `Unchanged` . (A única exceção é representada por aqueles que foram excluídas com êxito de base de dados, que estão no estado de `Deleted` e inutilizável que a instância de <xref:System.Data.Linq.DataContext> .)  
   
 ## <a name="object-states"></a>Estados de objeto  
  A tabela a seguir lista os estados possíveis para objetos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
 |Estado|Descrição|  
 |-----------|-----------------|  
-|`Untracked`|Um objeto não controlado por [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Os exemplos incluem o seguinte:<br /><br /> -Um objeto não consultado com atual <xref:System.Data.Linq.DataContext> (por exemplo, um objeto recém-criado).<br />-Um objeto criado por meio de desserialização<br />-Um objeto consultado por meio de outro <xref:System.Data.Linq.DataContext>.|  
+|`Untracked`|Um objeto não controlado por [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Os exemplos incluem o seguinte:<br /><br /> -Um objeto não consultado por meio do <xref:System.Data.Linq.DataContext> atual (como um objeto recém-criado).<br />-Um objeto criado por meio de desserialização<br />-Um objeto consultado por um diferente <xref:System.Data.Linq.DataContext>.|  
 |`Unchanged`|Um objeto retornado usando <xref:System.Data.Linq.DataContext> atual e não conhecido para ter sido alterado desde que ele foi criado.|  
-|`PossiblyModified`|Um objeto que é *anexado* para um <xref:System.Data.Linq.DataContext>. Para obter mais informações, consulte [recuperação de dados e operações de CUD em aplicativos de N camadas (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).|  
+|`PossiblyModified`|Um objeto que é *anexado* a um <xref:System.Data.Linq.DataContext>. Para obter mais informações, consulte [operações de recuperação de dados e cud em aplicativos de N camadas (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).|  
 |`ToBeInserted`|Um objeto não recuperado usando <xref:System.Data.Linq.DataContext>atual. Isso faz com que um base de dados `INSERT` durante <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|  
 |`ToBeUpdated`|Um objeto conhecido para ter sido alterado desde que ele foi recuperado. Isso faz com que um base de dados `UPDATE` durante <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|  
 |`ToBeDeleted`|Um objeto marcado para exclusão, causando um base de dados `DELETE` durante <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|  
 |`Deleted`|Um objeto que é excluído na base de dados. Esse estado é final e não permite transições adicionais.|  
   
 ## <a name="inserting-objects"></a>Inserindo objetos  
- Você pode solicitar `Inserts` explicitamente usando <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>. Como alternativa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode inferir `Inserts` localizando objetos conectados a um dos objetos conhecidos que devem ser atualizados. Por exemplo, se você adicionar um `Untracked` do objeto para um <xref:System.Data.Linq.EntitySet%601> ou definir um <xref:System.Data.Linq.EntityRef%601> para um `Untracked` do objeto, você faz o `Untracked` alcançável por objetos rastreadas no gráfico de objeto. Durante o processamento <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] percorre os objetos rastreadas e descobre todos os objetos acessíveis persistentes que não são rastreados. Esses objetos são candidatos para inserção na base de dados.  
+ Você pode solicitar `Inserts` explicitamente usando <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>. Como alternativa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é possível `Inserts` inferir localizando objetos conectados a um dos objetos conhecidos que devem ser atualizados. Por exemplo, se você adicionar um `Untracked` objeto a um <xref:System.Data.Linq.EntitySet%601> ou definir um <xref:System.Data.Linq.EntityRef%601> para um `Untracked` objeto, tornará o `Untracked` objeto acessível por meio de objetos rastreados no grafo. Durante o <xref:System.Data.Linq.DataContext.SubmitChanges%2A>processamento [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , o percorre os objetos rastreados e descobre quaisquer objetos persistentes acessíveis que não são rastreados. Esses objetos são candidatos para inserção na base de dados.  
   
- Para classes em uma hierarquia de herança <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>(`o`) também define o valor do membro designado como o *discriminador* corresponder ao tipo do objeto `o`. No caso de um tipo que corresponde ao valor padrão de discriminador, esta ação faz com que o valor de discriminador a ser substituído com o valor padrão. Para obter mais informações, consulte [suporte à herança](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).  
+ Para classes em uma hierarquia de herança <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>,`o`() também define o valor do membro designado como discriminador para corresponder ao tipo do objeto. `o` No caso de um tipo que corresponde ao valor padrão de discriminador, esta ação faz com que o valor de discriminador a ser substituído com o valor padrão. Para obter mais informações, consulte [suporte à herança](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).  
   
 > [!IMPORTANT]
->  Um objeto adicionado a `Table` não estiver no cache de identidade. O cache de identidade reflete somente o que é recuperado de base de dados. Após uma chamada a <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, a entidade adicionada não aparece em consultas na base de dados até que <xref:System.Data.Linq.DataContext.SubmitChanges%2A> está concluída com êxito.  
+> Um objeto adicionado a `Table` não estiver no cache de identidade. O cache de identidade reflete somente o que é recuperado de base de dados. Após uma chamada a <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, a entidade adicionada não aparece em consultas na base de dados até que <xref:System.Data.Linq.DataContext.SubmitChanges%2A> está concluída com êxito.  
   
 ## <a name="deleting-objects"></a>Excluindo objetos  
- Você marca um objeto acompanhado `o` para exclusão chamando <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>() no <xref:System.Data.Linq.Table%601>apropriado. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] considera a remoção de um objeto de um <xref:System.Data.Linq.EntitySet%601> como uma atualização de operação e o valor de chave estrangeiro correspondente é definido como null. O destino da operação (`o`) não é excluído da tabela. Por exemplo, `cust.Orders.DeleteOnSubmit(ord)` indica uma atualização onde a relação entre `cust` e `ord` está separada definindo a chave estrangeira `ord.CustomerID` para nulo. Não faz com que a exclusão da linha que corresponde a `ord`.  
+ Você marca um objeto acompanhado `o` para exclusão chamando <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>() no <xref:System.Data.Linq.Table%601>apropriado. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]considera a remoção de um objeto de uma <xref:System.Data.Linq.EntitySet%601> operação de atualização e o valor de chave estrangeira correspondente é definido como nulo. O destino da operação (`o`) não é excluído da tabela. Por exemplo, `cust.Orders.DeleteOnSubmit(ord)` indica uma atualização onde a relação entre `cust` e `ord` está separada definindo a chave estrangeira `ord.CustomerID` para nulo. Não faz com que a exclusão da linha que corresponde a `ord`.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] executa o processamento seguinte quando um objeto é excluído (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) de sua tabela:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]executa o seguinte processamento quando um objeto é excluído (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) de sua tabela:  
   
 - Quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado, uma operação de `DELETE` é executada para esse objeto.  
   
@@ -47,16 +47,16 @@ ms.locfileid: "64610091"
  Você pode chamar <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> somente em um objeto controlado por <xref:System.Data.Linq.DataContext>. Para um objeto de `Untracked` , você deve chamar <xref:System.Data.Linq.Table%601.Attach%2A> antes de chamar <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>. A chamada <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> em um objeto de `Untracked` gerencie uma exceção.  
   
 > [!NOTE]
->  Remover um objeto de uma tabela informa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para gerar um SQL correspondente `DELETE` comando no momento da <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Esta ação não remove o objeto de cache ou não propaga a exclusão a objetos relacionados.  
+> A remoção de um objeto de uma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tabela diz para gerar um `DELETE` comando SQL correspondente no momento <xref:System.Data.Linq.DataContext.SubmitChanges%2A>do. Esta ação não remove o objeto de cache ou não propaga a exclusão a objetos relacionados.  
 >   
->  Para recuperar `id` de um objeto excluído, use uma nova instância de <xref:System.Data.Linq.DataContext> . Para limpeza de objetos relacionados, você pode usar o *exclusão em cascata* de recursos do banco de dados, ou então manualmente excluir os objetos relacionados.  
+>  Para recuperar `id` de um objeto excluído, use uma nova instância de <xref:System.Data.Linq.DataContext> . Para a limpeza de objetos relacionados, você pode usar o recurso de *exclusão em cascata* do banco de dados ou excluir manualmente os objetos relacionados.  
 >   
 >  Os objetos relacionados não precisam ser excluídos em qualquer encomenda especial (em oposição na base de dados).  
   
 ## <a name="updating-objects"></a>Atualizando objetos  
  Você pode detectar `Updates` observando notificações de alterações. As notificações são fornecidas com o evento de <xref:System.ComponentModel.INotifyPropertyChanging.PropertyChanging> em definidores de propriedade. Quando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é notificado da primeira alteração em um objeto, cria uma cópia do objeto e considera o objeto um candidato para gerar uma instrução de `Update` .  
   
- Para objetos que não implementam <xref:System.ComponentModel.INotifyPropertyChanging>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mantém uma cópia dos valores que objetos tinham quando foram materializados primeiro. Quando você chama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] compara os valores atuais e originais para decidir se o objeto foi alterado.  
+ Para objetos que não são <xref:System.ComponentModel.INotifyPropertyChanging>implementados [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , o mantém uma cópia dos valores que os objetos tinham quando foram materializados pela primeira vez. Quando você chama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] o compara os valores atual e original para decidir se o objeto foi alterado.  
   
  Para atualizações para relações, a referência de filho ao pai (ou seja, a referência que corresponde à chave estrangeira) é considerada a autoridade. A referência na direção invertida (isto é, pai para o filho) é opcional. As classes de relacionamento (<xref:System.Data.Linq.EntitySet%601> e <xref:System.Data.Linq.EntityRef%601>) garantem que as referências bidirecionais são consistentes para para muitos e relacionamento um-para-um. Se o modelo de objeto não usa <xref:System.Data.Linq.EntitySet%601> ou <xref:System.Data.Linq.EntityRef%601>, e se a referência invertido estiver presente, é de sua responsabilidade mantê-la consistente com a referência direta ao relacionamento é atualizada.  
   

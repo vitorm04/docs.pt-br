@@ -1,5 +1,5 @@
 ---
-title: Retomar Statement (Visual Basic)
+title: Instrução Resume (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Resume
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 796342d17b0d0f1a642aff381274746d1fda3559
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 884bdaa0c19508b5a6bf6377568a53acc6880518
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783910"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957685"
 ---
 # <a name="resume-statement"></a>Instrução Resume
 Retoma a execução após a conclusão de uma rotina de tratamento de erros.  
   
- Sugerimos que você use manipulação de exceção estruturada em seu código sempre que possível, em vez de usar o tratamento de exceção não estruturados e o `On Error` e `Resume` instruções. Para obter mais informações, consulte [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Sugerimos que você use manipulação de exceção estruturada em seu código sempre que possível, em vez de usar a manipulação de `On Error` exceção `Resume` não estruturada e as instruções e. Para obter mais informações, consulte [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,32 +35,32 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>Partes  
  `Resume`  
- Necessário. Se o erro ocorreu no mesmo procedimento que o manipulador de erro, a execução continua com a instrução que causou o erro. Se o erro ocorreu em um procedimento chamado, a execução continuará na instrução que pela última chamada do procedimento que contém a rotina de tratamento de erros.  
+ Necessário. Se o erro ocorreu no mesmo procedimento que o manipulador de erros, a execução é retomada com a instrução que causou o erro. Se o erro ocorreu em um procedimento chamado, a execução será retomada na instrução última chamada para fora do procedimento que contém a rotina de tratamento de erros.  
   
  `Next`  
- Opcional. Se o erro ocorreu no mesmo procedimento que o manipulador de erro, a execução continua com a instrução imediatamente após a instrução que causou o erro. Se o erro ocorreu em um procedimento chamado, a execução é retomada com a instrução imediatamente após a instrução que pela última chamada do procedimento que contém a rotina de tratamento de erros (ou `On Error Resume Next` instrução).  
+ Opcional. Se o erro ocorreu no mesmo procedimento que o manipulador de erros, a execução é retomada com a instrução imediatamente após a instrução que causou o erro. Se o erro ocorreu em um procedimento chamado, a execução será retomada com a instrução imediatamente após a instrução que a última chamada para fora do procedimento que contém a rotina `On Error Resume Next` de tratamento de erros (ou a instrução).  
   
  `line`  
- Opcional. Retoma a execução na linha especificada em necessários `line` argumento. O `line` argumento é um rótulo de linha ou o número de linha e deve estar no mesmo procedimento que o manipulador de erro.  
+ Opcional. A execução é retomada na linha especificada no `line` argumento necessário. O `line` argumento é um rótulo de linha ou número de linha e deve estar no mesmo procedimento que o manipulador de erro.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  É recomendável que você use o tratamento de exceções estruturado em seu código sempre que possível, em vez de usar o tratamento de exceção não estruturados e o `On Error` e `Resume` instruções. Para obter mais informações, consulte [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+> É recomendável que você use manipulação de exceção estruturada em seu código sempre que possível, em vez de usar a manipulação `On Error` de `Resume` exceção não estruturada e as instruções e. Para obter mais informações, consulte [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
- Se você usar um `Resume` declaração em qualquer lugar diferente de em uma rotina de tratamento de erro, um erro ocorre.  
+ Se você usar uma `Resume` instrução em qualquer lugar que não seja em uma rotina de tratamento de erros, ocorrerá um erro.  
   
- O `Resume` instrução não pode ser usada em qualquer procedimento que contém um `Try...Catch...Finally` instrução.  
+ A `Resume` instrução não pode ser usada em nenhum procedimento que contenha uma `Try...Catch...Finally` instrução.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `Resume` instrução para terminar em um procedimento de tratamento de erros e, em seguida, retomar a execução com a instrução que causou o erro. Número do erro 55 é gerado para ilustrar o uso do `Resume` instrução.  
+ Este exemplo usa a `Resume` instrução para encerrar o tratamento de erros em um procedimento e, em seguida, retomar a execução com a instrução que causou o erro. O número de erro 55 é gerado para ilustrar `Resume` o uso da instrução.  
   
  [!code-vb[VbVbalrErrorHandling#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#16)]  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
+ **)** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Consulte também
 

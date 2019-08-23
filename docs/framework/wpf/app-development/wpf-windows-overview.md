@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16f4155cefea20868185febb3d2a566dc1524cc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817946"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956281"
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
 Os usuários interagem com aplicativos autônomos do Windows Presentation Foundation (WPF) por meio do Windows. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Os [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos fornecem suas próprias janelas usando <xref:System.Windows.Window> a classe. Este tópico apresenta <xref:System.Windows.Window> antes de abranger os conceitos básicos da criação e gerenciamento de janelas em aplicativos autônomos.  
   
 > [!NOTE]
->  Aplicativos hospedados [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] em navegador, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] incluindo páginas [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] flexíveis, não fornecem suas próprias janelas. Em vez disso, eles são hospedados no Windows fornecido pelo Windows Internet Explorer. Consulte [visão geral de aplicativos de navegador XAML WPF](wpf-xaml-browser-applications-overview.md).  
+> Aplicativos hospedados [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] em navegador, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] incluindo páginas [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] flexíveis, não fornecem suas próprias janelas. Em vez disso, eles são hospedados no Windows fornecido pelo Windows Internet Explorer. Consulte [visão geral de aplicativos de navegador XAML WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>A classe Window  
@@ -88,14 +88,14 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
   
  Para permitir que [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] um arquivo de marcação e um arquivo code-behind funcionem juntos, são necessários os seguintes:  
   
-- Na marcação, o `Window` elemento deve incluir o `x:Class` atributo. Quando o aplicativo é compilado, a existência do `x:Class` no arquivo de marcação faz [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] com que o `partial` crie uma classe derivada de <xref:System.Windows.Window> e que tenha o nome especificado pelo `x:Class` atributo. Isso requer a adição de uma [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] declaração de namespace para [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] o esquema `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` (). A classe `partial` gerada implementa o `InitializeComponent` método, que é chamado para registrar os eventos e definir as propriedades que são implementadas na marcação.  
+- Na marcação, o `Window` elemento deve incluir o `x:Class` atributo. Quando o aplicativo é compilado, a existência do `x:Class` no arquivo de marcação faz com que o Microsoft Build Engine (MSBuild) `partial` crie uma classe derivada de <xref:System.Windows.Window> e que `x:Class` tenha o nome especificado pelo atributo. Isso requer a adição de uma [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] declaração de namespace para [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] o esquema `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` (). A classe `partial` gerada implementa o `InitializeComponent` método, que é chamado para registrar os eventos e definir as propriedades que são implementadas na marcação.  
   
 - No code-behind, a classe deve ser uma `partial` classe com o mesmo nome que é especificado `x:Class` pelo atributo na marcação e deve derivar de <xref:System.Windows.Window>. Isso permite que o arquivo code-behind seja associado `partial` à classe gerada para o arquivo de marcação quando o aplicativo é compilado (consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md)).  
   
 - No code-behind, a <xref:System.Windows.Window> classe deve implementar um construtor que chama o `InitializeComponent` método. `InitializeComponent`é implementado pela classe gerada `partial` do arquivo de marcação para registrar eventos e definir propriedades que são definidas na marcação.  
   
 > [!NOTE]
->  Quando você adiciona um novo <xref:System.Windows.Window> ao seu projeto usando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]o, o <xref:System.Windows.Window> é implementado usando marcação e code-behind e inclui a configuração necessária para criar a associação entre a marcação e os arquivos code-behind como descrito aqui.  
+> Quando você adiciona um novo <xref:System.Windows.Window> ao seu projeto usando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]o, o <xref:System.Windows.Window> é implementado usando marcação e code-behind e inclui a configuração necessária para criar a associação entre a marcação e os arquivos code-behind como descrito aqui.  
   
  Com essa configuração em vigor, você pode se concentrar na definição da aparência da janela na [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação e na implementação de seu comportamento no code-behind. O exemplo a seguir mostra uma janela com um botão, implementado [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] em marcação e um manipulador de eventos para o evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> do botão, implementado no code-behind.  
   
@@ -106,13 +106,13 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configurar uma definição de janela para MSBuild  
- A forma como você implementa sua janela determina como ela é [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]configurada para o. Para uma janela que é definida usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação e code-behind:  
+ A forma como você implementa sua janela determina como ela é configurada para o MSBuild. Para uma janela que é definida usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação e code-behind:  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]os arquivos de marcação são [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] configurados como `Page` itens.  
+- Os arquivos de marcação XAML são configurados como itens do MSBuild `Page` .  
   
-- Os arquivos code-behind são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` itens.  
+- Os arquivos code-behind são configurados como itens do MSBuild `Compile` .  
   
- Isso é mostrado no arquivo de [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] projeto a seguir.  
+ Isso é mostrado no seguinte arquivo de projeto do MSBuild.  
   
 ```xml  
 <Project ...  
@@ -149,7 +149,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
  Uma janela que é aberta chamando <xref:System.Windows.Window.Show%2A> é uma janela sem-modo, o que significa que o aplicativo opera em um modo que permite que os usuários ativem outras janelas no mesmo aplicativo.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>é chamado para abrir janelas como caixas de diálogo modalmente. Consulte [visão geral das caixas de diálogo](dialog-boxes-overview.md) para obter mais informações.  
+> <xref:System.Windows.Window.ShowDialog%2A>é chamado para abrir janelas como caixas de diálogo modalmente. Consulte [visão geral das caixas de diálogo](dialog-boxes-overview.md) para obter mais informações.  
   
  Quando <xref:System.Windows.Window.Show%2A> é chamado, uma janela executa o trabalho de inicialização antes de ser mostrada para estabelecer a infraestrutura que permite receber entrada do usuário. Quando a janela é inicializada, <xref:System.Windows.Window.SourceInitialized> o evento é gerado e a janela é mostrada.  
   
@@ -205,7 +205,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
  Quando uma janela é aberta pela primeira vez, ela se torna a janela ativa (a menos <xref:System.Windows.Window.ShowActivated%2A> que ela `false`seja mostrada com definido como). A *janela ativa* é a janela que está atualmente capturando a entrada do usuário, como traços de tecla e cliques do mouse. Quando uma janela se torna ativa, ela gera <xref:System.Windows.Window.Activated> o evento.  
   
 > [!NOTE]
->  Quando uma janela é aberta pela primeira vez <xref:System.Windows.FrameworkElement.Loaded> , <xref:System.Windows.Window.ContentRendered> os eventos e são gerados somente <xref:System.Windows.Window.Activated> depois que o evento é gerado. Com isso em mente, uma janela pode ser efetivamente considerada aberta quando <xref:System.Windows.Window.ContentRendered> é gerada.  
+> Quando uma janela é aberta pela primeira vez <xref:System.Windows.FrameworkElement.Loaded> , <xref:System.Windows.Window.ContentRendered> os eventos e são gerados somente <xref:System.Windows.Window.Activated> depois que o evento é gerado. Com isso em mente, uma janela pode ser efetivamente considerada aberta quando <xref:System.Windows.Window.ContentRendered> é gerada.  
   
  Depois que uma janela fica ativa, um usuário pode ativar outra janela no mesmo aplicativo ou então ativar outro aplicativo. Quando isso acontece, a janela ativa no momento torna-se desativada <xref:System.Windows.Window.Deactivated> e gera o evento. Da mesma forma, quando o usuário seleciona uma janela desativada no momento, a janela torna <xref:System.Windows.Window.Activated> -se ativa novamente e é gerada.  
   
@@ -221,7 +221,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
  Se uma tarefa em segundo plano for concluída, uma janela pode querer notificar o usuário de forma mais <xref:System.Windows.Window.Activate%2A> urgente chamando o método. Se o usuário estiver interagindo com outro aplicativo ativado quando <xref:System.Windows.Window.Activate%2A> for chamado, o botão da barra de tarefas da janela piscará. Se um usuário estiver interagindo com o aplicativo atual, a <xref:System.Windows.Window.Activate%2A> chamada levará a janela para o primeiro plano.  
   
 > [!NOTE]
->  Você pode manipular a ativação de escopo de aplicativo <xref:System.Windows.Application.Activated?displayProperty=nameWithType> usando <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> os eventos e.  
+> Você pode manipular a ativação de escopo de aplicativo <xref:System.Windows.Application.Activated?displayProperty=nameWithType> usando <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> os eventos e.  
   
 <a name="Closing_a_Window"></a>   
 ### <a name="closing-a-window"></a>Fechar uma janela  
@@ -262,9 +262,9 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
  Se <xref:System.Windows.Window.Closing> não for tratado ou for manipulado, mas não cancelado, a janela será fechada. Logo antes de uma janela ser fechada <xref:System.Windows.Window.Closed> , é gerado. Neste ponto, uma janela não pode ser impedida de fechar.  
   
 > [!NOTE]
->  Um aplicativo pode ser configurado para ser desligado automaticamente quando a janela principal do aplicativo é fechada ( <xref:System.Windows.Application.MainWindow%2A>consulte) ou a última janela é fechada. Para obter detalhes, consulte <xref:System.Windows.Application.ShutdownMode%2A>.  
+> Um aplicativo pode ser configurado para ser desligado automaticamente quando a janela principal do aplicativo é fechada ( <xref:System.Windows.Application.MainWindow%2A>consulte) ou a última janela é fechada. Para obter detalhes, consulte <xref:System.Windows.Application.ShutdownMode%2A>.  
   
- Embora uma janela possa ser fechada explicitamente por meio de mecanismos fornecidos nas áreas que não são cliente e cliente, uma janela também pode ser fechada implicitamente como resultado de um comportamento em outras partes do aplicativo [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]ou, incluindo o seguinte:  
+ Embora uma janela possa ser fechada explicitamente por meio de mecanismos fornecidos nas áreas não cliente e cliente, uma janela também pode ser fechada implicitamente como resultado de um comportamento em outras partes do aplicativo ou do Windows, incluindo o seguinte:  
   
 - Um usuário faz logoff ou desliga o Windows.  
   
@@ -275,7 +275,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
 - <xref:System.Windows.Application.Shutdown%2A> é chamado.  
   
 > [!NOTE]
->  Uma janela não pode ser reaberta depois que é fechada.  
+> Uma janela não pode ser reaberta depois que é fechada.  
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Eventos de tempo de vida da janela  
@@ -377,7 +377,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
  Uma janela com um estado maximizado se expande para o tamanho máximo que pode ser, que será tão grande quanto suas <xref:System.Windows.FrameworkElement.MaxWidth%2A>Propriedades, <xref:System.Windows.FrameworkElement.MaxHeight%2A>e <xref:System.Windows.Window.SizeToContent%2A> ditadas. Assim como ocorre com uma janela minimizada, uma janela maximizada não pode ser redimensionada usando uma alça de redimensionamento ou arrastando a borda.  
   
 > [!NOTE]
->  Os <xref:System.Windows.Window.Top%2A>valores das <xref:System.Windows.Window.Left%2A> Propriedades<xref:System.Windows.FrameworkElement.Height%2A> ,, <xref:System.Windows.FrameworkElement.Width%2A>e de uma janela sempre representam os valores para o estado normal, mesmo quando a janela está atualmente maximizada ou minimizada.  
+> Os <xref:System.Windows.Window.Top%2A>valores das <xref:System.Windows.Window.Left%2A> Propriedades<xref:System.Windows.FrameworkElement.Height%2A> ,, <xref:System.Windows.FrameworkElement.Width%2A>e de uma janela sempre representam os valores para o estado normal, mesmo quando a janela está atualmente maximizada ou minimizada.  
   
  O estado de uma janela pode ser configurado definindo sua <xref:System.Windows.Window.WindowState%2A> Propriedade, que pode ter um dos seguintes <xref:System.Windows.WindowState> valores de enumeração:  
   

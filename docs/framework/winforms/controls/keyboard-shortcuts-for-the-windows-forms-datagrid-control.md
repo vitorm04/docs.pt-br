@@ -5,18 +5,18 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: 58e65ee9d95329c3583515b99db47b87b3749c8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b4d566d377a3cda73bf8422caa798134d356f63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973778"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962579"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Atalhos de teclado para o controle DataGrid dos Windows Forms
 > [!NOTE]
->  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- A tabela a seguir lista os atalhos de teclado que podem ser usados para navegação dentro do Windows Forms <xref:System.Windows.Forms.DataGrid> controle:  
+ A tabela a seguir lista os atalhos de teclado que podem ser usados para navegação dentro <xref:System.Windows.Forms.DataGrid> do controle de Windows Forms:  
   
 |Ação|Atalho|  
 |------------|--------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "61973778"
 |Ocultar a linha pai quando estiver em uma tabela filho.|CTRL+PAGE UP|  
 |Estender a seleção para baixo uma tela (exceto por links da tabela filho).|SHIFT + PAGE DOWN|  
 |Estender a seleção para cima uma tela (exceto por links da tabela filho).|SHIFT+PAGE UP|  
-|Chamar o <xref:System.Windows.Forms.DataGrid.EndEdit%2A> método para a linha atual.|CTRL+ENTER|  
+|Chame o <xref:System.Windows.Forms.DataGrid.EndEdit%2A> método para a linha atual.|CTRL+ENTER|  
 |Insira um <xref:System.DBNull.Value?displayProperty=nameWithType> valor em uma célula no modo de edição.|CTRL+0|  
   
 ## <a name="see-also"></a>Consulte também

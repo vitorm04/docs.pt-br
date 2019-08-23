@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: debb704900d852df1d66c7bac65ab385e0d72ec5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff1365ddb46ca28cbcaa4f1383b293681e6ec214
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769948"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956779"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>Método ICorDebugRegisterSet::SetThreadContext
-`SetThreadContext` não é implementada no .NET Framework versão 2.0. Não chame este método.  
+`SetThreadContext`Não está implementado na versão .NET Framework 2,0. Não chame esse método.  
   
 > [!NOTE]
->  Use a operação de nível mais alto [icordebugnativeframe:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) para definir o contexto de um thread.  
+> Use a operação de nível superior [ICorDebugNativeFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) para definir o contexto de um thread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,13 +41,13 @@ HRESULT SetThreadContext (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
- **Versões do .NET framework:** 1.1, 1.0  
+ **.NET Framework versões:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Consulte também
 

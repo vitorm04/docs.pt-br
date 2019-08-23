@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetMethodParameterSymbols Method
+title: 'Método ICorDebugSymbolProvider:: GetMethodParameterSymbols'
 ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d016007d09a06e923bef78fa8ead99e1e1ce9420
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 04262876db39dad93cf5904cdbb81b568fc22041
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771376"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957331"
 ---
-# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider::GetMethodParameterSymbols Method
-Obtém os símbolos de parâmetro do método dado o endereço virtual relativo (RVA) desse método.  
+# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>Método ICorDebugSymbolProvider:: GetMethodParameterSymbols
+Obtém os símbolos de parâmetro de um método de acordo com o endereço virtual relativo (RVA) desse método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -27,28 +27,28 @@ HRESULT GetMethodParameterSymbols(
   
 ## <a name="parameters"></a>Parâmetros  
  `nativeRVA`  
- [in] O endereço de virtual relativo nativo do método.  
+ no O endereço virtual relativo nativo do método.  
   
  `cRequestedSymbols`  
- [in] O número de símbolos locais solicitado.  
+ no O número de símbolos locais solicitados.  
   
  `pcFetchedSymbols`  
- [out] Um ponteiro para o número de símbolos recuperados pelo método.  
+ fora Um ponteiro para o número de símbolos recuperados pelo método.  
   
  `pcFetchedSymbols`  
- [out] Um ponteiro para um [ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) matriz que contém símbolos de locais do método.  
+ fora Um ponteiro para uma matriz [ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) que contém os símbolos locais do método.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
