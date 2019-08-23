@@ -9,28 +9,28 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: 86e42b5d2fcd5bcb23489bd03a6daf8255d0725f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a52e330147b07f26136380821c392d27eec60fae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457531"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935250"
 ---
-# <a name="bitmap-effects"></a><span data-ttu-id="da69f-102">Efeitos de bitmap</span><span class="sxs-lookup"><span data-stu-id="da69f-102">Bitmap Effects</span></span>
-<span data-ttu-id="da69f-103">Os tópicos nesta seção descrevem como aplicar efeitos visuais a imagens de bitmap usando [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="da69f-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="bitmap-effects"></a><span data-ttu-id="beb4a-102">Efeitos de bitmap</span><span class="sxs-lookup"><span data-stu-id="beb4a-102">Bitmap Effects</span></span>
+<span data-ttu-id="beb4a-103">Os tópicos nesta seção descrevem como aplicar efeitos visuais a imagens de bitmap usando [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]o.</span><span class="sxs-lookup"><span data-stu-id="beb4a-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="da69f-104">No .NET Framework 4 ou posterior, o <xref:System.Windows.Media.Effects.BitmapEffect> classe está obsoleta.</span><span class="sxs-lookup"><span data-stu-id="da69f-104">In the .NET Framework 4 or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="da69f-105">Se você tentar usar o <xref:System.Windows.Media.Effects.BitmapEffect> classe, você receberá uma exceção obsoleta.</span><span class="sxs-lookup"><span data-stu-id="da69f-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="da69f-106">A alternativa não obsoleta para o <xref:System.Windows.Media.Effects.BitmapEffect> classe é o <xref:System.Windows.Media.Effects.Effect> classe.</span><span class="sxs-lookup"><span data-stu-id="da69f-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="da69f-107">Na maioria das situações, a <xref:System.Windows.Media.Effects.Effect> classe é significativamente mais rápida.</span><span class="sxs-lookup"><span data-stu-id="da69f-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
+> <span data-ttu-id="beb4a-104">No .NET Framework 4 ou posterior, a <xref:System.Windows.Media.Effects.BitmapEffect> classe é obsoleta.</span><span class="sxs-lookup"><span data-stu-id="beb4a-104">In the .NET Framework 4 or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="beb4a-105">Se você tentar usar a <xref:System.Windows.Media.Effects.BitmapEffect> classe, receberá uma exceção obsoleta.</span><span class="sxs-lookup"><span data-stu-id="beb4a-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="beb4a-106">A alternativa não obsoleta para a <xref:System.Windows.Media.Effects.BitmapEffect> classe é a <xref:System.Windows.Media.Effects.Effect> classe.</span><span class="sxs-lookup"><span data-stu-id="beb4a-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="beb4a-107">Na maioria das situações, <xref:System.Windows.Media.Effects.Effect> a classe é significativamente mais rápida.</span><span class="sxs-lookup"><span data-stu-id="beb4a-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="da69f-108">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="da69f-108">In This Section</span></span>  
- [<span data-ttu-id="da69f-109">Visão geral dos efeitos de bitmap</span><span class="sxs-lookup"><span data-stu-id="da69f-109">Bitmap Effects Overview</span></span>](bitmap-effects-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="beb4a-108">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="beb4a-108">In This Section</span></span>  
+ [<span data-ttu-id="beb4a-109">Visão geral dos efeitos de bitmap</span><span class="sxs-lookup"><span data-stu-id="beb4a-109">Bitmap Effects Overview</span></span>](bitmap-effects-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="da69f-110">Referência</span><span class="sxs-lookup"><span data-stu-id="da69f-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="beb4a-110">Referência</span><span class="sxs-lookup"><span data-stu-id="beb4a-110">Reference</span></span>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
   
  <xref:System.Windows.Media.Effects>  
   
-## <a name="related-sections"></a><span data-ttu-id="da69f-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="da69f-111">Related Sections</span></span>  
- [<span data-ttu-id="da69f-112">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="da69f-112">Graphics and Multimedia</span></span>](index.md)  
+## <a name="related-sections"></a><span data-ttu-id="beb4a-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="beb4a-111">Related Sections</span></span>  
+ [<span data-ttu-id="beb4a-112">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="beb4a-112">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="da69f-113">Visão geral da geração de imagens</span><span class="sxs-lookup"><span data-stu-id="da69f-113">Imaging Overview</span></span>](imaging-overview.md)
+ [<span data-ttu-id="beb4a-113">Visão geral da geração de imagens</span><span class="sxs-lookup"><span data-stu-id="beb4a-113">Imaging Overview</span></span>](imaging-overview.md)
