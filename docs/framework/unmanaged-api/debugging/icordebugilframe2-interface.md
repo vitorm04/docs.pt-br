@@ -16,38 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4f57f27ec92e7977b46ebfa5967b0590674d2a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d02dab01eca3bd4f8ce3ae7ace7f9d4be8233dca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946465"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917011"
 ---
-# <a name="icordebugilframe2-interface"></a><span data-ttu-id="bc027-102">Interface ICorDebugILFrame2</span><span class="sxs-lookup"><span data-stu-id="bc027-102">ICorDebugILFrame2 Interface</span></span>
+# <a name="icordebugilframe2-interface"></a><span data-ttu-id="8e13a-102">Interface ICorDebugILFrame2</span><span class="sxs-lookup"><span data-stu-id="8e13a-102">ICorDebugILFrame2 Interface</span></span>
 
-<span data-ttu-id="bc027-103">Uma extensão lógica da interface ICorDebugILFrame.</span><span class="sxs-lookup"><span data-stu-id="bc027-103">A logical extension of the ICorDebugILFrame interface.</span></span>  
+<span data-ttu-id="8e13a-103">Uma extensão lógica da interface ICorDebugILFrame.</span><span class="sxs-lookup"><span data-stu-id="8e13a-103">A logical extension of the ICorDebugILFrame interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="bc027-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="bc027-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8e13a-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="8e13a-104">Methods</span></span>  
   
-|<span data-ttu-id="bc027-105">Método</span><span class="sxs-lookup"><span data-stu-id="bc027-105">Method</span></span>|<span data-ttu-id="bc027-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="bc027-106">Description</span></span>|  
+|<span data-ttu-id="8e13a-105">Método</span><span class="sxs-lookup"><span data-stu-id="8e13a-105">Method</span></span>|<span data-ttu-id="8e13a-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="8e13a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="bc027-107">Método EnumerateTypeParameters</span><span class="sxs-lookup"><span data-stu-id="bc027-107">EnumerateTypeParameters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|<span data-ttu-id="bc027-108">Obtém um objeto ICorDebugTypeEnum que contém o <xref:System.Type> parâmetros neste quadro.</span><span class="sxs-lookup"><span data-stu-id="bc027-108">Gets an ICorDebugTypeEnum object that contains the <xref:System.Type> parameters in this frame.</span></span>|  
-|[<span data-ttu-id="bc027-109">Método RemapFunction</span><span class="sxs-lookup"><span data-stu-id="bc027-109">RemapFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|<span data-ttu-id="bc027-110">Remapeia uma função editada, especificando o novo deslocamento do MSIL.</span><span class="sxs-lookup"><span data-stu-id="bc027-110">Remaps an edited function by specifying the new MSIL offset.</span></span>|  
+|[<span data-ttu-id="8e13a-107">Método EnumerateTypeParameters</span><span class="sxs-lookup"><span data-stu-id="8e13a-107">EnumerateTypeParameters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|<span data-ttu-id="8e13a-108">Obtém um objeto ICorDebugTypeEnum que contém os <xref:System.Type> parâmetros neste quadro.</span><span class="sxs-lookup"><span data-stu-id="8e13a-108">Gets an ICorDebugTypeEnum object that contains the <xref:System.Type> parameters in this frame.</span></span>|  
+|[<span data-ttu-id="8e13a-109">Método RemapFunction</span><span class="sxs-lookup"><span data-stu-id="8e13a-109">RemapFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|<span data-ttu-id="8e13a-110">Remapeia uma função editada especificando o novo deslocamento MSIL.</span><span class="sxs-lookup"><span data-stu-id="8e13a-110">Remaps an edited function by specifying the new MSIL offset.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bc027-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="bc027-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8e13a-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="8e13a-111">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bc027-112">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="bc027-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="8e13a-112">Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.</span><span class="sxs-lookup"><span data-stu-id="8e13a-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bc027-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bc027-113">Requirements</span></span>  
- <span data-ttu-id="bc027-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bc027-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e13a-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8e13a-113">Requirements</span></span>  
+ <span data-ttu-id="8e13a-114">**Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8e13a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc027-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bc027-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8e13a-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8e13a-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bc027-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc027-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8e13a-116">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8e13a-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bc027-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc027-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8e13a-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e13a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc027-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bc027-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e13a-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8e13a-118">See also</span></span>
 
-- [<span data-ttu-id="bc027-119">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="bc027-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="8e13a-119">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="8e13a-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

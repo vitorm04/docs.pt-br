@@ -2,24 +2,24 @@
 title: <custom>
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 18359e871feed17a11006d0b2998907faf25c158
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5cc522604fa7aca8ca6eae787520265b36fef6f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704187"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925951"
 ---
-# <a name="custom"></a><span data-ttu-id="43fdc-101">\<custom></span><span class="sxs-lookup"><span data-stu-id="43fdc-101">\<custom></span></span>
-<span data-ttu-id="43fdc-102">Especifica configurações para um serviço de resolvedor de pares personalizado.</span><span class="sxs-lookup"><span data-stu-id="43fdc-102">Specifies settings for a custom peer resolver service.</span></span>  
+# <a name="custom"></a><span data-ttu-id="6b07f-101">\<custom></span><span class="sxs-lookup"><span data-stu-id="6b07f-101">\<custom></span></span>
+<span data-ttu-id="6b07f-102">Especifica as configurações para um serviço resolvedor de pares personalizado.</span><span class="sxs-lookup"><span data-stu-id="6b07f-102">Specifies settings for a custom peer resolver service.</span></span>  
   
-<span data-ttu-id="43fdc-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="43fdc-103">\<system.serviceModel></span></span>  
-<span data-ttu-id="43fdc-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="43fdc-104">\<bindings></span></span>  
-<span data-ttu-id="43fdc-105">\<netPeerBinding></span><span class="sxs-lookup"><span data-stu-id="43fdc-105">\<netPeerBinding></span></span>  
-<span data-ttu-id="43fdc-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="43fdc-106">\<binding></span></span>  
-<span data-ttu-id="43fdc-107">\<resolver></span><span class="sxs-lookup"><span data-stu-id="43fdc-107">\<resolver></span></span>  
-<span data-ttu-id="43fdc-108">\<custom></span><span class="sxs-lookup"><span data-stu-id="43fdc-108">\<custom></span></span>  
+<span data-ttu-id="6b07f-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="6b07f-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="6b07f-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="6b07f-104">\<bindings></span></span>  
+<span data-ttu-id="6b07f-105">\<netPeerBinding></span><span class="sxs-lookup"><span data-stu-id="6b07f-105">\<netPeerBinding></span></span>  
+<span data-ttu-id="6b07f-106">\<> de associação</span><span class="sxs-lookup"><span data-stu-id="6b07f-106">\<binding></span></span>  
+<span data-ttu-id="6b07f-107">\<resolver></span><span class="sxs-lookup"><span data-stu-id="6b07f-107">\<resolver></span></span>  
+<span data-ttu-id="6b07f-108">\<custom></span><span class="sxs-lookup"><span data-stu-id="6b07f-108">\<custom></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="43fdc-109">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="43fdc-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b07f-109">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6b07f-109">Syntax</span></span>  
   
 ```xml  
 <custom address="Uri"
@@ -29,37 +29,37 @@ ms.locfileid: "61704187"
 </custom>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="43fdc-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="43fdc-110">Attributes and Elements</span></span>  
- <span data-ttu-id="43fdc-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="43fdc-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6b07f-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="6b07f-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="6b07f-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="6b07f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="43fdc-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="43fdc-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6b07f-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="6b07f-112">Attributes</span></span>  
   
-|<span data-ttu-id="43fdc-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="43fdc-113">Attribute</span></span>|<span data-ttu-id="43fdc-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="43fdc-114">Description</span></span>|  
+|<span data-ttu-id="6b07f-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="6b07f-113">Attribute</span></span>|<span data-ttu-id="6b07f-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="6b07f-114">Description</span></span>|  
 |---------------|-----------------|  
-|`address`|<span data-ttu-id="43fdc-115">Um URI que especifica o endereço do ponto de extremidade do nó par que hospeda o serviço de resolvedor de pares personalizado.</span><span class="sxs-lookup"><span data-stu-id="43fdc-115">A URI that specifies the endpoint address of the peer node that hosts the custom peer resolver service.</span></span>|  
-|`resolverType`|<span data-ttu-id="43fdc-116">Uma cadeia de caracteres que especifica o tipo de serviço resolvedor de pares personalizado.</span><span class="sxs-lookup"><span data-stu-id="43fdc-116">A string that specifies the type of the custom peer resolver service.</span></span>|  
+|`address`|<span data-ttu-id="6b07f-115">Um URI que especifica o endereço do ponto de extremidade do nó par que hospeda o serviço resolvedor de pares personalizado.</span><span class="sxs-lookup"><span data-stu-id="6b07f-115">A URI that specifies the endpoint address of the peer node that hosts the custom peer resolver service.</span></span>|  
+|`resolverType`|<span data-ttu-id="6b07f-116">Uma cadeia de caracteres que especifica o tipo do serviço resolvedor de pares personalizado.</span><span class="sxs-lookup"><span data-stu-id="6b07f-116">A string that specifies the type of the custom peer resolver service.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="43fdc-117">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="43fdc-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6b07f-117">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="6b07f-117">Child Elements</span></span>  
   
-|<span data-ttu-id="43fdc-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="43fdc-118">Element</span></span>|<span data-ttu-id="43fdc-119">Descrição</span><span class="sxs-lookup"><span data-stu-id="43fdc-119">Description</span></span>|  
+|<span data-ttu-id="6b07f-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="6b07f-118">Element</span></span>|<span data-ttu-id="6b07f-119">Descrição</span><span class="sxs-lookup"><span data-stu-id="6b07f-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="43fdc-120">\<identity></span><span class="sxs-lookup"><span data-stu-id="43fdc-120">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="43fdc-121">Especifica a identidade para os resolvedores de pares personalizados configurados com este elemento.</span><span class="sxs-lookup"><span data-stu-id="43fdc-121">Specifies the identity for custom peer resolvers configured with this element.</span></span> <span data-ttu-id="43fdc-122">Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IdentityElement>.</span><span class="sxs-lookup"><span data-stu-id="43fdc-122">This element is of type <xref:System.ServiceModel.Configuration.IdentityElement>.</span></span>|  
-|[<span data-ttu-id="43fdc-123">\<headers></span><span class="sxs-lookup"><span data-stu-id="43fdc-123">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="43fdc-124">Uma coleção de cabeçalho de endereço usado para mensagens SOAP manipuladas pelo resolvedor de pares personalizado.</span><span class="sxs-lookup"><span data-stu-id="43fdc-124">A collection of address header used for SOAP messages handled by the custom peer resolver.</span></span>|  
+|[<span data-ttu-id="6b07f-120">\<identity></span><span class="sxs-lookup"><span data-stu-id="6b07f-120">\<identity></span></span>](identity.md)|<span data-ttu-id="6b07f-121">Especifica a identidade para resolvedores de pares personalizados configurados com este elemento.</span><span class="sxs-lookup"><span data-stu-id="6b07f-121">Specifies the identity for custom peer resolvers configured with this element.</span></span> <span data-ttu-id="6b07f-122">Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IdentityElement>.</span><span class="sxs-lookup"><span data-stu-id="6b07f-122">This element is of type <xref:System.ServiceModel.Configuration.IdentityElement>.</span></span>|  
+|[<span data-ttu-id="6b07f-123">\<headers></span><span class="sxs-lookup"><span data-stu-id="6b07f-123">\<headers></span></span>](headers-element.md)|<span data-ttu-id="6b07f-124">Uma coleção de cabeçalho de endereço usada para mensagens SOAP tratadas pelo resolvedor de pares personalizado.</span><span class="sxs-lookup"><span data-stu-id="6b07f-124">A collection of address header used for SOAP messages handled by the custom peer resolver.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="43fdc-125">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="43fdc-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6b07f-125">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="6b07f-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="43fdc-126">Elemento</span><span class="sxs-lookup"><span data-stu-id="43fdc-126">Element</span></span>|<span data-ttu-id="43fdc-127">Descrição</span><span class="sxs-lookup"><span data-stu-id="43fdc-127">Description</span></span>|  
+|<span data-ttu-id="6b07f-126">Elemento</span><span class="sxs-lookup"><span data-stu-id="6b07f-126">Element</span></span>|<span data-ttu-id="6b07f-127">Descrição</span><span class="sxs-lookup"><span data-stu-id="6b07f-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="43fdc-128">\<resolver></span><span class="sxs-lookup"><span data-stu-id="43fdc-128">\<resolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|<span data-ttu-id="43fdc-129">Um resolvedor de pares que é usado para resolver um par de ID de malha para um conjunto de endereços de nó par que representa vários nós que participam da malha.</span><span class="sxs-lookup"><span data-stu-id="43fdc-129">A peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>|  
+|[<span data-ttu-id="6b07f-128">\<resolver></span><span class="sxs-lookup"><span data-stu-id="6b07f-128">\<resolver></span></span>](resolver.md)|<span data-ttu-id="6b07f-129">Um resolvedor de pares que é usado para resolver uma ID de malha de mesmo nível para um conjunto de endereços de nó par que representa vários nós que participam da malha.</span><span class="sxs-lookup"><span data-stu-id="6b07f-129">A peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="43fdc-130">Comentários</span><span class="sxs-lookup"><span data-stu-id="43fdc-130">Remarks</span></span>  
- <span data-ttu-id="43fdc-131">Este elemento define as configurações básicas para um serviço de resolvedor de pares personalizado, incluindo o endereço do ponto de extremidade do par que hospeda o serviço e quaisquer configurações de associação específica.</span><span class="sxs-lookup"><span data-stu-id="43fdc-131">This element defines the basic settings for a custom peer resolver service, including the endpoint address of the peer hosting the service and any specific binding settings.</span></span> <span data-ttu-id="43fdc-132">Para obter mais informações sobre a criação de um resolvedor personalizado, consulte [adicionando um resolvedor personalizado a um aplicativo PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90)).</span><span class="sxs-lookup"><span data-stu-id="43fdc-132">For more information on creating a custom resolver, see [Adding a Custom Resolver to a PeerChannel Application](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90)).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6b07f-130">Comentários</span><span class="sxs-lookup"><span data-stu-id="6b07f-130">Remarks</span></span>  
+ <span data-ttu-id="6b07f-131">Esse elemento define as configurações básicas para um serviço resolvedor de pares personalizado, incluindo o endereço do ponto de extremidade do par que hospeda o serviço e quaisquer configurações de associação específicas.</span><span class="sxs-lookup"><span data-stu-id="6b07f-131">This element defines the basic settings for a custom peer resolver service, including the endpoint address of the peer hosting the service and any specific binding settings.</span></span> <span data-ttu-id="6b07f-132">Para obter mais informações sobre como criar um resolvedor personalizado, consulte [adicionando um resolvedor personalizado a um aplicativo PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90)).</span><span class="sxs-lookup"><span data-stu-id="6b07f-132">For more information on creating a custom resolver, see [Adding a Custom Resolver to a PeerChannel Application](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43fdc-133">Consulte também</span><span class="sxs-lookup"><span data-stu-id="43fdc-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b07f-133">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6b07f-133">See also</span></span>
 
 - <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>
 - <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>
 - <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>
 - <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>
-- [<span data-ttu-id="43fdc-134">Resolvedores pares</span><span class="sxs-lookup"><span data-stu-id="43fdc-134">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
-- <span data-ttu-id="43fdc-135">[Adicionando um resolvedor personalizado a um aplicativo PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="43fdc-135">[Adding a Custom Resolver to a PeerChannel Application](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))</span></span>
+- [<span data-ttu-id="6b07f-134">Resolvedores pares</span><span class="sxs-lookup"><span data-stu-id="6b07f-134">Peer Resolvers</span></span>](../../../wcf/feature-details/peer-resolvers.md)
+- <span data-ttu-id="6b07f-135">[Adicionando um resolvedor personalizado a um aplicativo PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="6b07f-135">[Adding a Custom Resolver to a PeerChannel Application](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))</span></span>
