@@ -11,28 +11,28 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: bd152d19567806cf1cc7b1b38d9a3c0e47d2a960
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 44d34ddb00005a0fb86b2d06c4c14e2a5b949819
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591689"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966687"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Como: Habilitar a exibição de bloco em um controle ListView do Windows Forms
-Com o recurso de exibição de bloco a <xref:System.Windows.Forms.ListView> controle, você pode fornecer um equilíbrio visual entre informações gráficas e textuais. As informações textuais exibidas para um item na exibição lado a lado são as mesmas que as informações de coluna definidas para exibição de detalhes. Exibição lado a lado funciona em combinação com recursos de marca de agrupamento ou inserção no <xref:System.Windows.Forms.ListView> controle.  
+Com o recurso exibição de bloco do <xref:System.Windows.Forms.ListView> controle, você pode fornecer um equilíbrio visual entre informações gráficas e textuais. As informações textuais exibidas para um item na exibição lado a lado são as mesmas que as informações de coluna definidas para exibição de detalhes. O modo de exibição de bloco funciona em combinação com os recursos de agrupamento ou <xref:System.Windows.Forms.ListView> marca de inserção no controle.  
   
  O modo de exibição lado a lado usa um ícone de 32 x 32 pixels e várias linhas de texto, conforme mostrado nas imagens a seguir.  
   
- ![Exibição em um controle ListView lado a lado](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "lado a lado exibir ícones e texto")  
+ ![Exibição de bloco em um controle ListView](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "Texto e ícones de exibição de bloco")  
  
- Para habilitar exibição lado a lado, defina as <xref:System.Windows.Forms.ListView.View%2A> propriedade para <xref:System.Windows.Forms.View.Tile>. Você pode ajustar o tamanho dos blocos, definindo o <xref:System.Windows.Forms.ListView.TileSize%2A> propriedade e o número de linhas de texto exibidas no bloco ajustando a <xref:System.Windows.Forms.ListView.Columns%2A> coleção.  
+ Para habilitar a exibição de bloco, <xref:System.Windows.Forms.ListView.View%2A> defina a <xref:System.Windows.Forms.View.Tile>Propriedade como. Você pode ajustar o tamanho dos blocos definindo a <xref:System.Windows.Forms.ListView.TileSize%2A> Propriedade e o número de linhas de texto exibidas no bloco ajustando a <xref:System.Windows.Forms.ListView.Columns%2A> coleção.  
   
 > [!NOTE]
->  A exibição lado a lado está disponível apenas no [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] quando seu aplicativo chama o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método. Em sistemas operacionais anteriores, qualquer código relacionado ao modo de exibição lado a lado não terá efeito e o <xref:System.Windows.Forms.ListView> controle exibe no modo de exibição de ícones grandes. Para obter mais informações, consulte <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.  
+> A exibição de bloco está disponível somente [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] em quando o aplicativo chama <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> o método. Em sistemas operacionais anteriores, qualquer código relacionado à exibição de bloco não tem nenhum efeito e o <xref:System.Windows.Forms.ListView> controle é exibido na exibição de ícones grandes. Para obter mais informações, consulte <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.  
   
 ### <a name="to-set-tile-view-programmatically"></a>Para definir a exibição lado a lado programaticamente  
   
-1. Use o <xref:System.Windows.Forms.View> enumeração do <xref:System.Windows.Forms.ListView> controle.  
+1. Use a <xref:System.Windows.Forms.View> enumeração <xref:System.Windows.Forms.ListView> do controle.  
   
     ```vb  
     ListView1.View = View.Tile  

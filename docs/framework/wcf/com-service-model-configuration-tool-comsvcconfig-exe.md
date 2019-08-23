@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89462d05b9da7fc63bda58955517bfa9f0c50ab9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608834"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964198"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Ferramenta de configuração de modelo de serviço COM+ (ComSvcConfig.exe)
-A ferramenta de linha de comando de configuração de modelo de serviço COM+ (ComSvcConfig.exe) permite que você configure interfaces COM+ deve ser exposta como serviços da Web.  
+A ferramenta de linha de comando de configuração do modelo de serviço COM+ (ComSvcConfig. exe) permite que você configure as interfaces COM+ para serem expostas como serviços Web.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -24,42 +24,42 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Você deve ser um administrador no computador local para usar ComSvcConfig.exe.  
+> Você deve ser um administrador no computador local para usar o ComSvcConfig. exe.  
   
  A ferramenta pode ser encontrada no seguinte local  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
- Para obter mais informações sobre ComSvcConfig.exe, consulte [como: Use a ferramenta de configuração de modelo de serviço COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+ Para obter mais informações sobre o ComSvcConfig. exe [, consulte Como: Use a ferramenta](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)de configuração do modelo de serviço com+.  
   
- A tabela a seguir descreve os modos que podem ser usados com ComSvcConfig.exe.  
-  
-|Opção|Descrição|  
-|------------|-----------------|  
-|`install`|Instala uma configuração para uma interface COM+ para integração com o modelo de serviço.<br /><br /> Forma abreviada `/i`.|  
-|`uninstall`|Desinstala uma configuração para uma interface COM+ de integração do modelo de serviço.<br /><br /> Forma abreviada `/u`.|  
-|`list`|Lista informações sobre aplicativos COM+ e componentes com interfaces que estão configuradas para integração com o modelo de serviço.<br /><br /> Forma abreviada `/l`.|  
-  
- A tabela a seguir descreve os sinalizadores que podem ser usados com ComSvcConfig.exe.  
+ A tabela a seguir descreve os modos que podem ser usados com ComSvcConfig. exe.  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Especifica o aplicativo COM+ para configurar.<br /><br /> Forma abreviada `/a`.|  
-|`/contract:` \<*ClassID*  &#124; *ProgID*  &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; \*\>|Especifica o componente COM+ e a interface que será configurado como o contrato do serviço.<br /><br /> Forma abreviada `/c`.<br /><br /> Embora o caractere curinga (\*) pode ser usado quando você especifica os nomes de componente e a interface, é recomendável que você não usá-lo, porque você pode expor interfaces que você não pretendia.|  
-|`/hosting:` \<*complus*  &#124; *was*\>|Especifica se deve usar o modo ou o modo de hospedagem da Web de hospedagem COM+.<br /><br /> Forma abreviada `/h`.<br /><br /> Modo de hospedagem usando o COM+ exige a ativação explícita do aplicativo COM+. Usando a Web do modo de hospedagem permite que o aplicativo COM+ a ser ativado automaticamente como necessário. Se o aplicativo COM+ é um aplicativo de biblioteca, ele é executado no processo de serviços de informações da Internet (IIS). Se o aplicativo COM+ é um aplicativo de servidor, ele é executado no processo de Dllhost.exe.|  
-|`/webSite:` \<*WebsiteName*\>|Especifica o site da Web para hospedar quando o modo de hospedagem na Web é usado (consulte a `/hosting` sinalizador).<br /><br /> Forma abreviada `/w`.<br /><br /> Se nenhum site da Web for especificado, o site padrão será usado.|  
-|`/webDirectory:` \<*WebDirectoryName*\>|Especifica o diretório virtual para a hospedagem de hospedagem na Web é usado (consulte a `/hosting` sinalizador).<br /><br /> Forma abreviada `/d`.|  
-|`/mex`|Adiciona um ponto de extremidade de serviço de troca de metadados (MEX) à configuração de serviço padrão para dar suporte a clientes que desejam recuperar uma definição de contrato de serviço.<br /><br /> Forma abreviada `/x`.|  
-|`/id`|Exibe o aplicativo, componente e informações de interface, como IDs.<br /><br /> Forma abreviada `/k`.|  
-|`/nologo`|Impede que ComSvcConfig.exe exibindo seu logotipo.<br /><br /> Forma abreviada `/n`.|  
-|`/verbose`|Gera todos os avisos ou texto informativo, além de todos os erros encontrados.<br /><br /> Forma abreviada `/v`.|  
-|`/help`|Exibe a mensagem de uso.<br /><br /> Forma abreviada `/?`.|  
-|`/partial`|Gera uma configuração de serviço quando a interface especificada inclui uma ou mais assinaturas de método que podem ser expostas. No momento da inicialização de serviço, métodos compatíveis aparecem como operações no contrato de serviço, e não-compatíveis com métodos são ignorados e estavam ausentes ao contrato de serviço.<br /><br /> Se esse sinalizador estiver ausente, a ferramenta não irá gerar uma configuração de serviço quando a interface especificada inclui um ou mais métodos incompatíveis.|  
+|`install`|Instala uma configuração para uma interface COM+ para integração do modelo de serviço.<br /><br /> Forma `/i`abreviada.|  
+|`uninstall`|Desinstala uma configuração de uma interface COM+ da integração do modelo de serviço.<br /><br /> Forma `/u`abreviada.|  
+|`list`|Lista informações sobre aplicativos COM+ e componentes que têm interfaces configuradas para integração do modelo de serviço.<br /><br /> Forma `/l`abreviada.|  
+  
+ A tabela a seguir descreve os sinalizadores que podem ser usados com ComSvcConfig. exe.  
+  
+|Opção|Descrição|  
+|------------|-----------------|  
+|`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Especifica o aplicativo COM+ a ser configurado.<br /><br /> Forma `/a`abreviada.|  
+|`/contract:`&#124; &#124; &#124; Progidid&#124; de ClassID, interface de interface \* \<    \*\>|Especifica o componente e a interface COM+ que serão configurados como o contrato para o serviço.<br /><br /> Forma `/c`abreviada.<br /><br /> Embora o caractere curinga (\*) possa ser usado quando você especifica os nomes do componente e da interface, é recomendável não usá-lo, pois você pode expor interfaces que não pretendiam.|  
+|`/hosting:` \<*complus*  &#124; *was*\>|Especifica se o modo de hospedagem COM+ ou o modo de hospedagem da Web deve ser usado.<br /><br /> Forma `/h`abreviada.<br /><br /> Usar o modo de hospedagem COM+ requer ativação explícita do aplicativo COM+. O uso do modo de hospedagem da Web permite que o aplicativo COM+ seja ativado automaticamente conforme necessário. Se o aplicativo COM+ for um aplicativo de biblioteca, ele será executado no processo de Serviços de Informações da Internet (IIS). Se o aplicativo COM+ for um aplicativo de servidor, ele será executado no processo Dllhost. exe.|  
+|`/webSite:` \<*WebsiteName*\>|Especifica o site para hospedagem quando o modo de hospedagem da Web é usado ( `/hosting` consulte o sinalizador).<br /><br /> Forma `/w`abreviada.<br /><br /> Se nenhum site da Web for especificado, o site padrão será usado.|  
+|`/webDirectory:` \<*WebDirectoryName*\>|Especifica o diretório virtual para hospedagem quando a hospedagem Web é usada (consulte `/hosting` o sinalizador).<br /><br /> Forma `/d`abreviada.|  
+|`/mex`|Adiciona um ponto de extremidade de serviço de intercâmbio de metadados (MEX) à configuração de serviço padrão para dar suporte a clientes que desejam recuperar uma definição de contrato do serviço.<br /><br /> Forma `/x`abreviada.|  
+|`/id`|Exibe as informações de aplicativo, componente e interface como IDs.<br /><br /> Forma `/k`abreviada.|  
+|`/nologo`|Impede que o ComSvcConfig. exe exiba seu logotipo.<br /><br /> Forma `/n`abreviada.|  
+|`/verbose`|Gera todos os avisos ou texto informativo além dos erros encontrados.<br /><br /> Forma `/v`abreviada.|  
+|`/help`|Exibe a mensagem de uso.<br /><br /> Forma `/?`abreviada.|  
+|`/partial`|Gera uma configuração de serviço quando a interface especificada inclui uma ou mais assinaturas de método que podem ser expostas. No momento da inicialização do serviço, os métodos compatíveis aparecem como operações no contrato de serviço, e os métodos não compatíveis são ignorados e estão ausentes do contrato de serviço.<br /><br /> Se esse sinalizador estiver ausente, a ferramenta não gerará uma configuração de serviço quando a interface especificada incluir um ou mais métodos incompatíveis.|  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="description"></a>Descrição  
- O exemplo a seguir adiciona o `IFinances` interface da `ItemOrders.IFinancial` componente (do aplicativo aplicativo OnlineStore COM+) ao conjunto de interfaces que são expostas como serviços da Web, usando o modo de hospedagem COM+. Todos os avisos serão gerados, além de todos os erros encontrados.  
+ O exemplo a seguir adiciona `IFinances` a interface `ItemOrders.IFinancial` do componente (do aplicativo OnlineStore com+) ao conjunto de interfaces que são expostas como serviços Web, usando o modo de hospedagem com+. Todos os avisos serão exibidos além dos erros encontrados.  
   
 ### <a name="code"></a>Código  
   
@@ -68,7 +68,7 @@ ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financia
 ```  
   
 ### <a name="description"></a>Descrição  
- O exemplo a seguir adiciona o `IStockLevels` interface da `ItemInventory.Warehouse` componente (a partir do aplicativo OnlineWarehouse COM+) ao conjunto de interfaces que são expostos como serviços Web, usando o modo de host Web. O serviço Web é que Web hospedada no diretório virtual OnlineWarehouse do IIS.  
+ O exemplo a seguir adiciona `IStockLevels` a interface `ItemInventory.Warehouse` do componente (do aplicativo OnlineWarehouse com+) ao conjunto de interfaces que são expostas como serviços Web, usando o modo de hospedagem da Web. O serviço Web é hospedado na Web no diretório virtual OnlineWarehouse do IIS.  
   
 ### <a name="code"></a>Código  
   
@@ -77,7 +77,7 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
 ```  
   
 ### <a name="description"></a>Descrição  
- O exemplo a seguir remove a `IFinances` interface da `ItemOrders.Financial` componente (do aplicativo OnlineStore COM+ aplicativo) do conjunto de interfaces que são expostas como serviços da Web.  
+ O exemplo a seguir remove `IFinances` a interface `ItemOrders.Financial` do componente (do aplicativo OnlineStore com+) do conjunto de interfaces que são expostas como serviços Web.  
   
 ### <a name="code"></a>Código  
   
@@ -86,7 +86,7 @@ ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Finan
 ```  
   
 ### <a name="description"></a>Descrição  
- A exemplo a seguir lista expostos atualmente hospedado interfaces COM+, juntamente com o endereço de correspondência e os detalhes da associação, para o aplicativo do aplicativo OnlineStore COM+ no computador local.  
+ O exemplo a seguir lista as interfaces hospedadas do COM+ atualmente expostas, juntamente com os detalhes de endereço e associação correspondentes, para o aplicativo OnlineStore COM+ no computador local.  
   
 ### <a name="code"></a>Código  
   
@@ -96,4 +96,4 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Use a ferramenta de configuração de modelo de serviço COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Como: Usar a ferramenta de configuração do modelo de serviço COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

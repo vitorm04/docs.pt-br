@@ -1,21 +1,21 @@
 ---
-title: <tracking> do WCF
+title: <tracking>do WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: 4aac9f28de746e2a75a079cbaf774f01f4a08fca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad4f85139ff0a0f587bc47f63334fe97e25440b0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758139"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932368"
 ---
-# <a name="tracking-of-wcf"></a>\<Acompanhamento > do WCF
+# <a name="tracking-of-wcf"></a>\<acompanhamento de > do WCF
 Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.  
   
- Para obter mais informações no controle de fluxo de trabalho e sua configuração, consulte [fluxo de trabalho, controle e rastreamento](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) e [Configurando o rastreamento para um fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+ Para obter mais informações sobre o rastreamento do fluxo de trabalho e sua configuração, consulte rastreamento [e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configuração de rastreamento para um fluxo de trabalho](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
  \<system.serviceModel>  
-\<tracking>  
+\<acompanhamento de >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -85,8 +85,8 @@ Representa uma seção de configuração para definir configurações de control
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Uma coleção de elementos de configuração definindo os participantes que assinar a acompanhar registros. Os participantes de rastreamento contém a lógica para processar a carga de registros de rastreamento (por exemplo, eles poderiam optar por gravar em um arquivo).|  
-|[\<trackingProfile>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|Um perfil de rastreamento para filtrar registros de rastreamento emitida de uma instância de fluxo de trabalho.|  
+|[\<participants>](../windows-workflow-foundation/participants.md)|Uma coleção de elementos de configuração que define os participantes que assinam os registros de rastreamento. Os participantes de rastreamento contém a lógica para processar a carga de registros de rastreamento (por exemplo, eles poderiam optar por gravar em um arquivo).|  
+|[\<trackingProfile>](../windows-workflow-foundation/trackingprofile.md)|Um perfil de rastreamento para filtrar registros de rastreamento emitida de uma instância de fluxo de trabalho.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -100,4 +100,4 @@ Representa uma seção de configuração para definir configurações de control
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
-- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Acompanhamento e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)

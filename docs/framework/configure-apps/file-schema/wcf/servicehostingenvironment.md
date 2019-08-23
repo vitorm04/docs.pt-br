@@ -2,15 +2,15 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 16dacee89576b4ede0f2f80255ba8a0dcbc8c0dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b81c9f3c4260f415f057cd74b6f113d88f635978
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610183"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936285"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
-Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia para um transporte particular. Se esse elemento estiver vazio, o tipo padrão é usado. Esse elemento só pode ser usado no aplicativo ou arquivos de configuração de nível de máquina.  
+Esse elemento define o tipo que o ambiente de Hospedagem de serviço instancia para um transporte específico. Se esse elemento estiver vazio, o tipo padrão será usado. Esse elemento só pode ser usado nos arquivos de configuração no nível do aplicativo ou do computador.  
   
  \<system.ServiceModel>  
 \<ServiceHostingEnvironment>  
@@ -42,49 +42,49 @@ Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia p
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Um valor booliano que indica se o modo de compatibilidade do ASP.NET foi ativado para o aplicativo atual. O padrão é `false`.<br /><br /> Quando esse atributo é definido como `true`, fluem de solicitações para serviços do Windows Communication Foundation (WCF) por meio do pipeline HTTP do ASP.NET e comunicação por meio de protocolos não HTTP está proibida. Para obter mais informações, consulte [serviços WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Um inteiro que especifica a quantidade mínima de memória livre que deve estar disponível para o sistema, antes de um serviço WCF pode ser ativado. **Cuidado:**  A especificação desse atributo junto com confiança parcial no arquivo Web. config de um serviço WCF resultará em um <xref:System.Security.SecurityException> quando o serviço é executado.|  
-|multipleSiteBindingsEnabled|Um valor booliano que especifica se várias associações IIS por site está habilitado.<br /><br /> IIS consiste em sites da web, que são contêineres para aplicativos virtuais, que contém os diretórios virtuais. O aplicativo em um site pode ser acessado por meio de um ou mais associação do IIS. Uma associação IIS oferece dois tipos de informação: um protocolo de associação e informações de associação. Protocolo de associação define o esquema no qual a comunicação ocorre, e informações de associação são as informações usadas para acessar o site. Um exemplo de um protocolo de associação pode ser HTTP, enquanto as informações de associação podem conter um endereço IP, porta, cabeçalho de host, etc.<br /><br /> IIS dá suporte à especificação de várias associações IIS por site, o que resulta em vários endereços de base por esquema. No entanto, um serviço do Windows Communication Foundation (WCF) hospedado em um site permite que a associação baseAddress apenas um por esquema.<br /><br /> Para habilitar várias associações IIS por site para um serviço do Windows Communication Foundation (WCF), defina esse atributo como `true`. Observe que várias associação do site tem suporte apenas para o protocolo HTTP. O endereço dos pontos de extremidade no arquivo de configuração deve ser um URI completo.|  
+|aspNetCompatibilityEnabled|Um valor booliano que indica se o modo de compatibilidade ASP.NET foi ativado para o aplicativo atual. O padrão é `false`.<br /><br /> Quando esse atributo é definido como `true`, as solicitações para Windows Communication Foundation (WCF) fluem por meio do pipeline http ASP.net e a comunicação por protocolos não http é proibida. Para obter mais informações, consulte [Serviços WCF e ASP.net](../../../wcf/feature-details/wcf-services-and-aspnet.md).|  
+|minFreeMemoryPercentageToActivateService|Um inteiro que especifica a quantidade mínima de memória livre que deve estar disponível para o sistema, antes que um serviço WCF possa ser ativado. **Cuidado:**  A especificação desse atributo junto com a confiança parcial no arquivo Web. config de um serviço WCF resultará em <xref:System.Security.SecurityException> um quando o serviço for executado.|  
+|multipleSiteBindingsEnabled|Um valor booliano que especifica se várias associações IIS por site estão habilitadas.<br /><br /> O IIS consiste em sites da Web, que são contêineres para aplicativos virtuais que contêm diretórios virtuais. O aplicativo em um site pode ser acessado por meio de uma ou mais associações do IIS. Uma associação do IIS fornece duas informações: um protocolo de associação e informações de associação. O protocolo de associação define o esquema sobre o qual ocorre a comunicação e informações de associação são as informações usadas para acessar o site. Um exemplo de protocolo de associação pode ser HTTP, enquanto as informações de associação podem conter um endereço IP, uma porta, um cabeçalho de host, etc.<br /><br /> O IIS dá suporte à especificação de várias associações do IIS por site, o que resulta em vários endereços base por esquema. No entanto, um serviço de Windows Communication Foundation (WCF) hospedado em um site permite a associação a apenas um baseAddress por esquema.<br /><br /> Para habilitar várias associações do IIS por site para um serviço Windows Communication Foundation (WCF), defina esse atributo como `true`. Observe que a associação de vários sites tem suporte apenas para o protocolo HTTP. O endereço dos pontos de extremidade no arquivo de configuração precisa ser um URI completo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Uma coleção de elementos de configuração que especificam filtros de prefixo para os endereços base usados pelo host de serviço.|  
-|[\<serviceActivations>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Uma seção de configuração que descreve as configurações de ativação.|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Uma coleção de elementos de configuração que identificam o tipo de um transporte particular.|  
+|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|Uma coleção de elementos de configuração que especificam filtros de prefixo para os endereços base usados pelo host de serviço.|  
+|[\<serviceActivations>](serviceactivations.md)|Uma seção de configuração que descreve as configurações de ativação.|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|Uma coleção de elementos de configuração que identificam o tipo de um transporte específico.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|serviceModel|O elemento raiz de todos os elementos de configuração do Windows Communication Foundation (WCF).|  
+|serviceModel|O elemento raiz de todos os elementos de configuração de Windows Communication Foundation (WCF).|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, os serviços de WCF para execução lado a lado com o ASP.NET em domínios de aplicativo hospedado (AppDomain). Embora o WCF e ASP.NET podem coexistir no mesmo AppDomain, as solicitações do WCF não são processadas pelo Pipeline de HTTP do ASP.NET por padrão. Como resultado, vários elementos da plataforma do aplicativo ASP.NET não estão disponíveis para os serviços WCF. Eles incluem  
+ Por padrão, os serviços WCF são executados lado a lado com ASP.NET em domínios de aplicativo hospedado (AppDomain). Embora o WCF e o ASP.NET possam coexistir no mesmo AppDomain, as solicitações do WCF não são processadas pelo pipeline HTTP do ASP.NET por padrão. Como resultado, vários elementos da plataforma de aplicativo ASP.NET não estão disponíveis para os serviços WCF. Isso inclui  
   
-- Autorização de arquivo/URL do ASP.NET  
+- Autorização de arquivo/URL ASP.NET  
   
-- Personificação do ASP.NET  
+- Representação ASP.NET  
   
-- Estado de sessão baseada em cookie  
+- Estado de sessão baseado em cookie  
   
 - HttpContext.Current  
   
 - Extensibilidade de pipeline por meio de HttpModule personalizado  
   
- Se precisam de seus serviços WCF funcionar com o contexto do ASP.NET e se comunicar somente por HTTP, você pode usar o modo de compatibilidade do ASP.NET do WCF. Esse modo é ativado quando o `aspNetCompatibilityEnabled` atributo é definido como `true` no nível do aplicativo. As implementações de serviço devem declarar sua capacidade de executar no modo de compatibilidade usando o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> classe. Quando o modo de compatibilidade é habilitado,  
+ Se os serviços WCF precisarem funcionar no contexto ASP.NET e se comunicarem somente por meio de HTTP, você poderá usar o modo de compatibilidade ASP.NET do WCF. Esse modo é ativado quando o `aspNetCompatibilityEnabled` atributo é definido como `true` no nível do aplicativo. As implementações de serviço devem declarar sua capacidade de execução no modo <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> de compatibilidade usando a classe. Quando o modo de compatibilidade estiver habilitado,  
   
-- Autorização de arquivo/URL do ASP.NET é aplicada antes da autorização do WCF. Uma decisão de autorização baseia-se na identidade do nível de transporte da solicitação. As identidades no nível da mensagem são ignoradas.  
+- A autorização de arquivo/URL ASP.NET é imposta antes da autorização do WCF. Uma decisão de autorização é baseada na identidade de nível de transporte da solicitação. As identidades no nível da mensagem são ignoradas.  
   
-- Operações de serviço WCF começam a executar no contexto de representação do ASP.NET. Se a representação do ASP.NET e a representação do WCF são habilitadas para um serviço específico, o contexto de representação do WCF se aplica.  
+- As operações de serviço WCF começam a ser executadas no contexto de representação ASP.NET. Se a representação do ASP.NET e a representação do WCF estiverem habilitadas para um serviço específico, o contexto de representação do WCF será aplicado.  
   
-- HttpContext. Current pode ser usado no código de serviço do WCF e serviços são impedidos de expor pontos de extremidade não-HTTP.  
+- HttpContext. Current pode ser usado no código do serviço WCF, e os serviços são impedidos de expor pontos de extremidade não HTTP.  
   
-- As solicitações do WCF são processadas pelo pipeline do ASP.NET. HttpModules que foram configurados para atuar em solicitações de entrada também pode processar as solicitações do WCF. Eles podem incluir componentes da plataforma ASP.NET (por exemplo, <xref:System.Web.SessionState.SessionStateModule>), bem como módulos personalizados de terceiros.  
+- As solicitações do WCF são processadas pelo pipeline ASP.NET. HttpModules que foram configurados para atuar em solicitações de entrada também podem processar solicitações do WCF. Eles podem incluir componentes de plataforma ASP.net (por exemplo <xref:System.Web.SessionState.SessionStateModule>,), bem como módulos de terceiros personalizados.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir mostra como habilitar o modo de compatibilidade do ASP.  
+ O exemplo de código a seguir mostra como habilitar o modo de compatibilidade ASP.  
   
 ## <a name="code"></a>Código  
   
@@ -96,5 +96,5 @@ Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia p
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [Hospedagem](../../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Serviços do WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [Hospedagem](../../../wcf/feature-details/hosting.md)
+- [Serviços do WCF e ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)

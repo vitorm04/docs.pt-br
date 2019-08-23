@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: de05a8783fa957c459006e3ec27d9e8668e7226c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e13c4df87909629a45830e3b7950551434ed5ab1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422654"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946583"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Estatísticas do provedor para SQL Server
 A partir da versão 2.0 do .NET Framework, o provedor de dados do .NET Framework para SQL Server dá suporte a estatísticas de tempo de execução. Você deve habilitar estatísticas definindo a propriedade <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> do objeto de <xref:System.Data.SqlClient.SqlConnection> para `True` depois de criar um objeto de conexão válido. Depois que as estatísticas forem habilitadas, você poderá examiná-las como um "instantâneo no tempo" recuperando uma referência do <xref:System.Collections.IDictionary> pelo método <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> do objeto <xref:System.Data.SqlClient.SqlConnection>. Enumere por meio da lista como um conjunto de entradas no dicionário de pares de nome/valor. Esses pares de nome/valor não são ordenados. A qualquer momento, você pode chamar o método <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> do objeto <xref:System.Data.SqlClient.SqlConnection> para redefinir os contadores. Se a coleta de estatísticas não estiver habilitada, uma exceção não será gerada. Além disso, se <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> for chamado sem <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> ter sido chamado primeiro, os valores recuperados serão os valores iniciais para cada entrada. Se você habilitar estatísticas, execute o aplicativo por um tempo e, em seguida, desabilite as estatísticas. Os valores recuperados refletirão os valores coletados até o ponto em que as estatísticas foram desabilitadas. Todos os valores estatísticos são coletados a cada conexão.  
   
 ## <a name="statistical-values-available"></a>Valores estatísticos disponíveis  
- No momento, há 18 itens diferentes disponíveis do provedor do Microsoft SQL Server. O número de itens disponíveis pode ser acessado por meio de **contagem** propriedade da <xref:System.Collections.IDictionary> referência retornada pela interface <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Todos os contadores para estatísticas do provedor usam o common language runtime <xref:System.Int64> tipo (**longo** em c# e Visual Basic), que é de 64 bits de largura. O valor máximo do **int64** tipo de dados, conforme definido pelo **int64. MaxValue** campo, ((2^63)-1)). Quando os valores para os contadores atingirem esse valor máximo, eles não deverão ser considerados precisos. Isso significa que **int64. MaxValue**-1((2^63)-2) é efetivamente o maior valor válido para qualquer estatística.  
+ No momento, há 18 itens diferentes disponíveis do provedor do Microsoft SQL Server. O número de itens disponíveis pode ser acessado por meio da propriedade <xref:System.Collections.IDictionary> Count da referência de <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>interface retornada por. Todos os contadores para estatísticas de provedor usam o tipo <xref:System.Int64> de Common Language Runtime (Long C# in e Visual Basic), que tem 64 bits de largura. O valor máximo do tipo de dados **Int64** , conforme definido pelo **Int64.** O campo MaxValue, é ((2 ^ 63)-1)). Quando os valores para os contadores atingirem esse valor máximo, eles não deverão ser considerados precisos. Isso significa que **Int64. MaxValue**-1 ((2 ^ 63)-2) é efetivamente o maior valor válido para qualquer estatística.  
   
 > [!NOTE]
->  Um dicionário é usado retornar estatísticas do provedor porque o número, os nomes e a ordem das estatísticas retornadas podem ser alteradas no futuro. Os aplicativos não devem confiar em um valor específico localizado no dicionário, mas devem verificar se o valor está lá e está ramificado adequadamente.  
+> Um dicionário é usado retornar estatísticas do provedor porque o número, os nomes e a ordem das estatísticas retornadas podem ser alteradas no futuro. Os aplicativos não devem confiar em um valor específico localizado no dicionário, mas devem verificar se o valor está lá e está ramificado adequadamente.  
   
  A tabela a seguir descreve os valores estatísticos atuais disponíveis. Observe que os nomes de chave para os valores individuais não são localizados em versões regionais do Microsoft .NET Framework.  
   
@@ -48,7 +48,7 @@ A partir da versão 2.0 do .NET Framework, o provedor de dados do .NET Framework
  O aplicativo de console seguir mostra como habilitar estatísticas em uma conexão, recuperar quatro valores de estatística individual e gravá-los na janela do console.  
   
 > [!NOTE]
->  O exemplo a seguir usa o exemplo **AdventureWorks** banco de dados incluído com o SQL Server. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
+> O exemplo a seguir usa o banco de dados **AdventureWorks** de exemplo incluído com SQL Server. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
   
 ```vb  
 Option Strict On  
@@ -204,7 +204,7 @@ namespace CS_Stats_Console_GetValue
  O aplicativo de console seguir mostra como habilitar estatísticas em uma conexão, recuperar todos os valores de estatística disponíveis usando o enumerador, e gravá-los na janela do console.  
   
 > [!NOTE]
->  O exemplo a seguir usa o exemplo **AdventureWorks** banco de dados incluído com o SQL Server. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
+> O exemplo a seguir usa o banco de dados **AdventureWorks** de exemplo incluído com SQL Server. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
   
 ```vb  
 Option Strict On  

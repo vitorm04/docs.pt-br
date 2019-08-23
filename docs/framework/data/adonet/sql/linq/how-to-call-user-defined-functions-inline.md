@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26eafb9a6ea1a0b416d205e94b0e420b0f4059d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903247"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941069"
 ---
 # <a name="how-to-call-user-defined-functions-inline"></a>Como: chamar funções embutidas definidas pelo usuário
-Embora você possa chamar funções definidas pelo usuário embutidos, as funções que são incluídas em uma consulta cuja execução é adiada não são executadas até que a consulta. Para obter mais informações, consulte [Introdução a Consultas de LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+Embora você possa chamar funções definidas pelo usuário embutidos, as funções que são incluídas em uma consulta cuja execução é adiada não são executadas até que a consulta. Para obter mais informações, consulte [Introdução a Consultas de LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
  Quando você chama a mesma função fora de uma consulta, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cria uma consulta simples de expressão de chamada de método. A seguir está a sintaxe do SQL (parâmetro `@p0` é associado à constante passada dentro):  
   
@@ -27,7 +27,7 @@ SELECT dbo.ReverseCustName(@p0)
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  
   
 ## <a name="example"></a>Exemplo  
- A seguir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consulta, você pode ver uma chamada embutido para o método de função definida pelo usuário gerada `ReverseCustName`. A função não é executada imediatamente porque a execução da consulta é adiada. O SQL compilado para esta consulta converte a uma chamada para a função definida pelo usuário na base de dados (consulte o código SQL seguir a consulta).  
+ Na consulta a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] seguir, você pode ver uma chamada embutida para o método `ReverseCustName`de função definido pelo usuário gerado. A função não é executada imediatamente porque a execução da consulta é adiada. O SQL compilado para esta consulta converte a uma chamada para a função definida pelo usuário na base de dados (consulte o código SQL seguir a consulta).  
   
  [!code-csharp[DLinqUDFS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#5)]
  [!code-vb[DLinqUDFS#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#5)]  

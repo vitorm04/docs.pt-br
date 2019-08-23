@@ -11,27 +11,27 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: 3653194c7e48533e664ac7513ca7f4f48d1c69f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd525ea5a295411e509f3bc37285675d15a8c4f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801524"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930044"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>Retornar valores para a função CStr (Visual Basic)
-A tabela a seguir descreve os valores retornados pela `CStr` para tipos de dados diferentes de `expression`.  
+A tabela a seguir descreve os valores de `CStr` retorno para para tipos de `expression`dados diferentes do.  
   
-|Se `expression` é do tipo|Retornos de `CStr`|  
+|Se `expression` o tipo for|Retornos de `CStr`|  
 |-----------------------------|--------------------|  
-|[Tipo de Dados Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Uma cadeia de caracteres que contém "True" ou "False".|  
-|[Tipo de Dados de Data](../../../visual-basic/language-reference/data-types/date-data-type.md)|Uma cadeia de caracteres que contém um `Date` valor (data e hora) em formato de data abreviada do seu sistema.|  
+|[Tipo de Dados Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Uma cadeia de caracteres que contém "true" ou "false".|  
+|[Tipo de Dados de Data](../../../visual-basic/language-reference/data-types/date-data-type.md)|Uma cadeia de caracteres `Date` que contém um valor (data e hora) no formato de data abreviada do seu sistema.|  
 |[Tipos de Dados Numéricos](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Uma cadeia de caracteres que representa o número.|  
   
-## <a name="cstr-and-date"></a>Data e CStr  
- O `Date` tipo sempre contém informações de data e hora. Para fins de conversão de tipo, o Visual Basic considera 1/1/0001 (1 de janeiro do ano 1) como um *valor neutro* para a data e 00:00:00 (meia-noite) ser um valor neutro para a hora. `CStr` não inclui valores neutros na cadeia de caracteres resultante. Por exemplo, se você converter `#January 1, 0001 9:30:00#` como uma cadeia de caracteres, o resultado será "9:30:00 AM"; as informações de data são suprimidas. No entanto, as informações de data ainda estão presentes no original `Date` de valor e pode ser recuperada com funções como <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+## <a name="cstr-and-date"></a>CStr e Date  
+ O `Date` tipo sempre contém informações de data e hora. Para fins de conversão de tipo, Visual Basic considera 1/1/0001 (1º de Janeiro do ano 1) como um *valor neutro* para a data e 00:00:00 (meia-noite) para ser um valor neutro para o tempo. `CStr`Não inclui valores neutros na cadeia de caracteres resultante. Por exemplo, se você converter `#January 1, 0001 9:30:00#` em uma cadeia de caracteres, o resultado será "9:30:00 AM"; as informações de data são suprimidas. No entanto, as informações de data ainda estão presentes `Date` no valor original e podem ser recuperadas com <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>funções como.  
   
 > [!NOTE]
->  O `CStr` função executa a conversão com base nas configurações de cultura atual para o aplicativo. Para obter a representação de cadeia de caracteres de um número em uma cultura específica, use o número `ToString(IFormatProvider)` método. Por exemplo, use <xref:System.Double.ToString%2A?displayProperty=nameWithType> ao converter um valor do tipo `Double` para um `String`.  
+> A `CStr` função executa sua conversão com base nas configurações de cultura atuais para o aplicativo. Para obter a representação de cadeia de caracteres de um número em uma cultura específica, use `ToString(IFormatProvider)` o método do número. Por exemplo, use <xref:System.Double.ToString%2A?displayProperty=nameWithType> ao converter um valor do tipo `Double` para um `String`.  
   
 ## <a name="see-also"></a>Consulte também
 

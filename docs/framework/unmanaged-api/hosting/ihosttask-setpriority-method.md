@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf9ecdeb4df6210805490586f1818298025fc036
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 533e3d715b46b4ef6d473795a010fa3ad297ded2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749944"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913745"
 ---
 # <a name="ihosttasksetpriority-method"></a>Método IHostTask::SetPriority
-Solicitações que o host de ajustar a prioridade do thread de nível para a tarefa representada por atual [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância.  
+Solicita que o host ajuste o nível de prioridade de thread para a tarefa representada pela instância de [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,21 +37,21 @@ HRESULT SetPriority (
   
 ## <a name="parameters"></a>Parâmetros  
  `newPriority`  
- [in] Um inteiro que representa o valor de prioridade de thread solicitada para a tarefa representada por atual `IHostTask` instância.  
+ no Um inteiro que representa o valor de prioridade de thread solicitado para a tarefa representada pela `IHostTask` instância atual.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetPriority` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|S_OK|`SetPriority`retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Threads de processamento são concedidas tempo usando um sistema de rodízio parcialmente com base no nível de prioridade do thread. `SetPriority` permite que o CLR definir esse nível de prioridade de thread para a tarefa atual. O seguinte `newPriority` valores têm suporte.  
+ Os threads recebem o tempo de processamento usando um sistema Round Robin que é parcialmente baseado no nível de prioridade de um thread. `SetPriority`permite que o CLR defina o nível de prioridade do thread para a tarefa atual. Há suporte `newPriority` para os valores a seguir.  
   
 - THREAD_PRIORITY_ABOVE_NORMAL  
   
@@ -67,19 +67,19 @@ HRESULT SetPriority (
   
 - THREAD_PRIORITY_TIME_CRITICAL  
   
- O CLR chama `SetPriority` quando o valor da <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> é modificado pelo código do usuário. Um host pode definir seus próprios algoritmos para atribuição de prioridade de thread e está livre para ignorar essa solicitação.  
+ O CLR chama `SetPriority` quando o valor <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> de é modificado pelo código do usuário. Um host pode definir seus próprios algoritmos para atribuição de prioridade de thread e é livre para ignorar essa solicitação.  
   
 > [!NOTE]
->  `SetPriority` não relata se o nível de prioridade de thread foi alterado. Chame [ihosttask:: Getpriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) para determinar o valor do nível de prioridade do thread da tarefa.  
+> `SetPriority`não relata se o nível de prioridade do thread foi alterado. Chame [IHostTask::](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) getanteriory para determinar o valor do nível de prioridade de thread da tarefa.  
   
- Valores de nível de prioridade de thread são definidos pelo Win32 `SetThreadPriority` função. Para obter mais informações sobre a prioridade de thread, consulte a documentação da plataforma Windows.  
+ Os valores de nível de prioridade de thread são `SetThreadPriority` definidos pela função do Win32. Para obter mais informações sobre prioridade de thread, consulte a documentação da plataforma Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -16,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2ba3172b1a82c0a9f624a49eb63a193dd29faac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3bde5b18437cc9890f660f018e81582a4d708d2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750717"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910915"
 ---
 # <a name="link-demands"></a>Demandas de link
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Uma demanda de link faz com que uma verificação de segurança durante a compilação just-in-time e verifica somente o assembly de chamada imediato do seu código. Vinculação ocorre quando seu código é associado a uma referência de tipo, incluindo referências de ponteiro de função e chamadas de método. Se o assembly de chamada não tem permissão suficiente para vincular ao seu código, o link não é permitido e uma exceção de tempo de execução é gerada quando o código é carregado e executado. Demandas de link podem ser substituídas nas classes que herdam de seu código.  
+ Uma demanda de link causa uma verificação de segurança durante a compilação just-in-time e verifica apenas o assembly de chamada imediata do seu código. A vinculação ocorre quando seu código está associado a uma referência de tipo, incluindo referências de ponteiro de função e chamadas de método. Se o assembly de chamada não tiver permissão suficiente para vincular ao seu código, o link não será permitido e uma exceção de tempo de execução será lançada quando o código for carregado e executado. As demandas de link podem ser substituídas em classes que herdam do seu código.  
   
- Observe que uma movimentação de pilha completa não será executada com esse tipo de demanda e que seu código ainda é suscetível a ataques de atração. Por exemplo, se um método em um assembly é protegido por uma demanda de link, um chamador direto no assembly B é avaliado com base nas permissões do Assembly B.  No entanto, a demanda de link não avaliará um método no assembly C se chama indiretamente o método no assembly usando o método no assembly B. A demanda de link Especifica que apenas as permissões de direcionam os chamadores no assembly de chamada imediato devem ter que vincular ao seu código. Ele especifica as permissões de todos os chamadores devem ter para executar seu código.  
+ Observe que uma movimentação de pilha completa não é executada com esse tipo de demanda e que seu código ainda está suscetível a ataques de chamariz. Por exemplo, se um método no assembly A for protegido por uma demanda de link, um chamador direto no assembly B será avaliado com base nas permissões do assembly B.  No entanto, a demanda de link não avaliará um método no assembly C se ele chamar indiretamente o método no assembly A usando o método no assembly B. A demanda de link especifica somente as permissões que os chamadores diretos no assembly de chamada imediata devem ter que vincular ao seu código. Ele não especifica as permissões que todos os chamadores devem ter para executar seu código.  
   
- O <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A>, e <xref:System.Security.CodeAccessPermission.PermitOnly%2A> modificadores de movimentação de pilha não afetam a avaliação de demandas de link.  Porque as demandas de link não executam um exame da pilha, os modificadores de movimentação de pilha não têm efeito nas demandas de link.  
+ Os <xref:System.Security.CodeAccessPermission.Assert%2A>modificadores de <xref:System.Security.CodeAccessPermission.PermitOnly%2A> movimentação de pilha, <xref:System.Security.CodeAccessPermission.Deny%2A>e não afetam a avaliação de demandas de link.  Como as demandas de link não executam uma movimentação de pilha, os modificadores de movimentação de pilha não têm nenhum efeito nas demandas de link.  
   
- Se um método protegido por uma demanda de link é acessado por meio [reflexão](../../../docs/framework/reflection-and-codedom/reflection.md), em seguida, uma exigência de vínculo verifica o chamador imediato do código acessado por meio de reflexão. Isso é verdadeiro para a descoberta de método e de invocação de método executada usando a reflexão. Por exemplo, suponha que o código usa a reflexão para retornar um <xref:System.Reflection.MethodInfo> do objeto que representa um método protegido por uma demanda de link e, em seguida, passará **MethodInfo** objeto para outro código que usa o objeto para invocar o método original. Nesse caso, a verificação de demanda de link ocorre duas vezes: uma vez para o código que retorna o **MethodInfo** objeto e uma vez para o código que invoca a ele.  
+ Se um método protegido por uma demanda de link for acessado por meio de [reflexão](../../../docs/framework/reflection-and-codedom/reflection.md), uma demanda de link verificará o chamador imediato do código acessado por meio de reflexão. Isso é verdadeiro para a descoberta de método e para invocação de método executada usando reflexão. Por exemplo, suponha que o código use a reflexão <xref:System.Reflection.MethodInfo> para retornar um objeto que representa um método protegido por uma demanda de link e, em seguida, passe esse objeto **MethodInfo** para algum outro código que usa o objeto para invocar o método original. Nesse caso, a verificação de demanda de link ocorre duas vezes: uma vez para o código que retorna o objeto **MethodInfo** e uma vez para o código que o invoca.  
   
 > [!NOTE]
->  Uma demanda de link executada em um construtor de classe estática não protege o construtor porque os construtores estáticos são chamados pelo sistema, fora do caminho de execução de código do aplicativo. Como resultado, quando uma demanda de link é aplicada a uma classe inteira, ele não pode proteger o acesso a um construtor estático, embora ele protege o restante da classe.  
+> Uma demanda de link executada em um construtor de classe estática não protege o construtor porque construtores estáticos são chamados pelo sistema, fora do caminho de execução de código do aplicativo. Como resultado, quando uma demanda de link é aplicada a uma classe inteira, ela não pode proteger o acesso a um construtor estático, embora proteja o restante da classe.  
   
- O fragmento de código a seguir especifica declarativamente todo o código de vinculação para o `ReadData` método deve ter o `CustomPermission` permissão. Essa permissão é uma permissão personalizada hipotética e não existe no .NET Framework. A demanda é feita, passando um **SecurityAction.LinkDemand** sinalizar para o `CustomPermissionAttribute`.  
+ O fragmento de código a seguir especifica declarativamente que qualquer vinculação de `ReadData` código para o método `CustomPermission` deve ter a permissão. Essa permissão é uma permissão personalizada hipotética e não existe no .NET Framework. A demanda é feita passando um sinalizador **SecurityAction. LinkDemand** para o `CustomPermissionAttribute`.  
   
 ```vb  
 <CustomPermissionAttribute(SecurityAction.LinkDemand)> _  
@@ -56,5 +56,5 @@ public static string ReadData()
   
 ## <a name="see-also"></a>Consulte também
 
-- [Atributos](../../../docs/standard/attributes/index.md)
+- [Atributos](../../standard/attributes/index.md)
 - [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)

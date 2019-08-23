@@ -7,18 +7,18 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: 39e6f2db7abaae63715c5ef9febcef357054d2bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8df3d07a18efcfbb6c30b46668ab8fec8736af5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982716"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953201"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Clientes de Automação de Interface de Usuário para Código Gerenciado
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
- Esta seção contém visões gerais e tópicos de instruções para ajudá-lo a desenvolver clientes de automação de interface do usuário.  
+ Esta seção contém visões gerais e tópicos de instruções para ajudá-lo a desenvolver clientes de automação da interface do usuário.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Automação de interface do usuário e escala da tela](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  

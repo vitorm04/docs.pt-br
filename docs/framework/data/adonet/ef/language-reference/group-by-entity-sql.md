@@ -2,15 +2,15 @@
 title: AGRUPAR POR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 574d952e0183eb65c88864f2788eb7d698c9f2ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9074b1c2ea4f8f9206c8de1e658c1aac762a74f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936089"
 ---
 # <a name="group-by-entity-sql"></a>AGRUPAR POR (Entity SQL)
-Especifica os grupos nos quais os objetos retornados por uma consulta ([selecionar](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) expressão devem ser colocados.  
+Especifica os grupos nos quais os objetos retornados por uma expressão de consulta ([Select](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) devem ser colocados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -23,10 +23,10 @@ Especifica os grupos nos quais os objetos retornados por uma consulta ([selecion
  Qualquer expressão de consulta válida em que o agrupamento for executado. `expression` pode ser uma propriedade ou uma expressão de não agregação que referencia uma propriedade retornada pela cláusula. Cada expressão em um cláusula GROUP BY deve ser avaliada como um tipo que pode ser comparado para igualdade. Esses tipos são geralmente primitivos escalares como números, cadeias de caracteres, e datas. Você não pode agrupar por uma coleção.  
   
 ## <a name="remarks"></a>Comentários  
- Se as funções de agregação são incluídas na cláusula SELECT \<lista select >, GROUP BY calcula um valor resumido para cada grupo. Quando o GRUPO é especificado PERTO, ou cada nome de propriedade em qualquer expressão de nonaggregate na lista select deve ser incluído na lista GRUPO, ou o GROUP BY expressão deve coincidir exatamente com a expressão selecionar a lista.  
+ Se as funções de agregação forem incluídas na \<cláusula SELECT, selecione lista >, agrupar por calcula um valor de resumo para cada grupo. Quando o GRUPO é especificado PERTO, ou cada nome de propriedade em qualquer expressão de nonaggregate na lista select deve ser incluído na lista GRUPO, ou o GROUP BY expressão deve coincidir exatamente com a expressão selecionar a lista.  
   
 > [!NOTE]
->  Se a cláusula ORDER BY não for especificado, os grupos retornados pelo cláusula GROUP BY não estão em qualquer ordem específica. Para especificar ordem específica de dados, nós recomendamos que você sempre use a cláusula ORDER BY.  
+> Se a cláusula ORDER BY não for especificado, os grupos retornados pelo cláusula GROUP BY não estão em qualquer ordem específica. Para especificar ordem específica de dados, nós recomendamos que você sempre use a cláusula ORDER BY.  
   
  Quando um cláusula GROUP BY é especificado, explícita ou implicitamente (por exemplo, a cláusula HAVING na consulta), o escopo atual está oculto, e um novo escopo é apresentado.  
   
@@ -46,7 +46,7 @@ Especifica os grupos nos quais os objetos retornados por uma consulta ([selecion
   
  `GROUP BY o.Product as name`  
   
- Esta consulta usa o cláusula GROUP BY para gerar um relatório de custo de todos os produtos ordenados, subproduto dividido. Ele fornece o nome `name` ao produto como parte da expressão de agrupamento e, em seguida, as referências que nomeiam na lista de seleção. Ela também especifica a agregação `sum` na lista de seleção que referencia internamente o preço e quantidade da linha da ordem.  
+ Esta consulta usa o cláusula GROUP BY para gerar um relatório de custo de todos os produtos ordenados, subproduto dividido. Ele fornece o nome `name` para o produto como parte da expressão de agrupamento e, em seguida, faz referência a esse nome na lista de seleção. Ele também especifica a agregação `sum` na lista de seleção que faz referência interna ao preço e à quantidade da linha de ordem.  
   
  Cada GROUP BY expressão chave deve ter pelo menos uma referência ao escopo de entrada:  
   
@@ -57,12 +57,12 @@ GROUP BY Q   -- BAD
 GROUP BY 1   -- BAD, a constant is not allowed  
 ```  
   
- Para obter um exemplo de como usar GROUP BY, consulte [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md).  
+ Para obter um exemplo de como usar GROUP BY, consulte [tendo](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md).  
   
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa o GRUPO pelo operador para especificar os grupos em que os objetos são retornados por uma consulta. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como: Executar uma consulta que retorna resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna os resultados](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)de primitivatype.  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
   

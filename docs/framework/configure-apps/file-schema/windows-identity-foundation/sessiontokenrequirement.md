@@ -3,15 +3,15 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 0c575e02862884e8f7ecf062138c36fe731f8e19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 254d34149892abeaf31b9227f7567eb0a66ec0b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943671"
 ---
 # <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
-Fornece configuração para o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> classe ou classes derivadas.  
+Fornece a configuração para <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> a classe ou classes derivadas.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -41,7 +41,7 @@ Fornece configuração para o <xref:System.IdentityModel.Tokens.SessionSecurityT
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|tempo de vida|Especifica o tempo de vida de tokens de sessão.|  
+|tempo de vida|Especifica o tempo de vida dos tokens de sessão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -50,7 +50,7 @@ Fornece configuração para o <xref:System.IdentityModel.Tokens.SessionSecurityT
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Adiciona o manipulador de token de segurança especificado à coleção de manipulador de token.|  
+|[\<add>](add.md)|Adiciona o manipulador de token de segurança especificado à coleção de manipulador de token.|  
   
 ## <a name="example"></a>Exemplo  
   

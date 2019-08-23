@@ -1,16 +1,16 @@
 ---
-title: < System. ServiceModel > de fluxo de trabalho
+title: < o > System. serviceModel do fluxo de trabalho
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422881"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947362"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<System. ServiceModel > de fluxo de trabalho
+# <a name="systemservicemodel-of-workflow"></a>\<> de sistema. serviceModel do fluxo de trabalho
 Esta seção de configuração contém todos os elementos de configuração do fluxo de trabalho.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -101,8 +101,8 @@ Esta seção de configuração contém todos os elementos de configuração do f
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|Esta seção define os **serviceBehaviors** coleção.  Cada elemento na coleção define elementos de comportamento consumidos por serviços. Cada elemento de comportamento é identificado por seu exclusivo **nome** atributo.|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.<br /><br /> Para obter mais informações no controle de fluxo de trabalho e sua configuração, consulte [fluxo de trabalho, controle e rastreamento](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) e [Configurando o rastreamento para um fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+|[\<comportamentos >](behaviors-of-workflow.md)|Esta seção define a coleção de percomportamentos.  Cada elemento na coleção define elementos de comportamento consumidos por serviços. Cada elemento de comportamento é identificado por seu atributo de **nome** exclusivo.|  
+|[\<tracking>](tracking.md)|Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.<br /><br /> Para obter mais informações sobre o rastreamento do fluxo de trabalho e sua configuração, consulte rastreamento [e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configuração de rastreamento para um fluxo de trabalho](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

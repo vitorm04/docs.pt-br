@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: abfb91c61ef72bfc1626b4cc4dcea42b75e2ab35
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: cb54ef372e6da551b95f1edf61e3844b9dcba4c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040236"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950037"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Passo a passo: Criar um controle composto com o Visual Basic
 Os controles de composição fornecem um meio pelo qual as interfaces gráficas personalizadas podem ser criadas e reutilizadas. Basicamente, um controle de composição é um componente com uma representação visual. Assim, ele pode consistir em um ou mais controles, componentes ou blocos de código dos Windows Forms que podem estender a funcionalidade ao validar a entrada do usuário, modificar propriedades de exibição ou executar outras tarefas exigidas pelo autor. Os controles de composição podem ser colocados nos Windows Forms da mesma maneira que outros controles. Na primeira parte deste passo a passo, você cria um controle de composição simples chamado `ctlClock`. Na segunda parte do passo a passo, você estende a funcionalidade de `ctlClock` por meio da herança.
@@ -37,7 +37,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
 3. No Gerenciador de Soluções, clique com o botão direito do mouse em **UserControl1.vb** e, em seguida, clique em **Renomear**. Altere o nome de arquivo para `ctlClock.vb`. Clique no botão **Sim** quando solicitado se deseja renomear todas as referências ao elemento de código “UserControl1”.
 
     > [!NOTE]
-    >  Por padrão, um controle composto é herdado <xref:System.Windows.Forms.UserControl> da classe fornecida pelo sistema. A <xref:System.Windows.Forms.UserControl> classe fornece a funcionalidade exigida por todos os controles de composição e implementa métodos e propriedades padrão.
+    > Por padrão, um controle composto é herdado <xref:System.Windows.Forms.UserControl> da classe fornecida pelo sistema. A <xref:System.Windows.Forms.UserControl> classe fornece a funcionalidade exigida por todos os controles de composição e implementa métodos e propriedades padrão.
 
 4. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.
 
@@ -184,7 +184,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
 5. No Gerenciador de Soluções, procure os projetos atuais.
 
     > [!NOTE]
-    >  Um arquivo chamado **ctlAlarmClock.vb** foi adicionado ao projeto atual.
+    > Um arquivo chamado **ctlAlarmClock.vb** foi adicionado ao projeto atual.
 
 ### <a name="adding-the-alarm-properties"></a>Adicionando as propriedades de alarme
  As propriedades são adicionadas a um controle herdado da mesma forma que são adicionadas a um controle de composição. Agora você usará a sintaxe de declaração de propriedade para adicionar duas propriedades ao controle: `AlarmTime`, que armazenará o valor de data e hora em que o alarme será acionado e `AlarmSet`, que indicará se o alarme está definido.
@@ -230,10 +230,10 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
 2. Clique em `lblDisplay` (a parte de exibição do controle) e exiba a janela Propriedades.
 
     > [!NOTE]
-    >  Embora todas as propriedades sejam exibidas, elas ficam esmaecidas. Isso indica que essas propriedades são nativas de `lblDisplay` e não podem ser modificadas nem acessadas na janela Propriedades. Por padrão, os controles contidos em um controle de composição são `Private` e suas propriedades não são acessíveis por nenhum meio.
+    > Embora todas as propriedades sejam exibidas, elas ficam esmaecidas. Isso indica que essas propriedades são nativas de `lblDisplay` e não podem ser modificadas nem acessadas na janela Propriedades. Por padrão, os controles contidos em um controle de composição são `Private` e suas propriedades não são acessíveis por nenhum meio.
 
     > [!NOTE]
-    >  Se você desejar que os próximos usuários do controle de composição tenham acesso a seus controles internos, declare-os como `Public` ou `Protected`. Isso permitirá definir e modificar as propriedades de controles contidos no controle de composição usando o código apropriado.
+    > Se você desejar que os próximos usuários do controle de composição tenham acesso a seus controles internos, declare-os como `Public` ou `Protected`. Isso permitirá definir e modificar as propriedades de controles contidos no controle de composição usando o código apropriado.
 
 3. Adicione um <xref:System.Windows.Forms.Label> controle ao seu controle composto.
 
@@ -298,7 +298,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
      A adição desse código realiza várias tarefas. A instrução `Overrides` direciona o controle a usar esse método em vez do método herdado do controle base. Quando esse método é chamado, ele chama o método que substitui ao invocar a instrução `MyBase.Timer1_Tick`, garantindo que toda a funcionalidade incorporada no controle original seja reproduzida nesse controle. Em seguida, ele executa um código adicional para incorporar a funcionalidade de alarme. Um controle de rótulo intermitente será exibido quando o alarme for acionado e um alarme sonoro audível será ouvido.
 
     > [!NOTE]
-    >  Como você está substituindo um manipulador de eventos herdado, você não precisa especificar o evento com a palavra-chave `Handles`. O evento já está vinculado. O que você está substituindo é a implementação do manipulador.
+    > Como você está substituindo um manipulador de eventos herdado, você não precisa especificar o evento com a palavra-chave `Handles`. O evento já está vinculado. O que você está substituindo é a implementação do manipulador.
 
      O controle do despertador está quase concluído. A única coisa que resta é implementar uma maneira de desligá-lo. Para fazer isso, você adicionará um código ao método `lblAlarm_Click`.
 

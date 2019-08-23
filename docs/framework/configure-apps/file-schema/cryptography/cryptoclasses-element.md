@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: dbe46e0b36d247005f933c82ee83687886b283d1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 87e64ecd79ebc54a669d33550790781c87b5917c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659650"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921126"
 ---
 # <a name="cryptoclasses-element"></a>\<Elemento de > cryptoClasses
 Contém uma lista de classes de criptografia que têm um mapeamento para um nome amigável no elemento [ \<nameEntry>](nameentry-element.md).  
@@ -81,6 +81,6 @@ Contém uma lista de classes de criptografia que têm um mapeamento para um nome
 - <xref:System.Security.Cryptography>
 - [Esquema de arquivos de configuração](../index.md)
 - [Esquema de configurações de criptografia](index.md)
-- [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)
+- [Serviços criptográficos](../../../../standard/security/cryptographic-services.md)
 - [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [Configurando classes de criptografia](../../configure-cryptography-classes.md)

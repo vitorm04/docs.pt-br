@@ -2,21 +2,21 @@
 title: <security> de <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: 8d79523db2a1567283b934abbd3de1adbbe6b0b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b74c95ef2933fcf7e8d49aed89d95acbd288b80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670528"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936705"
 ---
-# <a name="security-of-msmqintegrationbinding"></a>\<segurança > de \<msmqIntegrationBinding >
-Define as configurações de segurança de transporte para o canal de integração de enfileiramento de mensagens (MSMQ).  
+# <a name="security-of-msmqintegrationbinding"></a>\<> de segurança \<do MsmqIntegrationBinding >
+Define as configurações de segurança de transporte para o canal de integração do serviço de enfileiramento de mensagens (MSMQ).  
   
  \<system.ServiceModel>  
 \<bindings>  
 msmqIntegrationBinding  
-\<binding>  
-\<segurança >  
+\<> de associação  
+\<> de segurança  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,19 +43,19 @@ msmqIntegrationBinding
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|modo|Especifica o tipo de segurança que controles de integridade, confidencialidade e autenticação com o canal de integração de enfileiramento de mensagens. Os valores válidos incluem o seguinte:<br /><br /> -None: Isso desabilita a segurança.<br />-Transporte: Proteção e a autenticação são oferecidos pelo transporte. Isso se aplica a segurança de mensagem entre os gerenciadores de fila de dois. Não há nenhuma segurança oferecida entre o aplicativo e o Gerenciador de fila. Aplicativos existentes do Msmq são funcionalmente equivalentes com esse tipo de modo de segurança.<br /><br /> O valor padrão é `Transport`. Esse atributo é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
+|modo|Especifica o tipo de segurança que controla a integridade, a confidencialidade e a autenticação com o canal de integração do enfileiramento de mensagens. Os valores válidos incluem o seguinte:<br /><br /> None Isso desabilita a segurança.<br />Porta A proteção e a autenticação são oferecidas pelo transporte. Isso se aplica à segurança de mensagem entre os dois gerenciadores de fila. Não há nenhuma segurança oferecida entre o Gerenciador de aplicativos e filas. Os aplicativos MSMQ existentes são funcionalmente equivalentes a esse tipo de modo de segurança.<br /><br /> O valor padrão é `Transport`. Esse atributo é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|Define as configurações de segurança para o transporte de integração de enfileiramento de mensagens. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<> de transporte](transport-of-msmqintegrationbinding.md)|Define as configurações de segurança para o transporte de integração do enfileiramento de mensagens. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|O elemento de associação do [ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).|  
+|[\<binding>](../../../misc/binding.md)|O elemento Binding da [ \<> MsmqIntegrationBinding](msmqintegrationbinding.md).|  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -63,10 +63,10 @@ msmqIntegrationBinding
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>
-- [Filas no WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)
+- [Filas no WCF](../../../wcf/feature-details/queues-in-wcf.md)
+- [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Associações](../../../wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)
+- [\<msmqIntegrationBinding>](msmqintegrationbinding.md)

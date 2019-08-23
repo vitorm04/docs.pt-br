@@ -2,31 +2,31 @@
 title: Níveis de confiança de segurança ao acessar recursos
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 847467b964e86f6d13be6ba103162512270fa684
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596751"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948713"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Níveis de confiança de segurança ao acessar recursos
 Este tópico discute como o acesso está restrito a tipos de recursos que <xref:System.Transactions> expõe.  
   
  Há três principais níveis de confiança para <xref:System.Transactions>. Os níveis de confiança são definidos com base nos tipos de recursos que <xref:System.Transactions> expõe e o nível de confiança deve ser necessária para acessar esses recursos. Os recursos que <xref:System.Transactions> fornece acesso a são recursos ampla do sistema, recursos ampla do processo compartilhado e memória do sistema. Os níveis são:  
   
-- **AllowPartiallyTrustedCallers** (APTCA) para aplicativos que usam transações dentro de um único domínio de aplicativo.  
+- **AllowPartiallyTrustedCallers** (APTCA) para aplicativos que usam transações em um único domínio de aplicativo.  
   
 - **DistributedTransactionPermission** (DTP) para aplicativos que usam transações distribuídas.  
   
 - Confiança total para recursos duráveis, aplicativos de gerenciamento de configuração e os aplicativos herdados de interoperabilidade.  
   
 > [!NOTE]
->  Você não deve chamar qualquer uma das interfaces de inscrição com contextos representados.  
+> Você não deve chamar qualquer uma das interfaces de inscrição com contextos representados.  
   
 ## <a name="trust-levels"></a>Níveis de confiança  
   
 ### <a name="aptca-partial-trust"></a>APTCA (confiança parcial)  
- O <xref:System.Transactions> assembly pode ser chamado pelo código parcialmente confiável, porque ele foi marcado com o **AllowPartiallyTrustedCallers** atributo (APTCA). Basicamente, esse atributo remove implícito <xref:System.Security.Permissions.SecurityAction.LinkDemand> para o **FullTrust** permissão conjunto contrário colocado automaticamente em cada método publicamente acessível em cada tipo. No entanto, alguns tipos e membros ainda requerem permissões mais fortes.  
+ O <xref:System.Transactions> assembly pode ser chamado por código parcialmente confiável porque foi marcado com o atributo **AllowPartiallyTrustedCallers** (APTCA). Esse atributo basicamente remove o implícito <xref:System.Security.Permissions.SecurityAction.LinkDemand> para o conjunto de permissões **FullTrust** que, de outra forma, é colocado automaticamente em cada método acessível publicamente em cada tipo. No entanto, alguns tipos e membros ainda requerem permissões mais fortes.  
   
  O atributo APTCA permite que aplicativos usem as transações em confiança parcial em um único domínio de aplicativo. Isso permite que as transações não escalonados e inscrições voláteis que podem ser usadas para tratamento de erros. Um exemplo disso é uma tabela de hash transacionado e um aplicativo que utiliza. Dados podem ser adicionados ao e removidos da tabela de hash em uma única transação. Se a transação é posteriormente revertida, todas as alterações feitas na tabela de hash em transação podem ser desfeitas.  
   
@@ -38,11 +38,11 @@ Este tópico discute como o acesso está restrito a tipos de recursos que <xref:
   
  Para habilitar a recuperação, esse tipo de aplicativo tem a capacidade de consumir permanentemente os recursos do sistema. Isso ocorre porque o Gerenciador de transações recuperável deve se lembrar de transações que foram confirmadas até que ele possa confirmar que todos os gerenciadores de recursos duráveis que participam da transação tem recebido o resultado. Portanto, esse tipo de aplicativo requer confiança total e não deve ser executado, a menos que nível de confiança recebeu.  
   
- Para obter mais informações sobre recuperação e inscrições duráveis, consulte o [inscrever-se a recursos como participantes em uma transação](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) e [realizar recuperação](../../../../docs/framework/data/transactions/performing-recovery.md) tópicos.  
+ Para obter mais informações sobre inlistagens duráveis e recuperação, consulte os tópicos [Inscrevendo recursos como participantes em uma transação](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) e [executando a recuperação](../../../../docs/framework/data/transactions/performing-recovery.md) .  
   
  Aplicativos que executam o trabalho com herdado interoperabilidade com COM+ também precisam ter confiança total.  
   
- A seguir está uma lista de tipos e membros que não podem ser chamados por parcialmente confiável código porque eles são decorados com o **FullTrust** atributos de segurança declarativa:  
+ Veja a seguir uma lista de tipos e membros que não podem ser chamados por código parcialmente confiável, pois eles são decorados com o atributo de segurança declarativa **FullTrust** :  
   
  `PermissionSetAttribute(SecurityAction.LinkDemand, Name := "FullTrust")`  
   
@@ -62,4 +62,4 @@ Este tópico discute como o acesso está restrito a tipos de recursos que <xref:
   
 - <xref:System.Transactions.TransactionScope.%23ctor%28System.Transactions.TransactionScopeOption%2CSystem.Transactions.TransactionOptions%2CSystem.Transactions.EnterpriseServicesInteropOption%29>  
   
- Somente o chamador imediato é necessário ter o **FullTrust** permissão definida para usar os tipos ou métodos acima.
+ Somente o chamador imediato precisa ter o conjunto de permissões **FullTrust** para usar os tipos ou métodos acima.

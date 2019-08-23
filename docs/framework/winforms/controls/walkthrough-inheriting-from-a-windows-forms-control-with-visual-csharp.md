@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: df88f9ae0b32ecd3b79686f3271e09b92ad7d4fd
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c06639ef2f2ced8bd128adea636efe8be1715764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040185"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931017"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Passo a passo: Herdar de um controle de Windows Forms com o Visual C\#
 Com o C#Visual, você pode criar controles personalizados avançados por meio de *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão herdará a funcionalidade do controle de <xref:System.Windows.Forms.Button> Windows Forms padrão e apresentará uma propriedade personalizada chamada `ButtonValue`.
@@ -42,7 +42,7 @@ Com o C#Visual, você pode criar controles personalizados avançados por meio de
 8. No menu **Arquivo**, escolha **Salvar Tudo** para salvar o projeto.
 
     > [!NOTE]
-    >  Um designer visual não está mais disponível. Como o <xref:System.Windows.Forms.Button> controle faz sua própria pintura, você não pode modificar sua aparência no designer. Sua representação visual será exatamente igual à da classe da qual ela herda (ou seja, <xref:System.Windows.Forms.Button>), a menos que seja modificada no código. Você ainda pode adicionar componentes, que não têm uma interface do usuário, à superfície de design.
+    > Um designer visual não está mais disponível. Como o <xref:System.Windows.Forms.Button> controle faz sua própria pintura, você não pode modificar sua aparência no designer. Sua representação visual será exatamente igual à da classe da qual ela herda (ou seja, <xref:System.Windows.Forms.Button>), a menos que seja modificada no código. Você ainda pode adicionar componentes, que não têm uma interface do usuário, à superfície de design.
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>Adicionando uma propriedade ao controle herdado
  Um uso possível dos controles herdados dos Windows Forms é a criação de controles que são idênticos em termos de aparência a controles padrão dos Windows Forms, mas que expõem propriedades personalizadas. Nesta seção, você adicionará uma propriedade chamada `ButtonValue` ao controle.

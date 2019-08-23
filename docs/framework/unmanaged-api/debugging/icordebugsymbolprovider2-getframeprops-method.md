@@ -1,18 +1,18 @@
 ---
-title: Método ICorDebugSymbolProvider2::GetFrameProps
+title: 'Método ICorDebugSymbolProvider2:: GetFrameProps'
 ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 274da030bbbb7c614709b5150f08f37ddf5aaf5a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c22e9c58a203c13611298e1956a6951d8ca7e8b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771169"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955507"
 ---
-# <a name="icordebugsymbolprovider2getframeprops-method"></a>Método ICorDebugSymbolProvider2::GetFrameProps
-Retorna o método Iniciando endereço virtual relativo de um método e o quadro pai recebe um endereço virtual relativo de código.  
+# <a name="icordebugsymbolprovider2getframeprops-method"></a>Método ICorDebugSymbolProvider2:: GetFrameProps
+Retorna o método iniciando o endereço virtual relativo de um método e o quadro pai, dado um endereço virtual relativo de código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,25 +26,25 @@ HRESULT GetFrameProps(
   
 ## <a name="parameters"></a>Parâmetros  
  `codeRva`  
- [in] Um endereço virtual relativo de código.  
+ no Um endereço virtual relativo ao código.  
   
  `pCodeStartRva`  
- [out] Um ponteiro para o método Iniciando endereço virtual relativo.  
+ fora Um ponteiro para o endereço virtual relativo inicial do método.  
   
  `pParentFrameStartRva`  
- [out] Um ponteiro para o quadro Iniciando endereço virtual relativo.  
+ fora Um ponteiro para o endereço virtual relativo inicial do quadro.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

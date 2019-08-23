@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da1fc949109455cf50767191a99a8a727116f77c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c48c222a34e2e78f29c33e49da331d97d409bae1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989502"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949754"
 ---
 # <a name="icordebugappdomainenum-interface"></a>Interface ICorDebugAppDomainEnum
 
-Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDomainEnum` começando no próximo local na enumeração de valores. Essa interface é uma subclasse de "ICorDebugEnum".  
+Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDomainEnum` valores começando no próximo local na enumeração. Essa interface é uma subclasse de "ICorDebugEnum".  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Obtém o número de domínios de aplicativo especificado da coleção, começando na posição atual do cursor.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Obtém o número especificado de domínios de aplicativo da coleção, começando na posição atual do cursor.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
+> Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

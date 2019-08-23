@@ -2,25 +2,25 @@
 title: Vários pontos de extremidade em único ListenUri
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 6249690b7fdc95affd21eee13e0c6e2af1c4f8a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea0cd0d8636f5301dab3fe60b181dfd36fc30d54
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755968"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930329"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Vários pontos de extremidade em único ListenUri
-Este exemplo demonstra um serviço que hospeda vários pontos de extremidade em um único `ListenUri`. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
+Este exemplo demonstra um serviço que hospeda vários pontos de extremidade em um único `ListenUri`. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Conforme demonstrado a [vários pontos de extremidade](../../../../docs/framework/wcf/samples/multiple-endpoints.md) exemplo, um serviço pode hospedar vários pontos de extremidade, cada um com diferentes endereços e possivelmente também ligações diferentes. Este exemplo mostra que é possível hospedar vários pontos de extremidade no mesmo endereço. Este exemplo também demonstra as diferenças entre os dois tipos de endereços que tem um ponto de extremidade de serviço: `EndpointAddress` e `ListenUri`.  
+ Conforme demonstrado no exemplo de [vários pontos de extremidade](../../../../docs/framework/wcf/samples/multiple-endpoints.md) , um serviço pode hospedar vários pontos de extremidade, cada um com endereços diferentes e, possivelmente, também associações diferentes. Este exemplo mostra que é possível hospedar vários pontos de extremidade no mesmo endereço. Este exemplo também demonstra as diferenças entre os dois tipos de endereços que um ponto de extremidade de `EndpointAddress` serviço `ListenUri`tem: e.  
   
- O `EndpointAddress` é o endereço lógico de um serviço. É o endereço de mensagens SOAP são endereçadas a. O `ListenUri` é o endereço físico do serviço. Ele tem as informações de porta e endereço em que o ponto de extremidade de serviço, na verdade, escuta de mensagens no computador atual. Na maioria dos casos, não é necessário para esses endereços forem diferentes; Quando um `ListenUri` não for especificado explicitamente, o padrão é o URI do `EndpointAddress` do ponto de extremidade. Em alguns casos, é útil para diferenciá-los, como quando configurar um roteador, que pode aceitar mensagens endereçadas a vários serviços diferentes.  
+ O `EndpointAddress` é o endereço lógico de um serviço. É o endereço para o qual as mensagens SOAP são endereçadas. O `ListenUri` é o endereço físico do serviço. Ele tem as informações de porta e endereço em que o ponto de extremidade de serviço realmente escuta mensagens no computador atual. Na maioria dos casos, não é necessário que esses endereços sejam diferentes; Quando um `ListenUri` não é especificado explicitamente, ele usa como padrão o URI `EndpointAddress` do ponto de extremidade. Em alguns casos, é útil distingui-los, como ao configurar um roteador, que pode aceitar mensagens endereçadas a vários serviços diferentes.  
   
 ## <a name="service"></a>Serviço  
- O serviço neste exemplo tem dois contratos, `ICalculator` e `IEcho`. Além do habitual `IMetadataExchange` ponto de extremidade, há três pontos de extremidade do aplicativo, conforme mostrado no código a seguir.  
+ O serviço neste exemplo tem dois contratos `ICalculator` e. `IEcho` Além do `IMetadataExchange` ponto de extremidade personalizado, há três pontos de extremidades de aplicativo, conforme mostrado no código a seguir.  
   
 ```xml  
 <endpoint address="urn:Stuff"  
@@ -37,16 +37,16 @@ Este exemplo demonstra um serviço que hospeda vários pontos de extremidade em 
         listenUri="http://localhost/servicemodelsamples/service.svc" />  
 ```  
   
- Todos os três pontos de extremidade são hospedados no mesmo `ListenUri` e use o mesmo `binding` -pontos de extremidade ao mesmo `ListenUri` deve ter a mesma ligação, porque eles estão compartilhando uma pilha de canal único que escuta para mensagens nesse endereço físico a máquina. O `address` de cada ponto de extremidade é um URN; embora normalmente endereços representam locais físicos, de fato o endereço pode ser qualquer tipo de URI, como o endereço é usado para correspondência e fins de filtragem, conforme demonstrado neste exemplo.  
+ Todos os três pontos de extremidade são hospedados ao `ListenUri` mesmo tempo e usam `binding` os mesmos pontos de extremidade, no `ListenUri` mesmo, devem ter a mesma ligação, pois estão compartilhando uma pilha de canal única que escuta mensagens nesse endereço físico no Tradução. O `address` de cada ponto de extremidade é um urn; embora normalmente endereços representem locais físicos, na verdade, o endereço pode ser qualquer tipo de URI, pois o endereço é usado para fins de correspondência e filtragem, como é demonstrado neste exemplo.  
   
- Como todos os três pontos de extremidade compartilham o mesmo `ListenUri`, quando uma mensagem chega lá, o Windows Communication Foundation (WCF) deve decidir qual ponto de extremidade de mensagem é destinada. Cada ponto de extremidade tem um filtro de mensagem é composto de duas partes: o filtro de endereço e o filtro de contrato. O filtro de endereço corresponde a `To` da mensagem SOAP para o endereço do ponto de extremidade de serviço. Por exemplo, somente mensagens endereçadas `To "Urn:OtherEcho"` são candidatos para o terceiro ponto de extremidade desse serviço. O filtro de contrato corresponde as ações associadas com as operações de um determinado contrato. Por exemplo, mensagens com a ação de `IEcho`. `Echo` coincide com os filtros de contrato de segundo e terceiro pontos de extremidade desse serviço, porque ambos os hosts de pontos de extremidade a `IEcho` contrato.  
+ Como todos os três pontos de extremidade compartilham os `ListenUri`mesmos, quando uma mensagem chega lá, Windows Communication Foundation (WCF) deve decidir para qual ponto de extremidade a mensagem é destinada. Cada ponto de extremidade tem um filtro de mensagem composto por duas partes: o filtro de endereço e o filtro de contrato. O filtro de endereço corresponde `To` ao da mensagem SOAP para o endereço do ponto de extremidade de serviço. Por exemplo, somente as mensagens `To "Urn:OtherEcho"` tratadas são candidatas ao terceiro ponto de extremidade deste serviço. O filtro de contrato corresponde às ações associadas às operações de um contrato específico. Por exemplo, mensagens com a ação de `IEcho`. `Echo`corresponde aos filtros de contrato do segundo e terceiro pontos de extremidade desse serviço, pois ambos os pontos de extremidade hospedam o `IEcho` contrato.  
   
- Portanto, a combinação de filtros de endereço e contrato torna possível rotear cada mensagem que chega a esse serviço `ListenUri` ao ponto de extremidade correto. O terceiro ponto de extremidade é diferenciado dos outros dois, pois ele aceita mensagens enviadas para um endereço diferente de outros pontos de extremidade. Os pontos de extremidade primeiros e segundo são diferenciados entre si com base em seus contratos (a ação da mensagem de entrada).  
+ Assim, a combinação de filtro de endereço e filtro de contrato torna possível rotear cada mensagem que chega a esse `ListenUri` serviço para o ponto de extremidade correto. O terceiro ponto de extremidade é diferenciado dos outros dois porque ele aceita mensagens enviadas a um endereço diferente dos outros pontos de extremidade. O primeiro e o segundo pontos de extremidade são diferenciados uns dos outros com base em seus contratos (a ação da mensagem de entrada).  
   
 ## <a name="client"></a>Cliente  
- Assim como os pontos de extremidade no servidor tiverem dois endereços diferentes, os pontos de extremidade também tem dois endereços. No servidor e cliente, o endereço lógico é chamado de `EndpointAddress`. Mas, enquanto o endereço físico é chamado de `ListenUri` no servidor, no cliente, o endereço físico é chamado de `Via`.  
+ Assim como os pontos de extremidade no servidor têm dois endereços diferentes, os pontos de extremidade do cliente também têm dois endereços. No servidor e no cliente, o endereço lógico é chamado de `EndpointAddress`. Mas, enquanto o endereço físico é chamado `ListenUri` de no servidor, no cliente, o endereço físico é chamado de. `Via`  
   
- Como no servidor, por padrão, esses dois endereços são os mesmos. Para especificar uma `Via` no cliente que é diferente do endereço do ponto de extremidade, `ClientViaBehavior` é usado:  
+ Como no servidor, por padrão, esses dois endereços são os mesmos. Para especificar um `Via` no cliente que seja diferente do endereço do ponto de extremidade, `ClientViaBehavior` é usado:  
   
 ```csharp  
 Uri via = new Uri("http://localhost/ServiceModelSamples/service.svc");  
@@ -55,26 +55,26 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
         new ClientViaBehavior(via));  
 ```  
   
- Como de costume, o endereço vem do arquivo de configuração de cliente, que foi gerado pelo Svcutil.exe. O `Via` (que corresponde ao `ListenUri` do serviço) não aparece nos metadados do serviço e, portanto, essas informações devem ser comunicadas para a cliente fora de banda (assim como o endereço de metadados do serviço).  
+ Como de costume, o endereço vem do arquivo de configuração do cliente, que foi gerado pelo svcutil. exe. O `Via` (que corresponde `ListenUri` ao do serviço) não aparece nos metadados do serviço e, portanto, essas informações devem ser comunicadas ao cliente fora de banda (assim como o endereço de metadados do serviço).  
   
- O cliente neste exemplo envia mensagens para cada um dos pontos de extremidade de aplicativo de três do servidor demonstrar que ela pode se comunicar com (e diferenciar) todos os três pontos de extremidade, mesmo que todos eles têm o mesmo `Via`.  
+ O cliente neste exemplo envia mensagens para cada um dos três pontos de extremidade do aplicativo do servidor, para demonstrar que ele pode se comunicar com (e diferenciar) todos os três pontos de extremidade, mesmo que todos tenham o `Via`mesmo.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Para várias máquinas, você deve substituir o localhost no arquivo Client.cs com o nome da máquina do serviço.  
+    >  Para computadores cruzados, você deve substituir localhost no arquivo Client.cs pelo nome do computador de serviço.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  

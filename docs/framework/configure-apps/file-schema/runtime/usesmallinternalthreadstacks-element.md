@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74678089bb1b19295983064eb7ad54fbf0a1e361
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8ee4df12a017429de333dd4e93df27973b658dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663384"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920673"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<Elemento de > UseSmallInternalThreadStacks
 Solicita que o Common Language Runtime (CLR) reduza o uso de memória especificando tamanhos de pilha explícitos ao criar determinados threads que ele usa internamente, em vez de usar o tamanho de pilha padrão para esses threads.  
@@ -57,7 +57,7 @@ Solicita que o Common Language Runtime (CLR) reduza o uso de memória especifica
  Esse elemento de configuração é usado para solicitar o uso reduzido de memória virtual em um processo, pois os tamanhos de thread explícitos usados pelo CLR para seus threads internos, se a solicitação for respeitada, serão menores do que o tamanho padrão.  
   
 > [!IMPORTANT]
->  Esse elemento de configuração é uma solicitação para o CLR em vez de um requisito absoluto. No .NET Framework 4, a solicitação é respeitada apenas para a arquitetura x86. Esse elemento pode ser ignorado completamente em versões futuras do CLR, ou substituído por tamanhos de pilha explícitos que são sempre usados para threads internos selecionados.  
+> Esse elemento de configuração é uma solicitação para o CLR em vez de um requisito absoluto. No .NET Framework 4, a solicitação é respeitada apenas para a arquitetura x86. Esse elemento pode ser ignorado completamente em versões futuras do CLR, ou substituído por tamanhos de pilha explícitos que são sempre usados para threads internos selecionados.  
   
  A especificação desse elemento de configuração compensa a confiabilidade para uso menor de memória virtual se o CLR honrar a solicitação, porque tamanhos de pilha menores poderiam potencialmente causar estouros de pilha mais prováveis.  
   

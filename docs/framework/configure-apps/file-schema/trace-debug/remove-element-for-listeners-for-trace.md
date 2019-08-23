@@ -1,5 +1,5 @@
 ---
-title: <remove> Elemento para <listeners> para <trace>
+title: <remove>Elemento para <listeners> para<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673674"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920485"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<Remover > elemento para \<ouvintes > para \<rastreamento >
-Remove um ouvinte dos **ouvintes** coleção.  
+# <a name="remove-element-for-listeners-for-trace"></a>\<remover o elemento > \<para ouvintes > \<para rastreamento >
+Remove um ouvinte da coleção Listeners.  
   
  \<configuration>  
-\<system.diagnostics>  
-\<trace>  
+\<System. Diagnostics >  
+\<> de rastreamento  
 \<listeners>  
 \<remove>  
   
@@ -36,7 +36,7 @@ Remove um ouvinte dos **ouvintes** coleção.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|**name**|Atributo obrigatório.<br /><br /> O nome do ouvinte para remover o **ouvintes** coleção.|  
+|**name**|Atributo obrigatório.<br /><br /> O nome do ouvinte a ser removido da coleção de ouvintes.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -46,17 +46,17 @@ Remove um ouvinte dos **ouvintes** coleção.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
-|`listeners`|Especifica um ouvinte que coleta, armazena e encaminha mensagens. Os ouvintes direcionam a saída de rastreamento para um destino apropriado.|  
+|`listeners`|Especifica um ouvinte que coleta, armazena e roteia mensagens. Os ouvintes direcionam a saída de rastreamento para um destino apropriado.|  
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
 |`trace`|Configura o serviço de rastreamento do ASP.NET.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Removendo o <xref:System.Diagnostics.DefaultTraceListener> do `Listeners` coleção altera o comportamento das <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, e <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> métodos. Chamar um `Assert` ou `Fail` método normalmente resulta na exibição de uma caixa de mensagem, no entanto, a caixa de mensagem não será exibida se o <xref:System.Diagnostics.DefaultTraceListener> não está no `Listeners` coleção.  
+> Remover o <xref:System.Diagnostics.DefaultTraceListener> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>da coleção altera o<xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>comportamento dos métodos,, e <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>. `Listeners` Chamar um `Assert` método `Fail` ou normalmente resulta na exibição de uma caixa de mensagem, no entanto, a caixa de mensagem não <xref:System.Diagnostics.DefaultTraceListener> será exibida se `Listeners` o não estiver na coleção.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como remover o ouvinte de rastreamento padrão do rastreamento **ouvintes** coleção.  
+ O exemplo a seguir mostra como remover o ouvinte de rastreamento padrão da coleção de ouvintes de rastreamento.  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ Remove um ouvinte dos **ouvintes** coleção.
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Esquema de configurações de rastreamento e depuração](index.md)

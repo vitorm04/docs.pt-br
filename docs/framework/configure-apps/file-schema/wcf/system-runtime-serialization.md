@@ -2,15 +2,15 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ec5cd19ccdc5c21a3caf426520d51442dc5ab3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757905"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938932"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
-Representa o elemento raiz para o <xref:System.Runtime.Serialization> seção de namespace e contém elementos para configurar as opções do <xref:System.Runtime.Serialization.DataContractSerializer>.  
+Representa o elemento raiz da <xref:System.Runtime.Serialization> seção namespace e contém elementos para definir as opções <xref:System.Runtime.Serialization.DataContractSerializer>do.  
   
  system.runtime.serialization  
   
@@ -43,16 +43,16 @@ Representa o elemento raiz para o <xref:System.Runtime.Serialization> seção de
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|Permite a adição de tipos conhecidos a serem usados quando a desserialização.|  
+|[\<dataContractSerializer>](datacontractserializer-of-system-runtime-serialization.md)|Permite que a adição de tipos conhecidos seja usada na desserialização.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|O elemento de nível superior para a configuração.|  
+|[Elemento \<configuration>](../configuration-element.md)|O elemento de nível superior para configuração.|  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.Serialization>
-- [Usando contratos de dados](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Tipos conhecidos de contrato de dados](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Usando contratos de dados](../../../wcf/feature-details/using-data-contracts.md)
+- [Tipos conhecidos de contrato de dados](../../../wcf/feature-details/data-contract-known-types.md)

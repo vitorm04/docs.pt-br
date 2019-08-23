@@ -2,24 +2,24 @@
 title: Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: aa4c716dc1b27d50620777613e698ca6dbab31d8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 104fdd78ce3f4b9c18f09fc41fddebe46815d217
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487641"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938465"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade, recuperação de desastre
-Este tópico discute o suporte do SqlClient (adicionado no .NET Framework 4.5) para recuperação de desastres de alta disponibilidade – grupos de disponibilidade AlwaysOn.  O recurso de grupos de disponibilidade AlwaysOn foi adicionado ao SQL Server 2012. Para obter mais informações sobre grupos de disponibilidade AlwaysOn, consulte os Manuais Online do SQL Server.  
+Este tópico discute o suporte a SqlClient (adicionado no .NET Framework 4,5) para alta disponibilidade, recuperação de desastre-Grupos de Disponibilidade AlwaysOn.  Grupos de Disponibilidade AlwaysOn recurso foi adicionado ao SQL Server 2012. Para obter mais informações sobre Grupos de Disponibilidade AlwaysOn, consulte Manuais Online do SQL Server.  
   
- Agora você pode especificar o ouvinte do grupo de disponibilidade de uma (alta disponibilidade, recuperação de desastres) (AG) do grupo de disponibilidade ou instância de Cluster de Failover do SQL Server 2012 na propriedade de conexão. Se um aplicativo SqlClient está conectado a um banco de dados AlwaysOn que realiza failover, a conexão original será interrompida e o aplicativo deverá abrir uma nova conexão para continuar o trabalho após o failover.  
+ Agora você pode especificar o ouvinte do grupo de disponibilidade de um AG (grupo de disponibilidade de alta disponibilidade, recuperação de desastre) ou uma instância de cluster de failover do SQL Server 2012 na propriedade de conexão. Se um aplicativo SqlClient está conectado a um banco de dados AlwaysOn que realiza failover, a conexão original será interrompida e o aplicativo deverá abrir uma nova conexão para continuar o trabalho após o failover.  
   
- Se você não estiver se conectando a um ouvinte do grupo de disponibilidade ou instância de Cluster de Failover do SQL Server 2012 e se vários endereços IP estiverem associados um nome de host, SqlClient percorrerá sequencialmente todos os endereços IP associados à entrada DNS. Isso pode ser demorado se o primeiro endereço IP retornado pelo servidor DNS não estiver associado a nenhuma placa de interface de rede (NIC). Ao se conectar a um ouvinte de grupo de disponibilidade ou instância de Cluster de Failover do SQL Server 2012, o SqlClient tenta estabelecer conexões com todos os endereços IP em paralelo e se uma tentativa de conexão for bem-sucedida, o driver descartará qualquer conexão pendente as tentativas.  
+ Se você não estiver se conectando a um ouvinte de grupo de disponibilidade ou SQL Server instância de cluster de failover 2012 e se vários endereços IP estiverem associados a um nome de host, o SqlClient irá iterar sequencialmente por todos os endereços IP associados à entrada DNS. Isso pode ser demorado se o primeiro endereço IP retornado pelo servidor DNS não estiver associado a nenhuma placa de interface de rede (NIC). Ao se conectar a um ouvinte de grupo de disponibilidade ou SQL Server instância de cluster de failover 2012, o SqlClient tenta estabelecer conexões com todos os endereços IP em paralelo e, se uma tentativa de conexão for bem sucedida, o driver descartará qualquer conexão pendente falhas.  
   
 > [!NOTE]
->  Aumentar o tempo limite de conexão e implementar lógica de novas tentativas de conexão aumenta a probabilidade de um aplicativo conectar-se a um grupo de disponibilidade. Além disso, como uma conexão pode falhar devido a um failover, você deve implementar lógica de novas tentativas de conexão, repetindo uma conexão falha até que ela se reconecte.  
+> Aumentar o tempo limite de conexão e implementar lógica de novas tentativas de conexão aumenta a probabilidade de um aplicativo conectar-se a um grupo de disponibilidade. Além disso, como uma conexão pode falhar devido a um failover, você deve implementar lógica de novas tentativas de conexão, repetindo uma conexão falha até que ela se reconecte.  
   
- As propriedades de conexão a seguir foram adicionadas ao SqlClient no .NET Framework 4.5:  
+ As propriedades de conexão a seguir foram adicionadas ao SqlClient no .NET Framework 4,5:  
   
 - `ApplicationIntent`  
   
@@ -32,26 +32,26 @@ Este tópico discute o suporte do SqlClient (adicionado no .NET Framework 4.5) p
 2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  Definindo `MultiSubnetFailover` para `true` não é necessária com o .NET Framework 4.6.1 ou versões posteriores.
+> A `MultiSubnetFailover` configuração `true` para não é necessária com .NET Framework 4.6.1 ou versões posteriores.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectar-se ao MultiSubnetFailover  
- Sempre especifique `MultiSubnetFailover=True` ao se conectar a um ouvinte de grupo de disponibilidade do SQL Server 2012 ou uma instância de Cluster de Failover do SQL Server 2012. `MultiSubnetFailover` permite failover mais rápido para grupos de disponibilidade todas as e ou instância de Cluster de Failover em SQL Server 2012 e reduzir significativamente o tempo de failover para topologias AlwaysOn únicas e de várias sub-redes. Durante um failover com várias sub-redes, o cliente tentará realizar conexões em paralelo. Durante um failover de sub-rede, ele tentará agressivamente realizar a conexão TCP.  
+ Sempre especifique `MultiSubnetFailover=True` ao se conectar a um ouvinte de grupo de disponibilidade SQL Server 2012 ou SQL Server instância de cluster de failover 2012. `MultiSubnetFailover`permite um failover mais rápido para todos os grupos de disponibilidade e a instância de cluster de failover no SQL Server 2012 e reduzirá significativamente o tempo de failover para topologias AlwaysOn de várias sub-redes. Durante um failover com várias sub-redes, o cliente tentará realizar conexões em paralelo. Durante um failover de sub-rede, ele tentará agressivamente realizar a conexão TCP.  
   
- O `MultiSubnetFailover` propriedade de conexão indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou instância de Cluster de Failover do SQL Server 2012 e que o SqlClient tentará se conectar ao banco de dados na instância do SQL Server primário tentando Conecte-se a todos os endereços IP. Quando `MultiSubnetFailover=True` é especificado para uma conexão, o cliente tenta novamente realizar a conexão TCP mais rapidamente do que os intervalos de retransmissão de TCP do padrão do sistema operacional. Isso permite que uma reconexão mais rápida após o failover de um Grupo de Disponibilidade AlwaysOn ou uma Instância de Cluster de Failover AlwaysOn, e é aplicável a Grupos de Disponibilidade de sub-rede único Instâncias de Cluster de Failover.  
+ A `MultiSubnetFailover` Propriedade Connection indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou SQL Server instância de cluster de failover 2012 e que o SqlClient tentará se conectar ao banco de dados na instância de SQL Server primária ao tentar Conecte-se a todos os endereços IP. Quando `MultiSubnetFailover=True` é especificado para uma conexão, o cliente tenta novamente realizar a conexão TCP mais rapidamente do que os intervalos de retransmissão de TCP do padrão do sistema operacional. Isso permite que uma reconexão mais rápida após o failover de um Grupo de Disponibilidade AlwaysOn ou uma Instância de Cluster de Failover AlwaysOn, e é aplicável a Grupos de Disponibilidade de sub-rede único Instâncias de Cluster de Failover.  
   
  Para obter mais informações sobre palavras-chave de cadeia de caracteres de conexão no SqlClient, consulte <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- Especificando `MultiSubnetFailover=True` quando conexão a algo que não seja um ouvinte de grupo de disponibilidade ou instância de Cluster de Failover do SQL Server 2012 pode resultar em um impacto negativo no desempenho e não é suportado.  
+ Especificar `MultiSubnetFailover=True` ao conectar-se a algo diferente de um ouvinte de grupo de disponibilidade ou SQL Server instância de cluster de failover 2012 pode resultar em um impacto negativo no desempenho e não é suportado.  
   
- Use as diretrizes a seguir para se conectar a um servidor em um grupo de disponibilidade ou instância de Cluster de Failover do SQL Server 2012:  
+ Use as diretrizes a seguir para se conectar a um servidor em um grupo de disponibilidade ou SQL Server instância de cluster de failover 2012:  
   
 - Use a propriedade de conexão `MultiSubnetFailover` ao conectar-se a uma sub-rede única ou a várias. Isso melhora o desempenho para ambos os casos.  
   
 - Para conectar-se a um grupo de disponibilidade, especifique o ouvinte de grupo de disponibilidade do grupo de disponibilidade como servidor na cadeia de caracteres de conexão.  
   
-- Conectando a um servidor SQL instância configurada com mais de 64 endereços IP causará uma falha de conexão.  
+- Conectar-se a uma instância SQL Server configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
-- Comportamento de um aplicativo que usa o `MultiSubnetFailover` propriedade de conexão não é afetada com base no tipo de autenticação: Autenticação do SQL Server, a autenticação Kerberos ou autenticação do Windows.  
+- O comportamento de um aplicativo que usa `MultiSubnetFailover` a propriedade Connection não é afetado com base no tipo de autenticação: SQL Server autenticação, autenticação Kerberos ou autenticação do Windows.  
   
 - Aumente o valor de `Connect Timeout` para compensar o tempo de failover e reduzir as tentativas de conexão do aplicativo.  
   
@@ -68,7 +68,7 @@ Este tópico discute o suporte do SqlClient (adicionado no .NET Framework 4.5) p
  Uma conexão falhará se a réplica primária estiver configurada para rejeitar as cargas de trabalho de somente leitura e a cadeia de caracteres da conexão contém `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Atualizando para usar vários clusters de sub-redes do espelhamento do banco de dados  
- Um erro de conexão (<xref:System.ArgumentException>) ocorrerá se as palavras-chave de conexão `MultiSubnetFailover` e `Failover Partner` estiverem presentes na cadeia de conexão, ou se `MultiSubnetFailover=True` e um protocolo diferente do TCP for usado. Um erro (<xref:System.Data.SqlClient.SqlException>) também ocorrerá se `MultiSubnetFailover` é usado e o SQL Server retorna uma resposta de parceiro de failover indicando que ela faz parte de um par de espelhamento de banco de dados.  
+ Um erro de conexão (<xref:System.ArgumentException>) ocorrerá se as palavras-chave de conexão `MultiSubnetFailover` e `Failover Partner` estiverem presentes na cadeia de conexão, ou se `MultiSubnetFailover=True` e um protocolo diferente do TCP for usado. Um erro (<xref:System.Data.SqlClient.SqlException>) também ocorrerá se `MultiSubnetFailover` for usado e o SQL Server retornar uma resposta de parceiro de failover indicando que ele faz parte de um par de espelhamento de banco de dados.  
   
  Se você atualizar um aplicativo SqlClient que atualmente usa o espelhamento de banco de dados para um cenário de várias sub-redes, deverá remover a propriedade de conexão `Failover Partner` e substituí-la por `MultiSubnetFailover` definida como `True`, além de substituir o nome do servidor na cadeia de conexão por um ouvinte do grupo de disponibilidade. Se uma cadeia de conexão usar `Failover Partner` e `MultiSubnetFailover=True`, o driver gerará um erro. No entanto, se uma cadeia de conexão usa `Failover Partner` e `MultiSubnetFailover=False` (ou `ApplicationIntent=ReadWrite`), o aplicativo irá usar o espelhamento de banco de dados.  
   
@@ -79,7 +79,7 @@ Este tópico discute o suporte do SqlClient (adicionado no .NET Framework 4.5) p
   
  A palavra-chave `ApplicationIntent` não funciona com bancos de dados legados de somente leitura.  
   
- Um banco de dados pode permitir ou impedir cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Isso é feito com o `ALLOW_CONNECTIONS` cláusula do `PRIMARY_ROLE` e `SECONDARY_ROLE`instruções Transact-SQL.)  
+ Um banco de dados pode permitir ou impedir cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Isso é feito com a `ALLOW_CONNECTIONS` cláusula `PRIMARY_ROLE` das `SECONDARY_ROLE`instruções Transact-SQL.)  
   
  A palavra-chave `ApplicationIntent` é usada para ativar o roteamento de somente leitura.  
   

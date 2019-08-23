@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 030986111a50ab59c605a1d683fedc118d10b260
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ab554b60f7ba44ee0b92b76e1362ffdbb25f2afb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626604"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965363"
 ---
 # <a name="error-types-visual-basic"></a>Tipos de erro (Visual Basic)
 No Visual Basic, os erros se enquadram em uma das três categorias: erros de sintaxe, erros de tempo de execução e erros de lógica.
@@ -24,7 +24,7 @@ No Visual Basic, os erros se enquadram em uma das três categorias: erros de sin
  Os *erros de sintaxe* são aqueles que aparecem enquanto você escreve o código. Se você estiver usando o Visual Studio, Visual Basic verificará seu código ao digitá-lo na janela **Editor de código** e o alertará se cometer um erro, como grafar uma palavra incorreta ou usando um elemento de linguagem incorretamente. Se você compilar a partir da linha de comando, Visual Basic exibirá um erro do compilador com informações sobre o erro de sintaxe. Os erros de sintaxe são o tipo mais comum de erros. Você pode corrigi-los facilmente no ambiente de codificação assim que eles ocorrerem.
 
 > [!NOTE]
->  A `Option Explicit` instrução é um meio de evitar erros de sintaxe. Ele força você a declarar, com antecedência, todas as variáveis a serem usadas no aplicativo. Portanto, quando essas variáveis são usadas no código, quaisquer erros tipográficos são capturados imediatamente e podem ser corrigidos.
+> A `Option Explicit` instrução é um meio de evitar erros de sintaxe. Ele força você a declarar, com antecedência, todas as variáveis a serem usadas no aplicativo. Portanto, quando essas variáveis são usadas no código, quaisquer erros tipográficos são capturados imediatamente e podem ser corrigidos.
 
 ## <a name="run-time-errors"></a>Erros de tempo de execução
  Os *erros de tempo de execução* são aqueles que aparecem somente depois que você compila e executa seu código. Eles envolvem código que podem parecer corretos para que não haja erros de sintaxe, mas que não serão executados. Por exemplo, você pode escrever corretamente uma linha de código para abrir um arquivo. Mas se o arquivo não existir, o aplicativo não poderá abrir o arquivo e lançar uma exceção. Você pode corrigir a maioria dos erros de tempo de execução reescrevendo o código com falha ou usando a [manipulação de exceções](../../language-reference/statements/try-catch-finally-statement.md)e, em seguida, recompilando-o e executando-o novamente.

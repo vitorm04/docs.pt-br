@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 2243c9ce2d8ba741143d301c38e8b88d7b196c98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505299"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914823"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de bitmaps
 Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz retangular de pixels. O número de bits dedicados a um pixel individual determina o número de cores que podem ser atribuídos a esse pixel. Por exemplo, se cada pixel é representado por 4 bits, em seguida, um determinado pixel pode ser atribuído um dos 16 cores diferentes (2^4 = 16). A tabela a seguir mostra alguns exemplos do número de cores que podem ser atribuídos a um pixel representado por um determinado número de bits.  
@@ -39,21 +39,21 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
 |16|2^16 = 65.536|  
 |24|2^24 = 16,777,216|  
   
- Arquivos de disco que armazenam os bitmaps geralmente contêm um ou mais blocos de informações que armazenam informações como o número de bits por pixel, o número de pixels em cada linha e o número de linhas na matriz. Esse arquivo também pode conter uma tabela de cores (às vezes chamada de uma paleta de cores). Uma tabela de cores mapeia os números no bitmap para cores específicas. A ilustração a seguir mostra uma imagem ampliada juntamente com sua tabela de cores e bitmap. Cada pixel é representado por um número de 4 bits, portanto, existem 2^4 = 16 cores na tabela de cores. Cada cor na tabela é representada por um número de 24 bits: 8 bits para vermelho, 8 bits para verde e 8 bits para azul. Os números são exibidos em formato hexadecimal (base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
+ Arquivos de disco que armazenam os bitmaps geralmente contêm um ou mais blocos de informações que armazenam informações como o número de bits por pixel, o número de pixels em cada linha e o número de linhas na matriz. Esse arquivo também pode conter uma tabela de cores (às vezes chamada de uma paleta de cores). Uma tabela de cores mapeia os números no bitmap para cores específicas. A ilustração a seguir mostra uma imagem ampliada juntamente com sua tabela de cores e bitmap. Cada pixel é representado por um número de 4 bits, portanto, existem 2^4 = 16 cores na tabela de cores. Cada cor na tabela é representada por um número de 24 bits: 8 bits para vermelho, 8 bits para verde e 8 bits para azul. Os números são mostrados em formato hexadecimal (base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
  ![Exemplo de bitmap](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
  Examinar o pixel na linha 3, coluna 5 da imagem. O número correspondente no bitmap é 1. A tabela de cores nos informa que 1 representa a cor vermelha, portanto o pixel é vermelho. Todas as entradas na linha superior do bitmap são 3. A tabela de cores nos informa que 3 representa azul, portanto, todos os pixels na linha superior da imagem são azuis.  
   
 > [!NOTE]
->  Alguns bitmaps são armazenados no formato de baixo para cima; os números na primeira linha do bitmap correspondem aos pixels na linha inferior da imagem.  
+> Alguns bitmaps são armazenados no formato de baixo para cima; os números na primeira linha do bitmap correspondem aos pixels na linha inferior da imagem.  
   
  Um bitmap que armazena os índices em uma tabela de cores é chamado um bitmap indexado por paleta. Alguns bitmaps não tiveram necessidade de uma tabela de cores. Por exemplo, se um bitmap usa 24 bits por pixel, esse bitmap pode armazenar as cores ao invés de indexar em uma tabela de cores. A ilustração a seguir mostra um bitmap que armazena as cores diretamente (24 bits por pixel) em vez de usar uma tabela de cores. A ilustração também mostra uma exibição ampliada da imagem correspondente. No bitmap, FFFFFF representa branco, FF0000 representa vermelho, 00FF00 representa verde e 0000FF representa azul.  
   
  ![Exemplo de bitmap](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formatos de arquivos gráficos  
- Há muitos formatos padrão para salvar os bitmaps nos arquivos do disco. Dá suporte a GDI+ o arquivo gráfico formatos descritos nos parágrafos a seguir.  
+ Há muitos formatos padrão para salvar os bitmaps nos arquivos do disco. O GDI+ dá suporte aos formatos de arquivo gráficos descritos nos parágrafos a seguir.  
   
 ### <a name="bmp"></a>BMP  
  BMP é um formato padrão usado pelo Windows para armazenar imagens independente de dispositivo e aplicativo. O número de bits por pixel (1, 4, 8, 15, 24, 32 ou 64) para um determinado arquivo BMP é especificado no cabeçalho do arquivo. Arquivos BMP com 24 bits por pixel são comuns. Arquivos BMP geralmente não são compactados e, portanto, não são adequados para a transferência pela Internet.  

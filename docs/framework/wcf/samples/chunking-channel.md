@@ -2,34 +2,34 @@
 title: Canal de agrupamento
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 1714b58d290b3dd85e105c60399dabe6c107b50b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6de513db82c49821c8f6758509f1bd356035b9c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878560"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950999"
 ---
 # <a name="chunking-channel"></a>Canal de agrupamento
-Ao enviar mensagens grandes usando o Windows Communication Foundation (WCF), geralmente é desejável para limitar a quantidade de memória usada para armazenar em buffer as mensagens. Uma solução possível é transmitir o corpo da mensagem (supondo que a maior parte dos dados está no corpo). No entanto, alguns protocolos exigem armazenamento em buffer da mensagem inteira. Sistema de mensagens confiável e segurança são dois exemplos de tais. Outra solução possível é dividir a mensagem grande em mensagens menores chamado partes, enviar partes de uma dessas partes por vez e reconstituir a mensagem grande no lado de recepção. O aplicativo em si pode fazer esse agrupamento e desprovisionamento de agrupamento ou use um canal personalizado para fazê-lo. O exemplo de agrupamento de canal mostra como um protocolo personalizado ou o canal em camadas pode ser usado para fazer a eliminação da divisão de mensagens arbitrariamente grandes e o agrupamento.  
+Ao enviar mensagens grandes usando Windows Communication Foundation (WCF), geralmente é desejável limitar a quantidade de memória usada para armazenar em buffer essas mensagens. Uma solução possível é transmitir o corpo da mensagem (supondo que a massa dos dados esteja no corpo). No entanto, alguns protocolos exigem o armazenamento em buffer de toda a mensagem. As mensagens e a segurança confiáveis são dois exemplos. Outra solução possível é dividir a mensagem grande em mensagens menores chamadas de partes, enviar as partes uma parte por vez e reconstituir a mensagem grande no lado de recebimento. O próprio aplicativo poderia fazer esse agrupamento e desagrupamento ou usar um canal personalizado para fazer isso. O exemplo de canal de agrupamento mostra como um protocolo personalizado ou canal em camadas pode ser usado para fazer agrupamentos e desagrupamento de mensagens arbitrariamente grandes.  
   
- Agrupamento sempre deve ser empregada somente depois que a mensagem inteira seja enviado foi construída. Um canal de agrupamento deve sempre ser colocado em camadas abaixo de um canal de segurança e um canal de sessão confiável.  
+ O agrupamento deve ser sempre empregado somente depois que a mensagem inteira a ser enviada tiver sido construída. Um canal de agrupamento deve estar sempre em camadas abaixo de um canal de segurança e um canal de sessão confiável.  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`  
   
-## <a name="chunking-channel-assumptions-and-limitations"></a>Agrupamento de canal suposições e restrições  
+## <a name="chunking-channel-assumptions-and-limitations"></a>Trechos de considerações e limitações de canal  
   
-### <a name="message-structure"></a>Estrutura de mensagens  
- O canal de agrupamento pressupõe que a seguinte estrutura de mensagem a ser em bloco de mensagens:  
+### <a name="message-structure"></a>Estrutura da mensagem  
+ O canal de agrupamento assume a seguinte estrutura de mensagem para que as mensagens sejam fragmentadas:  
   
 ```xml  
 <soap:Envelope ...>  
@@ -42,7 +42,7 @@ Ao enviar mensagens grandes usando o Windows Communication Foundation (WCF), ger
 </soap:Envelope>  
 ```  
   
- Ao usar o ServiceModel, operações de contrato que têm um parâmetro de entrada 1 está em conformidade com esta forma de mensagem à mensagem de entrada. Da mesma forma, operações de contrato que tem um parâmetro de saída 1 ou valor de retorno estão em conformidade com esta forma de mensagem à mensagem de saída. A seguir estão exemplos de tais operações:  
+ Ao usar o ServiceModel, as operações de contrato que têm um parâmetro de entrada são compatíveis com essa forma de mensagem para sua mensagem de entrada. Da mesma forma, as operações de contrato que têm 1 parâmetro de saída ou valor de retorno estão em conformidade com essa forma de mensagem para sua mensagem de saída. Veja a seguir exemplos de tais operações:  
   
 ```  
 [ServiceContract]  
@@ -60,13 +60,13 @@ interface ITestService
 ```  
   
 ### <a name="sessions"></a>Sessões  
- O canal de agrupamento requer que mensagens sejam entregues exatamente uma vez, na entrega ordenada das mensagens (partes). Isso significa que a pilha de canais subjacente deve ser de sessão. As sessões podem ser fornecidas pelo transporte (por exemplo, o transporte TCP) ou por um canal de protocolo de sessão (por exemplo, ReliableSession canal).  
+ O canal de agrupamento exige que as mensagens sejam entregues exatamente uma vez, na entrega ordenada de mensagens (partes). Isso significa que a pilha de canais subjacente deve ser sessão. As sessões podem ser fornecidas pelo transporte (por exemplo, transporte TCP) ou por um canal de protocolo de sessão (por exemplo, canal ReliableSession).  
   
-### <a name="asynchronous-send-and-receive"></a>Assíncrona enviar e receber  
- Assíncrona enviar e receber métodos não são implementados nesta versão do exemplo de agrupamento de canal.  
+### <a name="asynchronous-send-and-receive"></a>Envio e recebimento assíncronos  
+ Os métodos de envio e recebimento assíncronos não são implementados nesta versão do exemplo de canal de agrupamento.  
   
-## <a name="chunking-protocol"></a>Agrupamento de protocolo  
- O canal de agrupamento define um protocolo que indica o início e término de uma série de blocos, bem como o número de sequência de cada parte. As mensagens de exemplo de três a seguir demonstram o início, mensagens de bloco e de término com comentários que descrevem os principais aspectos de cada um.  
+## <a name="chunking-protocol"></a>Protocolo de agrupamento  
+ O canal de agrupamento define um protocolo que indica o início e o término de uma série de partes, bem como o número de sequência de cada parte. As três mensagens de exemplo a seguir demonstram as mensagens de início, bloco e fim com comentários que descrevem os principais aspectos de cada um.  
   
 ### <a name="start-message"></a>Mensagem de início  
   
@@ -114,7 +114,7 @@ the data to be chunked.
 </s:Envelope>  
 ```  
   
-### <a name="chunk-message"></a>O fragmento de mensagem  
+### <a name="chunk-message"></a>Mensagem de bloco  
   
 ```xml  
 <s:Envelope   
@@ -156,7 +156,7 @@ kfSr2QcBlkHTvQ==
 </s:Envelope>  
 ```  
   
-### <a name="end-message"></a>Mensagem de término  
+### <a name="end-message"></a>Mensagem final  
   
 ```xml  
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing"   
@@ -198,19 +198,19 @@ as the ChunkingStart message.
 </s:Envelope>  
 ```  
   
-## <a name="chunking-channel-architecture"></a>Arquitetura do canal de agrupamento  
- O canal de agrupamento é um `IDuplexSessionChannel` que, em um alto nível, segue a arquitetura típica de canal. Há um `ChunkingBindingElement` que pode criar um `ChunkingChannelFactory` e um `ChunkingChannelListener`. O `ChunkingChannelFactory` cria instâncias de `ChunkingChannel` quando for solicitado a. O `ChunkingChannelListener` cria instâncias de `ChunkingChannel` quando um novo canal interno é aceito. O `ChunkingChannel` por si só é responsável por enviar e receber mensagens.  
+## <a name="chunking-channel-architecture"></a>Arquitetura de canal de agrupamento  
+ O canal de agrupamento é um `IDuplexSessionChannel` que, em um alto nível, segue a arquitetura de canal típica. Há um `ChunkingBindingElement` que pode criar um `ChunkingChannelFactory` e um `ChunkingChannelListener`. O `ChunkingChannelFactory` cria instâncias de `ChunkingChannel` quando é solicitado. O `ChunkingChannelListener` cria instâncias do `ChunkingChannel` quando um novo canal interno é aceito. O `ChunkingChannel` próprio é responsável por enviar e receber mensagens.  
   
- No próximo nível inferior, `ChunkingChannel` depende de vários componentes para implementar o protocolo de agrupamento. No lado do envio, o canal usa um personalizado <xref:System.Xml.XmlDictionaryWriter> chamado `ChunkingWriter` que faz o agrupamento real. `ChunkingWriter` usa o canal interno diretamente para enviar partes. Usando um personalizado `XmlDictionaryWriter` nos permite enviar partes como o corpo da mensagem original grande está sendo gravado. Isso significa que podemos não armazenar em buffer toda a mensagem original.  
+ No próximo nível abaixo, `ChunkingChannel` o depende de vários componentes para implementar o protocolo de agrupamento. No lado do envio, o canal usa um chamado <xref:System.Xml.XmlDictionaryWriter> `ChunkingWriter` personalizado que faz o agrupamento real. `ChunkingWriter`usa o canal interno diretamente para enviar partes. O uso de `XmlDictionaryWriter` um personalizado nos permite enviar partes, já que o corpo grande da mensagem original está sendo gravado. Isso significa que não armazenamos em buffer toda a mensagem original.  
   
- ![Arquitetura de envio de diagrama que mostra o canal de agrupamento.](./media/chunking-channel/chunking-channel-send.gif)  
+ ![Diagrama que mostra a arquitetura de envio do canal de agrupamento.](./media/chunking-channel/chunking-channel-send.gif)  
   
- No lado do recebimento, `ChunkingChannel` efetua pull das mensagens do canal interno e passa-os para um personalizado <xref:System.Xml.XmlDictionaryReader> chamado `ChunkingReader`, qual reconstitui a mensagem original das partes de entrada. `ChunkingChannel` resume isso `ChunkingReader` em um personalizado `Message` implementação chamado `ChunkingMessage` e retorna essa mensagem para a camada acima. Essa combinação de `ChunkingReader` e `ChunkingMessage` permite dividir desprovisionar o corpo da mensagem original como ele está sendo lido pela camada acima em vez de precisar armazenar em buffer o corpo da mensagem original inteira. `ChunkingReader` tem uma fila em que ele armazena em buffer partes de entrada até um máximo número configurável de partes em buffer. Quando esse limite máximo for atingido, o leitor aguarda a ser extraído da fila pela camada acima de mensagens (ou seja, lendo apenas do corpo da mensagem original) ou até que receba o máximo tempo limite for atingido.  
+ No lado do recebimento, `ChunkingChannel` o recebe as mensagens do canal interno e as passa para uma chamada <xref:System.Xml.XmlDictionaryReader> `ChunkingReader`personalizada, que reconstitui a mensagem original das partes de entrada. `ChunkingChannel`encapsula isso `ChunkingReader` em uma implementação personalizada `Message` chamada `ChunkingMessage` e retorna essa mensagem para a camada acima. Essa combinação de `ChunkingReader` e `ChunkingMessage` nos permite retirar a parte do corpo da mensagem original, pois ele está sendo lido pela camada acima, em vez de ter que armazenar em buffer todo o corpo da mensagem original. `ChunkingReader`tem uma fila na qual ele armazena em buffer as partes de entrada até um número máximo configurável de partes em buffer. Quando esse limite máximo é atingido, o leitor aguarda que as mensagens sejam descarregadas da fila pela camada acima (ou seja, apenas lendo do corpo da mensagem original) ou até que o tempo limite máximo de recebimento seja atingido.  
   
- ![Diagrama que mostra o canal de agrupamento receber arquitetura.](./media/chunking-channel/chunking-channel-receive.gif)  
+ ![Diagrama que mostra a arquitetura de recebimento do canal de agrupamento.](./media/chunking-channel/chunking-channel-receive.gif)  
   
 ## <a name="chunking-programming-model"></a>Modelo de programação de agrupamento  
- Os desenvolvedores de serviço podem especificar quais mensagens devem ser em partes, aplicando o `ChunkingBehavior` de atributo para operações no contrato. O atributo expõe um `AppliesTo` propriedade que permite que o desenvolvedor Especifique se agrupamento se aplica a mensagem de entrada, a mensagem de saída ou ambos. O exemplo a seguir mostra o uso de `ChunkingBehavior` atributo:  
+ Os desenvolvedores de serviço podem especificar quais mensagens devem ser fragmentadas aplicando `ChunkingBehavior` o atributo às operações no contrato. O atributo expõe uma `AppliesTo` propriedade que permite ao desenvolvedor especificar se o agrupamento se aplica à mensagem de entrada, à mensagem de saída ou a ambas. O exemplo a seguir mostra o uso `ChunkingBehavior` do atributo:  
   
 ```  
 [ServiceContract]  
@@ -231,99 +231,99 @@ interface ITestService
 }  
 ```  
   
- Do modelo de programação, o `ChunkingBindingElement` compila uma lista de URIs que identificam as mensagens para ser em partes de ação. A ação de cada mensagem de saída é comparada com essa lista para determinar se a mensagem deve ser em partes ou enviada diretamente.  
+ A partir desse modelo de programação `ChunkingBindingElement` , o compila uma lista de URIs de ação que identificam as mensagens a serem fragmentadas. A ação de cada mensagem de saída é comparada com essa lista para determinar se a mensagem deve ser colocada em bloco ou enviada diretamente.  
   
 ## <a name="implementing-the-send-operation"></a>Implementando a operação de envio  
- Em um alto nível, a operação de envio primeiro verifica se a mensagem de saída deve ser em bloco e, se não, envia a mensagem diretamente usando o canal interno.  
+ Em um nível alto, a operação enviar primeiro verifica se a mensagem de saída deve ser colocada em bloco e, caso contrário, envia a mensagem diretamente usando o canal interno.  
   
- Se a mensagem deve ser em bloco, envio cria um novo `ChunkingWriter` e chama `WriteBodyContents` na mensagem de saída passá-lo isso `ChunkingWriter`. O `ChunkingWriter` e em seguida, faz a divisão de mensagem (incluindo copiar cabeçalhos da mensagem original para a mensagem de bloco de início) e envia partes usando o canal interno.  
+ Se a mensagem precisar ser enfileirada, Send criará `ChunkingWriter` uma nova `WriteBodyContents` e chamará a mensagem de `ChunkingWriter`saída que a transmite. `ChunkingWriter` Em seguida, o faz a fragmentação da mensagem (incluindo copiar os cabeçalhos da mensagem original para a mensagem de início da parte) e envia partes usando o canal interno.  
   
- Alguns detalhes que vale a pena observar:  
+ Alguns detalhes vale A pena observar:  
   
-- Enviar primeiro chama `ThrowIfDisposedOrNotOpened` para garantir que o `CommunicationState` é aberto.  
+- Envie as primeiras `ThrowIfDisposedOrNotOpened` chamadas para garantir `CommunicationState` que o esteja aberto.  
   
-- Enviando é sincronizada para que somente uma mensagem possa ser enviada por vez para cada sessão. Há um `ManualResetEvent` chamado `sendingDone` que é redefinido quando uma mensagem em partes que está sendo enviada. Depois que a mensagem de bloco final é enviada, esse evento é definido. O método de envio aguarda para este evento a ser definido antes de tentar enviar a mensagem de saída.  
+- O envio é sincronizado para que apenas uma mensagem possa ser enviada por vez para cada sessão. Há um `ManualResetEvent` nome `sendingDone` que é redefinido quando uma mensagem em partes é enviada. Depois que a mensagem final da parte é enviada, esse evento é definido. O método Send aguarda esse evento ser definido antes de tentar enviar a mensagem de saída.  
   
-- Bloqueios de enviar o `CommunicationObject.ThisLock` evitar sincronizado as alterações de estado durante o envio. Consulte a <xref:System.ServiceModel.Channels.CommunicationObject> documentação para obter mais informações sobre <xref:System.ServiceModel.Channels.CommunicationObject> estados e a máquina de estado.  
+- Enviar bloqueia o `CommunicationObject.ThisLock` para evitar alterações de estado sincronizado ao enviar. Consulte a <xref:System.ServiceModel.Channels.CommunicationObject> documentação para obter mais informações <xref:System.ServiceModel.Channels.CommunicationObject> sobre Estados e computador de estado.  
   
-- O tempo limite passado para o envio é usado como o tempo limite para a operação de envio inteira que inclui o envio de todos os fragmentos.  
+- O tempo limite passado para Send é usado como o tempo limite para toda a operação de envio, que inclui o envio de todas as partes.  
   
-- Personalizado <xref:System.Xml.XmlDictionaryWriter> design foi escolhido para evitar o armazenamento em buffer o corpo da mensagem original inteira. Se tivéssemos uma <xref:System.Xml.XmlDictionaryReader> sobre como usar o corpo `message.GetReaderAtBodyContents` buffer de todo o corpo. Em vez disso, temos um personalizado <xref:System.Xml.XmlDictionaryWriter> que é passado para `message.WriteBodyContents`. Como a mensagem chamadas WriteBase64 no gravador, o gravador de partes em mensagens de pacotes e as envia usando o canal interno. Blocos de WriteBase64 até que a parte seja enviada.  
+- O design <xref:System.Xml.XmlDictionaryWriter> personalizado foi escolhido para evitar o buffer de todo o corpo da mensagem original. Se tivéssemos que obter um <xref:System.Xml.XmlDictionaryReader> no corpo usando `message.GetReaderAtBodyContents` o corpo inteiro seria armazenado em buffer. Em vez disso, temos um <xref:System.Xml.XmlDictionaryWriter> personalizado que é passado `message.WriteBodyContents`para. À medida que a mensagem chama WriteBase64 no gravador, o gravador empacota partes em mensagens e as envia usando o canal interno. WriteBase64 blocos de bloqueio até que a parte seja enviada.  
   
 ## <a name="implementing-the-receive-operation"></a>Implementando a operação de recebimento  
- Em um alto nível, a operação de recebimento primeiro verifica se a mensagem de entrada não é `null` e que sua ação é o `ChunkingAction`. Se ele não atender a ambos os critérios, a mensagem é retornada inalterada de recebimento. Caso contrário, o recebimento cria um novo `ChunkingReader` e uma nova `ChunkingMessage` encapsulado em torno dele (chamando `GetNewChunkingMessage`). Antes de retornar que novos `ChunkingMessage`, Receive usa um thread de pool de threads para executar `ReceiveChunkLoop`, que chama `innerChannel.Receive` em um loop e entrega o partes para o `ChunkingReader` até que a mensagem de bloco final é recebida ou o tempo limite de recebimento for atingido.  
+ Em um alto nível, a operação de recebimento verifica primeiro se a mensagem de entrada `null` não é e se sua ação `ChunkingAction`é. Se ele não atender aos dois critérios, a mensagem será retornada inalterada de Receive. Caso contrário, Receive criará `ChunkingReader` um novo e `ChunkingMessage` um novo encapsulado em torno `GetNewChunkingMessage`dele (chamando). Antes de retornar essa `ChunkingMessage`nova, Receive usa um thread de ThreadPool `ReceiveChunkLoop`a ser executado `innerChannel.Receive` , que chama em um loop e transfere partes `ChunkingReader` para o até que a mensagem de bloco final seja recebida ou o tempo limite de recebimento seja atingido.  
   
- Alguns detalhes que vale a pena observar:  
+ Alguns detalhes vale A pena observar:  
   
-- Como enviar, receber chamadas primeiro `ThrowIfDisposedOrNotOepned` para garantir que o `CommunicationState` é aberto.  
+- Como enviar, receba as primeiras `ThrowIfDisposedOrNotOepned` chamadas para garantir `CommunicationState` que o esteja aberto.  
   
-- Receba também são sincronizados para que somente uma mensagem pode ser recebida por vez da sessão. Isso é especialmente importante, porque depois que uma mensagem de bloco de início for recebida, todas as mensagens recebidas subsequentes devem ser partes dentro essa nova sequência de bloco até que uma mensagem de bloco final seja recebida. Receber não pode extrair mensagens do canal interno até que todas as partes que pertencem à mensagem atualmente desprovisionar sendo em partes são recebidas. Para fazer isso, receber usa um `ManualResetEvent` denominado `currentMessageCompleted`, que é definido quando a mensagem de bloco final é recebida e redefinir quando uma nova mensagem de bloco de início é recebida.  
+- Receive também é sincronizado para que apenas uma mensagem possa ser recebida por vez da sessão. Isso é especialmente importante porque depois que uma mensagem de início de bloco é recebida, todas as mensagens subsequentes recebidas devem ser partes nessa nova sequência de bloco até que uma mensagem de bloco final seja recebida. O recebimento não pode efetuar pull de mensagens do canal interno até que todas as partes que pertencem à mensagem que está sendo desfragmentada no momento sejam recebidas. Para fazer isso, Receive usa um `ManualResetEvent` nome `currentMessageCompleted`, que é definido quando a mensagem de parte final é recebida e redefinida quando uma nova mensagem de início de bloco é recebida.  
   
-- Ao contrário de envio, recebimento não impede que as transições de estado sincronizado durante a recepção. Por exemplo, fechar pode ser chamado durante o recebimento e aguarda até que o recebimento pendente da mensagem original é concluído ou o valor de tempo limite especificado for atingido.  
+- Ao contrário de enviar, Receive não impede transições de estado sincronizadas durante o recebimento. Por exemplo, Close pode ser chamado durante o recebimento e aguarda até que o recebimento pendente da mensagem original seja concluído ou o valor de tempo limite especificado seja atingido.  
   
-- O tempo limite passado para o recebimento é usado como o tempo limite para toda a operação, que inclui o recebimento de todas as partes de recebimento.  
+- O tempo limite passado para Receive é usado como o tempo limite para a operação de recebimento inteira, que inclui o recebimento de todas as partes.  
   
-- Se a camada que consome a mensagem está consumindo o corpo da mensagem a uma taxa menor do que a taxa de bloco de mensagens de entrada, o `ChunkingReader` buffers essas partes de entrada até o limite especificado pela `ChunkingBindingElement.MaxBufferedChunks`. Quando esse limite é atingido, não há mais blocos são extraídos da camada inferior até que uma parte em buffer é consumida ou o tempo limite de recebimento for atingido.  
+- Se a camada que consome a mensagem estiver consumindo o corpo da mensagem em uma taxa menor do que a taxa de mensagens de `ChunkingReader` bloco de entrada, o armazenará em buffer essas partes de `ChunkingBindingElement.MaxBufferedChunks`entrada até o limite especificado por. Depois que esse limite for atingido, nenhuma parte mais será extraída da camada inferior até que uma parte armazenada em buffer seja consumida ou o tempo limite de recebimento seja atingido.  
   
 ## <a name="communicationobject-overrides"></a>Substituições de CommunicationObject  
   
 ### <a name="onopen"></a>OnOpen  
- `OnOpen` chamadas `innerChannel.Open` para abrir o canal interno.  
+ `OnOpen`chamadas `innerChannel.Open` para abrir o canal interno.  
   
-### <a name="onclose"></a>OnClose  
- `OnClose` primeiro define `stopReceive` à `true` para sinalizar o pendente `ReceiveChunkLoop` para parar. Ele aguarda até que o `receiveStopped` <xref:System.Threading.ManualResetEvent>, que é definido quando `ReceiveChunkLoop` para. Supondo que o `ReceiveChunkLoop` para de dentro do tempo limite especificado, `OnClose` chamadas `innerChannel.Close` com o tempo limite restante.  
+### <a name="onclose"></a>Fechamento  
+ `OnClose`o primeiro `stopReceive` define `true` como para sinalizar `ReceiveChunkLoop` o pendente para parar. Em seguida, ele aguarda o `receiveStopped` <xref:System.Threading.ManualResetEvent>, que é definido quando `ReceiveChunkLoop` é interrompido. Supondo `ReceiveChunkLoop` que as interrupções dentro do `OnClose` tempo `innerChannel.Close` limite especificado sejam chamadas com o tempo limite restante.  
   
 ### <a name="onabort"></a>OnAbort  
- `OnAbort` chamadas `innerChannel.Abort` para anular o canal interno. Se não houver um pendente `ReceiveChunkLoop` ele obtém uma exceção a partir de pendente `innerChannel.Receive` chamar.  
+ `OnAbort`chamadas `innerChannel.Abort` para anular o canal interno. Se houver um `ReceiveChunkLoop` , ele receberá uma exceção da chamada pendente `innerChannel.Receive` .  
   
-### <a name="onfaulted"></a>OnFaulted  
- O `ChunkingChannel` não exige um comportamento especial quando o canal está com defeito isso `OnFaulted` não for substituído.  
+### <a name="onfaulted"></a>Com falha  
+ O `ChunkingChannel` não requer comportamento especial quando o canal tem falha, portanto `OnFaulted` não é substituído.  
   
-## <a name="implementing-channel-factory"></a>Implementação de fábrica de canais  
- O `ChunkingChannelFactory` é responsável pela criação de instâncias de `ChunkingDuplexSessionChannel` e para as transições de estado em cascata para a fábrica de canais interna.  
+## <a name="implementing-channel-factory"></a>Implementando a fábrica de canais  
+ O `ChunkingChannelFactory` é responsável por criar instâncias do `ChunkingDuplexSessionChannel` e para transições de estado em cascata para a fábrica de canais interna.  
   
- `OnCreateChannel` usa a fábrica de canais interna para criar um `IDuplexSessionChannel` canal interno. Em seguida, cria um novo `ChunkingDuplexSessionChannel` passá-lo neste canal interno juntamente com a lista de ações de mensagem a ser em bloco e o número máximo de blocos para armazenar em buffer após o recebimento. A lista de ações de mensagem a ser em bloco e o número máximo de blocos para armazenar em buffer são dois parâmetros passados para `ChunkingChannelFactory` em seu construtor. A seção sobre `ChunkingBindingElement` descreve de onde vêm esses valores.  
+ `OnCreateChannel`usa a fábrica de canais interna para criar `IDuplexSessionChannel` um canal interno. Em seguida, ele cria `ChunkingDuplexSessionChannel` um novo passando esse canal interno junto com a lista de ações de mensagens a serem enfileiradas e o número máximo de partes para armazenar em buffer após o recebimento. A lista de ações de mensagens a serem enfileiradas e o número máximo de partes para o buffer são dois parâmetros `ChunkingChannelFactory` passados para em seu construtor. A seção sobre `ChunkingBindingElement` descreve de onde vêm esses valores.  
   
- O `OnOpen`, `OnClose`, `OnAbort` e seus equivalentes assíncronos chame o método de transição de estado correspondente na fábrica de canais interna.  
+ O `OnOpen`, `OnClose` ,`OnAbort` e seus equivalentes assíncronos chamam o método de transição de estado correspondente na fábrica de canais interna.  
   
-## <a name="implementing-channel-listener"></a>Implementando o ouvinte de canais  
- O `ChunkingChannelListener` é um wrapper em torno de um ouvinte de canais interna. Sua função principal, além de chamadas de delegados para esse ouvinte de canais interna, é encapsular novo `ChunkingDuplexSessionChannels` em torno de canais aceitos de ouvinte de canais interno. Isso é feito no `OnAcceptChannel` e `OnEndAcceptChannel`. Recém-criado `ChunkingDuplexSessionChannel` é passado o canal interno juntamente com os outros parâmetros descritos anteriormente.  
+## <a name="implementing-channel-listener"></a>Implementando ouvinte de canal  
+ O `ChunkingChannelListener` é um wrapper em um ouvinte de canal interno. Sua função principal, além de chamadas delegadas para esse ouvinte de canal interno, `ChunkingDuplexSessionChannels` é encapsular o novo em volta dos canais aceitos do ouvinte de canal interno. Isso é feito no `OnAcceptChannel` e `OnEndAcceptChannel`no. O recém-criado `ChunkingDuplexSessionChannel` é passado para o canal interno junto com os outros parâmetros descritos anteriormente.  
   
-## <a name="implementing-binding-element-and-binding"></a>Implementando o elemento de associação e associação  
- `ChunkingBindingElement` é responsável por criar a `ChunkingChannelFactory` e `ChunkingChannelListener`. O `ChunkingBindingElement` verifica se T no `CanBuildChannelFactory` \<T > e `CanBuildChannelListener` \<T > é do tipo `IDuplexSessionChannel` (o único canal com suporte pelo canal de agrupamento) e que os outros elementos de associação na associação de dar suporte a isso tipo de canal.  
+## <a name="implementing-binding-element-and-binding"></a>Implementando elemento de associação e Associação  
+ `ChunkingBindingElement`é responsável por criar o `ChunkingChannelFactory` e `ChunkingChannelListener`o. O `ChunkingBindingElement` verifica se t em `CanBuildChannelFactory` \<t > e `CanBuildChannelListener` \<t > é do tipo `IDuplexSessionChannel` (o único canal com suporte no canal de agrupamento) e se os outros elementos de ligação na associação dão suporte a isso tipo de canal.  
   
- `BuildChannelFactory`\<T > primeiro verifica se o tipo de canal solicitada pode ser compilado e, em seguida, obtém uma lista de ações de mensagem a ser em bloco. Para obter mais informações, consulte a seção a seguir. Em seguida, cria uma nova `ChunkingChannelFactory` passá-lo a fábrica de canais interna (como retornado pelo `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), a lista de ações de mensagem e o número máximo de blocos para armazenar em buffer. O número máximo de partes vem de uma propriedade chamada `MaxBufferedChunks` expostos pelo `ChunkingBindingElement`.  
+ `BuildChannelFactory`\<T > primeiro verifica se o tipo de canal solicitado pode ser compilado e, em seguida, obtém uma lista de ações de mensagens a serem fragmentadas. Para obter mais informações, consulte a seção a seguir. Em seguida, ele cria `ChunkingChannelFactory` um novo passando-o para o alocador de `context.BuildInnerChannelFactory<IDuplexSessionChannel>`canal interno (como retornado de), a lista de ações de mensagem e o número máximo de partes para armazenar em buffer. O número máximo de partes vem de uma propriedade chamada `MaxBufferedChunks` exposta `ChunkingBindingElement`pelo.  
   
- `BuildChannelListener<T>` tem uma implementação semelhante para a criação de `ChunkingChannelListener` e passando-o ouvinte de canais interna.  
+ `BuildChannelListener<T>`o tem uma implementação semelhante para `ChunkingChannelListener` criar e passar o ouvinte de canal interno.  
   
- Há uma associação de exemplo incluída neste exemplo denominado `TcpChunkingBinding`. Essa ligação consiste em dois elementos de associação: `TcpTransportBindingElement` e `ChunkingBindingElement`. Além de expor a `MaxBufferedChunks` propriedade, a associação também define algumas da `TcpTransportBindingElement` propriedades, como `MaxReceivedMessageSize` (define como `ChunkingUtils.ChunkSize` + 100 KB bytes para os cabeçalhos).  
+ Há uma associação de exemplo incluída neste exemplo denominada `TcpChunkingBinding`. Essa associação consiste em dois elementos de ligação `TcpTransportBindingElement` : `ChunkingBindingElement`e. Além de expor `MaxBufferedChunks` a propriedade, a associação também define algumas `TcpTransportBindingElement` das propriedades como `MaxReceivedMessageSize` (define para `ChunkingUtils.ChunkSize` + 100 KB bytes para cabeçalhos).  
   
- `TcpChunkingBinding` também implementa `IBindingRuntimePreferences` e retorna true do `ReceiveSynchronously` método que indica que apenas as receber chamadas síncronas são implementadas.  
+ `TcpChunkingBinding`também implementa `IBindingRuntimePreferences` e retorna true `ReceiveSynchronously` do método que indica que apenas as chamadas de recebimento síncronas são implementadas.  
   
-### <a name="determining-which-messages-to-chunk"></a>Determinando quais mensagens para o fragmento  
- O canal de agrupamento reparte apenas as mensagens identificadas por meio de `ChunkingBehavior` atributo. O `ChunkingBehavior` classe implementa `IOperationBehavior` e é implementado por meio da chamada a `AddBindingParameter` método. Nesse método, o `ChunkingBehavior` examina o valor do seu `AppliesTo` propriedade (`InMessage`, `OutMessage` ou ambos) para determinar quais mensagens devem ser em bloco. Então obtém a ação de cada uma dessas mensagens (da coleção de mensagens no `OperationDescription`) e o adiciona a uma coleção de cadeia de caracteres contida em uma instância do `ChunkingBindingParameter`. Em seguida, adiciona esses `ChunkingBindingParameter` nas `BindingParameterCollection`.  
+### <a name="determining-which-messages-to-chunk"></a>Determinando quais mensagens partes  
+ O canal de agrupamento fragmenta apenas as mensagens identificadas por meio `ChunkingBehavior` do atributo. A `ChunkingBehavior` classe implementa `IOperationBehavior` e é implementada chamando o `AddBindingParameter` método. Nesse `ChunkingBehavior` método, o examina o valor de sua `AppliesTo` Propriedade (`InMessage` `OutMessage` ou ambos) para determinar quais mensagens devem ser fragmentadas. Em seguida, ele obtém a ação de cada uma dessas mensagens (da coleção messages em `OperationDescription`) e a adiciona a uma coleção de cadeia de caracteres contida em uma instância do. `ChunkingBindingParameter` Em seguida, ele `ChunkingBindingParameter` adiciona isso ao `BindingParameterCollection`fornecido.  
   
- Isso `BindingParameterCollection` é passado dentro do `BindingContext` a cada elemento de associação na associação quando esse elemento de associação cria a fábrica de canais ou o ouvinte de canais. O `ChunkingBindingElement`da implementação de `BuildChannelFactory<T>` e `BuildChannelListener<T>` puxar isto `ChunkingBindingParameter` fora dos `BindingContext’`s `BindingParameterCollection`. A coleção de ações contidas dentro de `ChunkingBindingParameter` é então passado para o `ChunkingChannelFactory` ou `ChunkingChannelListener`, que por sua vez o passa para o `ChunkingDuplexSessionChannel`.  
+ Isso `BindingParameterCollection` é passado dentro de `BindingContext` cada elemento de ligação na associação quando esse elemento de ligação cria a fábrica de canais ou o ouvinte de canal. A `ChunkingBindingElement` implementaçãodo`BuildChannelListener<T>` eretire`ChunkingBindingParameter` isso dos s`BindingContext’`. `BindingParameterCollection` `BuildChannelFactory<T>` A `ChunkingBindingParameter` coleção de ações contidas no é passada para o `ChunkingChannelFactory` ou `ChunkingChannelListener`, que, por sua vez, passa para `ChunkingDuplexSessionChannel`o.  
   
-## <a name="running-the-sample"></a>A execução do exemplo  
+## <a name="running-the-sample"></a>Executando o exemplo  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Instale usando o seguinte comando do ASP.NET 4.0.  
+1. Instale o ASP.NET 4,0 usando o comando a seguir.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5. Executar Service.exe primeiro, execute Client.exe e assista a ambas as janelas do console de saída.  
+5. Execute o Service. exe primeiro e execute Client. exe e observe as janelas do console para saída.  
   
- Ao executar o exemplo, a seguinte saída é esperada.  
+ Ao executar o exemplo, a saída a seguir é esperada.  
   
  Cliente:  
   
@@ -352,7 +352,7 @@ Press enter when service is available
  < Received chunk 10 of message 5b226ad5-c088-4988-b737-6a565e0563dd  
 ```  
   
- Servidor:  
+ Servidor  
   
 ```  
 Service started, press enter to exit  

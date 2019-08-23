@@ -2,20 +2,20 @@
 title: <unrecognizedPolicyAssertion>
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: 9de33512f4240dffdd9e549a49f3daf106418258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f57465e6ce0f1fd7887f4adb90ec25d505efbdc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769857"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941080"
 ---
 # <a name="unrecognizedpolicyassertion"></a>\<unrecognizedPolicyAssertion>
-Representa um elemento de associação que especifica a declaração de política. Esse elemento não tem nenhum atributo e está presente como um comutador vazio.  
+Representa um elemento de associação que especifica a declaração de política. Este elemento não tem nenhum atributo e está presente como uma opção vazia.  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<> de associação  
 \<unrecognizedPolicyAssertion>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,12 +40,12 @@ Representa um elemento de associação que especifica a declaração de polític
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
+|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Associações](../../../wcf/bindings.md)
+- [Estendendo associações](../../../wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 580f9ce81e9b3652a9defec25dfd05f47e296d7a
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545381"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933682"
 ---
 # <a name="opentype-font-features"></a>Recursos de fonte OpenType
 
@@ -37,7 +37,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
 - Suporte mais amplo para controle tipográfico avançado.  
   
 > [!NOTE]
->  O SDK do Windows contém um conjunto de fontes OpenType de exemplo que você pode usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] com aplicativos. Essas fontes oferecem a maioria dos recursos ilustrados no restante deste tópico. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
+> O SDK do Windows contém um conjunto de fontes OpenType de exemplo que você pode usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] com aplicativos. Essas fontes oferecem a maioria dos recursos ilustrados no restante deste tópico. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
   
  Consulte a [especificação OpenType](https://go.microsoft.com/fwlink/?LinkId=96731) para obter detalhes do formato de fonte OpenType.  
   

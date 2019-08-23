@@ -2,12 +2,12 @@
 title: Visão geral de atributos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 2ecc3fb0a3bf7365b6eec39e1c5086d99f2c5a19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c799b9be9b936beadde28374bd9882ebc6e2d9a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966314"
 ---
 # <a name="attributes-overview-visual-basic"></a>Visão geral de atributos (Visual Basic)
 Os atributos fornecem um método eficiente de associação de metadados, ou informações declarativas, ao código (assemblies, tipos, métodos, propriedades e etc.). Após um atributo ser associado a uma entidade de programa, o atributo poderá ser consultado no tempo de execução usando uma técnica chamada *reflexão*. Para obter mais informações, consulte [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -67,7 +67,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  Por convenção, todos os nomes de atributo terminam com a palavra "Atributo" para distingui-los de outros itens no .NET Framework. No entanto, você não precisa especificar o sufixo de atributo ao usar atributos no código. Por exemplo, `[DllImport]` é equivalente a `[DllImportAttribute]`, mas `DllImportAttribute` é o nome do atributo real no .NET Framework.  
+> Por convenção, todos os nomes de atributo terminam com a palavra "Atributo" para distingui-los de outros itens no .NET Framework. No entanto, você não precisa especificar o sufixo de atributo ao usar atributos no código. Por exemplo, `[DllImport]` é equivalente a `[DllImportAttribute]`, mas `DllImportAttribute` é o nome do atributo real no .NET Framework.  
   
 ### <a name="attribute-parameters"></a>Parâmetros de atributo  
  Muitos atributos têm parâmetros, que podem ser nomeados, sem nome ou posicionais. Quaisquer parâmetros posicionais devem ser especificados em uma determinada ordem e não podem ser omitidos. Os parâmetros nomeados são opcionais e podem ser especificados em qualquer ordem. Os parâmetros posicionais são especificados primeiro. Por exemplo, esses três atributos são equivalentes:  
@@ -136,7 +136,7 @@ Module: CLSCompliant(True)>
   
 - [Acessando atributos usando reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
-- [Como: Criar uma união do C/C++ usando atributos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Como: Criar uma C/C++ Union usando atributos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
 - [Atributos comuns (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   

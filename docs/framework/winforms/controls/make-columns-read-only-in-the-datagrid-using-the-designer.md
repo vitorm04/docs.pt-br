@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 6bdd561c863a461f43a5a7aac025fead1f971bb0
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 82be9d31ff6bb3f2f5dd8a55b4426103d466bdd6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039817"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952100"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Deixar as colunas somente leitura no controle DataGridView do Windows Forms usando o designer
 Por padrão, os usuários podem modificar texto e dados numéricos exibidos no controle <xref:System.Windows.Forms.DataGridView> de Windows Forms. Se quiser exibir os dados que não são destinados para modificação, você deverá tornar somente leitura as colunas que contêm os dados. Para obter informações sobre como tornar o controle totalmente somente leitura, consulte [como: Impedir adição e exclusão de linhas no controle Windows Forms DataGridView usando o designer](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md).
@@ -28,7 +28,7 @@ Por padrão, os usuários podem modificar texto e dados numéricos exibidos no c
 3. Na grade **Propriedades da coluna** , defina a <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> Propriedade como `true`.
 
     > [!NOTE]
-    >  Você também pode tornar uma coluna somente leitura ao adicioná-la marcando a caixa de seleção **Somente Leitura** na caixa de diálogo **Adicionar Coluna**.
+    > Você também pode tornar uma coluna somente leitura ao adicioná-la marcando a caixa de seleção **Somente Leitura** na caixa de diálogo **Adicionar Coluna**.
 
 ## <a name="see-also"></a>Consulte também
 

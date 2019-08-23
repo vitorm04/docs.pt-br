@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c037f2509aaa0a5e4c3f7a844614742b6f21bec3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f86c4388fd633c72e846c227d45eff09bb66cf44
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769142"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951117"
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>Método ICorProfilerCallback::MovedReferences
-Chamado para relatar o novo layout dos objetos no heap como resultado de uma coleta de lixo de compactação.  
+Chamado para relatar o novo layout de objetos no heap como resultado de uma coleta de lixo de compactação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,37 +39,37 @@ HRESULT MovedReferences(
   
 ## <a name="parameters"></a>Parâmetros  
  `cMovedObjectIDRanges`  
- [in] O número de blocos de objetos contíguos que movidas como resultado da compactação coleta de lixo. Ou seja, o valor de `cMovedObjectIDRanges` é o tamanho total do `oldObjectIDRangeStart`, `newObjectIDRangeStart`, e `cObjectIDRangeLength` matrizes.  
+ no O número de blocos de objetos contíguos que foram movidos como resultado da coleta de lixo de compactação. Ou seja, o valor de `cMovedObjectIDRanges` é o tamanho total `oldObjectIDRangeStart`das matrizes `newObjectIDRangeStart`, e `cObjectIDRangeLength` .  
   
- Os próximos três argumentos de `MovedReferences` são matrizes paralelas. Em outras palavras, `oldObjectIDRangeStart[i]`, `newObjectIDRangeStart[i]`, e `cObjectIDRangeLength[i]` todos dizem respeito a um único bloco de objetos contíguos.  
+ Os próximos três argumentos de `MovedReferences` são matrizes paralelas. Em outras palavras, `oldObjectIDRangeStart[i]` `newObjectIDRangeStart[i]`,, e `cObjectIDRangeLength[i]` todos se preocupam com um único bloco de objetos contíguos.  
   
  `oldObjectIDRangeStart`  
- [in] Uma matriz de `ObjectID` valores, cada um deles é o antigo (coleta de lixo de pré-lançamento) endereço de um bloco de contíguos inicial, os objetos dinâmicos na memória.  
+ no Uma matriz de `ObjectID` valores, cada um dos quais é o endereço inicial (coleta antes de lixo) de um bloco de objetos dinâmicos contíguos na memória.  
   
  `newObjectIDRangeStart`  
- [in] Uma matriz de `ObjectID` valores, cada um deles é o novo endereço inicial (coleta de pós-lixo) de um bloco de contíguos, live objetos na memória.  
+ no Uma matriz de `ObjectID` valores, cada um dos quais é o novo endereço inicial (coleta de lixo) de um bloco de objetos dinâmicos contíguos na memória.  
   
  `cObjectIDRangeLength`  
- [in] Uma matriz de inteiros, cada um deles é o tamanho de um bloco de objetos adjacentes na memória.  
+ no Uma matriz de inteiros, cada qual é o tamanho de um bloco de objetos contíguos na memória.  
   
- Um tamanho for especificado para cada bloco que é referenciado na `oldObjectIDRangeStart` e `newObjectIDRangeStart` matrizes.  
+ Um tamanho é especificado para cada bloco que é referenciado nas `oldObjectIDRangeStart` matrizes e `newObjectIDRangeStart` .  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]
->  Esse método informa os tamanhos como `MAX_ULONG` para objetos que são maiores que 4 GB em plataformas de 64 bits. Para obter o tamanho dos objetos que são maiores que 4 GB, use o [ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) método em vez disso.  
+> Esse método relata tamanhos `MAX_ULONG` para objetos que são maiores que 4 GB em plataformas de 64 bits. Para obter o tamanho dos objetos com mais de 4 GB, use o método [ICorProfilerCallback4:: MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) em vez disso.  
   
- Um compactação coletor de lixo recupera a memória ocupada por objetos inativos e compacta que liberado espaço. Como resultado, os objetos em tempo real podem ser movidos no heap, e `ObjectID` valores distribuídos por meio de notificações anteriores pode ser alterado.  
+ Um coletor de lixo de compactação recupera a memória ocupada por objetos inativos e compacta o espaço livre. Como resultado, os objetos dinâmicos podem ser movidos dentro do heap `ObjectID` , e os valores distribuídos pelas notificações anteriores podem ser alterados.  
   
- Suponha que uma já existente `ObjectID` valor (`oldObjectID`) se encontra dentro do seguinte intervalo:  
+ Suponha que um valor `ObjectID` existente (`oldObjectID`) está dentro do seguinte intervalo:  
   
  `oldObjectIDRangeStart[i]` <= `oldObjectID` < `oldObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- Nesse caso, o deslocamento do início do intervalo para o início do objeto é da seguinte maneira:  
+ Nesse caso, o deslocamento do início do intervalo até o início do objeto é o seguinte:  
   
  `oldObjectID` - `oldObjectRangeStart[i]`  
   
- Para qualquer valor de `i` que está no seguinte intervalo:  
+ Para qualquer valor `i` que esteja no seguinte intervalo:  
   
  0 <= `i` < `cMovedObjectIDRanges`  
   
@@ -77,14 +77,14 @@ HRESULT MovedReferences(
   
  `newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)  
   
- Nenhum dos `ObjectID` valores passados pelo `MovedReferences` são válidos durante o retorno de chamada em si, porque a coleta de lixo pode estar no meio de movimentação de objetos de locais antigos para novos locais. Portanto, os criadores de perfis não devem tentar inspecionar objetos durante uma chamada `MovedReferences`. Um [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) retorno de chamada indica que todos os objetos foram movidos para os novos locais e inspeção pode ser executada.  
+ Nenhum dos `ObjectID` valores passados por `MovedReferences` são válidos durante o próprio retorno de chamada, pois a coleta de lixo pode estar no meio da movimentação de objetos de locais antigos para novos locais. Portanto, os criadores de perfis não devem tentar inspecionar objetos durante uma chamada `MovedReferences`. Um retorno de chamada [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) indica que todos os objetos foram movidos para seus novos locais e a inspeção pode ser executada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl, CorProf.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

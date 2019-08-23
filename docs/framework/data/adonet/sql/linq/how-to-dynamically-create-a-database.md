@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623860"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940081"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Como: criar um banco de dados dinamicamente
 No LINQ to SQL, um modelo de objeto é mapeado para um banco de dados relacional. O mapeamento é habilitado usando o mapeamento baseado em atributo ou um arquivo de mapeamento externo para descrever a estrutura do banco de dados relacional. Em ambos os cenários, há informações suficientes sobre o banco de dados relacional para que você possa criar uma nova instância do banco de dados usando o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
@@ -26,7 +26,7 @@ No LINQ to SQL, um modelo de objeto é mapeado para um banco de dados relacional
  Você também pode usar o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> com o SQL Server usando um arquivo .mdf ou um nome de catálogo, dependendo da cadeia de conexão. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa a cadeia de conexão para definir o banco de dados a ser criado e em qual servidor o banco de dados será criado.  
   
 > [!NOTE]
->  Sempre que possível, use a Segurança Integrada do Windows para se conectar ao banco de dados, de modo que não sejam necessárias senhas na cadeia de conexão.  
+> Sempre que possível, use a Segurança Integrada do Windows para se conectar ao banco de dados, de modo que não sejam necessárias senhas na cadeia de conexão.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir fornece um exemplo de como criar um novo banco de dados chamado MyDVDs.mdf.  

@@ -7,40 +7,40 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: fa6486db483c004430e0e8ed75c75a6b25c05d6b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 561839138baf448db881e3bd72777bda7b7c65bb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613578"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941248"
 ---
 # <a name="endpoint-creation-overview"></a>Visão geral de criação de ponto de extremidade
-Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade fornecem os clientes acessem a funcionalidade que oferece um serviço WCF. Esta seção descreve a estrutura de um ponto de extremidade e descreve como definir um ponto de extremidade na configuração e no código.  
+Toda a comunicação com um serviço Windows Communication Foundation (WCF) ocorre por meio dos *pontos de extremidade* do serviço. Os pontos de extremidade fornecem aos clientes acesso à funcionalidade oferecida por um serviço WCF. Esta seção descreve a estrutura de um ponto de extremidade e destaca como definir um ponto de extremidade na configuração e no código.  
   
 ## <a name="the-structure-of-an-endpoint"></a>A estrutura de um ponto de extremidade  
  Cada ponto de extremidade contém um endereço que indica onde encontrar o ponto de extremidade, uma associação que especifica como um cliente pode se comunicar com o ponto de extremidade e um contrato que identifica os métodos disponíveis.  
   
-- **Endereço**. O endereço identifica o ponto de extremidade exclusivamente e informa à consumidores em potencial em que o serviço está localizado. Ele é representado no modelo de objeto WCF pelo <xref:System.ServiceModel.EndpointAddress> endereço, que contém um identificador de recurso uniforme (URI) e as propriedades de endereço que incluem uma identidade, alguns elementos de descrição linguagem WSDL (Web Services) e uma coleção de opcional cabeçalhos. Os cabeçalhos opcionais fornecem informações adicionais de endereçamento detalhadas para identificar ou interagir com o ponto de extremidade. Para obter mais informações, consulte [especificação de um endereço de ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+- **Endereço**. O endereço identifica exclusivamente o ponto de extremidade e informa aos possíveis consumidores onde o serviço está localizado. Ele é representado no modelo de objeto do WCF pelo <xref:System.ServiceModel.EndpointAddress> endereço, que contém um URI (Uniform Resource Identifier) e propriedades de endereço que incluem uma identidade, alguns elementos WSDL (Web Services Description Language) e uma coleção de opcional conector. Os cabeçalhos opcionais fornecem informações adicionais de endereçamento detalhadas para identificar ou interagir com o ponto de extremidade. Para obter mais informações, consulte [especificando um endereço de ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
-- **Associação**. A associação especifica como se comunicar com o ponto de extremidade. A associação especifica como o ponto de extremidade se comunica com o mundo, incluindo qual protocolo de transporte usar (por exemplo, TCP ou HTTP), codificação a ser usada para as mensagens (por exemplo, texto ou binário), e quais requisitos de segurança são necessários (para exemplo, Secure Sockets Layer [SSL] ou segurança de mensagem SOAP). Para obter mais informações, consulte [usando associações para configurar os serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+- **Associação**. A associação especifica como se comunicar com o ponto de extremidade. A associação especifica como o ponto de extremidade se comunica com o mundo, incluindo qual protocolo de transporte deve ser usado (por exemplo, TCP ou HTTP), que codificação usar para as mensagens (por exemplo, texto ou binário) e quais requisitos de segurança são necessários (para exemplo, protocolo SSL [SSL] ou segurança de mensagem SOAP). Para obter mais informações, consulte [usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
-- **Contrato de serviço**. O contrato de serviço descreve qual funcionalidade que o ponto de extremidade expõe para o cliente. Um contrato especifica as operações que um cliente pode chamar, o formulário da mensagem e o tipo de dados necessários para chamar a operação e o tipo de processamento ou o cliente pode esperar de mensagem de resposta ou parâmetros de entrada. Três tipos básicos de contratos correspondem aos padrões de troca de mensagens básicas (MEPs): datagrama (unidirecional), solicitação/resposta e duplex (bidirecional). O contrato de serviço também pode empregar os contratos de dados e a mensagem em exigem tipos de dados específicos e formatos de mensagem quando acessados. Para obter mais informações sobre como definir um contrato de serviço, consulte [Criando contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md). Observe que um cliente também pode ser necessário para implementar um contrato de serviço definido, chamado de um contrato de retorno de chamada, receber mensagens do serviço em um MEP duplex. Para obter mais informações, consulte [serviços Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+- **Contrato de serviço**. O contrato de serviço descreve qual funcionalidade o ponto de extremidade expõe para o cliente. Um contrato especifica as operações que um cliente pode chamar, a forma da mensagem e o tipo de parâmetros de entrada ou dados necessários para chamar a operação e o tipo de mensagem de processamento ou resposta que o cliente pode esperar. Três tipos básicos de contratos correspondem aos padrões de troca de mensagens básicos (MEPs): datagrama (unidirecional), solicitação/resposta e duplex (bidirecional). O contrato de serviço também pode empregar dados e contratos de mensagem para exigir tipos de dados e formatos de mensagem específicos ao serem acessados. Para obter mais informações sobre como definir um contrato de serviço, consulte [projetando contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md). Observe que um cliente também pode ser solicitado a implementar um contrato definido pelo serviço, chamado de contrato de retorno de chamada, para receber mensagens do serviço em um MEP duplex. Para obter mais informações, consulte [duplex Services](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
- O ponto de extremidade para um serviço pode ser especificado imperativamente por meio de código ou declarativamente por meio da configuração. Se nenhum ponto de extremidade forem especificados, em seguida, o tempo de execução fornece pontos de extremidade padrão com a adição de um ponto de extremidade padrão para cada endereço base para cada contrato de serviço implementado pelo serviço. Definir pontos de extremidade no código geralmente não é prático porque as associações e endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Em geral, é mais prático definir pontos de extremidade de serviço usando a configuração em vez de código. Informações fora do código de endereçamento e manter a associação permite que eles alterem os sem ter que recompilar e reimplantar o aplicativo.  
+ O ponto de extremidade de um serviço pode ser especificado de forma imperativa usando código ou declarativamente por meio de configuração. Se nenhum ponto de extremidade for especificado, o tempo de execução fornecerá pontos de extremidade padrão adicionando um ponto de extremidades padrão para cada endereço base para cada contrato de serviço implementado pelo serviço. A definição de pontos de extremidade no código geralmente não é prática porque as associações e os endereços para um serviço implantado são normalmente diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Em geral, é mais prático definir pontos de extremidade de serviço usando a configuração em vez de código. Manter a ligação e as informações de endereçamento do código permite que elas sejam alteradas sem a necessidade de recompilar e reimplantar o aplicativo.  
   
 > [!NOTE]
->  Ao adicionar um ponto de extremidade de serviço que executa representação, você deve usar um dos <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> métodos ou o <xref:System.ServiceModel.Description.ContractDescription.GetContract%28System.Type%2CSystem.Type%29> método para carregar corretamente o contrato em um novo <xref:System.ServiceModel.Description.ServiceDescription> objeto.  
+> Ao adicionar um ponto de extremidade de serviço que executa a representação, você deve usar <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> um dos métodos <xref:System.ServiceModel.Description.ContractDescription.GetContract%28System.Type%2CSystem.Type%29> ou o método para carregar corretamente o contrato em <xref:System.ServiceModel.Description.ServiceDescription> um novo objeto.  
   
-## <a name="defining-endpoints-in-code"></a>Definir pontos de extremidade no código  
+## <a name="defining-endpoints-in-code"></a>Definindo pontos de extremidade no código  
  O exemplo a seguir ilustra como especificar um ponto de extremidade no código com o seguinte:  
   
-- Definir um contrato para um `IEcho` tipo de serviço que aceita o nome e o eco com a resposta de alguém "Hello \<nome >!".  
+- Defina um contrato para um `IEcho` tipo de serviço que aceite o nome de uma pessoa e o eco com a \<resposta "Olá, >!".  
   
-- Implementar uma `Echo` serviço do tipo definido pelo `IEcho` contrato.  
+- Implemente `Echo` um serviço do tipo definido `IEcho` pelo contrato.  
   
-- Especifique um endereço de ponto de extremidade de `http://localhost:8000/Echo` para o serviço.  
+- Especifique um endereço de ponto `http://localhost:8000/Echo` de extremidade para o serviço.  
   
-- Configurar o `Echo` usando um <xref:System.ServiceModel.WSHttpBinding> associação.  
+- Configure o `Echo` serviço usando uma <xref:System.ServiceModel.WSHttpBinding> associação.  
   
 ```csharp  
 Namespace Echo  
@@ -119,23 +119,23 @@ serviceHost.Open()
 ```  
   
 > [!NOTE]
->  O host de serviço é criado com um endereço básico e, em seguida, o restante do endereço, relativo ao endereço base, é especificado como parte de um ponto de extremidade. Esse particionamento do endereço permite que vários pontos de extremidade seja definido de forma mais conveniente para os serviços em um host.  
+> O host de serviço é criado com um endereço base e, em seguida, o restante do endereço, relativo ao endereço base, é especificado como parte de um ponto de extremidade. Esse particionamento do endereço permite que vários pontos de extremidade sejam definidos mais convenientemente para os serviços em um host.  
   
 > [!NOTE]
->  Propriedades de <xref:System.ServiceModel.Description.ServiceDescription> no serviço de aplicativo não deve ser modificado subsequente para o <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> método em <xref:System.ServiceModel.ServiceHostBase>. Alguns membros, como o <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> propriedade e o `AddServiceEndpoint` métodos <xref:System.ServiceModel.ServiceHostBase> e <xref:System.ServiceModel.ServiceHost>, lançar uma exceção se modificado além daquele ponto. Outros permitem que você modificá-los, mas o resultado será indefinido.  
+> As propriedades <xref:System.ServiceModel.Description.ServiceDescription> do no aplicativo de serviço não devem ser modificadas subsequentemente para <xref:System.ServiceModel.ServiceHostBase>o <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> método em. Alguns <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> Membros, como a propriedade e os `AddServiceEndpoint` métodos em <xref:System.ServiceModel.ServiceHostBase> e <xref:System.ServiceModel.ServiceHost>, geram uma exceção, caso tenham sido modificados após esse ponto. Outros permitem que você os modifique, mas o resultado é indefinido.  
 >   
->  Da mesma forma, no cliente a <xref:System.ServiceModel.Description.ServiceEndpoint> valores não devem ser modificados após a chamada para <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> sobre o <xref:System.ServiceModel.ChannelFactory>. O <xref:System.ServiceModel.ChannelFactory.Credentials%2A> propriedade gera uma exceção se modificado após esse ponto. Os outros valores de descrição de cliente podem ser modificados sem erro, mas o resultado será indefinido.  
+>  Da mesma forma, no cliente <xref:System.ServiceModel.Description.ServiceEndpoint> , os valores não devem ser modificados após <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> a chamada <xref:System.ServiceModel.ChannelFactory>para no. A <xref:System.ServiceModel.ChannelFactory.Credentials%2A> propriedade gera uma exceção se modificada após esse ponto. Os outros valores de descrição do cliente podem ser modificados sem erros, mas o resultado é indefinido.  
 >   
->  Se para o serviço ou cliente, é recomendável que você modifique a descrição antes de chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>.  
+>  Seja para o serviço ou cliente, é recomendável que você modifique a descrição antes de chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>.  
   
-## <a name="defining-endpoints-in-configuration"></a>Definir pontos de extremidade na configuração  
- Ao criar um aplicativo, você geralmente deseja adiar as decisões para o administrador que está implantando o aplicativo. Por exemplo, há muitas vezes não há como saber antecipadamente que um serviço (um URI) de endereços será. Em vez de embutir um endereço, é preferível para permitir que um administrador para fazer isso depois de criar um serviço. Essa flexibilidade é realizada por meio da configuração. Para obter detalhes, consulte [Configurando os serviços de](../../../docs/framework/wcf/configuring-services.md).  
+## <a name="defining-endpoints-in-configuration"></a>Definindo pontos de extremidade na configuração  
+ Ao criar um aplicativo, muitas vezes você desejará adiar decisões para o administrador que está implantando o aplicativo. Por exemplo, geralmente não há como saber com antecedência o que será um endereço de serviço (URI). Em vez de embutir em código um endereço, é preferível permitir que um administrador faça isso depois de criar um serviço. Essa flexibilidade é realizada por meio da configuração. Para obter detalhes, consulte Configurando [Serviços](../../../docs/framework/wcf/configuring-services.md).  
   
 > [!NOTE]
->  Use o [ferramenta Utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) com o `/config:` *filename*`[,`*filename* `]` alternar para Crie rapidamente arquivos de configuração.  
+> `[,`Use a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) com a `/config:`opção filename*filename* `]` para criar arquivos de configuração rapidamente.  
   
 ## <a name="using-default-endpoints"></a>Usando pontos de extremidade padrão  
- Se nenhum ponto de extremidade forem especificados no código ou na configuração, em seguida, o tempo de execução fornece pontos de extremidade padrão com a adição de um ponto de extremidade padrão para cada endereço base para cada contrato de serviço implementado pelo serviço. O endereço base pode ser especificado no código ou na configuração e os pontos de extremidade padrão são adicionados quando <xref:System.ServiceModel.ICommunicationObject.Open> é chamado de <xref:System.ServiceModel.ServiceHost>. Este exemplo é o mesmo exemplo da seção anterior, mas uma vez que nenhum ponto de extremidade forem especificados, os pontos de extremidade padrão são adicionados.  
+ Se nenhum ponto de extremidade for especificado no código ou na configuração, o tempo de execução fornecerá os pontos de extremidade padrão adicionando um ponto de extremidades padrão para cada endereço base para cada contrato de serviço implementado pelo serviço. O endereço base pode ser especificado no código ou na configuração, e os pontos de extremidade padrão são adicionados quando <xref:System.ServiceModel.ICommunicationObject.Open> é chamado <xref:System.ServiceModel.ServiceHost>no. Este exemplo é o mesmo exemplo da seção anterior, mas como nenhum ponto de extremidade é especificado, os pontos de extremidade padrão são adicionados.  
   
 ```csharp  
 Namespace Echo  
@@ -196,7 +196,7 @@ Dim echoUri As Uri = New Uri("http://localhost:8000/")
 serviceHost.Open()  
 ```  
   
- Se os pontos de extremidade forem fornecidos explicitamente, os pontos de extremidade padrão ainda podem ser adicionados chamando <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> sobre o <xref:System.ServiceModel.ServiceHost> antes de chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obter mais informações sobre pontos de extremidade padrão, consulte [configuração simplificado](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Se os pontos de extremidade forem fornecidos explicitamente, os pontos de extremidade padrão ainda poderão ser adicionados chamando <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> no antes <xref:System.ServiceModel.ServiceHost> de chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obter mais informações sobre pontos de extremidade padrão, consulte [configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Consulte também
 

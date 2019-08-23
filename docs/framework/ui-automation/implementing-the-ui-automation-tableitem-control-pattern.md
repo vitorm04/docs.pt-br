@@ -6,25 +6,25 @@ helpviewer_keywords:
 - UI Automation, Table Item control pattern
 - TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-ms.openlocfilehash: 3893f69ca6f73665ea3ea4b4f07970b847097f11
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f368fee6df6ebe5455f2029670e90f036d3d89a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649465"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932100"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>Implementando o padrão de controle TableItem de interface de usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
- Este tópico apresenta diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.ITableItemProvider>, incluindo informações sobre propriedades e eventos. Links para referências adicionais são listadas no final da visão geral.  
+ Este tópico apresenta diretrizes e convenções para implementação <xref:System.Windows.Automation.Provider.ITableItemProvider>, incluindo informações sobre eventos e propriedades. Links para referências adicionais são listados no final da visão geral.  
   
- O <xref:System.Windows.Automation.TableItemPattern> padrão de controle é usado para dar suporte a controles filhos de contêineres que implementam <xref:System.Windows.Automation.Provider.ITableProvider>. Acesso à funcionalidade das células individuais é fornecido pela implementação simultânea necessária de <xref:System.Windows.Automation.Provider.IGridItemProvider>. Esse padrão de controle é análogo à <xref:System.Windows.Automation.Provider.IGridItemProvider> com a diferença que qualquer controle implementando <xref:System.Windows.Automation.Provider.ITableItemProvider> por meio de programação deve expor a relação entre a célula individual e suas informações de linha e coluna. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação de interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ O <xref:System.Windows.Automation.TableItemPattern> padrão de controle é usado para dar suporte a controles filho de <xref:System.Windows.Automation.Provider.ITableProvider>contêineres que implementam o. O acesso à funcionalidade de célula individual é fornecido pela implementação simultânea necessária do <xref:System.Windows.Automation.Provider.IGridItemProvider>. Esse padrão de controle é análogo <xref:System.Windows.Automation.Provider.IGridItemProvider> à distinção que qualquer controle que implementa <xref:System.Windows.Automation.Provider.ITableItemProvider> deve expor de forma programática a relação entre a célula individual e suas informações de linha e coluna. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
+## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
   
-- Para a funcionalidade do item de grade relacionados, consulte [Implementando o padrão de controle GridItem de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md).  
+- Para obter a funcionalidade de item de grade relacionada, consulte [implementando o padrão de controle GridItem de automação da interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
   
 <a name="Required_Members_for_ITableItemProvider"></a>   
 ## <a name="required-members-for-itableitemprovider"></a>Membros necessários para ITableItemProvider  
@@ -34,11 +34,11 @@ ms.locfileid: "64649465"
 |<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|Método|Nenhum|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|Método|Nenhum|  
   
- Esse padrão de controle não tem propriedades associadas ou eventos.  
+ Este padrão de controle não tem propriedades ou eventos associados.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  
- Esse padrão de controle não tem exceção associada.  
+ Este padrão de controle não tem nenhuma exceção associada.  
   
 ## <a name="see-also"></a>Consulte também
 
