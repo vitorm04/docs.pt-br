@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ee08e9ca243ac086a0b75892bf9258246e8fd7c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 343abf450a49ad222c403c28e46c6e3aac33e1b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490667"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966158"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nomenclatura forte (referência de API não gerenciada)
 A API de nomenclatura forte permite que um cliente administre a assinatura de nome forte para assemblies.  
@@ -23,7 +23,7 @@ A API de nomenclatura forte permite que um cliente administre a assinatura de no
 ## <a name="in-this-section"></a>Nesta seção  
   
 > [!NOTE]
->  Todas essas funções foram preteridas a partir do .NET Framework 4. Para alternativas sugeridas, consulte a interface [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
+> Todas essas funções foram preteridas a partir do .NET Framework 4. Para alternativas sugeridas, consulte a interface [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
   
  [Função GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
  Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado. Preteridos do .NET Framework 4 em diante.  
