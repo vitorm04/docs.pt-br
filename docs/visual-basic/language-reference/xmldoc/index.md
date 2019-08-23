@@ -8,22 +8,22 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: e59ee25b22c51e47dc83233af33099e6c55de87b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d6519af8ca1a0e2d59131eec4d63646dce7318b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940849"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913499"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>marcações XML recomendadas para comentários da documentação (Visual Basic)
-O compilador do Visual Basic pode processar comentários de documentação em seu código para um arquivo XML. Você pode usar ferramentas adicionais para processar o arquivo XML em documentação.  
+O compilador Visual Basic pode processar comentários de documentação em seu código para um arquivo XML. Você pode usar ferramentas adicionais para processar o arquivo XML na documentação do.  
   
- Comentários XML são permitidos em construções de código, como tipos e membros de tipo. Para tipos parciais, apenas uma parte do tipo pode ter comentários XML, embora não haja nenhuma restrição em comentar seus membros.  
+ Comentários XML são permitidos em construções de código, como tipos e membros de tipo. Para tipos parciais, apenas uma parte do tipo pode ter comentários XML, embora não haja nenhuma restrição ao comentar seus membros.  
   
 > [!NOTE]
->  Comentários de documentação não podem ser aplicados a namespaces. O motivo é que um namespace pode abranger vários assemblies, e nem todos os assemblies precisam ser carregados ao mesmo tempo.  
+> Comentários de documentação não podem ser aplicados a namespaces. O motivo é que um namespace pode abranger vários assemblies, e nem todos os assemblies precisam ser carregados ao mesmo tempo.  
   
- O compilador processa qualquer marca que é um XML válido. As seguintes marcas fornecem funcionalidades comumente usadas na documentação do usuário.  
+ O compilador processa qualquer marca que seja XML válida. As marcas a seguir fornecem funcionalidade comumente usada na documentação do usuário.  
   
 ||||  
 |---|---|---|  
@@ -37,7 +37,7 @@ O compilador do Visual Basic pode processar comentários de documentação em se
  (<sup>1</sup> o compilador verifica a sintaxe.)  
   
 > [!NOTE]
->  Se você quiser colchetes angulares sejam exibidos no texto de um comentário de documentação, use `&lt;` e `&gt;`. Por exemplo, a cadeia de caracteres `"&lt;text in angle brackets&gt;"` será exibido como `<text in angle brackets>`.  
+> Se você quiser que os colchetes angulares apareçam no texto de um comentário de `&lt;` documentação `&gt;`, use e. Por exemplo, a cadeia `"&lt;text in angle brackets&gt;"` de caracteres será `<text in angle brackets>`exibida como.  
   
 ## <a name="see-also"></a>Consulte também
 

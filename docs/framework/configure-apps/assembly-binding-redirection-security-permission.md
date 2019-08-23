@@ -5,33 +5,33 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: ba4e7e790860696f4489e9ef7b73bddcb8c4e399
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b59689e78f901637674c0a1df28ed74411e8e7c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705422"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921380"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Permissão de segurança para redirecionamento de associações de assemblies
-O redirecionamento de associação de assembly explícito em um arquivo de configuração do aplicativo requer uma permissão de segurança. Isso se aplica ao redirecionamento de assemblies do .NET Framework e assemblies de terceiros. A permissão é concedida ao definir a <xref:System.Security.Permissions.SecurityPermissionFlag> sinalizador no <xref:System.Security.Permissions.SecurityPermission>. Por padrão, os assemblies gerenciados não têm nenhuma permissão.  
+O redirecionamento de associação de assembly explícito em um arquivo de configuração do aplicativo requer uma permissão de segurança. Isso se aplica ao redirecionamento de assemblies do .NET Framework e assemblies de terceiros. A permissão é concedida definindo o <xref:System.Security.Permissions.SecurityPermissionFlag> sinalizador <xref:System.Security.Permissions.SecurityPermission>no. Os assemblies gerenciados não têm permissões por padrão.  
   
- A permissão de segurança é concedida aos aplicativos executados nas zonas confiáveis (computador local) e zona da Intranet. Aplicativos em execução na zona da Internet estritamente estão proibidos de realizar o redirecionamento de associação de assembly.  
+ A permissão de segurança é concedida a aplicativos executados na zona de zona confiável (computador local) e na intranet. Os aplicativos executados na zona da Internet são estritamente proibidos de executar o redirecionamento de associação de assembly.  
   
- A permissão não é necessária se o redirecionamento de assembly é executado em um arquivo de política de publicador é controlado pelo editor de componente, ou no arquivo de configuração do computador é controlado pelo administrador. No entanto, a permissão é necessária para um aplicativo ignorar explicitamente a política de publicador usando o [ \<publisherPolicy aplicar = "no" / >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elemento no arquivo de configuração do aplicativo.  
+ A permissão não será necessária se o redirecionamento de assembly for executado em um arquivo de política do Publicador que é controlado pelo editor de componentes ou no arquivo de configuração do computador que é controlado pelo administrador. No entanto, a permissão é necessária para que um aplicativo ignore explicitamente a política do editor usando o [ \<elemento publisherPolicy Apply Apply = "no"/>](./file-schema/runtime/publisherpolicy-element.md) no arquivo de configuração do aplicativo.  
   
- A tabela a seguir mostra o padrão de configurações de segurança para o **BindingRedirects** sinalizador.  
+ A tabela a seguir mostra as configurações de segurança padrão para o sinalizador **BindingRedirects** .  
   
-|Zona|Configuração do sinalizador de BindingRedirects|  
+|Zona|Configuração do sinalizador BindingRedirects|  
 |----------|-----------------------------------|  
 |Zona confiável (computador local)|**ON**|  
 |Zona da intranet|**ON**|  
 |Zona da Internet|**OFF**|  
 |Zonas não confiáveis|**OFF**|  
   
- Um administrador pode alterar essas configurações de segurança para oferecer suporte ou restringir os cenários específicos em um determinado computador. Não há nenhuma ferramenta para alterar o **BindingRedirects** sinalizador de configuração do padrão; um administrador deve editar manualmente o arquivo Security config no computador do usuário.  
+ Um administrador pode alterar essas configurações de segurança para dar suporte ou restringir cenários específicos em um determinado computador. Não há ferramentas para alterar a configuração de sinalizador **BindingRedirects** do padrão; um administrador deve editar manualmente o arquivo Security. config no computador de um usuário.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Arquivos de política de editor e execução lado a lado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/06d2bae3(v=vs.100))
-- [Como: Habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
-- [Execução lado a lado](../../../docs/framework/deployment/side-by-side-execution.md)
+- [Arquivos de política do Publicador e execução lado a lado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/06d2bae3(v=vs.100))
+- [Como: Habilitar e desabilitar o redirecionamento automático de associações](how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Execução lado a lado](../deployment/side-by-side-execution.md)

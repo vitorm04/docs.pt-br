@@ -1,19 +1,19 @@
 ---
-title: <diagnostics> para a ativação
+title: <diagnostics>para ativação
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 30456963a7d74a93e39bb1fddc0910daae97f039
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 543c41936921eda39017e07f1c97294b268a9141
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704252"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919213"
 ---
-# <a name="diagnostics-for-activation"></a>\<diagnóstico > para ativação
-Configura as funcionalidades de diagnóstico do ouvinte do Windows Communication Foundation (WCF).  
+# <a name="diagnostics-for-activation"></a>\<> de diagnóstico para ativação
+Configura as funcionalidades de diagnóstico do ouvinte Windows Communication Foundation (WCF).  
   
  \<system.serviceModel.activation>  
-\<diagnóstico >  
+\<> de diagnóstico  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ Configura as funcionalidades de diagnóstico do ouvinte do Windows Communication
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contém definições de configuração para o processo de escuta SMSvcHost.exe.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Contém definições de configuração para o processo de ouvinte SMSvcHost. exe.|  
   
 ## <a name="see-also"></a>Consulte também
 

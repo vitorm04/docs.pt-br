@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bfcdcd172d96660c3351926a9c42d298ac3fa654
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608736"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928559"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurando associações para serviços do Windows Communication Foundation
-Ao criar um aplicativo, você geralmente deseja adiar as decisões para o administrador após a implantação do aplicativo. Por exemplo, geralmente não há nenhuma maneira de saber com antecedência qual um endereço de serviço ou o identificador de recurso uniforme (URI), será. Em vez de embutir um endereço, é preferível para permitir que um administrador para fazer isso depois de criar um serviço. Essa flexibilidade é realizada por meio da configuração.  
+Ao criar um aplicativo, muitas vezes você desejará adiar decisões para o administrador após a implantação do aplicativo. Por exemplo, geralmente não há como saber com antecedência o que é um endereço de serviço, ou Uniform Resource Identifier (URI), será. Em vez de embutir em código um endereço, é preferível permitir que um administrador faça isso depois de criar um serviço. Essa flexibilidade é realizada por meio da configuração.  
   
 > [!NOTE]
->  Use o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) com o `/config` switch para criar rapidamente arquivos de configuração.  
+> Use a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) com a `/config` opção para criar rapidamente os arquivos de configuração.  
   
 ## <a name="major-sections"></a>Seções principais  
- O esquema de configuração do Windows Communication Foundation (WCF) inclui as três seções principais (`serviceModel`, `bindings`, e `services`):  
+ O esquema de configuração do Windows Communication Foundation (WCF) inclui as três seções principais`serviceModel`a `bindings`seguir ( `services`, e):  
   
 ```xml  
 <configuration>  
@@ -33,14 +33,14 @@ Ao criar um aplicativo, você geralmente deseja adiar as decisões para o admini
 </configuration>  
 ```  
   
-### <a name="servicemodel-elements"></a>Elementos de ServiceModel  
- Você pode usar a seção delimitada pelo `system.ServiceModel` elemento para configurar um tipo de serviço com um ou mais pontos de extremidade, bem como configurações de um serviço. Cada ponto de extremidade, em seguida, pode ser configurado com um endereço, um contrato e uma associação. Para obter mais informações sobre pontos de extremidade, consulte [visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md). Se nenhum ponto de extremidade forem especificados, o tempo de execução adiciona pontos de extremidade padrão. Para obter mais informações sobre pontos de extremidade, associações e comportamentos padrão, confira [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [Configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+### <a name="servicemodel-elements"></a>Elementos ServiceModel  
+ Você pode usar a seção vinculada pelo `system.ServiceModel` elemento para configurar um tipo de serviço com um ou mais pontos de extremidade, bem como configurações para um serviço. Cada ponto de extremidade pode ser configurado com um endereço, um contrato e uma associação. Para obter mais informações sobre pontos de extremidade, consulte [visão geral da criação de ponto de extremidades](../../../docs/framework/wcf/endpoint-creation-overview.md). Se nenhum ponto de extremidade for especificado, o tempo de execução adicionará pontos de extremidade padrão. Para obter mais informações sobre pontos de extremidade, associações e comportamentos padrão, confira [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [Configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
- Uma associação Especifica (pipes HTTP, TCP, enfileiramento de mensagens) de transportes e protocolos (segurança, confiabilidade, os fluxos de transação) e consiste em elementos, cada um deles especifica um aspecto de como um ponto de extremidade se comunica com o mundo de associação.  
+ Uma associação especifica transportes (HTTP, TCP, Pipes, Enfileiramento de mensagens) e protocolos (segurança, confiabilidade, fluxos de transação) e consiste em elementos de associação, cada um deles especificando um aspecto de como um ponto de extremidade se comunica com o mundo.  
   
- Por exemplo, especificando o [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento indica para usar o HTTP como o transporte para um ponto de extremidade. Isso é usado para conectar o ponto de extremidade no tempo de execução quando o serviço usando esse ponto de extremidade é aberto.  
+ Por exemplo, especificar o [ \<elemento BasicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) indica usar http como o transporte de um ponto de extremidade. Isso é usado para conectar o ponto de extremidade em tempo de execução quando o serviço que usa esse ponto de extremidade é aberto.  
   
- Há dois tipos de associações: predefinidos e personalizados. Associações predefinidas contêm útil combinações de elementos que são usados em cenários comuns. Para obter uma lista de tipos de associação predefinida que o WCF fornece, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md). Se nenhuma coleção de associação predefinida tiver a combinação correta de recursos que precisa de um aplicativo de serviço, você pode construir ligações personalizadas para atender aos requisitos do aplicativo. Para obter mais informações sobre ligações personalizadas, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Há dois tipos de associações: predefinidos e personalizados. As associações predefinidas contêm combinações úteis de elementos que são usadas em cenários comuns. Para obter uma lista de tipos de associação predefinidos que o WCF fornece, consulte [associações fornecidas pelo sistema](../../../docs/framework/wcf/system-provided-bindings.md). Se nenhuma coleção de associação predefinida tiver a combinação correta de recursos de que um aplicativo de serviço precisa, você poderá construir associações personalizadas para atender aos requisitos do aplicativo. Para obter mais informações sobre associações personalizadas, consulte [ \<CustomBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
  Os quatro exemplos a seguir ilustram as configurações de associação mais comuns usadas para configurar um serviço WCF.  
   
@@ -58,21 +58,21 @@ Ao criar um aplicativo, você geralmente deseja adiar as decisões para o admini
 </service>  
 ```  
   
- Neste exemplo, o `name` atributo indica que a configuração é do tipo de serviço. Quando você cria um serviço em seu código com o `HelloWorld` contrato, ele é inicializado com todos os pontos de extremidade definidos na configuração de exemplo. Se o assembly implementa apenas um contrato de serviço, o `name` atributo pode ser omitido porque o serviço usa o tipo só está disponível. O atributo utiliza uma cadeia de caracteres, deve estar no formato `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ Neste exemplo, o `name` atributo indica a qual tipo de serviço é a configuração. Quando você cria um serviço em seu código com o `HelloWorld` contrato, ele é inicializado com todos os pontos de extremidade definidos na configuração de exemplo. Se o assembly implementar apenas um contrato de serviço, `name` o atributo poderá ser omitido porque o serviço usa o único tipo disponível. O atributo usa uma cadeia de caracteres, que deve estar no formato`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
- O `address` atributo especifica o URI usado por outros pontos de extremidade para se comunicar com o serviço. O URI pode ser um caminho absoluto ou relativo. Se um endereço relativo for fornecido, o host deve fornecer um endereço base que é apropriado para o esquema de transporte usado na associação. Se um endereço não estiver configurado, o endereço base é considerado o endereço do ponto de extremidade.  
+ O `address` atributo especifica o URI que outros pontos de extremidade usam para se comunicar com o serviço. O URI pode ser um caminho absoluto ou relativo. Se um endereço relativo for fornecido, espera-se que o host forneça um endereço base apropriado para o esquema de transporte usado na associação. Se um endereço não estiver configurado, presume-se que o endereço base seja o endereço para esse ponto de extremidade.  
   
- O `contract` atributo especifica o contrato que esse ponto de extremidade está expondo. O tipo de implementação de serviço deve implementar o tipo de contrato. Se uma implementação de serviço implementa um tipo de contrato único, em seguida, essa propriedade pode ser omitida.  
+ O `contract` atributo especifica o contrato que esse ponto de extremidade está expondo. O tipo de implementação do serviço deve implementar o tipo de contrato. Se uma implementação de serviço implementar um único tipo de contrato, essa propriedade poderá ser omitida.  
   
- O `binding` atributo seleciona uma associação predefinida ou personalizada a ser usado para esse ponto de extremidade específico. Um ponto de extremidade não seleciona explicitamente uma associação usa a seleção de associação padrão, que é `BasicHttpBinding`.  
+ O `binding` atributo seleciona uma associação personalizada ou predefinida a ser usada para esse ponto de extremidade específico. Um ponto de extremidade que não seleciona explicitamente uma associação usa a seleção de associação padrão, `BasicHttpBinding`que é.  
   
 #### <a name="modifying-a-predefined-binding"></a>Modificando uma associação predefinida  
- No exemplo a seguir, uma associação predefinida é modificada. Ele pode ser usado para configurar qualquer ponto de extremidade no serviço. A associação é modificada, definindo o <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> valor como 1 segundo. Observe que a propriedade retorna um <xref:System.TimeSpan> objeto.  
+ No exemplo a seguir, uma associação predefinida é modificada. Em seguida, ele pode ser usado para configurar qualquer ponto de extremidade no serviço. A associação é modificada definindo o <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> valor como 1 segundo. Observe que a propriedade retorna um <xref:System.TimeSpan> objeto.  
   
- Alterado de associação for encontrado na seção de associações. Isso alterado associação agora pode ser usado durante a criação de qualquer ponto de extremidade, definindo o `binding` de atributo no `endpoint` elemento.  
+ Essa associação alterada é encontrada na seção associações. Essa associação alterada agora pode ser usada ao criar qualquer ponto de extremidade, `binding` definindo o atributo `endpoint` no elemento.  
   
 > [!NOTE]
->  Se você fornecer um nome específico à associação, o `bindingConfiguration` especificado no serviço de ponto de extremidade deve corresponder com ele.  
+> Se você fornecer um nome específico para a associação, o `bindingConfiguration` especificado no ponto de extremidade de serviço deverá corresponder a ele.  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -88,11 +88,11 @@ Ao criar um aplicativo, você geralmente deseja adiar as decisões para o admini
 </bindings>  
 ```  
   
-## <a name="configuring-a-behavior-to-apply-to-a-service"></a>Configurando um comportamento a ser aplicado a um serviço  
- No exemplo a seguir, um comportamento específico é configurado para o tipo de serviço. O `ServiceMetadataBehavior` elemento é usado para habilitar o [ferramenta Utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para consultar o serviço e gerar documentos de descrição linguagem WSDL (Web Services) dos metadados.  
+## <a name="configuring-a-behavior-to-apply-to-a-service"></a>Configurando um comportamento para aplicar a um serviço  
+ No exemplo a seguir, um comportamento específico é configurado para o tipo de serviço. O `ServiceMetadataBehavior` elemento é usado para habilitar a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para consultar o serviço e gerar documentos WSDL (Web Services Description Language) a partir dos metadados.  
   
 > [!NOTE]
->  Se você fornecer um nome específico para o comportamento, o `behaviorConfiguration` especificado no serviço ou ponto de extremidade de seção deve corresponder a ele.  
+> Se você fornecer um nome específico para o comportamento, o `behaviorConfiguration` especificado na seção serviço ou ponto de extremidade deverá corresponder a ele.  
   
 ```xml  
 <behaviors>  
@@ -111,12 +111,12 @@ Ao criar um aplicativo, você geralmente deseja adiar as decisões para o admini
 </services>  
 ```  
   
- O habilita a configuração anterior um cliente chamar e obter os metadados de "HelloWorld" digitado o serviço.  
+ A configuração anterior permite que um cliente chame e obtenha os metadados do serviço digitado "HelloWorld".  
   
  `svcutil /config:Client.exe.config http://computer:8080/Hello?wsdl`  
   
-## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Especificando um serviço com dois pontos de extremidade usando valores diferentes de associação  
- Neste último exemplo, dois pontos de extremidade são configurados para o `HelloWorld` tipo de serviço. Cada ponto de extremidade usa diferentes personalizado `bindingConfiguration` atributo do mesmo tipo de associação (cada modifica o `basicHttpBinding`).  
+## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Especificando um serviço com dois pontos de extremidade usando valores de associação diferentes  
+ Neste último exemplo, dois pontos de extremidade são configurados para `HelloWorld` o tipo de serviço. Cada ponto de extremidade usa um `bindingConfiguration` atributo personalizado diferente do mesmo tipo de associação (cada um `basicHttpBinding`modifica o).  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -143,7 +143,7 @@ Ao criar um aplicativo, você geralmente deseja adiar as decisões para o admini
 </bindings>  
 ```  
   
- Você pode obter o mesmo comportamento usando a configuração padrão, adicionando um `protocolMapping` seção e configurar as associações, conforme demonstrado no exemplo a seguir.  
+ Você pode obter o mesmo comportamento usando a configuração padrão adicionando uma `protocolMapping` seção e configurando as associações, conforme demonstrado no exemplo a seguir.  
   
 ```xml  
 <protocolMapping>  

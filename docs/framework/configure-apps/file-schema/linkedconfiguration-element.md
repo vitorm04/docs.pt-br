@@ -11,19 +11,19 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0b56ac66302f11c59c149197a84bb96691282a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674643"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921010"
 ---
-# <a name="linkedconfiguration-element"></a>\<linkedConfiguration > elemento
+# <a name="linkedconfiguration-element"></a>\<elemento de > linkedConfiguration
 
 Especifica um arquivo de configuração a ser incluído.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblyBinding>** ](assemblybinding-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
 
 ## <a name="syntax"></a>Sintaxe
@@ -36,13 +36,13 @@ Especifica um arquivo de configuração a ser incluído.
 
 |           | Descrição |
 | --------- | ----------- |
-| **href**  | Atributo obrigatório.<br><br>A URL do arquivo de configuração para incluir. O único formato com suporte para o **href** atributo é `file://`. Há suporte para arquivos locais e arquivos UNC. |
+| **href**  | Atributo obrigatório.<br><br>A URL do arquivo de configuração a ser incluído. O único formato com suporte para o atributo href `file://`é. Há suporte para arquivos locais e arquivos UNC. |
 
 ## <a name="parent-element"></a>Elemento pai
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<assemblyBinding >** elemento](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Especifica a diretiva de ligação de assembly no nível de configuração. |
+| [elemento de > assemblyBinding  **\<** ](assemblybinding-element-for-configuration.md) | Especifica a diretiva de ligação de assembly no nível de configuração. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -50,24 +50,24 @@ Nenhum
 
 ## <a name="remarks"></a>Comentários
 
-O  **\<linkedConfiguration >** elemento simplifica a manutenção do assemblies do componente. Se um ou mais aplicativos usam um assembly que tem um arquivo de configuração que residem em um local conhecido, os arquivos de configuração dos aplicativos que usam o assembly podem usar o  **\<linkedConfiguration >** elemento para incluir o arquivo de configuração do assembly, em vez de incluindo informações de configuração diretamente. Quando o assembly do componente é atendido, atualizando o arquivo de configuração comum fornece informações de configuração atualizada para todos os aplicativos que usam o assembly.
+O elemento  **\<> linkedConfiguration** simplifica a manutenção de assemblies de componente. Se um ou mais aplicativos usarem um assembly que tenha um arquivo de configuração que resida em um local bem conhecido, os arquivos de configuração dos aplicativos que usam o assembly poderão usar o  **\<elemento > linkedConfiguration** para incluir o arquivo de configuração do assembly, em vez de incluir informações de configuração diretamente. Quando o assembly de componente é atendido, a atualização do arquivo de configuração comum fornece informações de configuração atualizadas para todos os aplicativos que usam o assembly.
 
 > [!NOTE]
-> O  **\<linkedConfiguration >** elemento não tem suporte para aplicativos com manifestos do Windows lado a lado.
+> O elemento de  **\<> linkedConfiguration** não tem suporte para aplicativos com manifestos lado a lado do Windows.
 
-As seguintes regras regem o uso de arquivos de configuração vinculados:
+As regras a seguir regem o uso de arquivos de configuração vinculados:
 
-- As configurações em arquivos de configuração incluído só afetam a política de associação do carregador e são usadas somente pelo carregador de. Os arquivos de configuração incluído podem ter configurações diferentes políticas de associação, mas essas configurações não têm qualquer efeito.
+- As configurações nos arquivos de configuração incluídos afetam apenas a política de associação do carregador e são usadas somente pelo carregador. Os arquivos de configuração incluídos podem ter configurações diferentes de diretivas de associação, mas essas configurações não têm nenhum efeito.
 
-- O único formato com suporte para o `href` atributo é `file://`. Há suporte para arquivos locais e arquivos UNC.
+- O único formato com suporte para `href` o atributo `file://`é. Há suporte para arquivos locais e arquivos UNC.
 
-- Não há nenhuma restrição no número de configurações vinculadas por arquivo de configuração.
+- Não há nenhuma restrição quanto ao número de configurações vinculadas por arquivo de configuração.
 
-- Todos os arquivos de configuração vinculados são mesclados para formar um arquivo, semelhante ao comportamento da `#include` diretiva em C/C++.
+- Todos os arquivos de configuração vinculados são mesclados para formar um arquivo, semelhante ao comportamento `#include` da diretiva em CC++/.
 
-- O  **\<linkedConfiguration >** elemento é permitido somente em arquivos de configuração do aplicativo; ele será ignorado na *Machine. config*.
+- **O\<elemento > linkedConfiguration** é permitido somente em arquivos de configuração de aplicativo; ele é ignorado em *Machine. config*.
 
-- Referências circulares são detectadas e encerradas. Ou seja, se o  **\<linkedConfiguration >** elementos de uma série de arquivos de configuração formam um loop, o loop é detectado e interrompido.
+- Referências circulares são detectadas e terminadas. Ou seja, se o  **\<linkedConfiguration >** elementos de uma série de arquivos de configuração formam um loop, o loop será detectado e interrompido.
 
 ## <a name="example"></a>Exemplo
 
@@ -83,5 +83,5 @@ O exemplo a seguir mostra como incluir o arquivo de configuração do disco ríg
 
 ## <a name="see-also"></a>Consulte também
 
-- [ **\<assemblyBinding >** elemento](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
-- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [elemento de > assemblyBinding  **\<** ](assemblybinding-element-for-configuration.md)
+- [Esquema do arquivo de configuração para o .NET Framework](index.md)

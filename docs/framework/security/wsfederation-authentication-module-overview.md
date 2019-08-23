@@ -3,12 +3,12 @@ title: Visão geral do módulo de autenticação WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0bd6c7432f79894c9e31952b72f3426fc88f9d03
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: MT
+ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877200"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915509"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Visão geral do módulo de autenticação WSFederation
 O Windows Identity Foundation (WIF) inclui suporte para autenticação federada em aplicativos do ASP.NET por meio do módulo de autenticação WS-Federated (WS-FAM). Este tópico ajudará você a entender como a autenticação federada funciona e como usá-la.  
@@ -31,11 +31,11 @@ O Windows Identity Foundation (WIF) inclui suporte para autenticação federada 
 6. O RP extrai declarações do cliente do token de segurança e toma uma decisão de autorização.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Uso do módulo de autenticação federada com o ASP.NET  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) é um módulo HTTP que permite que você adicione autenticação federada a um aplicativo ASP.NET. A autenticação federada permite que a autenticação lógica seja tratada pelo STS e permite que você se concentre em escrever a lógica de negócios.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WS-FAM) é um módulo HTTP que permite adicionar autenticação federada a um aplicativo ASP.NET. A autenticação federada permite que a autenticação lógica seja tratada pelo STS e permite que você se concentre em escrever a lógica de negócios.  
   
  Configure o WS-FAM para especificar o STS para o qual as solicitações não autenticadas deverão ser redirecionadas. O WIF permite autenticar um usuário de duas maneiras:  
   
-1. Redirecionamento passivo: Quando um usuário não autenticado tenta acessar um recurso protegido, e você deseja simplesmente redirecioná-lo para um STS sem a necessidade de uma página de logon, isso é a abordagem correta. O STS verifica a identidade do usuário e emite um token de segurança que contém as declarações apropriadas para esse usuário. Essa opção exige que o WS-FAM seja adicionado ao pipeline dos módulos de HTTP. Você pode usar a Ferramenta de Acesso e Identidade para o Visual Studio 2012 para modificar o arquivo de configuração do seu aplicativo para usar WS-FAM e federar com um STS. Para saber mais, confira [Ferramenta de Identidade e Acesso para o Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1. Redirecionamento passivo: Quando um usuário não autenticado tenta acessar um recurso protegido e você deseja simplesmente redirecioná-los para um STS sem a necessidade de uma página de logon, essa é a abordagem certa. O STS verifica a identidade do usuário e emite um token de segurança que contém as declarações apropriadas para esse usuário. Essa opção exige que o WS-FAM seja adicionado ao pipeline dos módulos de HTTP. Você pode usar a Ferramenta de Acesso e Identidade para o Visual Studio 2012 para modificar o arquivo de configuração do seu aplicativo para usar WS-FAM e federar com um STS. Para saber mais, confira [Ferramenta de Identidade e Acesso para o Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
 2. Chame o método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> ou o método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> por meio do code-behind de uma página de entrada no aplicativo RP.  
   
@@ -44,7 +44,7 @@ O Windows Identity Foundation (WIF) inclui suporte para autenticação federada 
  O WS-FAM também gera vários eventos que permitem personalizar sua funcionalidade em um aplicativo ASP.NET.  
   
 ### <a name="how-the-ws-fam-works"></a>Como funciona o WS-FAM  
- O WS-FAM é implementado na classe <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>. Normalmente, você adiciona o WS-FAM ao pipeline de HTTP do seu aplicativo de RP do ASP.NET. Quando um usuário não autenticado tenta acessar um recurso protegido, o RP retorna uma resposta HTTP “401 autorização negada”. O WS-FAM intercepta essa resposta em vez de permitir que o cliente o receba e, em seguida, ele redireciona o usuário para o STS especificado. O STS emite um token de segurança, que o WS-FAM intercepta novamente. O WS-FAM usa o token para criar uma instância de <xref:System.Security.Claims.ClaimsPrincipal> para o usuário autenticado, que permite que mecanismos de autorização regulares do .NET Framework funcionar.  
+ O WS-FAM é implementado na classe <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>. Normalmente, você adiciona o WS-FAM ao pipeline HTTP do seu aplicativo ASP.NET RP. Quando um usuário não autenticado tenta acessar um recurso protegido, o RP retorna uma resposta HTTP “401 autorização negada”. O WS-FAM intercepta essa resposta em vez de permitir que o cliente o receba e, em seguida, ele redireciona o usuário para o STS especificado. O STS emite um token de segurança, que o WS-FAM intercepta novamente. O WS-fam usa o token para criar uma instância do <xref:System.Security.Claims.ClaimsPrincipal> para o usuário autenticado, o que permite que os mecanismos de autorização de .NET Framework regulares funcionem.  
   
  Como o HTTP é sem monitoração de estado, precisamos de uma maneira de evitar repetir este processo sempre que o usuário tentar acessar outro recurso protegido. É nesse momento que entra o <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Quando o STS emite um token de segurança para o usuário, <xref:System.IdentityModel.Services.SessionAuthenticationModule> também cria um token de segurança de sessão para o usuário e o coloca em um cookie. Em solicitações posteriores, o <xref:System.IdentityModel.Services.SessionAuthenticationModule> intercepta esse cookie e o utiliza para reconstruir a <xref:System.Security.Claims.ClaimsPrincipal> do usuário.  
   
@@ -60,8 +60,8 @@ O Windows Identity Foundation (WIF) inclui suporte para autenticação federada 
   
  ![Diagrama de timing de SAM que mostra a entrada usando controles](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
-### <a name="events"></a>Eventos  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule> e sua classe pai, <xref:System.IdentityModel.Services.HttpModuleBase>, acionam eventos em vários estágios de processamento de uma solicitação HTTP. Você pode manipular esses eventos no `global.asax` arquivo do seu aplicativo ASP.NET.  
+### <a name="events"></a>Events  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule> e sua classe pai, <xref:System.IdentityModel.Services.HttpModuleBase>, acionam eventos em vários estágios de processamento de uma solicitação HTTP. Você pode manipular esses eventos no `global.asax` arquivo do aplicativo ASP.net.  
   
 - A infraestrutura ASP.NET invoca o método <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> do módulo para inicializar o módulo.  
   
@@ -91,7 +91,7 @@ O Windows Identity Foundation (WIF) inclui suporte para autenticação federada 
 - O WS-FAM aciona o evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> uma vez por sessão, pois a sessão é fechada para cada usuário. Ele não será gerado se a sessão for fechada no lado do cliente (por exemplo, excluindo o cookie de sessão). Em um ambiente de SSO, o IP-STS pode solicitar que cada RP saia também. Isso também acionará esse evento, com <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> definido como `true`.  
   
 > [!NOTE]
->  Não use a propriedade <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> durante qualquer evento acionado por <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> ou <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Isso ocorre porque <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> é definido após o processo de autenticação, enquanto os eventos são acionados durante o processo de autenticação.  
+> Não use a propriedade <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> durante qualquer evento acionado por <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> ou <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Isso ocorre porque <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> é definido após o processo de autenticação, enquanto os eventos são acionados durante o processo de autenticação.  
   
 ### <a name="configuration-of-federated-authentication"></a>Configuração da autenticação federada  
  O WS-FAM e o SAM são configurados por meio do elemento [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md). O elemento filho [\<wsFederation>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) configura os valores padrão para as propriedades do WS-FAM; por exemplo, a propriedade <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> e a propriedade <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A>. (Esses valores podem ser alterados por solicitação, fornecendo manipuladores para alguns dos eventos do WS-FAM; por exemplo, <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>.) O manipulador de cookie que é usado pelo SAM é configurado por meio do elemento filho [\<cookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md). O WIF fornece um manipulador de cookie padrão implementado na classe <xref:System.IdentityModel.Services.ChunkedCookieHandler> que pode ter seu tamanho de parte definido por meio do elemento [\<chunkedCookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md). O elemento `<federationConfiguration>` referencia um <xref:System.IdentityModel.Configuration.IdentityConfiguration>, que fornece a configuração de outros componentes do WIF usados no aplicativo, como o <xref:System.Security.Claims.ClaimsAuthenticationManager> e o <xref:System.Security.Claims.ClaimsAuthorizationManager>. A configuração de identidade pode ser referenciada explicitamente especificando um elemento [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) nomeado no atributo `identityConfigurationName` do elemento `<federationConfiguration>`. Se a configuração de identidade não for referenciada explicitamente, a configuração de identidade padrão será usada.  

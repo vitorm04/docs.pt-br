@@ -2,12 +2,12 @@
 title: <add> de <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 32eff2e7bfdf1aee4c7d37a0e06166afba3cb398
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 7e2a2e26099f2d31116e4a89297fc1ac984c480d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920075"
 ---
 # <a name="add-of-namespacetable"></a>\<Adicionar > de \<NamespaceTable >
 Representa um elemento de configuração que contém um namespace para mapeamento de prefixo que pode ser usado em filtros XPath para roteamento.  
@@ -45,7 +45,7 @@ Representa um elemento de configuração que contém um namespace para mapeament
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<namespaceTable>](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|Representa uma seção de configuração para definir um conjunto de elementos que contêm namespace para mapeamentos de prefixo que podem ser usados em filtros XPath para roteamento.|  
+|[\<namespaceTable>](namespacetable.md)|Representa uma seção de configuração para definir um conjunto de elementos que contêm namespace para mapeamentos de prefixo que podem ser usados em filtros XPath para roteamento.|  
   
 ## <a name="see-also"></a>Consulte também
 

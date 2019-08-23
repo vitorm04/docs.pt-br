@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 99c18bd5b779845d52831b4a9591eaf4d5e5530b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659232"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920956"
 ---
 # <a name="remove-element-for-bypasslist-network-settings"></a>\<remover o elemento > para BypassList (configurações de rede)
 
@@ -61,7 +61,7 @@ O `remove` elemento remove expressões regulares que descrevem endereços IP ou 
 
 O valor do `address` atributo deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.
 
-Para obter mais informações sobre expressões regulares, consulte. [.NET Framework expressões regulares](../../../../../docs/standard/base-types/regular-expressions.md).
+Para obter mais informações sobre expressões regulares, consulte. [.NET Framework expressões regulares](../../../../standard/base-types/regular-expressions.md).
 
 ## <a name="configuration-files"></a>Arquivos de Configuração
 

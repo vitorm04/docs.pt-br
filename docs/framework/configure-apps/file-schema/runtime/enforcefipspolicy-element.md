@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb28eddf7e9f13bceaf47de28633073f59f3920d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f13243ddef7020f4d7a50e519ae8281702b0d261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663751"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927425"
 ---
 # <a name="enforcefipspolicy-element"></a>\<Elemento de > enforceFIPSPolicy
 Especifica se deve-se impor um requisito de configuração do computador em que os algoritmos de criptografia devem estar em conformidade com o FIPS (padrão norte-americano de processamento de informações).  
@@ -75,4 +75,4 @@ Especifica se deve-se impor um requisito de configuração do computador em que 
 
 - [Esquema de configurações do tempo de execução](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Modelo de criptografia](../../../../../docs/standard/security/cryptography-model.md)
+- [Modelo de criptografia](../../../../standard/security/cryptography-model.md)

@@ -7,54 +7,54 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: d36bd5002d15e98d0cf3273bf18a78684bd3e067
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 18942c2d486038c3ebfbe11d21b41d0ba9412500
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638429"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909870"
 ---
 # <a name="programming-wcf-security"></a>Programação de segurança do WCF
-Este tópico descreve as tarefas de programação fundamentais usadas para criar um aplicativo seguro do Windows Communication Foundation (WCF). Este tópico aborda apenas a autenticação, confidencialidade e integridade, coletivamente conhecido como *transferir segurança*. Este tópico não abrange a autorização (o controle de acesso aos recursos ou serviços); Para obter informações sobre autorização, consulte [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+Este tópico descreve as tarefas de programação fundamentais usadas para criar um aplicativo de Windows Communication Foundation de segurança (WCF). Este tópico aborda somente autenticação, confidencialidade e integridade, coletivamente conhecido como *segurança de transferência*. Este tópico não abrange a autorização (o controle de acesso a recursos ou serviços); para obter informações sobre autorização, consulte [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 > [!NOTE]
->  Para obter uma introdução valiosa conceitos de segurança, especialmente em relação ao WCF, consulte o conjunto de tutoriais de padrões e práticas recomendadas no MSDN em [cenários, padrões e diretrizes de implementação para aprimoramentos WSE (Web Services) 3.0](https://go.microsoft.com/fwlink/?LinkID=88250).  
+> Para obter uma introdução valiosa aos conceitos de segurança, especialmente em relação ao WCF, consulte o conjunto de tutoriais de padrões e práticas no MSDN em [cenários, padrões e diretrizes de implementação para o WSE (Web Services Enhancements) 3,0](https://go.microsoft.com/fwlink/?LinkID=88250).  
   
- Programação de segurança do WCF baseia-se em três etapas de configuração a seguir: o modo de segurança, um tipo de credencial de cliente e os valores de credencial. Você pode executar essas etapas por meio de código ou configuração.  
+ A programação da segurança do WCF baseia-se em três etapas definindo o seguinte: o modo de segurança, um tipo de credencial de cliente e os valores de credencial. Você pode executar essas etapas por meio de código ou configuração.  
   
 ## <a name="setting-the-security-mode"></a>Configurando o modo de segurança  
- O exemplo a seguir explica as etapas gerais para a programação com o modo de segurança no WCF:  
+ O seguinte explica as etapas gerais para a programação com o modo de segurança no WCF:  
   
-1. Selecione uma das associações predefinidas apropriadas aos seus requisitos de aplicativo. Para obter uma lista das opções de associação, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md). Por padrão, quase todas as associações tem segurança habilitada. A única exceção é o <xref:System.ServiceModel.BasicHttpBinding> classe (usando a configuração, o [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1. Selecione uma das associações predefinidas apropriadas para os requisitos do aplicativo. Para obter uma lista das opções de associação, consulte [associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md). Por padrão, quase todas as ligações têm segurança habilitada. A única exceção é a <xref:System.ServiceModel.BasicHttpBinding> classe (usando a configuração, a [ \<> BasicHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
-     A associação que você selecionar determina o transporte. Por exemplo, <xref:System.ServiceModel.WSHttpBinding> usa HTTP como o transporte; <xref:System.ServiceModel.NetTcpBinding> usa TCP.  
+     A associação selecionada determina o transporte. Por exemplo, <xref:System.ServiceModel.WSHttpBinding> usa http como o transporte; <xref:System.ServiceModel.NetTcpBinding> usa TCP.  
   
-2. Selecione um dos modos de segurança para a associação. Observe que a associação que você selecionar determina as opções disponíveis de modo. Por exemplo, o <xref:System.ServiceModel.WSDualHttpBinding> não permite a segurança de transporte (não é uma opção). Da mesma forma, nem o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> nem o <xref:System.ServiceModel.NetNamedPipeBinding> permite que a segurança de mensagem.  
+2. Selecione um dos modos de segurança para a associação. Observe que a associação selecionada determina as opções de modo disponíveis. Por exemplo, o <xref:System.ServiceModel.WSDualHttpBinding> não permite a segurança de transporte (não é uma opção). Da mesma forma, <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> nem o <xref:System.ServiceModel.NetNamedPipeBinding> nem o permite a segurança da mensagem.  
   
      Você tem três opções:  
   
     1. `Transport`  
   
-         Segurança de transporte depende do mecanismo que usa a associação que você selecionou. Por exemplo, se você estiver usando `WSHttpBinding` e em seguida, o mecanismo de segurança é o protocolo (SSL) (também o mecanismo para o protocolo HTTPS). Em termos gerais, a principal vantagem de segurança de transporte é que ele oferece boa taxa de transferência, não importa qual transporte você está usando. No entanto, ela tem duas limitações: A primeira é que o mecanismo de transporte determina o tipo de credencial usado para autenticar um usuário. Isso é uma desvantagem somente se um serviço precisa interoperar com outros serviços que exigem tipos diferentes de credenciais. A segunda é que, como a segurança não é aplicada no nível da mensagem, a segurança é implementada em uma maneira de salto a salto em vez de ponta a ponta. Essa última limitação é um problema apenas se o caminho de mensagem entre cliente e serviço inclui intermediários. Para obter mais informações sobre qual transporte deve ser usado, consulte [escolhendo um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obter mais informações sobre como usar a segurança de transporte, consulte [visão geral da segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         A segurança de transporte depende do mecanismo que a associação que você selecionou usa. Por exemplo, se você estiver usando `WSHttpBinding` , o mecanismo de segurança será protocolo SSL (SSL) (também o mecanismo para o protocolo HTTPS). Em termos gerais, a principal vantagem da segurança de transporte é que ela fornece uma boa taxa de transferência, não importa qual transporte você está usando. No entanto, ele tem duas limitações: A primeira é que o mecanismo de transporte determina o tipo de credencial usado para autenticar um usuário. Essa é uma desvantagem somente se um serviço precisar interoperar com outros serviços que exigem diferentes tipos de credenciais. A segunda é que, como a segurança não é aplicada no nível de mensagem, a segurança é implementada de uma maneira de salto a ponta em vez de ponta a extremidade. Essa última limitação é um problema somente se o caminho da mensagem entre o cliente e o serviço inclui intermediários. Para obter mais informações sobre qual transporte usar, consulte [escolhendo um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obter mais informações sobre como usar a segurança de transporte, consulte [visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2. `Message`  
   
-         Segurança de mensagem significa que cada mensagem inclui os cabeçalhos necessários e seguro de dados para manter a mensagem. Como a composição dos cabeçalhos varia, você pode incluir qualquer número de credenciais. Isso se torna um fator se você está interoperando com outros serviços que exigem um tipo de credencial específica que um mecanismo de transporte não pode fornecer, ou se a mensagem deve ser usada com mais de um serviço, em que cada serviço exige um tipo de credencial diferente.  
+         Segurança de mensagem significa que cada mensagem inclui os cabeçalhos e os dados necessários para manter a mensagem segura. Como a composição dos cabeçalhos varia, você pode incluir qualquer número de credenciais. Isso se torna um fator se você estiver Interoperando com outros serviços que exigem um tipo de credencial específico que um mecanismo de transporte não pode fornecer, ou se a mensagem deve ser usada com mais de um serviço, em que cada serviço exige um tipo de credencial diferente.  
   
-         Para obter mais informações, consulte [segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+         Para obter mais informações, consulte [segurança da mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
     3. `TransportWithMessageCredential`  
   
-         Essa opção usa a camada de transporte para proteger a transferência de mensagem, enquanto cada mensagem inclui as credenciais avançadas precisam de outros serviços. Ele combina a vantagem de desempenho de segurança de transporte com a vantagem de credenciais avançados de segurança de mensagem. Isso está disponível com as seguintes associações: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding>, e <xref:System.ServiceModel.WSHttpBinding>.  
+         Essa escolha usa a camada de transporte para proteger a transferência de mensagens, enquanto cada mensagem inclui as credenciais avançadas de que outros serviços precisam. Isso combina a vantagem de desempenho da segurança de transporte com as valiosas vantagens das credenciais de segurança de mensagem. Isso está disponível com as seguintes <xref:System.ServiceModel.BasicHttpBinding>associações: <xref:System.ServiceModel.NetPeerTcpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, e <xref:System.ServiceModel.WSHttpBinding>.  
   
-3. Se você decidir usar a segurança de transporte para HTTP (em outras palavras, HTTPS), você também deve configurar o host com um certificado SSL e habilitar o SSL em uma porta. Para obter mais informações, consulte [segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+3. Se você decidir usar a segurança de transporte para HTTP (em outras palavras, HTTPS), também deverá configurar o host com um certificado SSL e habilitar o SSL em uma porta. Para obter mais informações, consulte [segurança de transporte http](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
-4. Se você estiver usando o <xref:System.ServiceModel.WSHttpBinding> e não é necessário estabelecer uma sessão segura, defina a <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propriedade `false`.  
+4. Se você estiver usando o <xref:System.ServiceModel.WSHttpBinding> e não precisar estabelecer uma sessão segura, defina a <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> Propriedade como `false`.  
   
-     Uma sessão segura ocorre quando um cliente e serviço criam um canal usando uma chave simétrica (cliente e servidor para usar a mesma chave para o comprimento de uma conversa, até que a caixa de diálogo é fechada).  
+     Uma sessão segura ocorre quando um cliente e um serviço criam um canal usando uma chave simétrica (tanto o cliente quanto o servidor usam a mesma chave para o comprimento de uma conversa, até que a caixa de diálogo seja fechada).  
   
-## <a name="setting-the-client-credential-type"></a>Definindo o tipo de credencial de cliente  
- Selecione um tipo de credencial de cliente conforme apropriado. Para obter mais informações, consulte [selecionando um tipo de credencial](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Os seguintes tipos de credencial de cliente estão disponíveis:  
+## <a name="setting-the-client-credential-type"></a>Configurando o tipo de credencial do cliente  
+ Selecione um tipo de credencial de cliente conforme apropriado. Para obter mais informações, consulte [selecionando um tipo de credencial](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Os seguintes tipos de credencial do cliente estão disponíveis:  
   
 - `Windows`  
   
@@ -70,7 +70,7 @@ Este tópico descreve as tarefas de programação fundamentais usadas para criar
   
 - `IssuedToken`  
   
- Dependendo de como você define o modo, você deve definir o tipo de credencial. Por exemplo, se você tiver selecionado a `wsHttpBinding`e tiver definido o modo de "Message", em seguida, você também pode definir o `clientCredentialType` atributo do elemento de mensagem para um dos seguintes valores: `None`, `Windows`, `UserName`, `Certificate` , e `IssuedToken`, conforme mostrado no exemplo de configuração a seguir.  
+ Dependendo de como você define o modo, você deve definir o tipo de credencial. Por exemplo, se você selecionou o `wsHttpBinding`e definiu o modo como "Message", você também pode definir o `clientCredentialType` atributo do elemento Message como um dos `UserName`seguintes valores: `None`, `Windows`,, `Certificate` e `IssuedToken`, conforme mostrado no exemplo de configuração a seguir.  
   
 ```xml  
 <system.serviceModel>  
@@ -89,14 +89,14 @@ Este tópico descreve as tarefas de programação fundamentais usadas para criar
  [!code-csharp[c_WsHttpService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#1)]
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
-## <a name="setting-service-credential-values"></a>Valores de credenciais do serviço de configuração  
- Depois de selecionar um tipo de credencial de cliente, você deve definir as credenciais reais para o serviço e cliente para usar. No serviço, as credenciais são definidas usando o <xref:System.ServiceModel.Description.ServiceCredentials> de classe e retornado pelo <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> propriedade do <xref:System.ServiceModel.ServiceHostBase> classe. A associação em uso implica o tipo de credencial de serviço, o modo de segurança escolhido e o tipo da credencial do cliente. O código a seguir define um certificado para uma credencial de serviço.  
+## <a name="setting-service-credential-values"></a>Definindo valores de credenciais de serviço  
+ Depois de selecionar um tipo de credencial de cliente, você deve definir as credenciais reais para o serviço e o cliente a serem usados. No serviço, as credenciais são definidas usando a <xref:System.ServiceModel.Description.ServiceCredentials> classe e retornadas <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> pela propriedade da <xref:System.ServiceModel.ServiceHostBase> classe. A associação em uso implica o tipo de credencial de serviço, o modo de segurança escolhido e o tipo de credencial do cliente. O código a seguir define um certificado para uma credencial de serviço.  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
   
-## <a name="setting-client-credential-values"></a>Definindo valores de credencial de cliente  
- No cliente, defina valores de credencial de cliente usando o <xref:System.ServiceModel.Description.ClientCredentials> de classe e retornado pelo <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> propriedade do <xref:System.ServiceModel.ClientBase%601> classe. O código a seguir define um certificado como uma credencial em um cliente usando o protocolo TCP.  
+## <a name="setting-client-credential-values"></a>Definindo valores de credenciais de cliente  
+ No cliente, defina os valores de credencial do <xref:System.ServiceModel.Description.ClientCredentials> cliente usando a classe e <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> retornados pela propriedade <xref:System.ServiceModel.ClientBase%601> da classe. O código a seguir define um certificado como uma credencial em um cliente usando o protocolo TCP.  
   
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  

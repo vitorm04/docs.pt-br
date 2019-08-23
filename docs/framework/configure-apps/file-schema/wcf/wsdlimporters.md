@@ -2,15 +2,15 @@
 title: <wsdlImporters>
 ms.date: 03/30/2017
 ms.assetid: 270c7f93-eab7-47b6-8b94-ac3f5b7f17e4
-ms.openlocfilehash: 75f88219ab73d321b3e04c140bbfe964aed0b83a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da9ab00c86e7f2657bfc28724d328ccbbc6957b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785470"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915162"
 ---
 # <a name="wsdlimporters"></a>\<wsdlImporters>
-Este elemento de configuração especifica todos os importadores WSDL que importa os metadados de descrição linguagem WSDL (Web Services) 1.1 com anexos WS-Policy. Cada elemento filho é um <`wsdlImporter`> que especifica a maneira de importar metadados, bem como converter essas informações em várias classes que representam informações de contrato e o ponto de extremidade. Ele seletivamente pode importar informações de contrato e o ponto de extremidade e propriedades que expõem os erros de importação e aceitar informações relevantes para o processo de importação e a conversão do tipo. Ele também dá suporte a importação de informações de associação e propriedades que fornecem acesso a todos os documentos de política, documentos WSDL, extensões WSDL e documentos de esquema XML.  
+Este elemento de configuração especifica todos os importadores WSDL que importa metadados do WSDL (Web Services Description Language) 1,1 com anexos de WS-Policy. Cada elemento filho é um <`wsdlImporter`> que especifica a maneira de importar metadados, bem como converter essas informações em várias classes que representam informações de contrato e de ponto de extremidade. Ele pode importar seletivamente informações de contrato e de ponto de extremidade e propriedades que expõem quaisquer erros de importação e aceitam informações de tipo relevantes para o processo de importação e conversão. Ele também dá suporte à importação de informações de associação e propriedades que fornecem acesso a documentos de política, documentos WSDL, extensões WSDL e documentos de esquema XML.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -18,5 +18,5 @@ Este elemento de configuração especifica todos os importadores WSDL que import
 - <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>
 - <xref:System.ServiceModel.Description.MetadataImporter>
 - <xref:System.ServiceModel.Description.WsdlImporter>
-- [Configuração de cliente do WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Clientes](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [Configuração de cliente do WCF](../../../wcf/feature-details/client-configuration.md)
+- [Clientes](../../../wcf/feature-details/clients.md)

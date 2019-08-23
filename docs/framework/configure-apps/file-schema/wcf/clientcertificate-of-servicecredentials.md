@@ -2,21 +2,21 @@
 title: <clientCertificate> de <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 277e5e33bcc7f9d417da7ce24caa4c6200c23e23
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673297"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919546"
 ---
-# <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate > de \<serviceCredentials >
-Define um certificado X.509 usado para assinar e criptografar mensagens para um cliente de um serviço em um padrão de comunicação duplex.  
+# <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate > de \<ServiceCredentials >
+Define um certificado X. 509 usado para assinar e criptografar mensagens para um cliente forma um serviço em um padrão de comunicação duplex.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors>  
-\<serviceBehaviors>  
-\<behavior>  
+\<> de portais  
+\<> de portais  
+\<> de comportamento  
 \<serviceCredentials>  
 \<clientCertificate>  
   
@@ -39,19 +39,19 @@ Define um certificado X.509 usado para assinar e criptografar mensagens para um 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|Especifica opções de autenticação para o certificado do cliente.|  
-|[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|Especifica o certificado a ser usado.|  
+|[\<authentication>](authentication-of-clientcertificate-element.md)|Especifica as opções de autenticação para o certificado do cliente.|  
+|[\<certificate>](certificate-of-clientcertificate-element.md)|Especifica o certificado a ser usado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica as credenciais a serem usadas ao autenticar o serviço, e configurações relacionadas à validação de credenciais do cliente.|  
+|[\<serviceCredentials>](servicecredentials.md)|Especifica as credenciais a serem usadas na autenticação do serviço e as configurações relacionadas à validação de credenciais do cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento é usado quando o serviço deve ter o certificado do cliente com antecedência para se comunicar com segurança com o cliente. Isso ocorre ao usar o padrão de comunicação duplex. No padrão mais comum de solicitação/resposta, o cliente inclui seu certificado na solicitação, o serviço usa para criptografar e assinar sua resposta ao cliente. No padrão de comunicação duplex, no entanto, o serviço não tem uma solicitação do cliente e, portanto, ele precisa que o certificado do cliente com antecedência para proteger a mensagem ao cliente. Portanto você deve obter o certificado do cliente em uma negociação de out-of-band e especificar o certificado usando esse elemento. Para obter mais informações sobre serviços duplex, consulte [como: Criar um contrato Duplex](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+ Esse elemento é usado quando o serviço deve ter o certificado do cliente com antecedência para se comunicar com segurança com o cliente. Isso ocorre ao usar o padrão de comunicação duplex. No padrão de solicitação/resposta mais comum, o cliente inclui seu certificado na solicitação, que o serviço usa para criptografar e assinar sua resposta para o cliente. No padrão de comunicação duplex, no entanto, o serviço não tem uma solicitação do cliente e, portanto, precisa do certificado do cliente com antecedência para proteger a mensagem para o cliente. Portanto, você deve obter o certificado do cliente em uma negociação fora de banda e especificar o certificado usando esse elemento. Para obter mais informações sobre os serviços duplex [, consulte Como: Crie um contrato](../../../wcf/feature-details/how-to-create-a-duplex-contract.md)duplex.  
   
- O certificado definido neste elemento é usado para criptografar mensagens para o cliente somente para associações que estão configurados com `MutualCertificateDuplex` modo de autenticação de segurança de mensagem.  
+ O conjunto de certificados neste elemento é usado para criptografar mensagens para o cliente somente para associações que são configuradas com `MutualCertificateDuplex` o modo de autenticação de segurança de mensagem.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -60,6 +60,6 @@ Define um certificado X.509 usado para assinar e criptografar mensagens para um 
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
-- [Como: Criar um contrato Duplex](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Como: Criar um contrato duplex](../../../wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Comportamentos de segurança](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)

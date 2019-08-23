@@ -11,45 +11,45 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e08cb1b3f4708b4314f0cd663f70fa10aaa1aded
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487816"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910682"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Usando bibliotecas de código parcialmente confiável
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  Este tópico aborda o comportamento de assemblies de nome forte e só se aplica ao [nível 1](../../../docs/framework/misc/security-transparent-code-level-1.md) assemblies. [Código transparente de segurança, nível 2](../../../docs/framework/misc/security-transparent-code-level-2.md) assemblies no .NET Framework 4 ou posterior não são afetados por nomes fortes. Para obter mais informações sobre as alterações no sistema de segurança, consulte [alterações de segurança](../../../docs/framework/security/security-changes.md).  
+> Este tópico aborda o comportamento de assemblies com nomes fortes e aplica-se somente a assemblies de [nível 1](../../../docs/framework/misc/security-transparent-code-level-1.md) . O [código de segurança transparente,](../../../docs/framework/misc/security-transparent-code-level-2.md) os assemblies de nível 2 no .NET Framework 4 ou posterior não são afetados por nomes fortes. Para obter mais informações sobre alterações no sistema de segurança, consulte [alterações de segurança](../../../docs/framework/security/security-changes.md).  
   
- Aplicativos que recebem menos do que a relação de confiança total do seu host ou de área restrita não têm permissão para chamar compartilhado bibliotecas gerenciadas, a menos que o escritor da biblioteca permita, especificamente por meio do uso do <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo. Portanto, os criadores de aplicativo devem estar cientes de que algumas bibliotecas não estarão disponíveis a eles em um contexto parcialmente confiável. Por padrão, todo o código que é executado em uma confiança parcial [área restrita](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) e não é a lista de assemblies de confiança total é parcialmente confiável. Se você não espera que seu código deve ser executado em um contexto parcialmente confiável ou ser chamado por código parcialmente confiável, você não precisa se preocupar com as informações nesta seção. No entanto, se você escrever código que deve interagir com código parcialmente confiável ou que operam em um contexto parcialmente confiável, você deve considerar os seguintes fatores:  
+ Os aplicativos que recebem menos do que a confiança total do host ou da área restrita não têm permissão para chamar bibliotecas gerenciadas compartilhadas, a menos que o gravador <xref:System.Security.AllowPartiallyTrustedCallersAttribute> de biblioteca permita especificamente o uso do atributo. Portanto, os gravadores de aplicativo devem estar cientes de que algumas bibliotecas não estarão disponíveis para eles por meio de um contexto parcialmente confiável. Por padrão, todo o código que é executado em uma [área](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) de segurança parcialmente confiável e que não está na lista de assemblies de confiança total é parcialmente confiável. Se você não espera que seu código seja executado a partir de um contexto parcialmente confiável ou que seja chamado por código parcialmente confiável, você não precisa se preocupar com as informações nesta seção. No entanto, se você escrever código que deve interagir com código parcialmente confiável ou operar de um contexto parcialmente confiável, considere os seguintes fatores:  
   
-- Bibliotecas devem ser assinadas com um nome forte para serem compartilhados por vários aplicativos. Nomes fortes permitem que seu código seja colocado no cache de assembly global ou adicionado à lista de confiança total de um modo seguro <xref:System.AppDomain>, e permitir que os consumidores verificar se uma determinada parte do código móvel realmente provém de você.  
+- As bibliotecas devem ser assinadas com um nome forte para serem compartilhadas por vários aplicativos. Nomes fortes permitem que seu código seja colocado no cache de assembly global ou adicionado à lista de confiança total de uma área restrita <xref:System.AppDomain>e permite que os consumidores verifiquem se um determinado código móvel realmente se origina de você.  
   
-- Por padrão, nome forte [nível 1](../../../docs/framework/misc/security-transparent-code-level-1.md) bibliotecas compartilhadas executam implícito [LinkDemand](../../../docs/framework/misc/link-demands.md) completa confiar automaticamente, sem o escritor da biblioteca precisar fazer nada.  
+- Por padrão, as bibliotecas compartilhadas de [nível 1](../../../docs/framework/misc/security-transparent-code-level-1.md) de nome forte executam um [LinkDemand](../../../docs/framework/misc/link-demands.md) implícito para confiança total automaticamente, sem que o gravador de biblioteca tenha que fazer nada.  
   
-- Se um chamador não tem confiança total, mas ainda tenta chamar uma biblioteca, o tempo de execução gera uma <xref:System.Security.SecurityException> e o chamador não tem permissão para vincular à biblioteca.  
+- Se um chamador não tiver confiança total, mas ainda tentar chamar essa biblioteca, o tempo de execução lançará <xref:System.Security.SecurityException> um e o chamador não terá permissão para vincular à biblioteca.  
   
-- Para desabilitar o automático **LinkDemand** e impede que a exceção sendo lançada, você pode colocar o **AllowPartiallyTrustedCallersAttribute** atributo no assembly escopo compartilhado biblioteca. Este atributo permite suas bibliotecas a ser chamado do código gerenciado parcialmente confiável.  
+- Para desabilitar o **LinkDemand** automático e impedir que a exceção seja gerada, você pode posicionar o atributo **AllowPartiallyTrustedCallersAttribute** no escopo do assembly de uma biblioteca compartilhada. Esse atributo permite que suas bibliotecas sejam chamadas a partir de código gerenciado parcialmente confiável.  
   
-- Código parcialmente confiável que é concedido acesso a uma biblioteca com esse atributo ainda está sujeito à mais restrições definidas pelo <xref:System.AppDomain>.  
+- O <xref:System.AppDomain>código parcialmente confiável que recebe acesso a uma biblioteca com esse atributo ainda está sujeito a restrições adicionais definidas pelo.  
   
-- Não há nenhuma maneira programático para código parcialmente confiável chamar uma biblioteca que não tem o **AllowPartiallyTrustedCallersAttribute** atributo.  
+- Não há nenhuma maneira programática para código parcialmente confiável chamar uma biblioteca que não tem o atributo **AllowPartiallyTrustedCallersAttribute** .  
   
- As bibliotecas que são particulares a um aplicativo específico não exigem um nome forte ou o **AllowPartiallyTrustedCallersAttribute** de atributo e não pode ser referenciado pelo código potencialmente mal-intencionado fora do aplicativo. Esse código é protegido contra uso indevido intencional ou não pelo código parcialmente confiável de móvel sem que o desenvolvedor que precise fazer nada extra.  
+ As bibliotecas que são privadas para um aplicativo específico não exigem um nome forte ou o atributo **AllowPartiallyTrustedCallersAttribute** e não podem ser referenciadas por código potencialmente mal-intencionado fora do aplicativo. Esse código é protegido contra uso indevido intencional ou não intencional pelo código móvel parcialmente confiável, sem que o desenvolvedor precise fazer algo extra.  
   
- Você deve considerar habilitar explicitamente o uso pelo código parcialmente confiável para os seguintes tipos de código:  
+ Você deve considerar habilitar explicitamente o uso por código parcialmente confiável para os seguintes tipos de código:  
   
-- Código que foi testado cuidadosamente para vulnerabilidades de segurança e está em conformidade com as diretrizes descritas em [diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md).  
+- O código que foi testado de vulnerabilidades de segurança e está em conformidade com as diretrizes descritas em [diretrizes de codificação segura](../../standard/security/secure-coding-guidelines.md).  
   
 - Bibliotecas de código de nome forte que são escritas especificamente para cenários parcialmente confiáveis.  
   
-- Todos os componentes (seja parcial ou totalmente confiável) assinado com um nome forte que será chamado pelo código que é baixado da Internet.  
+- Todos os componentes (parcialmente ou totalmente confiáveis) assinados com um nome forte que será chamado pelo código baixado da Internet.  
   
 > [!NOTE]
->  Algumas classes na biblioteca de classes do .NET Framework não tem o **AllowPartiallyTrustedCallersAttribute** de atributo e não pode ser chamado pelo código parcialmente confiável.  
+> Algumas classes na biblioteca de classes de .NET Framework não têm o atributo **AllowPartiallyTrustedCallersAttribute** e não podem ser chamadas por código parcialmente confiável.  
   
 ## <a name="see-also"></a>Consulte também
 

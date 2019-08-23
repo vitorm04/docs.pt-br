@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b6f26c7b9e9d02b3ff20b53f42b09d671699ea5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673180"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919384"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -180,57 +180,57 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|closeTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para a conclusão de uma operação close. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|
-|name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor é uma cadeia de caracteres definida pelo usuário que atua como a cadeia de caracteres de identificação para a associação personalizada. Começando com [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre a configuração padrão e sem nome associações e comportamentos, consulte [configuração simplificado](../../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|
-|openTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para a conclusão de uma operação open. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|
-|receiveTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de recebimento ser concluída. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|
-|sendTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de envio ser concluída. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|
+|closeTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para a conclusão de uma operação de fechamento. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|
+|name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor é uma cadeia de caracteres definida pelo usuário que atua como a cadeia de caracteres de identificação para a associação personalizada. A partir do, não é necessário que as associações e os comportamentos tenham um nome. [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
+|openTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para a conclusão de uma operação de abertura. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|
+|receiveTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para a conclusão de uma operação de recebimento. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|
+|sendTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para a conclusão de uma operação de envio. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|
 
 ### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Especifica o sistema de mensagens bidirecional para a associação personalizada. Ele é usado com os transportes que não permitem comunicações duplex nativamente, por exemplo, HTTP. TCP, por outro lado, permite que as comunicações duplex nativamente e não requer o uso desse elemento de associação para o serviço enviar mensagens para um cliente.<br /><br /> O cliente deve expor um endereço para o serviço para que entre em contato com e estabelecer uma conexão. Esse endereço de cliente é fornecido pelo `ClientBaseAddress` atributo.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
-|[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Especifica um resolvedor de nome de pares de protocolo de resolução de nome de ponto a ponto (PNRP). Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
-|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Especifica a configuração para mensagens WS-Reliable. Quando esse elemento é adicionado a uma ligação personalizada, o canal resultante pode dar suporte a exatamente-uma vez as garantias de entrega. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança da associação personalizada. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
-|[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Especifica as configurações de segurança para uma associação de fluxo SSL. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
-|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Especifica que a associação dá suporte ao fluxo de transações e o protocolo a ser usado pelo `transactionProtocol` atributo. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
-|[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Especifica as opções de segurança da associação personalizada de fluxo. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
+|[\<compositeDuplex>](compositeduplex.md)|Especifica a mensagem de duas vias para a associação personalizada. Ele é usado com transportes que não permitem comunicações duplex nativamente, por exemplo, HTTP. O TCP, por outro lado, permite comunicações duplex nativamente e não requer o uso desse elemento de ligação para que o serviço envie mensagens de volta para um cliente.<br /><br /> O cliente deve expor um endereço para que o serviço faça contato e estabeleça uma conexão. Esse endereço de `ClientBaseAddress` cliente é fornecido pelo atributo.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
+|[\<pnrpPeerResolver>](pnrppeerresolver.md)|Especifica um resolvedor de nome de par PNRP (Peer Name Resolution Protocol). Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
+|[\<reliableSession>](reliablesession.md)|Especifica a configuração para mensagens WS-Reliable. Quando esse elemento é adicionado a uma associação personalizada, o canal resultante pode dar suporte a garantias de entrega exatamente uma vez. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
+|[\<security>](security-of-custombinding.md)|Especifica as opções de segurança da associação personalizada. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
+|[\<sslStreamSecurity>](sslstreamsecurity.md)|Especifica as configurações de segurança para uma associação de fluxo SSL. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
+|[\<transactionFlow>](transactionflow.md)|Especifica que a associação dá suporte ao fluxo de transações e o protocolo a ser usado `transactionProtocol` pelo atributo. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
+|[\<windowsStreamSecurity>](windowsstreamsecurity.md)|Especifica as opções de segurança de streaming da associação personalizada. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
 
 ### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|associações|Contém todas as associações de aplicativos do Windows Communication Foundation.|
+|associações|Contém todas as associações para aplicativos Windows Communication Foundation.|
 
 ## <a name="remarks"></a>Comentários
 
-Associações personalizadas fornecem controle total sobre a pilha de mensagens do WCF. Associações personalizadas especiais podem ser criadas com o meu adicionando os elementos de configuração para entidades específicas. Por exemplo, o usuário pode combinar as `httpsTransport` seção, `reliableSession` seção e o `security` associação baseado em seção para criar um https seguro e confiável.
+As associações personalizadas fornecem controle total sobre a pilha de mensagens do WCF. Associações especiais personalizadas podem ser criadas para adicionar os elementos de configuração para entidades específicas. Por exemplo, o usuário pode combinar a `httpsTransport` seção, `reliableSession` seção e a `security` seção para criar uma associação baseada em https confiável e segura.
 
-Uma associação individual define a pilha de mensagem, especificando os elementos de configuração para os elementos da pilha na ordem em que aparecem na pilha. Cada elemento define e configura um elemento da pilha. Deve haver apenas um elemento de transporte em cada associação personalizada. Sem esse elemento, a pilha de mensagens está incompleta.
+Uma associação individual define a pilha de mensagens especificando os elementos de configuração dos elementos de pilha na ordem em que aparecem na pilha. Cada elemento define e configura o elemento de um da pilha. Deve haver apenas um elemento de transporte em cada associação personalizada. Sem esse elemento, a pilha de mensagens está incompleta.
 
-A ordem na qual os elementos aparecem na pilha é importante, porque ele é a ordem na qual as operações são aplicadas à mensagem. A ordem recomendada de elementos da pilha é o seguinte:
+A ordem na qual os elementos aparecem na pilha é importante, pois é a ordem na qual as operações são aplicadas à mensagem. A ordem recomendada de elementos de pilha é a seguinte:
 
-1. Transações (opcionais)
+1. Transações (opcional)
 
-2. (Opcional) de mensagens confiáveis
+2. Mensagens confiáveis (opcional)
 
 3. Segurança (opcional)
 
-4. Transporte
+4. Porta
 
 5. Codificador (opcional)
 
-Use uma ligação personalizada quando uma das associações fornecidas pelo sistema não atende aos requisitos do seu serviço. Uma associação personalizada pode ser usada, por exemplo, para habilitar o uso de um novo transporte ou de um codificador de novo em um ponto de extremidade de serviço.
+Use uma associação personalizada quando uma das associações fornecidas pelo sistema não atender aos requisitos do seu serviço. Uma associação personalizada poderia ser usada, por exemplo, para habilitar o uso de um novo transporte ou um novo codificador em um ponto de extremidade de serviço.
 
-Uma associação personalizada é construída usando uma da <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> de uma coleção de elementos de associação que são "empilhados" em uma ordem específica:
+Uma associação personalizada é construída usando uma das <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> coleções de elementos de associação que são "empilhadas" em uma ordem específica:
 
-- Na parte superior é um recurso opcional <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> que permite a fluir transações.
+- Na parte superior, há um <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> opcional que permite transações de fluxo.
 
-- Em seguida, é um recurso opcional <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> que fornece uma sessão e mecanismo de ordenação, conforme definido na especificação WS-ReliableMessaging. Essa noção de uma sessão pode cruzar intermediários SOAP e transporte.
+- Em seguida, é <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> um opcional que fornece um mecanismo de sessão e ordenação, conforme definido na especificação WS-ReliableMessaging. Essa noção de uma sessão pode cruzar os intermediários de transporte e SOAP.
 
-- Em seguida, é um elemento de associação de segurança opcional que fornece recursos de segurança como autenticação, autorização, proteção e confidencialidade. Os seguintes elementos de associação de segurança são fornecidos pelo Windows Communication Foundation (WCF):
+- A seguir está um elemento de associação de segurança opcional que fornece recursos de segurança como autorização, autenticação, proteção e confidencialidade. Os seguintes elementos de associação de segurança são fornecidos pelo Windows Communication Foundation (WCF):
 
   - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 
@@ -240,11 +240,11 @@ Uma associação personalizada é construída usando uma da <xref:System.Service
 
   - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 
-- Em seguida os padrões de mensagem opcionais são especificados pelos elementos de associação:
+- Em seguida, estão os padrões de mensagem opcionais especificados por elementos de associação:
 
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
 
-- Em seguida, estão os upgrades/auxiliares de transporte opcional elementos de associação:
+- Em seguida, estão os elementos de associação de atualizações/auxiliares de transporte opcionais:
 
   - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 
@@ -252,7 +252,7 @@ Uma associação personalizada é construída usando uma da <xref:System.Service
 
   - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 
-- Em seguida, é um elemento de associação de codificação de mensagem necessário. Você pode usar seu próprio transporte ou use um da seguinte mensagem de codificação associações:
+- A seguir está um elemento de associação de codificação de mensagem necessário. Você pode usar seu próprio transporte ou usar uma das seguintes associações de codificação de mensagem:
 
   - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 
@@ -260,7 +260,7 @@ Uma associação personalizada é construída usando uma da <xref:System.Service
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-- Na parte inferior é um elemento de transporte obrigatório. Você pode usar seu próprio transporte ou use um dos elementos fornecidos pelo Windows Communication Foundation (WCF) de associação de transporte:
+- Na parte inferior, há um elemento Transport necessário. Você pode usar seu próprio transporte ou usar um dos elementos de associação de transporte fornecidos pelo Windows Communication Foundation (WCF):
 
   - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -282,15 +282,15 @@ A tabela a seguir resume as opções para cada camada.
 |-----------|-------------|--------------|
 |Fluxo de transações|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Não|
 |Confiabilidade|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Não|
-|Segurança|Simétrica, assimétrica, nível de transporte|Não|
+|Segurança|Simétrico, assimétrico, nível de transporte|Não|
 |Alteração de forma|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Não|
-|Upgrades de transporte|Fluxo de SSL, fluxo do Windows, resolvedor de pares|Não|
+|Atualizações de transporte|Fluxo SSL, fluxo do Windows, resolvedor de pares|Não|
 |Codificando|Texto, binário, MTOM, personalizado|Sim|
-|Transporte|Tipos HTTP, HTTPS, TCP, Pipes nomeados, MSMQ, personalizado|Sim|
+|Porta|TCP, pipes nomeados, HTTP, HTTPS, tipos de MSMQ, personalizado|Sim|
 
-Além disso, você pode definir seus próprios elementos de associação e inseri-los entre qualquer uma das camadas anteriores definidas.
+Além disso, você pode definir seus próprios elementos de ligação e inseri-los entre as camadas definidas anteriormente.
 
-Para obter uma discussão sobre como usar uma associação para modificar uma associação fornecida pelo sistema personalizada, consulte [como: Personalizar uma associação fornecida pelo sistema](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).
+Para obter uma discussão sobre como usar uma associação personalizada para modificar uma associação fornecida pelo sistema, consulte [como: Personalize uma associação](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)fornecida pelo sistema.
 
 ## <a name="see-also"></a>Consulte também
 
@@ -298,11 +298,11 @@ Para obter uma discussão sobre como usar uma associação para modificar uma as
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.Configuration.BindingsSection>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [customBinding elemento](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)
+- [Associações](../../../wcf/bindings.md)
+- [Estendendo associações](../../../wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
+- [Elemento CustomBinding](custombinding.md)
+- [Associações](../../../wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)

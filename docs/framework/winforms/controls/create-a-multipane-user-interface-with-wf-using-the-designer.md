@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039956"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930176"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Como: Criar uma interface do usuário com vários painéis com o Windows Forms usando o designer
 No procedimento a seguir, você vai criar uma interface do usuário com vários painéis semelhante à que é usada no Microsoft Outlook, com uma lista **Pasta**, um painel **Mensagens** e um painel **Visualização**. Essa organização é obtida principalmente por meio de controles de encaixe com o formulário.
@@ -39,7 +39,7 @@ No procedimento a seguir, você vai criar uma interface do usuário com vários 
      Neste ponto, se você pressionar F5 para executar o aplicativo, o formulário exibirá uma interface do usuário de três partes, semelhante àquela do Microsoft Outlook.
 
     > [!NOTE]
-    >  Quando você coloca o ponteiro do mouse sobre qualquer um dos divisores <xref:System.Windows.Forms.SplitContainer> dentro dos controles, você pode redimensionar as dimensões internas.
+    > Quando você coloca o ponteiro do mouse sobre qualquer um dos divisores <xref:System.Windows.Forms.SplitContainer> dentro dos controles, você pode redimensionar as dimensões internas.
 
 Neste ponto no desenvolvimento de aplicativos, você criou uma interface do usuário sofisticada. A próxima etapa é prosseguir com a programação do próprio aplicativo, talvez conectando o controle e <xref:System.Windows.Forms.TreeView> <xref:System.Windows.Forms.ListView> os controles a algum tipo de fonte de dados. Para obter mais informações sobre como conectar controles a dados, consulte [Vinculação de dados e Windows Forms](../data-binding-and-windows-forms.md).
 

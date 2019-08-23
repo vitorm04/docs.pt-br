@@ -5,21 +5,21 @@ helpviewer_keywords:
 - retrieving the DrawingGroup value of a Visual [WPF]
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
-ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25aa0c3706005c1e16cedd7e06914db764545ebb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930077"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a>Como: Enumerar conteúdo de desenho de um visual
-O <xref:System.Windows.Media.Drawing> objeto fornece um modelo de objeto para enumerar o conteúdo de um <xref:System.Windows.Media.Visual>.  
+O <xref:System.Windows.Media.Drawing> objeto fornece um modelo de objeto para enumerar o conteúdo de <xref:System.Windows.Media.Visual>um.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> método para recuperar o <xref:System.Windows.Media.DrawingGroup> valor de um <xref:System.Windows.Media.Visual> e enumerá-lo.  
+ O exemplo a seguir usa <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> o método para recuperar <xref:System.Windows.Media.DrawingGroup> o valor de <xref:System.Windows.Media.Visual> a e enumerá-lo.  
   
 > [!NOTE]
->  Quando você está enumerando o conteúdo do visual, você está recuperando <xref:System.Windows.Media.Drawing> objetos e não a representação subjacente dos dados de renderização como uma lista de instruções de gráficos de vetor. Para obter mais informações, consulte [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md).  
+> Ao enumerar o conteúdo do Visual, você está recuperando <xref:System.Windows.Media.Drawing> objetos e não a representação subjacente da lista de instruções de renderização de dados como elementos gráficos de vetor. Para obter mais informações, consulte [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md).  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   

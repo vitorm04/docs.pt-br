@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 983860c680b7c9bcf36406f61582a6b641fd26a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd0010ccd3c7f6b2f4433fe8ce234bc806754260
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645295"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916236"
 ---
 # <a name="custom-serialization"></a>Serialização personalizada
 A serialização personalizada é o processo de controlar a serialização e a desserialização de um tipo. Controlando a serialização, é possível garantir a compatibilidade de serialização, que é a capacidade de serializar e desserializar entre versões de um tipo sem interromper a funcionalidade básica do tipo. Por exemplo, na primeira versão de um tipo, pode haver apenas dois campos. Na próxima versão de um tipo, vários outros campos são adicionados. No entanto, a segunda versão de um aplicativo deve ser capaz de serializar e desserializar ambos os tipos. As seções a seguir descrevem como controlar a serialização.
@@ -30,7 +30,7 @@ A serialização personalizada é o processo de controlar a serialização e a d
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
->  Nas versões anteriores ao .NET Framework 4.0, a serialização de dados personalizados do usuário em um assembly parcialmente confiável era realizada com o GetObjectData. Iniciando com a versão 4.0, esse método é marcado com o atributo <xref:System.Security.SecurityCriticalAttribute> que impede a execução em assemblies parcialmente confiáveis. Para contornar esta condição, implemente a interface <xref:System.Runtime.Serialization.ISafeSerializationData>.  
+> Nas versões anteriores ao .NET Framework 4.0, a serialização de dados personalizados do usuário em um assembly parcialmente confiável era realizada com o GetObjectData. Iniciando com a versão 4.0, esse método é marcado com o atributo <xref:System.Security.SecurityCriticalAttribute> que impede a execução em assemblies parcialmente confiáveis. Para contornar esta condição, implemente a interface <xref:System.Runtime.Serialization.ISafeSerializationData>.  
   
 ## <a name="running-custom-methods-during-and-after-serialization"></a>Executando métodos personalizados durante e após a serialização  
  A prática recomendada e a maneira mais fácil (introduzidas na versão 2.0 do .NET Framework) é aplicar os seguintes atributos a métodos que são usados para corrigir dados durante e após a serialização:  

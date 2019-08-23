@@ -2,25 +2,25 @@
 title: Configuração de exemplo de cópia em massa
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 6244afff348edbde46fdfda7481910aca2b25939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a7c0ddef42ff56306a42288c6960987ce7f714a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878651"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918087"
 ---
 # <a name="bulk-copy-example-setup"></a>Configuração de exemplo de cópia em massa
-O <xref:System.Data.SqlClient.SqlBulkCopy> classe pode ser usado para gravar dados somente em tabelas do SQL Server. Os exemplos de código mostrados neste tópico usam o banco de dados de exemplo do SQL Server, **AdventureWorks**. Para evitar a alteração das tabelas existentes a exemplos de código gravam dados em tabelas que você deve criar primeiro.  
+A <xref:System.Data.SqlClient.SqlBulkCopy> classe pode ser usada para gravar dados somente em tabelas SQL Server. Os exemplos de código mostrados neste tópico usam o SQL Server banco de dados de exemplo, **AdventureWorks**. Para evitar alterar as tabelas existentes, os exemplos de código gravam dados em tabelas que você deve criar primeiro.  
   
- O **BulkCopyDemoMatchingColumns** e **BulkCopyDemoDifferentColumns** tabelas são baseadas no **AdventureWorks** **Production**  tabela. Nos exemplos de código que usam essas tabelas, os dados são adicionados dos **Production** tabela para uma dessas tabelas de exemplo. O **BulkCopyDemoDifferentColumns** tabela é usada quando o exemplo ilustra como mapear colunas de dados de origem para a tabela de destino; **BulkCopyDemoMatchingColumns** é usado para a maioria dos outros exemplos.  
+ As tabelas **BulkCopyDemoMatchingColumns** e **BulkCopyDemoDifferentColumns** são baseadas na tabela **AdventureWorks** **Production. Products** . Nos exemplos de código que usam essas tabelas, os dados são adicionados da tabela **Production. Products** a uma dessas tabelas de exemplo. A tabela **BulkCopyDemoDifferentColumns** é usada quando o exemplo ilustra como mapear colunas dos dados de origem para a tabela de destino; **BulkCopyDemoMatchingColumns** é usado para a maioria dos outros exemplos.  
   
- Alguns dos exemplos de código demonstram como usar um <xref:System.Data.SqlClient.SqlBulkCopy> classe para gravar em várias tabelas. Para esses exemplos, o **BulkCopyDemoOrderHeader** e **BulkCopyDemoOrderDetail** tabelas são usadas como tabelas de destino. Essas tabelas são baseadas na **Sales. SalesOrderHeader** e **Sales. SalesOrderDetail** tabelas na **AdventureWorks**.  
+ Alguns dos exemplos de código demonstram como usar uma <xref:System.Data.SqlClient.SqlBulkCopy> classe para gravar em várias tabelas. Para esses exemplos, as tabelas **BulkCopyDemoOrderHeader** e **BulkCopyDemoOrderDetail** são usadas como tabelas de destino. Essas tabelas são baseadas nas tabelas **Sales. SalesOrderHeader** e **Sales. SalesOrderDetail** no **AdventureWorks**.  
   
 > [!NOTE]
->  O **SqlBulkCopy** exemplos de código são fornecidos para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem localizadas na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+> Os exemplos de código **SqlBulkCopy** são fornecidos para demonstrar a sintaxe somente para uso do **SqlBulkCopy** . Se as tabelas de origem e destino estiverem localizadas na mesma instância de SQL Server, será mais fácil e rápido usar uma instrução Transact `INSERT … SELECT` -SQL para copiar os dados.  
   
-## <a name="table-setup"></a>Configuração da tabela  
- Para criar as tabelas necessárias para os exemplos de código seja executado corretamente, você deve executar as seguintes instruções Transact-SQL em um banco de dados do SQL Server.  
+## <a name="table-setup"></a>Configuração de tabela  
+ Para criar as tabelas necessárias para que os exemplos de código sejam executados corretamente, você deve executar as instruções Transact-SQL a seguir em um banco de dados SQL Server.  
   
 ```  
 USE AdventureWorks  

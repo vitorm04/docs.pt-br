@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 5c57d86b2f08733dc4a729bf6091eab23c6035f2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039705"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912621"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Como: Adicionar Controles ao Windows Forms
 A maioria dos formulários é projetada adicionando controles à superfície do formulário para definir uma interface do usuário (IU). Um *controle* é um componente em um formulário usado para exibir informações ou aceitar a entrada do usuário. Para obter mais informações sobre controles, consulte [Controles do Windows Forms](index.md).
@@ -30,7 +30,7 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
      O controle é adicionado ao formulário com a localização e o tamanho especificados.
 
     > [!NOTE]
-    >  Cada controle tem um tamanho padrão definido. Você pode adicionar um controle ao seu formulário no tamanho de padrão do controle arrastando-o da **Caixa de ferramentas** para o formulário.
+    > Cada controle tem um tamanho padrão definido. Você pode adicionar um controle ao seu formulário no tamanho de padrão do controle arrastando-o da **Caixa de ferramentas** para o formulário.
 
 ## <a name="to-drag-a-control-to-a-form"></a>Arrastar um controle para um formulário
 
@@ -41,12 +41,12 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
      O controle é adicionado ao formulário na localização e tamanho especificados.
 
     > [!NOTE]
-    >  Você pode clicar duas vezes em um controle na **Caixa de ferramentas** para adicioná-lo ao canto superior esquerdo do formulário com seu tamanho padrão.
+    > Você pode clicar duas vezes em um controle na **Caixa de ferramentas** para adicioná-lo ao canto superior esquerdo do formulário com seu tamanho padrão.
 
      Você também pode adicionar controles dinamicamente a um formulário no tempo de execução. No exemplo de código a seguir, <xref:System.Windows.Forms.TextBox> um controle será adicionado ao formulário quando um <xref:System.Windows.Forms.Button> controle for clicado.
 
     > [!NOTE]
-    >  O procedimento a seguir requer a existência de um formulário com um controle **Botão**, `Button1`, já inserido nele.
+    > O procedimento a seguir requer a existência de um formulário com um controle **Botão**, `Button1`, já inserido nele.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>Adicionar um controle a um formulário com programação
 
@@ -81,7 +81,7 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
     ```
 
     > [!NOTE]
-    >  Você também pode adicionar código para inicializar outras propriedades do controle.
+    > Você também pode adicionar código para inicializar outras propriedades do controle.
 
     > [!IMPORTANT]
     >  Você poderia expor seu computador local a um risco de segurança por meio da rede referenciando um `UserControl` mal-intencionado. Isso seria um problemas apenas no caso de uma pessoa mal-intencionada criar um controle personalizado prejudicial e você adicioná-lo por engano ao seu projeto.

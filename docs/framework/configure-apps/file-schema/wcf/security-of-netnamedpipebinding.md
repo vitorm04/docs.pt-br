@@ -2,21 +2,21 @@
 title: <security> de <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0996a98438dc344d96d640abced52ac99709adbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670515"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936681"
 ---
-# <a name="security-of-netnamedpipebinding"></a>\<security> of \<netNamedPipeBinding>
+# <a name="security-of-netnamedpipebinding"></a>\<> de segurança \<do NetNamedPipeBinding >
 Define as configurações de segurança para uma associação.  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netNamedPipeBinding>  
-\<binding>  
-\<segurança >  
+\<> de associação  
+\<> de segurança  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ Define as configurações de segurança para uma associação.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|modo|Especifica o tipo de segurança que é aplicada a essa associação. Os valores válidos incluem o seguinte:<br /><br /> -None: Isso desabilita a segurança.<br />-Transporte: Segurança é fornecida usando a segurança de transporte com base subjacente. É possível controlar o nível de proteção com esse modo.<br />-O valor padrão é o transporte. Esse atributo é do tipo <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|modo|Especifica o tipo de segurança que é aplicado a essa associação. Os valores válidos incluem o seguinte:<br /><br /> None Isso desabilita a segurança.<br />Porta A segurança é fornecida usando a segurança baseada em transporte subjacente. É possível controlar o nível de proteção com esse modo.<br />-O valor padrão é transporte. Esse atributo é do tipo <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -49,7 +49,7 @@ Define as configurações de segurança para uma associação.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|associação|O elemento de associação do [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).|  
+|associação|O elemento Binding da [ \<> NetNamedPipeBinding](netnamedpipebinding.md).|  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -57,9 +57,9 @@ Define as configurações de segurança para uma associação.
 - <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Selecionando um tipo de credencial](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Selecionando um tipo de credencial](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [Associações](../../../wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

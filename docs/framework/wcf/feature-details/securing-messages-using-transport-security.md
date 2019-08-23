@@ -2,18 +2,18 @@
 title: Mensagens de segurança que usam a segurança de transporte
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331510"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911716"
 ---
 # <a name="securing-messages-using-transport-security"></a>Mensagens de segurança que usam a segurança de transporte
 Esta seção discute a segurança de transporte do MSMQ (enfileiramento de mensagens) que você pode usar para proteger mensagens enviadas a uma fila.  
   
 > [!NOTE]
->  Antes de ler este tópico, é recomendável que você leia os [conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+> Antes de ler este tópico, é recomendável que você leia os [conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
  A ilustração a seguir fornece um modelo conceitual de comunicação em fila usando o Windows Communication Foundation (WCF). Esta ilustração e terminologia são usadas para explicar os conceitos de segurança de transporte.  
   
@@ -53,7 +53,7 @@ Esta seção discute a segurança de transporte do MSMQ (enfileiramento de mensa
  A escolha de usar a segurança do Windows requer a integração de Active Directory. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>é o modo de segurança de transporte padrão. Quando isso é definido, o canal do WCF anexa o SID do Windows à mensagem do MSMQ e usa seu certificado interno obtido do Active Directory. O MSMQ usa esse certificado interno para proteger a mensagem. O Gerenciador de filas de recebimento usa Active Directory para pesquisar e localizar um certificado correspondente para autenticar o cliente e verifica se o SID também corresponde ao do cliente. Essa etapa de autenticação é executada se um certificado, gerado internamente no caso do modo `WindowsDomain` de autenticação ou gerado externamente no caso do modo `Certificate` de autenticação, é anexado à mensagem mesmo que a fila de destino seja Não Marcado como exigindo autenticação.  
   
 > [!NOTE]
->  Ao criar uma fila, você pode marcar a fila como uma fila autenticada para indicar que a fila requer autenticação do cliente enviando mensagens para a fila. Isso garante que nenhuma mensagem não autenticada seja aceita na fila.  
+> Ao criar uma fila, você pode marcar a fila como uma fila autenticada para indicar que a fila requer autenticação do cliente enviando mensagens para a fila. Isso garante que nenhuma mensagem não autenticada seja aceita na fila.  
   
  O SID anexado à mensagem também é usado para verificar a ACL da fila de destino para garantir que o cliente tenha autoridade para enviar mensagens para a fila.  
   
@@ -76,13 +76,13 @@ Esta seção discute a segurança de transporte do MSMQ (enfileiramento de mensa
  Além de assinar a mensagem, a mensagem MSMQ é criptografada usando a chave pública do certificado obtido de Active Directory que pertence ao Gerenciador de fila de recebimento que hospeda a fila de destino. O Gerenciador de filas de envio garante que a mensagem MSMQ seja criptografada em trânsito. O Gerenciador de filas de recebimento descriptografa a mensagem MSMQ usando a chave privada de seu certificado interno e armazena a mensagem na fila (se autenticada e autorizada) em texto não criptografado.  
   
 > [!NOTE]
->  Para criptografar a mensagem, Active Directory acesso é necessário`UseActiveDirectory` (a <xref:System.ServiceModel.NetMsmqBinding> propriedade de deve ser `true`definida como) e pode ser usada <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> com <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>and.  
+> Para criptografar a mensagem, Active Directory acesso é necessário`UseActiveDirectory` (a <xref:System.ServiceModel.NetMsmqBinding> propriedade de deve ser `true`definida como) e pode ser usada <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> com <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>and.  
   
 #### <a name="none-protection-level"></a>Nenhum nível de proteção  
  Isso é implícito quando <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> é definido como. <xref:System.Net.Security.ProtectionLevel.None> Este não pode ser um valor válido para outros modos de autenticação.  
   
 > [!NOTE]
->  Se a mensagem MSMQ for assinada, o MSMQ verificará se a mensagem está assinada com o certificado anexado (interno ou externo) independentemente do estado da fila, ou seja, da fila autenticada ou não.  
+> Se a mensagem MSMQ for assinada, o MSMQ verificará se a mensagem está assinada com o certificado anexado (interno ou externo) independentemente do estado da fila, ou seja, da fila autenticada ou não.  
   
 ### <a name="msmq-encryption-algorithm"></a>Algoritmo de criptografia MSMQ  
  O algoritmo de criptografia especifica o algoritmo a ser usado para criptografar a mensagem do MSMQ na conexão. Essa propriedade será usada somente se <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> for definido como <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  

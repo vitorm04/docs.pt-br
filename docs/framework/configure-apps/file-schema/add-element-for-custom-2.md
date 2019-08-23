@@ -1,5 +1,5 @@
 ---
-title: <add> elemento para NameValueSectionHandler e DictionarySectionHandler
+title: <add>elemento para NameValueSectionHandler e DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 3bbe4ad6559e324db5853b95e797f50a7b908dcb
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ec6d5045580e887de5f05a05c8f39fa62c6e3f2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301420"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921319"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Adicionar > elemento para NameValueSectionHandler e DictionarySectionHandler
 
-Adiciona as configurações de aplicativo personalizado. Cada  **\<Adicionar >** marca contém um par chave/valor.
+Adiciona configurações de aplicativo personalizadas. Cada marca Add > contém um par chave/valor.  **\<**
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>Sintaxe
@@ -41,7 +41,7 @@ Adiciona as configurações de aplicativo personalizado. Cada  **\<Adicionar >**
 
 | Elemento | Descrição |
 | ------- | ------------|
-| [ **\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Define as configurações para seções de configuração personalizadas que usam o <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classes. |
+| [elemento >name  **\<** ](custom-element-2.md) | Define as configurações para seções de configuração personalizadas que <xref:System.Configuration.NameValueSectionHandler> usam <xref:System.Configuration.DictionarySectionHandler> as classes e. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -49,7 +49,7 @@ Nenhum
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como definir uma seção de configuração personalizada e usar o  **\<Adicionar >** elemento colocar configurações na seção:
+O exemplo a seguir mostra como definir uma seção de configuração personalizada e usar o  **\<elemento add >** para colocar as configurações na seção:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ O exemplo a seguir mostra como definir uma seção de configuração personaliza
 
 ## <a name="configuration-file"></a>arquivo de configuração
 
-Esse elemento pode ser usado no arquivo de configuração do aplicativo, arquivo de configuração de máquina (*Machine. config*), e *Web. config* arquivos que não estão no nível de diretório do aplicativo.
+Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema do arquivo de configuração para o .NET Framework](index.md)

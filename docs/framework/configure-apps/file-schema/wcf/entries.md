@@ -2,21 +2,21 @@
 title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 5561cf61cef2258ec61bd32770538add1c69f5c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 610ba29ec98f4b1f2a9b1db3542bcb3aefb46457
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704200"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925660"
 ---
-# <a name="entries"></a>\<entries>
-Uma entrada de roteamento que contêm mapeamentos entre os filtros de roteamento e os pontos de extremidade para enviar mensagens para quando o filtro corresponde ao destino.  
+# <a name="entries"></a>\<entradas >
+Uma entrada de roteamento que contém mapeamentos entre os filtros de roteamento e os pontos de extremidade de destino para envio de mensagens quando o filtro é correspondente.  
   
  \<system.serviceModel>  
-\<routing>  
+\<> de roteamento  
 \<routingTables>  
 \<table>  
-\<entries>  
+\<entradas >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,13 +45,13 @@ Uma entrada de roteamento que contêm mapeamentos entre os filtros de roteamento
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Mapeia um filtro para um ponto de extremidade do cliente que foi definido anteriormente. As mensagens que correspondem a esse filtro serão enviadas para este destino.|  
+|[\<filters>](filters-of-routing.md)|Mapeia um filtro para um ponto de extremidade do cliente que foi definido anteriormente. As mensagens correspondentes a este filtro serão enviadas para esse destino.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Uma seção de configuração que contém uma tabela de roteamento.|  
+|[\<routing>](routing.md)|Uma seção de configuração que contém uma tabela de roteamento.|  
   
 ## <a name="see-also"></a>Consulte também
 

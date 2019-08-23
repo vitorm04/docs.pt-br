@@ -1,21 +1,21 @@
 ---
-title: <certificate> para <identity>
+title: <certificate>fins<identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 76bdcb40d5016d7fcbff6c0d9769819f710065fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52d1fa31cebd949c91809464976739ef1334af29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673337"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919610"
 ---
-# <a name="certificate-for-identity"></a>\<certificado > para \<identidade >
-Especifica um certificado X.509 usado para validar um servidor para um cliente.  
+# <a name="certificate-for-identity"></a>\<> de certificado \<para > de identidade
+Especifica um certificado X. 509 usado para validar um servidor para um cliente.  
   
- Para obter mais informações sobre como definir o valor do elemento, consulte [identidade de serviço e autenticação](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Para obter mais informações sobre como definir o valor do elemento, consulte [identidade e autenticação de serviço](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
  \<identity>  
-\<certificate>  
+\<> de certificado  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,7 +30,7 @@ Especifica um certificado X.509 usado para validar um servidor para um cliente.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|encodedValue|Uma codificação de Base64 do certificado.|  
+|encodedValue|Uma codificação base64 do certificado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -39,7 +39,7 @@ Especifica um certificado X.509 usado para validar um servidor para um cliente.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica a identidade do serviço para ser autenticado pelo cliente.|  
+|[\<identity>](identity.md)|Especifica a identidade do serviço a ser autenticado pelo cliente.|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir especifica a representação codificada de um certificado usado para validar um servidor para um cliente.  
@@ -56,5 +56,5 @@ Especifica um certificado X.509 usado para validar um servidor para um cliente.
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.EndpointIdentity>
-- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Autenticação e identidade de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

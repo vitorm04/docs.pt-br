@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96d38abad37f9460230164de784a1258e7e937a4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 29fbe951b955c97e39ebaf80885729a45c1a3fd7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663717"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927391"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<Elemento de > forcePerformanceCounterUniqueSharedMemoryReads
 Especifica se o PerfCounter.dll usa a configuração de registro CategoryOptions em um aplicativo do .NET Framework versão 1.1 para determinar se é preciso carregar dados do contador de desempenho da memória global ou da memória compartilhada especifica da categoria.  
@@ -62,7 +62,7 @@ enabled="true|false"/>
  Para compatibilidade com versões anteriores, o .NET Framework 4 PerfCounter. dll não verifica a entrada de registro CategoryOptions quando executado em um aplicativo .NET Framework 1,1. Ele simplesmente usa a memória compartilhada global, assim como o .NET Framework 1,1 PerfCounter. dll. No entanto, você pode instruir o .NET Framework 4 PerfCounter. dll para verificar a configuração do `<forcePerformanceCounterUniqueSharedMemoryReads>` registro habilitando o elemento.  
   
 > [!NOTE]
->  Habilitar o `<forcePerformanceCounterUniqueSharedMemoryReads>` elemento não garante que a memória compartilhada específica da categoria será usada. A `true` configuração habilitada só faz com que PerfCounter. dll referencie a configuração do registro CategoryOptions. A configuração padrão para CategoryOptions é usar a memória compartilhada específica da categoria; no entanto, você pode alterar CategoryOptions para indicar que a memória compartilhada global deve ser usada.  
+> Habilitar o `<forcePerformanceCounterUniqueSharedMemoryReads>` elemento não garante que a memória compartilhada específica da categoria será usada. A `true` configuração habilitada só faz com que PerfCounter. dll referencie a configuração do registro CategoryOptions. A configuração padrão para CategoryOptions é usar a memória compartilhada específica da categoria; no entanto, você pode alterar CategoryOptions para indicar que a memória compartilhada global deve ser usada.  
   
  A chave do registro que contém a configuração CategoryOptions é\\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services <\>NomeDaCategoria \Performance. Por padrão, CategoryOptions é definido como 3, o que instrui o PerfCounter. dll a usar a memória compartilhada específica da categoria. Se CategoryOptions for definido como 0, PerfCounter. dll usará a memória compartilhada global. Os dados da instância serão reutilizados somente se o nome da instância que está sendo criada for idêntico à instância que está sendo reutilizada. Todas as versões poderão gravar na categoria. Se CategoryOptions for definido como 1, a memória compartilhada global será usada, mas os dados da instância poderão ser reutilizados se o nome da categoria tiver o mesmo comprimento que a categoria que está sendo reutilizada.  
   

@@ -2,23 +2,23 @@
 title: Ativação com base em configuração no ISS e WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 99f6c7d41620a7bafea0981cbeaa5cdcbad5ef12
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636121"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909776"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Ativação com base em configuração no ISS e WAS
 
-Normalmente, ao hospedar um serviço do Windows Communication Foundation (WCF) em serviços de informações da Internet (IIS) ou o serviço de ativação de processos do Windows (WAS), você deve fornecer um arquivo. svc. O arquivo. svc contém o nome do serviço e uma fábrica do host de serviço personalizado opcional. Este arquivo adicional aumenta a sobrecarga de capacidade de gerenciamento. O recurso de ativação baseada em configuração remove o requisito de ter um arquivo. svc e, portanto, os respectivos sobrecarga.
+Normalmente, ao hospedar um serviço de Windows Communication Foundation (WCF) em Serviços de Informações da Internet (IIS) ou no WAS (serviço de ativação de processos do Windows), você deve fornecer um arquivo. svc. O arquivo. svc contém o nome do serviço e uma fábrica de host de serviço personalizada opcional. Esse arquivo adicional adiciona sobrecarga de gerenciabilidade. O recurso de ativação baseada em configuração remove a necessidade de ter um arquivo. svc e, portanto, a sobrecarga associada.
 
 ## <a name="configuration-based-activation"></a>Ativação com base em configuração
 
-Ativação baseada em configuração leva os metadados que costumava ser colocado no arquivo. svc e o coloca no arquivo Web. config. Dentro de <`serviceHostingEnvironment`> elemento, há um <`serviceActivations`> elemento. Dentro de <`serviceActivations`> elemento são um ou mais <`add`> elementos, um para cada serviço hospedado. O <`add`> elemento contém atributos que permitem que você defina o endereço relativo para o serviço e o tipo de serviço ou uma fábrica do host de serviço. O código de exemplo de configuração a seguir mostra como esta seção é usada.
+A ativação baseada em configuração usa os metadados que costumava ser colocados no arquivo. svc e os coloca no arquivo Web. config. Dentro do elemento`serviceHostingEnvironment`< > há um elemento <`serviceActivations`>. Dentro do elemento`serviceActivations`< > há um ou mais elementos`add`de > <, um para cada serviço hospedado. O elemento`add`< > contém atributos que permitem definir o endereço relativo para o serviço e o tipo de serviço ou uma fábrica de host de serviço. O código de exemplo de configuração a seguir mostra como essa seção é usada.
 
 > [!NOTE]
->  Cada <`add`> elemento deve especificar um serviço ou um atributo de fábrica. É permitido especificar atributos de serviço e a fábrica.
+> Cada elemento`add`de > de < deve especificar um atributo de serviço ou de fábrica. É permitido especificar os atributos de serviço e de fábrica.
 
 ```xml
 <serviceHostingEnvironment>
@@ -28,16 +28,16 @@ Ativação baseada em configuração leva os metadados que costumava ser colocad
 </serviceHostingEnvironment>
 ```
 
- Com isso no arquivo Web. config, você pode colocar o código-fonte de serviço no diretório App_Code do aplicativo ou um assembly compilado no diretório Bin do aplicativo.
+ Com isso no arquivo Web. config, você pode posicionar o código-fonte do serviço no diretório App_Code do aplicativo ou um assembly em conformidade no diretório bin do aplicativo.
 
 > [!NOTE]
 > - Ao usar a ativação baseada em configuração, não há suporte para código embutido em arquivos. svc.
-> - O `relativeAddress` atributo deve ser definido como um endereço relativo, como "\<subdiretório > / SVC" ou "~ /\<sub directory/SVC".
-> - Uma exceção de configuração é gerada se você registrar um endereço relativo que não tem uma extensão conhecida associada com o WCF.
+> - O `relativeAddress` atributo deve ser definido como um endereço relativo, como "\<subdiretório >/Service.svc" ou "~/\<sub-Directory/Service. svc".
+> - Uma exceção de configuração será gerada se você registrar um endereço relativo que não tenha uma extensão conhecida associada ao WCF.
 > - O endereço relativo especificado é relativo à raiz do aplicativo virtual.
-> - Devido ao modelo hierárquico de configuração, os endereços relativos registrados no nível de máquina e o site são herdados por aplicativos virtuais.
-> - Registros em um arquivo de configuração têm precedência sobre as configurações em um. svc,. xamlx,. xoml ou outro arquivo.
-> - Qualquer ' \' (barras invertidas) em um URI enviado para o IIS / WAS são convertidos automaticamente em um '/' (barra). Se um endereço relativo é adicionado, que contém um ' \' e enviar um URI que usa o endereço relativo do IIS, a barra invertida é convertida em uma barra invertida e o IIS não pode corresponder ao endereço relativo. O IIS enviará informações de rastreamento que indica que não há nenhuma correspondência encontrada.
+> - Devido ao modelo hierárquico da configuração, os endereços relativos registrados no nível do computador e do site são herdados por aplicativos virtuais.
+> - Os registros em um arquivo de configuração têm precedência sobre as configurações em um. svc,. xamlx,. xoml ou outro arquivo.
+> - Qualquer ' \ ' (barras invertidas) em um URI enviado para o IIS/WAS é convertido automaticamente em um '/' (barra "/"). Se um endereço relativo for adicionado que contenha um ' \ ' e você enviar um URI que usa o endereço relativo, a barra invertida será convertida em uma barra e o IIS não poderá corresponder ao endereço relativo. O IIS envia informações de rastreamento que indicam que não foram encontradas correspondências.
 
 ## <a name="see-also"></a>Consulte também
 
@@ -45,4 +45,4 @@ Ativação baseada em configuração leva os metadados que costumava ser colocad
 - [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)
 - [Visão geral dos serviços de fluxo de trabalho de hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)
-- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Recursos de hospedagem do Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

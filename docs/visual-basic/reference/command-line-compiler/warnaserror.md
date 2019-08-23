@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4382ec8feda2df1e83fd2fdc509abb66984e501f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796169"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937247"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 Faz com que o compilador trate a primeira ocorrência de um aviso como um erro.  
@@ -37,7 +37,7 @@ Faz com que o compilador trate a primeira ocorrência de um aviso como um erro.
  Se você deseja que apenas avisos específicos sejam tratados como erros, pode especificar uma lista separada por vírgulas de números de aviso para serem tratados como erros.  
   
 > [!NOTE]
->  A opção `-warnaserror` não controla como os avisos são exibidos. Use a opção [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) para desativar os avisos.  
+> A opção `-warnaserror` não controla como os avisos são exibidos. Use a opção [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) para desativar os avisos.  
   
 |Para definir -warnaserror para tratar todos os avisos como erros no IDE do Visual Studio|  
 |---|  

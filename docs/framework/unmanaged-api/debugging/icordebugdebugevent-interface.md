@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a226737a-cb99-4e97-bd94-9a37094ded41
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 013cdfbb6a2904e60d6f7b4df6d40e3d65606fcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f838c9c2775023583b6879ea4c4a52727065114
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911257"
 ---
 # <a name="icordebugdebugevent-interface"></a>Interface ICorDebugDebugEvent
 Define a interface base da qual derivam todos os eventos de depuração `ICorDebug`.  
@@ -22,21 +22,21 @@ Define a interface base da qual derivam todos os eventos de depuração `ICorDeb
 |[Método GetThread](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-getthread-method.md)|Obtém o thread no qual o evento ocorreu.|  
   
 ## <a name="remarks"></a>Comentários  
- As seguintes interfaces são derivadas de `ICorDebugDebugEvent` interface:  
+ As seguintes interfaces são derivadas da `ICorDebugDebugEvent` interface:  
   
 - [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
   
 - [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
   
 > [!NOTE]
->  A interface só está disponível com o .NET Native. A tentativa de chamar `QueryInterface` recuperar um ponteiro de interface retorna `E_NOINTERFACE` para cenários de ICorDebug fora do .NET Native.  
+> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface `E_NOINTERFACE` retorna para cenários ICorDebug fora do .net Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

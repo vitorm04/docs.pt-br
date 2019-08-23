@@ -2,55 +2,55 @@
 title: Rastreamento de atividades em segurança de mensagens
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
-ms.openlocfilehash: 65b2842c57da8e17c7280a2becd755ba2aae8364
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb8a4c6782cc52de393eacc2458e216d0f069866
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933522"
 ---
 # <a name="activity-tracing-in-message-security"></a>Rastreamento de atividades em segurança de mensagens
-Este tópico descreve o rastreamento de atividade para processamento de segurança, o que acontece a seguir três fases.  
+Este tópico descreve o rastreamento de atividades para o processamento de segurança, que ocorre nas três fases a seguir.  
   
-- Troca de negociação/SCT. Isso pode acontecer no transporte posteriormente (por meio de troca de dados binários) ou camada de mensagem (por meio de trocas de mensagens SOAP).  
+- Negociação/SCT do Exchange. Isso pode acontecer no transporte posteriormente (por meio de troca de dados binária) ou camada de mensagem (por meio de trocas de mensagens SOAP).  
   
-- Mensagem de criptografia/descriptografia, com autenticação e verificação de assinatura. Os rastreamentos aparecem na atividade de ambiente, normalmente "ação de processo".  
+- Criptografia/descriptografia de mensagens, com verificação de assinatura e autenticação. Os rastreamentos aparecem na atividade ambiente, normalmente "ação do processo".  
   
-- A autorização e verificação. Isso pode acontecer localmente ou quando a comunicação entre pontos de extremidade.  
+- Autorização e verificação. Isso pode acontecer localmente ou durante a comunicação entre pontos de extremidade.  
   
-## <a name="negotiationsct-exchange"></a>Troca de negociação/SCT  
- Na fase de negociação/SCT de exchange, são criados dois tipos de atividade no cliente: "Configurar a sessão segura" e "Fechar sessão segura". "Configurar a sessão segura" abrange os rastreamentos para as trocas de mensagens RSTR/RST/SCT, enquanto "Fechar sessão segura" inclui os rastreamentos da mensagem de cancelamento.  
+## <a name="negotiationsct-exchange"></a>Negociação/SCT de intercâmbio  
+ Na fase de negociação/SCT Exchange, dois tipos de atividade são criados no cliente: "Configurar sessão segura" e "fechar sessão segura". "Configurar sessão segura" abrange rastreamentos para as trocas de mensagens RST/RSTR/SCT, enquanto "fechar sessão segura" inclui rastreamentos para a mensagem de cancelamento.  
   
- No servidor, cada solicitação/resposta de RST/RSTR/SCT aparece em sua própria atividade. Se `propagateActivity` = `true` sobre o cliente e servidor, as atividades no servidor têm a mesma ID em aparecem juntas na "Instalação Secure sessão" quando visualizado por meio do Visualizador de rastreamento de serviço.  
+ No servidor, cada solicitação/resposta para o RST/RSTR/SCT aparece em sua própria atividade. Se `propagateActivity` estiver noservidor= e no cliente, as atividades no servidor terão a mesma ID e aparecerão juntas na "sessão segura de instalação" quando visualizadas por meio do Visualizador de rastreamento de serviço. `true`  
   
- Esse modelo de rastreamento de atividade é válido para a autenticação NTLM, autenticação de certificado e autenticação de nome e senha do usuário.  
+ Esse modelo de rastreamento de atividade é válido para autenticação de nome de usuário/senha, autenticação de certificado e autenticação NTLM.  
   
- A tabela a seguir lista as atividades e os rastreamentos para negociação e exchange SCT.  
+ A tabela a seguir lista as atividades e os rastreamentos para negociação e SCT do Exchange.  
   
-||Quando o exchange de negociação/SCT acontece de hora|Atividades|Rastreamentos|  
+||Tempo em que a negociação/SCT ocorre no Exchange|Atividades|Rastreamentos|  
 |-|-------------------------------------------------|----------------|------------|  
-|Transporte seguro<br /><br /> (HTTPS, SSL)|Na primeira mensagem recebida.|Rastreamentos são emitidos na atividade de ambiente.|-Exchange rastreamentos<br />-Proteger o canal estabelecido<br />-Compartilhamento de segredos obtidos.|  
-|Camada de mensagem segura<br /><br /> (WSHTTP)|Na primeira mensagem recebida.|No cliente:<br /><br /> -"Instalação segura Session" fora de "Processo de ação" da primeira mensagem, para cada solicitação/resposta de RST/RSTR/SCT.<br />-"Fechar sessão segura" para a troca de cancelar, fora da "atividade de Proxy fechar". Essa atividade pode acontecer fora de alguma outra atividade ambiente, dependendo de quando a sessão segura é fechada.<br /><br /> No servidor:<br /><br /> -Uma atividade de "Ação de processo" para cada solicitação/resposta de RST/SCT/Cancelar no servidor. Se `propagateActivity` = `true`, atividades RST/RSTR/SCT são mescladas com "Definir a segurança Session" e Cancelar é mesclada com a atividade "Fechar" do cliente.<br /><br /> Há dois estágios para "Definir backup Session seguro":<br /><br /> 1.  Negociação de autenticação. Isso é opcional se o cliente já tiver as credenciais apropriadas. Essa fase pode ser feita por meio de transporte seguro, ou por meio de trocas de mensagens. No último caso, trocas RST/RSTR 1 ou 2 podem acontecer. Para essas trocas, os rastreamentos são emitidos em novas atividades de solicitação/resposta criadas anteriormente.<br />2.  Proteger o estabelecimento da sessão (SCT), no qual uma troca RST/RSTR ocorre aqui. Isso tem as mesmas atividades de ambientes, conforme descrito anteriormente.|-Exchange rastreamentos<br />-Proteger o canal estabelecido<br />-Compartilhamento de segredos obtidos.|  
+|Transporte seguro<br /><br /> (HTTPS, SSL)|Na primeira mensagem recebida.|Os rastreamentos são emitidos na atividade ambiente.|-Rastreamentos do Exchange<br />-Canal seguro estabelecido<br />-Compartilhe segredos obtidos.|  
+|Camada de mensagem segura<br /><br /> (WSHTTP)|Na primeira mensagem recebida.|No cliente:<br /><br /> -"Configurar sessão segura" fora da "ação do processo" da primeira mensagem, para cada solicitação/resposta para RST/RSTR/SCT.<br />-"Fechar sessão segura" para o cancelamento do Exchange, fora da "atividade fechar proxy". Essa atividade pode ocorrer fora de alguma outra atividade de ambiente, dependendo de quando a sessão segura é fechada.<br /><br /> No servidor:<br /><br /> -Uma atividade de "processar ação" para cada solicitação/resposta para RST/SCT/Cancel no servidor. As `propagateActivity`atividades se =, RST/RSTR/SCT são mescladas com "configurar a sessão de segurança" e o cancelamento é mesclado com a atividade de "fechamento" do cliente. `true`<br /><br /> Há dois estágios para "configurar sessão segura":<br /><br /> 1.  Negociação de autenticação. Isso é opcional se o cliente já tiver as credenciais apropriadas. Essa fase pode ser feita por meio de transporte seguro ou por trocas de mensagens. No último caso, podem ocorrer trocas de 1 ou 2 RST/RSTR. Para essas trocas, os rastreamentos são emitidos em novas atividades de solicitação/resposta, conforme projetado anteriormente.<br />2.  O SCT (estabelecimento de sessão segura), no qual uma troca de RST/RSTR acontece aqui. Isso tem as mesmas atividades de ambiente descritas anteriormente.|-Rastreamentos do Exchange<br />-Canal seguro estabelecido<br />-Compartilhe segredos obtidos.|  
   
 > [!NOTE]
->  No modo de segurança mista, autenticação de negociação ocorre em trocas de binárias, mas SCT acontece na troca de mensagens. No modo de transporte puro, negociação ocorre apenas no transporte com nenhuma outra atividade.  
+> No modo de segurança mista, a autenticação de negociação ocorre em intercâmbios binários, mas o SCT acontece na troca de mensagens. No modo de transporte puro, a negociação ocorre apenas no transporte sem atividades adicionais.  
   
-## <a name="message-encryption-and-decryption"></a>Descriptografia e criptografia de mensagens  
- A tabela a seguir lista as atividades e os rastreamentos de criptografia/descriptografia de mensagem, bem como autenticação de assinatura.  
+## <a name="message-encryption-and-decryption"></a>Criptografia e descriptografia de mensagens  
+ A tabela a seguir lista as atividades e os rastreamentos para criptografia/descriptografia de mensagens, bem como autenticação de assinatura.  
   
-||Transporte seguro<br /><br /> (HTTPS, SSL) e proteger a camada de mensagem<br /><br /> (WSHTTP)|  
+||Transporte seguro<br /><br /> (HTTPS, SSL) e camada de mensagem segura<br /><br /> (WSHTTP)|  
 |-|---------------------------------------------------------------------------------|  
-|Hora em que a criptografia/descriptografia da mensagem, assim como acontece de autenticação de assinatura|Na mensagem recebida|  
-|Atividades|Rastreamentos são emitidos na atividade de ProcessAction no cliente e servidor.|  
-|Rastreamentos|-   sendSecurityHeader (sender):<br />-Mensagem de entrada<br />-Criptografar dados de solicitação<br />-   receiveSecurityHeader (receiver):<br />-Verifique se a assinatura<br />-Descriptografar os dados de resposta<br />-Autenticação|  
+|Tempo em que a criptografia/descriptografia de mensagens, bem como a autenticação de assinatura ocorre|Na mensagem recebida|  
+|Atividades|Os rastreamentos são emitidos na atividade processAction no cliente e no servidor.|  
+|Rastreamentos|-sendSecurityHeader (remetente):<br />-Assinar mensagem<br />-Criptografar dados de solicitação<br />-receiveSecurityHeader (destinatário):<br />-Verificar assinatura<br />-Descriptografar dados de resposta<br />-Autenticação|  
   
 > [!NOTE]
->  No modo de transporte puro, criptografia/descriptografia mensagem ocorre apenas no transporte com nenhuma outra atividade.  
+> No modo de transporte puro, a criptografia/descriptografia de mensagens ocorre apenas no transporte sem atividades adicionais.  
   
 ## <a name="authorization-and-verification"></a>Autorização e verificação  
  A tabela a seguir lista as atividades e os rastreamentos para autorização.  
   
-||Quando a autorização acontece de hora|Atividades|Rastreamentos|  
+||Hora em que a autorização ocorre|Atividades|Rastreamentos|  
 |-|-------------------------------------|----------------|------------|  
-|Local (padrão)|Depois que a mensagem é descriptografada no servidor|Rastreamentos são emitidos na atividade de ProcessAction no servidor.|Usuário autorizado.|  
-|Remoto|Depois que a mensagem é descriptografada no servidor|Rastreamentos são emitidos em uma nova atividade invocada pela atividade ProcessAction.|Usuário autorizado.|
+|Local (padrão)|Depois que a mensagem é descriptografada no servidor|Os rastreamentos são emitidos na atividade processAction no servidor.|Autorizado pelo usuário.|  
+|Remoto|Depois que a mensagem é descriptografada no servidor|Os rastreamentos são emitidos em uma nova atividade chamada pela atividade processAction.|Autorizado pelo usuário.|

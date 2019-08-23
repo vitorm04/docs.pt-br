@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658981"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920919"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<Elemento de > AppContextSwitchOverrides
 Define uma ou mais opções usadas pela classe <xref:System.AppContext> para fornecer um mecanismo de recusa de uma nova funcionalidade.  
@@ -138,7 +138,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Controla se as sequências de chaves vazias em chaves compostas são ignoradas pela validação de esquema XSD. Para obter mais informações, confira [Mitigação: Validação](../../../migration-guide/mitigation-xml-schema-validation.md)de esquema XML.|.NET Framework 4.6|  
   
 > [!NOTE]
->  Em vez de adicionar `AppContextSwitchOverrides` um elemento a um arquivo de configuração de aplicativo, você também pode definir as opções programaticamente C#chamando o `Shared` `static` método (in) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> ou (no Visual Basic).  
+> Em vez de adicionar `AppContextSwitchOverrides` um elemento a um arquivo de configuração de aplicativo, você também pode definir as opções programaticamente C#chamando o `Shared` `static` método (in) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> ou (no Visual Basic).  
   
  Os desenvolvedores de biblioteca também podem definir opções personalizadas para permitir que os chamadores recusem a funcionalidade alterada introduzida em versões posteriores de suas bibliotecas. Para obter mais informações, consulte a classe <xref:System.AppContext>.  
   

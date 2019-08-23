@@ -2,16 +2,16 @@
 title: <add> de <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929773fcb6b6a3ee5c75aa970147277d9dbe7b45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920021"
 ---
-# <a name="add-of-serviceactivations"></a>\<Adicionar > de \<serviceActivations >
+# <a name="add-of-serviceactivations"></a>\<Adicionar > de \<perativações >
 
-Um elemento de configuração que permite que você defina configurações de ativação de serviços virtuais que são mapeados para seus tipos de serviço do Windows Communication Foundation (WCF). Isso torna possível para ativar serviços hospedados no WAS / IIS sem um arquivo. svc.
+Um elemento de configuração que permite definir configurações de ativação de serviço virtual que são mapeadas para seus tipos de serviço do Windows Communication Foundation (WCF). Isso possibilita a ativação de serviços hospedados no WAS/IIS sem um arquivo. svc.
 
 \<system.ServiceModel>\
 \<serviceHostingEnvironment>
@@ -35,9 +35,9 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|fábrica|Uma cadeia de caracteres que especifica o nome do tipo CLR da fábrica que gera um elemento de ativação do serviço.|
-|serviço|O ServiceType que implementa o serviço (o Typename qualificado completo ou o Typename curto (quando ele é colocado na pasta App_Code).|
-|relativeAddress|O endereço relativo dentro do aplicativo IIS atual – por exemplo "SVC". No WCF 4.0 Este endereço relativo deve conter uma das extensões de arquivo conhecidos (. svc. xamlx,...). Nenhum arquivo físico deve existir para a relativeUrl|
+|padrões|Uma cadeia de caracteres que especifica o nome do tipo CLR da fábrica que gera um elemento de ativação de serviço.|
+|serviço|O ServiceType que implementa o serviço (o TypeName totalmente qualificado ou o TypeName curto (quando ele é colocado na pasta App_Code).|
+|relativeAddress|O endereço relativo no aplicativo IIS atual-por exemplo, "Service. svc". No WCF 4,0, esse endereço relativo deve conter uma das extensões de arquivo conhecidas (. svc,. xamlx,...). Nenhum arquivo físico deve existir para o relativeUrl|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -47,11 +47,11 @@ nenhuma.
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Uma seção de configuração que descreve as configurações de ativação.|
+|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Uma seção de configuração que descreve as configurações de ativação.|
 
 ## <a name="remarks"></a>Comentários
 
-O exemplo a seguir mostra como definir as configurações de ativação dentro de seu arquivo Web. config.
+O exemplo a seguir mostra como definir as configurações de ativação no arquivo Web. config.
 
 ```xml
 <configuration>
@@ -65,11 +65,11 @@ O exemplo a seguir mostra como definir as configurações de ativação dentro d
 </configuration>
 ```
 
-Usando esta configuração, você pode ativar o GreetingService sem usar um arquivo. svc.
+Usando essa configuração, você pode ativar o GreetingService sem usar um arquivo. svc.
 
-Observe que `<serviceHostingEnvironment>` é uma configuração de nível de aplicativo. Você precisa colocar o `web.config` que contém a configuração sob a raiz do aplicativo virtual. Além disso, `serviceHostingEnvironment` é uma seção de herdável machineToApplication. Se você registrar um único serviço na raiz do computador, cada serviço no aplicativo herdará esse serviço.
+Observe que `<serviceHostingEnvironment>` é uma configuração de nível de aplicativo. Você precisa posicionar o `web.config` que contém a configuração na raiz do aplicativo virtual. Além disso, `serviceHostingEnvironment` é uma seção de reherança de machineToApplication. Se você registrar um único serviço na raiz do computador, cada serviço no aplicativo herdará esse serviço.
 
-Ativação baseada em configuração oferece suporte à ativação pelo protocolo http e não http. Ele requer que as extensões no relativeAddress, ou seja,. svc,. xoml ou. xamlx. Você pode mapear suas próprias extensões para o buildProviders saber, que, em seguida, permitirá que você ativar o serviço ao longo de qualquer extensão. Após o conflito, o `<serviceActivations>` seção substitui os registros. svc.
+A ativação baseada em configuração dá suporte à ativação por meio do protocolo http e não http. Ele requer extensões no relativeAddress, ou seja,. svc,. xoml ou. xamlx. Você pode mapear suas próprias extensões para o know buildProviders, que permitirá que você ative o serviço em qualquer extensão. Após o conflito, `<serviceActivations>` a seção substitui os registros. svc.
 
 ## <a name="see-also"></a>Consulte também
 

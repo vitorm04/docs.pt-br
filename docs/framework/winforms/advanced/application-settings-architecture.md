@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039412"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916702"
 ---
 # <a name="application-settings-architecture"></a>Arquitetura das configurações do aplicativo
 Este tópico descreve como a arquitetura das configurações de aplicativo funciona e explora recursos avançados da arquitetura, como as configurações agrupadas e as chaves de configurações.
@@ -142,7 +142,7 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
  Um provedor pode ser chamado simultaneamente de vários threads, mas ele sempre gravará no mesmo local de armazenamento. Portanto, a arquitetura das configurações de aplicativo somente instanciará uma única instância de sua classe de provedor.
 
 > [!IMPORTANT]
->  Você deve garantir que seu provedor seja thread-safe e permita que apenas um thread por vez grave nos arquivos de configuração.
+> Você deve garantir que seu provedor seja thread-safe e permita que apenas um thread por vez grave nos arquivos de configuração.
 
  Seu provedor não precisa dar suporte a todos os atributos de configurações definidos no namespace <xref:System.Configuration?displayProperty=nameWithType> , embora ele deva ter suporte <xref:System.Configuration.ApplicationScopedSettingAttribute> mínimo e <xref:System.Configuration.UserScopedSettingAttribute>e também deve dar suporte <xref:System.Configuration.DefaultSettingValueAttribute>a. Para os atributos aos quais ele não oferece suporte, o provedor deve apenas falhar, sem notificação. Ele não deve lançar uma exceção. No entanto, se a classe Settings usar uma combinação inválida de atributos — <xref:System.Configuration.ApplicationScopedSettingAttribute> como <xref:System.Configuration.UserScopedSettingAttribute> aplicar e à mesma configuração — seu provedor deverá lançar uma exceção e interromper a operação.
 

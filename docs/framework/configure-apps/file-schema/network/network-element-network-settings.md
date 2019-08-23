@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 40d89f7bd7a1f4a38a1c4030a86405e09c497899
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee60b990bc749dbb9c5d0e7426c57e9392ddf9d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659308"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920967"
 ---
 # <a name="network-element-network-settings"></a>\<Elemento de > de rede (configurações de rede)
 Configura as opções de rede para um servidor de protocolo SMTP externo.  
@@ -70,7 +70,7 @@ Configura as opções de rede para um servidor de protocolo SMTP externo.
  Você também pode usar a autenticação básica (um nome de usuário e senha) para se autenticar no servidor SMTP. Para usar essa opção, você deve especificar um nome de usuário e uma senha válidos para o servidor SMTP especificado.  
   
 > [!NOTE]
->  A autenticação básica envia `userName` os `password` valores e ao servidor sem criptografia. Qualquer pessoa que monitorar o tráfego de rede pode exibir suas credenciais e usá-las para se conectar ao servidor. Você deve considerar o uso de um mecanismo de autenticação mais seguro, como o Kerberos ou o NT LAN Manager (NTLM). Se `defaultCredentials` for`true`, o Kerberos ou NTLM será usado se o servidor oferecer suporte a esses protocolos.  
+> A autenticação básica envia `userName` os `password` valores e ao servidor sem criptografia. Qualquer pessoa que monitorar o tráfego de rede pode exibir suas credenciais e usá-las para se conectar ao servidor. Você deve considerar o uso de um mecanismo de autenticação mais seguro, como o Kerberos ou o NT LAN Manager (NTLM). Se `defaultCredentials` for`true`, o Kerberos ou NTLM será usado se o servidor oferecer suporte a esses protocolos.  
   
  As opções de autenticação básica e credenciais de rede padrão são mutuamente exclusivas; Se você definir `defaultCredentials` como `true` e especificar um nome de usuário e uma senha, a credencial de rede padrão será usada e os dados de autenticação básica serão ignorados.  
   

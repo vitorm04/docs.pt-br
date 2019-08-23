@@ -2,12 +2,12 @@
 title: <localIssuer>
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-ms.openlocfilehash: 9a51387cd75d57a6828ecde1dcd788b056f7e27a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ec5a99139112ae600c1c2bc44feb6d3f62da1e0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766396"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931733"
 ---
 # <a name="localissuer"></a>\<localIssuer>
 Especifica o endereço e a associação do emissor local a ser usado para obter um token de segurança.  
@@ -15,7 +15,7 @@ Especifica o endereço e a associação do emissor local a ser usado para obter 
  \<system.ServiceModel>  
 \<comportamentos >  
 seção endpointBehaviors  
-\<behavior>  
+\<> de comportamento  
 \<clientCredentials>  
 \<issuedToken>  
 \<localIssuer>  
@@ -36,27 +36,27 @@ seção endpointBehaviors
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |endereço|Cadeia de caracteres obrigatória. Especifica o URI do emissor local.|  
-|associação|Cadeia de caracteres opcional. Uma das associações fornecidas pelo sistema. Para obter uma lista, consulte [System-Provided associações](../../../../../docs/framework/wcf/system-provided-bindings.md).|  
+|associação|Cadeia de caracteres opcional. Uma das associações fornecidas pelo sistema. Para obter uma lista, consulte [associações fornecidas pelo sistema](../../../wcf/system-provided-bindings.md).|  
 |bindingConfiguration|Cadeia de caracteres opcional. Especifica uma configuração de associação encontrada no arquivo de configuração.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica informações de identidade para o emissor local.|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Uma coleção de cabeçalhos de endereço que são necessários para tratar corretamente o emissor local. Você pode usar o `add` palavra-chave para adicionar um cabeçalho a esta coleção.|  
+|[\<identity>](identity.md)|Especifica informações de identidade para o emissor local.|  
+|[\<headers>](headers-element.md)|Uma coleção de cabeçalhos de endereço que são necessários para resolver corretamente o emissor local. Você pode usar a `add` palavra-chave para adicionar um cabeçalho a essa coleção.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<issuedToken>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Especifica um token personalizado usado para autenticar um cliente a um serviço.|  
+|[\<issuedToken>](issuedtoken.md)|Especifica um token personalizado usado para autenticar um cliente para um serviço.|  
   
 ## <a name="remarks"></a>Comentários  
- Ao obter um token emitido de um Security Token Service (STS), o aplicativo cliente deve ser configurado com o endereço e associação a ser usada para se comunicar com o STS. Quando o <xref:System.ServiceModel.WSFederationHttpBinding> não fornece uma URL para o serviço de token de segurança, ou quando é o endereço do emissor de uma associação federado `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` ou `null`, o canal do cliente Windows Communication Foundation (WCF) usa os valores especificados pelo `address`e `binding` para se comunicar com o STS a fim de obter o token emitido. Para obter mais informações sobre como configurar um emissor local, consulte [como: Configurar um emissor Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Ao obter um token emitido de um serviço de token de segurança (STS), o aplicativo cliente deve ser configurado com o endereço e a associação a serem usados para se comunicar com o STS. Quando o <xref:System.ServiceModel.WSFederationHttpBinding> não fornece uma URL para o serviço de token de segurança, ou quando o endereço do emissor de uma associação federada `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` é `null`ou, o canal de Windows Communication Foundation do cliente (WCF) usa os valores especificados por `address` e`binding` para se comunicar com o STS para obter o token emitido. Para obter mais informações sobre como configurar um emissor local, [consulte Como: Configure um emissor](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)local.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir define o `address`, `binding`, e `bindingConfiguration` atributos de um `localIssuer` elemento.  
+ O exemplo a seguir define `address`os `binding`atributos, `bindingConfiguration` e de um `localIssuer` elemento.  
   
 ```xml  
 <system.serviceModel>
@@ -82,12 +82,12 @@ seção endpointBehaviors
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
-- [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Como: Configurar um emissor Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Protegendo clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Como: Criar um cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Comportamentos de segurança](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Como: Configurar um emissor local](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Autenticação e identidade de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Comportamentos de segurança](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Protegendo clientes](../../../wcf/securing-clients.md)
+- [Como: Criar um cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Federação e tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)

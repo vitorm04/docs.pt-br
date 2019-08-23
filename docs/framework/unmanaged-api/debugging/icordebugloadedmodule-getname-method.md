@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5b3889829ced876b23ea6632f35f4da6beffdca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63341bcd6079688ed1a8e18ec8c422bca1427c72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759919"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910074"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a>Método ICorDebugLoadedModule::GetName
 Obtém o nome do módulo carregado.  
@@ -27,25 +27,25 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parâmetros  
  `cchName`  
- [in] O número de caracteres no `szName` buffer.  
+ no O número de caracteres no `szName` buffer.  
   
  `pcchName`  
- [out] Um ponteiro para o número de caracteres gravados, na verdade, o `szName` buffer.  
+ fora Um ponteiro para o número de caracteres realmente gravados no `szName` buffer.  
   
  `szName`  
- [out] Uma matriz de caracteres que contêm o nome do módulo carregado.  
+ fora Uma matriz de caracteres que contém o nome do módulo carregado.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

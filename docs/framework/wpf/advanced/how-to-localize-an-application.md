@@ -9,18 +9,18 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666786"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913678"
 ---
 # <a name="how-to-localize-an-application"></a>Como: Localizar um aplicativo
 Esse tutorial explica como criar um aplicativo localizado usando a ferramenta LocBaml.  
   
 > [!NOTE]
->  A ferramenta LocBaml não é um aplicativo pronto para produção. Ela é apresentada como um exemplo que usa algumas das APIs de localização e ilustra como você pode escrever uma ferramenta de localização.  
+> A ferramenta LocBaml não é um aplicativo pronto para produção. Ela é apresentada como um exemplo que usa algumas das APIs de localização e ilustra como você pode escrever uma ferramenta de localização.  
   
 <a name="Introduction"></a>   
 ## <a name="overview"></a>Visão geral  
@@ -28,9 +28,9 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 <a name="Requirements"></a>   
 ## <a name="requirements"></a>Requisitos  
- Ao longo desta discussão, você usará [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], que é um compilador que é executado na linha de comando.  
+ Ao longo desta discussão, você usará o Microsoft Build Engine (MSBuild), que é um compilador executado na linha de comando.  
   
- Além disso, você será instruído a usar um arquivo de projeto. Para obter instruções sobre como usar [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] os arquivos do e do Project, consulte [Compilar e implantar](../app-development/building-and-deploying-wpf-applications.md).  
+ Além disso, você será instruído a usar um arquivo de projeto. Para obter instruções sobre como usar o MSBuild e arquivos de projeto, consulte [Compilar e implantar](../app-development/building-and-deploying-wpf-applications.md).  
   
  Todos os exemplos nesta discussão usam en-US (inglês-EUA) como a cultura. Isso permite que você trabalhe nas etapas dos exemplos sem instalar um idioma diferente.  
   
@@ -40,7 +40,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 1. Desenvolva seu aplicativo até o ponto em que você deseja iniciar a localização.  
   
-2. Especifique a linguagem de desenvolvimento no arquivo de projeto para [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] que gere um assembly principal e um assembly satélite (um arquivo com a extensão. Resources. dll) para conter os recursos de idioma neutro. O arquivo de projeto no exemplo HelloApp é o HelloApp.csproj. Nesse arquivo, você encontrará a linguagem de desenvolvimento identificada da seguinte maneira:  
+2. Especifique a linguagem de desenvolvimento no arquivo de projeto para que o MSBuild gere um assembly principal e um assembly satélite (um arquivo com a extensão. Resources. dll) para conter os recursos de idioma neutro. O arquivo de projeto no exemplo HelloApp é o HelloApp.csproj. Nesse arquivo, você encontrará a linguagem de desenvolvimento identificada da seguinte maneira:  
   
      `<UICulture>en-US</UICulture>`  
   
@@ -108,7 +108,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
     - **extensa** Exibe informações de modo detalhado.  
   
     > [!NOTE]
-    >  Se você precisar de uma lista das opções ao executar a ferramenta, digite **LocBaml. exe** e pressione Enter.  
+    > Se você precisar de uma lista das opções ao executar a ferramenta, digite **LocBaml. exe** e pressione Enter.  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>Usar LocBaml para analisar um arquivo  
@@ -121,7 +121,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
      **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
-    >  Se o arquivo de entrada, HelloApp.resources.dll, não estiver no mesmo diretório que o LocBaml.exe mova um dos arquivos para que ambos estejam no mesmo diretório.  
+    > Se o arquivo de entrada, HelloApp.resources.dll, não estiver no mesmo diretório que o LocBaml.exe mova um dos arquivos para que ambos estejam no mesmo diretório.  
   
 3. Ao executar a LocBaml para analisar arquivos, a saída consistirá em sete campos delimitados por vírgulas (arquivos .csv) ou tabulações (arquivos .txt). A seguir está o arquivo .csv analisado do HelloApp.resources.dll:
 
@@ -172,7 +172,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
-    >  Se o arquivo de entrada, Hello.csv, não estiver no mesmo diretório que o executável, LocBaml.exe, mova um dos arquivos para que ambos estejam no mesmo diretório.  
+    > Se o arquivo de entrada, Hello.csv, não estiver no mesmo diretório que o executável, LocBaml.exe, mova um dos arquivos para que ambos estejam no mesmo diretório.  
   
 2. Substitua o arquivo HelloApp.resources.dll no diretório C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll antigo pelo arquivo HelloApp.resources.dll recém-criado.  
   

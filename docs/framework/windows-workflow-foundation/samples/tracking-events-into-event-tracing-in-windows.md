@@ -2,20 +2,20 @@
 title: Eventos de rastreamento no rastreamento de evento no Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: d3afc04fec996f4e24eb6e5ad771886480cd9cb9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 48ffbbb8ccac34c5eb605edc4aab17d0e2b3499e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922917"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventos de rastreamento no rastreamento de evento no Windows
-Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um serviço de fluxo de trabalho de rastreamento e emitir os eventos de rastreamento no evento de rastreamento para Windows (ETW). Para emitir registros de acompanhamento de fluxo de trabalho em ETW, o exemplo usa o participante de rastreamento de<xref:System.Activities.Tracking.EtwTrackingParticipant>(ETW).
+Este exemplo demonstra como habilitar o rastreamento de Windows Workflow Foundation (WF) em um serviço de fluxo de trabalho e emitir os eventos de rastreamento no ETW (rastreamento de eventos para Windows). Para emitir registros de acompanhamento de fluxo de trabalho em ETW, o exemplo usa o participante de rastreamento de<xref:System.Activities.Tracking.EtwTrackingParticipant>(ETW).
 
  O fluxo de trabalho no exemplo recebe uma solicitação, atribui o recíproco de dados de entrada à variável de entrada e retorna o recíproco de volta para o cliente. Quando os dados de entrada é 0, uma partilha a exceção ocorre zero que é não tratados que faz com que o fluxo de trabalho nulo. Com o rastreamento ativado, a reputação de erro é emitida a ETW, que pode ajudar a resolver problemas posteriormente o erro. O participante de rastreamento de ETW é configurado com um perfil de rastreamento para assinar a acompanhar registros. O perfil de rastreamento é definido no arquivo web.config e como como um parâmetro de configuração para participante de rastreamento de ETW. O participante de rastreamento de ETW é configurado no arquivo web.config do serviço de fluxo de trabalho e aplicado ao serviço como um comportamento de serviço. Nesse exemplo, você exibe os eventos de rastreamento no log de eventos usando o visualizador de eventos.
 
 ## <a name="workflow-tracking-details"></a>Detalhes de acompanhamento de fluxo de trabalho
- Windows Workflow Foundation fornece uma infraestrutura de rastreamento para controlar a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento cria uma instância de fluxo de trabalho para emitir os eventos relacionados ao ciclo de vida de fluxo de trabalho, os eventos de atividades de fluxo de trabalho e eventos personalizados. A tabela a seguir detalha os componentes principais de infraestrutura de rastreamento.
+ Windows Workflow Foundation fornece uma infraestrutura de controle para acompanhar a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento cria uma instância de fluxo de trabalho para emitir os eventos relacionados ao ciclo de vida de fluxo de trabalho, os eventos de atividades de fluxo de trabalho e eventos personalizados. A tabela a seguir detalha os componentes principais de infraestrutura de rastreamento.
 
 |Componente|Descrição|
 |---------------|-----------------|
@@ -39,43 +39,43 @@ Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um s
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1. Usando o Visual Studio 2010, abra o arquivo de solução de Etwtrackingparticipantsample.
+1. Usando o Visual Studio 2010, abra o arquivo de solução EtwTrackingParticipantSample. sln.
 
 2. Para criar a solução, pressione CTRL+SHIFT+B.
 
 3. Para executar a solução, pressione F5.
 
-     Por padrão, o serviço está escutando na porta 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
+     Por padrão, o serviço está escutando na porta 53797 http://localhost:53797/SampleWorkflowService.xamlx) (.
 
-4. Usando o Explorador de arquivos, abra o cliente de teste do WCF.
+4. Usando o explorador de arquivos, abra o cliente de teste do WCF.
 
-     O cliente de teste do WCF (WcfTestClient.exe) está localizado no \<pasta de instalação do Visual Studio 2010 > pasta \Common7\IDE\.
+     O cliente de teste do WCF (WcfTestClient. exe) está localizado \<na pasta de instalação do Visual Studio 2010 > pasta \Common7\IDE\
 
-     A pasta de instalação do Visual Studio 2010 padrão é C:\Program Files\Microsoft Visual Studio 10,0.
+     A pasta de instalação padrão do Visual Studio 2010 é C:\Program Files\Microsoft Visual Studio 10,0.
 
-5. No cliente de teste do WCF, selecione **Adicionar serviço** da **arquivo** menu.
+5. Em cliente de teste do WCF, selecione **Adicionar serviço** no menu **arquivo** .
 
      Adicione o endereço do ponto de extremidade na caixa de entrada. O padrão é `http://localhost:53797/SampleWorkflowService.xamlx`.
 
 6. Abra o aplicativo visualizador de eventos.
 
-     Antes de invocar o serviço, iniciar o Visualizador de eventos na **inicie** menu, selecione **execute** e digite `eventvwr.exe`. Certifique-se de que o log de eventos é escutando eventos de rastreamento emissores de serviço de fluxo de trabalho.
+     Antes de invocar o serviço, inicie Visualizador de Eventos no menu **Iniciar** , selecione **executar** `eventvwr.exe`e digite. Certifique-se de que o log de eventos é escutando eventos de rastreamento emissores de serviço de fluxo de trabalho.
 
-7. Na exibição de árvore do Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, e **Microsoft**. Clique com botão direito **Microsoft** e selecione **exibição** e, em seguida, **Mostrar Logs analíticos e depuração** para habilitar o analítica e logs de depuração
+7. No modo de exibição de árvore do Visualizador de Eventos, navegue até **Visualizador de eventos**, **aplicativos e logs de serviços**e **Microsoft**. Clique com o botão direito do mouse em **Microsoft** e selecione **Exibir** e, em seguida, **Mostrar logs analíticos e de depuração** para habilitar logs analíticos e de depuração
 
-     Certifique-se de que o **Mostrar Logs analíticos e depuração** opção estiver marcada.
+     Verifique se a opção **Mostrar logs analíticos e de depuração** está marcada.
 
-8. Na exibição de árvore no Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**,  **Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **Habilitar Log** para habilitar o **analítico** log.
+8. No modo de exibição de árvore no Visualizador de Eventos, navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **analítica** e selecione **habilitar log** para habilitar o log **analítico** .
 
 9. Testar o serviço usando o cliente de teste de WCF clicando duas vezes `GetData`.
 
      Isso abre o método de `GetData` . A solicitação aceita um parâmetro e garante que o valor é 0, que é o padrão.
 
-     Clique em **invocar**.
+     Cliqueem invocar.
 
 10. Observe os eventos emissores de fluxo de trabalho.
 
-     Retorne ao Visualizador de eventos e navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**,  **Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **atualizar**.
+     Volte para Visualizador de Eventos e navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **analítica** e selecione **Atualizar**.
 
      Os eventos de fluxo de trabalho são exibidos no visualizador de eventos. Observe que os eventos de execução de fluxo de trabalho são exibidos e que um deless é uma exceção sem tratamento que corresponde ao erro no fluxo de trabalho. Além disso, um evento de aviso é emitida de atividade de fluxo de trabalho, que indica que a atividade é lançando uma falha.
 
@@ -125,18 +125,18 @@ Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um s
 
 1. Visualizador de EventosAberto.
 
-2. Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativo Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **desabilitar Log**.
+2. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **analítica** e selecione **desabilitar log**.
 
-3. Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativo Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **Limpar Log**.
+3. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **analítica** e selecione **limpar log**.
 
-4. Escolha o **limpar** opção para limpar os eventos.
+4. Escolha a opção **limpar** para limpar os eventos.
 
 ## <a name="known-issue"></a>Problema conhecido
 
 > [!NOTE]
->  Há um problema conhecido em Visualizador de Eventos onde pode não decodifica eventos de ETW. Você pode ver a uma mensagem de erro semelhante ao seguinte.
+> Há um problema conhecido em Visualizador de Eventos onde pode não decodifica eventos de ETW. Você pode ver a uma mensagem de erro semelhante ao seguinte.
 >
->  A descrição para a ID de evento \<id > da fonte Microsoft-Windows-aplicativos de servidor não podem ser encontrados. Qualquer o componente que gerencie esse evento não é instalado em seu computador local ou na instalação for danificado. Você pode instalar ou reparar o componente no computador local.
+>  A descrição para a ID \<de ID de evento > da origem Microsoft-Windows-Application Server – Applications não pode ser encontrada. Qualquer o componente que gerencie esse evento não é instalado em seu computador local ou na instalação for danificado. Você pode instalar ou reparar o componente no computador local.
 >
 >  Se você encontrar esse erro, atualização de clique no painel ações. O evento agora deve decodificar corretamente.
 
@@ -145,10 +145,10 @@ Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um s
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Consulte também
 
-- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Exemplos de monitoramento do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

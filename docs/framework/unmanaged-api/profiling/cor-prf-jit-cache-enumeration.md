@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30500e8ea55f8298b9a980e34dc611b58a51bdcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752154"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916394"
 ---
-# <a name="corprfjitcache-enumeration"></a>Enumeração COR_PRF_JIT_CACHE
+# <a name="cor_prf_jit_cache-enumeration"></a>Enumeração COR_PRF_JIT_CACHE
 Indica o resultado de uma busca de função armazenada em cache.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` tem um valor de zero, então, `COR_PRF_JIT_CACHE` não pode ser usado como um substituto booliano.  
+> `COR_PRF_CACHED_FUNCTION_FOUND`tem um valor de zero, portanto `COR_PRF_JIT_CACHE` não pode ser usado como um substituto booliano.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,15 +42,15 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|A função foi encontrado pela pesquisa.|  
+|`COR_PRF_FUNCTION_FOUND`|A pesquisa encontrou a função.|  
 |`COR_PRF_FUNCTION_NOT_FOUND`|A pesquisa não encontrou a função.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl, CorProf.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

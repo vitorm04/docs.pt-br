@@ -10,33 +10,33 @@ helpviewer_keywords:
 - tables [WPF], manipulating columns
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
-ms.openlocfilehash: d379d1a98bff614ff9e16cdd340bb69644988743
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18a26c76688ebf668293cb1254404d6d2cf15208
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913598"
 ---
 # <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>Como: Manipular colunas de uma tabela por meio da propriedade Columns
-Este exemplo demonstra algumas das operações mais comuns que podem ser executadas em colunas de uma tabela por meio de <xref:System.Windows.Documents.Table.Columns%2A> propriedade.  
+Este exemplo demonstra algumas das operações mais comuns que podem ser executadas nas colunas de uma tabela por meio da <xref:System.Windows.Documents.Table.Columns%2A> propriedade.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria uma nova tabela e, em seguida, usa o <xref:System.Windows.Documents.TableColumnCollection.Add%2A> método para adicionar colunas à tabela de <xref:System.Windows.Documents.Table.Columns%2A> coleção.  
+ O exemplo a seguir cria uma nova tabela e, em <xref:System.Windows.Documents.TableColumnCollection.Add%2A> seguida, usa o método para adicionar colunas <xref:System.Windows.Documents.Table.Columns%2A> à coleção da tabela.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Add](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_add)]
  [!code-vb[TableSnippets2#_Table_Columns_Add](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_add)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir insere um novo <xref:System.Windows.Documents.TableColumn>.  A nova coluna é inserida na posição de índice 0, tornando-a a nova primeira coluna na tabela.  
+ O exemplo a seguir insere um <xref:System.Windows.Documents.TableColumn>novo.  A nova coluna é inserida na posição de índice 0, tornando-a a nova primeira coluna na tabela.  
   
 > [!NOTE]
->  O <xref:System.Windows.Documents.TableColumnCollection> coleção usa a indexação padrão de base zero.  
+> A <xref:System.Windows.Documents.TableColumnCollection> coleção usa a indexação padrão baseada em zero.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Insert](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_insert)]
  [!code-vb[TableSnippets2#_Table_Columns_Insert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_insert)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir acessa algumas propriedades arbitrárias em colunas no <xref:System.Windows.Documents.TableColumnCollection> coleção, fazendo referência a colunas específicas por índice.  
+ O exemplo a seguir acessa algumas propriedades arbitrárias em colunas na <xref:System.Windows.Documents.TableColumnCollection> coleção, referindo-se a colunas específicas por índice.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Manip](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_manip)]
  [!code-vb[TableSnippets2#_Table_Columns_Manip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_manip)]  

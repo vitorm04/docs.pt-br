@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cf75de6a71cfbe25cbde281f837060b88e93753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2377773b471b387376f0284522ebe29d6b003ae3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988436"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910107"
 ---
 # <a name="icordebuginternalframe2-interface"></a>Interface ICorDebugInternalFrame2
-Fornece informações sobre os quadros internos, incluindo o endereço de pilha e a posição em relação aos objetos ICorDebugFrame.  
+Fornece informações sobre quadros internos, incluindo o endereço de pilha e a posição em relação aos objetos ICorDebugFrame.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetFrameAddress](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|Retorna o endereço de pilha do quadro interno.|  
-|[Método IsCloserToLeaf](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|Verifica se o `this` quadro interno está mais próximo da folha que o objeto ICorDebugFrame especificado.|  
+|[Método GetFrameAddress](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|Retorna o endereço da pilha do quadro interno.|  
+|[Método IsCloserToLeaf](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|Verifica se o `this` quadro interno está mais próximo da folha do que o objeto ICorDebugFrame especificado.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa interface estende a interface ICorDebugInternalFrame.  
   
 > [!NOTE]
->  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
+> Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

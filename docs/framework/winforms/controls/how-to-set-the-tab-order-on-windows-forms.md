@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 5559a3a3e4e62ce9e620de23feef3cbfa0ab8f60
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 0a6cd8b16148d28049549b241b568966239b9b01
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039848"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923610"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Como: Definir a ordem de tabulação nos Windows Forms
 A ordem de tabulação é a ordem em que um usuário move o foco de um controle para outro pressionando a tecla TAB. Cada formulário tem sua própria ordem de tabulação. Por padrão, a ordem de tabulação é igual à ordem em que você criou os controles. A numeração da ordem de tabulação começa com zero.
@@ -29,12 +29,12 @@ A ordem de tabulação é a ordem em que um usuário move o foco de um controle 
 2. Clique nos controles sequencialmente para estabelecer a ordem de tabulação desejada.
 
     > [!NOTE]
-    >  Local do controle na ordem de tabulação pode ser definido como qualquer valor maior ou igual a 0. Quando ocorrem duplicatas, a ordem z dos dois controles é avaliada e o controle na parte superior é tabulado primeiro. (A ordem z consiste na disposição em camadas visuais de controles em um formulário ao longo do eixo z do formulário [profundidade]. A ordem z determina quais controles estão na frente de outros controles.) Para obter mais informações sobre a ordem z, consulte [Colocando objetos em camadas nos Windows Forms](how-to-layer-objects-on-windows-forms.md).
+    > Local do controle na ordem de tabulação pode ser definido como qualquer valor maior ou igual a 0. Quando ocorrem duplicatas, a ordem z dos dois controles é avaliada e o controle na parte superior é tabulado primeiro. (A ordem z consiste na disposição em camadas visuais de controles em um formulário ao longo do eixo z do formulário [profundidade]. A ordem z determina quais controles estão na frente de outros controles.) Para obter mais informações sobre a ordem z, consulte [Colocando objetos em camadas nos Windows Forms](how-to-layer-objects-on-windows-forms.md).
 
 3. Quando você tiver terminado, clique em **Ordem de Tabulação** no menu **Exibir** novamente para sair do modo de ordem de tabulação.
 
     > [!NOTE]
-    >  Controles que não podem obter o foco, bem como controles desabilitados e invisíveis, não têm <xref:System.Windows.Forms.Control.TabIndex%2A> uma propriedade e não são incluídos na ordem de tabulação. Conforme um usuário pressiona a tecla TAB, esses controles são ignorados.
+    > Controles que não podem obter o foco, bem como controles desabilitados e invisíveis, não têm <xref:System.Windows.Forms.Control.TabIndex%2A> uma propriedade e não são incluídos na ordem de tabulação. Conforme um usuário pressiona a tecla TAB, esses controles são ignorados.
 
  Como alternativa, a ordem de Tabulação pode ser definida no janela Propriedades <xref:System.Windows.Forms.Control.TabIndex%2A> usando a propriedade. A <xref:System.Windows.Forms.Control.TabIndex%2A> propriedade de um controle determina onde ele é posicionado na ordem de tabulação. Por padrão, o primeiro controle desenhado tem um <xref:System.Windows.Forms.Control.TabIndex%2A> valor de 0, o segundo tem um <xref:System.Windows.Forms.Control.TabIndex%2A> de 1 e assim por diante.
 
@@ -49,7 +49,7 @@ A ordem de tabulação é a ordem em que um usuário move o foco de um controle 
      Um controle cuja <xref:System.Windows.Forms.Control.TabStop%2A> Propriedade foi definida como `false` ainda mantém sua posição na ordem de tabulação, embora o controle seja ignorado quando você percorre os controles com a tecla Tab.
 
     > [!NOTE]
-    >  Um grupo de botões de opção tem uma única parada de tabulação no tempo de execução. O botão selecionado (ou seja, o botão com sua <xref:System.Windows.Forms.RadioButton.Checked%2A> propriedade definida como `true`) tem sua <xref:System.Windows.Forms.Control.TabStop%2A> propriedade definida automaticamente como `true`, enquanto os outros botões têm sua <xref:System.Windows.Forms.Control.TabStop%2A> propriedade definida como `false`. Para obter mais informações sobre <xref:System.Windows.Forms.RadioButton> como agrupar controles, consulte [agrupando Windows Forms controles RadioButton para funcionar como um conjunto](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
+    > Um grupo de botões de opção tem uma única parada de tabulação no tempo de execução. O botão selecionado (ou seja, o botão com sua <xref:System.Windows.Forms.RadioButton.Checked%2A> propriedade definida como `true`) tem sua <xref:System.Windows.Forms.Control.TabStop%2A> propriedade definida automaticamente como `true`, enquanto os outros botões têm sua <xref:System.Windows.Forms.Control.TabStop%2A> propriedade definida como `false`. Para obter mais informações sobre <xref:System.Windows.Forms.RadioButton> como agrupar controles, consulte [agrupando Windows Forms controles RadioButton para funcionar como um conjunto](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
 
 ## <a name="see-also"></a>Consulte também
 

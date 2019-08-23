@@ -2,25 +2,25 @@
 title: Elemento <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 6aa11c50ef950a8a9d902a0fb77fdf301d18f7cb
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 09094c00b8faa28c37e202112251fee7cb4580be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423037"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934015"
 ---
-# <a name="peerauthentication-element"></a>\<peerAuthentication > elemento
-Especifica as opções de autenticação para clientes ponto a ponto.  
+# <a name="peerauthentication-element"></a>\<Elemento de > peerAuthentication
+Especifica opções de autenticação para clientes ponto a ponto.  
   
- Para obter mais informações sobre a programação de peer-to-peer, consulte [Peer-to-Peer Networking](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Para obter mais informações sobre a programação ponto a ponto, consulte [rede ponto a ponto](../../../wcf/feature-details/peer-to-peer-networking.md).  
   
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<behavior>  
+\<> de comportamento  
 \<clientCredentials>  
 \<peer>  
-\<peerAuthentication >  
+\<> PeerAuthentication  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,34 +38,34 @@ Especifica as opções de autenticação para clientes ponto a ponto.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`customCertificateValidatorType`|Cadeia de caracteres opcional. Um tipo e assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`.|  
-|`certificateValidationMode`|Enumeração opcional. Especifica um dos três modos usados para validar as credenciais. Se definido como `Custom`, em seguida, um `customCertificateValidator` também deve ser fornecido. O padrão é `ChainTrust`.|  
-|`revocationMode`|Enumeração opcional. Um dos modos usados para verificar por listas de certificados revogados (CRL). O padrão é `Online`.|  
-|`trustedStoreLocation`|Enumeração opcional. Um dos locais de armazenamento de sistema de dois: `LocalMachine` ou `CurrentUser`. Esse valor é usado quando um certificado de serviço é negociado ao cliente. Validação é executada em relação a **pessoas confiáveis** armazenar no local de repositório especificado. O padrão é `CurrentUser`.|  
+|`customCertificateValidatorType`|Cadeia de caracteres opcional. Um tipo e um assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`.|  
+|`certificateValidationMode`|Enumeração opcional. Especifica um dos três modos usados para validar as credenciais. Se definido como `Custom`, um `customCertificateValidator` também deverá ser fornecido. O padrão é `ChainTrust`.|  
+|`revocationMode`|Enumeração opcional. Um dos modos usados para verificar se há listas de certificados revogados (CRL). O padrão é `Online`.|  
+|`trustedStoreLocation`|Enumeração opcional. Um dos dois locais de armazenamento do sistema `LocalMachine` : `CurrentUser`ou. Esse valor é usado quando um certificado de serviço é negociado para o cliente. A validação é executada no repositório de **pessoas confiáveis** no local de armazenamento especificado. O padrão é `CurrentUser`.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType atributo  
-  
-|Valor|Descrição|  
-|-----------|-----------------|  
-|Cadeia de Caracteres|Especifica o nome do tipo e assembly e outros dados usados para localizar o tipo. No mínimo, um nome de namespace e tipo são necessários. Incluem informações opcionais: nome do assembly, número de versão, cultura e token de chave pública.|  
-  
-## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode atributo  
+## <a name="customcertificatevalidatortype-attribute"></a>Atributo customCertificateValidatorType  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Enumeração|Um dos seguintes valores: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. O padrão é `ChainTrust`.<br /><br /> Para obter mais informações, consulte [trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Cadeia de Caracteres|Especifica o nome do tipo e o assembly e outros dados usados para localizar o tipo. No mínimo, um namespace e um nome de tipo são necessários. As informações opcionais incluem: nome do assembly, número de versão, cultura e token de chave pública.|  
   
-## <a name="revocationmode-attribute"></a>revocationMode atributo  
-  
-|Valor|Descrição|  
-|-----------|-----------------|  
-|Enumeração|Um dos seguintes valores: `NoCheck`, `Online`, `Offline`. O padrão é `Online`.<br /><br /> Para obter mais informações, consulte [trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
-  
-## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation atributo  
+## <a name="certificatevalidationmode-attribute"></a>Atributo certificateValidationMode  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Enumeração|Um dos seguintes valores: `LocalMachine` ou `CurrentUser`. O padrão é `CurrentUser`. Se o aplicativo cliente é executado sob uma conta do sistema, o certificado está normalmente abaixo `LocalMachine`. Se o aplicativo cliente está em execução em uma conta de usuário, o certificado é normalmente em `CurrentUser`.|  
+|Enumeração|Um dos seguintes valores: `None` `ChainTrust`, `PeerTrust`,, `Custom`,. `PeerOrChainTrust` O padrão é `ChainTrust`.<br /><br /> Para obter mais informações, consulte [trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md).|  
+  
+## <a name="revocationmode-attribute"></a>Atributo rerevocationmode  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|Enumeração|Um dos seguintes valores: `NoCheck`, `Online`, `Offline`. O padrão é `Online`.<br /><br /> Para obter mais informações, consulte [trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md).|  
+  
+## <a name="trustedstorelocation-attribute"></a>Atributo trustedStoreLocation  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|Enumeração|Um dos seguintes valores: `LocalMachine` ou. `CurrentUser` O padrão é `CurrentUser`. Se o aplicativo cliente estiver sendo executado em uma conta do sistema, o certificado geralmente `LocalMachine`estará abaixo de. Se o aplicativo cliente estiver sendo executado sob uma conta de usuário, o certificado normalmente `CurrentUser`estará em.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -74,13 +74,13 @@ Especifica as opções de autenticação para clientes ponto a ponto.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de ponto a ponto.|  
+|[\<peer>](peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de mesmo nível.|  
   
 ## <a name="remarks"></a>Comentários  
- O `<authentication>` elemento corresponde ao <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> classe. Esse elemento Especifica um validador, que é invocado durante a autenticação de vizinho para vizinhos na malha. Quando um novo par tenta estabelecer uma conexão de vizinho, ele passa seu próprio credencial para o par está respondendo. O validador do Respondente é invocado para verificar se a credencial da parte remota. Sempre que uma conexão ponto a ponto é estabelecida na malha, os pontos são autenticados mutuamente, validadores de significado em ambas as extremidades são invocados.  
+ O `<authentication>` elemento corresponde <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> à classe. Esse elemento especifica um validador, que é invocado durante a autenticação de vizinho para vizinho na malha. Quando um novo par tenta estabelecer uma conexão vizinha, ele passa sua própria credencial para o par de resposta. O validador do respondente é chamado para verificar a credencial da parte remota. Sempre que uma conexão de mesmo nível é estabelecida na malha, ambos os pares são mutuamente autenticados, o que significa que os validadores em ambas as extremidades são invocados.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir define o modo de validação de certificado `PeerOrChainTrust`.  
+ O código a seguir define o modo de validação `PeerOrChainTrust`de certificado como.  
   
 ```xml  
 <behaviors>
@@ -107,8 +107,8 @@ Especifica as opções de autenticação para clientes ponto a ponto.
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
-- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)
+- [Rede ponto a ponto](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [Autenticação de mensagem de canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Autenticação personalizada de canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [Protegendo aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Autenticação personalizada do canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Protegendo aplicativos de canal par](../../../wcf/feature-details/securing-peer-channel-applications.md)

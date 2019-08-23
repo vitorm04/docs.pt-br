@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 356678afb537ab5e5e1653c4f71140ce704e55ef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d881c71d4725e1a73d743aa098aecc053182947
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779681"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918602"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>Método ICLRGCManager2::SetGCStartupLimitsEx
-Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração do sistema de coleta de lixo 0.  
+Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração 0 do sistema de coleta de lixo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,43 +38,43 @@ HRESULT SetGCStartupLimitsEx (
   
 ## <a name="parameters"></a>Parâmetros  
  `SegmentSize`  
- [in] O tamanho especificado de um segmento de coleta de lixo.  
+ no O tamanho especificado de um segmento de coleta de lixo.  
   
- O tamanho do segmento mínimo é de 4 MB. Segmentos podem ser aumentado em incrementos de 1 MB ou maiores.  
+ O tamanho mínimo do segmento é 4 MB. Os segmentos podem ser aumentados em incrementos de 1 MB ou mais.  
   
  `MaxGen0Size`  
- [in] O tamanho máximo especificado para a geração 0.  
+ no O tamanho máximo especificado para a geração 0.  
   
- O tamanho mínimo de geração 0 é 64 KB.  
+ O tamanho mínimo de 0 de geração é 64 KB.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimitsEx` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|S_OK|`SetGCStartupLimitsEx`retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Os valores que `SetGCStartupLimitsEx` conjuntos podem ser especificados apenas antes que o host é iniciado. Chamadas posteriores para `SetGCStartupLimitsEx` são ignorados.  
+ Os valores que `SetGCStartupLimitsEx` conjuntos só podem ser especificados antes do host ser iniciado. As chamadas posteriores para `SetGCStartupLimitsEx` são ignoradas.  
   
- Para definir um parâmetro sem afetar o outro, especifique 0 (zero) para o parâmetro que você não deseja alterar.  
+ Para definir qualquer parâmetro sem afetar o outro, especifique 0 (zero) para o parâmetro que você não deseja alterar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciamento Automático de Memória](../../../../docs/standard/automatic-memory-management.md)
-- [Coleta de lixo](../../../../docs/standard/garbage-collection/index.md)
+- [Gerenciamento Automático de Memória](../../../standard/automatic-memory-management.md)
+- [Coleta de lixo](../../../standard/garbage-collection/index.md)
 - [Interface ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interface ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

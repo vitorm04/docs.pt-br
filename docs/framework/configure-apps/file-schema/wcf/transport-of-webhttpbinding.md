@@ -2,22 +2,22 @@
 title: <transport> de <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 8dcd51cd248dbba3ccf60295cb1712167684328e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f78add5397644dc40bfd22f10bd84aa5c5eb29e6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788265"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923205"
 ---
-# <a name="transport-of-webhttpbinding"></a>\<transporte > de \<webHttpBinding >
-Define as configurações de segurança de nível de transporte para um ponto de extremidade de serviço configurado para receber solicitações HTTP.  
+# <a name="transport-of-webhttpbinding"></a>\<> de transporte \<de WebHttpBinding >
+Define as configurações de segurança no nível de transporte para um ponto de extremidade de serviço configurado para receber solicitações HTTP.  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<webHttpBinding>  
-\<binding>  
-\<segurança >  
-\<transporte >  
+\<> de associação  
+\<> de segurança  
+\<> de transporte  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,30 +50,30 @@ Define as configurações de segurança de nível de transporte para um ponto de
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`clientCredentialType`|Especifica a credencial usada para autenticar o cliente para o serviço. Esse atributo é do tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|`proxyCredentialType`|Especifica a credencial usada para autenticar o cliente para um proxy do domínio. Esse atributo é do tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|`realm`|Uma cadeia de caracteres que especifica o realm de autenticação para a autenticação básica ou digest. O padrão é uma cadeia de caracteres vazia.<br /><br /> Pelo menos, um realm de autenticação especifica o nome do host que executa a autenticação. Ele também pode especificar uma coleção de usuários que tem acesso. Um usuário pode consultar o realm de autenticação para determinar quais dos vários possíveis nomes de usuário e senhas pode ser usado.|  
-|`policyEnforcement`|Esta enumeração Especifica quando o <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> deve ser imposta.<br /><br /> 1.  Nunca – a política de nunca é aplicada (proteção estendida é desabilitada).<br />2.  WhenSupported – a política é aplicada somente se o cliente oferece suporte à proteção estendida.<br />3.  Sempre – a política sempre é aplicada. Os clientes que não dão suporte a proteção estendida falharão ao autenticar.|  
+|`proxyCredentialType`|Especifica a credencial usada para autenticar o cliente para um proxy de domínio. Esse atributo é do tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|`realm`|Uma cadeia de caracteres que especifica o realm de autenticação para Digest ou autenticação básica. O padrão é uma cadeia de caracteres vazia.<br /><br /> Um realm de autenticação especifica pelo menos o nome do host que executa a autenticação. Ele também pode especificar uma coleção de usuários que tem acesso. Um usuário pode consultar o realm de autenticação para determinar que um dos vários nomes de usuário e senhas possíveis podem ser usados.|  
+|`policyEnforcement`|Essa enumeração especifica quando o <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> deve ser imposto.<br /><br /> 1.  Nunca – a política nunca é imposta (a proteção estendida está desabilitada).<br />2.  WhenSupported – a política será imposta somente se o cliente oferecer suporte à proteção estendida.<br />3.  Sempre – a política é sempre imposta. Os clientes que não dão suporte à proteção estendida não serão autenticados.|  
   
-## <a name="clientcredentialtype-attribute"></a>clientCredentialType de atributo  
+## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialtype  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |`None`|A segurança é desabilitada.|  
 |`Basic`|Usa a autenticação básica.|  
-|`Certificate`|Usa certificados x. 509 para autenticar o cliente.|  
-|`Digest`|Usa autenticação digest.|  
+|`Certificate`|Usa certificados X. 509 para autenticar o cliente.|  
+|`Digest`|Usa a autenticação Digest.|  
 |`Ntlm`|Usa a autenticação NTLM como um fallback com um domínio do Windows.|  
-|`Windows`|Usa integrada a autenticação do Windows.|  
+|`Windows`|Usa a autenticação integrada do Windows.|  
   
-## <a name="proxycredentialtype-attribute"></a>proxyCredentialType atributo  
+## <a name="proxycredentialtype-attribute"></a>Atributo proxyCredentialType  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |`None`|A segurança é desabilitada.|  
 |`Basic`|Usa a autenticação básica.|  
-|`Digest`|Usa autenticação digest.|  
+|`Digest`|Usa a autenticação Digest.|  
 |`Ntlm`|Usa NTLM como um fallback com um domínio do Windows.|  
-|`Windows`|Usa integrada a autenticação do Windows.|  
+|`Windows`|Usa a autenticação integrada do Windows.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -82,7 +82,7 @@ Define as configurações de segurança de nível de transporte para um ponto de
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|Representa os recursos de segurança de [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.|  
+|[\<security>](security-of-webhttpbinding.md)|Representa os recursos de segurança do [ \<elemento WSHttpBinding >](wshttpbinding.md) .|  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -90,9 +90,9 @@ Define as configurações de segurança de nível de transporte para um ponto de
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [Modelo de programação HTTP Web do WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Associações](../../../wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)
+- [Modelo de programação HTTP Web do WCF](../../../wcf/feature-details/wcf-web-http-programming-model.md)

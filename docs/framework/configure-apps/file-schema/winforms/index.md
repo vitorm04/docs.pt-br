@@ -4,12 +4,12 @@ ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb2c4157ba702182056c98c959a60569e8c3d1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e76e11ef8bb39d72cb16655c948354bc326e75bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786406"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913084"
 ---
 # <a name="windows-forms-configuration-section"></a>Seção de configuração do Windows Forms
 As definições de configuração do Windows Forms permitem que um aplicativo do Windows Forms armazene e recupere informações sobre configurações personalizadas de aplicativo, como suporte a vários monitores, suporte ao DPI e outras configurações predefinidas.
@@ -38,7 +38,7 @@ nenhuma.
 
 Elemento  |Descrição |
 ---------|---------|
-[`<add>`](../../../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md) | Adiciona uma chave de definição de configuração com um valor especificado |
+[`<add>`](windows-forms-add-configuration-element.md) | Adiciona uma chave de definição de configuração com um valor especificado |
 
 ### <a name="parent-elements"></a>Elementos pai
 
@@ -50,9 +50,9 @@ Elemento  |Descrição |
 
 A partir do .NET Framework 4.7, o elemento `<System.Windows.Forms.ApplicationConfigurationSection>` permite configurar os aplicativos do Windows Forms para aproveitar os recursos adicionados em versões recentes do .NET Framework. 
 
-O elemento `<System.Windows.Forms.ApplicationConfigurationSection>` pode incluir um ou mais elementos [`<add>`](../../../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md) filho e cada um deles define uma definição de configuração específica.
+O elemento `<System.Windows.Forms.ApplicationConfigurationSection>` pode incluir um ou mais elementos [`<add>`](windows-forms-add-configuration-element.md) filho e cada um deles define uma definição de configuração específica.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Esquema de arquivos de configuração](../index.md)
-- [High DPI Support in Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md) (Suporte a alto DPI no Windows Forms)
+- [High DPI Support in Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md) (Suporte a alto DPI no Windows Forms)

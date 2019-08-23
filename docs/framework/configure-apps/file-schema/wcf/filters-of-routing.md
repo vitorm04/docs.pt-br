@@ -2,20 +2,20 @@
 title: <filters> de <routing>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 8b2c735a19c4cece16dcb77e3ec548eb2d39ec18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba60958ad33b46b40285f3f70001273bb3af3a63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701028"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925613"
 ---
-# <a name="filters-of-routing"></a>\<Filtros > de \<roteamento >
+# <a name="filters-of-routing"></a>\<Filtros > do \<> de roteamento
 
-Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo do Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas.
+Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo de Windows Communication Foundation <xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) a ser usado ao avaliar mensagens de entrada.
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;[**\<routing>**](routing.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**
+[ **\<system.serviceModel>** ](system-servicemodel.md)   
+&nbsp;&nbsp;[ **\<routing>** ](routing.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<filters>**
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,13 +44,13 @@ Nenhum
 
 |     | Descrição |
 | --- | ----------- |
-| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Contém um filtro de roteamento que determina o tipo do Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> será usada ao avaliar mensagens recebidas. |
+| [ **\<filter>** ](filter.md) | Contém um filtro de roteamento que determina o tipo de Windows Communication Foundation (WCF<xref:System.ServiceModel.Dispatcher.MessageFilter> ) será usado ao avaliar mensagens de entrada. |
 
 ### <a name="parent-elements"></a>Elementos pai
 
 |     | Descrição |
 | --- | ----------- |
-| [**\<routing>**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo do Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas, bem como roteamento de tabelas que definem os pontos de extremidade de destino para envie mensagens para quando um filtro corresponde. |
+| [ **\<routing>** ](routing.md) | Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo de Windows Communication Foundation<xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) a ser usado ao avaliar mensagens de entrada, bem como tabelas de roteamento que definem os pontos de extremidade de destino para enviar mensagens para quando um filtro corresponder. |
 
 ## <a name="see-also"></a>Consulte também
 

@@ -24,18 +24,18 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 28a06139275f63571d9528d075946d97a19c9f3c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456208"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912876"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurando aplicativos usando arquivos de configuração
 O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolvedores e administradores controle e flexibilidade sobre a maneira de executar aplicativos. Os arquivos de configuração são arquivos XML que podem ser alterados quando necessário. Um administrador pode controlar quais recursos protegidos um aplicativo pode acessar, quais versões de assemblies um aplicativo usará e onde os aplicativos e objetos remotos são localizados. Os desenvolvedores podem colocar definições em arquivos de configuração, eliminando a necessidade de recompilar um aplicativo sempre que uma configuração é alterada. Esta seção descreve o que pode ser configurado e por que a configuração de um aplicativo pode ser útil.  
   
 > [!NOTE]
->  O código gerenciado pode usar as classes no namespace <xref:System.Configuration> para ler configurações dos arquivos de configuração, mas não para gravar configurações nesses arquivos.  
+> O código gerenciado pode usar as classes no namespace <xref:System.Configuration> para ler configurações dos arquivos de configuração, mas não para gravar configurações nesses arquivos.  
   
  Este tópico descreve a sintaxe dos arquivos de configuração e fornece informações sobre os três tipos de arquivos de configuração: computador, aplicativo e segurança.  
   
@@ -44,7 +44,7 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
   
  Como com todos os arquivos XML, a sintaxe em arquivos de configuração diferencia maiúsculas de minúsculas.  
   
- Você especifica configurações usando atributos predefinidos que são pares de nome/valor na marca inicial de um elemento. O exemplo a seguir especifica dois atributos (`version` e `href`) para o elemento `<codeBase>` que especifica onde o tempo de execução pode localizar um assembly (para obter mais informações, consulte [Especificando o local de um assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)).  
+ Você especifica configurações usando atributos predefinidos que são pares de nome/valor na marca inicial de um elemento. O exemplo a seguir especifica dois atributos (`version` e `href`) para o elemento `<codeBase>` que especifica onde o tempo de execução pode localizar um assembly (para obter mais informações, consulte [Especificando o local de um assembly](specify-assembly-location.md)).  
   
 ```xml  
 <codeBase version="2.0.0.0"  
@@ -54,12 +54,12 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
 ## <a name="machine-configuration-files"></a>Arquivos de configuração de computador  
  O arquivo de configuração do computador, Machine.config, contém configurações que se aplicam a um computador inteiro. Esse arquivo está localizado no diretório %*runtime install path*%\Config. Machine.config contém as definições de configuração para associação de assembly em todo o computador, [canais remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) internos e ASP.NET.  
   
- O sistema de configuração primeiro procura o [elemento **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/index.md) no arquivo de configuração do computador e outras seções de configuração que um desenvolvedor pode definir. Em seguida, ele examina o arquivo de configuração de aplicativo. Para manter o arquivo de configuração do computador gerenciável, é melhor colocar essas configurações no arquivo de configuração de aplicativo. No entanto, colocar as configurações no arquivo de configuração do computador pode tornar seu sistema mais sustentável. Por exemplo, se você tiver um componente de terceiros que seu aplicativo para cliente e servidor use, será mais fácil colocar as configurações para esse componente em um local. Nesse caso, o arquivo de configuração do computador será o local apropriado para as configurações de forma que você não terá as mesmas configurações em dois arquivos diferentes.  
+ O sistema de configuração primeiro procura o [elemento **\<appSettings>** ](./file-schema/appsettings/index.md) no arquivo de configuração do computador e outras seções de configuração que um desenvolvedor pode definir. Em seguida, ele examina o arquivo de configuração de aplicativo. Para manter o arquivo de configuração do computador gerenciável, é melhor colocar essas configurações no arquivo de configuração de aplicativo. No entanto, colocar as configurações no arquivo de configuração do computador pode tornar seu sistema mais sustentável. Por exemplo, se você tiver um componente de terceiros que seu aplicativo para cliente e servidor use, será mais fácil colocar as configurações para esse componente em um local. Nesse caso, o arquivo de configuração do computador será o local apropriado para as configurações de forma que você não terá as mesmas configurações em dois arquivos diferentes.  
   
 > [!NOTE]
->  Implantar um aplicativo que use XCOPY não copiará as configurações no arquivo de configuração do computador.  
+> Implantar um aplicativo que use XCOPY não copiará as configurações no arquivo de configuração do computador.  
   
- Para obter mais informações de como o Common Language Runtime usa o arquivo de configuração do computador para a associação de assembly, consulte [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Para obter mais informações de como o Common Language Runtime usa o arquivo de configuração do computador para a associação de assembly, consulte [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md).  
   
 ## <a name="application-configuration-files"></a>Arquivos de configuração de aplicativo  
  Um arquivo de configuração de aplicativo contém configurações específicas para um aplicativo. Esse arquivo inclui configurações que o Common Language Runtime lê (como política de associação de assembly, objetos remotos e assim por diante), além das configurações que o aplicativo pode ler.  
@@ -72,11 +72,11 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
   
      Ao desenvolver no Visual Studio, coloque o arquivo de configuração de origem do aplicativo no diretório do projeto e defina sua propriedade **Copiar para Diretório de Saída** como **Copiar sempre** ou **Copiar se for mais novo**. O nome do arquivo de configuração é o nome do aplicativo com uma extensão .config. Por exemplo, um aplicativo chamado myApp.exe deve ter um arquivo de configuração de origem chamado myApp.exe.config.  
   
-     O Visual Studio copia automaticamente o arquivo de configuração de origem para o diretório onde o assembly compilado é colocado para criar o arquivo de configuração de saída que é implantado com o aplicativo. Em alguns casos, o Visual Studio pode modificar o arquivo de configuração de saída. Para obter mais informações, consulte a seção [Redirecting assembly versions at the app level](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) (Redirecionando versões de assembly no nível do aplicativo) do artigo [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md) (Redirecionando versões de assembly).  
+     O Visual Studio copia automaticamente o arquivo de configuração de origem para o diretório onde o assembly compilado é colocado para criar o arquivo de configuração de saída que é implantado com o aplicativo. Em alguns casos, o Visual Studio pode modificar o arquivo de configuração de saída. Para obter mais informações, consulte a seção [Redirecting assembly versions at the app level](redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) (Redirecionando versões de assembly no nível do aplicativo) do artigo [Redirecting Assembly Versions](redirect-assembly-versions.md) (Redirecionando versões de assembly).  
   
 - Aplicativo hospedado no ASP.NET.  
   
-     Para obter mais informações sobre arquivos de configuração do ASP.NET, consulte [definições de configuração do ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
+     Para obter mais informações sobre arquivos de configuração do ASP.NET, consulte [definições de configuração do ASP.net](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
 - Aplicativo hospedado no Internet Explorer.  
   
@@ -87,10 +87,10 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
      Nessa marca, `location` é uma URL para o arquivo de configuração. Isso define a base do aplicativo. O arquivo de configuração deve estar localizado no mesmo site que o aplicativo.  
   
 ## <a name="security-configuration-files"></a>Arquivos de configuração de segurança  
- Os arquivos de configuração de segurança contêm informações sobre a hierarquia e os conjuntos de permissões do grupo de códigos associados a um nível de política. É altamente recomendável que você use a [ferramenta Política de Segurança de Acesso a Códigos (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) para modificar a política de segurança a fim de garantir que as alterações de política não corrompam os arquivos de configuração de segurança.  
+ Os arquivos de configuração de segurança contêm informações sobre a hierarquia e os conjuntos de permissões do grupo de códigos associados a um nível de política. É altamente recomendável que você use a [ferramenta Política de Segurança de Acesso a Códigos (Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) para modificar a política de segurança a fim de garantir que as alterações de política não corrompam os arquivos de configuração de segurança.  
   
 > [!NOTE]
->  Começando com o .NET Framework 4, os arquivos de configuração de segurança estão presentes somente se a política de segurança foi alterada.  
+> A partir do .NET Framework 4, os arquivos de configuração de segurança estarão presentes somente se a política de segurança tiver sido alterada.  
   
  Os arquivos de configuração de segurança estão nos seguintes locais:  
   
@@ -101,30 +101,30 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
 - Arquivo de configuração de política de usuário: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: Localizar Assemblies usando DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Como: Localizar assemblies usando DEVPATH](how-to-locate-assemblies-by-using-devpath.md)  
  Descreve como direcionar o tempo de execução para usar a variável de ambiente DEVPATH ao procurar por assemblies.  
   
- [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
+ [Redirecionando versões de assembly](redirect-assembly-versions.md)  
  Descreve como especificar o local de um assembly e qual versão de um assembly será usada.  
   
- [Especificando o local de um assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)  
+ [Especificando o local de um assembly](specify-assembly-location.md)  
  Descreve como especificar onde o tempo de execução deve pesquisar um assembly.  
   
- [Configurando classes de criptografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [Configurando classes de criptografia](configure-cryptography-classes.md)  
  Descreve como mapear um nome de algoritmo para uma classe de criptografia e um identificador de objeto para um algoritmo de criptografia.  
   
- [Como: Criar uma política de editor](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [Como: Criar uma política de Publicador](how-to-create-a-publisher-policy.md)  
  Descreve quando e como você deve adicionar um arquivo de política de editor para especificar as configurações de base de redirecionamento e código de assembly.  
   
- [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Esquema de arquivos de configuração](./file-schema/index.md)  
  Descreve a hierarquia de esquema de inicialização, tempo de execução, rede e outros tipos de parâmetros de configuração.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Especificando o local de um assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Esquema de arquivos de configuração](./file-schema/index.md)
+- [Especificando o local de um assembly](specify-assembly-location.md)
+- [Redirecionando versões de assembly](redirect-assembly-versions.md)
 - [Administração de site ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Gerenciamento de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe (Ferramenta de Política de Segurança de Acesso do Código)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
-- [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Caspol.exe (Ferramenta de Política de Segurança de Acesso do Código)](../tools/caspol-exe-code-access-security-policy-tool.md)
+- [Assemblies no Common Language Runtime](../app-domains/assemblies-in-the-common-language-runtime.md)

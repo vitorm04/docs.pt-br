@@ -2,12 +2,12 @@
 title: Autorização e permissões no SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 35aa26ed1afb0006802b703fa0fa3a6076f03ddf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66bf347543641808cc463d8035223fcf59b08231
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649562"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918105"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorização e permissões no SQL Server
 Ao criar objetos de banco de dados, você deve conceder permissões explicitamente para torná-los acessíveis aos usuários. Cada objeto protegível tem permissões que podem ser concedidas a uma entidade de segurança usando declarações de permissão.  
@@ -18,7 +18,7 @@ Ao criar objetos de banco de dados, você deve conceder permissões explicitamen
  Siga sempre o princípio de privilégios mínimos para conceder permissões aos usuários do banco de dados. Conceda as permissões mínimas necessárias a um usuário ou a uma função para realizar uma determinada tarefa.  
   
 > [!IMPORTANT]
->  O desenvolvimento e o teste de um aplicativo usando a abordagem LUA adiciona um grau de dificuldade ao processo de desenvolvimento. É mais fácil criar objetos e escrever código quando conectado como um administrador do sistema ou proprietário do banco de dados do que usando uma conta com LUA. No entanto, o desenvolvimento de aplicativos usando uma conta altamente privilegiada pode ofuscar o impacto da funcionalidade reduzida quando usuários com privilégios mínimos tentarem executar um aplicativo que exija permissões elevadas para funcionar corretamente. Conceder permissões excessivas aos usuários para readquirir funcionalidade perdida pode deixar seu aplicativo vulnerável a ataque. A criação, o desenvolvimento e o teste de seu aplicativo conectado com uma conta com LUA impõe uma abordagem disciplinada ao planejamento de segurança, que elimina surpresas desagradáveis e a tentação de conceder privilégios elevados como uma solução rápida. Você pode usar um logon do SQL Server para testar mesmo que seu aplicativo esteja destinado a ser implantado usando a autenticação do Windows.  
+> O desenvolvimento e o teste de um aplicativo usando a abordagem LUA adiciona um grau de dificuldade ao processo de desenvolvimento. É mais fácil criar objetos e escrever código quando conectado como um administrador do sistema ou proprietário do banco de dados do que usando uma conta com LUA. No entanto, o desenvolvimento de aplicativos usando uma conta altamente privilegiada pode ofuscar o impacto da funcionalidade reduzida quando usuários com privilégios mínimos tentarem executar um aplicativo que exija permissões elevadas para funcionar corretamente. Conceder permissões excessivas aos usuários para readquirir funcionalidade perdida pode deixar seu aplicativo vulnerável a ataque. A criação, o desenvolvimento e o teste de seu aplicativo conectado com uma conta com LUA impõe uma abordagem disciplinada ao planejamento de segurança, que elimina surpresas desagradáveis e a tentação de conceder privilégios elevados como uma solução rápida. Você pode usar um logon do SQL Server para testar mesmo que seu aplicativo esteja destinado a ser implantado usando a autenticação do Windows.  
   
 ## <a name="role-based-permissions"></a>Permissões baseadas em função  
  Conceder permissões a funções em vez de aos usuários simplifica a administração de segurança. Os conjuntos de permissões que são atribuídos às funções são herdados por todos os membros da função. É mais fácil adicionar ou remover usuários de uma função do que recriar conjuntos de permissões separados para usuários individuais. As funções podem ser aninhadas. No entanto, níveis de aninhamento excessivos podem prejudicar o desempenho. Você também pode adicionar usuários a funções de banco de dados fixas para simplificar a atribuição de permissões.  
@@ -40,7 +40,7 @@ Ao criar objetos de banco de dados, você deve conceder permissões explicitamen
 - A instrução GRANT pode atribuir permissões a um grupo ou a uma função, que podem ser herdadas por usuários do banco de dados. No entanto, a instrução DENY tem precedência sobre quaisquer outras instruções de permissão. Portanto, um usuário para o qual uma permissão é negada não pode herdá-la de outra função.  
   
 > [!NOTE]
->  As permissões não podem ser negadas para membros da função de servidor fixa `sysadmin` e proprietários de objetos.  
+> As permissões não podem ser negadas para membros da função de servidor fixa `sysadmin` e proprietários de objetos.  
   
 ## <a name="ownership-chains"></a>Cadeias de propriedade  
  O SQL Server garante que somente as entidades de segurança que receberam permissão podem acessar objetos. Quando vários objetos de banco de dados acessam um ao outro, a sequência é conhecida como uma cadeia. Quando o SQL Server está atravessando os links na cadeia, ele avalia as permissões de maneira diferente do que avaliaria se estivesse acessando cada item separadamente. Quando um objeto é acessado por meio de uma cadeia, o SQL Server primeiro compara o proprietário do objeto com o proprietário do objeto de chamada (o link anterior na cadeia). Se os dois objetos tiverem o mesmo proprietário, as permissões do objeto referenciado não serão verificadas. Sempre que um objeto acessa outro objeto que tem um proprietário diferente, a cadeia de propriedade é interrompida e o SQL Server deve verificar o contexto de segurança do chamador.  
@@ -49,7 +49,7 @@ Ao criar objetos de banco de dados, você deve conceder permissões explicitamen
  Suponha que um usuário receba permissões de execução em um procedimento armazenado que seleciona dados de uma tabela. Se o procedimento armazenado e a tabela tiverem o mesmo proprietário, o usuário não precisará receber nenhuma permissão na tabela e pode até ter permissões negadas. Entretanto, se o procedimento armazenado e a tabela tiverem proprietários diferentes, o SQL Server deverá verificar as permissões do usuário na tabela antes de permitir acesso a dados.  
   
 > [!NOTE]
->  O encadeamento de propriedade não se aplica no caso de instruções SQL dinâmicas. Para chamar um procedimento que executa uma instrução SQL, o chamador deve ter recebido permissões nas tabelas subjacentes, deixando seu aplicativo vulnerável ao ataque de injeção de SQL. O SQL Server fornece novos mecanismos, como a representação e módulos de assinatura com certificados, que não requerem a concessão de permissões nas tabelas subjacentes. Eles também podem ser usados com procedimentos armazenados CLR.  
+> O encadeamento de propriedade não se aplica no caso de instruções SQL dinâmicas. Para chamar um procedimento que executa uma instrução SQL, o chamador deve ter recebido permissões nas tabelas subjacentes, deixando seu aplicativo vulnerável ao ataque de injeção de SQL. O SQL Server fornece novos mecanismos, como a representação e módulos de assinatura com certificados, que não requerem a concessão de permissões nas tabelas subjacentes. Eles também podem ser usados com procedimentos armazenados CLR.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obter mais informações, consulte os seguintes recursos.  

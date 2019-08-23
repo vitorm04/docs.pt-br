@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55120e292ac2a2c822c5510563d1aa167ca921e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673700"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920450"
 ---
-# <a name="source-element"></a>\<origem > elemento
+# <a name="source-element"></a>\<Elemento de > de origem
 Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.  
   
  \<configuration>  
-\<system.diagnostics>  
-\<sources>  
-\<origem >  
+\<System. Diagnostics >  
+\<fontes >  
+\<> de origem  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,16 +37,16 @@ Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`name`|Atributo opcional.<br /><br /> Especifica o nome da origem de rastreamento.|  
-|`switchName`|Atributo opcional.<br /><br /> Especifica o nome de uma instância de comutador de rastreamento no aplicativo. Se a opção não for identificada em um `<switches>` elemento, o valor Especifica o nível para o comutador.|  
-|`switchType`|Atributo opcional.<br /><br /> Especifica o tipo de opção de rastreamento. Se estiver presente, o tipo deve ser um nome de classe válido e não pode ser uma cadeia de caracteres vazia.|  
-|`extraAttribute`|Atributo opcional.<br /><br /> Especifica o valor para um atributo específico de fonte de rastreamento identificado pelo <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> método para essa origem de rastreamento.|  
+|`name`|Atributo opcional.<br /><br /> Especifica o nome da origem do rastreamento.|  
+|`switchName`|Atributo opcional.<br /><br /> Especifica o nome de uma instância de opção de rastreamento no aplicativo. Se a opção não for identificada em `<switches>` um elemento, o valor especificará o nível para a opção.|  
+|`switchType`|Atributo opcional.<br /><br /> Especifica o tipo da opção de rastreamento. Se presente, o tipo deve ser um nome de classe válido e não pode ser uma cadeia de caracteres vazia.|  
+|`extraAttribute`|Atributo opcional.<br /><br /> Especifica o valor para um atributo específico de origem de rastreamento identificado pelo <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> método para essa origem de rastreamento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Contém os ouvintes que coletam, armazenam e roteiam mensagens.|  
+|[\<listeners>](listeners-element-for-source.md)|Contém ouvintes que coletam, armazenam e roteiam mensagens.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -57,10 +57,10 @@ Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.
 |`sources`|Contém as origens de rastreamento que iniciam as mensagens de rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento pode ser usado no arquivo de configuração de máquina (Machine. config) e o arquivo de configuração do aplicativo.  
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o `<source>` elemento para adicionar a origem de rastreamento `mySource` e para definir o nível para a alternância de origem chamado `sourceSwitch`. Um ouvinte de rastreamento do console é adicionado, que grava informações de rastreamento no console.  
+ O exemplo a seguir mostra como usar o `<source>` elemento para adicionar a origem `mySource` de rastreamento e definir o nível para a opção de origem `sourceSwitch`denominada. Um ouvinte de rastreamento de console é adicionado que grava informações de rastreamento no console do.  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Opções de rastreamento](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Esquema de configurações de rastreamento e depuração](index.md)
+- [Opções de rastreamento](../../../debug-trace-profile/trace-switches.md)

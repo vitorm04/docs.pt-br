@@ -9,37 +9,37 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: bf7cdc5074cfe6548a13610e6f0af090d2359177
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3f373c3947b45443ca4031ecdc3d5e40608ec84c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607140"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911547"
 ---
 # <a name="ui-automation-events-overview"></a>Visão geral sobre eventos de automação de interface do usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] notificação de eventos é um recurso importante para tecnologias auxiliares, como leitores de tela e lentes. Esses eventos acompanhar clientes de automação de interface do usuário que são gerados por provedores de automação de interface do usuário quando algo acontece no [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e use as informações para notificar os usuários finais.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]a notificação de eventos é um recurso importante para tecnologias assistenciais, como leitores de tela e ampliadores de tela. Esses clientes de automação da interface do usuário rastreiam eventos que são gerados por provedores de automação [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] de interface do usuário quando algo acontece no e usam as informações para notificar os usuários finais.  
   
- Eficiência é aprimorada permitindo que aplicativos de provedor gerar eventos seletivamente, dependendo se todos os clientes estão inscritos para esses eventos, ou não, se nenhum cliente está ouvindo os eventos.  
+ A eficiência é aprimorada permitindo que os aplicativos de provedor gerem eventos de forma seletiva, dependendo se algum cliente estiver inscrito nesses eventos ou não, se nenhum cliente estiver ouvindo nenhum evento.  
   
 <a name="Types_of_Events"></a>   
 ## <a name="types-of-events"></a>Tipos de eventos  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] eventos se enquadram nas categorias a seguir.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]os eventos se enquadram nas categorias a seguir.  
   
 |evento|Descrição|  
 |-----------|-----------------|  
-|Alteração de propriedade|Gerado quando uma propriedade em um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mudanças de padrão de controle ou elemento. Por exemplo, se um cliente precisa monitorar o controle de caixa de seleção de um aplicativo, ele pode registrar para escutar um evento de alteração de propriedade no <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> propriedade. Quando o controle de caixa de seleção está marcado ou desmarcado, o provedor gera o evento e o cliente possa agir conforme necessário.|  
-|Elemento de ação|Gerado quando uma alteração na [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] resultados do usuário final ou de atividade de programação; por exemplo, quando um botão é clicado ou invocado por meio de <xref:System.Windows.Automation.InvokePattern>.|  
-|Alteração de estrutura|Gerado quando a estrutura do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] alterações de árvore. A estrutura é alterada quando novos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] itens se tornam visíveis, ocultos ou removidos na área de trabalho.|  
-|Alteração da área de trabalho global|Gerado quando ocorrem as ações de interesse global para o cliente, como quando o foco muda de um elemento para outro, ou quando fecha uma janela.|  
+|Alteração de propriedade|Gerado quando uma propriedade em um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] padrão de elemento ou de controle é alterada. Por exemplo, se um cliente precisar monitorar o <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> controle de caixa de seleção de um aplicativo, ele poderá se registrar para escutar um evento de alteração de propriedade na propriedade. Quando o controle caixa de seleção está marcado ou desmarcado, o provedor gera o evento e o cliente pode agir conforme necessário.|  
+|Ação do elemento|Gerado quando uma alteração nos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] resultados de uma atividade programática ou de usuário final, por exemplo, quando um botão é clicado ou invocado por meio <xref:System.Windows.Automation.InvokePattern>do.|  
+|Alteração de estrutura|Gerado quando a estrutura da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore é alterada. A estrutura é alterada quando [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] novos itens se tornam visíveis, ocultos ou removidos na área de trabalho.|  
+|Alteração global na área de trabalho|Gerado quando ocorrem ações de interesse global para o cliente, como quando o foco muda de um elemento para outro ou quando uma janela é fechada.|  
   
- Alguns eventos não significam necessariamente que o estado da interface do usuário foi alterado. Por exemplo, se o usuário pressiona TAB para um campo de entrada de texto e, em seguida, clica em um botão para atualizar o campo, um `TextChangedEvent` é gerado, mesmo se o usuário não tiver alterado realmente o texto. Ao processar um evento, pode ser necessário para um aplicativo cliente verificar se, na verdade, nada foi alterado antes de tomar.  
+ Alguns eventos não significam necessariamente que o estado da interface do usuário foi alterado. Por exemplo, se o usuário tabular para um campo de entrada de texto e clicar em um botão para atualizar o `TextChangedEvent` campo, um será gerado mesmo que o usuário não tenha realmente alterado o texto. Ao processar um evento, pode ser necessário que um aplicativo cliente Verifique se alguma coisa foi realmente alterada antes de executar a ação.  
   
- Os seguintes eventos podem ser gerados, mesmo quando o estado da interface do usuário não foi alterado.  
+ Os eventos a seguir podem ser gerados mesmo quando o estado da interface do usuário não foi alterado.  
   
-- `AutomationPropertyChangedEvent` (dependendo da propriedade que foi alterada)  
+- `AutomationPropertyChangedEvent`(dependendo da propriedade que foi alterada)  
   
 - `ElementSelectedEvent`  
   
@@ -48,10 +48,10 @@ ms.locfileid: "64607140"
 - `TextChangedEvent`  
   
 <a name="UI_Automation_Event_Identifiers"></a>   
-## <a name="ui-automation-event-identifiers"></a>Identificadores de eventos de automação de interface do usuário  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] eventos são identificados pela <xref:System.Windows.Automation.AutomationEvent> objetos. O <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> propriedade contém um valor que identifica exclusivamente o tipo de evento.  
+## <a name="ui-automation-event-identifiers"></a>Identificadores de evento de automação da interface do usuário  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]os eventos são identificados <xref:System.Windows.Automation.AutomationEvent> por objetos. A <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> propriedade contém um valor que identifica exclusivamente o tipo de evento.  
   
- Os valores possíveis para <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> são fornecidos na tabela a seguir, junto com o tipo usado para argumentos de evento. Observe que os identificadores usados por clientes e provedores são nomeados identicamente campos de classes diferentes.  
+ Os valores possíveis para <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> são fornecidos na tabela a seguir, juntamente com o tipo usado para argumentos de evento. Observe que os identificadores usados por clientes e provedores são campos nomeados de forma idêntica de classes diferentes.  
   
 |Identificador de cliente|Identificador do provedor|Tipo de argumentos de evento|  
 |-----------------------|-------------------------|--------------------------|  
@@ -63,23 +63,23 @@ ms.locfileid: "64607140"
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowClosedEventArgs>|  
   
 <a name="UI_Automation_Event_Arguments"></a>   
-## <a name="ui-automation-event-arguments"></a>Argumentos de evento de automação de interface do usuário  
- As seguintes classes encapsulam os argumentos do evento.  
+## <a name="ui-automation-event-arguments"></a>Argumentos de evento de automação da interface do usuário  
+ As classes a seguir encapsulam argumentos de evento.  
   
 |Classe|Descrição|  
 |-----------|-----------------|  
-|<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Contém informações sobre o carregamento assíncrono do conteúdo, incluindo a porcentagem de carregamento concluído.|  
-|<xref:System.Windows.Automation.AutomationEventArgs>|Contém informações sobre um evento simples que exige nenhum dado extra.|  
-|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|Contém informações sobre uma alteração de foco de entrada de um elemento para outro. Eventos desse tipo são gerados pelo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sistema, não por meio de provedores.|  
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|Contém informações sobre uma alteração no valor de uma propriedade de um padrão de controle ou elemento.|  
-|<xref:System.Windows.Automation.StructureChangedEventArgs>|Contém informações sobre uma alteração no [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore.|  
-|<xref:System.Windows.Automation.WindowClosedEventArgs>|Contém informações sobre o fechamento de uma janela.|  
+|<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Contém informações sobre o carregamento assíncrono de conteúdo, incluindo a porcentagem de carregamento concluído.|  
+|<xref:System.Windows.Automation.AutomationEventArgs>|Contém informações sobre um evento simples que não requer dados adicionais.|  
+|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|Contém informações sobre uma alteração no foco de entrada de um elemento para outro. Os [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] eventos desse tipo são gerados pelo sistema, não pelos provedores.|  
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|Contém informações sobre uma alteração em um valor de propriedade de um elemento ou padrão de controle.|  
+|<xref:System.Windows.Automation.StructureChangedEventArgs>|Contém informações sobre uma alteração na [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore.|  
+|<xref:System.Windows.Automation.WindowClosedEventArgs>|Contém informações sobre um fechamento de janela.|  
   
- Todas as classes de argumento de evento contém um <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A> membro. Esse identificador é encapsulado em um <xref:System.Windows.Automation.AutomationEvent>.  
+ Todas as classes de argumento de evento <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A> contêm um membro. Esse identificador é encapsulado em um <xref:System.Windows.Automation.AutomationEvent>.  
   
- O <xref:System.Windows.Automation.AutomationEvent> objetos usados para identificar os eventos são obtidos por provedores de campos na <xref:System.Windows.Automation.AutomationElementIdentifiers> e classes de padrão de identificador de controle, como <xref:System.Windows.Automation.DockPatternIdentifiers>. Os campos equivalentes são obtidos por aplicativos cliente dos campos em <xref:System.Windows.Automation.AutomationElement> e classes de padrão de controle, como <xref:System.Windows.Automation.DockPattern>.  
+ Os <xref:System.Windows.Automation.AutomationEvent> objetos usados para identificar eventos são obtidos por provedores de campos em <xref:System.Windows.Automation.AutomationElementIdentifiers> e classes de identificador de <xref:System.Windows.Automation.DockPatternIdentifiers>padrão de controle, como. Os campos equivalentes são obtidos por aplicativos cliente de campos <xref:System.Windows.Automation.AutomationElement> no e classes de padrão de <xref:System.Windows.Automation.DockPattern>controle, como.  
   
- Para obter uma lista de identificadores de evento, consulte [eventos de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md).  
+ Para obter uma lista de identificadores de eventos, consulte [eventos de automação da interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md).  
   
 ## <a name="see-also"></a>Consulte também
 
