@@ -16,41 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd60defc1c003fa4b235ddcb0a78b9a819b1b0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 426269d14992ae0f1f8c02619b259cfdd4bcbf8f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645521"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959436"
 ---
-# <a name="icordebugassembly-interface"></a><span data-ttu-id="c9ae0-102">Interface ICorDebugAssembly</span><span class="sxs-lookup"><span data-stu-id="c9ae0-102">ICorDebugAssembly Interface</span></span>
+# <a name="icordebugassembly-interface"></a><span data-ttu-id="2c517-102">Interface ICorDebugAssembly</span><span class="sxs-lookup"><span data-stu-id="2c517-102">ICorDebugAssembly Interface</span></span>
 
-<span data-ttu-id="c9ae0-103">Representa um assembly.</span><span class="sxs-lookup"><span data-stu-id="c9ae0-103">Represents an assembly.</span></span>  
+<span data-ttu-id="2c517-103">Representa um assembly.</span><span class="sxs-lookup"><span data-stu-id="2c517-103">Represents an assembly.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c9ae0-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="c9ae0-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="2c517-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="2c517-104">Methods</span></span>  
   
-|<span data-ttu-id="c9ae0-105">Método</span><span class="sxs-lookup"><span data-stu-id="c9ae0-105">Method</span></span>|<span data-ttu-id="c9ae0-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="c9ae0-106">Description</span></span>|  
+|<span data-ttu-id="2c517-105">Método</span><span class="sxs-lookup"><span data-stu-id="2c517-105">Method</span></span>|<span data-ttu-id="2c517-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="2c517-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c9ae0-107">Método EnumerateModules</span><span class="sxs-lookup"><span data-stu-id="c9ae0-107">EnumerateModules Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)|<span data-ttu-id="c9ae0-108">Obtém um enumerador para os módulos contidos no assembly.</span><span class="sxs-lookup"><span data-stu-id="c9ae0-108">Gets an enumerator for the modules contained in the assembly.</span></span>|  
-|[<span data-ttu-id="c9ae0-109">Método GetAppDomain</span><span class="sxs-lookup"><span data-stu-id="c9ae0-109">GetAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getappdomain-method.md)|<span data-ttu-id="c9ae0-110">Obtém um ponteiro de interface para o domínio do aplicativo que contém este `ICorDebugAssembly` instância.</span><span class="sxs-lookup"><span data-stu-id="c9ae0-110">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>|  
-|[<span data-ttu-id="c9ae0-111">Método GetCodeBase</span><span class="sxs-lookup"><span data-stu-id="c9ae0-111">GetCodeBase Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getcodebase-method.md)|<span data-ttu-id="c9ae0-112">Não implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c9ae0-112">Not implemented in the current version of the .NET Framework.</span></span>|  
-|[<span data-ttu-id="c9ae0-113">Método GetName</span><span class="sxs-lookup"><span data-stu-id="c9ae0-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getname-method.md)|<span data-ttu-id="c9ae0-114">Obtém o nome do assembly.</span><span class="sxs-lookup"><span data-stu-id="c9ae0-114">Gets the name of the assembly.</span></span>|  
-|[<span data-ttu-id="c9ae0-115">Método GetProcess</span><span class="sxs-lookup"><span data-stu-id="c9ae0-115">GetProcess Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getprocess-method.md)|<span data-ttu-id="c9ae0-116">Obtém a instância de ICorDebugProcess no qual o assembly está em execução.</span><span class="sxs-lookup"><span data-stu-id="c9ae0-116">Gets the ICorDebugProcess instance in which the assembly is running.</span></span>|  
+|[<span data-ttu-id="2c517-107">Método EnumerateModules</span><span class="sxs-lookup"><span data-stu-id="2c517-107">EnumerateModules Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)|<span data-ttu-id="2c517-108">Obtém um enumerador para os módulos contidos no assembly.</span><span class="sxs-lookup"><span data-stu-id="2c517-108">Gets an enumerator for the modules contained in the assembly.</span></span>|  
+|[<span data-ttu-id="2c517-109">Método GetAppDomain</span><span class="sxs-lookup"><span data-stu-id="2c517-109">GetAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getappdomain-method.md)|<span data-ttu-id="2c517-110">Obtém um ponteiro de interface para o domínio do aplicativo que `ICorDebugAssembly` contém essa instância.</span><span class="sxs-lookup"><span data-stu-id="2c517-110">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>|  
+|[<span data-ttu-id="2c517-111">Método GetCodeBase</span><span class="sxs-lookup"><span data-stu-id="2c517-111">GetCodeBase Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getcodebase-method.md)|<span data-ttu-id="2c517-112">Não implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2c517-112">Not implemented in the current version of the .NET Framework.</span></span>|  
+|[<span data-ttu-id="2c517-113">Método GetName</span><span class="sxs-lookup"><span data-stu-id="2c517-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getname-method.md)|<span data-ttu-id="2c517-114">Obtém o nome do assembly.</span><span class="sxs-lookup"><span data-stu-id="2c517-114">Gets the name of the assembly.</span></span>|  
+|[<span data-ttu-id="2c517-115">Método GetProcess</span><span class="sxs-lookup"><span data-stu-id="2c517-115">GetProcess Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getprocess-method.md)|<span data-ttu-id="2c517-116">Obtém a instância ICorDebugProcess na qual o assembly está em execução.</span><span class="sxs-lookup"><span data-stu-id="2c517-116">Gets the ICorDebugProcess instance in which the assembly is running.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c9ae0-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="c9ae0-117">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2c517-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="2c517-117">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c9ae0-118">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="c9ae0-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="2c517-118">Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.</span><span class="sxs-lookup"><span data-stu-id="2c517-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c9ae0-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c9ae0-119">Requirements</span></span>  
- <span data-ttu-id="c9ae0-120">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9ae0-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c517-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2c517-119">Requirements</span></span>  
+ <span data-ttu-id="2c517-120">**Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2c517-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9ae0-121">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9ae0-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2c517-121">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2c517-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c9ae0-122">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9ae0-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2c517-122">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c517-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c9ae0-123">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9ae0-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2c517-123">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c517-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9ae0-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c9ae0-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c517-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2c517-124">See also</span></span>
 
-- [<span data-ttu-id="c9ae0-125">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="c9ae0-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="2c517-125">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="2c517-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
