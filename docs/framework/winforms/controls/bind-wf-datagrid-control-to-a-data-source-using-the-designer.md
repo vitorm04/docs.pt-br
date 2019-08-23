@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: de8b8d16f45221fbafe9f61ca634f144d8f6f6ae
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 665a1af990aaf615c763c1c2eae508024d9de5c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917822"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Como: Associar o controle DataGrid do Windows Forms a uma fonte de dados usando o Designer
 
 > [!NOTE]
->  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+> O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
  O controle <xref:System.Windows.Forms.DataGrid> de Windows Forms foi projetado especificamente para exibir informações de uma fonte de dados. Você associa o controle em tempo de design definindo as <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedades <xref:System.Windows.Forms.DataGrid.DataMember%2A> e, ou em tempo de execução, chamando <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> o método. Embora seja possível exibir dados de uma variedade de fontes de dados, as fontes mais comuns são conjuntos de dados e exibições de dados.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 25f6cbbc1df8a4a2b4ad9025b2381d26153e4b66
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364435"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965274"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensões de marcação e XAML WPF
 Este tópico apresenta o conceito de extensões de marcação para XAML, incluindo regras de sintaxe, finalidade e o modelo de objeto de classe subjacente. As extensões de marcação são um recurso geral da linguagem XAML e da implementação .NET de serviços XAML. Este tópico detalha, especificamente, as extensões de marcação para uso em XAML do WPF.  
@@ -50,7 +50,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 - O `x:Array` fornece suporte para a criação de matrizes gerais na sintaxe XAML, para casos em que o suporte da coleção oferecido por modelos de controle e elementos base do WPF não é usado deliberadamente. Para ver os detalhes, consulte [Extensão de marcação x:Array](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
->  O prefixo `x:` é utilizado para o mapeamento típico do namespace de XAML dos intrínsecos da linguagem XAML, no elemento raiz de uma produção ou arquivo XAML. Por exemplo, os modelos do Visual Studio para aplicativos do WPF iniciam um arquivo `x:` XAML usando esse mapeamento. Você poderia escolher um token de prefixo diferente no seu próprio mapeamento do namespace de XAML; porém, essa documentação assumirá o mapeamento padrão do `x:` como meio para identificar as entidades que são uma parte definida do namespace de XAML para a linguagem XAML, ao contrário do namespace padrão do WPF ou de outros namespaces XAML não relacionados a uma estrutura específica.  
+> O prefixo `x:` é utilizado para o mapeamento típico do namespace de XAML dos intrínsecos da linguagem XAML, no elemento raiz de uma produção ou arquivo XAML. Por exemplo, os modelos do Visual Studio para aplicativos do WPF iniciam um arquivo `x:` XAML usando esse mapeamento. Você poderia escolher um token de prefixo diferente no seu próprio mapeamento do namespace de XAML; porém, essa documentação assumirá o mapeamento padrão do `x:` como meio para identificar as entidades que são uma parte definida do namespace de XAML para a linguagem XAML, ao contrário do namespace padrão do WPF ou de outros namespaces XAML não relacionados a uma estrutura específica.  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>Extensões de marcação específicas do WPF  
@@ -71,7 +71,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 - O `ComponentResourceKey` e o `ThemeDictionary` dão suporte a aspectos da pesquisa de recursos, especialmente para recursos e temas empacotados com controles personalizados. Para obter mais informações, consulte [Extensão de marcação ComponentResourceKey](componentresourcekey-markup-extension.md), [Extensão de marcação ThemeDictionary](themedictionary-markup-extension.md) ou [Visão geral de criação do controle](../controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
-## <a name="extension-classes"></a>*Classes de extensão  
+## <a name="extension-classes"></a>\*Classes de extensão  
  Para a linguagem XAML geral e extensões de marcação específicas do WPF, o comportamento de cada extensão de marcação é identificado para um processador XAML por `*Extension` meio de uma classe derivada <xref:System.Windows.Markup.MarkupExtension>de e <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> fornece uma implementação do forma. Esse método em cada extensão fornece o objeto que é retornado após a avaliação da extensão de marcação. Normalmente, o objeto retornado é avaliado com base em vários tokens de cadeia de caracteres que são passados para a extensão de marcação.  
   
  Por exemplo, a <xref:System.Windows.StaticResourceExtension> classe fornece a implementação de superfície da pesquisa de recurso real para <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> que sua implementação retorne o objeto solicitado, com a entrada dessa implementação específica sendo uma cadeia de caracteres que é usada para Pesquise o recurso por seu `x:Key`. A maior parte dos detalhes da implementação não será importante se você estiver usando uma extensão de marcação existente.  
@@ -88,7 +88,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 - Se os tokens individuais separados não contiverem nenhum sinal de igual, cada token será tratado como um argumento do construtor. Cada parâmetro de construtor deve ser fornecido como o tipo esperado por essa assinatura e na ordem correta esperada por ela.  
   
     > [!NOTE]
-    >  Um processador XAML deve chamar o construtor que corresponde à contagem de argumento do número de pares. Por esse motivo, se você estiver implementando uma extensão de marcação personalizada, não forneça vários construtores com a mesma contagem de argumentos. O comportamento de um processador XAML se existir mais de um caminho do construtor de extensão de marcação com a mesma contagem de parâmetros não é definido, mas você deverá prever que um processador XAML está autorizado a lançar uma exceção em uso caso tal situação exista nas definições do tipo de extensão de marcação.  
+    > Um processador XAML deve chamar o construtor que corresponde à contagem de argumento do número de pares. Por esse motivo, se você estiver implementando uma extensão de marcação personalizada, não forneça vários construtores com a mesma contagem de argumentos. O comportamento de um processador XAML se existir mais de um caminho do construtor de extensão de marcação com a mesma contagem de parâmetros não é definido, mas você deverá prever que um processador XAML está autorizado a lançar uma exceção em uso caso tal situação exista nas definições do tipo de extensão de marcação.  
   
 - Se os tokens separados individuais contiverem sinais de igual, um processador XAML primeiro chamará o construtor sem parâmetros para a extensão de marcação. A seguir, cada par name=value será interpretado como um nome de propriedade que existe na extensão de marcação e um valor para designar à propriedade.  
   

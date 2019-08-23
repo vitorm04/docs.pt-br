@@ -2,17 +2,17 @@
 title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: 12ac8d9a7b0ed584fb1308e56d197a03b1c53e51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe57cb84cfa70b1f6b92abf1dbac89ddad9d4dc8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700872"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925707"
 ---
 # <a name="endpointextensions"></a>\<endpointExtensions>
-Esta seção registra um novo ponto de extremidade padrão na seção de extensões em um computador ou arquivo de configuração do aplicativo. Você pode adicionar um ponto de extremidade padrão para esta coleção usando o `add` palavra-chave e a configuração o `type` atributo do elemento para o tipo de ponto de extremidade, bem como o `name` de atributo para o nome do ponto de extremidade padrão.  
+Esta seção registra um novo ponto de extremidade padrão na seção extensões em um computador ou arquivo de configuração de aplicativo. Você pode adicionar um ponto de extremidade padrão a essa coleção usando `add` a palavra-chave e `type` definindo o atributo do elemento como o tipo de ponto de extremidade, `name` bem como o atributo para o nome do ponto de extremidade padrão.  
   
- O exemplo a seguir usa o `add` elemento, bem como o `name` atributo a ser adicionado a um ponto de extremidade padrão para o `<endpointExtensions>` seção do arquivo de configuração.  
+ O exemplo a seguir usa `add` o elemento, bem como o `name` atributo para adicionar `<endpointExtensions>` um ponto de extremidade padrão à seção do arquivo de configuração.  
   
 ```xml  
 <system.serviceModel>
@@ -25,7 +25,7 @@ Esta seção registra um novo ponto de extremidade padrão na seção de extens�
 </system.serviceModel>
 ```  
   
- Depois que o ponto de extremidade padrão tiver sido registrado, você pode usá-lo conforme mostrado no exemplo a seguir. No [ \<ponto de extremidade >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento, o `kind` atributo especifica o tipo de ponto de extremidade padrão que foi registrado no `<endpointExtensions>` seção. O `endpointConfiguration` atributo será idêntico de `name` atributo do elemento de configuração do ponto de extremidade padrão no `<standardEndpoints>` seção.  
+ Depois que o ponto de extremidade padrão tiver sido registrado, você poderá usá-lo conforme mostrado no exemplo a seguir. No elemento `kind` `<endpointExtensions>` Endpoint >, o atributo especifica o tipo de ponto de extremidade padrão que foi registrado na seção. [ \<](endpoint-element.md) O `endpointConfiguration` atributo será idêntico `name` ao atributo do elemento de configuração do ponto de extremidade padrão na `<standardEndpoints>` seção.  
   
 ```xml  
 <system.serviceModel>

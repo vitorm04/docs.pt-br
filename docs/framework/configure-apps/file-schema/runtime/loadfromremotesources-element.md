@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8e8663bf9d119007eb7d3771d16d55b1aa54856
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2268d07fb643621c944ef9bf561156b5332aaafc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663602"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920713"
 ---
 # <a name="loadfromremotesources-element"></a>\<elemento de > loadFromRemoteSources
 Especifica se os assemblies carregados de fontes remotas devem receber confiança total no .NET Framework 4 e posterior.
   
 > [!NOTE]
->  Se você foi direcionado para este artigo devido a uma mensagem de erro na lista de erros do projeto do Visual Studio ou um [erro de compilação, consulte Como: Use um assembly da Web no Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
+> Se você foi direcionado para este artigo devido a uma mensagem de erro na lista de erros do projeto do Visual Studio ou um [erro de compilação, consulte Como: Use um assembly da Web no Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
   
  \<configuration>  
 \<runtime>  

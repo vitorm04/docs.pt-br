@@ -9,22 +9,22 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 18c3b300d4e32cee06208caecb7166b73ae1c565
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913101"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915031"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Como: Redimensionar controles nos Windows Forms
-Você pode redimensionar controles individuais, e você pode redimensionar vários controles de tipos iguais ou diferentes, tais como <xref:System.Windows.Forms.Button> e <xref:System.Windows.Forms.GroupBox> controles.  
+Você pode redimensionar os controles individuais e pode redimensionar vários controles do mesmo tipo ou diferentes, <xref:System.Windows.Forms.Button> como controles e. <xref:System.Windows.Forms.GroupBox>  
   
 ### <a name="to-resize-a-control"></a>Para redimensionar um controle  
   
 1. Clique no controle a ser redimensionado e arraste um dos oito manipuladores de dimensionamento.  
   
     > [!NOTE]
-    >  Selecione o controle e pressione as teclas de seta mantendo pressionada a tecla SHIFT para redimensionar o controle um pixel de cada vez. Pressione as teclas de seta para baixo ou para a direita, mantendo pressionadas as teclas SHIFT e CTRL para redimensionar o controle em incrementos grandes.  
+    > Selecione o controle e pressione as teclas de seta mantendo pressionada a tecla SHIFT para redimensionar o controle um pixel de cada vez. Pressione as teclas de seta para baixo ou para a direita, mantendo pressionadas as teclas SHIFT e CTRL para redimensionar o controle em incrementos grandes.  
   
 ### <a name="to-resize-multiple-controls-on-a-form"></a>Para redimensionar vários controles em um formulário  
   
@@ -39,4 +39,4 @@ Você pode redimensionar controles individuais, e você pode redimensionar vári
 - [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)
-- [Como: Redimensionar Formulários do Windows usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))
+- [Como: Redimensionar Windows Forms usando o designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

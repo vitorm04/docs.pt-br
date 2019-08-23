@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83bb52f7f2035605914e2fe72ce2daf78de5bc1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 363d8f7d8cf960fb23210225c4545f73d597d663
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749908"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912837"
 ---
 # <a name="icordebugcontrollerstop-method"></a>Método ICorDebugController::Stop
-Executa uma parada cooperativa em todos os threads que estão executando o código gerenciado no processo.  
+Executa uma parada cooperativa em todos os threads que estão executando código gerenciado no processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +40,19 @@ HRESULT Stop (
  Não usado.  
   
 ## <a name="remarks"></a>Comentários  
- `Stop` executa um código cooperativo parada em todos os threads em execução e gerenciado no processo. Durante uma sessão de depuração somente gerenciado, os threads não gerenciados podem continuar a executar (mas serão bloqueados durante a tentativa de chamar código gerenciado). Durante uma sessão de depuração de interoperabilidade, os threads não gerenciados também serão interrompidos. O `dwTimeoutIgnored` valor atualmente é ignorada e tratada como infinito (-1). Se a parada cooperativa falhar devido a um deadlock, todos os threads são suspensos e E_TIMEOUT será retornado.  
+ `Stop`executa uma parada cooperativa em todos os threads que executam código gerenciado no processo. Durante uma sessão de depuração somente gerenciada, threads não gerenciados podem continuar em execução (mas serão bloqueados ao tentar chamar código gerenciado). Durante uma sessão de depuração de interoperabilidade, os threads não gerenciados também serão interrompidos. O `dwTimeoutIgnored` valor é ignorado no momento e tratado como infinito (-1). Se a parada cooperativa falhar devido a um deadlock, todos os threads serão suspensos e E_TIMEOUT será retornado.  
   
 > [!NOTE]
->  `Stop` é o método síncrono somente na API de depuração. Quando `Stop` Retorna S_OK, o processo é interrompido. Nenhum retorno de chamada é fornecido para notificar os ouvintes da parada. O depurador deve chamar [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para permitir que o processo da continuar.  
+> `Stop`é o único método síncrono na API de depuração. Quando `Stop` retorna S_OK, o processo é interrompido. Nenhum retorno de chamada é fornecido para notificar os ouvintes da parada. O depurador deve chamar [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para permitir que o processo retome.  
   
- O depurador mantém um contador de parada. Quando o contador chega a zero, o controlador é retomado. Cada chamada para `Stop` ou cada retorno de chamada expedido incrementa o contador. Cada chamada para `ICorDebugController::Continue` diminui o contador.  
+ O depurador mantém um contador de parada. Quando o contador chega a zero, o controlador é retomado. Cada chamada para `Stop` ou cada retorno de chamada despachado incrementa o contador. Cada chamada para `ICorDebugController::Continue` Decrementa o contador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

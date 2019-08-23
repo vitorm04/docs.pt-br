@@ -1,21 +1,21 @@
 ---
-title: <cancelRequestedQueries> do WCF
+title: <cancelRequestedQueries>do WCF
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: a9364fc53c7eb62a240206f6c81bd434b25c3f40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f04fc928358c96ca3112422f1a6ccd039269e47
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704369"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926242"
 ---
-# <a name="cancelrequestedqueries-of-wcf"></a>\<cancelRequestedQueries> of WCF
+# <a name="cancelrequestedqueries-of-wcf"></a>\<cancelRequestedQueries > do WCF
 Representa uma coleção de consultas que são usados para controlar solicitações cancelar uma atividade filho pela atividade pai. A consulta é necessária para um participante de rastreamento inscrever-se para Cancelar solicitação objetos de registro.  
   
-Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Para obter mais informações sobre consultas de perfil de rastreamento, consulte [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<acompanhamento de >  
 \<perfis > \<trackingProfile >  
 \<workflow>  
 \<cancelRequestedQueries>  
@@ -55,10 +55,10 @@ nenhuma.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Um elemento de configuração que contém todas as consultas de um fluxo de trabalho específico identificado pelo <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId> propriedade.|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|Um elemento de configuração que contém todas as consultas de um fluxo de trabalho específico identificado pelo <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId> propriedade.|  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery>
-- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Acompanhando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Acompanhamento e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Acompanhando perfis](../../../windows-workflow-foundation/tracking-profiles.md)

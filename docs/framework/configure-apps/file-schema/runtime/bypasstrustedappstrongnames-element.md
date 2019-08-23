@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aac7079d941e6774ca6c00fbece8ff72fbf3f0e1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 92873277b4b25e4c1c5981628187078ac7cb5704
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663882"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920896"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<Elemento bypassTrustedAppStrongNames>
 Especifica se deve ignorar a validação de nomes fortes em assemblies de confiança total que são carregados em uma confiança <xref:System.AppDomain>total.  
@@ -70,7 +70,7 @@ Especifica se deve ignorar a validação de nomes fortes em assemblies de confia
 - Não assinado com atraso.  
   
 > [!NOTE]
->  Se o recurso de bypass tiver sido desativado para todos os aplicativos no computador usando uma chave do registro, essa configuração do arquivo de configuração não terá nenhum efeito. Para obter mais informações, confira [Como: desabilitar a funcionalidade de bypass de nome forte](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
+> Se o recurso de bypass tiver sido desativado para todos os aplicativos no computador usando uma chave do registro, essa configuração do arquivo de configuração não terá nenhum efeito. Para obter mais informações, confira [Como: desabilitar a funcionalidade de bypass de nome forte](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como especificar o comportamento que valida a assinatura de nome forte em assemblies de confiança total.  

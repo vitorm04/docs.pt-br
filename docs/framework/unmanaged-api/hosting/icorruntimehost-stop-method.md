@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1af01559e65bd80fc62cb2eba44bf21d4fa3113
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ca51b87e7afc8e9e48d541a32b3bd60a19a5ff70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770901"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965963"
 ---
 # <a name="icorruntimehoststop-method"></a>Método ICorRuntimeHost::Stop
-Interrompe a execução de código no tempo de execução para o processo atual.  
+Interrompe a execução do código no tempo de execução para o processo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,23 +39,23 @@ HRESULT Stop ();
 |-------------|-----------------|  
 |S_OK|A operação foi bem-sucedida.|  
 |S_FALSE|Falha ao concluir a operação.|  
-|E_FAIL|Ocorreu uma falha catastrófica, desconhecida. Se um método retornar E_FAIL, o common language runtime (CLR) não é mais utilizável no processo. As chamadas subsequentes para todas as APIs de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o Common Language Runtime (CLR) não será mais utilizável no processo. As chamadas subsequentes para qualquer API de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
   
 ## <a name="remarks"></a>Comentários  
- Não é geralmente necessário chamar o `Stop` método, porque o código para executar quando o processo é encerrado.  
+ Normalmente, é desnecessário chamar o `Stop` método, pois o código para de ser executado quando o processo é encerrado.  
   
 > [!NOTE]
->  Após uma chamada para `Stop`, o CLR não pode ser reinicializado no mesmo processo.  
+> Após uma chamada para `Stop`, o CLR não pode ser reinicializado no mesmo processo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
- **Versões do .NET framework:** 1.0, 1.1  
+ **.NET Framework versões:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Consulte também
 

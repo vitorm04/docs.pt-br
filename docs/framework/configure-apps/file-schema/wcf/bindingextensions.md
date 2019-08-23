@@ -2,19 +2,19 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34ba198de33ae4aa1882d13f74bd2d538999a0c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919783"
 ---
-# <a name="bindingextensions"></a>\<bindingExtensions>
-Esta seção permite o uso de uma associação definida pelo usuário de um computador ou arquivo de configuração do aplicativo. Você pode adicionar uma associação definida pelo usuário a essa coleção usando o `add` palavra-chave e a configuração o `type` atributo do elemento para uma associação definida pelo usuário, bem como o `name` atributo para o nome do usuário de associação definida pelo.  
+# <a name="bindingextensions"></a>\<> bindingExtensions
+Esta seção habilita o uso de uma associação definida pelo usuário de um computador ou arquivo de configuração de aplicativo. Você pode adicionar uma associação definida pelo usuário a essa coleção usando a `add` palavra-chave e definindo `type` o atributo do elemento como uma associação definida pelo usuário, bem como o `name` atributo para o nome da associação definida pelo usuário.  
   
- As extensões de associação permitem ao usuário crie associações definidas pelo usuário para uso como parte de uma configuração de ponto de extremidade. Programaticamente, uma extensão de associação é um tipo que implementa a classe abstrata <xref:System.ServiceModel.Channels.Binding>.  
+ As extensões de associação permitem que o usuário crie associações definidas pelo usuário para uso como parte de uma configuração de ponto de extremidade. Programaticamente, uma extensão de associação é um tipo que implementa <xref:System.ServiceModel.Channels.Binding>a classe abstrata.  
   
- O exemplo a seguir usa o `add` elemento, bem como o `name` atributo a ser adicionado a uma extensão de associação para o `bindingElementExtensions` seção do arquivo de configuração.  
+ O exemplo a seguir usa `add` o elemento, bem como o `name` atributo para adicionar `bindingElementExtensions` uma extensão de associação à seção do arquivo de configuração.  
   
 ```xml  
 <system.serviceModel>
@@ -28,7 +28,7 @@ Esta seção permite o uso de uma associação definida pelo usuário de um comp
 </system.serviceModel>
 ```  
   
- Para adicionar capacidades de configuração para o elemento, o usuário precisa para escrever e registrar um `bindingSection` elemento. Para obter mais informações sobre isso, consulte o <xref:System.Configuration> documentação.  
+ Para adicionar habilidades de configuração ao elemento, o usuário precisa escrever e registrar um `bindingSection` elemento. Para obter mais informações sobre isso, consulte <xref:System.Configuration> a documentação.  
   
  Depois que o elemento e seu tipo de configuração são definidos, a extensão pode ser usada como parte de um ponto de extremidade, conforme mostrado no exemplo a seguir.  
   
@@ -43,4 +43,4 @@ Esta seção permite o uso de uma associação definida pelo usuário de um comp
   
 ## <a name="see-also"></a>Consulte também
 
-- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Estendendo associações](../../../wcf/extending/extending-bindings.md)

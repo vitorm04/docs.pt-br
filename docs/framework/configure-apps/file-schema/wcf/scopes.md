@@ -2,22 +2,22 @@
 title: <scopes>
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 8bc720238ca3039106345783381cd26134fc46b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd6513930798e9e1ab263f75c9350511c2dcdcd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670619"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935180"
 ---
-# <a name="scopes"></a>\<scopes>
-Contém uma coleção de elementos de configuração que especificam Uris que podem ser usados para filtrar pontos de extremidade de serviço durante consulta de escopo personalizado.  
+# <a name="scopes"></a>\<escopos >
+Contém uma coleção de elementos de configuração que especificam URIs de escopo personalizado que podem ser usados para filtrar pontos de extremidade de serviço durante a consulta.  
   
 \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<behavior>  
-\<endpointDiscovery>  
-\<scopes>  
+\<> de comportamento  
+\<> endpointDiscovery  
+\<escopos >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,13 +45,13 @@ Contém uma coleção de elementos de configuração que especificam Uris que po
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|Adiciona as informações de escopo para o ponto de extremidade que pode ser usado em correspondem aos critérios para a localização de serviços.|  
+|[\<add>](add-of-scopes.md)|Adiciona as informações de escopo para o ponto de extremidade que pode ser usado em critérios de correspondência para localizar serviços.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<endpointDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Especifica as várias configurações de descoberta para um ponto de extremidade, como sua capacidade de descoberta, escopos e quaisquer extensões personalizadas para seus metadados.|  
+|[\<endpointDiscovery>](endpointdiscovery.md)|Especifica as várias configurações de descoberta para um ponto de extremidade, como sua descoberta, escopos e quaisquer extensões personalizadas para seus metadados.|  
   
 ## <a name="see-also"></a>Consulte também
 

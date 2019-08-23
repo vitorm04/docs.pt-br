@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93352fffbe155183687a9b666d2fe5541428fca9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe78e2bd9c31bfb122e90b97977117adfc0235d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64752021"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967885"
 ---
 # <a name="runtime-directive-policy-settings"></a>Configurações da política da diretiva de tempo de execução
 
 > [!NOTE]
->  Este tópico refere-se ao Developer Preview do .NET Nativo, que é um software em pré-lançamento. Você pode baixar a versão prévia do [site Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (registro obrigatório).
+> Este tópico refere-se ao Developer Preview do .NET Nativo, que é um software em pré-lançamento. Você pode baixar a versão prévia do [site Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (registro obrigatório).
 
 As configurações de política de diretiva de tempo de execução para .NET Nativo determinam a disponibilidade de metadados para tipos e membros de tipo em tempo de execução. Sem os metadados necessários, operações que dependem de reflexão, serialização, desserialização ou marshaling dos tipos de .NET Framework para COM ou o Tempo de Execução do Windows podem falhar e gerar uma exceção. As exceções mais comuns são [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) e (no caso de interoperabilidade) [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).
 

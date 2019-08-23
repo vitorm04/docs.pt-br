@@ -2,36 +2,36 @@
 title: Visualizando logs de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 5e72aef7addb1e517bdf8cab4e300f6f8df5f833
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c926833a48331f191b6dcc3323f0dfda329b7014
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662830"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968662"
 ---
 # <a name="viewing-message-logs"></a>Visualizando logs de mensagem
-Este tópico descreve como você pode exibir os logs de mensagens.  
+Este tópico descreve como você pode exibir logs de mensagens.  
   
-## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>Exibir mensagem de Logs no Visualizador de rastreamento de serviço  
- Uma mensagem será transformada conforme ele é processado pelo WCF. Portanto, uma mensagem que está sendo registrada reflete somente o conteúdo no ponto em que ele foi registrado, não o conteúdo durante a transmissão.  
+## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>Exibindo logs de mensagens no Visualizador de rastreamento de serviço  
+ Uma mensagem será transformada conforme é processada pelo WCF. Portanto, uma mensagem que está sendo registrada reflete apenas o conteúdo da mensagem no ponto em que foi registrado, não o conteúdo na conexão.  
   
- Desde que a saída de log de mensagens não tem relação com o formato de transferência da mensagem, o log de mensagens sempre gera a mensagem decodificada. Se você tiver configurado as mensagens em log corretamente, nenhuma mensagem registrada deve ser em texto sem formatação. Por exemplo, o formato (texto sem formatação) das mensagens registradas não é afetado pelo uso de um codificador de mensagem binária.  
+ Como a saída do log de mensagens não tem nenhuma relação com o formato de transferência da mensagem, o log de mensagens sempre gera a mensagem decodificada. Se você configurou o log de mensagens corretamente, qualquer mensagem registrada deverá estar em texto sem formatação. Por exemplo, o formato (texto sem formatação) das mensagens registradas não é afetado pelo uso de um codificador de mensagem binária.  
   
- A saída de XmlWriterTraceListener é um arquivo que contém uma sequência de fragmentos XML. Você deve estar ciente de que o arquivo não é um arquivo XML válido. É recomendável que você use o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para exibir os arquivos de log de mensagem. Para obter mais informações sobre como usar essa ferramenta, consulte [usando o Visualizador de rastreamento de serviço para exibir rastreamentos correlacionados e soluções de problemas](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ A saída de XmlWriterTraceListener é um arquivo que contém uma sequência de fragmentos XML. Você deve estar ciente de que o arquivo não é um arquivo XML válido. É recomendável que você use a [ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para exibir os arquivos de log de mensagens. Para obter mais informações sobre como usar essa ferramenta, consulte [usando o Visualizador de rastreamento de serviço para exibir rastreamentos correlacionados e solução de problemas](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
- No Visualizador de rastreamento de serviço, as mensagens são listadas na **mensagem** guia. Mensagens que causaram ou que estão relacionadas, um erro de processamento são realçados em amarelo (nível de aviso) ou vermelho (nível de erro), dependendo da gravidade do erro. Clicando duas vezes na mensagem exibe o rastreamento de mensagens no contexto da solicitação de processamento.  
+ No Visualizador de rastreamento de serviço, as mensagens são listadas na guia **mensagem** . As mensagens que ocorreram ou estão relacionadas a um erro de processamento são realçadas em amarelo (nível de aviso) ou vermelho (nível de erro), dependendo da severidade do erro. Clicar duas vezes na mensagem abre o rastreamento de mensagem no contexto da solicitação de processamento.  
   
 > [!NOTE]
->  Se uma mensagem não tem cabeçalho, não `<header/>` marca é registrada.  
+> Se uma mensagem não tiver cabeçalho, nenhuma `<header/>` marca será registrada.  
   
 ## <a name="viewing-messages-logged-by-a-client-a-relay-and-a-service"></a>Exibindo mensagens registradas por um cliente, uma retransmissão e um serviço  
- Seu ambiente pode conter um cliente, que envia uma mensagem para uma retransmissão, que, posteriormente, encaminha a mensagem para o serviço. Quando o log de mensagens está habilitado em todos os três locais, e todos os três logs de mensagem são exibidos no [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) simultaneamente, trocas de mensagens do log serão renderizadas incorretamente. Isso ocorre porque o `CorrelationId` e `ActivityId` no cabeçalho da mensagem não são exclusivos para cada par de send-receive.  
+ Seu ambiente pode conter um cliente, que envia uma mensagem para uma retransmissão, que, posteriormente, encaminha a mensagem para o serviço. Quando o log de mensagens é habilitado em todos os três locais e todos os três logs de mensagens são exibidos na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) simultaneamente, as trocas de log de mensagens serão renderizadas incorretamente. Isso ocorre porque o `CorrelationId` e `ActivityId` no cabeçalho da mensagem não são exclusivos para todos os pares de envio-recebimento.  
   
- Você pode usar qualquer um dos seguintes métodos para resolver esse problema.  
+ Você pode usar qualquer um dos métodos a seguir para resolver esse problema.  
   
-- Exibir apenas dois dos três logs de mensagem na [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) a qualquer momento.  
+- Apenas exiba dois dos três logs de mensagem na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) a qualquer momento.  
   
-- Se você deve exibir todos os três logs na [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ao mesmo tempo, você pode modificar o serviço de retransmissão, criando um novo <xref:System.ServiceModel.Channels.Message> instância. A instância deve ser uma cópia do corpo da mensagem de entrada, além de todos os cabeçalhos, exceto para o `ActivityId` e `Action` cabeçalhos. O exemplo de código a seguir demonstra como fazer isso.  
+- Se você precisar exibir todos os três logs na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ao mesmo tempo, poderá modificar o serviço de retransmissão criando <xref:System.ServiceModel.Channels.Message> uma nova instância. Essa instância deve ser uma cópia do corpo da mensagem de entrada, além de todos os cabeçalhos, exceto os `ActivityId` cabeçalhos `Action` e. O código de exemplo a seguir demonstra como fazer isso.  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -47,18 +47,18 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 }  
 ```  
   
-## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Casos excepcionais para conteúdo da mensagem imprecisa de registro em log  
- Sob as seguintes condições, as mensagens sendo registradas em log podem não ser a representação exata do fluxo de octeto presente durante a transmissão.  
+## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Casos excepcionais para conteúdo de log de mensagens imprecisos  
+ Sob as condições a seguir, as mensagens sendo registradas podem não ser a representação exata do fluxo de octetos presentes na conexão.  
   
-- Para BasicHttpBinding, cabeçalhos de envelope são registrados em log para as novas mensagens na / endereçamento/nenhum namespace.  
+- Para BasicHttpBinding, os cabeçalhos de envelope são registrados para as mensagens de entrada no namespace/Addressing/None.  
   
-- Espaços em branco podem ser incompatíveis.  
+- Os espaços em branco podem ser incompatíveis.  
   
-- Mensagens de entrada, elementos em branco podem ser representados de forma diferente. Por exemplo, \<marca >\<marca > em vez de \<marca / >  
+- Para mensagens de entrada, elementos vazios podem ser representados de forma diferente. Por exemplo, \<marque >\</tag > em vez \<de marca/>  
   
-- Quando o registro em log de PII conhecido é desabilitado por padrão ou a configuração explícita enableLoggingKnownPii = "true".  
+- Quando o log PII conhecido é desabilitado por padrão ou a configuração explícita enableLoggingKnownPii = "true".  
   
-- Codificação está habilitada para transformação em UTF-8.  
+- A codificação está habilitada para transformação em UTF-8.  
   
 ## <a name="see-also"></a>Consulte também
 

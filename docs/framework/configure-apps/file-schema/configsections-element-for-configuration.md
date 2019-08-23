@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: d522d004630dee942e24c39a936feae7dc957bd5
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 31b53837e24029fc7ff0b576d95c0213041a434e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300784"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927664"
 ---
-# <a name="configsections-element-for-configuration"></a>\<configSections > elemento para \<configuration >
+# <a name="configsections-element-for-configuration"></a>\<configSections > elemento para \<a configuração >
 
-Contém as declarações de namespace e a seção de configuração.
+Contém as declarações de namespace e seção de configuração.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>Atributos
@@ -31,24 +31,24 @@ Nenhum
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
+| [ **\<configuration>** ](configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
 
 ## <a name="child-elements"></a>Elementos filho
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Contém uma declaração de seção de configuração. |
-| [ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |
-| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Remove uma seção predefinidos ou grupo da seção. |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Limpa todas as seções definidas anteriormente e grupos de seções. |
+| [ **\<> da seção**](section-element.md) | Contém uma declaração de seção de configuração. |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |
+| [ **\<remove>** ](remove-element-for-configsections.md) | Remove uma seção ou um grupo de seções predefinido. |
+| [ **\<clear>** ](clear-element-for-configsections.md) | Limpa todas as seções e grupos de seções definidos anteriormente. |
 
 ## <a name="remarks"></a>Comentários
 
-Se esse elemento estiver em um arquivo de configuração, ele deve ser o primeiro elemento filho do  **\<configuration >** elemento.
+Se esse elemento estiver em um arquivo de configuração, ele deverá ser o primeiro elemento filho do  **\<elemento Configuration >** .
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como definir uma seção de configuração e definir as configurações dessa seção:
+O exemplo a seguir mostra como definir uma seção de configuração e definir as configurações para essa seção:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ O exemplo a seguir mostra como definir uma seção de configuração e definir a
 
 ## <a name="configuration-file"></a>arquivo de configuração
 
-Esse elemento pode ser usado no arquivo de configuração do aplicativo, arquivo de configuração de máquina (*Machine. config*), e *Web. config* arquivos que não estão no nível de diretório do aplicativo.
+Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema do arquivo de configuração para o .NET Framework](index.md)

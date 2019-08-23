@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: d2b35a50d9d09bffd69ae8b8217d6e778ce66ea0
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: b009c2503c7cbf6aca847fc7318135842a060f69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965047"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Visão geral dos recursos bidirecionais no WPF
 Ao contrário de qualquer outra plataforma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de desenvolvimento, o tem muitos recursos que dão suporte ao desenvolvimento rápido de conteúdo bidirecional, por exemplo, misto da esquerda para a direita e da direita para a esquerda dos dados no mesmo documento. Ao mesmo tempo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o cria uma experiência excelente para os usuários que precisam de recursos bidirecionais, como o árabe e o Hebraico falando de usuários.  
@@ -154,9 +154,9 @@ Ao contrário de qualquer outra plataforma [!INCLUDE[TLA2#tla_winclient](../../.
   
 <a name="NumberSubstitution"></a>   
 ## <a name="number-substitution"></a>Substituição de números  
- Historicamente, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] o tem suporte para substituição de números, permitindo a representação de diferentes formas culturais para os mesmos dígitos, ao mesmo tempo em que mantém o armazenamento interno desses dígitos unificado entre diferentes localidades, por exemplo, os números são armazenados em seus valores hexadecimais bem conhecidos, 0x40, 0x41, mas são exibidos de acordo com o idioma selecionado.  
+ Historicamente, o Windows tem suporte para substituição de números, permitindo a representação de diferentes formas culturais para os mesmos dígitos enquanto mantém o armazenamento interno desses dígitos unificados entre diferentes localidades, por exemplo, os números são armazenados em seus valores hexadecimais conhecidos, 0x40, 0x41, mas são exibidos de acordo com o idioma selecionado.  
   
- Isso permitiu que os aplicativos processassem valores numéricos sem a necessidade de convertê-los de um idioma para outro, por exemplo, um [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] usuário pode abrir uma planilha [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] em um árabe localizado e ver os números moldados em árabe, mas abri-los em uma versão europeia do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e consulte representação Europeia dos mesmos números. Isso também é necessário para outros símbolos, como separadores de vírgula e símbolo de percentual, porque eles geralmente acompanham os números no mesmo documento.  
+ Isso permitiu que os aplicativos processassem valores numéricos sem a necessidade de convertê-los de um idioma para outro, por exemplo, um [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] usuário pode abrir uma planilha em um Windows árabe localizado e ver os números moldados em árabe, mas abri-los em um Versão europeia do Windows e ver a representação Europeia dos mesmos números. Isso também é necessário para outros símbolos, como separadores de vírgula e símbolo de percentual, porque eles geralmente acompanham os números no mesmo documento.  
   
  O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dá continuidade à mesma tradição e adiciona suporte adicional a esse recurso, o que permite maior controle do usuário sobre quando e como a substituição é usada. Embora esse recurso tenha sido projetado para qualquer idioma, ele é particularmente útil no conteúdo bidirecional, em que a formatação de dígitos de um idioma específico é, de modo geral, um desafio para os desenvolvedores de aplicativos, devido às várias culturas nas quais um aplicativo pode ser executado.  
   
@@ -190,7 +190,7 @@ Ao contrário de qualquer outra plataforma [!INCLUDE[TLA2#tla_winclient](../../.
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Os números são renderizados usando os dígitos tradicionais para a cultura de número. Para a maioria das culturas, isso é o <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>mesmo que. No entanto, <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> resulta em dígitos latinos para algumas culturas árabes, enquanto esse valor resulta em dígitos árabes para todas as culturas árabes.  
   
- O que esses valores significam para um desenvolvedor de conteúdo bidirecional? Na maioria dos casos, o desenvolvedor pode precisar apenas definir <xref:System.Windows.FlowDirection> e o idioma de cada elemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] textual, por exemplo `Language="ar-SA"` , e <xref:System.Windows.Media.NumberSubstitution> a lógica cuida da exibição dos números de acordo com o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]correto. O exemplo a seguir demonstra o uso de números em árabe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e em inglês em um aplicativo em [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]execução em uma versão em árabe do.  
+ O que esses valores significam para um desenvolvedor de conteúdo bidirecional? Na maioria dos casos, o desenvolvedor pode precisar apenas definir <xref:System.Windows.FlowDirection> e o idioma de cada elemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] textual, por exemplo `Language="ar-SA"` , e <xref:System.Windows.Media.NumberSubstitution> a lógica cuida da exibição dos números de acordo com o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]correto. O exemplo a seguir demonstra o uso de números em árabe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e em inglês em um aplicativo em execução em uma versão em árabe do Windows.  
   
  [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   

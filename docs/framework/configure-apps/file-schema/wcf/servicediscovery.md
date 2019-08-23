@@ -2,20 +2,20 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 54a9833f56927568af711a103bd3831b767711e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a99edd3a62a40c2efbc63a166b8c0b0d124e8a72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788408"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936268"
 ---
 # <a name="servicediscovery"></a>\<serviceDiscovery>
-Especifica a detectabilidade de pontos de extremidade de serviço.  
+Especifica a descoberta de pontos de extremidade de serviço.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors>  
-\<behavior>  
+\<> de portais  
+\<> de comportamento  
 \<serviceDiscovery>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -49,20 +49,20 @@ Especifica a detectabilidade de pontos de extremidade de serviço.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Uma coleção de pontos de extremidade de comunicado. Use esta seção para especificar os pontos de extremidade a ser usado para enviar mensagens de comunicado.|  
-|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Uma coleção de pontos de extremidade de descoberta. Use esta seção para especificar os pontos de extremidade no qual escutar as mensagens de descoberta.|  
+|[\<announcementEndpoint>](announcementendpoint.md)|Uma coleção de pontos de extremidade de comunicado. Use esta seção para especificar os pontos de extremidade a serem usados para enviar mensagens de comunicado.|  
+|[\<discoveryEndpoint>](discoveryendpoint.md)|Uma coleção de pontos de extremidade de descoberta. Use esta seção para especificar os pontos de extremidade nos quais as mensagens de descoberta são escutadas.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<> de comportamento](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando adicionado à configuração de comportamento do serviço, este elemento de configuração faz com que todos os pontos de extremidade de serviço detectável. Você pode configurar os recursos de descoberta de tais pontos de extremidade usando o [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) ou [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) elementos filho. Use o [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) seção para configurar os anúncios, especificando a configuração de ponto de extremidade a ser usado para enviar comunicados de serviço (online/Hello e offline/até logo). Use o [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) seção para especificar manualmente o ponto de extremidade para escutar as mensagens de descoberta.  
+ Quando adicionado à configuração de comportamento do serviço, esse elemento de configuração torna todos os pontos de extremidade desse serviço detectáveis. Você pode configurar ainda mais os recursos de descoberta desses pontos de extremidade usando os [ \<elementos filho DiscoveryEndpoint >](discoveryendpoint.md) ou [ \<announcementEndpoint >](announcementendpoint.md) . Use a [ \<seção > de announcementEndpoint](announcementendpoint.md) para configurar os anúncios especificando a configuração do ponto de extremidade a ser usada para enviar comunicados de serviço (online/Olá e offline/até). Use a [ \<seção > de DiscoveryEndpoint](discoveryendpoint.md) para especificar manualmente o ponto de extremidade no qual escutar as mensagens de descoberta.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de configuração a seguir especifica que o CalculatorService seja detectável e, opcionalmente, especifica o ponto de extremidade de comunicado a ser usado.  
+ O exemplo de configuração a seguir especifica que o CalculatorService a ser descoberto e, opcionalmente, especifica o ponto de extremidade de anúncio a ser usado.  
   
 ```xml  
 <services>

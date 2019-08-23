@@ -2,18 +2,18 @@
 title: Personalizando a inserção, atualiazação, e as operações de exclusão
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-ms.openlocfilehash: 114447fd45806e567b4fde8e9e74138c096bff07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f75f4b4caf6b72076a83bde2f2c659aab4c9707d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743564"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912574"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>Personalizando a inserção, atualiazação, e as operações de exclusão
 Por padrão, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gerencia dinâmico SQL para implementar à leitura, inserção, atualiazação, e as operações de exclusão. Na prática, no entanto, você personaliza normalmente seu aplicativo atender às suas necessidades comerciais.  
   
 > [!NOTE]
->  Se você estiver usando o Visual Studio, você pode usar o Object Relational Designer para personalizar a inserir, atualizar e excluir ações.  
+> Se você estiver usando o Visual Studio, poderá usar o Object Relational Designer para personalizar as ações de inserção, atualização e exclusão.  
   
  Tópicos desta seção descreve as técnicas que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece personalizando à leitura, inserção, atualiazação, e as operações de exclusão em seu aplicativo.  
   

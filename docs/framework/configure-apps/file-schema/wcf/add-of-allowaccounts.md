@@ -2,15 +2,15 @@
 title: <add> de <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 1c6764b37b2aa5349b8ccf63e6b7c2bc580b69b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ed0b5025ab969c45d7440f2a209426c5c87f549
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701132"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920285"
 ---
 # <a name="add-of-allowaccounts"></a>\<Adicionar > de \<allowAccounts >
-Especifica uma conta de usuário para processos que hospedam serviços do WCF e recebem acesso de conexão para o serviço de compartilhamento.  
+Especifica uma conta de usuário para processos que hospedam serviços WCF e recebem acesso de conexão ao serviço de compartilhamento.  
   
  \<system.serviceModel.activation>  
   
@@ -29,7 +29,7 @@ Especifica uma conta de usuário para processos que hospedam serviços do WCF e 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|securityIdentifier|Uma cadeia de caracteres que especifica um identificador exclusivo usado para identificar uma conta de usuário. Os valores padrão são IIS_USRS, administradores, NS, LS e LocalSystem.|  
+|securityIdentifier|Uma cadeia de caracteres que especifica um identificador exclusivo usado para identificar uma conta de usuário. Os valores padrão são LocalSystem, Administrators, NS, LS e IIS_USRS.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -38,10 +38,10 @@ Especifica uma conta de usuário para processos que hospedam serviços do WCF e 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Uma coleção de elementos de configuração que contêm um `securityIdentifier` atributo para especificar contas de usuário para processos que hospedam serviços do WCF e recebem acesso de conexão para o serviço de compartilhamento.|  
+|[\<allowAccounts>](allowaccounts.md)|Uma coleção de elementos de configuração que contêm `securityIdentifier` um atributo para especificar contas de usuário para processos que hospedam serviços WCF e recebem acesso de conexão ao serviço de compartilhamento.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de configuração a seguir adiciona os identificadores de padrão de cinco contas de usuário a essa coleção.  
+ O exemplo de configuração a seguir adiciona os cinco identificadores padrão para contas de usuário a esta coleção.  
   
 ```xml  
 <allowAccounts>

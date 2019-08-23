@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 197ab9dbc1ec85bf8961f60bb26496eab788e63f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee56b23b6d5fca6d0527d509c9b6a6fc6dd82336
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663695"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920777"
 ---
 # <a name="gccpugroup-element"></a>\<Elemento de > GCCpuGroup
 
@@ -82,4 +82,4 @@ O exemplo a seguir mostra como habilitar a coleta de lixo para vários grupos de
 - [Esquema de configurações do tempo de execução](index.md)
 - [Esquema de arquivos de configuração](../index.md)
 - [Para desabilitar a coleta de lixo simultânea](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [Coleta de lixo de estação de trabalho ou de servidor](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [Coleta de lixo de estação de trabalho ou de servidor](../../../../standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

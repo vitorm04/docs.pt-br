@@ -2,20 +2,20 @@
 title: <persistenceProvider>
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: dc8dea0ddd1ea074c08952e3e2ebfef2d12f7183
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fc9e1332effc51e183a84cf2d3653357277d2ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783286"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934149"
 ---
 # <a name="persistenceprovider"></a>\<persistenceProvider>
-Especifica o tipo de implementação do provedor de persistência a usar, bem como o tempo limite a ser usado para operações de persistência.  
+Especifica o tipo da implementação do provedor de persistência a ser usado, bem como o tempo limite a ser usado para operações de persistência.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors>  
-\<behavior>  
+\<> de portais  
+\<> de comportamento  
 \<persistenceProvider>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,8 +32,8 @@ Especifica o tipo de implementação do provedor de persistência a usar, bem co
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|persistenceOperationTimeout|Um <xref:System.TimeSpan> valor que especifica o tempo limite usado para operações de persistência. O padrão é "00: 00:30".|  
-|tipo|Uma cadeia de caracteres que especifica o tipo da fábrica de provedor de persistência a usar.|  
+|persistenceOperationTimeout|Um <xref:System.TimeSpan> valor que especifica o tempo limite usado para operações de persistência. O padrão é "00:00:30".|  
+|tipo|Uma cadeia de caracteres que especifica o tipo do alocador de provedor de persistência a ser usado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -42,7 +42,7 @@ Especifica o tipo de implementação do provedor de persistência a usar, bem co
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<> de comportamento](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse elemento Especifica o provedor de persistência a ser usado para serializar o estado de um serviço WCF. Ele deve ser usado junto com o `wsHttpContextBinding` que passa informações de estado em cabeçalhos HTTP.  

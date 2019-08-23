@@ -8,25 +8,25 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: b9dee0fc876c6e7a02d085db7db4bf1c5dd2c68d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fc5d1afd9e9723e6b3c58e100b0519ef8fdfab4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053906"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968369"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-Especifica que um parâmetro de procedimento usa uma matriz opcional de elementos do tipo especificado. `ParamArray` pode ser usado apenas no último parâmetro de uma lista de parâmetros.  
+Especifica que um parâmetro de procedimento usa uma matriz opcional de elementos do tipo especificado. `ParamArray`pode ser usado somente no último parâmetro de uma lista de parâmetros.  
   
 ## <a name="remarks"></a>Comentários  
- `ParamArray` permite que você passe um número arbitrário de argumentos para o procedimento. Um `ParamArray` parâmetro sempre é declarado usando [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
+ `ParamArray`permite que você passe um número arbitrário de argumentos para o procedimento. Um `ParamArray` parâmetro é sempre declarado usando [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
   
- Você pode fornecer um ou mais argumentos para um `ParamArray` , passando uma matriz dos dados apropriados tipo de parâmetro, uma lista separada por vírgulas de valores ou nada em todos os. Para obter detalhes, consulte "Chamada de ParamArray" em [matrizes de parâmetro](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
+ Você pode fornecer um ou mais argumentos a um `ParamArray` parâmetro passando uma matriz do tipo de dados apropriado, uma lista de valores separados por vírgula ou nada. Para obter detalhes, consulte "chamando um ParamArray" em matrizes de [parâmetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
 > [!IMPORTANT]
->  Sempre que você lida com uma matriz que pode ser indefinidamente grande, há um risco de ultrapassar alguma capacidade interna do seu aplicativo. Se você aceitar uma matriz de parâmetros do código de chamada, você deve testar seu tamanho e tomar as medidas adequadas se ele for muito grande para o seu aplicativo.  
+> Sempre que você lida com uma matriz que pode ser indefinidamente grande, há um risco de sobreexecutar alguma capacidade interna de seu aplicativo. Se você aceitar uma matriz de parâmetros do código de chamada, deverá testar seu comprimento e tomar as medidas apropriadas se for muito grande para seu aplicativo.  
   
- O `ParamArray` modificador pode ser usado nestes contextos:  
+ O `ParamArray` modificador pode ser usado nesses contextos:  
   
  [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   

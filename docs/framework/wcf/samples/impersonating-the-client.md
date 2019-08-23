@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: d79ce0d189fc88310594f356f1901d93b3e1e06f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61befdcaf1381120dba6f72ba592dade09d0490a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954967"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968336"
 ---
 # <a name="impersonating-the-client"></a>Representando o cliente
-O exemplo representação demonstra como representar o aplicativo do chamador no serviço para que o serviço possa acessar recursos do sistema em nome do chamador.  
+O exemplo de representação demonstra como representar o aplicativo chamador no serviço para que o serviço possa acessar recursos do sistema em nome do chamador.  
   
- Este exemplo se baseia a [auto-hospedar](../../../../docs/framework/wcf/samples/self-host.md) exemplo. Os arquivos de configuração do cliente e de serviço são os mesmos que o [auto-hospedar](../../../../docs/framework/wcf/samples/self-host.md) exemplo.  
+ Este exemplo é baseado no exemplo de [hospedagem interna](../../../../docs/framework/wcf/samples/self-host.md) . Os arquivos de configuração do serviço e do cliente são os mesmos do exemplo de [hospedagem interna](../../../../docs/framework/wcf/samples/self-host.md) .  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- O código de serviço tiver sido modificado, de modo que o `Add` método no serviço representará o chamador usando a <xref:System.ServiceModel.OperationBehaviorAttribute> conforme mostrado no código de exemplo a seguir.  
+ O código de serviço foi modificado de modo que `Add` o método no serviço represente o chamador usando o <xref:System.ServiceModel.OperationBehaviorAttribute> , conforme mostrado no código de exemplo a seguir.  
   
 ```csharp
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
@@ -35,7 +35,7 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- Como resultado, o contexto de segurança do thread em execução é alternado para representar o chamador antes de inserir o `Add` método e revertidas em saindo do método.  
+ Como resultado, o contexto de segurança do thread em execução é alternado para representar o chamador antes de `Add` inserir o método e revertido ao sair do método.  
   
  O `DisplayIdentityInformation` método mostrado no código de exemplo a seguir é uma função de utilitário que exibe a identidade do chamador.  
   
@@ -52,7 +52,7 @@ static void DisplayIdentityInformation()
 }  
 ```  
   
- O `Subtract` método no serviço representará o chamador usando chamadas imperativas, conforme mostrado no código de exemplo a seguir.  
+ O `Subtract` método no serviço representa o chamador usando chamadas obrigatórias, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp
 public double Subtract(double n1, double n2)  
@@ -86,11 +86,11 @@ public double Subtract(double n1, double n2)
 }  
 ```  
   
- Observe que nesse caso, o chamador não é representado para a chamada inteira, mas só é representado por uma parte da chamada. Em geral, a representação para o menor escopo é preferível representando toda a operação.  
+ Observe que, nesse caso, o chamador não é representado para a chamada inteira, mas é representado apenas por uma parte da chamada. Em geral, é preferível representar para o menor escopo para a operação inteira.  
   
  Os outros métodos não representam o chamador.  
   
- O código do cliente foi modificado para definir a representação como <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>. O cliente especifica o nível de representação a ser usado pelo serviço, usando o <xref:System.Security.Principal.TokenImpersonationLevel> enumeração. A enumeração suporta os seguintes valores: <xref:System.Security.Principal.TokenImpersonationLevel.None>, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> e <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Para executar uma verificação de acesso ao acessar um recurso do sistema no computador local que é protegido usando ACLs do Windows, o nível de representação deve ser definido como <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>, conforme mostrado no código de exemplo a seguir.  
+ O código do cliente foi modificado para definir o nível de representação <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>como. O cliente especifica o nível de representação a ser usado pelo serviço, usando a <xref:System.Security.Principal.TokenImpersonationLevel> enumeração. A enumeração oferece suporte aos seguintes valores <xref:System.Security.Principal.TokenImpersonationLevel.None>: <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> e <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Para executar uma verificação de acesso ao acessar um recurso do sistema no computador local que é protegido usando ACLs do Windows, o nível de representação deve <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>ser definido como, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp
 // Create a client with given client endpoint configuration  
@@ -99,28 +99,28 @@ CalculatorClient client = new CalculatorClient();
 client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationLevel.Impersonation;  
 ```  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas nas janelas do console de serviço e cliente. Pressione ENTER em cada janela de console para desligar o serviço e o cliente.  
+ Quando você executa o exemplo, as solicitações e respostas da operação são exibidas nas janelas do console do cliente e do serviço. Pressione ENTER em cada janela do console para desligar o serviço e o cliente.  
   
 > [!NOTE]
->  O serviço deve executar em uma conta administrativa ou a conta em que ele é executado deve ter direitos para registrar o `http://localhost:8000/ServiceModelSamples` URI com a camada HTTP. Tais direitos podem ser concedidos ao configurar uma [reserva do Namespace](https://go.microsoft.com/fwlink/?LinkId=95012) usando o [Httpcfg.exe ferramenta](https://go.microsoft.com/fwlink/?LinkId=95010).  
+> O serviço deve ser executado em uma conta administrativa ou a conta em que ele é executado deve receber direitos para registrar `http://localhost:8000/ServiceModelSamples` o URI com a camada http. Esses direitos podem ser concedidos Configurando uma [reserva de namespace](https://go.microsoft.com/fwlink/?LinkId=95012) usando a [ferramenta Httpcfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
->  Em computadores que executam [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], a representação tem suporte apenas se o aplicativo Host.exe tem o privilégio de representação. (Por padrão, somente os administradores têm essa permissão). Para adicionar esse privilégio a uma conta de serviço está em execução como, vá para **ferramentas administrativas**, abra **política de segurança Local**, abra **políticas locais**, clique em **Atribuição de direitos de usuário**e selecione **representar um cliente após autenticação** e clique duas vezes em **propriedades** para adicionar um usuário ou grupo.  
+> Em computadores que [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]executam o, a representação só terá suporte se o aplicativo host. exe tiver o privilégio de representação. (Por padrão, somente os administradores têm essa permissão.) Para adicionar esse privilégio a uma conta em que o serviço está sendo executado, vá para **Ferramentas administrativas**, abra **política de segurança local**, abra **políticas locais**, clique em **atribuição de direitos de usuário**e selecione **representar um cliente após Autenticação** e clique duas vezes em **Propriedades** para adicionar um usuário ou grupo.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-4. Para demonstrar que o serviço representará o chamador, execute o cliente em uma conta diferente daquela que o serviço está sendo executado. Para fazer isso, no prompt de comando, digite:  
+4. Para demonstrar que o serviço representa o chamador, execute o cliente em uma conta diferente daquela em que o serviço está sendo executado. Para fazer isso, no prompt de comando, digite:  
   
     ```  
     runas /user:<machine-name>\<user-name> client.exe  
     ```  
   
-     Em seguida, você será solicitado para uma senha. Insira a senha para a conta especificada anteriormente.  
+     Em seguida, você será solicitado a fornecer uma senha. Insira a senha para a conta que você especificou anteriormente.  
   
-5. Quando você executa o cliente, observe a identidade de antes e depois da execução com credenciais diferentes.  
+5. Quando você executa o cliente, observe a identidade antes e depois de executá-la com credenciais diferentes.  

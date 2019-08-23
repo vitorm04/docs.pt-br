@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 51e18555a322e32f0877167d42cd30776068c746
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 609878416be26786ce865168c996c78e18b1897f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040031"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917884"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Associar dados ao controle DataGridView do Windows Forms usando o designer
 Você pode usar o designer para conectar um <xref:System.Windows.Forms.DataGridView> controle a fontes de dados de várias variedades diferentes, incluindo bancos de dados, objetos comerciais ou Web Services. Quando você associa o controle a uma fonte de dados usando o designer, o controle é associado automaticamente a <xref:System.Windows.Forms.BindingSource> um componente que representa a fonte de dados. Além disso, as colunas são automaticamente geradas no controle para coincidir com as informações de esquema fornecidas pela fonte de dados.
@@ -39,7 +39,7 @@ Você pode usar o designer para conectar um <xref:System.Windows.Forms.DataGridV
 6. Para criar uma relação mestre/detalhes, na janela suspensa **escolher fonte de dados** para um segundo <xref:System.Windows.Forms.DataGridView> controle, expanda o <xref:System.Windows.Forms.BindingSource> criado para a tabela pai e, em seguida, selecione a tabela filho relacionada na lista mostrada.
 
     > [!NOTE]
-    >  Se o projeto já tiver uma fonte de dados, você também poderá usar a janela **Fontes de Dados** para criar um formulário de dados. Para obter mais informações, consulte [Janela de Fontes de Dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).
+    > Se o projeto já tiver uma fonte de dados, você também poderá usar a janela **Fontes de Dados** para criar um formulário de dados. Para obter mais informações, consulte [Janela de Fontes de Dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).
 
 ## <a name="see-also"></a>Consulte também
 

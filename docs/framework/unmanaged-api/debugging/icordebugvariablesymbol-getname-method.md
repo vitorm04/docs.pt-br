@@ -1,17 +1,17 @@
 ---
-title: Método ICorDebugVariableSymbol::GetName
+title: 'Método ICorDebugVariableSymbol:: GetName'
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aff2686830290e38df3d3a79b2bea6fa0b4a280
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23637055e493c008db36b23515001895450d6ab9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774884"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967896"
 ---
-# <a name="icordebugvariablesymbolgetname-method"></a>Método ICorDebugVariableSymbol::GetName
+# <a name="icordebugvariablesymbolgetname-method"></a>Método ICorDebugVariableSymbol:: GetName
 Obtém o nome de uma variável.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -26,10 +26,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parâmetros  
  `cchName`  
- [in] O número de caracteres no `szName` buffer.  
+ no O número de caracteres no `szName` buffer.  
   
  `pcchName`  
- [out] Um ponteiro para o número de caracteres gravados, na verdade, o `szName` buffer.  
+ fora Um ponteiro para o número de caracteres realmente gravados no `szName` buffer.  
   
  `szName`  
  Um ponteiro para uma matriz de caracteres que contém o nome da variável.  
@@ -37,14 +37,14 @@ HRESULT GetName(
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

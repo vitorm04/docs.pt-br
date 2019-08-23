@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb254503f5ce2240a03179da693c66f7ada876be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918293"
 ---
 # <a name="layout"></a>Layout
 Este tópico descreve o sistema de layout do Windows Presentation Foundation (WPF). Entender como e quando ocorrem cálculos de layout é essencial para a criação de interfaces de usuário no WPF.  
@@ -89,7 +89,7 @@ Este tópico descreve o sistema de layout do Windows Presentation Foundation (WP
  Em segundo lugar, as propriedades <xref:System.Windows.FrameworkElement> da estrutura definidas em são processadas, `constraintSize`o que afeta o valor de. Essas propriedades geralmente descrevem as características de dimensionamento do <xref:System.Windows.UIElement>subjacente, como <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Margin%2A>, e <xref:System.Windows.FrameworkElement.Style%2A>. Cada uma dessas propriedades pode alterar o espaço necessário para exibir o elemento. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>é chamado com `constraintSize` como um parâmetro.  
   
 > [!NOTE]
->  Há uma diferença entre as <xref:System.Windows.FrameworkElement.Height%2A> Propriedades de <xref:System.Windows.FrameworkElement.ActualHeight%2A> e <xref:System.Windows.FrameworkElement.Width%2A> e e <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Por exemplo, a <xref:System.Windows.FrameworkElement.ActualHeight%2A> propriedade é um valor calculado com base em outras entradas de altura e no sistema de layout. O valor é definido pelo próprio sistema de layout, com base em uma passagem de renderização real, e, portanto, pode atrasar um pouco atrás do valor definido <xref:System.Windows.FrameworkElement.Height%2A>das propriedades, como, que são a base da alteração de entrada.  
+> Há uma diferença entre as <xref:System.Windows.FrameworkElement.Height%2A> Propriedades de <xref:System.Windows.FrameworkElement.ActualHeight%2A> e <xref:System.Windows.FrameworkElement.Width%2A> e e <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Por exemplo, a <xref:System.Windows.FrameworkElement.ActualHeight%2A> propriedade é um valor calculado com base em outras entradas de altura e no sistema de layout. O valor é definido pelo próprio sistema de layout, com base em uma passagem de renderização real, e, portanto, pode atrasar um pouco atrás do valor definido <xref:System.Windows.FrameworkElement.Height%2A>das propriedades, como, que são a base da alteração de entrada.  
 >   
 >  Como <xref:System.Windows.FrameworkElement.ActualHeight%2A> é um valor calculado, você deve estar ciente de que pode haver várias alterações relatadas e incrementadas para ele como resultado de várias operações pelo sistema de layout. O sistema de layout pode estar calculando o espaço de medição necessário para elementos filhos, as restrições do elemento pai e assim por diante.  
   

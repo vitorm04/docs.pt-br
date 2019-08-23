@@ -12,21 +12,21 @@ helpviewer_keywords:
 - UI automation, finding text
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
-ms.openlocfilehash: fafd3fc7345f94d3907163ff9dcf0ab293f85f3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e8b69167f470afd5e3049a717978a41078db575
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609940"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969001"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>Encontre e destaque texto usando automação de interface de usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
- Este tópico demonstra como procurar sequencialmente e destacar cada ocorrência de uma cadeia de caracteres dentro do conteúdo de um controle de texto usando [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
+ Este tópico demonstra como Pesquisar em sequência e realçar cada ocorrência de uma cadeia de caracteres dentro do conteúdo de um controle [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]de texto usando.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir obtém um <xref:System.Windows.Automation.TextPattern> objeto a partir de um controle de texto. Um <xref:System.Windows.Automation.Text.TextPatternRange> objeto, que representa o conteúdo textual do documento inteiro, em seguida, é criado usando o <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> propriedade deste <xref:System.Windows.Automation.TextPattern>. Adicionais <xref:System.Windows.Automation.Text.TextPatternRange> , em seguida, são criados para a pesquisa sequencial de objetos e funcionalidade de realce.  
+ O exemplo a seguir obtém um <xref:System.Windows.Automation.TextPattern> objeto de um controle de texto. Um <xref:System.Windows.Automation.Text.TextPatternRange> objeto, que representa o conteúdo textual do documento inteiro, é criado usando a <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> Propriedade deste <xref:System.Windows.Automation.TextPattern>. Dois objetos <xref:System.Windows.Automation.Text.TextPatternRange> adicionais são então criados para a funcionalidade de realce e pesquisa sequencial.  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a7be97ef3184c6836cd67e47b4e9383214f1b5f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7ff68ce5f612255f41ce3a7c6f2526c3a340cfcd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629400"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967308"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>MDA invalidApartmentStateChange
 O MDS (Assistente de Depuração Gerenciado) de `invalidApartmentStateChange` é ativado por qualquer um de dois problemas:  
@@ -31,7 +31,7 @@ O MDS (Assistente de Depuração Gerenciado) de `invalidApartmentStateChange` é
   
 - Estado de apartment COM de um thread não é o que foi solicitado. Isso pode fazer com que proxies sejam usados para componentes COM que têm um modelo de threading diferente do atual. Isso, por sua vez, pode fazer com que uma <xref:System.InvalidCastException> seja gerada ao chamar o objeto COM por meio de interfaces não definidas para marshaling entre apartments.  
   
-- O estado de apartment COM do thread é diferente do esperado. Isso pode causar uma <xref:System.Runtime.InteropServices.COMException> com um HRESULT RPC_E_WRONG_THREAD, bem como uma <xref:System.InvalidCastException> ao fazer chamadas em um [RCW](../../../docs/standard/native-interop/runtime-callable-wrapper.md) (Runtime Callable Wrapper). Isso também pode fazer com que alguns componentes COM de thread único sejam acessados por vários threads ao mesmo tempo, o que pode levar a danos ou perda de dados.  
+- O estado de apartment COM do thread é diferente do esperado. Isso pode causar uma <xref:System.Runtime.InteropServices.COMException> com um HRESULT RPC_E_WRONG_THREAD, bem como uma <xref:System.InvalidCastException> ao fazer chamadas em um [RCW](../../standard/native-interop/runtime-callable-wrapper.md) (Runtime Callable Wrapper). Isso também pode fazer com que alguns componentes COM de thread único sejam acessados por vários threads ao mesmo tempo, o que pode levar a danos ou perda de dados.  
   
 ## <a name="cause"></a>Causa  
   

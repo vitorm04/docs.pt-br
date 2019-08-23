@@ -2,20 +2,20 @@
 title: Fábrica de canais
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: 0bcaa739a51d168e18c809804b7da6948ab61e9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6479c4bb057ad73b0aeb84c882cbed8dec306ce6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002399"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911693"
 ---
 # <a name="channel-factory"></a>Fábrica de canais
-Este exemplo demonstra como um aplicativo cliente pode criar um canal com o <xref:System.ServiceModel.ChannelFactory> classe em vez de um cliente gerado. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
+Este exemplo demonstra como um aplicativo cliente pode criar um canal com a <xref:System.ServiceModel.ChannelFactory> classe em vez de um cliente gerado. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Este exemplo usa o <xref:System.ServiceModel.ChannelFactory%601> classe para criar um canal para um ponto de extremidade de serviço. Normalmente, para criar um canal para um ponto de extremidade de serviço você gerar um tipo de cliente com o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) e criar uma instância do tipo gerado. Você também pode criar um canal usando o <xref:System.ServiceModel.ChannelFactory%601> de classe, conforme demonstrado neste exemplo. O serviço criado pelo código de exemplo a seguir é idêntico para o serviço na [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Este exemplo usa a <xref:System.ServiceModel.ChannelFactory%601> classe para criar um canal para um ponto de extremidade de serviço. Normalmente, para criar um canal para um ponto de extremidade de serviço, você gera um tipo de cliente com a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) e cria uma instância do tipo gerado. Você também pode criar um canal usando a <xref:System.ServiceModel.ChannelFactory%601> classe, conforme demonstrado neste exemplo. O serviço criado pelo código de exemplo a seguir é idêntico ao serviço no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ```csharp  
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
@@ -26,9 +26,9 @@ ICalculator channel = factory.CreateChannel();
 ```  
   
 > [!IMPORTANT]
->  Se você estiver executando este exemplo em um cenário entre máquinas, você deve substituir "localhost" no código anterior com o nome totalmente qualificado do computador que está executando o serviço. Este exemplo usa a configuração para definir o endereço do ponto de extremidade, portanto, isso deve ser feito no código.  
+>  Se você estiver executando este exemplo em um cenário de máquina cruzada, deverá substituir "localhost" no código anterior pelo nome totalmente qualificado do computador que está executando o serviço. Este exemplo não usa a configuração para definir o endereço do ponto de extremidade, portanto, isso deve ser feito no código.  
   
- Depois que o canal é criado, as operações de serviço podem ser invocadas assim como ocorre com um cliente gerado.  
+ Depois que o canal é criado, as operações de serviço podem ser invocadas exatamente como com um cliente gerado.  
   
 ```csharp  
 // Call the Add service operation.  
@@ -38,14 +38,14 @@ double result = channel.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```  
   
- Para fechar o canal, ele deve primeiro ser convertido para um <xref:System.ServiceModel.IClientChannel> interface. Isso ocorre porque o canal conforme gerado é declarado no aplicativo cliente usando o `ICalculator` interface, que tem métodos como `Add` e `Subtract` mas não `Close`. O `Close` método se origina no <xref:System.ServiceModel.ICommunicationObject> interface.  
+ Para fechar o canal, primeiro ele deve ser convertido em uma <xref:System.ServiceModel.IClientChannel> interface. Isso ocorre porque o canal como gerado é declarado no `ICalculator` aplicativo cliente usando a interface, que tem métodos como `Add` e `Subtract` , mas não `Close`. O `Close` método se origina <xref:System.ServiceModel.ICommunicationObject> na interface.  
   
 ```csharp  
 // Close the channel.  
  ((IClientChannel)client).Close();  
 ```  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o aplicativo cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o aplicativo cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -58,15 +58,15 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Observe que este exemplo não habilitar a publicação de metadados. Você deve primeiro habilitar a publicação de metadados para este exemplo regenerar o tipo de cliente.  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Observe que esse exemplo não habilita a publicação de metadados. Primeiro, você deve habilitar a publicação de metadados para este exemplo para regenerar o tipo de cliente.  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### <a name="to-run-the-sample-cross-machine"></a>Para executar o exemplo entre o computador  
+### <a name="to-run-the-sample-cross-machine"></a>Para executar o exemplo de computador cruzado  
   
-1. Substitua "localhost" no código a seguir com o nome totalmente qualificado do computador que está executando o serviço.  
+1. Substitua "localhost" no código a seguir pelo nome totalmente qualificado do computador que está executando o serviço.  
   
     ```csharp  
     EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
@@ -77,6 +77,6 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ChannelFactory`  

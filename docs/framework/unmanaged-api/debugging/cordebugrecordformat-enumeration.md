@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: adb13688791cd7d8f467780da1895d4f9fe6e990
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6ed7d25593f9dd5d5d01f8c06024dcf8acfcfea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739636"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916481"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>Enumeração CorDebugRecordFormat
 Descreve o formato dos dados em uma matriz de bytes que contém informações sobre um evento de depuração de exceção nativo.  
@@ -39,17 +39,17 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Os dados serão um registro de exceção do Windows de 64 bits.|  
   
 ## <a name="remarks"></a>Comentários  
- Um membro do `CorDebugRecordFormat` enumeração é passada para o [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) método para indicar o formato da matriz de bytes no seu `pRecord` argumento.  
+ Um membro da `CorDebugRecordFormat` enumeração é passado para o método [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) para indicar o formato da matriz de bytes em seu `pRecord` argumento.  
   
 > [!NOTE]
->  Essa enumeração destina-se para uso no .NET Native somente para cenários de depuração.  
+> Essa enumeração destina-se ao uso em cenários de depuração .NET Native apenas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

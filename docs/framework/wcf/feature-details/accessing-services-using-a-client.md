@@ -5,100 +5,100 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 9a38ec444c51560cab48db1b39ae331f728fba30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0923fa70907a4846924395483c86e541cd88f284
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635662"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964973"
 ---
 # <a name="accessing-services-using-a-client"></a>Usando um cliente para acessar um serviço
-Aplicativos cliente devem criar, configurar e usar objetos de cliente ou de canal WCF para se comunicar com os serviços. O [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md) tópico fornece uma visão geral dos objetos e das etapas envolvidas na criação de objetos básicos de cliente e o canal e usá-los.  
+Os aplicativos cliente devem criar, configurar e usar objetos de cliente ou de canal do WCF para se comunicar com os serviços. O tópico [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md) fornece uma visão geral dos objetos e das etapas envolvidas na criação de objetos de cliente e de canal básicos e no uso deles.  
   
- Este tópico fornece informações detalhadas sobre alguns dos problemas com o cliente de aplicativos e objetos de cliente e o canal que podem ser úteis dependendo do cenário.  
+ Este tópico fornece informações detalhadas sobre alguns dos problemas com aplicativos cliente e objetos de cliente e de canal que podem ser úteis, dependendo do seu cenário.  
   
 ## <a name="overview"></a>Visão geral  
- Este tópico descreve o comportamento e problemas relacionados ao:  
+ Este tópico descreve o comportamento e os problemas relacionados a:  
   
-- Tempos de vida de sessão e de canal.  
+- Tempos de vida de canal e sessão.  
   
 - Tratamento de exceções.  
   
-- Entendendo problemas de bloqueio.  
+- Entendendo os problemas de bloqueio.  
   
 - Inicializando canais interativamente.  
   
-### <a name="channel-and-session-lifetimes"></a>Canal e tempos de vida de sessão  
- Aplicativos do Windows Communication Foundation (WCF) inclui duas categorias de canais, datagrama e de sessão.  
+### <a name="channel-and-session-lifetimes"></a>Tempos de vida de canal e sessão  
+ Os aplicativos Windows Communication Foundation (WCF) incluem duas categorias de canais, datagrama e sessão.  
   
- Um *datagrama* canal é um canal no qual todas as mensagens são não correlacionadas. Com um canal de datagrama, se uma operação de entrada ou saída falhar, a próxima operação é normalmente afetada e o mesmo canal pode ser reutilizado. Por isso, os canais de datagrama normalmente não falhará.  
+ Um canal de datagrama é um canal no qual todas as mensagens não estão correlacionadas. Com um canal de datagrama, se uma operação de entrada ou saída falhar, a próxima operação normalmente não será afetada e o mesmo canal poderá ser reutilizado. Por isso, os canais de datagrama normalmente não têm falha.  
   
- *Sessão* canais, no entanto, são canais com uma conexão para outro ponto de extremidade. Mensagens em uma sessão em um lado sempre são correlacionadas com a mesma sessão do outro lado. Além disso, ambos os participantes em uma sessão devem concordar que os requisitos de sua conversa foram atendidos para a sessão ser considerada bem sucedida. Se não puderem concordar, o canal de sessão pode falhar.  
+ Os canais de *sessão* , no entanto, são canais com uma conexão com o outro ponto de extremidade. As mensagens em uma sessão em um lado são sempre correlacionadas com a mesma sessão do outro lado. Além disso, ambos os participantes em uma sessão devem concordar que os requisitos de sua conversa foram atendidos para que a sessão seja considerada com êxito. Se eles não concordarem, o canal de sessão poderá falhar.  
   
- Abra os clientes explícita ou implicitamente chamando-se a primeira operação.  
+ Abra clientes explicitamente ou implicitamente chamando a primeira operação.  
   
 > [!NOTE]
->  Tentando detectar explicitamente os canais de sessão com falha não é geralmente útil, pois quando você receber a notificação varia de acordo com a implementação de sessão. Por exemplo, porque o <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> (com a sessão confiável desabilitada) revela a sessão de conexão TCP, se você escutar o <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> eventos sobre o serviço ou o cliente provavelmente você ser notificado rapidamente no caso de falha de rede. Sessões confiáveis, mas (estabelecida por associações no qual o <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> está habilitado) são projetados para isolar serviços contra falhas de rede pequena. Se a sessão pode ser restabelecida dentro de um período razoável de tempo, a mesma associação — configurado para sessões confiáveis — talvez não falhará até que a interrupção de continuação por um período maior de tempo.  
+> A tentativa de detectar explicitamente os canais com falha na sessão não é normalmente útil, porque quando você é notificado depende da implementação da sessão. Por exemplo, como o <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> (com a sessão confiável desabilitada) superfícies a sessão da conexão TCP, se você ouvir o <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> evento no serviço ou o cliente provavelmente será notificado rapidamente no caso de uma falha de rede. Mas as sessões confiáveis (estabelecidas por associações em que o <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> está habilitado) foram projetadas para isolar serviços de pequenas falhas de rede. Se a sessão puder ser restabelecida em um período de tempo razoável, a mesma ligação — configurada para sessões confiáveis — pode não falhar até que a interrupção continue por um período de tempo maior.  
   
- A maioria das associações fornecidas pelo sistema (que expõem os canais para a camada de aplicativo) usa sessões por padrão, mas o <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> não faz isso. Para obter mais informações, consulte [sessões usando](../../../../docs/framework/wcf/using-sessions.md).  
+ A maioria das associações fornecidas pelo sistema (que expõem canais à camada de aplicativo) usa sessões por padrão, mas o <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> não faz isso. Para obter mais informações, consulte [usando sessões](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="the-proper-use-of-sessions"></a>O uso adequado de sessões  
- As sessões fornecem uma maneira de saber se a troca de mensagem inteira for concluída, e se ambos os lados consideraram bem-sucedida. É recomendável que um aplicativo de chamada abrir o canal, usá-lo e fechar o canal de dentro do bloco try de uma. Se um canal de sessão estiver aberto e o <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> método é chamado uma vez e essa chamada retorna com êxito e, em seguida, a sessão foi bem-sucedida. Bem-sucedido nesse caso, significa que todas as entregas garante a associação especificada foram atingidas, e o outro lado não chamou <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> no canal antes de chamar <xref:System.ServiceModel.ICommunicationObject.Close%2A>.  
+ As sessões fornecem uma maneira de saber se a troca de mensagens inteira está concluída e se ambos os lados consideraram que ela foi bem-sucedida. É recomendável que um aplicativo de chamada Abra o canal, use-o e feche o canal dentro de um bloco try. Se um canal de sessão estiver aberto e o <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> método for chamado uma vez e essa chamada retornar com êxito, a sessão foi bem-sucedida. O êxito nesse caso significa que toda a entrega garante que a associação especificada foi atendida e o outro lado não chamou <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> no canal antes de chamar <xref:System.ServiceModel.ICommunicationObject.Close%2A>.  
   
  A seção a seguir fornece um exemplo dessa abordagem de cliente.  
   
 ### <a name="handling-exceptions"></a>Tratando exceções  
- Tratamento de exceções em aplicativos cliente é simples. Se um canal é aberto, usado e fechado dentro de um bloco try, em seguida, a conversa foi bem-sucedida, a menos que uma exceção será lançada. Normalmente, se uma exceção é gerada a conversa será anulada.  
+ A manipulação de exceções em aplicativos cliente é simples. Se um canal for aberto, usado e fechado dentro de um bloco try, a conversa terá êxito, a menos que uma exceção seja gerada. Normalmente, se uma exceção for lançada, a conversa será anulada.  
   
 > [!NOTE]
->  Usar o `using` instrução (`Using` no Visual Basic) não é recomendado. Isso ocorre porque o final do `using` instrução pode causar exceções que podem mascarar outras exceções, talvez você precise saber sobre. Para obter mais informações, consulte [uso Close e Abort para liberar os recursos de cliente do WCF](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
+> O `using` uso da instrução (`Using` em Visual Basic) não é recomendado. Isso ocorre porque o final da instrução `using` pode causar exceções que podem mascarar outras exceções sobre as quais você talvez precise saber. Para obter mais informações, consulte [usar fechar e anular para liberar recursos do cliente WCF](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
   
- O exemplo de código a seguir mostra o padrão de cliente recomendada usando um bloco try/catch e não o `using` instrução.  
+ O exemplo de código a seguir mostra o padrão de cliente recomendado usando um bloco Try/Catch `using` e não a instrução.  
   
  [!code-csharp[FaultContractAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
 > [!NOTE]
->  Verificar o valor do <xref:System.ServiceModel.ICommunicationObject.State%2A?displayProperty=nameWithType> propriedade é uma condição de corrida e não é recomendada para determinar se deve reutilizar ou fechar um canal.  
+> Verificar o valor da <xref:System.ServiceModel.ICommunicationObject.State%2A?displayProperty=nameWithType> propriedade é uma condição de corrida e não é recomendável determinar se deve reutilizar ou fechar um canal.  
   
- Canais de datagrama de nunca falha, mesmo que ocorram exceções quando eles são fechados. Além disso, os clientes não-duplex que falham ao autenticar usando uma conversa segura normalmente geram um <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>. No entanto se o cliente duplex usando uma conversa segura não for autenticado, o cliente recebe um <xref:System.TimeoutException?displayProperty=nameWithType> em vez disso.  
+ Os canais de datagrama nunca falham, mesmo se as exceções ocorrerem quando forem fechadas. Além disso, os clientes não-duplex que não se autenticam usando uma conversa segura normalmente <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>lançam um. No entanto, se o cliente duplex que usa uma conversa segura falhar ao autenticar <xref:System.TimeoutException?displayProperty=nameWithType> , o cliente receberá um em vez disso.  
   
- Para obter informações mais completas sobre como trabalhar com as informações de erro no nível do aplicativo, consulte [especificação e tratamento de falhas em contratos e serviços](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) descreve as exceções esperadas e mostra como lidar com eles. Para obter mais informações sobre como tratar erros durante o desenvolvimento de canais, consulte [tratamento de exceções e falhas de](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
+ Para obter informações mais completas sobre como trabalhar com informações de erro no nível do aplicativo, consulte [especificando e manipulando falhas em contratos e serviços](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). As [exceções esperadas](../../../../docs/framework/wcf/samples/expected-exceptions.md) descrevem as exceções esperadas e mostram como tratá-las. Para obter mais informações sobre como lidar com erros ao desenvolver canais, consulte [tratando exceções e falhas](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
-### <a name="client-blocking-and-performance"></a>Bloqueio de cliente e o desempenho  
- Quando um aplicativo chama forma síncrona uma operação de solicitação-resposta, os blocos de cliente até que um valor de retorno é recebido ou uma exceção (como um <xref:System.TimeoutException?displayProperty=nameWithType>) é gerada. Esse comportamento é semelhante ao comportamento de local. Quando um aplicativo invoca forma síncrona uma operação em um objeto de cliente WCF ou canal, o cliente não retorna até que a camada de canais pode gravar os dados na rede ou até que uma exceção será lançada. E enquanto o padrão de troca de mensagem unidirecional (especificado pela marcação de uma operação com <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> definido como `true`) pode tornar alguns clientes também podem bloquear operações mais ágil na resposta, unidirecionais, de acordo com a associação e o que as mensagens já foram enviado. Operações unidirecionais são apenas sobre a troca de mensagens, nem mais, nem menos. Para obter mais informações, consulte [unidirecional serviços](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
+### <a name="client-blocking-and-performance"></a>Desempenho e bloqueio de cliente  
+ Quando um aplicativo chama de forma síncrona uma operação de solicitação-resposta, o cliente é bloqueado até que um valor de retorno seja recebido ou <xref:System.TimeoutException?displayProperty=nameWithType>uma exceção (como um) seja gerada. Esse comportamento é semelhante ao comportamento local. Quando um aplicativo invoca de forma síncrona uma operação em um canal ou objeto de cliente WCF, o cliente não retorna até que a camada de canal possa gravar os dados na rede ou até que uma exceção seja gerada. E, embora o padrão de troca de mensagens unidirecionais (especificado marcando <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> uma operação `true`com definido como) possa tornar alguns clientes mais responsivos, as operações unidirecionais também podem bloquear, dependendo da associação e quais mensagens já foram enviados. Operações unidirecionais são apenas sobre a troca de mensagens, não mais nem menos. Para obter mais informações, consulte [Serviços](../../../../docs/framework/wcf/feature-details/one-way-services.md)unidirecionais.  
   
- Partes de dados grande podem diminuir o processamento não importa qual o padrão de troca de mensagem de cliente. Para entender como lidar com esses problemas, consulte [dados grandes e Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ Partes de dados grandes podem reduzir o processamento do cliente independentemente do padrão de troca de mensagens. Para entender como lidar com esses problemas, consulte [grandes dados e streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Se seu aplicativo deve fazer mais trabalho, enquanto uma operação é concluída, você deve criar um par de métodos assíncronos na interface de contrato de serviço que implementa o cliente do WCF. A maneira mais fácil de fazer isso é usar o `/async` ligar a [ferramenta Utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obter um exemplo, consulte [ Chamar operações de serviço de forma assíncrona](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Se seu aplicativo precisar fazer mais trabalho enquanto uma operação for concluída, você deverá criar um par de métodos assíncronos na interface de contrato de serviço que seu cliente WCF implementa. A maneira mais fácil de fazer isso é usar a `/async` opção na ferramenta de [Utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obter um exemplo, consulte [ Chamar operações de serviço](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)de forma assíncrona.  
   
- Para obter mais informações sobre aumentando o desempenho do cliente, consulte [aplicativos de cliente de camada intermediária](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
+ Para obter mais informações sobre como aumentar o desempenho do cliente, consulte [aplicativos cliente de camada intermediária](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
-### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Permitindo que o usuário selecionar credenciais dinamicamente  
- O <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> interface permite que os aplicativos exibir uma interface do usuário que permite ao usuário escolher credenciais com o qual um canal é criado antes de iniciar os timers de tempo limite.  
+### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Habilitando o usuário a selecionar as credenciais dinamicamente  
+ A <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> interface permite que os aplicativos exibam uma interface do usuário que permite ao usuário escolher credenciais com as quais um canal é criado antes do início dos temporizadores de tempo limite.  
   
- Os desenvolvedores de aplicativos podem fazer uso de um inserido <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> de duas maneiras. O aplicativo cliente pode chamar o <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (ou uma versão assíncrona) antes de abrir o canal (o *explícita* abordagem) ou ligue para a primeira operação (o *implícita*abordagem).  
+ Os desenvolvedores de aplicativos podem fazer uso de <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> um inserido de duas maneiras. O aplicativo cliente pode <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> chamar ou <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (ou uma versão assíncrona) antes de abrir o canal (a abordagem *explícita* ) ou chamar a primeira operação (a abordagem *implícita* ).  
   
- Se usar a abordagem implícita, o aplicativo deve chamar a primeira operação em um <xref:System.ServiceModel.ClientBase%601> ou <xref:System.ServiceModel.IClientChannel> extensão. Se ele chamar qualquer coisa que não seja a primeira operação, uma exceção é lançada.  
+ Se estiver usando a abordagem implícita, o aplicativo deverá chamar a primeira operação em <xref:System.ServiceModel.ClientBase%601> uma <xref:System.ServiceModel.IClientChannel> extensão ou. Se ele chamar algo diferente da primeira operação, uma exceção será lançada.  
   
- Se usar a abordagem explícita, o aplicativo deve executar as seguintes etapas na ordem:  
+ Se estiver usando a abordagem explícita, o aplicativo deverá executar as seguintes etapas na ordem:  
   
-1. Chame o <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (ou uma versão assíncrona).  
+1. Chame uma <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (ou uma versão assíncrona).  
   
-2. Quando os inicializadores de tem retornado, chame o o <xref:System.ServiceModel.ICommunicationObject.Open%2A> método na <xref:System.ServiceModel.IClientChannel> objeto ou na <xref:System.ServiceModel.IClientChannel> objeto retornado do <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> propriedade.  
+2. Quando os <xref:System.ServiceModel.ICommunicationObject.Open%2A> inicializadores forem retornados, chame o método <xref:System.ServiceModel.IClientChannel> no objeto ou no <xref:System.ServiceModel.IClientChannel> objeto retornado da <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> propriedade.  
   
 3. Chamar as operações.  
   
- É recomendável que os aplicativos de qualidade de produção controlam o processo de interface do usuário, adotando a abordagem explícita.  
+ É recomendável que os aplicativos de qualidade de produção controlem o processo de interface do usuário, adotando a abordagem explícita.  
   
- Aplicativos que usam a abordagem implícita invocar os inicializadores de interface do usuário, mas se o usuário do aplicativo não responder dentro do período de tempo limite de envio da associação, uma exceção é lançada quando a interface do usuário é retornado.  
+ Os aplicativos que usam a abordagem implícita invocam os inicializadores de interface do usuário, mas se o usuário do aplicativo não responder dentro do período de tempo limite de envio da associação, uma exceção será lançada quando a interface do usuário retornar.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Serviços duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [Como: Acessar os serviços com unidirecional e contratos de solicitação-resposta](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Como: Serviços do Access com um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Como: Acessar um WSE 3.0 Service](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Como: Usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Como: Acessar serviços com contratos unidirecional e de solicitação-resposta](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Como: Acessar serviços com um contrato duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Como: Acessar um serviço WSE 3,0](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Como: Usar a ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
 - [Como: Chamar operações de serviço de forma assíncrona](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [Aplicativos cliente de camada intermediária](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

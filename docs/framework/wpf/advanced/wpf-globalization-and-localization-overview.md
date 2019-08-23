@@ -5,118 +5,118 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 6bccff6bf3bb061a430a9105d99f2fee3511c7fd
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e34b61e14db1e7839173658d71a70240d63c5f8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859896"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917577"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Visão geral de globalização e localização do WPF
 
 Quando você limita a disponibilidade de seu produto a apenas um idioma, você limita sua base de clientes potenciais a uma fração da população mundial de 6,5 bilhões. Se desejar que seus aplicativos alcancem um público global, a localização econômica de seu produto será uma das melhores e mais econômicas maneiras de alcançar mais clientes.
 
-Esta visão geral apresenta a globalização e localização no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. A globalização é o design e o desenvolvimento de aplicativos que são executados em várias localizações. Por exemplo, a globalização dá suporte a interfaces do usuário localizadas e a dados regionais para usuários em culturas diferentes. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece recursos de design globalizados, incluindo o layout automático, assemblies satélites e os atributos localizados e comentários.
+Esta visão geral apresenta a globalização [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]e a localização no. A globalização é o design e o desenvolvimento de aplicativos que são executados em várias localizações. Por exemplo, a globalização dá suporte a interfaces do usuário localizadas e a dados regionais para usuários em culturas diferentes. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fornece recursos de design globalizados, incluindo layout automático, assemblies satélite e atributos localizados e comentários.
 
-A localização é a tradução de recursos do aplicativo em versões localizadas para culturas específicas às quais o aplicativo dá suporte. Quando você localiza no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], você usa as APIs no <xref:System.Windows.Markup.Localizer> namespace. Essas APIs ativam a [ferramenta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016) ferramenta de linha de comando. Para obter informações sobre como criar e usar LocBaml, consulte [localizar um aplicativo](how-to-localize-an-application.md).
+A localização é a tradução de recursos do aplicativo em versões localizadas para culturas específicas às quais o aplicativo dá suporte. Ao localizar no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], você usa as APIs <xref:System.Windows.Markup.Localizer> no namespace. Essas APIs capacitam a ferramenta de linha de comando de [exemplo de ferramenta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016) . Para obter informações sobre como criar e usar LocBaml, consulte [localizar um aplicativo](how-to-localize-an-application.md).
 
 ## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>Melhores práticas de globalização e localização no WPF
 
-Você pode aproveitar ao máximo a funcionalidade de globalização e localização que se baseia em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] seguindo o design de interface do usuário e as dicas relacionadas à localização fornecidas nesta seção.
+Você pode aproveitar ao máximo a funcionalidade de globalização e localização criada no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] seguindo o design da interface do usuário e as dicas relacionadas à localização que esta seção fornece.
 
 ### <a name="best-practices-for-wpf-ui-design"></a>Melhores práticas de design de interface do usuário no WPF
 
-Quando você cria um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– com base em [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], considere a implementação dessas práticas recomendadas:
+Ao projetar um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– baseado [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], considere implementar essas práticas recomendadas:
 
-- Gravar sua [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] na [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; evite criar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no código. Quando você cria sua [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], expô-lo por meio de APIs de localização internas.
+- Escreva seu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; Evite criar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] em código. Quando você cria seu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]o, você o expõe por meio de APIs de localização internas.
 
-- Evite usar posições absolutas e tamanhos fixos para dispor o conteúdo; em vez disso, use dimensionamento relativo ou automático.
+- Evite usar posições absolutas e tamanhos fixos para definir o layout de conteúdo; em vez disso, use o dimensionamento relativo ou automático.
 
-  - Use <xref:System.Windows.Window.SizeToContent%2A> e mantenha as larguras e alturas definidas como `Auto`.
+  - Use <xref:System.Windows.Window.SizeToContent%2A> e mantenha larguras e alturas definidas `Auto`como.
 
-  - Evite usar <xref:System.Windows.Controls.Canvas> dispor [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s.
+  - Evite usar <xref:System.Windows.Controls.Canvas> para fazer o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]layout de s.
 
   - Use <xref:System.Windows.Controls.Grid> e seu recurso de compartilhamento de tamanho.
 
 - Forneça espaço extra nas margens, pois, de modo geral, o texto localizado exige mais espaço. O espaço extra permite possíveis caracteres estendidos.
 
-- Habilitar <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> em <xref:System.Windows.Controls.TextBlock> para evitar recorte.
+- Habilitar <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> no<xref:System.Windows.Controls.TextBlock> para evitar o recorte.
 
-- Defina o `xml:lang` atributo. Esse atributo descreve a cultura de um elemento específico e seus elementos filho. O valor dessa propriedade altera o comportamento de vários recursos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, ele altera o comportamento de hifenização, verificação ortográfica, substituição de números, formatação de scripts complexos e fallback de fontes. Ver [globalização do WPF](globalization-for-wpf.md) para obter mais informações sobre como configurar o [XML: lang manipulação em XAML](../../xaml-services/xml-lang-handling-in-xaml.md).
+- Defina o `xml:lang` atributo. Esse atributo descreve a cultura de um elemento específico e seus elementos filho. O valor dessa propriedade altera o comportamento de vários recursos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, ele altera o comportamento de hifenização, verificação ortográfica, substituição de números, formatação de scripts complexos e fallback de fontes. Consulte [Globalization for WPF](globalization-for-wpf.md) para obter mais informações sobre como definir o [tratamento XML: lang em XAML](../../xaml-services/xml-lang-handling-in-xaml.md).
 
-- Crie uma fonte de composição personalizada para obter um melhor controle de fontes que são usadas para diferentes idiomas. Por padrão, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa a fonte GlobalUserInterface no diretório Windows\Fonts.
+- Crie uma fonte composta personalizada para obter um melhor controle das fontes usadas para diferentes idiomas. Por padrão, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o usa a fonte GlobalUserInterface. Composite no diretório Windows\Fonts.
 
-- Quando você cria aplicativos de navegação que podem ser localizados em uma cultura que apresenta o texto em um formato da direita para esquerda, defina explicitamente o <xref:System.Windows.FlowDirection> de cada página para garantir que a página não herda <xref:System.Windows.FlowDirection> do <xref:System.Windows.Navigation.NavigationWindow>.
+- Quando você cria aplicativos de navegação que podem ser localizados em uma cultura que apresenta texto em um formato da direita para a esquerda, defina explicitamente <xref:System.Windows.FlowDirection> a de cada página para garantir que a página não <xref:System.Windows.FlowDirection> seja herdada do <xref:System.Windows.Navigation.NavigationWindow>.
 
-- Quando você cria aplicativos de navegação autônomos que são hospedados fora de um navegador, defina as <xref:System.Windows.Application.StartupUri%2A> para seu aplicativo inicial para um <xref:System.Windows.Navigation.NavigationWindow> em vez da uma página (por exemplo, `<Application StartupUri="NavigationWindow.xaml">`). Esse design permite que você altere o <xref:System.Windows.FlowDirection> da janela e a barra de navegação. Para obter mais informações e um exemplo, consulte [amostra de globalização de home page](https://go.microsoft.com/fwlink/?LinkID=159990).
+- Quando você cria aplicativos de navegação autônomos que são hospedados fora de um navegador, <xref:System.Windows.Application.StartupUri%2A> defina o para o aplicativo inicial <xref:System.Windows.Navigation.NavigationWindow> como um em vez de em uma página ( `<Application StartupUri="NavigationWindow.xaml">`por exemplo,). Esse design permite que você altere o <xref:System.Windows.FlowDirection> da janela e a barra de navegação. Para obter mais informações e um exemplo, consulte [exemplo de Home Page](https://go.microsoft.com/fwlink/?LinkID=159990)de globalização.
 
 ### <a name="best-practices-for-wpf-localization"></a>Melhores práticas de localização no WPF
 
-Quando você localiza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– aplicativos baseados no, considere a implementação dessas práticas recomendadas:
+Ao localizar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aplicativos baseados em, considere a implementação dessas práticas recomendadas:
 
 - Use comentários de localização para fornecer contexto extra para os localizadores.
 
-- Use atributos de localização para controlar a localização em vez de omitir seletivamente <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedades nos elementos. Ver [atributos de localização e comentários](localization-attributes-and-comments.md) para obter mais informações.
+- Use atributos de localização para controlar a localização em vez de omitir <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> seletivamente Propriedades em elementos. Consulte [atributos e comentários de localização](localization-attributes-and-comments.md) para obter mais informações.
 
-- Use `msbuild -t:updateuid` e `-t:checkuid` para adicionar e verificar <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedades na sua [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Use <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedades para controlar alterações entre o desenvolvimento e a localização. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedades ajudam você a localizar novas alterações de desenvolvimento. Se você adicionar manualmente <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedades para um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], a tarefa será entediante e menos preciso.
+- Use `msbuild -t:updateuid` <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e `-t:checkuid` para adicionar e verificar as propriedades no seu. Use <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> as propriedades para controlar as alterações entre o desenvolvimento e a localização. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>as propriedades ajudam você a localizar novas alterações de desenvolvimento. Se você adicionar <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Propriedades manualmente a um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], a tarefa será normalmente entediante e menos precisa.
 
-  - Não edite nem altere <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedades depois de iniciar a localização.
+  - Não edite ou altere <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> as propriedades depois de começar a localização.
 
-  - Não use duplicata <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedades (Lembre-se desta dica ao usar o comando copiar e colar).
+  - Não use Propriedades duplicadas <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> (Lembre-se dessa dica ao usar o comando copiar e colar).
 
   - Defina as `UltimateResourceFallback` local em AssemblyInfo.* para especificar o idioma apropriado para fallback (por exemplo, `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).
 
-    Se você optar por incluir o idioma de origem no assembly principal omitindo a `<UICulture>` marca no arquivo de projeto, defina a `UltimateResourceFallback` local do assembly principal, em vez de satélite (por exemplo, `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).
+    Se você decidir incluir o idioma de origem no assembly principal omitindo a `<UICulture>` marca no arquivo do projeto, defina o `UltimateResourceFallback` local como o assembly principal em vez do satélite (por exemplo, `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).
 
 ## <a name="localize-a-wpf-application"></a>Localizar um aplicativo WPF
 
-Quando você localiza um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo, você tem várias opções. Por exemplo, você pode associar os recursos localizáveis em seu aplicativo para um [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] do arquivo, armazenar o texto localizável em tabelas resx ou fazer com que o localizador use [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] arquivos. Esta seção descreve um fluxo de trabalho de localização que usa o formato BAML de XAML, que oferece vários benefícios:
+Ao localizar um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo, você tem várias opções. Por exemplo, você pode associar os recursos localizáveis em seu aplicativo a [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] um arquivo, armazenar texto localizável em tabelas resx ou fazer com que [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] seu localizador Use arquivos. Esta seção descreve um fluxo de trabalho de localização que usa a forma de BAML do XAML, que fornece vários benefícios:
 
-- Você pode localizar após o build.
+- Você pode localizar depois de Compilar.
 
-- Você pode atualizar para uma versão mais recente do formato BAML de XAML com localizações de uma versão mais antiga do formato BAML de XAML para que você possa localizar ao mesmo tempo que você desenvolve.
+- Você pode atualizar para uma versão mais recente da forma de BAML do XAML com localizações de uma versão mais antiga da forma de BAML do XAML, para que você possa localizar ao mesmo tempo que desenvolve.
 
-- Você pode validar elementos de origem original e a semântica em tempo de compilação porque o formato BAML de XAML é a forma compilada de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
+- Você pode validar os elementos de origem e a semântica originais em tempo de compilação porque a forma de BAML do XAML é [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]a forma compilada do.
 
 ### <a name="localization-build-process"></a>Processo de build para localização
 
-Quando você desenvolve um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo, o processo de compilação para a localização é o seguinte:
+Quando você desenvolve um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo, o processo de compilação para localização é o seguinte:
 
-- O desenvolvedor cria e globaliza o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo. No arquivo de projeto o desenvolvedor define `<UICulture>en-US</UICulture>` para que quando o aplicativo é compilado, um assembly de principal com neutralidade de idioma é gerado. Esse assembly tem um arquivo satélite .resources.dll que contém todos os recursos localizáveis. Opcionalmente, você pode manter o idioma de origem no assembly principal, porque as nossas APIs de localização dão suporte à extração do assembly principal.
+- O desenvolvedor cria e globalizes o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo. No arquivo de projeto que o desenvolvedor `<UICulture>en-US</UICulture>` define para que, quando o aplicativo for compilado, um assembly principal com neutralidade de idioma será gerado. Esse assembly tem um arquivo satélite .resources.dll que contém todos os recursos localizáveis. Opcionalmente, você pode manter o idioma de origem no assembly principal porque nossas APIs de localização dão suporte à extração do assembly principal.
 
-- Quando o arquivo é compilado no build, o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é convertido em formato BAML de XAML. Culturalmente neutro `MyDialog.exe` e culturalmente dependentes (em inglês) `MyDialog.resources.dll` arquivos são liberados para o cliente falante de inglês.
+- Quando o arquivo é compilado na compilação, o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é convertido para a forma de BAML do XAML. Os arquivos culturalmente `MyDialog.exe` neutro e dependente cultural (inglês) `MyDialog.resources.dll` são lançados para o cliente de língua inglesa.
 
 ### <a name="localization-workflow"></a>Fluxo de trabalho de localização
 
-O processo de localização é iniciado após o build `MyDialog.resources.dll` arquivo é criado. O [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos e propriedades no original [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] são extraídos do formato BAML de XAML em pares chave / valor usando as APIs em <xref:System.Windows.Markup.Localizer>. Os localizadores usam os pares chave-valor para localizar o aplicativo. É possível gerar um novo .resource.dll com base nos novos valores após a conclusão da localização.
+O processo de localização começa depois que o `MyDialog.resources.dll` arquivo não local é criado. Os [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos e as propriedades no seu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] original são extraídos da forma de BAML do XAML em pares de chave-valor usando as <xref:System.Windows.Markup.Localizer>APIs em. Os localizadores usam os pares chave-valor para localizar o aplicativo. É possível gerar um novo .resource.dll com base nos novos valores após a conclusão da localização.
 
-As chaves de pares chave-valor são `x:Uid` valores que são colocados pelo desenvolvedor no original [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Eles `x:Uid` valores habilite a API de controle e mescle as alterações que ocorrem entre o desenvolvedor e o localizador durante a localização. Por exemplo, se o desenvolvedor altera o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] depois que o localizador iniciar a localização, você pode mesclar a alteração de desenvolvimento com o trabalho já concluído de localização para que o trabalho de tradução mínimo é perdido.
+As chaves dos pares chave-valor são `x:Uid` valores que são colocados pelo desenvolvedor no original. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Esses `x:Uid` valores permitem que a API acompanhe e mescle as alterações que ocorrem entre o desenvolvedor e o localizador durante a localização. Por exemplo, se o desenvolvedor alterar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] depois que o localizador começar a localizar, você poderá mesclar a alteração de desenvolvimento com o trabalho de localização já concluído para que o mínimo de trabalho de tradução seja perdido.
 
-O gráfico a seguir mostra um fluxo de trabalho típico de localização que se baseia no formato BAML de XAML. Este diagrama supõe que o desenvolvedor escreve o aplicativo em inglês. O desenvolvedor cria e globaliza o aplicativo do WPF. No arquivo de projeto o desenvolvedor define `<UICulture>en-US</UICulture>` para que na compilação, um assembly principal com neutralidade de idioma seja gerado com um satélite. Resources que contém todos os recursos localizáveis. Como alternativa, é possível manter o idioma de origem no assembly principal, pois as APIs de localização do WPF dão suporte à extração do assembly principal. Após o processo de build, o XAML é compilado para o BAML. O MyDialog.exe.resources.dll com neutralidade de cultura é enviado para o cliente falante de inglês.
+O gráfico a seguir mostra um fluxo de trabalho típico de localização que se baseia no formato BAML de XAML. Este diagrama pressupõe que o desenvolvedor grave o aplicativo em inglês. O desenvolvedor cria e globaliza o aplicativo do WPF. No arquivo de projeto que o desenvolvedor `<UICulture>en-US</UICulture>` define para que, na compilação, um assembly principal de idioma neutro é gerado com um satélite. Resources. dll contendo todos os recursos localizáveis. Como alternativa, é possível manter o idioma de origem no assembly principal, pois as APIs de localização do WPF dão suporte à extração do assembly principal. Após o processo de build, o XAML é compilado para o BAML. O MyDialog.exe.resources.dll com neutralidade de cultura é enviado para o cliente falante de inglês.
 
 ![Diagrama mostrando o fluxo de trabalho de localização.](./media/wpf-globalization-and-localization-overview/localization-workflow.png)
 
-![Diagrama mostrando o fluxo de trabalho não localizado.](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)
+![Diagrama mostrando o fluxo de trabalho não local.](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)
 
 ## <a name="examples-of-wpf-localization"></a>Exemplos de localização no WPF
 
-Esta seção contém exemplos de aplicativos localizados para ajudá-lo a compreender como construir e localizar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.
+Esta seção contém exemplos de aplicativos localizados para ajudá-lo a entender como compilar e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localizar aplicativos.
 
 #### <a name="run-dialog-box-example"></a>Exemplo da caixa de diálogo Executar
 
-Os gráficos a seguir mostram a saída a **executar** amostra de caixa de diálogo.
+Os gráficos a seguir mostram a saída da amostra da caixa de diálogo **executar** .
 
 **Inglês:**
 
-![Captura de tela mostrando uma caixa de diálogo Executar em inglês.](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)
+![Captura de tela mostrando uma caixa de diálogo de execução em inglês.](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)
 
 **Alemão:**
 
-![Captura de tela mostrando uma caixa de diálogo Executar alemão.](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)
+![Captura de tela mostrando uma caixa de diálogo de execução em alemão.](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)
 
 **Criando uma caixa de diálogo Executar global**
 
-Este exemplo produz uma **executados** caixa de diálogo usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Essa caixa de diálogo é equivalente à **executar** caixa de diálogo está disponível a partir de [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] menu Iniciar.
+Este exemplo produz uma caixa de diálogo de execução [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e. Essa caixa de diálogo é equivalente à caixa de diálogo **executar** que está disponível no [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] menu iniciar.
 
 Alguns destaques para a criação de caixas de diálogo globais são:
 
@@ -130,35 +130,35 @@ A propriedade Window anterior redimensiona automaticamente a janela de acordo co
 
 `<Grid x:Uid="Grid_1">`
 
-<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedades são necessárias para que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localização APIs para funcionar corretamente.
+<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>as propriedades são necessárias para que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] as APIs de localização funcionem corretamente.
 
-Elas são usadas pelas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] as APIs para controlar alterações entre o desenvolvimento e a localização de localização a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> as propriedades permitem mesclar uma versão mais recente a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] com uma localização mais antiga do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Você adiciona uma <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedade executando `msbuild -t:updateuid RunDialog.csproj` em um shell de comando. Esse é o método recomendado de adição de <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedades como adicioná-las manualmente é normalmente demorado e menos preciso. Você pode verificar se <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propriedades estão definidas corretamente executando `msbuild -t:checkuid RunDialog.csproj`.
+Eles são usados pelas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] APIs [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]de localização para controlar as alterações entre o desenvolvimento e a localização do. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>as propriedades permitem que você mescle uma versão mais recente [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do com uma localização mais antiga [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]do. Você adiciona uma <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Propriedade executando `msbuild -t:updateuid RunDialog.csproj` em um shell de comando. Esse é o método recomendado para adicionar <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Propriedades porque adicioná-las manualmente normalmente é demorado e menos preciso. Você pode verificar se <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> as propriedades estão definidas corretamente executando `msbuild -t:checkuid RunDialog.csproj`.
 
-O [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] são estruturados usando o <xref:System.Windows.Controls.Grid> controle, que é um controle útil para tirar proveito do layout automático no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Observe que a caixa de diálogo é dividida em três linhas e cinco colunas. Não, uma das definições de linha e coluna tem um tamanho fixo; Portanto, o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos são posicionados em cada célula podem se adaptar a aumentos e diminuições durante a localização.
+O [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] é estruturado usando o <xref:System.Windows.Controls.Grid> controle, que é um controle útil para aproveitar o layout automático no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Observe que a caixa de diálogo é dividida em três linhas e cinco colunas. Não uma das definições de linha e coluna tem um tamanho fixo; Portanto, os [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos que estão posicionados em cada célula podem se adaptar a aumentos e diminuições de tamanho durante a localização.
 
 [!code-xaml[GlobalizationRunDialog#GridColumnDef](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationRunDialog/CS/Window1.xaml#gridcolumndef)]
 
-As duas primeiras colunas em que o **aberto:** rótulo e <xref:System.Windows.Controls.ComboBox> são colocados usam 10 por cento do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] largura total.
+As duas primeiras colunas em que o rótulo **abrir:** e <xref:System.Windows.Controls.ComboBox> são colocadas usam [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 10% da largura total.
 
 [!code-xaml[GlobalizationRunDialog#GridColumnDef2](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationRunDialog/CS/Window1.xaml#gridcolumndef2)]
 
-Observe que o exemplo usa o recurso de dimensionamento compartilhado de <xref:System.Windows.Controls.Grid>. As três últimas colunas aproveitam isso posicionando-se no mesmo <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Como normalmente se esperaria do nome da propriedade, isso permite que as colunas compartilhem o mesmo tamanho. Portanto, quando o "Procurar..." é localizado para a sequência mais longa "Durchsuchen...", todos os botões crescem em largura, em vez de ter um pequeno botão "Okey" e um botão "Durchsuchen..." desproporcionalmente grande.
+Observe que o exemplo usa o recurso de dimensionamento compartilhado do <xref:System.Windows.Controls.Grid>. As três últimas colunas aproveitam isso colocando-se no mesmo <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Como normalmente se esperaria do nome da propriedade, isso permite que as colunas compartilhem o mesmo tamanho. Então, quando o botão "procurar..." é localizado para a cadeia de caracteres mais longa "Durchsuchen...", todos os botões crescem em largura, em vez de ter um botão pequeno "OK" e um "Durchsuchen..." desproporcional. Button.
 
 **xml:lang**
 
 `xml:lang="en-US"`
 
-Observe que o [XML: lang manipulação em XAML](../../xaml-services/xml-lang-handling-in-xaml.md) colocado no elemento raiz do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Essa propriedade descreve a cultura de determinado elemento e seus filhos. Esse valor é usado por vários recursos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e deve ser alterado apropriadamente durante a localização. Esse valor altera qual dicionário de idioma deve ser usado para hifenizar e fazer a verificação ortográfica das palavras. Ele também afeta a exibição de dígitos e como o sistema de fallback de fontes seleciona qual fonte deve ser usada. Finalmente, a propriedade afeta a maneira como os números são exibidos e o modo como os textos escritos em scripts complexos são formatados. O valor padrão é “en-US”.
+Observe o [tratamento XML: lang no XAML](../../xaml-services/xml-lang-handling-in-xaml.md) colocado no elemento raiz do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Essa propriedade descreve a cultura de determinado elemento e seus filhos. Esse valor é usado por vários recursos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e deve ser alterado adequadamente durante a localização. Esse valor altera qual dicionário de idioma deve ser usado para hifenizar e fazer a verificação ortográfica das palavras. Ele também afeta a exibição de dígitos e como o sistema de fallback de fontes seleciona qual fonte deve ser usada. Finalmente, a propriedade afeta a maneira como os números são exibidos e o modo como os textos escritos em scripts complexos são formatados. O valor padrão é “en-US”.
 
 **Compilando um assembly de recursos satélite**
 
 *Em .csproj:*
 
-Editar o `.csproj` arquivo e adicione a seguinte marcação para um incondicional `<PropertyGroup>`:
+Edite `.csproj` o arquivo e adicione a seguinte marca a um `<PropertyGroup>`incondicional:
 
 `<UICulture>en-US</UICulture>`
 
-Observe a adição de um `UICulture` valor. Quando isso é definido como válido <xref:System.Globalization.CultureInfo> valor como en-US, compilar o projeto irá gerar um assembly satélite com todos os recursos localizáveis nele.
+Observe a adição de um `UICulture` valor. Quando definido como um valor válido <xref:System.Globalization.CultureInfo> , como en-US, compilar o projeto irá gerar um assembly satélite com todos os recursos localizáveis nele.
 
 `<Resource Include="RunIcon.JPG">`
 
@@ -166,13 +166,13 @@ Observe a adição de um `UICulture` valor. Quando isso é definido como válido
 
 `</Resource>`
 
-O `RunIcon.JPG` não precisa ser localizado, pois ele deve aparecer o mesmo para todas as culturas. `Localizable` é definido como `false` para que ele permaneça no assembly principal com neutralidade de idioma, em vez do assembly satélite. É o valor padrão de todos os recursos não compiláveis `Localizable` definido como `true`.
+O `RunIcon.JPG` não precisa ser localizado porque deve parecer o mesmo para todas as culturas. `Localizable`é definido como `false` para que permaneça no assembly principal de neutralidade do idioma em vez do assembly satélite. O valor padrão de todos os recursos não compiláveis `Localizable` é definido `true`como.
 
 **Localizando a caixa de diálogo Executar**
 
 **Analisar**
 
-Depois de criar o aplicativo, a primeira etapa da localização é analisar os recursos localizáveis fora do assembly satélite. Para os fins deste tópico, use a ferramenta LocBaml de exemplo que pode ser encontrada em [ferramenta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016). Observe que LocBaml é apenas uma ferramenta de exemplo para ajudá-lo a começar a criar uma ferramenta de localização que se ajuste ao seu processo de localização. Usando LocBaml, execute o seguinte para analisar: **LocBaml/analisar /Parse /out:** para gerar um arquivo "RunDialog".
+Depois de criar o aplicativo, a primeira etapa da localização é analisar os recursos localizáveis fora do assembly satélite. Para os fins deste tópico, use a ferramenta LocBaml de exemplo que pode ser encontrada no [exemplo de ferramenta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016). Observe que LocBaml é apenas uma ferramenta de exemplo para ajudá-lo a começar a criar uma ferramenta de localização que se ajuste ao seu processo de localização. Usando LocBaml, execute o seguinte para analisar: **LocBaml/parse RunDialog. Resources. dll/out:** para gerar um arquivo "RunDialog. Resources. dll. csv".
 
 **Localizar**
 
@@ -206,7 +206,7 @@ A última etapa da localização envolve a criação do assembly satélite recé
 
 **LocBaml.exe /generate RunDialog.resources.dll /trans:RunDialog.resources.dll.CSV /out: . /cul:de-DE**
 
-Em alemão [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], se esse Resources for colocado em uma pasta de-DE ao lado do assembly principal, esse recurso será carregado automaticamente em vez na pasta en-US. Se você não tiver uma versão em alemão [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] para testar isso, defina a cultura para qualquer cultura do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] você está usando (por exemplo, `en-US`) e substitua os DLL de recursos originais.
+No Windows em alemão, se essa. dll for colocada em uma pasta de de-DE ao lado do assembly principal, esse recurso será carregado automaticamente em vez do que estiver na pasta en-US. Se você não tiver uma versão em alemão do Windows para testar isso, defina a cultura para qualquer cultura do Windows que você esteja usando (por exemplo `en-US`,) e substitua a DLL de recursos originais.
 
 **Carregamento de recursos satélite**
 
@@ -215,7 +215,7 @@ Em alemão [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md
 |Código|BAML original em inglês|BAML localizado|
 |Recursos com neutralidade de cultura|Outros recursos em inglês|Outros recursos localizados para o alemão|
 
-O .NET framework escolhe automaticamente qual assembly de recursos satélite para carregar com o aplicativo `Thread.CurrentThread.CurrentUICulture`. O padrão será a cultura do seu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] sistema operacional. Portanto, se você estiver usando o alemão [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], o de-DE\MyDialog.resources.dll é carregado, se você estiver usando o inglês [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], carrega o en-US\MyDialog.resources.dll. É possível definir o recurso de fallback final para o aplicativo especificando o NeutralResourcesLanguage em AssemblyInfo* do projeto. Por exemplo, se você especificar:
+O .NET Framework escolhe automaticamente o assembly de recursos de satélite a ser carregado com base `Thread.CurrentThread.CurrentUICulture`no aplicativo. O padrão é a cultura do seu sistema operacional Windows. Portanto, se você estiver usando janelas em alemão, o de-DE\MyDialog.resources.dll será carregado, se você estiver usando janelas em inglês, o en-US\MyDialog.resources.dll será carregado. É possível definir o recurso de fallback final para o aplicativo especificando o NeutralResourcesLanguage em AssemblyInfo* do projeto. Por exemplo, se você especificar:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
@@ -223,19 +223,19 @@ o en-US\MyDialog.resources.dll será usado com o Windows em alemão se um de-DE\
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Home page da Microsoft na Arábia Saudita
 
-Os gráficos a seguir mostram uma home page em inglês e em árabe. Para o exemplo completo que produz esses elementos gráficos, consulte [amostra de globalização de home page](https://go.microsoft.com/fwlink/?LinkID=159990).
+Os gráficos a seguir mostram uma home page em inglês e em árabe. Para obter o exemplo completo que produz esses gráficos, consulte [exemplo de Home Page](https://go.microsoft.com/fwlink/?LinkID=159990)de globalização.
 
 **Inglês:**
 
-![Captura de tela mostrando uma home page em inglês.](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)
+![Captura de tela mostrando um home page em inglês.](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)
 
 **Árabe:**
 
-![Captura de tela mostrando uma home page árabe.](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)
+![Captura de tela mostrando um home page árabe.](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)
 
-### <a name="designing-a-global-microsoft-home-page"></a>Criando uma home page do Microsoft Global
+### <a name="designing-a-global-microsoft-home-page"></a>Criando um Microsoft home page global
 
-Este exemplo fictício do site da Microsoft na Arábia Saudita ilustra os recursos de globalização fornecidos para idiomas RightToLeft. Idiomas como árabe e hebraico tem uma ordem de leitura da direita para esquerda. Portanto, o layout de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] geralmente deve ser disposto bem diferente do que seria em idiomas da esquerda para a direita como o inglês. A localização de um idioma da esquerda para a direita para um idioma da direita para a esquerda ou vice-versa pode apresentar muitos desafios. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] foi projetado para facilitar grande parte dessas localizações.
+Este exemplo fictício do site da Microsoft na Arábia Saudita ilustra os recursos de globalização fornecidos para idiomas RightToLeft. Linguagens como hebraico e árabe têm uma ordem de leitura da direita para a esquerda, de modo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que o layout de deve muitas vezes ser disposto de forma muito diferente do que seria em idiomas da esquerda para a direita, como o inglês. A localização de um idioma da esquerda para a direita para um idioma da direita para a esquerda ou vice-versa pode apresentar muitos desafios. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] foi projetado para facilitar grande parte dessas localizações.
 
 **FlowDirection**
 
@@ -243,9 +243,9 @@ Este exemplo fictício do site da Microsoft na Arábia Saudita ilustra os recurs
 
 [!code-xaml[GlobalizationHomepage#Homepage](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#homepage)]
 
-Observe que o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade <xref:System.Windows.Controls.Page>. A alteração dessa propriedade para <xref:System.Windows.FlowDirection.RightToLeft> alterará o <xref:System.Windows.FrameworkElement.FlowDirection%2A> da <xref:System.Windows.Controls.Page> e seus elementos filhos para que o layout dessa [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] é invertido para se tornar direita para esquerda como um usuário árabe esperaria. É possível substituir o comportamento de herança especificando um explícito <xref:System.Windows.FrameworkElement.FlowDirection%2A> em qualquer elemento. O <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade está disponível em qualquer <xref:System.Windows.FrameworkElement> ou elemento relacionado ao documento e tem um valor implícito de <xref:System.Windows.FlowDirection.LeftToRight>.
+Observe a <xref:System.Windows.FrameworkElement.FlowDirection%2A> Propriedade em <xref:System.Windows.Controls.Page>. Alterar essa propriedade para <xref:System.Windows.FlowDirection.RightToLeft> alterará o <xref:System.Windows.FrameworkElement.FlowDirection%2A> dos <xref:System.Windows.Controls.Page> seus elementos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] filhos e para que o layout dele seja invertido para ser da direita para a esquerda como um usuário árabe esperaria. É possível substituir o comportamento da herança especificando um explícito <xref:System.Windows.FrameworkElement.FlowDirection%2A> em qualquer elemento. A <xref:System.Windows.FrameworkElement.FlowDirection%2A> Propriedade está disponível em qualquer <xref:System.Windows.FrameworkElement> elemento ou de documento relacionado e tem um valor implícito <xref:System.Windows.FlowDirection.LeftToRight>de.
 
-Observe que até mesmo os pincéis de gradiente do plano de fundo são invertidos corretamente quando a raiz <xref:System.Windows.FrameworkElement.FlowDirection%2A> é alterado:
+Observe que até mesmo os pincéis do gradiente do plano de fundo são <xref:System.Windows.FrameworkElement.FlowDirection%2A> invertidos corretamente quando a raiz é alterada:
 
 **FlowDirection="LeftToRight"**
 
@@ -253,11 +253,11 @@ Observe que até mesmo os pincéis de gradiente do plano de fundo são invertido
 
 **FlowDirection="RightToLeft"**
 
-![Captura de tela mostrando o fluxo de gradiente da direita para esquerda.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)
+![Captura de tela mostrando o fluxo de gradiente da direita para a esquerda.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)
 
 **Evitar usar dimensões fixas para painéis e controles**
 
-Dê uma olhada em HomePage. XAML, observe que, além de largura e altura fixas especificadas para toda a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] na parte superior <xref:System.Windows.Controls.DockPanel>, não há nenhuma outra dimensão fixa. Evite usar dimensões fixas para evitar o recorte do texto localizado, que pode ser maior que o texto de origem. Os painéis e controles do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] serão automaticamente redimensionados de acordo com o conteúdo que eles contêm. A maioria dos controles também tem dimensões mínima e máxima que podem ser definidas para obter mais controle (por exemplo, MinWidth = "20"). Com o <xref:System.Windows.Controls.Grid>, você também pode definir larguras e alturas relativas usando '\*' (por exemplo, `Width="0.25*"`) ou usar seu recurso de compartilhamento de tamanho de célula.
+Dê uma olhada na homepage. XAML, observe que, além da largura e da altura fixas especificadas para [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] o todo na <xref:System.Windows.Controls.DockPanel>parte superior, não há outras dimensões fixas. Evite usar dimensões fixas para evitar o recorte do texto localizado, que pode ser maior que o texto de origem. Os painéis e controles do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] serão automaticamente redimensionados de acordo com o conteúdo que eles contêm. A maioria dos controles também tem dimensões mínimas e máximas que você pode definir para mais controle (por exemplo, MinWidth = "20"). Com <xref:System.Windows.Controls.Grid>o, você também pode definir larguras e alturas relativas usando\*' ' (por exemplo `Width="0.25*"`,) ou usar seu recurso de compartilhamento de tamanho de célula.
 
 **Comentários de localização**
 
@@ -265,7 +265,7 @@ Há muitos casos em que o conteúdo pode ser ambíguo e difícil de ser traduzid
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-Esse comentário é associado com o conteúdo do TextBlock_1 e, no caso da ferramenta LocBaml, (consulte [localizar um aplicativo](how-to-localize-an-application.md)), ele pode ser visto na 6ª coluna da linha TextBlock_1 no arquivo. csv de saída:
+Esse comentário se torna associado ao conteúdo TextBlock_1's e, no caso da ferramenta LocBaml, (consulte [localizar um aplicativo](how-to-localize-an-application.md)), ele pode ser visto na 6º coluna da linha TextBlock_1 no arquivo output. csv:
 
 |Chave de Recurso|Categoria|Legível|Modificável|Comentário|Valor|
 |-|-|-|-|-|-|
@@ -277,15 +277,15 @@ Os comentários podem ser colocados no conteúdo ou na propriedade de qualquer e
 
 **Atributos de Localização**
 
-De modo geral, o desenvolvedor ou o gerente de localização precisa controlar o que os localizadores podem ler e modificar. Por exemplo, talvez você não deseje que o localizador traduza o nome de sua empresa ou palavras que se referem ao conteúdo legal. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece atributos que permitem definir a legibilidade, modificabilidade e categoria do conteúdo ou da propriedade de um elemento que a ferramenta de localização pode usar para bloquear, ocultar ou classificar elementos. Para obter mais informações, consulte <xref:System.Windows.Localization.Attributes%2A>. Para as finalidades desta amostra, a ferramenta LocBaml somente gera os valores desses atributos. Todos os controles do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] têm valores padrão para esses atributos, mas eles podem ser substituídos. Por exemplo, o exemplo a seguir substitui os atributos de localização padrão para `TextBlock_1` e define o conteúdo esteja legível não modificável, mas para os localizadores.
+De modo geral, o desenvolvedor ou o gerente de localização precisa controlar o que os localizadores podem ler e modificar. Por exemplo, talvez você não deseje que o localizador traduza o nome de sua empresa ou palavras que se referem ao conteúdo legal. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece atributos que permitem definir a legibilidade, modificabilidade e categoria do conteúdo ou da propriedade de um elemento que a ferramenta de localização pode usar para bloquear, ocultar ou classificar elementos. Para obter mais informações, consulte <xref:System.Windows.Localization.Attributes%2A>. Para as finalidades desta amostra, a ferramenta LocBaml somente gera os valores desses atributos. Todos os controles do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] têm valores padrão para esses atributos, mas eles podem ser substituídos. Por exemplo, o exemplo a seguir substitui os atributos de localização `TextBlock_1` padrão para e define o conteúdo como legível, mas não modificável para localizadores.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
-Além dos atributos de modificação e a legibilidade [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece uma enumeração de categorias comuns de interface do usuário (<xref:System.Windows.LocalizationCategory>) que pode ser usado para fornecer mais contexto aos localizadores. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] categorias padrão para controles de plataforma podem ser substituídas no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] também:
+Além dos atributos de legibilidade e modificação, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o fornece uma enumeração de categorias de interface do usuário comuns (<xref:System.Windows.LocalizationCategory>) que podem ser usadas para dar mais contexto aos localizadores. As [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] categorias padrão para controles de plataforma também podem ser [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] substituídas em:
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-A localização padrão de atributos que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece também pode ser substituído pelo código, para que você possa definir corretamente os valores padrão certos para controles personalizados. Por exemplo:
+Os atributos de localização padrão [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que o fornece também podem ser substituídos por meio de código, para que você possa definir corretamente os valores padrão corretos para controles personalizados. Por exemplo:
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]
@@ -295,14 +295,14 @@ public class CorporateLogo : TextBlock
 }
 ```
 
-Os atributos por instância definidos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] terá precedência sobre valores definidos no código em controles personalizados. Para obter mais informações sobre atributos e comentários, consulte [atributos de localização e comentários](localization-attributes-and-comments.md).
+Os atributos por instância definidos em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] terão precedência sobre os valores definidos no código em controles personalizados. Para obter mais informações sobre atributos e comentários, consulte [atributos e comentários de localização](localization-attributes-and-comments.md).
 
 **Fallback de fontes e fontes de composição**
 
-Se você especificar uma fonte que não oferece suporte a um intervalo determinado codepoint, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fará fallback automaticamente para um que faz usando o compositefont Global do usuário que está localizado no diretório Windows\Fonts. Fontes compostas funcionam como qualquer outra fonte e pode ser usadas explicitamente definindo um elemento `FontFamily` (por exemplo, `FontFamily="Global User Interface"`). Você pode especificar sua própria preferência de fallback de fontes criando sua própria fonte de composição e especificando qual fonte será usada para intervalos de ponto de código e idiomas específicos.
+Se você especificar uma fonte que não dê suporte a um determinado intervalo ponto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , o fará fallback automaticamente para um que faça isso usando a interface de usuário global. CompositeFont que está localizada em seu diretório Windows\Fonts. Fontes compostas funcionam assim como qualquer outra fonte e podem ser usadas explicitamente definindo um elemento `FontFamily` (por exemplo, `FontFamily="Global User Interface"`). Você pode especificar sua própria preferência de fallback de fontes criando sua própria fonte de composição e especificando qual fonte será usada para intervalos de ponto de código e idiomas específicos.
 
-Para obter mais informações sobre fontes de composição consulte <xref:System.Windows.Media.FontFamily>.
+Para obter mais informações sobre fontes compostas, consulte <xref:System.Windows.Media.FontFamily>.
 
 **Localizando a home page da Microsoft**
 
-É possível seguir as mesmas etapas do exemplo da Caixa de Diálogo Executar para localizar esse aplicativo. O arquivo. csv localizado para árabe está disponível para você na [amostra de globalização de home page](https://go.microsoft.com/fwlink/?LinkID=159990).
+É possível seguir as mesmas etapas do exemplo da Caixa de Diálogo Executar para localizar esse aplicativo. O arquivo. csv localizado para árabe está disponível para você no [exemplo de Home Page](https://go.microsoft.com/fwlink/?LinkID=159990)da globalização.

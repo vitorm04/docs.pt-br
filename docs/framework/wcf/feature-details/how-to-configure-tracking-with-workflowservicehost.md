@@ -2,19 +2,19 @@
 title: 'Como: configurar o acompanhamento com WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5781878270272f5ef894c68dc23b9433029e1d41
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039358"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968499"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Como: configurar o acompanhamento com WorkflowServiceHost
-Este tópico explica como configurar o controle para um [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fluxo de trabalho hospedado em <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Ele é configurado por meio de um arquivo Web. config, especificando um comportamento de serviço.  
+Este tópico explica como configurar o acompanhamento de um [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fluxo de trabalho <xref:System.ServiceModel.Activities.WorkflowServiceHost>hospedado no. Ele é configurado por meio de um arquivo Web. config especificando um comportamento de serviço.  
   
 ### <a name="configure-tracking-in-configuration"></a>Configurar o controle na configuração  
   
-1. Adicione a <xref:System.Activities.Tracking.EtwTrackingParticipant> usando o <`behavior`> elemento em um arquivo de configuração, conforme mostrado no exemplo a seguir.  
+1. Adicione o <xref:System.Activities.Tracking.EtwTrackingParticipant> usando o elemento`behavior`< > em um arquivo de configuração, conforme mostrado no exemplo a seguir.  
   
     ```xml  
     <behaviors>  
@@ -27,9 +27,9 @@ Este tópico explica como configurar o controle para um [!INCLUDE[netfx_current_
     ```  
   
     > [!NOTE]
-    >  O exemplo de configuração anterior está usando a configuração simplificada. Para obter mais informações, consulte [simplificado configuração](../../../../docs/framework/wcf/simplified-configuration.md).  
+    > O exemplo de configuração anterior está usando uma configuração simplificada. Para obter mais informações, consulte [configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md).  
   
-     O exemplo de configuração anterior adiciona um <xref:System.Activities.Tracking.EtwTrackingParticipant> e especifica um controle de nome do perfil. Perfis de rastreamento são criados em um <`trackingProfile`> elemento dentro de um <`tracking`> elemento. O perfil de rastreamento contém consultas de rastreamento que permitem um participante de rastreamento assinar eventos de fluxo de trabalho que são emitidos quando o estado de uma instância de fluxo de trabalho é alterado em tempo de execução. O exemplo a seguir mostra como criar um perfil de rastreamento.  
+     O exemplo de configuração anterior adiciona <xref:System.Activities.Tracking.EtwTrackingParticipant> um e especifica um nome de perfil de controle. Os perfis de rastreamento são criados em`trackingProfile`um elemento < > dentro`tracking`de um elemento > <. O perfil de controle contém consultas de acompanhamento que permitem que um participante de controle assine eventos de fluxo de trabalho emitidos quando o estado de uma instância de fluxo de trabalho é alterado no tempo de execução. O exemplo a seguir mostra como criar um perfil de controle.  
   
     ```xml  
     <system.serviceModel>  
@@ -50,23 +50,23 @@ Este tópico explica como configurar o controle para um [!INCLUDE[netfx_current_
     </system.serviceModel>  
     ```  
   
-     Para obter mais informações sobre perfis de rastreamento, consulte [perfis de acompanhamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     Para obter mais informações sobre perfis de rastreamento, consulte [perfis de rastreamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     Para obter mais informações sobre o controle em geral, consulte [fluxo de trabalho, controle e rastreamento](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+     Para obter mais informações sobre o rastreamento em geral, consulte rastreamento [e acompanhamento de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 ### <a name="configure-tracking-in-code"></a>Configurar o acompanhamento no código  
   
-1. Adicione a <xref:System.Activities.Tracking.EtwTrackingParticipant> usando o <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> comportamento no código, conforme mostrado no exemplo a seguir.  
+1. Adicione o <xref:System.Activities.Tracking.EtwTrackingParticipant> usando o <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> comportamento no código, conforme mostrado no exemplo a seguir.  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  
     ```  
   
-     Exemplo de código anterior adiciona um <xref:System.Activities.Tracking.EtwTrackingParticipant> e especifica um controle de nome do perfil. Perfis de rastreamento são criados em um <`trackingProfile`> elemento dentro de um <`tracking`> elemento, conforme mostrado na seção anterior.  
+     O exemplo de código anterior adiciona <xref:System.Activities.Tracking.EtwTrackingParticipant> um e especifica um nome de perfil de controle. Os perfis de rastreamento são criados em`trackingProfile`um elemento < > dentro`tracking`de um elemento < >, conforme mostrado na seção anterior.  
   
-     Para obter mais informações sobre perfis de rastreamento, consulte [perfis de acompanhamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     Para obter mais informações sobre perfis de rastreamento, consulte [perfis de rastreamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     Para obter mais informações sobre o controle em geral, consulte [fluxo de trabalho, controle e rastreamento](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Para obter um exemplo de configuração de rastreamento programaticamente, consulte [Configurando o rastreamento para um fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+     Para obter mais informações sobre o rastreamento em geral, consulte rastreamento [e acompanhamento de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Para obter um exemplo de como configurar o acompanhamento programaticamente, consulte Configurando [o acompanhamento de um fluxo](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 5d4d96143dbd1db440de2247a7dc2f0c66f20403
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921309"
 ---
-# <a name="clear-element-for-appsettings"></a>\<Limpar > elemento para \<appSettings >
+# <a name="clear-element-for-appsettings"></a>\<limpar > elemento para \<appSettings >
 
 Limpa as configurações de aplicativo personalizadas.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Sintaxe
@@ -40,7 +40,7 @@ Nenhum
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço Web XML ou qualquer outra informação de configuração de aplicativo personalizado. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço Web XML ou qualquer outra informação de configuração de aplicativo personalizada. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -48,7 +48,7 @@ Nenhum
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como limpar as configurações personalizadas:
+O exemplo a seguir mostra como limpar as definições de configuração personalizadas:
 
 ```xml
 <appSettings>
@@ -58,4 +58,4 @@ O exemplo a seguir mostra como limpar as configurações personalizadas:
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema do arquivo de configuração para o .NET Framework](../index.md)

@@ -2,20 +2,20 @@
 title: <issuedTokenAuthentication> de <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: d093b45269b230b4ff074d07a66290ab09592f60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 280aa49019f68a0906307e24842a585a92c6600a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756709"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925361"
 ---
-# <a name="issuedtokenauthentication-of-servicecredentials"></a>\<issuedTokenAuthentication > de \<serviceCredentials >
+# <a name="issuedtokenauthentication-of-servicecredentials"></a>\<issuedTokenAuthentication > de \<ServiceCredentials >
 Especifica um token personalizado emitido como uma credencial de serviço.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors>  
-\<behavior>  
+\<> de portais  
+\<> de comportamento  
 \<serviceCredentials>  
 \<issuedTokenAuthentication>  
   
@@ -48,31 +48,31 @@ Especifica um token personalizado emitido como uma credencial de serviço.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`allowedAudienceUris`|Obtém o conjunto de URIs de destino para o qual o <xref:System.IdentityModel.Tokens.SamlSecurityToken> token de segurança pode ser direcionado para ser considerado válido por um <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instância. Para obter mais informações sobre como usar esse atributo, consulte <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>.|  
-|`allowUntrustedRsaIssuers`|Um valor booliano que especifica se emissores de certificados RSA não confiáveis são permitidos.<br /><br /> Os certificados são assinados por autoridades de certificação (CAs) para verificar autenticidade. Um emissor não confiável é uma autoridade de certificação não for especificada para ser confiável para assinar certificados.|  
-|`audienceUriMode`|Obtém um valor que especifica se o <xref:System.IdentityModel.Tokens.SamlSecurityToken> do token de segurança <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> deve ser validado. Esse valor é do tipo <xref:System.IdentityModel.Selectors.AudienceUriMode>. Para obter mais informações sobre como usar esse atributo, consulte <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>.|  
-|`certificateValidationMode`|Define o modo de validação de certificado. Um dos valores válidos de <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Se definido como `Custom`, em seguida, um `customCertificateValidator` também deve ser fornecido. O padrão é `ChainTrust`.|  
-|`customCertificateValidatorType`|Cadeia de caracteres opcional. Um tipo e assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`.|  
-|`revocationMode`|Define o modo de revogação que especifica se uma verificação de revogação ocorre e se ela é executada online ou offline. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.|  
-|`samlSerializer`|Um atributo de cadeia de caracteres opcional que especifica o tipo de classe SamlSerializer que é usado para a credencial de serviço. O padrão é uma cadeia de caracteres vazia.|  
-|`trustedStoreLocation`|Enumeração opcional. Um dos locais de armazenamento de sistema de dois: `LocalMachine` ou `CurrentUser`.|  
+|`allowedAudienceUris`|Obtém o conjunto de URIs de destino para o <xref:System.IdentityModel.Tokens.SamlSecurityToken> qual o token de segurança pode ser direcionado para ser considerado válido por <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> uma instância. Para obter mais informações sobre como usar esse atributo <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>, consulte.|  
+|`allowUntrustedRsaIssuers`|Um valor booliano que especifica se os emissores de certificado RSA não confiáveis são permitidos.<br /><br /> Os certificados são assinados por autoridades de certificação (CAs) para verificar a autenticidade. Um emissor não confiável é uma AC que não é especificada para ser confiável para assinar certificados.|  
+|`audienceUriMode`|Obtém um valor que especifica se o <xref:System.IdentityModel.Tokens.SamlSecurityToken> <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> token de segurança deve ser validado. Esse valor é do tipo <xref:System.IdentityModel.Selectors.AudienceUriMode>. Para obter mais informações sobre como usar esse atributo <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>, consulte.|  
+|`certificateValidationMode`|Define o modo de validação de certificado. Um dos valores válidos de <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Se definido como `Custom`, um `customCertificateValidator` também deverá ser fornecido. O padrão é `ChainTrust`.|  
+|`customCertificateValidatorType`|Cadeia de caracteres opcional. Um tipo e um assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`.|  
+|`revocationMode`|Define o modo de revogação que especifica se uma verificação de revogação ocorre e se é executada online ou offline. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.|  
+|`samlSerializer`|Um atributo de cadeia de caracteres opcional que especifica o tipo de SamlSerializer que é usado para a credencial de serviço. O padrão é uma cadeia de caracteres vazia.|  
+|`trustedStoreLocation`|Enumeração opcional. Um dos dois locais de armazenamento do sistema `LocalMachine` : `CurrentUser`ou.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`knownCertificates`|Especifica uma coleção de <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement> elementos que especifica os emissores confiáveis para a credencial de serviço.|  
+|`knownCertificates`|Especifica uma coleção de <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement> elementos que especifica emissores confiáveis para a credencial de serviço.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica a credencial a ser usado na autenticação do serviço e as configurações de relacionadas à validação de credenciais do cliente.|  
+|[\<serviceCredentials>](servicecredentials.md)|Especifica a credencial a ser usada na autenticação do serviço e as configurações relacionadas à validação da credencial do cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- O cenário de token emitido tem três etapas. O primeiro estágio, um cliente tentar acessar um serviço é chamado um *serviço de token seguro*. O serviço de token seguro, em seguida, autentica o cliente e emite subsequentemente um token, normalmente um token de segurança asserções SAML (Markup Language) para o cliente. O cliente, em seguida, retorne para o serviço com o token. O serviço examina o token para os dados que permite que o serviço autenticar o token e, portanto, o cliente. Para autenticar o token, o certificado usa o serviço de token seguro deve ser conhecida para o serviço.  
+ O cenário de token emitido tem três estágios. No primeiro estágio, um cliente que tenta acessar um serviço é chamado de um *serviço de token seguro*. O serviço de token seguro autentica o cliente e subsequentemente emite um token do cliente, normalmente um token SAML (Security Assertion Markup Language). O cliente retorna ao serviço com o token. O serviço examina o token de dados que permite que o serviço autentique o token e, portanto, o cliente. Para autenticar o token, o certificado que o serviço de token seguro usa deve ser conhecido pelo serviço.  
   
- Esse elemento é o repositório para todos esses certificados de serviço de token seguro. Para adicionar certificados, use o [ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). Inserir uma [ \<Adicionar >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) para cada certificado, conforme mostrado no exemplo a seguir.  
+ Esse elemento é o repositório para qualquer um desses certificados de serviço de token seguro. Para adicionar certificados, use o [ \<> knownCertificates](knowncertificates.md). Insira um [ \<> Adicionar](add-of-knowncertificates.md) para cada certificado, conforme mostrado no exemplo a seguir.  
   
 ```xml  
 <issuedTokenAuthentication>
@@ -85,9 +85,9 @@ Especifica um token personalizado emitido como uma credencial de serviço.
 </issuedTokenAuthentication>
 ```  
   
- Por padrão, os certificados devem ser obtidos de um serviço de token seguro. Esses "conhecidos" certificados Certifique-se de que apenas legítimas os clientes podem acessar um serviço.  
+ Por padrão, os certificados devem ser obtidos de um serviço de token seguro. Esses certificados "conhecidos" garantem que somente clientes legítimos possam acessar um serviço.  
   
- Para obter mais informações sobre como usar este elemento de configuração, consulte [como: Configurar credenciais em um serviço de Federação](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Para obter mais informações sobre como usar esse elemento de [configuração, consulte Como: Configure as credenciais em um](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)serviço de Federação.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -98,5 +98,5 @@ Especifica um token personalizado emitido como uma credencial de serviço.
 - <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Como: Configurar credenciais em um serviço de Federação](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Como: Configurar credenciais em um Serviço de Federação](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

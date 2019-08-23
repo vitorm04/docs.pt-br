@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 768d16a05bbe139c3fe02677526bc28809a93be0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9df9263a0356b0c3c1a6d1da950c670f5a020d1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779723"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966225"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>Método ICLRGCManager::GetStats
-Obtém um conjunto de estatísticas atuais sobre o sistema de coleta de lixo do common language runtime.  
+Obtém um conjunto de estatísticas atuais sobre o sistema de coleta de lixo do Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,25 +37,25 @@ HRESULT GetStats (
   
 ## <a name="parameters"></a>Parâmetros  
  `pStats`  
- [no, out] Um [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) instância que contém as estatísticas solicitadas.  
+ [entrada, saída] Uma instância de [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) que contém as estatísticas solicitadas.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`GetStats` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|S_OK|`GetStats`retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR calcula e retorna somente as estatísticas que são especificadas pela `Flags` campo de `pStats`.  
+ O CLR calcula e retorna somente as estatísticas que são especificadas pelo `Flags` campo de. `pStats`  
   
- Defina a `Flags` campo para um ou mais valores da [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeração para especificar quais estatísticas no [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) estrutura devem ser definidas.  
+ Defina o `Flags` campo como um ou mais valores da enumeração [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) para especificar quais estatísticas na estrutura [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) devem ser definidas.  
   
- Um exemplo do uso é da seguinte maneira:  
+ Um exemplo de uso é o seguinte:  
   
 ```cpp  
 COR_GC_STATS GCStats;  
@@ -64,20 +64,20 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciamento Automático de Memória](../../../../docs/standard/automatic-memory-management.md)
+- [Gerenciamento Automático de Memória](../../../standard/automatic-memory-management.md)
 - [Estrutura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [Enumeração COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
-- [Coleta de lixo](../../../../docs/standard/garbage-collection/index.md)
+- [Coleta de lixo](../../../standard/garbage-collection/index.md)
 - [Interface ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interface ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
 - [Interfaces de hospedagem CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)

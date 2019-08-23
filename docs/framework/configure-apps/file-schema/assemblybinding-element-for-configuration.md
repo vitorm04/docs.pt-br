@@ -7,18 +7,18 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-ms.openlocfilehash: f5992a6085c32d37f56319cf8b2c361542c441e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0b83c4b3573ab6819654e72cac1bf3e4a0ba637
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674825"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921268"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > elemento para \<configuration >
+# <a name="assemblybinding-element-for-configuration"></a>\<elemento de > assemblyBinding \<para > de configuração
 
 Especifica a diretiva de ligação de assembly no nível de configuração.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp; **\<assemblyBinding>**
 
 ## <a name="syntax"></a>Sintaxe
@@ -33,26 +33,26 @@ Especifica a diretiva de ligação de assembly no nível de configuração.
 
 |           | Descrição |
 | --------- | ----------- |
-| **xmlns** | Atributo obrigatório.<br><br>Especifica o namespace XML necessário para a associação de assembly. Use a cadeia de caracteres "urn: schemas-microsoft-v1" como o valor. |
+| **xmlns** | Atributo obrigatório.<br><br>Especifica o namespace XML necessário para a associação de assembly. Use a cadeia de caracteres "urn: schemas-microsoft-com: asm. v1" como o valor. |
 
 ## <a name="parent-element"></a>Elemento pai
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
+| [ **\<configuration>** ](configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
 
 ## <a name="child-element"></a>Elemento filho
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<linkedConfiguration>** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Especifica um arquivo de configuração a ser incluído. |
+| [ **\<linkedConfiguration>** ](linkedconfiguration-element.md) | Especifica um arquivo de configuração a ser incluído. |
 
 ## <a name="remarks"></a>Comentários
 
-O [  **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) elemento simplifica o gerenciamento de assemblies de componente, permitindo que os arquivos de configuração de aplicativo para incluir o assembly de arquivos de configuração locais bem conhecidos, em vez de duplicar as definições de configuração de assembly.
+O elemento > linkedConfiguration simplifica o gerenciamento de assemblies de componente, permitindo que os arquivos de configuração de aplicativo incluam arquivos de configuração de assembly em locais bem conhecidos, em vez de duplicar o assembly [ **\<** ](linkedconfiguration-element.md) definições de configuração.
 
 > [!NOTE]
-> O  **\<linkedConfiguration >** elemento não tem suporte para aplicativos com manifestos do Windows lado a lado.
+> O elemento de  **\<> linkedConfiguration** não tem suporte para aplicativos com manifestos lado a lado do Windows.
 
 ## <a name="example"></a>Exemplo
 
@@ -68,4 +68,4 @@ O exemplo a seguir mostra como incluir um arquivo de configuração no disco rí
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema do arquivo de configuração para o .NET Framework](index.md)

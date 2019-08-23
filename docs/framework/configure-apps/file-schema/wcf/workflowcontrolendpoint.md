@@ -2,15 +2,15 @@
 title: <workflowControlEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: a9c16d1036a8177120cd152d4ac211ad084d588e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c9774217b835acdb9ebf7374b964d838497fc9f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769636"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915329"
 ---
 # <a name="workflowcontrolendpoint"></a>\<workflowControlEndpoint>
-Este elemento de configuração define um ponto de extremidade padrão para controlar a execução de instâncias de fluxo de trabalho (criar, executar, suspender, finalizar, etc).  
+Este elemento de configuração define um ponto de extremidade padrão para controlar a execução de instâncias de fluxo de trabalho (criar, executar, suspender, encerrar, etc.).  
   
 \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -34,7 +34,7 @@ Este elemento de configuração define um ponto de extremidade padrão para cont
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|name|Uma cadeia de caracteres que especifica o nome da configuração do ponto de extremidade padrão. O nome é usado no `endpointConfiguration` atributo do ponto de extremidade de serviço para vincular a um ponto de extremidade padrão para sua configuração.|  
+|name|Uma cadeia de caracteres que especifica o nome da configuração do ponto de extremidade padrão. O nome é usado no `endpointConfiguration` atributo do ponto de extremidade de serviço para vincular um ponto de extremidade padrão à sua configuração.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -43,7 +43,7 @@ Este elemento de configuração define um ponto de extremidade padrão para cont
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Uma coleção de pontos de extremidade padrão que são definidos previamente os pontos de extremidade com um ou mais das suas propriedades (endereço, associação, contrato) fixo.|  
+|[\<standardEndpoints>](standardendpoints.md)|Uma coleção de pontos de extremidade padrão que são pontos de extremidade predefinidos com uma ou mais de suas propriedades (endereço, associação, contrato) fixa.|  
   
 ## <a name="see-also"></a>Consulte também
 

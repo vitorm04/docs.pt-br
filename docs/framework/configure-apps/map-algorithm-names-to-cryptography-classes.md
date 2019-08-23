@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566726"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912861"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mapeando nomes de algoritmo para classes de criptografia
 Há quatro maneiras pelas quais um desenvolvedor pode criar um objeto de criptografia usando o SDK do Windows:  
@@ -58,16 +58,16 @@ Há quatro maneiras pelas quais um desenvolvedor pode criar um objeto de criptog
 </configuration>  
 ```  
   
- Você pode especificar o nome do atributo no [elemento < cryptoClass\> ](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (o exemplo anterior nomeia o atributo `MySHA1Hash`). O valor do atributo no elemento de  **\<> cryptoClass** é uma cadeia de caracteres que o Common Language Runtime usa para localizar a classe. Você pode usar qualquer cadeia de caracteres que atenda aos requisitos especificados na [especificação de nomes de tipo totalmente qualificados](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).  
+ Você pode especificar o nome do atributo no [elemento < cryptoClass\> ](./file-schema/cryptography/cryptoclass-element.md) (o exemplo anterior nomeia o atributo `MySHA1Hash`). O valor do atributo no elemento de  **\<> cryptoClass** é uma cadeia de caracteres que o Common Language Runtime usa para localizar a classe. Você pode usar qualquer cadeia de caracteres que atenda aos requisitos especificados na [especificação de nomes de tipo totalmente qualificados](../reflection-and-codedom/specifying-fully-qualified-type-names.md).  
   
- Muitos nomes de algoritmos podem ser mapeados para a mesma classe. [ O\<elemento nameEntry >](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) mapeia uma classe para um nome de algoritmo amigável. O atributo **Name** pode ser uma cadeia de caracteres que é usada ao chamar o método **System. Security. Cryptography. CryptoConfig.** CreateFromName ou o nome de uma <xref:System.Security.Cryptography> classe de criptografia abstrata no namespace. O valor do atributo **Class** é o nome do atributo no  **\<elemento > cryptoClass** .  
+ Muitos nomes de algoritmos podem ser mapeados para a mesma classe. [ O\<elemento nameEntry >](./file-schema/cryptography/nameentry-element.md) mapeia uma classe para um nome de algoritmo amigável. O atributo **Name** pode ser uma cadeia de caracteres que é usada ao chamar o método **System. Security. Cryptography. CryptoConfig.** CreateFromName ou o nome de uma <xref:System.Security.Cryptography> classe de criptografia abstrata no namespace. O valor do atributo **Class** é o nome do atributo no  **\<elemento > cryptoClass** .  
   
 > [!NOTE]
->  Você pode obter um algoritmo SHA1 chamando o <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> ou o método **Security. CryptoConfig. CreateFromName ("SHA1")** . Cada método garante apenas que ele retorne um objeto que implementa o algoritmo SHA1. Você não precisa mapear cada nome amigável de um algoritmo para a mesma classe no arquivo de configuração.  
+> Você pode obter um algoritmo SHA1 chamando o <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> ou o método **Security. CryptoConfig. CreateFromName ("SHA1")** . Cada método garante apenas que ele retorne um objeto que implementa o algoritmo SHA1. Você não precisa mapear cada nome amigável de um algoritmo para a mesma classe no arquivo de configuração.  
   
  Para obter uma lista de nomes padrão e as classes que eles mapeiam <xref:System.Security.Cryptography.CryptoConfig>, consulte.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
-- [Configurando classes de criptografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Serviços criptográficos](../../standard/security/cryptographic-services.md)
+- [Configurando classes de criptografia](configure-cryptography-classes.md)

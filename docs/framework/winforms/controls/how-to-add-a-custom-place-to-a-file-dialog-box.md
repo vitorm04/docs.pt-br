@@ -9,22 +9,22 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: 129ebed6d0a2b075020e635c8463536f97629d2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 824c948fafd0a0995ad261389414d2d79918c8a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624114"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916345"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Como: Adicionar um local personalizado a uma caixa de diálogo Arquivo
-O padrão abrir e salvar as caixas de diálogo no [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] têm uma área no lado esquerdo da caixa de diálogo intitulada **Links Favoritos**. Essa área é chamada de locais personalizados. O <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> classes permitem que você adicione pastas para o <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção.  
+As caixas de diálogo padrão abrir e salvar [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] em têm uma área no lado esquerdo da caixa de diálogo chamada **links favoritos**. Essa área é chamada de locais personalizados. As <xref:System.Windows.Forms.OpenFileDialog> classes <xref:System.Windows.Forms.SaveFileDialog> e permitem que você adicione pastas à <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção.  
   
 > [!NOTE]
->  Em ordem para um local personalizado apareça na <xref:System.Windows.Forms.OpenFileDialog> ou <xref:System.Windows.Forms.SaveFileDialog>, o <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> propriedade deve ser definida como `true` (o padrão).  
+> Para que um local personalizado apareça <xref:System.Windows.Forms.OpenFileDialog> no ou <xref:System.Windows.Forms.SaveFileDialog>, a <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> propriedade deve ser definida como `true` (o padrão).  
   
 ### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Para adicionar um local personalizado a uma caixa de diálogo de arquivo  
   
-- Adicionar um caminho, um GUID de pasta conhecida, ou um <xref:System.Windows.Forms.FileDialogCustomPlace> do objeto para o <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção da caixa de diálogo.  
+- Adicione um caminho, um GUID de pasta conhecida ou um <xref:System.Windows.Forms.FileDialogCustomPlace> objeto <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> à coleção da caixa de diálogo.  
   
      O exemplo de código a seguir mostra como adicionar um caminho:  
   

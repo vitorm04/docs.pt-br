@@ -2,20 +2,20 @@
 title: <enableWebScript>
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: b2cdd29cda7f82ce555b0f6c1a963567b41ff81b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 123f58ee3d77bf605db21fa0d9537b3196d56468
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673245"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919109"
 ---
 # <a name="enablewebscript"></a>\<enableWebScript>
-Esse elemento permite que o comportamento de ponto de extremidade que torna possível consumir o serviço de páginas da web de ASP.NET AJAX.  
+Esse elemento habilita o comportamento do ponto de extremidade que torna possível consumir o serviço de páginas da Web do ASP.NET AJAX.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<behavior>  
+\<> de comportamento  
 \<enableWebScript>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,14 +37,14 @@ Esse elemento permite que o comportamento de ponto de extremidade que torna poss
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica o conjunto de comportamentos de ponto de extremidade.|  
+|[\<> de comportamento](behavior-of-endpointbehaviors.md)|Especifica o conjunto de comportamentos de ponto de extremidade.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse comportamento só deve ser usado em conjunto com qualquer um de [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) associação padrão, ou o [ \<webMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md) elemento de associação.  Para obter mais informações sobre esse comportamento, consulte <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
+ Esse comportamento só deve ser usado em conjunto com a associação [ \<](webhttpbinding.md) de WebHttpBinding > padrão ou com o elemento de associação de [ \<> webMessageEncoding](webmessageencoding.md) .  Para obter mais informações sobre esse comportamento, <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>consulte.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>
 - <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>
-- [Integração AJAX e suporte para JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
-- [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)
+- [Integração AJAX e suporte para JSON](../../../wcf/feature-details/ajax-integration-and-json-support.md)
+- [\<webHttp>](webhttp.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0aefc9b21381f77fbe80db36da3e9932ad483750
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 084007bd7ab20449c28d2c5e6125cbacfa280526
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780835"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912710"
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a>Método ICorProfilerInfo4::GetCodeInfo3
-Obtém as extensões de código nativo associado com a versão recompilado por JIT da função especificada.  
+Obtém as extensões do código nativo associado à versão recompilada do JIT da função especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,38 +41,38 @@ HRESULT GetCodeInfo3(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionID`  
- [in] A ID da função à qual o código nativo está associado.  
+ no A ID da função à qual o código nativo está associado.  
   
  `reJitId`  
- [in] A identidade da função recompilado por JIT.  
+ no A identidade da função de compilação JIT recompilada.  
   
  `cCodeInfos`  
- [in] O tamanho do `codeInfos` matriz.  
+ no O tamanho da `codeInfos` matriz.  
   
  `pcCodeInfos`  
- [out] Um ponteiro para o número total de [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) estruturas disponíveis.  
+ fora Um ponteiro para o número total de estruturas [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) disponíveis.  
   
  `codeInfos`  
- [out] Um buffer fornecido pelo chamador. Depois que o método retorna, ele contém uma matriz de `COR_PRF_CODE_INFO` estruturas, cada um deles descreve um bloco de código nativo.  
+ fora Um buffer fornecido pelo chamador. Depois que o método retorna, ele contém uma matriz `COR_PRF_CODE_INFO` de estruturas, cada uma delas descreve um bloco de código nativo.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetCodeInfo3` método é semelhante ao [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md), exceto que ele obterá a ID da função que contém o endereço IP especificado recompilado por JIT.  
+ O `GetCodeInfo3` método é semelhante a [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md), exceto pelo fato de que ele receberá a ID de compilação JIT recompilada da função que contém o endereço IP especificado.  
   
 > [!NOTE]
->  `GetCodeInfo3` pode disparar uma coleta de lixo, enquanto [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) será não. Para obter mais informações, consulte o [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
+> `GetCodeInfo3`pode disparar uma coleta de lixo, enquanto [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) não vai. Para obter mais informações, consulte o HRESULT do [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) .  
   
- As extensões são classificadas em ordem crescente de deslocamento de idioma intermediário comum (CIL).  
+ As extensões são classificadas em ordem crescente de deslocamento de Common Intermediate Language (CIL).  
   
- Após `GetCodeInfo3` é retornado, você deve verificar se o `codeInfos` buffer era grande o suficiente para conter todos os as [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) estruturas. Para fazer isso, comparar o valor de `cCodeInfos` com o valor da `cchName` parâmetro. Se `cCodeInfos` dividida pelo tamanho de um [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) estrutura é menor que `pcCodeInfos`, alocar uma maior `codeInfos` do buffer, atualize `cCodeInfos` com o novo e maior tamanho e a chamada `GetCodeInfo3` novamente.  
+ Depois `GetCodeInfo3` de retornar, você deve verificar se `codeInfos` o buffer foi grande o suficiente para conter todas as estruturas [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) . Para fazer isso, compare o valor de `cCodeInfos` com o valor `cchName` do parâmetro. Se `cCodeInfos` dividido pelo tamanho de uma estrutura [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) for menor que `pcCodeInfos`, aloque um buffer maior `codeInfos` , atualize `cCodeInfos` com o novo tamanho, maior e chame `GetCodeInfo3` novamente.  
   
- Como alternativa, você pode primeiro chamar `GetCodeInfo3` com um comprimento de zero `codeInfos` buffer para obter o tamanho do buffer correto. Em seguida, você pode definir a `codeInfos` buffers de tamanho para o valor retornado na `pcCodeInfos`, multiplicado pelo tamanho de um [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) estrutura e chame `GetCodeInfo3` novamente.  
+ Como alternativa, você pode primeiro chamar `GetCodeInfo3` com um buffer de comprimento `codeInfos` zero para obter o tamanho de buffer correto. Em seguida, você pode `codeInfos` definir o tamanho do buffer para o `pcCodeInfos`valor retornado em, multiplicado pelo tamanho de uma estrutura [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) e `GetCodeInfo3` chamar novamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl, CorProf.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 2114efcc4d39cb4d2ea9ca33d7ff244c81a7097f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650574"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909876"
 ---
 # <a name="large-udts"></a>UDTs grandes
 Os tipos definidos pelo usuário (UDTs) permitem que um desenvolvedor estenda o sistema de tipo escalar do servidor armazenando objetos CLR em um banco de dados do SQL Server. Os UDTs podem conter vários elementos e podem ter comportamentos, ao contrário dos tipos de dados de alias tradicionais, que consistem em um único tipo de dados do sistema do SQL Server.  
   
 > [!NOTE]
->  Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para se beneficiar do suporte avançado do SqlClient para UDTs grandes.  
+> Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para se beneficiar do suporte avançado do SqlClient para UDTs grandes.  
   
  Anteriormente, os UDTs eram restritos a um tamanho máximo de 8 quilobytes. No SQL Server 2008, essa limitação foi removida para UDTs que têm um formato de <xref:Microsoft.SqlServer.Server.Format.UserDefined>.  
   
@@ -27,7 +27,7 @@ Os tipos definidos pelo usuário (UDTs) permitem que um desenvolvedor estenda o 
 1. [Tipos CLR definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Recuperando esquemas de UDT usando GetSchema  
- O método <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> de <xref:System.Data.SqlClient.SqlConnection> retorna informações de esquema do banco de dados em um <xref:System.Data.DataTable>. Para obter mais informações, consulte [coleções de esquema do SQL Server](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
+ O método <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> de <xref:System.Data.SqlClient.SqlConnection> retorna informações de esquema do banco de dados em um <xref:System.Data.DataTable>. Para obter mais informações, consulte [SQL Server coleções de esquema](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
   
 ### <a name="getschematable-column-values-for-udts"></a>Valores de coluna de GetSchemaTable para UDTs  
  O método <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> de um <xref:System.Data.SqlClient.SqlDataReader> retorna um <xref:System.Data.DataTable> que descreve metadados de coluna. A tabela a seguir descreve as diferenças nos metadados da coluna para UDTs grandes entre o SQL Server 2005 e SQL Server 2008.  
@@ -41,7 +41,7 @@ Os tipos definidos pelo usuário (UDTs) permitem que um desenvolvedor estenda o 
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|Instância de UDT|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|As três partes de nome especificado como *SchemaName*.|  
+|`DataTypeName`|`SqlDbType.VarBinary`|O nome de três partes especificado como *Database. SchemaName. TypeName*.|  
 |`IsLong`|Varia|Varia|  
   
 ## <a name="sqldatareader-considerations"></a>Considerações do SqlDataReader  

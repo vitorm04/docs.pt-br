@@ -2,15 +2,15 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 0f5eace346fd0ed2c0532fb602585c4593d97291
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: d5d06953c67b90e8367f2c0d01a670a46f487526
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756683"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925420"
 ---
 # <a name="identity"></a>\<identity>
-O elemento de identidade permite que um desenvolvedor de cliente especificar em tempo de design a identidade esperada do serviço. No processo de handshake entre o cliente e o serviço, a infraestrutura do Windows Communication Foundation (WCF) para garantir que a identidade de serviço esperados correspondências os valores desse elemento e, portanto, pode ser autenticada. Para obter mais informações, consulte [identidade de serviço e autenticação](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+O elemento Identity permite que um desenvolvedor cliente especifique em tempo de design a identidade esperada do serviço. No processo de handshake entre o cliente e o serviço, a infraestrutura Windows Communication Foundation (WCF) garantirá que a identidade do serviço esperado corresponda aos valores desse elemento e, portanto, possa ser autenticada. Para obter mais informações, consulte [identidade de serviço e autenticação](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
  \<system.ServiceModel>  
 \<client>  
@@ -43,29 +43,29 @@ O elemento de identidade permite que um desenvolvedor de cliente especificar em 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|certificado|Especifica as configurações de um certificado X.509. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.CertificateElement>. Ele contém um atributo `encodedValue` que é uma cadeia de caracteres que especifica o valor codificado por esse certificado.|  
-|certificateReference|Especifica configurações para validação de certificado X.509. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.CertificateReferenceElement>.|  
-|dns|Especifica o DNS de um certificado X.509 usado para autenticar um serviço. Esse elemento contém um atributo `value` que é uma cadeia de caracteres e contém a identidade real.|  
-|rsa|Especifica o valor do campo da RSA de um certificado X.509 usado para autenticar um serviço para um cliente. Esse elemento contém um atributo `value` que é uma cadeia de caracteres e contém a identidade real|  
-|servicePrincipalName|Especifica uma identidade de nome principal (SPN) do servidor, que é o nome de entidade de segurança usado por um cliente para identificar exclusivamente uma instância de um serviço. Esse elemento contém um atributo `value` que é uma cadeia de caracteres e contém o nome real da entidade. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>.|  
-|userPrincipalName|Especifica uma identidade de nome principal (UPN) do usuário, que é o tipo de nome de logon de um usuário em uma rede. O nome UPN consiste em nome de objeto de usuário usado no Active Directory, seguido pelo símbolo (\@) e, em seguida, normalmente, o sistema de nomes de domínio domínio pai. Por exemplo, Jeff na árvore do domínio Fabrikam.com pode ter o nome UPN [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com).  Esse elemento contém um atributo `value` que é uma cadeia de caracteres e contém o nome real da entidade. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
+|certificado|Especifica as configurações de um certificado X. 509. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.CertificateElement>. Ele contém um atributo `encodedValue` que é uma cadeia de caracteres, que especifica o valor codificado por esse certificado.|  
+|certificateReference|Especifica as configurações para a validação de certificado X. 509. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.CertificateReferenceElement>.|  
+|dns|Especifica o DNS de um certificado X. 509 usado para autenticar um serviço. Esse elemento contém um atributo `value` que é uma cadeia de caracteres e contém a identidade real.|  
+|rsa|Especifica o valor do campo RSA de um certificado X. 509 usado para autenticar um serviço para um cliente. Esse elemento contém um atributo `value` que é uma cadeia de caracteres e contém a identidade real|  
+|servicePrincipalName|Especifica uma identidade de SPN (nome principal do servidor), que é o nome principal usado por um cliente para identificar exclusivamente uma instância de um serviço. Esse elemento contém um atributo `value` que é uma cadeia de caracteres e contém o nome da entidade de segurança real. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>.|  
+|userPrincipalName|Especifica uma identidade de UPN (nome principal do usuário), que é o tipo de nome de logon de um usuário em uma rede. O nome principal do usuário consiste no nome do objeto de usuário usado em Active Directory, seguido pelo símbolo arroba\@() e, em seguida, normalmente, o domínio pai do sistema de nome de domínio. Por exemplo, Jeff na árvore de domínio Fabrikam.com pode ter o nome [jeff@fabrikam.com](mailto:jeffsmith@fabrikam.com)principal do usuário.  Esse elemento contém um atributo `value` que é uma cadeia de caracteres e contém o nome da entidade de segurança real. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Especifica um resolvedor de pares personalizado para um netPeerTcpBinding.|  
-|[\<endpoint>](endpoint-element.md)|Configura pontos de extremidade de serviço.|  
-|[\<endpoint> of \<client>](endpoint-of-client.md)|Configura pontos de extremidade de canal.|  
-|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Especifica o serviço de Token de segurança (STS) para o serviço federado.|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Especifica o ponto de extremidade de metadados para o Token de segurança Service (STS) de um serviço federado.|  
-|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Define parâmetros para um token emitido em uma associação personalizada.|  
-|[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Especifica um local Security Token Service (STS).|  
+|[\<custom>](custom.md)|Especifica um resolvedor de pares personalizado para um netPeerTcpBinding.|  
+|[\<endpoint>](endpoint-element.md)|Configura os pontos de extremidade de serviço.|  
+|[\<> de ponto \<de extremidade do cliente >](endpoint-of-client.md)|Configura os pontos de extremidade do canal.|  
+|[\<issuer>](issuer.md)|Especifica o serviço de token de segurança (STS) para o serviço federado.|  
+|[\<issuerMetadata>](issuermetadata.md)|Especifica o ponto de extremidade de metadados para o serviço de token de segurança (STS) de um serviço federado.|  
+|[\<issuedTokenParameters>](issuedtokenparameters.md)|Define parâmetros para um token emitido em uma associação personalizada.|  
+|[\<localIssuer>](localissuer.md)|Especifica um serviço de token de segurança (STS) local.|  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
-- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Pontos de extremidade: Endereços, associações e contratos](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Autenticação e identidade de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Extremidade Endereços, associações e contratos](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

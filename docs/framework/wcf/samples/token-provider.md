@@ -2,19 +2,19 @@
 title: Fornecedor de token
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: b3f56ed46507d68092268c3202cee6234fda7b42
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: e1520ef3e2faca88b06cc82ef5ab3035a857314a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969364"
 ---
 # <a name="token-provider"></a>Fornecedor de token
-Este exemplo demonstra como implementar um provedor de token personalizado. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriado as credenciais para que a infraestrutura de segurança pode proteger a mensagem. O WCF é fornecido com o provedor de Token do Gerenciador de credenciais padrão. O WCF também é fornecido com um provedor de token do CardSpace. Provedores de token personalizados são úteis nos seguintes casos:
+Este exemplo demonstra como implementar um provedor de token personalizado. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e emite as credenciais apropriadas para que a infraestrutura de segurança possa proteger a mensagem. O WCF é fornecido com o provedor de token padrão do Credential Manager. O WCF também é fornecido com um provedor de token do CardSpace. Os provedores de token personalizados são úteis nos seguintes casos:
 
-- Se você tiver um repositório de credenciais que esses provedores de token não podem operar com.
+- Se você tiver um repositório de credenciais para o qual esses provedores de token não podem operar.
 
-- Se você quiser fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando a estrutura do cliente WCF usa as credenciais.
+- Se você quiser fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto em que o usuário fornece os detalhes quando a estrutura do cliente WCF usa as credenciais.
 
 - Se você estiver criando um token personalizado.
 
@@ -22,17 +22,17 @@ Este exemplo demonstra como implementar um provedor de token personalizado. Um p
 
  Para resumir, este exemplo demonstra o seguinte:
 
-- Como um cliente pode autenticar usando um par de nome de usuário e senha.
+- Como um cliente pode se autenticar usando um par de nome de usuário/senha.
 
 - Como um cliente pode ser configurado com um provedor de token personalizado.
 
-- Como o servidor pode validar as credenciais do cliente usando uma senha com um personalizado <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> que valida o nome de usuário e a senha correspondem.
+- Como o servidor pode validar as credenciais do cliente usando uma senha com um <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> personalizado que valida a correspondência entre o nome de usuário e a senha.
 
-- Como o servidor é autenticado pelo cliente usando o certificado do servidor x. 509.
+- Como o servidor é autenticado pelo cliente usando o certificado X. 509 do servidor.
 
- Este exemplo também mostra como a identidade do chamador está acessível após o processo de autenticação de token personalizado.
+ Este exemplo também mostra como a identidade do chamador pode ser acessada após o processo de autenticação de token personalizado.
 
- O serviço expõe um ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração App. config. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão `wsHttpBinding`, que usa a segurança de mensagem por padrão. Este exemplo define o padrão `wsHttpBinding` para usar a autenticação de nome de usuário do cliente. O serviço também configura o certificado de serviço usando o comportamento de serviceCredentials. O comportamento de serviceCredentials permite que você configure um certificado de serviço. Um certificado de serviço é usado por um cliente para autenticar o serviço e fornecer proteção de mensagem. A configuração a seguir referencia o certificado do localhost instalado durante a instalação de exemplo conforme descrito nas instruções de instalação a seguir.
+ O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração app. config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com `wsHttpBinding`um padrão, que usa a segurança de mensagem por padrão. Este exemplo define o padrão `wsHttpBinding` para usar a autenticação de nome de usuário do cliente. O serviço também configura o certificado de serviço usando o comportamento serviceCredentials. O comportamento serviceCredentials permite que você configure um certificado de serviço. Um certificado de serviço é usado por um cliente para autenticar o serviço e fornecer proteção de mensagem. A configuração a seguir faz referência ao certificado localhost instalado durante a configuração de exemplo, conforme descrito nas instruções de instalação a seguir.
 
 ```xml
 <system.serviceModel>
@@ -82,7 +82,7 @@ Este exemplo demonstra como implementar um provedor de token personalizado. Um p
   </system.serviceModel>
 ```
 
- A configuração do ponto de extremidade cliente consiste em um nome de configuração, um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A associação de cliente é configurado com os devidos `Mode` e a mensagem `clientCredentialType`.
+ A configuração de ponto de extremidade do cliente consiste em um nome de configuração, um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A associação de cliente é configurada `Mode` com a `clientCredentialType`mensagem e apropriada.
 
 ```xml
 <system.serviceModel>
@@ -107,13 +107,13 @@ Este exemplo demonstra como implementar um provedor de token personalizado. Um p
 </system.serviceModel>
 ```
 
- As etapas a seguir mostram como desenvolver um provedor de token personalizado e integrá-la com a estrutura de segurança do WCF:
+ As etapas a seguir mostram como desenvolver um provedor de token personalizado e integrá-lo com a estrutura de segurança do WCF:
 
 1. Escreva um provedor de token personalizado.
 
-     O exemplo implementa um provedor de token personalizado que obtém o nome de usuário e senha. A senha deve corresponder a este nome de usuário. Este provedor de token personalizado é para fins de demonstração e não é recomendado para implantação do mundo para o real.
+     O exemplo implementa um provedor de token personalizado que obtém o nome de usuário e a senha. A senha deve corresponder a este nome de usuário. Esse provedor de token personalizado é apenas para fins de demonstração e não é recomendado para implantação do mundo real.
 
-     Para executar essa tarefa, o provedor de token personalizado é derivado de <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe e substitui o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> método. Esse método cria e retorna um novo `UserNameSecurityToken`.
+     Para executar essa tarefa, o provedor de token personalizado deriva a <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe e substitui o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> método. Esse método cria e retorna um novo `UserNameSecurityToken`.
 
     ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
@@ -128,9 +128,9 @@ Este exemplo demonstra como implementar um provedor de token personalizado. Um p
     }
     ```
 
-2. Escreva um Gerenciador de token de segurança personalizada.
+2. Gravar Gerenciador de token de segurança personalizado.
 
-     O <xref:System.IdentityModel.Selectors.SecurityTokenManager> é usado para criar <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para determinado <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> que é passado para ele no `CreateSecurityTokenProvider` método. Gerenciador de token de segurança também é usado para criar um serializador de token e autenticadores de token, mas esses não são cobertos por este exemplo. Neste exemplo, o Gerenciador de token de segurança personalizada herda <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> classe e substitui o `CreateSecurityTokenProvider` método para retornar o provedor de token de nome de usuário personalizada quando os requisitos de token passados indicam esse provedor de nome de usuário é solicitado.
+     O <xref:System.IdentityModel.Selectors.SecurityTokenManager> é usado para criar <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> específico que é passado para ele `CreateSecurityTokenProvider` no método. O Gerenciador de token de segurança também é usado para criar autenticadores de token e um serializador de token, mas eles não são cobertos por esse exemplo. Neste exemplo, o Gerenciador de token de segurança personalizado herda <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> da classe e substitui `CreateSecurityTokenProvider` o método para retornar o provedor de token de nome de usuário personalizado quando os requisitos de token passados indicam que o provedor de nome de usuário é solicitado.
 
     ```csharp
     public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager
@@ -159,9 +159,9 @@ Este exemplo demonstra como implementar um provedor de token personalizado. Um p
     }
     ```
 
-3. Grave uma credencial de cliente personalizadas.
+3. Grave uma credencial de cliente personalizada.
 
-     Classe de credenciais do cliente é usado para representar as credenciais que são configuradas para o proxy de cliente e cria o Gerenciador de token que é usado para obter os autenticadores de token, provedores de token e um serializador de token de segurança.
+     A classe de credenciais de cliente é usada para representar as credenciais que são configuradas para o proxy do cliente e cria o Gerenciador de token de segurança que é usado para obter autenticadores de token, provedores de token e um serializador de token.
 
     ```csharp
     public class MyUserNameClientCredentials : ClientCredentials
@@ -184,9 +184,9 @@ Este exemplo demonstra como implementar um provedor de token personalizado. Um p
     }
     ```
 
-4. Configure o cliente para usar a credencial de cliente personalizadas.
+4. Configure o cliente para usar a credencial de cliente personalizada.
 
-     Em ordem para o cliente usar a credencial de cliente personalizado, o exemplo exclui a classe de credencial de cliente padrão e fornece a nova classe de credencial de cliente.
+     Para que o cliente use a credencial de cliente personalizada, o exemplo exclui a classe de credencial do cliente padrão e fornece a nova classe de credencial do cliente.
 
     ```csharp
     static void Main()
@@ -202,7 +202,7 @@ Este exemplo demonstra como implementar um provedor de token personalizado. Um p
     }
     ```
 
- No serviço, para exibir informações do chamador, use o <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> conforme mostrado no exemplo de código a seguir. O <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contém informações de declarações sobre o chamador atual.
+ No serviço, para exibir as informações do chamador, use o <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> conforme mostrado no exemplo de código a seguir. O <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contém informações de declarações sobre o chamador atual.
 
 ```csharp
 static void DisplayIdentityInformation()
@@ -212,16 +212,16 @@ static void DisplayIdentityInformation()
 }
 ```
 
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
-## <a name="setup-batch-file"></a>Arquivo de lote
- O arquivo em lotes de Setup. bat incluído com este exemplo permite que você configure o servidor com o certificado apropriado para executar um aplicativo hospedado internamente que exige a segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar entre computadores ou para trabalhar em um caso de não hospedados.
+## <a name="setup-batch-file"></a>Arquivo em lotes de instalação
+ O arquivo em lotes setup. bat incluído com este exemplo permite que você configure o servidor com o certificado relevante para executar um aplicativo auto-hospedado que requer segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar em computadores ou para funcionar em um caso não hospedado.
 
- O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada:
+ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes para que eles possam ser modificados para serem executados na configuração apropriada:
 
 - Criando o certificado do servidor.
 
-     As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. O `%SERVER_NAME%` variável Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O valor padrão nesse arquivo em lotes é localhost.
+     As linhas a seguir do arquivo em lotes setup. bat criam o certificado do servidor a ser usado. A `%SERVER_NAME%` variável especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O valor padrão nesse arquivo em lotes é localhost.
 
     ```
     echo ************
@@ -235,60 +235,60 @@ static void DisplayIdentityInformation()
 
 - Instalando o certificado do servidor no repositório de certificados confiáveis do cliente:
 
-     As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.
+     As linhas a seguir no arquivo em lotes setup. bat copiam o certificado do servidor no repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — esta etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
 > [!NOTE]
->  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Prompt de comando do SDK do Windows. Ele requer que a variável de ambiente MSSDK apontar para o diretório onde o SDK está instalado. Essa variável de ambiente é definido automaticamente dentro de um Prompt de comando do SDK do Windows.
+> O arquivo em lotes setup. bat foi projetado para ser executado em um prompt de comando SDK do Windows. Ele requer que a variável de ambiente MSSDK aponte para o diretório em que o SDK está instalado. Essa variável de ambiente é definida automaticamente em um prompt de comando SDK do Windows.
 
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar e compilar o exemplo
 
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador
 
-1. Execute Setup. bat da pasta de instalação de exemplo dentro de um prompt de comando do Visual Studio 2012 aberto com privilégios de administrador. Essa opção instala todos os certificados necessários para executar o exemplo.
+1. Execute setup. bat da pasta de instalação de exemplo dentro de um prompt de comando do Visual Studio 2012 aberto com privilégios de administrador. Isso instala todos os certificados necessários para executar o exemplo.
 
     > [!NOTE]
-    >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2012 Prompt de comando. A variável de ambiente PATH definido dentro de pontos de Prompt de comando do Visual Studio 2012 para o diretório que contém executáveis exigido pelo script de Setup. bat.  
+    >  O arquivo em lotes setup. bat foi projetado para ser executado em um prompt de comando do Visual Studio 2012. A variável de ambiente PATH definida no prompt de comando do Visual Studio 2012 aponta para o diretório que contém os executáveis exigidos pelo script setup. bat.  
   
-2. Inicie o service.exe de service\bin.  
+2. Inicie o Service. exe em service\bin.  
   
-3. Inicie o Client.exe no \client\bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
+3. Inicie o Client.exe no \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
   
-4. No prompt de nome de usuário, digite um nome de usuário.  
+4. Na solicitação de nome de usuário, digite um nome de utilizador.  
   
 5. No prompt de senha, use a mesma cadeia de caracteres que foi digitada para o prompt de nome de usuário.  
   
-6. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo em computadores  
+#### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo entre computadores  
   
-1. Crie um diretório no computador do serviço para os binários de serviço.  
+1. Crie um diretório no computador de serviço para os binários de serviço.  
   
-2. Copie os arquivos de programa de serviço para o diretório de serviço no computador do serviço. Também copie os arquivos Setup. bat e Cleanup para o computador do serviço.  
+2. Copie os arquivos de programa do serviço para o diretório de serviço no computador do serviço. Copie também os arquivos Setup. bat e Cleanup. bat para o computador de serviço.  
   
-3. Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. O arquivo Service.exe.config deve ser atualizado para refletir o novo nome de certificado. Você pode criar o certificado do servidor, modificando o arquivo em lotes de Setup. bat. Observe que o arquivo Setup. bat deve ser executado a partir de um Prompt de comando do desenvolvedor para Visual Studio é aberto com privilégios de administrador. Você deve definir `%SERVER_NAME%` variável ao nome de host totalmente qualificado do computador que é usado para hospedar o serviço.  
+3. Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. O arquivo Service. exe. config deve ser atualizado para refletir esse novo nome de certificado. Você pode criar um certificado de servidor modificando o arquivo em lotes setup. bat. Observe que o arquivo setup. bat deve ser executado de um Prompt de Comando do Desenvolvedor para o Visual Studio aberto com privilégios de administrador. Você deve definir `%SERVER_NAME%` a variável para o nome de host totalmente qualificado do computador que é usado para hospedar o serviço.  
   
-4. Copie o certificado do servidor para o repositório CurrentUser TrustedPeople do cliente. Você não precisa fazer isso quando o certificado do servidor é emitido por um emissor confiável do cliente.  
+4. Copie o certificado do servidor no repositório CurrentUser-TrustedPeople do cliente. Você não precisa fazer isso quando o certificado do servidor é emitido por um emissor confiável do cliente.  
   
-5. No arquivo Service.exe.config no computador do serviço, altere o valor do endereço base para especificar um nome de computador totalmente qualificado em vez do localhost.  
+5. No arquivo Service. exe. config no computador do serviço, altere o valor do endereço base para especificar um nome de computador totalmente qualificado em vez de localhost.  
   
-6. No computador do serviço, execute service.exe em um prompt de comando.  
+6. No computador do serviço, execute o Service. exe em um prompt de comando.  
   
-7. Copie os arquivos de programa do cliente na pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
+7. Copie os arquivos de programas do cliente da pasta \client\bin\, na pasta específica do idioma, para o computador cliente.  
   
-8. No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço.  
+8. No arquivo client. exe. config no computador cliente, altere o valor de endereço do ponto de extremidade para corresponder ao novo endereço do serviço.  
   
-9. No computador cliente, inicie o `Client.exe` em uma janela do prompt de comando.  
+9. No computador cliente, inicie `Client.exe` a partir de uma janela de prompt de comando.  
   
-10. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
+#### <a name="to-clean-up-after-the-sample"></a>Para limpar após o exemplo  
   
-1. Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
+1. Execute o Cleanup. bat na pasta Samples depois de concluir a execução do exemplo.  

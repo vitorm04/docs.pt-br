@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 8636050b2618d1b2c2da0c08c756b0ed221c7f6f
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 890269857aaa00ce62195ccb2f4cb184b363b61e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300767"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921026"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Elemento personalizado para NameValueSectionHandler e DictionarySectionHandler
 
-Define as configurações para seções de configuração personalizadas que usam o <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classes.
+Define as configurações para seções de configuração personalizadas que <xref:System.Configuration.NameValueSectionHandler> usam <xref:System.Configuration.DictionarySectionHandler> as classes e.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
+[ **\<configuration>** ](configuration-element.md)\
 &nbsp;&nbsp; **\<sectionName>**
 
 ## <a name="attributes"></a>Atributos
@@ -30,32 +30,32 @@ Nenhum
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
+| [ **\<configuration>** ](configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
 
 ## <a name="child-elements"></a>Elementos filho
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<Adicionar >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>  | Adiciona as configurações de aplicativo personalizado. |
-| [ **\<Remover >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Remove uma configuração definida anteriormente. |
-| [ **\<Limpar >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Limpa todas as configurações definidas anteriormente em uma seção. |
+| Adicionar > para e [ **\<** ](add-element-for-custom-2.md) <xref:System.Configuration.NameValueSectionHandler><xref:System.Configuration.DictionarySectionHandler>  | Adiciona configurações de aplicativo personalizadas. |
+| Remover > para e [ **\<** ](remove-element-for-custom-2.md) <xref:System.Configuration.NameValueSectionHandler><xref:System.Configuration.DictionarySectionHandler> | Remove uma configuração definida anteriormente. |
+| Desmarque <xref:System.Configuration.NameValueSectionHandler> > para e [ **\<** ](clear-element-for-custom-2.md)<xref:System.Configuration.DictionarySectionHandler> | Limpa todas as configurações definidas anteriormente em uma seção. |
 
 ## <a name="remarks"></a>Comentários
 
-O  **\<sectionName >** é um elemento personalizado definido por uma  **\<seção >** marcar no  **\<configSections >** elemento.
+**\<**  **O\<elemento SectionName >** é um elemento personalizado definido por uma  **\<seção >** tag no elemento configSections >.
 
-A tabela a seguir mostra que o tipo de objeto, o método ConfigurationSettings.GetConfig retorna para cada manipulador de seção de configuração:
+A tabela a seguir mostra o tipo de objeto que o método ConfigurationSettings. GetConfig retorna para cada manipulador de seção de configuração:
 
-| Manipulador de seção de configuração                        | Tipo de retorno                                                |
+| Manipulador da seção de configuração                        | Tipo de retorno                                                |
 | ---------------------------------------------------- | ---------------------------------------------------------- |
 | <xref:System.Configuration.NameValueSectionHandler>  | <xref:System.Collections.Specialized.NameValueCollection>  |
 | <xref:System.Configuration.DictionarySectionHandler> | <xref:System.Collections.IDictionary>                      |
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como declarar seções que usam o <xref:System.Configuration.DictionarySectionHandler> e <xref:System.Configuration.NameValueSectionHandler> classes.
+O exemplo a seguir mostra como declarar seções que usam as <xref:System.Configuration.DictionarySectionHandler> classes <xref:System.Configuration.NameValueSectionHandler> e.
 
-É o primeiro elemento personalizado  **\<dictionarySample >** , que contém as configurações lidas pelo <xref:System.Configuration.DictionarySectionHandler> classe o `System.dll` assembly. O segundo elemento personalizado estiver  **\<mySection >** , que contém as configurações lidas pelo <xref:System.Configuration.NameValueSectionHandler> classe no `System.dll` assembly.
+O primeiro elemento personalizado é  **\<dictionarySample >** , que contém <xref:System.Configuration.DictionarySectionHandler> as configurações lidas pela classe no `System.dll` assembly. O segundo elemento personalizado é  **\<myseção >** , que contém <xref:System.Configuration.NameValueSectionHandler> as configurações lidas pela classe no `System.dll` assembly.
 
 ```xml
 <configuration>
@@ -78,8 +78,8 @@ O exemplo a seguir mostra como declarar seções que usam o <xref:System.Configu
 
 ## <a name="configuration-file"></a>arquivo de configuração
 
-Esse elemento pode ser usado no arquivo de configuração do aplicativo, arquivo de configuração de máquina (*Machine. config*), e *Web. config* arquivos que não estão no nível de diretório do aplicativo.
+Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema do arquivo de configuração para o .NET Framework](index.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 1fa9b04063d8f606f674cc54190dad5a669adbeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c0dc40f6cac0af1f88e72089865caa3a17fcf2a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914742"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Como: Criar texto dimensionado da variável em um controle ComboBox
-Este exemplo demonstra um desenho personalizado de texto em um <xref:System.Windows.Forms.ComboBox> controle. Quando um item atende a certos critérios, ele é desenhado com uma fonte maior e ativado vermelho.  
+Este exemplo demonstra o desenho personalizado de texto em <xref:System.Windows.Forms.ComboBox> um controle. Quando um item atende a determinados critérios, ele é desenhado em uma fonte maior e fica vermelho.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -60,10 +60,10 @@ End Sub
   
 - Um formulário do Windows.  
   
-- Um <xref:System.Windows.Forms.ComboBox> controle chamado `ListBox1` com três itens a <xref:System.Windows.Forms.ComboBox.Items%2A> propriedade. Neste exemplo, os três itens são nomeados `"One", Two", and Three"`. O <xref:System.Windows.Forms.ComboBox.DrawMode%2A> propriedade de `ComboBox1` deve ser definida como <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
+- Um <xref:System.Windows.Forms.ComboBox> controle chamado `ListBox1` comtrêsitensnapropriedade.<xref:System.Windows.Forms.ComboBox.Items%2A> Neste exemplo, os três itens são nomeados `"One", Two", and Three"`. A <xref:System.Windows.Forms.ComboBox.DrawMode%2A> propriedade de `ComboBox1` deve ser definida como <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
   
     > [!NOTE]
-    >  Essa técnica também é aplicável para o <xref:System.Windows.Forms.ListBox> controle — você pode substituir uma <xref:System.Windows.Forms.ListBox> para o <xref:System.Windows.Forms.ComboBox>.  
+    > Essa técnica também se aplica ao <xref:System.Windows.Forms.ListBox> controle — você pode substituir uma <xref:System.Windows.Forms.ListBox> para o <xref:System.Windows.Forms.ComboBox>.  
   
 - Referências aos namespaces <xref:System.Windows.Forms?displayProperty=nameWithType> e <xref:System.Drawing?displayProperty=nameWithType>.  
   

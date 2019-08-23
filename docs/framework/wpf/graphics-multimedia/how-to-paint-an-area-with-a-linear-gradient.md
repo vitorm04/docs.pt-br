@@ -6,15 +6,15 @@ helpviewer_keywords:
 - brushes [WPF], painting with linear gradients
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
-ms.openlocfilehash: c48ff13811d784ecc7042b73b964a9e6f2d42a34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92c9ccd846dbbce043d13e6ba82b9fa8e72fa8b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921872"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916171"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Como: Pintar uma área com um gradiente linear
-Este exemplo mostra como usar o <xref:System.Windows.Media.LinearGradientBrush> classe pintar uma área com um gradiente linear. No exemplo a seguir, o <xref:System.Windows.Shapes.Shape.Fill%2A> de um <xref:System.Windows.Shapes.Rectangle> é pintado com um gradiente linear diagonal que faz a transição de amarelo para vermelho para azul para verde limão.  
+Este exemplo mostra como usar a <xref:System.Windows.Media.LinearGradientBrush> classe para pintar uma área com um gradiente linear. No exemplo a seguir, o <xref:System.Windows.Shapes.Shape.Fill%2A> de a <xref:System.Windows.Shapes.Rectangle> é pintado com um gradiente linear diagonal que faz a transição de amarelo para vermelho para azul para verde-limão.  
   
 ## <a name="example"></a>Exemplo  
  [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
@@ -25,7 +25,7 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.LinearGradientBrush> 
   
  ![Gradiente linear diagonal](./media/graphicsmm-diagonallgb.jpg "graphicsmm_DiagonalLGB")  
   
- Para criar um gradiente linear horizontal, altere o <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> e <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> da <xref:System.Windows.Media.LinearGradientBrush> para (0, 0.5) e (1, 0,5). No exemplo a seguir, um <xref:System.Windows.Shapes.Rectangle> é pintado com um gradiente linear horizontal.  
+ Para criar um gradiente linear horizontal, altere <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> o <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> e de <xref:System.Windows.Media.LinearGradientBrush> para (0, 0.5) e (1, 0.5). No exemplo a seguir, um <xref:System.Windows.Shapes.Rectangle> é pintado com um gradiente linear horizontal.  
   
  [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
@@ -35,7 +35,7 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.LinearGradientBrush> 
   
  ![Um gradiente linear horizontal](./media/graphicsmm-horizontallgb.jpg "graphicsmm_HorizontalLGB")  
   
- Para criar um gradiente linear vertical, altere o <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> e <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> da <xref:System.Windows.Media.LinearGradientBrush> para (0.5,0) e (0.5,1). No exemplo a seguir, um <xref:System.Windows.Shapes.Rectangle> é pintado com um gradiente linear vertical.  
+ Para criar um gradiente linear vertical, altere <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> o <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> e de <xref:System.Windows.Media.LinearGradientBrush> para (0.5, 0) e (0.5, 1). No exemplo a seguir, um <xref:System.Windows.Shapes.Rectangle> é pintado com um gradiente linear vertical.  
   
  [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
@@ -46,6 +46,6 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.LinearGradientBrush> 
  ![Gradiente linear vertical](./media/graphicsmm-verticallgb.jpg "graphicsmm_VerticalLGB")  
   
 > [!NOTE]
->  Os exemplos neste tópico usam o sistema de coordenadas padrão para definir pontos de início e pontos de extremidade. O sistema de coordenadas padrão é relativo a uma caixa delimitadora: 0 indica 0% da caixa delimitadora e 1 indica 100 por cento da caixa delimitadora. Você pode alterar esse sistema de coordenadas definindo a <xref:System.Windows.Media.GradientBrush.MappingMode%2A> propriedade para o valor <xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>. Um sistema de coordenadas absoluto não é relativo a uma caixa delimitadora. Os valores são interpretados diretamente no espaço local.  
+> Os exemplos neste tópico usam o sistema de coordenadas padrão para definir pontos de início e pontos de extremidade. O sistema de coordenadas padrão é relativo a uma caixa delimitadora: 0 indica 0% da caixa delimitadora e 1 indica 100% da caixa delimitadora. Você pode alterar esse sistema de coordenadas definindo a <xref:System.Windows.Media.GradientBrush.MappingMode%2A> propriedade para o valor <xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>. Um sistema de coordenadas absoluto não é relativo a uma caixa delimitadora. Os valores são interpretados diretamente no espaço local.  
   
  Para obter exemplos adicionais, veja [Exemplo de pincéis](https://go.microsoft.com/fwlink/?LinkID=159973). Para obter mais informações sobre gradientes e outros tipos de pincéis, veja [Visão geral de pintura com cores sólidas e gradientes](painting-with-solid-colors-and-gradients-overview.md).

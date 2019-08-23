@@ -2,22 +2,22 @@
 title: <add> de <scopes>
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: c29e47f688118e34fbdb4deb396c930d478f0582
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b190cb72e21d47bdc62aab2daba0f6eea1ee04ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673596"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926624"
 ---
 # <a name="add-of-scopes"></a>\<Adicionar > de \<escopos >
-Adiciona um Uri que pode ser usado para filtrar pontos de extremidade de serviço durante consulta de escopo personalizado.  
+Adiciona um URI de escopo personalizado que pode ser usado para filtrar pontos de extremidade de serviço durante a consulta.  
   
 \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<behavior>  
-\<endpointDiscovery>  
-\<scopes>  
+\<> de comportamento  
+\<> endpointDiscovery  
+\<escopos >  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -43,7 +43,7 @@ Adiciona um Uri que pode ser usado para filtrar pontos de extremidade de serviç
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|escopo|Um URI que contém informações de escopo para o ponto de extremidade que pode ser usado em correspondem aos critérios para a localização de serviços.|  
+|escopo|Um URI que contém informações de escopo para o ponto de extremidade que pode ser usado em critérios de correspondência para localizar serviços.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -52,7 +52,7 @@ Adiciona um Uri que pode ser usado para filtrar pontos de extremidade de serviç
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Contém uma coleção de elementos de configuração que especificam Uris que podem ser usados para filtrar pontos de extremidade de serviço durante consulta de escopo personalizado.|  
+|[\<scopes>](scopes.md)|Contém uma coleção de elementos de configuração que especificam URIs de escopo personalizado que podem ser usados para filtrar pontos de extremidade de serviço durante a consulta.|  
   
 ## <a name="see-also"></a>Consulte também
 

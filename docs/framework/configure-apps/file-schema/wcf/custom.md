@@ -2,20 +2,20 @@
 title: <custom>
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 18359e871feed17a11006d0b2998907faf25c158
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5cc522604fa7aca8ca6eae787520265b36fef6f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704187"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925951"
 ---
 # <a name="custom"></a>\<custom>
-Especifica configurações para um serviço de resolvedor de pares personalizado.  
+Especifica as configurações para um serviço resolvedor de pares personalizado.  
   
 \<system.serviceModel>  
 \<bindings>  
 \<netPeerBinding>  
-\<binding>  
+\<> de associação  
 \<resolver>  
 \<custom>  
   
@@ -36,24 +36,24 @@ Especifica configurações para um serviço de resolvedor de pares personalizado
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`address`|Um URI que especifica o endereço do ponto de extremidade do nó par que hospeda o serviço de resolvedor de pares personalizado.|  
-|`resolverType`|Uma cadeia de caracteres que especifica o tipo de serviço resolvedor de pares personalizado.|  
+|`address`|Um URI que especifica o endereço do ponto de extremidade do nó par que hospeda o serviço resolvedor de pares personalizado.|  
+|`resolverType`|Uma cadeia de caracteres que especifica o tipo do serviço resolvedor de pares personalizado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica a identidade para os resolvedores de pares personalizados configurados com este elemento. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IdentityElement>.|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Uma coleção de cabeçalho de endereço usado para mensagens SOAP manipuladas pelo resolvedor de pares personalizado.|  
+|[\<identity>](identity.md)|Especifica a identidade para resolvedores de pares personalizados configurados com este elemento. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IdentityElement>.|  
+|[\<headers>](headers-element.md)|Uma coleção de cabeçalho de endereço usada para mensagens SOAP tratadas pelo resolvedor de pares personalizado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Um resolvedor de pares que é usado para resolver um par de ID de malha para um conjunto de endereços de nó par que representa vários nós que participam da malha.|  
+|[\<resolver>](resolver.md)|Um resolvedor de pares que é usado para resolver uma ID de malha de mesmo nível para um conjunto de endereços de nó par que representa vários nós que participam da malha.|  
   
 ## <a name="remarks"></a>Comentários  
- Este elemento define as configurações básicas para um serviço de resolvedor de pares personalizado, incluindo o endereço do ponto de extremidade do par que hospeda o serviço e quaisquer configurações de associação específica. Para obter mais informações sobre a criação de um resolvedor personalizado, consulte [adicionando um resolvedor personalizado a um aplicativo PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90)).  
+ Esse elemento define as configurações básicas para um serviço resolvedor de pares personalizado, incluindo o endereço do ponto de extremidade do par que hospeda o serviço e quaisquer configurações de associação específicas. Para obter mais informações sobre como criar um resolvedor personalizado, consulte [adicionando um resolvedor personalizado a um aplicativo PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90)).  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -61,5 +61,5 @@ Especifica configurações para um serviço de resolvedor de pares personalizado
 - <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>
 - <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>
 - <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>
-- [Resolvedores pares](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [Resolvedores pares](../../../wcf/feature-details/peer-resolvers.md)
 - [Adicionando um resolvedor personalizado a um aplicativo PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))

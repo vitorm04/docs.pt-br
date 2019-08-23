@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 6494a154b9b4bd5bf29fc0e2fbd0b4e5e84550ff
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c05e849705f851b51a362d3a1d1d3f81a9eaf0e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364171"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923604"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Solucionando problemas de criação do controle e do componente
 Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver componentes e controles. Para obter mais informações, consulte [Programando com componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -96,7 +96,7 @@ Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver
  Para obter mais informações sobre depuração, consulte [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) e [Walkthrough: Depuração de controles de Windows Forms personalizados em](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)tempo de design.  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>O evento é gerado duas vezes no componente ou no controle herdado  
- Isso provavelmente é devido a uma cláusula `Handles` duplicada. Para obter mais informações, consulte [Solução de problemas de manipuladores de eventos herdados no Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
+ Isso provavelmente é devido a uma cláusula `Handles` duplicada. Para obter mais informações, consulte [Solução de problemas de manipuladores de eventos herdados no Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="design-time-error-failed-to-create-component-component-name"></a>Erro de tempo de design: "Falha ao criar o componente ' nome do componente '"  
  Seu componente ou controle deve fornecer um construtor sem parâmetros com nenhum parâmetro. Quando o ambiente de design cria uma instância do seu componente ou controle, ele não tenta fornecer nenhum parâmetro para as sobrecargas do construtor que aceitam parâmetros.  

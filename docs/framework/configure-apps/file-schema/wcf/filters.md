@@ -2,24 +2,24 @@
 title: <filters>
 ms.date: 03/30/2017
 ms.assetid: 37a87222-ec78-4728-8105-9ca1bd961f0c
-ms.openlocfilehash: b840e17c2dccabce9e58cb658d757b0a98e1ffcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4ce0452cc46a8f29334fa67f51f14b83290b1c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703992"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918882"
 ---
-# <a name="filters"></a>\<filters>
+# <a name="filters"></a>\<Filtros >
 
-O `filters` elemento contém uma coleção de filtros XPath usados para controlar que tipo de mensagem é registrado.
+O `filters` elemento contém uma coleção de filtros XPath usados para controlar que tipo de mensagem é registrada.
 
-Os filtros são aplicados apenas na camada de transporte, especificada por `logMessagesAtTransportLevel` é `true`. Registro em log de mensagem malformada e nível de serviço não são afetadas por filtros.
+Os filtros são aplicados somente na camada de transporte, especificada `logMessagesAtTransportLevel` por `true`is. O nível de serviço e o log de mensagens malformados não são afetados por filtros.
 
-Para adicionar um filtro à coleção, use o `add` palavra-chave. Quando um ou mais filtros são definidos, apenas as mensagens que correspondem a pelo menos um dos filtros são registradas. Se nenhum filtro for definido, todas as mensagens passam.
+Para adicionar um filtro à coleção, use a `add` palavra-chave. Quando um ou mais filtros são definidos, somente as mensagens que correspondem a pelo menos um dos filtros são registradas. Se nenhum filtro for definido, todas as mensagens passarão.
 
-Filtros dão suporte a sintaxe completa do XPath e são aplicados na ordem em que aparecem no arquivo de configuração. Um filtro sintaticamente incorreto resulta em uma exceção de configuração.
+Os filtros dão suporte à sintaxe XPath completa e são aplicados na ordem em que aparecem no arquivo de configuração. Um filtro sintaticamente incorreto resulta em uma exceção de configuração.
 
-O exemplo a seguir é um exemplo de como configurar um filtro que registra apenas mensagens que têm uma seção de cabeçalho SOAP.
+Veja a seguir um exemplo de como configurar um filtro que registra somente as mensagens que têm uma seção de cabeçalho SOAP.
   
 ```xml  
 <messageLogging logEntireMessage="true"
@@ -45,5 +45,5 @@ O exemplo a seguir é um exemplo de como configurar um filtro que registra apena
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElementCollection>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [Configurando registros de mensagens em log](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [Configurando registros de mensagens em log](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](messagelogging.md)

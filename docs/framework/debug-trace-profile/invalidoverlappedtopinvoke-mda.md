@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bdb2035906b9383342201017b58d1d0050113b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5709e4ef883ba2750f1efd0ae2e9a72f1cf43b0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754486"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967297"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>MDA invalidOverlappedToPinvoke
 O MDA (Assistente de Depuração Gerenciado) de `invalidOverlappedToPinvoke` é ativado quando um ponteiro sobreposto que não foi criado no heap de coleta de lixo é passado para funções específicas do Win32.  
   
 > [!NOTE]
->  Por padrão, esse MDA é ativado somente se a chamada de invocação de plataforma é definida no seu código e o depurador relata o status de JustMyCode de cada método. Um depurador que não entende JustMyCode (tal como MDbg.exe sem nenhuma extensão) não ativará esse MDA. Esse MDA pode ser habilitado para esses depuradores usando um arquivo de configuração e configurando `justMyCode="false"` explicitamente no `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>` do arquivo .mda.config).  
+> Por padrão, esse MDA é ativado somente se a chamada de invocação de plataforma é definida no seu código e o depurador relata o status de JustMyCode de cada método. Um depurador que não entende JustMyCode (tal como MDbg.exe sem nenhuma extensão) não ativará esse MDA. Esse MDA pode ser habilitado para esses depuradores usando um arquivo de configuração e configurando `justMyCode="false"` explicitamente no `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>` do arquivo .mda.config).  
   
 ## <a name="symptoms"></a>Sintomas  
  Falhas ou corrupção de heap inexplicáveis.  

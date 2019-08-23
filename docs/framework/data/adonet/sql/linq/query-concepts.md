@@ -2,12 +2,12 @@
 title: Consulte conceitos
 ms.date: 03/30/2017
 ms.assetid: 9a125749-ccb5-49d5-999d-d2db7171d74d
-ms.openlocfilehash: 62af37399cda5220c429fae2d9ab619989050b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be564ae6fe6dc887b77ea4ae213d56d11f309369
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938567"
 ---
 # <a name="query-concepts"></a>Consulte conceitos
 Esta seção descreve os conceitos principais para criar consultas de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -32,5 +32,5 @@ Esta seção descreve os conceitos principais para criar consultas de [!INCLUDE[
  [Identidade do objeto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  Explica o conceito da identidade do objeto em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Introdução a consultas LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ [Introdução a consultas LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  Fornece uma introdução para as operações consulta em [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].

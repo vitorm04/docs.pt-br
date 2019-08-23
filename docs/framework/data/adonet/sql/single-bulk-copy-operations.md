@@ -5,54 +5,54 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cba2201bf8087633103efe45c5236cab3af0a0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876363"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964749"
 ---
 # <a name="single-bulk-copy-operations"></a>Operações únicas de cópia em massa
-A abordagem mais simples para executar uma operação de cópia em massa do SQL Server é executar uma única operação em um banco de dados. Por padrão, uma operação de cópia em massa é executada como uma operação isolada: a operação de cópia ocorre de forma não transacionada, sem a oportunidade de revertê-la de volta.  
+A abordagem mais simples para executar uma SQL Server operação de cópia em massa é executar uma única operação em um banco de dados. Por padrão, uma operação de cópia em massa é executada como uma operação isolada: a operação de cópia ocorre de forma não-transacionada, sem nenhuma oportunidade de redistribuí-la.  
   
 > [!NOTE]
->  Se você precisar reverter toda ou parte da cópia em massa quando ocorrer um erro, você pode usar um <xref:System.Data.SqlClient.SqlBulkCopy>-transação gerenciada ou executar a operação de cópia em massa dentro de uma transação existente. **SqlBulkCopy** também trabalhará <xref:System.Transactions> se a conexão será inscrita (implícita ou explicitamente) em um **System. Transactions** transação.  
+> Se você precisar reverter toda ou parte da cópia em massa quando ocorrer um erro, poderá usar uma <xref:System.Data.SqlClient.SqlBulkCopy>transação gerenciada ou executar a operação de cópia em massa em uma transação existente. O **SqlBulkCopy** também funcionará <xref:System.Transactions> se a conexão for listada (implícita ou explicitamente) em uma transação **System.** Transactions.  
 >   
->  Para obter mais informações, consulte [transações e operações de cópia em massa](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).  
+>  Para obter mais informações, consulte [operações de cópia em massa e transação](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).  
   
- As etapas gerais para executar uma operação de cópia em massa são da seguinte maneira:  
+ As etapas gerais para executar uma operação de cópia em massa são as seguintes:  
   
-1. Conectar-se ao servidor de origem e obter os dados a serem copiados. Dados também podem vir de outras fontes, se ele pode ser recuperado de um <xref:System.Data.IDataReader> ou <xref:System.Data.DataTable> objeto.  
+1. Conecte-se ao servidor de origem e obtenha os dados a serem copiados. Os dados também podem vir de outras fontes, se puderem ser recuperados <xref:System.Data.IDataReader> de <xref:System.Data.DataTable> um objeto ou.  
   
-2. Conectar-se ao servidor de destino (a menos que você deseje **SqlBulkCopy** para estabelecer uma conexão para você).  
+2. Conecte-se ao servidor de destino (a menos que você queira que o **SqlBulkCopy** estabeleça uma conexão para você).  
   
-3. Criar um <xref:System.Data.SqlClient.SqlBulkCopy> objeto, definindo as propriedades necessárias.  
+3. Crie um <xref:System.Data.SqlClient.SqlBulkCopy> objeto, definindo as propriedades necessárias.  
   
-4. Defina as **DestinationTableName** propriedade para indicar a tabela de destino para a maior parte de operação de inserção.  
+4. Defina a propriedade **DestinationTableName** para indicar a tabela de destino para a operação de inserção em massa.  
   
-5. Chame um dos **WriteToServer** métodos.  
+5. Chame um dos métodos **WriteToServer** .  
   
-6. Opcionalmente, atualize as propriedades e chamar **WriteToServer** novamente, conforme necessário.  
+6. Opcionalmente, atualize as propriedades e chame **WriteToServer** novamente conforme necessário.  
   
-7. Chame <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, ou encapsular as operações de cópia em massa dentro de um `Using` instrução.  
+7. Chamar <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>ou encapsular as operações de cópia em massa `Using` em uma instrução.  
   
 > [!CAUTION]
->  É recomendável que os tipos de dados de coluna de origem e destino correspondam. Se os tipos de dados não corresponderem, **SqlBulkCopy** tenta converter cada valor de origem para o tipo de dados de destino, usando as regras de empregado pelo <xref:System.Data.SqlClient.SqlParameter.Value%2A>. As conversões podem afetar o desempenho e também podem resultar em erros inesperados. Por exemplo, uma `Double` tipo de dados pode ser convertido em um `Decimal` a maioria do tipo de dados do tempo, mas não sempre.  
+>  É recomendável que os tipos de dados de coluna de origem e destino coincidam. Se os tipos de dados não corresponderem, o **SqlBulkCopy** tentará converter cada valor de origem no tipo de dados de destino, <xref:System.Data.SqlClient.SqlParameter.Value%2A>usando as regras empregadas pelo. As conversões podem afetar o desempenho e também podem resultar em erros inesperados. Por exemplo, um `Double` tipo de dados pode ser convertido em `Decimal` um tipo de dados na maior parte do tempo, mas nem sempre.  
   
 ## <a name="example"></a>Exemplo  
- O aplicativo de console a seguir demonstra como carregar dados usando o <xref:System.Data.SqlClient.SqlBulkCopy> classe. Neste exemplo, uma <xref:System.Data.SqlClient.SqlDataReader> é usado para copiar dados do **Production. Product** tabela no SQL Server **AdventureWorks** banco de dados em uma tabela semelhante no mesmo banco de dados.  
+ O aplicativo de console a seguir demonstra como carregar dados usando <xref:System.Data.SqlClient.SqlBulkCopy> a classe. Neste exemplo, um <xref:System.Data.SqlClient.SqlDataReader> é usado para copiar dados da tabela de **produção. Product** no banco SQL Server dados **AdventureWorks** para uma tabela semelhante no mesmo banco de dados.  
   
 > [!IMPORTANT]
->  Este exemplo não será executado, a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem localizadas na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+> Este exemplo não será executado a menos que você tenha criado as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe somente para uso de **SqlBulkCopy** . Se as tabelas de origem e destino estiverem localizadas na mesma instância de SQL Server, será mais fácil e rápido usar uma instrução Transact `INSERT … SELECT` -SQL para copiar os dados.  
   
  [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
  [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]  
   
-## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Executando uma operação de cópia em massa usando Transact-SQL e a classe de comando  
+## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Executando uma operação de cópia em massa usando Transact-SQL e a classe Command  
  O exemplo a seguir ilustra como usar o <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> método para executar a instrução BULK INSERT.  
   
 > [!NOTE]
->  O caminho do arquivo da fonte de dados é relativo ao servidor. O processo do servidor deve ter acesso a esse caminho para que a operação de cópia em massa seja bem-sucedida.  
+> O caminho do arquivo para a fonte de dados é relativo ao servidor. O processo do servidor deve ter acesso a esse caminho para que a operação de cópia em massa tenha sucesso.  
   
 ```vb  
 Using connection As SqlConnection = New SqlConnection(connectionString)  

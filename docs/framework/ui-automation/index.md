@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 9b6d594a3d92a7b666e52c92221d60956e718b42
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 61f3e52476f5003218f8b741db99dfa4df2c9c2c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68237535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968200"
 ---
 # <a name="accessibility"></a>Acessibilidade
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
  A [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] é a nova estrutura de acessibilidade do [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]. Ela atende às necessidades de produtos de tecnologia assistencial e de estruturas de teste automatizado, fornecendo acesso programático a informações sobre a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Além disso, a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permite que os desenvolvedores de controle e de aplicativo disponibilizem seus produtos.  
   

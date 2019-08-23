@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88b7b2093ecb2c601e57eca32e25c21e91641281
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 622b6c523adfb7bae2fc38826152ef69709568cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753476"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931070"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>Método IHostSyncManager::CreateCrst
-Cria um objeto de seção crítica para a sincronização.  
+Cria um objeto de seção crítica para sincronização.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,29 +37,29 @@ HRESULT CreateCrst (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppCrst`  
- [out] Um ponteiro para o endereço de um [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instância implementada pelo host ou nula se a seção crítica não pôde ser criada.  
+ fora Um ponteiro para o endereço de uma instância de [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) implementada pelo host, ou NULL se a seção crítica não puder ser criada.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CreateCrst` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|S_OK|`CreateCrst`retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Não havia memória suficiente disponível para criar a seção crítica solicitada.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Não há memória suficiente disponível para criar a seção crítica solicitada.|  
   
 ## <a name="remarks"></a>Comentários  
- Objetos de seção crítica fornecem sincronização semelhante àquela fornecida por um objeto de mutex, exceto que seções críticas que podem ser usadas somente por threads de um único processo. `CreateCrst` espelha o Win32 `InitializeCriticalSection` função.  
+ Os objetos de seção crítica fornecem sincronização semelhante à fornecida por um objeto mutex, exceto que as seções críticas podem ser usadas somente pelos threads de um único processo. `CreateCrst`espelha a função `InitializeCriticalSection` do Win32.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -69,5 +69,5 @@ HRESULT CreateCrst (
 - [Interface IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
 - [Interface IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
 - [Interface IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [Mutexes](../../../../docs/standard/threading/mutexes.md)
-- [Semaphore e SemaphoreSlim](../../../../docs/standard/threading/semaphore-and-semaphoreslim.md)
+- [Mutexes](../../../standard/threading/mutexes.md)
+- [Semaphore e SemaphoreSlim](../../../standard/threading/semaphore-and-semaphoreslim.md)

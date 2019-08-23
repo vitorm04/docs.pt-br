@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6663b4875fc2c3698b612a4958140ba199ea2669
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c27732de448e19c4227062706c7a7d73c98e5f19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631930"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966872"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Melhorando a depuração com os atributos de exibição do depurador
 
-Os atributos de exibição do depurador permitem ao desenvolvedor do tipo, que especifica e entende melhor o comportamento de tempo de execução desse tipo, especificar também a aparência desse tipo quando ele é exibido em um depurador. Além disso, os atributos de exibição do depurador que fornecem uma propriedade `Target` podem ser aplicados no nível do assembly pelos usuários sem conhecimento do código-fonte. O atributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controla como um tipo ou um membro é exibido nas janelas de variáveis do depurador. O atributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina se e como um campo ou uma propriedade é exibida nas janelas de variáveis do depurador. O atributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> especifica um tipo substituto ou um proxy, para um tipo e altera o modo como o tipo é exibido nas janelas do depurador. Quando você exibe uma variável que tem um proxy ou um tipo substituto, o proxy substitui o tipo original na janela de exibição do depurador. A janela de variáveis do depurador exibe apenas os membros públicos do tipo de proxy. Os membros particulares não são exibidos.  
+Os atributos de exibição do depurador permitem ao desenvolvedor do tipo, que especifica e entende melhor o comportamento de tempo de execução desse tipo, especificar também a aparência desse tipo quando ele é exibido em um depurador. Além disso, os atributos de exibição do depurador que fornecem uma propriedade `Target` podem ser aplicados no nível do assembly pelos usuários sem conhecimento do código-fonte. O atributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controla como um tipo ou um membro é exibido nas janelas de variáveis do depurador. O atributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina se e como um campo ou uma propriedade é exibida nas janelas de variáveis do depurador. O atributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> especifica um tipo substituto ou um proxy, para um tipo e altera o modo como o tipo é exibido nas janelas do depurador. Quando você exibe uma variável que tem um proxy ou tipo substituto, o proxy se refere ao tipo original na janela de exibição do depurador. A janela de variáveis do depurador exibe apenas os membros públicos do tipo de proxy. Os membros particulares não são exibidos.  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>Usando o DebuggerDisplayAttribute  
 
@@ -47,12 +47,12 @@ Por exemplo, se um objeto do C# tiver um `ToString()` substituído, o depurador 
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.Never> indica que o membro não é exibido na janela de dados.  Por exemplo, o uso desse valor para o <xref:System.Diagnostics.DebuggerBrowsableAttribute> em um campo remove o campo da hierarquia; o campo não é exibido quando você expande o tipo delimitador clicando no sinal de adição (+) da instância de tipo.
 
-- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> indica que o membro é exibido, mas não expandido por padrão.  Este é o comportamento padrão.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> indica que o membro é exibido, mas não expandido por padrão.  Esse é o comportamento padrão.
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> indica que o próprio membro não é mostrado, mas seus objetos constituintes são exibidos, se ele é uma matriz ou uma coleção.
 
 > [!NOTE]
->  Não há suporte para o <xref:System.Diagnostics.DebuggerBrowsableAttribute> no Visual Basic no .NET Framework versão 2.0.
+> Não há suporte para o <xref:System.Diagnostics.DebuggerBrowsableAttribute> no Visual Basic no .NET Framework versão 2.0.
 
 O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.DebuggerBrowsableAttribute> para impedir que a propriedade após ele seja exibida na janela de depuração da classe.
 
@@ -97,7 +97,7 @@ class MyHashtable : Hashtable
 
 ### <a name="description"></a>Descrição
 
-O exemplo de código a seguir pode ser exibido no Visual Studio para ver os resultados da aplicação do <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute>, e <xref:System.Diagnostics.DebuggerTypeProxyAttribute> atributos.
+O exemplo de código a seguir pode ser exibido no Visual Studio para ver os resultados da <xref:System.Diagnostics.DebuggerDisplayAttribute>aplicação <xref:System.Diagnostics.DebuggerBrowsableAttribute>dos atributos <xref:System.Diagnostics.DebuggerTypeProxyAttribute> , e.
 
 ### <a name="code"></a>Código
 

@@ -4,75 +4,75 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 0ab071bf7996a296563fbda68dfdc731e95ed897
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 334e9fe7ca6931f87c75023f3322638b36001b6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425352"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923061"
 ---
 # <a name="routing-scenarios"></a>Cenários de roteamento
-Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um desafio para a lógica de roteamento eficiente de design ao criar uma nova configuração do zero.  No entanto, há vários cenários comuns que seguem a maioria das configurações de serviço de roteamento. Enquanto esses cenários não podem ser aplicadas diretamente em sua configuração específica, Noções básicas sobre como o serviço de roteamento pode ser configurado para tratar desses cenários ajudam a entender o serviço de roteamento.  
+Embora o serviço de roteamento seja altamente personalizável, pode ser um desafio criar uma lógica de roteamento eficiente ao criar uma nova configuração do zero.  No entanto, há vários cenários comuns que a maioria das configurações de serviço de roteamento seguem. Embora esses cenários possam não se aplicar diretamente à sua configuração específica, entender como o serviço de roteamento pode ser configurado para lidar com esses cenários ajudará você a compreender o serviço de roteamento.  
   
 ## <a name="common-scenarios"></a>Cenários comuns  
- O uso mais básico do serviço de roteamento é agregar vários pontos de extremidade de destino para reduzir o número de pontos de extremidade expostos aos aplicativos cliente e, em seguida, usar filtros de mensagem para rotear cada mensagem para o destino correto. As mensagens podem ser roteadas com base nos requisitos de processamento lógico ou físico, como um tipo de mensagem que deve ser processado por um serviço específico ou com base nas necessidades de negócios arbitrário, como fornecer processamento de prioridade de mensagens de uma fonte específica. A tabela a seguir lista alguns dos cenários comuns e quando eles forem encontrados:  
+ O uso mais básico do serviço de roteamento é para agregar vários pontos de extremidade de destino para reduzir o número de pontos de extremidade expostos aos aplicativos cliente e, em seguida, usar filtros de mensagem para rotear cada mensagem para o destino correto. As mensagens podem ser roteadas com base em requisitos de processamento lógico ou físico, como um tipo de mensagem que deve ser processado por um serviço específico ou com base em necessidades de negócios arbitrárias, como fornecer o processamento prioritário de mensagens de uma fonte específica. A tabela a seguir lista alguns dos cenários comuns e quando eles são encontrados:  
   
-|Cenário|Use quando|  
+|Cenário|Usar quando|  
 |--------------|--------------|  
-|Controle de versão do serviço|Você precisa dar suporte a várias versões de um serviço ou pode implantar um serviço atualizado no futuro|  
+|Controle de versão de serviço|Você precisa dar suporte a várias versões de um serviço ou pode implantar um serviço atualizado no futuro|  
 |Particionamento de dados de serviço|Você deve particionar um serviço em vários hosts|  
-|Atualização dinâmica|Você deve reconfigurar dinamicamente lógica de roteamento em tempo de execução para lidar com implantações do serviço de alteração|  
-|Multicast|Você deve enviar uma mensagem para vários pontos de extremidade|  
-|Ponte de protocolo|Receber mensagens através do protocolo de transporte e o ponto de extremidade de destino usa um protocolo diferente|  
-|Tratamento de erros|Você precisa fornecer resiliência a interrupções de rede e falhas de comunicação|  
+|Atualização dinâmica|Você deve reconfigurar dinamicamente a lógica de roteamento em tempo de execução para lidar com a alteração de implantações de serviço|  
+|Seletiva|Você deve enviar uma mensagem para vários pontos de extremidade|  
+|Ponte de protocolo|Você recebe mensagens em um protocolo de transporte e o ponto de extremidade de destino usa um protocolo diferente|  
+|Tratamento de erros|Você precisa fornecer resiliência para interrupções de rede e falhas de comunicação|  
   
 > [!NOTE]
->  Embora muitos dos cenários apresentados são específicos a determinadas necessidades de negócios ou requisitos de processamento, Planejando dar suporte a atualizações dinâmicas e utilizando o tratamento de erro geralmente podem ser considerado como melhores práticas, pois permitem que você modifique a lógica de roteamento em tempo de execução e se recuperar de falhas transitórias de rede e comunicação.  
+> Embora muitos dos cenários apresentados sejam específicos a determinadas necessidades de negócios ou requisitos de processamento, o planejamento para dar suporte a atualizações dinâmicas e a utilização do tratamento de erros geralmente pode ser considerado como práticas recomendadas, pois permitem modificar a lógica de roteamento em tempo de execução e se recupere de falhas de comunicação e rede transitórias.  
   
 ### <a name="service-versioning"></a>Controle de versão de serviço  
- Ao introduzir uma nova versão de um serviço, você geralmente deve manter a versão anterior até que todos os clientes têm feito a transição para o novo serviço. Isso é especialmente crítico se o serviço é um processo de longa execução que leva os dias, semanas ou até meses para ser concluído. Normalmente, isso requer a implementação de um novo endereço de ponto de extremidade para o novo serviço, mantendo o ponto de extremidade original para a versão anterior.  
+ Ao introduzir uma nova versão de um serviço, geralmente você deve manter a versão anterior até que todos os clientes tenham sido transferidos para o novo serviço. Isso é especialmente crítico se o serviço for um processo de longa execução que leva dias, semanas ou até meses para ser concluído. Normalmente, isso requer a implementação de um novo endereço de ponto de extremidade para o novo serviço, mantendo o ponto de extremidade original para a versão anterior.  
   
- Ao usar o serviço de roteamento, você pode expor um ponto de extremidade para receber mensagens de aplicativos cliente e, em seguida, rotear cada mensagem para a versão de serviço correto com base no conteúdo da mensagem. A implementação mais básica envolve a adição de um cabeçalho personalizado para a mensagem que indica a versão do que a mensagem deve ser processado pelo serviço. O serviço de roteamento pode usar o XPathMessageFilter para inspecionar cada mensagem para a presença do cabeçalho personalizado e rotear a mensagem para o ponto de extremidade de destino apropriado.  
+ Usando o serviço de roteamento, você pode expor um ponto de extremidade para receber mensagens de aplicativos cliente e, em seguida, rotear cada mensagem para a versão de serviço correta com base no conteúdo da mensagem. A implementação mais básica envolve a adição de um cabeçalho personalizado à mensagem que indica a versão do serviço pelo qual a mensagem deve ser processada. O serviço de roteamento pode usar o XPathMessageFilter para inspecionar cada mensagem quanto à presença do cabeçalho personalizado e encaminhar a mensagem para o ponto de extremidade de destino apropriado.  
   
- Para obter as etapas usadas para criar uma configuração de controle de versão de serviço, consulte [How To: Controle de versão de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
+ Para as etapas usadas para criar uma configuração de controle de versão de [serviço, consulte Como: Controle de versão](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)do serviço.
   
 ### <a name="service-data-partitioning"></a>fornecer particionamento de dados  
- Ao criar um ambiente distribuído, geralmente é desejável para distribuir a carga de processamento entre vários computadores para fornecer alta disponibilidade, diminuir a carga de processamento em computadores individuais ou para fornecer recursos dedicados para um subconjunto específico de mensagens. Enquanto o serviço de roteamento não substitui uma solução de balanceamento de carga dedicada, sua capacidade de executar o roteamento com base em conteúdo pode ser usado para rotear mensagens de outra forma semelhante para destinos específicos. Por exemplo, você pode ter um requisito para processar as mensagens de um cliente específico separadamente de mensagens recebidas de outros clientes.  
+ Ao criar um ambiente distribuído, muitas vezes é desejável espalhar a carga de processamento em vários computadores para fornecer alta disponibilidade, diminuir a carga de processamento em computadores individuais ou fornecer recursos dedicados para um subconjunto específico de mensagens. Embora o serviço de roteamento não substitua uma solução de balanceamento de carga dedicada, sua capacidade de executar o roteamento baseado em conteúdo pode ser usada para rotear mensagens semelhantes para destinos específicos. Por exemplo, você pode ter um requisito para processar mensagens de um cliente específico separadamente das mensagens recebidas de outros clientes.  
   
- Para obter as etapas usadas para criar uma configuração de particionamento de dados de serviço, consulte [How To: Particionamento de dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
+ Para as etapas usadas para criar uma configuração de particionamento de dados de serviço [, consulte Como: Particionamento de dados de](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)serviço.  
   
 ### <a name="dynamic-routing"></a>Roteamento dinâmico  
- Muitas vezes é desejável para modificar a configuração de roteamento para atender às crescentes necessidades do negócio, como a adição de uma rota para uma versão mais recente de um serviço, a alteração dos critérios de roteamentos ou alterando o ponto de extremidade de destino uma mensagem específica que o filtro faça o roteamento. O serviço de roteamento permite que você faça isso por meio de <xref:System.ServiceModel.Routing.RoutingExtension>, que permite que você forneça um novo RoutingConfiguration durante o tempo de execução. A nova configuração entrará em vigor imediatamente, mas só afeta qualquer sessão nova processada pelo serviço de roteamento.  
+ Geralmente, é desejável modificar a configuração de roteamento para atender às necessidades de negócios em constante mudança, como adicionar uma rota a uma versão mais recente de um serviço, alterar os critérios de roteamento ou alterar o ponto de extremidade de destino para uma mensagem específica que o filtro roteia. O serviço de roteamento permite que você faça isso por <xref:System.ServiceModel.Routing.RoutingExtension>meio do, que permite fornecer um novo RoutingConfiguration durante o tempo de execução. A nova configuração entra em vigor imediatamente, mas afeta apenas as novas sessões processadas pelo serviço de roteamento.  
   
- Para obter as etapas usadas para implementar o roteamento dinâmico, consulte [How To: Atualização dinâmica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
+ Para as etapas usadas para implementar o roteamento dinâmico, [consulte Como: Atualização](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)dinâmica.
   
-### <a name="multicast"></a>Multicast  
- Quando o roteamento de mensagens, geralmente você roteamento cada mensagem ao ponto de extremidade de um destino específico.  No entanto, ocasionalmente, talvez precise rotear uma cópia da mensagem para vários pontos de extremidade de destino. Para executar o roteamento de difusão seletiva, as seguintes condições devem ser verdadeiras:  
+### <a name="multicast"></a>Seletiva  
+ Ao rotear mensagens, geralmente você encaminha cada mensagem para um ponto de extremidade de destino específico.  No entanto, ocasionalmente você pode precisar encaminhar uma cópia da mensagem para vários pontos de extremidade de destino. Para executar o roteamento multicast, as seguintes condições devem ser verdadeiras:  
   
-- A forma de canal não deve ser de solicitação-resposta (embora ele possa ser unidirecionais ou bidirecionais,) porque a solicitação-resposta exige que apenas uma resposta pode ser recebida pelo aplicativo cliente em resposta à solicitação.  
+- A forma de canal não deve ser solicitação-resposta (embora possa ser unidirecional ou duplex) porque a solicitação-resposta exige que apenas uma resposta possa ser recebida pelo aplicativo cliente em resposta à solicitação.  
   
-- Vários filtros devem retornar **verdadeira** ao avaliar a mensagem.  
+- Vários filtros devem retornar **true** ao avaliar a mensagem.  
   
- Se essas condições forem atendidas, a cada ponto de extremidade de destino que está associado com um filtro que retorna true receberá uma cópia da mensagem.  
+ Se essas condições forem atendidas, cada ponto de extremidade de destino associado a um filtro que retorna true receberá uma cópia da mensagem.  
   
 ### <a name="protocol-bridging"></a>Ponte de protocolo  
- Ao rotear mensagens entre diferentes protocolos SOAP, o serviço de roteamento usa APIs do WCF para converter a mensagem de um protocolo para o outro. Isso ocorre automaticamente quando os pontos de extremidade de serviço expostos pelo uso do serviço de roteamento de um protocolo diferente que os pontos de extremidade do cliente que as mensagens são roteadas para. É possível desabilitar esse comportamento se os protocolos em uso não são padrão; No entanto, em seguida, forneça seu próprio código de ponte.
+ Ao rotear mensagens entre protocolos SOAP diferentes, o serviço de roteamento usa APIs WCF para converter a mensagem de um protocolo para outro. Isso ocorre automaticamente quando os pontos de extremidade de serviço expostos pelo serviço de roteamento usam um protocolo diferente dos pontos de extremidade do cliente para os quais as mensagens são roteadas. É possível desabilitar esse comportamento se os protocolos em uso não forem padrão; no entanto, você deve fornecer seu próprio código de ponte.
   
 ### <a name="error-handling"></a>Tratamento de erros  
- Em um ambiente distribuído, não é incomum encontrar falhas de rede ou de comunicação transitórias. Sem um serviço intermediário como o serviço de roteamento, a sobrecarga de lidar com tais falhas se enquadra no aplicativo cliente. Se o aplicativo cliente não inclui a lógica específica para tentar novamente em caso de rede ou falhas de comunicação e conhecimento sobre locais alternativos, o usuário pode encontrar situações em que uma mensagem deve ser enviada várias vezes antes que ele seja com êxito processado pelo serviço de destino. Isso pode levar a insatisfação do cliente com o aplicativo, pois podem ser considerado como não confiável.  
+ Em um ambiente distribuído, não é incomum encontrar falhas transitórias de rede ou comunicação. Sem um serviço intermediário como o serviço de roteamento, a carga de lidar com essas falhas cai no aplicativo cliente. Se o aplicativo cliente não incluir uma lógica específica para tentar novamente no caso de falhas de rede ou de comunicação e o conhecimento de locais alternativos, o usuário poderá encontrar cenários em que uma mensagem deve ser enviada várias vezes antes de ser bem-sucedida processado pelo serviço de destino. Isso pode levar à insatisfação do cliente com o aplicativo, pois ele pode ser percebido como não confiável.  
   
- O serviço de roteamento tenta corrigir esse cenário, fornecendo recursos de tratamento de erros robusto para mensagens que encontrar a rede ou falhas relacionadas à comunicação. Ao criar uma lista de pontos de extremidade de destino possíveis e associar essa lista com cada filtro de mensagem, você remove o ponto único de falha incorrido por ter apenas um destino possível. Em caso de falha, o serviço de roteamento tentará entregar a mensagem para o próximo ponto de extremidade na lista até que a mensagem foi entregue, ocorre uma falha de comunicação não, ou todos os pontos de extremidade foram esgotados.  
+ O serviço de roteamento tenta corrigir esse cenário fornecendo recursos robustos de tratamento de erros para mensagens que encontram falhas relacionadas à rede ou à comunicação. Ao criar uma lista de pontos de extremidade de destino possíveis e associar essa lista a cada filtro de mensagem, você remove o ponto único de falha incorrida por ter apenas um destino possível. Em caso de falha, o serviço de roteamento tentará entregar a mensagem para o próximo ponto de extremidade na lista até que a mensagem tenha sido entregue, uma falha de não comunicação ocorrerá ou todos os pontos de extremidade tenham sido esgotados.  
   
- Para obter as etapas usadas para configurar o tratamento de erros, consulte [How To: Tratamento de erro](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
+ Para as etapas usadas para configurar o tratamento de erros [, consulte Como: Tratamento](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)de erros.
   
 ### <a name="in-this-section"></a>Nesta seção  
- [Como: Controle de versão do serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Como: Controle de versão de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
  [Como: Particionamento de dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
  [Como: Atualização dinâmica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Como: Tratamento de erros](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Como: Tratamento de erro](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Consulte também
 

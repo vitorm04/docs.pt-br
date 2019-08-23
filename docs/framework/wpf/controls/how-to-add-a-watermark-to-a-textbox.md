@@ -8,20 +8,20 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe276c686d394ded13ec03f08deae65e4098d03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911607"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923570"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Como: Adicionar uma marca-d'água a um TextBox
-O exemplo a seguir mostra como a usabilidade de auxílio de uma <xref:System.Windows.Controls.TextBox> exibindo uma imagem em segundo plano explicativo dentro do <xref:System.Windows.Controls.TextBox> até que o usuário insere texto, no ponto em que a imagem será removida. Além disso, a imagem de plano de fundo é restaurada novamente se o usuário remove suas entradas. Consulte a ilustração a seguir.  
+O exemplo a seguir mostra como auxiliar a usabilidade de <xref:System.Windows.Controls.TextBox> um exibindo uma imagem de tela <xref:System.Windows.Controls.TextBox> de fundo explicativa dentro do até que o usuário entradas de texto, no ponto em que a imagem é removida. Além disso, a imagem de plano de fundo será restaurada novamente se o usuário remover sua entrada. Consulte a ilustração abaixo.  
   
  ![Uma caixa de texto com uma imagem de plano de fundo](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
   
 > [!NOTE]
->  O motivo pelo qual uma imagem de plano de fundo é usada neste exemplo em vez de simplesmente manipular as <xref:System.Windows.Controls.TextBox.Text%2A> propriedade de <xref:System.Windows.Controls.TextBox>, é que uma imagem de plano de fundo não interferirá na associação de dados.  
+> O motivo pelo qual uma imagem de plano de fundo é usada neste exemplo em vez <xref:System.Windows.Controls.TextBox.Text%2A> de simplesmente <xref:System.Windows.Controls.TextBox>manipular a propriedade de, é que uma imagem de plano de fundo não interfere na vinculação de dados.  
   
 ## <a name="example"></a>Exemplo  
  [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  

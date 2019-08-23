@@ -2,17 +2,17 @@
 title: Esquema de configuração do WCF
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: baea1e49bce10054530afa5b6f282023d5ceb981
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d7b4cbad1876888e7a22a92bdb28a17b880e159
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755800"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925397"
 ---
 # <a name="wcf-configuration-schema"></a>Esquema de configuração do WCF
-Elementos de configuração do Windows Communication Foundation (WCF) permitem configurar aplicativos de serviço e cliente do WCF. Você pode usar a [Ferramenta Editor de Configuração (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) para criar e modificar arquivos de configuração para clientes e serviços. Como os arquivos de configuração são formatados como XML, você deverá estar familiarizado com XML se desejar editá-los manualmente usando um editor de texto. Caso contrário, você pode ter problemas, como uma marca de elemento XML unfound ou atributo. Isso ocorre porque marcas de elementos XML e atributos diferenciam maiúsculas de minúsculas.  
+Os elementos de configuração do Windows Communication Foundation (WCF) permitem configurar aplicativos cliente e serviço WCF. Você pode usar a [Ferramenta Editor de Configuração (SvcConfigEditor.exe)](../../../wcf/configuration-editor-tool-svcconfigeditor-exe.md) para criar e modificar arquivos de configuração para clientes e serviços. Como os arquivos de configuração são formatados como XML, você deverá estar familiarizado com XML se desejar editá-los manualmente usando um editor de texto. Caso contrário, você pode ter problemas, como uma marca de elemento XML unfound ou atributo. Isso ocorre porque marcas de elementos XML e atributos diferenciam maiúsculas de minúsculas.  
   
- O sistema de configuração do WCF se baseia o <xref:System.Configuration> namespace. Portanto, você pode usar todos os recursos padrão fornecidos pelo namespace <xref:System.Configuration>, como bloqueio de configuração, criptografia e mesclagem para aumentar a segurança de seu aplicativo e de sua configuração. Para obter mais informações sobre esses conceitos, consulte os tópicos a seguir.  
+ O sistema de configuração do WCF é baseado <xref:System.Configuration> no namespace. Portanto, você pode usar todos os recursos padrão fornecidos pelo namespace <xref:System.Configuration>, como bloqueio de configuração, criptografia e mesclagem para aumentar a segurança de seu aplicativo e de sua configuração. Para obter mais informações sobre esses conceitos, consulte os tópicos a seguir.  
   
  [Criptografando informações de configuração](https://go.microsoft.com/fwlink/?LinkId=95337)  
   
@@ -23,16 +23,16 @@ Elementos de configuração do Windows Communication Foundation (WCF) permitem c
  ![Diagrama que mostra o esquema de configuração do WCF.](./media/index/windows-communication-foundation-configuration-schema.gif)  
   
 > [!CAUTION]
->  Você deve proteger seções de configuração do WCF em seus arquivos de configuração de aplicativo (App. config) com apropriado controle listas acesso (ACL) para evitar possíveis ameaças de segurança.  Por exemplo, você deve garantir que somente pessoas apropriadas possam acessar ou modificar as configurações de segurança em associações de aplicativo ou a seção do modelo de serviço no arquivo de configuração de um serviço.  
+>  Você deve proteger as seções de configuração do WCF em seus arquivos de configuração de aplicativo (App. config) com as listas de controle de acesso (ACL) apropriadas para evitar possíveis ameaças à segurança.  Por exemplo, você deve garantir que somente pessoas apropriadas possam acessar ou modificar as configurações de segurança em associações de aplicativo ou a seção do modelo de serviço no arquivo de configuração de um serviço.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+ [\<system.serviceModel>](system-servicemodel.md)  
  Descreve o `ServiceModel` elemento.  
   
- [\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)  
+ [\<system.serviceModel.activation>](system-servicemodel-activation.md)  
  Configura a ferramenta SMSvcHost.exe.  
   
- [\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
+ [\<system.runtime.serialization>](system-runtime-serialization.md)  
  O elemento de nível superior para definir opções ao usar serializadores como o <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

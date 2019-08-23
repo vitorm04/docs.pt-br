@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cbf82f1481ee9779cec5cfbf3fb057b7ea399a1c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 9eb762a9691a6127e2419f9ddc25f3010d3383fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039901"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966520"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Como: Bloquear controles nos Windows Forms
 Ao projetar a interface do usuário do seu aplicativo do Windows, você pode bloquear os controles quando eles são posicionados corretamente, para que você não os mova nem os redimensione inadvertidamente ao configurar outras propriedades.
@@ -24,14 +24,14 @@ Ao projetar a interface do usuário do seu aplicativo do Windows, você pode blo
      Como alternativa, clique com o botão direito do mouse no controle e escolha **Bloquear Controles**.
 
     > [!NOTE]
-    >  O bloqueio dos controles evita que eles sejam arrastados para um novo tamanho ou local na superfície de design. No entanto, você ainda pode alterar o tamanho ou local dos controles por meio da janela **Propriedades** ou no código.
+    > O bloqueio dos controles evita que eles sejam arrastados para um novo tamanho ou local na superfície de design. No entanto, você ainda pode alterar o tamanho ou local dos controles por meio da janela **Propriedades** ou no código.
 
 ## <a name="to-lock-all-the-controls-on-a-form"></a>Para bloquear todos os controles em um formulário
 
 1. No menu **Formatar**, escolha **Bloquear Controles**.
 
     > [!NOTE]
-    >  Esse comando bloqueia também o tamanho do formulário, pois um formulário é um controle.
+    > Esse comando bloqueia também o tamanho do formulário, pois um formulário é um controle.
 
 ## <a name="to-unlock-all-locked-controls-on-a-form"></a>Para desbloquear todos os controles bloqueados em um formulário
 

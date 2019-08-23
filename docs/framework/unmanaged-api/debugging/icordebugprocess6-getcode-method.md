@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 810590f0d1f7f74b778d73d98a9f7f9b1988b75f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d896cc4316c2de6fa1cb0bacc9ff8b1f3713129
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967552"
 ---
 # <a name="icordebugprocess6getcode-method"></a>Método ICorDebugProcess6::GetCode
 Obtém informações sobre o código gerenciado em um endereço de código em particular.  
@@ -24,22 +24,22 @@ HRESULT GetCode(
   
 ## <a name="parameters"></a>Parâmetros  
  `codeAddress`  
- [in] Um [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) valor que especifica o endereço inicial do segmento de código gerenciado.  
+ no Um valor de [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) que especifica o endereço inicial do segmento de código gerenciado.  
   
  `ppCode`  
- [out] Um ponteiro para o endereço de um objeto de "ICorDebugCode" que representa um segmento de código gerenciado.  
+ fora Um ponteiro para o endereço de um objeto "ICorDebugCode" que representa um segmento de código gerenciado.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
