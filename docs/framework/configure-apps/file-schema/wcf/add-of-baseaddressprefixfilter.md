@@ -2,22 +2,22 @@
 title: <add> de <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: a58a29e44fff3d653d04da271e3b240f2969611f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e29db0b2412c9ccbfe83d000077e8d85332955ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673727"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926859"
 ---
-# <a name="add-of-baseaddressprefixfilter"></a><span data-ttu-id="87ea0-102">\<add> of \<baseAddressPrefixFilter></span><span class="sxs-lookup"><span data-stu-id="87ea0-102">\<add> of \<baseAddressPrefixFilter></span></span>
-<span data-ttu-id="87ea0-103">Representa um elemento de configuração que especifica um filtro de passagem, que fornece um mecanismo para coletar as associações de serviços de informações da Internet (IIS) apropriadas ao hospedar um aplicativo do Windows Communication Foundation (WCF) no IIS.</span><span class="sxs-lookup"><span data-stu-id="87ea0-103">Represents a configuration element that specifies a pass-through filter, which provides a mechanism to pick the appropriate Internet Information Services (IIS) bindings when hosting a Windows Communication Foundation (WCF) application in IIS.</span></span>  
+# <a name="add-of-baseaddressprefixfilter"></a><span data-ttu-id="9d765-102">\<Adicionar > de \<baseAddressPrefixFilter ></span><span class="sxs-lookup"><span data-stu-id="9d765-102">\<add> of \<baseAddressPrefixFilter></span></span>
+<span data-ttu-id="9d765-103">Representa um elemento de configuração que especifica um filtro de passagem, que fornece um mecanismo para escolher as associações de Serviços de Informações da Internet (IIS) apropriadas ao hospedar um aplicativo de Windows Communication Foundation (WCF) no IIS.</span><span class="sxs-lookup"><span data-stu-id="9d765-103">Represents a configuration element that specifies a pass-through filter, which provides a mechanism to pick the appropriate Internet Information Services (IIS) bindings when hosting a Windows Communication Foundation (WCF) application in IIS.</span></span>  
   
- <span data-ttu-id="87ea0-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="87ea0-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="87ea0-105">\<ServiceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="87ea0-105">\<ServiceHostingEnvironment></span></span>  
-<span data-ttu-id="87ea0-106">\<baseAddressPrefixFilters></span><span class="sxs-lookup"><span data-stu-id="87ea0-106">\<baseAddressPrefixFilters></span></span>  
-<span data-ttu-id="87ea0-107">\<add></span><span class="sxs-lookup"><span data-stu-id="87ea0-107">\<add></span></span>  
+ <span data-ttu-id="9d765-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="9d765-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="9d765-105">\<ServiceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="9d765-105">\<ServiceHostingEnvironment></span></span>  
+<span data-ttu-id="9d765-106">\<baseAddressPrefixFilters></span><span class="sxs-lookup"><span data-stu-id="9d765-106">\<baseAddressPrefixFilters></span></span>  
+<span data-ttu-id="9d765-107">\<add></span><span class="sxs-lookup"><span data-stu-id="9d765-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87ea0-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="87ea0-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d765-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9d765-108">Syntax</span></span>  
   
 ```xml  
 <serviceHostingEnvironment>
@@ -27,39 +27,39 @@ ms.locfileid: "61673727"
 </serviceHostingEnvironment>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="87ea0-109">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="87ea0-109">Attributes and Elements</span></span>  
- <span data-ttu-id="87ea0-110">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="87ea0-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9d765-109">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="9d765-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="9d765-110">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="9d765-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="87ea0-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="87ea0-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="9d765-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="9d765-111">Attributes</span></span>  
   
-|<span data-ttu-id="87ea0-112">Atributo</span><span class="sxs-lookup"><span data-stu-id="87ea0-112">Attribute</span></span>|<span data-ttu-id="87ea0-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="87ea0-113">Description</span></span>|  
+|<span data-ttu-id="9d765-112">Atributo</span><span class="sxs-lookup"><span data-stu-id="9d765-112">Attribute</span></span>|<span data-ttu-id="9d765-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="9d765-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="87ea0-114">prefix</span><span class="sxs-lookup"><span data-stu-id="87ea0-114">prefix</span></span>|<span data-ttu-id="87ea0-115">Um URI que é usado para corresponder a uma parte de um endereço básico.</span><span class="sxs-lookup"><span data-stu-id="87ea0-115">A URI that is used to match a part of a base address.</span></span>|  
+|<span data-ttu-id="9d765-114">prefix</span><span class="sxs-lookup"><span data-stu-id="9d765-114">prefix</span></span>|<span data-ttu-id="9d765-115">Um URI que é usado para corresponder a uma parte de um endereço base.</span><span class="sxs-lookup"><span data-stu-id="9d765-115">A URI that is used to match a part of a base address.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="87ea0-116">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="87ea0-116">Child Elements</span></span>  
- <span data-ttu-id="87ea0-117">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="87ea0-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="9d765-116">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="9d765-116">Child Elements</span></span>  
+ <span data-ttu-id="9d765-117">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="9d765-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="87ea0-118">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="87ea0-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="9d765-118">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="9d765-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="87ea0-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="87ea0-119">Element</span></span>|<span data-ttu-id="87ea0-120">Descrição</span><span class="sxs-lookup"><span data-stu-id="87ea0-120">Description</span></span>|  
+|<span data-ttu-id="9d765-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="9d765-119">Element</span></span>|<span data-ttu-id="9d765-120">Descrição</span><span class="sxs-lookup"><span data-stu-id="9d765-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="87ea0-121">\<baseAddressPrefixFilters></span><span class="sxs-lookup"><span data-stu-id="87ea0-121">\<baseAddressPrefixFilters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|<span data-ttu-id="87ea0-122">Uma coleção de elementos de configuração que especificam filtros de passagem, que fornecem um mecanismo para coletar as associações de IIS apropriadas ao hospedar um aplicativo do Windows Communication Foundation (WCF) no IIS.</span><span class="sxs-lookup"><span data-stu-id="87ea0-122">A collection of configuration elements that specify pass-through filters, which provide a mechanism to pick the appropriate IIS bindings when hosting a Windows Communication Foundation (WCF) application in IIS.</span></span>|  
+|[<span data-ttu-id="9d765-121">\<baseAddressPrefixFilters></span><span class="sxs-lookup"><span data-stu-id="9d765-121">\<baseAddressPrefixFilters></span></span>](baseaddressprefixfilters.md)|<span data-ttu-id="9d765-122">Uma coleção de elementos de configuração que especificam filtros de passagem, que fornecem um mecanismo para escolher as associações do IIS apropriadas ao hospedar um aplicativo de Windows Communication Foundation (WCF) no IIS.</span><span class="sxs-lookup"><span data-stu-id="9d765-122">A collection of configuration elements that specify pass-through filters, which provide a mechanism to pick the appropriate IIS bindings when hosting a Windows Communication Foundation (WCF) application in IIS.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="87ea0-123">Comentários</span><span class="sxs-lookup"><span data-stu-id="87ea0-123">Remarks</span></span>  
- <span data-ttu-id="87ea0-124">Um filtro de prefixo fornece uma maneira para os provedores de hospedagem compartilhadas especificar quais URIs devem ser usados pelo serviço.</span><span class="sxs-lookup"><span data-stu-id="87ea0-124">A prefix filter provides a way for shared hosting providers to specify which URIs are to be used by the service.</span></span> <span data-ttu-id="87ea0-125">Ele permite que os hosts compartilhados hospedar vários aplicativos com diferentes endereços base para o mesmo esquema no mesmo site.</span><span class="sxs-lookup"><span data-stu-id="87ea0-125">It enables shared hosts to host multiple applications with different base addresses for the same scheme on the same site.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9d765-123">Comentários</span><span class="sxs-lookup"><span data-stu-id="9d765-123">Remarks</span></span>  
+ <span data-ttu-id="9d765-124">Um filtro de prefixo fornece uma maneira de provedores de hospedagem compartilhados especificar quais URIs devem ser usados pelo serviço.</span><span class="sxs-lookup"><span data-stu-id="9d765-124">A prefix filter provides a way for shared hosting providers to specify which URIs are to be used by the service.</span></span> <span data-ttu-id="9d765-125">Ele permite que hosts compartilhados hospedem vários aplicativos com endereços base diferentes para o mesmo esquema no mesmo site.</span><span class="sxs-lookup"><span data-stu-id="9d765-125">It enables shared hosts to host multiple applications with different base addresses for the same scheme on the same site.</span></span>  
   
- <span data-ttu-id="87ea0-126">Sites da Web do IIS são contêineres para aplicativos virtuais que contêm os diretórios virtuais.</span><span class="sxs-lookup"><span data-stu-id="87ea0-126">IIS Web sites are containers for virtual applications which contain virtual directories.</span></span> <span data-ttu-id="87ea0-127">O aplicativo em um site pode ser acessado por meio de um ou mais associação do IIS.</span><span class="sxs-lookup"><span data-stu-id="87ea0-127">The application in a site can be accessed through one or more IIS binding.</span></span> <span data-ttu-id="87ea0-128">Associações do IIS fornecem dois tipos de informação: informações de associação e o protocolo de associação.</span><span class="sxs-lookup"><span data-stu-id="87ea0-128">IIS bindings provide two pieces of information: binding protocol and binding information.</span></span> <span data-ttu-id="87ea0-129">Associação de protocolo (por exemplo, HTTP) define o esquema no qual a comunicação ocorre, e informações (por exemplo, endereço IP, porta, cabeçalho de host) de associação contém dados usados para acessar o site.</span><span class="sxs-lookup"><span data-stu-id="87ea0-129">Binding protocol (for example, HTTP) defines the scheme over which communication occurs, and binding information (for example, IP Address, Port, Hostheader) contains data used to access the site.</span></span>  
+ <span data-ttu-id="9d765-126">Os sites da Web do IIS são contêineres para aplicativos virtuais que contêm diretórios virtuais.</span><span class="sxs-lookup"><span data-stu-id="9d765-126">IIS Web sites are containers for virtual applications which contain virtual directories.</span></span> <span data-ttu-id="9d765-127">O aplicativo em um site pode ser acessado por meio de uma ou mais associações do IIS.</span><span class="sxs-lookup"><span data-stu-id="9d765-127">The application in a site can be accessed through one or more IIS binding.</span></span> <span data-ttu-id="9d765-128">As associações do IIS fornecem duas informações: vinculação de protocolo e informações de associação.</span><span class="sxs-lookup"><span data-stu-id="9d765-128">IIS bindings provide two pieces of information: binding protocol and binding information.</span></span> <span data-ttu-id="9d765-129">O protocolo de associação (por exemplo, HTTP) define o esquema sobre o qual ocorre a comunicação e as informações de associação (por exemplo, endereço IP, porta, cabeçalho) contêm os dados usados para acessar o site.</span><span class="sxs-lookup"><span data-stu-id="9d765-129">Binding protocol (for example, HTTP) defines the scheme over which communication occurs, and binding information (for example, IP Address, Port, Hostheader) contains data used to access the site.</span></span>  
   
- <span data-ttu-id="87ea0-130">IIS dá suporte à especificação de várias associações de IIS para cada site, o que resulta em vários endereços de base para cada esquema.</span><span class="sxs-lookup"><span data-stu-id="87ea0-130">IIS supports specifying multiple IIS bindings for each site, which results in multiple base addresses for each scheme.</span></span> <span data-ttu-id="87ea0-131">Como um serviço WCF hospedado em um site permite que a associação para apenas um endereço base para cada esquema, você pode usar o recurso de filtro de prefixo para escolher o endereço base necessário do serviço hospedado.</span><span class="sxs-lookup"><span data-stu-id="87ea0-131">Because a WCF service hosted under a site allows binding to only one base address for each scheme, you can use the prefix filter feature to pick the required base address of the hosted service.</span></span> <span data-ttu-id="87ea0-132">Os endereços base entrados fornecidos pelo IIS, são filtrados com base no filtro de lista de prefixo opcional.</span><span class="sxs-lookup"><span data-stu-id="87ea0-132">The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list filter.</span></span>  
+ <span data-ttu-id="9d765-130">O IIS dá suporte à especificação de várias associações IIS para cada site, o que resulta em vários endereços base para cada esquema.</span><span class="sxs-lookup"><span data-stu-id="9d765-130">IIS supports specifying multiple IIS bindings for each site, which results in multiple base addresses for each scheme.</span></span> <span data-ttu-id="9d765-131">Como um serviço WCF hospedado em um site permite a associação a apenas um endereço base para cada esquema, você pode usar o recurso de filtro de prefixo para escolher o endereço base necessário do serviço hospedado.</span><span class="sxs-lookup"><span data-stu-id="9d765-131">Because a WCF service hosted under a site allows binding to only one base address for each scheme, you can use the prefix filter feature to pick the required base address of the hosted service.</span></span> <span data-ttu-id="9d765-132">Os endereços base de entrada, fornecidos pelo IIS, são filtrados com base no filtro de lista de prefixo opcional.</span><span class="sxs-lookup"><span data-stu-id="9d765-132">The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list filter.</span></span>  
   
- <span data-ttu-id="87ea0-133">Por exemplo, seu site pode conter os seguintes endereços de base.</span><span class="sxs-lookup"><span data-stu-id="87ea0-133">For example, your site can contain the following base addresses.</span></span>  
+ <span data-ttu-id="9d765-133">Por exemplo, seu site pode conter os seguintes endereços base.</span><span class="sxs-lookup"><span data-stu-id="9d765-133">For example, your site can contain the following base addresses.</span></span>  
   
 ```  
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  
   
- <span data-ttu-id="87ea0-134">Você pode usar o seguinte arquivo de configuração para especificar um filtro de prefixo no nível do appdomain.</span><span class="sxs-lookup"><span data-stu-id="87ea0-134">You can use the following configuration file to specify a prefix filter at the appdomain level.</span></span>  
+ <span data-ttu-id="9d765-134">Você pode usar o arquivo de configuração a seguir para especificar um filtro de prefixo no nível do AppDomain.</span><span class="sxs-lookup"><span data-stu-id="9d765-134">You can use the following configuration file to specify a prefix filter at the appdomain level.</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -72,16 +72,16 @@ http://test2.fabrikam.com/Service.svc
 </system.serviceModel>
 ```  
   
- <span data-ttu-id="87ea0-135">Neste exemplo, `net.tcp://test1.fabrikam.com:8000` e `http://test2.fabrikam.com:9000` são os endereços base somente para seus respectivos esquemas que têm permissão para ser passado.</span><span class="sxs-lookup"><span data-stu-id="87ea0-135">In this example, `net.tcp://test1.fabrikam.com:8000` and `http://test2.fabrikam.com:9000` are the only base addresses for their respective schemes which are allowed to be passed through.</span></span>  
+ <span data-ttu-id="9d765-135">Neste exemplo, `net.tcp://test1.fabrikam.com:8000` e `http://test2.fabrikam.com:9000` são os únicos endereços base para seus respectivos esquemas que têm permissão para serem passados.</span><span class="sxs-lookup"><span data-stu-id="9d765-135">In this example, `net.tcp://test1.fabrikam.com:8000` and `http://test2.fabrikam.com:9000` are the only base addresses for their respective schemes which are allowed to be passed through.</span></span>  
   
- <span data-ttu-id="87ea0-136">Por padrão, quando o prefixo não for especificado, todos os endereços são passados.</span><span class="sxs-lookup"><span data-stu-id="87ea0-136">By default, when prefix is not specified, all addresses are passed through.</span></span> <span data-ttu-id="87ea0-137">Especificar o prefixo permite apenas o endereço base correspondente para que o esquema deve ser passado.</span><span class="sxs-lookup"><span data-stu-id="87ea0-137">Specifying the prefix only allows the matching base address for that scheme to be passed through.</span></span>  
+ <span data-ttu-id="9d765-136">Por padrão, quando o prefixo não é especificado, todos os endereços são passados.</span><span class="sxs-lookup"><span data-stu-id="9d765-136">By default, when prefix is not specified, all addresses are passed through.</span></span> <span data-ttu-id="9d765-137">A especificação do prefixo só permite que o endereço de base correspondente para esse esquema seja passado.</span><span class="sxs-lookup"><span data-stu-id="9d765-137">Specifying the prefix only allows the matching base address for that scheme to be passed through.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="87ea0-138">O filtro não oferece suporte a curingas.</span><span class="sxs-lookup"><span data-stu-id="87ea0-138">The filter does not support any wildcards.</span></span> <span data-ttu-id="87ea0-139">Além disso, o baseAddresses fornecida pelo IIS podem ter endereços associados a outros esquemas não está presentes no `baseAddressPrefixFilters` lista.</span><span class="sxs-lookup"><span data-stu-id="87ea0-139">In addition, the baseAddresses supplied by IIS may have addresses bound to other schemes not present in the `baseAddressPrefixFilters` list.</span></span> <span data-ttu-id="87ea0-140">Esses endereços não serão filtrados.</span><span class="sxs-lookup"><span data-stu-id="87ea0-140">These addresses are not filtered out.</span></span>  
+> <span data-ttu-id="9d765-138">O filtro não oferece suporte a caracteres curinga.</span><span class="sxs-lookup"><span data-stu-id="9d765-138">The filter does not support any wildcards.</span></span> <span data-ttu-id="9d765-139">Além disso, os baseaddresss fornecidos pelo IIS podem ter endereços associados a outros esquemas que não estão presentes `baseAddressPrefixFilters` na lista.</span><span class="sxs-lookup"><span data-stu-id="9d765-139">In addition, the baseAddresses supplied by IIS may have addresses bound to other schemes not present in the `baseAddressPrefixFilters` list.</span></span> <span data-ttu-id="9d765-140">Esses endereços não são filtrados.</span><span class="sxs-lookup"><span data-stu-id="9d765-140">These addresses are not filtered out.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87ea0-141">Consulte também</span><span class="sxs-lookup"><span data-stu-id="87ea0-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d765-141">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9d765-141">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [<span data-ttu-id="87ea0-142">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="87ea0-142">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [<span data-ttu-id="9d765-142">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="9d765-142">Hosting</span></span>](../../../wcf/feature-details/hosting.md)

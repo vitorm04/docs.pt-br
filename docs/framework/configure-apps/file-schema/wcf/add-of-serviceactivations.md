@@ -2,21 +2,21 @@
 title: <add> de <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929773fcb6b6a3ee5c75aa970147277d9dbe7b45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920021"
 ---
-# <a name="add-of-serviceactivations"></a><span data-ttu-id="63e9c-102">\<Adicionar > de \<serviceActivations ></span><span class="sxs-lookup"><span data-stu-id="63e9c-102">\<add> of \<serviceActivations></span></span>
+# <a name="add-of-serviceactivations"></a><span data-ttu-id="8dde6-102">\<Adicionar > de \<perativações ></span><span class="sxs-lookup"><span data-stu-id="8dde6-102">\<add> of \<serviceActivations></span></span>
 
-<span data-ttu-id="63e9c-103">Um elemento de configuração que permite que você defina configurações de ativação de serviços virtuais que são mapeados para seus tipos de serviço do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="63e9c-103">A configuration element that allows you to define virtual service activation settings that map to your Windows Communication Foundation (WCF) service types.</span></span> <span data-ttu-id="63e9c-104">Isso torna possível para ativar serviços hospedados no WAS / IIS sem um arquivo. svc.</span><span class="sxs-lookup"><span data-stu-id="63e9c-104">This makes it possible to activate services hosted in WAS/IIS without an .svc file.</span></span>
+<span data-ttu-id="8dde6-103">Um elemento de configuração que permite definir configurações de ativação de serviço virtual que são mapeadas para seus tipos de serviço do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="8dde6-103">A configuration element that allows you to define virtual service activation settings that map to your Windows Communication Foundation (WCF) service types.</span></span> <span data-ttu-id="8dde6-104">Isso possibilita a ativação de serviços hospedados no WAS/IIS sem um arquivo. svc.</span><span class="sxs-lookup"><span data-stu-id="8dde6-104">This makes it possible to activate services hosted in WAS/IIS without an .svc file.</span></span>
 
-<span data-ttu-id="63e9c-105">\<system.ServiceModel>\\</span><span class="sxs-lookup"><span data-stu-id="63e9c-105">\<system.ServiceModel>\\</span></span>
-<span data-ttu-id="63e9c-106">\<serviceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="63e9c-106">\<serviceHostingEnvironment></span></span>
+<span data-ttu-id="8dde6-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="8dde6-105">\<system.ServiceModel></span></span>\
+<span data-ttu-id="8dde6-106">\<serviceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="8dde6-106">\<serviceHostingEnvironment></span></span>
 
-## <a name="syntax"></a><span data-ttu-id="63e9c-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="63e9c-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8dde6-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8dde6-107">Syntax</span></span>
 
 ```xml
 <serviceHostingEnvironment>
@@ -27,31 +27,31 @@ ms.locfileid: "61701457"
 </serviceHostingEnvironment>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="63e9c-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="63e9c-108">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="8dde6-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="8dde6-108">Attributes and Elements</span></span>
 
-<span data-ttu-id="63e9c-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="63e9c-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="8dde6-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="8dde6-109">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="63e9c-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="63e9c-110">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="8dde6-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="8dde6-110">Attributes</span></span>
 
-|<span data-ttu-id="63e9c-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="63e9c-111">Attribute</span></span>|<span data-ttu-id="63e9c-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="63e9c-112">Description</span></span>|
+|<span data-ttu-id="8dde6-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="8dde6-111">Attribute</span></span>|<span data-ttu-id="8dde6-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="8dde6-112">Description</span></span>|
 |---------------|-----------------|
-|<span data-ttu-id="63e9c-113">fábrica</span><span class="sxs-lookup"><span data-stu-id="63e9c-113">factory</span></span>|<span data-ttu-id="63e9c-114">Uma cadeia de caracteres que especifica o nome do tipo CLR da fábrica que gera um elemento de ativação do serviço.</span><span class="sxs-lookup"><span data-stu-id="63e9c-114">A string that specifies the CLR type name of the factory that generates a service activation element.</span></span>|
-|<span data-ttu-id="63e9c-115">serviço</span><span class="sxs-lookup"><span data-stu-id="63e9c-115">service</span></span>|<span data-ttu-id="63e9c-116">O ServiceType que implementa o serviço (o Typename qualificado completo ou o Typename curto (quando ele é colocado na pasta App_Code).</span><span class="sxs-lookup"><span data-stu-id="63e9c-116">The ServiceType that implements the service (either the full qualified Typename or the short Typename (when it is placed in the App_Code folder).</span></span>|
-|<span data-ttu-id="63e9c-117">relativeAddress</span><span class="sxs-lookup"><span data-stu-id="63e9c-117">relativeAddress</span></span>|<span data-ttu-id="63e9c-118">O endereço relativo dentro do aplicativo IIS atual – por exemplo "SVC".</span><span class="sxs-lookup"><span data-stu-id="63e9c-118">The relative address within the current IIS application - for example "Service.svc".</span></span> <span data-ttu-id="63e9c-119">No WCF 4.0 Este endereço relativo deve conter uma das extensões de arquivo conhecidos (. svc. xamlx,...). Nenhum arquivo físico deve existir para a relativeUrl</span><span class="sxs-lookup"><span data-stu-id="63e9c-119">In WCF 4.0 this relative address has to contain one of the known file extensions (.svc, .xamlx, ...). No physical file has to exist for the relativeUrl</span></span>|
+|<span data-ttu-id="8dde6-113">padrões</span><span class="sxs-lookup"><span data-stu-id="8dde6-113">factory</span></span>|<span data-ttu-id="8dde6-114">Uma cadeia de caracteres que especifica o nome do tipo CLR da fábrica que gera um elemento de ativação de serviço.</span><span class="sxs-lookup"><span data-stu-id="8dde6-114">A string that specifies the CLR type name of the factory that generates a service activation element.</span></span>|
+|<span data-ttu-id="8dde6-115">serviço</span><span class="sxs-lookup"><span data-stu-id="8dde6-115">service</span></span>|<span data-ttu-id="8dde6-116">O ServiceType que implementa o serviço (o TypeName totalmente qualificado ou o TypeName curto (quando ele é colocado na pasta App_Code).</span><span class="sxs-lookup"><span data-stu-id="8dde6-116">The ServiceType that implements the service (either the full qualified Typename or the short Typename (when it is placed in the App_Code folder).</span></span>|
+|<span data-ttu-id="8dde6-117">relativeAddress</span><span class="sxs-lookup"><span data-stu-id="8dde6-117">relativeAddress</span></span>|<span data-ttu-id="8dde6-118">O endereço relativo no aplicativo IIS atual-por exemplo, "Service. svc".</span><span class="sxs-lookup"><span data-stu-id="8dde6-118">The relative address within the current IIS application - for example "Service.svc".</span></span> <span data-ttu-id="8dde6-119">No WCF 4,0, esse endereço relativo deve conter uma das extensões de arquivo conhecidas (. svc,. xamlx,...). Nenhum arquivo físico deve existir para o relativeUrl</span><span class="sxs-lookup"><span data-stu-id="8dde6-119">In WCF 4.0 this relative address has to contain one of the known file extensions (.svc, .xamlx, ...). No physical file has to exist for the relativeUrl</span></span>|
 
-### <a name="child-elements"></a><span data-ttu-id="63e9c-120">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="63e9c-120">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="8dde6-120">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="8dde6-120">Child Elements</span></span>
 
-<span data-ttu-id="63e9c-121">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="63e9c-121">None.</span></span>
+<span data-ttu-id="8dde6-121">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="8dde6-121">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="63e9c-122">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="63e9c-122">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="8dde6-122">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="8dde6-122">Parent Elements</span></span>
 
-|<span data-ttu-id="63e9c-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="63e9c-123">Element</span></span>|<span data-ttu-id="63e9c-124">Descrição</span><span class="sxs-lookup"><span data-stu-id="63e9c-124">Description</span></span>|
+|<span data-ttu-id="8dde6-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="8dde6-123">Element</span></span>|<span data-ttu-id="8dde6-124">Descrição</span><span class="sxs-lookup"><span data-stu-id="8dde6-124">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="63e9c-125">\<serviceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="63e9c-125">\<serviceHostingEnvironment></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|<span data-ttu-id="63e9c-126">Uma seção de configuração que descreve as configurações de ativação.</span><span class="sxs-lookup"><span data-stu-id="63e9c-126">A configuration section that describes activation settings.</span></span>|
+|[<span data-ttu-id="8dde6-125">\<serviceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="8dde6-125">\<serviceHostingEnvironment></span></span>](servicehostingenvironment.md)|<span data-ttu-id="8dde6-126">Uma seção de configuração que descreve as configurações de ativação.</span><span class="sxs-lookup"><span data-stu-id="8dde6-126">A configuration section that describes activation settings.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="63e9c-127">Comentários</span><span class="sxs-lookup"><span data-stu-id="63e9c-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8dde6-127">Comentários</span><span class="sxs-lookup"><span data-stu-id="8dde6-127">Remarks</span></span>
 
-<span data-ttu-id="63e9c-128">O exemplo a seguir mostra como definir as configurações de ativação dentro de seu arquivo Web. config.</span><span class="sxs-lookup"><span data-stu-id="63e9c-128">The following example shows how to configure activation settings within your web.config file.</span></span>
+<span data-ttu-id="8dde6-128">O exemplo a seguir mostra como definir as configurações de ativação no arquivo Web. config.</span><span class="sxs-lookup"><span data-stu-id="8dde6-128">The following example shows how to configure activation settings within your web.config file.</span></span>
 
 ```xml
 <configuration>
@@ -65,13 +65,13 @@ ms.locfileid: "61701457"
 </configuration>
 ```
 
-<span data-ttu-id="63e9c-129">Usando esta configuração, você pode ativar o GreetingService sem usar um arquivo. svc.</span><span class="sxs-lookup"><span data-stu-id="63e9c-129">Using this configuration, you can activate the GreetingService without using an .svc file.</span></span>
+<span data-ttu-id="8dde6-129">Usando essa configuração, você pode ativar o GreetingService sem usar um arquivo. svc.</span><span class="sxs-lookup"><span data-stu-id="8dde6-129">Using this configuration, you can activate the GreetingService without using an .svc file.</span></span>
 
-<span data-ttu-id="63e9c-130">Observe que `<serviceHostingEnvironment>` é uma configuração de nível de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="63e9c-130">Note that `<serviceHostingEnvironment>` is an application level configuration.</span></span> <span data-ttu-id="63e9c-131">Você precisa colocar o `web.config` que contém a configuração sob a raiz do aplicativo virtual.</span><span class="sxs-lookup"><span data-stu-id="63e9c-131">You have to place the `web.config` containing the configuration under the root of the virtual Application.</span></span> <span data-ttu-id="63e9c-132">Além disso, `serviceHostingEnvironment` é uma seção de herdável machineToApplication.</span><span class="sxs-lookup"><span data-stu-id="63e9c-132">In addition, `serviceHostingEnvironment` is a machineToApplication inheritable section.</span></span> <span data-ttu-id="63e9c-133">Se você registrar um único serviço na raiz do computador, cada serviço no aplicativo herdará esse serviço.</span><span class="sxs-lookup"><span data-stu-id="63e9c-133">If you register a single service in the root of the machine, every service in the application will inherit this service.</span></span>
+<span data-ttu-id="8dde6-130">Observe que `<serviceHostingEnvironment>` é uma configuração de nível de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="8dde6-130">Note that `<serviceHostingEnvironment>` is an application level configuration.</span></span> <span data-ttu-id="8dde6-131">Você precisa posicionar o `web.config` que contém a configuração na raiz do aplicativo virtual.</span><span class="sxs-lookup"><span data-stu-id="8dde6-131">You have to place the `web.config` containing the configuration under the root of the virtual Application.</span></span> <span data-ttu-id="8dde6-132">Além disso, `serviceHostingEnvironment` é uma seção de reherança de machineToApplication.</span><span class="sxs-lookup"><span data-stu-id="8dde6-132">In addition, `serviceHostingEnvironment` is a machineToApplication inheritable section.</span></span> <span data-ttu-id="8dde6-133">Se você registrar um único serviço na raiz do computador, cada serviço no aplicativo herdará esse serviço.</span><span class="sxs-lookup"><span data-stu-id="8dde6-133">If you register a single service in the root of the machine, every service in the application will inherit this service.</span></span>
 
-<span data-ttu-id="63e9c-134">Ativação baseada em configuração oferece suporte à ativação pelo protocolo http e não http.</span><span class="sxs-lookup"><span data-stu-id="63e9c-134">Configuration-based activation supports activation over both http and non-http protocol.</span></span> <span data-ttu-id="63e9c-135">Ele requer que as extensões no relativeAddress, ou seja,. svc,. xoml ou. xamlx.</span><span class="sxs-lookup"><span data-stu-id="63e9c-135">It requires extensions in the relativeAddress, i.e. .svc, .xoml or .xamlx.</span></span> <span data-ttu-id="63e9c-136">Você pode mapear suas próprias extensões para o buildProviders saber, que, em seguida, permitirá que você ativar o serviço ao longo de qualquer extensão.</span><span class="sxs-lookup"><span data-stu-id="63e9c-136">You can map your own extensions to the know buildProviders, which will then enable you to activate service over any extension.</span></span> <span data-ttu-id="63e9c-137">Após o conflito, o `<serviceActivations>` seção substitui os registros. svc.</span><span class="sxs-lookup"><span data-stu-id="63e9c-137">Upon conflict, the `<serviceActivations>` section overrides .svc registrations.</span></span>
+<span data-ttu-id="8dde6-134">A ativação baseada em configuração dá suporte à ativação por meio do protocolo http e não http.</span><span class="sxs-lookup"><span data-stu-id="8dde6-134">Configuration-based activation supports activation over both http and non-http protocol.</span></span> <span data-ttu-id="8dde6-135">Ele requer extensões no relativeAddress, ou seja,. svc,. xoml ou. xamlx.</span><span class="sxs-lookup"><span data-stu-id="8dde6-135">It requires extensions in the relativeAddress, i.e. .svc, .xoml or .xamlx.</span></span> <span data-ttu-id="8dde6-136">Você pode mapear suas próprias extensões para o know buildProviders, que permitirá que você ative o serviço em qualquer extensão.</span><span class="sxs-lookup"><span data-stu-id="8dde6-136">You can map your own extensions to the know buildProviders, which will then enable you to activate service over any extension.</span></span> <span data-ttu-id="8dde6-137">Após o conflito, `<serviceActivations>` a seção substitui os registros. svc.</span><span class="sxs-lookup"><span data-stu-id="8dde6-137">Upon conflict, the `<serviceActivations>` section overrides .svc registrations.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="63e9c-138">Consulte também</span><span class="sxs-lookup"><span data-stu-id="63e9c-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8dde6-138">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8dde6-138">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ServiceActivationElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>

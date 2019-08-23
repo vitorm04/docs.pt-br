@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-ms.openlocfilehash: a0752a052b1b80589d20738e9303ca0db8be14ea
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: da333fcd5f76359400e44511820ad9aa34e83bd7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68237364"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911480"
 ---
-# <a name="ui-automation-fundamentals"></a><span data-ttu-id="f2394-102">Fundamentos de automação da interface do usuário</span><span class="sxs-lookup"><span data-stu-id="f2394-102">UI Automation Fundamentals</span></span>
+# <a name="ui-automation-fundamentals"></a><span data-ttu-id="84d09-102">Fundamentos de automação da interface do usuário</span><span class="sxs-lookup"><span data-stu-id="84d09-102">UI Automation Fundamentals</span></span>
 > [!NOTE]
->  <span data-ttu-id="f2394-103">Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="f2394-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="f2394-104">Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="f2394-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="84d09-103">Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="84d09-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="84d09-104">Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="84d09-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="f2394-105">Esta seção contém resumos de alto nível a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.</span><span class="sxs-lookup"><span data-stu-id="f2394-105">This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.</span></span>  
+ <span data-ttu-id="84d09-105">Esta seção contém visões gerais de alto nível da [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.</span><span class="sxs-lookup"><span data-stu-id="84d09-105">This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f2394-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="f2394-106">In This Section</span></span>  
- [<span data-ttu-id="f2394-107">Visão geral de Automação da Interface do Usuário</span><span class="sxs-lookup"><span data-stu-id="f2394-107">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [<span data-ttu-id="f2394-108">Automação de interface do usuário e Acessibilidade Ativa da Microsoft</span><span class="sxs-lookup"><span data-stu-id="f2394-108">UI Automation and Microsoft Active Accessibility</span></span>](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
- [<span data-ttu-id="f2394-109">Visão geral de árvore de automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="f2394-109">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [<span data-ttu-id="f2394-110">Visão geral de padrões de controle de automação da interface do usuário</span><span class="sxs-lookup"><span data-stu-id="f2394-110">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [<span data-ttu-id="f2394-111">Visão geral de propriedades de automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="f2394-111">UI Automation Properties Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [<span data-ttu-id="f2394-112">Visão geral sobre eventos de automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="f2394-112">UI Automation Events Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [<span data-ttu-id="f2394-113">Visão geral de segurança de automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="f2394-113">UI Automation Security Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [<span data-ttu-id="f2394-114">Usando automação de interface do usuário para testes automatizados</span><span class="sxs-lookup"><span data-stu-id="f2394-114">Using UI Automation for Automated Testing</span></span>](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="84d09-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="84d09-106">In This Section</span></span>  
+ [<span data-ttu-id="84d09-107">Visão geral de Automação da Interface do Usuário</span><span class="sxs-lookup"><span data-stu-id="84d09-107">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)  
+ [<span data-ttu-id="84d09-108">Automação de interface do usuário e Acessibilidade Ativa da Microsoft</span><span class="sxs-lookup"><span data-stu-id="84d09-108">UI Automation and Microsoft Active Accessibility</span></span>](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
+ [<span data-ttu-id="84d09-109">Visão geral de árvore de automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="84d09-109">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="84d09-110">Visão geral de padrões de controle de automação da interface do usuário</span><span class="sxs-lookup"><span data-stu-id="84d09-110">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="84d09-111">Visão geral de propriedades de automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="84d09-111">UI Automation Properties Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
+ [<span data-ttu-id="84d09-112">Visão geral sobre eventos de automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="84d09-112">UI Automation Events Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
+ [<span data-ttu-id="84d09-113">Visão geral de segurança de automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="84d09-113">UI Automation Security Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
+ [<span data-ttu-id="84d09-114">Usando automação de interface do usuário para testes automatizados</span><span class="sxs-lookup"><span data-stu-id="84d09-114">Using UI Automation for Automated Testing</span></span>](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
   
-## <a name="reference"></a><span data-ttu-id="f2394-115">Referência</span><span class="sxs-lookup"><span data-stu-id="f2394-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="84d09-115">Referência</span><span class="sxs-lookup"><span data-stu-id="84d09-115">Reference</span></span>  
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  
