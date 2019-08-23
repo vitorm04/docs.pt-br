@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: d31d970e8e95726aa789f853ac12c4830498a743
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: dee5ec65993cf20cb57377694f61af092b0ccf26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796834"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939699"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Conversores de tipo e extensões de marcação para XAML
 Conversores de tipo e extensões de marcação são duas técnicas que os sistemas de tipos XAML e gravadores XAML usam para gerar componentes de gráfico de objeto. Embora eles compartilhem algumas características, os conversores de tipo e as extensões de marcação são representados de forma diferente em um fluxo de nó XAML. Neste conjunto de documentação, conversores de tipo, extensões de marcação e construções semelhantes são, às vezes, chamados coletivamente de conversores de valor.  
@@ -45,7 +45,7 @@ Conversores de tipo e extensões de marcação são duas técnicas que os sistem
  Para obter mais informações sobre o padrão de implementação de extensão de marcação para XAML, consulte [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  Os <xref:System.Windows.Markup.MarkupExtension> <xref:System.Windows.Markup.ValueSerializer>tipose estão no <xref:System.Xaml> namespace e não no namespace. <xref:System.Windows.Markup> Isso não significa que esses tipos são específicos para as tecnologias WPF ou Windows Forms que, de outra forma, populam os namespaces `Windows`CLR que contêm a cadeia de caracteres. <xref:System.Windows.Markup.MarkupExtension>e <xref:System.Windows.Markup.ValueSerializer> estão no assembly System. XAML e não têm nenhuma dependência de estrutura específica. Esses tipos existiam no namespace CLR para .NET Framework 3,0 e permanecem no namespace CLR no .NET Framework 4 para evitar a quebra de referências em projetos existentes do WPF. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](types-migrated-from-wpf-to-system-xaml.md).  
+> Os <xref:System.Windows.Markup.MarkupExtension> <xref:System.Windows.Markup.ValueSerializer>tipose estão no <xref:System.Xaml> namespace e não no namespace. <xref:System.Windows.Markup> Isso não significa que esses tipos são específicos para as tecnologias WPF ou Windows Forms que, de outra forma, populam os namespaces `Windows`CLR que contêm a cadeia de caracteres. <xref:System.Windows.Markup.MarkupExtension>e <xref:System.Windows.Markup.ValueSerializer> estão no assembly System. XAML e não têm nenhuma dependência de estrutura específica. Esses tipos existiam no namespace CLR para .NET Framework 3,0 e permanecem no namespace CLR no .NET Framework 4 para evitar a quebra de referências em projetos existentes do WPF. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Serializadores de valor  

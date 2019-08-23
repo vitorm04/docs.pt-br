@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d4efa7cb3bc98c54be2889855c3b756fdbf2847
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ad2532240c9f18a00421281fae0d111dbfaec5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782241"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963799"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>Método ICorProfilerInfo2::GetStringLayout
-Obtém informações sobre o layout de um objeto de cadeia de caracteres. Esse método foi preterido no .NET Framework 4 e é substituído pelo [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) método.  
+Obtém informações sobre o layout de um objeto de cadeia de caracteres. Esse método é preterido no .NET Framework 4 e é substituído pelo método [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,34 +38,34 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Parâmetros  
  `pBufferLengthOffset`  
- [out] Um ponteiro para o deslocamento do local, relativo a `ObjectID` ponteiro, que armazena o comprimento da cadeia de caracteres. O comprimento é armazenado como um `DWORD`.  
+ fora Um ponteiro para o deslocamento do local, relativo ao `ObjectID` ponteiro, que armazena o comprimento da cadeia de caracteres. O comprimento é armazenado como um `DWORD`.  
   
 > [!NOTE]
->  Esse parâmetro retorna o comprimento da cadeia de caracteres em si, não o comprimento do buffer. O comprimento do buffer não está mais disponível.  
+> Esse parâmetro retorna o comprimento da cadeia de caracteres em si, não o comprimento do buffer. O comprimento do buffer não está mais disponível.  
   
  `PStringLengthOffset`  
- [out] Um ponteiro para o deslocamento do local, relativo a `ObjectID` ponteiro, que armazena o comprimento da cadeia de caracteres em si. O comprimento é armazenado como um `DWORD`.  
+ fora Um ponteiro para o deslocamento do local, relativo ao `ObjectID` ponteiro, que armazena o comprimento da própria cadeia de caracteres. O comprimento é armazenado como um `DWORD`.  
   
  `pBufferOffset`  
- [out] Um ponteiro para o deslocamento do buffer, em relação ao `ObjectID` ponteiro, que armazena a cadeia de caracteres largos.  
+ fora Um ponteiro para o deslocamento do buffer, relativo ao `ObjectID` ponteiro, que armazena a cadeia de caracteres largos.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetStringLayout` método obtém os deslocamentos, relativo a `ObjectID` ponteiro dos locais a seguir é armazenada:  
+ O `GetStringLayout` método obtém os deslocamentos, em relação `ObjectID` ao ponteiro, dos locais nos quais os seguintes itens são armazenados:  
   
 - O comprimento do buffer da cadeia de caracteres.  
   
-- O comprimento da cadeia de caracteres em si.  
+- O comprimento da própria cadeia de caracteres.  
   
-- O buffer que contém a cadeia de caracteres real de caracteres largos.  
+- O buffer que contém a cadeia real de caracteres largos.  
   
- Cadeias de caracteres podem ser terminada em nulo.  
+ Cadeias de caracteres podem ser terminadas em nulo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl, CorProf.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 6bd597cd2719fb96b8633f724da46a76e416b454
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 019035247b1316eb236b025d4527c42bb6ef526c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817898"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962815"
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
 <a name="introduction"></a>Ao desenvolver Windows Presentation Foundation (WPF) aplicativos autônomos e hospedados em navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]os aplicativos autônomos são executados com permissões irrestritas (conjunto de permissões do CAS**FullTrust** ), sejam implantados usando Windows Installer (. msi), xcopy ou ClickOnce. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo de host totalmente confiável pode criar uma confiança <xref:System.AppDomain> parcial usando o modelo de suplemento .NET Framework. Para obter mais informações, consulte [visão geral dos suplementos do WPF](./app-development/wpf-add-ins-overview.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "68817898"
 |Código do aplicativo|Recursos XAML que têm um code-behind compilado.<br /><br /> - ou -<br /><br /> Arquivos XAML que são adicionados a um projeto com um tipo de compilação de **página**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
->  Para obter mais informações sobre arquivos de dados de [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]aplicativos e pacote, consulte [recursos de aplicativo WPF, conteúdo e arquivos de dados](./app-development/wpf-application-resource-content-and-data-files.md).  
+> Para obter mais informações sobre arquivos de dados de [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]aplicativos e pacote, consulte [recursos de aplicativo WPF, conteúdo e arquivos de dados](./app-development/wpf-application-resource-content-and-data-files.md).  
   
  É possível navegar até arquivos desses tipos de conteúdo por meio do usuário ou programaticamente:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68817898"
   
 - Script  
   
-- Autenticação do usuário  
+- Autenticação de Usuário  
   
  A coleção de funcionalidades que podem ser protegidas dessa maneira é configurada por zona para a **Internet**, **intranet**, **sites confiáveis**e zonas de **sites restritos** . As etapas a seguir descrevem como definir as configurações de segurança:  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68817898"
      ![Captura de tela que mostra a caixa de diálogo Configurações de segurança.](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
->  Também é possível acessar a caixa de diálogo Opções da Internet pelo Internet Explorer. Clique em **ferramentas** e em **Opções da Internet**.  
+> Também é possível acessar a caixa de diálogo Opções da Internet pelo Internet Explorer. Clique em **ferramentas** e em **Opções da Internet**.  
   
  A partir do Windows Internet Explorer 7, as seguintes configurações de segurança especificamente para .NET Framework estão incluídas:  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68817898"
  O controle <xref:System.Windows.Controls.WebBrowser> WPF pode ser usado para hospedar conteúdo da Web. O controle <xref:System.Windows.Controls.WebBrowser> WPF encapsula o controle ActiveX WebBrowser subjacente. O WPF fornece algum suporte para proteger seu aplicativo quando você usa o controle <xref:System.Windows.Controls.WebBrowser> WPF para hospedar conteúdo da Web não confiável. No entanto, alguns recursos de segurança devem ser aplicados diretamente pelos aplicativos <xref:System.Windows.Controls.WebBrowser> que usam o controle. Para obter mais informações sobre o controle ActiveX do WebBrowser, consulte [visões gerais do controle WebBrowser e tutoriais](https://go.microsoft.com/fwlink/?LinkId=179388).  
   
 > [!NOTE]
->  Esta seção também se aplica ao <xref:System.Windows.Controls.Frame> controle, pois ele usa <xref:System.Windows.Controls.WebBrowser> o para navegar até o conteúdo HTML.  
+> Esta seção também se aplica ao <xref:System.Windows.Controls.Frame> controle, pois ele usa <xref:System.Windows.Controls.WebBrowser> o para navegar até o conteúdo HTML.  
   
  Se o controle <xref:System.Windows.Controls.WebBrowser> WPF for usado para hospedar conteúdo da Web não confiável, seu aplicativo deverá usar uma confiança <xref:System.AppDomain> parcial para ajudar a isolar o código do aplicativo de código de script HTML potencialmente mal-intencionado. Isso é especialmente verdadeiro se seu aplicativo estiver interagindo com o script hospedado usando o <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> método e a <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> propriedade. Para obter mais informações, consulte [visão geral dos suplementos do WPF](./app-development/wpf-add-ins-overview.md).  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68817898"
  Os controles de recurso são aplicados pelo processo instanciando o objeto ActiveX do WebBrowser. Portanto, se estiver criando um aplicativo autônomo capaz de navegar até o conteúdo não confiável, considere seriamente a possibilidade de habilitar controles de recurso adicionais.  
   
 > [!NOTE]
->  Essa recomendação baseia-se em recomendações gerais para segurança do host MSHTML e SHDOCVW. Para obter mais informações, [consulte as perguntas frequentes sobre segurança do host MSHTML: Parte I de II](https://go.microsoft.com/fwlink/?LinkId=179396) e [as perguntas frequentes sobre segurança do host MSHTML: Parte II de II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+> Essa recomendação baseia-se em recomendações gerais para segurança do host MSHTML e SHDOCVW. Para obter mais informações, [consulte as perguntas frequentes sobre segurança do host MSHTML: Parte I de II](https://go.microsoft.com/fwlink/?LinkId=179396) e [as perguntas frequentes sobre segurança do host MSHTML: Parte II de II](https://go.microsoft.com/fwlink/?LinkId=179415).  
   
  Para o executável, considere a possibilidade de habilitar os controles de recurso a seguir ao definir o valor de Registro como 1.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "68817898"
  Os XBAPs executados no Internet Explorer também têm um nível adicional de segurança em comparação com aplicativos autônomos normais. Essa segurança adicional ocorre porque o Internet Explorer e, portanto, o controle ActiveX do WebBrowser, é executado no modo [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] protegido [!INCLUDE[win7](../../../includes/win7-md.md)]por padrão no e no. Para obter mais informações sobre o modo protegido, consulte [compreendendo e trabalhando no modo protegido do Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
   
 > [!NOTE]
->  Se você tentar executar um XBAP que inclui um controle WPF <xref:System.Windows.Controls.WebBrowser> no Firefox, enquanto na zona da Internet, um <xref:System.Security.SecurityException> será lançado. Isso ocorre por causa da política de segurança do WPF.  
+> Se você tentar executar um XBAP que inclui um controle WPF <xref:System.Windows.Controls.WebBrowser> no Firefox, enquanto na zona da Internet, um <xref:System.Security.SecurityException> será lançado. Isso ocorre por causa da política de segurança do WPF.  
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Desabilitando os assemblies APTCA para aplicativos cliente parcialmente confiáveis  
@@ -241,7 +241,7 @@ ms.locfileid: "68817898"
  Caso seja necessário desabilitar um assembly para aplicativos clientes parcialmente confiáveis, você pode gravar uma atualização que crie a chave do Registro e o valor.  
   
 > [!NOTE]
->  Os assemblies de .NET Framework principal não são afetados desabilitando-os dessa forma porque eles são necessários para que os aplicativos gerenciados sejam executados. O suporte para desabilitar assemblies APTCA é destinado principalmente a aplicativos de terceiros.  
+> Os assemblies de .NET Framework principal não são afetados desabilitando-os dessa forma porque eles são necessários para que os aplicativos gerenciados sejam executados. O suporte para desabilitar assemblies APTCA é destinado principalmente a aplicativos de terceiros.  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>Comportamento da área restrita para arquivos XAML flexíveis  
@@ -258,7 +258,7 @@ ms.locfileid: "68817898"
  Com essa configuração, o conteúdo externo será carregado em um processo separado do processo que está hospedando o aplicativo. Esse processo restringe-se ao conjunto de permissões da zona da Internet padrão, isolando-o eficazmente do aplicativo host e do computador cliente.  
   
 > [!NOTE]
->  Embora a navegação para arquivos [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] soltos de um <xref:System.Windows.Navigation.NavigationWindow> ou <xref:System.Windows.Controls.Frame> em um aplicativo autônomo seja implementada com base na infraestrutura de hospedagem do navegador WPF, envolvendo o processo do PresentationHost, o nível de segurança é um pouco menor do que quando o conteúdo é carregado diretamente no Internet [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] Explorer [!INCLUDE[win7](../../../includes/win7-md.md)] em e (o que ainda seria por meio do PresentationHost). Isso ocorre porque um aplicativo autônomo do WPF que usa um navegador da Web não oferece o recurso de segurança adicional de modo protegido do Internet Explorer.  
+> Embora a navegação para arquivos [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] soltos de um <xref:System.Windows.Navigation.NavigationWindow> ou <xref:System.Windows.Controls.Frame> em um aplicativo autônomo seja implementada com base na infraestrutura de hospedagem do navegador WPF, envolvendo o processo do PresentationHost, o nível de segurança é um pouco menor do que quando o conteúdo é carregado diretamente no Internet [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] Explorer [!INCLUDE[win7](../../../includes/win7-md.md)] em e (o que ainda seria por meio do PresentationHost). Isso ocorre porque um aplicativo autônomo do WPF que usa um navegador da Web não oferece o recurso de segurança adicional de modo protegido do Internet Explorer.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Recursos para o desenvolvimento de aplicativos do WPF que promovem a segurança  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401432"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965472"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Como: Criar e associar a um ObservableCollection
 Este exemplo mostra como criar e associar a uma coleção que deriva da <xref:System.Collections.ObjectModel.ObservableCollection%601> classe, que é uma classe de coleção que fornece notificações quando os itens são adicionados ou removidos.  
@@ -136,7 +136,7 @@ End Class
  A definição de `NameItemTemplate` não é mostrada aqui.  
   
 > [!NOTE]
->  Os objetos em sua coleção devem atender aos requisitos descritos na [Visão geral da origem da associação](binding-sources-overview.md). Em particular, se você estiver usando <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> ou (por exemplo, deseja que [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] o seja atualizado quando as propriedades de origem forem alteradas dinamicamente), você deverá implementar um mecanismo de notificação de alteração de propriedade adequado, como o <xref:System.ComponentModel.INotifyPropertyChanged>interface.  
+> Os objetos em sua coleção devem atender aos requisitos descritos na [Visão geral da origem da associação](binding-sources-overview.md). Em particular, se você estiver usando <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> ou (por exemplo, deseja que [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] o seja atualizado quando as propriedades de origem forem alteradas dinamicamente), você deverá implementar um mecanismo de notificação de alteração de propriedade adequado, como o <xref:System.ComponentModel.INotifyPropertyChanged>interface.  
   
  Para obter mais informações, consulte a seção Associando a coleções na [Visão geral de associação de dados](data-binding-overview.md).  
   

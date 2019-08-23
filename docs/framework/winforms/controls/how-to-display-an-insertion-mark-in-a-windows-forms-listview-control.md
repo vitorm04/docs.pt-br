@@ -11,22 +11,22 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: f3dff351052eaaf70737c6410c1367ab568f6fd0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f5de00fd41b24fc1a7f1ff4484c3a126e98952a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586512"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967827"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Como: Exibir uma marca de inserção em um controle ListView do Windows Forms
-A marca de inserção no <xref:System.Windows.Forms.ListView> controle mostra aos usuários o ponto onde os itens arrastados serão inseridos. Quando um usuário arrasta um item para um ponto entre dois outros itens, a marca de inserção mostra o local da nova esperado do item.  
+A marca de inserção no <xref:System.Windows.Forms.ListView> controle mostra aos usuários o ponto em que os itens arrastados serão inseridos. Quando um usuário arrasta um item para um ponto entre dois outros itens, a marca de inserção mostra o novo local esperado do item.  
   
 > [!NOTE]
->  O recurso de marca de inserção está disponível apenas no [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] quando seu aplicativo chama o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método. Em sistemas operacionais anteriores, nenhum código relacionado à marca de inserção não tem nenhum efeito e a marca de inserção não será exibida. Para obter mais informações, consulte <xref:System.Windows.Forms.ListViewInsertionMark>.  
+> O recurso de marca de inserção está disponível [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] somente em quando o aplicativo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> chama o método. Em sistemas operacionais anteriores, qualquer código relacionado à marca de inserção não tem nenhum efeito e a marca de inserção não será exibida. Para obter mais informações, consulte <xref:System.Windows.Forms.ListViewInsertionMark>.  
   
  A imagem a seguir mostra uma marca de inserção:  
   
- ![Captura de tela que mostra uma marca de inserção de ListView. ](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")  
+ ![Captura de tela que mostra uma marca de inserção de ListView.](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")  
   
  O exemplo de código a seguir demonstra como usar esse recurso.  
   

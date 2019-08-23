@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 6f677d067ea0a93310036b13dba90e43731e8094
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9677e516ef6c91ef344e10bc8f608a397a4ed157
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606493"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966133"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Como: usar a ferramenta de configuração do modelo de serviço COM+
 Depois que você tiver selecionado um modo de hospedagem apropriado, use a ferramenta de linha de comando Configuração de Modelo de Serviço COM+ (ComSvcConfig.exe) para configurar as interfaces de aplicativo que serão expostas como serviços Web.  
   
 > [!NOTE]
->  Você deve ser administrador no computador para executar as tarefas a seguir.  
+> Você deve ser administrador no computador para executar as tarefas a seguir.  
   
  Ao usar ComSvcConfig.exe em um computador com Windows 7 para configurar um serviço Web para usar a versão mais recente do modelo de serviço (atualmente v4.5), execute as seguintes etapas:  
   
-1. Defina a chave do registro `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` para um valor DWORD de 0x00000001  
+1. Defina a chave `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` do registro como um valor DWORD de 0x00000001  
   
 2. Executar comsvcconfig.exe  
   
 3. Reverter a chave do Registro adicionada na etapa 1 de volta para o seu valor original, ou excluí-la se não existia.  
   
 > [!IMPORTANT]
->  Reverter essa chave de Registro é importante. Essa é uma chave de compatibilidade. Não reverter essa alteração pode causar problemas com outros aplicativos .NET que são executados no computador).  
+> Reverter essa chave de Registro é importante. Essa é uma chave de compatibilidade. Não reverter essa alteração pode causar problemas com outros aplicativos .NET que são executados no computador).  
   
 > [!WARNING]
->  Ao usar ComSvcConfig.exe /install em um computador com Windows 8 uma caixa de diálogo é exibida informando que "um aplicativo em seu computador precisa ter o seguinte recurso do Windows: .NET Framework 3.5 (inclui .NET 2.0 e o .NET 3.0" se o .NET Framework 3.5 não está instalado. Essa caixa de diálogo pode ser ignorada. Como alternativa, você pode definir a chave do Registro OnlyUseLatestCLR para um valor DWORD de 0x00000001  
+>  Ao usar ComSvcConfig. exe/install em uma máquina com o Windows 8, uma caixa de diálogo é exibida informando que "um aplicativo em seu computador precisa do seguinte recurso do Windows: .NET Framework 3,5 (inclui o .NET 2,0 e o .NET 3,0" se o .NET Framework 3,5 não estiver instalado. Essa caixa de diálogo pode ser ignorada. Como alternativa, você pode definir a chave do Registro OnlyUseLatestCLR para um valor DWORD de 0x00000001  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Para adicionar uma interface para o conjunto de interfaces que devem ser expostos como serviços Web, usando o modo de hospedagem COM+  
   

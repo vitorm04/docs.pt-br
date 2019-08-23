@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: d293ccb45a3af85ca5ca23fec9e3c01a55564581
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83b6f98ca889d4f80841b629d7a958401bac1e87
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003347"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953746"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Codificação e transporte de associação personalizado
-Uma associação personalizada é definida por uma lista ordenada de elementos de associação discretos. Este exemplo demonstra como configurar uma associação personalizada com vários transporte e mensagem que codifica elementos.  
+Uma associação personalizada é definida por uma lista ordenada de elementos de associação discretos. Este exemplo demonstra como configurar uma associação personalizada com vários elementos de codificação de mensagens e transporte.  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Este exemplo se baseia a [auto-hospedar](../../../../docs/framework/wcf/samples/self-host.md)e foi modificado para configurar os três pontos de extremidade para dar suporte a transportes HTTP, TCP e pipe nomeado com associações personalizadas. A configuração de cliente da mesma forma foi modificada e o código do cliente é alterado para se comunicar com cada um dos três pontos de extremidade.  
+ Este exemplo é baseado no [auto-host](../../../../docs/framework/wcf/samples/self-host.md)e foi modificado para configurar três pontos de extremidade para dar suporte a transportes http, TCP e NamedPipe com associações personalizadas. A configuração do cliente foi modificada da mesma forma e o código do cliente foi alterado para se comunicar com cada um dos três pontos de extremidade.  
   
- O exemplo demonstra como configurar uma associação personalizada que dá suporte a um transporte particular e a codificação de mensagem. Isso é feito configurando um transporte e uma mensagem de codificação para o `binding` elemento. A ordenação dos elementos de associação é importante definir uma ligação personalizada, porque cada um representa uma camada da pilha de canal (consulte [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)). Esta amostra configura três ligações personalizadas: um transporte HTTP com codificação de texto, um transporte TCP com codificação de texto e um transporte de pipe nomeado com uma codificação binária.  
+ O exemplo demonstra como configurar uma ligação personalizada que dá suporte a um transporte e codificação de mensagem específicos. Isso é feito configurando um transporte e uma codificação de mensagem `binding` para o elemento. A ordenação de elementos de associação é importante na definição de uma associação personalizada, pois cada uma representa uma camada na pilha de canais (consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)). Esta amostra configura três associações personalizadas: um transporte HTTP com codificação de texto, um transporte TCP com codificação de texto e um transporte NamedPipe com uma codificação binária.  
   
  A configuração de serviço define as associações personalizadas da seguinte maneira:  
   
@@ -44,9 +44,9 @@ Uma associação personalizada é definida por uma lista ordenada de elementos d
 </bindings>  
 ```  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de serviço e cliente. O cliente se comunica com cada um dos três pontos de extremidade, acessando primeiro HTTP, TCP e, finalmente, pipe nomeado. Pressione ENTER em cada janela de console para desligar o serviço e o cliente.  
+ Quando você executa o exemplo, as solicitações e respostas da operação são exibidas na janela do console do cliente e do serviço. O cliente se comunica com cada um dos três pontos de extremidade, acessando primeiro HTTP, depois TCP e, por fim, NamedPipe. Pressione ENTER em cada janela do console para desligar o serviço e o cliente.  
   
- O `namedPipeTransport` associação não dá suporte a operações de máquina para máquina. Ele é usado apenas para comunicação no mesmo computador. Portanto, ao executar o exemplo em um cenário entre máquinas, comente as linhas a seguir no arquivo de código do cliente:  
+ A `namedPipeTransport` associação não oferece suporte a operações de máquina a máquina. Ele é usado somente para comunicação no mesmo computador. Portanto, ao executar o exemplo em um cenário de máquina cruzada, comente as seguintes linhas no arquivo de código do cliente:  
   
 ```csharp  
 CalculatorClient client = new CalculatorClient("default");  
@@ -67,21 +67,21 @@ client.Close()
 ```  
   
 > [!NOTE]
->  Se você usar Svcutil.exe para gerar novamente a configuração para este exemplo, certifique-se de modificar o nome do ponto de extremidade na configuração do cliente para coincidir com o código do cliente.  
+> Se você usar svcutil. exe para regenerar a configuração para este exemplo, certifique-se de modificar o nome do ponto de extremidade na configuração do cliente para corresponder ao código do cliente.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição de c#, C++ ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para criar a C#edição C++do, ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  

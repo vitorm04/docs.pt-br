@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629933"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964891"
 ---
 # <a name="cleartype-registry-settings"></a>Configurações do Registro de ClearType
 Este tópico fornece uma visão geral das configurações do registro do Microsoft ClearType que são usadas por aplicativos do WPF.  
@@ -36,12 +36,12 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
 |Estrutura de Pixel|Descreve a disposição dos pixels para um dispositivo de vídeo.|  
 |Nível de contraste do texto|Descreve o nível de contraste para o texto exibido.|  
   
- Essas configurações podem ser acessadas por um utilitário de configuração externo que sabe como referenciar as configurações de registro de ClearType identificadas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Editor do Registro.  
+ Essas configurações podem ser acessadas por um utilitário de configuração externo que sabe como referenciar as configurações de registro de ClearType identificadas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o editor do registro do Windows.  
   
- Se as [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]configurações do registro ClearType não estiverem definidas (que é o estado padrão), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o aplicativo consultará as [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] informações de parâmetros do sistema para configurações de suavização de fontes.  
+ Se as [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]configurações do registro ClearType não estiverem definidas (que é o estado padrão), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o aplicativo consultará as informações de parâmetros do sistema do Windows para configurações de suavização de fontes.  
   
 > [!NOTE]
->  Para obter informações sobre como enumerar nomes de dispositivos de `SystemParametersInfo` exibição, consulte a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] função.  
+> Para obter informações sobre como enumerar nomes de dispositivos de `SystemParametersInfo` exibição, consulte a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] função.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Nível de ClearType  
@@ -59,7 +59,7 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
  ![Configurações de ClearType no editor do registro.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]os aplicativos renderizam o texto em um dos dois modos, com e sem ClearType. Quando o texto é renderizado sem ClearType, ele é referido como renderização de escala cinza.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]os aplicativos renderizam o texto em um dos dois modos, com e sem ClearType. Quando o texto é renderizado sem ClearType, ele é referido como renderização de escala cinza.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Nível de Gama  
@@ -89,7 +89,7 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
  A estrutura de pixel corresponde a um valor inteiro que vai de 0 a 2. O nível padrão é 0, que representa uma estrutura de pixel plana.  
   
 > [!NOTE]
->  Para obter informações sobre como enumerar nomes de dispositivos de `EnumDisplayDevices` exibição, consulte a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] função.  
+> Para obter informações sobre como enumerar nomes de dispositivos de `EnumDisplayDevices` exibição, consulte a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] função.  
   
 ### <a name="registry-setting"></a>Configuração do Registro  
  A localização da configuração do Registro para a estrutura de pixel é uma configuração do computador local que corresponde a um nome de dispositivo de vídeo específico:  

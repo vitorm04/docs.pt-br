@@ -2,42 +2,42 @@
 title: Tratamento de mensagens suspeitas no MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 86d42e567d6d0f2b306d4def6746d32bfe7c6ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 88ce22c9376313db26a5cbe377bdc8aaee83c118
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664762"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965566"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Tratamento de mensagens suspeitas no MSMQ 4.0
-Este exemplo demonstra como executar manipulação em um serviço de mensagens suspeitas. Este exemplo se baseia a [transacionada de associação de MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemplo. Este exemplo usa `netMsmqBinding`. O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.
+Este exemplo demonstra como executar a manipulação de mensagens suspeitas em um serviço. Este exemplo é baseado no exemplo de [associação MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) transacionado. Este exemplo usa `netMsmqBinding`. O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.
 
- Comunicação em fila, o cliente se comunica com o serviço usando uma fila. Mais precisamente, o cliente envia mensagens a uma fila. O serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisa estar em execução ao mesmo tempo para se comunicar usando uma fila.
+ Na comunicação em fila, o cliente se comunica com o serviço usando uma fila. Mais precisamente, o cliente envia mensagens para uma fila. O serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisam estar em execução ao mesmo tempo para se comunicarem usando uma fila.
 
- Uma mensagem suspeita é uma mensagem que é lida repetidamente em uma fila quando o serviço de ler a mensagem não é possível processar a mensagem e, portanto, encerra a transação sob a qual a mensagem é lida. Nesses casos, a mensagem for repetida novamente. Isso pode, teoricamente, vá para sempre se houver um problema com a mensagem. Observe que isso só pode ocorrer ao usar transações para ler a fila e chamar a operação de serviço.
+ Uma mensagem suspeita é uma mensagem que é lida repetidamente de uma fila quando o serviço que lê a mensagem não pode processar a mensagem e, portanto, encerra a transação sob a qual a mensagem é lida. Nesses casos, a mensagem é repetida novamente. Teoricamente, isso pode ser usado para sempre se houver um problema com a mensagem. Observe que isso só pode ocorrer quando você usa transações para ler da fila e invocar a operação de serviço.
 
- Com base na versão do MSMQ, NetMsmqBinding dá suporte à detecção de limitado para detecção de total de mensagens suspeitas. Depois que a mensagem foi detectada como adulterados, podem ser manipulado de diversas maneiras. Novamente, com base na versão do MSMQ, NetMsmqBinding dá suporte à manipulação de limitado para tratamento completo de mensagens suspeitas.
+ Com base na versão do MSMQ, o NetMsmqBinding dá suporte à detecção limitada para detecção completa de mensagens suspeitas. Depois que a mensagem for detectada como inviabilizada, ela poderá ser tratada de várias maneiras. Novamente, com base na versão do MSMQ, o NetMsmqBinding dá suporte ao tratamento limitado para o tratamento total de mensagens suspeitas.
 
- Este exemplo ilustra as funcionalidades de suspeitas limitadas fornecidas em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] plataforma e as funcionalidades de completo suspeitas fornecidas em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Em ambos os exemplos, o objetivo é mover a mensagem suspeita da fila para outra fila que pode ser atendida por um serviço de mensagens suspeitas.
+ Este exemplo ilustra as instalações suspeitas limitadas [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] fornecidas [!INCLUDE[wxp](../../../../includes/wxp-md.md)] no e na plataforma e as instalações completas [!INCLUDE[wv](../../../../includes/wv-md.md)]de suspeitas fornecidas no. Em ambos os exemplos, o objetivo é mover a mensagem suspeita para fora da fila para outra fila que pode ser atendida por um serviço de mensagens suspeitas.
 
-## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Poison exemplo de tratamento
- No [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ fornece um recurso de fila de mensagens suspeitas de subpropriedades que pode ser usado para armazenar mensagens suspeitas. Este exemplo demonstra a prática recomendada de lidar com mensagens suspeitas usando [!INCLUDE[wv](../../../../includes/wv-md.md)].
+## <a name="msmq-v40-poison-handling-sample"></a>Exemplo de tratamento inviabilizado do MSMQ v 4.0
+ No [!INCLUDE[wv](../../../../includes/wv-md.md)], o MSMQ fornece um recurso de subfilas suspeitas que pode ser usado para armazenar mensagens suspeitas. Este exemplo demonstra a prática recomendada de lidar com mensagens suspeitas [!INCLUDE[wv](../../../../includes/wv-md.md)]usando o.
 
- A detecção de mensagens suspeitas em [!INCLUDE[wv](../../../../includes/wv-md.md)] é bastante sofisticado. Há 3 propriedades que ajudam com a detecção. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é o número de vezes que uma determinada mensagem é lida novamente a fila e expedidas para o aplicativo para processamento. Uma mensagem é lida novamente na fila quando ele é colocado de volta na fila porque a mensagem não pode ser enviada para o aplicativo ou o aplicativo reverterá a transação na operação de serviço. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> é o número de vezes que a mensagem será movida para a fila de repetição. Quando <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é atingido, a mensagem será movida para a fila de repetição. A propriedade <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> é o tempo de espera após o qual a mensagem é movida da fila de repetição volta para a fila principal. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é redefinido como 0. A mensagem será tentada novamente. Se todas as tentativas de ler a mensagem tiverem falhado, a mensagem é marcada como suspeita.
+ A detecção de mensagens suspeitas no [!INCLUDE[wv](../../../../includes/wv-md.md)] é bastante sofisticada. Há três propriedades que ajudam na detecção. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é o número de vezes que uma determinada mensagem é relida da fila e despachada para o aplicativo para processamento. Uma mensagem é relida da fila quando é colocada de volta na fila porque a mensagem não pode ser expedida para o aplicativo ou o aplicativo reverte a transação na operação de serviço. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>é o número de vezes que a mensagem é movida para a fila de repetição. Quando <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> for atingido, a mensagem será movida para a fila de repetição. A propriedade <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> é o intervalo de tempo após o qual a mensagem é movida da fila de repetição de volta para a fila principal. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é redefinido como 0. A mensagem é tentada novamente. Se todas as tentativas de ler a mensagem tiverem falhado, a mensagem será marcada como inviabilizada.
 
- Depois que a mensagem é marcada como suspeita, a mensagem será abordada acordo com as configurações de <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> enumeração. Para reiterar os valores possíveis:
+ Depois que a mensagem é marcada como inviabilizada, a mensagem é tratada de acordo com as configurações na <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> enumeração. Para reiterar os valores possíveis:
 
-- Falha (padrão): Para o ouvinte e também o host de serviço de falha.
+- Falha (padrão): Para falhar o ouvinte e também o host de serviço.
 
-- Remova: Para descartar a mensagem.
+- Suspensa Para descartar a mensagem.
 
-- Mova: Para mover a mensagem para a subfila de mensagens suspeitas. Esse valor só está disponível na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Prosseguir Para mover a mensagem para a subfila de mensagens suspeitas. Esse valor está disponível apenas em [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
-- Rejeite: Para rejeitar a mensagem, enviando a mensagem de volta para a fila de mensagens mortas do remetente. Esse valor só está disponível na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Rejeitar Para rejeitar a mensagem, envie a mensagem de volta para a fila de mensagens mortas do remetente. Esse valor está disponível apenas em [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- O exemplo demonstra como usar o `Move` disposição para a mensagem suspeita. `Move` faz com que a mensagem Mover para a subfila suspeita.
+ O exemplo demonstra o uso `Move` da disposição para a mensagem suspeita. `Move`faz com que a mensagem seja movida para a subfila de envenenamento.
 
- O contrato de serviço é `IOrderProcessor`, que define um serviço unidirecional que é adequado para uso com as filas.
+ O contrato de serviço `IOrderProcessor`é, que define um serviço unidirecional que é adequado para uso com filas.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- A operação de serviço exibe uma mensagem informando que está processando o pedido. Para demonstrar a funcionalidade de mensagens suspeitas, o `SubmitPurchaseOrder` operação de serviço lança uma exceção ao reverter a transação em uma invocação aleatória do serviço. Isso faz com que a mensagem a ser colocado de volta na fila. Eventualmente, a mensagem é marcada como suspeitas. A configuração está definida para mover a mensagem suspeita para a subfila suspeita.
+ A operação de serviço exibe uma mensagem informando que está processando a ordem. Para demonstrar a funcionalidade de mensagem suspeita, `SubmitPurchaseOrder` a operação de serviço gera uma exceção para reverter a transação em uma invocação aleatória do serviço. Isso faz com que a mensagem seja colocada de volta na fila. Eventualmente, a mensagem é marcada como suspeita. A configuração é definida para mover a mensagem suspeita para a subfila de suspeita.
 
 ```csharp
 // Service class that implements the service contract.
@@ -118,7 +118,7 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- A configuração de serviço inclui as seguintes propriedades de mensagem suspeita: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay`, e `receiveErrorHandling` conforme mostrado no seguinte arquivo de configuração.
+ A configuração de serviço inclui as seguintes propriedades de mensagem `receiveRetryCount`suspeita `maxRetryCycles`: `retryCycleDelay`,, `receiveErrorHandling` e conforme mostrado no arquivo de configuração a seguir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -154,12 +154,12 @@ public class OrderProcessorService : IOrderProcessor
 </configuration>
 ```
 
-## <a name="processing-messages-from-the-poison-message-queue"></a>Processamento de mensagens da fila de mensagens suspeitas
- O serviço de mensagens suspeitas lê as mensagens da fila de mensagens suspeitas final e as processa.
+## <a name="processing-messages-from-the-poison-message-queue"></a>Processando mensagens da fila de mensagens suspeitas
+ O serviço de mensagens suspeitas lê mensagens da fila final de mensagens suspeitas e as processa.
 
- Mensagens na fila de mensagens suspeitas são mensagens que são resolvidas para o serviço que está processando a mensagem, o que poderia ser diferente do ponto de extremidade de serviço de mensagens suspeitas. Portanto, quando o serviço de mensagens suspeitas lê as mensagens da fila, a camada de canais do WCF localiza a incompatibilidade nos pontos de extremidade e não despachar a mensagem. Nesse caso, a mensagem é endereçada ao serviço de processamento de pedidos, mas está sendo recebida pelo serviço de mensagens suspeitas. Para continuar a receber a mensagem, mesmo se a mensagem é endereçada a um ponto de extremidade diferente, devemos adicionar um `ServiceBehavior` para endereços de filtro em que o critério de correspondência é para corresponder a qualquer ponto de extremidade de serviço a mensagem é endereçada ao. Isso é necessário para processar com êxito mensagens lidas da fila de mensagens suspeitas.
+ As mensagens na fila de mensagens suspeitas são mensagens endereçadas ao serviço que está processando a mensagem, que pode ser diferente do ponto de extremidade do serviço de mensagens suspeitas. Portanto, quando o serviço de mensagens suspeitas lê mensagens da fila, a camada de canal do WCF localiza a incompatibilidade em pontos de extremidade e não despacha a mensagem. Nesse caso, a mensagem é endereçada ao serviço de processamento de pedidos, mas está sendo recebida pelo serviço de mensagens suspeitas. Para continuar a receber a mensagem mesmo que a mensagem seja endereçada a um ponto de extremidade diferente, devemos `ServiceBehavior` adicionar um para filtrar endereços em que o critério de correspondência é corresponder a qualquer ponto de extremidade de serviço ao qual a mensagem é endereçada. Isso é necessário para processar com êxito as mensagens que você leu da fila de mensagens suspeitas.
 
- A implementação do serviço de mensagens suspeitas em si é muito semelhante à implementação do serviço. Ele implementa o contrato e processa os pedidos. O exemplo de código é da seguinte maneira.
+ A própria implementação do serviço de mensagens suspeitas é muito semelhante à implementação do serviço. Ele implementa o contrato e processa os pedidos. O exemplo de código é o seguinte.
 
 ```csharp
 // Service class that implements the service contract.
@@ -206,10 +206,10 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- Ao contrário da ordem de serviço que lê mensagens da fila de ordem de processamento, o serviço de mensagens suspeitas lê mensagens da fila de suspeitas de subpropriedades. Fila de mensagens suspeitas é uma subfila da fila principal, é denominada "suspeitas" e é automaticamente gerada pelo MSMQ. Para acessá-lo, forneça o nome de fila principal, seguido por um ";" e o subfila nome, nesse caso-"suspeita", conforme mostrado no seguinte exemplo de configuração.
+ Ao contrário do serviço de processamento de pedidos que lê mensagens da fila de pedidos, o serviço de mensagens suspeitas lê as mensagens da subfila de suspeita. A fila de suspeitas é uma subfila da fila principal, denominada "suspeita" e é gerada automaticamente pelo MSMQ. Para acessá-lo, forneça o nome da fila principal seguido por um ";" e o nome da subfila, neste caso, "suspeita", conforme mostrado na seguinte configuração de exemplo.
 
 > [!NOTE]
->  No exemplo de v MSMQ 3.0, o nome da fila de mensagens suspeitas não é uma subfila, em vez disso, a fila que mudamos a mensagem.
+> No exemplo do MSMQ v 3.0, o nome da fila suspeita não é uma subfila, e sim a fila para a qual movemos a mensagem.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -229,9 +229,9 @@ public class OrderProcessorService : IOrderProcessor
 </configuration>
 ```
 
- Quando você executar o exemplo, o cliente, serviços e atividades de serviço de mensagens suspeitas são exibidas nas janelas do console. Você pode ver as mensagens de recebimento do serviço do cliente. Pressione ENTER em cada janela de console para interromper os serviços.
+ Quando você executa o exemplo, as atividades cliente, serviço e serviço de mensagens suspeitas são exibidas em janelas de console. Você pode ver o serviço receber mensagens do cliente. Pressione ENTER em cada janela do console para desligar os serviços.
 
- O serviço é iniciado em execução, o processamento de pedidos e aleatoriamente começa a encerrar o processamento. Se a mensagem indicar que ele processou a ordem, você pode executar o cliente novamente para enviar outra mensagem até que você veja que o serviço terminou, na verdade, uma mensagem. Com base nas configurações feitas suspeitas, a mensagem a tentativa de uma vez para o processamento antes de movê-lo para a fila de mensagens suspeitas final.
+ O serviço inicia a execução, processando pedidos e, aleatoriamente, começa a encerrar o processamento. Se a mensagem indicar que ele processou a ordem, você poderá executar o cliente novamente para enviar outra mensagem até ver que o serviço, na verdade, terminou uma mensagem. Com base nas configurações suspeitas configuradas, a mensagem é tentada uma vez para processamento antes de movê-la para a fila de suspeitas final.
 
 ```
 The service is ready.
@@ -256,7 +256,7 @@ Processing Purchase Order: 5ef9a4fa-5a30-4175-b455-2fb1396095fa
 Aborting transaction, cannot process purchase order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 ```
 
- Inicie o serviço de mensagens suspeitas ao ler a mensagem inviabilizada da fila de mensagens suspeitas. Neste exemplo, o serviço de mensagens suspeitas lê a mensagem e processa-os. Você pode ver que a ordem de compra que foi encerrada e adulterada é lido pelo serviço de mensagens suspeitas.
+ Inicie o serviço de mensagens suspeitas para ler a mensagem inviabilizada da fila de suspeitas. Neste exemplo, o serviço de mensagens suspeitas lê a mensagem e a processa. Você pode ver que a ordem de compra terminada e inviabilizada é lida pelo serviço de mensagens suspeitas.
 
 ```
 The service is ready.
@@ -273,29 +273,29 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
+2. Se o serviço for executado primeiro, ele verificará se a fila está presente. Se a fila não estiver presente, o serviço criará uma. Você pode executar o serviço primeiro para criar a fila ou pode criar um por meio do Gerenciador de filas MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
 
-    1. Abra o Gerenciador de servidores no Visual Studio 2012.
+    1. Abra Gerenciador do Servidor no Visual Studio 2012.
 
-    2. Expanda o **recursos** guia.
+    2. Expanda a guia **recursos** .
 
-    3. Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.
+    3. Clique com o botão direito do mouse em **filas de mensagens particulares**e selecione **nova** **fila privada**.
 
-    4. Verifique as **transacional** caixa.
+    4. Marque a caixa transacional.
 
     5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
 
-3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Para executar o exemplo em uma configuração ou entre computadores, alterar os nomes de fila para refletir o nome do host real em vez do localhost e siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Para executar o exemplo em uma configuração de computador único ou entre computadores, altere os nomes de fila para refletir o nome de host real em vez de localhost e siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- Por padrão com o `netMsmqBinding` transporte de associação de segurança está habilitada. Duas propriedades, `MsmqAuthenticationMode` e `MsmqProtectionLevel`, juntos determinam o tipo de segurança de transporte. Por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign`. Para o MSMQ fornecer a autenticação e o recurso de assinatura, ele deve ser parte de um domínio. Se você executar esse exemplo em um computador que não faz parte de um domínio, você receberá o seguinte erro: "Mensagem do usuário interna certificado do enfileiramento de mensagens não existe".
+ Por padrão, com `netMsmqBinding` o transporte de associação, a segurança é habilitada. Duas propriedades `MsmqAuthenticationMode` e `MsmqProtectionLevel`, juntas, determinam o tipo de segurança de transporte. Por padrão, o modo de autenticação é definido `Windows` como e o nível de proteção é `Sign`definido como. Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio. Se você executar esse exemplo em um computador que não faz parte de um domínio, você receberá o seguinte erro: "O certificado interno do enfileiramento de mensagens do usuário não existe".
 
-#### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para executar o exemplo em um computador associado a um grupo de trabalho
+#### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para executar o exemplo em um computador ingressado em um grupo de trabalho
 
-1. Se seu computador não fizer parte de um domínio, desative a segurança de transporte, definindo o nível de proteção e o modo de autenticação como `None` conforme mostrado no seguinte exemplo de configuração:
+1. Se o computador não fizer parte de um domínio, desative a segurança de transporte definindo o modo de autenticação e o `None` nível de proteção como mostrado na seguinte configuração de exemplo:
 
     ```xml
     <bindings>
@@ -307,20 +307,20 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     </bindings>
     ```
 
-     Certifique-se de que o ponto de extremidade está associado com a associação, definindo o atributo bindingConfiguration de um ponto de extremidade.
+     Verifique se o ponto de extremidade está associado à associação definindo o atributo bindingConfiguration do ponto de extremidade.
 
-2. Certifique-se de que você altera a configuração no PoisonMessageServer, server e o cliente antes de executar o exemplo.
+2. Certifique-se de alterar a configuração no PoisonMessageServer, no servidor e no cliente antes de executar o exemplo.
 
     > [!NOTE]
-    >  Definindo `security mode` à `None` é equivalente à configuração `MsmqAuthenticationMode`, `MsmqProtectionLevel`, e `Message` security `None`.  
+    >  A `security mode` configuração `None` como é equivalente à `MsmqAuthenticationMode`configuração `MsmqProtectionLevel`, e `Message` à segurança `None`para.  
   
-3. Ordem de Meta para troca de dados trabalhar, registramos uma URL com associação de http. Isso requer que o serviço é executado em uma janela de comando com privilégios elevados. Caso contrário, você receberá uma exceção, como: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
+3. Para que o Meta Data Exchange funcione, registramos uma URL com associação http. Isso requer que o serviço seja executado em uma janela de comandos com privilégios elevados. Caso contrário, você obterá uma exceção, `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`como:.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

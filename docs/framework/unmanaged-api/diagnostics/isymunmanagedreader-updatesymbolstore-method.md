@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfc4507557102e19d95f1b746b3a76a231882d7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d84d4fccb2cb4e500f07f6bfbfb93b8c7b81f5d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939000"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>Método ISymUnmanagedReader::UpdateSymbolStore
-Atualiza o repositório de símbolos existente com um repositório de símbolos delta. Esse método é usado em cenários de editar e continuar para atualizar o repositório de símbolos para corresponder os deltas para o original (arquivo portable Executable).  
+Atualiza o repositório de símbolos existente com um repositório de símbolos delta. Esse método é usado em cenários de edição e continuação para atualizar o armazenamento de símbolo para corresponder deltas ao arquivo PE (executável portátil) original.  
   
 > [!NOTE]
->  Você precisa especificar apenas um dos `filename` ou `pIStream` parâmetros, não ambos. Se `filename` for especificado, o repositório de símbolos será atualizado com os símbolos no arquivo. Se `pIStream` for especificado, o repositório será atualizado com os dados a partir de <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> Você precisa especificar apenas um dos `filename` parâmetros ou `pIStream` , não ambos. Se `filename` for especificado, o armazenamento de símbolos será atualizado com os símbolos nesse arquivo. Se `pIStream` for especificado, o repositório será atualizado com os dados <xref:System.Runtime.InteropServices.ComTypes.IStream>do.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +40,13 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>Parâmetros  
  `filename`  
- [in] O nome do arquivo que contém o repositório de símbolos.  
+ no O nome do arquivo que contém o armazenamento de símbolo.  
   
  `pIStream`  
- [in] O fluxo de arquivos, usado como uma alternativa para o `filename` parâmetro.  
+ no O fluxo de arquivos, usado como uma alternativa ao `filename` parâmetro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  

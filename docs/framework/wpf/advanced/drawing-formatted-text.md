@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 3b410bcf609aca2cb201042247b8768f243ac93a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eeba54ebd63b26a50c8c01a2478e847b3e660a3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629748"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937688"
 ---
 # <a name="drawing-formatted-text"></a>Desenhando texto formatado
 Este tópico fornece uma visão geral dos recursos do <xref:System.Windows.Media.FormattedText> objeto. Este objeto fornece controle de baixo nível para desenhar texto em aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -26,7 +26,7 @@ Este tópico fornece uma visão geral dos recursos do <xref:System.Windows.Media
  ![Texto exibido usando o objeto FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
->  Para desenvolvedores que estão migrando da API [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], a tabela na seção [Migração do Win32](#win32_migration) lista os sinalizadores DrawText [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] e o equivalente aproximado em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+> Para desenvolvedores que estão migrando da API [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], a tabela na seção [Migração do Win32](#win32_migration) lista os sinalizadores DrawText [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] e o equivalente aproximado em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ### <a name="reasons-for-using-formatted-text"></a>Motivos para usar texto formatado  
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui vários controles para desenhar texto na tela. Cada controle é destinado a um cenário diferente e tem sua própria lista de recursos e limitações. Em geral, o <xref:System.Windows.Controls.TextBlock> elemento deve ser usado quando o suporte a texto limitado é necessário, como uma breve frase em [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]um. <xref:System.Windows.Controls.Label>pode ser usado quando o suporte a texto mínimo é necessário. Para obter mais informações, consulte [Documentos no WPF](documents-in-wpf.md).  
@@ -97,15 +97,15 @@ Esfera seguindo a geometria de caminho do texto
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Use a <xref:System.Windows.Media.FormattedText.Trimming%2A> Propriedade com o valor <xref:System.Windows.TextTrimming.CharacterEllipsis>.<br /><br /> Use <xref:System.Windows.TextTrimming.WordEllipsis> para obter [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DT_END_ELLIPSIS com reticências de extremidade DT_WORD_ELIPSIS – nesse caso, reticências de caractere só ocorrem em palavras que não se ajustam em uma única linha.|  
 |DT_EXPAND_TABS|Nenhum|Não obrigatório. As guias são expandidas automaticamente para paradas a cada 4 ems, o que é aproximadamente a largura de 8 caracteres independentes do idioma.|  
 |DT_EXTERNALLEADING|Nenhum|Não obrigatório. O entrelinhamento externo sempre é incluído no espaçamento entre linhas. Use a <xref:System.Windows.Media.FormattedText.LineHeight%2A> propriedade para criar um espaçamento de linha definido pelo usuário.|  
-|DT_HIDEPREFIX|Nenhum|Sem suporte. Remova o ' & ' da cadeia de caracteres antes de construir <xref:System.Windows.Media.FormattedText> o objeto.|  
+|DT_HIDEPREFIX|Nenhum|Não compatível. Remova o ' & ' da cadeia de caracteres antes de construir <xref:System.Windows.Media.FormattedText> o objeto.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Este é o alinhamento de texto padrão. Use a <xref:System.Windows.Media.FormattedText.TextAlignment%2A> Propriedade com o valor definido como <xref:System.Windows.TextAlignment.Left>. (Somente WPF)|  
-|DT_MODIFYSTRING|Nenhum|Sem suporte.|  
+|DT_MODIFYSTRING|Nenhum|Não compatível.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|O recorte não acontece automaticamente. Se você quiser recortar o texto, use <xref:System.Windows.Media.Visual.VisualClip%2A> a propriedade.|  
-|DT_NOFULLWIDTHCHARBREAK|Nenhum|Sem suporte.|  
+|DT_NOFULLWIDTHCHARBREAK|Nenhum|Não compatível.|  
 |DT_NOPREFIX|Nenhum|Não obrigatório. O caractere "&" nas cadeias de caracteres sempre é tratado como um caractere normal.|  
 |DT_PATHELLIPSIS|Nenhum|Use a <xref:System.Windows.Media.FormattedText.Trimming%2A> Propriedade com o valor <xref:System.Windows.TextTrimming.WordEllipsis>.|  
-|DT_PREFIX|Nenhum|Sem suporte. Se você quiser usar sublinhados para texto, como uma tecla aceleradora ou link, use o <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> método.|  
-|DT_PREFIXONLY|Nenhum|Sem suporte.|  
+|DT_PREFIX|Nenhum|Não compatível. Se você quiser usar sublinhados para texto, como uma tecla aceleradora ou link, use o <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> método.|  
+|DT_PREFIXONLY|Nenhum|Não compatível.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Use a <xref:System.Windows.Media.FormattedText.TextAlignment%2A> Propriedade com o valor definido como <xref:System.Windows.TextAlignment.Right>. (Somente WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Defina a propriedade <xref:System.Windows.Media.FormattedText.FlowDirection%2A> como <xref:System.Windows.FlowDirection.RightToLeft>.|  
 |DT_SINGLELINE|Nenhum|Não obrigatório. <xref:System.Windows.Media.FormattedText>os objetos se comportam como um controle de linha <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> única, a menos que a propriedade seja definida ou o texto contenha uma CR/LF (retorno de carro/alimentação de linha).|  

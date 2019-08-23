@@ -13,26 +13,26 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: ad3a4af2474ace61bbf35ea1357a2a6037af039a
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 45ef0b5920e43300e047d363149ea10a7833477b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506229"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912227"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pincéis e formas preenchidas no GDI+
-Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutura de tópicos e um interior. A estrutura de tópicos é desenhada com uma caneta e o interior é preenchido com um pincel. GDI+ fornece várias classes de pincel para preencher os interiores das formas fechadas: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, e <xref:System.Drawing.Drawing2D.PathGradientBrush>. Todas essas classes herdam o <xref:System.Drawing.Brush> classe. A ilustração a seguir mostra um retângulo preenchido com um pincel sólido e uma elipse preenchida com um pincel de hachura.  
+Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutura de tópicos e um interior. A estrutura de tópicos é desenhada com uma caneta e o interior é preenchido com um pincel. O GDI+ fornece várias classes de pincel para preencher os interiores de formas fechadas <xref:System.Drawing.SolidBrush>: <xref:System.Drawing.Drawing2D.HatchBrush> <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>,, e <xref:System.Drawing.Drawing2D.PathGradientBrush>. Todas essas classes herdam da <xref:System.Drawing.Brush> classe. A ilustração a seguir mostra um retângulo preenchido com um pincel sólido e uma elipse preenchida com um pincel de hachura.  
   
  ![Formas Preenchidas](./media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
 ## <a name="solid-brushes"></a>Pincéis Sólidos  
- Para preencher uma forma fechada, você precisa de uma instância das <xref:System.Drawing.Graphics> classe e um <xref:System.Drawing.Brush>. A instância das <xref:System.Drawing.Graphics> classe fornece métodos, tais como <xref:System.Drawing.Graphics.FillRectangle%2A> e <xref:System.Drawing.Graphics.FillEllipse%2A>e o <xref:System.Drawing.Brush> armazena atributos do preenchimento, como cor e padrão. O <xref:System.Drawing.Brush> é passado como um dos argumentos para o método de preenchimento. O exemplo de código a seguir mostra como preencher uma elipse com uma cor vermelha sólida.  
+ Para preencher uma forma fechada, você precisa de uma instância da <xref:System.Drawing.Graphics> classe e de <xref:System.Drawing.Brush>um. A instância da <xref:System.Drawing.Graphics> classe fornece métodos, <xref:System.Drawing.Graphics.FillRectangle%2A> como e <xref:System.Drawing.Graphics.FillEllipse%2A>, e os <xref:System.Drawing.Brush> atributos de armazenamento do preenchimento, como cor e padrão. O <xref:System.Drawing.Brush> é passado como um dos argumentos para o método Fill. O exemplo de código a seguir mostra como preencher uma elipse com uma cor vermelha sólida.  
   
  [!code-csharp[LinesCurvesAndShapes#121](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#121)]
  [!code-vb[LinesCurvesAndShapes#121](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#121)]  
   
 > [!NOTE]
->  No exemplo anterior, o pincel é do tipo <xref:System.Drawing.SolidBrush>, que herda de <xref:System.Drawing.Brush>.  
+> No exemplo anterior, o pincel é do tipo <xref:System.Drawing.SolidBrush>, que é herdado de. <xref:System.Drawing.Brush>  
   
 ## <a name="hatch-brushes"></a>Pincéis de Hachura  
  Ao preencher uma forma com um pincel de hachura, é necessário especificar uma cor de primeiro plano, uma cor da tela de fundo e um estilo de hachura. A cor de primeiro plano é a cor da hachura.  
@@ -40,7 +40,7 @@ Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutu
  [!code-csharp[LinesCurvesAndShapes#122](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- GDI+ fornece mais de 50 estilos de hachura; os três estilos mostrados na ilustração a seguir são <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, e <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
+ GDI+ fornece mais de 50 estilos de hachura; os três estilos mostrados na ilustração a seguir <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>são <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, e <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
   
  ![Formas Preenchidas](./media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -59,7 +59,7 @@ Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutu
  ![Forma Preenchida](./media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>Pincéis de Gradiente  
- GDI+ fornece dois tipos de pincéis de gradiente: linear e o caminho. É possível usar um pincel de gradiente linear para preencher uma forma com uma cor que muda gradualmente à medida que a forma é movida horizontal, vertical ou diagonalmente. O exemplo de código a seguir mostra como preencher uma elipse com um pincel de gradiente horizontal que muda de azul para verde ao mover da borda esquerda para a borda direita da elipse.  
+ O GDI+ fornece dois tipos de pincéis de gradiente: linear e Path. É possível usar um pincel de gradiente linear para preencher uma forma com uma cor que muda gradualmente à medida que a forma é movida horizontal, vertical ou diagonalmente. O exemplo de código a seguir mostra como preencher uma elipse com um pincel de gradiente horizontal que muda de azul para verde ao mover da borda esquerda para a borda direita da elipse.  
   
  [!code-csharp[LinesCurvesAndShapes#124](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  

@@ -2,22 +2,22 @@
 title: Vários contratos
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: acced4bfc79571c78e868b31b0a4db6cfbdea76a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39970f9f0aefa46c3d064b39c9b35d195ef22843
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989736"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930358"
 ---
 # <a name="multiple-contracts"></a>Vários contratos
-O exemplo de vários contratos demonstra como implementar mais de um contrato em um serviço e como configurar pontos de extremidade para se comunicar com cada um dos contratos implementados. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). O serviço foi modificado para definir contratos de dois, o `ICalculator` contrato e o `ICalculatorSession` contrato.  
+O exemplo de vários contratos demonstra como implementar mais de um contrato em um serviço e como configurar pontos de extremidade para se comunicar com cada um dos contratos implementados. Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). O serviço foi modificado para definir dois contratos, o `ICalculator` contrato e o `ICalculatorSession` contrato.  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- A classe de serviço implementa ambos os `ICalculator` e `ICalculatorSession` contratos. Como um dos contratos requer uma sessão, o serviço usa o <xref:System.ServiceModel.InstanceContextMode.PerSession> modo de instância para manter o estado durante a vida útil da sessão.  
+ A classe de serviço implementa os `ICalculator` contratos `ICalculatorSession` e. Como um dos contratos requer uma sessão, o serviço usa o <xref:System.ServiceModel.InstanceContextMode.PerSession> modo de instância para manter o estado durante o tempo de vida da sessão.  
   
- A configuração do serviço foi modificada para definir dois pontos de extremidade para expor cada contrato. O `ICalculator` ponto de extremidade é exposto ao endereço básico usando um `basicHttpBinding`. O `ICalculatorSession` ponto de extremidade é exposto ao baseaddress/sessão usando um `wsHttpBinding` com o `bindingConfiguration` atributo definido como `BindingWithSession`, conforme mostrado no seguinte exemplo de configuração.  
+ A configuração de serviço foi modificada para definir dois pontos de extremidade para expor cada contrato. O `ICalculator` ponto de extremidade é exposto no endereço base usando `basicHttpBinding`um. O `ICalculatorSession` ponto de extremidade é exposto no BaseAddress/Session usando `wsHttpBinding` um `BindingWithSession`com `bindingConfiguration` o atributo definido como, conforme mostrado na seguinte configuração de exemplo.  
   
 ```xml  
 <service   
@@ -40,25 +40,25 @@ O exemplo de vários contratos demonstra como implementar mais de um contrato em
 </service>  
 ```  
   
- O código de cliente gerado agora inclui uma classe de cliente para o original `ICalculator` contrato e o novo `ICalculatorSession` contrato. A configuração de cliente e o código foram modificadas para se comunicar com cada contrato no ponto de extremidade de serviço apropriado.  
+ O código do cliente gerado agora inclui uma classe de cliente para o `ICalculator` contrato original e para `ICalculatorSession` o novo contrato. A configuração do cliente e o código foram modificados para se comunicar com cada contrato no ponto de extremidade de serviço apropriado.  
   
- O cliente é um aplicativo do windows do console (.exe). O serviço é hospedado pelo Internet Information Services (IIS).  
+ O cliente é um aplicativo do Windows do console (. exe). O serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
   
- A janela de console do cliente exibe as operações enviadas a cada um dos pontos de extremidade, primeiro, o ponto de extremidade básico, seguido pelo ponto de extremidade seguro.  
+ A janela do console do cliente exibe as operações enviadas para cada um dos pontos de extremidade, primeiro o ponto final básico, seguido pelo ponto de extremidade seguro.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleContracts`  

@@ -2,18 +2,18 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3fc7828d399555f7c459f6dd067ce9a24b8998b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 170cae5b328c86073c1d8e7710bb19e98ab5688c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704045"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925871"
 ---
-# <a name="diagnostics"></a>\<diagnóstico >
-O `diagnostics` elemento define configurações que podem ser usadas por um administrador para inspeção de tempo de execução e controle.  
+# <a name="diagnostics"></a>\<> de diagnóstico
+O `diagnostics` elemento define as configurações que podem ser usadas por um administrador para inspeção e controle de tempo de execução.  
   
  \<system.ServiceModel>  
-\<diagnóstico >  
+\<> de diagnóstico  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,16 +46,16 @@ O `diagnostics` elemento define configurações que podem ser usadas por um admi
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|etwProviderId|Uma cadeia de caracteres que especifica o identificador para o provedor de rastreamento de eventos, que grava eventos em sessões ETW.|  
-|performanceCounters|Especifica se contadores de desempenho para o assembly estão habilitados. Os valores válidos são<br /><br /> -Off: Os contadores de desempenho estão desabilitados.<br />-   ServiceOnly: Estão habilitados apenas contadores de desempenho relevantes para esse serviço.<br />-Todos os itens: Contadores de desempenho podem ser exibidos em tempo de execução.<br />-Padrão: Uma instância única de contador de desempenho _WCF_Admin é criada. Esta instância é usada para habilitar a coleta de dados SQM usados pela infraestrutura. Nenhum dos valores de contador para esta instância estão atualizados e, portanto, permanecerão em zero. Isso é o valor padrão se nenhuma configuração estiver presente para o WCF.|  
-|wmiProviderEnabled|Um valor booliano que especifica se o provedor WMI para o assembly está habilitado. O provedor WMI é necessário para o usuário obtenha acesso de tempo de execução para os recursos de inspeção e controle do Windows Communication Foundation (WCF). O padrão é `false`.|  
+|etwProviderId|Uma cadeia de caracteres que especifica o identificador para o provedor de rastreamento de eventos, que grava eventos em sessões do ETW.|  
+|performanceCounters|Especifica se contadores de desempenho para o assembly estão habilitados. Os valores válidos são<br /><br /> Desconto Os contadores de desempenho estão desabilitados.<br />-Somente: Estão habilitados apenas contadores de desempenho relevantes para esse serviço.<br />Os Contadores de desempenho podem ser exibidos em tempo de execução.<br />Os Uma instância única de contador de desempenho _WCF_Admin é criada. Esta instância é usada para habilitar a coleta de dados SQM usados pela infraestrutura. Nenhum dos valores de contador para esta instância estão atualizados e, portanto, permanecerão em zero. Esse será o valor padrão se nenhuma configuração estiver presente para o WCF.|  
+|wmiProviderEnabled|Um valor booliano que especifica se o provedor WMI para o assembly está habilitado. O provedor WMI é necessário para que o usuário tenha acesso em tempo de execução aos recursos de inspeção e controle do Windows Communication Foundation (WCF). O padrão é `false`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Um elemento de configuração que permite que você habilitar e desabilitar diferentes aspectos de rastreamento de ponta a ponta durante a execução de um aplicativo de serviço.|  
-|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Descreve as configurações de log de mensagens do WCF.|  
+|[\<endToEndTracing>](endtoendtracing.md)|Um elemento de configuração que permite habilitar e desabilitar diferentes aspectos de rastreamento de ponta a ponta durante a execução de um aplicativo de serviço.|  
+|[\<messageLogging>](messagelogging.md)|Descreve as configurações para o log de mensagens do WCF.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -64,7 +64,7 @@ O `diagnostics` elemento define configurações que podem ser usadas por um admi
 |serviceModel|O elemento raiz de todos os elementos de configuração do WCF.|  
   
 ## <a name="remarks"></a>Comentários  
- O `diagnostics` seção define as configurações de diagnóstico para todos os serviços localizados em um assembly. Não é possível definir as configurações de diagnóstico separada no nível de serviço, a menos que haja apenas um serviço no assembly. Atributos são definidos de acordo com os requisitos da seção.  
+ A `diagnostics` seção define as configurações de diagnóstico para todos os serviços localizados em um assembly. Não é possível definir configurações de diagnóstico separadas no nível de serviço, a menos que haja apenas um serviço no assembly. Os atributos são definidos de acordo com os requisitos da seção.  
   
 ## <a name="example"></a>Exemplo  
   

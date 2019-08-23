@@ -1,52 +1,52 @@
 ---
-title: 'Implementando o padrão de controle SelectionItem de interface de usuário '
+title: Implementando o padrão de controle SelectionItem de interface de usuário
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Selection Item control pattern
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: b1d5a0b11510a123d5fbebd656c1fdcd338870e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aef1d31499f65834fa1268147e45f82294fe560a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649483"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935685"
 ---
-# <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementando o padrão de controle SelectionItem de interface de usuário 
+# <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementando o padrão de controle SelectionItem de interface de usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
- Este tópico apresenta diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, incluindo informações sobre propriedades, métodos e eventos. Links para referências adicionais são listadas no final da visão geral.  
+ Este tópico apresenta as diretrizes e convenções para <xref:System.Windows.Automation.Provider.ISelectionItemProvider>implementar o, incluindo informações sobre propriedades, métodos e eventos. Links para referências adicionais são listados no final da visão geral.  
   
- O <xref:System.Windows.Automation.SelectionItemPattern> padrão de controle é usado para oferecer suporte aos controles que atuam como itens filhos selecionáveis e individuais de caixas de controles que implementam <xref:System.Windows.Automation.Provider.ISelectionProvider>. Para obter exemplos de controles que implementam o padrão de controle SelectionItem, consulte [mapeamento de padrão de controle para clientes de automação de interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ O <xref:System.Windows.Automation.SelectionItemPattern> padrão de controle é usado para dar suporte a controles que atuam como itens filho selecionáveis individuais de <xref:System.Windows.Automation.Provider.ISelectionProvider>controles de contêiner que implementam. Para obter exemplos de controles que implementam o padrão de controle SelectionItem, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
- Ao implementar o padrão de controle de Item de seleção, observe as seguintes diretrizes e convenções:  
+## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
+ Ao implementar o padrão de controle item de seleção, observe as seguintes diretrizes e convenções:  
   
-- Controles de seleção única que gerenciam os controles filho que implementam <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, como o **resolução de tela** controle deslizante no **as propriedades de exibição** caixa de diálogo deve implementar <xref:System.Windows.Automation.Provider.ISelectionProvider>e seus filhos devem implementar ambos <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> e <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- Controles de seleção única que gerenciam controles filho que <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>implementam, como o controle deslizante de **resolução de tela** na caixa de diálogo <xref:System.Windows.Automation.Provider.ISelectionProvider> Propriedades de **exibição** , devem implementar e seus filhos devem implementar ambos <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> e .<xref:System.Windows.Automation.Provider.ISelectionItemProvider>  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iselectionitemprovider"></a>Membros necessários para ISelectionItemProvider  
- As seguintes propriedades, métodos e eventos são necessários para implementar <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+ As propriedades, os métodos e os eventos a seguir são necessários <xref:System.Windows.Automation.Provider.ISelectionItemProvider>para implementar o.  
   
 |Membros necessários|Tipo de membro|Observações|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Propriedade|Nenhum|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Propriedade|Nenhum|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Método|Nenhum|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|evento|Gerado quando uma seleção em um contêiner mudou significativamente e requer o envio mais <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> e <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> eventos do que o <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> permite constante.|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|evento|Gerado quando uma seleção em um contêiner é alterada de forma significativa e requer <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> o <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> envio de eventos <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> mais e do que a constante permite.|  
   
-- Se o resultado de uma <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, uma <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, ou uma <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> é um único item selecionado, uma <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> deve ser gerado; caso contrário, envie <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> conforme apropriado.  
+- Se o resultado de um <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, um <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>ou um <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> for um único item selecionado, um <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> deve ser gerado; caso contrário, <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> enviar /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> conforme apropriado.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  
- Provedores devem lançar as exceções a seguir.  
+ Os provedores devem lançar as seguintes exceções.  
   
 |Tipo de exceção|Condição|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|Quando qualquer um dos seguintes são tentadas:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> é chamado em um contêiner de seleção única em que <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` e um elemento já está selecionado.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> é chamado em um contêiner de seleção múltipla em que <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` e apenas um elemento é selecionado.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> é chamado em um contêiner de seleção única em que <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty>  =  `false` e outro elemento já está selecionado.|  
+|<xref:System.InvalidOperationException>|Quando qualquer uma das seguintes opções for tentada:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A>é chamado em um contêiner de seleção única onde <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` e um elemento já está selecionado.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A>é chamado em um contêiner de várias seleções em <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> que  =  `true` e apenas um elemento é selecionado.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A>é chamado em um contêiner de seleção única em <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> que  =  `false` e outro elemento já está selecionado.|  
   
 ## <a name="see-also"></a>Consulte também
 

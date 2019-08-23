@@ -10,19 +10,19 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673778"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920406"
 ---
-# <a name="trace-element"></a>\<rastreamento > elemento
+# <a name="trace-element"></a>\<Elemento de > de rastreamento
 Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.  
   
  \<configuration>  
-\<system.diagnostics>  
-\<trace>  
+\<System. Diagnostics >  
+\<> de rastreamento  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,29 +39,29 @@ Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`autoflush`|Atributo opcional.<br /><br /> Especifica se os ouvintes de rastreamento automaticamente liberar o buffer de saída após cada operação de gravação.|  
-|`indentsize`|Atributo opcional.<br /><br /> Especifica o número de espaços para recuar.|  
+|`autoflush`|Atributo opcional.<br /><br /> Especifica se os ouvintes de rastreamento liberam automaticamente o buffer de saída após cada operação de gravação.|  
+|`indentsize`|Atributo opcional.<br /><br /> Especifica o número de espaços a serem recuados.|  
 |`useGlobalLock`|Atributo opcional.<br /><br /> Indica se o bloqueio global deve ser usado.|  
   
-## <a name="autoflush-attribute"></a>autoflush atributo  
+## <a name="autoflush-attribute"></a>Atributo autoflush  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Não libera o buffer de saída automaticamente. Esse é o padrão.|  
-|`true`|Automaticamente libera o buffer de saída.|  
+|`false`|Não libera automaticamente o buffer de saída. Esse é o padrão.|  
+|`true`|Libera automaticamente o buffer de saída.|  
   
-## <a name="usegloballock-attribute"></a>useGlobalLock atributo  
+## <a name="usegloballock-attribute"></a>Atributo useGlobalLock  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Não usa o bloqueio global, se o ouvinte é thread-safe; Caso contrário, usará o bloqueio global.|  
-|`true`|Usa o bloqueio global, independentemente se o ouvinte é thread-safe. Esse é o padrão.|  
+|`false`|Não usará o bloqueio global se o ouvinte for thread-safe; caso contrário, o usará o bloqueio global.|  
+|`true`|Usa o bloqueio global independentemente de o ouvinte ser thread-safe. Esse é o padrão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Especifica um ouvinte que coleta, armazena e encaminha mensagens.|  
+|[\<listeners>](listeners-element-for-trace.md)|Especifica um ouvinte que coleta, armazena e roteia mensagens.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -71,7 +71,7 @@ Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o `<trace>` elemento para adicionar o ouvinte `MyListener` para o `Listeners` coleção. `MyListener` cria um arquivo chamado `MyListener.log` e grava a saída para o arquivo. O `useGlobalLock` atributo é definido como `false`, que faz com que o bloqueio global não deve ser usado se o ouvinte de rastreamento é thread-safe. O `autoflush` atributo é definido como `true`, que faz com que o ouvinte de rastreamento gravar o arquivo independentemente se o <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> método é chamado. O `indentsize` atributo é definido como 0 (zero), que faz com que o ouvinte recuar os espaços de zero quando o <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> método é chamado.  
+ O exemplo a seguir mostra como usar o `<trace>` elemento para adicionar o ouvinte `MyListener` à `Listeners` coleção. `MyListener`Cria um arquivo chamado `MyListener.log` e grava a saída no arquivo. O `useGlobalLock` atributo é definido como `false`, o que faz com que o bloqueio global não seja usado se o ouvinte de rastreamento for thread-safe. O `autoflush` atributo é definido como `true`, o que faz com que o ouvinte de rastreamento grave no arquivo, <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> independentemente de o método ser chamado. O `indentsize` atributo é definido como 0 (zero), o que faz com que o ouvinte recue zero <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> espaços quando o método é chamado.  
   
 ```xml  
 <configuration>  
@@ -91,4 +91,4 @@ Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Esquema de configurações de rastreamento e depuração](index.md)

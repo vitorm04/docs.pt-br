@@ -2,15 +2,15 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769740"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940315"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
-Um elemento de configuração usado para especificar configurações de soquete da Web.  
+Um elemento de configuração usado para especificar as configurações de soquete da Web.  
   
 \<system.ServiceModel>  
 \<bindings>  
@@ -40,20 +40,20 @@ Um elemento de configuração usado para especificar configurações de soquete 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|createNotificationOnConnection|Especifica se uma notificação será enviada após a conexão.|  
+|createNotificationOnConnection|Especifica se uma notificação é enviada na conexão.|  
 |disablePayloadMasking|Especifica se o mascaramento de soquete da Web está desabilitado.|  
-|keepAliveInterval|Especifica o intervalo de keep alive.|  
-|maxPendingConnections|Especifica o número máximo de conexões aguardando a expedição no serviço.|  
-|receiveBufferSize|Especifica o tamanho do buffer de recepção.|  
+|keepAliveInterval|Especifica o intervalo de Keep Alive.|  
+|maxPendingConnections|Especifica o número máximo de conexões que estão aguardando despacho no serviço.|  
+|receiveBufferSize|Especifica o tamanho do buffer de recebimento.|  
 |sendBufferSize|Especifica o tamanho do buffer de envio.|  
-|subProtocol|Especifica o subprotocolo do soquete da Web.|  
+|subProtocol|Especifica o subprotocolo de soquete da Web.|  
 |transportUsage|Especifica quando usar soquetes da Web.|  
   
-## <a name="transportusage-attribute"></a>transportUsage atributo  
+## <a name="transportusage-attribute"></a>Atributo transportUsage  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|WhenDuplex|Use o protocolo de soquete da Web quando o contrato é duplex.|  
+|WhenDuplex|Use o protocolo de soquete da Web quando o contrato for duplex.|  
 |Sempre|Sempre use o protocolo de soquete da Web, independentemente do contrato.|  
 |Nunca|Nunca use o protocolo de soquete da Web.|  
   
@@ -67,7 +67,7 @@ Um elemento de configuração usado para especificar configurações de soquete 
 |\<netHttpBinding>|Especifica o NetHttpBinding|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o \<webSocketSettings > elemento.  
+ O exemplo a seguir mostra como usar o \<elemento > webSocketSettings.  
   
 ```xml  
 <netHttpBinding>
@@ -90,7 +90,7 @@ Um elemento de configuração usado para especificar configurações de soquete 
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Associações](../../../wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

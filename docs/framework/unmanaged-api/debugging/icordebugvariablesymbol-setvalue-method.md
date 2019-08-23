@@ -1,17 +1,17 @@
 ---
-title: Método ICorDebugVariableSymbol::SetValue
+title: 'Método ICorDebugVariableSymbol:: SetValue'
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5c1c77b92d94062206cf9eb38981f38ff2a1cad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5436f56d3dcad7de3df2296485b0a36e5b3cfd79
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775458"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967959"
 ---
-# <a name="icordebugvariablesymbolsetvalue-method"></a>Método ICorDebugVariableSymbol::SetValue
+# <a name="icordebugvariablesymbolsetvalue-method"></a>Método ICorDebugVariableSymbol:: SetValue
 Atribui o valor de uma matriz de bytes a uma variável.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -29,34 +29,34 @@ HRESULT SetValue(
   
 ## <a name="parameters"></a>Parâmetros  
  `offset`  
- [in] O deslocamento inicial da variável no qual definir o valor. Esse parâmetro é usado ao gravar em campos de membro em um objeto.  
+ no O deslocamento inicial na variável na qual definir o valor. Esse parâmetro é usado ao gravar em campos de membro em um objeto.  
   
  `threadID`  
- [in] O identificador de thread do thread cujo contexto deve ser atualizado para refletir o novo valor.  
+ no O identificador de thread do thread cujo contexto deve ser atualizado para refletir o novo valor.  
   
  `cbContext`  
- [in] O tamanho em bytes do que o contexto do thread.  
+ no O tamanho em bytes do contexto do thread.  
   
  `context`  
- [in] O contexto do thread usado para gravar o valor.  
+ no O contexto de thread usado para gravar o valor.  
   
  `cbValue`  
- [in] O tamanho em bytes do `pValue` buffer.  
+ no O tamanho em bytes do `pValue` buffer.  
   
  `pValue`  
- [in] O buffer que contém o valor a ser definido.  
+ no O buffer que contém o valor a ser definido.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

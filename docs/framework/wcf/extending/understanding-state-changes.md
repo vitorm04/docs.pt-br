@@ -2,12 +2,12 @@
 title: Noções básicas de alterações de estado
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363948"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963080"
 ---
 # <a name="understanding-state-changes"></a>Noções básicas de alterações de estado
 Este tópico discute os Estados e as transições que os canais têm, os tipos usados para estruturar os Estados de canal e como implementá-los.  
@@ -58,7 +58,7 @@ Figura 2. A implementação de CommunicationObject do computador de estado IComm
  <xref:System.ServiceModel.Channels.CommunicationObject>fornece implementações de abortar, fechar e abrir. Ele também fornece um método Fault que causa uma transição de estado para o estado com falha. A Figura 2 mostra <xref:System.ServiceModel.ICommunicationObject> a máquina de estado com cada transição rotulada pelo método que a causa (as transições não rotuladas acontecem dentro da implementação do método que causou a transição do último rótulo).  
   
 > [!NOTE]
->  Todas <xref:System.ServiceModel.Channels.CommunicationObject> as implementações do estado de comunicação Obtém/define são sincronizadas por thread.  
+> Todas <xref:System.ServiceModel.Channels.CommunicationObject> as implementações do estado de comunicação Obtém/define são sincronizadas por thread.  
   
  Construtor  
   

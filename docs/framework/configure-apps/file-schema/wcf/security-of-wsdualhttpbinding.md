@@ -2,21 +2,21 @@
 title: <security> de <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: c6f9e34724ccc3a0d05da3e1886b4f0bcbaae064
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bed7f4ce325e0d5e387e310ca15a3b72ac93f18e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936553"
 ---
-# <a name="security-of-wsdualhttpbinding"></a>\<segurança > de \<wsDualHttpBinding >
-Define os recursos de segurança de [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
+# <a name="security-of-wsdualhttpbinding"></a>\<> de segurança \<do WSDualHttpBinding >
+Define os recursos de segurança do [ \<> WSDualHttpBinding](wsdualhttpbinding.md).  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<wsDualHttpBinding>  
-\<binding>  
-\<segurança >  
+\<> de associação  
+\<> de segurança  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,9 +35,9 @@ Define os recursos de segurança de [ \<wsDualHttpBinding >](../../../../../docs
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|modo|-Opcional. Especifica o tipo de segurança que é aplicado. O valor padrão é `Message`. Esse atributo é do tipo <xref:System.ServiceModel.WSDualHttpSecurityMode>.|  
+|modo|Adicional. Especifica o tipo de segurança que é aplicado. O valor padrão é `Message`. Esse atributo é do tipo <xref:System.ServiceModel.WSDualHttpSecurityMode>.|  
   
-## <a name="mode-attribute"></a>modo de atributo  
+## <a name="mode-attribute"></a>Atributo de modo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -48,23 +48,23 @@ Define os recursos de segurança de [ \<wsDualHttpBinding >](../../../../../docs
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wsdualhttpbinding.md)|Define as configurações para a segurança de nível de mensagem. Esse elemento é do tipo <xref:System.ServiceModel.MessageSecurityOverHttp>.|  
+|[\<message>](message-of-wsdualhttpbinding.md)|Define as configurações para a segurança em nível de mensagem. Esse elemento é do tipo <xref:System.ServiceModel.MessageSecurityOverHttp>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação do [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação do [ \<> WSDualHttpBinding](wsdualhttpbinding.md).|  
   
 ## <a name="remarks"></a>Comentários  
- Uma dupla associação expõe o endereço IP do cliente para o serviço. O cliente deve usar a segurança para garantir que ele só se conecta aos serviços-relações de confiança.  
+ Uma associação dupla expõe o endereço IP do cliente para o serviço. O cliente deve usar a segurança para garantir que ele se conecte apenas aos serviços que confia.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.WSDualHttpSecurity>
 - <xref:System.ServiceModel.BasicHttpSecurity>
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Associações](../../../wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

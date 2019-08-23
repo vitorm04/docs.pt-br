@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eeb92845d9b4eb40eef496ffaf5b35e38ed91423
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301165"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968700"
 ---
 # <a name="encrypting-data"></a>Criptografando dados
-Criptografias simétrica e assimétrica são executadas usando processos diferentes. A criptografia simétrica é executada em fluxos e, portanto, é útil para criptografar grandes quantidades de dados. A criptografia assimétrica é executada em um pequeno número de bytes e, portanto, é útil somente para pequenas quantidades de dados.  
+A criptografia simétrica e a criptografia assimétrica são executadas usando processos diferentes. A criptografia simétrica é executada em fluxos e, portanto, é útil para criptografar grandes quantidades de dados. A criptografia assimétrica é executada em um pequeno número de bytes e, portanto, é útil apenas para pequenas quantidades de dados.  
   
 ## <a name="symmetric-encryption"></a>Criptografia simétrica  
- As classes de criptografia simétrica gerenciados são usadas com uma classe de fluxos especial chamada um <xref:System.Security.Cryptography.CryptoStream> que criptografa os dados lidos no fluxo. O **CryptoStream** classe é inicializada com uma classe de fluxo gerenciado, uma classe implementa a <xref:System.Security.Cryptography.ICryptoTransform> interface (criado de uma classe que implementa um algoritmo de criptografia) e um <xref:System.Security.Cryptography.CryptoStreamMode> enumeração que Descreve o tipo de acesso permitido para o **CryptoStream**. O **CryptoStream** classe pode ser inicializado usando qualquer classe que deriva de <xref:System.IO.Stream> classe, incluindo <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, e <xref:System.Net.Sockets.NetworkStream>. Usando essas classes, você pode executar a criptografia simétrica em uma variedade de objetos de fluxo.  
+ As classes de criptografia simétrica gerenciadas são usadas com uma classe de fluxo <xref:System.Security.Cryptography.CryptoStream> especial chamada a que criptografa os dados lidos no fluxo. A classe **CryptoStream** é inicializada com uma classe de fluxo gerenciada, uma <xref:System.Security.Cryptography.ICryptoTransform> classe implementa a interface (criada a partir de uma classe que implementa um algoritmo <xref:System.Security.Cryptography.CryptoStreamMode> criptográfico) e uma enumeração que descreve o tipo de acesso permitido para o **CryptoStream**. A **classe CryptoStream** pode ser inicializada usando qualquer classe derivada da <xref:System.IO.Stream> classe, incluindo <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>e <xref:System.Net.Sockets.NetworkStream>. Usando essas classes, você pode executar a criptografia simétrica em uma variedade de objetos Stream.  
   
- O exemplo a seguir ilustra como criar uma nova instância dos <xref:System.Security.Cryptography.RijndaelManaged> classe, que implementa o algoritmo de criptografia Rijndael e usá-lo para executar a criptografia em um **CryptoStream** classe. Neste exemplo, o **CryptoStream** é inicializada com um objeto stream chamado `myStream` que pode ser qualquer tipo de fluxo gerenciado. O **CreateEncryptor** método a partir de **RijndaelManaged** classe é passada a chave e IV que são usadas para criptografia. Nesse caso, o IV e a chave padrão gerados de `rmCrypto` são usados. Por fim, o **CryptoStreamMode.Write** for passado, especificando o acesso de gravação no fluxo.  
+ O exemplo a seguir ilustra como criar uma nova instância da <xref:System.Security.Cryptography.RijndaelManaged> classe, que implementa o algoritmo de criptografia Rijndael e usá-la para executar a criptografia em uma classe **CryptoStream** . Neste exemplo, o **CryptoStream** é inicializado com um objeto de fluxo `myStream` chamado que pode ser qualquer tipo de fluxo gerenciado. O método createencryptr da classe **RijndaelManaged** é passado à chave e ao IV que são usados para criptografia. Nesse caso, a chave padrão e o IV gerados de `rmCrypto` são usados. Por fim, o **CryptoStreamMode. Write** é passado, especificando o acesso de gravação ao fluxo.  
   
 ```vb  
 Dim rmCrypto As New RijndaelManaged()  
@@ -38,12 +38,12 @@ RijndaelManaged rmCrypto = new RijndaelManaged();
 CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor(), CryptoStreamMode.Write);  
 ```  
   
- Depois que esse código é executado, todos os dados gravados para o **CryptoStream** objeto está criptografado usando o algoritmo Rijndael.  
+ Depois que esse código é executado, todos os dados gravados no objeto **CryptoStream** são criptografados usando o algoritmo Rijndael.  
   
- O exemplo a seguir mostra todo o processo de criação de um fluxo, criptografar o fluxo de, gravando o fluxo e fechar o fluxo. Este exemplo cria um fluxo de rede que é criptografado usando o **CryptoStream** classe e o **RijndaelManaged** classe. Uma mensagem é gravada no fluxo criptografado com o <xref:System.IO.StreamWriter> classe.  
+ O exemplo a seguir mostra todo o processo de criação de um fluxo, criptografia do fluxo, gravação no fluxo e fechamento do fluxo. Este exemplo cria um fluxo de rede que é criptografado usando a classe **CryptoStream** e a classe **RijndaelManaged** . Uma mensagem é gravada no fluxo criptografado com <xref:System.IO.StreamWriter> a classe.  
   
 > [!NOTE]
->  Você também pode usar este exemplo para gravar em um arquivo. Para fazer isso, exclua o <xref:System.Net.Sockets.TcpClient> de referência e substitua o <xref:System.Net.Sockets.NetworkStream> com um <xref:System.IO.FileStream>.  
+> Você também pode usar este exemplo para gravar em um arquivo. Para fazer isso, exclua <xref:System.Net.Sockets.TcpClient> a referência e <xref:System.Net.Sockets.NetworkStream> substitua por uma <xref:System.IO.FileStream>.  
   
 ```vb  
 Imports System  
@@ -158,22 +158,22 @@ public class main
 }  
 ```  
   
- No exemplo anterior executar com êxito, deve haver um processo que escuta no endereço IP e número da porta especificado no <xref:System.Net.Sockets.TcpClient> classe. Se existir um processo de escuta, o código irá conectar-se ao processo de escuta, criptografar o fluxo usando o algoritmo simétrico de Rijndael e escrever "Hello World!" no fluxo. Se o código for bem-sucedida, ele exibe o texto a seguir no console:  
+ Para que o exemplo anterior seja executado com êxito, deve haver um processo de escuta no endereço IP e no número da porta especificado <xref:System.Net.Sockets.TcpClient> na classe. Se houver um processo de escuta, o código se conectará ao processo de escuta, criptografará o fluxo usando o algoritmo simétrico de Rijndael e gravará "Olá, Mundo!" para o fluxo. Se o código for bem-sucedido, ele exibirá o seguinte texto no console:  
   
 ```  
 The message was sent.  
 ```  
   
- No entanto, se nenhum processo de escuta for encontrado ou uma exceção é gerada, o código exibe o texto a seguir no console:  
+ No entanto, se nenhum processo de escuta for encontrado ou uma exceção for gerada, o código exibirá o seguinte texto no console:  
   
 ```  
 The connection failed.  
 ```  
   
 ## <a name="asymmetric-encryption"></a>Criptografia assimétrica  
- Algoritmos assimétricos são geralmente usados para criptografar pequenas quantidades de dados, como a criptografia de uma chave simétrica e IV. Normalmente, uma individual executando a criptografia assimétrica usa a chave pública gerada por terceiros. O <xref:System.Security.Cryptography.RSACryptoServiceProvider> classe é fornecida pelo .NET Framework para essa finalidade.  
+ Os algoritmos assimétrico geralmente são usados para criptografar pequenas quantidades de dados, como a criptografia de uma chave simétrica e IV. Normalmente, um indivíduo executando a criptografia assimétrica usa a chave pública gerada por outra entidade. A <xref:System.Security.Cryptography.RSACryptoServiceProvider> classe é fornecida pelo .NET Framework para essa finalidade.  
   
- O exemplo a seguir usa informações de chave pública para criptografar uma chave simétrica e IV. Matrizes de dois bytes são inicializados que representam a chave pública de terceiros. Um <xref:System.Security.Cryptography.RSAParameters> objeto é inicializado para esses valores. Em seguida, o **RSAParameters** objeto (juntamente com a chave pública que ele representa) é importado para um **RSACryptoServiceProvider** usando o <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> método. Por fim, o IV e a chave privada criada por um <xref:System.Security.Cryptography.RijndaelManaged> classe são criptografadas. Esse exemplo requer sistemas tenham a criptografia de 128 bits instalada.  
+ O exemplo a seguir usa informações de chave pública para criptografar uma chave simétrica e um IV. Duas matrizes de bytes são inicializadas que representam a chave pública de terceiros. Um <xref:System.Security.Cryptography.RSAParameters> objeto é inicializado para esses valores. Em seguida, o objeto **RSAParameters** (junto com a chave pública que ele representa) é importado para <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> um **RSACryptoServiceProvider** usando o método. Por fim, a chave privada e o IV criados <xref:System.Security.Cryptography.RijndaelManaged> por uma classe são criptografados. Este exemplo requer que os sistemas tenham a criptografia de 128 bits instalada.  
   
 ```vb  
 Imports System  

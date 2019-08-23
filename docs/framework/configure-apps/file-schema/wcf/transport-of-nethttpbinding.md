@@ -2,22 +2,22 @@
 title: <transport> de <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 44e334c3313f93a23ca7df15ba377c5568a92397
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9f784329081f6a18560991378a4527c731f4d31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788369"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934720"
 ---
-# <a name="transport-of-nethttpbinding"></a>\<transporte > de \<netHttpBinding >
+# <a name="transport-of-nethttpbinding"></a>\<> de transporte \<de NetHttpBinding >
 Define as propriedades que controlam os parâmetros de autenticação para o transporte HTTP.  
   
 \<system.serviceModel>  
 \<bindings>  
 \<netHttpBinding>  
-\<binding>  
-\<segurança >  
-\<transporte >  
+\<> de associação  
+\<> de segurança  
+\<> de transporte  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,32 +46,32 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|clientCredentialType|-Especifica o tipo de credencial a ser usada ao executar a autenticação de cliente usando a autenticação HTTP.  O padrão é `None`. Esse atributo é do tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|proxyCredentialType|-Especifica o tipo de credencial a ser usada ao executar a autenticação de cliente de dentro de um domínio usando um proxy por meio de HTTP. Esse atributo é aplicável somente quando o `mode` atributo do pai `security` elemento é `Transport` ou `TransportCredentialsOnly`. Esse atributo é do tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|território|Uma cadeia de caracteres que especifica o realm que é usado pelo esquema de autenticação de HTTP para a autenticação básica ou digest. O padrão é uma cadeia de caracteres vazia.|  
-|policyEnforcement|Esta enumeração Especifica quando o <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> deve ser imposta.<br /><br /> 1.  Nunca – a política de nunca é aplicada (proteção estendida é desabilitada).<br />2.  WhenSupported – a política é aplicada somente se o cliente oferece suporte à proteção estendida.<br />3.  Sempre – a política sempre é aplicada. Os clientes que não dão suporte a proteção estendida falharão ao autenticar.|  
-|protectionScenario|Esta enumeração Especifica o cenário de proteção imposto pela política.|  
+|clientCredentialType|-Especifica o tipo de credencial a ser usado ao executar a autenticação de cliente usando a autenticação HTTP.  O padrão é `None`. Esse atributo é do tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|proxyCredentialType|-Especifica o tipo de credencial a ser usado ao executar a autenticação de cliente de dentro de um domínio usando um proxy sobre HTTP. Esse atributo é aplicável somente quando o `mode` atributo do elemento pai `security` é `Transport` ou `TransportCredentialsOnly`. Esse atributo é do tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|territórios|Uma cadeia de caracteres que especifica o realm usado pelo esquema de autenticação HTTP para Digest ou autenticação básica. O padrão é uma cadeia de caracteres vazia.|  
+|policyEnforcement|Essa enumeração especifica quando o <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> deve ser imposto.<br /><br /> 1.  Nunca – a política nunca é imposta (a proteção estendida está desabilitada).<br />2.  WhenSupported – a política será imposta somente se o cliente oferecer suporte à proteção estendida.<br />3.  Sempre – a política é sempre imposta. Os clientes que não dão suporte à proteção estendida não serão autenticados.|  
+|protectionScenario|Essa enumeração Especifica o cenário de proteção imposto pela política.|  
   
-## <a name="clientcredentialtype-attribute"></a>clientCredentialType de atributo  
+## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialtype  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Nenhum|Mensagens não são protegidas durante a transferência.|  
+|Nenhum|As mensagens não são protegidas durante a transferência.|  
 |Basic|Especifica autenticação básica.|  
 |Digest|Especifica a autenticação Digest.|  
 |NTLM|Especifica a autenticação NTLM quando possível, e se a autenticação do Windows falhar.|  
 |Windows|Especifica a autenticação integrada do Windows.|  
   
-## <a name="proxycredentialtype-attribute"></a>proxyCredentialType atributo  
+## <a name="proxycredentialtype-attribute"></a>Atributo proxyCredentialType  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Nenhum|-Mensagens não são protegidas durante a transferência.|  
-|Basic|Especifica autenticação básica, conforme definido pelo RFC 2617 – autenticação HTTP: Básica e autenticação Digest.|  
-|Digest|Especifica a autenticação digest, conforme definido pelo RFC 2617 – autenticação HTTP: Básica e autenticação Digest.|  
+|Nenhum|-As mensagens não são protegidas durante a transferência.|  
+|Basic|Especifica a autenticação básica, conforme definido pela RFC 2617 – autenticação HTTP: Autenticação básica e resumida.|  
+|Digest|Especifica a autenticação Digest, conforme definido pela RFC 2617 – autenticação HTTP: Autenticação básica e resumida.|  
 |NTLM|Especifica a autenticação NTLM quando possível, e se a autenticação do Windows falhar.|  
 |Windows|Especifica a autenticação integrada do Windows.|  
-|Certificado|Executa a autenticação de cliente usando um certificado. Essa opção só funcionará se o `Mode` atributo do pai `security` elemento é definido como transporte e não funcionará se ele for definido como TransportCredentialOnly.|  
+|Certificate|Executa a autenticação de cliente usando um certificado. Essa opção só funcionará se `Mode` o atributo do elemento `security` pai estiver definido como transporte e não funcionará se estiver definido como TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -80,10 +80,10 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|Define os recursos de segurança para o [ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md).|  
+|[\<security>](security-of-nethttpbinding.md)|Define os recursos de segurança para o [ \<>](nethttpbinding.md)NetHttpBinding.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra o uso da segurança de transporte SSL com a associação básica. Por padrão, a associação básica oferece suporte à comunicação HTTP.  
+ O exemplo a seguir demonstra o uso de segurança de transporte SSL com a associação básica. Por padrão, a associação básica dá suporte à comunicação HTTP.  
   
 ```xml  
 <system.serviceModel>
@@ -122,8 +122,8 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 - <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
 - <xref:System.ServiceModel.HttpTransportSecurity>
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Associações](../../../wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

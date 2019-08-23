@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad83c376816c2203cd78a83b8664fa90b0e109fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8ffdb04bdf3fd2f605e2dffc5065a0d786bbaf7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780824"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967911"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>Método ICorProfilerInfo4::GetILToNativeMapping2
-Obtém um mapa da Microsoft intermediate language (MSIL) deslocamentos para deslocamentos nativos para o código contido na versão recompilado por JIT da função especificada.  
+Obtém um mapa de deslocamentos de MSIL (Microsoft Intermediate Language) para deslocamentos nativos do código contido na versão recompilada do JIT da função especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,38 +41,38 @@ HRESULT GetILToNativeMapping(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] A ID da função que contém o código.  
+ no A ID da função que contém o código.  
   
  `pReJitId`  
- [in] A identidade da função recompilado por JIT. A identidade deve ser zero no .NET Framework 4.5.  
+ no A identidade da função de compilação JIT recompilada. A identidade deve ser zero no .NET Framework 4,5.  
   
  `cMap`  
- [in] O tamanho máximo da `map` matriz.  
+ no O tamanho máximo da `map` matriz.  
   
  `pcMap`  
- [out] O número total de estruturas COR_DEBUG_IL_TO_NATIVE_MAP disponíveis.  
+ fora O número total de estruturas COR_DEBUG_IL_TO_NATIVE_MAP disponíveis.  
   
  `map`  
- [out] Uma matriz de `COR_DEBUG_IL_TO_NATIVE_MAP` estruturas, cada um deles especifica os deslocamentos. Após o `GetILToNativeMapping2` método retorna, `map` irá conter algumas ou todas as `COR_DEBUG_IL_TO_NATIVE_MAP` estruturas.  
+ fora Uma matriz de `COR_DEBUG_IL_TO_NATIVE_MAP` estruturas, cada uma delas especifica os deslocamentos. Depois que `GetILToNativeMapping2` o método retornar `map` , conterá `COR_DEBUG_IL_TO_NATIVE_MAP` algumas ou todas as estruturas.  
   
 ## <a name="remarks"></a>Comentários  
- `GetILToNativeMapping2` é semelhante para o [ICorProfilerInfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) método, exceto que ele permitirá que o criador de perfil especificar a ID da função recompilada em futuras versões.  
+ `GetILToNativeMapping2`é semelhante ao método [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) , exceto pelo fato de que ele permitirá que o criador de perfil ESPECIFIQUE a ID da função recompilada em versões futuras.  
   
 > [!NOTE]
->  O [icorprofilerfunctioncontrol:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) método não está implementado no .NET Framework 4.5, portanto, funções que tenham sido recompilado por JIT não podem ter um mapeamento de IL para nativo que é diferente do originalmente função compilada. Como tal, `GetILToNativeMapping2` não pode ser chamado com uma ID diferente de zero recompilado por JIT do .NET Framework 4.5.  
+> O método [ICorProfilerFunctionControl:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) não está implementado no .NET Framework 4,5, portanto, as funções que foram recompiladas por JIT não podem ter um mapeamento de Il para nativo diferente da função compilada originalmente. Como tal, `GetILToNativeMapping2` não pode ser chamado com uma ID de compilação JIT diferente de zero no .NET Framework 4,5.  
   
- O `GetILToNativeMapping2` método retorna uma matriz de `COR_DEBUG_IL_TO_NATIVE_MAP` estruturas. Para transmitir que determinados intervalos de instruções nativas correspondem a regiões especiais do código (por exemplo, o prólogo), uma entrada na matriz pode ter sua `ilOffset` campo definido como um valor de [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) enumeração.  
+ O `GetILToNativeMapping2` método retorna uma matriz de `COR_DEBUG_IL_TO_NATIVE_MAP` estruturas. Para transmitir que determinados intervalos de instruções nativas correspondem a regiões especiais de código (por exemplo, o prólogo), uma entrada na matriz pode ter seu `ilOffset` campo definido como um valor da enumeração [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) .  
   
- Após `GetILToNativeMapping2` é retornado, você deve verificar se o `map` buffer era grande o suficiente para conter todos o `COR_DEBUG_IL_TO_NATIVE_MAP` estruturas. Para fazer isso, comparar o valor de `cMap` com o valor da `pcMap` parâmetro. Se o `pcMap` valor, quando ele é multiplicado pelo tamanho de um `COR_DEBUG_IL_TO_NATIVE_MAP` estrutura, é maior que `cMap`, alocar uma maior `map` do buffer, atualize `cMap` com o novo e maior tamanho e a chamada `GetILToNativeMapping2` novamente.  
+ Depois `GetILToNativeMapping2` de retornar, você deve verificar se `map` o buffer foi grande o `COR_DEBUG_IL_TO_NATIVE_MAP` suficiente para conter todas as estruturas. Para fazer isso, compare o valor de `cMap` com o valor `pcMap` do parâmetro. Se o `pcMap` valor, quando for multiplicado pelo tamanho de uma `COR_DEBUG_IL_TO_NATIVE_MAP` estrutura, for maior do que `cMap`, aloque um buffer maior `map` , atualize `cMap` com o novo tamanho, maior e chame `GetILToNativeMapping2` novamente.  
   
- Como alternativa, você pode primeiro chamar `GetILToNativeMapping2` com um comprimento de zero `map` buffer para obter o tamanho do buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcMap` e chamar `GetILToNativeMapping2` novamente.  
+ Como alternativa, você pode primeiro chamar `GetILToNativeMapping2` com um buffer de comprimento `map` zero para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer para o `pcMap` valor retornado `GetILToNativeMapping2` em e chamar novamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl, CorProf.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

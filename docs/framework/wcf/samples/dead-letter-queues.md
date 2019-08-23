@@ -2,43 +2,43 @@
 title: Filas de mensagens de inatividade
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 59e2344d2bd6a9de3396f7d6d878182333138ff3
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: a1e9ad000b83aab1e0d17d3443e1bd6f87310c9a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425493"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962621"
 ---
 # <a name="dead-letter-queues"></a>Filas de mensagens de inatividade
-Este exemplo demonstra como manipular e processar as mensagens com falha na entrega. Ele se baseia a [associação de MSMQ transacionado](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemplo. Este exemplo usa o `netMsmqBinding` associação. O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.
+Este exemplo demonstra como tratar e processar mensagens que falharam na entrega. Ele se baseia no exemplo de [associação MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) transacionado. Este exemplo usa a `netMsmqBinding` associação. O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.
 
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
 > [!NOTE]
->  Este exemplo demonstra cada fila de mensagens mortas do aplicativo só está disponível em [!INCLUDE[wv](../../../../includes/wv-md.md)]. O exemplo pode ser modificado para usar as filas de todo o sistema padrão para o MSMQ 3.0 em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Este exemplo demonstra cada fila de mensagens mortas do aplicativo que está disponível [!INCLUDE[wv](../../../../includes/wv-md.md)]apenas no. O exemplo pode ser modificado para usar as filas padrão de todo o sistema para o MSMQ 3,0 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] no [!INCLUDE[wxp](../../../../includes/wxp-md.md)]e no.
 
- Comunicação em fila, o cliente se comunica com o serviço usando uma fila. Mais precisamente, o cliente envia mensagens a uma fila. O serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisa estar em execução ao mesmo tempo para se comunicar usando uma fila.
+ Na comunicação em fila, o cliente se comunica com o serviço usando uma fila. Mais precisamente, o cliente envia mensagens para uma fila. O serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisam estar em execução ao mesmo tempo para se comunicarem usando uma fila.
 
- Como a comunicação em fila pode envolver um determinado período de dormência, você talvez queira associar um valor time-to-live na mensagem para garantir que a mensagem não for entregue ao aplicativo se ele tiver ficado após a hora. Também há casos, em que um aplicativo deve ser informado se uma mensagem de falha na entrega. Em todos esses casos, como quando o tempo de vida da mensagem expirou ou a mensagem de falha na entrega, a mensagem é colocada em uma fila de mensagens mortas. O aplicativo de envio, em seguida, pode ler as mensagens na fila de inatividade e tomar ações corretivas que variam de nenhuma ação para corrigir os motivos da falha na entrega e reenviar a mensagem.
+ Como a comunicação em fila pode envolver uma determinada quantidade de dormência, talvez você queira associar um valor de vida útil na mensagem para garantir que a mensagem não seja entregue ao aplicativo se ela tiver passado o tempo. Também há casos em que um aplicativo deve ser informado se uma mensagem com falha na entrega. Em todos esses casos, como quando a vida útil na mensagem expirou ou a entrega da mensagem falhou, a mensagem é colocada em uma fila de mensagens mortas. O aplicativo de envio pode, então, ler as mensagens na fila de mensagens mortas e tomar medidas corretivas que variam de nenhuma ação para corrigir os motivos da entrega com falha e reenviar a mensagem.
 
- Fila de inatividade no `NetMsmqBinding` associação é expresso nas seguintes propriedades:
+ A fila de mensagens mortas na `NetMsmqBinding` associação é expressa nas seguintes propriedades:
 
-- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> propriedade para expressar o tipo de fila de inatividade exigido pelo cliente. Esta enumeração tem os seguintes valores:
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>a propriedade para expressar o tipo de fila de mensagens mortas exigido pelo cliente. Essa enumeração tem os seguintes valores:
 
-- `None`: Nenhuma fila de inatividade é exigida pelo cliente.
+- `None`: Nenhuma fila de mensagens mortas é exigida pelo cliente.
 
-- `System`: A fila de inatividade do sistema é usada para armazenar mensagens de inatividade. A fila de inatividade do sistema é compartilhada por todos os aplicativos em execução no computador.
+- `System`: A fila de mensagens mortas do sistema é usada para armazenar mensagens mortas. A fila de mensagens mortas do sistema é compartilhada por todos os aplicativos em execução no computador.
 
-- `Custom`: Uma fila de inatividade personalizada especificada usando o <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriedade é usada para armazenar mensagens de inatividade. Esse recurso só está disponível em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso é usado quando o aplicativo deve usar sua própria fila de mensagens mortas, em vez de compartilhá-la com outros aplicativos em execução no mesmo computador.
+- `Custom`: Uma fila de mensagens mortas personalizada especificada usando a <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriedade é usada para armazenar mensagens mortas. Este recurso está disponível apenas no [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso é usado quando o aplicativo deve usar sua própria fila de mensagens mortas em vez de compartilhá-lo com outros aplicativos em execução no mesmo computador.
 
-- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriedade para expressar a fila específica a ser usada como uma fila de inatividade. Isso está disponível apenas no [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>Propriedade para expressar a fila específica a ser usada como uma fila de mensagens mortas. Isso está disponível apenas no [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- Neste exemplo, o cliente envia um lote de mensagens para o serviço de dentro do escopo de uma transação e especifica um valor baixo arbitrariamente para "time-to-live" para essas mensagens (cerca de 2 segundos). O cliente também especifica uma fila mortas personalizada para usar a opção de enfileirar as mensagens que expiraram.
+ Neste exemplo, o cliente envia um lote de mensagens para o serviço de dentro do escopo de uma transação e especifica um valor arbitrariamente baixo para "vida útil" para essas mensagens (cerca de 2 segundos). O cliente também especifica uma fila de mensagens mortas personalizada a ser usada para enfileirar as mensagens que expiraram.
 
- O aplicativo cliente pode ler as mensagens na fila de inatividade e a enviar a mensagem de repetição ou corrigir o erro que causou a mensagem original a ser colocado na fila de inatividade e enviar a mensagem. No exemplo, o cliente exibirá uma mensagem de erro.
+ O aplicativo cliente pode ler as mensagens na fila de mensagens mortas e tentar enviar a mensagem novamente ou corrigir o erro que fez com que a mensagem original fosse colocada na fila de mensagens mortas e enviar a mensagem. No exemplo, o cliente exibe uma mensagem de erro.
 
- O contrato de serviço é `IOrderProcessor`, conforme mostrado no código de exemplo a seguir.
+ O contrato de serviço `IOrderProcessor`é, conforme mostrado no código de exemplo a seguir.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -49,9 +49,9 @@ public interface IOrderProcessor
 }
 ```
 
- O código de serviço no exemplo é do [associação de MSMQ transacionado](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
+ O código de serviço no exemplo é o da [associação MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)transacionada.
 
- A comunicação com o serviço ocorre dentro do escopo de uma transação. O serviço lê as mensagens da fila, executa a operação e, em seguida, exibe os resultados da operação. O aplicativo também cria uma fila de inatividade para mensagens mortas.
+ A comunicação com o serviço ocorre dentro do escopo de uma transação. O serviço lê as mensagens da fila, executa a operação e, em seguida, exibe os resultados da operação. O aplicativo também cria uma fila de mensagens mortas para mensagem de inatividade.
 
 ```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.
@@ -108,12 +108,12 @@ class Client
 }
 ```
 
- A configuração do cliente especifica uma duração curta para a mensagem alcançar o serviço. Se a mensagem não pode ser transmitida dentro da duração especificada, a mensagem expira e é movida para a fila de inatividade.
+ A configuração do cliente especifica uma duração curta para a mensagem alcançar o serviço. Se a mensagem não puder ser transmitida dentro da duração especificada, a mensagem expirará e será movida para a fila de mensagens mortas.
 
 > [!NOTE]
->  É possível que o cliente envie a mensagem à fila de serviço dentro do tempo especificado. Para garantir que você vê o serviço de inatividade em ação, você deve executar o cliente antes de iniciar o serviço. A mensagem expira e é entregue ao serviço de inatividade.
+> É possível que o cliente entregue a mensagem à fila de serviço dentro do tempo especificado. Para garantir que você veja o serviço de mensagens mortas em ação, execute o cliente antes de iniciar o serviço. A mensagem atinge o tempo limite e é entregue ao serviço de mensagens mortas.
 
- O aplicativo deve definir qual fila a ser usada como sua fila de inatividade. Se nenhuma fila for especificada, a fila de inatividade padrão em todo o sistema transacional é usada para mensagens de inatividade da fila. Neste exemplo, o aplicativo cliente especifica sua própria fila de inatividade do aplicativo.
+ O aplicativo deve definir qual fila usar como sua fila de mensagens mortas. Se nenhuma fila for especificada, a fila de mensagens mortas transacionais em todo o sistema padrão será usada para enfileirar mensagens mortas. Neste exemplo, o aplicativo cliente especifica sua própria fila de mensagens mortas do aplicativo.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -146,12 +146,12 @@ class Client
 </configuration>
 ```
 
- O serviço de mensagens mortas lê as mensagens da fila de inatividade. O serviço de mensagens mortas implementa o `IOrderProcessor` contrato. Sua implementação no entanto não é para processar pedidos. O serviço de mensagens mortas é um serviço de cliente e não tem o recurso para processar pedidos.
+ O serviço de mensagens mortas lê mensagens da fila de mensagens mortas. O serviço de mensagem de mensagens mortas implementa `IOrderProcessor` o contrato. No entanto, sua implementação não processa pedidos. O serviço de mensagem de mensagens mortas é um serviço de cliente e não tem o recurso de processar pedidos.
 
 > [!NOTE]
->  A fila de inatividade é uma fila do cliente e é local para o Gerenciador de fila do cliente.
+> A fila de mensagens mortas é uma fila de cliente e é local para o Gerenciador de filas de cliente.
 
- A implementação do serviço de mensagens mortas verifica o motivo pelo qual que uma mensagem de falha na entrega e leva de medidas corretivas. O motivo da falha de uma mensagem for capturado no duas enumerações, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> e <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Você pode recuperar o <xref:System.ServiceModel.Channels.MsmqMessageProperty> do <xref:System.ServiceModel.OperationContext> conforme mostrado no código de exemplo a seguir:
+ A implementação do serviço de mensagens mortas verifica o motivo da falha na entrega de uma mensagem e faz medidas corretivas. O motivo para uma falha de mensagem é capturado em duas enumerações <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> e <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Você pode recuperar o <xref:System.ServiceModel.Channels.MsmqMessageProperty> <xref:System.ServiceModel.OperationContext> do conforme mostrado no código de exemplo a seguir:
 
 ```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)
@@ -169,9 +169,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- Mensagens na fila de inatividade são mensagens que são resolvidas para o serviço que está processando a mensagem. Portanto, quando o serviço de mensagens mortas lê as mensagens da fila, a camada de canais do Windows Communication Foundation (WCF) localiza a incompatibilidade nos pontos de extremidade e não despachar a mensagem. Nesse caso, a mensagem é endereçada ao serviço de processamento de pedidos, mas é recebida pelo serviço de mensagens mortas. Para receber uma mensagem que é endereçada a um ponto de extremidade diferente, um filtro de endereço para correspondência de qualquer endereço é especificado no `ServiceBehavior`. Isso é necessário para processar com êxito mensagens que são lidas da fila de inatividade.
+ As mensagens na fila de mensagens mortas são aquelas que são endereçadas ao serviço que está processando a mensagem. Portanto, quando o serviço de mensagem de inatividade lê mensagens da fila, a camada de canal Windows Communication Foundation (WCF) localiza a incompatibilidade em pontos de extremidade e não despacha a mensagem. Nesse caso, a mensagem é endereçada ao serviço de processamento de pedidos, mas é recebida pelo serviço de mensagem de mensagens mortas. Para receber uma mensagem que é endereçada a um ponto de extremidade diferente, um filtro de endereço para corresponder a qualquer `ServiceBehavior`endereço é especificado no. Isso é necessário para processar com êxito as mensagens que são lidas da fila de mensagens mortas.
 
- Neste exemplo, o serviço de mensagens mortas reenvia a mensagem se o motivo da falha é que a mensagem atingiu o tempo limite. Para todos os outros motivos, ele exibe a falha de entrega, conforme mostrado no código de exemplo a seguir:
+ Neste exemplo, o serviço mensagem de mensagens mortas reenvia a mensagem se o motivo da falha é que a mensagem atingiu o tempo limite. Por todos os outros motivos, ele exibe a falha de entrega, conforme mostrado no código de exemplo a seguir:
 
 ```csharp
 // Service class that implements the service contract.
@@ -228,7 +228,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
 }
 ```
 
- O exemplo a seguir mostra a configuração de uma mensagem de inatividade:
+ O exemplo a seguir mostra a configuração de uma mensagem de mensagens mortas:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -265,20 +265,20 @@ public class PurchaseOrderDLQService : IOrderProcessor
 </configuration>
 ```
 
- Executar o exemplo, há 3 executáveis sejam rodados para ver como a fila de inatividade funciona para cada aplicativo. o cliente, serviço e um serviço de inatividade que lê da fila de inatividade para cada aplicativo e reenvia a mensagem para o serviço. Todos são aplicativos de console com saída nas janelas do console.
+ Ao executar o exemplo, há três executáveis a serem executados para ver como a fila de mensagens mortas funciona para cada aplicativo; o cliente, o serviço e um serviço de mensagens mortas que lê da fila de mensagens mortas para cada aplicativo e reenvia a mensagem para o serviço. Todos são aplicativos de console com saída em janelas de console.
 
 > [!NOTE]
->  Porque o enfileiramento de mensagens está em uso, o cliente e o serviço não precisa estar em execução ao mesmo tempo. Executar o cliente, desligá-lo e, em seguida, inicie o serviço e ainda recebe suas mensagens. Você deve iniciar o serviço e desligá-lo para que a fila pode ser criada.
+> Como o enfileiramento está em uso, o cliente e o serviço não precisam estar em funcionamento ao mesmo tempo. Você pode executar o cliente, desligá-lo e, em seguida, iniciar o serviço e ele ainda receberá suas mensagens. Você deve iniciar o serviço e desligá-lo para que a fila possa ser criada.
 
- Ao executar o cliente, o cliente exibirá a mensagem:
+ Ao executar o cliente, o cliente exibe a mensagem:
 
 ```
 Press <ENTER> to terminate client.
 ```
 
- O cliente tentou enviar a mensagem, mas com um tempo limite curto, a mensagem expirou e está agora na fila na fila de inatividade para cada aplicativo.
+ O cliente tentou enviar a mensagem, mas com um tempo limite curto, a mensagem expirou e agora está na fila na fila de mensagens mortas para cada aplicativo.
 
- Em seguida, executar o serviço de inatividade, que lê a mensagem e exibe o código de erro e reenvia a mensagem de volta para o serviço.
+ Em seguida, você executa o serviço de mensagens mortas, que lê a mensagem e exibe o código de erro e reenvia a mensagem de volta para o serviço.
 
 ```
 The dead letter service is ready.
@@ -293,7 +293,7 @@ Trying to resend the message
 Purchase order resent
 ```
 
- O serviço é iniciado e, em seguida, lê a mensagem resent e processa-os.
+ O serviço é iniciado e, em seguida, lê a mensagem reenviada e a processa.
 
 ```
 The service is ready.
@@ -310,27 +310,27 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
+2. Se o serviço for executado primeiro, ele verificará se a fila está presente. Se a fila não estiver presente, o serviço criará uma. Você pode executar o serviço primeiro para criar a fila ou pode criar um por meio do Gerenciador de filas MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
 
-    1. Abra o Gerenciador de servidores no Visual Studio 2012.
+    1. Abra Gerenciador do Servidor no Visual Studio 2012.
 
-    2. Expanda o **recursos** guia.
+    2. Expanda a guia **recursos** .
 
-    3. Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.
+    3. Clique com o botão direito do mouse em **filas de mensagens particulares**e selecione **nova** **fila privada**.
 
-    4. Verifique as **transacional** caixa.
+    4. Marque a caixa transacional.
 
     5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
 
-3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Para executar o exemplo em uma fila de alteração de configuração ou entre computadores nomes apropriadamente, substituindo o localhost pelo nome completo do computador e siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Para executar o exemplo em uma configuração de computador único ou entre computadores, altere os nomes da fila adequadamente, substituindo localhost pelo nome completo do computador e siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para executar o exemplo em um computador associado a um grupo de trabalho
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para executar o exemplo em um computador ingressado em um grupo de trabalho
 
-1. Se seu computador não fizer parte de um domínio, desative a segurança de transporte, definindo o nível de proteção e o modo de autenticação como `None` conforme mostrado no seguinte exemplo de configuração:
+1. Se o computador não fizer parte de um domínio, desative a segurança de transporte definindo o modo de autenticação e o `None` nível de proteção como mostrado na seguinte configuração de exemplo:
 
     ```xml
     <bindings>
@@ -342,21 +342,21 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     </bindings>
     ```
 
-     Verifique se o ponto de extremidade está associado com a associação, definindo o ponto de extremidade `bindingConfiguration` atributo.
+     Verifique se o ponto de extremidade está associado à associação definindo o atributo `bindingConfiguration` do ponto de extremidade.
 
-2. Certifique-se de que você altera a configuração no DeadLetterService, server e o cliente antes de executar o exemplo.
+2. Certifique-se de alterar a configuração no DeadLetterService, no servidor e no cliente antes de executar o exemplo.
 
     > [!NOTE]
-    >  Definindo `security mode` à `None` é equivalente à configuração `MsmqAuthenticationMode`, `MsmqProtectionLevel` e `Message` security `None`.
+    >  A `security mode` configuração `None` `MsmqAuthenticationMode`como éequivalente`Message` à configuração `None`e à segurança para. `MsmqProtectionLevel`
 
 ## <a name="comments"></a>Comentários
- Por padrão com o `netMsmqBinding` transporte de associação de segurança está habilitada. Duas propriedades, `MsmqAuthenticationMode` e `MsmqProtectionLevel`, juntos determinam o tipo de segurança de transporte. Por padrão, o modo de autenticação está definido como `Windows` e o nível de proteção é definido como `Sign`. Para o MSMQ fornecer a autenticação e o recurso de assinatura, ele deve ser parte de um domínio. Se você executar esse exemplo em um computador que não faz parte de um domínio, você receberá o seguinte erro: "Mensagem do usuário interna certificado do enfileiramento de mensagens não existe".
+ Por padrão, com `netMsmqBinding` o transporte de associação, a segurança é habilitada. Duas propriedades `MsmqAuthenticationMode` e `MsmqProtectionLevel`, juntas, determinam o tipo de segurança de transporte. Por padrão, o modo de autenticação é `Windows` definido como e o nível de proteção `Sign`é definido como. Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio. Se você executar esse exemplo em um computador que não faz parte de um domínio, você receberá o seguinte erro: "O certificado interno do enfileiramento de mensagens do usuário não existe".
 
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

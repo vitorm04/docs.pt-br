@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 70cef109e4f2947fb4e38b9bfd19433257cce136
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 052d6937846df39bd94d532e1b63ebe522dbf6c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663503"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964684"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Especifica o nome do assembly do qual esse módulo fará parte.  
@@ -26,27 +26,27 @@ Especifica o nome do assembly do qual esse módulo fará parte.
   
 |Termo|Definição|  
 |---|---|  
-|`assembly_name`|O nome do assembly que esse módulo fará parte.|  
+|`assembly_name`|O nome do assembly do qual este módulo fará parte.|  
   
 ## <a name="remarks"></a>Comentários  
- O compilador processa os `-moduleassemblyname` somente se de opção a `-target:module` opção foi especificada. Isso faz com que o compilador crie um módulo. O módulo criado pelo compilador é válido somente para o conjunto especificado com o `-moduleassemblyname` opção. Se você colocar o módulo em um assembly diferente, ocorrerão erros de tempo de execução.  
+ O compilador processará `-moduleassemblyname` a opção somente se `-target:module` a opção tiver sido especificada. Isso faz com que o compilador crie um módulo. O módulo criado pelo compilador é válido somente para o assembly especificado com a `-moduleassemblyname` opção. Se você posicionar o módulo em um assembly diferente, ocorrerão erros de tempo de execução.  
   
- O `-moduleassemblyname` opção é necessária somente quando as seguintes condições forem verdadeiras:  
+ A `-moduleassemblyname` opção é necessária somente quando as seguintes opções são verdadeiras:  
   
-- Um tipo de dados no módulo precisa acessar um `Friend` tipo em um assembly referenciado.  
+- Um tipo de dados no módulo precisa de acesso a `Friend` um tipo em um assembly referenciado.  
   
-- O assembly referenciado concedeu acesso de assembly amigável para o assembly no qual o módulo será compilado.  
+- O assembly referenciado concedeu acesso de assembly Friend ao assembly no qual o módulo será compilado.  
   
- Para obter mais informações sobre como criar um módulo, consulte [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obter mais informações sobre assemblies amigáveis, consulte [Assemblies amigáveis](../../../standard/assembly/friend-assemblies.md).  
+ Para obter mais informações sobre como criar um módulo, consulte [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obter mais informações sobre assemblies Friend, consulte [Friend Assemblies](../../../standard/assembly/friend-assemblies.md).  
   
 > [!NOTE]
->  O `-moduleassemblyname` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível apenas quando você compila em um prompt de comando.  
+> A `-moduleassemblyname` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ela está disponível somente quando você compila a partir de um prompt de comando.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Como: Criar um assembly de vários arquivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [-referência (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)

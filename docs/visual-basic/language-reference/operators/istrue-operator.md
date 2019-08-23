@@ -7,40 +7,40 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1152f4b512a85ae183f8fc8d476b69685e2926ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768362"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966912"
 ---
 # <a name="istrue-operator-visual-basic"></a>Operador IsTrue (Visual Basic)
 Determina se uma expressão é `True`.  
   
- Você não pode chamar `IsTrue` explicitamente no seu código, mas o Visual Basic compilador pode usá-lo para gerar o código de `OrElse` cláusulas. Se você definir uma classe ou estrutura e, em seguida, usar uma variável desse tipo em uma `OrElse` cláusula, você deve definir `IsTrue` nessa classe ou estrutura.  
+ Você não pode `IsTrue` chamar explicitamente em seu código, mas o compilador Visual Basic pode usá-lo para gerar `OrElse` código de cláusulas. Se você definir uma classe ou estrutura e, em seguida, usar uma variável desse tipo `OrElse` em uma cláusula, deverá `IsTrue` definir nessa classe ou estrutura.  
   
- O compilador considera a `IsTrue` e `IsFalse` operadores como um *par correspondente*. Isso significa que se você definir um deles, você deve também definir outro.  
+ O compilador considera os `IsTrue` operadores `IsFalse` e como um *par correspondente*. Isso significa que, se você definir um deles, também deverá definir o outro.  
   
 ## <a name="compiler-use-of-istrue"></a>Uso do compilador de IsTrue  
- Quando você tiver definido uma classe ou estrutura, você pode usar uma variável desse tipo em uma `For`, `If`, `Else If`, ou `While` instrução, ou em um `When` cláusula. Se você fizer isso, o compilador exige um operador que converte seu tipo em um `Boolean` para que ele possa testar uma condição de valor. Ele procura por um operador adequado na seguinte ordem:  
+ Quando você tiver definido uma classe ou estrutura, poderá usar uma variável `For`desse tipo em uma instrução `Else If`, `If`, ou `While` , ou em uma `When` cláusula. Se você fizer isso, o compilador exigirá um operador que converte o tipo em `Boolean` um valor para que ele possa testar uma condição. Ele procura um operador adequado na seguinte ordem:  
   
-1. Um operador de conversão de ampliação de sua classe ou estrutura para `Boolean`.  
+1. Um operador de conversão de ampliação de sua classe ou `Boolean`estrutura para.  
   
-2. Um operador de conversão de ampliação de sua classe ou estrutura para `Boolean?`.  
+2. Um operador de conversão de ampliação de sua classe ou `Boolean?`estrutura para.  
   
 3. O `IsTrue` operador em sua classe ou estrutura.  
   
-4. Uma conversão de estreitamento `Boolean?` que não envolve uma conversão de `Boolean` para `Boolean?`.  
+4. Uma conversão de restrição para `Boolean?` que não envolve uma conversão de `Boolean` para `Boolean?`.  
   
-5. Um operador de conversão de estreitamento de sua classe ou estrutura para `Boolean`.  
+5. Um operador de conversão de restrição de sua classe ou estrutura `Boolean`para.  
   
- Se você não definiu qualquer conversão para `Boolean` ou um `IsTrue` operador, o compilador sinaliza um erro.  
+ Se você não tiver definido nenhuma conversão para `Boolean` ou um `IsTrue` operador, o compilador sinalizará um erro.  
   
 > [!NOTE]
->  O `IsTrue` operador pode ser *sobrecarregado*, que significa que uma classe ou estrutura pode redefinir seu comportamento quando o operando tem o tipo de classe ou estrutura. Se seu código usa esse operador em uma classe ou estrutura, certifique-se de que você entende seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> O `IsTrue` operador pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando seu operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir define o contorno de uma estrutura que inclui as definições para o `IsFalse` e `IsTrue` operadores.  
+ O exemplo de código a seguir define o contorno de uma estrutura que inclui `IsFalse` definições `IsTrue` para os operadores e.  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   

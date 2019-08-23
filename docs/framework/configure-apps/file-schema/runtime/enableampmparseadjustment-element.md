@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a62bd3507c14e42798c903ae51edb0187e666c8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 46cf37ee800c05eb7fe12e8491ad3b2130c3a04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920818"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<Elemento de > EnableAmPmParseAdjustment
 Determina se os métodos de análise de data e hora usam um conjunto ajustado de regras para analisar as cadeias de caracteres de data que contêm um designador de dia, mês, hora e AM/PM.  
@@ -68,7 +68,7 @@ Determina se os métodos de análise de data e hora usam um conjunto ajustado de
  O `<EnableAmPmParseAdjustment>` elemento não tem nenhum efeito <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>nos métodos <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> .  
   
 > [!IMPORTANT]
->  No .NET Core e .NET Native, as regras de análise de AM/PM ajustadas são habilitadas por padrão.  
+> No .NET Core e .NET Native, as regras de análise de AM/PM ajustadas são habilitadas por padrão.  
   
  Se a regra de ajuste de análise não estiver habilitada, o primeiro dígito da cadeia de caracteres será interpretado como a hora do relógio de 12 horas e o restante da cadeia de caracteres, exceto o designador AM/PM, será ignorado. A data e a hora retornadas pelo método de análise consiste na data atual e na hora do dia extraídas da cadeia de caracteres de data.  
   

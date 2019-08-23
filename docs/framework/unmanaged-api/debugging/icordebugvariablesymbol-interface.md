@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 0e58b85e-69bd-41ff-bedb-8cdc8be6a7a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c7cdababd1e4b5fae4f5e48a654f861b708a6e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fb2538894184c19bc107ce52cbef3ac86a97345
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930111"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967978"
 ---
 # <a name="icordebugvariablesymbol-interface"></a>Interface ICorDebugVariableSymbol
-Recupera as informações de símbolo de depuração de uma variável.  
+Recupera as informações de símbolo de depuração para uma variável.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -27,14 +27,14 @@ Recupera as informações de símbolo de depuração de uma variável.
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Essa interface só está disponível com o .NET Native. Se você implementar essa interface para cenários de ICorDebug fora do .NET nativo, o common language runtime irá ignorar essa interface.  
+> Essa interface está disponível somente com .NET Native. Se você implementar essa interface para cenários ICorDebug fora do .NET Native, o Common Language Runtime ignorará essa interface.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

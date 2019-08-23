@@ -2,23 +2,23 @@
 title: Referências de objeto
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 2a2da82d913d43aa9bc3ccfeb9f1f1eda12b0562
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ac8eba44168befae92bef30a054c00d997cc54b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008053"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965606"
 ---
 # <a name="object-references"></a>Referências de objeto
-Este exemplo demonstra como passar objetos por referências entre servidor e cliente. O exemplo usa simulado *redes sociais*. Uma rede social consiste em um `Person` que contém uma lista de amigos no qual cada friend é uma instância da classe a `Person` classe, com sua própria lista de amigos. Isso cria um grafo de objetos. O serviço expõe operações nessas redes sociais.  
+Este exemplo demonstra como passar objetos por referências entre servidor e cliente. O exemplo usa *redes sociais*simuladas. Uma rede social consiste em uma `Person` classe que contém uma lista de amigos em que cada amigo é uma instância `Person` da classe, com sua própria lista de amigos. Isso cria um grafo de objetos. O serviço expõe operações nessas redes sociais.  
   
- Neste exemplo, o serviço é hospedado pelo Internet Information Services (IIS) e o cliente é um aplicativo de console (.exe).  
+ Neste exemplo, o serviço é hospedado pelo Serviços de Informações da Internet (IIS) e o cliente é um aplicativo de console (. exe).  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
 ## <a name="service"></a>Serviço  
- O `Person` classe tem o <xref:System.Runtime.Serialization.DataContractAttribute> atributo aplicado, com o <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> campo definido como `true` declará-lo como um tipo de referência. Todas as propriedades têm o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo aplicado.  
+ A `Person` classe tem o <xref:System.Runtime.Serialization.DataContractAttribute> atributo aplicado, `true` com o <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> campo definido como para declará-lo como um tipo de referência. Todas as propriedades têm <xref:System.Runtime.Serialization.DataMemberAttribute> o atributo aplicado.  
   
 ```csharp
 [DataContract(IsReference=true)]  
@@ -51,7 +51,7 @@ public class Person
 }  
 ```  
   
- O `GetPeopleInNetwork` operação leva um parâmetro do tipo `Person` e retorna todas as pessoas na rede; ou seja, todas as pessoas no `friends` lista, o amigo amigos e assim por diante, sem duplicatas.  
+ A `GetPeopleInNetwork` operação usa um parâmetro do tipo `Person` e retorna todas as pessoas na rede, ou seja, `friends` todas as pessoas na lista, os amigos do amigo e assim por diante, sem duplicatas.  
   
 ```csharp
 public List<Person> GetPeopleInNetwork(Person p)  
@@ -63,7 +63,7 @@ public List<Person> GetPeopleInNetwork(Person p)
 }  
 ```  
   
- O `GetMutualFriends` operação leva um parâmetro do tipo `Person` e retorna todos os amigos da lista que também têm essa pessoa em sua `friends` lista.  
+ A `GetMutualFriends` operação usa um parâmetro do tipo `Person` e retorna todos os amigos na lista que também `friends` têm essa pessoa na lista.  
   
 ```csharp
 public List<Person> GetMutualFriends(Person p)  
@@ -78,7 +78,7 @@ public List<Person> GetMutualFriends(Person p)
 }  
 ```  
   
- O `GetCommonFriends` operação aceita uma lista do tipo `Person`. A lista deve ter dois `Person` objetos nele. A operação retorna uma lista dos `Person` objetos que estão na `friends` listas de ambos `Person` objetos na lista de entrada.  
+ A `GetCommonFriends` operação usa uma lista do tipo `Person`. Espera-se que a lista tenha `Person` dois objetos. A operação retorna uma lista de `Person` objetos que estão `friends` nas listas de ambos os `Person` objetos na lista de entrada.  
   
 ```csharp
 public List<Person> GetCommonFriends(List<Person> people)  
@@ -92,24 +92,24 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>Cliente  
- O proxy de cliente é criado usando o **adicionar referência de serviço** recurso do Visual Studio.  
+ O proxy do cliente é criado usando o recurso **Adicionar referência de serviço** do Visual Studio.  
   
- Uma rede social que consiste em cinco `Person` objetos é criado. O cliente chama cada um dos três métodos no serviço.  
+ Uma rede social que consiste em cinco `Person` objetos é criada. O cliente chama cada um dos três métodos no serviço.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   

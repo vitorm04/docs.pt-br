@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 1c3c70b24de5163ca004b41a21017205a19d9730
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 19a70e500f6b75fd003bdb798f242cddb3926935
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583370"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964359"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 Faz com que o compilador não referencie automaticamente as bibliotecas padrão.  
@@ -23,16 +23,16 @@ Faz com que o compilador não referencie automaticamente as bibliotecas padrão.
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O `-nostdlib` opção remove a referência automática para o assembly System. dll e impede que o compilador lendo o arquivo Vbc. rsp. O arquivo Vbc. rsp, que está localizado no mesmo diretório que o arquivo Vbc.exe, faz referência a assemblies do .NET Framework comumente usados e importa o `System` e `Microsoft.VisualBasic` namespaces.  
+ A `-nostdlib` opção remove a referência automática para o assembly System. dll e impede que o compilador Leia o arquivo Vbc. rsp. O arquivo Vbc. rsp, localizado no mesmo diretório que o arquivo Vbc. exe, faz referência aos assemblies de .NET Framework usados com frequência e importa os `System` namespaces e `Microsoft.VisualBasic` .  
   
 > [!NOTE]
->  Os assemblies de mscorlib. dll e VisualBasic são sempre referenciados.  
+> Os assemblies mscorlib. dll e Microsoft. VisualBasic. dll são sempre referenciados.  
   
 > [!NOTE]
->  O `-nostdlib` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível somente durante a compilação da linha de comando.  
+> A `-nostdlib` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ela está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
- O seguinte código compila `T2.vb` sem fazer referência às bibliotecas padrão. Você deve definir a `_MYTYPE` constante de compilação condicional para a cadeia de caracteres "Vazio" para remover o `My` objeto.  
+ O código a seguir é compilado `T2.vb` sem referenciar as bibliotecas padrão. Você deve definir a `_MYTYPE` constante de compilação condicional para a cadeia de caracteres "Empty" para `My` remover o objeto.  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

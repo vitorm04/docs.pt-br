@@ -2,20 +2,20 @@
 title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: ee7a0c23adca883af279addf9d1f221bd4056d00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0316e983446644671ead2f8f843dc91b493b29c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772405"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933163"
 ---
 # <a name="namespacetable"></a>\<namespaceTable>
 
-Representa uma seção de configuração para definir um conjunto de elementos que contêm namespace para mapeamentos de prefixo que pode ser usado em filtros de XPath para roteamento.
+Representa uma seção de configuração para definir um conjunto de elementos que contêm namespace para mapeamentos de prefixo que podem ser usados em filtros XPath para roteamento.
 
-**\<system.serviceModel>**   
-&nbsp;&nbsp;**\<routing>**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable>**
+**\<system.serviceModel>**    
+&nbsp;&nbsp; **\<routing>**    
+&nbsp;&nbsp;&nbsp;&nbsp; **\<namespaceTable>**
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,13 +42,13 @@ Nenhum
 
 |     | Descrição |
 | --- | ----------- |
-| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Define um mapeamento de prefixo de namespace usado para expressões XPath. |
+| [ **\<filter>** ](filter.md) | Define um mapeamento de prefixo de namespace usado para expressões XPath. |
 
 ### <a name="parent-elements"></a>Elementos pai
 
 |     | Descrição |
 | --- | ----------- |
-| [**\<routing>**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo do Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas, bem como roteamento de tabelas que definem os pontos de extremidade de destino para envie mensagens para quando um filtro corresponde. |
+| [ **\<routing>** ](routing.md) | Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo de Windows Communication Foundation<xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) a ser usado ao avaliar mensagens de entrada, bem como tabelas de roteamento que definem os pontos de extremidade de destino para enviar mensagens para quando um filtro corresponder. |
 
 ## <a name="see-also"></a>Consulte também
 

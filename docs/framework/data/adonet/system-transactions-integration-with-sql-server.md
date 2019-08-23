@@ -5,62 +5,62 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 25b443d8234909a4d8525c2ce2b4e70c3baa337b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880588"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965229"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integração de System.Transactions com o SQL Server
-O .NET Framework versão 2.0 introduziu uma estrutura de transação que pode ser acessada por meio de <xref:System.Transactions> namespace. Essa estrutura expõe transações de forma que é totalmente integrado no .NET Framework, inclusive o ADO.NET.  
+O .NET Framework versão 2,0 introduziu uma estrutura de transação que pode ser acessada por meio do <xref:System.Transactions> namespace. Essa estrutura expõe transações de uma maneira totalmente integrada no .NET Framework, incluindo ADO.NET.  
   
- Além dos aprimoramentos de programabilidade, <xref:System.Transactions> e ADO.NET podem trabalhar juntos para coordenar as otimizações, quando você trabalha com transações. Uma transação passível de promoção é uma transação leve (local) que pode ser elevada automaticamente a uma transação totalmente distribuída em uma base conforme necessário.  
+ Além dos aprimoramentos de programação, <xref:System.Transactions> e o ADO.net pode trabalhar em conjunto para coordenar otimizações quando você trabalha com transações. Uma transação promocionaltable é uma transação leve (local) que pode ser promovida automaticamente para uma transação totalmente distribuída conforme necessário.  
   
- Começando com o ADO.NET 2.0 <xref:System.Data.SqlClient> dá suporte a transações passíveis de promoção ao trabalhar com o SQL Server. Uma transação passível de promoção não chama a sobrecarga adicional de uma transação distribuída a menos que a sobrecarga adicional seja necessária. Transações passíveis de promoção são automáticas e não exigem intervenção do desenvolvedor.  
+ A partir do ADO.NET 2,0 <xref:System.Data.SqlClient> , o oferece suporte a transações de promoção quando você trabalha com SQL Server. Uma transação passível de promoção não chama a sobrecarga adicional de uma transação distribuída a menos que a sobrecarga adicional seja necessária. As transações de promoçãotable são automáticas e não exigem nenhuma intervenção do desenvolvedor.  
   
- Transações passíveis de promoção só estão disponíveis quando você usa o .NET Framework Data Provider para SQL Server (`SqlClient`) com o SQL Server.  
+ As transações de promoçãotable só estão disponíveis quando você usa o .NET Framework provedor de dados para`SqlClient`SQL Server () com SQL Server.  
   
-## <a name="creating-promotable-transactions"></a>Criando transações passíveis de promoção  
- O provedor do .NET Framework para SQL Server fornece suporte para transações passíveis de promoção, que são tratadas por meio das classes no .NET Framework <xref:System.Transactions> namespace. Transações passíveis de promoção otimizam transações distribuídas, adiando a criação de uma transação distribuída até que ele seja necessário. Se houver apenas um Gerenciador de recursos necessário, nenhuma transação distribuída ocorre.  
+## <a name="creating-promotable-transactions"></a>Criando transações de promotable  
+ O provedor de .NET Framework para SQL Server fornece suporte para transações de promoção, que são manipuladas por meio das classes <xref:System.Transactions> no namespace .NET Framework. As transações da promotable otimizam as transações distribuídas por meio da criação de uma transação distribuída até que seja necessária. Se apenas um Gerenciador de recursos for necessário, nenhuma transação distribuída ocorrerá.  
   
 > [!NOTE]
->  Em um cenário parcialmente confiável, o <xref:System.Transactions.DistributedTransactionPermission> é necessário quando uma transação é promovida a uma transação distribuída.  
+> Em um cenário parcialmente confiável, o <xref:System.Transactions.DistributedTransactionPermission> é necessário quando uma transação é promovida para uma transação distribuída.  
   
-## <a name="promotable-transaction-scenarios"></a>Cenários de transação passível de promoção  
- Transações distribuídas normalmente consomem recursos significativos do sistema, que está sendo gerenciados pelo Microsoft Distributed Transaction Coordinator (MS DTC), que integra todos os gerenciadores de recursos acessados na transação. Uma transação passível de promoção é uma forma especial de um <xref:System.Transactions> transação que delega efetivamente o trabalho para uma simple transação do SQL Server. <xref:System.Transactions>, <xref:System.Data.SqlClient>, e o SQL Server coordenam o trabalho envolvido no tratamento da transação, elevando-a para uma transação distribuída completa conforme necessário.  
+## <a name="promotable-transaction-scenarios"></a>Cenários de transação de promoção  
+ As transações distribuídas normalmente consomem recursos significativos do sistema, sendo gerenciados pelo Microsoft Coordenador de Transações Distribuídas (MS DTC), que integra todos os gerenciadores de recursos acessados na transação. Uma transação promocionaltable é uma forma especial de uma <xref:System.Transactions> transação que delega efetivamente o trabalho a uma transação SQL Server simples. <xref:System.Transactions>, <xref:System.Data.SqlClient>e SQL Server coordenar o trabalho envolvido na manipulação da transação, promovê-la para uma transação distribuída completa, conforme necessário.  
   
- A vantagem de usar transações passíveis de promoção é que quando uma conexão é aberta por meio de um ativo <xref:System.Transactions.TransactionScope> transação e nenhuma outra conexão aberta, a transação é confirmada como uma transação superficial, em vez de incorrer adicional sobrecarga de uma transação distribuída completa.  
+ O benefício de usar transações de promoção é que, quando uma conexão é aberta usando uma transação <xref:System.Transactions.TransactionScope> ativa, e não há nenhuma outra conexão aberta, a transação é confirmada como uma transação leve, em vez de incorrer o adicional sobrecarga de uma transação distribuída completa.  
   
-### <a name="connection-string-keywords"></a>Palavras-chave de cadeia de caracteres de Conexão  
- O <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> propriedade dá suporte a uma palavra-chave `Enlist`, que indica se <xref:System.Data.SqlClient> detecta contextos transacionais e inscrever-se automaticamente a conexão em uma transação distribuída. Se `Enlist=true`, a conexão será inscrita automaticamente no contexto de transação atual do thread de abertura. Se `Enlist=false`, o `SqlClient` conexão não interage com uma transação distribuída. O valor padrão para `Enlist` é verdadeiro. Se `Enlist` não for especificado na cadeia de conexão, a conexão será inscrita automaticamente em uma transação distribuída caso uma seja detectada quando a conexão é aberta.  
+### <a name="connection-string-keywords"></a>Palavras-chave da cadeia de conexão  
+ A <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Propriedade dá suporte a uma `Enlist`palavra-chave, <xref:System.Data.SqlClient> , que indica se o detectará contextos transacionais e inscreverá automaticamente a conexão em uma transação distribuída. Se `Enlist=true`, a conexão será inscrito automaticamente no contexto de transação atual do thread de abertura. Se `Enlist=false`, a `SqlClient` conexão não interagirá com uma transação distribuída. O valor padrão para `Enlist` é true. Se `Enlist` não for especificado na cadeia de conexão, a conexão será inscrito automaticamente em uma transação distribuída se uma for detectada quando a conexão for aberta.  
   
- O `Transaction Binding` palavras-chave em um <xref:System.Data.SqlClient.SqlConnection> cadeia de caracteres de conexão controlar a associação da conexão com um inscrito `System.Transactions` transação. Ele também está disponível por meio de <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> propriedade de um <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+ As `Transaction Binding` palavras-chave em uma <xref:System.Data.SqlClient.SqlConnection> cadeia de conexão controlam a associação da conexão `System.Transactions` com uma transação enlistada. Ele também está disponível por meio <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> da propriedade de <xref:System.Data.SqlClient.SqlConnectionStringBuilder>a.  
   
- A tabela a seguir descreve os possíveis valores.  
+ A tabela a seguir descreve os valores possíveis.  
   
 |Palavra-chave|Descrição|  
 |-------------|-----------------|  
-|Implícita desassociar|O padrão. A conexão se desconecta da transação quando ele termina, alternando de volta para o modo de confirmação automática.|  
-|Explícito desassociar|A conexão permanece anexado à transação até que a transação seja fechada. A conexão falhará se a transação associada não está ativa ou não corresponde ao <xref:System.Transactions.Transaction.Current%2A>.|  
+|Desassociar implícito|O padrão. A conexão é desanexada da transação quando termina, voltando para o modo de confirmação automática.|  
+|Desassociar explícito|A conexão permanece anexada à transação até que a transação seja fechada. A conexão falhará se a transação associada não estiver ativa ou não corresponder <xref:System.Transactions.Transaction.Current%2A>.|  
   
-## <a name="using-transactionscope"></a>Usando o TransactionScope  
- O <xref:System.Transactions.TransactionScope> classe torna um bloco de código transacional inscrevendo implicitamente conexões em uma transação distribuída. Você deve chamar o <xref:System.Transactions.TransactionScope.Complete%2A> método no final o <xref:System.Transactions.TransactionScope> bloco antes de deixá-lo. Sair do bloco invoca o <xref:System.Transactions.TransactionScope.Dispose%2A> método. Se uma exceção foi lançada que faz com que o código deixar o escopo, a transação é considerado anulada.  
+## <a name="using-transactionscope"></a>Usando TransactionScope  
+ A <xref:System.Transactions.TransactionScope> classe torna um bloco de código transacional, informando implicitamente as conexões em uma transação distribuída. Você deve chamar o <xref:System.Transactions.TransactionScope.Complete%2A> método no final <xref:System.Transactions.TransactionScope> do bloco antes de deixá-lo. Deixar o bloco invoca o <xref:System.Transactions.TransactionScope.Dispose%2A> método. Se uma exceção tiver sido gerada que faz com que o código deixe o escopo, a transação será considerada anulada.  
   
- É recomendável que você use uma `using` bloco para certificar-se de que <xref:System.Transactions.TransactionScope.Dispose%2A> é chamado no <xref:System.Transactions.TransactionScope> objeto que o uso do bloco é encerrado. Falha ao confirmar ou reverter transações pendentes significativamente pode danificar o desempenho porque o tempo limite padrão para o <xref:System.Transactions.TransactionScope> é um minuto. Se você não usar um `using` instrução, você deve executar todo o trabalho em um `Try` bloquear e chamar explicitamente o <xref:System.Transactions.TransactionScope.Dispose%2A> método no `Finally` bloco.  
+ É recomendável que você use `using` um bloco para certificar- <xref:System.Transactions.TransactionScope.Dispose%2A> se de que é <xref:System.Transactions.TransactionScope> chamado no objeto quando o bloco Using é encerrado. A falha na confirmação ou reversão de transações pendentes pode danificar significativamente o desempenho porque o tempo limite <xref:System.Transactions.TransactionScope> padrão para o é de um minuto. Se `using` você não usar uma instrução, deverá executar todo o trabalho em um `Try` bloco e `Finally` chamar explicitamente o <xref:System.Transactions.TransactionScope.Dispose%2A> método no bloco.  
   
- Se ocorrer uma exceção no <xref:System.Transactions.TransactionScope>, a transação será marcada como inconsistente e abandonada. Ela será revertida quando o <xref:System.Transactions.TransactionScope> é descartado. Se nenhuma exceção ocorrer, confirmar as transações participantes serão.  
-  
-> [!NOTE]
->  O `TransactionScope` classe cria uma transação com um <xref:System.Transactions.Transaction.IsolationLevel%2A> de `Serializable` por padrão. Dependendo do seu aplicativo, você talvez queira considerar abaixar o nível de isolamento para evitar uma contenção elevada em seu aplicativo.  
+ Se ocorrer uma exceção no <xref:System.Transactions.TransactionScope>, a transação será marcada como inconsistente e abandonada. Ele será revertido quando o <xref:System.Transactions.TransactionScope> for descartado. Se nenhuma exceção ocorrer, as transações participantes são confirmadas.  
   
 > [!NOTE]
->  É recomendável que você execute apenas atualizações, inserções e exclusões em transações distribuídas porque eles consomem recursos significativos do banco de dados. Instruções SELECT podem bloquear recursos do banco de dados desnecessariamente e, em alguns cenários, talvez você precise usar transações para seleções. Qualquer trabalho de banco de dados não deve ser feito fora do escopo da transação, a menos que ele envolve outros gerenciadores de recursos transacionados. Embora uma exceção no escopo da transação evitar que a transação seja confirmada, o <xref:System.Transactions.TransactionScope> classe não tem provisão para reverter alterações de seu código tenha feito fora do escopo da própria transação. Se você tiver que executar alguma ação quando a transação for revertida, você deve escrever sua própria implementação do <xref:System.Transactions.IEnlistmentNotification> de interface e inscrevê-la explicitamente na transação.  
+> A `TransactionScope` classe cria uma transação com um <xref:System.Transactions.Transaction.IsolationLevel%2A> de `Serializable` por padrão. Dependendo do seu aplicativo, convém considerar reduzir o nível de isolamento para evitar uma alta contenção em seu aplicativo.  
+  
+> [!NOTE]
+> É recomendável que você execute apenas atualizações, inserções e exclusões em transações distribuídas, pois elas consomem recursos de banco de dados significativos. As instruções SELECT podem bloquear os recursos do banco de dados desnecessariamente e, em alguns cenários, talvez seja necessário usar transações para seleções. Qualquer trabalho que não seja de banco de dados deve ser feito fora do escopo da transação, a menos que envolva outros gerenciadores de recursos transacionados. Embora uma exceção no escopo da transação impeça que a transação seja confirmada, a <xref:System.Transactions.TransactionScope> classe não tem provisão para reverter as alterações que seu código fez fora do escopo da própria transação. Se você precisar executar alguma ação quando a transação for revertida, deverá escrever sua própria implementação da <xref:System.Transactions.IEnlistmentNotification> interface e inscrever-se explicitamente na transação.  
   
 ## <a name="example"></a>Exemplo  
- Trabalhando com <xref:System.Transactions> exige que você tenha uma referência a Transactions.  
+ Trabalhar com <xref:System.Transactions> o requer que você tenha uma referência a System. Transactions. dll.  
   
- A função a seguir demonstra como criar uma transação passível de promoção em duas instâncias do SQL Server diferentes, representado por dois diferentes <xref:System.Data.SqlClient.SqlConnection> objetos, que são encapsulados em um <xref:System.Transactions.TransactionScope> bloco. O código cria o <xref:System.Transactions.TransactionScope> bloco com um `using` instrução e abre a primeira conexão, que inscreve automaticamente no <xref:System.Transactions.TransactionScope>. A transação é inscrita inicialmente como uma transação superficial, não uma transação distribuída completa. A segunda conexão está inscrita no <xref:System.Transactions.TransactionScope> somente se o comando em que a primeira conexão não gerará uma exceção. Quando a segunda conexão for aberta, a transação é promovida automaticamente a uma transação distribuída completa. O <xref:System.Transactions.TransactionScope.Complete%2A> método é invocado, que confirma a transação apenas se nenhuma exceção tiver sido lançada. Se uma exceção tiver sido lançada em qualquer ponto a <xref:System.Transactions.TransactionScope> bloco, `Complete` será não ser chamado e a transação distribuída será revertida quando o <xref:System.Transactions.TransactionScope> é descartada no final do seu `using` bloco.  
+ A função a seguir demonstra como criar uma transação promocionaltable em duas instâncias de SQL Server diferentes, representadas por <xref:System.Data.SqlClient.SqlConnection> dois objetos diferentes, que são encapsuladas em um <xref:System.Transactions.TransactionScope> bloco. O código cria o <xref:System.Transactions.TransactionScope> bloco com uma `using` instrução e abre a primeira conexão, que a <xref:System.Transactions.TransactionScope>lista automaticamente no. A transação é inicialmente listada como uma transação leve, não uma transação distribuída completa. A segunda conexão será listada <xref:System.Transactions.TransactionScope> somente se o comando na primeira conexão não lançar uma exceção. Quando a segunda conexão é aberta, a transação é promovida automaticamente para uma transação distribuída completa. O <xref:System.Transactions.TransactionScope.Complete%2A> método é invocado, que confirma a transação somente se nenhuma exceção tiver sido gerada. Se uma exceção tiver sido lançada em <xref:System.Transactions.TransactionScope> qualquer ponto do bloco, `Complete` não será chamada, e a transação distribuída será revertida quando o <xref:System.Transactions.TransactionScope> for descartado no final de seu `using` bloco.  
   
 ```csharp  
 // This function takes arguments for the 2 connection strings and commands in order  

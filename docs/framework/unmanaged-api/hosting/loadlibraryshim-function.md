@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03bc5584d24efa790989f93426251f9f38e65904
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ab44ce8f51620d83084d1dd16e98b2b310feb76
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768528"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968931"
 ---
 # <a name="loadlibraryshim-function"></a>Função LoadLibraryShim
-Carrega uma versão especificada de uma DLL que está incluída no pacote redistribuível do .NET Framework.  
+Carrega uma versão especificada de uma DLL que está incluída no pacote redistribuível .NET Framework.  
   
- Essa função foi preterida no .NET Framework 4. Use o [iclrruntimeinfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) método em vez disso.  
+ Essa função foi preterida no .NET Framework 4. Em vez disso, use o método [ICLRRuntimeInfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,33 +42,33 @@ HRESULT LoadLibraryShim (
   
 ## <a name="parameters"></a>Parâmetros  
  `szDllName`  
- [in] Uma cadeia terminada em zero que representa o nome da DLL a ser carregado na biblioteca do .NET Framework.  
+ no Uma cadeia de caracteres terminada em zero que representa o nome da DLL a ser carregada a partir da biblioteca de .NET Framework.  
   
  `szVersion`  
- [in] Uma cadeia terminada em zero que representa a versão da DLL a ser carregado. Se `szVersion` for nula, a versão selecionada para o carregamento é a versão mais recente da DLL especificado que é inferior à versão 4. Ou seja, todas as versões iguais ou maiores que a versão 4 são ignoradas se `szVersion` for nulo, e se nenhuma versão menor do que a versão 4 está instalado, a DLL não será carregada. Isso é para garantir que a instalação do .NET Framework 4 não afeta componentes ou aplicativos já existentes. Consulte a entrada [in-proc SxS e o início rápido da migração](https://go.microsoft.com/fwlink/?LinkId=200329) no blog da equipe do CLR.  
+ no Uma cadeia de caracteres terminada em zero que representa a versão da DLL a ser carregada. Se `szVersion` for NULL, a versão selecionada para carregamento será a versão mais recente da DLL especificada menor que a versão 4. Ou seja, todas as versões iguais ou maiores que a versão 4 são ignoradas se `szVersion` for NULL e, se nenhuma versão anterior à versão 4 estiver instalada, a dll não será carregada. Isso é para garantir que a instalação do .NET Framework 4 não afete aplicativos ou componentes pré-existentes. Consulte a entrada [SxS e início rápido de migração](https://go.microsoft.com/fwlink/?LinkId=200329) no blog da equipe do CLR.  
   
  `pvReserved`  
  Reservado para uso futuro.  
   
  `phModDll`  
- [out] Um ponteiro para a alça do módulo.  
+ fora Um ponteiro para o identificador do módulo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Esse método retorna códigos de erro padrão (COM Component Object Model), conforme definido em Winerror. H, além dos valores a seguir.  
+ Esse método retorna códigos de erro padrão de Component Object Model (COM), conforme definido no WinError. h, além dos valores a seguir.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
-|CLR_E_SHIM_RUNTIMELOAD|Carregando `szDllName` requer o carregamento, o common language runtime (CLR) e a versão necessária do CLR não podem ser carregado.|  
+|CLR_E_SHIM_RUNTIMELOAD|O `szDllName` carregamento requer o carregamento do Common Language Runtime (CLR) e a versão necessária do CLR não pode ser carregada.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa função é usada para carregar as DLLs que são incluídas no pacote redistribuível do .NET Framework. Ele não carrega DLLs gerados pelo usuário.  
+ Essa função é usada para carregar DLLs incluídas no pacote redistribuível .NET Framework. Ele não carrega DLLs geradas pelo usuário.  
   
 > [!NOTE]
->  Começando com o .NET Framework versão 2.0, carregar Fusion faz com que o CLR a ser carregado. Isso ocorre porque as funções em Fusion agora são wrappers cujas implementações são fornecidas pelo tempo de execução.  
+> A partir do .NET Framework versão 2,0, o carregamento de Fusion. dll faz com que o CLR seja carregado. Isso ocorre porque as funções em Fusion. dll agora são wrappers cujas implementações são fornecidas pelo tempo de execução.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   

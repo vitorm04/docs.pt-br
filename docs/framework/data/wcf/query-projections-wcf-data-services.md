@@ -10,60 +10,60 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 2e4c40d6c71a254d5f40ea42788608e10c5872a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774615"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931165"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projeções de consulta (WCF Data Services)
 
-Projeção fornece um mecanismo no [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para reduzir a quantidade de dados no feed retornado por uma consulta, especificando que somente algumas propriedades de uma entidade são retornadas na resposta. Para obter mais informações, consulte [OData: Selecione a opção de consulta do sistema ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).
+A projeção fornece um mecanismo [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] no para reduzir a quantidade de dados no feed retornada por uma consulta, especificando que apenas determinadas propriedades de uma entidade são retornadas na resposta. Para obter mais informações, [consulte OData: Selecione a opção de consulta do sistema](https://go.microsoft.com/fwlink/?LinkId=186076)($SELECT).
 
-Este tópico descreve como definir uma projeção de consulta, o que os requisitos são para a entidade e tipos não são de entidade, fazendo atualizações para os resultados previstos, Criando tipos projetados e lista algumas considerações de projeção.
+Este tópico descreve como definir uma projeção de consulta, quais são os requisitos para tipos de entidade e não de entidade, fazer atualizações em resultados projetados, criar tipos projetados e listar algumas considerações de projeção.
 
 ## <a name="defining-a-query-projection"></a>Definindo uma projeção de consulta
 
-Você pode adicionar uma cláusula de projeção para uma consulta usando o `$select` opção em um URI ou por meio de consulta a [selecionar](~/docs/csharp/language-reference/keywords/select-clause.md) cláusula ([selecione](~/docs/visual-basic/language-reference/queries/select-clause.md) no Visual Basic) em uma consulta LINQ. Retornado podem ser projetados de dados de entidade em tipos de entidade ou tipos não são de entidade no cliente. Os exemplos neste tópico demonstram como usar o `select` cláusula em uma consulta LINQ.
+Você pode adicionar uma cláusula de projeção a uma consulta usando a `$select` opção de consulta em um URI ou usando a cláusula [Select](../../../csharp/language-reference/keywords/select-clause.md) ([Select](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) em uma consulta LINQ. Os dados de entidade retornados podem ser projetados em tipos de entidade ou tipos que não são de entidade no cliente. Os exemplos neste tópico demonstram como usar a `select` cláusula em uma consulta LINQ.
 
 > [!IMPORTANT]
-> Pode ocorrer perda de dados no serviço de dados quando você salvar as atualizações que foram feitas para tipos projetados. Para obter mais informações, consulte [considerações da projeção](#considerations).
+> A perda de dados pode ocorrer no serviço de dados quando você salva atualizações que foram feitas em tipos projetados. Para obter mais informações, consulte [considerações](#considerations)de projeção.
 
-## <a name="requirements-for-entity-and-non-entity-types"></a>Requisitos para a entidade e tipos não são de entidade
+## <a name="requirements-for-entity-and-non-entity-types"></a>Requisitos para tipos de entidade e não de entidade
 
-Tipos de entidade devem ter uma ou mais propriedades de identidade que compõem a chave de entidade. Tipos de entidade são definidos nos clientes em uma das seguintes maneiras:
+Os tipos de entidade devem ter uma ou mais propriedades de identidade que compõem a chave de entidade. Os tipos de entidade são definidos em clientes de uma das seguintes maneiras:
 
-- Aplicando o <xref:System.Data.Services.Common.DataServiceKeyAttribute> ou <xref:System.Data.Services.Common.DataServiceEntityAttribute> para o tipo.
+- Aplicando o <xref:System.Data.Services.Common.DataServiceKeyAttribute> ou <xref:System.Data.Services.Common.DataServiceEntityAttribute> ao tipo.
 
 - Quando o tipo tem uma propriedade chamada `ID`.
 
-- Quando o tipo tem uma propriedade chamada *tipo*`ID`, onde *tipo* é o nome do tipo.
+- Quando o tipo tem uma propriedade chamada *Type*`ID`, em que *Type* é o nome do tipo.
 
-Por padrão, quando você projetar os resultados da consulta em um tipo definido no cliente, as propriedades solicitadas na projeção devem existir no tipo de cliente. No entanto, quando você especifica um valor de `true` para o <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> propriedade do <xref:System.Data.Services.Client.DataServiceContext>, não serão necessário que as propriedades especificadas na projeção ocorrer no tipo de cliente.
+Por padrão, quando você projeta os resultados da consulta em um tipo definido no cliente, as propriedades solicitadas na projeção devem existir no tipo de cliente. No entanto, quando você especifica um `true` valor de <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> para a propriedade <xref:System.Data.Services.Client.DataServiceContext>do, as propriedades especificadas na projeção não precisam ocorrer no tipo de cliente.
 
-### <a name="making-updates-to-projected-results"></a>Fazer atualizações em resultados projetados
+### <a name="making-updates-to-projected-results"></a>Fazendo atualizações nos resultados projetados
 
-Quando você projetar os resultados da consulta em tipos de entidade no cliente, o <xref:System.Data.Services.Client.DataServiceContext> pode rastrear esses objetos com as atualizações a serem enviados para os dados de serviço quando o <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> método é chamado. No entanto, as atualizações feitas aos dados projetados em tipos não são de entidade no cliente não podem ser enviadas de volta para o serviço de dados. Isso ocorre porque sem uma chave para identificar a instância de entidade, o serviço de dados não é possível atualizar a entidade correta na fonte de dados. Tipos de entidade não não estão conectados ao <xref:System.Data.Services.Client.DataServiceContext>.
+Quando você projeta resultados de consulta em tipos de entidade no cliente, <xref:System.Data.Services.Client.DataServiceContext> o pode controlar esses objetos com atualizações a serem enviadas de volta ao serviço de dados <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> quando o método é chamado. No entanto, as atualizações feitas aos dados projetadas em tipos que não são de entidade no cliente não podem ser enviadas de volta ao serviço de dados. Isso ocorre porque, sem uma chave para identificar a instância de entidade, o serviço de dados não pode atualizar a entidade correta na fonte de dados. Os <xref:System.Data.Services.Client.DataServiceContext>tipos que não são de entidade não são anexados ao.
 
-Quando uma ou mais propriedades de um tipo de entidade definido no serviço de dados não ocorrem no tipo de cliente no qual a entidade é projetada, inserções das novas entidades não conterá essas propriedades ausentes. Nesse caso, as atualizações feitas para entidades existentes serão **também** incluem essas propriedades ausentes. Quando um valor existe para essa propriedade, a atualização ele será redefinido para o valor padrão para a propriedade, conforme definido na fonte de dados.
+Quando uma ou mais propriedades de um tipo de entidade definida no serviço de dados não ocorrem no tipo de cliente no qual a entidade está projetada, as inserções de novas entidades não conterá essas propriedades ausentes. Nesse caso, as atualizações feitas em entidades existentes **também** não incluirão essas propriedades ausentes. Quando existe um valor para tal propriedade, a atualização o redefine para o valor padrão da propriedade, conforme definido na fonte de dados.
 
 ### <a name="creating-projected-types"></a>Criando tipos projetados
 
-O exemplo a seguir usa uma consulta LINQ anônima que projeta as propriedades relacionadas a endereço do `Customers` tipo em um novo `CustomerAddress` tipo, que é definido no cliente e é atribuído como um tipo de entidade:
+O exemplo a seguir usa uma consulta LINQ anônima que projeta as propriedades relacionadas ao endereço do `Customers` tipo em um novo `CustomerAddress` tipo, que é definido no cliente e é atribuído como um tipo de entidade:
 
 [!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#selectcustomeraddressspecific)]
 [!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#selectcustomeraddressspecific)]
 
-Neste exemplo, o padrão de inicializador de objeto é usado para criar uma nova instância do `CustomerAddress` tipo em vez de chamar um construtor. Construtores não são suportados quando a projeção em tipos de entidade, mas pode ser usados quando a projeção em tipos não são de entidade e anônimos. Porque `CustomerAddress` é um tipo de entidade, as alterações podem ser feitas e enviadas de volta para o serviço de dados.
+Neste exemplo, o padrão de inicializador de objeto é usado para criar uma nova instância `CustomerAddress` do tipo em vez de chamar um construtor. Não há suporte para construtores durante a projeção em tipos de entidade, mas eles podem ser usados durante a projeção em tipos anônimos e não de entidade. Como `CustomerAddress` é um tipo de entidade, as alterações podem ser feitas e enviadas de volta para o serviço de dados.
 
-Além disso, os dados a partir o `Customer` tipo é projetado em uma instância da `CustomerAddress` tipo de entidade em vez de um tipo anônimo. Há suporte para projeção em tipos anônimos, mas os dados são somente leitura porque os tipos anônimos são tratados como tipos de não são de entidade.
+Além disso, os dados do `Customer` tipo são projetados em uma instância `CustomerAddress` do tipo de entidade, em vez de um tipo anônimo. Há suporte para projeção em tipos anônimos, mas os dados são somente leitura porque tipos anônimos são tratados como tipos que não são de entidade.
 
-O <xref:System.Data.Services.Client.MergeOption> configurações do <xref:System.Data.Services.Client.DataServiceContext> são usados para resolução de identidade durante a projeção de consulta. Isso significa que, se uma instância das `Customer` tipo já existe na <xref:System.Data.Services.Client.DataServiceContext>, uma instância de `CustomerAddress` com a mesma identidade seguirá a resolução de identidade, as regras definidas pela <xref:System.Data.Services.Client.MergeOption>
+As <xref:System.Data.Services.Client.MergeOption> configurações<xref:System.Data.Services.Client.DataServiceContext> de são usadas para resolução de identidade durante a projeção de consulta. Isso significa que, se uma instância do `Customer` tipo já existir <xref:System.Data.Services.Client.DataServiceContext>no, uma instância do `CustomerAddress` com a mesma identidade seguirá as regras de resolução de identidade definidas pelo<xref:System.Data.Services.Client.MergeOption>
 
-O exemplo a seguir descreve os comportamentos quando a projeção de resultados em tipos de entidade e não são de entidade:
+O seguinte descreve os comportamentos ao projetar resultados em tipos de entidade e não entidade:
 
-**Criar uma nova instância projetada usando inicializadores**
+**Criando uma nova instância projetada usando inicializadores**
 
 - Exemplo:
 
@@ -72,9 +72,9 @@ O exemplo a seguir descreve os comportamentos quando a projeção de resultados 
 
 - Tipo de entidade: Com suporte
 
-- Tipo de entidade não: Com suporte
+- Tipo de não entidade: Com suporte
 
-**Criar uma nova instância projetada usando construtores**
+**Criando uma nova instância projetada usando construtores**
 
 - Exemplo:
 
@@ -83,38 +83,38 @@ O exemplo a seguir descreve os comportamentos quando a projeção de resultados 
 
 - Tipo de entidade: Um <xref:System.NotSupportedException> é gerado.
 
-- Tipo de entidade não: Com suporte
+- Tipo de não entidade: Com suporte
 
-**Usando a projeção para transformar um valor de propriedade**
+**Usando projeção para transformar um valor de propriedade**
 
 - Exemplo:
 
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
-- Tipo de entidade: Essa transformação não há suporte para tipos de entidade, pois ele pode causar confusão e possivelmente substituir os dados na fonte de dados que pertence a outra entidade. Um <xref:System.NotSupportedException> é gerado.
+- Tipo de entidade: Essa transformação não tem suporte para tipos de entidade porque pode levar à confusão e potencialmente substituir os dados na fonte de dados que pertence a outra entidade. Um <xref:System.NotSupportedException> é gerado.
 
-- Tipo de entidade não: Com suporte
+- Tipo de não entidade: Com suporte
 
 <a name="considerations"></a>
 
-## <a name="projection-considerations"></a>Considerações de projeção
+## <a name="projection-considerations"></a>Considerações sobre projeção
 
-As seguintes considerações adicionais se aplicam ao definir uma projeção de consulta.
+As considerações adicionais a seguir se aplicam ao definir uma projeção de consulta.
 
-- Quando você define feeds personalizados para o formato Atom, certifique-se de que todas as propriedades de entidade que têm mapeamentos personalizados definidos são incluídas na projeção. Quando uma propriedade de entidade mapeada não está incluída na projeção, pode ocorrer perda de dados. Para obter mais informações, consulte [personalização de Feed](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
+- Ao definir feeds personalizados para o formato Atom, você deve certificar-se de que todas as propriedades de entidade que têm mapeamentos personalizados definidos sejam incluídas na projeção. Quando uma propriedade de entidade mapeada não é incluída na projeção, pode ocorrer perda de dados. Para obter mais informações, consulte [personalização de feed](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
 
-- Quando as inserções são feitas em um tipo projetado que não contém todas as propriedades da entidade no modelo de dados do serviço de dados, as propriedades não são incluídas na projeção no cliente são definidas para seus valores padrão.
+- Quando são feitas inserções em um tipo projetado que não contém todas as propriedades da entidade no modelo de dados do serviço de dados, as propriedades não incluídas na projeção no cliente são definidas com seus valores padrão.
 
-- Quando as atualizações são feitas para um tipo projetado que não contém todas as propriedades da entidade no modelo de dados do serviço de dados, não incluídos na projeção no cliente de valores existentes serão substituídos com valores padrão não inicializado.
+- Quando são feitas atualizações em um tipo projetado que não contém todas as propriedades da entidade no modelo de dados do serviço de dados, os valores existentes não incluídos na projeção no cliente serão substituídos por valores padrão não inicializados.
 
 - Quando uma projeção inclui uma propriedade complexa, o objeto complexo inteiro deve ser retornado.
 
-- Quando uma projeção inclui uma propriedade de navegação, os objetos relacionados são carregados implicitamente sem a necessidade de chamar o <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> método. O <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> método não é suportado para uso em uma consulta projetada.
+- Quando uma projeção inclui uma propriedade de navegação, os objetos relacionados são carregados implicitamente sem a necessidade <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> de chamar o método. Não <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> há suporte para o método para uso em uma consulta projetada.
 
-- Consultas de projeções de consulta no cliente são convertidas para usar o `$select` opção no URI de solicitação de consulta. Quando uma consulta com a projeção é executada em uma versão anterior do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que não oferece suporte a `$select` opção de consulta, um erro será retornado. Isso também pode acontecer quando o <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> do <xref:System.Data.Services.DataServiceBehavior> para os dados de serviço é definido como um valor de <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obter mais informações, consulte [controle de versão de serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+- As consultas de projeções de consulta no cliente são convertidas para usar a `$select` opção de consulta no URI de solicitação. Quando uma consulta com projeção é executada em uma versão anterior [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do que não oferece suporte `$select` à opção de consulta, um erro é retornado. Isso também pode acontecer quando o <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> <xref:System.Data.Services.DataServiceBehavior> do para o serviço de dados é definido com um valor de <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obter mais informações, consulte [controle de versão do serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
 
-Para obter mais informações, confira [Como: Os resultados da consulta do projeto](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).
+Para obter mais informações, confira [Como: Resultados da](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)consulta do projeto.
 
 ## <a name="see-also"></a>Consulte também
 

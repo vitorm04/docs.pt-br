@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], preventing row addition or deletion
 ms.assetid: a17722bd-9400-41e6-8dcc-c9c151f0a749
-ms.openlocfilehash: 20f9b85dc48ccd634468d0fed000120723f8ee5c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: f47eb29bf9ae077555f352d10c667bac4ade9373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038198"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968329"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Evitar a adição e a exclusão de linha no controle DataGridView do Windows Forms usando o designer
 Às vezes, você desejará impedir que os usuários insiram novas linhas de dados ou exclua linhas existentes no seu <xref:System.Windows.Forms.DataGridView> controle. Novas linhas são inseridas na linha especial para novos registros na parte inferior do controle. Quando você desabilitar a adição de linha, a linha para novos registros não será exibida. Em seguida, você pode deixar o controle totalmente somente leitura desabilitando a exclusão de linha e a edição de célula.
@@ -21,7 +21,7 @@ ms.locfileid: "69038198"
 - Clique no glifo de marca inteligente (![glifo de marca inteligente](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) no <xref:System.Windows.Forms.DataGridView> canto superior direito do controle e desmarque as caixas de seleção **habilitar adição** e **Habilitar exclusão** .
 
     > [!NOTE]
-    >  Para tornar o controle somente leitura inteiramente, desmarque também a caixa de seleção **Habilitar Edição**.
+    > Para tornar o controle somente leitura inteiramente, desmarque também a caixa de seleção **Habilitar Edição**.
 
 ## <a name="see-also"></a>Consulte também
 

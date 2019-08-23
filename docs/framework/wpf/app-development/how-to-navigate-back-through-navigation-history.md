@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 86590c2794339ac22cbc8ec5e11224736133e870
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 53b32e145390d7052262042c7a793699c163b373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817971"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969349"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>Como: Navegar para trás por meio do histórico de navegação
 Este exemplo ilustra como navegar para entradas no histórico de navegação de volta.  
@@ -29,4 +29,4 @@ Este exemplo ilustra como navegar para entradas no histórico de navegação de 
  **CanGoBack** e **GoBack** são implementados <xref:System.Windows.Navigation.NavigationWindow>pelo <xref:System.Windows.Controls.Frame>, e <xref:System.Windows.Navigation.NavigationService>.  
   
 > [!NOTE]
->  Se você chamar o **GoBack**e não houver entradas no histórico de navegação voltar, um <xref:System.InvalidOperationException> será gerado.
+> Se você chamar o **GoBack**e não houver entradas no histórico de navegação voltar, um <xref:System.InvalidOperationException> será gerado.

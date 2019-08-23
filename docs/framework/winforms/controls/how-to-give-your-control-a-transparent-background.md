@@ -6,25 +6,25 @@ helpviewer_keywords:
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 8a03d9afec5340cd77af465c4470b7484b8926be
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a82807ea3873b2217d1f05f6c720c599ea79abdd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609711"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966647"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>Como: Dar ao controle um segundo plano transparente
-Em versões anteriores do .NET Framework, controles não oferece suporte à configuração backcolors transparente sem primeiro definir o <xref:System.Windows.Forms.Control.SetStyle%2A> método no construtor de formulários. Na versão atual do framework, a cor de fundo para a maioria dos controles pode ser definido como <xref:System.Drawing.Color.Transparent%2A> no **propriedades** janela em tempo de design ou no código no construtor do formulário.  
+Em versões anteriores do .NET Framework, os controles não suportavam definir cores de BackColor transparente sem <xref:System.Windows.Forms.Control.SetStyle%2A> primeiro definir o método no construtor do formulário. Na versão atual do Framework, a BackColor para a maioria dos controles pode ser <xref:System.Drawing.Color.Transparent%2A> definida como na janela **Propriedades** em tempo de design ou no código do construtor do formulário.  
   
 > [!NOTE]
->  Controles de formulários do Windows não têm suporte para a verdadeira transparência. O plano de fundo de um controle Windows Forms transparente é pintado pelo pai.  
+> Os controles de Windows Forms não dão suporte à transparência real. O plano de fundo de um controle de Windows Forms transparente é pintado por seu pai.  
   
 > [!NOTE]
->  O <xref:System.Windows.Controls.Button> controle não dá suporte a um backcolor transparente, mesmo quando o <xref:System.Windows.Forms.ButtonBase.BackColor%2A> estiver definida como <xref:System.Drawing.Color.Transparent%2A>.  
+> O <xref:System.Windows.Controls.Button> controle não dá suporte a um BackColor transparente mesmo <xref:System.Windows.Forms.ButtonBase.BackColor%2A> quando a propriedade é <xref:System.Drawing.Color.Transparent%2A>definida como.  
   
-### <a name="to-give-your-control-a-transparent-backcolor"></a>Para dar ao controle uma backcolor transparente  
+### <a name="to-give-your-control-a-transparent-backcolor"></a>Para dar ao seu controle um BackColor transparente  
   
-- Na janela Propriedades, escolha o <xref:System.Windows.Forms.ButtonBase.BackColor%2A> propriedade e defina-o como <xref:System.Drawing.Color.Transparent%2A>  
+- Na janela Propriedades, escolha a <xref:System.Windows.Forms.ButtonBase.BackColor%2A> Propriedade e defina-a como<xref:System.Drawing.Color.Transparent%2A>  
   
 ## <a name="see-also"></a>Consulte também
 

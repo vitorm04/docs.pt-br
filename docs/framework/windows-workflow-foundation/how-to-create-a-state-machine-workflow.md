@@ -5,73 +5,73 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 84d2355a78c7d33bf712baf158f28861e59e75d1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3f1c1beda7519a113ea15c5fed84bcb017afae12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881959"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962356"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Como: criar um fluxo de trabalho da máquina de estado
-Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico orienta a criação de um fluxo de trabalho usa atividades internas, como o <xref:System.Activities.Statements.StateMachine> atividade e atividades personalizadas do anterior [como: Criar uma atividade](how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número.  
+Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a <xref:System.Activities.Statements.StateMachine> atividade, e as atividades personalizadas da seção [como: Criar um tópico](how-to-create-an-activity.md) de atividade. O fluxo de trabalho modela um jogo de palpite de número.  
   
 > [!NOTE]
->  Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, você deve primeiro concluir [como: Criar uma atividade](how-to-create-an-activity.md).  
+> Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, você deve primeiro concluir [como: Crie uma atividade](how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Para baixar uma versão completa do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
+> Para baixar uma versão completa do tutorial, consulte [Windows Workflow Foundation (WF45) – introdução tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-workflow"></a>Para criar o fluxo de trabalho  
   
-1. Clique com botão direito **NumberGuessWorkflowActivities** na **Gerenciador de soluções** e selecione **Add**, **Novo Item**.  
+1. Clique com o botão direito do mouse em **NumberGuessWorkflowActivities** em **Gerenciador de soluções** e selecione **Adicionar**, **novo item**.  
   
-2. No **Installed**, **itens comuns** nó, selecione **fluxo de trabalho**. Selecione **atividade** da **fluxo de trabalho** lista.  
+2. No nó **itens comuns** **instalados**, selecione fluxo de **trabalho**. Selecione **atividade** na lista **fluxo de trabalho** .  
   
-3. Tipo de `StateMachineNumberGuessWorkflow` para o **nome** caixa e clique em **Add**.  
+3. Digite `StateMachineNumberGuessWorkflow` na caixa **nome** e clique em **Adicionar**.  
   
-4. Arraste uma **StateMachine** a atividade do **máquina de estado** seção o **caixa de ferramentas** e solte-o no **soltar atividade aqui** rótulos no a superfície de design de fluxo de trabalho.  
+4. Arraste uma atividade **StateMachine** da seção **máquina de estado** da caixa de **ferramentas** e solte-a no rótulo **soltar atividade aqui** na superfície de design do fluxo de trabalho.  
   
 ### <a name="to-create-the-workflow-variables-and-arguments"></a>Para criar as variáveis e os argumentos do fluxo de trabalho  
   
-1. Clique duas vezes em **Statemachinenumberguessworkflow** na **Gerenciador de soluções** para exibir o fluxo de trabalho no designer, caso ainda não esteja sendo exibido.  
+1. Clique duas vezes em **StateMachineNumberGuessWorkflow. XAML** em **Gerenciador de soluções** para exibir o fluxo de trabalho no designer, se ele ainda não estiver sendo exibido.  
   
-2. Clique em **argumentos** no lado inferior esquerdo do designer de fluxo de trabalho para exibir o **argumentos** painel.  
+2. Clique em **argumentos** no lado inferior esquerdo do designer de fluxo de trabalho para exibir o painel **argumentos** .  
   
 3. Clique em **criar argumento**.  
   
-4. Tipo `MaxNumber` para o **nome** caixa, selecione **no** do **direção** lista suspensa, selecione **Int32** da **Tipo de argumento** lista suspensa e pressione ENTER para salvar o argumento.  
+4. Digite `MaxNumber` na caixa **nome** , selecione **em na** lista suspensa **direção** , selecione **Int32** na lista suspensa **tipo de argumento** e pressione ENTER para salvar o argumento...  
   
 5. Clique em **criar argumento**.  
   
-6. Tipo `Turns` para o **nome** caixa abaixo recém-adicionada `MaxNumber` argumento, selecione **Out** do **direção** lista suspensa, selecione  **Int32** do **tipo de argumento** lista suspensa e pressione ENTER.  
+6. Digite `Turns` na caixa de **nome** que `MaxNumber` está abaixo do argumento recém-adicionado, selecione **fora** na lista suspensa **direção** , selecione **Int32** na lista suspensa tipo de **argumento** e, em seguida, pressione Enter.  
   
-7. Clique em **argumentos** no lado inferior esquerdo do designer de atividade para fechar o **argumentos** painel.  
+7. Clique em **argumentos** no lado inferior esquerdo do designer de atividade para fechar o painel **argumentos** .  
   
-8. Clique em **variáveis** no lado inferior esquerdo do designer de fluxo de trabalho para exibir o **variáveis** painel.  
+8. Clique em **variáveis** no lado inferior esquerdo do designer de fluxo de trabalho para exibir o painel **variáveis** .  
   
 9. Clique em **criar variável**.  
   
     > [!TIP]
-    >  Se nenhum **criar variável** caixa é exibida, clique no <xref:System.Activities.Statements.StateMachine> atividade na superfície do designer de fluxo de trabalho para selecioná-lo.  
+    >  Se nenhuma caixa **criar variável** for exibida, clique na <xref:System.Activities.Statements.StateMachine> atividade na superfície do designer de fluxo de trabalho para selecioná-la.  
   
-10. Tipo `Guess` para o **nome** caixa, selecione **Int32** do **tipo de variável** lista suspensa e, em seguida, pressione ENTER para salvar a variável.  
+10. Digite `Guess` na caixa **nome** , selecione **Int32** na lista suspensa **tipo de variável** e pressione ENTER para salvar a variável.  
   
 11. Clique em **criar variável**.  
   
-12. Tipo `Target` para o **nome** caixa, selecione **Int32** do **tipo de variável** lista suspensa e, em seguida, pressione ENTER para salvar a variável.  
+12. Digite `Target` na caixa **nome** , selecione **Int32** na lista suspensa **tipo de variável** e pressione ENTER para salvar a variável.  
   
-13. Clique em **variáveis** no lado inferior esquerdo do designer de atividade para fechar o **variáveis** painel.  
+13. Clique em **variáveis** no lado inferior esquerdo do designer de atividade para fechar o painel **variáveis** .  
   
 ### <a name="to-add-the-workflow-activities"></a>Para adicionar as atividades de fluxo de trabalho  
   
-1. Clique em **State1** para selecioná-lo. No **janela de propriedades**, altere o **DisplayName** para `Initialize Target`.  
+1. Clique em **State1** para selecioná-lo. Na **janela Propriedades**, altere o **DisplayName** para `Initialize Target`.  
   
     > [!TIP]
-    >  Se o **janela de propriedades** não for exibido, selecione **janela propriedades** do **exibição** menu.  
+    >  Se a **janela Propriedades** não for exibida, selecione **janela Propriedades** no menu **Exibir** .  
   
-2. Clique duas vezes em recém-renomeada **inicializar destino** estado no designer de fluxo de trabalho para expandi-lo.  
+2. Clique duas vezes no estado de destino de **inicialização** renomeado recentemente no designer de fluxo de trabalho para expandi-lo.  
   
-3. Arraste um **atribuir** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-o no **entrada** seção do estado. Tipo `Target` para o **para** caixa e a seguinte expressão na **insira uma expressão c#** ou **insira uma expressão VB** caixa.  
+3. Arraste uma atividade **atribuir** da seção **primitivas** da caixa de **ferramentas** e solte-a na seção **entrada** do estado. Digite `Target` na caixa **para** e a expressão a seguir na caixa **Inserir uma C# expressão** ou **Inserir uma expressão VB** .  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -82,17 +82,17 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     ```  
   
     > [!TIP]
-    >  Se o **caixa de ferramentas** janela não for exibida, selecione **caixa de ferramentas** do **exibição** menu.  
+    >  Se a janela **caixa de ferramentas** não for exibida, selecione caixa de **ferramentas** no menu **Exibir** .  
   
-4. Retorne ao geral exibição no designer de fluxo de trabalho de máquina de estado clicando **StateMachine** na trilha exibir na parte superior do designer de fluxo de trabalho.  
+4. Retorne à exibição de máquina de estado geral no designer de fluxo de trabalho clicando em **StateMachine** na exibição de navegação estrutural na parte superior do designer de fluxo de trabalho.  
   
-5. Arraste um **estado** atividade do **máquina de estado** seção o **caixa de ferramentas** para o designer de fluxo de trabalho e passe o mouse sobre o **inicializar destino** estado. Observe que quatro triângulos aparecerão em torno de **inicializar destino** estado quando o novo estado está sobre ele. Solte o novo estado no triângulo que está imediatamente abaixo de **inicializar destino** estado. Isso coloca o novo estado no fluxo de trabalho e cria uma transição do **inicializar destino** estado para o novo estado.  
+5. Arraste uma atividade de **estado** da seção **máquina de estado** da **caixa de ferramentas** para o designer de fluxo de trabalho e passe o mouse sobre o estado de destino de **inicialização** . Observe que quatro triângulos aparecerão em torno do estado de **inicialização de destino** quando o novo estado estiver sobre ele. Descarte o novo estado no triângulo imediatamente abaixo do estado de **inicialização de destino** . Isso coloca o novo estado no fluxo de trabalho e cria uma transição do estado de **destino de inicialização** para o novo estado.  
   
-6. Clique em **State1** para selecioná-lo, alterar o **DisplayName** para `Enter Guess`e, em seguida, clique duas vezes o estado no designer de fluxo de trabalho para expandi-lo.  
+6. Clique em **State1** para selecioná-lo, altere o `Enter Guess` **DisplayName** para e clique duas vezes no estado no designer de fluxo de trabalho para expandi-lo.  
   
-7. Arraste um **WriteLine** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-o no **entrada** seção do estado.  
+7. Arraste uma atividade **WriteLine** da seção **primitivas** da caixa de **ferramentas** e solte-a na seção **entrada** do estado.  
   
-8. Digite a seguinte expressão no **texto** da caixa da propriedade de **WriteLine**.  
+8. Digite a expressão a seguir na caixa de propriedade **texto** de **WriteLine**.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -102,23 +102,23 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     "Please enter a number between 1 and " + MaxNumber  
     ```  
   
-9. Arraste uma **atribuir** a atividade do **primitivos** seção do **caixa de ferramentas** e solte o **sair** seção do estado.  
+9. Arraste uma atividade **assign** da seção **primitivas** da caixa de **ferramentas** e solte na seção **sair** do estado.  
   
-10. Tipo de `Turns` no **para** caixa e `Turns + 1` no **insira uma expressão c#** ou **insira uma expressão VB** caixa.  
+10. Digite `Turns` na caixa **para** e `Turns + 1` na caixa **Inserir uma C# expressão** ou **Inserir uma expressão VB** .  
   
-11. Retorne ao geral exibição no designer de fluxo de trabalho de máquina de estado clicando **StateMachine** na trilha exibir na parte superior do designer de fluxo de trabalho.  
+11. Retorne à exibição de máquina de estado geral no designer de fluxo de trabalho clicando em **StateMachine** na exibição de navegação estrutural na parte superior do designer de fluxo de trabalho.  
   
-12. Arraste um **FinalState** a atividade do **máquina de estado** seção o **caixa de ferramentas**, passe o mouse sobre o **Enter Guess** de estado e solte-o no triângulo que aparece à direita do **Enter Guess** de estado para que uma transição é criada entre **Enter Guess** e **FinalState**.  
+12. Arraste uma atividade FinalState da seção **máquina de estado** da **caixa de ferramentas**, passe o mouse sobre o estado de **adivinhação Enter** e solte-o no triângulo que aparece à direita do estado **Enter estimar** para que uma transição seja criado entre **Enter estimativa** e **FinalState**.  
   
-13. É o nome padrão da transição **T2**. Clique na transição no designer de fluxo de trabalho para selecioná-lo e defina suas **DisplayName** à **Palpite correto**. Em seguida, clique e selecione o **FinalState**e arraste-o para a direita para que haja espaço para o nome completo da transição seja exibido sem sobrepor nenhum dos dois estados. Isso facilitará a conclusão das etapas restantes no tutorial.  
+13. O nome padrão da transição é **T2**. Clique na transição no designer de fluxo de trabalho para selecioná-la e defina seu **DisplayName** como **palpite correto**. Em seguida, clique eselecione o FinalState e arraste-o para a direita para que haja espaço para que o nome de transição completo seja exibido sem sobreposição de qualquer um dos dois Estados. Isso facilitará a conclusão das etapas restantes no tutorial.  
   
-14. Clique duas vezes em recém-renomeada **Palpite correto** transição no designer de fluxo de trabalho para expandi-lo.  
+14. Clique duas vezes na transição **correta** de adivinhação renomeada no designer de fluxo de trabalho para expandi-la.  
   
-15. Arraste uma **ReadInt** a atividade do **NumberGuessWorkflowActivities** seção o **caixa de ferramentas** e solte-o no **gatilho** seção da transição.  
+15. Arraste uma atividade **ReadInt** da seção **NumberGuessWorkflowActivities** da caixa de **ferramentas** e solte-a na seção **gatilho** da transição.  
   
-16. No **janela de propriedades** para o **ReadInt** atividade, digite `"EnterGuess"` incluindo as aspas no **BookmarkName** caixa de valor de propriedade e digite `Guess`para o **resultado** caixa do valor de propriedade  
+16. Na **janela Propriedades** da atividade **ReadInt** , digite `"EnterGuess"` incluindo as aspas na caixa valor da propriedade **BookmarkName** e digite `Guess` na caixa valor da propriedade de **resultado**  
   
-17. Digite a seguinte expressão para o **Palpite correto** da transição **condição** caixa do valor de propriedade.  
+17. Digite a expressão a seguir na caixa de valor da propriedade **Condition** da transição **correta** .  
   
     ```vb  
     Guess = Target  
@@ -128,22 +128,22 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     Guess == Target  
     ```  
   
-18. Retorne ao geral exibição no designer de fluxo de trabalho de máquina de estado clicando **StateMachine** na trilha exibir na parte superior do designer de fluxo de trabalho.  
+18. Retorne à exibição de máquina de estado geral no designer de fluxo de trabalho clicando em **StateMachine** na exibição de navegação estrutural na parte superior do designer de fluxo de trabalho.  
   
     > [!NOTE]
-    >  Uma transição ocorre quando o evento de gatilho é recebido e o <xref:System.Activities.Statements.Transition.Condition%2A>, se houver, é avaliado como `True`. Para essa transição, se o usuário `Guess` corresponde gerado aleatoriamente `Target`, em seguida, o controle passa para o **FinalState** e o fluxo de trabalho é concluído.  
+    > Uma transição ocorre quando o evento de gatilho é recebido e o <xref:System.Activities.Statements.Transition.Condition%2A>, se houver, é avaliado como `True`. Para essa transição, se o usuário corresponder `Guess` ao gerado `Target`aleatoriamente, o controle passará para o FinalState e o fluxo de trabalho será concluído.  
   
-19. Dependendo se o Palpite está correto, o fluxo de trabalho deve fazer a transição para o **FinalState** ou de volta para o **Enter Guess** estado para outra tentativa. Ambas as transições compartilham o mesmo gatilho de esperar o palpite do usuário ser recebida por meio de **ReadInt** atividade. Isso é chamado de uma transição compartilhada. Para criar uma transição compartilhada, clique no círculo que indica o início do **Palpite correto** transição e arraste-o para o estado desejado. Nesse caso, a transição é automática, então, arraste o ponto inicial do **Palpite correto** fazer a transição e solte-a novamente na parte inferior da **Enter Guess** estado. Depois de criar a transição, selecione-a no designer de fluxo de trabalho e defina suas **DisplayName** propriedade **Palpite incorreto**.  
-  
-    > [!NOTE]
-    >  As transições compartilhadas também podem ser criadas de dentro do designer de transição clicando **adicionar transição de gatilho de compartilhado** na parte inferior do designer de transição e, em seguida, selecionando o estado do destino desejado do  **Estados disponíveis para conectar-se** lista suspensa.  
+19. Dependendo se a estimativa está correta, o fluxo de trabalho deve fazer a transição para o FinalState ou de volta para o estado de **adivinhação Enter** para outra tentativa. Ambas as transições compartilham o mesmo gatilho de aguardando que a adivinhação do usuário seja recebida por meio da atividade **ReadInt** . Isso é chamado de uma transição compartilhada. Para criar uma transição compartilhada, clique no círculo que indica o início da transição de **adivinhação correta** e arraste-a para o estado desejado. Nesse caso, a transição é uma transição automática, portanto, arraste o ponto inicial da transição de **adivinhação correta** e solte-a de volta na parte inferior do estado de **adivinhação Enter** . Depois de criar a transição, selecione-a no designer de fluxo de trabalho e defina sua propriedade **DisplayName** como **adivinhar incorreta**.  
   
     > [!NOTE]
-    >  Observe que se <xref:System.Activities.Statements.Transition.Condition%2A> de uma transição for avaliada como `false` (ou todas as condições de uma transição do gatilho compartilhada for avaliada como `false`), a transição não ocorrerá e todos os gatilhos para todas as transições de estado serão reprogramados. Neste tutorial, essa situação não pode ocorrer devido à maneira como as condições são configuradas (temos ações específicas para se o palpite está correto ou incorreto).  
+    > As transições compartilhadas também podem ser criadas de dentro do designer de transição clicando em **Adicionar transição de gatilho compartilhado** na parte inferior do designer de transição e, em seguida, selecionando o estado de destino desejado nos **Estados disponíveis para se conectar** menu suspenso.  
   
-20. Clique duas vezes o **Palpite incorreto** transição no designer de fluxo de trabalho para expandi-lo. Observe que o **disparador** já está definido como o mesmo **ReadInt** atividade que foi usada pelo **Palpite correto** transição.  
+    > [!NOTE]
+    > Observe que se <xref:System.Activities.Statements.Transition.Condition%2A> de uma transição for avaliada como `false` (ou todas as condições de uma transição do gatilho compartilhada for avaliada como `false`), a transição não ocorrerá e todos os gatilhos para todas as transições de estado serão reprogramados. Neste tutorial, essa situação não pode ocorrer devido à maneira como as condições são configuradas (temos ações específicas para se o palpite está correto ou incorreto).  
   
-21. Digite a seguinte expressão para o **condição** caixa do valor de propriedade.  
+20. Clique duas vezes em **adivinhar** transição incorreta no designer de fluxo de trabalho para expandi-la. Observe que o **gatilho** já está definido como a mesma atividade **ReadInt** que foi usada pela transição de **adivinhação correta** .  
+  
+21. Digite a expressão a seguir na caixa valor da propriedade de **condição** .  
   
     ```vb  
     Guess <> Target  
@@ -153,39 +153,39 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     Guess != Target  
     ```  
   
-22. Arraste uma **se** a atividade do **fluxo de controle** seção o **caixa de ferramentas** e solte-o no **ação** seção da transição.  
+22. Arraste uma atividade **If** da seção **fluxo de controle** da **caixa de ferramentas** e solte-a na seção **ação** da transição.  
   
-23. Digite a seguinte expressão para o **se** da atividade **condição** caixa do valor de propriedade.  
+23. Digite a expressão a seguir na caixa de valor da propriedade **condição** **If** da atividade.  
   
     ```
     Guess < Target  
     ```  
   
-24. Arraste dois **WriteLine** atividades da **primitivos** seção do **caixa de ferramentas** e soltá-los de modo que uma esteja no **, em seguida,** seção o **se** atividade e outra esteja na **Else** seção.  
+24. Arraste duas atividades **WriteLine** da seção **primitivas** da caixa de **ferramentas** e solte-as para que uma esteja na seção **em seguida** da atividade **se** e outra esteja na seção **else** .  
   
-25. Clique o **WriteLine** atividade na **, em seguida,** seção para selecioná-lo e, em seguida, digite a seguinte expressão na **texto** caixa do valor de propriedade.  
+25. Clique na atividade **WriteLine** na seção **em seguida** para selecioná-la e digite a expressão a seguir na caixa valor da propriedade de **texto** .  
   
     ```
     "Your guess is too low."  
     ```  
   
-26. Clique o **WriteLine** atividade na **Else** seção para selecioná-lo e, em seguida, digite a seguinte expressão na **texto** caixa do valor de propriedade.  
+26. Clique na atividade **WriteLine** na seção **else** para selecioná-la e digite a expressão a seguir na caixa valor da propriedade de **texto** .  
   
     ```
     "Your guess is too high."  
     ```  
   
-27. Retorne ao geral exibição no designer de fluxo de trabalho de máquina de estado clicando **StateMachine** na trilha exibir na parte superior do designer de fluxo de trabalho.  
+27. Retorne à exibição de máquina de estado geral no designer de fluxo de trabalho clicando em **StateMachine** na exibição de navegação estrutural na parte superior do designer de fluxo de trabalho.  
   
      O exemplo a seguir ilustra o fluxo de trabalho concluído.  
   
-     ![Ilustração que mostra o fluxo de trabalho de máquina de estado concluído.](./media/how-to-create-a-state-machine-workflow/complete-state-machine-workflow.jpg)  
+     ![Ilustração que mostra o fluxo de trabalho da máquina de estado concluído.](./media/how-to-create-a-state-machine-workflow/complete-state-machine-workflow.jpg)  
   
 ### <a name="to-build-the-workflow"></a>Para compilar o fluxo de trabalho  
   
 1. Pressione CTRL+SHIFT+B para criar a solução.  
   
-     Para obter instruções sobre como executar o fluxo de trabalho, consulte o próximo tópico, [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md). Se você já tiver concluído o [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md) passo a passo com um estilo diferente de fluxo de trabalho e quiser executá-lo usando o fluxo de trabalho de máquina de estado dessa etapa, pule para a [para compilar e executar o aplicativo](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) seção [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md).  
+     Para obter instruções sobre como executar o fluxo de trabalho, consulte o próximo tópico [, como: Executar um fluxo](how-to-run-a-workflow.md)de trabalho. Se você já tiver concluído o [como: Execute uma etapa](how-to-run-a-workflow.md) de fluxo de trabalho com um estilo diferente de fluxo de trabalho e queira executá-lo usando o fluxo de trabalho de máquina de estado nesta etapa, pule para a seção [ [para compilar e executar o aplicativo](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) de como: Executar um fluxo](how-to-run-a-workflow.md)de trabalho.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -2,18 +2,18 @@
 title: Esquema de base de dados de persistência
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 38df4b3d629840f1b5def2eafa0d074a2b2397a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 384a9aceaf0b5619bbc4eca5929b6e6d7855e3d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864163"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962891"
 ---
 # <a name="persistence-database-schema"></a>Esquema de base de dados de persistência
 Este tópico descreve as visualizações públicas suportadas por instância Store de fluxo de trabalho SQL.  
   
 ## <a name="instances-view"></a>O modo de instâncias  
- O **instâncias** exibição contém informações gerais sobre todas as instâncias de fluxo de trabalho no banco de dados.  
+ A exibição **instâncias** contém informações gerais sobre todas as instâncias de fluxo de trabalho no banco de dados.  
   
 |Nome da coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
@@ -22,16 +22,16 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
 |CreationTime|DateTime|Indica quando o fluxo de trabalho foi criado.|  
 |LastUpdatedTime|DateTime|Indica a última vez que o fluxo de trabalho foi persistente a base de dados.|  
 |ServiceDeploymentId|BigInt|Atua como uma chave estrangeira para modo de ServiceDeployments []. Se a instância atual de fluxo de trabalho é uma instância de um serviço web hospedado, então essa coluna tem um valor, se não estiver definida PARA ANULAR.|  
-|SuspensionExceptionName|Nvarchar(450)|Indica o tipo de exceção (por exemplo, InvalidOperationException) que causou o fluxo de trabalho Suspender.|  
+|SuspensionExceptionName|Nvarchar(450)|Indica o tipo de exceção (por exemplo, InvalidOperationException) que fez com que o fluxo de trabalho fosse suspenso.|  
 |SuspensionReason|Nvarchar (máximo)|Indica como a instância de fluxo de trabalho foi suspendida. Se uma exceção causou a instância suspende, então essa coluna contém a mensagem associada com a exceção.<br /><br /> Se a instância foi suspendida manualmente, então essa coluna contém a razão especificada pelo usuário para suspender a instância.|  
 |ActiveBookmarks|Nvarchar (máximo)|Se a instância de fluxo de trabalho estiver ocioso, essa propriedade indica que indicadores a instância é bloqueada sobre. Se a instância não estiver ocioso, então essa coluna é NULA.|  
 |CurrentMachine|Nvarchar(128)|Indica que o nome do computador atualmente tem a instância de fluxo de trabalho carregado na memória.|  
 |LastMachine|Nvarchar(450)|Indica o computador o último que carregou a instância de fluxo de trabalho.|  
-|ExecutionStatus|Nvarchar(450)|Indica o estado atual de execução de fluxo de trabalho. Os estados possíveis incluem **Executing**, **ocioso**, **fechado**.|  
+|ExecutionStatus|Nvarchar(450)|Indica o estado atual de execução de fluxo de trabalho. Os Estados possíveisincluem execuções, **ociosas**, **fechadas**.|  
 |IsInitialized|Bit|Indica se a instância de fluxo de trabalho foi inicializada. Uma instância inicializada de fluxo de trabalho é uma instância de fluxo de trabalho que é mantido pelo menos uma vez.|  
 |IsSuspended|Bit|Indica se a instância de fluxo de trabalho foi suspendida.|  
-|IsCompleted|Bit|Indica se a instância de fluxo de trabalho terminou de executar. **Observação:**  IIf a **InstanceCompletionAction** estiver definida como **DeleteAll**, as instâncias são removidas do modo de exibição após a conclusão.|  
-|EncodingOption|TinyInt|Descreve a codificação usada para serializar as propriedades de dados.<br /><br /> -0 – sem codificação<br />-   1 – GzipStream|  
+|IsCompleted|Bit|Indica se a instância de fluxo de trabalho terminou de executar. **Observação:**  IIf a propriedade **InstanceCompletionAction** é definida como **DeleteAll**, as instâncias são removidas da exibição após a conclusão.|  
+|EncodingOption|TinyInt|Descreve a codificação usada para serializar as propriedades de dados.<br /><br /> -0 – sem codificação<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que serão fornecidos de volta para o tempo de execução de fluxo de trabalho que a instância é carregada.<br /><br /> Cada propriedade primitiva é um tipo nativo de CLR, o que significa que qualquer conjunto especial é necessário para desserializar a operação.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que não são fornecidas de volta para o tempo de execução de fluxo de trabalho que a instância é carregada.<br /><br /> Cada propriedade primitiva é um tipo nativo de CLR, o que significa que qualquer conjunto especial é necessário para desserializar a operação.|  
 |ReadWriteComplexDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que serão fornecidos de volta para o tempo de execução de fluxo de trabalho que a instância é carregada.<br /><br /> Desserialização um exigiria conhecimento de todos os tipos de objeto armazenados nesta operação.|  
@@ -44,17 +44,17 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
 |Revisão|BigInt|O número de revisão de versão de fluxo de trabalho.|  
   
 > [!CAUTION]
->  O **instâncias** exibição também contém um gatilho Delete. Os usuários com as permissões apropriadas podem executar instruções de exclusão nesta exibição que removerá vigorosa as instâncias de fluxo de trabalho de base de dados. Recomendamos excluir diretamente de exibição somente como um recurso o último como excluir uma instância sob o tempo de execução de fluxo de trabalho pode levar a consequências não intencionais. Em vez disso, use o ponto final de gerenciamento de instância de fluxo de trabalho para que o tempo de execução de fluxo de trabalho finalizar a instância. Se você deseja excluir um grande número de instâncias de exibição, certifique-se de que não há nenhum tempo de execução ativa que pode operar nessas instâncias.  
+>  A exibição **instâncias** também contém um gatilho DELETE. Os usuários com as permissões apropriadas podem executar instruções de exclusão nesta exibição que removerá vigorosa as instâncias de fluxo de trabalho de base de dados. Recomendamos excluir diretamente de exibição somente como um recurso o último como excluir uma instância sob o tempo de execução de fluxo de trabalho pode levar a consequências não intencionais. Em vez disso, use o ponto final de gerenciamento de instância de fluxo de trabalho para que o tempo de execução de fluxo de trabalho finalizar a instância. Se você deseja excluir um grande número de instâncias de exibição, certifique-se de que não há nenhum tempo de execução ativa que pode operar nessas instâncias.  
   
 ## <a name="servicedeployments-view"></a>O modo de ServiceDeployments  
- O **ServiceDeployments** contém informações de implantação para tudo na Web (IIS / WAS) serviços de fluxo de trabalho hospedados. Cada instância de fluxo de trabalho Web está hospedada conterá uma **ServiceDeploymentId** que se refere a uma linha nesta exibição.  
+ A exibição de implantações contém informações de implantação para todos os serviços de fluxo de trabalho hospedados na Web (IIS/WAS). Cada instância de fluxo de trabalho hospedada na Web conterá um serviceInstance que se refere a uma linha nessa exibição.  
   
 |Nome da coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|A chave primária para esta exibição.|  
-|SiteName|Nvarchar (máximo)|Representa o nome do site que contém o serviço de fluxo de trabalho (por exemplo, **Default Web Site**).|  
-|RelativeServicePath|Nvarchar (máximo)|Representa o caminho virtual relativo ao site da web que aponta para o serviço de fluxo de trabalho. (por exemplo  **/app1/PurchaseOrderService.svc**).|  
-|RelativeApplicationPath|Nvarchar (máximo)|Representa o caminho virtual relativo ao site da web que aponta para um aplicativo que contém o serviço de fluxo de trabalho. (por exemplo, **/app1**).|  
+|SiteName|Nvarchar (máximo)|Representa o nome do site que contém o serviço de fluxo de trabalho (por exemplo, **site padrão**).|  
+|RelativeServicePath|Nvarchar (máximo)|Representa o caminho virtual relativo ao site da web que aponta para o serviço de fluxo de trabalho. p.  **/App1/PurchaseOrderService.svc**).|  
+|RelativeApplicationPath|Nvarchar (máximo)|Representa o caminho virtual relativo ao site da web que aponta para um aplicativo que contém o serviço de fluxo de trabalho. (por exemplo, **/App1**).|  
 |ServiceName|Nvarchar (máximo)|Representa o nome do serviço de fluxo de trabalho. (por exemplo, **PurchaseOrderService**).|  
 |ServiceNamespace|Nvarchar (máximo)|Representa o namespace do serviço de fluxo de trabalho. (por exemplo, **MyCompany**).|  
   
@@ -62,20 +62,20 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
   
 1. Excluir entradas desta exibição é grande desde que o base de dados inteiro deve ser bloqueado antes de executar esta operação. Isso é necessário para evitar o cenário onde uma instância de fluxo de trabalho pode referir-se a uma entrada inexistente de ServiceDeployment. Excluir desta exibição somente durante o tempo de inatividade/janelas de aplicativos.  
   
-2. Qualquer tentativa de excluir uma linha de ServiceDeployment que é referenciada pelas entradas na **instâncias** exibição resultará no não operacional. Você só pode excluir linhas de ServiceDeployment com referências zero.  
+2. Qualquer tentativa de excluir uma linha de imdeployment que é referenciada por entradas no modo de exibição de **instâncias** resultará em uma operação não operacional. Você só pode excluir linhas de ServiceDeployment com referências zero.  
   
 ## <a name="instancepromotedproperties-view"></a>O modo de InstancePromotedProperties  
- O **InstancePromotedProperties** contém informações para todas as propriedades elevadas especificadas pelo usuário. Uma propriedade promovida funciona como uma propriedade de primeira classe, que um usuário possa usar em consultas para recuperar instâncias.  Por exemplo, um usuário pode adicionar uma promoção de PurchaseOrder que armazena sempre o custo de um pedido na **Value1** coluna. Isso deve permitir um usuário para consultar todos os pedidos de compra cujos custo exceder qualquer valor.  
+ A exibição **InstancePromotedProperties** contém informações para todas as propriedades promovidas que são especificadas pelo usuário. Uma propriedade promovida funciona como uma propriedade de primeira classe, que um usuário possa usar em consultas para recuperar instâncias.  Por exemplo, um usuário poderia adicionar uma promoção PurchaseOrder que sempre armazena o custo de um pedido na coluna **value1** . Isso deve permitir um usuário para consultar todos os pedidos de compra cujos custo exceder qualquer valor.  
   
 |Tipo de coluna|Tipo de coluna|Descrição|  
 |-|-|-|  
 |InstanceId|UniqueIdentifier|A identificação de instância de fluxo de trabalho|  
 |EncodingOption|TinyInt|Descreve a codificação usada para serializar as propriedades binários elevadas.<br /><br /> -0 – sem codificação<br />-1 – GZipStream|  
 |PromotionName|Nvarchar (400)|O nome da promoção associada com essa instância. O PromotionName é necessário para adicionar contexto para colunas genéricos nesta linha.<br /><br /> Por exemplo, um PromotionName de PurchaseOrder pode indicar que o valor1 contém os custos de ordem, valor2 contém o nome do cliente que fez o pedido, valor 3 contém o endereço de cliente, e assim por diante.|  
-|Value[1-32]|SqlVariant|O valor [] 1-32 contém os valores que podem ser armazenados em uma coluna de SqlVariant. Uma única promoção não pode conter mais de 32 SqlVariants.|  
+|Valor [1-32]|SqlVariant|O valor [] 1-32 contém os valores que podem ser armazenados em uma coluna de SqlVariant. Uma única promoção não pode conter mais de 32 SqlVariants.|  
 |Valor [33-64]|Varbinary (máximo)|O valor [] 33-64 contém valores serializados. Por exemplo, Value33 pode conter JPEG de um item que está sendo comprado. Uma única promoção não pode conter mais de 32 propriedades binários|  
   
  O modo de InstancePromotedProperties é limite do esquema, o que significa que os usuários podem adicionar índices em uma ou mais colunas para otimizar consultas nesta exibição.  
   
 > [!NOTE]
->  Uma exibição indexada requer mais armazenamento e adicione a sobrecarga adicional de processamento. Consulte a [melhorando o desempenho com exibições indexadas do SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=179529) para obter mais informações.
+> Uma exibição indexada requer mais armazenamento e adicione a sobrecarga adicional de processamento. Veja melhorando o [desempenho com exibições indexadas do SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=179529) para obter mais informações.

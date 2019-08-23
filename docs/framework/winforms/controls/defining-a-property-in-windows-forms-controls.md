@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: f2f36cc7fe59262e1e16b913e18daa7363240847
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a641b1e7565842a1edf6aeec88bdc37ee0786ab4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648039"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969123"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definindo uma propriedade em controles dos Windows Forms
 Para obter uma visão geral das propriedades, consulte [Visão geral das propriedades](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Há algumas considerações importantes ao definir uma propriedade:  
   
 - Você deve aplicar atributos às propriedades que você definir. Atributos especificam como o designer deve exibir uma propriedade. Para obter detalhes, consulte [Atributos de tempo de design para componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
-- Se alterar a propriedade afeta a exibição visual do controle, chame o <xref:System.Windows.Forms.Control.Invalidate%2A> método (que o controle herda de <xref:System.Windows.Forms.Control>) do `set` acessador. <xref:System.Windows.Forms.Control.Invalidate%2A> por sua vez chama o <xref:System.Windows.Forms.Control.OnPaint%2A> método, que redesenha o controle. Diversas chamadas para <xref:System.Windows.Forms.Control.Invalidate%2A> resultar em uma única chamada para <xref:System.Windows.Forms.Control.OnPaint%2A> para maior eficiência.  
+- Se a alteração da propriedade afetar a exibição visual do controle, chame o <xref:System.Windows.Forms.Control.Invalidate%2A> método (que o controle herda de <xref:System.Windows.Forms.Control>) do `set` acessador. <xref:System.Windows.Forms.Control.Invalidate%2A>por sua vez, <xref:System.Windows.Forms.Control.OnPaint%2A> chama o método, que redesenha o controle. Várias chamadas para <xref:System.Windows.Forms.Control.Invalidate%2A> resultar em uma única chamada para <xref:System.Windows.Forms.Control.OnPaint%2A> a eficiência.  
   
 - A biblioteca de classes do .NET Framework fornece conversores de tipo para tipos de dados comuns como inteiros, números decimais, valores boolianos e outros. A finalidade de um conversor de tipo geralmente é fornecer conversão de cadeia de caracteres para valor (de dados de cadeia de caracteres em outros tipos de dados). Tipos de dados comuns são associados a conversores de tipo padrão que convertem valores em cadeias de caracteres e nos tipos de dados apropriados. Se você definir uma propriedade que é um tipo de dados personalizado (isto é, fora do padrão), será necessário aplicar um atributo que especifica o conversor de tipo para associá-lo a essa propriedade. Você também pode usar um atributo para associar um editor de tipos de interface do usuário personalizado a uma propriedade. Um editor de tipos de interface do usuário fornece uma interface do usuário para editar uma propriedade ou tipo de dados. Um seletor de cor é um exemplo de um editor de tipos de interface do usuário. Exemplos de atributos são fornecidos no final deste tópico.  
   
     > [!NOTE]
-    >  Se um conversor de tipo ou um editor de tipos de interface do usuário não estiver disponível para a propriedade personalizada, você poderá implementar um conforme descrito em [Estendendo o suporte no tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  
+    > Se um conversor de tipo ou um editor de tipos de interface do usuário não estiver disponível para a propriedade personalizada, você poderá implementar um conforme descrito em [Estendendo o suporte no tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  
   
  O fragmento de código a seguir define uma propriedade personalizada chamada `EndColor` para o controle personalizado `FlashTrackBar`.  
   
@@ -95,7 +95,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- O fragmento de código a seguir associa um conversor de tipo e um editor de tipo à interface do usuário com a propriedade `Value`. Nesse caso `Value` é um inteiro e tem um conversor de tipo padrão, mas o <xref:System.ComponentModel.TypeConverterAttribute> atributo se aplica a um conversor de tipo personalizado (`FlashTrackBarValueConverter`) que permite que o designer para exibi-lo como uma porcentagem. O editor de tipo da interface do usuário, `FlashTrackBarValueEditor`, permite que o percentual seja exibido visualmente. Este exemplo também mostra que o conversor de tipo ou o editor especificado pelo <xref:System.ComponentModel.TypeConverterAttribute> ou <xref:System.ComponentModel.EditorAttribute> atributo substitui o conversor padrão.  
+ O fragmento de código a seguir associa um conversor de tipo e um editor de tipo à interface do usuário com a propriedade `Value`. Nesse caso `Value` , é um inteiro e tem um conversor de tipo padrão, mas <xref:System.ComponentModel.TypeConverterAttribute> o atributo aplica um conversor de tipo`FlashTrackBarValueConverter`personalizado () que permite que o designer o exiba como uma porcentagem. O editor de tipo da interface do usuário, `FlashTrackBarValueEditor`, permite que o percentual seja exibido visualmente. Este exemplo também mostra que o conversor de tipo ou o editor especificado <xref:System.ComponentModel.TypeConverterAttribute> pelo <xref:System.ComponentModel.EditorAttribute> atributo ou substitui o conversor padrão.  
   
 ```vb  
 <Category("Flash"), _  

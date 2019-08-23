@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b926214d3be7f5f57783a8599acf1bb1042f956
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982391"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944450"
 ---
 # <a name="error-statement"></a>Instrução Error
 Simula a ocorrência de um erro.  
@@ -31,26 +31,26 @@ Error errornumber
  Necessário. Pode ser qualquer número de erro válido.  
   
 ## <a name="remarks"></a>Comentários  
- O `Error` instrução é suportada para compatibilidade com versões anteriores. No novo código, especialmente ao criar objetos, use o `Err` do objeto `Raise` método para gerar erros de tempo de execução.  
+ A `Error` instrução tem suporte para compatibilidade com versões anteriores. No novo código, especialmente ao criar objetos, use o `Err` método do `Raise` objeto para gerar erros em tempo de execução.  
   
- Se `errornumber` for definido, o `Error` instrução chama o manipulador de erro após as propriedades do `Err` objeto são atribuídos os seguintes valores padrão:  
+ Se `errornumber` for definido, a `Error` instrução chamará o manipulador de erro `Err` depois que as propriedades do objeto forem atribuídas aos seguintes valores padrão:  
   
 |Propriedade|Valor|  
 |--------------|-----------|  
 |`Number`|Valor especificado como argumento para `Error` instrução. Pode ser qualquer número de erro válido.|  
-|`Source`|Nome do projeto atual do Visual Basic.|  
-|`Description`|Expressão correspondente para o valor de retorno de cadeia de caracteres a `Error` função especificado `Number`, se essa cadeia de caracteres não existir. Se a cadeia de caracteres não existir, `Description` contém uma cadeia de caracteres de comprimento zero ("").|  
-|`HelpFile`|A unidade totalmente qualificada, o caminho e o nome do arquivo do arquivo de Ajuda do Visual Basic apropriado.|  
-|`HelpContext`|ID de contexto para o erro correspondente de arquivos de ajuda Visual Basic a `Number` propriedade.|  
+|`Source`|Nome do projeto de Visual Basic atual.|  
+|`Description`|Expressão de cadeia de caracteres correspondente ao valor de `Error` retorno da função para `Number`o especificado, se essa cadeia de caracteres existir. Se a cadeia de caracteres não existir `Description` , conterá uma cadeia de caracteres de comprimento zero ("").|  
+|`HelpFile`|A unidade, o caminho e o nome de arquivo totalmente qualificados do arquivo de ajuda Visual Basic apropriado.|  
+|`HelpContext`|A ID de contexto do arquivo de ajuda Visual Basic apropriada para o erro `Number` correspondente à propriedade.|  
 |`LastDLLError`|Zero.|  
   
- Se nenhum manipulador de erro existe, ou se nenhum estiver habilitado, uma mensagem de erro é criada e exibida do `Err` propriedades do objeto.  
+ Se nenhum manipulador de erro existir, ou se nenhum estiver habilitado, uma mensagem de erro será criada e exibida `Err` nas propriedades do objeto.  
   
 > [!NOTE]
->  Alguns aplicativos de host do Visual Basic não é possível criar objetos. Consulte a documentação do seu aplicativo de host para determinar se ele pode criar classes e objetos.  
+> Alguns aplicativos host Visual Basic não podem criar objetos. Consulte a documentação do aplicativo host para determinar se ele pode criar classes e objetos.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `Error` instrução para gerar o erro número 11.  
+ Este exemplo usa a `Error` instrução para gerar o número de erro 11.  
   
 ```  
 On Error Resume Next   ' Defer error handling.  
@@ -60,7 +60,7 @@ Error 11   ' Simulate the "Division by zero" error.
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
+ **)** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -6,29 +6,29 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: ff5320fa5b4441ae3e0f414b274ab9118b77ec50
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6aa3e27cdfda7597c9b6acbf2980a2774f2b667b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963033"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Como: Animar uma matriz usando quadros principais
 Este exemplo mostra como animar a <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propriedade de um <xref:System.Windows.Media.MatrixTransform> usando quadros-chave.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> classe para animar a <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propriedade de um <xref:System.Windows.Media.MatrixTransform>. O exemplo usa o <xref:System.Windows.Media.MatrixTransform> objeto para transformar a aparência e a posição de um <xref:System.Windows.Controls.Button>.  
+ O exemplo a seguir usa <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> a classe para animar a <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propriedade <xref:System.Windows.Media.MatrixTransform>de um. O exemplo usa o <xref:System.Windows.Media.MatrixTransform> objeto para transformar a aparência e a posição de <xref:System.Windows.Controls.Button>um.  
   
- Essa animação usa o <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> de classe para criar dois quadros-chave e faz o seguinte com eles:  
+ Essa animação usa a <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> classe para criar dois quadros-chave e faz o seguinte com eles:  
   
-1. Anima o primeiro <xref:System.Windows.Media.Matrix> durante o primeiro 0,2 segundo. O exemplo altera o <xref:System.Windows.Media.Matrix.M11%2A> e <xref:System.Windows.Media.Matrix.M12%2A> propriedades do <xref:System.Windows.Media.Matrix>. Essa alteração faz com que o botão se alongue e fique achatado. O exemplo também modifica o <xref:System.Windows.Media.Matrix.OffsetX%2A> e <xref:System.Windows.Media.Matrix.OffsetY%2A> propriedades para que o botão muda de posição.  
+1. Anima o primeiro <xref:System.Windows.Media.Matrix> durante os primeiros 0,2 segundos. O exemplo altera as <xref:System.Windows.Media.Matrix.M11%2A> propriedades <xref:System.Windows.Media.Matrix.M12%2A> e do <xref:System.Windows.Media.Matrix>. Essa alteração faz com que o botão se alongue e fique achatado. O exemplo também altera as <xref:System.Windows.Media.Matrix.OffsetX%2A> propriedades <xref:System.Windows.Media.Matrix.OffsetY%2A> e para que o botão mude de posição.  
   
-2. Anima o segundo <xref:System.Windows.Media.Matrix> em 1,0 segundo. O botão muda para outra posição enquanto o botão não é mais distorcido ou alongado.  
+2. Anima o segundo <xref:System.Windows.Media.Matrix> em 1,0 segundos. O botão muda para outra posição enquanto o botão não é mais distorcido ou alongado.  
   
 3. Repete a animação indefinidamente.  
   
 > [!NOTE]
->  Quadros que derivam de chave a <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> objeto criam saltos repentinos entre valores, ou seja, o movimento da animação é brusco.  
+> Os quadros-chave que derivam do <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> objeto criam saltos repentinos entre valores, ou seja, a movimentação da animação é Jerky.  
   
  [!code-xaml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
   

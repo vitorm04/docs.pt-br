@@ -2,12 +2,12 @@
 title: Participantes de rastreamento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a92c3ab710fc9bc86fbf269a4672f1d34737cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699794"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963684"
 ---
 # <a name="tracking-participants"></a>Participantes de rastreamento
 Os participantes de rastreamento são os pontos de extensibilidade que permitem que um desenvolvedor de fluxo de trabalho acessar objetos de <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e processe os. O [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] inclui um participante padrão de rastreamento que grava registros de rastreamento como eventos de Rastreamento de Eventos para Windows (ETW). Se isso não atender aos requisitos, você também poderá escrever um participante de rastreamento personalizado.  
@@ -15,7 +15,7 @@ Os participantes de rastreamento são os pontos de extensibilidade que permitem 
 ## <a name="tracking-participants"></a>Participantes de rastreamento  
  A infraestrutura de rastreamento permite que o aplicativo de um filtro os registros de saída de rastreamento para que um participante pode assinar um subconjunto de registros. O mecanismo para aplicar um filtro é com um perfil de rastreamento.  
   
- Windows Workflow Foundation (WF) no [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] fornece um participante de rastreamento que grava os registros de rastreamento em uma sessão do ETW. O participante é configurado em um serviço de fluxo de trabalho adicionando um comportamento acompanhamento- específico em um arquivo de configuração. Ativar um participante de rastreamento de ETW permite controlar os registros a serem exibidos no visualizador de eventos. O exemplo SDK para o rastreamento ETW- base é uma boa maneira para obter o familiarizado com rastreamento de WF usando o participante controlando ETW- base.  
+ Windows Workflow Foundation (WF) no [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] fornece um participante de rastreamento que grava os registros de controle em uma sessão de ETW. O participante é configurado em um serviço de fluxo de trabalho adicionando um comportamento acompanhamento- específico em um arquivo de configuração. Ativar um participante de rastreamento de ETW permite controlar os registros a serem exibidos no visualizador de eventos. O exemplo SDK para o rastreamento ETW- base é uma boa maneira para obter o familiarizado com rastreamento de WF usando o participante controlando ETW- base.  
   
 ## <a name="etw-tracking-participant"></a>Participante de rastreamento de ETW  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] inclui um participante de rastreamento de ETW que grava os registros de rastreamento a uma sessão de ETW. Isso é feito em uma maneira muito eficiente com um impacto mínimo o desempenho do aplicativo ou à produção de servidor. Uma vantagem de usar o participante de acompanhamento de ETW padrão é que os registros que o controle receba podem ser exibidos com o outro aplicativo e o sistema entra no visualizador de eventos do Windows.  
@@ -47,7 +47,7 @@ Os participantes de rastreamento são os pontos de extensibilidade que permitem 
 ```  
   
 > [!NOTE]
->  Se um nome de `trackingProfile` não for especificado, como apenas `<etwTracking/>` ou `<etwTracking profileName=""/>`, então o perfil padrão de rastreamento instalado com [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] no arquivo Machine.config é usado.  
+> Se um nome de `trackingProfile` não for especificado, como apenas `<etwTracking/>` ou `<etwTracking profileName=""/>`, então o perfil padrão de rastreamento instalado com [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] no arquivo Machine.config é usado.  
   
  No arquivo Machine.config, o perfil padrão de rastreamento assina os registros e a falhas de instância de fluxo de trabalho.  
   
@@ -60,14 +60,14 @@ Os participantes de rastreamento são os pontos de extensibilidade que permitem 
   
  A ilustração a seguir mostra o fluxo de dados de rastreamento através de participante de rastreamento de ETW. Uma vez que os dados de acompanhamento alcançam a sessão de ETW, podem ser acessados de várias maneiras. Uma das maneiras mais úteis de acessar esses eventos é através do visualizador de eventos, uma ferramenta do Windows comuns usada exibindo efetua logon e rastreamentos de aplicativos e serviços.  
   
- ![Fluxo de dados por meio do provedor de rastreamento ETW de rastreamento.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
+ ![Fluxo de dados de rastreamento por meio do provedor de rastreamento ETW.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>Dados do evento de participante de rastreamento  
- Um participante de rastreamento serializa dados controlados de evento a uma sessão de ETW no formato de um evento pelo registro de rastreamento.  Um evento é identificado usando um identificador dentro do intervalo de 100 a 199. Para obter definições de evento de acompanhamento emitidos por um participante de rastreamento, os registros, consulte a [referência de rastreamento de eventos](tracking-events-reference.md) tópico.  
+ Um participante de rastreamento serializa dados controlados de evento a uma sessão de ETW no formato de um evento pelo registro de rastreamento.  Um evento é identificado usando um identificador dentro do intervalo de 100 a 199. Para obter definições dos registros de eventos de rastreamento emitidos por um participante de acompanhamento, consulte o tópico de [referência de eventos de rastreamento](tracking-events-reference.md) .  
   
  O tamanho de um evento de ETW é limitado pelo tamanho do buffer de ETW, ou pela carga útil máximo para um evento de ETW, qualquer valor é menor. Se o tamanho do evento excede qualquer um desses limites de ETW, o evento será truncado e seu conteúdo é removido de uma maneira arbitrária. Variáveis, os argumentos, anotações e os dados personalizado não são removidos seletivamente. No caso de truncamento, todos estes é truncada independentemente do valor que fez com que o tamanho do evento excede o limite de ETW.  Os dados são removidos substituídos por `<item>..<item>`.  
   
- Tipos complexos em variáveis, argumentos, e itens de dados personalizados são serializados para o registro de eventos ETW usando o [classe NetDataContractSerializer](https://go.microsoft.com/fwlink/?LinkId=177537). Essa classe inclui informações de CLR- tipo no vapor serializado XML.  
+ Tipos complexos em variáveis, argumentos e itens de dados personalizados são serializados para o registro de evento do ETW usando a [classe NetDataContractSerializer](https://go.microsoft.com/fwlink/?LinkId=177537). Essa classe inclui informações de CLR- tipo no vapor serializado XML.  
   
  Truncamento de dados de carregamento útil devido aos limites de ETW pode resultar em duplicado através dos registros que estão sendo enviados a uma sessão de ETW. Isso pode ocorrer se mais de uma sessão é escutando eventos e as sessões têm diferentes limites de carregamento útil para os eventos.  
   
@@ -77,17 +77,17 @@ Os participantes de rastreamento são os pontos de extensibilidade que permitem 
  Os eventos que são gravados em uma sessão de ETW por participante de rastreamento de ETW podem ser acessados através do visualizador de eventos (para usar o padrão de identificação do provedor). Isso permite rapidamente exibindo os registros de rastreamento que foram emitidos pelo fluxo de trabalho.  
   
 > [!NOTE]
->  Controlando o registro os eventos emissores a uma sessão de ETW usam IDs de evento no intervalo de 100 a 199.  
+> Controlando o registro os eventos emissores a uma sessão de ETW usam IDs de evento no intervalo de 100 a 199.  
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>Para ativar exibir os registros de rastreamento no visualizador de eventos  
   
 1. Ligue o visualizador de eventos (EVENTVWR.EXE)  
   
-2. Selecione **Visualizador de eventos, Applications and Services Logs, Microsoft, Windows, aplicativos de servidor**.  
+2. Selecione **Visualizador de eventos, logs de aplicativos e serviços, Microsoft, Windows, servidor de aplicativos-aplicativos**.  
   
-3. Clique com botão direito e certifique-se de que **exibição, mostrar logs analíticos e depuração** está selecionado. Se não, selecione-o para que a marca de seleção aparece próxima a ela. Isso exibe a **analítico**, **Perf**, e **depurar** logs.  
+3. Clique com o botão direito do mouse e verifique se **Exibir, Mostrar logs analíticos e de depuração** está selecionado. Se não, selecione-o para que a marca de seleção aparece próxima a ela. Isso exibe oslogs analíticos, de **desempenho**e de **depuração** .  
   
-4. Clique com botão direito do **analítico** faça logon e, em seguida, selecione **Habilitar Log**. O log existirá no diretório %SystemRoot% \ arquivo de Winevt System32 \ \ \ application logs Server-Applications%4Analytic.etl.  
+4. Clique com o botão direito do mouse no log **analítico** e selecione **habilitar log**. O log existirá no diretório %SystemRoot% \ arquivo de Winevt System32 \ \ \ application logs Server-Applications%4Analytic.etl.  
   
 ## <a name="custom-tracking-participant"></a>Participante de rastreamento personalizada  
  O participante de rastreamento API permite a extensão de rastreamento usuário fornecido com o participante de rastreamento que pode incluir a lógica personalizada para manipular os registros de rastreamento emissores em tempo de execução de fluxo de trabalho. Para gravar um participante personalizado de rastreamento, o desenvolvedor deve implementar o método `Track` na classe de <xref:System.Activities.Tracking.TrackingParticipant> . Este método é chamado quando um registro de rastreamento é emitida em tempo de execução de fluxo de trabalho.  
@@ -142,5 +142,5 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
   
 ## <a name="see-also"></a>Consulte também
 
-- [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitoramento do Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Monitorando aplicativos com o app Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

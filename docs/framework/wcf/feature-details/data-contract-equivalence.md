@@ -7,36 +7,36 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 448c47d8687aa32671ade016f9b48cd763f87dfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857227"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945356"
 ---
 # <a name="data-contract-equivalence"></a>Equivalência de contrato de dados
-Para um cliente enviar com êxito os dados de um determinado tipo para um serviço ou um serviço para enviar com êxito os dados para um cliente, o tipo de envio não necessariamente precisa existir na extremidade receptora. O único requisito é que os contratos de ambos os tipos de dados ser equivalentes. (Às vezes, equivalência estrita não é necessária, conforme discutido em [controle de versão de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
+Para um cliente enviar com êxito dados de um determinado tipo para um serviço, ou um serviço para enviar dados com êxito a um cliente, o tipo enviado não precisa necessariamente existir na extremidade de recebimento. O único requisito é que os contratos de dados de ambos os tipos sejam equivalentes. (Às vezes, a equivalência estrita não é necessária, conforme discutido em [controle de versão de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
   
- Para contratos de dados para serem equivalentes, eles devem ter o mesmo namespace e nome. Além disso, cada membro de dados em um lado deve ter um membro de dados equivalentes no outro lado.  
+ Para que os contratos de dados sejam equivalentes, eles devem ter o mesmo namespace e nome. Além disso, cada membro de dados em um lado deve ter um membro de dados equivalente no outro lado.  
   
- Para membros de dados para serem equivalentes, eles devem ter o mesmo nome. Além disso, eles devem representar o mesmo tipo de dados; ou seja, seus contratos de dados devem ser equivalentes.  
+ Para que os membros de dados sejam equivalentes, eles devem ter o mesmo nome. Além disso, eles devem representar o mesmo tipo de dados; ou seja, seus contratos de dados devem ser equivalentes.  
   
 > [!NOTE]
->  Observação de contrato de dados nomes e namespaces, bem como nomes de membro de dados diferenciam maiusculas de minúsculas.  
+> Observe que os nomes de contrato de dados e namespaces, bem como os nomes de membro de dados, diferenciam maiúsculas de minúsculas.  
   
- Para obter mais informações sobre namespaces e nomes de contrato de dados, bem como nomes de membro de dados, consulte [nomes de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Para obter mais informações sobre nomes de contrato de dados e namespaces, bem como nomes de membros de dados, consulte [nomes de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
- Se existem dois tipos no mesmo lado (remetente ou receptor) e seus contratos de dados não são equivalentes (por exemplo, eles têm membros de dados diferente), não deve atribuir o mesmo nome e namespace. Isso pode causar exceções seja lançada.  
+ Se dois tipos existirem no mesmo lado (remetente ou destinatário) e seus contratos de dados não forem equivalentes (por exemplo, se tiverem membros de dados diferentes), você não deverá dar a eles o mesmo nome e namespace. Isso pode fazer com que as exceções sejam geradas.  
   
  Os contratos de dados para os seguintes tipos são equivalentes:  
   
  [!code-csharp[C_DataContractNames#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#5)]
  [!code-vb[C_DataContractNames#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#5)]  
   
-## <a name="data-member-order-and-data-contract-equivalence"></a>Equivalência de contrato de dados e de ordem de membro de dados  
- Usando o <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> classe pode afetar a equivalência de contrato de dados. Os contratos de dados devem ter membros que aparecem na mesma ordem como equivalente. A ordem padrão é alfabética. Para obter mais informações, consulte [ordem de membro de dados](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+## <a name="data-member-order-and-data-contract-equivalence"></a>Equivalência do contrato de dados e da ordem do membro de dados  
+ O uso <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> da propriedade da <xref:System.Runtime.Serialization.DataMemberAttribute> classe pode afetar a equivalência do contrato de dados. Os contratos de dados devem ter membros que aparecem na mesma ordem para serem equivalentes. A ordem padrão é alfabética. Para obter mais informações, consulte [ordem de membro de dados](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
- Por exemplo, o código a seguir resulta em contratos de dados equivalente.  
+ Por exemplo, o código a seguir resulta em contratos de dados equivalentes.  
   
  [!code-csharp[C_DataContractNames#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#6)]
  [!code-vb[C_DataContractNames#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#6)]  
@@ -46,19 +46,19 @@ Para um cliente enviar com êxito os dados de um determinado tipo para um servi�
  [!code-csharp[C_DataContractNames#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#7)]
  [!code-vb[C_DataContractNames#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#7)]  
   
-## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>Herança, Interfaces e equivalência de contrato de dados  
- Ao determinar a equivalência, um contrato de dados que herda de outro contrato de dados é tratado como se ele é apenas um contrato de dados que inclui todos os membros de dados do tipo base. Tenha em mente que a ordem dos membros de dados deve corresponder e que os membros do tipo base precedem derivadas membros de tipo na ordem. Além disso, se, como no exemplo de código a seguir, os membros de dados de dois têm o mesmo valor de ordem, a ordenação para os membros de dados é em ordem alfabética. Para obter mais informações, consulte [ordem de membro de dados](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>Herança, interfaces e equivalência de contrato de dados  
+ Ao determinar a equivalência, um contrato de dados herdado de outro contrato de dados é tratado como se fosse apenas um contrato de dados que inclui todos os membros de dados do tipo base. Tenha em mente que a ordem dos membros de dados deve corresponder e que os membros do tipo base precedem membros de tipo derivado na ordem. Além disso, se, como no exemplo de código a seguir, dois membros de dados tiverem o mesmo valor de ordem, a ordenação desses membros de dados será alfabética. Para obter mais informações, consulte [ordem de membro de dados](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
- No exemplo a seguir, o contrato de dados para o tipo `Employee` é equivalente ao contrato de dados para o tipo `Worker`.  
+ No exemplo a seguir, o contrato de dados para `Employee` o tipo é equivalente ao contrato de dados para `Worker`o tipo.  
   
  [!code-csharp[C_DataContractNames#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#8)]
  [!code-vb[C_DataContractNames#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#8)]  
   
- Ao passar parâmetros e valores retornados entre um cliente e um serviço, um contrato de dados de uma classe base não pode ser enviado quando o ponto de extremidade receptor espera que um contrato de dados de uma classe derivada. Isso está de acordo com princípios de programação orientada a objeto. No exemplo anterior, um objeto do tipo `Person` não pode ser enviada quando um `Employee` é esperado.  
+ Ao passar parâmetros e retornar valores entre um cliente e um serviço, um contrato de dados de uma classe base não pode ser enviado quando o ponto de extremidade de recebimento espera um contrato de dados de uma classe derivada. Isso é de acordo com as filosofias de programação orientada a objeto. No exemplo anterior, um objeto do tipo `Person` não pode ser enviado quando um `Employee` é esperado.  
   
- Um contrato de dados de uma classe derivada pode ser enviado quando um contrato de dados de uma classe base é esperada, mas somente se o ponto de extremidade de recebimento "sabe" do tipo derivado usando o <xref:System.Runtime.Serialization.KnownTypeAttribute>. Para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). No exemplo anterior, um objeto do tipo `Employee` podem ser enviadas quando um `Person` é o esperado, mas somente se o código do receptor emprega o <xref:System.Runtime.Serialization.KnownTypeAttribute> incluí-lo na lista de tipos conhecidos.  
+ Um contrato de dados de uma classe derivada pode ser enviado quando um contrato de dados de uma classe base é esperado, mas somente se o ponto de extremidade de recebimento "souber" do <xref:System.Runtime.Serialization.KnownTypeAttribute>tipo derivado usando o. Para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). No exemplo anterior, um objeto do tipo `Employee` pode ser enviado quando um `Person` é esperado, mas somente se o código do receptor empregar o <xref:System.Runtime.Serialization.KnownTypeAttribute> para incluí-lo na lista de tipos conhecidos.  
   
- Ao passar parâmetros e valores retornados entre aplicativos, se o tipo esperado é uma interface, ele é equivalente o tipo esperado é do tipo <xref:System.Object>. Porque cada tipo, por fim, deriva <xref:System.Object>, cada contrato de dados deriva, por fim, o contrato de dados <xref:System.Object>. Portanto, qualquer tipo de contrato de dados pode ser passado quando se espera que uma interface. São necessárias etapas adicionais para trabalhar com êxito com interfaces; Para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Ao passar parâmetros e retornar valores entre aplicativos, se o tipo esperado for uma interface, ele será equivalente ao tipo esperado sendo do tipo <xref:System.Object>. Como todos os tipos derivam de <xref:System.Object>, todos os contratos de dados derivam do contrato de dados <xref:System.Object>para o. Assim, qualquer tipo de contrato de dados pode ser passado quando uma interface é esperada. Etapas adicionais são necessárias para trabalhar com êxito com interfaces; para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Consulte também
 

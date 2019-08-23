@@ -2,43 +2,43 @@
 title: Migrando serviços Web do ASP.NET para o WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 8102b91ba14b75ec9cbd2a683b68c3723a77aed0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52e0e499b5338e20377c14b598c045a5173df7d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649430"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965347"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrando serviços Web do ASP.NET para o WCF
-ASP.NET fornece ferramentas e bibliotecas de classes do .NET Framework para criar serviços Web, bem como recursos para hospedar serviços dentro do Internet Information Services (IIS). Windows Communication Foundation (WCF) fornece bibliotecas de classes do .NET Framework, ferramentas e recursos de hospedagem para habilitar a entidades de software se comunique usando todos os protocolos, incluindo aqueles usados pelo Web services.  Migrando serviços de Web do ASP.NET para o WCF permite que seus aplicativos para tirar proveito dos novos recursos e aprimoramentos que são exclusivos para o WCF.  
+O ASP.NET fornece bibliotecas de classes e ferramentas de .NET Framework para a criação de serviços Web, bem como recursos para hospedar serviços no Serviços de Informações da Internet (IIS). O Windows Communication Foundation (WCF) fornece .NET Framework bibliotecas de classes, ferramentas e recursos de hospedagem para permitir que entidades de software se comuniquem usando qualquer protocolo, incluindo os usados pelos serviços Web.  Migrar serviços Web do ASP.NET para o WCF permite que seus aplicativos aproveitem os novos recursos e melhorias que são exclusivos do WCF.  
   
- O WCF possui várias vantagens importantes em relação a serviços Web do ASP.NET. Enquanto as ferramentas de serviços da Web do ASP.NET são exclusivamente para a criação de serviços da Web, o WCF fornece ferramentas que podem ser usadas quando entidades de software devem ser feitas para se comunicar uns com os outros. Isso reduzirá o número de tecnologias que os desenvolvedores precisam conhecer para acomodar cenários de comunicação de software diferente, que por sua vez, reduzirá o custo de recursos de desenvolvimento de software, bem como o tempo para concluir o software projetos de desenvolvimento.  
+ O WCF tem várias vantagens importantes em relação aos serviços Web do ASP.NET. Embora as ferramentas de serviços Web do ASP.NET sejam exclusivamente para a criação de serviços da Web, o WCF fornece ferramentas que podem ser usadas quando entidades de software devem ser feitas para se comunicarem umas com as outras. Isso reduzirá o número de tecnologias que os desenvolvedores precisam saber para acomodar diferentes cenários de comunicação de software, o que, por sua vez, reduzirá o custo dos recursos de desenvolvimento de software, bem como o tempo para concluir o software projetos de desenvolvimento.  
   
- Mesmo para projetos de desenvolvimento do serviço Web, o WCF oferece suporte a mais protocolos de serviço da Web que suporte a serviços Web do ASP.NET. Esses protocolos adicionais fornecem soluções mais sofisticadas que envolvem, entre outras coisas, sessões confiáveis e transações.  
+ Mesmo para projetos de desenvolvimento de serviço Web, o WCF dá suporte a mais protocolos de serviço Web do que o suporte aos serviços Web ASP.NET. Esses protocolos adicionais fornecem soluções mais sofisticadas envolvendo, entre outras coisas, sessões confiáveis e transações.  
   
- WCF dá suporte a mais protocolos de transporte de mensagens que os serviços Web do ASP.NET. Serviços Web do ASP.NET só dão suporte a envio de mensagens usando o protocolo HTTP (Hypertext Transfer). WCF oferece suporte ao envio de mensagens por meio de HTTP, bem como o protocolo TCP (Transmission Control), pipes nomeados e Microsoft Message Queuing (MSMQ). Mais importante, o WCF pode ser estendido para dar suporte a protocolos de transporte adicionais. Portanto, o software desenvolvido usando o WCF pode ser adaptado para trabalhar junto com uma variedade maior de outro software, aumentando assim o potencial de retorno do investimento.  
+ O WCF dá suporte a mais protocolos para transportar mensagens do que os serviços Web do ASP.NET. Os serviços Web do ASP.NET dão suporte apenas ao envio de mensagens usando o protocolo HTTP. O WCF dá suporte ao envio de mensagens usando HTTP, bem como o protocolo TCP, pipes nomeados e MSMQ (enfileiramento de mensagens da Microsoft). Mais importante, o WCF pode ser estendido para dar suporte a protocolos de transporte adicionais. Portanto, o software desenvolvido usando o WCF pode ser adaptado para trabalhar em conjunto com uma variedade maior de outros softwares, aumentando assim o possível retorno sobre o investimento.  
   
- WCF fornece muito mais ricas instalações para a implantação e gerenciamento de aplicativos que os serviços Web do ASP.NET. Além de um sistema de configuração, o ASP.NET também tem, o WCF oferece um editor de configuração, rastreamento de atividade de remetentes para receptores e de volta por meio de qualquer número de intermediários, um visualizador de rastreamento, log de mensagens, um grande número de contadores de desempenho, e suporte para instrumentação de gerenciamento do Windows.  
+ O WCF fornece recursos muito mais ricos para implantar e gerenciar aplicativos do que o ASP.NET Web Services fornece. Além de um sistema de configuração, que o ASP.NET também tem, o WCF oferece um editor de configuração, rastreamento de atividades de remetentes para receptores e voltar por qualquer número de intermediários, um visualizador de rastreamento, registro de mensagens, um grande número de contadores de desempenho e suporte para Instrumentação de Gerenciamento do Windows.  
   
- Considerando esses benefícios em potencial do WCF em relação ao ASP.NET Web services, se você estiver usando ou está considerando o uso de serviços Web do ASP.NET que você tem várias opções:  
+ Considerando esses possíveis benefícios do WCF em relação aos serviços Web do ASP.NET, se você estiver usando o ou estiver considerando o uso de serviços Web do ASP.NET, terá várias opções:  
   
-- Continue a usar os serviços Web do ASP.NET e antecipar os benefícios que dedicaram pelo WCF.  
+- Continue a usar os serviços Web do ASP.NET e, anteriormente, os benefícios proffered pelo WCF.  
   
-- Continue a usar os serviços da Web do ASP.NET com a intenção de adotar o WCF em algum momento no futuro. Os tópicos nesta seção explicam como maximizar os clientes potenciais para poder usar os novos aplicativos de serviço da Web do ASP.NET junto com aplicativos futuros do WCF. Os tópicos nesta seção também explicam como criar nova ASP.NET Web services para tornar mais fácil para migrá-los para o WCF. No entanto, se os serviços de proteção é importante, ou garantias de confiabilidade ou a transação são necessárias, ou se personalizado recursos de gerenciamento precisará ser construído, ele é uma opção melhor para adotar o WCF. WCF foi desenvolvido para precisamente esses cenários.  
+- Continue usando os serviços Web do ASP.NET com a intenção de adotar o WCF em algum momento no futuro. Os tópicos nesta seção explicam como maximizar os clientes potenciais para poder usar novos aplicativos de serviço Web ASP.NET com aplicativos WCF futuros. Os tópicos nesta seção também explicam como criar novos serviços Web ASP.NET para facilitar sua migração para o WCF. No entanto, se a proteção dos serviços for importante, ou se as garantias de confiabilidade ou de transação forem necessárias, ou se os recursos de gerenciamento personalizado precisarem ser construídos, será uma opção melhor para adotar o WCF. O WCF foi projetado para cenários precisamente.  
   
-- Adote o WCF para novos desenvolvimentos, enquanto continua a manter seus aplicativos existentes do serviço Web do ASP.NET. Essa opção muito provavelmente é a ideal. Ele gera os benefícios do WCF, enquanto o custo de modificar os aplicativos existentes para usá-lo a reserva. Nesse cenário, novos aplicativos do WCF podem coexistir com aplicativos ASP.NET existentes. Novos aplicativos do WCF será capazes de usar os serviços existentes do Web ASP.NET e WCF pode ser usado para programar os novos recursos operacionais em aplicativos ASP.NET existentes em virtude do modo de compatibilidade do ASP.NET do WCF.  
+- Adote o WCF para um novo desenvolvimento, enquanto continua a manter seus aplicativos de serviço Web ASP.NET existentes. Essa opção é muito provavelmente a ideal. Ele gera os benefícios do WCF e, ao mesmo tempo, reserva o custo de modificar os aplicativos existentes para usá-lo. Nesse cenário, novos aplicativos WCF podem coexistir com aplicativos ASP.NET existentes. Os novos aplicativos WCF poderão usar os serviços Web ASP.NET existentes, e o WCF poderá ser usado para programar novos recursos operacionais em aplicativos ASP.NET existentes em virtude do modo de compatibilidade do WCF ASP.NET.  
   
-- Adote o WCF e migrar aplicativos existentes do serviço da Web do ASP.NET ao WCF. Você pode escolher essa opção para aprimorar os aplicativos existentes com recursos fornecidos pelo WCF, ou para reproduzir a funcionalidade de serviços Web ASP.NET existentes dentro do novo, os aplicativos mais avançados do WCF.  
+- Adote o WCF e migre aplicativos de serviço Web ASP.NET existentes para o WCF. Você pode escolher essa opção para aprimorar os aplicativos existentes com recursos fornecidos pelo WCF ou para reproduzir a funcionalidade de serviços Web ASP.NET existentes em aplicativos WCF novos e mais poderosos.  
   
 > [!NOTE]
->  É necessário ter cuidado se um serviço WCF é hospedado pelo IIS 5.x e o ASP.NET é desinstalado. Quando um serviço WCF é hospedado pelo IIS 5.x, o código para o serviço pode ser solicitado se o ASP.NET for desinstalado. Quando o ASP.NET é desinstalado em um sistema operacional que está executando o IIS 5.x e WCF é desinstalado, um arquivo com a extensão. svc é considerado um arquivo de texto e o conteúdo, incluindo qualquer código-fonte, será retornado ao solicitante.  
+> Deve-se ter cuidado se um serviço WCF for hospedado pelo IIS 5. x e o ASP.NET for desinstalado. Quando um serviço WCF é hospedado pelo IIS 5. x, o código para o serviço pode ser solicitado se ASP.NET for desinstalado. Quando o ASP.NET é desinstalado em um sistema operacional que está executando o IIS 5. x e o WCF é desinstalado, um arquivo com a extensão. svc é considerado um arquivo de texto e o conteúdo, incluindo qualquer código-fonte, é retornado ao solicitante.  
   
- Esta seção descreve essas opções em detalhes, compara o ASP.NET Web Services para o WCF e fornece instruções sobre como migrar seu código de serviços Web do ASP.NET ao WCF.  
+ Esta seção descreve essas opções em detalhes, compara os serviços Web do ASP.NET com o WCF e fornece instruções sobre como migrar seu código de serviços Web do ASP.NET para o WCF.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Antecipando a adoção do Windows Communication Foundation: Facilitando a migração futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
-- [Antecipando a adoção do Windows Communication Foundation: Facilitando a futura integração](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+- [Prevendo a adoção do Windows Communication Foundation: Facilitando a migração futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Prevendo a adoção do Windows Communication Foundation: Facilitando a integração futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
 - [Adotando o Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
 - [Comparando serviços Web do ASP.NET ao WCF com base na finalidade e padrões usados](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
 - [Comparando serviços Web do ASP.NET ao WCF com base em desenvolvimento](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

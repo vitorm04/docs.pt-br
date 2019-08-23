@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661904"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963855"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Elementos Return ou Skip em uma sequência
 Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número específico de elementos em uma sequência e ignorar o restante.  
@@ -18,9 +18,9 @@ Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número esp
  Use o operador <xref:System.Linq.Queryable.Skip%2A> para ignorar um número específico de elementos em uma sequência e retornar o restante.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> possuem certas limitações quando são usados em consultas no SQL Server 2000. Para obter mais informações, consulte a entrada "Exceções Skip e Take no SQL Server 2000" em [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> possuem certas limitações quando são usados em consultas no SQL Server 2000. Para obter mais informações, consulte a entrada "ignorar e considerar exceções no SQL Server 2000" em [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduz <xref:System.Linq.Queryable.Skip%2A> por meio de uma subconsulta com o SQL `NOT EXISTS` cláusula. Essa conversão apresenta as seguintes limitações:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]traduz <xref:System.Linq.Queryable.Skip%2A> usando uma subconsulta com a cláusula SQL `NOT EXISTS` . Essa conversão apresenta as seguintes limitações:  
   
 - O argumento deve ser um conjunto. Não há suporte para vários conjuntos, mesmo se ordenados.  
   
@@ -49,9 +49,9 @@ Use o operador <xref:System.Linq.Queryable.Take%2A> para retornar um número esp
  Devido às limitações de ordenamento no SQL, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta mover a ordenação do argumento do operador <xref:System.Linq.Queryable.Take%2A> ou <xref:System.Linq.Queryable.Skip%2A> para o resultado do operador.  
   
 > [!NOTE]
->  Conversão é diferente para o SQL Server 2000 e SQL Server 2005. Se você planeja usar <xref:System.Linq.Queryable.Skip%2A> com uma consulta de qualquer complexidade, use o SQL Server 2005.  
+> A tradução é diferente para SQL Server 2000 e SQL Server 2005. Se você planeja usar <xref:System.Linq.Queryable.Skip%2A> o com uma consulta de qualquer complexidade, use SQL Server 2005.  
   
- Considere o seguinte [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consulta do SQL Server 2000:  
+ Considere a seguinte [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consulta para SQL Server 2000:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  

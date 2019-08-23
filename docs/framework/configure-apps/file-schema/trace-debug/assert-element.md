@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ba781598542d271f41476b1a1e9d61faeb6ff74
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701353"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927193"
 ---
-# <a name="assert-element"></a>\<Assert > elemento
+# <a name="assert-element"></a>\<declarar > elemento
 Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; também especifica o nome do arquivo no qual as mensagens serão gravadas.  
   
  \<configuration>  
-\<system.diagnostics>  
-\<assert>  
+\<System. Diagnostics >  
+\<> de declaração  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,10 +35,10 @@ Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:S
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`assertuienabled`|Atributo opcional.<br /><br /> Especifica se exibir uma caixa de mensagem quando o **Debug. Assert** método é avaliada como **falso**.|  
-|`logfilename`|Atributo opcional.<br /><br /> Especifica o nome do arquivo para gravar a mensagem se **Debug. Assert** é avaliada como **falso**.|  
+|`assertuienabled`|Atributo opcional.<br /><br /> Especifica se uma caixa de mensagem deve ser exibida quando o método **debug. Assert** for avaliado como **false**.|  
+|`logfilename`|Atributo opcional.<br /><br /> Especifica o nome do arquivo no qual gravar a mensagem se **debug. Assert** for avaliado como **false**.|  
   
-## <a name="assertuienabled-attribute"></a>assertuienabled atributo  
+## <a name="assertuienabled-attribute"></a>Atributo AssertUiEnabled  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -56,10 +56,10 @@ Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:S
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
   
 ## <a name="remarks"></a>Comentários  
- Ambos os atributos na  **\<assert >** elemento são opcionais. Você pode desabilitar as caixas de mensagem sem especificar um arquivo para gravar as mensagens de, ou você pode especificar um arquivo para gravar mensagens enquanto deixando habilitadas de caixas de mensagem.  
+ Ambos os atributos no  **\<elemento > Assert** são opcionais. Você pode desabilitar caixas de mensagens sem especificar um arquivo no qual gravar as mensagens ou pode especificar um arquivo para gravar mensagens enquanto deixa as caixas de mensagens habilitadas.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como desabilitar Exibindo caixas de mensagem quando você chama **Debug. Assert** e gravar as mensagens para `c:\log.txt`.  
+ O exemplo a seguir mostra como desabilitar a exibição de caixas de mensagem quando você chama **debug. Assert** e grava `c:\log.txt`as mensagens em.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:S
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Diagnostics.Debug>
-- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Esquema de configurações de rastreamento e depuração](index.md)

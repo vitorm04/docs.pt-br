@@ -2,35 +2,35 @@
 title: Visão geral de fluxo de mensagens
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 009dd05ab299b92ee5f5cafd1c2131a2e6eb0132
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cee579f272700ca37228bacecdf387d03637610a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650251"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963052"
 ---
 # <a name="message-flow-overview"></a>Visão geral de fluxo de mensagens
-Em um sistema distribuído que contém serviços interconectados, é necessário determinar relações causais entre os serviços. É importante entender os vários componentes que faziam parte de um fluxo de solicitação para dar suporte a cenários críticos, tais como integridade, monitoramento, solução de problemas e análise da causa raiz. Para habilitar a correlação de rastreamentos entre vários serviços, no .NET Framework 4, adicionamos suporte por meio dos seguintes recursos:
+Em um sistema distribuído que contém serviços interconectados, é necessário determinar as relações de causal entre os serviços. É importante entender os vários componentes que faziam parte de um fluxo de solicitação para dar suporte a cenários críticos, como monitoramento de integridade, solução de problemas e análise de causa raiz. Para habilitar a correlação de rastreamentos entre vários serviços, no .NET Framework 4, adicionamos suporte por meio dos seguintes recursos:
 
-- Rastreamento analítico: Um alto desempenho e o recurso de rastreamento de baixo nível de detalhes usando o rastreamento de eventos para Windows (ETW).
+- Rastreamento analítico: Um recurso de rastreamento de alto desempenho e baixo nível baixo usando o ETW (rastreamento de eventos para Windows).
 
-- Modelo de atividade de ponta a ponta para os serviços do WCF/WF: Esse recurso dá suporte à correlação de rastreamentos gerados pelo <xref:System.ServiceModel> e <xref:System.Workflow.ComponentModel> namespaces.
+- Modelo de atividade de ponta a ponta para serviços WCF/WF: Esse recurso dá suporte à correlação de rastreamentos <xref:System.ServiceModel> gerados <xref:System.Workflow.ComponentModel> pelos namespaces e.
 
-- Rastreamento do WF com o ETW: Esse recurso usa registros de rastreamento gerados pelos serviços do WF para fornecer visibilidade sobre o estado atual e o progresso do fluxo de trabalho.
+- Rastreamento de ETW para WF: Esse recurso usa registros de rastreamento gerados pelos serviços do WF para fornecer visibilidade do estado atual do fluxo de trabalho e do andamento.
 
- Erros registrados em um rastreamento ou registro de rastreamento podem ser usados para localizar defeitos de código ou mensagens formadas incorretamente. A propriedade ActivityId do nó correlação no cabeçalho da mensagem do evento pode ser usada para determinar a atividade com falha. Para habilitar o rastreamento de fluxo de mensagem por ID de atividade, consulte [Configurando o rastreamento de fluxo de mensagem](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). Este tópico demonstra como habilitar o rastreamento de fluxo de mensagem no projeto criado no tutorial de Introdução.
+ Os erros registrados em um registro rastreamento ou rastreamento podem ser usados para encontrar defeitos de código ou mensagens formadas incorretamente. A propriedade ActivityId do nó de correlação no cabeçalho da mensagem do evento pode ser usada para determinar a atividade com falha. Para habilitar o rastreamento de fluxo de mensagens por ID de atividade, consulte Configurando o [rastreamento de fluxo de mensagens](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). Este tópico demonstra como habilitar o rastreamento de fluxo de mensagens no projeto criado no tutorial de Introdução.
 
-### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Para habilitar o rastreamento de fluxo de mensagem no tutorial de Introdução
+### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Para habilitar o rastreamento de fluxo de mensagens no tutorial de Introdução
 
-1. Abra o Visualizador de eventos clicando **inicie**, **execute**e inserindo `eventvwr.exe`.
+1. Abra Visualizador de Eventos clicando em **Iniciar**, **executar**e inserindo `eventvwr.exe`.
 
-2. Se você ainda não tiver ativado rastreamento analítico, expanda **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativos de servidor** . Selecione **modo de exibição**, **analíticos e de Logs de depuração**. Clique com botão direito **analítico** e selecione **Habilitar Log**. Deixe o Visualizador de eventos aberto para que os rastreamentos podem ser exibidos.
+2. Se você não tiver habilitado o rastreamento analítico, expanda **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **servidor de aplicativos-aplicativos**. Selecione **Exibir**, **Mostrar logs analíticos e de depuração**. Clique com o botão direito do mouse em **analítica** e selecione **habilitar log**. Deixe Visualizador de Eventos aberto para que os rastreamentos possam ser exibidos.
 
-3. Abra o exemplo criado a [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md) no Visual Studio 2012. Observe que você deve executar o Visual Studio 2012 como um administrador para que o serviço pode ser criado. Se você tiver que instalar os exemplos WCF, você pode abrir o [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contém o projeto concluído criado no tutorial.
+3. Abra o exemplo criado no [tutorial de introdução](../../../../docs/framework/wcf/getting-started-tutorial.md) no Visual Studio 2012. Observe que você deve executar o Visual Studio 2012 como administrador para que o serviço possa ser criado. Se você tiver os exemplos do WCF instalados, poderá abrir o [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contém o projeto concluído criado no tutorial.
 
-4. Com o botão direito do **Service** do projeto e selecione **Add**, **Novo Item**. Selecione **arquivo de configuração de aplicativo** e clique em **Okey**.
+4. Clique com o botão direito do mouse no projeto de **serviço** e selecione **Adicionar**, **novo item**. Selecione o **arquivo de configuração do aplicativo** e clique em **OK**.
 
-5. Adicione o seguinte código ao arquivo App. config criado na etapa anterior.
+5. Adicione o código a seguir ao arquivo app. config criado na etapa anterior.
 
     ```xml
     <system.serviceModel>
@@ -40,9 +40,9 @@ Em um sistema distribuído que contém serviços interconectados, é necessário
     </system.serviceModel>
     ```
 
-6. Execute o aplicativo de servidor sem depuração pressionando CTRL + F5. Executar o projeto de cliente clicando com o **Client** projeto e selecionando **Debug**, **iniciar uma nova instância**.
+6. Execute o aplicativo de servidor sem depuração pressionando CTRL + F5. Execute o projeto cliente clicando com o botão direito do mouse no projeto **cliente** e selecionando **depurar**, **Iniciar nova instância**.
 
-7. Para rastrear os eventos do cliente para o servidor, adicione o seguinte ao arquivo de configuração de aplicativo no projeto do cliente.
+7. Para rastrear os eventos do cliente para o servidor, adicione o seguinte ao arquivo de configuração do aplicativo no projeto do cliente.
 
     ```xml
     <diagnostics>
@@ -50,29 +50,29 @@ Em um sistema distribuído que contém serviços interconectados, é necessário
     </diagnostics>
     ```
 
-8. Em Program.cs no cliente, adicione a seguinte instrução Using.
+8. Em Program.cs no cliente, adicione a seguinte instrução using.
 
     ```csharp
     using System.Diagnostics;
     ```
 
-9. No método Main no arquivo program.cs no projeto do cliente, defina o GUID de rastreamento sejam propagadas no log de eventos.
+9. No método principal no arquivo program.cs no projeto cliente, defina o GUID de rastreamento a ser propagado no log de eventos.
 
     ```csharp
     Guid guid = Guid.NewGuid();
     Trace.CorrelationManager.ActivityId = guid;
     ```
 
-10. Atualizar e examine os **analítico** log.  Procure um evento com 220 de ID de evento.  Selecione o evento e, em seguida, clique no **detalhes** guia no painel de visualização. Esse evento conterá a ID de correlação para a atividade de chamada.
+10. Atualize e examine o log **analítico** .  Procure um evento com a ID de evento 220.  Selecione o evento e clique na guia **detalhes** no painel de visualização. Esse evento conterá a ID de correlação para a atividade de chamada.
 
     ```xml
     <Correlation ActivityID="{A066CCF1-8AB3-459B-B62F-F79F957A5036}" />
     ```
 
     > [!NOTE]
-    >  Todos os eventos com o mesmo GUID em ActivityID estão relacionados a uma solicitação. Isso pode ser usado para correlacionar mensagens de um cliente específico a um serviço específico. Se o cliente chamado outro serviço, em seguida, o mesmo cliente poderia ser identificado pela ActivityID.
+    > Todos os eventos com o mesmo GUID na ActivityId estão relacionados a uma solicitação. Isso pode ser usado para correlacionar mensagens de um cliente específico a um serviço específico. Se o cliente tiver chamado outro serviço, o mesmo cliente poderá ser identificado por ActivityId.
 
-11. Em alguns casos, o ActivityID pode alterar de GUID original para um novo ActivityID. Nesse caso, um evento de transferência é emitido. Essa ID de evento é 499 e o evento conterá os seguintes dados no cabeçalho.
+11. Em alguns casos, o ActivityId pode ser alterado do GUID original para um novo ActivityId. Nesse caso, um evento de transferência é emitido. Essa ID de evento é 499 e o evento conterá os dados a seguir no cabeçalho.
 
     ```xml
     <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
@@ -87,4 +87,4 @@ Em um sistema distribuído que contém serviços interconectados, é necessário
     ```
 
     > [!NOTE]
-    >  O evento de transferência registra a alteração da ActivityID Active Directory do GUID especificado como o ActivityID ao GUID especificado como RelatedActivityID. Depois que o evento de transferência é emitido, todos os eventos conterão o novo GUID como o ActivityID.
+    > O evento de transferência registra a alteração do ActivityId ativo do GUID especificado como ActivityId para o GUID especificado como RelatedActivityID. Depois que o evento de transferência for emitido, todos os eventos conterão o novo GUID como ActivityId.

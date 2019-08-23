@@ -9,26 +9,26 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: 12c73d7344bba3ca36169c2f46134876295dee00
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a83c5078d67be40fda2ae3382b8124594ee78103
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651741"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966654"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Como: Congelar colunas no controle DataGridView do Windows Forms
-Quando os usuários exibem os dados exibidos em um Windows Forms <xref:System.Windows.Forms.DataGridView> controle, às vezes elas precisam para se referir a uma única coluna ou conjunto de colunas com frequência. Por exemplo, ao exibir uma tabela de informações do cliente que contém várias colunas, é útil exibir o nome do cliente em todos os momentos enquanto permite outras colunas rolem para fora da região visível.  
+Quando os usuários exibem dados exibidos em <xref:System.Windows.Forms.DataGridView> um controle de Windows Forms, às vezes eles precisam se referir a uma única coluna ou conjunto de colunas com frequência. Por exemplo, ao exibir uma tabela de informações do cliente que contém muitas colunas, é útil exibir o nome do cliente em todos os momentos enquanto permite que outras colunas rolem para fora da região visível.  
   
  Para obter esse comportamento, você pode congelar colunas no controle. Quando você congela uma coluna, todas as colunas à esquerda (ou à direita em scripts de idioma da direita para esquerda) são congeladas também. Colunas congeladas permanecerão no local enquanto todas as outras colunas podem rolar.  
   
 > [!NOTE]
->  Se a reordenação de coluna estiver habilitada, as colunas congeladas serão tratadas como um grupo diferente das colunas não congeladas. Os usuários podem reposicionar colunas em um dos grupos, mas não poderão mover uma coluna de um grupo para outro.  
+> Se a reordenação de coluna estiver habilitada, as colunas congeladas serão tratadas como um grupo diferente das colunas não congeladas. Os usuários podem reposicionar colunas em um dos grupos, mas não poderão mover uma coluna de um grupo para outro.  
   
- O <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> propriedade de uma coluna determina se a coluna está sempre visível dentro da grade.  
+ A <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> propriedade de uma coluna determina se a coluna está sempre visível dentro da grade.  
   
- Há suporte para esta tarefa no Visual Studio.  Consulte também [como: Congelar colunas no Windows Forms usando o Designer de controle de DataGridView](freeze-columns-in-the-datagrid-using-the-designer.md).  
+ Há suporte para esta tarefa no Visual Studio.  Consulte [também como: Congele colunas no controle Windows Forms DataGridView usando o designer](freeze-columns-in-the-datagrid-using-the-designer.md).  
   
-### <a name="to-freeze-a-column-programmatically"></a>Para congelar uma coluna de forma programática  
+### <a name="to-freeze-a-column-programmatically"></a>Para congelar uma coluna programaticamente  
   
 - Defina a propriedade <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType> como `true`.  
   
@@ -38,7 +38,7 @@ Quando os usuários exibem os dados exibidos em um Windows Forms <xref:System.Wi
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
-- Um <xref:System.Windows.Forms.DataGridView> controle chamado `dataGridView1` que contém uma coluna denominada `AddToCartButton`.  
+- Um <xref:System.Windows.Forms.DataGridView> controle chamado `dataGridView1` que contém uma coluna chamada `AddToCartButton`.  
   
 - Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
@@ -47,4 +47,4 @@ Quando os usuários exibem os dados exibidos em um Windows Forms <xref:System.Wi
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - [Funcionalidades de coluna, linha e célula básicas no controle DataGridView do Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Como: Habilitar a reorganização de colunas no controle DataGridView dos Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Como: Habilitar reordenação de coluna no controle Windows Forms DataGridView](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

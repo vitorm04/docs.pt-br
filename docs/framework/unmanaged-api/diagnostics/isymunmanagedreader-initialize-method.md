@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1986ed730c6f0a1ba8a2d8e3c688e6872184da9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736760"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939022"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>Método ISymUnmanagedReader::Initialize
-Inicializa o leitor de símbolo com a interface do importador de metadados que esse leitor será associado, juntamente com o nome de arquivo do módulo.  
+Inicializa o leitor de símbolos com a interface de importador de metadados à qual esse leitor será associado, juntamente com o nome de arquivo do módulo.  
   
 > [!NOTE]
->  Esse método pode ser chamado apenas uma vez e deve ser chamado antes de quaisquer outros métodos de leitor.  
+> Esse método pode ser chamado apenas uma vez e deve ser chamado antes de qualquer outro método de leitura.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,22 +42,22 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>Parâmetros  
  `importer`  
- [in] A interface de Importador de metadados com o qual esse leitor será associado.  
+ no A interface de importador de metadados à qual este leitor será associado.  
   
  `filename`  
- [in] O nome do arquivo do módulo. Você pode usar o `pIStream` parâmetro em vez disso.  
+ no O nome do arquivo do módulo. Em vez disso, `pIStream` você pode usar o parâmetro.  
   
  `searchPath`  
- [in] O caminho para pesquisar. Esse parâmetro é opcional.  
+ no O caminho para pesquisar. Esse parâmetro é opcional.  
   
  `pIStream`  
- [in] O fluxo de arquivos, usado como uma alternativa para o parâmetro de nome de arquivo.  
+ no O fluxo de arquivos, usado como uma alternativa ao parâmetro filename.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Você precisa especificar apenas um dos `filename` ou o `pIStream` parâmetros, não ambos. O parâmetro `searchPath` é opcional.  
+ Você precisa especificar apenas um dos `filename` `pIStream` parâmetros ou, não ambos. O parâmetro `searchPath` é opcional.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  

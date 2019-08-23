@@ -1,17 +1,17 @@
 ---
-title: Método ICorDebugStaticFieldSymbol::GetSize
+title: 'Método ICorDebugStaticFieldSymbol:: GetSize'
 ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a30778a287b4115df552444549a92c006288005
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d99e06c1093dbc67e9c1999e4b9ccabd6579340e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962671"
 ---
-# <a name="icordebugstaticfieldsymbolgetsize-method"></a>Método ICorDebugStaticFieldSymbol::GetSize
+# <a name="icordebugstaticfieldsymbolgetsize-method"></a>Método ICorDebugStaticFieldSymbol:: GetSize
 Obtém o tamanho em bytes do campo estático.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -24,19 +24,19 @@ HRESULT GetSize(
   
 ## <a name="parameters"></a>Parâmetros  
  `pcbSize`  
- [out] Um ponteiro para o comprimento do campo.  
+ fora Um ponteiro para o comprimento do campo.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

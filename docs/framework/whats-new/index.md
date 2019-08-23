@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3e16ead437bf3ebec9fcae6131577fa03e1df9
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660689"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987239"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -32,10 +32,10 @@ Este artigo resume os novos recursos-chave e melhorias nas seguintes versões do
 - [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
-Este artigo não fornece informações abrangentes sobre cada recurso novo e está sujeito a alterações. Para obter informações gerais sobre o .NET Framework, confira [Introdução](../get-started/index.md). Para conhecer as plataformas compatíveis, confira [Requisitos do sistema](~/docs/framework/get-started/system-requirements.md). Para obter links de download e instruções de instalação, confira [Guia de instalação](../install/guide-for-developers.md).
+Este artigo não fornece informações abrangentes sobre cada recurso novo e está sujeito a alterações. Para obter informações gerais sobre o .NET Framework, confira [Introdução](../get-started/index.md). Para conhecer as plataformas compatíveis, confira [Requisitos do sistema](../get-started/system-requirements.md). Para obter links de download e instruções de instalação, confira [Guia de instalação](../install/guide-for-developers.md).
 
 > [!NOTE]
-> A equipe do .NET Framework também libera recursos fora de banda com o NuGet para expandir o suporte à plataforma e introduzir novas funcionalidades, como coleções imutáveis e tipos de vetor habilitados para SIMD. Para saber mais, confira [Bibliotecas de classes e APIs adicionais](../additional-apis/index.md) e [O .NET Framework e lançamentos fora da banda](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+> A equipe do .NET Framework também libera recursos fora de banda com o NuGet para expandir o suporte à plataforma e introduzir novas funcionalidades, como coleções imutáveis e tipos de vetor habilitados para SIMD. Para saber mais, confira [Bibliotecas de classes e APIs adicionais](../additional-apis/index.md) e [O .NET Framework e lançamentos fora da banda](../get-started/the-net-framework-and-out-of-band-releases.md).
 > Veja uma [lista completa de pacotes do NuGet](https://www.nuget.org/profiles/dotnetframework) para o .NET Framework.
 
 <a name="v48" />
@@ -605,7 +605,7 @@ Além disso, um dos objetivos principais do .NET Framework 4.7.1 é a melhoria d
 
 **Compatível com o .NET Standard 2.0**
 
-O [.NET Standard](~/docs/standard/net-standard.md) define um conjunto das APIs que precisam estar disponíveis em todas as implementações do .NET compatíveis com a versão do standard. O .NET Framework 4.7.1 dá suporte total ao .NET Standard 2.0 e adiciona [cerca de 200 APIs](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) que são definidas no .NET Standard 2.0 e não estão presentes nas versões 4.6.1, 4.6.2 e 4.7 do .NET Framework. (Observe que essas versões do .NET Framework são compatíveis com o .NET Standard 2.0 somente se os arquivos de suporte do .NET Standard estiverem implantados no sistema de destino.) Para obter mais informações, consulte “BLC – Suporte ao .NET Standard 2.0” na postagem de blog [Tempo de execução e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/).
+O [.NET Standard](../../standard/net-standard.md) define um conjunto das APIs que precisam estar disponíveis em todas as implementações do .NET compatíveis com a versão do standard. O .NET Framework 4.7.1 dá suporte total ao .NET Standard 2.0 e adiciona [cerca de 200 APIs](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) que são definidas no .NET Standard 2.0 e não estão presentes nas versões 4.6.1, 4.6.2 e 4.7 do .NET Framework. (Observe que essas versões do .NET Framework são compatíveis com o .NET Standard 2.0 somente se os arquivos de suporte do .NET Standard estiverem implantados no sistema de destino.) Para obter mais informações, consulte “BLC – Suporte ao .NET Standard 2.0” na postagem de blog [Tempo de execução e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/).
 
 **Suporte para construtores de configuração**
 
@@ -623,7 +623,7 @@ A partir do .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWi
 
 **Suporte para referências somente leitura**
 
-O .NET Framework 4.7.1 adiciona o <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Este atributo é usado por compiladores de linguagem para marcar membros que têm parâmetros ou tipos de retorno somente leitura de referência. Para obter mais informações, consulte “Compilador -- Suporte a ReadOnlyReferences” na postagem de blog [Tempo de execução e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/). Para saber mais sobre valores retornados de referência, consulte [Valores retornados de referência e locais de referência (Guia de C#)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) e [Valores retornados de referência (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
+O .NET Framework 4.7.1 adiciona o <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Este atributo é usado por compiladores de linguagem para marcar membros que têm parâmetros ou tipos de retorno somente leitura de referência. Para obter mais informações, consulte “Compilador -- Suporte a ReadOnlyReferences” na postagem de blog [Tempo de execução e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/). Para saber mais sobre valores retornados de referência, consulte [Valores retornados de referência e locais de referência (Guia de C#)](../../csharp/programming-guide/classes-and-structs/ref-returns.md) e [Valores retornados de referência (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
 
 <a name="clr" />
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: c3ec6ca6feba975517a9f982bb58e4b061516a61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962813"
 ---
 # <a name="wpf-partial-trust-security"></a>Segurança parcialmente confiável do WPF
 <a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, as linguagens de script HTML e do lado do cliente não são capazes de acessar recursos críticos do sistema. Como os aplicativos hospedados no navegador Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade com um conjunto semelhante de restrições. Para impor essas restrições, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] baseia-se na CAS (segurança de acesso do código) e no ClickOnce (consulte [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Por padrão, aplicativos hospedados em navegador solicitam o conjunto de permissões de CAS de zona da Internet, independentemente de serem iniciados da Internet, da intranet local ou do computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  
@@ -87,7 +87,7 @@ ms.locfileid: "69567535"
 |Internet|Falha com "Confiança não concedida"|Assine XBAP com um certificado.|  
   
 > [!NOTE]
->  O comportamento descrito na tabela anterior é de confiança total XBAPs que não seguem o modelo de implantação do ClickOnce confiáveis.  
+> O comportamento descrito na tabela anterior é de confiança total XBAPs que não seguem o modelo de implantação do ClickOnce confiáveis.  
   
  Em geral, o código que pode exceder as permissões permitidas é provavelmente código comum que é compartilhado entre autônomos e aplicativos hospedados pelo navegador. CAS e [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] oferecem várias técnicas para gerenciar esse cenário.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69567535"
  O uso de CAS para verificar permissões é uma técnica adequada quando você precisa verificar por permissão. No entanto, essa técnica depende capturar exceções como uma parte normal processamento, que não é recomendado em geral e pode ter problemas de desempenho. Em vez disso, [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] se o seu for executado apenas dentro da área restrita da zona <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> da Internet, você poderá usar [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]a propriedade, que retorna true para.  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>distingue apenas se um aplicativo está em execução em um navegador, não em qual conjunto de permissões um aplicativo está sendo executado.  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>distingue apenas se um aplicativo está em execução em um navegador, não em qual conjunto de permissões um aplicativo está sendo executado.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Gerenciando permissões  
@@ -149,7 +149,7 @@ ms.locfileid: "69567535"
 |Navegador da Web|Navegação do quadro seguro para HTML|Sim|Sim|  
   
 > [!NOTE]
->  Recortar e colar só é permitido em confiança parcial quando iniciada pelo usuário.  
+> Recortar e colar só é permitido em confiança parcial quando iniciada pelo usuário.  
   
  Se você precisar aumentar as permissões, você precisará alterar as configurações do projeto e o manifesto do aplicativo ClickOnce. Para obter mais informações, consulte [Visão geral de aplicativos de navegador XAML WPF](./app-development/wpf-xaml-browser-applications-overview.md). Os documentos a seguir também podem ser úteis.  
   

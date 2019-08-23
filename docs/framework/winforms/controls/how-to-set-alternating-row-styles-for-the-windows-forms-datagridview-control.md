@@ -9,39 +9,39 @@ helpviewer_keywords:
 - data grids [Windows Forms], row styles
 - rows [Windows Forms], data grids
 ms.assetid: 699ef759-458c-426d-ac87-7c7e71b018ae
-ms.openlocfilehash: a61764aeca71b00c74a23d2ce7f14da3199cb17f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d113c45469f6a78c94b9489bd82f9e55b5b96bba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638149"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962270"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Como: Definir estilos de linha alternados para o controle DataGridView do Windows Forms
 Dados tabulares geralmente são apresentados aos usuários em um formato contábil no qual linhas alternativas têm cores de tela de fundo diferente. Esse formato facilita para os usuários saber quais células estão em cada linha, especialmente com tabelas largas com muitas colunas.  
   
- Com o <xref:System.Windows.Forms.DataGridView> controle, você pode especificar informações de estilo completas para linhas alternadas. Isso permite usar as características de estilo como cor e fonte de primeiro plano, além da cor da tela de fundo, para diferenciar as linhas alternadas.  
+ Com o <xref:System.Windows.Forms.DataGridView> controle, você pode especificar informações de estilo completas para alternar linhas. Isso permite usar as características de estilo como cor e fonte de primeiro plano, além da cor da tela de fundo, para diferenciar as linhas alternadas.  
   
- Há suporte para esta tarefa no Visual Studio.  Consulte também [como: Definir estilos de linha alternada para o Windows Forms usando o Designer de controle de DataGridView](set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
+ Há suporte para esta tarefa no Visual Studio.  Consulte [também como: Defina os estilos de linha alternados para o controle Windows Forms DataGridView](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)usando o designer.  
   
 ### <a name="to-set-alternating-row-styles-programmatically"></a>Para definir estilos de linha alternada de forma programática  
   
-- Definir as propriedades do <xref:System.Windows.Forms.DataGridViewCellStyle> objetos retornados pela <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> e <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> propriedades do <xref:System.Windows.Forms.DataGridView>.  
+- Defina <xref:System.Windows.Forms.DataGridViewCellStyle> as propriedades dos objetos retornados <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> pelas propriedades e <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> do <xref:System.Windows.Forms.DataGridView>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#068](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#068)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#068](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#068)]  
   
     > [!NOTE]
-    >  Os estilos especificados usando o <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> e <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> propriedades substituem os estilos especificados na coluna e <xref:System.Windows.Forms.DataGridView> de nível, mas são substituídos por estilos definidos no nível de linha e célula individual. Para obter mais informações, consulte [Estilos de célula no controle DataGridView dos Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
+    > Os estilos especificados usando as <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> propriedades <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> e substituem os estilos especificados na coluna e <xref:System.Windows.Forms.DataGridView> no nível, mas são substituídos pelos estilos definidos no nível de linha e célula individuais. Para obter mais informações, consulte [Estilos de célula no controle DataGridView dos Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
 - Um controle <xref:System.Windows.Forms.DataGridView> chamado `dataGridView1`.  
   
-- Referências para o <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, e <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.  
+- Referências aos <xref:System?displayProperty=nameWithType>assemblies, <xref:System.Drawing?displayProperty=nameWithType>e. <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
 ## <a name="robust-programming"></a>Programação robusta  
- Para obter escalabilidade máxima, você deve compartilhar <xref:System.Windows.Forms.DataGridViewCellStyle> objetos em várias linhas, colunas ou células que usam os mesmos estilos, em vez de definir as propriedades de estilo para cada elemento separadamente. Para obter mais informações, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Para obter a escalabilidade máxima, <xref:System.Windows.Forms.DataGridViewCellStyle> você deve compartilhar objetos em várias linhas, colunas ou células que usam os mesmos estilos, em vez de definir as propriedades de estilo para cada elemento separadamente. Para obter mais informações, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -52,4 +52,4 @@ Dados tabulares geralmente são apresentados aos usuários em um formato contáb
 - [Formatação e estilos básicos no controle DataGridView do Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Estilos de célula no controle DataGridView do Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Como: Definir estilos de fonte e cor no controle DataGridView dos Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)
+- [Como: Definir estilos de fonte e cor no controle Windows Forms DataGridView](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)

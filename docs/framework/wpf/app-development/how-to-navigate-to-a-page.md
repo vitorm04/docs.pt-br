@@ -8,18 +8,18 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: 458769355521c8a3653e3bc80a6ab8a0d0f7c6dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 38814268c9bb271ad3d88d549fb6ec4c6cbfed40
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622816"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966035"
 ---
 # <a name="how-to-navigate-to-a-page"></a>Como: Navegar para a página
-Este exemplo ilustra várias maneiras em que uma página pode ser acessada de um <xref:System.Windows.Navigation.NavigationWindow>.  
+Este exemplo ilustra várias maneiras em que uma página pode ser navegada de um <xref:System.Windows.Navigation.NavigationWindow>.  
   
 ## <a name="example"></a>Exemplo  
- É possível que um <xref:System.Windows.Navigation.NavigationWindow> para navegar até uma página usando um dos seguintes:  
+ É possível <xref:System.Windows.Navigation.NavigationWindow> navegar para uma página usando uma das seguintes opções:  
   
 - A propriedade de <xref:System.Windows.Navigation.NavigationWindow.Source%2A> .  
   
@@ -29,7 +29,7 @@ Este exemplo ilustra várias maneiras em que uma página pode ser acessada de um
  [!code-vb[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagecode)]  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)] pode ser relativo ou absoluto. Para obter mais informações, consulte [URIs "pack://" no WPF](pack-uris-in-wpf.md).  
+> [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)]pode ser relativo ou absoluto. Para obter mais informações, consulte [URIs "pack://" no WPF](pack-uris-in-wpf.md).  
   
 ## <a name="see-also"></a>Consulte também
 

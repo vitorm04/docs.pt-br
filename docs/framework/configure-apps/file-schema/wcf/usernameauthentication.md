@@ -2,20 +2,20 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 5a4cf8d429198b889f2bb362294ba3841c814b26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 399158632d5c17a35ded02691ba35a231e6cdc6e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788694"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940541"
 ---
 # <a name="usernameauthentication"></a>\<userNameAuthentication>
 Especifica as credenciais de um serviço com base no nome de usuário e senha.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors>  
-\<behavior>  
+\<> de portais  
+\<> de comportamento  
 \<serviceCredentials>  
 \<userNameAuthentication>  
   
@@ -38,13 +38,13 @@ Especifica as credenciais de um serviço com base no nome de usuário e senha.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`cacheLogonTokenLifetime`|Um <xref:System.TimeSpan> que especifica o comprimento máximo de tempo que um token é armazenado em cache. O padrão é 15:00:00.|  
-|`cacheLogonTokens`|Um valor booliano que especifica se tokens de logon são armazenadas em cache. O padrão é `false`.|  
-|`customUserNamePasswordValidatorType`|Uma cadeia de caracteres que especifica o tipo de validador de senha do nome de usuário personalizado a ser usado. O padrão é uma cadeia de caracteres vazia.|  
-|`includeWindowsGroups`|Um valor booliano que especifica se os grupos do Windows são incluídos no contexto de segurança. O padrão é `true`.<br /><br /> Definir esse atributo como `true` tem um impacto no desempenho, já que resulta em uma expansão de grupo completo. Defina essa propriedade como `false` se você não precisar estabelecer a lista de grupos de um usuário pertence.|  
-|`maxCacheLogonTokens`|Um inteiro que especifica o número máximo de tokens de logon ao cache. Esse valor deve ser maior que zero. O padrão é 128.|  
-|`membershipProviderName`|Quando o `clientCredentialType` atributo de uma associação é definido como `username`, o nome de usuário é mapeado para contas do Windows. Você pode substituir esse comportamento usando esse atributo, o que é uma cadeia de caracteres que contém o nome da <xref:System.Web.Security.MembershipProvider> valor que fornece o mecanismo de validação de senha relevantes.|  
-|`userNamePasswordValidationMode`|Especifica a maneira na qual nome de usuário a senha é validada. Os valores válidos são:<br /><br /> -   Windows<br />-MembershipProvider<br />-Custom<br /><br /> O padrão é Windows. Esse atributo é do tipo <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
+|`cacheLogonTokenLifetime`|Um <xref:System.TimeSpan> valor que especifica o período máximo de tempo em que um token é armazenado em cache. O padrão é 00:15:00.|  
+|`cacheLogonTokens`|Um valor booliano que especifica se os tokens de logon são armazenados em cache. O padrão é `false`.|  
+|`customUserNamePasswordValidatorType`|Uma cadeia de caracteres que especifica o tipo de validador de senha de nome de usuário personalizado a ser usado. O padrão é uma cadeia de caracteres vazia.|  
+|`includeWindowsGroups`|Um valor booliano que especifica se os grupos do Windows estão incluídos no contexto de segurança. O padrão é `true`.<br /><br /> Definir esse atributo para `true` tem um impacto no desempenho conforme ele resulta em uma expansão de grupo completo. Defina essa propriedade como `false` se você não precisar estabelecer a lista de grupos aos quais um usuário pertence.|  
+|`maxCacheLogonTokens`|Um inteiro que especifica o número máximo de tokens de logon para armazenar em cache. Esse valor deve ser maior que zero. O padrão é 128.|  
+|`membershipProviderName`|Quando o `clientCredentialType` atributo de uma associação é definido como `username`, o nome de usuário é mapeado para contas do Windows. Você pode substituir esse comportamento usando esse atributo, que é uma cadeia de caracteres que contém o nome <xref:System.Web.Security.MembershipProvider> do valor que fornece o mecanismo de validação de senha relevante.|  
+|`userNamePasswordValidationMode`|Especifica a maneira como a senha de nome de usuário é validada. Os valores válidos são:<br /><br /> -Windows<br />-MembershipProvider<br />-Personalizado<br /><br /> O padrão é Windows. Esse atributo é do tipo <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -53,12 +53,12 @@ Especifica as credenciais de um serviço com base no nome de usuário e senha.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica a credencial a ser usada na autenticação de serviço, e configurações relacionadas à validação de credenciais do cliente.|  
+|[\<serviceCredentials>](servicecredentials.md)|Especifica a credencial a ser usada na autenticação do serviço e as configurações relacionadas à validação de credenciais do cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- Se nenhuma das associações usadas por um serviço estiver configurada para autenticação baseada em nome/senha do usuário, os atributos desse elemento são ignorados. Eles incluem `customUserNamePasswordValidatorType`, `includeWindowsGroups`, `membershipProviderName`, e `userNamePasswordValidationMode`.  
+ Se nenhuma das associações usadas por um serviço estiver configurada para autenticação baseada em nome de usuário/senha, os atributos desse elemento serão ignorados. Isso inclui `customUserNamePasswordValidatorType` `includeWindowsGroups` ,,e`userNamePasswordValidationMode`. `membershipProviderName`  
   
- Se nenhuma das associações usadas por um serviço estiver configurada para usar a autenticação do Windows para o nome de usuário/senha, as configurações relacionadas ao cache de tokens de logon serão ignoradas. Isso inclui o `cacheLogonTokenLifetime`, `cacheLogonTokens`, e `maxCacheLogonTokens`.  
+ Se nenhuma das associações usadas por um serviço estiver configurada para usar a autenticação do Windows para nome de usuário/senha, as configurações relacionadas ao cache de tokens de logon serão ignoradas. Isso inclui o `cacheLogonTokenLifetime`, `cacheLogonTokens`o e `maxCacheLogonTokens`o.  
   
 ## <a name="see-also"></a>Consulte também
 

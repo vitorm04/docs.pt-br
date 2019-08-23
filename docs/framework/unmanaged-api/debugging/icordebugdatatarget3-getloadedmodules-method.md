@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc62618c5872a2c3e3740be4c60ae02e386c1868
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 120b839b2b11c85f42bb1a0ae4701de0dea33879
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912830"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>Método ICorDebugDataTarget3::GetLoadedModules
-Obtém uma lista dos módulos que foram carregados até o momento.  
+Obtém uma lista dos módulos que foram carregados até agora.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,25 +26,25 @@ HRESULT GetLoadedModules(
   
 ## <a name="parameters"></a>Parâmetros  
  `cRequestedModules`  
- [in] O número de módulos para o qual as informações são solicitadas.  
+ no O número de módulos para os quais as informações são solicitadas.  
   
  `pcFetchedModules`  
- [out] Um ponteiro para o número de módulos sobre qual informação foi retornada.  
+ fora Um ponteiro para o número de módulos sobre os quais as informações foram retornadas.  
   
  `pLoadedModules`  
- [out] Um ponteiro para uma matriz de [ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) objetos que fornecem informações sobre os módulos carregados.  
+ fora Um ponteiro para uma matriz de objetos [ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) que fornecem informações sobre os módulos carregados.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -3,12 +3,12 @@ title: WIF e Web Farms
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 656e7b116b9da68dbb38a5a2fc3d1ed90fda576a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592272"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967184"
 ---
 # <a name="wif-and-web-farms"></a>WIF e Web Farms
 Ao usar o WIF (Windows Identity Foundation) para proteger os recursos de um aplicativo RP (terceira parte confiável) implantado em uma web farm, siga etapas específicas para garantir que o WIF possa processar tokens de instâncias do aplicativo RP em execução em diferentes computadores no farm. Esse processamento inclui validação de assinaturas de token de sessão, criptografia e descriptografia de tokens de sessão, cache de tokens de sessão e detecção de tokens de segurança reproduzidos.  
@@ -55,10 +55,10 @@ Ao usar o WIF (Windows Identity Foundation) para proteger os recursos de um apli
 - Se o aplicativo detectar tokens reproduzidos, siga uma estratégia de cache distribuído semelhante para o cache de reprodução de token derivando de <xref:System.IdentityModel.Tokens.TokenReplayCache> e apontando para o cache de reprodução de token no serviço de cache do elemento de configuração [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
->  Todos os exemplo de XML e o código deste tópico é obtida a [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) exemplo.  
+> Todo o exemplo de XML e código neste tópico é tirado do exemplo de [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) .  
   
 > [!IMPORTANT]
->  Os exemplos deste tópico são fornecidos no estado em que se encontram e não se destinam a serem usados no código de produção sem modificação.  
+> Os exemplos deste tópico são fornecidos no estado em que se encontram e não se destinam a serem usados no código de produção sem modificação.  
   
 <a name="BKMK_TheWCFCachingService"></a>   
 ## <a name="the-wcf-caching-service"></a>O serviço de cache do WCF  

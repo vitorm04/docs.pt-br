@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: 3b80fc18fdabe0817c49f3e692ba678435d6761b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 604eaf9dc2ef506214969826ee7f38ee85690a0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876030"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942180"
 ---
 # <a name="ws-reliable-session"></a>Sessão confiável de WS
-Este exemplo demonstra o uso de sessões confiáveis. Sessões confiáveis fornecem suporte para o sistema de mensagens confiável e sessões. Sistema de mensagens confiável tenta novamente a comunicação em caso de falha e permite que as garantias de entrega seja especificado, como em ordem chegada de mensagens. Sessões de mantêm o estado dos clientes entre chamadas. O exemplo implementa sessões para manter o estado do cliente e especifica as garantias de entrega em ordem.  
+Este exemplo demonstra o uso de sessões confiáveis. As sessões confiáveis oferecem suporte para mensagens e sessões confiáveis. O sistema de mensagens confiável repete a comunicação em caso de falha e permite que as garantias de entrega sejam especificadas, como a chegada de mensagens em ordem. As sessões mantêm o estado para clientes entre chamadas. O exemplo implementa sessões para manter o estado do cliente e especifica garantias de entrega em ordem.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsReliableSession`  
   
- Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Os recursos de sessão confiável estão habilitados e configurados nos arquivos de configuração do aplicativo para o cliente e o serviço.  
+ Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Os recursos de sessão confiáveis são habilitados e configurados nos arquivos de configuração do aplicativo para o cliente e o serviço.  
   
- Neste exemplo, o serviço está hospedado no Internet Information Services (IIS) e o cliente é um aplicativo de console (.exe).  
+ Neste exemplo, o serviço é hospedado no Serviços de Informações da Internet (IIS) e o cliente é um aplicativo de console (. exe).  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- O exemplo usa o `wsHttpBinding`. A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação é especificado no elemento de ponto de extremidade `binding` conforme mostrado no seguinte exemplo de configuração do atributo.  
+ O exemplo usa o `wsHttpBinding`. A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação é especificado no atributo do elemento `binding` do ponto de extremidade, conforme mostrado na seguinte configuração de exemplo.  
   
 ```xml  
 <endpoint address=""  
@@ -39,7 +39,7 @@ Este exemplo demonstra o uso de sessões confiáveis. Sessões confiáveis forne
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O ponto de extremidade contém um `bindingConfiguration` atributo que faz referência a uma configuração de associação chamado "Binding1". A configuração de associação permite que as sessões confiáveis, definindo o `enabled` atributo o [ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) para `true`. Garantias de entrega ordenada sessões são controladas pela definição de atributo ordenada `true` ou `false`. O padrão é `true`.  
+ O ponto de extremidade `bindingConfiguration` contém um atributo que faz referência a uma configuração de associação chamada "Binding1". A configuração de associação permite sessões confiáveis definindo o `enabled` atributo [ \<do > ReliableSession](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) como. `true` As garantias de entrega para sessões ordenadas são controladas definindo o atributo `true` ordenado `false`como ou. O padrão é `true`.  
   
 ```xml  
 <bindings>  
@@ -51,7 +51,7 @@ Este exemplo demonstra o uso de sessões confiáveis. Sessões confiáveis forne
 </bindings>  
 ```  
   
- A classe de implementação de serviço implementa <xref:System.ServiceModel.InstanceContextMode.PerSession> instanciação para manter uma instância de classe separada para cada cliente, conforme mostrado no código de exemplo a seguir.  
+ A classe de implementação de <xref:System.ServiceModel.InstanceContextMode.PerSession> serviço implementa a instanciação para manter uma instância de classe separada para cada cliente, conforme mostrado no código de exemplo a seguir.  
 
 ```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)] public class CalculatorService : ICalculator  
@@ -60,7 +60,7 @@ Este exemplo demonstra o uso de sessões confiáveis. Sessões confiáveis forne
 }  
 ```
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -73,14 +73,14 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Instale usando o seguinte comando do ASP.NET 4.0.  
+1. Instale o ASP.NET 4,0 usando o comando a seguir.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  

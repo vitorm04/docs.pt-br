@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68364071"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941734"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrando seu aplicativo da Windows Store para .NET Nativo
 
@@ -55,7 +55,7 @@ ms.locfileid: "68364071"
 
 Por exemplo, a associação de dados necessita de um aplicativo para conseguir mapear nomes de propriedade às funções. Nos aplicativos .NET para Windows Store, o Common Language Runtime usa reflexão automaticamente para fornecer esse recurso para tipos nativos gerenciados e disponíveis publicamente. No .NET Native, o compilador inclui automaticamente metadados para os tipos aos quais você associa dados.
 
-O compilador de .net Native também pode manipular tipos genéricos comumente usados, <xref:System.Collections.Generic.List%601> como <xref:System.Collections.Generic.Dictionary%602>e, que funcionam sem a necessidade de nenhuma dica ou diretivas. A palavra-chave [dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) também tem suporte dentro de certos limites.
+O compilador de .net Native também pode manipular tipos genéricos comumente usados, <xref:System.Collections.Generic.List%601> como <xref:System.Collections.Generic.Dictionary%602>e, que funcionam sem a necessidade de nenhuma dica ou diretivas. A palavra-chave [dynamic](../../csharp/language-reference/keywords/dynamic.md) também tem suporte dentro de certos limites.
 
 > [!NOTE]
 > Você deve testar completamente todos os caminhos de código dinâmico ao portar seu aplicativo para .NET Native.
@@ -129,7 +129,7 @@ As seções a seguir listam cenários não suportados e APIs de desenvolvimento 
 
 - A criação dinâmica de matrizes multidimensionais não tem suporte. Essas matrizes geralmente são criados chamando uma sobrecarga do método <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> que inclui um parâmetro `lengths` ou chamando o método <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType>.
 
-- Não há suporte para matrizes multidimensionais com quatro ou mais dimensões, ou seja, com valor da propriedade <xref:System.Array.Rank%2A?displayProperty=nameWithType> quatro ou superior. Use [matrizes denteadas](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (uma matriz de matrizes) em vez disso. Por exemplo, `array[x,y,z]` é inválido, mas `array[x][y][z]` não é.
+- Não há suporte para matrizes multidimensionais com quatro ou mais dimensões, ou seja, com valor da propriedade <xref:System.Array.Rank%2A?displayProperty=nameWithType> quatro ou superior. Use [matrizes denteadas](../../csharp/programming-guide/arrays/jagged-arrays.md) (uma matriz de matrizes) em vez disso. Por exemplo, `array[x,y,z]` é inválido, mas `array[x][y][z]` não é.
 
 - Variação de matrizes multidimensionais não é suportada e causa uma exceção <xref:System.InvalidCastException> no tempo de execução.
 
@@ -668,4 +668,4 @@ A habilitação de .NET Native em uma biblioteca de teste de unidade para um pro
 - [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Visão geral dos aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

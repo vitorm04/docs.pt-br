@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876571"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964729"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Especificar valores XML como parâmetros
-Se uma consulta requer um parâmetro cujo valor é uma cadeia de caracteres XML, os desenvolvedores podem fornecer esse valor usando uma instância das **SqlXml** tipo de dados. Não há realmente nenhuma truques; Colunas XML no SQL Server aceitam valores de parâmetro exatamente da mesma maneira que outros tipos de dados.  
+Se uma consulta exigir um parâmetro cujo valor é uma cadeia de caracteres XML, os desenvolvedores poderão fornecer esse valor usando uma instância do tipo de dados **SQLXML** . Realmente não há truques; As colunas XML no SQL Server aceitam valores de parâmetro exatamente da mesma maneira que outros tipos de dados.  
   
 ## <a name="example"></a>Exemplo  
- O aplicativo de console a seguir cria uma nova tabela na **AdventureWorks** banco de dados. A nova tabela inclui uma coluna denominada **SalesID** e uma coluna XML denominado **SalesInfo**.  
+ O aplicativo de console a seguir cria uma nova tabela no banco de dados **AdventureWorks** . A nova tabela inclui uma coluna chamada **saleid** e uma coluna XML chamada **SalesInfo**.  
   
 > [!NOTE]
->  O **AdventureWorks** banco de dados de exemplo não é instalado por padrão quando você instala o SQL Server. Você pode instalá-lo executando a instalação do SQL Server.  
+> O banco de dados de exemplo **AdventureWorks** não é instalado por padrão quando você instala o SQL Server. Você pode instalá-lo executando SQL Server configuração.  
   
- O exemplo prepara um <xref:System.Data.SqlClient.SqlCommand> objeto para inserir uma linha na nova tabela. Um arquivo salvo fornece os dados XML necessários para o **SalesInfo** coluna.  
+ O exemplo prepara um <xref:System.Data.SqlClient.SqlCommand> objeto para inserir uma linha na nova tabela. Um arquivo salvo fornece os dados XML necessários para a coluna **SalesInfo** .  
   
- Para criar o arquivo necessário para executar o exemplo, crie um novo arquivo de texto na mesma pasta do seu projeto. Nomeie o arquivo MyTestStoreData.xml. Abra o arquivo no bloco de notas e copie e cole o seguinte texto:  
+ Para criar o arquivo necessário para que o exemplo seja executado, crie um novo arquivo de texto na mesma pasta que o seu projeto. Nomeie o arquivo MyTestStoreData. xml. Abra o arquivo no bloco de notas e copie e cole o seguinte texto:  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

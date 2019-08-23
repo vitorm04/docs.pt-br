@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37f1f6055ec8fa68fe804780d2893d20c978e6bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 277b93267f0537c8e499a8d8f3b456c4396a975c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663734"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966348"
 ---
 # <a name="imetadataerror-interface"></a>Interface IMetaDataError
 Fornece um mecanismo de retorno de chamada para relatar erros durante a mesclagem de metadados.  
   
 > [!NOTE]
->  O `IMetaDataError` interface deve ser implementada pelo cliente.  
+> A `IMetaDataError` interface deve ser implementada pelo cliente.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método OnError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Fornece notificação de erros que ocorrem durante a mesclagem de metadados.|  
+|[Método OnError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Fornece uma notificação de erros que ocorrem durante a mesclagem de metadados.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Biblioteca** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

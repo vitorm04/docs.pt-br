@@ -5,34 +5,34 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 903928087d5ad9c51040ba6bf65639f44d8c7dd6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f72dcc25b158d793850069e5cc32c3a3c02fad17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627435"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939206"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Espaço em branco em literais XML (Visual Basic)
-O compilador do Visual Basic incorpora somente os caracteres de espaço em branco significativo de um literal XML quando ele cria um [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto. Os caracteres de espaço em branco insignificante não são incorporados.  
+O compilador Visual Basic incorpora apenas os caracteres de espaço em branco significativos de um literal XML quando ele cria um [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto. Os caracteres de espaço em branco insignificantes não são incorporados.  
   
-## <a name="significant-and-insignificant-white-space"></a>Espaço em branco significativo e irrisória  
- Caracteres de espaço em branco em literais XML são significativos em apenas três áreas:  
+## <a name="significant-and-insignificant-white-space"></a>Espaço em branco significativo e insignificante  
+ Os caracteres de espaço em branco em literais XML são significativos em apenas três áreas:  
   
-- Quando eles estão em um valor de atributo.  
+- Quando estão em um valor de atributo.  
   
-- Quando eles fazem parte de um elemento conteúdo de texto e o texto também contiver outros caracteres.  
+- Quando eles fazem parte do conteúdo de texto de um elemento e o texto também contém outros caracteres.  
   
-- Quando eles estão em uma expressão inserida para o conteúdo de texto de um elemento.  
+- Quando estão em uma expressão inserida para o conteúdo de texto de um elemento.  
   
- Caso contrário, o compilador trata caracteres de espaço em branco como insignificante e não inclui, em seguida, no [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto para o literal.  
+ Caso contrário, o compilador trata caracteres de espaço em branco como insignificantes e não inclui [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , em seguida, no objeto para o literal.  
   
- Para incluir espaço em branco insignificante em um literal XML, use uma expressão inserida que contém uma cadeia de caracteres literal com o espaço em branco.  
+ Para incluir um espaço em branco insignificante em um literal XML, use uma expressão inserida que contenha um literal de cadeia de caracteres com o espaço em branco.  
   
 > [!NOTE]
->  Se o `xml:space` atributo é exibido em um elemento XML literal, o compilador do Visual Basic inclui o atributo no <xref:System.Xml.Linq.XElement> objeto, mas adicionando esse atributo não altera como o compilador trata espaços em branco.  
+> Se o `xml:space` atributo aparecer em um literal de elemento XML, o compilador de Visual Basic incluirá o <xref:System.Xml.Linq.XElement> atributo no objeto, mas a adição desse atributo não altera como o compilador trata o espaço em branco.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir contém dois elementos XML, externos e internos. Ambos os elementos de contenham espaço em branco em seu conteúdo de texto. O espaço em branco no elemento externo é insignificante, porque ele contém apenas espaços em branco e um elemento XML. O espaço em branco no elemento interno é significativo porque ele contém espaço em branco e texto.  
+ O exemplo a seguir contém dois elementos XML, externo e interno. Ambos os elementos contêm espaço em branco em seu conteúdo de texto. O espaço em branco no elemento externo é insignificante porque contém apenas espaços em branco e um elemento XML. O espaço em branco no elemento interno é significativo porque contém espaço em branco e texto.  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   

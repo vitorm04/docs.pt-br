@@ -2,18 +2,18 @@
 title: Filtros personalizados
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: 9ef94d95737fb743af56f411bcc0f39ceea679a0
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: ade387524c9ca6c8ef337ccf6a5b3453b7df976b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912679"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945375"
 ---
 # <a name="custom-filters"></a>Filtros personalizados
-Filtros personalizados permitem que você defina a lógica de correspondência que não pode ser realizada usando os filtros de mensagem fornecida pelo sistema. Por exemplo, você pode criar um filtro personalizado que faz o hash de um elemento de mensagem específica e, em seguida, examina o valor para determinar se o filtro deve retornar true ou false.  
+Os filtros personalizados permitem que você defina a lógica correspondente que não pode ser realizada usando os filtros de mensagens fornecidos pelo sistema. Por exemplo, você pode criar um filtro personalizado que faz hash de um determinado elemento de mensagem e, em seguida, examina o valor para determinar se o filtro deve retornar true ou false.  
   
 ## <a name="implementation"></a>Implementação  
- Um filtro personalizado é uma implementação do <xref:System.ServiceModel.Dispatcher.MessageFilter> classe base abstrata. Ao implementar seu filtro personalizado, o construtor, opcionalmente, pode aceitar um parâmetro de cadeia de caracteres único. Este parâmetro contém as informações de configuração que são passadas para o construtor de MessageFilter para fornecer corresponde a todos os valores ou configuração que o filtro precisa em tempo de execução para realizar. Por exemplo, isso pode ser usado para fornecer um valor que o filtro procura dentro da mensagem que está sendo avaliada. O exemplo a seguir demonstra uma implementação básica de um filtro de mensagem personalizado que aceita um parâmetro de cadeia de caracteres:  
+ Um filtro personalizado é uma implementação da <xref:System.ServiceModel.Dispatcher.MessageFilter> classe base abstrata. Ao implementar seu filtro personalizado, o construtor pode opcionalmente aceitar um único parâmetro de cadeia de caracteres. Esse parâmetro contém as informações de configuração que são passadas para o Construtor MessageFilter para fornecer qualquer valor ou configuração que o filtro precisa em tempo de execução para executar correspondências. Por exemplo, isso pode ser usado para fornecer um valor que o filtro Procure dentro da mensagem que está sendo avaliada. O exemplo a seguir demonstra uma implementação básica de um filtro de mensagem personalizado que aceita um parâmetro de cadeia de caracteres:  
   
 ```csharp  
 public class MyMessageFilter: MessageFilter  
@@ -39,25 +39,25 @@ public class MyMessageFilter: MessageFilter
 ```  
   
 > [!NOTE]
->  Em uma implementação real, os métodos de correspondência contém a lógica que examinará a mensagem para determinar se o filtro de mensagens deve retornar **verdadeira** ou **falso**.  
+> Em uma implementação real, os métodos de correspondência contêm a lógica que examinará a mensagem para determinar se esse filtro de mensagem deve retornar **verdadeiro** ou **falso**.  
   
 ### <a name="performance"></a>Desempenho  
- Ao implementar um filtro personalizado, é importante levar em consideração o comprimento máximo de tempo necessário para o filtro concluir a avaliação de uma mensagem. Uma vez que uma mensagem pode ser avaliada em relação a vários filtros antes que uma correspondência for encontrada, é importante garantir que a solicitação do cliente não expira antes que todos os filtros podem ser avaliados. Portanto, um filtro personalizado deve conter somente o código necessário para avaliar o conteúdo ou atributos de uma mensagem para determinar se ele corresponde aos critérios de filtro.  
+ Ao implementar um filtro personalizado, é importante levar em consideração o período máximo de tempo necessário para que o filtro conclua a avaliação de uma mensagem. Uma vez que uma mensagem pode ser avaliada em vários filtros antes que uma correspondência seja encontrada, é importante garantir que a solicitação do cliente não expire antes que todos os filtros possam ser avaliados. Portanto, um filtro personalizado deve conter apenas o código necessário para avaliar o conteúdo ou os atributos de uma mensagem a fim de determinar se ele corresponde aos critérios de filtro.  
   
  Em geral, você deve evitar o seguinte ao implementar um filtro personalizado:  
   
-- E/s, como salvar dados em disco ou um banco de dados.  
+- E/s, como salvar dados em disco ou em um banco de dados.  
   
-- Desnecessária de processamento, como looping através de vários registros em um documento.  
+- Processamento desnecessário, como looping sobre vários registros em um documento.  
   
-- Operações de bloqueio, como chamadas que envolvem a obtenção de um bloqueio em recursos compartilhados ou realização de pesquisas em relação a um banco de dados.  
+- Operações de bloqueio, como chamadas que envolvem a obtenção de um bloqueio em recursos compartilhados ou a execução de pesquisas em um banco de dados.  
   
- Antes de usar um filtro personalizado em um ambiente de produção, você deve executar testes de desempenho para determinar a duração média de tempo que o filtro usa para avaliar uma mensagem. Quando combinado com o tempo médio de processamento dos filtros usados na tabela de filtros, isso permitirá que você determine com precisão o valor de tempo limite máximo deve ser especificado pelo aplicativo cliente.  
+ Antes de usar um filtro personalizado em um ambiente de produção, você deve executar testes de desempenho para determinar a duração média de tempo que o filtro leva para avaliar uma mensagem. Quando combinado com o tempo médio de processamento dos outros filtros usados na tabela de filtro, isso permitirá que você determine com precisão o valor de tempo limite máximo que deve ser especificado pelo aplicativo cliente.  
   
 ## <a name="usage"></a>Uso  
- Para usar seu filtro personalizado com o serviço de roteamento, você deve adicioná-lo à tabela de filtro especificando uma nova entrada de filtro do tipo "Custom", o nome do tipo totalmente qualificado do filtro de mensagem e o nome do seu assembly.  Assim como acontece com outros MessageFilters, você pode especificar o filterData de cadeia de caracteres que será passado ao construtor do seu filtro personalizado.  
+ Para usar o filtro personalizado com o serviço de roteamento, você deve adicioná-lo à tabela de filtros especificando uma nova entrada de filtro do tipo "Custom", o nome do tipo totalmente qualificado do filtro de mensagem e o nome do seu assembly.  Assim como ocorre com outros MessageFilters, você pode especificar a cadeia de caracteres filterData que será passada para o construtor do filtro personalizado.  
   
- Os exemplos a seguir demonstram o uso de um filtro personalizado com o serviço de roteamento:  
+ Os exemplos a seguir demonstram como usar um filtro personalizado com o serviço de roteamento:  
   
 ```xml  
 <!--ROUTING SECTION -->  

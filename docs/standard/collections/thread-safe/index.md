@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816200"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962989"
 ---
 # <a name="thread-safe-collections"></a>Coleções thread-safe
 O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que inclui várias classes de coleção que são tanto thread-safe quanto escalonáveis. Vários threads podem adicionar ou remover itens dessas coleções de modo seguro e eficiente sem a necessidade de sincronização adicional no código do usuário. Ao escrever um novo código, use as classes de coleção simultâneas sempre que vários threads forem ser gravados simultaneamente nas coleções. Se estiver lendo apenas de uma coleção compartilhada, você poderá usar as classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. É recomendável não usar as classes da coleção 1.0, a menos que você precise ter como destino o tempo de execução do .NET Framework 1.1 ou anterior.  
@@ -30,11 +30,11 @@ O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?disp
  As classes <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601> não usam bloqueios. Em vez disso, elas usam operações do <xref:System.Threading.Interlocked> para obter acesso thread-safe.  
   
 > [!NOTE]
->  Considerando que as classes de coleções simultâneas dão suporte a <xref:System.Collections.ICollection>, elas fornecem implementações para as propriedades <xref:System.Collections.ICollection.IsSynchronized%2A> e <xref:System.Collections.ICollection.SyncRoot%2A>, embora essas propriedades sejam irrelevantes. `IsSynchronized` sempre retorna `false` e `SyncRoot` é sempre `null` (`Nothing` no Visual Basic).  
+> Considerando que as classes de coleções simultâneas dão suporte a <xref:System.Collections.ICollection>, elas fornecem implementações para as propriedades <xref:System.Collections.ICollection.IsSynchronized%2A> e <xref:System.Collections.ICollection.SyncRoot%2A>, embora essas propriedades sejam irrelevantes. `IsSynchronized` sempre retorna `false` e `SyncRoot` é sempre `null` (`Nothing` no Visual Basic).  
   
  A tabela a seguir lista os tipos de coleção no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Tipo|Descrição|  
+|Tipo|DESCRIÇÃO|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Fornece funcionalidade de delimitação e bloqueio de qualquer tipo que implemente <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Para obter mais informações, veja [Visão geral de BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Implementação thread-safe de um dicionário de pares chave-valor.|  
@@ -45,7 +45,7 @@ O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?disp
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Título|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Visão geral de BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Este tópico descreve a funcionalidade fornecida pelo tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
 |[Como: Adicionar e remover itens de um ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Descreve como adicionar e remover elementos de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 800bf80e5ba3e697c122bcf4b1bc0f302357d087
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 154a2543c62de545e8b2df711d6ad51989d0689d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401620"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964846"
 ---
 # <a name="dependency-property-metadata"></a>Metadados de propriedade da dependência
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sistema de propriedades inclui um sistema de relatórios de metadados que vai além do que pode ser relatado sobre uma propriedade por meio de características de reflexão ou de Common Language Runtime geral (CLR). Os metadados de uma propriedade de dependência também podem ser atribuídos exclusivamente pela classe que define uma propriedade de dependência, podem ser alterados quando a propriedade de dependência é adicionada a uma classe diferente e podem ser substituídos especificamente por todas as classes derivadas que herdam a propriedade de dependência da classe base de definição.  
@@ -38,7 +38,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
  A <xref:System.Windows.PropertyMetadata> classe é derivada de para fornecer metadados mais específicos para divisões arquitetônicas, como as classes de nível de estrutura do WPF. <xref:System.Windows.UIPropertyMetadata>Adiciona relatórios de animação e <xref:System.Windows.FrameworkPropertyMetadata> fornece as propriedades de nível de estrutura do WPF mencionadas na seção anterior. Quando as propriedades de dependência são registradas, elas podem ser <xref:System.Windows.PropertyMetadata> registradas com essas classes derivadas. Quando os metadados são examinados, o <xref:System.Windows.PropertyMetadata> tipo base pode potencialmente ser convertido para as classes derivadas para que você possa examinar as propriedades mais específicas.  
   
 > [!NOTE]
->  As características de propriedade que podem ser especificadas <xref:System.Windows.FrameworkPropertyMetadata> no são, às vezes, referenciadas nesta documentação como "Flags". Quando você cria novas instâncias de metadados para uso em registros de propriedade de dependência ou substituições de metadados, você especifica esses valores <xref:System.Windows.FrameworkPropertyMetadataOptions> usando a enumeração flagwise e, em seguida, fornece valores concatenados da enumeração para o <xref:System.Windows.FrameworkPropertyMetadata> Construtor. No entanto, uma vez construída, essas características de opção <xref:System.Windows.FrameworkPropertyMetadata> são expostas em um como uma série de propriedades booleanas em vez do valor de enumeração de construção. As propriedades boolianas permitem que você verifique cada condicional, em vez de exigirem que você aplique uma máscara a um valor de enumeração sinalizadora para obter as informações que lhe interessam. O construtor usa o concatenado <xref:System.Windows.FrameworkPropertyMetadataOptions> para manter o comprimento da assinatura do Construtor razoável, ao passo que os metadados construídos reais expõem as propriedades discretas para tornar a consulta de metadados mais intuitiva.  
+> As características de propriedade que podem ser especificadas <xref:System.Windows.FrameworkPropertyMetadata> no são, às vezes, referenciadas nesta documentação como "Flags". Quando você cria novas instâncias de metadados para uso em registros de propriedade de dependência ou substituições de metadados, você especifica esses valores <xref:System.Windows.FrameworkPropertyMetadataOptions> usando a enumeração flagwise e, em seguida, fornece valores concatenados da enumeração para o <xref:System.Windows.FrameworkPropertyMetadata> Construtor. No entanto, uma vez construída, essas características de opção <xref:System.Windows.FrameworkPropertyMetadata> são expostas em um como uma série de propriedades booleanas em vez do valor de enumeração de construção. As propriedades boolianas permitem que você verifique cada condicional, em vez de exigirem que você aplique uma máscara a um valor de enumeração sinalizadora para obter as informações que lhe interessam. O construtor usa o concatenado <xref:System.Windows.FrameworkPropertyMetadataOptions> para manter o comprimento da assinatura do Construtor razoável, ao passo que os metadados construídos reais expõem as propriedades discretas para tornar a consulta de metadados mais intuitiva.  
   
 <a name="override_or_subclass"></a>   
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>Quando substituir metadados, quando derivar uma classe  
@@ -78,7 +78,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
  No [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], as propriedades anexadas são implementadas como propriedades de dependência. Isso significa que elas também têm metadados de propriedade, que as classes individuais podem substituir. As considerações de escopo para uma propriedade anexada no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são geralmente que qualquer <xref:System.Windows.DependencyObject> um pode ter uma propriedade anexa definida nelas. Portanto, qualquer <xref:System.Windows.DependencyObject> classe derivada pode substituir os metadados de qualquer propriedade anexada, pois ele pode ser definido em uma instância da classe. Você pode substituir os valores padrão, os retornos de chamada ou as propriedades de relatório de características de nível de estrutura do WPF. Se a propriedade anexada for definida em uma instância da sua classe, aquelas características de metadados de propriedade de substituição serão aplicadas. Por exemplo, você pode substituir o valor padrão, de modo que o valor de substituição seja relatado como o valor da propriedade anexada nas instâncias da sua classe, sempre que a propriedade não é definida de outra forma.  
   
 > [!NOTE]
->  A <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> propriedade não é relevante para propriedades anexadas.  
+> A <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> propriedade não é relevante para propriedades anexadas.  
   
 <a name="dp_add_owner"></a>   
 ### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>Adicionando uma classe como um proprietário de uma propriedade de dependência existente  

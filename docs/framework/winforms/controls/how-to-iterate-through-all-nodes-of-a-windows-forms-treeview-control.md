@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941083"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966555"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Como: Iterar em todos os nós de um controle TreeView do Windows Forms
-Às vezes é útil para examinar todos os nós em um Windows Forms <xref:System.Windows.Forms.TreeView> controle para realizar alguns cálculos nos valores de nó. Essa operação pode ser feita usando um procedimento recursivo (método recursivo em C# e C++) que itera em cada nó em cada coleção da árvore.  
+Às vezes, é útil examinar cada nó em um controle <xref:System.Windows.Forms.TreeView> de Windows Forms para executar algum cálculo nos valores de nó. Essa operação pode ser feita usando um procedimento recursivo (método recursivo em C# e C++) que itera em cada nó em cada coleção da árvore.  
   
- Cada <xref:System.Windows.Forms.TreeNode> objeto em uma exibição de árvore tem propriedades que você pode usar para navegar a exibição de árvore: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, e <xref:System.Windows.Forms.TreeNode.Parent%2A>. O valor da <xref:System.Windows.Forms.TreeNode.Parent%2A> propriedade é o nó pai do nó atual. Os nós filho do nó atual, caso haja algum, são listados no seu <xref:System.Windows.Forms.TreeNode.Nodes%2A> propriedade. O <xref:System.Windows.Forms.TreeView> próprio controle tem o <xref:System.Windows.Forms.TreeView.TopNode%2A> propriedade, que é o nó raiz do modo de exibição de árvore inteira.  
+ Cada <xref:System.Windows.Forms.TreeNode> objeto em um modo de exibição de árvore tem propriedades que você pode usar para navegar pelo modo de exibição <xref:System.Windows.Forms.TreeNode.PrevNode%2A>de árvore <xref:System.Windows.Forms.TreeNode.Parent%2A>: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A> <xref:System.Windows.Forms.TreeNode.NextNode%2A>,, e. O valor da <xref:System.Windows.Forms.TreeNode.Parent%2A> propriedade é o nó pai do nó atual. Os nós filho do nó atual, se houver algum, serão listados em sua <xref:System.Windows.Forms.TreeNode.Nodes%2A> propriedade. O <xref:System.Windows.Forms.TreeView> próprio controle tem a <xref:System.Windows.Forms.TreeView.TopNode%2A> Propriedade, que é o nó raiz do modo de exibição de árvore inteiro.  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Como iterar em todos os nós do controle TreeView  
   
@@ -28,7 +28,7 @@ ms.locfileid: "61941083"
   
 2. Chame o procedimento.  
   
-     O exemplo a seguir mostra como imprimir cada <xref:System.Windows.Forms.TreeNode> do objeto <xref:System.Windows.Forms.TreeNode.Text%2A> propriedade:  
+     O exemplo a seguir mostra como imprimir a <xref:System.Windows.Forms.TreeNode> propriedade de <xref:System.Windows.Forms.TreeNode.Text%2A> cada objeto:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -126,4 +126,4 @@ ms.locfileid: "61941083"
 ## <a name="see-also"></a>Consulte também
 
 - [Controle TreeView](treeview-control-windows-forms.md)
-- [Procedimentos Recursivos](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+- [Procedimentos Recursivos](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
