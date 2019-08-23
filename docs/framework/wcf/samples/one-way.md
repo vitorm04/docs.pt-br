@@ -2,20 +2,20 @@
 title: Unidirecional
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: e82034a79610ea7956b3ef07508295578461de1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0035b64b14b0d32f39974e8eaa28242290d665c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008027"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957241"
 ---
 # <a name="one-way"></a>Unidirecional
-Este exemplo demonstra um contato de serviço com operações de serviço unidirecional. O cliente não aguarda a conclusão como é o caso com operações de serviço bidirecional das operações de serviço. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e usa o `wsHttpBinding` associação. O serviço neste exemplo é um aplicativo de console auto-hospedado para que você possa observar o serviço que recebe e processa as solicitações. O cliente também é um aplicativo de console.  
+Este exemplo demonstra um contato de serviço com operações de serviço unidirecionais. O cliente não aguarda que as operações de serviço sejam concluídas como é o caso com operações de serviço bidirecionais. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e usa a `wsHttpBinding` associação. O serviço neste exemplo é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe e processa solicitações. O cliente também é um aplicativo de console.  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Para criar um contrato de serviço unidirecional, definir seu contrato de serviço, se aplicam a <xref:System.ServiceModel.OperationContractAttribute> de classe para cada operação e defina <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> para `true` conforme mostrado no código de exemplo a seguir:  
+ Para criar um contrato de serviço unidirecional, defina seu contrato de serviço, <xref:System.ServiceModel.OperationContractAttribute> aplique a classe a cada operação e <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> `true` defina como, conforme mostrado no código de exemplo a seguir:  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -52,11 +52,11 @@ public class CalculatorService : IOneWayCalculator
 }  
 ```  
   
- Quando o cliente chama o serviço, a chamada retorna sem aguardar a conclusão da operação de serviço.  
+ Quando o cliente chama o serviço, a chamada retorna sem esperar que a operação de serviço seja concluída.  
   
- Quando você executar o exemplo, as atividades do cliente e o serviço são exibidas nas janelas do console de serviço e cliente. Você pode ver as mensagens de recebimento do serviço do cliente. Pressione ENTER em cada janela de console para desligar o serviço e o cliente.  
+ Quando você executa o exemplo, as atividades de cliente e serviço são exibidas nas janelas do console do cliente e do serviço. Você pode ver o serviço receber mensagens do cliente. Pressione ENTER em cada janela do console para desligar o serviço e o cliente.  
   
- O cliente concluir à frente do serviço, demonstrando que um cliente não aguarda a conclusão das operações de serviço unidirecional. A saída do cliente é da seguinte maneira:  
+ O cliente é concluído antes do serviço, demonstrando que um cliente não aguarda a conclusão de operações de serviço unidirecionais. A saída do cliente é a seguinte:  
   
 ```console  
 Add(100,15.99)  
@@ -67,7 +67,7 @@ Divide(22,7)
 Press <ENTER> to terminate client.  
 ```  
   
- A seguinte saída de serviço é mostrada:  
+ A saída de serviço a seguir é mostrada:  
   
 ```console  
 The service is ready.  
@@ -84,24 +84,24 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP é, por definição, um protocolo de solicitação/resposta; Quando uma solicitação é feita, uma resposta é retornada. Isso é verdadeiro mesmo para uma operação de serviço unidirecional que é exposta no HTTP. Quando a operação é chamada, o serviço retornará um código de status HTTP de 202 antes que a operação de serviço foi executada. Esse código de status significa que a solicitação foi aceita para processamento, mas o processamento ainda não foi concluído. O cliente que chamou a operação bloqueia até que ele recebe a resposta 202 do serviço. Isso pode causar um comportamento inesperado quando várias mensagens unidirecionais são enviadas usando uma associação que está configurada para usar sessões. O `wsHttpBinding` associação usada nesse exemplo é configurada para usar sessões por padrão para estabelecer um contexto de segurança. Por padrão, mensagens em uma sessão são garantidas de chegar na ordem em que elas são enviadas. Por isso, quando a segunda mensagem em uma sessão é enviada, ela não é processada até que a primeira mensagem foi processada. O resultado disso é que o cliente não recebe uma mensagem de resposta 202 até que o processamento da mensagem anterior foi concluído. O cliente, portanto, é exibida para o bloco em cada chamada de operação subsequente. Para evitar esse comportamento, este exemplo configura o tempo de execução para distribuir mensagens simultaneamente para instâncias distintas para processamento. Os conjuntos de exemplo <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> para `PerCall` para que cada mensagem pode ser processada por uma instância diferente. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> é definido como `Multiple` para permitir que mais de um thread enviar mensagens por vez.  
+> O HTTP é, por definição, um protocolo de solicitação/resposta; Quando uma solicitação é feita, uma resposta é retornada. Isso é verdadeiro mesmo para uma operação de serviço unidirecional que é exposta por HTTP. Quando a operação é chamada, o serviço retorna um código de status HTTP de 202 antes da execução da operação de serviço. Esse código de status significa que a solicitação foi aceita para processamento, mas o processamento ainda não foi concluído. O cliente que chamou a operação é bloqueado até receber a resposta 202 do serviço. Isso pode causar algum comportamento inesperado quando várias mensagens unidirecionais são enviadas usando uma associação configurada para usar sessões. A `wsHttpBinding` associação usada neste exemplo é configurada para usar sessões por padrão para estabelecer um contexto de segurança. Por padrão, as mensagens em uma sessão têm garantia de chegar na ordem em que são enviadas. Por isso, quando a segunda mensagem em uma sessão é enviada, ela não é processada até que a primeira mensagem seja processada. O resultado disso é que o cliente não recebe a resposta 202 para uma mensagem até que o processamento da mensagem anterior tenha sido concluído. O cliente, portanto, parece bloquear em cada chamada de operação subsequente. Para evitar esse comportamento, esta amostra configura o tempo de execução para distribuir mensagens simultaneamente para instâncias distintas para processamento. O exemplo define <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> como `PerCall` para que cada mensagem possa ser processada por uma instância diferente. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>é definido como `Multiple` para permitir que mais de um thread envie mensagens por vez.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  Execute o serviço antes de executar o cliente e desligar o cliente antes de desligar o serviço. Isso evita uma exceção do cliente quando o cliente não é possível fechar a sessão de segurança corretamente porque o serviço não existe mais.  
+> Execute o serviço antes de executar o cliente e desligue o cliente antes de desligar o serviço. Isso evita uma exceção de cliente quando o cliente não pode fechar a sessão de segurança corretamente porque o serviço não existe mais.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  

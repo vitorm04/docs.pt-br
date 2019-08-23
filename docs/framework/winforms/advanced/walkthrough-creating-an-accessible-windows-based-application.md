@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 7dec86c724479fde78fcb2e2881dce40b1bf747a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877111"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957188"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Passo a passo: criar um aplicativo baseado no Windows acessível
 
@@ -35,7 +35,7 @@ Para obter informações sobre suporte a diferentes layouts de teclado, consulte
 
 ## <a name="creating-the-project"></a>Criando o Projeto
 
-Este passo a passo cria a interface do usuário para um aplicativo que recebe pedidos de pizza. Ele consiste em uma <xref:System.Windows.Forms.TextBox> para o nome do cliente, uma <xref:System.Windows.Forms.RadioButton> grupo para selecionar o tamanho da pizza, um <xref:System.Windows.Forms.CheckedListBox> para selecionar os ingredientes, dois controles de botão rotulado como ordem e Cancelar e um Menu com um comando Sair.
+Este passo a passo cria a interface do usuário para um aplicativo que recebe pedidos de pizza. Ele consiste em um <xref:System.Windows.Forms.TextBox> para o nome do cliente, um <xref:System.Windows.Forms.RadioButton> grupo para selecionar o tamanho da pizza, <xref:System.Windows.Forms.CheckedListBox> um para selecionar os ingredientes, dois controles Button rotulados Order e Cancel e um menu com um comando Exit.
 
 O usuário insere o nome do cliente, o tamanho da pizza e os ingredientes desejados. Quando o usuário clica no botão Pedir, um resumo do pedido e o custo são exibidos em uma caixa de mensagem e os controles são limpos e preparados para o próximo pedido. Quando o usuário clica no botão Cancelar, os controles são limpos e preparados para o próximo pedido. Quando o usuário clica no item de menu Sair, o programa é fechado.
 
@@ -43,13 +43,13 @@ A ênfase deste passo a passo não é no código para um sistema de pedidos de v
 
 #### <a name="to-begin-making-the-application"></a>Para começar a criar o aplicativo
 
-- Criar um novo aplicativo do Windows no Visual Basic ou Visual C#. Nomeie o projeto como **PizzaOrder**. (Para obter detalhes, consulte [Criando novas soluções e projetos](/visualstudio/ide/creating-solutions-and-projects)).
+- Crie um novo aplicativo do Windows em Visual Basic ou C#Visual. Nomeie o projeto como **PizzaOrder**. (Para obter detalhes, consulte [Criando novas soluções e projetos](/visualstudio/ide/creating-solutions-and-projects)).
 
 ## <a name="adding-the-controls-to-the-form"></a>Adicionando os controles ao formulário
 
 Ao adicionar controles a um formulário, tenha em mente as seguintes diretrizes para criar um aplicativo acessível:
 
-- Defina as <xref:System.Windows.Forms.Control.AccessibleDescription%2A> e <xref:System.Windows.Forms.Control.AccessibleName%2A> propriedades. Neste exemplo, a configuração padrão para o <xref:System.Windows.Forms.Control.AccessibleRole%2A> é suficiente. Para obter mais informações sobre as propriedades de acessibilidade, consulte [Fornecendo informações de acessibilidade para controles em um Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).
+- Defina as <xref:System.Windows.Forms.Control.AccessibleDescription%2A> propriedades <xref:System.Windows.Forms.Control.AccessibleName%2A> e. Neste exemplo, a configuração padrão para o <xref:System.Windows.Forms.Control.AccessibleRole%2A> é suficiente. Para obter mais informações sobre as propriedades de acessibilidade, consulte [Fornecendo informações de acessibilidade para controles em um Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).
 
 - Defina o tamanho da fonte como 10 pontos ou mais.
 
@@ -58,9 +58,9 @@ Ao adicionar controles a um formulário, tenha em mente as seguintes diretrizes 
 
 - Certifique-se de que qualquer controle de rótulo que descreve um controle TextBox venha logo antes do controle TextBox na ordem de tabulação.
 
-- Adicione uma chave de acesso, usando o caractere "&", para o <xref:System.Windows.Forms.Control.Text%2A> propriedade de qualquer controle que o usuário deseja navegar.
+- Adicione uma chave de acesso, usando o caractere "&", à <xref:System.Windows.Forms.Control.Text%2A> propriedade de qualquer controle ao qual o usuário possa desejar navegar.
 
-- Adicione uma chave de acesso, usando o caractere "&", para o <xref:System.Windows.Forms.Control.Text%2A> propriedade do rótulo que precede um controle que o usuário poderá navegar para. Definir rótulos <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriedade para `true`, de modo que o foco é definido para o próximo controle na ordem de tabulação quando o usuário pressiona a tecla de acesso.
+- Adicione uma chave de acesso, usando o caractere "&", à <xref:System.Windows.Forms.Control.Text%2A> Propriedade do rótulo que precede um controle para o qual o usuário talvez queira navegar. Defina a <xref:System.Windows.Forms.Label.UseMnemonic%2A> Propriedade rótulos como `true`, para que o foco seja definido como o próximo controle na ordem de tabulação quando o usuário pressionar a tecla de acesso.
 
 - Adicione chaves de acesso a todos os itens de menu.
 
@@ -68,7 +68,7 @@ Ao adicionar controles a um formulário, tenha em mente as seguintes diretrizes 
 
 - Adicione os controles ao formulário e defina as propriedades conforme descrito abaixo. Veja a imagem no final da tabela para um modelo de como organizar os controles no formulário.
 
-   |Objeto|Propriedade|Valor|
+   |Object|Propriedade|Valor|
    |------------|--------------|-----------|
    |Form1|AccessibleDescription|Formulário de pedido|
    ||AccessibleName|Formulário de pedido|
@@ -140,13 +140,13 @@ Ao adicionar controles a um formulário, tenha em mente as seguintes diretrizes 
    |MenuItem|Nome|exitApp|
    ||Texto|Sa&ir|
 
-   Seu formulário será algo parecido com a imagem a seguir:
+   Seu formulário será semelhante à imagem a seguir:
 
-   ![O formulário de pedido de pizza com uma seleção de nome de caixa de texto e o tamanho e ingredientes.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   ![O formulário de ordem de pizza com uma caixa de texto de nome e seleção de tamanho e ingredientes.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
 ## <a name="supporting-high-contrast-mode"></a>Suporte ao modo de alto contraste
 
-O modo de Alto Contraste é uma configuração de sistema do Windows que melhora a legibilidade, usando cores contrastantes e tamanhos de fonte que são benéficos para usuários com deficiências visuais. O <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> é fornecida para determinar se o modo de alto contraste está definido.
+O modo de Alto Contraste é uma configuração de sistema do Windows que melhora a legibilidade, usando cores contrastantes e tamanhos de fonte que são benéficos para usuários com deficiências visuais. A <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> propriedade é fornecida para determinar se o modo de alto contraste está definido.
 
 Se SystemInformation.HighContrast for `true`, o aplicativo deverá:
 
@@ -156,9 +156,9 @@ Se SystemInformation.HighContrast for `true`, o aplicativo deverá:
 
 - Omitir imagens ou padrões por trás do texto
 
-O aplicativo deve verificar a configuração da <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> quando o aplicativo é iniciado e responder ao evento de sistema <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. O <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> é gerado sempre que o valor de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> alterações.
+O aplicativo deve verificar a configuração de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> quando o aplicativo é iniciado e responder ao evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>do sistema. O <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> evento é gerado sempre que o valor <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> de é alterado.
 
-Em nosso aplicativo, o único elemento que não está usando as configurações do sistema para a cor é o `lblCompanyName`. O <xref:System.Drawing.SystemColors> classe é usada para alterar as configurações de cor do rótulo para as cores do sistema selecionadas pelo usuário.
+Em nosso aplicativo, o único elemento que não está usando as configurações do sistema para a cor é o `lblCompanyName`. A <xref:System.Drawing.SystemColors> classe é usada para alterar as configurações de cor do rótulo para as cores do sistema selecionadas pelo usuário.
 
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Para habilitar o modo de Alto Contraste de uma maneira eficaz
 
@@ -214,7 +214,7 @@ Em nosso aplicativo, o único elemento que não está usando as configurações 
     }
     ```
 
-3. Criar um procedimento de evento, com a assinatura apropriada, para responder a <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> eventos.
+3. Crie um procedimento de evento, com a assinatura apropriada, para responder ao <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> evento.
 
     ```vb
     ' Visual Basic
@@ -258,7 +258,7 @@ Em nosso aplicativo, o único elemento que não está usando as configurações 
     }
     ```
 
-5. Adicione código ao formulário <xref:System.Windows.Forms.Control.Dispose%2A> método antes de chamar o <xref:System.Windows.Forms.Control.Dispose%2A> método da classe base, para liberar o evento quando o aplicativo é fechado. Para acessar o <xref:System.Windows.Forms.Control.Dispose%2A> método no Visual Basic, você precisará expandir a região rotulada como código gerado pelo Windows Form Designer.
+5. Adicione o código ao método <xref:System.Windows.Forms.Control.Dispose%2A> Form, antes da chamada para o <xref:System.Windows.Forms.Control.Dispose%2A> método da classe base, para liberar o evento quando o aplicativo for fechado. Para acessar o <xref:System.Windows.Forms.Control.Dispose%2A> método no Visual Basic, você precisará expandir a região rotulada código gerado pelo designer do Windows Form.
 
     > [!NOTE]
     > O código de evento do sistema executa um thread separado do aplicativo principal. Se você não liberar o evento, o código que você associou com o evento será executado mesmo depois que o programa for fechado.
@@ -303,7 +303,7 @@ Neste aplicativo, nenhuma informação é transmitida apenas pelo som. Se você 
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Para fornecer informações por outros meios além do som
 
-1. Faça a barra de título piscar, usando a função FlashWindow da API do Windows. Para obter um exemplo de como chamar funções da API do Windows, consulte [passo a passo: Chamando APIs do Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+1. Faça a barra de título piscar, usando a função FlashWindow da API do Windows. Para obter um exemplo de como chamar funções da API do Windows [, consulte Passo a passos: Chamando APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)do Windows.
 
     > [!NOTE]
     > O usuário pode ter o serviço SoundSentry do Windows habilitado, que também fará com que a janela pisque quando os sons do sistema forem executados pelo alto-falante do computador.

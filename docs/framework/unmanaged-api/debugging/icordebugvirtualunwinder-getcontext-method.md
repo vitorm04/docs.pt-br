@@ -1,17 +1,17 @@
 ---
-title: Método ICorDebugVirtualUnwinder::GetContext
+title: 'Método ICorDebugVirtualUnwinder:: GetContext'
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8377c374ae71c45cf198446d66a5f9a235a2142f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a6a8be489ff2a99bb9da393577514b2442d50db8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775369"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967947"
 ---
-# <a name="icordebugvirtualunwindergetcontext-method"></a>Método ICorDebugVirtualUnwinder::GetContext
+# <a name="icordebugvirtualunwindergetcontext-method"></a>Método ICorDebugVirtualUnwinder:: GetContext
 Obtém o contexto atual deste desenrolador.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -27,34 +27,34 @@ HRESULT GetContext(
   
 ## <a name="parameters"></a>Parâmetros  
  `contextFlags`  
- [in] Sinalizadores que especificam quais partes do contexto para retornar (definidos em Winnt. H).  
+ no Sinalizadores que especificam quais partes do contexto retornar (definido em WinNT. h).  
   
  `cbContextBuf`  
- [in] O número de bytes em `contextBuf`.  
+ no O número de bytes em `contextBuf`.  
   
  `contextSize`  
- [out] Um ponteiro para o número de bytes realmente gravados `contextBuf`.  
+ fora Um ponteiro para o número de bytes realmente gravados `contextBuf`no.  
   
  `contextBuf`  
- [out] Uma matriz de bytes que contém o contexto atual deste desenrolador.  
+ fora Uma matriz de bytes que contém o contexto atual deste desenrolador.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Qualquer valor HRESULT recebida pelo mscordbi com falha é considerada fatal e fará com que as APIs de ICorDebug retornar `CORDBG_E_DATA_TARGET_ERROR`.  
+ Qualquer valor HRESULT com falha recebido por MSCorDbi é considerado fatal e fará com que as APIs `CORDBG_E_DATA_TARGET_ERROR`do ICorDebug sejam retornadas.  
   
 ## <a name="remarks"></a>Comentários  
- Você define o valor inicial do `contextBuf` argumento para o buffer de contexto retornado ao chamar o [icordebugstackwalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) método.  
+ Você define o valor inicial do `contextBuf` argumento para o buffer de contexto retornado chamando o método [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) .  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
- Porque desenrolamento maio apenas restaurar um subconjunto de registros, como não-volátil registra somente, o contexto pode não coincidir com o estado de registro no momento da chamada do método real.  
+ Como o desenrolamento só pode restaurar um subconjunto dos registros, como somente os registros não voláteis, o contexto pode não corresponder exatamente ao estado de registro no momento da chamada de método real.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

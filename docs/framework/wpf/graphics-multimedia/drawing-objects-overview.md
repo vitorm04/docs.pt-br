@@ -9,53 +9,53 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: b09fed48912a9175ff34d5be4f783bdb06abf936
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d739865a692fa5ef448eba91369015580e5eda97
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615429"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916308"
 ---
 # <a name="drawing-objects-overview"></a>Visão geral dos objetos de desenho
-Este tópico apresenta <xref:System.Windows.Media.Drawing> objetos e descreve como usá-los para desenhar formas, bitmaps, texto e mídia de forma eficiente. Use <xref:System.Windows.Media.Drawing> objetos ao criar clip-art, pintar com um <xref:System.Windows.Media.DrawingBrush>, ou use <xref:System.Windows.Media.Visual> objetos.  
+Este tópico apresenta <xref:System.Windows.Media.Drawing> objetos e descreve como usá-los para desenhar formas, bitmaps, texto e mídia com eficiência. Use <xref:System.Windows.Media.Drawing> objetos ao criar Clip-Art, pinte com um <xref:System.Windows.Media.DrawingBrush>ou use <xref:System.Windows.Media.Visual> objetos.  
 
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>O que é um objeto de desenho?  
  Um <xref:System.Windows.Media.Drawing> objeto descreve o conteúdo visível, como uma forma, bitmap, vídeo ou uma linha de texto. Diferentes tipos de desenhos descrevem diferentes tipos de conteúdo. A seguir está uma lista dos diferentes tipos de objetos de desenho.  
   
-- <xref:System.Windows.Media.GeometryDrawing> – Desenha uma forma.  
+- <xref:System.Windows.Media.GeometryDrawing>– Desenha uma forma.  
   
-- <xref:System.Windows.Media.ImageDrawing> – Desenha uma imagem.  
+- <xref:System.Windows.Media.ImageDrawing>– Desenha uma imagem.  
   
-- <xref:System.Windows.Media.GlyphRunDrawing> – Desenha texto.  
+- <xref:System.Windows.Media.GlyphRunDrawing>– Desenha texto.  
   
-- <xref:System.Windows.Media.VideoDrawing> – Reproduz um arquivo de áudio ou vídeo.  
+- <xref:System.Windows.Media.VideoDrawing>– Reproduz um arquivo de áudio ou de vídeo.  
   
-- <xref:System.Windows.Media.DrawingGroup> – Desenha outros desenhos. Use um grupo de desenhos para combinar outros desenhos em um único desenho composto.  
+- <xref:System.Windows.Media.DrawingGroup>– Desenha outros desenhos. Use um grupo de desenhos para combinar outros desenhos em um único desenho composto.  
   
- <xref:System.Windows.Media.Drawing> os objetos são versáteis; Há várias maneiras que você pode usar um <xref:System.Windows.Media.Drawing> objeto.  
+ <xref:System.Windows.Media.Drawing>os objetos são versáteis; Há várias maneiras de usar um <xref:System.Windows.Media.Drawing> objeto.  
   
-- Você pode exibi-lo como uma imagem usando uma <xref:System.Windows.Media.DrawingImage> e um <xref:System.Windows.Controls.Image> controle.  
+- Você pode exibi-lo como uma imagem usando um <xref:System.Windows.Media.DrawingImage> e um <xref:System.Windows.Controls.Image> controle.  
   
-- Você pode usá-lo com um <xref:System.Windows.Media.DrawingBrush> pintar um objeto, como o <xref:System.Windows.Controls.Page.Background%2A> de um <xref:System.Windows.Controls.Page>.  
+- Você pode usá-lo com <xref:System.Windows.Media.DrawingBrush> um para pintar um objeto, como o <xref:System.Windows.Controls.Page.Background%2A> de um <xref:System.Windows.Controls.Page>.  
   
-- Você pode usá-lo para descrever a aparência de um <xref:System.Windows.Media.DrawingVisual>.  
+- Você pode usá-lo para descrever a aparência de <xref:System.Windows.Media.DrawingVisual>um.  
   
-- Você pode usá-lo para enumerar o conteúdo de um <xref:System.Windows.Media.Visual>.  
+- Você pode usá-lo para enumerar o conteúdo <xref:System.Windows.Media.Visual>de um.  
   
- O WPF fornece outros tipos de objetos que são capazes de desenhar formas, bitmaps, texto e mídia. Por exemplo, você também pode usar <xref:System.Windows.Shapes.Shape> objetos para desenhar formas e o <xref:System.Windows.Controls.MediaElement> controle fornece outra maneira de adicionar vídeo ao seu aplicativo. Portanto, quando você deve usar <xref:System.Windows.Media.Drawing> objetos? Quando você pode sacrificar características de nível de framework para ganhar benefícios de desempenho ou quando você precisar <xref:System.Windows.Freezable> recursos. Porque <xref:System.Windows.Media.Drawing> objetos não têm suporte para [Layout](../advanced/layout.md), entrada e foco, eles fornecem benefícios de desempenho que os tornam ideais para descrever telas de fundo, clip-arts e para desenho de baixo nível com <xref:System.Windows.Media.Visual> objetos.  
+ O WPF fornece outros tipos de objetos que são capazes de desenhar formas, bitmaps, texto e mídia. Por exemplo, você também pode usar <xref:System.Windows.Shapes.Shape> objetos para desenhar formas e o <xref:System.Windows.Controls.MediaElement> controle fornece outra maneira de adicionar vídeo ao seu aplicativo. Então, quando você deve <xref:System.Windows.Media.Drawing> usar objetos? Quando você puder sacrificar os recursos de nível de estrutura para obter benefícios de desempenho <xref:System.Windows.Freezable> ou quando precisar de recursos. Como <xref:System.Windows.Media.Drawing> os objetos não têm suporte para [layout](../advanced/layout.md), entrada e foco, eles fornecem benefícios de desempenho que os tornam ideais para descrever os planos de fundo, clip-art e para <xref:System.Windows.Media.Visual> desenhos de baixo nível com objetos.  
   
- Porque eles são um tipo <xref:System.Windows.Freezable> objeto, <xref:System.Windows.Media.Drawing> objetos obtém vários recursos especiais, que incluem o seguinte: eles podem ser declarados como [recursos](../advanced/xaml-resources.md), compartilhados entre vários objetos, somente leitura para melhorar desempenho, clonados e transformados em thread-safe. Para obter mais informações sobre os diferentes recursos fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte a [visão geral de objetos congeláveis](../advanced/freezable-objects-overview.md).  
+ Como eles são um objeto <xref:System.Windows.Freezable> de tipo <xref:System.Windows.Media.Drawing> , os objetos recebem vários recursos especiais, que incluem o seguinte: eles podem ser declarados como [recursos](../advanced/xaml-resources.md), compartilhados entre vários objetos, feitos somente leitura para melhorar o desempenho, clonado e tornar thread-safe. Para obter mais informações sobre os diferentes recursos fornecidos <xref:System.Windows.Freezable> por objetos, consulte a [visão geral dos objetos Freezable](../advanced/freezable-objects-overview.md).  
   
 <a name="drawinggeometriessection"></a>   
 ## <a name="draw-a-shape"></a>Desenhar uma forma  
- Para desenhar uma forma, você deve usar um <xref:System.Windows.Media.GeometryDrawing>. Um desenho geométrico <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> propriedade descreve de forma a ser desenhada, sua <xref:System.Windows.Media.GeometryDrawing.Brush%2A> propriedade descreve como o interior da forma deve ser pintado e sua <xref:System.Windows.Media.GeometryDrawing.Pen%2A> propriedade descreve como seu contorno deve ser desenhado.  
+ Para desenhar uma forma, você usa um <xref:System.Windows.Media.GeometryDrawing>. A <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> propriedade de um desenho de geometria descreve a forma para desenhar <xref:System.Windows.Media.GeometryDrawing.Brush%2A> , sua propriedade descreve como o interior da forma deve ser pintado e sua <xref:System.Windows.Media.GeometryDrawing.Pen%2A> propriedade descreve como sua estrutura de tópicos deve ser desenhada.  
   
- O exemplo a seguir usa um <xref:System.Windows.Media.GeometryDrawing> para desenhar uma forma. A forma é descrita por um <xref:System.Windows.Media.GeometryGroup> e duas <xref:System.Windows.Media.EllipseGeometry> objetos. O interior da forma é pintado com um <xref:System.Windows.Media.LinearGradientBrush> e seu contorno é desenhado com uma <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>.  
+ O exemplo a seguir usa <xref:System.Windows.Media.GeometryDrawing> um para desenhar uma forma. A forma é descrita por um <xref:System.Windows.Media.GeometryGroup> e dois <xref:System.Windows.Media.EllipseGeometry> objetos. O interior da forma é pintado com um <xref:System.Windows.Media.LinearGradientBrush> e sua estrutura de tópicos é desenhada com um. <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>  
   
  Este exemplo cria o seguinte <xref:System.Windows.Media.GeometryDrawing>.  
   
- ![Um GeometryDrawing de duas elipses](./media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")  
+ ![Uma GeometryDrawing de duas reticências](./media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")  
 Um GeometryDrawing  
   
  [!code-csharp[DrawingMiscSnippets_snip#GeometryDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GeometryDrawingExample.cs#geometrydrawingexampleinline)]
@@ -63,17 +63,17 @@ Um GeometryDrawing
   
  Para obter o exemplo completo, consulte [Instruções: criar um GeometryDrawing](how-to-create-a-geometrydrawing.md).  
   
- Outros <xref:System.Windows.Media.Geometry> classes, como <xref:System.Windows.Media.PathGeometry> permitem criar formas mais complexas criando curvas e arcos. Para obter mais informações sobre <xref:System.Windows.Media.Geometry> objetos, consulte a [visão geral de geometria](geometry-overview.md).  
+ Outras <xref:System.Windows.Media.Geometry> classes, como o <xref:System.Windows.Media.PathGeometry> permitem que você crie formas mais complexas criando curvas e arcos. Para obter mais informações <xref:System.Windows.Media.Geometry> sobre objetos, consulte a [visão geral da geometria](geometry-overview.md).  
   
- Para obter mais informações sobre outras formas de desenhar formas que não usam <xref:System.Windows.Media.Drawing> objetos, consulte [formas e desenho básico no WPF Overview](shapes-and-basic-drawing-in-wpf-overview.md).  
+ Para obter mais informações sobre outras maneiras de desenhar formas que não <xref:System.Windows.Media.Drawing> usam objetos, consulte [visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md).  
   
 <a name="drawingimagessection"></a>   
 ## <a name="draw-an-image"></a>Desenhar uma imagem  
- Para desenhar uma imagem, use um <xref:System.Windows.Media.ImageDrawing>. Uma <xref:System.Windows.Media.ImageDrawing> do objeto <xref:System.Windows.Media.ImageDrawing.ImageSource%2A> propriedade descreve a imagem a ser desenhada e sua <xref:System.Windows.Media.ImageDrawing.Rect%2A> propriedade define a região em que a imagem é desenhada.  
+ Para desenhar uma imagem, use um <xref:System.Windows.Media.ImageDrawing>. A <xref:System.Windows.Media.ImageDrawing> propriedade de <xref:System.Windows.Media.ImageDrawing.ImageSource%2A> um objeto descreve a imagem a ser desenhada e sua <xref:System.Windows.Media.ImageDrawing.Rect%2A> propriedade define a região em que a imagem é desenhada.  
   
- O exemplo a seguir desenha uma imagem em um retângulo localizado em (75,75) que tem 100 por 100 pixels. A ilustração a seguir mostra o <xref:System.Windows.Media.ImageDrawing> criado pelo exemplo. Uma borda cinza foi adicionada para mostrar os limites do <xref:System.Windows.Media.ImageDrawing>.  
+ O exemplo a seguir desenha uma imagem em um retângulo localizado em (75,75) que tem 100 por 100 pixels. A ilustração a seguir mostra <xref:System.Windows.Media.ImageDrawing> o criado pelo exemplo. Uma borda cinza foi adicionada para mostrar os limites do <xref:System.Windows.Media.ImageDrawing>.  
   
- ![Um ImageDrawing 100 por 100 desenhado no &#40;75,75&#41;](./media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
+ ![Um 100 de 100 ImageDrawing desenhado em &#40;75, 75&#41; ](./media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
 Um ImageDrawing de 100 por 100  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawing100by100inline)]
@@ -85,14 +85,14 @@ Um ImageDrawing de 100 por 100
 ## <a name="play-media-code-only"></a>Reproduzir mídia (apenas código)  
   
 > [!NOTE]
->  Embora seja possível declarar uma <xref:System.Windows.Media.VideoDrawing> em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], você só pode carregar e reproduzir mídia dele usando código. Para reproduzir o vídeo na [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], use um <xref:System.Windows.Controls.MediaElement> em vez disso.  
+> Embora seja possível declarar um <xref:System.Windows.Media.VideoDrawing> no [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], você só pode carregar e reproduzir sua mídia usando código. Para reproduzir o vídeo [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]no, use <xref:System.Windows.Controls.MediaElement> um em vez disso.  
   
- Para reproduzir um arquivo de áudio ou vídeo, você deve usar um <xref:System.Windows.Media.VideoDrawing> e um <xref:System.Windows.Media.MediaPlayer>. Há duas maneiras de carregar e reproduzir mídia. A primeira é usar um <xref:System.Windows.Media.MediaPlayer> e uma <xref:System.Windows.Media.VideoDrawing> por si só e a segunda maneira é criar seu próprio <xref:System.Windows.Media.MediaTimeline> para usar com o <xref:System.Windows.Media.MediaPlayer> e <xref:System.Windows.Media.VideoDrawing>.  
+ Para reproduzir um arquivo de áudio ou de vídeo, use <xref:System.Windows.Media.VideoDrawing> um e <xref:System.Windows.Media.MediaPlayer>um. Há duas maneiras de carregar e reproduzir mídia. A <xref:System.Windows.Media.MediaPlayer> primeira é usar um e um <xref:System.Windows.Media.VideoDrawing> por si só, e a segunda maneira é criar seu próprio <xref:System.Windows.Media.MediaTimeline> para uso com o e <xref:System.Windows.Media.MediaPlayer> <xref:System.Windows.Media.VideoDrawing>o.  
   
 > [!NOTE]
->  Ao distribuir mídia com seu aplicativo, você não pode usar um arquivo de mídia como um recurso do projeto, como faria com uma imagem. Em seu arquivo de projeto, em vez disso, você deve definir o tipo de mídia como `Content` e defina `CopyToOutputDirectory` para `PreserveNewest` ou `Always`.  
+> Ao distribuir mídia com seu aplicativo, você não pode usar um arquivo de mídia como um recurso do projeto, como faria com uma imagem. Em seu arquivo de projeto, em vez disso, você deve definir o tipo de mídia como `Content` e defina `CopyToOutputDirectory` para `PreserveNewest` ou `Always`.  
   
- Para reproduzir mídia sem criar seu próprio <xref:System.Windows.Media.MediaTimeline>, execute as seguintes etapas.  
+ Para reproduzir mídia sem criar suas próprias <xref:System.Windows.Media.MediaTimeline>, execute as etapas a seguir.  
   
 1. Crie um objeto <xref:System.Windows.Media.MediaPlayer>.  
   
@@ -106,60 +106,60 @@ Um ImageDrawing de 100 por 100
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline3)]  
   
-4. Especifique o tamanho e local para desenhar a mídia definindo a <xref:System.Windows.Media.VideoDrawing.Rect%2A> propriedade do <xref:System.Windows.Media.VideoDrawing>.  
+4. Especifique o tamanho e o local para desenhar a mídia definindo a <xref:System.Windows.Media.VideoDrawing.Rect%2A> propriedade <xref:System.Windows.Media.VideoDrawing>do.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline4)]  
   
-5. Defina a <xref:System.Windows.Media.VideoDrawing.Player%2A> propriedade do <xref:System.Windows.Media.VideoDrawing> com o <xref:System.Windows.Media.MediaPlayer> você criou.  
+5. Defina a <xref:System.Windows.Media.VideoDrawing.Player%2A> propriedade <xref:System.Windows.Media.VideoDrawing> do com o <xref:System.Windows.Media.MediaPlayer> que você criou.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline5](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline5)]  
   
-6. Use o <xref:System.Windows.Media.MediaPlayer.Play%2A> método da <xref:System.Windows.Media.MediaPlayer> para iniciar a reprodução de mídia.  
+6. Use o <xref:System.Windows.Media.MediaPlayer.Play%2A> método <xref:System.Windows.Media.MediaPlayer> do para iniciar a reprodução da mídia.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline6](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline6)]  
   
- O exemplo a seguir usa uma <xref:System.Windows.Media.VideoDrawing> e um <xref:System.Windows.Media.MediaPlayer> para reproduzir um arquivo de vídeo uma vez.  
+ O exemplo a seguir usa <xref:System.Windows.Media.VideoDrawing> um e <xref:System.Windows.Media.MediaPlayer> um para reproduzir um arquivo de vídeo uma vez.  
   
  [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- Para obter controle adicional sobre a mídia de tempo, use uma <xref:System.Windows.Media.MediaTimeline> com o <xref:System.Windows.Media.MediaPlayer> e <xref:System.Windows.Media.VideoDrawing> objetos. O <xref:System.Windows.Media.MediaTimeline> permite que você especifique se o vídeo deve ser repetida. Para usar um <xref:System.Windows.Media.MediaTimeline> com um <xref:System.Windows.Media.VideoDrawing>, execute as seguintes etapas:  
+ Para obter controle de tempo adicional sobre a mídia, use <xref:System.Windows.Media.MediaTimeline> um com <xref:System.Windows.Media.MediaPlayer> os <xref:System.Windows.Media.VideoDrawing> objetos e. O <xref:System.Windows.Media.MediaTimeline> permite que você especifique se o vídeo deve ser repetido. Para usar um <xref:System.Windows.Media.MediaTimeline> com um <xref:System.Windows.Media.VideoDrawing>, execute as seguintes etapas:  
   
-1. Declare o <xref:System.Windows.Media.MediaTimeline> e defina seu comportamento de tempo.  
+1. Declare o <xref:System.Windows.Media.MediaTimeline> e defina seus comportamentos de tempo.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline1)]  
   
-2. Criar uma <xref:System.Windows.Media.MediaClock> do <xref:System.Windows.Media.MediaTimeline>.  
+2. Crie um <xref:System.Windows.Media.MediaClock> <xref:System.Windows.Media.MediaTimeline>do.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline2)]  
   
-3. Criar uma <xref:System.Windows.Media.MediaPlayer> e usar o <xref:System.Windows.Media.MediaClock> para definir seu <xref:System.Windows.Media.MediaPlayer.Clock%2A> propriedade.  
+3. Crie um <xref:System.Windows.Media.MediaPlayer> e use o <xref:System.Windows.Media.MediaClock> para definir sua <xref:System.Windows.Media.MediaPlayer.Clock%2A> propriedade.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline3)]  
   
-4. Criar uma <xref:System.Windows.Media.VideoDrawing> e atribua os <xref:System.Windows.Media.MediaPlayer> para o <xref:System.Windows.Media.VideoDrawing.Player%2A> propriedade do <xref:System.Windows.Media.VideoDrawing>.  
+4. Crie um <xref:System.Windows.Media.VideoDrawing> e atribua o <xref:System.Windows.Media.MediaPlayer> <xref:System.Windows.Media.VideoDrawing.Player%2A>àpropriedade do. <xref:System.Windows.Media.VideoDrawing>  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline4)]  
   
- O exemplo a seguir usa uma <xref:System.Windows.Media.MediaTimeline> com um <xref:System.Windows.Media.MediaPlayer> e um <xref:System.Windows.Media.VideoDrawing> para reproduzir um vídeo repetidamente.  
+ O exemplo a seguir usa <xref:System.Windows.Media.MediaTimeline> um com <xref:System.Windows.Media.MediaPlayer> um e <xref:System.Windows.Media.VideoDrawing> um para reproduzir um vídeo repetidamente.  
   
  [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline)]  
   
- Observe que, quando você usa um <xref:System.Windows.Media.MediaTimeline>, você usar o interactive <xref:System.Windows.Media.Animation.ClockController> retornados da <xref:System.Windows.Media.Animation.Clock.Controller%2A> propriedade do <xref:System.Windows.Media.MediaClock> para controlar a reprodução de mídia em vez dos métodos interativos do <xref:System.Windows.Media.MediaPlayer>.  
+ Observe que <xref:System.Windows.Media.MediaTimeline>, ao usar um, você usa o interativo <xref:System.Windows.Media.Animation.ClockController> retornado <xref:System.Windows.Media.MediaClock> da <xref:System.Windows.Media.Animation.Clock.Controller%2A> Propriedade do para controlar a reprodução de mídia em vez dos métodos interativos <xref:System.Windows.Media.MediaPlayer>do.  
   
 <a name="drawtext"></a>   
 ## <a name="draw-text"></a>Desenhar texto  
- Para desenhar o texto, use uma <xref:System.Windows.Media.GlyphRunDrawing> e um <xref:System.Windows.Media.GlyphRun>. O exemplo a seguir usa um <xref:System.Windows.Media.GlyphRunDrawing> para desenhar o texto "Hello World".  
+ Para desenhar texto, use um <xref:System.Windows.Media.GlyphRunDrawing> e um. <xref:System.Windows.Media.GlyphRun> O exemplo a seguir usa <xref:System.Windows.Media.GlyphRunDrawing> um para desenhar o texto "Olá, mundo".  
   
  [!code-csharp[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GlyphRunDrawingExample.cs#glyphrundrawingexampleinline)]
  [!code-xaml[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GlyphRunExample.xaml#glyphrundrawingexampleinline)]  
   
- Um <xref:System.Windows.Media.GlyphRun> é um objeto de baixo nível para uso com a apresentação de documentos de formato fixo e cenários de impressão. Uma maneira mais simples de desenhar texto na tela é usar um <xref:System.Windows.Controls.Label> ou um <xref:System.Windows.Controls.TextBlock>. Para obter mais informações sobre <xref:System.Windows.Media.GlyphRun>, consulte o [Introdução ao objeto GlyphRun e ao elemento de glifos](../advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md) visão geral.  
+ Um <xref:System.Windows.Media.GlyphRun> é um objeto de baixo nível destinado ao uso com cenários de apresentação e impressão de documentos de formato fixo. Uma maneira mais simples de desenhar texto na tela é usar um <xref:System.Windows.Controls.Label> ou um. <xref:System.Windows.Controls.TextBlock> Para obter mais informações <xref:System.Windows.Media.GlyphRun>sobre, consulte a [introdução ao objeto GlyphRun e a visão geral do elemento Glyphs](../advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md) .  
   
 <a name="compositedrawingssection"></a>   
 ## <a name="composite-drawings"></a>Desenhos de composição  
  Um <xref:System.Windows.Media.DrawingGroup> permite que você combine vários desenhos em um único desenho composto. Usando um <xref:System.Windows.Media.DrawingGroup>, você pode combinar formas, imagens e texto em um único <xref:System.Windows.Media.Drawing> objeto.  
   
- O exemplo a seguir usa uma <xref:System.Windows.Media.DrawingGroup> para combinar duas <xref:System.Windows.Media.GeometryDrawing> objetos e uma <xref:System.Windows.Media.ImageDrawing> objeto. Este exemplo gerencia a seguinte saída.  
+ O exemplo a seguir usa <xref:System.Windows.Media.DrawingGroup> um para combinar <xref:System.Windows.Media.GeometryDrawing> dois objetos e <xref:System.Windows.Media.ImageDrawing> um objeto. Este exemplo gerencia a seguinte saída.  
   
  ![Um DrawingGroup com vários desenhos](./media/graphicsmm-simple.jpg "graphicsmm_simple")  
 Um desenho de composição  
@@ -167,31 +167,31 @@ Um desenho de composição
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
  [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
- Um <xref:System.Windows.Media.DrawingGroup> também permite que você aplique máscaras de opacidade, transformações, efeitos de bitmap e outras operações de seu conteúdo. <xref:System.Windows.Media.DrawingGroup> operações são aplicadas na seguinte ordem: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>e, em seguida, <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ Um <xref:System.Windows.Media.DrawingGroup> também permite aplicar máscaras de opacidade, transformações, efeitos de bitmap e outras operações ao seu conteúdo. <xref:System.Windows.Media.DrawingGroup>as operações são aplicadas na seguinte ordem: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A> <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A> <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A> <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>,,, e, em <xref:System.Windows.Media.DrawingGroup.Transform%2A>seguida.  
   
- A ilustração a seguir mostra a ordem na qual <xref:System.Windows.Media.DrawingGroup> operações são aplicadas.  
+ A ilustração a seguir mostra a ordem na <xref:System.Windows.Media.DrawingGroup> qual as operações são aplicadas.  
   
- ![DrawingGroup ordem das operações](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+ ![Ordem das operações do DrawingGroup](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
 Ordem das operações do DrawingGroup  
   
- A tabela a seguir descreve as propriedades que você pode usar para manipular um <xref:System.Windows.Media.DrawingGroup> conteúdo do objeto.  
+ A tabela a seguir descreve as propriedades que você pode usar para <xref:System.Windows.Media.DrawingGroup> manipular o conteúdo de um objeto.  
   
 |Propriedade|Descrição|Ilustração|  
 |--------------|-----------------|------------------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Altera a opacidade de partes selecionadas do <xref:System.Windows.Media.DrawingGroup> conteúdo. Para obter um exemplo, consulte [ Controlar a opacidade de um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms748242(v=vs.90)).|![Um DrawingGroup com uma máscara de opacidade](./media/graphicsmm-opmask.png "graphicsmm_opmask")|  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Altera uniformemente a opacidade do <xref:System.Windows.Media.DrawingGroup> conteúdo. Use essa propriedade para tornar um <xref:System.Windows.Media.Drawing> transparente ou parcialmente transparente. Para obter um exemplo, consulte [ Aplicar uma máscara de opacidade a um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms753195(v=vs.90)).|![DrawingGroups com diferentes configurações de opacidade](./media/graphicsmm-opacity.png "graphicsmm_opacity")|  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|Aplica-se um <xref:System.Windows.Media.Effects.BitmapEffect> para o <xref:System.Windows.Media.DrawingGroup> conteúdo. Para obter um exemplo, consulte [ Aplicar um efeito de bitmap em um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752341(v=vs.90)).|![DrawingGroup com um BlurBitmapEffect](./media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
-|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|Recorta a <xref:System.Windows.Media.DrawingGroup> o conteúdo para uma região você descreve como usar um <xref:System.Windows.Media.Geometry>. Para obter um exemplo, consulte [ Recortar um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743068(v=vs.90)) .|![DrawingGroup com uma região de recorte definida](./media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Altera a opacidade das partes selecionadas do <xref:System.Windows.Media.DrawingGroup> conteúdo. Para obter um exemplo, consulte [ Controle a opacidade de um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms748242(v=vs.90)).|![Um DrawingGroup com uma máscara de opacidade](./media/graphicsmm-opmask.png "graphicsmm_opmask")|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Altera uniformemente a opacidade do <xref:System.Windows.Media.DrawingGroup> conteúdo. Use essa propriedade para tornar <xref:System.Windows.Media.Drawing> transparente ou parcialmente transparente. Para obter um exemplo, consulte [ Aplicar uma máscara de opacidade a um](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms753195(v=vs.90))desenho.|![DrawingGroups com diferentes configurações de opacidade](./media/graphicsmm-opacity.png "graphicsmm_opacity")|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|Aplica um <xref:System.Windows.Media.Effects.BitmapEffect> <xref:System.Windows.Media.DrawingGroup> ao conteúdo. Para obter um exemplo, consulte [ Aplicar um BitmapEffect a um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752341(v=vs.90)).|![DrawingGroup com um BlurBitmapEffect](./media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
+|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|Corta o <xref:System.Windows.Media.DrawingGroup> conteúdo para uma região que você descreve usando <xref:System.Windows.Media.Geometry>um. Para obter um exemplo, consulte [ Recorte um](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743068(v=vs.90)) desenho.|![DrawingGroup com uma região de recorte definida](./media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
 |<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|Ajusta os pixels independentes de dispositivo aos pixels do dispositivo, conforme as diretrizes especificadas. Essa propriedade é útil para assegurar que gráficos detalhados minuciosamente sejam renderizados com nitidez em monitores de baixo DPI. Para obter um exemplo, consulte [Instruções: aplicar um GuidelineSet a um desenho](how-to-apply-a-guidelineset-to-a-drawing.md).|![Um DrawingGroup com e sem um GuidelineSet](./media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
 |<xref:System.Windows.Media.DrawingGroup.Transform%2A>|Transforma o <xref:System.Windows.Media.DrawingGroup> conteúdo. Para obter um exemplo, consulte [ Aplicar uma transformação a um desenho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms742304(v=vs.90)).|![Um DrawingGroup girado](./media/graphicsmm-rotate.png "graphicsmm_rotate")|  
   
 <a name="usingimagedrawing"></a>   
 ## <a name="display-a-drawing-as-an-image"></a>Exibir um desenho como uma imagem  
- Para exibir uma <xref:System.Windows.Media.Drawing> com um <xref:System.Windows.Controls.Image> controlar, use um <xref:System.Windows.Media.DrawingImage> como o <xref:System.Windows.Controls.Image> do controle <xref:System.Windows.Controls.Image.Source%2A> e defina a <xref:System.Windows.Media.DrawingImage> do objeto <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> propriedade para o desenho que você deseja exibir.  
+ Para exibir um <xref:System.Windows.Media.Drawing> com um <xref:System.Windows.Controls.Image> controle, use <xref:System.Windows.Media.DrawingImage> <xref:System.Windows.Media.DrawingImage> <xref:System.Windows.Controls.Image> um como o controle <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> e defina a propriedade do objeto para o desenho que você deseja exibir. <xref:System.Windows.Controls.Image.Source%2A>  
   
- O exemplo a seguir usa uma <xref:System.Windows.Media.DrawingImage> e uma <xref:System.Windows.Controls.Image> controle para exibir um <xref:System.Windows.Media.GeometryDrawing>. Este exemplo gerencia a seguinte saída.  
+ O exemplo a seguir usa <xref:System.Windows.Media.DrawingImage> um e <xref:System.Windows.Controls.Image> um controle para exibir <xref:System.Windows.Media.GeometryDrawing>um. Este exemplo gerencia a seguinte saída.  
   
- ![Um GeometryDrawing de duas elipses](./media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")  
+ ![Uma GeometryDrawing de duas reticências](./media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")  
 Uma DrawingImage  
   
  [!code-csharp[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingImageExample.cs#drawingimageexamplewholepage)]
@@ -199,17 +199,17 @@ Uma DrawingImage
   
 <a name="renderingwithdrawingbrushsection"></a>   
 ## <a name="paint-an-object-with-a-drawing"></a>Pintar um objeto com um desenho  
- Um <xref:System.Windows.Media.DrawingBrush> é um tipo de pincel que pinta uma área com um objeto de desenho. Você pode usá-lo para pintar praticamente qualquer objeto gráfico com um desenho. O <xref:System.Windows.Media.Drawing> propriedade de um <xref:System.Windows.Media.DrawingBrush> descreve seu <xref:System.Windows.Media.DrawingBrush.Drawing%2A>. Para renderizar uma <xref:System.Windows.Media.Drawing> com um <xref:System.Windows.Media.DrawingBrush>, adicione-o ao pincel, usando o pincel <xref:System.Windows.Media.Drawing> propriedade e use o pincel para pintar um gráfico de objeto, como um controle ou painel.  
+ Um <xref:System.Windows.Media.DrawingBrush> é um tipo de pincel que pinta uma área com um objeto de desenho. Você pode usá-lo para pintar praticamente qualquer objeto gráfico com um desenho. A <xref:System.Windows.Media.Drawing> propriedade de um <xref:System.Windows.Media.DrawingBrush> descreve seu <xref:System.Windows.Media.DrawingBrush.Drawing%2A>. Para renderizar <xref:System.Windows.Media.Drawing> um com <xref:System.Windows.Media.DrawingBrush>um, adicione-o ao Pincel usando a propriedade <xref:System.Windows.Media.Drawing> do pincel e use o pincel para pintar um objeto gráfico, como um controle ou painel.  
   
- Os exemplos a seguir usa uma <xref:System.Windows.Media.DrawingBrush> para pintar o <xref:System.Windows.Shapes.Shape.Fill%2A> de uma <xref:System.Windows.Shapes.Rectangle> com um padrão criado de um <xref:System.Windows.Media.GeometryDrawing>. Este exemplo gerencia a seguinte saída.  
+ Os exemplos a seguir usam <xref:System.Windows.Media.DrawingBrush> um para pintar <xref:System.Windows.Shapes.Shape.Fill%2A> o de <xref:System.Windows.Shapes.Rectangle> um com um padrão criado a <xref:System.Windows.Media.GeometryDrawing>partir de um. Este exemplo gerencia a seguinte saída.  
   
- ![Um lado a lado DrawingBrush](./media/graphicsmm-drawingbrush-geometrydrawing.png "graphicsmm_drawingbrush_geometrydrawing")  
+ ![Um DrawingBrush à lado](./media/graphicsmm-drawingbrush-geometrydrawing.png "graphicsmm_drawingbrush_geometrydrawing")  
 Um GeometryDrawing usado com um DrawingBrush  
   
  [!code-csharp[DrawingMiscSnippets_snip#DrawingBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingBrushExample.cs#drawingbrushexamplewholepage)]
  [!code-xaml[DrawingMiscSnippets_snip#DrawingBrushExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingBrushExample.xaml#drawingbrushexamplewholepage)]  
   
- O <xref:System.Windows.Media.DrawingBrush> classe fornece uma variedade de opções para redimensionar e organizar lado a lado seu conteúdo. Para obter mais informações sobre <xref:System.Windows.Media.DrawingBrush>, consulte o [pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md) visão geral.  
+ A <xref:System.Windows.Media.DrawingBrush> classe fornece uma variedade de opções para alongar e organizar seu conteúdo em blocos. Para obter mais informações <xref:System.Windows.Media.DrawingBrush>sobre o, consulte a visão geral sobre [pintura com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md) .  
   
 <a name="renderingwithvisualsection"></a>   
 ## <a name="render-a-drawing-with-a-visual"></a>Renderizar um desenho com um Visual  
@@ -217,17 +217,17 @@ Um GeometryDrawing usado com um DrawingBrush
   
 <a name="drawingcontextobjects"></a>   
 ## <a name="drawingcontext-objects"></a>Objetos DrawingContext  
- O <xref:System.Windows.Media.DrawingContext> classe permite que você popule um <xref:System.Windows.Media.Visual> ou um <xref:System.Windows.Media.Drawing> com conteúdo visual. Muitos desses objetos gráficos de baixo nível usam um <xref:System.Windows.Media.DrawingContext> porque ele descreve o conteúdo gráfico com muita eficiência.  
+ A <xref:System.Windows.Media.DrawingContext> classe permite que você preencha um <xref:System.Windows.Media.Visual> ou um <xref:System.Windows.Media.Drawing> com conteúdo visual. Muitos desses objetos gráficos de nível inferior usam um <xref:System.Windows.Media.DrawingContext> porque ele descreve o conteúdo gráfico com muita eficiência.  
   
- Embora o <xref:System.Windows.Media.DrawingContext> métodos de desenho pareçam semelhantes aos métodos de desenho a <xref:System.Drawing.Graphics?displayProperty=nameWithType> tipo, eles são, na verdade, muito diferentes. <xref:System.Windows.Media.DrawingContext> é usada com um sistema de elementos gráficos de modo retido, enquanto o <xref:System.Drawing.Graphics?displayProperty=nameWithType> tipo é usado com um sistema gráfico de modo imediato. Quando você usa um <xref:System.Windows.Media.DrawingContext> comandos de desenho do objeto, na verdade, você está armazenando um conjunto de instruções de renderização (embora o mecanismo de armazenamento exato depende do tipo de objeto que fornece o <xref:System.Windows.Media.DrawingContext>) que será usado posteriormente pelos elementos gráficos do sistema; você não está desenhando na tela em tempo real. Para obter mais informações sobre como funciona o sistema de elementos gráficos do Windows Presentation Foundation (WPF), consulte o [visão geral de renderização do WPF gráficos](wpf-graphics-rendering-overview.md).  
+ Embora os <xref:System.Windows.Media.DrawingContext> métodos Draw pareçam semelhantes aos métodos Draw <xref:System.Drawing.Graphics?displayProperty=nameWithType> do tipo, eles são, na verdade, muito diferentes. <xref:System.Windows.Media.DrawingContext>é usado com um sistema gráfico de modo retido, enquanto o <xref:System.Drawing.Graphics?displayProperty=nameWithType> tipo é usado com um sistema gráfico de modo imediato. Quando você usa os <xref:System.Windows.Media.DrawingContext> comandos Draw de um objeto, na verdade você está armazenando um conjunto de instruções de renderização (embora o mecanismo de armazenamento exato dependa do tipo <xref:System.Windows.Media.DrawingContext>de objeto que fornece o) que será usado posteriormente pelo sistema de gráficos; Não estão desenhando na tela em tempo real. Para obter mais informações sobre como o sistema gráfico do Windows Presentation Foundation (WPF) funciona, consulte a [visão geral da renderização de gráficos do WPF](wpf-graphics-rendering-overview.md).  
   
- Você nunca instancia diretamente uma <xref:System.Windows.Media.DrawingContext>; no entanto, você pode, adquirir um contexto de desenho de alguns métodos, tais como <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> e <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>.  
+ Você nunca instancia diretamente um <xref:System.Windows.Media.DrawingContext>; você pode, no entanto, adquirir um contexto de desenho de determinados métodos <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> , <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>como e.  
   
 <a name="enumeratevisualcontents"></a>   
 ## <a name="enumerate-the-contents-of-a-visual"></a>Enumerar o conteúdo de um Visual  
- Além de seus outros usos <xref:System.Windows.Media.Drawing> objetos também fornecem um modelo de objeto para enumerar o conteúdo de um <xref:System.Windows.Media.Visual>.  
+ Além de seus outros usos, <xref:System.Windows.Media.Drawing> os objetos também fornecem um modelo de objeto para enumerar o conteúdo de um. <xref:System.Windows.Media.Visual>  
   
- O exemplo a seguir usa o <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> método para recuperar o <xref:System.Windows.Media.DrawingGroup> valor de um <xref:System.Windows.Media.Visual> e enumerá-lo.  
+ O exemplo a seguir usa <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> o método para recuperar <xref:System.Windows.Media.DrawingGroup> o valor de <xref:System.Windows.Media.Visual> a e enumerá-lo.  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   

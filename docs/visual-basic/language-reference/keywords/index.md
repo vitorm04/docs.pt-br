@@ -10,21 +10,21 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801550"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959959"
 ---
 # <a name="keywords-visual-basic"></a>Palavras-chave (Visual Basic)
-As tabelas seguintes listam todas as palavras-chave de linguagem de Visual Basic.  
+As tabelas a seguir listam todas as palavras-chave do idioma Visual Basic.  
   
 ## <a name="reserved-keywords"></a>Palavras-chave reservadas  
  As seguintes palavras-chave são *reservadas*, o que significa que elas não podem ser usadas como nomes para elementos de programação, como variáveis ou procedimentos. Você pode evitar essa restrição colocando o nome entre colchetes (`[]`). Para obter mais informações, consulte "Nomes de escape" em [Nomes de elemento declarado](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 > [!NOTE]
->  Não recomendamos que você use nomes de escape, porque isso pode tornar o código difícil de ler e pode levar a erros sutis que podem ser difíceis de encontrar.  
+> Não recomendamos que você use nomes de escape, porque isso pode tornar o código difícil de ler e pode levar a erros sutis que podem ser difíceis de encontrar.  
   
 |||||  
 |---|---|---|---|  
@@ -77,7 +77,7 @@ As tabelas seguintes listam todas as palavras-chave de linguagem de Visual Basic
 |[Operador >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[Operador >>=](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant`, e `Wend` são mantidos como palavras-chave reservadas, embora eles não são mais usados no Visual Basic. O significado da palavra-chave `Let` foi alterada. `Let` agora é usado em consultas LINQ. Para obter mais informações, consulte [Cláusula Let](../../../visual-basic/language-reference/queries/let-clause.md).  
+> `EndIf`, `GoSub`, e`Wend` são retidos como palavras-chave reservadas, embora não sejam mais usadas em Visual Basic. `Variant` O significado da palavra-chave `Let` foi alterada. `Let` agora é usado em consultas LINQ. Para obter mais informações, consulte [Cláusula Let](../../../visual-basic/language-reference/queries/let-clause.md).  
   
 ## <a name="unreserved-keywords"></a>Palavras-chave não reservadas  
  As seguintes palavras-chave não são reservadas, o que significa que elas podem ser usadas como nomes de elementos de programação. No entanto, isso não é recomendado, pois pode tornar o código difícil de ler e pode levar a erros sutis que podem ser difíceis de encontrar.  

@@ -10,33 +10,33 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 195920af64888bd3671b45befc0fe4cde463ae7b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913553"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Como: Manipular grupos de linhas de uma tabela por meio da propriedade RowGroups
-Este exemplo demonstra algumas das operações mais comuns que podem ser executadas em grupos de linhas de uma tabela por meio de <xref:System.Windows.Documents.Table.RowGroups%2A> propriedade.  
+Este exemplo demonstra algumas das operações mais comuns que podem ser executadas nos grupos de linhas de uma tabela por meio <xref:System.Windows.Documents.Table.RowGroups%2A> da propriedade.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria uma nova tabela e, em seguida, usa o <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> método para adicionar colunas à tabela de <xref:System.Windows.Documents.Table.RowGroups%2A> coleção.  
+ O exemplo a seguir cria uma nova tabela e, em <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> seguida, usa o método para adicionar colunas <xref:System.Windows.Documents.Table.RowGroups%2A> à coleção da tabela.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Add](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_add)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Add](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_add)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir insere um novo <xref:System.Windows.Documents.TableRowGroup>.  A nova coluna é inserida na posição de índice 0, tornando-a o novo grupo da primeira linha na tabela.  
+ O exemplo a seguir insere um <xref:System.Windows.Documents.TableRowGroup>novo.  A nova coluna é inserida na posição de índice 0, tornando-a o novo grupo da primeira linha na tabela.  
   
 > [!NOTE]
->  O <xref:System.Windows.Documents.TableRowGroupCollection> coleção usa a indexação padrão de base zero.  
+> A <xref:System.Windows.Documents.TableRowGroupCollection> coleção usa a indexação padrão baseada em zero.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Insert](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_insert)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Insert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_insert)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir adiciona várias linhas para uma determinada <xref:System.Windows.Documents.TableRowGroup> (especificado pelo índice) na tabela.  
+ O exemplo a seguir adiciona várias linhas a um <xref:System.Windows.Documents.TableRowGroup> específico (especificado pelo índice) na tabela.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_AddRows](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_addrows)]
  [!code-vb[TableSnippets2#_Table_RowGroups_AddRows](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addrows)]  
@@ -48,7 +48,7 @@ Este exemplo demonstra algumas das operações mais comuns que podem ser executa
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipRows](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_maniprows)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir adiciona várias células para um determinado <xref:System.Windows.Documents.TableRow> (especificado pelo índice) na tabela.  
+ O exemplo a seguir adiciona várias células a um <xref:System.Windows.Documents.TableRow> determinado (especificado pelo índice) na tabela.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_AddCells](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_addcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_AddCells](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addcells)]  
@@ -60,7 +60,7 @@ Este exemplo demonstra algumas das operações mais comuns que podem ser executa
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipCells](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_manipcells)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir retorna o número de <xref:System.Windows.Documents.TableRowGroup> elementos hospedados pela tabela.  
+ O exemplo a seguir retorna o número <xref:System.Windows.Documents.TableRowGroup> de elementos hospedados pela tabela.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Count](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_count)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Count](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_count)]  
@@ -85,6 +85,6 @@ Este exemplo demonstra algumas das operações mais comuns que podem ser executa
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como Manipular elementos de conteúdo de fluxo por meio da propriedade Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Como Manipular elementos de conteúdo do fluxo por meio da propriedade Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Manipular um FlowDocument por meio da propriedade Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Manipular colunas de uma tabela por meio da propriedade Columns](how-to-manipulate-table-columns-through-the-columns-property.md)

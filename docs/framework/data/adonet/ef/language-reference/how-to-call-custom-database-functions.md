@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ddd6ebc6215ec17fa416fb0de8f81cf631365db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774641"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936036"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Como: Chamar funções personalizadas de banco de dados
 Este tópico descreve como chamar funções personalizados que são definidas na base de dados de dentro das consultas LINQ to Entities.  
@@ -23,23 +23,23 @@ Este tópico descreve como chamar funções personalizados que são definidas na
   
 1. Crie uma função personalizada em seu base de dados.  
   
-     Para obter mais informações sobre como criar funções personalizadas no SQL Server, consulte [CREATE FUNCTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
+     Para obter mais informações sobre como criar funções personalizadas no SQL Server, consulte [criar função (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
   
 2. Declarar uma função em linguagem de definição de esquema de armazenamento (SSDL) do arquivo. edmx. O nome da função deve ser o mesmo que o nome da função declarada no base de dados.  
   
-     Para obter mais informações, consulte [o elemento de função (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
+     Para obter mais informações, consulte [elemento Function (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
   
 3. Adicione um método correspondente a uma classe em seu código do aplicativo e aplicar <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> a nota de método que os parâmetros de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de atributo é o nome do espaço do modelo conceitual e o nome da função no modelo conceitual respectivamente. A resolução de nomes de função para LINQ diferencia maiúsculas de minúsculas.  
   
 4. Chame o método em uma consulta LINQ to Entities.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como chamar uma função de base de dados personalizado de uma consulta LINQ to Entities. O exemplo usa o modelo de escola. Para obter informações sobre o modelo de escola, consulte [criando o banco de dados de exemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) e [gerando a. edmx de escola arquivo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
+ O exemplo a seguir demonstra como chamar uma função de base de dados personalizado de uma consulta LINQ to Entities. O exemplo usa o modelo de escola. Para obter informações sobre o modelo escolar, consulte [criando o banco de dados de exemplo da escola](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) e [gerando o arquivo School. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
   
  O código a seguir adiciona a função de `AvgStudentGrade` a base de dados de exemplo de escola.  
   
 > [!NOTE]
->  As etapas para chamar uma função de base de dados personalizado são as mesmas independentemente do servidor de base de dados. No entanto, o código abaixo é específico para criar uma função em uma base de dados SQL Server. O código para criar uma função personalizada em outros servidores de base de dados pode ser diferente.  
+> As etapas para chamar uma função de base de dados personalizado são as mesmas independentemente do servidor de base de dados. No entanto, o código abaixo é específico para criar uma função em uma base de dados SQL Server. O código para criar uma função personalizada em outros servidores de base de dados pode ser diferente.  
   
  [!code-sql[DP L2E MapToDBFunction#1](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp l2e maptodbfunction/tsql/create_avgstudentgrade.sql#1)]  
   

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3224b1d732fb82ffe68e8ce0bd410850004cb95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928565"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967164"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Como: especificar uma associação de serviço na configuração
-Neste exemplo, uma `ICalculator` contrato é definido para um serviço de calculadora básica, o serviço é implementado de `CalculatorService` classe e, em seguida, seu ponto de extremidade está configurado no arquivo Web. config, onde ele é especificado que o serviço usa o <xref:System.ServiceModel.BasicHttpBinding> . Para obter uma descrição de como configurar esse serviço usando o código em vez de uma configuração, consulte [como: Especificar uma associação de serviço no código](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
+Neste exemplo, um `ICalculator` contrato é definido para um serviço de calculadora básica, o serviço é implementado `CalculatorService` na classe e, em seguida, seu ponto de extremidade é configurado no arquivo Web. config, onde é especificado que o serviço usa <xref:System.ServiceModel.BasicHttpBinding> o . Para obter uma descrição de como configurar esse serviço usando o código em vez de uma configuração [, consulte Como: Especifique uma associação de serviço no](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)código.  
   
- Ele geralmente é a prática recomendada para especificar declarativamente as informações de endereço e associação na configuração em vez de imperativa no código. Definir pontos de extremidade no código geralmente não é prático porque as associações e endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. De modo geral, informações fora do código de endereçamento e manter a associação permite que eles alterem os sem ter que recompilar ou reimplantar o aplicativo.  
+ Geralmente, é a prática recomendada especificar a associação e as informações de endereço de forma declarativa na configuração, em vez de imperativa no código. A definição de pontos de extremidade no código geralmente não é prática porque as associações e os endereços para um serviço implantado são normalmente diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Em geral, manter as informações de vinculação e endereçamento do código permite que elas sejam alteradas sem a necessidade de recompilar ou reimplantar o aplicativo.  
   
- Todas as etapas de configuração a seguir podem ser executadas usando o [ferramenta de Editor de configuração (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+ Todas as etapas de configuração a seguir podem ser executadas usando a [ferramenta do editor de configuração (SvcConfigEditor. exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
  Para a cópia de origem deste exemplo, consulte [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md).  
   
-### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Para especificar o BasicHttpBinding para usar para configurar o serviço  
+### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Para especificar o BasicHttpBinding a ser usado para configurar o serviço  
   
 1. Defina um contrato de serviço para o tipo de serviço.  
   
@@ -34,9 +34,9 @@ Neste exemplo, uma `ICalculator` contrato é definido para um serviço de calcul
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
   
     > [!NOTE]
-    >  Informações de associação ou o endereço não estão especificadas dentro da implementação do serviço. Além disso, o código não tem a ser gravado para buscar informações do arquivo de configuração.  
+    > As informações de endereço ou de associação não são especificadas dentro da implementação do serviço. Além disso, o código não precisa ser escrito para buscar essas informações do arquivo de configuração.  
   
-3. Crie um arquivo Web. config para configurar um ponto de extremidade para o `CalculatorService` que usa o <xref:System.ServiceModel.WSHttpBinding>.  
+3. Crie um arquivo Web. config para configurar um ponto de extremidade `CalculatorService` para o que <xref:System.ServiceModel.WSHttpBinding>usa o.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -73,7 +73,7 @@ Neste exemplo, uma `ICalculator` contrato é definido para um serviço de calcul
     </configuration>  
     ```  
   
-4. Crie um arquivo Service SVC que contém a linha a seguir e colocá-lo em seu diretório virtual de serviços de informações da Internet (IIS).  
+4. Crie um arquivo Service. svc que contenha a linha a seguir e coloque-o em seu diretório virtual Serviços de Informações da Internet (IIS).  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
@@ -81,7 +81,7 @@ Neste exemplo, uma `ICalculator` contrato é definido para um serviço de calcul
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Para modificar os valores padrão das propriedades de associação  
   
-1. Para modificar um dos valores de propriedade padrão do <xref:System.ServiceModel.WSHttpBinding>, criar um novo nome de configuração de associação - `<binding name="Binding1">` - dentro a [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento e defina os novos valores para os atributos das associação nesse elemento de associação. Por exemplo, para alterar o padrão aberto e fechar os valores de tempo limite de 1 minuto para 2 minutos, adicione o seguinte ao arquivo de configuração.  
+1. Para modificar um dos valores de propriedade padrão do <xref:System.ServiceModel.WSHttpBinding>, crie um novo `<binding name="Binding1">` nome de configuração de associação, dentro do [ \<elemento WSHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) e defina os novos valores para os atributos da Associação nesta associação elementos. Por exemplo, para alterar os valores de tempo limite de abertura e fechamento padrão de 1 minuto para 2 minutos, adicione o seguinte ao arquivo de configuração.  
   
     ```xml  
     <wsHttpBinding>  

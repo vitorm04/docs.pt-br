@@ -2,19 +2,19 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a48fa2ed90999a66f4c1f84b7cfaa9a0e79f6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769831"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940577"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType>
 Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contrato de serviço.  
   
  \<system.ServiceModel>  
 \<comContracts>  
-\<comContract>  
+\<> de descontrato  
 \<userDefinedTypes>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,10 +40,10 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`name`|Um atributo opcional que contém uma cadeia de caracteres que fornece o nome de tipo legível. Isso não é usado pelo tempo de execução, mas ajuda a distinguir os tipos de um leitor.|  
+|`name`|Um atributo opcional que contém uma cadeia de caracteres que fornece o nome de tipo legível. Isso não é usado pelo tempo de execução, mas ajuda um leitor a distinguir os tipos.|  
 |`TypeDefID`|Uma cadeia de caracteres GUID que identifica o tipo UDT específico dentro da biblioteca de tipos registrada.|  
 |`TypeLibID`|Uma cadeia de caracteres GUID que identifica a biblioteca de tipos registrada que define o tipo.|  
-|`TypeLibVersion`|Uma cadeia de caracteres que identifica a versão da biblioteca de tipo que define o tipo.|  
+|`TypeLibVersion`|Uma cadeia de caracteres que identifica a versão da biblioteca de tipos que define o tipo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -55,11 +55,11 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
 |`userDefinedTypes`|Uma coleção de elementos `userDefinedType`.|  
   
 ## <a name="remarks"></a>Comentários  
- O tempo de execução de integração COM+ cria serviços inspecionando a biblioteca de tipos. Quando um componente COM+ contém métodos que passam uma VARIANTE, o sistema não pode determinar os tipos reais a serem passados antes do tempo de execução. Portanto, quando você tentar passar um usuário definido pelo tipo (UDT) dentro de uma VARIANTE, ele falhará porque não é um tipo conhecido para serialização.  
+ O Integration Runtime do COM+ cria serviços inspecionando a biblioteca de tipos. Quando um componente COM+ contém métodos que passam por uma variante, o sistema não pode determinar os tipos reais a serem passados antes do tempo de execução. Portanto, quando você tenta passar um UDT (tipo definido pelo usuário) em uma variante, ele falha porque não é um tipo conhecido para serialização.  
   
- Para contornar esse problema, você pode adicionar os UDTs ao arquivo de configuração para que eles possam ser incluídos como tipos conhecidos no contrato de serviço apropriado. Para fazer isso, você precisa que identificar exclusivamente o UDT e o contrato (s), ou seja, as interfaces COM original usam-o.  
+ Para evitar esse problema, você pode adicionar os UDTs ao arquivo de configuração para que eles possam ser incluídos como tipos conhecidos no contrato de serviço apropriado. Para fazer isso, você precisa identificar exclusivamente o UDT e os contratos, ou seja, as interfaces COM originais que o usam....  
   
- O exemplo a seguir demonstra como adicionar dois UDTs específicos para o <`userDefinedTypes`> seção do arquivo de configuração para essa finalidade.  
+ O exemplo a seguir demonstra como adicionar dois UDTs específicos à`userDefinedTypes`seção < > do arquivo de configuração para essa finalidade.  
   
 ```xml  
 <comContracts>
@@ -88,13 +88,13 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
 </comContracts>
 ```  
   
- Quando o serviço é inicializado, o integration runtime procura os tipos especificados e os adiciona à coleção de tipos conhecidos para os contratos especificados.  
+ Quando o serviço é inicializado, o Integration Runtime pesquisa os tipos especificados e os adiciona à coleção de tipos conhecidos para os contratos especificados.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Integração de aplicativos COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Como: Definir as configurações de serviço COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [Integração de aplicativos COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Como: Definir configurações de serviço COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

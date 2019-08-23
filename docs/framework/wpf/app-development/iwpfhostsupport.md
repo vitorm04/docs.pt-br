@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 97a120c57624ada32e6661bd8a613c4ea1d01b2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 994e5146e9cf49a9b31396d0b51e7be83bbb3cfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591381"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964777"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Aplicativos que hospedam conteúdo [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] via PresentationHost.exe implementam essa interface para fornecer um ponto de integração entre o host e PresentationHost.exe.  
@@ -26,7 +26,7 @@ Aplicativos que hospedam conteúdo [!INCLUDE[TLA#tla_winclient](../../../../incl
 - Consultar o aplicativo host para interfaces do usuário de andamento e de erro personalizadas.  
   
 > [!NOTE]
->  Esta API é destinada e tem suporte somente para uso no computador cliente local  
+> Esta API é destinada e tem suporte somente para uso no computador cliente local  
   
 ## <a name="members"></a>Membros  
   

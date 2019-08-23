@@ -2,18 +2,18 @@
 title: 'Como: gerar o modelo de objeto como um arquivo externo'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 828e92903447b5c7cd3d7d27ed72bfe61d0dc6a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7451dfbaf85c1cbd4635ae0cce1219853a2b01a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743298"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911933"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Como: gerar o modelo de objeto como um arquivo externo
 Como uma alternativa para o mapeamento baseado em atributos, você pode gerar seu modelo de objeto como um arquivo externo XML usando a ferramenta de linha de comando SQLMetal. Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Usando um arquivo de mapeamento externo XML, você reduz a confusão em seu código. Você também pode alterar o comportamento alterando o arquivo externo sem recompilar os binários do seu aplicativo. Para obter mais informações, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
->  O Object Relational Designer não oferece suporte a geração de um arquivo de mapeamento externo.  
+> O Object Relational Designer não oferece suporte à geração de um arquivo de mapeamento externo.  
   
 ## <a name="example"></a>Exemplo  
  O comando a seguir gerencia um arquivo externo de mapeamento de base de dados de exemplo Northwind.  
@@ -23,7 +23,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 ```  
   
 ## <a name="example"></a>Exemplo  
- O seguinte trecho de um arquivo de mapeamento externo mostra o mapeamento para a tabela clientes na base de dados de exemplo Northwind. Este trecho foi gerado executando SQLMetal com a **/Map** opção.  
+ O seguinte trecho de um arquivo de mapeamento externo mostra o mapeamento para a tabela clientes na base de dados de exemplo Northwind. Esse trecho foi gerado pela execução de SqlMetal com a opção **/MAP** .  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

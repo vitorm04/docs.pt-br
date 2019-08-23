@@ -2,21 +2,21 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 125baba917a49135aaa426df2cfa1a4dbe8ac1e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5cb64c54067ba695f67d86c0026db77ebbe7d5ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700903"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919044"
 ---
-# <a name="endpointdiscovery"></a>\<endpointDiscovery>
-Especifica as várias configurações de descoberta para um ponto de extremidade, como sua capacidade de descoberta, escopos e quaisquer extensões personalizadas para seus metadados.  
+# <a name="endpointdiscovery"></a>\<> endpointDiscovery
+Especifica as várias configurações de descoberta para um ponto de extremidade, como sua descoberta, escopos e quaisquer extensões personalizadas para seus metadados.  
   
 \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<behavior>  
-\<endpointDiscovery>  
+\<> de comportamento  
+\<> endpointDiscovery  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,30 +42,30 @@ Especifica as várias configurações de descoberta para um ponto de extremidade
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|habilitado|Um valor booliano que especifica se descoberta está habilitada nesse ponto de extremidade. O padrão é `false`.|  
+|habilitado|Um valor booliano que especifica se a descoberta está habilitada neste ponto de extremidade. O padrão é `false`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Uma coleção de URIs de escopo para o ponto de extremidade. Uris de mais de um escopo pode ser associado um ponto de extremidade.|  
-|[\<Extensões >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [de \<endpointDiscovery >]|Uma coleção de elementos XML que permite que você especifique metadados personalizados para serem publicados para um ponto de extremidade.|  
-|\<types>|Uma coleção de interfaces para pesquisar.|  
+|[\<scopes>](scopes.md)|Uma coleção de URIs de escopo para o ponto de extremidade. Mais de um URI de escopo pode ser associado a um único ponto de extremidade.|  
+|extensões > [of \<endpointDiscovery >] [ \<](extensions.md)|Uma coleção de elementos XML que permite que você especifique metadados personalizados a serem publicados para um ponto de extremidade.|  
+|\<types>|Uma coleção de interfaces a serem pesquisadas.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<> de comportamento](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
 |||  
   
 ## <a name="remarks"></a>Comentários  
- Quando adicionado à configuração de comportamento do ponto de extremidade e com o `enabled` atributo definido como `true`, este elemento de configuração permite que a sua capacidade de descoberta. Além disso, você pode usar o [ \<escopos >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)elemento filho a especificação de escopo personalizado Uris que podem ser usados para filtrar pontos de extremidade de serviço durante consulta, bem como o [ \<extensões >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) elemento filho para especificar metadados personalizados que devem ser publicados junto com os metadados detectáveis padrão (EPR, ContractTypeName, BindingName, escopo e ListenURI).  
+ Quando adicionado à configuração de comportamento do ponto de extremidade e `enabled` com o atributo `true`definido como, esse elemento de configuração permite sua capacidade de descoberta. Além disso, você pode usar os [ \<escopos >](scopes.md)elemento filho para especificar URIs de escopo personalizado que podem ser usados para filtrar pontos de extremidade de serviço durante a consulta, bem como as [ \<extensões >](extensions.md) elemento filho para especificar personalizado metadados que devem ser publicados juntamente com os metadados detectáveis padrão (EPR, ContractTypeName, BindingName, Scope e ListenURI).  
   
- Este elemento de configuração é dependente de [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) elemento que fornece o controle de nível de serviço de descoberta. Isso significa que as configurações desse elemento são ignoradas se [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) não está presente na configuração.  
+ Esse elemento de configuração é dependente do elemento de [ \<>](servicediscovery.md) do Service Discovery que fornece o controle de nível de serviço de descoberta. Isso significa que as configurações desse elemento serão ignoradas [ \<](servicediscovery.md) se o > do indiscovery não estiver presente na configuração.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de configuração a seguir especifica os escopos de filtragem e os metadados de extensão a ser publicado para um ponto de extremidade.  
+ O exemplo de configuração a seguir especifica os escopos de filtragem e os metadados de extensão a serem publicados para um ponto de extremidade.  
   
 ```xml  
 <services>

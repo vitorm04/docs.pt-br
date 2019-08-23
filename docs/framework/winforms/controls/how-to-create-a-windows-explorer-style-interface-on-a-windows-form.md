@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039528"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960620"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Como: Criar uma interface no estilo do Windows Explorer em Windows Forms
 O Windows Explorer é uma opção de interface do usuário comum para aplicativos devido à sua familiaridade pronta.
@@ -35,7 +35,7 @@ O Windows Explorer é uma opção de interface do usuário comum para aplicativo
 3. Selecione os três controles pressionando a tecla CTRL e clicando neles. Ao selecionar o <xref:System.Windows.Forms.SplitContainer> controle, clique na barra de divisão, em vez de nos painéis.
 
     > [!NOTE]
-    >  Não use o comando **Selecionar Tudo** no menu **Editar**. Se você fizer isso, a propriedade necessária na próxima etapa não aparecerá na janela **Propriedades**.
+    > Não use o comando **Selecionar Tudo** no menu **Editar**. Se você fizer isso, a propriedade necessária na próxima etapa não aparecerá na janela **Propriedades**.
 
 4. Na janela **Propriedades** , defina a <xref:System.Windows.Forms.SplitContainer.Dock%2A> Propriedade como <xref:System.Windows.Forms.DockStyle.Fill>.
 
@@ -44,7 +44,7 @@ O Windows Explorer é uma opção de interface do usuário comum para aplicativo
      O formulário exibe uma interface do usuário de duas partes, semelhante à do Windows Explorer.
 
     > [!NOTE]
-    >  Quando você arrasta o divisor, os painéis são redimensionados.
+    > Quando você arrasta o divisor, os painéis são redimensionados.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -2,20 +2,20 @@
 title: Elemento <defaultCertificate>
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93410e815a156f91db1962f05fb1aa6baca7f955
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644443"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919239"
 ---
-# <a name="defaultcertificate-element"></a>\<defaultCertificate > elemento
-Especifica um certificado X.509 a ser usado quando um serviço ou STS não fornece um através de um protocolo de negociação.  
+# <a name="defaultcertificate-element"></a>\<Elemento de > DefaultCertificate
+Especifica um certificado X. 509 a ser usado quando um serviço ou STS não fornecer um por meio de um protocolo de negociação.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
 seção endpointBehaviors  
-\<behavior>  
+\<> de comportamento  
 \<clientCredentials>  
 \<serviceCertificate>  
 \<defaultCertificate>  
@@ -37,15 +37,15 @@ seção endpointBehaviors
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |findValue|Cadeia. O valor a ser procurado.|  
-|x509FindType|Enumeração. Um dos campos do certificado para pesquisar.|  
-|storeLocation|Enumeração. Um dos dois sistemas locais de repositório para pesquisar.|  
-|storeName|Enumeração. Um dos armazenamentos de sistema para pesquisar.|  
+|x509FindType|Enumeração. Um dos campos de certificado a serem pesquisados.|  
+|storeLocation|Enumeração. Um dos dois locais de armazenamento do sistema para pesquisar.|  
+|storeName|Enumeração. Uma das lojas de sistema para pesquisa.|  
   
-## <a name="findvalue-attribute"></a>findValue atributo  
+## <a name="findvalue-attribute"></a>Atributo FindValue  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Cadeia de Caracteres|O valor depende do campo (especificado pelo atributo X509FindType) que está sendo pesquisado. Por exemplo, se você está procurando uma impressão digital, o valor deve ser uma cadeia de caracteres de números hexadecimais.|  
+|Cadeia de Caracteres|O valor depende do campo (especificado pelo atributo X509FindType) que está sendo pesquisado. Por exemplo, se estiver procurando uma impressão digital, o valor deverá ser uma cadeia de caracteres de números hexadecimais.|  
   
 ## <a name="x509findtype-attribute"></a>Atributo x509FindType  
   
@@ -53,17 +53,17 @@ seção endpointBehaviors
 |-----------|-----------------|  
 |Enumeração|Os valores são: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
-## <a name="storelocation-attribute"></a>storeLocation atributo  
+## <a name="storelocation-attribute"></a>Atributo storeLocation  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Enumeração|CurrentUser ou LocalMachine.|  
   
-## <a name="storename-attribute"></a>storeName atributo  
+## <a name="storename-attribute"></a>Atributo storeName  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Enumeração|Os valores são: Catálogo de endereços, AuthRoot, CertificateAuthority, não permitido, My, raiz, TrustedPeople e TrustedPublisher.|  
+|Enumeração|Os valores são: Catálogo, AuthRoot, CertificateAuthority, não permitido, My, root, TrustedPeople e TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -72,13 +72,13 @@ seção endpointBehaviors
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Especifica um certificado a ser usado ao autenticar um serviço para o cliente.|  
+|[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|Especifica um certificado a ser usado ao autenticar um serviço para o cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- Para associações que usam a segurança de mensagem baseada em certificado, o certificado especificado por este elemento de configuração é usado para criptografar mensagens para o serviço e deve ser usado pelo serviço para assinar respostas ao cliente. Ele armazena um único certificado a ser usado quando nenhum certificado é especificado por um serviço.  
+ Para associações que usam segurança de mensagem baseada em certificado, o certificado especificado por esse elemento de configuração é usado para criptografar mensagens para o serviço e deve ser usado pelo serviço para assinar respostas para o cliente. Ele armazena um único certificado a ser usado quando nenhum certificado é especificado por um serviço.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir especifica um certificado a ser usado para pontos de extremidade cujo URI começa com `http://www.contoso.com` e um certificado a ser usado para todos os outros pontos de extremidade que não executam o processo de negociação do certificado.  
+ O exemplo a seguir especifica um certificado a ser usado para pontos de extremidade cujo URI `http://www.contoso.com` começa com e um certificado a ser usado para todos os outros pontos de extremidade que não executam a negociação de certificado.  
   
 ```xml  
 <serviceCertificate>
@@ -103,7 +103,7 @@ seção endpointBehaviors
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
-- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
-- [Protegendo clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)
+- [\<authentication>](authentication-of-clientcertificate-element.md)
+- [Protegendo clientes](../../../wcf/securing-clients.md)
+- [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)

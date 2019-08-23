@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 02a86ea8d8d6b481044d6ca25d29df7edd2c73ee
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401684"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958715"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilando um aplicativo WPF (WPF)
 
@@ -24,7 +24,7 @@ Os aplicativos Windows Presentation Foundation (WPF) podem ser criados como .NET
 
 Um aplicativo WPF pode ser compilado das seguintes maneiras:
 
-- Linha de comando. O aplicativo deve conter somente código (sem XAML) e um arquivo de definição de aplicativo. Para obter mais informações, consulte [Build pela linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) ou [Build na linha de comando (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
+- Linha de comando. O aplicativo deve conter somente código (sem XAML) e um arquivo de definição de aplicativo. Para obter mais informações, consulte [Build pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) ou [Build na linha de comando (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
 
 - MSBuild (Microsoft Build Engine). Além do código e de arquivos XAML, o aplicativo deve conter um arquivo de projeto do MSBuild. Para mais informações, consulte "MSBuild".
 
@@ -42,7 +42,7 @@ Quando um projeto do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-w
 
 ### <a name="pre-build-initializations"></a>Inicializações pré-build
 
-Antes de compilar, o [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] determina a localização das ferramentas e bibliotecas importantes, incluindo o seguinte:
+Antes de Compilar, o MSBuild determina o local de ferramentas e bibliotecas importantes, incluindo o seguinte:
 
 - O .NET Framework.
 
@@ -52,7 +52,7 @@ Antes de compilar, o [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharpt
 
 - A propriedade para os caminhos de pesquisa de assembly.
 
-O primeiro local em que o [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] procura assemblies é o diretório do assembly de referência (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\). Durante essa etapa, o processo de build também inicializa as várias propriedades e grupos de itens e realiza qualquer trabalho necessário de limpeza.
+O primeiro local em que o MSBuild pesquisa por assemblies é o diretório de assembly de\\referência (%programfiles%\Reference Assemblies\Microsoft\Framework\v3.0). Durante essa etapa, o processo de build também inicializa as várias propriedades e grupos de itens e realiza qualquer trabalho necessário de limpeza.
 
 <a name="Resolving_references"></a>
 
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-Por padrão, a compilação de marcação é executada <xref:System.AppDomain> na mesma [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] forma que o mecanismo. Isso proporciona ganhos significativos de desempenho. Esse comportamento pode ser alternado com a propriedade `AlwaysCompileMarkupFilesInSeparateDomain`. Isso tem a vantagem de descarregar todos os assemblies de referência descarregando o separado <xref:System.AppDomain>.
+Por padrão, a compilação de marcação é executada <xref:System.AppDomain> na mesma forma que o mecanismo do MSBuild. Isso proporciona ganhos significativos de desempenho. Esse comportamento pode ser alternado com a propriedade `AlwaysCompileMarkupFilesInSeparateDomain`. Isso tem a vantagem de descarregar todos os assemblies de referência descarregando o separado <xref:System.AppDomain>.
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 

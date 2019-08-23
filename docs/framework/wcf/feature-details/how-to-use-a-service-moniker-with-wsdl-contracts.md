@@ -2,31 +2,31 @@
 title: 'Como: usar um moniker de serviço com contratos WSDL'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 2968641538bf0b4d0e136d5784bf69e5e7fcb3a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80b0d034b92123862d0500106f81d4a566cac467
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972881"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968775"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Como: usar um moniker de serviço com contratos WSDL
-Essas são situações em que talvez você queira que um cliente de interoperabilidade COM totalmente independente. O serviço que você deseja chamar não pode expor um ponto de extremidade MEX e o cliente do WCF com que dll não pode ser registrado para interoperabilidade. Nesses casos, você pode criar um arquivo WSDL que descreve o serviço e passá-la para o moniker de serviço do WCF. Este tópico descreve como chamar o exemplo de Introdução ao WCF usando um moniker de WCF WSDL.  
+Há situações em que você talvez queira ter um cliente de interoperabilidade COM totalmente independente. O serviço que você deseja chamar pode não expor um ponto de extremidade MEX e a DLL do cliente do WCF pode não estar registrada para interoperabilidade COM. Nesses casos, você pode criar um arquivo WSDL que descreve o serviço e passá-lo para o moniker do serviço WCF. Este tópico descreve como chamar o Introdução exemplo do WCF usando um moniker WSDL do WCF.  
   
-### <a name="using-the-wsdl-service-moniker"></a>Usando o moniker de serviço WSDL  
+### <a name="using-the-wsdl-service-moniker"></a>Usando o moniker do serviço WSDL  
   
-1. Abrir e criar a solução de exemplo GettingStarted.  
+1. Abra e crie a solução de exemplo GettingStarted.  
   
-2. Abra o Internet Explorer e navegue até `http://localhost/ServiceModelSamples/Service.svc` para certificar-se de que o serviço está funcionando.  
+2. Abra o Internet Explorer e navegue `http://localhost/ServiceModelSamples/Service.svc` até para certificar-se de que o serviço está funcionando.  
   
 3. No arquivo Service.cs, adicione o seguinte atributo na classe CalculatorService:  
   
      [!code-csharp[S_WSDL_Client#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wsdl_client/cs/service.cs#0)]  
   
-4. Adicione um namespace de associação para o serviço de App. config:  
+4. Adicione um namespace de associação ao aplicativo de serviço. config:  
 
-5. Crie um arquivo WSDL para o aplicativo ler. Como os namespaces foram adicionados nas etapas 3 e 4, você pode usar o IE para consultar a descrição inteira de WSDL do serviço, navegando até `http://localhost/ServiceModelSamples/Service.svc?wsdl`. Você pode salvar o arquivo do Internet Explorer como serviceWSDL.xml. Se você não especificar os namespaces nas etapas 3 e 4, o documento WSDL retornado das consultas URL acima não será concluída WSDL. O documento WSDL retornado incluirá várias instruções de importação que importar outros documentos WSDL. Você precisará passar por cada instrução de importação e compilar todo o documento WSDL, combinando o WSDL retornado do serviço com o WSDL importado.  
+5. Crie um arquivo WSDL para que o aplicativo Leia. Como os namespaces foram adicionados nas etapas 3 e 4, você pode usar o IE para consultar toda a descrição WSDL do serviço navegando até `http://localhost/ServiceModelSamples/Service.svc?wsdl`. Em seguida, você pode salvar o arquivo do Internet Explorer como arquivo. xml. Se você não especificar os namespaces nas etapas 3 e 4, o documento WSDL retornado da consulta da URL acima não será o WSDL completo. O documento WSDL retornado incluirá várias instruções de importação que importam outros documentos WSDL. Você precisará percorrer cada instrução de importação e criar o documento WSDL completo, combinando o WSDL retornado do serviço com o WSDL importado.  
   
-6. Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o seguinte código ao manipulador de cliques:  
+6. Abra Visual Basic 6,0 e crie um novo arquivo Standard. exe. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o seguinte código ao manipulador de cliques:  
   
     ```  
     ' Open the WSDL contract file and read it all into the wsdlContract string.  
@@ -50,9 +50,9 @@ Essas são situações em que talvez você queira que um cliente de interoperabi
     ```  
   
     > [!NOTE]
-    >  Se o moniker está mal formado ou se o serviço está indisponível a chamada para `GetObject` retornará um erro informando que "Sintaxe inválida".  Se você receber esse erro, verifique se você estiver usando o identificador de origem está correto e o serviço está disponível.  
+    > Se o moniker estiver malformado ou se o serviço não estiver disponível, `GetObject` a chamada para retornará um erro dizendo "sintaxe inválida".  Se você receber esse erro, verifique se o moniker que você está usando está correto e se o serviço está disponível.  
   
-7. Execute o aplicativo Visual Basic. Caixa de mensagem será exibida com os resultados da subtração de chamada (145, 76.54).  
+7. Execute o aplicativo Visual Basic. Uma caixa de mensagem será exibida com os resultados da chamada de subtração (145, 76,54).  
   
 ## <a name="see-also"></a>Consulte também
 

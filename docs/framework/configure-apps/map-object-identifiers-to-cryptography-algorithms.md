@@ -8,15 +8,15 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-ms.openlocfilehash: e035ff04a70a441f7f64bbc230ba6d8036fb2ace
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5aebac2d392d4540581dfe7c7afff0819968ac0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775772"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912536"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Mapeando identificadores de objeto para algoritmos de criptografia
-Assinaturas digitais Certifique-se de que dados não seja violados quando ela é enviada de um programa para outro. Normalmente, a assinatura digital é computada, aplicando uma função matemática para o hash dos dados a serem assinados. Ao formatar um valor de hash a ser assinada, alguns algoritmos de assinatura digital acrescentar um ASN. 1 objeto OID (identificador) como parte da operação de formatação. O OID identifica o algoritmo que foi usado para computar o hash. Você pode mapear os algoritmos para identificadores de objeto para estender o mecanismo de criptografia para usar algoritmos personalizados. O exemplo a seguir mostra como mapear um identificador de objeto para um novo algoritmo de hash.  
+As assinaturas digitais garantem que os dados não sejam adulterados quando enviados de um programa para outro. Normalmente, a assinatura digital é computada aplicando uma função matemática ao hash dos dados a serem assinados. Ao Formatar um valor de hash a ser assinado, alguns algoritmos de assinatura digital acrescentam um OID (identificador de objeto) de ASN. 1 como parte da operação de formatação. O OID identifica o algoritmo que foi usado para calcular o hash. Você pode mapear algoritmos para identificadores de objeto para estender o mecanismo de criptografia para usar algoritmos personalizados. O exemplo a seguir mostra como mapear um identificador de objeto para um novo algoritmo de hash.  
   
 ```xml  
 <configuration>  
@@ -38,9 +38,9 @@ Assinaturas digitais Certifique-se de que dados não seja violados quando ela é
 </configuration>  
 ```  
   
- O [ \<oidEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contém dois atributos. O **OID** atributo é o número de identificador de objeto. O **nome** atributo é o valor da **nome** de atributos dos [ \<nameEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Deve haver um mapeamento de um nome de algoritmo para uma classe antes de um identificador de objeto pode ser mapeado para um nome simples.  
+ [ O\<elemento > oidEntry](./file-schema/cryptography/oidentry-element.md) contém dois atributos. O atributo **OID** é o número do identificador de objeto. O atributo **Name** é o valor do [ \<atributo Name do elemento > nameEntry](./file-schema/cryptography/nameentry-element.md). Deve haver um mapeamento de um nome de algoritmo para uma classe antes que um identificador de objeto possa ser mapeado para um nome simples.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurando classes de criptografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
+- [Configurando classes de criptografia](configure-cryptography-classes.md)
+- [Serviços criptográficos](../../standard/security/cryptographic-services.md)

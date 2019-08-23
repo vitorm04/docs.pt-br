@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 45df54b3a590078eff6ddc1197db5b0124663cf5
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 26cbc995a749c4c129729be700dee588d1033a05
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971916"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953430"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Como: Implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente
 
@@ -49,7 +49,7 @@ O <xref:System.Windows.Forms.WebBrowser> controle permite que você implemente a
      O código a seguir usa a classe de formulário em si para o objeto de script.
 
     > [!NOTE]
-    >  O COM (Component Object Model) deve ser capaz de acessar o objeto de script. Para tornar seu formulário visível para com, adicione o <xref:System.Runtime.InteropServices.ComVisibleAttribute> atributo à sua classe de formulário.
+    > O COM (Component Object Model) deve ser capaz de acessar o objeto de script. Para tornar seu formulário visível para com, adicione o <xref:System.Runtime.InteropServices.ComVisibleAttribute> atributo à sua classe de formulário.
 
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]

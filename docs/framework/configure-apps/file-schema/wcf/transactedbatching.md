@@ -2,12 +2,12 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758126"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918671"
 ---
 # <a name="transactedbatching"></a>\<transactedBatching>
 
@@ -16,7 +16,7 @@ Especifica se o envio em lote de transações tem suporte para operações de re
 \<system.ServiceModel>\
 \<comportamentos > \
 \<endpointBehaviors>\
-\<behavior>\
+\<comportamento > \
 \<transactedBatching>
 
 ## <a name="syntax"></a>Sintaxe
@@ -33,7 +33,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|`maxBatchSize`|Um inteiro que especifica o número máximo de operações de recebimento que podem ser enviadas em lote juntas em uma transação. O padrão é 0.|
+|`maxBatchSize`|Um inteiro que especifica o número máximo de operações de recebimento que podem ser agrupadas em uma transação. O padrão é 0.|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -43,15 +43,15 @@ nenhuma.
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um comportamento de ponto de extremidade.|
+|[\<> de comportamento](behavior-of-endpointbehaviors.md)|Especifica um comportamento de ponto de extremidade.|
 
 ## <a name="remarks"></a>Comentários
 
-Um transporte configurado com transações em lotes de tentativas de enviar em lote várias operações em uma transação de recebimento. Ao fazer isso, o custo relativamente alto de criação de uma transação e confirmá-lo em cada receber operação é evitada.
+Um transporte configurado com o envio em lote de transações tenta o lote de várias operações de recebimento em uma transação. Ao fazer isso, o custo relativamente alto para criar uma transação e confirmá-la em todas as operações de recebimento é evitado.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como adicionar o comportamento de envio em lote transacionado para um serviço em um arquivo de configuração.
+O exemplo a seguir mostra como adicionar o comportamento de envio em lote transacionado a um serviço em um arquivo de configuração.
 
 ```xml
 <system.serviceModel>

@@ -2,33 +2,33 @@
 title: 'Como: usar Svcutil.exe para exportar metadados de código de serviço compilado'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 40c684cbc1b14bf14d3ca23cbc044020e36b85f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b8ddbaf896ee4c6ea8b6f8e8ce7d0ecef28140ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650223"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932565"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Como: usar Svcutil.exe para exportar metadados de código de serviço compilado
-Svcutil.exe pode exportar metadados para os serviços, contratos e tipos de dados em assemblies compilados, da seguinte maneira:  
+Svcutil. exe pode exportar metadados para serviços, contratos e tipos de dados em assemblies compilados, da seguinte maneira:  
   
-- Para exportar metadados para todos os compilado contratos de serviço para um conjunto de módulos (assemblies) usando Svcutil.exe, especifique os assemblies como parâmetros de entrada. Este é o comportamento padrão.  
+- Para exportar metadados para todos os contratos de serviço compilados para um conjunto de assemblies usando svcutil. exe, especifique os assemblies como parâmetros de entrada. Esse é o comportamento padrão.  
   
-- Para exportar metadados para um serviço compilado usando Svcutil.exe, especifique o assembly de serviço ou assemblies como parâmetros de entrada. Você deve usar o `/serviceName` opção para indicar o nome da configuração do serviço que você deseja exportar. Svcutil.exe carregará automaticamente o arquivo de configuração para o assembly executável especificado.  
+- Para exportar metadados para um serviço compilado usando svcutil. exe, especifique o assembly de serviço ou assemblies como parâmetros de entrada. Você deve usar a `/serviceName` opção para indicar o nome da configuração do serviço que deseja exportar. Svcutil. exe carrega automaticamente o arquivo de configuração para o assembly executável especificado.  
   
-- Para exportar todos os tipos de contrato de dados em um conjunto de módulos (assemblies), use o `/dataContractOnly` opção.  
+- Para exportar todos os tipos de contrato de dados dentro de um conjunto de `/dataContractOnly` assemblies, use a opção.  
   
 > [!NOTE]
->  Use o `/reference` opção para especificar os caminhos de arquivo para todos os assemblies dependentes.  
+> Use a `/reference` opção para especificar os caminhos de arquivo para quaisquer assemblies dependentes.  
   
-### <a name="to-export-metadata-for-compiled-service-contracts"></a>Para exportar metadados para contratos de serviço compilado  
+### <a name="to-export-metadata-for-compiled-service-contracts"></a>Para exportar metadados para contratos de serviço compilados  
   
-1. Compile suas implementações de contrato de serviço em um ou mais libraries.1 de classe  
+1. Compile as implementações do contrato de serviço em uma ou mais bibliotecas de classe. 1  
   
-2. Execute Svcutil.exe em assemblies compilados.  
+2. Execute svcutil. exe nos assemblies compilados.  
   
     > [!NOTE]
-    >  Você talvez precise usar o `/reference` para especificar o caminho do arquivo para todos os assemblies dependentes.  
+    > Talvez seja necessário usar a `/reference` opção para especificar o caminho do arquivo para quaisquer assemblies dependentes.  
   
     ```  
     svcutil.exe Contracts.dll  
@@ -53,30 +53,30 @@ Svcutil.exe pode exportar metadados para os serviços, contratos e tipos de dado
     </configuration>  
     ```  
   
-3. Execute Svcutil.exe no serviço compilado executável usando o `/serviceName` para especificar o nome da configuração do serviço.  
+3. Execute svcutil. exe no executável do serviço compilado usando a `/serviceName` opção para especificar o nome da configuração do serviço.  
   
     > [!NOTE]
-    >  Você talvez precise usar o `/reference` para especificar o caminho do arquivo para todos os assemblies dependentes.  
+    > Talvez seja necessário usar a `/reference` opção para especificar o caminho do arquivo para quaisquer assemblies dependentes.  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
-### <a name="to-export-metadata-for-compiled-data-contracts"></a>Para exportar metadados para contratos de dados compilado  
+### <a name="to-export-metadata-for-compiled-data-contracts"></a>Para exportar metadados para contratos de dados compilados  
   
-1. Compile suas implementações de contrato de dados em uma ou mais bibliotecas de classe.  
+1. Compile suas implementações de contrato de dados em uma ou mais bibliotecas de classes.  
   
-2. Executar Svcutil.exe em assemblies compilados usando o `/dataContract` para especificar que apenas os metadados para contratos de dados devem ser gerados.  
+2. Execute svcutil. exe nos assemblies compilados usando a `/dataContract` opção para especificar que somente os metadados para contratos de dados devem ser gerados.  
   
     > [!NOTE]
-    >  Você talvez precise usar o `/reference` para especificar o caminho do arquivo para todos os assemblies dependentes.  
+    > Talvez seja necessário usar a `/reference` opção para especificar o caminho do arquivo para quaisquer assemblies dependentes.  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como gerar metadados para uma implementação de serviço simples e a configuração.  
+ O exemplo a seguir demonstra como gerar metadados para uma configuração e implementação de serviço simples.  
   
  Para exportar metadados para o contrato de serviço.  
   
@@ -96,7 +96,7 @@ svcutil.exe /dataContractOnly Contracts.dll
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
- O `<path>` é o caminho para Contracts.dll.  
+ O `<path>` é o caminho para Contracts. dll.  
   
 ```  
 // The following service contract and data contracts are compiled into   

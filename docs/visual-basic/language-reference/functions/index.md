@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Visual Basic, functions
 - functions [Visual Basic]
 ms.assetid: d86fc51f-f46e-4941-8ae2-6262da3d2688
-ms.openlocfilehash: d76e02676d3921231b3fe4bf5cc1015540e6bafc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e38768e191d8b0e05e4dcc5081444737da759bf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802512"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930054"
 ---
 # <a name="functions-visual-basic"></a>Funções (Visual Basic)
 Os tópicos nesta seção contêm tabelas das funções de membro de tempo de execução do Visual Basic.  
   
 > [!NOTE]
->  Você também pode criar funções e chamá-las. Para obter mais informações, consulte [instrução Function](../../../visual-basic/language-reference/statements/function-statement.md) e [como: Criar um procedimento que retorna um valor](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
+> Você também pode criar funções e chamá-las. Para obter mais informações, consulte a instrução [de [função](../../../visual-basic/language-reference/statements/function-statement.md) e como: Crie um procedimento que retorne um](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md)valor.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Funções de Conversão](../../../visual-basic/language-reference/functions/conversion-functions.md)  

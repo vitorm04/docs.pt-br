@@ -5,32 +5,32 @@ helpviewer_keywords:
 - playback of media [WPF]
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
-ms.openlocfilehash: 186c9ae8167dafd09f029418c1d23f81f7a9e906
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2007525be770186a17cf9d2d42a7c52ba93fba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926057"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956963"
 ---
 # <a name="how-to-play-media-using-a-videodrawing"></a>Como: Executar mídia usando um VideoDrawing
-Para reproduzir um arquivo de áudio ou vídeo, você deve usar um <xref:System.Windows.Media.VideoDrawing> e um <xref:System.Windows.Media.MediaPlayer>. Há duas maneiras de carregar e reproduzir mídia. A primeira é usar um <xref:System.Windows.Media.MediaPlayer> e uma <xref:System.Windows.Media.VideoDrawing> por si só e a segunda maneira é criar seu próprio <xref:System.Windows.Media.MediaTimeline> para usar com o <xref:System.Windows.Media.MediaPlayer> e <xref:System.Windows.Media.VideoDrawing>.  
+Para reproduzir um arquivo de áudio ou de vídeo, use <xref:System.Windows.Media.VideoDrawing> um e <xref:System.Windows.Media.MediaPlayer>um. Há duas maneiras de carregar e reproduzir mídia. A <xref:System.Windows.Media.MediaPlayer> primeira é usar um e um <xref:System.Windows.Media.VideoDrawing> por si só, e a segunda maneira é criar seu próprio <xref:System.Windows.Media.MediaTimeline> para uso com o e <xref:System.Windows.Media.MediaPlayer> <xref:System.Windows.Media.VideoDrawing>o.  
   
 > [!NOTE]
->  Ao distribuir mídia com seu aplicativo, você não pode usar um arquivo de mídia como um recurso do projeto, como faria com uma imagem. Em seu arquivo de projeto, em vez disso, você deve definir o tipo de mídia como `Content` e defina `CopyToOutputDirectory` para `PreserveNewest` ou `Always`.  
+> Ao distribuir mídia com seu aplicativo, você não pode usar um arquivo de mídia como um recurso do projeto, como faria com uma imagem. Em seu arquivo de projeto, em vez disso, você deve definir o tipo de mídia como `Content` e defina `CopyToOutputDirectory` para `PreserveNewest` ou `Always`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa uma <xref:System.Windows.Media.VideoDrawing> e um <xref:System.Windows.Media.MediaPlayer> para reproduzir um arquivo de vídeo uma vez.  
+ O exemplo a seguir usa <xref:System.Windows.Media.VideoDrawing> um e <xref:System.Windows.Media.MediaPlayer> um para reproduzir um arquivo de vídeo uma vez.  
   
  [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- Para obter controle adicional sobre a mídia de tempo, use uma <xref:System.Windows.Media.MediaTimeline> com o <xref:System.Windows.Media.MediaPlayer> e <xref:System.Windows.Media.VideoDrawing> objetos. O <xref:System.Windows.Media.MediaTimeline> permite que você especifique se o vídeo deve ser repetida.  
+ Para obter controle de tempo adicional sobre a mídia, use <xref:System.Windows.Media.MediaTimeline> um com <xref:System.Windows.Media.MediaPlayer> os <xref:System.Windows.Media.VideoDrawing> objetos e. O <xref:System.Windows.Media.MediaTimeline> permite que você especifique se o vídeo deve ser repetido.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa uma <xref:System.Windows.Media.MediaTimeline> com o <xref:System.Windows.Media.MediaPlayer> e <xref:System.Windows.Media.VideoDrawing> objetos para reproduzir um vídeo repetidamente.  
+ O exemplo a seguir usa <xref:System.Windows.Media.MediaTimeline> um com <xref:System.Windows.Media.MediaPlayer> os <xref:System.Windows.Media.VideoDrawing> objetos e para reproduzir um vídeo repetidamente.  
   
  [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline)]  
   
- Observe que, quando você usa um <xref:System.Windows.Media.MediaTimeline>, você usar o interactive <xref:System.Windows.Media.Animation.ClockController> retornados da <xref:System.Windows.Media.Animation.Clock.Controller%2A> propriedade do <xref:System.Windows.Media.MediaClock> para controlar a reprodução de mídia em vez dos métodos interativos do <xref:System.Windows.Media.MediaPlayer>.  
+ Observe que <xref:System.Windows.Media.MediaTimeline>, ao usar um, você usa o interativo <xref:System.Windows.Media.Animation.ClockController> retornado <xref:System.Windows.Media.MediaClock> da <xref:System.Windows.Media.Animation.Clock.Controller%2A> Propriedade do para controlar a reprodução de mídia em vez dos métodos interativos <xref:System.Windows.Media.MediaPlayer>do.  
   
 ## <a name="see-also"></a>Consulte também
 

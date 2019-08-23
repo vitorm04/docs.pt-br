@@ -7,19 +7,19 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcd5cbe63a323a7509f5ff8c615364295c244d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673804"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920561"
 ---
-# <a name="add-element-for-switches"></a>\<Adicionar > elemento para \<switches >
+# <a name="add-element-for-switches"></a>\<Adicionar > elemento para \<comutadores >
 Especifica o nível em que uma opção de rastreamento é definida.  
   
  \<configuration>  
-\<system.diagnostics>  
-\<switches>  
+\<System. Diagnostics >  
+\<alterna >  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,8 +36,8 @@ Especifica o nível em que uma opção de rastreamento é definida.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|**name**|Atributo obrigatório.<br /><br /> Especifica o nome do comutador. O valor desse atributo corresponde à *displayName* parâmetro que é passado para alternar o construtor.|  
-|**value**|Atributo obrigatório.<br /><br /> Especifica o nível do comutador.|  
+|**name**|Atributo obrigatório.<br /><br /> Especifica o nome da opção. O valor desse atributo corresponde ao parâmetro *DisplayName* que é passado para o Construtor switch.|  
+|**value**|Atributo obrigatório.<br /><br /> Especifica o nível da opção.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -51,10 +51,10 @@ Especifica o nível em que uma opção de rastreamento é definida.
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
   
 ## <a name="remarks"></a>Comentários  
- Você pode alterar o nível de uma opção de rastreamento, colocando-o em um arquivo de configuração. Se a opção é um <xref:System.Diagnostics.BooleanSwitch>, você pode ativar e desativar. Se a opção é um <xref:System.Diagnostics.TraceSwitch>, você pode atribuir diferentes níveis a ele para especificar os tipos de rastreamento ou depuração mensagens as saídas do aplicativo.  
+ Você pode alterar o nível de uma opção de rastreamento colocando-a em um arquivo de configuração. Se o comutador for <xref:System.Diagnostics.BooleanSwitch>um, você poderá ativá-lo e desligá-lo. Se o comutador for <xref:System.Diagnostics.TraceSwitch>um, você poderá atribuir diferentes níveis a ele para especificar os tipos de mensagens de rastreamento ou de depuração que o aplicativo gera.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o  **\<Adicionar >** elemento para definir a `General` opção de rastreamento para o <xref:System.Diagnostics.TraceLevel> nível e habilitar o `Data` opção de rastreamento Boolean.  
+ O exemplo a seguir mostra como usar o  **\<elemento adicionar >** para definir a `General` opção de rastreamento para <xref:System.Diagnostics.TraceLevel> o nível e habilitar a `Data` opção de rastreamento booliano.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Especifica o nível em que uma opção de rastreamento é definida.
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Esquema de configurações de rastreamento e depuração](index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e3a348ac8da855e458b6208c51f9c51b48da3134
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663846"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927447"
 ---
 # <a name="compatsortnlsversion-element"></a>\<Elemento de > CompatSortNLSVersion
 Especifica que o tempo de execução deve usar as ordens de classificação herdadas ao executar comparações de cadeias de caracteres.  
@@ -60,7 +60,7 @@ Especifica que o tempo de execução deve usar as ordens de classificação herd
  Como as operações de comparação de cadeia de caracteres, classificação e <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> maiúsculas e minúsculas executadas pela classe no .NET Framework 4 estão em conformidade com o padrão Unicode 5,1, <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> os <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> resultados dos métodos de comparação de cadeia de caracteres, como e podem ser diferentes de versões anteriores do .NET Framework. Se seu aplicativo depender de comportamento herdado, você poderá restaurar a comparação de cadeias de caracteres e as regras de classificação usadas no .NET Framework 3,5 `<CompatSortNLSVersion>` e versões anteriores, incluindo o elemento no arquivo de configuração do aplicativo.  
   
 > [!IMPORTANT]
->  Restaurar a comparação e as regras de classificação de cadeia de caracteres herdadas também requer que a biblioteca de vínculo dinâmico do arquivo sort00001000.dll esteja disponível no sistema local.  
+> Restaurar a comparação e as regras de classificação de cadeia de caracteres herdadas também requer que a biblioteca de vínculo dinâmico do arquivo sort00001000.dll esteja disponível no sistema local.  
   
  Você também pode usar regras de classificação e comparação herdadas em um domínio de aplicativo específico ao passar a cadeia de caracteres "NetFx40_Legacy20SortingBehavior" ao método <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> quando o domínio do aplicativo é criado.  
   

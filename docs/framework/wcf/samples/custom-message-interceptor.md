@@ -2,47 +2,47 @@
 title: Interceptor de mensagem personalizado
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 530c626a1f134190bb90fcee3a4e3bbba91d9516
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dfff099a6bf45911f9327622a84a8803ad7dd0ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878299"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953666"
 ---
 # <a name="custom-message-interceptor"></a>Interceptor de mensagem personalizado
-Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particular, ele mostra como implementar um elemento de associação personalizado que cria as fábricas de canais e ouvintes de canais para interceptar todas as mensagens de entrada e saídas em um ponto específico na pilha de tempo de execução. O exemplo também inclui um cliente e servidor que demonstram o uso dessas fábricas personalizadas.  
+Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particular, ele mostra como implementar um elemento de ligação personalizado que cria fábricas de canal e ouvintes de canal para interceptar todas as mensagens recebidas e enviadas em um ponto específico na pilha de tempo de execução. O exemplo também inclui um cliente e um servidor que demonstram o uso dessas fábricas personalizadas.  
   
- Neste exemplo, o cliente e o serviço são programas de console (.exe). O cliente e o serviço que ambos fazer usam de uma biblioteca comum (. dll) que contém o elemento de associação personalizado e seus objetos de tempo de execução associados.  
+ Neste exemplo, o cliente e o serviço são programas de console (. exe). O cliente e o serviço fazem uso de uma biblioteca comum (. dll) que contém o elemento de associação personalizado e seus objetos de tempo de execução associados.  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- O exemplo descreve o procedimento recomendado para a criação de um canal personalizado de em camadas no Windows Communication Foundation (WCF), usando a estrutura de canais e seguir as práticas recomendadas do WCF. As etapas para criar um canal personalizado de em camadas são da seguinte maneira:  
+ O exemplo descreve o procedimento recomendado para criar um canal em camadas personalizado no Windows Communication Foundation (WCF), usando a estrutura de canal e as práticas recomendadas do WCF a seguir. As etapas para criar um canal personalizado em camadas são as seguintes:  
   
-1. Decida quais das formas de canal oferecerá suporte a sua fábrica de canais e o ouvinte de canais.  
+1. Decida em quais formas de canal o Channel Factory e o ouvinte de canal irão dar suporte.  
   
-2. Crie uma fábrica de canais e um ouvinte de canais que dão suporte a suas formas de canal.  
+2. Crie uma fábrica de canais e um ouvinte de canal que ofereçam suporte às suas formas de canal.  
   
-3. Adicione um elemento de associação que adiciona o canal em camadas personalizado a uma pilha de canais.  
+3. Adicione um elemento Binding que adiciona o canal em camadas personalizado a uma pilha de canais.  
   
-4. Adicione uma seção de extensão de elemento de associação para expor o novo elemento de associação para o sistema de configuração.  
+4. Adicione uma seção de extensão de elemento de associação para expor o novo elemento de associação ao sistema de configuração.  
   
 ## <a name="channel-shapes"></a>Formas de canal  
- A primeira etapa ao escrever um canal personalizado de em camadas é decidir quais formas são necessárias para o canal. Para nosso Inspetor de mensagens, há suporte para qualquer forma que a camada abaixo nos dá suporte a (por exemplo, se a camada abaixo nos pode compilar <xref:System.ServiceModel.Channels.IOutputChannel> e <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, em seguida, podemos também expor <xref:System.ServiceModel.Channels.IOutputChannel> e <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
+ A primeira etapa na gravação de um canal personalizado em camadas é decidir quais formas são necessárias para o canal. Para nosso Inspetor de mensagem, damos suporte a qualquer forma com a qual a camada abaixo dá suporte (por exemplo, se a camada <xref:System.ServiceModel.Channels.IOutputChannel> abaixo <xref:System.ServiceModel.Channels.IDuplexSessionChannel>pode criar e, além <xref:System.ServiceModel.Channels.IOutputChannel> disso <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, também expõe e).  
   
-## <a name="channel-factory-and-listener-factory"></a>Fábrica de canais e fábrica de escuta  
- A próxima etapa na escrita de um canal personalizado de em camadas é criar uma implementação de <xref:System.ServiceModel.Channels.IChannelFactory> canais de cliente e de <xref:System.ServiceModel.Channels.IChannelListener> para canais de serviço.  
+## <a name="channel-factory-and-listener-factory"></a>Fábrica de canais e fábrica de ouvintes  
+ A próxima etapa na gravação de um canal personalizado em camadas é criar uma implementação do <xref:System.ServiceModel.Channels.IChannelFactory> para canais de cliente e <xref:System.ServiceModel.Channels.IChannelListener> de para canais de serviço.  
   
- Essas classes levar um alocador interno e um ouvinte e delegar tudo, exceto os `OnCreateChannel` e `OnAcceptChannel` chamadas para a fábrica interna e o ouvinte.  
+ Essas classes usam uma fábrica interna e um ouvinte e delegam todas `OnCreateChannel` as `OnAcceptChannel` chamadas de e para a fábrica interna e o ouvinte.  
   
 ```  
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
@@ -52,24 +52,24 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Adicionando um elemento de associação  
- O exemplo define um elemento de associação personalizada: `InterceptingBindingElement`. `InterceptingBindingElement` leva um `ChannelMessageInterceptor` como uma entrada e usa isso `ChannelMessageInterceptor` para manipular as mensagens que passam por ela. Isso é a única classe que deve ser pública. O factory, o ouvinte e canais podem ser internas implementações das interfaces públicas do tempo de execução.  
+ O exemplo define um elemento de associação personalizado `InterceptingBindingElement`:. `InterceptingBindingElement`usa uma `ChannelMessageInterceptor` como entrada e `ChannelMessageInterceptor` a utiliza para manipular mensagens que passam por ela. Essa é a única classe que deve ser pública. A fábrica, o ouvinte e os canais podem ser implementações internas das interfaces de tempo de execução públicas.  
   
 ```  
 public class InterceptingBindingElement : BindingElement  
 ```  
   
 ## <a name="adding-configuration-support"></a>Adicionando suporte à configuração  
- Para integrar com a configuração de associação, a biblioteca define um manipulador de seção de configuração como uma seção de extensão de elemento de associação. Os arquivos de configuração do cliente e o servidor devem registrar a extensão de elemento de associação com o sistema de configuração. Os implementadores que desejam expor seu elemento de associação para o sistema de configuração podem derivar dessa classe.  
+ Para integrar com a configuração de associação, a biblioteca define um manipulador de seção de configuração como uma seção de extensão de elemento de associação. Os arquivos de configuração do cliente e do servidor devem registrar a extensão do elemento de associação com o sistema de configuração. Os implementadores que desejam expor seu elemento de ligação para o sistema de configuração podem derivar dessa classe.  
   
 ```  
 public abstract class InterceptingElement : BindingElementExtensionElement { ... }  
 ```  
   
-## <a name="adding-policy"></a>Adicionar política  
- Integrar com nosso sistema de política, `InterceptingBindingElement` implementa IPolicyExportExtension para sinalizar que podemos deve participar de geração de política. Para dar suporte à importação de política em um cliente gerado, o usuário pode registrar uma classe derivada de `InterceptingBindingElementImporter` e substituir `CreateMessageInterceptor`() para gerar a sua política habilitada `ChannelMessageInterceptor` classe.  
+## <a name="adding-policy"></a>Adicionando política  
+ Para integrar com nosso sistema de política `InterceptingBindingElement` , implemente IPolicyExportExtension para sinalizar que devemos participar da geração de políticas. Para dar suporte à política de importação em um cliente gerado, o usuário pode registrar uma `InterceptingBindingElementImporter` classe derivada `CreateMessageInterceptor`de e substituir () para gerar sua `ChannelMessageInterceptor` classe habilitada para política.  
   
-## <a name="example-droppable-message-inspector"></a>Exemplo: Inspetor de mensagens droppable  
- Incluído no exemplo é um exemplo de implementação de `ChannelMessageInspector` que descarta mensagens.  
+## <a name="example-droppable-message-inspector"></a>Exemplo: Inspetor de mensagem Dropper  
+ Incluído no exemplo, há um exemplo de implementação `ChannelMessageInspector` de que descarta mensagens.  
   
 ```  
 class DroppingServerElement : InterceptingElement  
@@ -99,7 +99,7 @@ class DroppingServerElement : InterceptingElement
 </configuration>  
 ```  
   
- O cliente e servidor usam esta seção de configuração recém-criada para inserir as fábricas personalizadas no nível mais baixo de suas pilhas de canal do tempo de execução (acima do nível de transporte).  
+ O cliente e o servidor usam essa seção de configuração recém-criada para inserir as fábricas personalizadas no nível mais baixo de suas pilhas de canal de tempo de execução (acima do nível de transporte).  
   
 ```xml  
 <customBinding>  
@@ -110,9 +110,9 @@ class DroppingServerElement : InterceptingElement
 </customBinding>  
 ```  
   
- O cliente usa o `MessageInterceptor` numerados de biblioteca para adicionar um cabeçalho personalizado para até mesmo mensagens. O serviço por outro lado usa `MessageInterceptor` biblioteca para descartar todas as mensagens que não têm esse cabeçalho especial.  
+ O cliente usa a `MessageInterceptor` biblioteca para adicionar um cabeçalho personalizado a mensagens numeradas par. O serviço, por outro lado, `MessageInterceptor` usa a biblioteca para descartar todas as mensagens que não têm esse cabeçalho especial.  
   
- Você verá a seguinte saída de cliente depois de executar o serviço e, em seguida, o cliente.  
+ Você deverá ver a seguinte saída do cliente depois de executar o serviço e, em seguida, o cliente.  
   
 ```  
 Reporting the next 10 wind speed  
@@ -134,9 +134,9 @@ Server dropped a message.
 Press ENTER to shut down client  
 ```  
   
- O cliente relata 10 velocidades de vento diferentes para o serviço, mas somente marcas metade com o cabeçalho especial.  
+ O cliente relata 10 velocidades de vento diferentes para o serviço, mas apenas marca metade delas com o cabeçalho especial.  
   
- No serviço, você deverá ver a saída a seguir:  
+ No serviço, você deve ver a seguinte saída:  
   
 ```  
 Press ENTER to exit.  
@@ -147,16 +147,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Instale usando o seguinte comando do ASP.NET 4.0.  
+1. Instale o ASP.NET 4,0 usando o comando a seguir.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5. Execute Service.exe primeiro, em seguida, executar Client.exe e assista a ambas as janelas do console de saída.  
+5. Execute o Service. exe primeiro e, em seguida, execute Client. exe e observe as janelas do console para saída.  

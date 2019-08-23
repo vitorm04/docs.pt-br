@@ -2,20 +2,20 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: 39dcb868bd3ff25451509616e1dac7d41f94cfa1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3a9ee00aab6ab48a1ba891565b63824e62b20fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783117"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934222"
 ---
 # <a name="resolver"></a>\<resolver>
-Especifica a ID de malha de um resolvedor de pares que é usado para resolver um par para um conjunto de endereços de nó par que representa vários nós que participam da malha.  
+Especifica um resolvedor de pares que é usado para resolver uma ID de malha de mesmo nível para um conjunto de endereços de nó par que representa vários nós que participam da malha.  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netPeerBinding>  
-\<binding>  
+\<> de associação  
 \<resolver>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,23 +33,23 @@ Especifica a ID de malha de um resolvedor de pares que é usado para resolver um
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`mode`|Uma cadeia de caracteres que especifica se a instância do resolvedor de par associada a esse serviço é PNRP específico, um resolvedor personalizado ou determinado automaticamente. Esse atributo é do tipo <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.|  
-|`referralPolicy`|Uma cadeia de caracteres que especifica a forma como referências são compartilhadas entre pares. Esse atributo é do tipo <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.|  
+|`mode`|Uma cadeia de caracteres que especifica se a instância do resolvedor de pares associada a esse serviço é específica do PNRP, um resolvedor personalizado ou determinado automaticamente. Esse atributo é do tipo <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.|  
+|`referralPolicy`|Uma cadeia de caracteres que especifica a maneira como as referências são compartilhadas entre os pares. Esse atributo é do tipo <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Especifica configurações para um serviço de resolvedor de pares personalizado.|  
+|[\<headers>](headers.md)|Especifica as configurações para um serviço resolvedor de pares personalizado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação do [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
+|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação do [ \<> NetPeerTcpBinding](netpeertcpbinding.md).|  
   
 ## <a name="remarks"></a>Comentários  
- Um resolvedor de pares nome é um serviço de descoberta usado pelos canais pares para localizar nós que participam de uma malha ponto a ponto a ponto a ponto. Ele também é usado para "Registrar" um nó com uma malha ponto a ponto, o mecanismo pelo qual o nó par se torna conhecidos e estão disponíveis na malha ponto a ponto. Para obter mais informações sobre os resolvedores de pares, consulte [resolvedores de pares](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
+ Um resolvedor de nome de par é um serviço de descoberta usado por canais de mesmo nível para localizar nós de mesmo nível que participam de uma malha de mesmo nível. Ele também é usado para "registrar" um nó com uma malha de mesmo nível, o mecanismo pelo qual o nó par se torna conhecido e disponível na malha de pares. Para obter mais informações sobre resolvedores de pares, consulte Resolvedores de [pares](../../../wcf/feature-details/peer-resolvers.md).  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -58,5 +58,5 @@ Especifica a ID de malha de um resolvedor de pares que é usado para resolver um
 - <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>
 - <xref:System.ServiceModel.Configuration.PeerResolverElement>
-- [Resolvedores pares](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [Resolvedores pares](../../../wcf/feature-details/peer-resolvers.md)
 - [Adicionando um resolvedor personalizado a um aplicativo PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))

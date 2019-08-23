@@ -2,18 +2,18 @@
 title: <filterTable>
 ms.date: 03/30/2017
 ms.assetid: e9f05441-3ad1-49b9-a267-71724aa094b4
-ms.openlocfilehash: 4e5c7d56e35afe3001f4c70064adbfef7702c720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9e64e667befb70d617574b2a03c3e6bebb2a143
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673206"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925597"
 ---
 # <a name="filtertable"></a>\<filterTable>
-Representa uma tabela de roteamento que contém uma lista de filtros para avaliar mensagens e o ponto de extremidade do cliente para rotear mensagens para se o filtro é avaliada como true.  
+Representa uma tabela de roteamento que contém uma lista de filtros para avaliar as mensagens e o ponto de extremidade do cliente para rotear mensagens se o filtro for avaliado como verdadeiro.  
   
  \<system.serviceModel>  
-\<routing>  
+\<> de roteamento  
 \<routingTables>  
 \<table>  
   
@@ -47,13 +47,13 @@ Representa uma tabela de roteamento que contém uma lista de filtros para avalia
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Mapeamentos entre os filtros de roteamento e os pontos de extremidade para enviar mensagens para quando o filtro corresponde ao destino.|  
+|[\<filters>](filters-of-routing.md)|Mapeamentos entre os filtros de roteamento e os pontos de extremidade de destino para enviar mensagens quando o filtro for correspondente.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Uma seção de configuração que contém tabelas de roteamento.|  
+|[\<routing>](routing.md)|Uma seção de configuração que contém tabelas de roteamento.|  
   
 ## <a name="see-also"></a>Consulte também
 

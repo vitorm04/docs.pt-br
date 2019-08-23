@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 62913face910ae9500aa5e6f2f443db67ffd4240
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301272"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921289"
 ---
-# <a name="remove-element-for-appsettings"></a>\<Remover > elemento para \<appSettings >
+# <a name="remove-element-for-appsettings"></a>\<remover o elemento > \<para appSettings >
 
-Remove as configurações de aplicativo personalizado.
+Remove as configurações de aplicativo personalizadas.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>Sintaxe
@@ -36,13 +36,13 @@ Remove as configurações de aplicativo personalizado.
 
 |         | Descrição |
 | ------- | ----------- |
-| **key** | Atributo obrigatório.<br><br>Especifica o nome da chave a ser removido. |
+| **key** | Atributo obrigatório.<br><br>Especifica o nome da chave a ser removida. |
 
 ### <a name="parent-element"></a>Elemento pai
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço da Web em XML ou qualquer outra informação de configuração personalizada para um aplicativo. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço da Web em XML ou qualquer outra informação de configuração personalizada para um aplicativo. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -60,4 +60,4 @@ O exemplo a seguir mostra como remover uma configuração personalizada para `Ap
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema do arquivo de configuração para o .NET Framework](../index.md)

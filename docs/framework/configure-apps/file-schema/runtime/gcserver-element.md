@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 19ebad32ad8c7018b910a3d230f43031008dcdc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663677"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927378"
 ---
 # <a name="gcserver-element"></a>\<Elemento de > gcServer
 Especifica se o Common Language Runtime executa a coleta de lixo do servidor.  
@@ -65,7 +65,7 @@ Especifica se o Common Language Runtime executa a coleta de lixo do servidor.
  Esse elemento só pode ser usado no arquivo de configuração do aplicativo; Ela será ignorada se estiver no arquivo de configuração da máquina.  
   
 > [!NOTE]
->  No .NET Framework 4 e versões anteriores, a coleta de lixo simultânea não está disponível quando a coleta de lixo do servidor está habilitada. A partir do .NET Framework 4,5, a coleta de lixo do servidor é simultânea. Para usar a coleta de lixo do servidor não simultânea, defina `<gcServer>` o elemento `true` como e o [ \<elemento de > gcConcurrent](gcconcurrent-element.md) como. `false`  
+> No .NET Framework 4 e versões anteriores, a coleta de lixo simultânea não está disponível quando a coleta de lixo do servidor está habilitada. A partir do .NET Framework 4,5, a coleta de lixo do servidor é simultânea. Para usar a coleta de lixo do servidor não simultânea, defina `<gcServer>` o elemento `true` como e o [ \<elemento de > gcConcurrent](gcconcurrent-element.md) como. `false`  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir habilita a coleta de lixo do servidor.  

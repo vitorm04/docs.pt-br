@@ -2,29 +2,29 @@
 title: Sintaxe de diretiva do WCF
 ms.date: 03/30/2017
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
-ms.openlocfilehash: 65c972067d5c2869a9dd130d285566db81dbc0d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd2580b2b052d7e4f387c276d23f87ec69b6bca1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704668"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920354"
 ---
 # <a name="wcf-directive-syntax"></a>Sintaxe de diretiva do WCF
-Especifica as configurações usadas pelas diretivas do Windows Communication Foundation (WCF) em arquivos. svc para direcionar os compiladores. Cada diretiva pode conter um ou mais atributos (combinados com valores) que são específicos dessa diretiva. O WCF possui apenas o [ \@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) diretiva.  
+Especifica as configurações usadas pelas diretivas Windows Communication Foundation (WCF) nos arquivos. svc para direcionar os compiladores. Cada diretiva pode conter um ou mais atributos (combinados com valores) que são específicos dessa diretiva. O WCF tem apenas [ \@](servicehost.md) a diretiva ServiceHost.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)  
+ [@ServiceHost](servicehost.md)  
  Define atributos específicos da página usados pelo compilador .svc. Pode ser incluído somente em arquivos .svc.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Como: Hospedar um serviço WCF no IIS](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
+ [Como: Hospedar um serviço WCF no IIS](../../../wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  Descreve como a diretiva @ServiceHost é usada ao hospedar um serviço em serviços no IIS (Serviços de Informações da Internet)  
   
- [Como: Hospedar um serviço WCF no WAS](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
+ [Como: Hospedar um serviço WCF no WAS](../../../wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
  Descreve como a diretiva @ServiceHost é usada ao hospedar um serviço no WAS (Serviço de Ativação de Processos do Windows)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Hospedagem](../../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Hospedagem nos Serviços de Informações da Internet](../../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [Hosting in Windows Process Activation Service](../../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md) (Hospedagem no Serviço de Ativação de Processos do Windows)
+- [Hospedagem](../../../wcf/feature-details/hosting.md)
+- [Hospedagem nos Serviços de Informações da Internet](../../../wcf/feature-details/hosting-in-internet-information-services.md)
+- [Hosting in Windows Process Activation Service](../../../wcf/feature-details/hosting-in-windows-process-activation-service.md) (Hospedagem no Serviço de Ativação de Processos do Windows)

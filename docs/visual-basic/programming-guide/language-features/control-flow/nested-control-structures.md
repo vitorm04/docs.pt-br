@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f559bf603605873f1b9155e9a96cb367e5420343
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907980"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941680"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estruturas de controle aninhadas (Visual Basic)
-Você pode colocar instruções de controle dentro de outras instruções de controle, por exemplo uma `If...Then...Else` bloquear dentro de um `For...Next` loop. Uma instrução de controle colocada dentro de outra instrução de controle é considerada *aninhada*.  
+Você pode posicionar as instruções de controle dentro de outras instruções de `If...Then...Else` controle, por `For...Next` exemplo, um bloco dentro de um loop. Uma instrução de controle colocada dentro de outra instrução de controle éconsiderada aninhada.  
   
 ## <a name="nesting-levels"></a>Níveis de aninhamento  
- Estruturas de controle no Visual Basic podem ser aninhadas para tantos níveis quantos desejar. É uma prática comum para facilitar a leitura das estruturas aninhadas Recuando o corpo de cada um deles. O editor de desenvolvimento integrado (IDE) do ambiente faz isso automaticamente.  
+ As estruturas de controle no Visual Basic podem ser aninhadas para quantos níveis você desejar. É uma prática comum tornar as estruturas aninhadas mais legíveis recuando o corpo de cada uma. O editor de ambiente de desenvolvimento integrado (IDE) faz isso automaticamente.  
   
- No exemplo a seguir, o procedimento `sumRows` juntos adiciona os elementos positivos de cada linha da matriz.  
+ No exemplo a seguir, o procedimento `sumRows` adiciona os elementos positivos de cada linha da matriz.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- No exemplo anterior, a primeira `Next` instrução fecha interna `For` loop e a última `Next` instrução fecha externo `For` loop.  
+ No exemplo anterior `Next` , a primeira instrução fecha o loop interno `For` e a última `Next` instrução fecha o loop externo `For` .  
   
- Da mesma forma, além de aninhados `If` instruções, o `End If` instruções aplicam-se automaticamente para o mais próximo anterior `If` instrução. Aninhado `Do` loops funcionam de maneira semelhante, com mais interna `Loop` instrução correspondente o mais interno `Do` instrução.  
+ Da mesma forma, `If` em instruções aninhadas, as `End If` instruções se aplicam automaticamente `If` à instrução anterior mais próxima. Os `Do` loops aninhados funcionam de maneira semelhante, com a `Loop` instrução mais interna correspondente `Do` à instrução mais interna.  
   
 > [!NOTE]
->  Para muitas estruturas de controle, quando você clica em uma palavra-chave, todas as palavras-chave na estrutura são realçadas. Por exemplo, quando você clica `If` em um `If...Then...Else` construção, todas as instâncias do `If`, `Then`, `ElseIf`, `Else`, e `End If` na construção são realçadas. Para mover para a palavra-chave a seguinte ou anterior, pressione CTRL + SHIFT + seta abaixo ou CTRL + SHIFT + seta acima.  
+> Para muitas estruturas de controle, quando você clica em uma palavra-chave, todas as palavras-chave na estrutura são realçadas. Por exemplo, quando você clica `If` em uma `If...Then...Else` construção, `ElseIf`todas as instâncias `If`de `Then`,, `Else`, e `End If` na construção são realçadas. Para mover para a próxima palavra-chave realçada ou anterior, pressione CTRL + SHIFT + seta para baixo ou CTRL + SHIFT + seta para cima.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Aninhamento de diferentes tipos de estruturas de controle  
- Você pode aninhar um tipo de estrutura de controle dentro de outro tipo. O exemplo a seguir usa uma `With` bloquear dentro de uma `For Each` loop e aninhados `If` bloqueia dentro a `With` bloco.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Aninhando diferentes tipos de estruturas de controle  
+ Você pode aninhar um tipo de estrutura de controle dentro de outro tipo. O exemplo a seguir usa `With` um bloco dentro `For Each` de um loop `If` e blocos aninhados dentro do `With` bloco.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,12 +64,12 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>Sobreposição de estruturas de controle  
- Você não pode se sobrepor a estruturas de controle. Isso significa que qualquer estrutura aninhada deve ser totalmente contida em estrutura Avançar mais interna. Por exemplo, a organização a seguir é inválida porque o `For` loop é encerrado antes interno `With` bloco é encerrado.  
+## <a name="overlapping-control-structures"></a>Sobrepondo estruturas de controle  
+ Não é possível sobrepor estruturas de controle. Isso significa que qualquer estrutura aninhada deve estar completamente contida na próxima estrutura mais interna. Por exemplo, a organização a seguir é inválida `For` porque o loop termina antes de `With` o bloco interno terminar.  
   
  ![Diagrama que mostra um exemplo de aninhamento inválido.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
- O compilador do Visual Basic detecta essas estruturas de controle sobrepostos e sinaliza um erro de tempo de compilação.  
+ O compilador Visual Basic detecta essas estruturas de controle sobrepostas e sinaliza um erro em tempo de compilação.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Canvas control [WPF], creating
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
-ms.openlocfilehash: 33b98024699a88f56d27b7e5ab8d5216c906e7ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: edef660b2da2f09e0a6edbc0a87f0d1f26eb03da
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000994"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964228"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>Como: Criar e usar uma tela
-Este exemplo mostra como criar e usar uma instância de <xref:System.Windows.Controls.Canvas>.  
+Este exemplo mostra como criar e usar uma instância do <xref:System.Windows.Controls.Canvas>.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir explicitamente posiciona duas <xref:System.Windows.Controls.TextBlock> elementos usando o <xref:System.Windows.Controls.Canvas.SetTop%2A> e <xref:System.Windows.Controls.Canvas.SetLeft%2A> métodos de <xref:System.Windows.Controls.Canvas>. O exemplo também atribui uma <xref:System.Windows.Controls.Control.Background%2A> cor dos `LightSteelBlue` para o <xref:System.Windows.Controls.Canvas>.  
+ O exemplo a seguir posiciona explicitamente <xref:System.Windows.Controls.TextBlock> dois elementos usando os <xref:System.Windows.Controls.Canvas.SetTop%2A> métodos <xref:System.Windows.Controls.Canvas.SetLeft%2A> e de <xref:System.Windows.Controls.Canvas>. O exemplo também atribui uma <xref:System.Windows.Controls.Control.Background%2A> cor de `LightSteelBlue` para o <xref:System.Windows.Controls.Canvas>.  
   
 > [!NOTE]
->  Quando você usa [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] posição <xref:System.Windows.Controls.TextBlock> elementos, use o <xref:System.Windows.Controls.Canvas.Top%2A> e <xref:System.Windows.Controls.Canvas.Left%2A> propriedades.  
+> Quando você usa [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para posicionar <xref:System.Windows.Controls.TextBlock> elementos, use <xref:System.Windows.Controls.Canvas.Top%2A> as <xref:System.Windows.Controls.Canvas.Left%2A> Propriedades e.  
   
  [!code-csharp[CanvasCode#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasCode/CSharp/Canvas_Code.cs#1)]
  [!code-vb[CanvasCode#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  

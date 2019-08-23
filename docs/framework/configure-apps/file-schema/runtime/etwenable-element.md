@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920771"
 ---
 # <a name="etwenable-element"></a>\<Elemento de > etwEnable
 Especifica se deseja-se habilitar o rastreamento de eventos para Windows (ETW) para eventos de Common Language Runtime.  
@@ -57,7 +57,7 @@ Especifica se deseja-se habilitar o rastreamento de eventos para Windows (ETW) p
  A partir do Windows Vista, o ETW é habilitado por padrão. Use este elemento para desabilitar o ETW para um aplicativo. Em versões anteriores do Windows, use esse elemento para habilitar o ETW para um aplicativo.  
   
 > [!NOTE]
->  O ETW pode ser habilitado ou desabilitado globalmente em um servidor usando uma configuração de registro. Consulte [controlando o log de .NET Framework](../../../performance/controlling-logging.md).  
+> O ETW pode ser habilitado ou desabilitado globalmente em um servidor usando uma configuração de registro. Consulte [controlando o log de .NET Framework](../../../performance/controlling-logging.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como habilitar o rastreamento ETW para um aplicativo.  

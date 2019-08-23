@@ -15,15 +15,15 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 24079f24bdae5fefd785a20dda9b29a190fb4068
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 23d9374f1f46c4480079eb4ad5269a197a13a5bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505254"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963885"
 ---
 # <a name="types-of-coordinate-systems"></a>Tipos de sistemas de coordenadas
-GDI+ usa três espaços de coordenadas: mundo, página e dispositivo. Coordenadas de mundo são as coordenadas usadas para modelar um mundo gráfico específico e são as coordenadas que você passa para métodos no .NET Framework. Coordenadas de página fazem referência ao sistema de coordenadas usado por uma superfície de desenho, como um formulário ou controle. Coordenadas de dispositivo são as coordenadas usadas pelo dispositivo físico em que o desenho está sendo feito, como uma tela ou uma folha de papel. Quando você faz a chamada `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, os pontos que você passa para o <xref:System.Drawing.Graphics.DrawLine%2A> método —`(0, 0)` e `(160, 80)`— estão no espaço de coordenadas de mundo. Antes de GDI+ pode desenhar a linha na tela, as coordenadas passam por uma sequência de transformações. Uma transformação, chamada transformação global, converte coordenadas de mundo em coordenadas de página e outra transformação, chamada transformação de página, converte coordenadas de página em coordenadas de dispositivo.  
+O GDI+ usa três espaços de coordenadas: mundo, página e dispositivo. Coordenadas de mundo são as coordenadas usadas para modelar um mundo gráfico específico e são as coordenadas que você passa para métodos no .NET Framework. Coordenadas de página fazem referência ao sistema de coordenadas usado por uma superfície de desenho, como um formulário ou controle. Coordenadas de dispositivo são as coordenadas usadas pelo dispositivo físico em que o desenho está sendo feito, como uma tela ou uma folha de papel. Quando você faz a chamada `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, os pontos que passa para o <xref:System.Drawing.Graphics.DrawLine%2A> método –`(0, 0)` e `(160, 80)`– estão no espaço de coordenadas do mundo. Antes que o GDI+ possa desenhar a linha na tela, as coordenadas passam por uma sequência de transformações. Uma transformação, chamada transformação global, converte coordenadas de mundo em coordenadas de página e outra transformação, chamada transformação de página, converte coordenadas de página em coordenadas de dispositivo.  
   
 ## <a name="transforms-and-coordinate-systems"></a>Transformações e sistemas de coordenadas  
  Suponha que você queira trabalhar com um sistema de coordenadas cuja origem está no corpo da área de cliente em vez do canto superior esquerdo. Digamos, por exemplo, que você queira que a origem esteja a 100 pixels da borda esquerda da área de cliente e a 50 pixels da parte superior da área de cliente. A ilustração a seguir mostra esse sistema de coordenadas.  
@@ -44,17 +44,17 @@ GDI+ usa três espaços de coordenadas: mundo, página e dispositivo. Coordenada
   
  Observe que o espaço de coordenadas de página tem sua origem no canto superior esquerdo da área de cliente; sempre será esse o caso. Observe também que, como a unidade de medida é o pixel, as coordenadas do dispositivo são as mesmas que as coordenadas da página. Se você definir a unidade de medida como algo diferente de pixels (por exemplo, polegadas), as coordenadas do dispositivo serão diferentes das coordenadas da página.  
   
- A transformação global, que mapeia coordenadas de mundo para coordenadas de página, é mantida na <xref:System.Drawing.Graphics.Transform%2A> propriedade do <xref:System.Drawing.Graphics> classe. No exemplo anterior, a transformação global é uma translação de 100 unidades na direção x e 50 unidades na direção y. O exemplo a seguir define a transformação global de um <xref:System.Drawing.Graphics> do objeto e, em seguida, usa que <xref:System.Drawing.Graphics> objeto para desenhar a linha mostrada na figura anterior:  
+ A transformação mundial, que mapeia coordenadas mundiais para coordenadas de páginas, é mantida <xref:System.Drawing.Graphics.Transform%2A> na propriedade <xref:System.Drawing.Graphics> da classe. No exemplo anterior, a transformação global é uma translação de 100 unidades na direção x e 50 unidades na direção y. O exemplo a seguir define a transformação mundial de <xref:System.Drawing.Graphics> um objeto e, em <xref:System.Drawing.Graphics> seguida, usa esse objeto para desenhar a linha mostrada na figura anterior:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.CoordinateSystems#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#31)]  
   
- A transformação de página mapeia as coordenadas da página para coordenadas do dispositivo. O <xref:System.Drawing.Graphics> classe fornece a <xref:System.Drawing.Graphics.PageUnit%2A> e <xref:System.Drawing.Graphics.PageScale%2A> propriedades para manipular a transformação de página. O <xref:System.Drawing.Graphics> classe também fornece duas propriedades somente leitura, <xref:System.Drawing.Graphics.DpiX%2A> e <xref:System.Drawing.Graphics.DpiY%2A>, para examinar os pontos horizontais e verticais por polegada do dispositivo de vídeo.  
+ A transformação de página mapeia as coordenadas da página para coordenadas do dispositivo. A <xref:System.Drawing.Graphics> classe fornece as <xref:System.Drawing.Graphics.PageUnit%2A> propriedades <xref:System.Drawing.Graphics.PageScale%2A> e para manipular a transformação da página. A <xref:System.Drawing.Graphics> classe também fornece duas <xref:System.Drawing.Graphics.DpiX%2A> propriedades somente leitura e <xref:System.Drawing.Graphics.DpiY%2A>, para examinar os pontos horizontais e verticais por polegada do dispositivo de vídeo.  
   
- Você pode usar o <xref:System.Drawing.Graphics.PageUnit%2A> propriedade do <xref:System.Drawing.Graphics> classe para especificar uma unidade de medida diferente do pixel.  
+ Você pode usar a <xref:System.Drawing.Graphics.PageUnit%2A> propriedade <xref:System.Drawing.Graphics> da classe para especificar uma unidade de medida diferente do pixel.  
   
 > [!NOTE]
->  Não é possível definir a <xref:System.Drawing.Graphics.PageUnit%2A> propriedade para <xref:System.Drawing.GraphicsUnit.World>, pois isso não é uma unidade física e causará uma exceção.  
+> Não é possível definir <xref:System.Drawing.Graphics.PageUnit%2A> a <xref:System.Drawing.GraphicsUnit.World>Propriedade como, pois essa não é uma unidade física e causará uma exceção.  
   
  O exemplo a seguir desenha uma linha de (0, 0) para (2, 1), no qual o ponto (2, 1) está 2 polegadas à direita e 1 polegada abaixo do ponto (0, 0):  
   
@@ -62,7 +62,7 @@ GDI+ usa três espaços de coordenadas: mundo, página e dispositivo. Coordenada
  [!code-vb[System.Drawing.CoordinateSystems#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#32)]  
   
 > [!NOTE]
->  Se você não especificar uma largura de caneta ao construir a caneta, o exemplo anterior desenhará uma linha com uma polegada de largura. Você pode especificar a largura da caneta no segundo argumento para o <xref:System.Drawing.Pen> construtor:  
+> Se você não especificar uma largura de caneta ao construir a caneta, o exemplo anterior desenhará uma linha com uma polegada de largura. Você pode especificar a largura da caneta no segundo argumento para o <xref:System.Drawing.Pen> Construtor:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#33](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#33)]
  [!code-vb[System.Drawing.CoordinateSystems#33](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#33)]  
@@ -77,7 +77,7 @@ GDI+ usa três espaços de coordenadas: mundo, página e dispositivo. Coordenada
   
  Observe que, como a origem do espaço de coordenadas de mundo está no canto superior esquerdo da área de cliente, as coordenadas de página serão as mesmas que as coordenadas de mundo.  
   
- É possível combinar as transformações global e de página para obter uma variedade de resultados. Por exemplo, suponha que você queira usar polegadas como a unidade de medida e queira que a origem se seu sistema de coordenadas esteja a 2 polegadas da borda esquerda da área de cliente e a 1/2 polegada da parte superior da área de cliente. O exemplo a seguir define as transformações global e de página de um <xref:System.Drawing.Graphics> de objeto e, em seguida, desenha uma linha de (0, 0) para (2, 1):  
+ É possível combinar as transformações global e de página para obter uma variedade de resultados. Por exemplo, suponha que você queira usar polegadas como a unidade de medida e queira que a origem se seu sistema de coordenadas esteja a 2 polegadas da borda esquerda da área de cliente e a 1/2 polegada da parte superior da área de cliente. O exemplo a seguir define as transformações do mundo e da <xref:System.Drawing.Graphics> página de um objeto e, em seguida, desenha uma linha de (0, 0) para (2, 1):  
   
  [!code-csharp[System.Drawing.CoordinateSystems#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.CoordinateSystems#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#34)]  

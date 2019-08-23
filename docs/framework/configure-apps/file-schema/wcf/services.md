@@ -2,15 +2,15 @@
 title: <services>
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
-ms.openlocfilehash: 2db168d48e3959a7d80a10ca27134f58e3fcb2de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c00d5fe3e8b2ba05843e09aca6aaa79386541bad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758152"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937196"
 ---
-# <a name="services"></a>\<services>
-Os serviços são definidos na `services` seção do arquivo de configuração. Cada serviço tem seu próprio `service` seção de configuração.  
+# <a name="services"></a>\<Serviços >
+Os serviços são definidos na `services` seção do arquivo de configuração. Cada serviço tem sua própria `service` seção de configuração.  
   
  \<system.ServiceModel>  
   
@@ -35,13 +35,13 @@ Os serviços são definidos na `services` seção do arquivo de configuração. 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Defina o contrato de serviço, o comportamento e os pontos de extremidade do serviço em questão.|  
+|[\<service>](service.md)|Defina o contrato de serviço, o comportamento e os pontos de extremidade do serviço específico.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|O elemento raiz de todos os elementos de configuração do Windows Communication Foundation (WCF).|  
+|[\<system.serviceModel>](system-servicemodel.md)|O elemento raiz de todos os elementos de configuração de Windows Communication Foundation (WCF).|  
   
 ## <a name="see-also"></a>Consulte também
 

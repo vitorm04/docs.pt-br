@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bd74460c7d5d077686c723936d140b07ac21dd0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f16a2bbd2470b4aec9e95ab67ccb0e736c4c6d02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663400"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920682"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<Elemento de > TimeSpan_LegacyFormatMode
 
@@ -64,7 +64,7 @@ nenhuma.
 
 Começando com o .NET Framework 4, a <xref:System.TimeSpan?displayProperty=nameWithType> estrutura implementa a <xref:System.IFormattable> interface e dá suporte a operações de formatação com cadeias de caracteres de formato padrão e personalizadas. Se um método de análise encontrar um especificador de formato sem suporte ou uma cadeia de caracteres de <xref:System.FormatException>formato, ele lançará um.
 
-Nas versões anteriores do .NET Framework, a estrutura <xref:System.TimeSpan> não implementou <xref:System.IFormattable> e não oferecia suporte a cadeias de caracteres de formato. No entanto, muitos desenvolvedores assumiram erroneamente <xref:System.TimeSpan> que davam suporte a um conjunto de cadeias de caracteres de formato e os usaram em <xref:System.String.Format%2A?displayProperty=nameWithType> [operações de formatação composta](../../../../../docs/standard/base-types/composite-formatting.md) com métodos como. Normalmente, se um tipo implementa <xref:System.IFormattable> e dá suporte a cadeias de caracteres de formato, as chamadas para métodos de formatação com <xref:System.FormatException>cadeias de caracteres de formato sem suporte geralmente lançam um. No entanto <xref:System.TimeSpan> , como o <xref:System.IFormattable>não foi implementado, o Runtime ignorou a cadeia de <xref:System.TimeSpan.ToString?displayProperty=nameWithType> caracteres de formato e, em vez disso, chamou o método. Isso significa que, embora as cadeias de caracteres de formato não tenham efeito sobre a operação de formatação, sua presença <xref:System.FormatException>não resultou em um.
+Nas versões anteriores do .NET Framework, a estrutura <xref:System.TimeSpan> não implementou <xref:System.IFormattable> e não oferecia suporte a cadeias de caracteres de formato. No entanto, muitos desenvolvedores assumiram erroneamente <xref:System.TimeSpan> que davam suporte a um conjunto de cadeias de caracteres de formato e os usaram em <xref:System.String.Format%2A?displayProperty=nameWithType> [operações de formatação composta](../../../../standard/base-types/composite-formatting.md) com métodos como. Normalmente, se um tipo implementa <xref:System.IFormattable> e dá suporte a cadeias de caracteres de formato, as chamadas para métodos de formatação com <xref:System.FormatException>cadeias de caracteres de formato sem suporte geralmente lançam um. No entanto <xref:System.TimeSpan> , como o <xref:System.IFormattable>não foi implementado, o Runtime ignorou a cadeia de <xref:System.TimeSpan.ToString?displayProperty=nameWithType> caracteres de formato e, em vez disso, chamou o método. Isso significa que, embora as cadeias de caracteres de formato não tenham efeito sobre a operação de formatação, sua presença <xref:System.FormatException>não resultou em um.
 
 Para casos em que o código herdado passa um método de formatação composto e uma cadeia de caracteres de formato inválida, e esse código não pode ser `<TimeSpan_LegacyFormatMode>` recompilado, você pode <xref:System.TimeSpan> usar o elemento para restaurar o comportamento herdado. Quando você define o `enabled` atributo desse elemento como `true`, o método de formatação composta resulta em uma chamada para <xref:System.TimeSpan.ToString?displayProperty=nameWithType> em vez <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>de e um <xref:System.FormatException> não é gerado.
 

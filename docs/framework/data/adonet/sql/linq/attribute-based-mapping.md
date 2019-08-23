@@ -2,22 +2,22 @@
 title: Mapeamento baseado em atributos
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 41152aa81ab84a2ab77e9a4ebf16e102ee5c0e3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743624"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964088"
 ---
 # <a name="attribute-based-mapping"></a>Mapeamento baseado em atributos
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia um banco de dados do SQL Server para um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objeto aplicando atributos ou usando um arquivo de mapeamento externo. Este tópico descreve a abordagem baseada em atributos.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]mapeia um banco de dados SQL Server [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para um modelo de objeto aplicando atributos ou usando um arquivo de mapeamento externo. Este tópico descreve a abordagem baseada em atributos.  
   
- Em sua forma mais elementar, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia um banco de dados para um <xref:System.Data.Linq.DataContext>, uma tabela para uma classe e colunas e relações para propriedades nessas classes. Você também pode usar atributos para mapear uma hierarquia de herança no seu modelo de objeto. Para obter mais informações, confira [Como: Gerar o modelo de objeto no Visual Basic ou C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Em sua forma mais elementar, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia um banco de dados para um <xref:System.Data.Linq.DataContext>, uma tabela para uma classe e colunas e relações para propriedades nessas classes. Você também pode usar atributos para mapear uma hierarquia de herança no seu modelo de objeto. Para obter mais informações, confira [Como: Gere o modelo de objeto no Visual Basic C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)ou.  
   
- Os desenvolvedores que usam o Visual Studio normalmente realizar mapeamento de atributo usando o Object Relational Designer. Você também pode usar a ferramenta de linha de comando SQLMetal, ou você pode codificar manualmente os atributos por conta própria. Para obter mais informações, confira [Como: Gerar o modelo de objeto no Visual Basic ou C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Os desenvolvedores que usam o Visual Studio normalmente executam o mapeamento baseado em atributo usando o Object Relational Designer. Você também pode usar a ferramenta de linha de comando SqlMetal ou pode codificar manualmente os atributos. Para obter mais informações, confira [Como: Gere o modelo de objeto no Visual Basic C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)ou.  
   
 > [!NOTE]
->  Você também pode mapear usando um arquivo XML externo. Para obter mais informações, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+> Você também pode mapear usando um arquivo XML externo. Para obter mais informações, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
  As seguintes seções descrevem o mapeamento baseado em atributos com mais detalhes. Para obter mais informações, consulte o namespace de <xref:System.Data.Linq.Mapping>.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67743624"
   
 |Propriedade|Tipo|Padrão|Descrição|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Nunca|Instrui o CLR (Common Language Runtime) para recuperar o valor depois de uma operação de inserção ou atualização.<br /><br /> Opções: Always, Never, OnUpdate, OnInsert.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Nunca|Instrui o CLR (Common Language Runtime) para recuperar o valor depois de uma operação de inserção ou atualização.<br /><br /> Opções: Sempre, nunca, OnUpdate, OnInsert.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|Indica que uma coluna pode conter valores nulos.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|Cadeia de Caracteres|Tipo de coluna do banco de dados inferido|Usa tipos de banco de dados e modificadores para especificar o tipo de coluna de banco de dados.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|Cadeia de Caracteres|Vazio|Define uma coluna computada em um banco de dados.|  
@@ -61,10 +61,10 @@ ms.locfileid: "67743624"
  Para obter mais informações, consulte <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  Os valores de propriedade de armazenamento AssociationAttribute e ColumnAttribute diferenciam maiúsculas de minúsculas. Por exemplo, verifique se os valores usados no atributo para a propriedade AssociationAttribute.Storage coincidem maiúsculas e minúsculas para os nomes de propriedades correspondentes usados em outro lugar no código. Isso se aplica a todas as linguagens de programação .NET, mesmo aqueles que não são normalmente diferencia maiusculas de minúsculas, incluindo o Visual Basic. Para obter mais informações sobre a propriedade Storage, consulte <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+> Os valores de propriedade de armazenamento AssociationAttribute e ColumnAttribute diferenciam maiúsculas de minúsculas. Por exemplo, verifique se os valores usados no atributo para a propriedade AssociationAttribute.Storage coincidem maiúsculas e minúsculas para os nomes de propriedades correspondentes usados em outro lugar no código. Isso se aplica a todas as linguagens de programação .NET, mesmo aquelas que não costumam diferenciar maiúsculas de minúsculas, incluindo Visual Basic. Para obter mais informações sobre a propriedade Storage, consulte <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>Atributo AssociationAttribute  
- Use esse atributo para designar uma propriedade para representar uma associação no banco de dados, como uma chave estrangeira para a relação de chave primária. Para obter mais informações sobre as relações, consulte [como: mapear relações de banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
+ Use esse atributo para designar uma propriedade para representar uma associação no banco de dados, como uma chave estrangeira para a relação de chave primária. Para obter mais informações sobre relações, [consulte Como: mapear relações de banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
  A tabela a seguir descreve as propriedades desse atributo.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "67743624"
  Para obter mais informações, consulte <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  Os valores de propriedade de armazenamento AssociationAttribute e ColumnAttribute diferenciam maiúsculas de minúsculas. Por exemplo, verifique se os valores usados no atributo para a propriedade AssociationAttribute.Storage coincidem maiúsculas e minúsculas para os nomes de propriedades correspondentes usados em outro lugar no código. Isso se aplica a todas as linguagens de programação .NET, mesmo aqueles que não são normalmente diferencia maiusculas de minúsculas, incluindo o Visual Basic. Para obter mais informações sobre a propriedade Storage, consulte <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+> Os valores de propriedade de armazenamento AssociationAttribute e ColumnAttribute diferenciam maiúsculas de minúsculas. Por exemplo, verifique se os valores usados no atributo para a propriedade AssociationAttribute.Storage coincidem maiúsculas e minúsculas para os nomes de propriedades correspondentes usados em outro lugar no código. Isso se aplica a todas as linguagens de programação .NET, mesmo aquelas que não costumam diferenciar maiúsculas de minúsculas, incluindo Visual Basic. Para obter mais informações sobre a propriedade Storage, consulte <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>Atributo InheritanceMappingAttribute  
  Use esse atributo para mapear uma hierarquia de herança.  

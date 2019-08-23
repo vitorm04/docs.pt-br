@@ -2,14 +2,14 @@
 title: <metadata>
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: c0c9848d073c799e1f97dd79b375848dfab71e99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4555dc9c2e0b783de2fb57e47c9aada0d69462e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763900"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931314"
 ---
-# <a name="metadata"></a>\<metadata>
+# <a name="metadata"></a>\<> de metadados
 Especifica como os metadados de serviço podem ser processados.  
   
  \<system.ServiceModel>  
@@ -42,14 +42,14 @@ Especifica como os metadados de serviço podem ser processados.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<policyImporters>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Especifica todos os importadores de políticas que controlam a importação de declarações de política personalizada sobre associações. Um importador de política é usado para pesquisar as declarações de política personalizadas sobre recursos de associação, bem como anexar a um elemento de associação personalizado que implementa os recursos que exige que a asserção.|  
-|[\<wsdlImporters>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|Especifica todos os importadores WSDL que importam metadados de descrição linguagem WSDL (Web Services) 1.1 com anexos WS-Policy. Um importador WSDL é usado para importar metadados, bem como converter essa informações em várias classes que representam o contrato e informações de ponto de extremidade. Ele seletivamente pode importar informações de contrato e o ponto de extremidade e propriedades que expõem os erros de importação e aceitar informações relevantes para o processo de importação e a conversão do tipo. Ele também dá suporte a importação de informações de associação e propriedades que fornecem acesso a todos os documentos de política, documentos WSDL, extensões WSDL e documentos de esquema XML.|  
+|[\<policyImporters>](policyimporters.md)|Especifica todos os importadores de política que controlam a importação de declarações de política personalizada sobre associações. Um importador de política é usado para pesquisar declarações de política personalizadas sobre recursos de associação, bem como anexar um elemento de ligação personalizado que implementa os recursos exigidos pela declaração.|  
+|[\<wsdlImporters>](wsdlimporters.md)|Especifica todos os importadores WSDL que importam metadados do WSDL (Web Services Description Language) 1,1 com anexos de WS-Policy. Um importador WSDL é usado para importar metadados, bem como converter essas informações em várias classes que representam informações de contrato e de ponto de extremidade. Ele pode importar seletivamente informações de contrato e de ponto de extremidade e propriedades que expõem quaisquer erros de importação e aceitam informações de tipo relevantes para o processo de importação e conversão. Ele também dá suporte à importação de informações de associação e propriedades que fornecem acesso a documentos de política, documentos WSDL, extensões WSDL e documentos de esquema XML.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|A seção de cliente define uma lista de pontos de extremidade que um cliente pode se conectar ao.|  
+|[\<client>](client.md)|A seção cliente define uma lista de pontos de extremidade aos quais um cliente pode se conectar.|  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -58,5 +58,5 @@ Especifica como os metadados de serviço podem ser processados.
 - <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>
 - <xref:System.ServiceModel.Description.MetadataImporter>
 - <xref:System.ServiceModel.Description.WsdlImporter>
-- [Configuração de cliente do WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Clientes](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [Configuração de cliente do WCF](../../../wcf/feature-details/client-configuration.md)
+- [Clientes](../../../wcf/feature-details/clients.md)

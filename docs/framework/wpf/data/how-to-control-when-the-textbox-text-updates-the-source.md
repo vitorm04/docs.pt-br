@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 9f7770db59c346f0981dd89a9995f11e41d17a1d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1d624d7550a1135431b7fffc7450e3a510855a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063487"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966461"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Como: Controlar quando o texto de TextBox atualiza a origem
 Este tópico descreve como usar a propriedade <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> para controlar o tempo das atualizações de origem de associação. O tópico usa o controle <xref:System.Windows.Controls.TextBox> como um exemplo.  
@@ -26,24 +26,24 @@ Este tópico descreve como usar a propriedade <xref:System.Windows.Data.Binding.
   
  [!code-xaml[SimpleBinding#USTHowTo](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=33-39,41-42)]  
   
- Como resultado, o <xref:System.Windows.Controls.TextBlock> mostra o mesmo texto (porque a origem é alterada) enquanto o usuário insere o texto para o <xref:System.Windows.Controls.TextBox>, conforme ilustrado pela seguinte captura de tela da amostra:  
+ Como resultado, o <xref:System.Windows.Controls.TextBlock> mostra o mesmo texto (porque a origem é alterada) à medida que o usuário insere texto <xref:System.Windows.Controls.TextBox>no, conforme ilustrado pela seguinte captura de tela do exemplo:  
   
- ![Captura de tela que mostra a associação de dados simples.](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
+ ![Captura de tela que mostra vinculação de dados simples.](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
- Se você tiver uma caixa de diálogo ou um formulário editável pelo usuário e desejar adiar atualizações de origem até que o usuário terminou a edição de campos e clicar em "Okey", você pode definir as <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor das suas associações para <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, conforme mostrado no exemplo a seguir:  
+ Se você tiver uma caixa de diálogo ou um formulário editável do usuário e desejar adiar as atualizações de origem até que o usuário termine de editar os campos e clique em "OK" <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> , você poderá definir o valor <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>de suas associações como, como no exemplo a seguir:  
   
  [!code-xaml[UpdateSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml#2)]  
   
- Quando você define o <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> de valor para <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, o valor de origem só muda quando o aplicativo chama o <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> método. O exemplo a seguir mostra como chamar <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> para `itemNameTextBox`:  
+ Quando você define o <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor como <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, o valor de origem só é alterado quando o aplicativo <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> chama o método. O exemplo a seguir mostra como chamar <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> para `itemNameTextBox`:  
   
  [!code-csharp[UpdateSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml.cs#1)]
  [!code-vb[UpdateSource#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UpdateSource/VisualBasic/Window1.xaml.vb#1)]  
   
 > [!NOTE]
->  Você pode usar a mesma técnica para as propriedades de outros controles, mas lembre-se de que a maioria das outras propriedades têm um padrão <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor de <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. Para obter mais informações, consulte o <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> página de propriedades.  
+> Você pode usar a mesma técnica para propriedades de outros controles, mas tenha em mente que a maioria das outras propriedades tem <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> um valor <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>padrão de. Para obter mais informações, consulte <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> a página de propriedades.  
   
 > [!NOTE]
->  O <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriedade lida com atualizações de origem e, portanto, só é relevante para <xref:System.Windows.Data.BindingMode.TwoWay> ou <xref:System.Windows.Data.BindingMode.OneWayToSource> associações. Para <xref:System.Windows.Data.BindingMode.TwoWay> e <xref:System.Windows.Data.BindingMode.OneWayToSource> associações funcione, o objeto de origem precisa para fornecer notificações de alteração de propriedade. Você pode consultar os exemplos citados neste tópico para obter mais informações. Além disso, você pode examinar [Implementar notificação de alteração de propriedade](how-to-implement-property-change-notification.md).  
+> A <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Propriedade lida com as atualizações de origem e, portanto, <xref:System.Windows.Data.BindingMode.TwoWay> é <xref:System.Windows.Data.BindingMode.OneWayToSource> relevante apenas para associações ou. Para <xref:System.Windows.Data.BindingMode.TwoWay>que as associaçõesfuncionem,oobjetodeorigemprecisafornecernotificaçõesdealteraçãodepropriedade.<xref:System.Windows.Data.BindingMode.OneWayToSource> Você pode consultar os exemplos citados neste tópico para obter mais informações. Além disso, você pode examinar [Implementar notificação de alteração de propriedade](how-to-implement-property-change-notification.md).  
   
 ## <a name="see-also"></a>Consulte também
 

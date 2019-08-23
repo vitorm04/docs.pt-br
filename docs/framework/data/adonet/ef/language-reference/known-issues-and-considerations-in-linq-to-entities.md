@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662145"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913908"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemas conhecidos e considerações no LINQ to Entities
-Esta seção fornece informações sobre problemas conhecidos com o LINQ para consultas de entidades.  
+Esta seção fornece informações sobre problemas conhecidos com consultas de LINQ to Entities.  
   
-- [Consultas LINQ que não podem ser armazenados em cache](#LINQQueriesThatAreNotCached)  
+- [Consultas LINQ que não podem ser armazenadas em cache](#LINQQueriesThatAreNotCached)  
   
-- [Informações de ordenação perdidas](#OrderingInfoLost)  
+- [Informações de pedidos perdidas](#OrderingInfoLost)  
   
-- [Inteiros sem sinal não tem suportados](#UnsignedIntsUnsupported)  
+- [Não há suporte para inteiros sem sinal](#UnsignedIntsUnsupported)  
   
 - [Erros de conversão de tipo](#TypeConversionErrors)  
   
-- [Referenciando variáveis não escalares não tem suportadas](#RefNonScalarClosures)  
+- [Não há suporte para variáveis não escalares de referência](#RefNonScalarClosures)  
   
-- [Consultas aninhadas podem falhar com o SQL Server 2000](#NestedQueriesSQL2000)  
+- [Consultas aninhadas podem falhar com SQL Server 2000](#NestedQueriesSQL2000)  
   
-- [Projetando para um tipo anônimo](#ProjectToAnonymousType)  
+- [Projeção para um tipo anônimo](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>Consultas LINQ que não podem ser armazenadas em cache  
@@ -35,14 +35,14 @@ Esta seção fornece informações sobre problemas conhecidos com o LINQ para co
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>Informações de ordenação perdidas  
- Projetar colunas em um tipo anônimo fará com que as informações de ordenação sejam perdidas em algumas consultas que são executadas em um banco de dados do SQL Server 2005 definido como um nível de compatibilidade "80".  Isso ocorre quando um nome de coluna na lista order-by corresponde a um nome de coluna no seletor, conforme mostrado no exemplo a seguir:  
+ A projeção de colunas em um tipo anônimo fará com que as informações de ordem sejam perdidas em algumas consultas executadas em um banco de dados SQL Server 2005 definido como um nível de compatibilidade "80".  Isso ocorre quando um nome de coluna na lista order-by corresponde a um nome de coluna no seletor, conforme mostrado no exemplo a seguir:  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Inteiros sem sinal não suportados  
- Não há suporte a especificação de um tipo de inteiro sem sinal em uma consulta LINQ to Entities porque o [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] não oferece suporte a inteiros sem sinal. Se você especificar um inteiro sem sinal, um <xref:System.ArgumentException> exceção será gerada durante a conversão de expressão de consulta, conforme mostrado no exemplo a seguir. Este exemplo consulta um pedido com a ID 48000.  
+ Não há suporte para a especificação de um tipo de inteiro sem sinal em uma consulta [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] LINQ to Entities porque o não oferece suporte a inteiros sem sinal. Se você especificar um inteiro sem sinal, uma <xref:System.ArgumentException> exceção será lançada durante a conversão da expressão de consulta, conforme mostrado no exemplo a seguir. Este exemplo consulta um pedido com a ID 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -58,7 +58,7 @@ Esta seção fornece informações sobre problemas conhecidos com o LINQ para co
  A referência a variáveis não escalares, como uma entidade, em uma consulta não é suportada. Quando uma consulta desse tipo é executada, é gerada uma exceção <xref:System.NotSupportedException> com a mensagem "Não foi possível criar um valor constante de tipo `EntityType`. Apenas tipos primitivos ('como Int32, String e GUID') são suportados nesse contexto."  
   
 > [!NOTE]
->  A referência a uma coleção de variáveis escalares é suportada.  
+> A referência a uma coleção de variáveis escalares é suportada.  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  

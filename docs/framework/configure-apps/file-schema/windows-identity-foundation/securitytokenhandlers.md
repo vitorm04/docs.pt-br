@@ -3,12 +3,12 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 678e5c705181c55257b1ddb853690ada60ecd17a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942466"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 Especifica uma coleção de manipuladores de token de segurança que são registrados com o ponto de extremidade.  
@@ -35,26 +35,26 @@ Especifica uma coleção de manipuladores de token de segurança que são regist
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|name|Especifica o nome de uma coleção de manipulador de token. Os únicos valores reconhecidos pela estrutura são "ActAs" e "OnBehalfOf". Se as coleções de manipuladores de token são especificadas com qualquer um desses nomes, a coleção será usada ao processamento ActAs ou OnBehalfOf tokens, respectivamente.|  
+|name|Especifica o nome de uma coleção de manipulador de token. Os únicos valores reconhecidos pela estrutura são "ActAs" e "OnBehalfOf". Se as coleções do manipulador de token forem especificadas com um desses nomes, a coleção será usada ao processar os tokens ActAs ou OnBehalfOf, respectivamente.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Adiciona um manipulador de token de segurança para a coleção de manipulador de token.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Limpa todos os manipuladores de token de segurança da coleção de manipulador de token.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|Remove um manipulador de token de segurança da coleção de manipulador de token.|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornece configuração para a coleção de manipuladores de token.|  
+|[\<add>](add.md)|Adiciona um manipulador de token de segurança à coleção do manipulador de token.|  
+|[\<clear>](clear.md)|Limpa todos os manipuladores de token de segurança da coleção do manipulador de token.|  
+|[\<remove>](remove.md)|Remove um manipulador de token de segurança da coleção de manipuladores de token.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Fornece a configuração para a coleção de manipuladores de token.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica as configurações de identidade de nível de serviço.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Especifica as configurações de identidade de nível de serviço.|  
   
 ## <a name="remarks"></a>Comentários  
- Você pode especificar uma ou mais coleções nomeadas de manipuladores de token de segurança em uma configuração de serviço. Você pode especificar um nome para uma coleção usando o `name` atributo. Os únicos nomes que as alças da estrutura são "ActAs" e "OnBehalfOf". Se existirem manipuladores nessas coleções, eles são usados por um serviço de token de segurança (STS) em vez dos manipuladores padrão durante o processamento `ActAs` e `OnBehalfOf` tokens.  
+ Você pode especificar uma ou mais coleções nomeadas de manipuladores de token de segurança em uma configuração de serviço. Você pode especificar um nome para uma coleção usando o `name` atributo. Os únicos nomes que a estrutura manipula são "ActAs" e "OnBehalfOf". Se houver manipuladores nessas coleções, eles serão usados por um serviço de token de segurança (STS) em vez dos manipuladores padrão `ActAs` durante `OnBehalfOf` o processamento e os tokens.  
   
- Por padrão, a coleção é preenchida com os seguintes tipos de manipulador: <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, e <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>. Você pode modificar a coleção usando o `<add>`, `<remove>`, e `<clear>` elementos. Você deve garantir que apenas um único manipulador de qualquer tipo específico existe na coleção. Por exemplo, se você derivar de um manipulador de <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe, ou seu manipulador ou o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> podem ser configurados em uma única coleção, mas não ambos.  
+ Por padrão, a coleção é populada com os seguintes tipos <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>de manipuladores <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>: <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler> <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>,, <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>,, e. Você pode modificar a coleção usando os `<add>`elementos, `<remove>`e. `<clear>` Você deve garantir que apenas um único manipulador de qualquer tipo específico exista na coleção. Por exemplo, se você derivar um manipulador da <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe, o manipulador ou o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> poderá ser configurado em uma única coleção, mas não em ambos.  
   
- Use o `<securityTokenHandlerConfiguration>` elemento para especificar as definições de configuração para os manipuladores na coleção. As configurações especificadas por meio desse elemento substituem aquelas especificadas no serviço por meio de [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento. Alguns manipuladores (incluindo vários tipos de manipulador interno de) podem dar suporte a configuração adicional por meio de um elemento filho do `<add>` elemento. As configurações especificadas em um manipulador substituem configurações equivalentes especificadas na coleção ou o serviço.
+ Use o `<securityTokenHandlerConfiguration>` elemento para especificar as definições de configuração para os manipuladores na coleção. As configurações especificadas por meio desse elemento substituem aquelas especificadas no serviço por meio do [ \<elemento identityConfiguration >](identityconfiguration.md) . Alguns manipuladores (incluindo vários dos tipos de manipuladores internos) podem dar suporte à configuração adicional por meio de um elemento `<add>` filho do elemento. As configurações especificadas em um manipulador substituem as configurações equivalentes especificadas na coleção ou no serviço.

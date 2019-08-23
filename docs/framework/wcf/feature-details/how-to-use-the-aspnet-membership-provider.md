@@ -6,34 +6,34 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 61324bbc5ea07dd19e23589bfc90f9ea44a6b331
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c2567b6abd42ae725b4786eb111e411f7328154e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880181"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939798"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Como: usar o provedor de associação do ASP.NET
-O provedor de associação do ASP.NET é um recurso que permite aos desenvolvedores do ASP.NET criar sites da Web que permitem aos usuários criar combinações de nome e senha de usuário exclusivo. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e entrar para acesso exclusivo para o site e seus serviços. Isso é diferente de segurança do Windows, o que exige que os usuários têm contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação de nome/senha de usuário) pode usar o site e seus serviços.  
+O provedor de associação do ASP.NET é um recurso que permite que os desenvolvedores do ASP.NET criem sites da Web que permitem que os usuários criem combinações exclusivas de nome de usuário e senha. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e entrar para ter acesso exclusivo ao site e aos seus serviços. Isso é diferente da segurança do Windows, o que exige que os usuários tenham contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação nome de usuário/senha) pode usar o site e seus serviços.  
   
- Para um aplicativo de exemplo, consulte [provedor de função e associação](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Para obter informações sobre como usar o recurso de provedor de função do ASP.NET, consulte [como: Usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Para um aplicativo de exemplo, consulte [associação e provedor de função](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Para obter informações sobre como usar o recurso de provedor de [função ASP.net, consulte Como: Use o provedor de função ASP.NET com um](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)serviço.  
   
- O recurso de associação requer o uso de um banco de dados do SQL Server para armazenar as informações do usuário. O recurso também inclui métodos para avisar com uma pergunta quaisquer usuários que tenham esquecido sua senha.  
+ O recurso de associação requer o uso de um banco de dados SQL Server para armazenar as informações do usuário. O recurso também inclui métodos para solicitar uma pergunta a qualquer usuário que tenha esquecido sua senha.  
   
- Os desenvolvedores do Windows Communication Foundation (WCF) podem tirar proveito desses recursos para fins de segurança. Quando integrado a um aplicativo do WCF, os usuários devem fornecer uma combinação de nome/senha de usuário para o aplicativo de cliente do WCF. Para transferir os dados para o serviço WCF, usar uma associação que dá suporte a credenciais de nome/senha do usuário, como o <xref:System.ServiceModel.WSHttpBinding> (na configuração, o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) e definir o tipo de credencial para `UserName`. No serviço de segurança do WCF autentica o usuário com base no nome de usuário e senha e também atribui a função especificada pela função do ASP.NET.  
+ Os desenvolvedores de Windows Communication Foundation (WCF) podem aproveitar esses recursos para fins de segurança. Quando integrado a um aplicativo WCF, os usuários devem fornecer uma combinação de nome de usuário/senha para o aplicativo cliente do WCF. Para transferir os dados para o serviço WCF, use uma associação que ofereça suporte a credenciais de nome de usuário/senha <xref:System.ServiceModel.WSHttpBinding> , como (na configuração, o [ \<WSHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) e defina o tipo de `UserName`credencial do cliente como. No serviço, a segurança do WCF autentica o usuário com base no nome de usuário e senha e também atribui a função especificada pela função ASP.NET.  
   
 > [!NOTE]
->  O WCF não fornece métodos para preencher o banco de dados com combinações de nome/senha de usuário ou outras informações do usuário.  
+> O WCF não fornece métodos para popular o banco de dados com combinações de nome de usuário/senha ou outras informações de usuário.  
   
 ### <a name="to-configure-the-membership-provider"></a>Para configurar o provedor de associação  
   
-1. No arquivo Web. config, sob o <`system.web`> elemento, crie um <`membership`> elemento.  
+1. No arquivo Web. config, no elemento <`system.web`>, crie um elemento <`membership`>.  
   
-2. Sob o `<membership>` elemento, criar um `<providers>` elemento.  
+2. No elemento, crie um `<providers>` elemento. `<membership>`  
   
-3. Como um filho para o <`providers`> elemento, adicionar um `<clear />` elemento para a coleção de provedores de liberação.  
+3. Como um filho para o elemento`providers`< >, adicione um `<clear />` elemento para liberar a coleção de provedores.  
   
-4. Sob o `<clear />` elemento, crie um <`add`> elemento com os seguintes atributos definidos com valores apropriados: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, e `passwordFormat`. O `name` atributo é usado posteriormente como um valor no arquivo de configuração. O exemplo a seguir define como `SqlMembershipProvider`.  
+4. Sob o `<clear />` elemento, crie um elemento`add`< > com os seguintes atributos definidos como `applicationName`valores `connectionStringName`apropriados `enablePasswordRetrieval`: `name`, `type` `enablePasswordReset` `requiresQuestionAndAnswer` ,,,,, , `requiresUniqueEmail`e .`passwordFormat` O `name` atributo é usado posteriormente como um valor no arquivo de configuração. O exemplo a seguir define como `SqlMembershipProvider`.  
   
      O exemplo a seguir mostra a seção de configuração.  
   
@@ -56,15 +56,15 @@ O provedor de associação do ASP.NET é um recurso que permite aos desenvolvedo
     </membership>  
     ```  
   
-### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Para configurar a segurança de serviço para aceitar a combinação de nome/senha do usuário  
+### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Para configurar a segurança do serviço para aceitar a combinação de nome de usuário/senha  
   
-1. No arquivo de configuração, sob o [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, adicionar um [ \<associações >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
+1. No arquivo de configuração, [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) [ \<no elemento System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , adicione um elemento bindings >.  
   
-2. Adicionar um [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) à seção de associações. Para obter mais informações sobre a criação de um elemento de associação do WCF, consulte [como: Especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2. Adicione um [ \<> de WSHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) à seção associações. Para obter mais informações sobre como criar um elemento de associação [do WCF, consulte Como: Especifique uma associação de serviço na](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)configuração.  
   
 3. Defina o atributo `mode` do elemento `<security>` como `Message`.  
   
-4. Defina as `clientCredentialType` atributo da <`message`> elemento a ser `UserName`. Isso especifica que um par de nome/senha do usuário será usado como credencial do cliente.  
+4. Defina o `clientCredentialType` atributo do elemento <`message`> como `UserName`. Isso especifica que um par de nome de usuário/senha será usado como a credencial do cliente.  
   
      O exemplo a seguir mostra o código de configuração para a associação.  
   
@@ -85,22 +85,22 @@ O provedor de associação do ASP.NET é um recurso que permite aos desenvolvedo
   
 ### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Para configurar um serviço para usar o provedor de associação  
   
-1. Como um filho para o `<system.serviceModel>` elemento, adicione uma [ \<comportamentos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento  
+1. Como um filho para o `<system.serviceModel>` elemento, adicione um elemento de [ \<> de comportamentos](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
-2. Adicionar um [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) para o <`behaviors`> elemento.  
+2. Adicione um [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) de portais ao elemento <`behaviors`>.  
   
-3. Adicionar um [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) e defina o `name` de atributo para um valor apropriado.  
+3. Adicione um [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) e defina o `name` atributo como um valor apropriado.  
   
-4. Adicionar um [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) para o <`behavior`> elemento.  
+4. Adicione um [ \<> ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) ao elemento <`behavior`>.  
   
-5. Adicionar um [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) para o `<serviceCredentials>` elemento.  
+5. Adicione [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) um`<serviceCredentials>` > userNameAuthentication ao elemento.  
   
-6. Defina as `userNamePasswordValidationMode` atributo `MembershipProvider`.  
+6. Defina o `userNamePasswordValidationMode` atributo como `MembershipProvider`.  
   
     > [!IMPORTANT]
-    >  Se o `userNamePasswordValidationMode` valor não for definido, o WCF usa a autenticação do Windows em vez do provedor de associação do ASP.NET.  
+    >  Se o `userNamePasswordValidationMode` valor não for definido, o WCF usará a autenticação do Windows em vez do provedor de associação do ASP.net.  
   
-7. Defina o `membershipProviderName` de atributo para o nome do provedor (especificado ao adicionar o provedor no primeiro procedimento neste tópico). O exemplo a seguir mostra o fragmento do `<serviceCredentials>` para este ponto.  
+7. Defina o `membershipProviderName` atributo como o nome do provedor (especificado ao adicionar o provedor no primeiro procedimento neste tópico). O exemplo a seguir mostra o fragmento do `<serviceCredentials>` para este ponto.  
   
     ```xml  
     <behaviors>  
@@ -117,7 +117,7 @@ O provedor de associação do ASP.NET é um recurso que permite aos desenvolvedo
     ```  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra a configuração para um serviço que usa o recurso de associação do ASP.  
+ O código a seguir mostra a configuração de um serviço que usa o recurso associação ASP.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

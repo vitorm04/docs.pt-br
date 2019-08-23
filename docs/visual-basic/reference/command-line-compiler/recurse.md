@@ -6,15 +6,15 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-ms.openlocfilehash: 2fe1834c3e92c3eff016ffd7857a0473eb2e8b3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4281c7bf5a7972d323e1e649aaef437c7ee901ff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788844"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956271"
 ---
 # <a name="-recurse"></a>-recurse
-Compila arquivos de código-fonte em todos os diretórios filho do diretório especificado ou o diretório do projeto.  
+Compila os arquivos de código-fonte em todos os diretórios filho do diretório especificado ou do diretório do projeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,19 +30,19 @@ Compila arquivos de código-fonte em todos os diretórios filho do diretório es
  Necessário. Os arquivos a serem pesquisados. São permitidos caracteres curinga.  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar curingas no nome do arquivo para compilar todos os arquivos correspondentes no diretório do projeto sem usar `-recurse`. Se nenhum nome de arquivo de saída for especificado, o compilador baseia o nome do arquivo de saída no primeiro arquivo de entrada processado. Isso geralmente é o primeiro arquivo na lista de arquivos compilados quando exibidos em ordem alfabética. Por esse motivo, é melhor especificar um arquivo de saída usando o `-out` opção.  
+ Você pode usar caracteres curinga em um nome de arquivo para compilar todos os arquivos correspondentes no diretório do projeto `-recurse`sem usar o. Se nenhum nome de arquivo de saída for especificado, o compilador baseará o nome do arquivo de saída no primeiro arquivo de entrada processado. Esse é geralmente o primeiro arquivo na lista de arquivos compilados quando exibidos em ordem alfabética. Por esse motivo, é melhor especificar um arquivo de saída usando a `-out` opção.  
   
 > [!NOTE]
->  O `-recurse` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível somente durante a compilação da linha de comando.  
+> A `-recurse` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ela está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
- O comando a seguir compila todos os arquivos do Visual Basic no diretório atual.  
+ O comando a seguir compila todos os arquivos de Visual Basic no diretório atual.  
   
 ```console
 vbc *.vb  
 ```  
   
- O comando a seguir compila todos os arquivos do Visual Basic na `Test\ABC` directory e quaisquer diretórios abaixo dele e, em seguida, gera `Test.ABC.dll`.  
+ O comando a seguir compila todos os arquivos de Visual Basic no `Test\ABC` diretório e em todos os diretórios abaixo dele e, `Test.ABC.dll`em seguida, gera.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

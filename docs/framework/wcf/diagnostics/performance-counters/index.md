@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 2f4c62ff551ac66c4b7192a4e978db0a9f443f3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4368bd57718f52816d4efad39932bcc0959b67a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613694"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951297"
 ---
 # <a name="wcf-performance-counters"></a>Contadores de desempenho do WCF
-Windows Communication Foundation (WCF) inclui um grande conjunto de contadores de desempenho para ajudá-lo a medir o desempenho do seu aplicativo.  
+O Windows Communication Foundation (WCF) inclui um grande conjunto de contadores de desempenho para ajudá-lo a medir o desempenho do seu aplicativo.  
   
-## <a name="enabling-performance-counters"></a>Habilitar os contadores de desempenho  
- Você pode habilitar os contadores de desempenho para um serviço WCF por meio do arquivo de configuração App. config do serviço WCF da seguinte maneira:  
+## <a name="enabling-performance-counters"></a>Habilitando contadores de desempenho  
+ Você pode habilitar contadores de desempenho para um serviço WCF por meio do arquivo de configuração app. config do serviço WCF da seguinte maneira:  
   
 ```xml  
 <configuration>  
@@ -27,17 +27,17 @@ Windows Communication Foundation (WCF) inclui um grande conjunto de contadores d
   
  O `performanceCounters` atributo pode ser definido para habilitar um tipo específico de contadores de desempenho. Os valores válidos são  
   
-- Todos os: Todos os contadores de categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation) estão habilitados.  
+- Os Todos os contadores de categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation) estão habilitados.  
   
-- ServiceOnly: Somente os contadores de categoria ServiceModelService estão habilitados. Este é o valor padrão.  
+- Somente de: Somente os contadores de categoria ServiceModelService estão habilitados. Este é o valor padrão.  
   
-- Off: Contadores de desempenho ServiceModel * estão desabilitados.  
+- Desconto Os contadores de desempenho ServiceModel * estão desabilitados.  
   
- Se você quiser habilitar os contadores de desempenho para todos os aplicativos do WCF, você pode colocar as definições de configuração no arquivo Machine. config.  Consulte a **aumentando o tamanho de memória para contadores de desempenho** seção abaixo para obter mais informações sobre como configurar a memória suficiente para contadores de desempenho em seu computador.  
+ Se você quiser habilitar contadores de desempenho para todos os aplicativos WCF, poderá posicionar as definições de configuração no arquivo Machine. config.  Consulte a seção **aumentar tamanho da memória para contadores de desempenho** abaixo para obter mais informações sobre como configurar memória suficiente para contadores de desempenho em seu computador.  
   
- Se você usar pontos de extensibilidade do WCF, como chamadores de operação personalizado, você também deve emitir seus próprios contadores de desempenho. Isso ocorre porque se você implementar um ponto de extensibilidade, o WCF não pode emitir os dados do contador de desempenho padrão no caminho padrão. Se você não implementar o suporte de contador de desempenho manual, você não poderá ver os dados de contador de desempenho esperados.  
+ Se você usar pontos de extensibilidade do WCF, como chamadores de operação personalizados, também deverá emitir seus próprios contadores de desempenho. Isso ocorre porque, se você implementar um ponto de extensibilidade, o WCF poderá não emitir mais os dados do contador de desempenho padrão no caminho padrão. Se você não implementar o suporte de contador de desempenho manual, talvez não veja os dados do contador de desempenho que espera.  
   
- Você também pode habilitar os contadores de desempenho em seu código da seguinte maneira  
+ Você também pode habilitar contadores de desempenho em seu código da seguinte maneira:  
   
 ```  
 using System.Configuration;  
@@ -51,41 +51,41 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>Exibindo dados de desempenho  
- Para exibir os dados capturados pelos contadores de desempenho, você pode usar o Monitor de desempenho (Perfmon.exe) que acompanha o Windows. Você pode iniciar essa ferramenta, vá para **inicie**e clique em **execute** e digite `perfmon.exe` na caixa de diálogo.  
+ Para exibir os dados capturados pelos contadores de desempenho, você pode usar o monitor de desempenho (Perfmon. exe) fornecido com o Windows. Você pode iniciar essa ferramenta acessando **Iniciar**e, em seguida, clique `perfmon.exe` em executar e digite na caixa de diálogo.  
   
 > [!NOTE]
->  Instâncias de contador de desempenho poderão ser liberadas antes que o último mensagens foram processadas pelo dispatcher do ponto de extremidade. Isso pode resultar em dados de desempenho não são capturados para algumas mensagens.  
+> As instâncias do contador de desempenho podem ser liberadas antes que as últimas mensagens sejam processadas pelo dispatcher do ponto de extremidade. Isso pode fazer com que os dados de desempenho não sejam capturados para algumas mensagens.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Aumentando o tamanho da memória para contadores de desempenho  
- WCF usa a memória compartilhada separada para suas categorias de contador de desempenho.  
+ O WCF usa memória compartilhada separada para suas categorias de contador de desempenho.  
   
- Por padrão, memória compartilhada separada é definida como um quarto do tamanho da memória do contador de desempenho global. A memória de contador de desempenho global padrão é 524.288 bytes. Portanto, as três categorias de contador de desempenho do WCF têm um tamanho padrão de aproximadamente 128KB cada. Dependendo as características de tempo de execução de aplicativos WCF em um computador, memória de contador de desempenho pode ser esgotada. Quando isso acontece, o WCF grava um erro no log de eventos do aplicativo. O conteúdo do erro informa que um contador de desempenho não foi carregado, e a entrada contém a exceção "System. InvalidOperationException: Modo de exibição de arquivo de contadores personalizados está sem memória." Se o rastreamento está habilitado no nível de erro, essa falha também é rastreada. Se a memória de contador de desempenho é esgotada, continuando a executar seus aplicativos do WCF com contadores de desempenho habilitados pode resultar em degradação de desempenho. Se você for um administrador da máquina, você deve configurá-lo para alocar memória suficiente para suportar o número máximo de contadores de desempenho que podem existir em qualquer momento.  
+ Por padrão, a memória compartilhada separada é definida como um trimestre do tamanho da memória do contador de desempenho global. A memória padrão do contador de desempenho global é de 524.288 bytes. Portanto, as três categorias de contador de desempenho do WCF têm um tamanho padrão de aproximadamente 128KB cada. Dependendo das características de tempo de execução dos aplicativos WCF em um computador, a memória do contador de desempenho pode ser esgotada. Quando isso acontece, o WCF grava um erro no log de eventos do aplicativo. O conteúdo do erro informa que um contador de desempenho não foi carregado e a entrada contém a exceção "System. InvalidOperationException: A exibição do arquivo de contadores personalizados está sem memória. " Se o rastreamento estiver habilitado no nível de erro, essa falha também será rastreada. Se a memória do contador de desempenho estiver esgotada, continuar a executar seus aplicativos WCF com os contadores de desempenho habilitado pode resultar em degradação do desempenho. Se você for um administrador do computador, deverá configurá-lo para alocar memória suficiente para dar suporte ao número máximo de contadores de desempenho que podem existir a qualquer momento.  
   
- Você pode alterar a quantidade de memória do contador de desempenho para as categorias WCF no registro. Para fazer isso, você precisará adicionar um novo valor DWORD chamado `FileMappingSize` para os três locais a seguir e defina-o como o valor desejado em bytes. Reinicie o computador para que essas alterações são levadas em efeito.  
+ Você pode alterar a quantidade de memória do contador de desempenho para categorias do WCF no registro. Para fazer isso, você precisa adicionar um novo valor DWORD chamado `FileMappingSize` aos três locais a seguir e defini-lo como o valor desejado em bytes. Reinicialize o computador para que essas alterações sejam levadas em vigor.  
   
-- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0 \ desempenho  
   
-- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0 \ desempenho  
   
-- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0 \ desempenho  
   
- Quando um grande número de objetos (por exemplo, o ServiceHost) sejam descartado, mas esperando para ser coletado como lixo, o `PrivateBytes` contador de desempenho serão registrados em um número extraordinariamente alto. Para resolver esse problema, você pode adicionar seus próprios contadores específicos do aplicativo, ou usar o `performanceCounters` atributo para habilitar os contadores apenas do nível de serviço.  
+ Quando um grande número de objetos (por exemplo, ServiceHost) é Descartado, mas aguardando para ser coletado pelo lixo `PrivateBytes` , o contador de desempenho registrará um número excepcionalmente alto. Para resolver esse problema, você pode adicionar seus próprios contadores específicos do aplicativo ou usar o `performanceCounters` atributo para habilitar somente contadores de nível de serviço.  
   
 ## <a name="types-of-performance-counters"></a>Tipos de contadores de desempenho  
- Contadores de desempenho estão no escopo para três níveis diferentes: Serviço, ponto de extremidade e operação.  
+ Os contadores de desempenho têm como escopo três níveis diferentes: Serviço, ponto de extremidade e operação.  
   
  Você pode usar o WMI para recuperar o nome de uma instância do contador de desempenho. Por exemplo,  
   
-- Nome de instância do contador de serviço pode ser obtido por meio do WMI [serviço](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) propriedade de "CounterInstanceName" da instância.  
+- O nome da instância do contador de serviço pode ser obtido por meio da propriedade "referendaname" da instância do [serviço](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) WMI.  
   
-- Nome de instância de contador do ponto de extremidade pode ser obtido por meio do WMI [ponto de extremidade](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) propriedade de "CounterInstanceName" da instância.  
+- O nome da instância do contador de ponto de extremidade pode ser obtido por meio da propriedade "referendaname" da instância do [ponto de extremidade](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) do WMI.  
   
-- Nome de instância do contador de operação pode ser obtido por meio do WMI [ponto de extremidade](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) "GetOperationCounterInstanceName" de método instância do.  
+- O nome da instância do contador de operações pode ser obtido por meio do método "GetOperationCounterInstanceName" da instância do [ponto de extremidade](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) do WMI.  
   
- Para obter mais informações sobre WMI, consulte [usando o Windows Management Instrumentation para diagnóstico](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Para obter mais informações sobre o WMI, consulte [usando instrumentação de gerenciamento do Windows para diagnóstico](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
-### <a name="service-performance-counters"></a>Contadores de desempenho do serviço  
- Contadores de desempenho serviço medem o comportamento de serviço como um todo e podem ser usados para diagnosticar o desempenho do serviço inteiro. Eles podem ser encontrados no `ServiceModelService 4.0.0.0` objeto de desempenho durante a exibição com o Monitor de desempenho. As instâncias são nomeadas usando o seguinte padrão:  
+### <a name="service-performance-counters"></a>Contadores de desempenho de serviço  
+ Os contadores de desempenho de serviço medem o comportamento do serviço como um todo e podem ser usados para diagnosticar o desempenho do serviço inteiro. Eles podem ser encontrados no objeto `ServiceModelService 4.0.0.0` de desempenho ao exibir com o monitor de desempenho. As instâncias são nomeadas usando o seguinte padrão:  
   
 ```  
 ServiceName@ServiceBaseAddress  
@@ -93,38 +93,38 @@ ServiceName@ServiceBaseAddress
   
  Um contador em um escopo de serviço é agregado do contador em uma coleção de pontos de extremidade.  
   
- Contadores de desempenho para criação de instância de serviço são incrementados quando um novo InstanceContext é criado. Observe que um novo InstanceContext é criado até mesmo quando você receber uma mensagem não ativando (com um serviço existente), ou quando você se conectar a uma instância de uma sessão, encerra a sessão e, em seguida, reconectar-se de outra sessão.  
+ Os contadores de desempenho para a criação da instância de serviço são incrementados quando um novo InstanceContext é criado. Observe que um novo InstanceContext é criado mesmo quando você recebe uma mensagem que não está sendo ativada (com um serviço existente) ou quando você se conecta a uma instância de uma sessão, encerra a sessão e, em seguida, reconecta a partir de outra sessão.  
   
-### <a name="endpoint-performance-counters"></a>Contadores de desempenho do ponto de extremidade  
- Contadores de desempenho do ponto de extremidade permitem que você examinar dados refletindo como um ponto de extremidade é aceitar mensagens. Eles podem ser encontrados no `ServiceModelEndpoint 4.0.0.0` objeto de desempenho durante a exibição usando o Monitor de desempenho. As instâncias são nomeadas usando o seguinte padrão:  
+### <a name="endpoint-performance-counters"></a>Contadores de desempenho de ponto de extremidade  
+ Os contadores de desempenho do ponto de extremidade permitem que você examine os dados que refletem como um ponto de extremidade está aceitando mensagens. Eles podem ser encontrados no objeto `ServiceModelEndpoint 4.0.0.0` de desempenho ao exibir usando o monitor de desempenho. As instâncias são nomeadas usando o seguinte padrão:  
   
 ```  
 (ServiceName).(ContractName)@(endpoint listener address)  
 ```  
   
- Os dados são semelhantes a que é coletado para operações individuais, mas só é agregado entre o ponto de extremidade.  
+ Os dados são semelhantes ao que é coletado para operações individuais, mas é agregado somente no ponto de extremidade.  
   
  Um contador em um escopo de ponto de extremidade é agregado dos contadores em uma coleção de operações.  
   
 > [!NOTE]
->  Se dois pontos de extremidade tem endereços e nomes de contrato idênticos, eles são mapeados para a mesma instância do contador.  
+> Se dois pontos de extremidade tiverem nomes de contrato e endereços idênticos, eles serão mapeados para a mesma instância do contador.  
   
 ### <a name="operation-performance-counters"></a>Contadores de desempenho de operação  
- Contadores de desempenho da operação estiverem localizados no `ServiceModelOperation 4.0.0.0` objeto de desempenho durante a exibição com o Monitor de desempenho. Cada operação tem uma instância individual. Ou seja, se um determinado contrato tem 10 operações, 10 instâncias de contador de operação são associadas esse contrato. As instâncias de objeto são nomeadas usando o seguinte padrão:  
+ Os contadores de desempenho de operação são `ServiceModelOperation 4.0.0.0` encontrados no objeto de desempenho ao exibir com o monitor de desempenho. Cada operação tem uma instância individual. Ou seja, se um determinado contrato tiver 10 operações, 10 instâncias do contador de operações serão associadas a esse contrato. As instâncias de objeto são nomeadas usando o seguinte padrão:  
   
 ```  
 (ServiceName).(ContractName).(OperationName)@(first endpoint listener address)  
 ```  
   
- Esse contador permite medir como a chamada está sendo usada e como a operação está sendo executado.  
+ Esse contador permite que você meça como a chamada está sendo usada e o quão bem a operação está sendo executada.  
   
- Quando contadores estão visíveis em vários escopos, os dados coletados de um escopo superior são agregados com os dados dos escopos menores. Por exemplo, `Calls` em um ponto de extremidade representa a soma de todas as chamadas de operação no ponto de extremidade. `Calls` em um serviço representa a soma de todas as chamadas para todos os pontos de extremidade dentro do serviço.  
+ Quando os contadores são visíveis em vários escopos, os dados coletados de um escopo superior são agregados com dados de escopos inferiores. Por exemplo, `Calls` em um ponto de extremidade representa a soma de todas as chamadas de operação dentro do ponto de extremidade; `Calls` em um serviço representa a soma de todas as chamadas para todos os pontos de extremidade no serviço.  
   
 > [!NOTE]
->  Se você tiver nomes de operação duplicadas em um contrato, você somente obtém uma instância do contador para ambas as operações.  
+> Se você tiver nomes de operação duplicados em um contrato, você só obterá uma instância de contador para ambas as operações.  
   
-## <a name="programming-the-wcf-performance-counters"></a>Os contadores de desempenho do WCF de programação  
- Vários arquivos são instalados na pasta de instalação do SDK para que você possa acessar os contadores de desempenho do WCF por meio de programação. Esses arquivos são listados a seguir.  
+## <a name="programming-the-wcf-performance-counters"></a>Programando os contadores de desempenho do WCF  
+ Vários arquivos são instalados na pasta de instalação do SDK para que você possa acessar os contadores de desempenho do WCF programaticamente. Esses arquivos são listados da seguinte maneira.  
   
 - _ServiceModelEndpointPerfCounters.vrg  
   
@@ -136,7 +136,7 @@ ServiceName@ServiceBaseAddress
   
 - _TransactionBridgePerfCounters.vrg  
   
- Para obter mais informações sobre como acessar os contadores de forma programática, consulte [arquitetura de programação de contador de desempenho](https://go.microsoft.com/fwlink/?LinkId=95179).  
+ Para obter mais informações sobre como acessar os contadores programaticamente, consulte [arquitetura de programação de contador de desempenho](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
 ## <a name="see-also"></a>Consulte também
 
