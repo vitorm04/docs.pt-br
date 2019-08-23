@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: 0cdca872e9e76b7491dc571209292a692a06d8f8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 772763b5927ca845d6c2ccba50382652e410ae4f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951238"
 ---
 # <a name="dataadapter-parameters"></a>Parâmetros DataAdapter
 O <xref:System.Data.Common.DbDataAdapter> tem quatro propriedades que são usadas para recuperar dados da fonte de dados e atualizá-los nela: a propriedade <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> retorna dados da fonte de dados; e as propriedades <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> e <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> são usadas para gerenciar alterações na fonte de dados. A propriedade `SelectCommand` deve ser definida antes que você chame o método `Fill` do `DataAdapter`. A propriedade `InsertCommand`, `UpdateCommand` ou `DeleteCommand` deve ser definida antes que o método `Update` do `DataAdapter` seja chamado, dependendo de quais alterações foram feitas nos dados da <xref:System.Data.DataTable>. Por exemplo, se as linhas tiverem sido adicionadas, o `InsertCommand` deve ser definido antes de chamar `Update`. Quando `Update` estiver processando uma linha inserida, atualizada ou excluída, o `DataAdapter` usará a respectiva propriedade `Command` para processar a ação. As informações atuais sobre a linha modificada são passadas para o objeto `Command` através da coleção `Parameters`.  
   
- Quando você atualiza uma linha na fonte de dados, você pode chamar a instrução de atualização, que usa um identificador exclusivo para identificar a linha na tabela a ser atualizada. O identificador exclusivo é geralmente o valor de um campo de chave primária. A instrução UPDATE usa os parâmetros que contêm o identificador exclusivo e as colunas e os valores a serem atualizados, conforme mostrado na declaração Transact-SQL a seguir.  
+ Ao atualizar uma linha na fonte de dados, você chama a instrução UPDATE, que usa um identificador exclusivo para identificar a linha na tabela a ser atualizada. O identificador exclusivo é geralmente o valor de um campo de chave primária. A instrução UPDATE usa os parâmetros que contêm o identificador exclusivo e as colunas e os valores a serem atualizados, conforme mostrado na declaração Transact-SQL a seguir.  
   
 ```sql
 UPDATE Customers SET CompanyName = @CompanyName   
@@ -23,9 +23,9 @@ UPDATE Customers SET CompanyName = @CompanyName
 ```  
   
 > [!NOTE]
->  A sintaxe para espaços reservados de parâmetro depende da fonte de dados. Este exemplo mostra os espaços reservados de uma fonte de dados do SQL Server. Use espaços reservados de ponto de interrogação (?) para os parâmetros <xref:System.Data.OleDb> e <xref:System.Data.Odbc>.  
+> A sintaxe para espaços reservados de parâmetro depende da fonte de dados. Este exemplo mostra os espaços reservados de uma fonte de dados do SQL Server. Use espaços reservados de ponto de interrogação (?) para os parâmetros <xref:System.Data.OleDb> e <xref:System.Data.Odbc>.  
   
- Neste exemplo do Visual Basic, o `CompanyName` campo é atualizado com o valor da `@CompanyName` parâmetro para a linha em que `CustomerID` é igual ao valor da `@CustomerID` parâmetro. Os parâmetros recuperam informações da linha modificada usando o <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> propriedade do <xref:System.Data.SqlClient.SqlParameter> objeto. Estes são os parâmetros da instrução UPDATE de exemplo anterior. O código assume que a variável `adapter` representa um objeto <xref:System.Data.SqlClient.SqlDataAdapter> válido.  
+ Neste `CompanyName` Visual Basic exemplo, o campo é atualizado com o valor `@CompanyName` do parâmetro para a linha em que `CustomerID` é igual ao valor do `@CustomerID` parâmetro. Os parâmetros recuperam informações da linha modificada usando <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> a propriedade <xref:System.Data.SqlClient.SqlParameter> do objeto. Estes são os parâmetros da instrução UPDATE de exemplo anterior. O código assume que a variável `adapter` representa um objeto <xref:System.Data.SqlClient.SqlDataAdapter> válido.  
   
 ```vb
 adapter.Parameters.Add( _  
@@ -39,7 +39,7 @@ parameter.SourceVersion = DataRowVersion.Original
  O método `Add` da coleção `Parameters` adota o nome do parâmetro, o tipo de dados, o tamanho (se aplicável ao tipo) e o nome da <xref:System.Data.Common.DbParameter.SourceColumn%2A> da `DataTable`. Observe que <xref:System.Data.Common.DbParameter.SourceVersion%2A> do parâmetro `@CustomerID` é definido como `Original`. Isso garante que a linha existente na fonte de dados será atualizada se o valor da(s) coluna(s) de identificação tiverem sido alteradas na <xref:System.Data.DataRow> modificada. Nesse caso, o valor de linha `Original` corresponderia ao valor atual na fonte de dados, e o valor de linha `Current` conteria o valor atualizado. A `SourceVersion` do parâmetro `@CompanyName` não está definida e usa o padrão, o valor de linha `Current`.  
   
 > [!NOTE]
->  Para ambos os `Fill` operações do `DataAdapter` e o `Get` métodos do `DataReader`, o tipo do .NET Framework é inferido do tipo retornado do provedor de dados .NET Framework. Os tipos inferidos do .NET Framework e métodos de acessador para tipos de dados do Microsoft SQL Server, OLE DB e ODBC estão descritos em [mapeamentos de tipo de dados no ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+> Para ambas as `Fill` operações `DataAdapter` `Get` do`DataReader`e os métodos do, o tipo de .NET Framework é inferido do tipo retornado do provedor de dados de .NET Framework. Os tipos de .NET Framework inferidos e os métodos de acessador para tipos de dados Microsoft SQL Server, OLE DB e ODBC são descritos em mapeamentos de [tipo de dados em ADO.net](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn, Parameter.SourceVersion  
  A `SourceColumn` e a `SourceVersion` podem ser passadas como argumentos para o construtor `Parameter` ou definidas como propriedades de um `Parameter` existente. A `SourceColumn` é o nome da <xref:System.Data.DataColumn> da <xref:System.Data.DataRow>, em que o valor do `Parameter` será recuperado. A `SourceVersion` especifica a versão da `DataRow` que o `DataAdapter` usa para recuperar o valor.  
@@ -53,7 +53,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|O parâmetro usa o valor original da coluna.|  
 |`Proposed`|O parâmetro usa um valor proposto.|  
   
- O exemplo de código `SqlClient` na seção a seguir define um parâmetro para um <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> em que a coluna `CustomerID` é usada como `SourceColumn` de dois parâmetros: `@CustomerID` (`SET CustomerID = @CustomerID`) e `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). O `@CustomerID` parâmetro é usado para atualizar o **CustomerID** coluna para o valor atual no `DataRow`. Como resultado, o `CustomerID` `SourceColumn` com um `SourceVersion` de `Current` é usado. O `@OldCustomerID` parâmetro é usado para identificar a linha atual na fonte de dados. Como o valor de coluna correspondente é encontrado na versão `Original` da linha, a mesma `SourceColumn` (`CustomerID`) com uma `SourceVersion` de `Original` é usada.  
+ O exemplo de código `SqlClient` na seção a seguir define um parâmetro para um <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> em que a coluna `CustomerID` é usada como `SourceColumn` de dois parâmetros: `@CustomerID` (`SET CustomerID = @CustomerID`) e `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). O `@CustomerID` parâmetro é usado para atualizar a coluna **CustomerID** para o valor `DataRow`atual no. `CustomerID` Como resultado, o `SourceColumn` com um `SourceVersion` de `Current` é usado. O `@OldCustomerID` parâmetro é usado para identificar a linha atual na fonte de dados. Como o valor de coluna correspondente é encontrado na versão `Original` da linha, a mesma `SourceColumn` (`CustomerID`) com uma `SourceVersion` de `Original` é usada.  
   
 ## <a name="working-with-sqlclient-parameters"></a>Trabalhando com parâmetros SqlClient  
  O exemplo a seguir demonstra como criar um <xref:System.Data.SqlClient.SqlDataAdapter> e definir <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> para <xref:System.Data.MissingSchemaAction.AddWithKey> a fim de recuperar informações adicionais do esquema no banco de dados. O conjunto de propriedades <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> e <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> e os objetos <xref:System.Data.SqlClient.SqlParameter> correspondentes adicionados à coleção <xref:System.Data.SqlClient.SqlCommand.Parameters%2A>. O método retorna um objeto `SqlDataAdapter`.  
@@ -162,7 +162,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
->  Se um nome de parâmetro não for fornecido para um parâmetro, o parâmetro é fornecido um nome padrão incremental de parâmetro*N* *,* começando com "Parameter1". É recomendável que você evite o parâmetro*N* convenção de nomenclatura ao fornecer um nome de parâmetro, porque o nome que você fornece pode entrar em conflito com um nome de parâmetro padrão existente no `ParameterCollection`. Se o nome fornecido já existir, será gerada uma exceção.  
+> Se um nome de parâmetro não for fornecido para um parâmetro, o parâmetro receberá um nome padrão incremental do parâmetro*N* *,* começando com "parâmetro1". Recomendamos que você evite o parâmetro*N* Convenção de nomenclatura ao fornecer um nome de parâmetro, pois o nome que você fornece pode entrar em conflito com um nome de parâmetro `ParameterCollection`padrão existente no. Se o nome fornecido já existir, será gerada uma exceção.  
   
 ## <a name="see-also"></a>Consulte também
 

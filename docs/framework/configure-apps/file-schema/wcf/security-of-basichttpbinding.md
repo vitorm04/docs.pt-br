@@ -2,21 +2,21 @@
 title: <security> de <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: f1e166bec2254ed6d2c306eaccfa13e9fba1d70d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f84f6c0f9988dd2d07377bf694286922db9d8364
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670557"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936800"
 ---
-# <a name="security-of-basichttpbinding"></a>\<segurança > de \<basicHttpBinding >
-Define os recursos de segurança de [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+# <a name="security-of-basichttpbinding"></a>\<> de segurança \<de BasicHttpBinding >
+Define os recursos de segurança do [ \<> BasicHttpBinding](basichttpbinding.md).  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<basicHttpBinding>  
-\<binding>  
-\<segurança >  
+\<> de associação  
+\<> de segurança  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,31 +39,31 @@ Define os recursos de segurança de [ \<basicHttpBinding >](../../../../../docs/
 |---------------|-----------------|  
 |modo|Opcional. Especifica o tipo de segurança que é usado. O padrão é `None`. Esse atributo é do tipo <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
   
-## <a name="mode-attribute"></a>modo de atributo  
+## <a name="mode-attribute"></a>Atributo de modo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Nenhum|-Mensagens não são protegidas durante a transferência.|  
-|Transporte|Segurança é fornecida usando o transporte HTTPS. As mensagens SOAP são protegidas usando HTTPS. O serviço é autenticado para o cliente usando o certificado do serviço x. 509. O cliente é autenticado usando o ClientCredentialType fornecido. Consulte a [ \<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md).|  
-|Mensagem|A segurança é fornecida usando a segurança de mensagem SOAP. Por padrão, o corpo é criptografado e assinado. Para essa associação, o sistema exige que o certificado do servidor ser fornecida para o cliente fora da banda. Válido somente `ClientCredentialType` para essa associação é `Certificate`.|  
-|TransportWithMessageCredential|Autenticação de integridade, confidencialidade e servidor são fornecidas pela segurança de transporte. A autenticação de cliente é fornecida por meio de segurança da mensagem SOAP. Esse modo é relevante quando o usuário está se autenticando usando o nome de usuário/senha e não há uma implantação existente de HTTP para transferência segura de mensagens.|  
-|TransportCredentialOnly|Esse modo não fornece confidencialidade e integridade de mensagens. Ele fornece autenticação de cliente com base em http. Esse modo deve ser usado com cuidado. Ele deve ser usado em ambientes onde a segurança do transporte está sendo fornecida por outros meios (como IPSec) e somente a autenticação do cliente é fornecida pela infraestrutura do WCF.|  
+|Nenhum|-As mensagens não são protegidas durante a transferência.|  
+|Porta|A segurança é fornecida usando o transporte HTTPS. As mensagens SOAP são protegidas usando HTTPS. O serviço é autenticado para o cliente usando o certificado X. 509 do serviço. O cliente é autenticado usando o ClientCredentialtype fornecido. Consulte o [ \<> de transporte](transport-of-basichttpbinding.md).|  
+|Mensagem|A segurança é fornecida usando a segurança de mensagem SOAP. Por padrão, o corpo é criptografado e assinado. Para essa associação, o sistema requer que o certificado do servidor seja fornecido para o cliente fora da banda. O único válido `ClientCredentialType` para essa associação é `Certificate`.|  
+|TransportWithMessageCredential|A integridade, a confidencialidade e a autenticação do servidor são fornecidas pela segurança do transporte. A autenticação de cliente é fornecida por meio de segurança da mensagem SOAP. Esse modo é relevante quando o usuário está Autenticando usando o nome de usuário/senha e há uma implantação HTTP existente para proteger a transferência de mensagens.|  
+|TransportCredentialOnly|Esse modo não fornece confidencialidade e integridade de mensagens. Ele fornece autenticação de cliente baseada em http. Esse modo deve ser usado com cautela. Ele deve ser usado em ambientes em que a segurança de transporte está sendo fornecida por outros meios (como IPSec) e somente a autenticação do cliente é fornecida pela infraestrutura do WCF.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|Define as configurações de segurança de transporte para um serviço HTTP básico. Esse elemento corresponde a <xref:System.ServiceModel.HttpTransportSecurity>.|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)|Define as configurações de segurança de mensagem para um serviço HTTP básico. Esse elemento corresponde a <xref:System.ServiceModel.BasicHttpMessageSecurity>.|  
+|[\<> de transporte](transport-of-basichttpbinding.md)|Define as configurações de segurança de transporte para um serviço HTTP básico. Este elemento corresponde a <xref:System.ServiceModel.HttpTransportSecurity>.|  
+|[\<message>](message-of-basichttpbinding.md)|Define as configurações de segurança da mensagem para um serviço HTTP básico. Este elemento corresponde a <xref:System.ServiceModel.BasicHttpMessageSecurity>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|associação|O elemento de associação do [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|associação|O elemento Binding do [ \<> BasicHttpBinding](basichttpbinding.md).|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, a mensagem SOAP não é protegida e o cliente não está autenticado. Esse elemento permite que você defina as configurações de segurança adicional para o `basicHttpBinding` elemento.  
+ Por padrão, a mensagem SOAP não é protegida e o cliente não é autenticado. Esse elemento permite que você defina configurações de segurança adicionais para `basicHttpBinding` o elemento.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -71,9 +71,9 @@ Define os recursos de segurança de [ \<basicHttpBinding >](../../../../../docs/
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>
 - <xref:System.ServiceModel.BasicHttpSecurity>
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Selecionando um tipo de credencial](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Selecionando um tipo de credencial](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [Associações](../../../wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

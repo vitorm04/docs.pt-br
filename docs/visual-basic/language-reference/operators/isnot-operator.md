@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: e07a775eec003a3e488f6909181aed3f742b4b91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a83b48e5e415bd6ca0c777cef6d34f7127691b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768336"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966933"
 ---
 # <a name="isnot-operator-visual-basic"></a>Operador IsNot (Visual Basic)
 Compara duas variáveis de referência de objeto.  
@@ -33,17 +33,17 @@ result = object1 IsNot object2
  Necessário. Qualquer `Object` variável ou expressão.  
   
 ## <a name="remarks"></a>Comentários  
- O `IsNot` operador determina se duas referências de objeto se referem a objetos diferentes. No entanto, ele não realiza comparações de valor. Se `object1` e `object2` fazem referência à mesma instância de objeto, `result` é `False`; caso contrário, `result` é `True`.  
+ O `IsNot` operador determina se duas referências de objeto se referem a objetos diferentes. No entanto, ele não executa comparações de valor. Se `object1` e `False` `result` `result` `True`ambos se referirem exatamente à mesma instância de objeto, será; se não forem, será. `object2`  
   
- `IsNot` é o oposto do `Is` operador. A vantagem de `IsNot` é que você pode evitar sintaxes estranhas com `Not` e `Is`, que pode ser difícil de ler.  
+ `IsNot`é o oposto do `Is` operador. A vantagem do `IsNot` é que você pode evitar uma sintaxe estranha `Not` com `Is`e, que pode ser difícil de ler.  
   
- Você pode usar o `Is` e `IsNot` operadores para testar objetos de associação antecipada e tardia.  
+ Você pode usar os `Is` operadores `IsNot` e para testar os objetos de ligação antecipada e de associação tardia.  
   
 > [!NOTE]
->  O `IsNot` operador não pode ser usado para comparar expressões retornadas do `TypeOf` operador. Em vez disso, você deve usar o `Not` e `Is` operadores.  
+> O `IsNot` operador não pode ser usado para comparar as `TypeOf` expressões retornadas do operador. Em vez disso, você deve `Not` usar `Is` os operadores e.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir usa ambos os `Is` operador e o `IsNot` operador para realizar a mesma comparação.  
+ O exemplo de código a seguir usa `Is` o operador e `IsNot` o operador para realizar a mesma comparação.  
   
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]  
   

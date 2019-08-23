@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: b5ad2280c832b62e043a1f65f082d5475697c38c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545359"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960343"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empacotando fontes com aplicativos
 Este tópico fornece uma visão geral de como empacotar fontes com [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] seu aplicativo.  
   
 > [!NOTE]
->  Assim como a maioria dos tipos de software, as fontes são licenciadas, ao invés de vendidas. As licenças que regem o uso de fontes variam de fornecedor para fornecedor, mas, em geral, a maioria das licenças [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] , incluindo aquelas que [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]abrangem fontes com aplicativos e, não permitem que as fontes sejam inseridas em aplicativos ou de outra forma redistribuído. Portanto, como desenvolvedor, é sua responsabilidade assegurar que você tenha os direitos de licença necessários de qualquer fonte que você inserir em um aplicativo ou redistribuir.  
+> Assim como a maioria dos tipos de software, as fontes são licenciadas, ao invés de vendidas. As licenças que regem o uso de fontes variam de fornecedor para fornecedor, mas, em geral, a maioria das licenças [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] , incluindo aquelas que abrangem as fontes fornecidas com aplicativos e janelas, não permitem que as fontes sejam inseridas em aplicativos ou de outra forma redistribuído. Portanto, como desenvolvedor, é sua responsabilidade assegurar que você tenha os direitos de licença necessários de qualquer fonte que você inserir em um aplicativo ou redistribuir.  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Introdução a empacotamento de fontes  
@@ -81,7 +81,7 @@ Este tópico fornece uma visão geral de como empacotar fontes com [!INCLUDE[TLA
 ```  
   
 > [!NOTE]
->  Ao adicionar fontes como recursos ao seu aplicativo, verifique se você está definindo o `<Resource>` elemento e não o `<EmbeddedResource>` elemento no arquivo de projeto do aplicativo. Não `<EmbeddedResource>` há suporte para o elemento da ação de compilação.  
+> Ao adicionar fontes como recursos ao seu aplicativo, verifique se você está definindo o `<Resource>` elemento e não o `<EmbeddedResource>` elemento no arquivo de projeto do aplicativo. Não `<EmbeddedResource>` há suporte para o elemento da ação de compilação.  
   
  O exemplo de marcação a seguir mostra como referenciar os recursos de fonte do aplicativo.  
   
@@ -152,7 +152,7 @@ Este tópico fornece uma visão geral de como empacotar fontes com [!INCLUDE[TLA
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  Este SDK contém um conjunto de fontes OpenType de exemplo que você pode usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] com aplicativos. As fontes são definidas em uma biblioteca somente recursos. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
+> Este SDK contém um conjunto de fontes OpenType de exemplo que você pode usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] com aplicativos. As fontes são definidas em uma biblioteca somente recursos. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>Limitações no uso de fontes  

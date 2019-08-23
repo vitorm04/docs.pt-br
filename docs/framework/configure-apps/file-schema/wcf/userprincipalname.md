@@ -2,17 +2,17 @@
 title: <userPrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 9e7b845d39495dba1d1a19af95faf308b8b8c0fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 423a3249a9298675517f0cff08566c3735fa35f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769805"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940506"
 ---
 # <a name="userprincipalname"></a>\<userPrincipalName>
-Especifica o usuário nome Principal (UPN) de um serviço para ser autenticado pelo cliente.  
+Especifica o nome principal do usuário (UPN) de um serviço a ser autenticado pelo cliente.  
   
- Para obter mais informações sobre como definir o UPN, consulte [identidade de serviço e autenticação](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Para obter mais informações sobre como definir o UPN, consulte [identidade de serviço e autenticação](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
 \<identity>  
 \<userPrincipalName>  
@@ -30,7 +30,7 @@ Especifica o usuário nome Principal (UPN) de um serviço para ser autenticado p
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|Valor |Um nome de conta de usuário (também conhecido como o nome de logon do usuário) e um nome de domínio identificando o domínio no qual a conta de usuário está localizada. Este é o uso padrão para fazer logon em um domínio do Windows. O formato é: someone@example.com (como um endereço de email).|  
+|value|Um nome de conta de usuário (às vezes chamado de nome de logon do usuário) e um nome de domínio que identifica o domínio no qual a conta de usuário está localizada. Esse é o uso padrão para fazer logon em um domínio do Windows. O formato é: someone@example.com (como para um endereço de email).|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -39,13 +39,13 @@ Especifica o usuário nome Principal (UPN) de um serviço para ser autenticado p
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica a identidade do serviço para ser autenticado pelo cliente.|  
+|[\<identity>](identity.md)|Especifica a identidade do serviço a ser autenticado pelo cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- Um cliente seguro do Windows Communication Foundation (WCF) que se conecta a um ponto de extremidade com esta identidade usa o UPN ao executar a autenticação SSPI com o ponto de extremidade.  
+ Um cliente de Windows Communication Foundation seguro (WCF) que se conecta a um ponto de extremidade com essa identidade usa o UPN ao executar a autenticação SSPI com o ponto de extremidade.  
   
 ## <a name="example"></a>Exemplo  
- O código de configuração a seguir especifica o UPN do serviço para ser autenticado pelo cliente.  
+ O código de configuração a seguir especifica o UPN do serviço a ser autenticado pelo cliente.  
   
 ```xml  
 <identity>
@@ -59,5 +59,5 @@ Especifica o usuário nome Principal (UPN) de um serviço para ser autenticado p
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.UpnEndpointIdentity>
-- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Autenticação e identidade de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

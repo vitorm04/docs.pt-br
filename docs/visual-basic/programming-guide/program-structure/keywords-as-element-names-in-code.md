@@ -7,31 +7,31 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e3613bd4a74da51cf7dbb63e52eddca811ca8e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955578"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947659"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Palavras-chave como nomes de elemento em código (Visual Basic)
-Qualquer elemento de programa — como uma variável, classe ou membro — pode ter o mesmo nome que uma palavra-chave restrita. Por exemplo, você pode criar uma variável chamada `Loop`. No entanto, para referir-se à sua versão dele — que tem o mesmo nome que restritas `Loop` palavra-chave — você deve precedê-lo com uma cadeia de caracteres de qualificação completa ou coloque-o entre colchetes (`[ ]`), como mostra o exemplo a seguir.  
+Qualquer elemento Program, como uma variável, uma classe ou um membro, pode ter o mesmo nome que uma palavra-chave restrita. Por exemplo, você pode criar uma variável chamada `Loop`. No entanto, para se referir à sua versão dele — que tem o mesmo nome `Loop` que a palavra-chave Restricted — você deve precedê-la com uma cadeia de caracteres de qualificação completa`[ ]`ou colocá-la entre colchetes (), como mostra o exemplo a seguir.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- Se você não fizer uma destas, Visual Basic assume o uso da intrínseca `Loop` palavra-chave e produz um erro, como no exemplo a seguir:  
+ Se você não fizer isso, o Visual Basic assumirá o uso da palavra-chave `Loop` intrínseca e produzirá um erro, como no exemplo a seguir:  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- Você pode usar colchetes para se referir a formulários e controles e ao declarar uma variável ou definindo um procedimento com o mesmo nome como uma palavra-chave restrita. É fácil esquecer de qualificar nomes ou incluir colchetes e, portanto, introduzir erros no seu código e torná-lo mais difícil de ler. Por esse motivo, recomendamos que você não use palavras-chave restritas como os nomes dos elementos do programa. No entanto, se uma versão futura do Visual Basic define uma nova palavra-chave que está em conflito com um formulário existente ou o nome do controle, em seguida, você pode usar essa técnica quando atualizar seu código para trabalhar com a nova versão.  
+ Você pode usar colchetes ao fazer referência a formulários e controles e ao declarar uma variável ou definir um procedimento com o mesmo nome de uma palavra-chave restrita. Pode ser fácil esquecer de qualificar nomes ou incluir colchetes e, portanto, introduzir erros em seu código e torná-lo mais difícil de ler. Por esse motivo, recomendamos que você não use palavras-chave restritas como os nomes dos elementos do programa. No entanto, se uma versão futura do Visual Basic definir uma nova palavra-chave que esteja em conflito com um formulário ou nome de controle existente, você poderá usar essa técnica ao atualizar seu código para trabalhar com a nova versão.  
   
 > [!NOTE]
->  O programa também pode incluir nomes de elemento fornecidos por outros assemblies referenciados. Se esses nomes em conflito com palavras-chave restritas, então colocar colchetes ao redor deles faz com que o Visual Basic para interpretá-los como seus elementos definidos.  
+> Seu programa também pode incluir nomes de elementos fornecidos por outros assemblies referenciados. Se esses nomes entrarem em conflito com palavras-chave restritas, colocar colchetes em relação a eles fará com que Visual Basic interpretá-los como seus elementos definidos.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Convenções de nomenclatura do Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic convenções de nomenclatura](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a815d1a5e8b40aee84ca2b9971ae4be7fb2c725
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f65f924b872195000f73bf29b267d1fc30b74f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763735"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937726"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>Método IHostGCManager::SuspensionEnding
-Notifica o host que o common language runtime (CLR) está continuando a execução de tarefas em threads que tinham sido suspensos para uma coleta de lixo.  
+Notifica o host que o Common Language Runtime (CLR) está retomando a execução de tarefas em threads que foram suspensos para uma coleta de lixo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,31 +37,31 @@ HRESULT SuspensionEnding (
   
 ## <a name="parameters"></a>Parâmetros  
  `generation`  
- [in] A geração de coleta de lixo está finalizando, do qual o thread está continuando.  
+ no A geração de coleta de lixo que está acabando de ser concluída, da qual o thread está retomando.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SuspensionEnding` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|S_OK|`SuspensionEnding`retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR chama `SuspensionEnding` depois que ele executa uma coleta de lixo, para informar o host que o thread está continuando a execução.  
+ O CLR chama `SuspensionEnding` após executar uma coleta de lixo para informar ao host que o thread está retomando a execução.  
   
 > [!IMPORTANT]
->  Não reagende o thread de de que chamada de método foi feita.  
+> Não reagende o thread a partir do qual a chamada de método foi feita.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

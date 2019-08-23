@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3680721c70ab69776c973913d929f7bdd9db3909
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccd73963302ae99c7d5d1a7201bc77c4544363f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779450"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937904"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>Método IHostAssemblyManager::GetNonHostStoreAssemblies
-Obtém um ponteiro de interface para um [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) que representa a lista de assemblies que o host espera que o common language runtime (CLR) para carregar.  
+Obtém um ponteiro de interface para um [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) que representa a lista de assemblies que o host espera que o Common Language Runtime (CLR) carregue.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,42 +37,42 @@ HRESULT GetNonHostStoreAssemblies (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppReferenceList`  
- [out] Um ponteiro para o endereço de um `ICLRAssemblyReferenceList` que contém uma lista de referências a assemblies que o host espera para carregar o CLR.  
+ fora Um ponteiro para o endereço de um `ICLRAssemblyReferenceList` que contém uma lista de referências a assemblies que o host espera que o CLR carregue.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`GetNonHostStoreAssemblies` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|S_OK|`GetNonHostStoreAssemblies`retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Não havia memória suficiente disponível para criar a lista de referências para a operação `ICLRAssemblyReferenceList`.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Não havia memória suficiente disponível para criar a lista de referências para o solicitado `ICLRAssemblyReferenceList`.|  
   
 ## <a name="remarks"></a>Comentários  
  O CLR resolve referências usando o seguinte conjunto de diretrizes:  
   
-- Primeiro, ele consulta a lista de referências de assembly retornado por `GetNonHostStoreAssemblies`.  
+- Primeiro, ele consulta a lista de referências de assembly retornada por `GetNonHostStoreAssemblies`.  
   
-- Se o assembly aparece na lista, o CLR é associado a ele normalmente.  
+- Se o assembly aparecer na lista, o CLR será associado a ele normalmente.  
   
-- Se o assembly não aparece na lista e o host tiver fornecido uma implementação de [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), o CLR chama [ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) para permitir que o host fornecer a assembly para associar a.  
+- Se o assembly não aparecer na lista e o host tiver fornecido uma implementação de [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), o CLR chamará [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) para permitir que o host forneça o assembly ao qual associar.  
   
-- Caso contrário, o CLR não vincular ao assembly.  
+- Caso contrário, o CLR não se associará ao assembly.  
   
- Se o host define `ppReferenceList` como nulo, as sondas CLR primeiro chama o cache de assembly global, `ProvideAssembly`e, em seguida, investiga a base do aplicativo para resolver uma referência de assembly.  
+ Se o host definir `ppReferenceList` como nulo, o CLR primeiro investigará o cache de assembly global, `ProvideAssembly`chamará e, em seguida, investigará a base do aplicativo para resolver uma referência de assembly.  
   
 > [!NOTE]
->  Após a inicialização, o CLR chama `GetNonHostStoreAssemblies` apenas uma vez. O método não é chamado novamente.  
+> Na inicialização, o CLR chama `GetNonHostStoreAssemblies` apenas uma vez. O método não é chamado novamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

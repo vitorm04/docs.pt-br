@@ -2,18 +2,18 @@
 title: Criando funções de aplicativo no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910721"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961175"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Criando funções de aplicativo no SQL Server
 As funções de aplicativo fornecem uma maneira de atribuir permissões para um aplicativo em vez de uma função ou usuário do banco de dados. Os usuários podem se conectar ao banco de dados, ativar a função de aplicativo e presumir as permissões concedidas ao aplicativo. As permissões concedidas para a função de aplicativo são impostas para a duração da conexão.  
   
 > [!IMPORTANT]
->  As funções de aplicativo são ativadas quando um aplicativo cliente fornece um nome da função de aplicativo e uma senha na cadeia de conexão. Eles apresentam uma vulnerabilidade de segurança em um aplicativo de duas camadas porque a senha deve ser armazenada no computador cliente. Em um aplicativo de três camadas, você pode armazenar a senha para que não possa ser acessada por usuários do aplicativo.  
+> As funções de aplicativo são ativadas quando um aplicativo cliente fornece um nome da função de aplicativo e uma senha na cadeia de conexão. Eles apresentam uma vulnerabilidade de segurança em um aplicativo de duas camadas porque a senha deve ser armazenada no computador cliente. Em um aplicativo de três camadas, você pode armazenar a senha para que não possa ser acessada por usuários do aplicativo.  
   
 ## <a name="application-role-features"></a>Recursos da função de aplicativo  
  As funções de aplicativo têm os seguintes recursos:  
@@ -47,9 +47,9 @@ As funções de aplicativo fornecem uma maneira de atribuir permissões para um 
   
  Você pode querer considerar as seguintes alternativas.  
   
-- Use a troca de contexto com a instrução EXECUTE AS com suas cláusulas NO REVERT e WITH COOKIE. Você pode criar uma conta de usuário em um banco de dados que não seja mapeado para um logon. Em seguida, você atribui permissões para essa conta. Usar EXECUTE AS a um usuário sem logon é mais seguro porque é baseado em permissão, não baseado em senha. Para obter mais informações, consulte [personalizando permissões com representação no SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Use a troca de contexto com a instrução EXECUTE AS com suas cláusulas NO REVERT e WITH COOKIE. Você pode criar uma conta de usuário em um banco de dados que não seja mapeado para um logon. Em seguida, você atribui permissões para essa conta. Usar EXECUTE AS a um usuário sem logon é mais seguro porque é baseado em permissão, não baseado em senha. Para obter mais informações, consulte [Personalizando permissões com representação em SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Assine procedimentos armazenados com certificados, concedendo permissão somente para executar os procedimentos. Para obter mais informações, consulte [assinar procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Assine procedimentos armazenados com certificados, concedendo permissão somente para executar os procedimentos. Para obter mais informações, consulte [assinando procedimentos armazenados em SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obter mais informações, consulte os seguintes recursos.  

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f323e91e60c9735a51e955eaab6673ca167f294d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755376"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951872"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>Método IMetaDataImport::ResolveTypeRef
-Resolve um <xref:System.Type> referência representada pelo token TypeRef especificado.  
+Resolve uma <xref:System.Type> referência representada pelo token TypeRef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,32 +40,32 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Parâmetros  
  `tr`  
- [in] O token de metadados TypeRef para retornar as informações de tipo referenciado.  
+ no O token de metadados TypeRef para retornar as informações de tipo referenciadas.  
   
  `riid`  
- [in] O IID da interface para retornar em `ppIScope`. Normalmente, isso seria IID_IMetaDataImport.  
+ no O IID da interface a ser retornada `ppIScope`. Normalmente, isso seria IID_IMetaDataImport.  
   
  `ppIScope`  
- [out] Uma interface para o escopo de módulo no qual o tipo referenciado é definido.  
+ fora Uma interface para o escopo do módulo no qual o tipo referenciado é definido.  
   
  `ptd`  
- [out] Um ponteiro para um token de TypeDef que representa o tipo referenciado.  
+ fora Um ponteiro para um token de TypeDef que representa o tipo referenciado.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]
->  Não use esse método se vários domínios de aplicativo são carregados. O método não respeita os limites de domínio de aplicativo. Se várias versões de um assembly são carregadas e que eles contêm o mesmo tipo com o mesmo namespace, o método retorna o escopo de módulo do primeiro tipo, que ele localiza.  
+> Não use esse método se vários domínios de aplicativo forem carregados. O método não respeita os limites do domínio do aplicativo. Se várias versões de um assembly forem carregadas e contiverem o mesmo tipo com o mesmo namespace, o método retornará o escopo do módulo do primeiro tipo que encontrar.  
   
- O `ResolveTypeRef` pesquisas de método para a definição de tipo em outros módulos. Se a definição de tipo for encontrada, `ResolveTypeRef` retorna uma interface para esse escopo de módulo, bem como o token de TypeDef para o tipo.  
+ O `ResolveTypeRef` método procura a definição de tipo em outros módulos. Se a definição de tipo for encontrada `ResolveTypeRef` , retorna uma interface para esse escopo de módulo, bem como o token de typedef para o tipo.  
   
- Se a referência de tipo a serem resolvidas tem um escopo de resolução de AssemblyRef, o `ResolveTypeRef` método procura uma correspondência somente em escopos metadados que já foi aberto com chamadas para qualquer um de [imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)método ou o [imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) método. Isso ocorre porque `ResolveTypeRef` não é possível determinar de apenas o escopo de AssemblyRef onde no disco ou no cache de assembly global assembly é armazenado.  
+ Se a referência de tipo a ser resolvida tiver um escopo de resolução de `ResolveTypeRef` AssemblyRef, o método procurará uma correspondência somente nos escopos de metadados que já foram abertos com chamadas para o método [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) ou o [ Método IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) . Isso ocorre porque `ResolveTypeRef` o não pode determinar apenas o escopo de AssemblyRef em que no disco ou no cache de assembly global o assembly está armazenado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

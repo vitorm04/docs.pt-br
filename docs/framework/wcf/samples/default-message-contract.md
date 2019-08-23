@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 267cdffdc532aaa2b31de835c31d23e93aca8c54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a9b6ddb67f914c2c1c228f3042152ef9582f7b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990334"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961797"
 ---
 # <a name="default-message-contract"></a>Contrato padrão de mensagem
-O exemplo de contrato de mensagem padrão demonstra um serviço em que uma mensagem personalizada definida pelo usuário é passada de e para operações de serviço. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa uma interface de Calculadora, como um serviço com tipo. Em vez das operações de serviço individuais para adição, subtração, multiplicação e divisão usada na [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), este exemplo passa uma mensagem personalizada que contém os operandos e o operador e retorna o resultado do cálculo aritmético.  
+O exemplo de contrato de mensagem padrão demonstra um serviço em que uma mensagem personalizada definida pelo usuário é passada para e de operações de serviço. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa uma interface de calculadora como um serviço tipado. Em vez das operações de serviço individuais para adição, subtração, multiplicação e divisão usada no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), este exemplo passa uma mensagem personalizada que contém os operandos e o operador e retorna o resultado do cálculo aritmético.  
   
- O cliente é um programa de console (.exe) e a biblioteca de serviço (. dll) é hospedada pelo Internet Information Services (IIS). Atividade do cliente está visível na janela do console.  
+ O cliente é um programa de console (. exe) e a biblioteca de serviços (. dll) é hospedada pelo Serviços de Informações da Internet (IIS). A atividade do cliente fica visível na janela do console.  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- No serviço, uma operação de serviço único é definida que aceita e retorna mensagens personalizadas do tipo `MyMessage`. Embora neste exemplo as mensagens de solicitação e resposta são do mesmo tipo, ele pode estar claro contratos de mensagem diferentes se necessário.  
+ No serviço, é definida uma única operação de serviço que aceita e retorna mensagens personalizadas do tipo `MyMessage`. Embora, neste exemplo, as mensagens de solicitação e resposta sejam do mesmo tipo, elas podem ser contratos de mensagem diferentes, se necessário.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -31,7 +31,7 @@ public interface ICalculator
 }  
 ```  
   
- A mensagem personalizada `MyMessage` é definido em uma classe anotada com <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> e <xref:System.ServiceModel.MessageBodyMemberAttribute> atributos. Somente o terceiro construtor é usado neste exemplo. Usar contratos de mensagem permite que você tenha controle total sobre a mensagem SOAP. Neste exemplo, o <xref:System.ServiceModel.MessageHeaderAttribute> atributo é usado para colocar `Operation` em um cabeçalho SOAP. Os operandos `N1`, `N2` e o `Result` aparecem dentro do corpo SOAP porque eles têm o <xref:System.ServiceModel.MessageBodyMemberAttribute> atributo aplicado.  
+ A mensagem `MyMessage` personalizada é definida em uma classe anotada <xref:System.ServiceModel.MessageHeaderAttribute> com <xref:System.ServiceModel.MessageContractAttribute>atributos e <xref:System.ServiceModel.MessageBodyMemberAttribute> . Somente o terceiro construtor é usado neste exemplo. O uso de contratos de mensagem permite que você exerça controle total sobre a mensagem SOAP. Neste exemplo, o <xref:System.ServiceModel.MessageHeaderAttribute> atributo é usado para colocar `Operation` em um cabeçalho SOAP. Os operandos `N1` `N2` e `Result` aparecem no corpo SOAP porque eles têm o <xref:System.ServiceModel.MessageBodyMemberAttribute> atributo aplicado.  
   
 ```csharp
 [MessageContract]  
@@ -97,7 +97,7 @@ public class MyMessage
 }  
 ```  
   
- A classe de implementação contém o código para o `Calculate` operação de serviço. O `CalculateService` classe obtém os operandos e o operador de mensagem de solicitação e cria uma mensagem de resposta que contém o resultado do cálculo solicitado, conforme mostrado no código de exemplo a seguir.  
+ A classe de implementação contém o código para `Calculate` a operação de serviço. A `CalculateService` classe obtém os operandos e o operador da mensagem de solicitação e cria uma mensagem de resposta que contém o resultado do cálculo solicitado, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp
 // Service class which implements the service contract.  
@@ -131,13 +131,13 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- O código de cliente gerado para o cliente foi criado com o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ferramenta. A ferramenta cria automaticamente os tipos de contrato de mensagem no código do cliente gerado, se necessário. O `/messageContract` opção de comando pode ser especificada para forçar a geração de contratos de mensagem.  
+ O código de cliente gerado para o cliente foi criado com a ferramenta de [Utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) . A ferramenta cria automaticamente tipos de contrato de mensagem no código de cliente gerado, se necessário. A `/messageContract` opção de comando pode ser especificada para forçar a geração de contratos de mensagem.  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- O código de exemplo a seguir demonstra o cliente usando o `MyMessage` mensagem.  
+ O código de exemplo a seguir demonstra o cliente `MyMessage` usando a mensagem.  
   
 ```csharp
 // Create a client with given client endpoint configuration  
@@ -155,7 +155,7 @@ MyMessage response = ((ICalculator)client).Calculate(request);
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
- Quando você executar o exemplo, os cálculos são exibidos na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, os cálculos são exibidos na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -166,21 +166,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Neste ponto, as mensagens personalizadas definidas pelo usuário passaram entre o cliente e a operação de serviço. O contrato de mensagem definidos os operandos e os resultados foram no corpo da mensagem e que o operador estava em um cabeçalho de mensagem. Log de mensagens pode ser configurado para observar a estrutura dessa mensagem.  
+ Neste ponto, as mensagens personalizadas definidas pelo usuário passaram entre o cliente e a operação de serviço. O contrato de mensagem definiu que os operandos e os resultados estavam no corpo da mensagem e que o operador estava em um cabeçalho de mensagem. O log de mensagens pode ser configurado para observar essa estrutura de mensagens.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

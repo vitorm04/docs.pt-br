@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c947dcd3fa3a71d5bbfdf742b106bf56d8444fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b1575d484c58afa3558d9f5b446473b4c89bc51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596740"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948004"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Como: criar, inicializar e configurar opções de rastreamento
 As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída de rastreamento.  
@@ -65,7 +65,7 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
  Além de especificar o nome de uma opção a ser configurada, você também deve especificar um valor para a opção. Esse valor é um Inteiro. Para <xref:System.Diagnostics.BooleanSwitch>, um valor igual a 0 corresponde a **Off** e qualquer valor diferente de zero corresponde a **On**. Para <xref:System.Diagnostics.TraceSwitch>, 0, 1, 2, 3 e 4 correspondem a **Off**, **Error**, **Warning**, **Info** e **Verbose**, respectivamente. Qualquer número maior que 4 é tratado como **Verbose** e qualquer número menor que zero é tratado como **Off**.  
   
 > [!NOTE]
->  No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, `true` para uma <xref:System.Diagnostics.BooleanSwitch> ou o texto que representa um valor de enumeração como `Error` para uma <xref:System.Diagnostics.TraceSwitch>. A linha `<add name="myTraceSwitch" value="Error" />` é equivalente a `<add name="myTraceSwitch" value="1" />`.  
+> No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, `true` para uma <xref:System.Diagnostics.BooleanSwitch> ou o texto que representa um valor de enumeração como `Error` para uma <xref:System.Diagnostics.TraceSwitch>. A linha `<add name="myTraceSwitch" value="Error" />` é equivalente a `<add name="myTraceSwitch" value="1" />`.  
   
  Para que os usuários finais possam definir as opções de rastreamento de um aplicativo, você deve fornecer uma documentação detalhada das opções no aplicativo. É necessário fornecer detalhes sobre quais opções controlam o que e como ativá-las e desativá-las. Você também deve fornecer ao usuário final um arquivo .config que tem a Ajuda apropriada nos comentários.  
   
@@ -75,11 +75,11 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
 2. Se o projeto não contiver um arquivo de configuração (app.config ou Web.config), no menu **Projeto**, selecione **Adicionar Novo Item**.  
   
-    - **Visual Basic:** No **Adicionar Novo Item** diálogo caixa, escolha **arquivo de configuração de aplicativo**.  
+    - **Visual Basic:** Na caixa de diálogo **Adicionar novo item** , escolha **arquivo de configuração de aplicativo**.  
   
          O arquivo de configuração de aplicativo será criado e aberto. Este é um documento XML cujo elemento raiz é `<configuration>.`  
   
-    - **Visual C#:** No **Adicionar Novo Item** diálogo caixa, escolha **arquivo XML**. Nomeie esse arquivo **app.config**. No editor de XML, após a declaração XML, adicione o seguinte XML:  
+    - **Visual C#:** Na caixa de diálogo **Adicionar novo item** , escolha **arquivo XML**. Nomeie esse arquivo **app.config**. No editor de XML, após a declaração XML, adicione o seguinte XML:  
   
         ```xml  
         <configuration>  

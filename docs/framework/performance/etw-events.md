@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa36399320a8c396a222619172264a32f3eb3505
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0462bcb3bc39c0ccbe8521729df9456cf15d7a69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723596"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955744"
 ---
 # <a name="etw-events-in-the-net-framework"></a>Eventos ETW no .NET Framework
 O rastreamento de eventos para Windows (ETW) é um sistema de rastreamento de alto desempenho, baixa sobrecarga e escalonável fornecido pelos sistemas operacionais Windows. Ele complementa o suporte de depuração e criação de perfil fornecido pelo .NET Framework e pode ser usado para solucionar problemas de uma variedade de cenários.  
   
- No .NET Framework, o rastreamento de eventos ETW está disponível para o CLR (Common Language Runtime), a [Biblioteca de Paralelismo de Tarefas](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) e o [PLINQ (LINQ Paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ No .NET Framework, o rastreamento de eventos ETW está disponível para o CLR (Common Language Runtime), a [Biblioteca de Paralelismo de Tarefas](../../standard/parallel-programming/task-parallel-library-tpl.md) e o [PLINQ (LINQ Paralelo)](../../standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Eventos ETW na biblioteca de paralelismo de tarefas e no PLINQ](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)  
@@ -29,5 +29,5 @@ O rastreamento de eventos para Windows (ETW) é um sistema de rastreamento de al
 ## <a name="see-also"></a>Consulte também
 
 - [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
-- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [TPL (Biblioteca de Paralelismo de Tarefas)](../../standard/parallel-programming/task-parallel-library-tpl.md)
+- [PLINQ (LINQ paralelo)](../../standard/parallel-programming/parallel-linq-plinq.md)

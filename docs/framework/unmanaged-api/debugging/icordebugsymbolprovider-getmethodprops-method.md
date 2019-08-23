@@ -1,18 +1,18 @@
 ---
-title: Método ICorDebugSymbolProvider::GetMethodProps
+title: 'Método ICorDebugSymbolProvider:: GetMethodProps'
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f6971c7991f5e54973d96d9b3f662b54be564d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95610bc527b8f5b90df906b6260eb636d61dbcd8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771335"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957303"
 ---
-# <a name="icordebugsymbolprovidergetmethodprops-method"></a>Método ICorDebugSymbolProvider::GetMethodProps
-Retorna informações sobre as propriedades do método, como o método token de metadados e informações sobre seus parâmetros genéricos, considerando um endereço virtual relativo (RVA) nesse método.  
+# <a name="icordebugsymbolprovidergetmethodprops-method"></a>Método ICorDebugSymbolProvider:: GetMethodProps
+Retorna informações sobre as propriedades do método, como o token de metadados do método e informações sobre seus parâmetros genéricos, considerando um endereço virtual relativo (RVA) nesse método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,35 +29,35 @@ HRESULT GetMethodProps(
   
 ## <a name="parameters"></a>Parâmetros  
  `codeRVA`  
- [in] Um endereço virtual relativo no método sobre quais informações deverá ser recuperado.  
+ no Um endereço virtual relativo no método sobre quais informações serão recuperadas.  
   
  `pMethodToken`  
- [out] Um ponteiro para o token de metadados do método.  
+ fora Um ponteiro para o token de metadados do método.  
   
  `pcGenericParams`  
- [out] Um ponteiro para o número de parâmetros genéricos associados com esse método.  
+ fora Um ponteiro para o número de parâmetros genéricos associados a este método.  
   
  `cbSignature`  
- [in] O tamanho do `signature` matriz. Consulte a seção Comentários.  
+ no O tamanho da `signature` matriz. Consulte a seção Comentários.  
   
  `pcbSignature`  
- [out] Um ponteiro para o tamanho de retornado `signature` matriz.  
+ fora Um ponteiro para o tamanho da matriz retornada `signature` .  
   
  `signature`  
- [out] Um buffer que contém as assinaturas de typespec de todos os parâmetros genéricos.  
+ fora Um buffer que contém as assinaturas TypeSpec de todos os parâmetros genéricos.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter o tamanho necessário do que o método `signature` matriz, defina a `cbSignature` argumento como 0 e `signature` para **nulo**. Quando o método retorna, `pcbSignature` conterá o número de bytes necessários para o `signature` matriz.  
+ Para obter o tamanho necessário da matriz `signature` do método, defina o `cbSignature` argumento como 0 e `signature` como **nulo**. Quando o método retornar, `pcbSignature` conterá o número de bytes necessários para a `signature` matriz.  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

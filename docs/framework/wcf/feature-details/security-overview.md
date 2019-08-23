@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: f1c0fba82761d42324eb53655b36ef7a3570d5b3
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868908"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949352"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Visão geral da segurança do Windows Communication Foundation
 O Windows Communication Foundation (WCF) é uma plataforma de programação distribuída baseada em mensagem SOAP, e a proteção de mensagens entre clientes e serviços é essencial para proteger os dados. O WCF fornece uma plataforma versátil e interoperável para trocar mensagens seguras com base na infraestrutura de segurança existente e nos padrões de segurança reconhecidos para mensagens SOAP.  
   
 > [!NOTE]
->  Para obter um guia abrangente sobre a segurança do WCF, consulte [diretrizes de segurança do WCF](https://go.microsoft.com/fwlink/?LinkID=158912).  
+> Para obter um guia abrangente sobre a segurança do WCF, consulte [diretrizes de segurança do WCF](https://go.microsoft.com/fwlink/?LinkID=158912).  
   
  O WCF usa conceitos que são familiares se você tiver criado aplicativos seguros e distribuídos com tecnologias existentes, como HTTPS, segurança integrada do Windows ou nomes de usuário e senhas para autenticar usuários. O WCF não só se integra a infraestruturas de segurança existentes, mas também estende a segurança distribuída além dos domínios somente do Windows usando mensagens SOAP seguras. Considere o WCF uma implementação de mecanismos de segurança existentes com a principal vantagem de usar o SOAP como o protocolo, além dos protocolos existentes. Por exemplo, as credenciais que identificam um cliente ou um serviço, como nome de usuário e senha ou certificados X. 509, têm perfis SOAP baseados em XML interoperáveis. Usando esses perfis, as mensagens são trocadas com segurança, tirando proveito de especificações abertas, como assinaturas digitais XML e criptografia XML. Para obter uma lista de especificações, consulte [protocolos de serviços Web com suporte em associações de interoperabilidade fornecidas pelo sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   
@@ -89,7 +89,7 @@ O Windows Communication Foundation (WCF) é uma plataforma de programação dist
   
  Um terceiro modo de segurança usa ambos os modos anteriores e traz as vantagens de ambos. Esse modo é chamado `TransportWithMessageCredential`. Nesse modo, a segurança da mensagem é usada para autenticar o cliente e a segurança de transporte é usada para autenticar o servidor e fornecer confidencialidade e integridade da mensagem. Graças a isso, o `TransportWithMessageCredential` modo de segurança é quase tão rápido quanto o modo de segurança de transporte e fornece extensibilidade de autenticação de cliente da mesma maneira que a segurança de mensagem. No entanto, ao contrário do modo de segurança da mensagem, ele não fornece segurança completa de ponta a ponta.  
   
-### <a name="access-control"></a>Controle de acesso  
+### <a name="access-control"></a>Controle de Acesso  
  O *controle de acesso* também é conhecido como autorização. A *autorização* permite que usuários diferentes tenham privilégios diferentes para exibir dados. Por exemplo, como os arquivos de recursos humanos de uma empresa contêm dados confidenciais de funcionários, somente os gerentes têm permissão para exibir dados de funcionários. Além disso, os gerentes podem exibir apenas os dados para seus subordinados diretos. Nesse caso, o controle de acesso é baseado na função ("gerente"), bem como na identidade específica do gerente (para impedir que um gerente examine os registros de funcionário de outro gerente).  
   
  No WCF, os recursos de controle de acesso são fornecidos por meio da integração com <xref:System.Security.Permissions.PrincipalPermissionAttribute> o Common Language Runtime (CLR) e por meio de um conjunto de APIs conhecido como *modelo de identidade*. Para obter detalhes sobre o controle de acesso e autorização baseada em declarações, consulte estendendo a [segurança](../../../../docs/framework/wcf/extending/extending-security.md).  

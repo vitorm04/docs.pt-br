@@ -2,18 +2,18 @@
 title: Tipos conhecidos
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: f2a5e6d5f5755d15bdc642ea3e64fb44af05cdab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebcf5e4a1e6d587a3047e3faffb03847715f7a85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989887"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952867"
 ---
 # <a name="known-types"></a>Tipos conhecidos
-Este exemplo demonstra como especificar informações sobre tipos derivados em um contrato de dados. Contratos de dados permitem que você passe dados estruturados para e de serviços. Na programação orientada a objeto, um tipo que herda de outro tipo pode ser usado no lugar do tipo original. Na programação orientada a serviços, esquemas, em vez de tipos são comunicados e, portanto, a relação entre tipos não é preservada. O <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo permite que as informações sobre tipos derivados para ser incluído no contrato de dados. Se esse mecanismo não é usado, um tipo derivado não pode ser enviado ou recebido em que um tipo base é esperado.  
+Este exemplo demonstra como especificar informações sobre tipos derivados em um contrato de dados. Os contratos de dados permitem que você transmita dados estruturados de e para serviços. Na programação orientada a objeto, um tipo que herda de outro tipo pode ser usado no lugar do tipo original. Na programação orientada a serviços, os esquemas em vez dos tipos são comunicados e, portanto, a relação entre os tipos não é preservada. O <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo permite que informações sobre tipos derivados sejam incluídas no contrato de dados. Se esse mecanismo não for usado, um tipo derivado não poderá ser enviado ou recebido onde um tipo base for esperado.  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
  O contrato de serviço para o serviço usa números complexos, conforme mostrado no código de exemplo a seguir.  
   
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- O <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> é aplicado para o `ComplexNumber` classe para indicar quais campos da classe podem ser passados entre o cliente e o serviço. Derivado `ComplexNumberWithMagnitude` classe pode ser usada no lugar de `ComplexNumber`. O <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo a `ComplexNumber` tipo indicará isso.  
+ O <xref:System.Runtime.Serialization.DataContractAttribute> `ComplexNumber` e <xref:System.Runtime.Serialization.DataMemberAttribute> é aplicado à classe para indicar quais campos da classe podem ser passados entre o cliente e o serviço. A classe `ComplexNumberWithMagnitude` derivada pode ser usada no lugar de `ComplexNumber`. O <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo`ComplexNumber` no tipo indica isso.  
   
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -53,7 +53,7 @@ public class ComplexNumber
 }  
 ```  
   
- O `ComplexNumberWithMagnitude` deriva do tipo `ComplexNumber` , mas adiciona um membro de dados adicionais, `Magnitude`.  
+ O `ComplexNumberWithMagnitude` tipo deriva de `ComplexNumber` , mas adiciona um membro de dados adicional `Magnitude`,.  
   
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -71,7 +71,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Para demonstrar o recurso de tipos conhecidos, o serviço é implementado de tal forma que ele retorna um `ComplexNumberWithMagnitude` somente para adição e subtração. (Mesmo que o contrato especifica `ComplexNumber`, isso é permitido devido a `KnownTypeAttribute` atributo). Multiplicação e divisão ainda retornará a base `ComplexNumber` tipo.  
+ Para demonstrar o recurso de tipos conhecidos, o serviço é implementado de forma que ele retorne `ComplexNumberWithMagnitude` apenas para adição e subtração. (Embora o contrato especifique `ComplexNumber`, isso é permitido por causa `KnownTypeAttribute` do atributo). Multiplicação e divisão ainda retornam o `ComplexNumber` tipo base.  
   
 ```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -114,7 +114,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- No cliente, o contrato de serviço e o contrato de dados são definidos no generatedClient.cs de arquivo de origem, que é gerado pelo [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) de metadados de serviço. Porque o <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo é especificado no contrato de dados do serviço, o cliente é capaz de receber ambas as `ComplexNumber` e `ComplexNumberWithMagnitude` classes quando usar o serviço. O cliente detecta se ele tem um `ComplexNumberWithMagnitude` e gerar a saída apropriada:  
+ No cliente, o contrato de serviço e o contrato de dados são definidos no arquivo de origem generatedClient.cs, que é gerado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) a partir de metadados de serviço. Como o <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo é especificado no contrato de dados do serviço, o cliente é capaz de receber as `ComplexNumber` classes e `ComplexNumberWithMagnitude` ao usar o serviço. O cliente detecta se ele tem um `ComplexNumberWithMagnitude` e gera a saída apropriada:  
   
 ```csharp
 // Create a client  
@@ -139,7 +139,7 @@ else
 }  
 ```  
   
- Quando você executar o exemplo, as solicitações e respostas da operação são exibidas na janela do console de cliente. Observe que uma magnitude é impresso para adição e subtração, mas não para multiplicação e divisão por causa da maneira o serviço foi implementado. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações e respostas da operação são exibidas na janela do console do cliente. Observe que uma magnitude é impressa para adição e subtração, mas não para multiplicação e divisão devido à maneira como o serviço foi implementado. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -156,17 +156,17 @@ No magnitude was sent from the service
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  

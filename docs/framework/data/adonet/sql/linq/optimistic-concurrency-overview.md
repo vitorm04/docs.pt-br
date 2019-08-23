@@ -2,25 +2,25 @@
 title: 'Simultaneidade otimista: Visão geral'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: a6e654ea1ae199cb086e9377454d05e6eaa03ad6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a61d4c5b35f3797539fe845045b8a959b0351350
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609959"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938623"
 ---
 # <a name="optimistic-concurrency-overview"></a>Simultaneidade otimista: Visão geral
-controle de simultaneidade otimista de suporte de[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] . A tabela a seguir descreve os termos que se aplicam a simultaneidade otimista em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação:  
+controle de simultaneidade otimista de suporte de[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] . A tabela a seguir descreve os termos que se aplicam [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] à simultaneidade otimista na documentação do:  
   
 |Termos|Descrição|  
 |-----------|-----------------|  
 |simultaneidade|A situação em que dois ou mais usuários tentarem ao mesmo tempo atualizar a mesma linha de base de dados.|  
 |conflito de concorrência|A situação em que dois ou mais usuários tentarem ao mesmo tempo enviar conflitar valores em uma ou mais colunas de uma linha.|  
 |controle de simultaneidade|A técnica usada para resolver conflitos de simultaneidade.|  
-|controle de simultaneidade otimista|A técnica que investiga primeiro se outras transações alterados valores em uma linha antes de permitir alterações para ser enviada.<br /><br /> Compare com *controle de simultaneidade pessimista*, que bloqueia o registro para evitar conflitos de simultaneidade.<br /><br /> *Otimista* controle é chamado porque então considera as chances de uma transação que interfere com outra para ser improvável.|  
-|resolução de conflitos|O processo de atualizar um item conflitante ver o base de dados novamente e depois reconciliar diferenças.<br /><br /> Quando um objeto é atualizado, o perseguidor de alteração de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] contém os seguintes dados:<br /><br /> -Verifique os valores originalmente obtidas do banco de dados e usado para a atualização.<br />-Os novos valores de banco de dados de consulta subsequentes.<br /><br /> em[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] determina se o objeto está em conflito (isto é, se um ou mais de seus valores de membros foram alterados). Se o objeto está em conflito, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] em seguida, determina quais de seus membros estão em conflito.<br /><br /> Qualquer conflito do membro que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] descobrir é adicionado a uma lista de conflito.|  
+|controle de simultaneidade otimista|A técnica que investiga primeiro se outras transações alterados valores em uma linha antes de permitir alterações para ser enviada.<br /><br /> Compare com *controle de simultaneidade pessimista*, que bloqueia o registro para evitar conflitos de simultaneidade.<br /><br /> O controle *otimista* é tão chamado porque considera as chances de uma transação interferir com outra para ser improvável.|  
+|resolução de conflitos|O processo de atualizar um item conflitante ver o base de dados novamente e depois reconciliar diferenças.<br /><br /> Quando um objeto é atualizado, o perseguidor de alteração de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] contém os seguintes dados:<br /><br /> -Os valores originalmente obtidos do banco de dados e usados para a verificação de atualização.<br />-Os novos valores de banco de dados da consulta subsequente.<br /><br /> em[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] determina se o objeto está em conflito (isto é, se um ou mais de seus valores de membros foram alterados). Se o objeto estiver em conflito, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] o próximo determina quais dos seus membros estão em conflito.<br /><br /> Qualquer conflito do membro que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] descobrir é adicionado a uma lista de conflito.|  
   
- No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objeto, um *conflito de simultaneidade otimista* ocorre quando ambas das seguintes condições forem verdadeiras:  
+ No modelo de objeto,umconflitodesimultaneidadeotimistaocorrequandoasduascondiçõesaseguirsão[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verdadeiras:  
   
 - Tentativas de cliente para enviar alterações para o base de dados.  
   
@@ -29,7 +29,7 @@ controle de simultaneidade otimista de suporte de[!INCLUDE[vbtecdlinq](../../../
  A resolução desse conflito inclui a descoberta de membros do objeto estão em conflito, e então decidir o que você deseja fazer sobre ele.  
   
 > [!NOTE]
->  Somente os membros mapeados como <xref:System.Data.Linq.Mapping.UpdateCheck.Always> ou <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> participam de verificação de simultaneidade otimista. Nenhuma verificação é executada para <xref:System.Data.Linq.Mapping.UpdateCheck.Never>marcado membros. Para obter mais informações, consulte <xref:System.Data.Linq.Mapping.UpdateCheck>.  
+> Somente os membros mapeados como <xref:System.Data.Linq.Mapping.UpdateCheck.Always> ou <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> participam de verificação de simultaneidade otimista. Nenhuma verificação é executada para <xref:System.Data.Linq.Mapping.UpdateCheck.Never>marcado membros. Para obter mais informações, consulte <xref:System.Data.Linq.Mapping.UpdateCheck>.  
   
 ## <a name="example"></a>Exemplo  
  Por exemplo, o seguinte cenário, inicia User1 para preparar uma atualização ver o base de dados para uma linha. User1 recebe uma linha com valores de Alfreds, de Maria, e de vendas.  
@@ -44,26 +44,26 @@ controle de simultaneidade otimista de suporte de[!INCLUDE[vbtecdlinq](../../../
 |User1|Alfred||Marketing|  
 |Usuário2||Mary|Serviço|  
   
- Você pode resolver conflitos como este de maneiras diferentes. Para obter mais informações, confira [Como: Gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ Você pode resolver conflitos como este de maneiras diferentes. Para obter mais informações, confira [Como: Gerenciar conflitos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)de alterações.  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>Lista de verificação de detecção e de resolução de conflitos  
  Você pode detectar e resolver conflitos em qualquer nível de detalhe. Em um extremo, você pode resolver todos os conflitos em uma das três maneiras (consulte <xref:System.Data.Linq.RefreshMode>) sem consideração adicional. No extremo outro, você pode designar uma ação específica para cada tipo de conflito em cada membro em conflito.  
   
 - Especificar ou revise as opções de <xref:System.Data.Linq.Mapping.UpdateCheck> no seu modelo de objeto.  
   
-     Para obter mais informações, confira [Como: Especificar quais membros são testados para conflitos de simultaneidade](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
+     Para obter mais informações, confira [Como: Especifique quais membros são testados para conflitos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)de simultaneidade.  
   
 - Em bloco try/catch de sua chamada a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, especifique ponto em que você deseja exceções seja lançada.  
   
-     Para obter mais informações, confira [Como: Especificar quando exceções de simultaneidade são geradas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
+     Para obter mais informações, confira [Como: Especifique quando as exceções de simultaneidade são geradas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
   
 - Determine quanto detalhes de conflito você deseja recuperar, e inclua código em seus bloco try/catch de acordo.  
   
-     Para obter mais informações, confira [Como: Recuperar informações de conflito de entidade](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) e [como: Recuperar informações de conflito de membro](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
+     Para obter mais informações, confira [Como: Recupere informações](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) de conflitos de [entidade e como: Recuperar informações](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)de conflito de membros.  
   
-- Incluir em seu `try` / `catch` como você deseja resolver os conflitos que você descubra de código.  
+- Inclua no seu `try` /códigocomovocê desejaresolverosváriosconflitosquevocêdescobre`catch` .  
   
-     Para obter mais informações, confira [Como: Resolver conflitos mantendo valores de banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [como: Resolver conflitos substituindo valores de banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), e [como: Resolver conflitos mesclando com valores de banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
+     Para obter mais informações, confira [Como: Resolva conflitos retendo os valores](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)do banco de dados, [como: Resolva conflitos, substituindo valores](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)de banco de dados e [como: Resolva conflitos mesclando com valores](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)de banco de dados.  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>Tipos LINQ to SQL que oferecem suporte a descoberta e a resolução de conflitos  
  As classes e os recursos para oferecer suporte a resolução de conflitos em concorrência otimista em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] incluem o seguinte:  
@@ -90,4 +90,4 @@ controle de simultaneidade otimista de suporte de[!INCLUDE[vbtecdlinq](../../../
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Como: Gerenciar conflitos de alterações](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

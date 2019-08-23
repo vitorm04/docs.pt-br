@@ -2,21 +2,21 @@
 title: <add> de <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 97d3ecca369aeffb7b2e8464f385eeae13bd470f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e7f0eac41e69e959aa6c4f8f3cfb488d4ea2917
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704473"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926795"
 ---
-# <a name="add-of-claimtyperequirements"></a>\<Adicionar > de \<claimTypeRequirements >
-Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer na credencial federada. Por exemplo, serviços de estado os requisitos de credenciais de entrada, que devem ter um determinado conjunto de tipos de declaração.  
+# <a name="add-of-claimtyperequirements"></a>\<Adicionar > de \<ClaimTypeRequirements >
+Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer na credencial federada. Por exemplo, os serviços definem os requisitos de credenciais de entrada, que devem ter um determinado conjunto de tipos de declaração.  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
-\<segurança >  
+\<> de associação  
+\<> de segurança  
 \<issuedTokenParameters>  
 \<claimTypeRequirements>  
   
@@ -36,8 +36,8 @@ Especifica os tipos de declarações obrigatórias e opcionais esperados para ap
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|claimType|Um URI que define o tipo de declaração. Por exemplo, para adquirir um produto de um site, o usuário deve apresentar um cartão de crédito válido com limite de crédito suficiente. O tipo de declaração seria o URI do cartão de crédito.|  
-|isOptional|Um valor booliano que especifica se esta é uma declaração opcional. Defina esse atributo como `false` quando se trata de uma declaração necessária.<br /><br /> Você pode usar esse atributo quando o serviço solicita algumas informações, mas não a exige. Por exemplo, se você precisar que o usuário insira seu nome, sobrenome e endereço, mas decidir que o número de telefone é opcional.|  
+|claimType|Um URI que define o tipo de uma declaração. Por exemplo, para comprar um produto de um site da Web, o usuário deve apresentar um cartão de crédito válido com limite de crédito suficiente. O tipo de declaração seria o URI do cartão de crédito.|  
+|isOptional|Um valor booliano que especifica se isso é para uma declaração opcional. Defina esse atributo como `false` se for uma declaração necessária.<br /><br /> Você pode usar esse atributo quando o serviço solicitar algumas informações, mas não precisar dela. Por exemplo, se você precisar que o usuário insira seu nome, sobrenome e endereço, mas decida que o número de telefone é opcional.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -46,13 +46,13 @@ Especifica os tipos de declarações obrigatórias e opcionais esperados para ap
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica uma coleção de tipos de declaração exigidos.<br /><br /> Em um cenário federado, os serviços de estado os requisitos de credenciais de entrada. Por exemplo, as credenciais de entrada devem ter um determinado conjunto de tipos de declaração. Cada elemento nesta coleção Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer em uma credencial federada.|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Especifica uma coleção de tipos de declaração necessários.<br /><br /> Em um cenário federado, os serviços atendem aos requisitos de credenciais de entrada. Por exemplo, as credenciais de entrada devem ter um determinado conjunto de tipos de declaração. Cada elemento nessa coleção especifica os tipos de declarações obrigatórias e opcionais que devem aparecer em uma credencial federada.|  
   
 ## <a name="remarks"></a>Comentários  
- Em um cenário federado, os serviços de estado os requisitos de credenciais de entrada. Por exemplo, as credenciais de entrada devem ter um determinado conjunto de tipos de declaração. Esse requisito é manifestado em uma política de segurança. Quando um credenciais de solicitações de cliente de um serviço federado (por exemplo, o CardSpace), ele coloca os requisitos em uma solicitação de token (RequestSecurityToken) para que o serviço federado pode emitir as credenciais que satisfazem os requisitos de forma adequada.  
+ Em um cenário federado, os serviços atendem aos requisitos de credenciais de entrada. Por exemplo, as credenciais de entrada devem ter um determinado conjunto de tipos de declaração. Esse requisito é manifestado em uma política de segurança. Quando um cliente solicita credenciais de um serviço federado (por exemplo, CardSpace), ele coloca os requisitos em uma solicitação de token (RequestSecurityToken) para que o serviço federado possa emitir as credenciais que atendem aos requisitos de acordo.  
   
 ## <a name="example"></a>Exemplo  
- A configuração a seguir adiciona dois requisitos de tipo de declaração para uma associação de segurança.  
+ A configuração a seguir adiciona dois requisitos de tipo de declaração a uma associação de segurança.  
   
 ```xml  
 <bindings>
@@ -80,10 +80,10 @@ Especifica os tipos de declarações obrigatórias e opcionais esperados para ap
 - <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
 - <xref:System.ServiceModel.Configuration.ClaimTypeElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [\<claimTypeRequirements>](claimtyperequirements-element.md)
+- [Associações](../../../wcf/bindings.md)
+- [Estendendo associações](../../../wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [Como: Criar uma associação personalizada usando o SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Segurança de associação personalizada](../../../wcf/samples/custom-binding-security.md)

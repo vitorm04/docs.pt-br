@@ -2,18 +2,18 @@
 title: Propriedade e separação do esquema do usuário no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 2702f56e8b3b339487ffacf7bc1ceb077d4d8b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 520772acc5edd812f64c61cc7fdda9db3441c87c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645728"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961101"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propriedade e separação do esquema do usuário no SQL Server
 Um conceito central de segurança do SQL Server é que os proprietários de objetos têm permissões irrevogáveis administrá-los. Você não pode remover os privilégios de um proprietário de objeto e não pode eliminar usuários de um banco de dados se eles possuírem objetos nele.  
   
 ## <a name="user-schema-separation"></a>Separação do esquema do usuário  
- A separação do esquema do usuário permite maior flexibilidade em gerenciar permissões do objeto de banco de dados. Um *esquema* é um contêiner denominado para objetos de banco de dados, que lhe permite agrupar objetos em namespaces separados. Por exemplo, o banco de dados de exemplo AdventureWorks contém esquemas para Production, Sales e HumanResources.  
+ A separação do esquema do usuário permite maior flexibilidade em gerenciar permissões do objeto de banco de dados. Um *esquema* é um contêiner nomeado para objetos de banco de dados, que permite que você agrupe objetos em namespaces separados. Por exemplo, o banco de dados de exemplo AdventureWorks contém esquemas para Production, Sales e HumanResources.  
   
  A sintaxe de nomeação de quatro partes para referir-se a objetos especifica o nome do esquema.  
   
@@ -40,7 +40,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  Se você removê-los do banco de dados modelo, eles não aparecerão em novos bancos de dados.  
   
 > [!NOTE]
->  Os esquemas `sys` e `INFORMATION_SCHEMA` são reservados para objetos do sistema. Você não pode criar objetos nesses esquemas e não pode removê-los.  
+> Os esquemas `sys` e `INFORMATION_SCHEMA` são reservados para objetos do sistema. Você não pode criar objetos nesses esquemas e não pode removê-los.  
   
 #### <a name="the-dbo-schema"></a>O esquema dbo  
  O esquema `dbo` é o esquema padrão para um banco de dados recém-criado. O esquema `dbo` é de propriedade da conta de usuário do `dbo`. Por padrão, os usuários criados com o comando CREATE USER do Transact-SQL têm `dbo` como o esquema padrão.  
@@ -48,14 +48,14 @@ Server.Database.DatabaseSchema.DatabaseObject
  Os usuários que são atribuídos ao esquema `dbo` não herdam as permissões da conta de usuário do `dbo`. Nenhuma permissão é herdada de um esquema por usuários; as permissões de esquema são herdadas pelos objetos de banco de dados contidos no esquema.  
   
 > [!NOTE]
->  Quando os objetos de banco de dados são referenciados usando um nome de uma parte, o SQL Server primeiro procura no esquema padrão do usuário. Se o objeto não for encontrado lá, o SQL Server procurará em seguida no esquema `dbo`. Se o objeto não estiver no esquema `dbo`, um erro será retornado.  
+> Quando os objetos de banco de dados são referenciados usando um nome de uma parte, o SQL Server primeiro procura no esquema padrão do usuário. Se o objeto não for encontrado lá, o SQL Server procurará em seguida no esquema `dbo`. Se o objeto não estiver no esquema `dbo`, um erro será retornado.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obter mais informações sobre a propriedade e os esquemas do objeto, consulte os recursos a seguir.  
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Separação do esquema de usuário](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Descreve as alterações introduzidas pela separação do esquema do usuário. Inclui o novo comportamento, o seu impacto na propriedade, as exibições do catálogo e as permissões.|  
+|[Separação de esquema de usuário](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Descreve as alterações introduzidas pela separação do esquema do usuário. Inclui o novo comportamento, o seu impacto na propriedade, as exibições do catálogo e as permissões.|  
   
 ## <a name="see-also"></a>Consulte também
 

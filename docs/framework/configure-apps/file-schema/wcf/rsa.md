@@ -2,15 +2,15 @@
 title: <rsa>
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: 0e307069bd3a98153cc66147ba7bcf511cf13a8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd8e5ab11a7c019a8fe967f1c14b88a922a16c33
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670646"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934744"
 ---
 # <a name="rsa"></a>\<rsa>
-Um cliente WCF seguro que se conecta a um ponto de extremidade com esta identidade verifica que as declarações apresentadas pelo servidor contém uma afirmação que contém a chave pública RSA usada para construir essa identidade.  
+Um cliente WCF seguro que se conecta a um ponto de extremidade com essa identidade verifica se as declarações apresentadas pelo servidor contêm uma declaração que contém a chave pública RSA usada para construir essa identidade.  
   
  \<identity>  
 \<rsa>  
@@ -28,7 +28,7 @@ Um cliente WCF seguro que se conecta a um ponto de extremidade com esta identida
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|Valor |Cadeia de caracteres opcional. O RSA valor da chave pública a ser comparado com o cliente.|  
+|value|Cadeia de caracteres opcional. O valor da chave pública RSA a ser comparado no cliente.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -37,15 +37,15 @@ Um cliente WCF seguro que se conecta a um ponto de extremidade com esta identida
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica a identidade do serviço para ser autenticado pelo cliente.|  
+|[\<identity>](identity.md)|Especifica a identidade do serviço a ser autenticado pelo cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- Uma verificação RSA permite que você restrinja especificamente a autenticação para um único certificado com base em sua chave RSA ou gerado seu próprio valor de chave RSA. Este permite mais rígida a autenticação de uma chave RSA específica à custa o serviço não é mais trabalhar com os clientes existentes se o valor da chave RSA é alterado.  
+ Uma verificação RSA permite restringir especificamente a autenticação a um único certificado com base em sua chave RSA ou gerar seu próprio valor de chave RSA. Isso permite a autenticação mais estrita de uma chave RSA específica na despesa do serviço que não está mais funcionando com os clientes existentes se o valor da chave RSA for alterado.  
   
- Para obter mais informações sobre como usar a identidade para validar um serviço para um cliente, consulte [identidade de serviço e autenticação](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Para obter mais informações sobre como usar a identidade para validar um serviço para um cliente, consulte [identidade e autenticação de serviço](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="example"></a>Exemplo  
- O código de configuração a seguir especifica o valor de chave pública de um certificado X.509 que é usado para autenticar um servidor.  
+ O código de configuração a seguir especifica o valor de chave pública de um certificado X. 509 que é usado para autenticar um servidor.  
   
 ```xml  
 <identity>
@@ -59,5 +59,5 @@ Um cliente WCF seguro que se conecta a um ponto de extremidade com esta identida
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.RsaEndpointIdentity>
-- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Autenticação e identidade de serviço](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

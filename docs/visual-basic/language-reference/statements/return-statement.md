@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: 7f8ec0456576133d37dd19b5c0f8878a7ac57dab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af49ea95d7f9d01072190ac3ccf6ba2f1041347e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783897"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957670"
 ---
 # <a name="return-statement-visual-basic"></a>Instrução Return (Visual Basic)
-Retorna o controle para o código que chamou um `Function`, `Sub`, `Get`, `Set`, ou `Operator` procedimento.  
+Retorna o controle para o código que chamou `Function`um `Sub`procedimento `Get`, `Set`,, `Operator` ou.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,20 +29,20 @@ Return expression
   
 ## <a name="part"></a>Parte  
  `expression`  
- Necessário em uma `Function`, `Get`, ou `Operator` procedimento. Expressão que representa o valor a ser retornado para o código de chamada.  
+ Necessário em um `Function`procedimento `Get`, ou `Operator` . Expressão que representa o valor a ser retornado para o código de chamada.  
   
 ## <a name="remarks"></a>Comentários  
- Em um `Sub` ou `Set` procedimento, o `Return` instrução é equivalente a um `Exit Sub` ou `Exit Property` instrução, e `expression` não deve ser fornecido.  
+ Em um `Sub` procedimento `Set` ou, a `Return` instrução é equivalente a uma `Exit Sub` instrução `Exit Property` or e `expression` não deve ser fornecida.  
   
- Em um `Function`, `Get`, ou `Operator` procedimento, o `Return` instrução deve incluir `expression`, e `expression` deve ser avaliada como um tipo de dados que seja conversível para o tipo de retorno do procedimento. Em um `Function` ou `Get` procedimento, você também tem a alternativa de atribuir uma expressão para o nome do procedimento para servir como o valor de retorno e, em seguida, executar uma `Exit Function` ou `Exit Property` instrução. Em um `Operator` procedimento, você deve usar `Return expression`.  
+ Em um `Function`procedimento `Get`,, `Operator` ou, a `Return` instrução deve incluir `expression`e `expression` deve ser avaliada como um tipo de dados que é conversível para o tipo de retorno do procedimento. Em um `Function` procedimento `Get` ou, você também tem a alternativa de atribuir uma expressão ao nome do procedimento para servir como o valor de retorno e, em seguida, executar `Exit Function` uma `Exit Property` instrução or. Em um `Operator` procedimento, você deve usar `Return expression`.  
   
- Você pode incluir tantos `Return` instruções conforme apropriado no mesmo procedimento.  
+ Você pode incluir `Return` quantas instruções forem apropriadas no mesmo procedimento.  
   
 > [!NOTE]
->  O código em um `Finally` bloco é executado depois de uma `Return` instrução em um `Try` ou `Catch` bloco é encontrada, mas antes que `Return` instrução é executada. Um `Return` instrução não pode ser incluída em um `Finally` bloco.  
+> O código em um `Finally` bloco é executado depois `Return` que uma instrução `Try` em `Catch` um bloco ou é encontrada, mas `Return` antes que essa instrução seja executada. Uma `Return` instrução não pode ser incluída em `Finally` um bloco.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Return` instrução várias vezes para retornar para o código de chamada quando o procedimento não precisa fazer mais nada.  
+ O exemplo a seguir usa `Return` a instrução várias vezes para retornar ao código de chamada quando o procedimento não precisa fazer mais nada.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   

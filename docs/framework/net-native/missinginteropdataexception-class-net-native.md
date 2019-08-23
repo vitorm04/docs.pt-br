@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 803709c97309f9766b6a441f5521cdcd7504862f
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3b8d84f8ea9cf8f94cb7a2b155c5d40c6de2979a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052496"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941691"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>Classe MissingInteropDataException (.NET Nativo)
-**.NET para aplicativos do Windows para Windows 10, apenas .NET nativo**  
+**.NET para aplicativos do Windows para Windows 10, somente .NET Native**  
   
  A exceção que é acionada quando um método de marshaling manual é chamado, mas os metadados de um tipo não são encontrados por análise estática ou em um arquivo de diretivas de tempo de execução.  
   
  **Namespace:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
->  O `MissingInteropDataException` classe destina-se somente para uso interno pela cadeia de ferramentas .NET Native. Ela não é destinado para uso em código de terceiros e você também não deve tratar a exceção no seu código do aplicativo. Em vez disso, elimine a exceção adicionando entradas ao seu [arquivo de diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Para obter mais informações, consulte a seção Comentários.  
+> A `MissingInteropDataException` classe é destinada exclusivamente ao uso interno da cadeia de ferramentas .net Native. Ela não é destinado para uso em código de terceiros e você também não deve tratar a exceção no seu código do aplicativo. Em vez disso, elimine a exceção adicionando entradas ao seu [arquivo de diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Para obter mais informações, consulte a seção Comentários.  
   
 ## <a name="syntax"></a>Sintaxe  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -34,7 +34,7 @@ ms.locfileid: "66052496"
   
 |Construtor|Descrição|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|Inicializa uma nova instância da classe `MissingInteropDataException` usando a ID de uma mensagem fornecida pelo sistema que descreve o erro e o tipo cujos dados estão ausentes. Este construtor é para uso interno pela cadeia de ferramentas .NET Native somente.|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|Inicializa uma nova instância da classe `MissingInteropDataException` usando a ID de uma mensagem fornecida pelo sistema que descreve o erro e o tipo cujos dados estão ausentes. Este construtor é para uso interno somente pela cadeia de ferramentas .NET Native.|  
   
 ## <a name="properties"></a>Propriedades  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66052496"
 |`protected Object MemberwiseClone()`|Cria uma cópia superficial do objeto atual. (Herdado de <xref:System.Object>.)|  
 |`public string ToString()`|Retorna a representação de cadeia de caracteres de exceção atual. (Herdado de <xref:System.Exception?displayProperty=nameWithType>.)|  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
   
 |evento|Descrição|  
 |-----------|-----------------|  
@@ -72,10 +72,10 @@ ms.locfileid: "66052496"
 ## <a name="usage-details"></a>Detalhes de uso  
  A exceção `MissingInteropDataException` é acionada quando uma chamada de método para um componente COM ou do Tempo de Execução do Windows não pode ser concluída com êxito porque as informações de tipo não estão disponíveis.  
   
- Os metadados disponíveis em um aplicativo no tempo de execução é definido pelo arquivo de diretivas (configuração XML) de tempo de execução, *. rd.xml. Para impedir que o seu aplicativo gere esta exceção, você deve modificar este arquivo para definir os metadados que devem estar presentes no tempo de execução. Geralmente, esse erro é tratado adicionando um atributo `MarshalObject`, `MarshalDelegate` ou `MarshalStructure` a um elemento de programa apropriado no arquivo de diretivas de tempo de execução. Para obter informações sobre o formato desse arquivo, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Os metadados disponíveis para um aplicativo em tempo de execução são definidos pelo arquivo de diretivas de tempo de execução (configuração XML \*),. Rd. xml. Para impedir que o seu aplicativo gere esta exceção, você deve modificar este arquivo para definir os metadados que devem estar presentes no tempo de execução. Geralmente, esse erro é tratado adicionando um atributo `MarshalObject`, `MarshalDelegate` ou `MarshalStructure` a um elemento de programa apropriado no arquivo de diretivas de tempo de execução. Para obter informações sobre o formato desse arquivo, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
->  Como essa exceção indica que os metadados exigidos pelo seu aplicativo não estão disponíveis no tempo de execução, você não deve tratar essa exceção em um bloco `try`/`catch`. Em vez disso, você deve diagnosticar a causa da exceção e eliminá-la adicionando a entrada apropriada a um arquivo de diretivas de tempo de execução.  
+> Como essa exceção indica que os metadados exigidos pelo seu aplicativo não estão disponíveis no tempo de execução, você não deve tratar essa exceção em um bloco `try`/`catch`. Em vez disso, você deve diagnosticar a causa da exceção e eliminá-la adicionando a entrada apropriada a um arquivo de diretivas de tempo de execução.  
   
  A classe `MissingInteropDataException` contém um único membro exclusivo, a propriedade `MissingType`, que indica o tipo cujos metadados são necessários para concluir uma chamada de método com êxito. Todos os membros restantes são herdados da classe base, <xref:System.Exception?displayProperty=nameWithType>.  
   

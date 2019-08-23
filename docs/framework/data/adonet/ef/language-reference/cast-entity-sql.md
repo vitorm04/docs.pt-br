@@ -2,12 +2,12 @@
 title: CONVERSÃO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489953"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935822"
 ---
 # <a name="cast-entity-sql"></a>CONVERSÃO (Entity SQL)
 Converte uma expressão de um tipo de dados para outro.  
@@ -23,13 +23,13 @@ CAST ( expression AS data_type )
  Qualquer expressão válida que seja conversível para `data_type`.  
   
  `data_type`  
- O tipo de dados fornecido pelo sistema de destino. Deve ser um tipo primitivo (escalar). O `data_type` usado depende do espaço da consulta. Se uma consulta é executada com o <xref:System.Data.EntityClient.EntityCommand>, o tipo de dados será um tipo definido no modelo conceitual. Para obter mais informações, consulte [especificação de CSDL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md). Se uma consulta é executada com o <xref:System.Data.Objects.ObjectQuery%601>, o tipo de dados será um tipo CLR (Common Language Runtime).  
+ O tipo de dados fornecido pelo sistema de destino. Deve ser um tipo primitivo (escalar). O `data_type` usado depende do espaço da consulta. Se uma consulta é executada com o <xref:System.Data.EntityClient.EntityCommand>, o tipo de dados será um tipo definido no modelo conceitual. Para obter mais informações, consulte [especificação CSDL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md). Se uma consulta é executada com o <xref:System.Data.Objects.ObjectQuery%601>, o tipo de dados será um tipo CLR (Common Language Runtime).  
   
 ## <a name="return-value"></a>Valor de retorno  
  Retorna o mesmo valor que `data_type`.  
   
 ## <a name="remarks"></a>Comentários  
- A expressão cast tem semântica semelhantes a expressão Transact-SQL converter. A expressão cast é usada para converter um valor de um tipo em um valor de outro tipo.  
+ A expressão de conversão tem semântica semelhante à expressão CONVERT do Transact-SQL. A expressão cast é usada para converter um valor de um tipo em um valor de outro tipo.  
   
 ```  
 CAST( e as T )  
@@ -48,12 +48,12 @@ CAST( e as T )
  O uso de uma expressão cast é considerado uma conversão explícita. Conversões explícitas podem truncar dados ou perder precisão.  
   
 > [!NOTE]
->  CAST tem suporte somente em tipos primitivos e tipos de membro de enumeração.  
+> CAST tem suporte somente em tipos primitivos e tipos de membro de enumeração.  
   
 ## <a name="example"></a>Exemplo  
- O seguinte [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta usa o operador CAST para converter uma expressão de um tipo de dados para outro. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
+ A consulta [!INCLUDE[esql](../../../../../../includes/esql-md.md)] a seguir usa o operador cast para converter uma expressão de um tipo de dados para outro. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como: Executar uma consulta que retorna resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna os resultados](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)de primitivatype.  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
   

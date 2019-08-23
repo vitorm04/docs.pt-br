@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 9456340834c06e87f977cd784a37f7436523d29e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 31a5aa0f147d43e94ce885c541f11b9aec4ae6d2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743143"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938647"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementando lógica de negócios (LINQ te o SQL)
 O termo “lógica de negócios” neste tópico faz referência a todas as regras personalizadas ou testes de validação que você aplica a dados antes de eles serem inseridos, atualizados ou excluídos do banco de dados. A lógica de negócios às vezes também é conhecida como "regras de negócio" ou "lógica de domínio". Em aplicativos de n camadas ela normalmente é criada como uma camada lógica para que possa ser modificada independentemente da camada de apresentação ou da camada de acesso a dados. A lógica de negócios pode ser chamada pela camada de acesso a dados antes ou depois de qualquer atualização, inserção ou exclusão de dados no banco de dados.  
   
- A lógica de negócios pode ser tão simples quanto uma validação de esquema para garantir que o tipo do campo seja compatível com o tipo da coluna da tabela. Ou pode consistir em um conjunto de objetos que interagem de maneiras arbitrariamente complexas. As regras podem ser implementadas como procedimentos armazenados no banco de dados ou como objetos na memória. No entanto, a lógica de negócios é implementada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] permite usar classes parciais e métodos parciais para separar a lógica de negócios do código de acesso a dados.  
+ A lógica de negócios pode ser tão simples quanto uma validação de esquema para garantir que o tipo do campo seja compatível com o tipo da coluna da tabela. Ou pode consistir em um conjunto de objetos que interagem de maneiras arbitrariamente complexas. As regras podem ser implementadas como procedimentos armazenados no banco de dados ou como objetos na memória. No entanto, a lógica de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] negócios é implementada, permite que você use classes parciais e métodos parciais para separar a lógica de negócios do código de acesso a dados.  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>Como o LINQ to SQL chama sua lógica de negócios  
- Quando você gera uma classe de entidade em tempo de design, manualmente ou usando o SQLMetal ou Object Relational Designer, ele é definido como uma classe parcial. Isso significa que, em um arquivo de código separado, você pode definir outra parte da classe de entidade que contém a lógica de negócios personalizada. Em tempo de compilação, as duas partes são mescladas em uma única classe. Mas, se você precisar regenerar as classes de entidade usando o SQLMetal ou Object Relational Designer, você poderá fazer isso e sua parte da classe não será modificado.  
+ Quando você gera uma classe de entidade em tempo de design, seja manualmente ou usando o Object Relational Designer ou SqlMetal, ela é definida como uma classe parcial. Isso significa que, em um arquivo de código separado, você pode definir outra parte da classe de entidade que contém a lógica de negócios personalizada. No momento da compilação, as duas partes são mescladas em uma única classe. Mas se você precisar regenerar suas classes de entidade usando o Object Relational Designer ou SqlMetal, poderá fazer isso e sua parte da classe não será modificada.  
   
  As classes parciais que definem entidades e o <xref:System.Data.Linq.DataContext> contêm métodos parciais. Esses são os pontos de extensibilidade que você pode usar para aplicar sua lógica de negócios antes e depois de qualquer atualização, inserção ou exclusão de uma entidade ou propriedade de entidade. Os métodos parciais podem ser considerados como eventos em tempo de compilação. O gerador de código define uma assinatura do método e chama os métodos nos acessadores de propriedade get e set, o construtor de `DataContext` e, em alguns casos o código em segundo plano quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado. Entretanto, se você não implementar um método parcial específico, todas as referências a ele e a definição serão removidos em tempo de compilação.  
   
  Na definição da implementação que você escreve no arquivo de código separado, você pode executar qualquer lógica personalizada que seja necessária. Você pode usar a classe parcial própria como a camada de domínio ou chamar da definição de sua implementação do método parcial em um objeto ou objetos separados. De qualquer forma, sua lógica de negócios é corretamente separada do seu código de acesso a dados e do seu código da camada de apresentação.  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>Uma visão mais profunda dos pontos de extensibilidade  
- O exemplo a seguir mostra parte do código gerado por Object Relational Designer para o `DataContext` classe que tem duas tabelas: `Customers` e `Orders`. Observe que os métodos Insert, Update e Delete são definidos para cada tabela da classe.  
+ O exemplo a seguir mostra parte do código gerado pelo Object Relational Designer para a `DataContext` classe que tem duas tabelas: `Customers` e `Orders`. Observe que os métodos Insert, Update e Delete são definidos para cada tabela da classe.  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- Se você implementar os métodos Insert, Update e Delete em sua classe parcial, o tempo de execução do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] os chamará em vez de seus próprios métodos padrão quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> for chamado. Isso permite que você substitua o comportamento padrão para operações de criação/leitura/atualização/exclusão. Para obter mais informações, confira [Passo a passo: Personalizando a inserção, atualização e exclusão de comportamento de classes de entidade](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
+ Se você implementar os métodos Insert, Update e Delete em sua classe parcial, o tempo de execução do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] os chamará em vez de seus próprios métodos padrão quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> for chamado. Isso permite que você substitua o comportamento padrão para operações de criação/leitura/atualização/exclusão. Para obter mais informações, confira [Passo a passo: Personalizando o comportamento de inserção, atualização e exclusão de classes](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)de entidade.  
   
  O método `OnCreated` é chamado no construtor da classe.  
   
@@ -88,7 +88,7 @@ public MyNorthWindDataContext(string connection) :
         }  
 ```  
   
- As classes de entidade têm três métodos que são chamados pelo tempo de execução do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] em que a entidade é criada, carregada, e validada (quando `SubmitChanges` é chamado). As classes de entidade também têm dois métodos parciais para cada propriedade, que é chamado antes que a propriedade é definida e um que são chamados depois. O exemplo de código a seguir mostra alguns dos métodos gerados para a classe `Customer`:  
+ As classes de entidade têm três métodos que são chamados pelo tempo de execução do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] em que a entidade é criada, carregada, e validada (quando `SubmitChanges` é chamado). As classes de entidade também têm dois métodos parciais para cada propriedade, um que é chamado antes que a propriedade seja definida e uma que seja chamada após. O exemplo de código a seguir mostra alguns dos métodos gerados para a classe `Customer`:  
   
 ```vb  
 #Region "Extensibility Method Definitions"  
@@ -155,7 +155,7 @@ public string CustomerID
 }  
 ```  
   
- Na sua parte da classe, você escreve uma definição de implementação do método. No Visual Studio, depois de digitar `partial` você verá o IntelliSense para as definições do método na outra parte da classe.  
+ Na sua parte da classe, você escreve uma definição de implementação do método. No Visual Studio, depois de digitar `partial` , você verá o IntelliSense para as definições de método na outra parte da classe.  
   
 ```vb  
 Partial Public Class Customer  
@@ -181,11 +181,11 @@ partial class Customer
   
  [Passo a passo: Personalizando o comportamento de inserção, atualização e exclusão de classes de entidade](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Passo a passo: Adicionando validação a Classes de entidade](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
+ [Passo a passo: Adicionando validação a classes de entidade](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Classes e métodos parciais](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
-- [Métodos Parciais](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [Métodos Parciais](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [SqlMetal.exe (Ferramenta de Geração de Código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

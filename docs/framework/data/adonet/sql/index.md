@@ -2,12 +2,12 @@
 title: SQL Server e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: f30d9d715a2d94deee788f92cfc8eed0cba706de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c58c6da7a6028c9167c73af820e922f59b528f15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033885"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938088"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server e ADO.NET
 Esta seção descreve os recursos e os comportamentos que são específicos ao Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>).  
@@ -15,7 +15,7 @@ Esta seção descreve os recursos e os comportamentos que são específicos ao P
  O <xref:System.Data.SqlClient> fornece acesso às versões do SQL Server, o que encapsula protocolos específicos ao banco de dados. A funcionalidade do provedor de dados foi criada para ser semelhante aos provedores de dados .NET Framework para OLE DB, ODBC e Oracle. O <xref:System.Data.SqlClient> inclui um analisador de protocolo TDS para se comunicar diretamente com o SQL Server.  
   
 > [!NOTE]
->  Para usar o Provedor de Dados .NET Framework para SQL Server, um aplicativo deve fazer referência ao namespace <xref:System.Data.SqlClient>.  
+> Para usar o Provedor de Dados .NET Framework para SQL Server, um aplicativo deve fazer referência ao namespace <xref:System.Data.SqlClient>.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [SQL Server Security](../../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)  

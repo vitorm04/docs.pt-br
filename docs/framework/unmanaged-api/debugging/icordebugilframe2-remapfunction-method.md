@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdcc2eccbb24a92643415db8e5d267033ac1ca0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75004f646c01897ef3e3016b073220ad33a0d925
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967575"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>Método ICorDebugILFrame2::RemapFunction
-Remapeia uma função editada, especificando o novo deslocamento do Microsoft intermediate language (MSIL)  
+Remapeia uma função editada especificando o novo deslocamento da MSIL (Microsoft Intermediate Language)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,27 +37,27 @@ HRESULT RemapFunction (
   
 ## <a name="parameters"></a>Parâmetros  
  `newILOffset`  
- [in] Novo deslocamento da MSIL do quadro de pilhas no qual o ponteiro de instrução deve ser colocado. Esse valor deve ser um ponto de sequência.  
+ no O novo deslocamento MSIL do quadro de pilha no qual o ponteiro de instrução deve ser colocado. Esse valor deve ser um ponto de sequência.  
   
- É responsabilidade do chamador para garantir a validade desse valor. Por exemplo, o deslocamento do MSIL não é válido se ele está fora dos limites da função.  
+ É responsabilidade do chamador garantir a validade desse valor. Por exemplo, o deslocamento de MSIL não será válido se estiver fora dos limites da função.  
   
 ## <a name="remarks"></a>Comentários  
- Quando a função de um quadro foi editada, o depurador pode chamar o `RemapFunction` método trocar a versão mais recente da função do quadro para que ele pode ser executado. A execução do código será iniciada no deslocamento especificado do MSIL.  
+ Quando a função de um quadro é editada, o depurador pode chamar `RemapFunction` o método para alternar a versão mais recente da função do quadro para que possa ser executado. A execução do código será iniciada no deslocamento de MSIL fornecido.  
   
 > [!NOTE]
->  Chamando `RemapFunction`, como chamar [icordebugilframe:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), imediatamente invalidará todas as interfaces de depuração que estão relacionadas à geração de um rastreamento de pilha do thread. Essas interfaces incluem [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame e ICorDebugNativeFrame.  
+> Chamar `RemapFunction`, como chamar [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), invalidará imediatamente todas as interfaces de depuração relacionadas à geração de um rastreamento de pilha para o thread. Essas interfaces incluem [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame e ICorDebugNativeFrame.  
   
- O `RemapFunction` método pode ser chamado somente no contexto do quadro atual e somente em um dos seguintes casos:  
+ O `RemapFunction` método pode ser chamado somente no contexto do quadro atual e apenas em um dos seguintes casos:  
   
-- Após o recebimento de uma [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) retorno de chamada que ainda não foi continuado.  
+- Após o recebimento de um retorno de chamada [ICorDebugManagedCallback2:: FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) que ainda não foi continuado.  
   
-- Embora a execução do código é interrompida devido uma [icordebugmanagedcallback:: Editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) eventos para este quadro.  
+- Enquanto a execução do código é interrompida devido a um evento [ICorDebugManagedCallback:: EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) para esse quadro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

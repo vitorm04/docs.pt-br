@@ -8,15 +8,15 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 5c95272c672d9b35d61e2fca8cccdbc532ef6776
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 609fe4896a2b01b8a69ff8a3d0854c85ddbd6a26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211291"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969091"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definindo valores padrão com o ShouldSerialize e os métodos de redefinição
-`ShouldSerialize` e `Reset` são métodos opcionais que você pode fornecer para uma propriedade, caso ela não tenha um valor padrão simples. Se a propriedade tem um valor padrão simples, você deve aplicar o <xref:System.ComponentModel.DefaultValueAttribute> e forneça o valor padrão para o construtor de classe de atributo em vez disso. Qualquer um desses mecanismos habilita os recursos a seguir no designer:
+`ShouldSerialize` e `Reset` são métodos opcionais que você pode fornecer para uma propriedade, caso ela não tenha um valor padrão simples. Se a propriedade tiver um valor padrão simples, você deverá aplicar o <xref:System.ComponentModel.DefaultValueAttribute> e fornecer o valor padrão ao construtor de classe de atributo em vez disso. Qualquer um desses mecanismos habilita os recursos a seguir no designer:
 
 - A propriedade fornecerá uma indicação visual no navegador de propriedades se tiver sido modificado de seu valor padrão.
 
@@ -25,7 +25,7 @@ ms.locfileid: "65211291"
 - O designer gera um código mais eficiente.
 
     > [!NOTE]
-    >  Alguma se aplicar a <xref:System.ComponentModel.DefaultValueAttribute> ou forneça `Reset` *PropertyName* e `ShouldSerialize` *PropertyName* métodos. Não use os dois.
+    > Aplique ou forneça <xref:System.ComponentModel.DefaultValueAttribute> `Reset`os métodos *PropertyName* e `ShouldSerialize` *PropertyName* . Não use os dois.
 
  O método `Reset`*PropertyName* define uma propriedade para o valor padrão, conforme mostrado no seguinte fragmento de código.
 
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
->  Se uma propriedade não tem um `Reset` método, não é marcado com um <xref:System.ComponentModel.DefaultValueAttribute>e não tem um valor padrão fornecido na sua declaração, o `Reset` opção para essa propriedade está desabilitada no menu de atalho do **propriedades** janela do Designer de formulários do Windows no Visual Studio.
+> Se uma propriedade não tiver `Reset` um método, não estiver marcada com um <xref:System.ComponentModel.DefaultValueAttribute>e não tiver um valor padrão fornecido em sua declaração, a `Reset` opção dessa propriedade será desabilitada no menu de atalho da janela **Propriedades** do o Designer de Formulários do Windows no Visual Studio.
 
- Designers como o Visual Studio usam o `ShouldSerialize` *PropertyName* método para verificar se uma propriedade foi alterada do seu valor padrão e escrever código no formulário apenas se uma propriedade for alterado, permitindo, portanto, um código mais eficiente geração. Por exemplo:
+ Designers como o Visual Studio usam o `ShouldSerialize`método *PropertyName* para verificar se uma propriedade foi alterada de seu valor padrão e gravar código no formulário somente se uma propriedade for alterada, permitindo assim uma geração de código mais eficiente. Por exemplo:
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -141,7 +141,7 @@ public class MyControl : Control {
 }
 ```
 
- Nesse caso, mesmo quando o valor da variável particular acessada pela `MyFont` é de propriedade `null`, o navegador de propriedade não exibe `null`; em vez disso, ele exibe o <xref:System.Windows.Forms.Control.Font%2A> propriedade do pai, se não for `null`, ou o padrão <xref:System.Windows.Forms.Control.Font%2A> valor definido na <xref:System.Windows.Forms.Control>. Assim, o valor padrão para `MyFont` não pode ser simplesmente definido e um <xref:System.ComponentModel.DefaultValueAttribute> não pode ser aplicado a essa propriedade. Em vez disso, os métodos `ShouldSerialize` e `Reset` devem ser implementados para a propriedade `MyFont`.
+ Nesse caso, mesmo quando o valor da variável privada acessado `MyFont` pela propriedade é `null`, o navegador de propriedades não é exibido `null`; em vez disso, ele <xref:System.Windows.Forms.Control.Font%2A> exibe a propriedade do pai, se não `null`for, ou o valor <xref:System.Windows.Forms.Control.Font%2A> padrão definido em <xref:System.Windows.Forms.Control>. Portanto, o valor padrão `MyFont` para não pode ser simplesmente definido, <xref:System.ComponentModel.DefaultValueAttribute> e um não pode ser aplicado a essa propriedade. Em vez disso, os métodos `ShouldSerialize` e `Reset` devem ser implementados para a propriedade `MyFont`.
 
 ## <a name="see-also"></a>Consulte também
 

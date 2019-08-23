@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controlling clocks interactively [WPF]
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
-ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d18f395974750a6b85458f636a27f6101e7978f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947232"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951343"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>Como: Controlar interativamente um relógio
-Um <xref:System.Windows.Media.Animation.Clock> do objeto <xref:System.Windows.Media.Animation.ClockController> propriedade permite que você interativamente Iniciar, pausar, retomar, buscar, Avançar o relógio para seu período de preenchimento e parar o relógio. Somente o relógio raiz de uma árvore de tempo pode ser controlado interativamente.  
+A <xref:System.Windows.Media.Animation.Clock> propriedade de <xref:System.Windows.Media.Animation.ClockController> um objeto permite que você inicie, pause, retome, busque, avance o relógio para seu período de preenchimento interativamente e pare o relógio. Somente o relógio raiz de uma árvore de tempo pode ser controlado interativamente.  
   
 > [!NOTE]
->  Há outras maneiras de controlar interativamente animações que não exigem que você trabalhe diretamente com relógios: você também pode usar Storyboards. Storyboards são suportados em código e marcação. Por exemplo, consulte [animar uma propriedade usando um Storyboard](how-to-animate-a-property-by-using-a-storyboard.md) ou o [visão geral da animação](animation-overview.md).  
+> Há outras maneiras de controlar interativamente animações que não exigem que você trabalhe diretamente com relógios: você também pode usar storyboards. Os storyboards têm suporte tanto na marcação quanto no código. Para obter um exemplo, consulte [animar uma propriedade usando um storyboard](how-to-animate-a-property-by-using-a-storyboard.md) ou a [visão geral da animação](animation-overview.md).  
   
  No exemplo a seguir, vários botões são usados para controlar interativamente um relógio de animação.  
   

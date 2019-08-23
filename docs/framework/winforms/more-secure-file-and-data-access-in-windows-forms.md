@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 3389261fe9ed3d1653b92c90419033380a403387
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 94b165757de636b2570798a21fd7c483264e37c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567419"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949948"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acesso mais seguro a arquivos e dados no Windows Forms
 O .NET Framework usa permissões para ajudar a proteger recursos e dados. Onde seu aplicativo pode ler ou gravar dados depende das permissões concedidas ao aplicativo. Quando seu aplicativo é executado em um ambiente de confiança parcial, talvez você não tenha acesso aos seus dados ou talvez você precise alterar a maneira como você acessa os dados.  
@@ -26,7 +26,7 @@ O .NET Framework usa permissões para ajudar a proteger recursos e dados. Onde s
  Quando você encontrar uma restrição de segurança, você tem duas opções: declarar a permissão (supondo que ela foi concedida ao seu aplicativo) ou use uma versão do recurso escrita para trabalhar em confiança parcial. As seções a seguir abordam como trabalhar com arquivos, o banco de dados e o acesso ao Registro de aplicativos que são executados em um ambiente parcialmente confiável.  
   
 > [!NOTE]
->  Por padrão, as ferramentas que geram implantações do ClickOnce padronizam essas implantações para solicitar confiança total dos computadores nos quais elas são executadas. Se você decidir que deseja os benefícios de segurança adicionais de execução em confiança parcial, será necessário alterar esse padrão no Visual Studio ou em uma das ferramentas de SDK do Windows (Mage. exe ou MageUI. exe). Para obter mais informações sobre segurança dos Windows Forms e sobre como determinar o nível de confiança apropriado para seu aplicativo, consulte [Visão geral de Segurança nos Windows Forms](security-in-windows-forms-overview.md).  
+> Por padrão, as ferramentas que geram implantações do ClickOnce padronizam essas implantações para solicitar confiança total dos computadores nos quais elas são executadas. Se você decidir que deseja os benefícios de segurança adicionais de execução em confiança parcial, será necessário alterar esse padrão no Visual Studio ou em uma das ferramentas de SDK do Windows (Mage. exe ou MageUI. exe). Para obter mais informações sobre segurança dos Windows Forms e sobre como determinar o nível de confiança apropriado para seu aplicativo, consulte [Visão geral de Segurança nos Windows Forms](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Acesso a arquivos  
  A <xref:System.Security.Permissions.FileIOPermission> classe controla o acesso a arquivos e pastas no .NET Framework. Por padrão, o sistema de segurança não concede <xref:System.Security.Permissions.FileIOPermission> aos ambientes de confiança parcial, como a intranet local e as zonas de Internet. No entanto, um aplicativo que requer acesso a arquivos ainda funcionará nesses ambientes se você modificar o design do seu aplicativo ou usa métodos diferentes para acessar arquivos. Por padrão, a zona da intranet local recebe o direito de ter o mesmo acesso a sites e o mesmo acesso a diretórios, para conectar-se novamente ao site de sua origem e ler seu diretório de instalação. Por padrão, a zona da Internet, é apenas o direito para se conectar novamente ao site de sua origem.  
@@ -35,7 +35,7 @@ O .NET Framework usa permissões para ajudar a proteger recursos e dados. Onde s
  Uma maneira de lidar com não ter a permissão de acesso ao arquivo é solicitar que o usuário forneça informações de arquivo específicas <xref:System.Windows.Forms.OpenFileDialog> usando <xref:System.Windows.Forms.SaveFileDialog> a classe ou. Essa interação de usuário ajuda a fornecer alguma garantia de que o aplicativo não pode carregar arquivos particulares ou substituir arquivos importantes maliciosamente. Os <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> métodos <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> e fornecem acesso de arquivo de leitura e gravação abrindo o fluxo de arquivos para o arquivo especificado pelo usuário. Os métodos também ajudam a proteger o arquivo do usuário ocultando o caminho do arquivo.  
   
 > [!NOTE]
->  Essas permissões são diferentes dependendo se o seu aplicativo estiver na zona da Internet ou zona da Intranet. Os aplicativos de zona da Internet só <xref:System.Windows.Forms.OpenFileDialog>podem usar o, enquanto os aplicativos de intranet têm a permissão de caixa de diálogo arquivo irrestrito.  
+> Essas permissões são diferentes dependendo se o seu aplicativo estiver na zona da Internet ou zona da Intranet. Os aplicativos de zona da Internet só <xref:System.Windows.Forms.OpenFileDialog>podem usar o, enquanto os aplicativos de intranet têm a permissão de caixa de diálogo arquivo irrestrito.  
   
  A <xref:System.Security.Permissions.FileDialogPermission> classe especifica qual tipo de caixa de diálogo de arquivo seu aplicativo pode usar. A tabela a seguir mostra o valor que você deve ter para <xref:System.Windows.Forms.FileDialog> usar cada classe.  
   
@@ -45,14 +45,14 @@ O .NET Framework usa permissões para ajudar a proteger recursos e dados. Onde s
 |<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
   
 > [!NOTE]
->  A permissão específica não é solicitada até <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> que o método seja realmente chamado.  
+> A permissão específica não é solicitada até <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> que o método seja realmente chamado.  
   
  A permissão para exibir uma caixa de diálogo de arquivo não concede ao aplicativo acesso completo a todos os <xref:System.Windows.Forms.FileDialog>Membros <xref:System.Windows.Forms.OpenFileDialog>das classes <xref:System.Windows.Forms.SaveFileDialog> , e. Para obter as permissões exatas necessárias para chamar cada método, consulte o tópico de referência para esse método na documentação da biblioteca de classes do .NET Framework.  
   
  O exemplo de código a seguir <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> usa o método para abrir um arquivo especificado pelo usuário <xref:System.Windows.Forms.RichTextBox> em um controle. O exemplo requer <xref:System.Security.Permissions.FileDialogPermission> e o valor <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> de enumeração associado. O exemplo demonstra como manipular o <xref:System.Security.SecurityException> para determinar se o recurso de salvamento deve ser desabilitado. Este exemplo requer que o <xref:System.Windows.Forms.Form> tenha um <xref:System.Windows.Forms.Button> controle chamado `ButtonOpen`e um <xref:System.Windows.Forms.RichTextBox> controle chamado `RtfBoxMain`.  
   
 > [!NOTE]
->  A lógica de programação para o recurso de gravação não é mostrado no exemplo.  
+> A lógica de programação para o recurso de gravação não é mostrado no exemplo.  
   
 ```vb  
 Private Sub ButtonOpen_Click(ByVal sender As System.Object, _  
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  No Visual C#, certifique-se de adicionar código para habilitar o manipulador de eventos. Ao usar o código do exemplo anterior, o código a seguir mostra como habilitar o manipulador de eventos.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+> No Visual C#, certifique-se de adicionar código para habilitar o manipulador de eventos. Ao usar o código do exemplo anterior, o código a seguir mostra como habilitar o manipulador de eventos.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Outros arquivos  
  Às vezes, você precisará ler ou gravar em arquivos que o usuário não especifica, como quando você precisa salvar as configurações do aplicativo. Na intranet local e zonas da Internet, o aplicativo não terá permissão para armazenar dados em um arquivo local. No entanto, seu aplicativo poderá armazenar dados no armazenamento isolado. Armazenamento isolado é um compartimento de dados abstrato (não um local de armazenamento específico) que contém um ou mais arquivos de armazenamento isolados, chamados de armazenamentos, que contêm os locais reais dos diretórios nos quais os dados são armazenados. Permissões de acesso a <xref:System.Security.Permissions.FileIOPermission> arquivos como não são necessárias; em <xref:System.Security.Permissions.IsolatedStoragePermission> vez disso, a classe controla as permissões para armazenamento isolado. Por padrão, os aplicativos que são executados na intranet local e zonas da Internet podem armazenar dados usando armazenamento isolado; No entanto, configurações como cota de disco podem variar. Para obter mais informações sobre armazenamento isolado, consulte [Armazenamento Isolado](../../standard/io/isolated-storage.md).  

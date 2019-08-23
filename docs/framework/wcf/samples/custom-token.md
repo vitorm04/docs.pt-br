@@ -2,31 +2,31 @@
 title: Token personalizado
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 11b89f6d4f2800f079ba6576801b39c85324f6e0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 7203b55b01f51851fa94fedc4950a05343b792bd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425068"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953573"
 ---
 # <a name="custom-token"></a>Token personalizado
-Este exemplo demonstra como adicionar uma implementação personalizada de token em um aplicativo do Windows Communication Foundation (WCF). O exemplo usa um `CreditCardToken` passar com segurança as informações sobre cartões de crédito do cliente para o serviço. O token é passado no cabeçalho da mensagem do WS-Security e é assinado e criptografado usando o elemento de associação de segurança simétrica juntamente com outros cabeçalhos de mensagem e o corpo da mensagem. Isso é útil em casos em que os tokens internos não são suficientes. Este exemplo demonstra como fornecer um token de segurança personalizada para um serviço em vez de usar um dos tokens internos. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.
+Este exemplo demonstra como adicionar uma implementação de token personalizada a um aplicativo Windows Communication Foundation (WCF). O exemplo usa um `CreditCardToken` para transmitir informações com segurança sobre cartões de crédito do cliente para o serviço. O token é passado no cabeçalho da mensagem WS-Security e é assinado e criptografado usando o elemento de ligação de segurança simétrica junto com o corpo da mensagem e outros cabeçalhos de mensagem. Isso é útil em casos em que os tokens internos não são suficientes. Este exemplo demonstra como fornecer um token de segurança personalizado para um serviço em vez de usar um dos tokens internos. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.
 
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
  Para resumir, este exemplo demonstra o seguinte:
 
-- Como um cliente pode passar um token de segurança personalizada para um serviço.
+- Como um cliente pode passar um token de segurança personalizado para um serviço.
 
-- Como o serviço pode consumir e validar um token de segurança personalizada.
+- Como o serviço pode consumir e validar um token de segurança personalizado.
 
-- Como o código do serviço WCF pode obter as informações sobre tokens de segurança recebido, incluindo o token de segurança personalizada.
+- Como o código do serviço WCF pode obter as informações sobre tokens de segurança recebidos, incluindo o token de segurança personalizado.
 
-- Como o certificado X.509 do servidor é usado para proteger a chave simétrica usada para assinatura e criptografia de mensagem.
+- Como o certificado X. 509 do servidor é usado para proteger a chave simétrica usada para criptografia e assinatura de mensagens.
 
-## <a name="client-authentication-using-a-custom-security-token"></a>Autenticação de cliente usando um Token de segurança personalizado
- O serviço expõe um ponto de extremidade é criado por meio de programação usando `BindingHelper` e `EchoServiceHost` classes. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com uma ligação personalizada usando `SymmetricSecurityBindingElement` e `HttpTransportBindingElement`. Este exemplo define o `SymmetricSecurityBindingElement` para usar o certificado X.509 de um serviço para proteger a chave simétrica durante a transmissão e para passar um personalizado `CreditCardToken` em um cabeçalho de mensagem do WS-Security como um token de segurança assinado e criptografado. O comportamento Especifica as credenciais de serviço que devem ser usados para autenticação de cliente e também informações sobre o certificado X.509 de serviço.
+## <a name="client-authentication-using-a-custom-security-token"></a>Autenticação de cliente usando um token de segurança personalizado
+ O serviço expõe um único ponto de extremidade que é criado `BindingHelper` programaticamente usando classes e `EchoServiceHost` . O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com uma associação `SymmetricSecurityBindingElement` personalizada `HttpTransportBindingElement`usando e. Este exemplo define o `SymmetricSecurityBindingElement` para usar o certificado X. 509 de um serviço para proteger a chave simétrica durante a transmissão e passar um `CreditCardToken` personalizado em um cabeçalho de mensagem do WS-Security como um token de segurança assinado e criptografado. O comportamento especifica as credenciais de serviço que devem ser usadas para autenticação de cliente e também informações sobre o certificado X. 509 do serviço.
 
 ```csharp
 public static class BindingHelper
@@ -47,7 +47,7 @@ public static class BindingHelper
 }
 ```
 
- Para consumir um cartão de crédito token na mensagem, o exemplo usa as credenciais de serviço personalizado para fornecer essa funcionalidade. A classe de credenciais de serviço está localizada na `CreditCardServiceCredentials` de classe e é adicionada às coleções de comportamentos do host do serviço no `EchoServiceHost.InitializeRuntime` método.
+ Para consumir um token de cartão de crédito na mensagem, o exemplo usa credenciais de serviço personalizadas para fornecer essa funcionalidade. A classe de credenciais de serviço está localizada `CreditCardServiceCredentials` na classe e é adicionada às coleções de comportamentos do host de serviço `EchoServiceHost.InitializeRuntime` no método.
 
 ```csharp
 class EchoServiceHost : ServiceHost
@@ -83,7 +83,7 @@ class EchoServiceHost : ServiceHost
 }
 ```
 
- O ponto de extremidade do cliente é configurado de maneira semelhante, como o ponto de extremidade de serviço. O cliente usa o mesmo `BindingHelper` classe para criar uma associação. O restante da instalação está localizado no `Client` classe. O cliente também define informações para caber no `CreditCardToken` e informações sobre o certificado X.509 de serviço no código a instalação adicionando um `CreditCardClientCredentials` instância com os dados adequados para a coleção de comportamentos de ponto de extremidade do cliente. O exemplo usa o certificado X.509 com o nome da entidade definida como `CN=localhost` como o certificado de serviço.
+ O ponto de extremidade do cliente é configurado de maneira semelhante ao ponto de extremidade de serviço. O cliente usa a mesma `BindingHelper` classe para criar uma associação. O restante da instalação está localizado na `Client` classe. O cliente também define as informações a serem contidas `CreditCardToken` no e no certificado X. 509 no código de instalação, adicionando uma `CreditCardClientCredentials` instância com os dados apropriados à coleção de comportamentos de ponto de extremidade do cliente. O exemplo usa o certificado X. 509 com o nome da `CN=localhost` entidade definido como o certificado de serviço.
 
 ```csharp
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();
@@ -112,10 +112,10 @@ Console.WriteLine("Echo service returned: {0}", client.Echo());
 channelFactory.Close();
 ```
 
-## <a name="custom-security-token-implementation"></a>Implementação de Token de segurança personalizada
- Para habilitar um token de segurança personalizadas no WCF, crie uma representação de objeto do token de segurança personalizada. O exemplo tem essa representação `CreditCardToken` classe. A representação de objeto é responsável por manter todas as informações de token de segurança relevantes e fornecer uma lista de chaves de segurança contidas no token de segurança. Nesse caso, o token de segurança do cartão de crédito não contém nenhuma chave de segurança.
+## <a name="custom-security-token-implementation"></a>Implementação do token de segurança personalizado
+ Para habilitar um token de segurança personalizado no WCF, crie uma representação de objeto do token de segurança personalizado. O exemplo tem essa representação na `CreditCardToken` classe. A representação do objeto é responsável por manter todas as informações de token de segurança relevantes e fornecer uma lista de chaves de segurança contidas no token de segurança. Nesse caso, o token de segurança do cartão de crédito não contém nenhuma chave de segurança.
 
- A próxima seção descreve o que deve ser feito para permitir que um token personalizado para serem transmitidos durante a transmissão e consumido por um ponto de extremidade do WCF.
+ A próxima seção descreve o que deve ser feito para permitir que um token personalizado seja transmitido pela rede e consumido por um ponto de extremidade do WCF.
 
 ```csharp
 class CreditCardToken : SecurityToken
@@ -152,12 +152,12 @@ class CreditCardToken : SecurityToken
 }
 ```
 
-## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Obtendo o cartão de crédito personalizado Token e para a mensagem
- Serializadores de token de segurança no WCF são responsáveis por criar uma representação de objeto de tokens de segurança do XML na mensagem e criar um formulário XML dos tokens de segurança. Eles também são responsáveis por outras funcionalidades como leitura e gravação de identificadores de chave que aponta para tokens de segurança, mas este exemplo usa apenas token relacionados à funcionalidade de segurança. Para habilitar um personalizado de token é necessário implementar seu próprio serializador de token de segurança. Este exemplo usa o `CreditCardSecurityTokenSerializer` classe para essa finalidade.
+## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Obtendo o token do cartão de crédito personalizado de e para a mensagem
+ Os serializadores de token de segurança no WCF são responsáveis por criar uma representação de objeto de tokens de segurança do XML na mensagem e criar um formulário XML dos tokens de segurança. Eles também são responsáveis por outras funcionalidades, como leitura e gravação de identificadores de chave que apontam para tokens de segurança, mas este exemplo usa apenas a funcionalidade relacionada ao token de segurança. Para habilitar um token personalizado, você deve implementar seu próprio serializador de token de segurança. Este exemplo usa a `CreditCardSecurityTokenSerializer` classe para essa finalidade.
 
  No serviço, o serializador personalizado lê o formulário XML do token personalizado e cria a representação de objeto de token personalizado a partir dele.
 
- No cliente, o `CreditCardSecurityTokenSerializer` classe grava as informações contidas na representação de objeto de token de segurança no gravador de XML.
+ No cliente, a `CreditCardSecurityTokenSerializer` classe grava as informações contidas na representação do objeto de token de segurança no gravador de XML.
 
 ```csharp
 public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
@@ -240,20 +240,20 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 }
 ```
 
-## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a>Como o provedor de Token e Classes de autenticador de Token são criadas
- As credenciais de cliente e o serviço serão responsáveis por fornecer a instância do Gerenciador de token de segurança. A instância do Gerenciador de token de segurança é usada para obter os provedores de token, autenticadores de token e serializadores de token.
+## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a>Como as classes do provedor de token e do autenticador de token são criadas
+ As credenciais de cliente e serviço são responsáveis por fornecer a instância do Gerenciador de token de segurança. A instância do Gerenciador de token de segurança é usada para obter provedores de token, autenticadores de token e serializadores de token.
 
- O provedor de token cria uma representação de objeto do token com base nas informações contidas nas credenciais do cliente ou serviço. A representação de objeto de token é gravada para a mensagem usando o serializador de token (discutido na seção anterior).
+ O provedor de token cria uma representação de objeto do token com base nas informações contidas nas credenciais do cliente ou do serviço. A representação do objeto token é gravada na mensagem usando o serializador de token (abordado na seção anterior).
 
- O autenticador de token valida os tokens que chegam na mensagem. A entrada de representação do objeto de token é criada pelo serializador de token. Essa representação de objeto é então passada para o autenticador de token para validação. Depois que o token é validado com êxito, o autenticador de token retorna uma coleção de `IAuthorizationPolicy` objetos que representam as informações contidas no token. Essas informações são usadas posteriormente, durante o processamento da mensagem para executar as decisões de autorização e fornecer declarações para o aplicativo. Neste exemplo, o autenticador de token de cartão de crédito usa `CreditCardTokenAuthorizationPolicy` para essa finalidade.
+ O autenticador de token valida os tokens que chegam na mensagem. A representação de objeto de token de entrada é criada pelo serializador de token. Essa representação de objeto é passada para o autenticador de token para validação. Depois que o token é validado com êxito, o autenticador de token `IAuthorizationPolicy` retorna uma coleção de objetos que representam as informações contidas no token. Essas informações são usadas posteriormente durante o processamento de mensagens para executar decisões de autorização e para fornecer declarações para o aplicativo. Neste exemplo, o autenticador de token de cartão `CreditCardTokenAuthorizationPolicy` de crédito usa para essa finalidade.
 
- O serializador de token é responsável por obter a representação de objeto do token de e para a transmissão. Isso é discutido na seção anterior.
+ O serializador de token é responsável por obter a representação do objeto do token de e para a conexão. Isso é abordado na seção anterior.
 
- Neste exemplo, podemos usar um provedor de token apenas no cliente e um autenticador de token apenas no serviço, porque queremos transmitir um token de cartão de crédito somente na direção para o serviço de cliente.
+ Neste exemplo, usamos um provedor de token somente no cliente e um autenticador de token somente no serviço, pois queremos transmitir um token de cartão de crédito somente na direção do cliente para o serviço.
 
- A funcionalidade no cliente está localizada na `CreditCardClientCredentials`, `CreditCardClientCredentialsSecurityTokenManager` e `CreditCardTokenProvider` classes.
+ A funcionalidade no cliente está localizada nas `CreditCardClientCredentials` `CreditCardClientCredentialsSecurityTokenManager` classes e `CreditCardTokenProvider` .
 
- No serviço, a funcionalidade reside na `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` e `CreditCardTokenAuthorizationPolicy` classes.
+ No serviço, a funcionalidade `CreditCardServiceCredentials`reside nas classes `CreditCardTokenAuthenticator` , `CreditCardServiceCredentialsSecurityTokenManager`e `CreditCardTokenAuthorizationPolicy` .
 
 ```csharp
     public class CreditCardClientCredentials : ClientCredentials
@@ -497,8 +497,8 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
     }
 ```
 
-## <a name="displaying-the-callers-information"></a>Exibindo informações de chamadores
- Para exibir informações do chamador, use o `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` conforme mostrado no código de exemplo a seguir. O `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contém declarações de autorização associadas ao chamador atual. As declarações são fornecidas, o `CreditCardToken` classe no seu `AuthorizationPolicies` coleção.
+## <a name="displaying-the-callers-information"></a>Exibindo as informações dos chamadores
+ Para exibir as informações do chamador, use o `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` conforme mostrado no código de exemplo a seguir. O `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contém declarações de autorização associadas ao chamador atual. As declarações são fornecidas pela `CreditCardToken` classe em sua `AuthorizationPolicies` coleção.
 
 ```csharp
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)
@@ -536,18 +536,18 @@ string GetCallerCreditCardNumber()
 }
 ```
 
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
-## <a name="setup-batch-file"></a>Arquivo de lote
- O arquivo em lotes de Setup. bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar o aplicativo hospedado no IIS que exige a segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar entre computadores ou para trabalhar em um caso de não hospedados.
+## <a name="setup-batch-file"></a>Arquivo em lotes de instalação
+ O arquivo em lotes setup. bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar o aplicativo hospedado pelo IIS que requer segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar em computadores ou para funcionar em um caso não hospedado.
 
- O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada.
+ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes para que eles possam ser modificados para serem executados na configuração apropriada.
 
 - Criando o certificado do servidor:
 
-     As seguintes linhas do `Setup.bat` arquivo em lotes de criar o certificado do servidor a ser usado. O `%SERVER_NAME%` variável Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O padrão nesse arquivo em lotes é localhost. Se você alterar o `%SERVER_NAME%` variável, você deve percorrer os arquivos Client.cs e Service.cs e substitua todas as instâncias do localhost pelo nome do servidor que você usa no script de Setup. bat.
+     As linhas a seguir do `Setup.bat` arquivo em lotes criam o certificado do servidor a ser usado. A `%SERVER_NAME%` variável especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O padrão neste arquivo em lotes é localhost. Se você alterar a `%SERVER_NAME%` variável, deverá percorrer os arquivos Client.cs e Service.cs e substituir todas as instâncias do localhost pelo nome do servidor que você usa no script setup. bat.
 
-     O certificado é armazenado no repositório My (pessoal) sob o `LocalMachine` local do repositório. O certificado é armazenado no repositório de LocalMachine para os serviços hospedados no IIS. Para serviços de hospedagem interna, você deve modificar o arquivo em lotes para armazenar o certificado de cliente no local de repositório CurrentUser, substituindo a cadeia de caracteres LocalMachine por CurrentUser.
+     O certificado é armazenado no meu repositório (pessoal) no local `LocalMachine` do repositório. O certificado é armazenado no armazenamento LocalMachine para os serviços hospedados pelo IIS. Para serviços hospedados internamente, você deve modificar o arquivo em lotes para armazenar o certificado do cliente no local do repositório CurrentUser, substituindo a cadeia de caracteres LocalMachine por CurrentUser.
 
     ```
     echo ************
@@ -561,7 +561,7 @@ string GetCallerCreditCardNumber()
 
 - Instalando o certificado do servidor no repositório de certificados confiáveis do cliente:
 
-     As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.
+     As linhas a seguir no arquivo em lotes setup. bat copiam o certificado do servidor no repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — esta etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.
 
     ```
     echo ************
@@ -570,7 +570,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
-- Para habilitar o acesso à chave privada do certificado do serviço hospedado no IIS, a conta de usuário sob a qual o processo hospedados no IIS está em execução deve ser concedida permissões apropriadas para a chave privada. Isso é realizado pelas últimas etapas no script de Setup. bat.
+- Para habilitar o acesso à chave privada do certificado do serviço hospedado pelo IIS, a conta de usuário sob a qual o processo hospedado pelo IIS está em execução deve receber as permissões apropriadas para a chave privada. Isso é feito pelas últimas etapas do script setup. bat.
 
     ```
     echo ************
@@ -584,47 +584,47 @@ string GetCallerCreditCardNumber()
     ```
 
 > [!NOTE]
->  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2012 Prompt de comando. A variável de ambiente PATH definido dentro de pontos de Prompt de comando do Visual Studio 2012 para o diretório que contém executáveis exigido pelo script de Setup. bat.
+> O arquivo em lotes setup. bat foi projetado para ser executado em um prompt de comando do Visual Studio 2012. A variável de ambiente PATH definida no prompt de comando do Visual Studio 2012 aponta para o diretório que contém os executáveis exigidos pelo script setup. bat.
 
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar e compilar o exemplo
 
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador
 
-1. Abra uma janela de Prompt de comando do Visual Studio 2012 com privilégios de administrador e execute Setup. bat da pasta de instalação de exemplo. Essa opção instala todos os certificados necessários para executar o exemplo. Certifique-se de que o caminho inclui a pasta onde se encontra Makecert.exe.
+1. Abra uma janela do prompt de comando do Visual Studio 2012 com privilégios de administrador e execute Setup. bat na pasta de instalação de exemplo. Isso instala todos os certificados necessários para executar o exemplo. Certifique-se de que o caminho inclui a pasta onde o MakeCert. exe está localizado.
 
 > [!NOTE]
->  Certifique-se de remover os certificados com a execução CleanUp quando terminar com o exemplo. Outros exemplos de segurança usam os mesmos certificados.  
+> Certifique-se de remover os certificados executando Cleanup. bat quando terminar com o exemplo. Outros exemplos de segurança usam os mesmos certificados.  
   
-1. Inicie o Client.exe no diretório client\bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
+1. Inicie o Client. exe no diretório client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
   
-2. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+2. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-run-the-sample-across-computer"></a>Para executar o exemplo em um computador  
+#### <a name="to-run-the-sample-across-computer"></a>Para executar o exemplo no computador  
   
-1. Crie um diretório no computador do serviço para os binários de serviço.  
+1. Crie um diretório no computador de serviço para os binários de serviço.  
   
-2. Copie os arquivos de programa de serviço para o diretório de serviço no computador do serviço. Não se esqueça de copiar CreditCardFile.txt; Caso contrário, o autenticador de cartão de crédito não é possível validar as informações de cartão de crédito enviadas do cliente. Também copie os arquivos Setup. bat e Cleanup para o computador do serviço.  
+2. Copie os arquivos de programa do serviço para o diretório de serviço no computador do serviço. Não se esqueça de copiar CreditCardFile. txt; caso contrário, o autenticador de cartão de crédito não poderá validar as informações de cartão de crédito enviadas do cliente. Copie também os arquivos Setup. bat e Cleanup. bat para o computador de serviço.  
   
-3. Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. Você pode criar um usando o Setup. bat se você alterar o `%SERVER_NAME%` variável ao nome totalmente qualificado do computador onde o serviço está hospedado. Observe que o arquivo Setup. bat deve ser executado em um Prompt de comando do desenvolvedor para Visual Studio é aberto com privilégios de administrador.  
+3. Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. Você pode criar um usando o setup. bat se alterar a `%SERVER_NAME%` variável para o nome totalmente qualificado do computador em que o serviço está hospedado. Observe que o arquivo setup. bat deve ser executado em um Prompt de Comando do Desenvolvedor para Visual Studio aberto com privilégios de administrador.  
   
-4. Copie o certificado do servidor para o repositório CurrentUser TrustedPeople no cliente. Você deve fazer isso somente se o certificado do servidor não foi emitido por um emissor confiável.  
+4. Copie o certificado do servidor no repositório CurrentUser-TrustedPeople no cliente. Você deve fazer isso somente se o certificado do servidor não for emitido por um emissor confiável.  
   
-5. No arquivo EchoServiceHost.cs, altere o valor do nome da entidade do certificado para especificar um nome de computador totalmente qualificado em vez do localhost.  
+5. No arquivo EchoServiceHost.cs, altere o valor do nome da entidade do certificado para especificar um nome de computador totalmente qualificado em vez de localhost.  
   
-6. Copie os arquivos de programa do cliente na pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
+6. Copie os arquivos de programas do cliente da pasta \client\bin\, na pasta específica do idioma, para o computador cliente.  
   
-7. No arquivo Client.cs, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço.  
+7. No arquivo Client.cs, altere o valor de endereço do ponto de extremidade para corresponder ao novo endereço do serviço.  
   
-8. No arquivo Client.cs altere o nome da entidade do certificado X.509 do serviço para corresponder ao nome de computador totalmente qualificado do host remoto em vez do localhost.  
+8. No arquivo Client.cs, altere o nome da entidade do certificado X. 509 para corresponder ao nome do computador totalmente qualificado do host remoto, em vez de localhost.  
   
-9. No computador cliente, inicie Client.exe em uma janela do prompt de comando.  
+9. No computador cliente, inicie o Client. exe em uma janela de prompt de comando.  
   
-10. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
+#### <a name="to-clean-up-after-the-sample"></a>Para limpar após o exemplo  
   
-1. Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
+1. Execute o Cleanup. bat na pasta Samples depois de concluir a execução do exemplo.  

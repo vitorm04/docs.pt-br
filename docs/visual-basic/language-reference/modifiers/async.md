@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: cf2c62878e8902afa9455c789d41393b73110172
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6a3d9c8eb8e5929796683bd0bb50159ca0c69f1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434051"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959864"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 O `Async` modificador indica que o método ou a [expressão lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) que ele modifica é assíncrono. Esses métodos são chamados de *métodos assíncronos*.  
@@ -20,7 +20,7 @@ O `Async` modificador indica que o método ou a [expressão lambda](../../../vis
  Um método assíncrono fornece uma maneira conveniente de executar trabalhos potencialmente demorados sem bloquear o thread do chamador. O chamador de um método assíncrono pode retomar seu trabalho sem esperar que o método Async seja concluído.  
   
 > [!NOTE]
->  As palavras-chave `Async` e `Await` foram introduzidas no Visual Studio 2012. Para obter uma introdução à programação assíncrona, consulte [programação assíncrona com Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
+> As palavras-chave `Async` e `Await` foram introduzidas no Visual Studio 2012. Para obter uma introdução à programação assíncrona, consulte [programação assíncrona com Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  O exemplo a seguir mostra a estrutura de um método assíncrono. Por convenção, os nomes de método assíncronos terminam em "Async".  
   

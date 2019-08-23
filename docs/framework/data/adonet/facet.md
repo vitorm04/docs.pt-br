@@ -2,20 +2,20 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b4a8a559d7297543812f3c67e3b90d06a011b0f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879054"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959097"
 ---
 # <a name="facet"></a>facet
-Um *faceta* é usado para adicionar detalhes a uma definição de propriedade do tipo primitivo. Um [propriedade](../../../../docs/framework/data/adonet/property.md) definição contém informações sobre o tipo de propriedade, mas geralmente mais detalhes é necessário. Por exemplo, um tipo de entidade em um modelo conceitual pode ter uma propriedade do tipo `String` cujo valor pode não ser definido como nulo. As facetas permitem que você especifique esse nível de detalhe.  
+Uma *faceta* é usada para adicionar detalhes a uma definição de propriedade de tipo primitivo. Uma definição de [Propriedade](../../../../docs/framework/data/adonet/property.md) contém informações sobre o tipo de propriedade, mas geralmente é necessário mais detalhes. Por exemplo, um tipo de entidade em um modelo conceitual pode ter uma propriedade do tipo `String` cujo valor pode não ser definido como nulo. As facetas permitem que você especifique esse nível de detalhe.  
   
  A tabela a seguir descreve as facetas que são suportadas em EDM.  
   
 > [!NOTE]
->  Os valores precisos e os comportamentos de facetas são determinados pelo ambiente de tempo de execução usando uma implementação de EDM.  
+> Os valores precisos e os comportamentos de facetas são determinados pelo ambiente de tempo de execução usando uma implementação de EDM.  
   
 |Aspecto|Descrição|Aplica-se a|  
 |-----------|-----------------|----------------|  
@@ -30,7 +30,7 @@ Um *faceta* é usado para adicionar detalhes a uma definição de propriedade do
 |`Unicode`|Indica se o valor da propriedade é armazenado como Unicode.|`String`|  
   
 ## <a name="example"></a>Exemplo  
- O [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa uma linguagem específica de domínio (DSL) chamada linguagem de definição de esquema conceitual ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir modelos conceituais. CSDL seguir define um tipo de entidade de `Book` . Observe que as facetas são implementadas como atributos XML. Os valores de aspecto indica que nenhuma propriedade pode ser definida para nulo, e que `Scale` e `Precision` de propriedade de cada `Revision` são definidas como 29.  
+ O [Entity Framework ADO.net](../../../../docs/framework/data/adonet/ef/index.md) usa uma DSL (linguagem específica de domínio) chamada[CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)(linguagem de definição de esquema conceitual) para definir modelos conceituais. CSDL seguir define um tipo de entidade de `Book` . Observe que as facetas são implementadas como atributos XML. Os valores de aspecto indica que nenhuma propriedade pode ser definida para nulo, e que `Scale` e `Precision` de propriedade de cada `Revision` são definidas como 29.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   

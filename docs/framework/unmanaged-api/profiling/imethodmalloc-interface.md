@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c67ce15175f8667139f99cec1ed17531eab473e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969800"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935654"
 ---
 # <a name="imethodmalloc-interface"></a>Interface IMethodMalloc
-Fornece um método para alocar memória para um novo corpo de função do Microsoft intermediate language (MSIL).  
+Fornece um método para alocar memória para um novo corpo de função da MSIL (Microsoft Intermediate Language).  
   
 > [!NOTE]
->  O `IMethodMalloc` interface é um alocador de memória simples. Ele permite que você alocar memória, mas não para liberá-la.  
+> A `IMethodMalloc` interface é um alocador de memória simples. Ele permite que você aloque memória, mas não a libere.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -36,14 +36,14 @@ Fornece um método para alocar memória para um novo corpo de função do Micros
 |[Método Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Tenta alocar uma quantidade especificada de memória para um novo corpo de função MSIL.|  
   
 ## <a name="remarks"></a>Comentários  
- Cada alocador é específica do módulo e garante que o corpo da função esteja em um deslocamento positivo da base do módulo. Memória acima a base de um módulo pode ser preciosa, portanto, o alocador deve ser usado para alocar memória para o corpo da função.  
+ Cada alocador é específico do módulo e garante que o corpo da função estará em um deslocamento positivo da base do módulo. A memória acima da base de um módulo pode ser preciosa, portanto, o alocador deve ser usado para alocar memória apenas para um corpo de função.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl, CorProf.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

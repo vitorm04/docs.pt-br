@@ -2,34 +2,34 @@
 title: Sessão confiável de associação personalizada
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: 215a1621fd2e74201cebdec736586322eadb76ce
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 460f06803b99bdac4e79df290d34831b931ff6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953845"
 ---
 # <a name="custom-binding-reliable-session"></a>Sessão confiável de associação personalizada
-Uma associação personalizada é definida por uma lista ordenada de elementos de associação discretos. Este exemplo demonstra como configurar uma associação personalizada com vários transporte e de mensagem que codifica elementos, especialmente habilitar sessões confiáveis.  
+Uma associação personalizada é definida por uma lista ordenada de elementos de associação discretos. Este exemplo demonstra como configurar uma associação personalizada com vários elementos de codificação de mensagens e transporte, especialmente permitindo sessões confiáveis.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSession`  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Sessões confiáveis fornecem recursos de sistema de mensagens confiável e sessões. Mensagens confiáveis tentará novamente a comunicação em caso de falha e permite que as garantias de entrega, como em ordem de chegada de mensagens seja especificado. Sessões de mantêm o estado dos clientes entre chamadas. O exemplo implementa sessões para manter o estado do cliente e especifica as garantias de entrega em ordem. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Os recursos de sessão confiável estão habilitados e configurados nos arquivos de configuração do aplicativo para o cliente e o serviço.  
+ As sessões confiáveis fornecem recursos para mensagens e sessões confiáveis. A Reliable Messaging repete a comunicação em caso de falha e permite que as garantias de entrega, como a chegada da ordem das mensagens a serem especificadas. As sessões mantêm o estado para clientes entre chamadas. O exemplo implementa sessões para manter o estado do cliente e especifica garantias de entrega em ordem. O exemplo se baseia na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Os recursos de sessão confiáveis são habilitados e configurados nos arquivos de configuração do aplicativo para o cliente e o serviço.  
   
 > [!NOTE]
->  Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.  
+> Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.  
   
- A ordenação dos elementos de associação é importante definir uma ligação personalizada, porque cada um representa uma camada da pilha de canal (consulte [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)).  
+ A ordenação de elementos de associação é importante na definição de uma associação personalizada, pois cada uma representa uma camada na pilha de canais (consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)).  
   
- A configuração do serviço para o exemplo é definida como mostrado no exemplo de código a seguir.  
+ A configuração de serviço para o exemplo é definida conforme mostrado no exemplo de código a seguir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -86,9 +86,9 @@ Uma associação personalizada é definida por uma lista ordenada de elementos d
 </configuration>  
 ```  
   
- Quando em execução em um cenário entre máquinas, você deve alterar o endereço do ponto de extremidade do cliente para refletir o nome do host do serviço.  
+ Ao executar em um cenário entre máquinas, você deve alterar o endereço do ponto de extremidade do cliente para refletir o nome do host do serviço.  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -101,20 +101,20 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Instale o ASP.NET 4.0 usando o seguinte comando:  
+1. Instale o ASP.NET 4,0 usando o seguinte comando:  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  Ao executar o cliente em uma configuração de várias máquinas, certifique-se de substituir "localhost" em ambos o `address` atributo do [ \<ponto de extremidade >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento e o `clientBaseAddress` atributo do [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) com o nome da máquina apropriada, conforme mostrado no exemplo a seguir.  
+    >  Ao executar o cliente em uma configuração entre computadores, certifique-se de substituir "localhost" no `address` atributo `clientBaseAddress` [ \<do elemento Endpoint >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) e no atributo de [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) pelo nome do computador apropriado, conforme mostrado no exemplo a seguir.  
   
     ```xml  
     <endpoint name = ""  

@@ -2,20 +2,20 @@
 title: <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-ms.openlocfilehash: b8643a5321bbab692ebb704101c664105b4ab55c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d3662b2ceda83eb32abe99244e926332214698
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763939"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931318"
 ---
 # <a name="messagesenderauthentication"></a>\<messageSenderAuthentication>
-Especifica as configurações de autenticação de certificado par usado por um remetente da mensagem.  
+Especifica as configurações de autenticação para o certificado par usado por um remetente de mensagem.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors>  
-\<behavior>  
+\<> de portais  
+\<> de comportamento  
 \<serviceCredentials>  
 \<peer>  
 \<messageSenderAuthentication>  
@@ -36,9 +36,9 @@ Especifica as configurações de autenticação de certificado par usado por um 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`certificateValidationMode`|Enumeração opcional. Especifica um dos cinco modos usados para validar as credenciais. Esse atributo é do tipo <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Se definido como `Custom`, em seguida, um `customCertificateValidator` também deve ser fornecido.|  
-|`customCertificateValidatorType`|Cadeia de caracteres opcional. Especifica um tipo e assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`. Esse atributo é do tipo <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Windows Communication Foundation (WCF) oferece um par de padrão de validador de certificado que verifica se o certificado de ponto a ponto em relação ao armazenamento de pessoas confiáveis. Ela também verifica se o certificado encadeia-se a uma raiz válida. Você pode implementar um validador personalizado para especificar um comportamento diferente e usar esse atributo para apontar para o validador personalizado.|  
-|`revocationMode`|Enumeração opcional. Especifica o modo de revogação de certificado. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>. O sistema verifica o certificado par não foi revogado por procurando na lista de certificados revogados. Essa verificação pode ser executada, verificando online ou em uma lista de revogação em cache. Verificação de revogação pode ser desativado, definindo este atributo como NoCheck.|  
+|`certificateValidationMode`|Enumeração opcional. Especifica um dos cinco modos usados para validar as credenciais. Esse atributo é do tipo <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Se definido como `Custom`, um `customCertificateValidator` também deverá ser fornecido.|  
+|`customCertificateValidatorType`|Cadeia de caracteres opcional. Especifica um tipo e um assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`. Esse atributo é do tipo <xref:System.IdentityModel.Selectors.X509CertificateValidator>. O Windows Communication Foundation (WCF) fornece um validador de certificado par padrão que verifica o certificado de mesmo nível no repositório de pessoas confiáveis. Ele também verifica se o certificado se encadeia em uma raiz válida. Você pode implementar um validador personalizado para especificar um comportamento diferente e usar esse atributo para apontar para o validador personalizado.|  
+|`revocationMode`|Enumeração opcional. Especifica o modo de revogação de certificado. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>. O sistema verifica se o certificado de mesmo nível não foi revogado ao procurá-lo na lista de certificados revogados. Essa verificação pode ser executada marcando-se online ou em uma lista de revogação armazenada em cache. A verificação de revogação pode ser desativada definindo esse atributo como NoCheck.|  
 |`trustedStoreLocation`|Enumeração opcional. Especifica o local de repositório confiável em que o certificado par é validado pelo sistema de segurança do WCF. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -48,10 +48,10 @@ Especifica as configurações de autenticação de certificado par usado por um 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Especifica as credenciais atuais para um nó par.|  
+|[\<peer>](peer-of-servicecredentials.md)|Especifica as credenciais atuais para um nó par.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento deve ser configurado, se for escolhida a autenticação de mensagem. Para os canais de saída, cada mensagem é assinada usando o certificado fornecido pelo [ \<certificado >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Todas as mensagens, antes da entrega para o aplicativo, são verificados em relação a credencial de mensagem usando o validador especificado pelo `customCertificateValidatorType` atributo desse elemento. O validador pode aceitar ou rejeitar a credencial.  
+ Esse elemento deve ser configurado se a autenticação de mensagem for escolhida. Para canais de saída, cada mensagem é assinada usando o certificado fornecido pelo [ \<certificado >](certificate-element.md). Todas as mensagens, antes de serem entregues ao aplicativo, são verificadas em relação à credencial da mensagem `customCertificateValidatorType` usando o validador especificado pelo atributo desse elemento. O Validador pode aceitar ou rejeitar a credencial.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -59,8 +59,8 @@ Especifica as configurações de autenticação de certificado par usado por um 
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>
-- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)
+- [Rede ponto a ponto](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [Autenticação de mensagem de canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Autenticação personalizada de canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [Protegendo aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Autenticação personalizada do canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Protegendo aplicativos de canal par](../../../wcf/feature-details/securing-peer-channel-applications.md)

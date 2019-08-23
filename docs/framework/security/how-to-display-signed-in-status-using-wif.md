@@ -3,12 +3,12 @@ title: 'Como: exibir o status de conexão usando o WIF'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: 6d81bd2023886799f939fc9851db516a00aa92df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e44dc80260e46b81ac723ada32085390a18a153a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945697"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Como: exibir o status de conexão usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -117,7 +117,7 @@ ms.locfileid: "67742447"
 3. Salve **Default.aspx** e, depois, abra seu arquivo code-behind chamado **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** pode estar oculto sob **Default.aspx** no Gerenciador de Soluções. Se **Default.aspx.cs** não estiver visível, expanda **Default.aspx** clicando no triângulo ao lado dele.  
+    > **Default.aspx.cs** pode estar oculto sob **Default.aspx** no Gerenciador de Soluções. Se **Default.aspx.cs** não estiver visível, expanda **Default.aspx** clicando no triângulo ao lado dele.  
   
 4. Substitua o código existente em **Default.aspx.cs** pelo seguinte código:  
   
@@ -153,4 +153,4 @@ ms.locfileid: "67742447"
   
 1. No Visual Studio, pressione **F5** para iniciar a depuração de seu aplicativo. Se nenhum erro for encontrado, uma nova janela do navegador será aberta.  
   
-2. Você pode perceber que o navegador redireciona silenciosamente a solicitação para o STS e, em seguida, abre a página Default.aspx. Se o WIF estiver configurado corretamente, você verá o site exibir o seguinte texto: **"Você está conectado"** .
+2. Você pode perceber que o navegador redireciona silenciosamente a solicitação para o STS e, em seguida, abre a página Default.aspx. Se o WIF estiver configurado corretamente, você deverá ver o site exibir o seguinte texto: **"Você está conectado"** .

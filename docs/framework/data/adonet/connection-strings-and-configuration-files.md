@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880068"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949458"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadeias de conexão e arquivos de configuração
 Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulnerabilidades de segurança e problemas de manutenção. As cadeias de conexão não criptografadas compiladas no código-fonte de um aplicativo podem ser exibidas com a ferramenta [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Além disso, se a cadeia de conexão for alterada, seu aplicativo deverá ser recompilado. Por esses motivos, recomendamos armazenar cadeias de conexão em um arquivo de configuração do aplicativo.  
@@ -36,7 +36,7 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
 ```  
   
 > [!NOTE]
->  Você pode salvar parte de uma cadeia de conexão em um arquivo de configuração e usar a classe <xref:System.Data.Common.DbConnectionStringBuilder> para concluí-la em tempo de execução. Isso é útil em situações onde você não conhece os elementos da cadeia de conexão com antecedência, ou quando não quer salvar informações confidenciais em um arquivo de configuração. Para obter mais informações, confira [Construtores de cadeias de conexão](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Você pode salvar parte de uma cadeia de conexão em um arquivo de configuração e usar a classe <xref:System.Data.Common.DbConnectionStringBuilder> para concluí-la em tempo de execução. Isso é útil em situações onde você não conhece os elementos da cadeia de conexão com antecedência, ou quando não quer salvar informações confidenciais em um arquivo de configuração. Para obter mais informações, confira [Construtores de cadeias de conexão](../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
 ### <a name="using-external-configuration-files"></a>Utilizando arquivos de configuração externos  
  Os arquivos de configuração externos são arquivos separados que contêm um fragmento de um arquivo de configuração que consiste em uma única seção. O arquivo de configuração externo é, em seguida, referenciado pelo arquivo de configuração principal. O armazenamento da seção **connectionStrings** em um arquivo fisicamente separado é útil em situações em que as cadeias de conexão podem ser editadas após a implantação do aplicativo. Por exemplo, o comportamento padrão do ASP.NET é reiniciar o domínio de um aplicativo quando os arquivos de configuração são modificados, o que resulta em perda de informações de estado. No entanto, modificar um arquivo de configuração externo não causa uma reinicialização do aplicativo. Os arquivos de configuração externos não estão limitados ao ASP.NET; eles também podem ser usados por aplicativos do Windows. Além disso, a segurança de acesso a arquivos e as permissões podem ser usadas para restringir o acesso a arquivos de configuração externos. Trabalhar com arquivos de configuração externos em tempo de execução é transparente e não exige nenhuma codificação especial.  
@@ -64,13 +64,13 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  O .NET Framework 2.0 introduziu novas classes no namespace <xref:System.Configuration> para simplificar a recuperação de cadeias de conexão de arquivos de configuração em tempo de execução. Você pode programaticamente recuperar uma cadeia de conexão por nome ou nome do provedor.  
   
 > [!NOTE]
->  O arquivo **machine.config** também contém uma seção **connectionStrings**, que contém as cadeias de conexão usadas pelo Visual Studio. Ao recuperar cadeias de conexão pelo nome do provedor do arquivo **app.config** em um aplicativo do Windows, as cadeias de conexão em **machine.config** são carregadas primeiro e, em seguida, as entradas de **app.config**. A adição de **clear** imediatamente após o elemento **connectionStrings** remove todas as referências herdadas da estrutura de dados na memória, de modo que somente as cadeias de conexão definidas no arquivo **app.config** local são consideradas.  
+> O arquivo **machine.config** também contém uma seção **connectionStrings**, que contém as cadeias de conexão usadas pelo Visual Studio. Ao recuperar cadeias de conexão pelo nome do provedor do arquivo **app.config** em um aplicativo do Windows, as cadeias de conexão em **machine.config** são carregadas primeiro e, em seguida, as entradas de **app.config**. A adição de **clear** imediatamente após o elemento **connectionStrings** remove todas as referências herdadas da estrutura de dados na memória, de modo que somente as cadeias de conexão definidas no arquivo **app.config** local são consideradas.  
   
 ### <a name="working-with-the-configuration-classes"></a>Trabalhando com as classes de configuração  
  A partir do .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager> é usado ao trabalhar com arquivos de configuração no computador local, substituindo o <xref:System.Configuration.ConfigurationSettings> obsoleto. <xref:System.Web.Configuration.WebConfigurationManager> é usado para trabalhar com arquivos de configuração do ASP.NET. Ele foi criado para trabalhar com arquivos de configuração em um servidor Web e permite o acesso programático a seções do arquivo de configuração como **system.web**.  
   
 > [!NOTE]
->  Acessar arquivos de configuração em tempo de execução exige a concessão de permissões para o chamador; as permissões necessárias dependem do tipo de aplicativo, do arquivo de configuração e do local. Para obter mais informações, confira [Usando as classes de configuração](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)), <xref:System.Web.Configuration.WebConfigurationManager> para aplicativos ASP.NET e <xref:System.Configuration.ConfigurationManager> para aplicativos do Windows.  
+> Acessar arquivos de configuração em tempo de execução exige a concessão de permissões para o chamador; as permissões necessárias dependem do tipo de aplicativo, do arquivo de configuração e do local. Para obter mais informações, confira [Usando as classes de configuração](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)), <xref:System.Web.Configuration.WebConfigurationManager> para aplicativos ASP.NET e <xref:System.Configuration.ConfigurationManager> para aplicativos do Windows.  
   
  Você pode usar <xref:System.Configuration.ConnectionStringSettingsCollection> para recuperar cadeias de conexão de arquivos de configuração do aplicativo. Ele contém uma coleção de objetos <xref:System.Configuration.ConnectionStringSettings>, cada um deles representando uma única entrada na seção **connectionStrings**. Suas propriedades mapeiam para atributos de cadeia de conexão, permitindo que você recupere uma cadeia de conexão especificando o nome ou o nome do provedor.  
   
@@ -80,16 +80,16 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|O nome do provedor totalmente qualificado. Mapeado para o atributo **providerName**.|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|A cadeia de conexão. Mapeada para o atributo **connectionString**.|  
   
-### <a name="example-listing-all-connection-strings"></a>Exemplo: Listando todas as cadeias de Conexão  
- Este exemplo itera por meio de <xref:System.Configuration.ConnectionStringSettingsCollection> e exibe as <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, e <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> propriedades na janela do console.  
+### <a name="example-listing-all-connection-strings"></a>Exemplo: Listando todas as cadeias de conexão  
+ Este <xref:System.Configuration.ConnectionStringSettingsCollection> exemplo itera através do e exibe as <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>Propriedades, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>e <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> na janela do console.  
   
 > [!NOTE]
->  System.Configuration.dll não está incluído em todos os tipos de projeto, e você talvez precise definir uma referência para ele para usar as classes de configuração. O nome e o local de um arquivo de configuração do aplicativo específico variam pelo tipo de aplicativo e o processo de hospedagem.  
+> System.Configuration.dll não está incluído em todos os tipos de projeto, e você talvez precise definir uma referência para ele para usar as classes de configuração. O nome e o local de um arquivo de configuração do aplicativo específico variam pelo tipo de aplicativo e o processo de hospedagem.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-name"></a>Exemplo: Recuperando uma cadeia de Conexão por nome  
+### <a name="example-retrieving-a-connection-string-by-name"></a>Exemplo: Recuperando uma cadeia de conexão por nome  
  Este exemplo demonstra como recuperar uma cadeia de conexão de um arquivo de configuração especificando seu nome. O código cria um objeto <xref:System.Configuration.ConnectionStringSettings>, correspondendo o parâmetro de entrada fornecido com o nome de <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A>. Se nenhum nome correspondente for localizado, a função retornará `null` (`Nothing` no Visual Basic).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
@@ -142,21 +142,21 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  Os dois provedores oferecem criptografia de dados forte. Entretanto, se você estiver planejando usar o mesmo arquivo de configuração criptografado em vários servidores, como uma Web farm, apenas o <xref:System.Configuration.RsaProtectedConfigurationProvider> permite que você exporte as chaves de criptografia usadas para criptografar os dados e importá-los em outro servidor. Para obter mais informações, confira [Importando e exportando contêineres de chave RSA da configuração protegida](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Usando as classes de configuração  
- O namespace <xref:System.Configuration> fornece classes para trabalhar com parâmetros de configuração programaticamente. A classe <xref:System.Configuration.ConfigurationManager> fornece acesso a arquivos de computador, aplicativo e configuração do usuário. Caso você esteja criando um aplicativo ASP.NET, use a classe <xref:System.Web.Configuration.WebConfigurationManager>, que fornece a mesma funcionalidade, permitindo também o acesso a configurações que são exclusivas aos aplicativos ASP.NET, como aquelas encontradas em **\<system.web>**.  
+ O namespace <xref:System.Configuration> fornece classes para trabalhar com parâmetros de configuração programaticamente. A classe <xref:System.Configuration.ConfigurationManager> fornece acesso a arquivos de computador, aplicativo e configuração do usuário. Caso você esteja criando um aplicativo ASP.NET, use a classe <xref:System.Web.Configuration.WebConfigurationManager>, que fornece a mesma funcionalidade, permitindo também o acesso a configurações que são exclusivas aos aplicativos ASP.NET, como aquelas encontradas em **\<system.web>** .  
   
 > [!NOTE]
->  O namespace <xref:System.Security.Cryptography> contém classes que oferecem opções adicionais para criptografar e descriptografar dados. Use essas classes se você precisar de serviços de criptografia que não estão disponíveis usando a configuração protegida. Algumas dessas classes são wrappers da Microsoft CryptoAPI não gerenciada, enquanto outras são implementações puramente gerenciadas. Para obter mais informações, consulte [Serviços Criptográficos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
+> O namespace <xref:System.Security.Cryptography> contém classes que oferecem opções adicionais para criptografar e descriptografar dados. Use essas classes se você precisar de serviços de criptografia que não estão disponíveis usando a configuração protegida. Algumas dessas classes são wrappers da Microsoft CryptoAPI não gerenciada, enquanto outras são implementações puramente gerenciadas. Para obter mais informações, consulte [Serviços Criptográficos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
   
 ### <a name="appconfig-example"></a>Exemplo de App.config  
  Este exemplo demonstra como ativar/desativar a criptografia da seção **connectionStrings** em um arquivo **app.config** para um aplicativo do Windows. Nesse exemplo, o procedimento utiliza o nome do aplicativo como um argumento, por exemplo, “MyApplication.exe”. O arquivo **app.config** será então criptografado e copiado para a pasta que contém o executável com o nome "MyApplication.exe.config".  
   
 > [!NOTE]
->  A cadeia de conexão somente pode ser descriptografada no computador no qual foi criptografada.  
+> A cadeia de conexão somente pode ser descriptografada no computador no qual foi criptografada.  
   
  O código usa o método <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> para abrir o arquivo **app.config** para edição, e o método <xref:System.Configuration.ConfigurationManager.GetSection%2A> retorna a seção **connectionStrings**. O código em seguida verifica a propriedade <xref:System.Configuration.SectionInformation.IsProtected%2A>, chamando <xref:System.Configuration.SectionInformation.ProtectSection%2A> para criptografar a seção se não estiver criptografada. O método <xref:System.Configuration.SectionInformation.UnprotectSection%2A> é chamado para descriptografar a seção. O método <xref:System.Configuration.Configuration.Save%2A> conclui a operação e salva as alterações.  
   
 > [!NOTE]
->  Você deve definir uma referência a `System.Configuration.dll` em seu projeto para que o código seja executado.  
+> Você deve definir uma referência a `System.Configuration.dll` em seu projeto para que o código seja executado.  
   
  [!code-csharp[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/VB/source.vb#1)]  
@@ -167,7 +167,7 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Para obter mais informações sobre como proteger aplicativos ASP.NET, consulte [sites da web ASP.NET protegendo](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
+ Para obter mais informações sobre como proteger aplicativos ASP.NET, consulte [securing ASP.NET Web sites](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte também
 

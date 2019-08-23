@@ -2,20 +2,20 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 819639eabf0332a34d6a7250159d24e42552f874
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 473d0fbd543a056ec2b152f43a76a0417a18016f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423098"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933200"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
-Define um transporte que faz com que um canal transferir mensagens usando pipes nomeados quando ele é incluído em uma associação personalizada.  
+Define um transporte que faz com que um canal transfira mensagens usando pipes nomeados quando ele é incluído em uma associação personalizada.  
   
 \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<> de associação  
 \<namePipeTransport>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -59,18 +59,18 @@ nenhuma.
 |maxPendingConnections|Obtém ou define o número máximo de conexões aguardando a expedição no serviço.|  
 |maxReceivedMessageSize|Obtém e define o tamanho de mensagem máximo permitido, em bytes, que pode ser recebido.|  
 |transferMode|Obtém ou define um valor que indica se as mensagens são armazenadas em buffer ou transmitidas com o transporte voltado para a conexão.|  
-|[\<connectionPoolSettings > de \<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|Especifica as configurações do pool de conexão adicionais para uma associação de Pipe nomeado.|  
+|[\<connectionPoolSettings > de \<namedPipeTransport >](connectionpoolsettings.md)|Especifica configurações de pool de conexões adicionais para uma associação de pipe nomeado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
+|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
-Esse transporte usa URIs do formulário "net.pipe://hostname/path". Outros componentes do URI são opcionais.  
+Esse transporte usa URIs no formato "net. pipe://hostname/Path". Outros componentes de URI são opcionais.  
   
-O `namedPipeTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte de pipes nomeados. Esse transporte é usada para em computadores Windows Communication Foundation (WCF) - para - comunicação WCF.  
+O `namedPipeTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte de pipes nomeados. Esse transporte é usado para a comunicação WCF (Windows Communication Foundation no computador) para WCF.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -78,9 +78,9 @@ O `namedPipeTransport` elemento é o ponto de partida para criar uma associaçã
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Transportes](../../../wcf/feature-details/transports.md)
+- [Escolhendo um transporte](../../../wcf/feature-details/choosing-a-transport.md)
+- [Associações](../../../wcf/bindings.md)
+- [Estendendo associações](../../../wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

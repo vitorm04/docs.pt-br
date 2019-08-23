@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb3aca0713b8b11bdfaa23bf33c8e1a0b302e272
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606532"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931978"
 ---
 # <a name="icordebugenum-interface"></a>Interface ICorDebugEnum
 
@@ -34,10 +34,10 @@ Serve como a interface base abstrata para os enumeradores que são usados por um
 |[Método Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Cria uma cópia deste objeto `ICorDebugEnum`.|  
 |[Método GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Obtém o número de itens na enumeração.|  
 |[Método Reset](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Move o cursor para o início da enumeração.|  
-|[Método Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Move o cursor para frente na enumeração pelo número especificado de itens.|  
+|[Método Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Move o cursor para a frente na enumeração pelo número especificado de itens.|  
   
 ## <a name="remarks"></a>Comentários  
- Os enumeradores seguintes derivam `ICorDebugEnum`:  
+ Os seguintes enumeradores derivam `ICorDebugEnum`de:  
   
 - "ICorDebugAppDomainEnum"  
   
@@ -82,14 +82,14 @@ Serve como a interface base abstrata para os enumeradores que são usados por um
 - [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
->  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
+> Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

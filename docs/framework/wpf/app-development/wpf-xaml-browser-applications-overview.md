@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a83b3e68365cccc96cfe7eaa4baaabf8c991c98f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611477"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956044"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Visão geral dos aplicativos de navegador XAML do WPF
 <a name="introduction"></a>
@@ -40,7 +40,7 @@ ms.locfileid: "69611477"
  Quando você executa o projeto XBAP, ele é aberto em uma janela do navegador, em vez de uma janela autônoma. Quando você depura o XBAP do Visual Studio, o aplicativo é executado com a permissão de zona da Internet e, portanto, gerará exceções de segurança se essas permissões forem excedidas. Para obter mais informações, consulte [Segurança](../security-wpf.md) e [Segurança de confiança parcial do WPF](../wpf-partial-trust-security.md).  
   
 > [!NOTE]
->  Se você não estiver desenvolvendo com o Visual Studio ou quiser saber mais sobre os arquivos de projeto, consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md).  
+> Se você não estiver desenvolvendo com o Visual Studio ou quiser saber mais sobre os arquivos de projeto, consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md).  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>Implantando um XBAP  
@@ -174,7 +174,7 @@ ms.locfileid: "69611477"
 |Internet|Falha com "Confiança não concedida"|Assinar o XBAP com um certificado.|  
   
 > [!NOTE]
->  O comportamento descrito na tabela anterior é para XBAPs de confiança total que não seguem o modelo de implantação confiável do ClickOnce.  
+> O comportamento descrito na tabela anterior é para XBAPs de confiança total que não seguem o modelo de implantação confiável do ClickOnce.  
   
  É recomendável que você use o modelo de implantação confiável do ClickOnce para implantar um XBAP de confiança total. Esse modelo permite que seu XBAP receba a confiança total automaticamente, independentemente da zona de segurança, de forma que o usuário não receba um aviso. Como parte desse modelo, você deve assinar o aplicativo com um certificado de um fornecedor confiável. Para obter mais informações, consulte [Visão geral da implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview) e [Introdução à assinatura de código](https://go.microsoft.com/fwlink/?LinkId=166327).  
   

@@ -3,25 +3,25 @@ title: <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: 30cb2efa4c00c8b292a8ace6a03306d6ac76a7f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd0b57d7d08cf77ba7792e079b7abd2ff8f2839e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797794"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947401"
 ---
-# <a name="states"></a>\<states>
+# <a name="states"></a>\<> de Estados
 Representa uma coleção de estados inscritos da instância do fluxo de trabalho controladas quando os registros de rastreamento são criados.  
   
- Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Para obter mais informações sobre consultas de perfil de rastreamento, consulte [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<acompanhamento de >  
 \<trackingProfile>  
 \<workflow>  
 \<workflowInstanceQueries>  
 \<workflowInstanceQuery>  
-\<states>  
+\<> de Estados  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,13 +51,13 @@ Representa uma coleção de estados inscritos da instância do fluxo de trabalho
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<state>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Um estado inscrito da instância do fluxo de trabalho controladas quando o registro de rastreamento é criado.|  
+|[\<state>](states.md)|Um estado inscrito da instância do fluxo de trabalho controladas quando o registro de rastreamento é criado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Uma consulta que controla as alterações de ciclo de vida de instância de fluxo de trabalho como um evento iniciado ou concluído.|  
+|[\<workflowInstanceQuery>](workflowinstancequery.md)|Uma consulta que controla as alterações de ciclo de vida de instância de fluxo de trabalho como um evento iniciado ou concluído.|  
   
 ## <a name="remarks"></a>Comentários  
  Os registros retornados são filtrados por estados nesta coleção.  
@@ -98,5 +98,5 @@ Representa uma coleção de estados inscritos da instância do fluxo de trabalho
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Acompanhando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Acompanhamento e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Acompanhando perfis](../../../windows-workflow-foundation/tracking-profiles.md)

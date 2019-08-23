@@ -1,18 +1,18 @@
 ---
-title: Método ICorDebugSymbolProvider::GetObjectSize
+title: 'Método ICorDebugSymbolProvider:: getobjectize'
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b90e2a097e6dfd35b6237808a7b8b47937774b0d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 59054d7b939ab29cb08c30961601a323529ce06b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771323"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955637"
 ---
-# <a name="icordebugsymbolprovidergetobjectsize-method"></a>Método ICorDebugSymbolProvider::GetObjectSize
-Retorna o tamanho do objeto para um objeto com base em sua assinatura typespec.  
+# <a name="icordebugsymbolprovidergetobjectsize-method"></a>Método ICorDebugSymbolProvider:: getobjectize
+Retorna o tamanho do objeto de um objeto com base em sua assinatura de TypeSpec.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,25 +26,25 @@ HRESULT GetObjectSize(
   
 ## <a name="parameters"></a>Parâmetros  
  `cbSignature`  
- [in] O número de bytes na assinatura typespec.  
+ no O número de bytes na assinatura TypeSpec.  
   
  typeSig  
- [in] A assinatura de typespec.  
+ no A assinatura TypeSpec.  
   
  `pObjectSize`  
- [out] Um ponteiro para o tamanho do objeto.  
+ fora Um ponteiro para o tamanho do objeto.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

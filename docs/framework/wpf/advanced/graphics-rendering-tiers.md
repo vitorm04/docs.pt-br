@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: fa59621aaf73922af957961af5401170c2872aa9
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972339"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937526"
 ---
 # <a name="graphics-rendering-tiers"></a>Camadas de renderização de gráficos
 Um nível de renderização define um nível de funcionalidade de hardware de gráficos e de desempenho para um dispositivo que executa um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -48,7 +48,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
 ### <a name="rendering-tier-1-and-rendering-tier-2"></a>Camada de Renderização 1 e Camada de Renderização 2  
   
 > [!NOTE]
->  A partir do .NET Framework 4, a camada de renderização 1 foi redefinida para incluir apenas hardware de gráficos que ofereça suporte a DirectX 9,0 ou superior. O hardware gráfico que dá suporte ao DirectX 7 ou 8 agora está definido como camada de renderização 0.  
+> A partir do .NET Framework 4, a camada de renderização 1 foi redefinida para incluir apenas hardware de gráficos que ofereça suporte a DirectX 9,0 ou superior. O hardware gráfico que dá suporte ao DirectX 7 ou 8 agora está definido como camada de renderização 0.  
   
  Um valor da camada de renderização de 1 ou 2 significa que a maioria dos recursos gráficos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usará a aceleração de hardware se os recursos de sistema necessários estiverem disponíveis e não forem esgotados. Isso corresponde a uma versão do DirectX maior ou igual a 9,0.  
   
@@ -105,7 +105,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
 |**Driver de vídeo configuração de data necessário**|Especifica se o sistema desabilita a aceleração de hardware para drivers lançados antes de novembro de 2004.|  
 |**Use a opção de rasterizador de referência**|Especifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve utilizar o rasterizador de referência.|  
   
- Essas configurações podem ser acessadas por qualquer utilitário de configuração externo que sabe como referenciar as configurações do Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Editor do Registro. Para obter mais informações, consulte as [configurações de Registro de renderização de gráficos](../graphics-multimedia/graphics-rendering-registry-settings.md).  
+ Essas configurações podem ser acessadas por qualquer utilitário de configuração externo que sabe como referenciar as configurações do Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o editor do registro do Windows. Para obter mais informações, consulte as [configurações de Registro de renderização de gráficos](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Ferramentas de criação de perfil de desempenho do WPF  
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um pacote de ferramentas de criação de perfil de desempenho que permitem analisar o comportamento de tempo de execução do aplicativo e determinar os tipos de otimização de desempenho que você pode aplicar. A tabela a seguir lista as ferramentas de criação de perfil de desempenho incluídas na ferramenta de SDK do Windows, o conjunto de desempenho do WPF:  

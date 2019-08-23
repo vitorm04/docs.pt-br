@@ -1,18 +1,18 @@
 ---
-title: Método ICorDebugSymbolProvider::GetStaticFieldSymbols
+title: 'Método ICorDebugSymbolProvider:: GetStaticFieldSymbols'
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9379a335130242918f6fe200eeda5e4c262fd020
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bd3442adf58250a423438666ec1092bab61958b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771291"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955549"
 ---
-# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>Método ICorDebugSymbolProvider::GetStaticFieldSymbols
-Obtém os símbolos de campo estático que correspondem a uma assinatura de typespec.  
+# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>Método ICorDebugSymbolProvider:: GetStaticFieldSymbols
+Obtém os símbolos de campo estático que correspondem a uma assinatura de TypeSpec.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -28,31 +28,31 @@ HRESULT GetStaticFieldSymbols(
   
 ## <a name="parameters"></a>Parâmetros  
  `cbSignature`  
- [in] O número de bytes no `typeSig` matriz.  
+ no O número de bytes na `typeSig` matriz.  
   
  `typeSig`  
- [in] Uma matriz de bytes que contém o `typespec` assinatura.  
+ no Uma matriz de bytes que contém `typespec` a assinatura.  
   
  `cRequestedSymbols`  
- [in] O número de símbolos solicitado.  
+ no O número de símbolos solicitados.  
   
  `pcFetchedSymbols`  
- [out] Um ponteiro para o número de símbolos recuperados pelo método.  
+ fora Um ponteiro para o número de símbolos recuperados pelo método.  
   
  `pSymbols`  
- [out] Um ponteiro para um [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) matriz que contém os símbolos de campo estático solicitado.  
+ fora Um ponteiro para uma matriz [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) que contém os símbolos de campo estáticos solicitados.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esse método só está disponível com o .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

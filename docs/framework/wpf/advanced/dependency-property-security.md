@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400762"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940833"
 ---
 # <a name="dependency-property-security"></a>Segurança de propriedade da dependência
 As propriedades da dependência geralmente devem ser consideradas como propriedades públicas. A natureza do sistema de propriedades [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] impede que a capacidade de dar garantias de segurança sobre um valor da propriedade de dependência.  
@@ -29,7 +29,7 @@ As propriedades da dependência geralmente devem ser consideradas como proprieda
  Para uma propriedade de dependência personalizada, você pode registrar sua propriedade como uma propriedade de dependência somente leitura, e isso fornece um meio efetivo de impedir que uma propriedade seja definida por qualquer pessoa que não tenha uma referência ao <xref:System.Windows.DependencyPropertyKey> para essa propriedade. Para obter mais informações, consulte [Propriedades de dependência somente leitura](read-only-dependency-properties.md).  
   
 > [!NOTE]
->  Declarar um <xref:System.Windows.DependencyProperty> campo de identificador privado não é proibido e pode ser usado de forma razoável para ajudar a reduzir o namespace exposto imediatamente de uma classe personalizada, mas essa propriedade não deve ser considerada "privada" no mesmo sentido que a linguagem comum as definições de linguagem de tempo de execução (CLR) definem esse nível de acesso, por motivos descritos na próxima seção.  
+> Declarar um <xref:System.Windows.DependencyProperty> campo de identificador privado não é proibido e pode ser usado de forma razoável para ajudar a reduzir o namespace exposto imediatamente de uma classe personalizada, mas essa propriedade não deve ser considerada "privada" no mesmo sentido que a linguagem comum as definições de linguagem de tempo de execução (CLR) definem esse nível de acesso, por motivos descritos na próxima seção.  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>Exposição do sistema de propriedades das propriedades de dependência  

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400779"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958796"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
 Este tópico define os termos que são usados para descrever os elementos da sintaxe XAML. Esses termos são usados com frequência durante o restante desta documentação, tanto especificamente para a documentação do WPF quanto para as outras estruturas que usam XAML ou os conceitos básicos do XAML habilitados pelo suporte à linguagem XAML no nível de System.Xaml. Este tópico trata mais a fundo da terminologia básica introduzida no tópico [Visão geral de XAML (WPF)](xaml-overview-wpf.md).  
@@ -86,7 +86,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
  Sintaxe de atributo é a sintaxe de marcação XAML que define um valor para uma propriedade, declarando um atributo em um elemento de objeto existente. O nome do atributo deve corresponder ao nome do membro CLR da propriedade da classe dá suporte ao elemento de objeto relevante. O nome do atributo é seguido por um operador de atribuição (=). O valor do atributo deve ser uma cadeia de caracteres entre aspas.  
   
 > [!NOTE]
->  Você pode usar aspas alternadas para colocar aspas literais dentro de um atributo. Por exemplo, você pode usar aspas simples como meio para declarar uma cadeia de caracteres que contém um caractere de aspas duplas. Independentemente de você usar aspas simples ou duplas, você deve usar um par correspondente para abrir e fechar a cadeia de caracteres de valor de atributo. Também há sequências de escape ou outras técnicas disponíveis para contornar as restrições de caracteres impostas por qualquer sintaxe XAML específica. Consulte [Entidades de caractere XML e XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
+> Você pode usar aspas alternadas para colocar aspas literais dentro de um atributo. Por exemplo, você pode usar aspas simples como meio para declarar uma cadeia de caracteres que contém um caractere de aspas duplas. Independentemente de você usar aspas simples ou duplas, você deve usar um par correspondente para abrir e fechar a cadeia de caracteres de valor de atributo. Também há sequências de escape ou outras técnicas disponíveis para contornar as restrições de caracteres impostas por qualquer sintaxe XAML específica. Consulte [Entidades de caractere XML e XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
  Para ser configurada via sintaxe de atributo, uma propriedade deve ser pública e deve ser gravável. O valor da propriedade no sistema de tipos de suporte deve ser um tipo de valor ou deve ser um tipo de referência que possa ser instanciado ou referenciado por um processador XAML ao acessar o tipo de suporte relevante.  
   
@@ -169,7 +169,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
  Um elemento de coleção implícita cria um membro na representação de árvore lógica, mesmo que ele não apareça na marcação como um elemento. Geralmente o construtor do tipo pai faz a instanciação para a coleção que é uma de suas propriedades e a coleção inicialmente vazia torna-se parte da árvore de objetos.  
   
 > [!NOTE]
->  A lista genérica e as interfaces de<xref:System.Collections.Generic.IList%601> dicionário <xref:System.Collections.Generic.IDictionary%602>(e) não têm suporte para detecção de coleção. No entanto, você pode <xref:System.Collections.Generic.List%601> usar a classe como uma classe base, porque <xref:System.Collections.IList> ela implementa diretamente <xref:System.Collections.Generic.Dictionary%602> ou como uma classe base, porque ela <xref:System.Collections.IDictionary> implementa diretamente.  
+> A lista genérica e as interfaces de<xref:System.Collections.Generic.IList%601> dicionário <xref:System.Collections.Generic.IDictionary%602>(e) não têm suporte para detecção de coleção. No entanto, você pode <xref:System.Collections.Generic.List%601> usar a classe como uma classe base, porque <xref:System.Collections.IList> ela implementa diretamente <xref:System.Collections.Generic.Dictionary%602> ou como uma classe base, porque ela <xref:System.Collections.IDictionary> implementa diretamente.  
   
  Nas páginas de referência do .NET para tipos de coleção, essa sintaxe com a omissão deliberada do elemento de objeto para uma coleção é ocasionalmente mencionada nas seções de sintaxe XAML como sintaxe de coleção implícita.  
   

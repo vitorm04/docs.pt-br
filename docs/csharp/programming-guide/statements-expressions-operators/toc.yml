@@ -7,8 +7,6 @@
       href: expressions.md
     - name: Membros aptos para expressão
       href: expression-bodied-members.md
-    - name: Operadores
-      href: operators.md
     - name: Funções anônimas
       items:
         - name: Visão geral

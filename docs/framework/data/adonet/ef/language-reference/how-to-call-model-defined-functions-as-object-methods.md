@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 53ec7122a3601a2da53513f25a546a08c2aa4307
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83b7533f66c68dd25f21906394a40c956c9b88b8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631563"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935996"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Como: Chamar funções definidas por modelo como métodos de objeto
-Este tópico descreve como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada. Um *função definida pelo modelo* é uma função que é definida no modelo conceitual. O tópico descrevem como chamar essas funções diretamente em vez de chamá-los de consultas LINQ to Entities. Para obter informações sobre como chamar funções definidas no LINQ para consultas de entidades, consulte [como: Chamar funções definidas em consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
+Este tópico descreve como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada. Uma *função definida pelo modelo* é uma função que é definida no modelo conceitual. O tópico descrevem como chamar essas funções diretamente em vez de chamá-los de consultas LINQ to Entities. Para obter informações sobre como chamar funções definidas pelo modelo em consultas LINQ to Entities [, consulte Como: Chame funções definidas pelo modelo em consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
   
  Se você chamar uma função o definida como um método de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada, primeiro você deve mapear o método à função definida com o <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. No entanto, quando você define um método na classe de <xref:System.Data.Objects.ObjectContext> , você deve usar a propriedade de <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> para expor o provedor LINQ, enquanto quando você define um método estático em uma classe personalizada, você deve usar a propriedade de <xref:System.Linq.IQueryable.Provider%2A> para expor o provedor LINQ. Para obter mais informações, consulte os exemplos a seguir os procedimentos abaixo.  
   
- Os procedimentos a seguir fornecem contornos de alto nível para chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> e como um método estático em uma classe personalizada. Os exemplos a seguir fornecem mais detalhes sobre as etapas nos procedimentos. Os procedimentos presumem que você definiu uma função no modelo conceitual. Para obter mais informações, confira [Como: Definir funções personalizadas no modelo conceitual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
+ Os procedimentos a seguir fornecem contornos de alto nível para chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> e como um método estático em uma classe personalizada. Os exemplos a seguir fornecem mais detalhes sobre as etapas nos procedimentos. Os procedimentos presumem que você definiu uma função no modelo conceitual. Para obter mais informações, confira [Como: Defina funções personalizadas no modelo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))conceitual.  
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Para chamar uma função o definida como um método em um objeto ObjectContext  
   
@@ -48,7 +48,7 @@ Este tópico descreve como chamar uma função o definida como um método em um 
   
  O exemplo a seguir demonstra como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> . O exemplo usa o [modelo de vendas AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
- Considere a função do modelo conceitual abaixo do rendimento do produto returns para um produto especificado. (Para obter informações sobre como adicionar a função ao seu modelo conceitual, consulte [como: Definir funções personalizadas no modelo conceitual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).)  
+ Considere a função do modelo conceitual abaixo do rendimento do produto returns para um produto especificado. (Para obter informações sobre como adicionar a função ao seu modelo conceitual, consulte [como: Definir funções personalizadas no modelo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))conceitual.)  
   
  [!code-xml[DP L2E Methods on ObjectContext#4](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#4)]  
 
@@ -82,14 +82,14 @@ Este tópico descreve como chamar uma função o definida como um método em um 
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>Exemplo  
- **Chamar uma função definida pelo modelo como um método estático em uma classe personalizada**  
+ **Chamando uma função definida pelo modelo como um método estático em uma classe personalizada**  
   
  O exemplo a seguir demonstra como chamar uma função o definida como um método estático em uma classe personalizada. O exemplo usa o [modelo de vendas AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 > [!NOTE]
->  Quando você chama uma função o definida como um método estático em uma classe personalizada, a função o definida deve aceitar uma coleção e retornar uma agregação dos valores na coleção.  
+> Quando você chama uma função o definida como um método estático em uma classe personalizada, a função o definida deve aceitar uma coleção e retornar uma agregação dos valores na coleção.  
   
- Considere a função do modelo conceitual abaixo do rendimento do produto returns para uma coleção de SalesOrderDetail. (Para obter informações sobre como adicionar a função ao seu modelo conceitual, consulte [como: Definir funções personalizadas no modelo conceitual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).).  
+ Considere a função do modelo conceitual abaixo do rendimento do produto returns para uma coleção de SalesOrderDetail. (Para obter informações sobre como adicionar a função ao seu modelo conceitual, consulte [como: Defina funções personalizadas no modelo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))conceitual.).  
   
  [!code-xml[DP L2E Methods on ObjectContext#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#1)]
   

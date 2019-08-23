@@ -1,21 +1,21 @@
 ---
-title: <windows> de <clientCredentials> elemento
+title: <windows>do <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9f0ed9879cc42ea25b83e6b626139a40a593112
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940304"
 ---
-# <a name="windows-of-clientcredentials-element"></a>\<Windows > de \<clientCredentials > elemento
-Especifica as configurações para uma credencial do Windows a ser usado para representar o cliente.  
+# <a name="windows-of-clientcredentials-element"></a>\<> do Windows \<do elemento > ClientCredentials
+Especifica as configurações para uma credencial do Windows a ser usada para representar o cliente.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<behavior>  
+\<> de comportamento  
 \<clientCredentials>  
 \<windows>  
   
@@ -33,8 +33,8 @@ Especifica as configurações para uma credencial do Windows a ser usado para re
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|Define a preferência de representação que o cliente se comunica com o servidor. O modo de representação que o cliente seleciona não é imposto no servidor. Os valores válidos incluem o seguinte:<br /><br /> -Identificação: O servidor pode obter a identidade e os privilégios do cliente, mas não pode representar o cliente.<br />-Representação: O servidor pode representar o contexto de segurança do cliente no sistema local.<br />-Delegação: O servidor pode representar o contexto de segurança do cliente em sistemas remotos.<br />-Anônimo: O servidor não pode representar ou identificar o cliente.<br />-None: Não há um nível de representação atribuído.<br /><br /> O padrão é a identificação. Esse atributo é do tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|Definir essa propriedade como `true` permite a autenticação rebaixar para NTLM se Kerberos não estiver disponível.<br /><br /> Definir essa propriedade como `false` faz com que o Windows Communication Foundation (WCF) para fazer um esforço para lançar uma exceção se NTLM for usado. Observe que a definição dessa propriedade `false` talvez não impeçam que as credenciais do NTLM sejam enviados durante a transmissão.|  
+|`allowedImpersonationLevel`|Define a preferência de representação que o cliente se comunica com o servidor. O modo de representação que o cliente seleciona não é imposto no servidor. Os valores válidos incluem o seguinte:<br /><br /> ID O servidor pode obter a identidade e os privilégios do cliente, mas não pode representar o cliente.<br />Representação O servidor pode representar o contexto de segurança do cliente no sistema local.<br />Delegação O servidor pode representar o contexto de segurança do cliente em sistemas remotos.<br />Modo O servidor não pode representar ou identificar o cliente.<br />None Não há um nível de representação atribuído.<br /><br /> O padrão é identificação. Esse atributo é do tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`allowNtlm`|Definir essa propriedade como `true` permite que a autenticação faça downgrade para NTLM se o Kerberos não estiver disponível.<br /><br /> Definir essa propriedade como `false` faz com que o Windows Communication Foundation (WCF) faça um melhor esforço para gerar uma exceção se o NTLM for usado. Observe que a definição dessa propriedade `false` como pode não impedir que credenciais NTLM sejam enviadas pela conexão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -43,7 +43,7 @@ Especifica as configurações para uma credencial do Windows a ser usado para re
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica as credenciais usadas para autenticar o cliente para o serviço.|  
+|[\<clientCredentials>](clientcredentials.md)|Especifica as credenciais usadas para autenticar o cliente para o serviço.|  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -54,6 +54,6 @@ Especifica as configurações para uma credencial do Windows a ser usado para re
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
-- [Protegendo clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protegendo clientes](../../../wcf/securing-clients.md)
+- [Trabalhando com certificados](../../../wcf/feature-details/working-with-certificates.md)
+- [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)

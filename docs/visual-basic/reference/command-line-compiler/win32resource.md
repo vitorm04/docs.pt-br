@@ -9,15 +9,15 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: d8f9c9aac87fd71b61a5413386582ae660efd903
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 382dcc6571aa06ecdfc32bf43080c4b7a36eb1f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593077"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961296"
 ---
 # <a name="-win32resource"></a>-win32resource
-Insere um arquivo de recurso Win32 no arquivo de saída.  
+Insere um arquivo de recurso do Win32 no arquivo de saída.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -27,20 +27,20 @@ Insere um arquivo de recurso Win32 no arquivo de saída.
   
 ## <a name="arguments"></a>Arguments  
  `filename`  
- O nome do arquivo de recurso para adicionar ao seu arquivo de saída. Coloque o nome do arquivo entre aspas ("") se ele contiver um espaço.  
+ O nome do arquivo de recurso a ser adicionado ao arquivo de saída. Coloque o nome de arquivo entre aspas ("") se ele contiver um espaço.  
   
 ## <a name="remarks"></a>Comentários  
- Você pode criar um arquivo de recurso do Win32 com o compilador de recurso do Microsoft Windows (RC).  
+ Você pode criar um arquivo de recurso do Win32 com o compilador de recursos do Microsoft Windows (RC).  
   
- Um recurso do Win32 pode conter a versão ou informações de bitmap (ícone) que ajudam a identificar seu aplicativo no **Explorador de arquivos**. Se você não especificar `-win32resource`, o compilador gera informações de versão com base na versão do assembly. O `-win32resource` e `-win32icon` são mutuamente exclusivas.  
+ Um recurso do Win32 pode conter informações de versão ou bitmap (ícone) que ajudam a identificar seu aplicativo no **Explorador de arquivos**. Se você não especificar `-win32resource`, o compilador gerará informações de versão com base na versão do assembly. As `-win32resource` opções `-win32icon` e são mutuamente exclusivas.  
   
- Ver [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para fazer referência a um arquivo de recurso do .NET Framework, ou [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para anexar um arquivo de recurso do .NET Framework.  
+ Consulte [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para fazer referência a um arquivo de recurso .NET Framework ou [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para anexar um arquivo de recurso de .NET Framework.  
   
 > [!NOTE]
->  O `-win32resource` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível somente durante a compilação da linha de comando.  
+> A `-win32resource` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ela está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
- O seguinte código compila `In.vb` e anexa um arquivo de recurso do Win32, `Rf.res`:  
+ O código a seguir compila `In.vb` e anexa um arquivo de recurso do Win32,: `Rf.res`  
   
 ```console  
 vbc -win32resource:rf.res in.vb  

@@ -3,12 +3,12 @@ title: 'Como: criar um aplicativo ASP.NET Web Forms baseado em declarações usa
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910580"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941290"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Como: criar um aplicativo ASP.NET Web Forms baseado em declarações usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -62,7 +62,7 @@ ms.locfileid: "64910580"
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Para configurar um aplicativo ASP.NET para autenticação baseada em declarações  
   
-1. Adicione as seguintes entradas de seção de configuração ao arquivo de configuração *Web.config* imediatamente após o elemento de abertura **\<configuration>**:  
+1. Adicione as seguintes entradas de seção de configuração ao arquivo de configuração *Web.config* imediatamente após o elemento de abertura **\<configuration>** :  
   
     ```xml  
     <configSections>  
@@ -103,7 +103,7 @@ ms.locfileid: "64910580"
     </system.webServer>  
     ```  
   
-5. Adicione as entradas de configuração relacionadas ao Windows Identity Foundation a seguir e garanta que a URL e o número da porta do aplicativo ASP.NET correspondam aos valores na entrada **\<audienceUris>**, no atributo **realm** do elemento **\<wsFederation>** e no atributo **reply** do elemento **\<wsFederation>**. Também garanta que o valor **issuer** se ajuste à URL do STS (Serviço de Token de Segurança).  
+5. Adicione as entradas de configuração relacionadas ao Windows Identity Foundation a seguir e garanta que a URL e o número da porta do aplicativo ASP.NET correspondam aos valores na entrada **\<audienceUris>** , no atributo **realm** do elemento **\<wsFederation>** e no atributo **reply** do elemento **\<wsFederation>** . Também garanta que o valor **issuer** se ajuste à URL do STS (Serviço de Token de Segurança).  
   
     ```xml  
     <system.identityModel>  
@@ -161,7 +161,7 @@ ms.locfileid: "64910580"
 2. Salve **Default.aspx** e, depois, abra seu arquivo code-behind chamado **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** pode estar oculto sob **Default.aspx** no Gerenciador de Soluções. Se **Default.aspx.cs** não estiver visível, expanda **Default.aspx** clicando no triângulo ao lado dele.  
+    > **Default.aspx.cs** pode estar oculto sob **Default.aspx** no Gerenciador de Soluções. Se **Default.aspx.cs** não estiver visível, expanda **Default.aspx** clicando no triângulo ao lado dele.  
   
 3. Substitua o código existente no método **Page_Load** de **Default.aspx.cs** pelo seguinte código:  
   

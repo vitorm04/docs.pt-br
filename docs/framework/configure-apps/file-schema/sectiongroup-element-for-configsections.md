@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 750708483f9680745eef4531d86fa7ecaa329f51
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4e28e8ccea1090e6a5704b541e09dc11681278ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301188"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920646"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > elemento para \<configSections >
+# <a name="sectiongroup-element-for-configsections"></a>\<elemento de > de seção \<para configSections >
 
 Define um namespace para seções de configuração.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup>**
 
 ## <a name="syntax"></a>Sintaxe
@@ -42,21 +42,21 @@ Define um namespace para seções de configuração.
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contém as declarações de namespace e a seção de configuração. |
+| [configSections > elemento  **\<** ](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
 
 ## <a name="child-elements"></a>Elementos filho
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Contém uma declaração de seção de configuração. |
+| [ **\<> da seção**](section-element.md) | Contém uma declaração de seção de configuração. |
 
 ## <a name="remarks"></a>Comentários
 
-Declarando um grupo de seção cria uma marca de contêiner para as seções de configuração e garante que não haja nenhum conflito de nomenclatura com seções de configuração definidas por outra pessoa. Você pode aninhar  **\<sectionGroup >** elementos dentro do outro.
+Declarar um grupo de seções cria uma marca de contêiner para seções de configuração e garante que não haja conflitos de nomenclatura com seções de configuração definidas por outra pessoa. Você pode aninhar  **\<** elementos de > de seção entre si.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como declarar um grupo de seção e declarar seções dentro de um grupo de seções:
+O exemplo a seguir mostra como declarar um grupo de seções e declarar seções dentro de um grupo de seções:
 
 ```xml
 <configuration>
@@ -76,8 +76,8 @@ O exemplo a seguir mostra como declarar um grupo de seção e declarar seções 
 
 ## <a name="configuration-file"></a>arquivo de configuração
 
-Esse elemento pode ser usado no arquivo de configuração do aplicativo, arquivo de configuração de máquina (*Machine. config*), e *Web. config* arquivos que não estão no nível de diretório do aplicativo.
+Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema do arquivo de configuração para o .NET Framework](index.md)

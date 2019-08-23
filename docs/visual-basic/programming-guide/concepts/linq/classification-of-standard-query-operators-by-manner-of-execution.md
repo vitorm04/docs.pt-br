@@ -1,15 +1,15 @@
 ---
-title: Classificação de operadores de consulta padrão pelo modo de execução (Visual Basic)
+title: Classificação de operadores de consulta padrão por meio de execução (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e89c58707b4980b208395cce67434a6e5efa5d22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939262"
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Classificação de operadores de consulta padrão pelo modo de execução (Visual Basic)
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Classificação de operadores de consulta padrão por meio de execução (Visual Basic)
 As implementações de LINQ to Objects dos métodos de operador de consulta padrão em uma das duas maneiras principais: imediata ou adiada. Os operadores de consulta que usam a execução adiada podem ser divididos em mais duas categorias: streaming e não streaming. Se você souber como os operadores de consulta diferentes são executados, isso poderá ajudá-lo a entender os resultados que serão obtidos de uma determinada consulta. Isso é especialmente verdadeiro se a fonte de dados está sendo alterada ou se você estiver criando uma consulta sobre outra consulta. Este tópico classifica os operadores de consulta padrão de acordo com o modo de execução.  
   
 ## <a name="manners-of-execution"></a>Modos de execução  
@@ -32,7 +32,7 @@ As implementações de LINQ to Objects dos métodos de operador de consulta padr
  A tabela a seguir classifica cada método de operador de consulta padrão de acordo com o respectivo método de execução.  
   
 > [!NOTE]
->  Se um operador estiver marcado em duas colunas, duas sequências de entrada estarão envolvidas na operação e cada sequência será avaliada de forma diferente. Nesses casos, a primeira sequência na lista de parâmetros é a que sempre será avaliada de maneira adiada e em modo streaming.  
+> Se um operador estiver marcado em duas colunas, duas sequências de entrada estarão envolvidas na operação e cada sequência será avaliada de forma diferente. Nesses casos, a primeira sequência na lista de parâmetros é a que sempre será avaliada de maneira adiada e em modo streaming.  
   
 |Operador de consulta padrão|Tipo de retorno|Execução Imediata|Execução adiada de streaming|Execução adiada de não streaming|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  

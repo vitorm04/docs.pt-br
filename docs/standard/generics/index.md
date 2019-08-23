@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5c9f15a7ff30d5647338bf1954aca441b47281b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666444"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948736"
 ---
 # <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
 
@@ -128,7 +128,7 @@ ms.locfileid: "69666444"
 - No Visual Basic, C# e C++, um tipo aninhado que está embutido em um tipo genérico não pode ser instanciado, a menos que os tipos tenham sido atribuídos aos parâmetros de tipo de todos os tipos de delimitadores. Outra maneira de dizer isso é que em reflexão, um tipo aninhado que é definido usando essas linguagens inclui os parâmetros de tipo de todos os seus tipos de delimitadores. Isso permite que os parâmetros de tipos de delimitadores sejam usados nas definições de membro de um tipo aninhado. Para obter mais informações, consulte "Tipos aninhados" em <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
-    >  Um tipo aninhado que é definido pela emissão do código em um assembly dinâmico ou usando o [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) não é necessário para incluir parâmetros de tipo de seus tipos de delimitadores; no entanto, se ele não os incluir, os parâmetros de tipo não estarão no escopo na classe aninhada.  
+    > Um tipo aninhado que é definido pela emissão do código em um assembly dinâmico ou usando o [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) não é necessário para incluir parâmetros de tipo de seus tipos de delimitadores; no entanto, se ele não os incluir, os parâmetros de tipo não estarão no escopo na classe aninhada.  
   
      Para obter mais informações, consulte "Tipos aninhados" em <xref:System.Type.MakeGenericType%2A>.  
   

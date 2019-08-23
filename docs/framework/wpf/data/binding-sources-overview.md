@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944691"
 ---
 # <a name="binding-sources-overview"></a>Visão geral das fontes de associação
 Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados. Este tópico discute os tipos de objetos que você pode usar como a origem da associação.  
@@ -88,7 +88,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
   
  O requisito de permissão para a associação [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] é semelhante. Em uma área restrita de confiança parcial <xref:System.Windows.Data.XmlDataProvider> , o falha quando não tem permissões para acessar os dados especificados.  
   
- Objetos com um tipo anônimo são internos. Você pode associar a propriedades de tipos anônimos somente durante a execução em confiança total. Para obter mais informações sobre tipos anônimos, consulte [Tipos anônimos (Guia de programação em C#)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md) ou [Tipos anônimos (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).  
+ Objetos com um tipo anônimo são internos. Você pode associar a propriedades de tipos anônimos somente durante a execução em confiança total. Para obter mais informações sobre tipos anônimos, consulte [Tipos anônimos (Guia de programação em C#)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) ou [Tipos anônimos (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).  
   
  Para obter mais informações sobre a segurança de confiança parcial, consulte [Segurança de confiança parcial do WPF](../wpf-partial-trust-security.md).  
   

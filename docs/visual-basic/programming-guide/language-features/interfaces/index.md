@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: ee53e6e5fc360c5155e1682f829a45be922caf22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 968e5d9bb08f168e3c77b40ea42b16dc66e93e64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665419"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956290"
 ---
 # <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
 As *interfaces* definem as propriedades, os métodos e os eventos que as classes podem implementar. As interfaces permitem definir as funcionalidades como pequenos grupos de propriedades, de métodos e de eventos estreitamente relacionados. Isso reduz os problemas de compatibilidade, uma vez que é possível desenvolver implementações avançadas para as interfaces sem arriscar o código existente. Você pode adicionar novas funcionalidades a qualquer momento desenvolvendo interfaces e implementações adicionais.  
@@ -33,20 +33,20 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
  Em um namespace, as instruções de interface são `Friend` por padrão, mas também podem ser declaradas explicitamente como `Public` ou `Friend`. As interfaces definidas em classes, em módulos, em interfaces e em estruturas são `Public` por padrão, mas também podem ser explicitamente declaradas como `Public`, `Friend`, `Protected` ou `Private`.  
   
 > [!NOTE]
->  A palavra-chave `Shadows` pode ser aplicada a todos os membros de interface. A palavra-chave `Overloads` pode ser aplicada às instruções `Sub`, `Function` e `Property` declaradas em uma definição de interface. Além disso, as instruções `Property` podem ter os modificadores `Default`, `ReadOnly` ou `WriteOnly`. Nenhum dos outros modificadores (`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride` ou `Overridable`) são permitidos. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+> A palavra-chave `Shadows` pode ser aplicada a todos os membros de interface. A palavra-chave `Overloads` pode ser aplicada às instruções `Sub`, `Function` e `Property` declaradas em uma definição de interface. Além disso, as instruções `Property` podem ter os modificadores `Default`, `ReadOnly` ou `WriteOnly`. Nenhum dos outros modificadores (`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride` ou `Overridable`) são permitidos. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  Por exemplo, o código a seguir define uma interface com uma função, uma propriedade e um evento.  
   
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>Implementando interfaces  
- Palavra reservada do Visual Basic `Implements` é usado de duas maneiras. A instrução `Implements` significa que uma classe ou estrutura implementa uma interface. A palavra-chave `Implements` significa que um membro de classe ou um membro da estrutura implementa um membro de interface específico.  
+ A palavra `Implements` reservada Visual Basic é usada de duas maneiras. A instrução `Implements` significa que uma classe ou estrutura implementa uma interface. A palavra-chave `Implements` significa que um membro de classe ou um membro da estrutura implementa um membro de interface específico.  
   
 ### <a name="implements-statement"></a>Instrução Implements  
  Se uma classe ou estrutura implementa uma ou mais interfaces, ela deve incluir a instrução `Implements` imediatamente após a instrução `Class` ou `Structure`. A instrução `Implements` exige uma lista de interfaces separadas por vírgula a serem implementadas por uma classe. A classe ou a estrutura deve implementar todos os membros da interface usando a palavra-chave `Implements`.  
   
 ### <a name="implements-keyword"></a>Palavra-chave Implements  
- A palavra-chave `Implements` exige uma lista dos membros de interface separados por vírgula a serem implementados. Em geral, apenas um único membro de interface é especificado, mas você pode especificar vários membros. A especificação de um membro de interface é composta pelo nome da interface, que deve ser especificado em uma instrução implements na classe, um período e o nome da função, da propriedade ou do evento do membro a ser implementado. O nome de um membro que implementa um membro de interface pode usar qualquer identificador válido e não está limitado ao `InterfaceName_MethodName` convenção usada em versões anteriores do Visual Basic.  
+ A palavra-chave `Implements` exige uma lista dos membros de interface separados por vírgula a serem implementados. Em geral, apenas um único membro de interface é especificado, mas você pode especificar vários membros. A especificação de um membro de interface é composta pelo nome da interface, que deve ser especificado em uma instrução implements na classe, um período e o nome da função, da propriedade ou do evento do membro a ser implementado. O nome de um membro que implementa um membro de interface pode usar qualquer identificador legal e não está limitado à `InterfaceName_MethodName` convenção usada em versões anteriores do Visual Basic.  
   
  Por exemplo, o código a seguir mostra como declarar uma sub-rotina chamada `Sub1` que implementa um método de uma interface:  
   

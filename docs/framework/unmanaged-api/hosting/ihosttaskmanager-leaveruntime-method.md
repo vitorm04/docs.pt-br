@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 959cb541013ca0a26557e849874dbb329489d855
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749536"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959037"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>Método IHostTaskManager::LeaveRuntime
-Notifica o host que a tarefa atualmente em execução está prestes a deixar o common language runtime (CLR) e insira o código não gerenciado.  
+Notifica o host de que a tarefa em execução no momento está prestes a sair do Common Language Runtime (CLR) e inserir código não gerenciado.  
   
 > [!IMPORTANT]
->  Uma chamada correspondente para [ihosttaskmanager:: Enterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) notifica o host que a tarefa em execução no momento é reinserção de código gerenciado.  
+> Uma chamada correspondente para [IHostTaskManager:: EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) notifica o host que a tarefa em execução no momento está reinserindo o código gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,38 +40,38 @@ HRESULT LeaveRuntime (
   
 ## <a name="parameters"></a>Parâmetros  
  `target`  
- [in] O endereço dentro do arquivo executável portátil mapeado da função não gerenciada a ser chamado.  
+ no O endereço dentro do arquivo executável portátil mapeado da função não gerenciada a ser chamada.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|S_OK|`LeaveRuntime`retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Não há memória suficiente está disponível para concluir a alocação solicitada.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Não há memória suficiente disponível para concluir a alocação solicitada.|  
   
 ## <a name="remarks"></a>Comentários  
- Sequências de chamada de código não gerenciado e podem ser aninhadas. Por exemplo, a lista a seguir descreve uma situação hipotética em que a sequência de chamadas para `LeaveRuntime`, [ihosttaskmanager:: Reverseenterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [ihosttaskmanager:: Reverseleaveruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), e `IHostTaskManager::EnterRuntime` permite que o host identificar as camadas aninhadas.  
+ Seqüências de chamadas de e para código não gerenciado podem ser aninhadas. Por exemplo, a lista a seguir descreve uma situação hipotética na qual a sequência de chamadas para `LeaveRuntime`, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)e `IHostTaskManager::EnterRuntime` permite que o host Identifique as camadas aninhadas.  
   
 |Ação|Chamada de método correspondente|  
 |------------|-------------------------------|  
-|Invocação de uma função não gerenciada, escrita em C usando a plataforma um chamadas executável gerenciado do Visual Basic.|`IHostTaskManager::LeaveRuntime`|  
-|A função C não gerenciada chama um método em uma DLL gerenciada escrita em C#.|`IHostTaskManager::ReverseEnterRuntime`|  
-|Gerenciado C# função chama outra função não gerenciada escrita em C, também usando invocação de plataforma.|`IHostTaskManager::LeaveRuntime`|  
-|A segunda função não gerenciada retorna a execução para o C# função.|`IHostTaskManager::EnterRuntime`|  
-|O C# função retorna a execução para a primeira função não gerenciada.|`IHostTaskManager::ReverseLeaveRuntime`|  
-|A primeira função não gerenciada retorna a execução para o programa em Visual Basic.|`IHostTaskManager::EnterRuntime`|  
+|Um executável gerenciado Visual Basic chama uma função não gerenciada escrita em C usando a invocação de plataforma.|`IHostTaskManager::LeaveRuntime`|  
+|A função C não gerenciada chama um método em uma DLL gerenciada gravada no C#.|`IHostTaskManager::ReverseEnterRuntime`|  
+|A função C# gerenciada chama outra função não gerenciada escrita em C, também usando a invocação de plataforma.|`IHostTaskManager::LeaveRuntime`|  
+|A segunda função não gerenciada retorna a execução para C# a função.|`IHostTaskManager::EnterRuntime`|  
+|A C# função retorna a execução para a primeira função não gerenciada.|`IHostTaskManager::ReverseLeaveRuntime`|  
+|A primeira função não gerenciada retorna a execução para o programa de Visual Basic.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

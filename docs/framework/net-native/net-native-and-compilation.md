@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711b4c79b32aa3db4d3681d29e08dbd3d2ddbd02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1cb53818d0e12d625b0609a80b4d8473713525d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660279"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941638"
 ---
 # <a name="net-native-and-compilation"></a>Compilação e .NET nativo
 Aplicativos do Windows 8.1 e aplicativos de Área de Trabalho do Windows direcionados ao .NET Framework são escritos em uma linguagem de programação específica e compilados em IL (linguagem intermediária). Em tempo de execução, um compilador JIT (Just-in-Time) é responsável pela compilação de IL em código nativo para o computador local antes de um método ser executado pela primeira vez. Por outro lado, a cadeia de ferramentas do .NET Native converte código-fonte em código nativo em tempo de compilação. Este tópico compara .NET Native com outras tecnologias de compilação disponíveis para aplicativos do .NET Framework e também fornece uma visão prática de como o .NET Native produz código nativo que pode lhe ajudar a entender por que as exceções que ocorrem no código compilado com o .NET Native não ocorrem no código com compilação JIT.  
   
-## <a name="net-native-generating-native-binaries"></a>.NET native: Gerando binários nativos  
+## <a name="net-native-generating-native-binaries"></a>.NET Native: Gerando binários nativos  
  Um aplicativo que tem como destino o .NET Framework e que não é compilado usando a cadeia de ferramentas do .NET Native consiste em seu assembly de aplicativo, que inclui o seguinte:  
   
-- [Metadados](../../../docs/standard/metadata-and-self-describing-components.md) que descrevem o assembly, as dependências desses metadados, os tipos que eles contêm e os respectivos membros. Os metadados são usados para reflexão e acesso de associação tardia e, em alguns casos, pelas ferramentas de compilador e de build também.  
+- [Metadados](../../standard/metadata-and-self-describing-components.md) que descrevem o assembly, as dependências desses metadados, os tipos que eles contêm e os respectivos membros. Os metadados são usados para reflexão e acesso de associação tardia e, em alguns casos, pelas ferramentas de compilador e de build também.  
   
 - Código de implementação. Isso consiste de opcodes de IL (linguagem intermediária). Em tempo de execução, o compilador JIT (Just-In-Time) o converte em código nativo para a plataforma de destino.  
   
@@ -50,16 +50,16 @@ Aplicativos do Windows 8.1 e aplicativos de Área de Trabalho do Windows direcio
 - Ele substitui o CLR completo com um tempo de execução refatorado que contém principalmente o coletor de lixo. O tempo de execução refatorado encontra-se em uma biblioteca de chamada mrt100_app.dll que é local para o aplicativo e tem apenas algumas centenas de kilobytes de tamanho. Isso é possível porque a vinculação estática elimina a necessidade de muitos dos serviços executados pelo Common Language Runtime.  
   
     > [!NOTE]
-    >  O .NET Native usa o mesmo coletor de lixo que o Common Language Runtime padrão. No coletor de lixo do .NET Native, a coleta de lixo em segundo plano é habilitada por padrão. Para obter mais informações sobre a coleta de lixo, consulte [Conceitos básicos da coleta de lixo](../../../docs/standard/garbage-collection/fundamentals.md).  
+    > O .NET Native usa o mesmo coletor de lixo que o Common Language Runtime padrão. No coletor de lixo do .NET Native, a coleta de lixo em segundo plano é habilitada por padrão. Para obter mais informações sobre a coleta de lixo, consulte [Conceitos básicos da coleta de lixo](../../standard/garbage-collection/fundamentals.md).  
   
 > [!IMPORTANT]
->  O .NET Native compila um aplicativo inteiro para um aplicativo nativo. Ele não permite que você compile um único assembly que contém uma biblioteca de classes para código nativo para que ele possa ser chamado independentemente por meio do código gerenciado.  
+> O .NET Native compila um aplicativo inteiro para um aplicativo nativo. Ele não permite que você compile um único assembly que contém uma biblioteca de classes para código nativo para que ele possa ser chamado independentemente por meio do código gerenciado.  
   
  O aplicativo resultante que é produzido pela cadeia de ferramentas do .NET Native é gravado em um diretório chamado ilc.out no diretório Debug ou Release do diretório do projeto. Ele consiste dos seguintes arquivos:  
   
-- *\<appName>*.exe, um executável de stub que simplesmente transfere o controle para uma exportação de `Main` especial em *\<appName>*.dll.  
+- *\<appName>* .exe, um executável de stub que simplesmente transfere o controle para uma exportação de `Main` especial em *\<appName>* .dll.  
   
-- *\<appName>*.dll, uma biblioteca de vínculo dinâmico do Windows que contém todo o código do aplicativo, bem como código de biblioteca de classes .NET Framework e todas as bibliotecas de terceiros em que você tem uma dependência.  Ele também contém código de suporte, tal como o código necessário para interoperação com o Windows e para serializar objetos em seu aplicativo.  
+- *\<appName>* .dll, uma biblioteca de vínculo dinâmico do Windows que contém todo o código do aplicativo, bem como código de biblioteca de classes .NET Framework e todas as bibliotecas de terceiros em que você tem uma dependência.  Ele também contém código de suporte, tal como o código necessário para interoperação com o Windows e para serializar objetos em seu aplicativo.  
   
 - mrt100_app.dll, um tempo de execução refatorado que fornece serviços de tempo de execução como coleta de lixo.  
   
@@ -102,7 +102,7 @@ Aplicativos do Windows 8.1 e aplicativos de Área de Trabalho do Windows direcio
   
 ## <a name="see-also"></a>Consulte também
 
-- [Metadados e componentes autodescritivos](../../../docs/standard/metadata-and-self-describing-components.md)
-- [Por dentro, o .NET Native (vídeo do Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [Metadados e componentes autodescritivos](../../standard/metadata-and-self-describing-components.md)
+- [Dentro de .NET Native (vídeo do Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [Solução de problemas gerais do .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

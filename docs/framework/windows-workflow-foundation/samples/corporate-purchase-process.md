@@ -2,17 +2,17 @@
 title: Processo de compra corporativo
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d019c1915e691fcba00fa8f1b0884a898ce02fab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876162"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951522"
 ---
 # <a name="corporate-purchase-process"></a>Processo de compra corporativo
 Este exemplo mostra como criar uma solicitação bem básico para o processo com base (RFP) de compra de propostas com a melhor seleção automático de proposta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, e <xref:System.Activities.Statements.ForEach%601> e uma atividade personalizado para criar um fluxo de trabalho que representa o processo.
 
- Este exemplo contém um aplicativo de cliente do ASP.NET que permite interagir com o processo como participantes diferentes (como o solicitador original ou um fornecedor particular).
+ Este exemplo contém um aplicativo cliente ASP.NET que permite interagir com o processo como participantes diferentes (como o solicitante original ou um fornecedor específico).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -36,19 +36,19 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 
 - Controlar.
 
-- Hospedagem [!INCLUDE[wf1](../../../../includes/wf1-md.md)] em diferentes clientes (aplicativos da Web ASP.NET e aplicativos WinForms).
+- Hospedagem [!INCLUDE[wf1](../../../../includes/wf1-md.md)] em clientes diferentes (aplicativos Web ASP.net e aplicativos WinForms).
 
 > [!IMPORTANT]
->  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
+> Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Descrição do processo  
- Este exemplo mostra uma implementação de um programa do Windows Workflow Foundation (WF) para reunir as propostas de fornecedores para uma empresa genérico.  
+ Este exemplo mostra uma implementação de um programa Windows Workflow Foundation (WF) para reunir propostas de fornecedores para uma empresa genérica.  
   
 1. Um funcionário da empresa X cria um aplicativo de propostas (RFP).  
   
@@ -82,7 +82,7 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 |-------------|-----------------|  
 |Comuns|Os objetos de entidade usados dentro do processo (aplicativo de propostas, fornecedor, e proposta de provedor).|  
 |WfDefinition|A definição de processo (como um programa de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) e o host (`PurchaseProcessHost`) usado por aplicativos cliente para criar e usar as instâncias de compra processam o fluxo de trabalho.|  
-|Clientes web|Um aplicativo de cliente do ASP.NET que permite que os usuários criarem e participem nas instâncias do processo de compra. Usa um host de criado para interagir com o mecanismo de fluxo de trabalho.|  
+|Clientes web|Um aplicativo cliente ASP.NET que permite que os usuários criem e participem de instâncias do processo de compra. Usa um host de criado para interagir com o mecanismo de fluxo de trabalho.|  
 |WinFormsClient|Um aplicativo cliente Windows Forms que permite aos usuários criarem e participem nas instâncias do processo de compras. Usa um host de criado para interagir com o mecanismo de fluxo de trabalho.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
@@ -127,14 +127,14 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 |Formulário|Descrição|  
 |-|-|  
 |NewRfp|Cria e envia uma nova solicitação para propostas.|  
-|ShowProposals|Mostrar todas as solicitações ativos e concluídas para propostas. **Observação:**  Você talvez precise clicar o **Refresh** botão na interface do usuário para ver as alterações na tela depois de criar ou modificar uma solicitação de proposta.|  
+|ShowProposals|Mostrar todas as solicitações ativos e concluídas para propostas. **Observação:**  Talvez seja necessário clicar no botão **Atualizar** na interface do usuário para ver as alterações nessa tela depois de criar ou modificar uma solicitação de proposta.|  
 |SubmitProposal|Obter uma proposta de um fornecedor em uma solicitação concreta para propostas. Essa janela é usada por fornecedores.|  
 |ViewRfp|Mostrar todas as informações sobre uma solicitação para propostas (propostas recebidas, datas, valores, e outras informações.) Essa janela é usada somente pelo criador de solicitação para propostas.|  
   
 ### <a name="persistence-files"></a>Arquivos de persistência  
  A tabela a seguir mostra os arquivos gerados pelo provedor de persistência (`XmlPersistenceProvider`) está localizada no caminho da pasta temporária do sistema atual (usando <xref:System.IO.Path.GetTempPath%2A>). O arquivo de rastreamento é criado no caminho atual de execução.  
   
-|Nome do Arquivo|Descrição|Caminho|  
+|Nome do Arquivo|Descrição|Path|  
 |-|-|-|  
 |rfps.xml|O arquivo XML com todas as solicitações ativos e concluídas para propostas.|<xref:System.IO.Path.GetTempPath%2A>|  
 |[instanceid]|Este arquivo contém todas informações sobre uma instância de fluxo de trabalho.<br /><br /> Este arquivo é gerado pela implementação esquematizada de persistência (PersistenceParticipant em XmlPersistenceProvider).|<xref:System.IO.Path.GetTempPath%2A>|  
@@ -143,11 +143,11 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1. Usando o Visual Studio 2010, abra o arquivo de solução de Purchaseprocess.  
+1. Usando o Visual Studio 2010, abra o arquivo de solução PurchaseProcess. sln.  
   
-2. Para executar o projeto de cliente da Web, abra **Gerenciador de soluções** e clique com botão direito do **cliente Web** projeto. Selecione **definir como projeto de inicialização**.  
+2. Para executar o projeto do cliente Web, abra **Gerenciador de soluções** e clique com o botão direito do mouse no projeto do **cliente Web** . Selecione **definir como projeto de inicialização**.  
   
-3. Para executar o projeto de cliente de WinForms, abra **Gerenciador de soluções** e clique com botão direito do **cliente de WinForms** projeto. Selecione **definir como projeto de inicialização**.  
+3. Para executar o projeto cliente WinForms, abra **Gerenciador de soluções** e clique com o botão direito do mouse no projeto **cliente WinForms** . Selecione **definir como projeto de inicialização**.  
   
 4. Para criar a solução, pressione CTRL+SHIFT+B.  
   
@@ -155,20 +155,20 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
   
 ### <a name="web-client-options"></a>Opções de cliente web  
   
-- **Criar um novo RFP&lt;1**: Cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
+- **Criar uma nova RFP**: Cria uma nova solicitação de propostas (RFP) e inicia um fluxo de trabalho de processo de compra.  
   
-- **Atualizar**: Atualiza a lista de RFPs ativo e concluído na janela principal.  
+- **Atualizar**: Atualiza a lista de RFPs ativas e concluídas na janela principal.  
   
-- **Exibir**: Mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não for concluído.)  
+- **Exibir**: Mostra o conteúdo de uma RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não for concluído.)  
   
-- Exiba como: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.  
+- Exibir como: O usuário pode acessar a RFP usando identidades diferentes selecionando o participante desejado na caixa de combinação **Exibir como** na grade de RFPs ativa.  
   
 ### <a name="winforms-client-options"></a>Opções de cliente de WinForms  
   
-- **Criar RFP**: Cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
+- **Criar RFP**: Cria uma nova solicitação de propostas (RFP) e inicia um fluxo de trabalho de processo de compra.  
   
-- **Atualizar**: Atualiza a lista de RFPs ativo e concluído na janela principal.  
+- **Atualizar**: Atualiza a lista de RFPs ativas e concluídas na janela principal.  
   
-- **Exibir RFP**: Mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não é concluído)  
+- **Exibir RFP**: Mostra o conteúdo de uma RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não é concluído)  
   
-- **Conectar-se como**: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.
+- **Conectar como**: O usuário pode acessar a RFP usando identidades diferentes selecionando o participante desejado na caixa de combinação **Exibir como** na grade de RFPs ativa.

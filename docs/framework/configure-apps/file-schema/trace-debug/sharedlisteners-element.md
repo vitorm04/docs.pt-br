@@ -11,18 +11,18 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41cabcbce13409b0842cbbd625028b51d32d59d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701210"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926979"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedListeners> Element
-Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento.  Esses ouvintes não recebem os rastreamentos por padrão, e não é possível recuperar esses ouvintes em tempo de execução. Ouvintes identificados como ouvintes compartilhados podem ser adicionados à fontes ou rastreamentos por nome.  
+# <a name="sharedlisteners-element"></a>\<Elemento de > de sharedListeners
+Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento.  Esses ouvintes não recebem nenhum rastreamento por padrão e não é possível recuperar esses ouvintes em tempo de execução. Os ouvintes identificados como ouvintes compartilhados podem ser adicionados a fontes ou rastreamentos por nome.  
   
  \<configuration>  
-\<system.diagnostics>  
+\<System. Diagnostics >  
 \<sharedListeners>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -43,22 +43,22 @@ Contém os ouvintes que podem ser referenciados por qualquer elemento de origem 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Adiciona um ouvinte na coleção `sharedListeners`.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Adiciona um ouvinte na coleção `sharedListeners`.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`Configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
-|`system.diagnostics`|Especifica o elemento raiz para a seção de configuração do ASP.NET.|  
+|`system.diagnostics`|Especifica o elemento raiz para a seção de configuração ASP.NET.|  
   
 ## <a name="remarks"></a>Comentários  
- Adicionar um ouvinte à coleção de ouvintes compartilhados não o torna um ouvinte ativo. Ela ainda deve ser adicionada a uma origem de rastreamento ou um rastreamento adicionando-à `Listeners` coleção para esse elemento de rastreamento. As classes de ouvinte no .NET Framework derivam o <xref:System.Diagnostics.TraceListener> classe.  
+ A adição de um ouvinte à coleção de ouvintes compartilhados não o torna um ouvinte ativo. Ele ainda deve ser adicionado a uma origem de rastreamento ou a um rastreamento adicionando-o `Listeners` à coleção para esse elemento Trace. As classes de ouvinte no .NET Framework derivam <xref:System.Diagnostics.TraceListener> da classe.  
   
- Esse elemento pode ser usado no arquivo de configuração de máquina (Machine. config) e o arquivo de configuração do aplicativo.  
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o `<sharedListeners>` elemento para adicionar o ouvinte `console` para o `Listeners` coleção para ambos os <xref:System.Diagnostics.TraceSource> e <xref:System.Diagnostics.Trace> classes. O ouvinte de rastreamento do console grava informações de rastreamento no console por meio de chamadas para um <xref:System.Diagnostics.TraceSource> ou <xref:System.Diagnostics.Trace>.  
+ O exemplo a seguir mostra como usar o `<sharedListeners>` elemento para adicionar o ouvinte `console` à `Listeners` coleção para <xref:System.Diagnostics.TraceSource> as classes e <xref:System.Diagnostics.Trace> . O ouvinte de rastreamento do console grava informações de rastreamento no console por <xref:System.Diagnostics.TraceSource> meio <xref:System.Diagnostics.Trace>de chamadas para o ou o.  
   
 ```xml  
 <configuration>  
@@ -91,5 +91,5 @@ Contém os ouvintes que podem ser referenciados por qualquer elemento de origem 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Diagnostics.TraceListener>
-- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Ouvintes de rastreamento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Esquema de configurações de rastreamento e depuração](index.md)
+- [Ouvintes de rastreamento](../../../debug-trace-profile/trace-listeners.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 867bf97ea13654de6f9c0209c64b9320824f9665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931748"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Implementação do método em controles personalizados
 Um método é implementado em um controle da mesma maneira que seria em qualquer outro componente.  
@@ -48,9 +48,9 @@ public int ConvertMatterToEnergy(int matter)
  Se desejar permitir aos usuários de seu controle fornecer diferentes combinações de parâmetros a um método, forneça múltiplas sobrecargas do método, usando tipos de dados explícitos. Evite criar parâmetros declarados `As Object` que podem conter qualquer tipo de dados, pois isso pode levar a erros que podem não ser capturados no teste.  
   
 > [!NOTE]
->  O tipo de dados universal no Common Language Runtime é `Object` ao invés de `Variant`. `Variant` foi removido do idioma.  
+> O tipo de dados universal no Common Language Runtime é `Object` ao invés de `Variant`. `Variant`foi removido do idioma.  
   
- Por exemplo, o `Spin` método de um controle `Widget` hipotético poderá permitir especificação direta de velocidade e direção da rotação ou especificação de outro `Widget` objeto do qual o momentum angular deve ser absorvido:  
+ Por exemplo, o `Spin` método de um `Widget` controle hipotético pode permitir a especificação direta da direção e da velocidade da rotação, ou a especificação `Widget` de outro objeto do qual a dinâmica angular deve ser absorvido:  
   
 ```vb  
 Overloads Public Sub Spin( _  

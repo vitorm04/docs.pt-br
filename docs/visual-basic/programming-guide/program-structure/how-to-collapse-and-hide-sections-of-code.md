@@ -6,28 +6,28 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: 367527fd638f6855077caf8ff5911edb333dfcbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db396adf24c12542f720d3b235068aea2329288d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648776"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949725"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Como: Recolher e ocultar seções de código (Visual Basic)
-O `#Region` diretiva permite que você recolher e ocultar seções de código em arquivos do Visual Basic. O `#Region` diretiva permite que você especifique um bloco de código que você pode expandir ou recolher ao usar o editor de código do Visual Studio. A capacidade de ocultar código seletivamente torna seus arquivos mais gerenciáveis e mais fácil de ler. Para obter mais informações, consulte [Estrutura de tópicos](/visualstudio/ide/outlining).  
+A `#Region` diretiva permite que você recolha e oculte seções de código em arquivos Visual Basic. A `#Region` diretiva permite especificar um bloco de código que você pode expandir ou recolher ao usar o editor de código do Visual Studio. A capacidade de ocultar o código seletivamente torna os arquivos mais gerenciáveis e fáceis de ler. Para obter mais informações, consulte [Estrutura de tópicos](/visualstudio/ide/outlining).  
   
- `#Region` diretivas de suportam a semântica de bloco de código como `#If...#End If`. Isso significa que eles não podem começar em um bloco e terminar em outra; o início e término devem ser no mesmo bloco. `#Region` Não há suporte para diretivas dentro de funções.  
+ `#Region`as diretivas dão suporte à semântica de bloco `#If...#End If`de código, como. Isso significa que eles não podem começar em um bloco e terminar em outro; o início e o fim devem estar no mesmo bloco. `#Region`Não há suporte para diretivas em funções.  
   
 ### <a name="to-collapse-and-hide-a-section-of-code"></a>Para recolher e ocultar uma seção de código  
   
-- Coloque a seção de código entre o `#Region` e `#End Region` instruções, como no exemplo a seguir:  
+- Coloque a seção de código entre as `#Region` instruções `#End Region` e, como no exemplo a seguir:  
   
      [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]  
   
-     O `#Region` bloco pode ser usado várias vezes em um arquivo de código; portanto, os usuários podem definir seus próprios blocos de procedimentos e as classes que podem, por sua vez, ser recolhidas. `#Region` blocos também podem ser aninhados dentro de outras `#Region` blocos.  
+     O `#Region` bloco pode ser usado várias vezes em um arquivo de código; assim, os usuários podem definir seus próprios blocos de procedimentos e classes que podem, por sua vez, ser recolhidos. `#Region`os blocos também podem ser aninhados `#Region` dentro de outros blocos.  
   
     > [!NOTE]
-    >  Ocultando código não impede que ele seja compilado e não afeta `#If...#End If` instruções.  
+    > Ocultar o código não impede que ele seja compilado e não afeta `#If...#End If` as instruções.  
   
 ## <a name="see-also"></a>Consulte também
 

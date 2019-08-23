@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: d973dd59c1f0612962b89775e1fb2cf6bdd756ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566952"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953925"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Usando automação de interface do usuário para testes automatizados
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
  Esta visão geral descreve [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] como o pode ser útil como uma estrutura para acesso programático em cenários de teste automatizado.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "69566952"
  Um provedor e um cliente precisam implementar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para que ele seja útil como uma ferramenta de teste automatizada. Os provedores de automação da interface do usuário são aplicativos como o Microsoft Word, o Excel e outros aplicativos ou controles de [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] terceiros baseados no sistema operacional. Os clientes de automação da interface do usuário incluem scripts de teste automatizados e aplicativos de tecnologia assistencial.  
   
 > [!NOTE]
->  A intenção desta visão geral é apresentar os novos e aprimorados recursos de teste automatizados do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Esta visão geral não se destina a fornecer informações sobre recursos de acessibilidade e não abordará acessibilidade além de onde for necessário.  
+> A intenção desta visão geral é apresentar os novos e aprimorados recursos de teste automatizados do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Esta visão geral não se destina a fornecer informações sobre recursos de acessibilidade e não abordará acessibilidade além de onde for necessário.  
   
 <a name="Using_UI_Automation_During_Development"></a>   
 ## <a name="ui-automation-in-a-provider"></a>Automação da interface do usuário em um provedor  
@@ -35,7 +35,7 @@ ms.locfileid: "69566952"
  Depois que essas ações-chave forem identificadas, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] os padrões de controle correspondentes (ou seja, os padrões de controle que espelham a [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] funcionalidade e o comportamento do elemento) devem ser implementados no controle. Por exemplo, a interação do usuário com um controle caixa de combinação (como o diálogo Executar) geralmente envolve expandir e recolher a caixa de combinação para ocultar ou exibir uma lista de itens, selecionar um item dessa lista ou adicionar um novo valor por meio de entrada do teclado.  
   
 > [!NOTE]
->  Com outros modelos de acessibilidade, os desenvolvedores devem reunir informações diretamente de botões, menus ou outros controles individuais. Infelizmente, cada tipo de controle vem em dezenas de pequenas variações. Em outras palavras, embora dez variações de um botão de pressão possam funcionar da mesma forma e executar a mesma função, todas elas devem ser tratadas como controles exclusivos. Não é possível saber que esses controles são funcionalmente equivalentes. Padrões de controle foram desenvolvidos para representar esses comportamentos de controle comuns. Para obter mais informações, consulte [visão geral dos padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+> Com outros modelos de acessibilidade, os desenvolvedores devem reunir informações diretamente de botões, menus ou outros controles individuais. Infelizmente, cada tipo de controle vem em dezenas de pequenas variações. Em outras palavras, embora dez variações de um botão de pressão possam funcionar da mesma forma e executar a mesma função, todas elas devem ser tratadas como controles exclusivos. Não é possível saber que esses controles são funcionalmente equivalentes. Padrões de controle foram desenvolvidos para representar esses comportamentos de controle comuns. Para obter mais informações, consulte [visão geral dos padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>Implementando a automação da interface do usuário  
@@ -79,7 +79,7 @@ ms.locfileid: "69566952"
  Identifica exclusivamente um elemento Automation de seus irmãos. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>Não é localizado, ao contrário de uma propriedade <xref:System.Windows.Automation.AutomationElement.NameProperty> , como que é normalmente localizada se um produto é enviado em vários idiomas. Consulte [usar a propriedade AutomationId](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>não garante uma identidade exclusiva em toda a árvore de automação. Por exemplo, um aplicativo pode conter um controle de menu com vários itens de menu de nível superior que, por sua vez, têm vários itens de menu filho. Esses itens de menu secundários podem ser identificados por um esquema genérico, como "Item1, item 2, Item3, etc.", permitindo identificadores duplicados para filhos em itens de menu de nível superior.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>não garante uma identidade exclusiva em toda a árvore de automação. Por exemplo, um aplicativo pode conter um controle de menu com vários itens de menu de nível superior que, por sua vez, têm vários itens de menu filho. Esses itens de menu secundários podem ser identificados por um esquema genérico, como "Item1, item 2, Item3, etc.", permitindo identificadores duplicados para filhos em itens de menu de nível superior.  
   
 #### <a name="controltype"></a>ControlType  
  Identifica o tipo de controle representado por um elemento de automação. Informações significativas podem ser inferidas do conhecimento do tipo de controle. Consulte [visão geral de tipos de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  

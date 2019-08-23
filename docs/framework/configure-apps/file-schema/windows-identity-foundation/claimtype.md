@@ -3,20 +3,20 @@ title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4253aec961b812b6893ee201861d2ab38048032a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667217"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942876"
 ---
-# <a name="claimtype"></a>\<claimType>
-Especifica uma única declaração obrigatórias ou opcional para tokens de segurança de entrada.  
+# <a name="claimtype"></a>\<> de ClaimType
+Especifica uma única declaração opcional ou necessária para tokens de segurança de entrada.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<claimTypeRequired>  
-\<claimType>  
+\<> de ClaimType  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ Especifica uma única declaração obrigatórias ou opcional para tokens de segu
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|tipo|O tipo da declaração. Normalmente é um URI. Necessário.|  
+|tipo|O tipo da declaração. Normalmente um URI. Necessário.|  
 |optional|Um valor booliano que especifica se o tipo de declaração é opcional. Opcional.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -48,4 +48,4 @@ Especifica uma única declaração obrigatórias ou opcional para tokens de segu
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Especifica o conjunto de declarações necessárias para tokens de segurança de entrada.|
+|[\<claimTypeRequired>](claimtyperequired.md)|Especifica o conjunto de declarações necessárias para tokens de segurança de entrada.|

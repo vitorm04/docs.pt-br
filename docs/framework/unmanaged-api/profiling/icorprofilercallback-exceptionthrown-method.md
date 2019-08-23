@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb95c11900b84b78a3f862bcb73f0700aaabeeaa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01e407b726ce4426f3b58bc29854b30bd6add257
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755983"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953871"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>Método ICorProfilerCallback::ExceptionThrown
-Notifica o criador de perfil que foi lançada uma exceção.  
+Notifica o criador de perfil de que uma exceção foi lançada.  
   
 > [!NOTE]
->  Essa função é chamada somente se a exceção atingir o código gerenciado.  
+> Essa função será chamada somente se a exceção atingir código gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,19 +39,19 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>Parâmetros  
  `thrownObjectId`  
- [in] A ID do objeto que causou a exceção seja lançada.  
+ no A ID do objeto que causou a exceção a ser gerada.  
   
 ## <a name="remarks"></a>Comentários  
- O criador de perfil não deve bloquear em sua implementação desse método, porque a pilha não pode estar em um estado que permite a coleta de lixo e, portanto, a coleta de lixo preemptive não pode ser habilitada. Se o criador de perfil bloqueia aqui e coleta de lixo é tentada, o tempo de execução será bloqueada até que esse retorno de chamada retorne.  
+ O criador de perfil não deve bloquear em sua implementação desse método porque a pilha pode não estar em um estado que permita a coleta de lixo e, portanto, a coleta de lixo preemptiva não pode ser habilitada. Se o criador de perfil for bloqueado aqui e a coleta de lixo for tentada, o tempo de execução será bloqueado até que esse retorno de chamada seja retornado.  
   
- Implementação do criador de perfil deste método não deve chamar código gerenciado ou em qualquer forma de causa uma alocação de memória gerenciada.  
+ A implementação do criador de perfil desse método não deve chamar o código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl, CorProf.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -2,20 +2,20 @@
 title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 0940248364488bb38a329c5e461d72463c574e74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65488c34931f6d7c424ece58a4855e746ea455bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670372"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936423"
 ---
 # <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager>
 Fornece um elemento de configuração de fluxo de trabalho que estabelece, no nível de serviço, a validade de uma transmissão, mensagem ou originador.  
   
 \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors>  
-\<behavior>  
+\<> de portais  
+\<> de comportamento  
 \<serviceAuthenticationManager>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,7 +37,7 @@ Fornece um elemento de configuração de fluxo de trabalho que estabelece, no n�
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|serviceAuthenticationManagerType|Uma cadeia de caracteres que especifica o tipo de política de autenticação para o comportamento atual.|  
+|serviceAuthenticationManagerType|Uma cadeia de caracteres que especifica o tipo da política de autenticação para o comportamento atual.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -46,7 +46,7 @@ Fornece um elemento de configuração de fluxo de trabalho que estabelece, no n�
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<> de comportamento](behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 5b4da744151d8b667c0f944b1a0d51d1251bfae5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a51381db71f528bf3cf25f5c84d18aee805c57e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652006"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948370"
 ---
 # <a name="configuring-message-logging"></a>Configurando registros de mensagens em log
 Este tópico descreve como você pode configurar o log de mensagens para diferentes cenários.  
   
-## <a name="enabling-message-logging"></a>Habilitando o log de mensagem  
- Por padrão, o Windows Communication Foundation (WCF) não registra mensagens. Para ativar o log de mensagens, você deve adicionar um ouvinte de rastreamento para o `System.ServiceModel.MessageLogging` fonte de rastreamento e definir atributos para o `<messagelogging>` elemento no arquivo de configuração.  
+## <a name="enabling-message-logging"></a>Habilitando o log de mensagens  
+ O Windows Communication Foundation (WCF) não registra mensagens por padrão. Para ativar o log de mensagens, você deve adicionar um ouvinte `System.ServiceModel.MessageLogging` de rastreamento à fonte de rastreamento e `<messagelogging>` definir atributos para o elemento no arquivo de configuração.  
   
  O exemplo a seguir mostra como habilitar o registro em log e especificar opções adicionais.  
   
@@ -45,83 +45,83 @@ Este tópico descreve como você pode configurar o log de mensagens para diferen
 </system.serviceModel>  
 ```  
   
- Para obter mais informações sobre as configurações de registro em log de mensagem, consulte [as configurações recomendadas para rastreamento e registro em log de mensagem](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Para obter mais informações sobre configurações de log de mensagens, consulte [configurações recomendadas para rastreamento e log de mensagens](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
- Você pode usar `add` para especificar o nome e tipo do ouvinte que você deseja usar. Na configuração de exemplo, o ouvinte é denominado "messages" e adiciona o ouvinte de rastreamento padrão do .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) como o tipo a ser usado. Se você usar `System.Diagnostics.XmlWriterTraceListener`, você deve especificar o local do arquivo de saída e o nome no arquivo de configuração. Isso é feito definindo `initializeData` para o nome do arquivo de log. Caso contrário, o sistema gerará uma exceção. Você também pode implementar um ouvinte personalizado que emite os logs para um arquivo padrão.  
+ Você pode usar `add` para especificar o nome e o tipo do ouvinte que deseja usar. Na configuração de exemplo, o ouvinte é chamado de "mensagens" e adiciona o ouvinte de`System.Diagnostics.XmlWriterTraceListener`rastreamento de .NET Framework padrão () como o tipo a ser usado. Se você usar `System.Diagnostics.XmlWriterTraceListener`o, deverá especificar o local e o nome do arquivo de saída no arquivo de configuração. Isso é feito definindo `initializeData` o nome do arquivo de log. Caso contrário, o sistema gera uma exceção. Você também pode implementar um ouvinte personalizado que emite logs para um arquivo padrão.  
   
 > [!NOTE]
->  Como registro em log de mensagem acessa o espaço em disco, você deve limitar o número de mensagens que são gravados em disco para um serviço específico. Quando o limite da mensagem é atingido, um rastreamento no nível de informações é produzido e parar todas as atividades de registro em log de mensagem.  
+> Como o log de mensagens acessa o espaço em disco, você deve limitar o número de mensagens gravadas no disco para um serviço específico. Quando o limite de mensagens é atingido, um rastreamento no nível de informação é produzido e todas as atividades de log de mensagem são interrompidas.  
   
- O nível de log, bem como as opções adicionais, são discutidas na seção de nível de registro em log e as opções.  
+ O nível de log, bem como as opções adicionais, são discutidos na seção nível de log e opções.  
   
- O `switchValue` atributo de um `source` só é válido para o rastreamento. Se você especificar uma `switchValue` de atributo para o `System.ServiceModel.MessageLogging` origem de rastreamento como segue, ele não tem nenhum efeito.  
+ O `switchValue` atributo de a `source` é válido somente para rastreamento. Se você especificar um `switchValue` atributo para a `System.ServiceModel.MessageLogging` origem de rastreamento da seguinte maneira, ele não terá nenhum efeito.  
   
 ```xml  
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Se você quiser desabilitar a origem de rastreamento, você deve usar o `logMessagesAtServiceLevel`, `logMalformedMessages`, e `logMessagesAtTransportLevel` atributos do `messageLogging` elemento em vez disso. Você deve definir todos esses atributos para `false`. Isso pode ser feito usando o arquivo de configuração no exemplo de código anterior, por meio da interface do Editor de configuração de UI, ou usando o WMI. Para obter mais informações sobre a ferramenta Editor de configuração, consulte [ferramenta de Editor de configuração (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Para obter mais informações sobre WMI, consulte [usando o Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Se você quiser desabilitar a origem do rastreamento `logMessagesAtServiceLevel`, use os atributos, `logMalformedMessages` `messageLogging` , e `logMessagesAtTransportLevel` do elemento. Você deve definir todos esses atributos como `false`. Isso pode ser feito usando o arquivo de configuração no exemplo de código anterior, por meio da interface de interface do usuário do editor de configuração ou usando o WMI. Para obter mais informações sobre a ferramenta do editor de configuração, consulte [ferramenta do editor de configuração (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Para obter mais informações sobre o WMI, consulte [usando instrumentação de gerenciamento do Windows para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
-## <a name="logging-levels-and-options"></a>Níveis de log e opções  
- Mensagens de entrada, registro em log ocorre imediatamente depois que a mensagem é formada, imediatamente antes da mensagem obtém ao código do usuário no nível de serviço, e quando mensagens malformadas são detectadas.  
+## <a name="logging-levels-and-options"></a>Níveis e opções de log  
+ Para mensagens de entrada, o log ocorre imediatamente depois que a mensagem é formada, imediatamente antes de a mensagem chegar ao código do usuário no nível de serviço e quando as mensagens malformadas são detectadas.  
   
- Para mensagens de saída, o registro em log ocorre imediatamente depois que a mensagem sair do código do usuário e imediatamente antes da mensagem é enviada durante a transmissão.  
+ Para mensagens de saída, o registro em log ocorre imediatamente após a mensagem sair do código do usuário e imediatamente antes de a mensagem entrar na conexão.  
   
- O WCF registra mensagens em dois níveis diferentes, serviço e transporte. Mensagens malformadas também são registradas. As três categorias são independentes uns dos outros e podem ser ativadas separadamente na configuração.  
+ O WCF Registra mensagens em dois níveis diferentes, serviço e transporte. As mensagens malformadas também são registradas. As três categorias são independentes umas das outras e podem ser ativadas separadamente na configuração.  
   
- Você pode controlar o nível de log definindo o `logMessagesAtServiceLevel`, `logMalformedMessages`, e `logMessagesAtTransportLevel` atributos do `messageLogging` elemento.  
+ Você pode controlar o nível de log definindo os `logMessagesAtServiceLevel`atributos `logMalformedMessages`, e `logMessagesAtTransportLevel` do `messageLogging` elemento.  
   
 ### <a name="service-level"></a>Nível de serviço  
- As mensagens registradas nesta camada estão prestes a insira (no recebimento) ou deixe (envio) código do usuário. Se os filtros tiverem sido definidos, apenas as mensagens que correspondem aos filtros são registradas. Caso contrário, todas as mensagens no nível de serviço estão registradas. Mensagens de infraestrutura (transações, canal de mesmo nível e segurança) também são registradas nesse nível, com exceção de mensagens do sistema de mensagens confiável. Em mensagens transmitidas, somente os cabeçalhos são registrados. Além disso, mensagens seguras são registradas descriptografados nesse nível.  
+ As mensagens registradas nessa camada estão prestes a entrar (no recebimento) ou saem (no envio) do código de usuário. Se os filtros tiverem sido definidos, somente as mensagens que corresponderem aos filtros serão registradas. Caso contrário, todas as mensagens no nível de serviço serão registradas. As mensagens de infraestrutura (transações, canal par e segurança) também são registradas nesse nível, exceto para mensagens de mensagens confiáveis. Em mensagens transmitidas, somente os cabeçalhos são registrados em log. Além disso, as mensagens seguras são descriptografadas nesse nível.  
   
 ### <a name="transport-level"></a>Nível de transporte  
- As mensagens registradas nesta camada estão prontas para serem codificados ou decodificados de ou depois de transporte durante a transmissão. Se os filtros tiverem sido definidos, apenas as mensagens que correspondem aos filtros são registradas. Caso contrário, todas as mensagens na camada de transporte são registradas. Todas as mensagens de infraestrutura são registradas nessa camada, incluindo mensagens de reliable messaging. Em mensagens transmitidas, somente os cabeçalhos são registrados. Além disso, mensagens seguras são registradas como criptografado nesse nível, exceto se um transporte seguro, como o HTTPS é usado.  
+ As mensagens registradas nessa camada estão prontas para serem codificadas ou decodificadas para ou após o transporte na transmissão. Se os filtros tiverem sido definidos, somente as mensagens que corresponderem aos filtros serão registradas. Caso contrário, todas as mensagens na camada de transporte serão registradas. Todas as mensagens de infraestrutura são registradas nessa camada, incluindo mensagens de mensagens confiáveis. Em mensagens transmitidas, somente os cabeçalhos são registrados em log. Além disso, as mensagens seguras são registradas como criptografadas nesse nível, exceto se um transporte seguro, como HTTPS, for usado.  
   
 ### <a name="malformed-level"></a>Nível malformado  
- Mensagens malformadas são mensagens que são rejeitadas pela pilha do WCF em qualquer estágio do processamento. Mensagens malformadas são registradas como-está: criptografados se estiverem, com XML não adequada e assim por diante. `maxSizeOfMessageToLog` definido o tamanho da mensagem a ser registrada como CDATA. Por padrão, `maxSizeOfMessageToLog` é igual a 256 K. Para obter mais informações sobre esse atributo, consulte a seção de outras opções.  
+ Mensagens malformadas são mensagens rejeitadas pela pilha do WCF em qualquer estágio do processamento. As mensagens malformadas são registradas como estão: criptografadas se forem assim, com XML não adequado e assim por diante. `maxSizeOfMessageToLog`definido o tamanho da mensagem a ser registrada como CDATA. Por padrão, `maxSizeOfMessageToLog` é igual a 256K. Para obter mais informações sobre esse atributo, consulte a seção outras opções.  
   
 ### <a name="other-options"></a>Outras opções  
- Além dos níveis de registro em log, o usuário pode especificar as seguintes opções:  
+ Além dos níveis de log, o usuário pode especificar as seguintes opções:  
   
-- Toda mensagem de log (`logEntireMessage` atributo): Esse valor Especifica se a mensagem inteira (cabeçalho de mensagem e corpo) é registrada. O valor padrão é `false`, que significa que apenas o cabeçalho está registrado. Essa configuração afeta os níveis de log de mensagem de transporte e de serviço...  
+- Registrar mensagem inteira (`logEntireMessage` atributo): Esse valor especifica se a mensagem inteira (cabeçalho e corpo da mensagem) é registrada. O valor padrão é `false`, o que significa que apenas o cabeçalho é registrado em log. Essa configuração afeta os níveis de log de mensagens de serviço e transporte.  
   
-- Máximo de mensagens para fazer logon (`maxMessagesToLog` atributo): Esse valor Especifica o número máximo de mensagens para fazer logon. Todas as mensagens (serviço de transporte e mensagens malformadas) são contadas para essa cota. Quando a cota for atingida, um rastreamento é emitido e nenhuma mensagem adicional será registrada. O valor padrão é 10000.  
+- Máximo de mensagens para log`maxMessagesToLog` (atributo): Esse valor especifica o número máximo de mensagens a serem registradas. Todas as mensagens (serviço, transporte e mensagens malformadas) são contadas em direção a essa cota. Quando a cota é atingida, um rastreamento é emitido e nenhuma mensagem adicional é registrada. O valor padrão é 10000.  
   
-- Tamanho máximo de mensagem a ser registrada (`maxSizeOfMessageToLog` atributo): Esse valor Especifica o tamanho máximo de mensagens para fazer logon em bytes. As mensagens que excedem o limite de tamanho não são registradas e nenhuma outra atividade é executada para a mensagem. Essa configuração afeta todos os níveis de rastreamento. Se o rastreamento de ServiceModel estiver ativada, um rastreamento de nível de aviso é emitido no primeiro ponto de registro em log (ServiceModelSend * ou TransportReceive) para notificar o usuário. O valor padrão para mensagens de nível transporte e de nível de serviço é de 256K, enquanto o valor padrão para mensagens malformadas for 4K.  
+- Tamanho máximo da mensagem a ser registrada (`maxSizeOfMessageToLog` atributo): Esse valor especifica o tamanho máximo das mensagens para fazer logon em bytes. Mensagens que excedem o limite de tamanho não são registradas e nenhuma outra atividade é executada para essa mensagem. Essa configuração afeta todos os níveis de rastreamento. Se o rastreamento de ServiceModel estiver ativado, um rastreamento de nível de aviso será emitido no primeiro ponto de log (ServiceModelSend * ou TransportReceive) para notificar o usuário. O valor padrão para as mensagens de nível de serviço e nível de transporte é 256K, enquanto o valor padrão para mensagens malformadas é de 4K.  
   
     > [!CAUTION]
-    >  O tamanho da mensagem que é calculado a ser comparada com `maxSizeOfMessageToLog` é o tamanho da mensagem na memória antes da serialização. Esse tamanho pode ser diferente do que o comprimento real da cadeia de caracteres de mensagem que está sendo registrada e, em muitas ocasiões em que é maior do que o tamanho real. Como resultado, as mensagens não podem ser registradas. Você pode considerar esse fato, especificando o `maxSizeOfMessageToLog` atributo a ser 10% maior que o tamanho da mensagem esperada. Além disso, se mensagens malformadas são registradas, o espaço em disco utilizado pelos logs de mensagem pode ser até 5 vezes o tamanho do valor especificado por `maxSizeOfMessageToLog`.  
+    >  O tamanho da mensagem que é computada para `maxSizeOfMessageToLog` comparação é o tamanho da mensagem na memória antes da serialização. Esse tamanho pode diferir do tamanho real da cadeia de caracteres de mensagem que está sendo registrada e, em muitas ocasiões, maior do que o tamanho real. Como resultado, as mensagens podem não ser registradas em log. Você pode considerar esse fato especificando que o `maxSizeOfMessageToLog` atributo seja 10% maior do que o tamanho esperado da mensagem. Além disso, se as mensagens malformadas forem registradas, o espaço em disco real utilizado pelos logs de mensagens poderá ter até cinco vezes o tamanho do valor `maxSizeOfMessageToLog`especificado por.  
   
- Se nenhum ouvinte de rastreamento é definido no arquivo de configuração, nenhuma saída de log é gerada, independentemente do nível de log especificado.  
+ Se nenhum ouvinte de rastreamento for definido no arquivo de configuração, nenhuma saída de log será gerada, independentemente do nível de log especificado.  
   
- Opções de registro em log de mensagem, como os atributos descritos nesta seção, podem ser alteradas em tempo de execução usando o Windows Management Instrumentation (WMI). Isso pode ser feito, acessando o [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) instância, que expõe essas propriedades Boolianas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, e `LogMalformedMessages`. Portanto, se você configura um ouvinte de rastreamento para o log de mensagens, mas definir essas opções para `false` na configuração, você pode alterar a `true` quando o aplicativo está em execução. Isso permite que o log de mensagens em tempo de execução com eficiência. Da mesma forma, se você habilitar o registro em log no arquivo de configuração de mensagem, você pode desabilitá-lo em tempo de execução usando o WMI. Para obter mais informações, consulte [usando o Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ As opções de log de mensagens, como os atributos descritos nesta seção, podem ser alteradas em tempo de execução usando Instrumentação de Gerenciamento do Windows (WMI). Isso pode ser feito acessando a instância [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) , que expõe essas propriedades booleanas `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`, e `LogMalformedMessages`. Portanto, se você configurar um ouvinte de rastreamento para o log de mensagens, mas `false` definir essas opções como em configuração, você poderá `true` alterá-las posteriormente para quando o aplicativo estiver em execução. Isso efetivamente habilita o log de mensagens em tempo de execução. Da mesma forma, se você habilitar o log de mensagens em seu arquivo de configuração, poderá desabilitá-lo em tempo de execução usando o WMI. Para obter mais informações, consulte [usando instrumentação de gerenciamento do Windows para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
- O `source` campo em um log de mensagem especifica no contexto em que a mensagem é registrada: no envio/recebimento de uma mensagem de solicitação para uma solicitação-resposta ou solicitação de maneira 1, na camada de transporte ou de modelo de serviço ou, no caso de uma mensagem malformada.  
+ O `source` campo em um log de mensagens especifica em qual contexto a mensagem é registrada: ao enviar/receber uma mensagem de solicitação, para uma solicitação de solicitação-resposta ou de 1-Way, no modelo de serviço ou na camada de transporte ou no caso de uma mensagem malformada.  
   
- Para mensagens malformadas, `source` é igual a `Malformed`. Caso contrário, a fonte tem os seguintes valores com base no contexto.  
+ Para mensagens malformadas, `source` é igual a. `Malformed` Caso contrário, a origem terá os valores a seguir com base no contexto.  
   
- Solicitação/resposta  
+ Para solicitação/resposta  
   
-||Enviar solicitação|Receber a solicitação|Enviar resposta|Receber resposta|  
+||Enviar solicitação|Receber solicitação|Enviar resposta|Receber resposta|  
 |-|------------------|---------------------|----------------|-------------------|  
-|Camada de modelo de serviço|Serviço<br /><br /> Nível<br /><br /> Enviar<br /><br /> Solicitação|Serviço<br /><br /> Nível<br /><br /> Receber<br /><br /> Solicitação|Serviço<br /><br /> Nível<br /><br /> Enviar<br /><br /> Resposta|Serviço<br /><br /> Nível<br /><br /> Receber<br /><br /> Resposta|  
-|camada de transporte|Transporte<br /><br /> Enviar|Transporte<br /><br /> Receber|Transporte<br /><br /> Enviar|Transporte<br /><br /> Receber|  
+|Camada do modelo de serviço|Serviço<br /><br /> Nível<br /><br /> Enviar<br /><br /> Solicitação|Serviço<br /><br /> Nível<br /><br /> Receber<br /><br /> Solicitação|Serviço<br /><br /> Nível<br /><br /> Enviar<br /><br /> Resposta|Serviço<br /><br /> Nível<br /><br /> Receber<br /><br /> Resposta|  
+|Camada de transporte|Porta<br /><br /> Enviar|Porta<br /><br /> Receber|Porta<br /><br /> Enviar|Porta<br /><br /> Receber|  
   
- Para a solicitação unidirecional  
+ Para uma solicitação unidirecional  
   
-||Enviar solicitação|Receber a solicitação|  
+||Enviar solicitação|Receber solicitação|  
 |-|------------------|---------------------|  
-|Camada de modelo de serviço|Serviço<br /><br /> Nível<br /><br /> Enviar<br /><br /> Datagrama|Serviço<br /><br /> Nível<br /><br /> Receber<br /><br /> Datagrama|  
-|camada de transporte|Transporte<br /><br /> Enviar|Transporte<br /><br /> Receber|  
+|Camada do modelo de serviço|Serviço<br /><br /> Nível<br /><br /> Enviar<br /><br /> Datagrama|Serviço<br /><br /> Nível<br /><br /> Receber<br /><br /> Datagrama|  
+|Camada de transporte|Porta<br /><br /> Enviar|Porta<br /><br /> Receber|  
   
 ## <a name="message-filters"></a>Filtros de mensagem  
- Filtros de mensagem são definidos os `messageLogging` elemento de configuração a `diagnostics` seção de configuração. Elas são aplicadas no nível de serviço e transporte. Quando um ou mais filtros são definidos, apenas as mensagens que correspondem a pelo menos um dos filtros são registradas. Se nenhum filtro for definido, todas as mensagens passam.  
+ Os filtros `messageLogging` `diagnostics` de mensagem são definidos no elemento Configuration da seção de configuração. Eles são aplicados no nível de serviço e transporte. Quando um ou mais filtros são definidos, somente as mensagens que correspondem a pelo menos um dos filtros são registradas. Se nenhum filtro for definido, todas as mensagens passarão.  
   
- Filtros dão suporte a sintaxe completa do XPath e são aplicados na ordem em que aparecem no arquivo de configuração. Um filtro sintaticamente incorreto resulta em uma exceção de configuração.  
+ Os filtros dão suporte à sintaxe XPath completa e são aplicados na ordem em que aparecem no arquivo de configuração. Um filtro sintaticamente incorreto resulta em uma exceção de configuração.  
   
- Filtros também fornecem um recurso de segurança usando o `nodeQuota` atributo, que limita o número máximo de nós no DOM, XPath que podem ser examinadas para corresponderem ao filtro.  
+ Os filtros também fornecem um recurso de segurança `nodeQuota` usando o atributo, que limita o número máximo de nós no DOM XPath que pode ser examinado para corresponder ao filtro.  
   
- O exemplo a seguir mostra como configurar um filtro que registra apenas as mensagens que têm uma seção de cabeçalho SOAP.  
+ O exemplo a seguir mostra como configurar um filtro que registra somente as mensagens que têm uma seção de cabeçalho SOAP.  
   
 ```xml  
 <messageLogging logEntireMessage="true"  
@@ -137,14 +137,14 @@ Este tópico descreve como você pode configurar o log de mensagens para diferen
 </messageLogging>  
 ```  
   
- Filtros não podem ser aplicados ao corpo de uma mensagem. Os filtros que tentam manipular o corpo de uma mensagem são removidos da lista de filtros. Um evento é emitido que indica que essa também. Por exemplo, o filtro a seguir seria removido da tabela de filtros.  
+ Os filtros não podem ser aplicados ao corpo de uma mensagem. Os filtros que tentam manipular o corpo de uma mensagem são removidos da lista de filtros. Um evento também é emitido, indicando isso. Por exemplo, o filtro a seguir seria removido da tabela de filtros.  
   
 ```xml  
 <add xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">/s:Envelope/s:Body[contains(text(), "Hello")]</add>  
 ```  
   
-## <a name="configuring-a-custom-listener"></a>Configurar um ouvinte personalizado  
- Você também pode configurar um ouvinte personalizado com opções adicionais. Um ouvinte personalizado pode ser útil na filtragem de elementos PII específicos do aplicativo de mensagens antes de fazer logon. O exemplo a seguir demonstra uma configuração de ouvinte personalizado.  
+## <a name="configuring-a-custom-listener"></a>Configurando um ouvinte personalizado  
+ Você também pode configurar um ouvinte personalizado com opções adicionais. Um ouvinte personalizado pode ser útil na filtragem de elementos de PII específicos do aplicativo de mensagens antes do registro em log. O exemplo a seguir demonstra uma configuração de ouvinte personalizada.  
   
 ```xml  
 <system.diagnostics>  
@@ -161,7 +161,7 @@ Este tópico descreve como você pode configurar o log de mensagens para diferen
 </system.diagnostics>  
 ```  
   
- Você deve estar ciente que o `type` atributo deve ser definido como um nome qualificado do assembly do tipo.  
+ Você deve estar ciente de que `type` o atributo deve ser definido como um nome de assembly qualificado do tipo.  
   
 ## <a name="see-also"></a>Consulte também
 

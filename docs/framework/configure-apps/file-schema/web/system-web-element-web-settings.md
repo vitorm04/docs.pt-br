@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486672"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941377"
 ---
-# <a name="systemweb-element-web-settings"></a>\<System. Web > (configurações da Web)
-Contém informações sobre como a camada de hospedagem do ASP.NET gerencia o comportamento de todo o processo.  
+# <a name="systemweb-element-web-settings"></a>\<Elemento de > System. Web (configurações da Web)
+Contém informações sobre como a camada de hospedagem ASP.NET gerencia o comportamento de todo o processo.  
   
  \<configuration>  
-\<System. Web > (configurações da Web)  
+\<Elemento de > System. Web (configurações da Web)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,19 +38,19 @@ Contém informações sobre como a camada de hospedagem do ASP.NET gerencia o co
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Especifica as configurações para pools de aplicativos do IIS em um arquivo ASPNET config.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Especifica as definições de configuração para pools de aplicativos do IIS em um arquivo Aspnet. config.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Especifica o elemento raiz em cada arquivo de configuração que é usado pelo common language runtime e aplicativos do .NET Framework.|  
+|[\<configuration>](../configuration-element.md)|Especifica o elemento raiz em cada arquivo de configuração que é usado pelo Common Language Runtime e .NET Framework aplicativos.|  
   
 ## <a name="remarks"></a>Comentários  
- O `system.web` elemento e seu filho `applicationPool` elemento foram adicionados ao .NET Framework a partir do .NET Framework 3.5 SP1. Quando você executa o IIS 7.0 ou versões posteriores no modo integrado, essa combinação de elemento lhe permite configurar como o ASP.NET gerencia os threads e como ele enfileira as solicitações quando o ASP.NET está hospedado em um pool de aplicativos do IIS. Se você executar o IIS 7.0 ou versões posteriores no modo clássico ou ISAPI, essas configurações serão ignoradas.  
+ O `system.web` elemento e seu elemento `applicationPool` filho foram adicionados à .NET Framework a partir de .NET Framework 3,5 SP1. Quando você executa o IIS 7,0 ou versões posteriores no modo integrado, essa combinação de elementos permite que você configure como o ASP.NET gerencia threads e como ele enfileira solicitações quando o ASP.NET está hospedado em um pool de aplicativos do IIS. Se você executar o IIS 7,0 ou versões posteriores no modo clássico ou ISAPI, essas configurações serão ignoradas.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como configurar o comportamento de todo o processo do ASP.NET no arquivo ASPNET config quando o ASP.NET está hospedado em um pool de aplicativos do IIS. O exemplo supõe que o IIS está em execução no integrado modo e que o aplicativo está usando o .NET Framework 3.5 SP1 ou posterior. Esse comportamento não ocorre nas versões do .NET Framework anteriores ao .NET Framework 3.5 SP1. Os valores no exemplo são os valores padrão.  
+ O exemplo a seguir mostra como configurar o comportamento do ASP.NET em todo o processo no arquivo Aspnet. config quando o ASP.NET está hospedado em um pool de aplicativos do IIS. O exemplo supõe que o IIS está sendo executado no modo integrado e que o aplicativo está usando o .NET Framework 3,5 SP1 ou uma versão posterior. Esse comportamento não ocorre em versões do .NET Framework anteriores ao .NET Framework 3,5 SP1. Os valores no exemplo são os valores padrão.  
   
 ```xml  
 <configuration>  
@@ -70,8 +70,8 @@ Contém informações sobre como a camada de hospedagem do ASP.NET gerencia o co
 |Namespace||  
 |Nome do esquema||  
 |Arquivo de validação||  
-|Pode ser vazio||  
+|Pode estar vazio||  
   
 ## <a name="see-also"></a>Consulte também
 
-- [\<applicationPool> Element (Web Settings)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md) [Elemento applicationPool> (configurações da Web)]
+- [\<applicationPool> Element (Web Settings)](applicationpool-element-web-settings.md) [Elemento applicationPool> (configurações da Web)]

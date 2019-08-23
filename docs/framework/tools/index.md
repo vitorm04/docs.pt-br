@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 47d6fe1d4c99adaf3313c87e0b3411049e3b2452
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489658"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933629"
 ---
 # <a name="net-framework-tools"></a>Ferramentas do .NET Framework
 A ferramentas do .NET Framework facilitam a criação, a implantação e o gerenciamento de aplicativos e componentes com o .NET Framework como destino.  
@@ -26,7 +26,7 @@ A maioria das ferramentas do .NET Framework descritas nesta seção é instalada
  A melhor maneira de executar as ferramentas de linha de comando é usando o Prompt de Comando do Desenvolvedor do Visual Studio. Esses utilitários permitem executar facilmente as ferramentas, sem navegar até a pasta de instalação. Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
->  Algumas ferramentas são específicas para computadores 32 ou 64 bits. Não se esqueça de executar a versão apropriada da ferramenta para o computador.  
+> Algumas ferramentas são específicas para computadores 32 ou 64 bits. Não se esqueça de executar a versão apropriada da ferramenta para o computador.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  

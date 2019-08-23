@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80d82e26fe54c5422d1140bba84830879f0b5c2d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 238a5f19bd8cbd89a5537b2b9297bfa9e1f54613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952882"
 ---
 # <a name="functionleave-function"></a>Função FunctionLeave
-Notifica o criador de perfil que uma função está prestes a retornar ao chamador.  
+Notifica o criador de perfil de que uma função está prestes a retornar ao chamador.  
   
 > [!NOTE]
->  O `FunctionLeave` função foi preterida no .NET Framework 2.0. Ele continuará a funcionar, mas provocará uma penalidade de desempenho. Use o [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function em vez disso.  
+> A `FunctionLeave` função foi preterida no .NET Framework 2,0. Ele continuará funcionando, mas incorrerá em uma penalidade de desempenho. Em vez disso, use a função [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,29 +39,29 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>Parâmetros  
  `funcID`  
- [in] O identificador da função que está retornando.  
+ no O identificador da função que está retornando.  
   
 ## <a name="remarks"></a>Comentários  
- O `FunctionLeave` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec`(`naked`) atributo de classe de armazenamento.  
+ A `FunctionLeave` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec`atributo`naked`de classe de armazenamento ().  
   
- O mecanismo de execução não salva qualquer registros antes de chamar essa função.  
+ O mecanismo de execução não salva nenhum registro antes de chamar essa função.  
   
-- Na entrada, você deve salvar todos os registros que você usa, incluindo aqueles na unidade de ponto flutuante (FPU).  
+- Na entrada, você deve salvar todos os registros que usar, incluindo aqueles na FPU (unidade de ponto flutuante).  
   
-- Na saída, você deve restaurar a pilha de popping desativar todos os parâmetros que foram enviados por push ao seu chamador.  
+- Ao sair, você deve restaurar a pilha removendo todos os parâmetros que foram enviados por Push por seu chamador.  
   
- A implementação de `FunctionLeave` não devem bloquear porque isso atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo, porque a pilha não pode estar em um estado de amigável para coleta de lixo. Se você tentar uma coleta de lixo, o tempo de execução será bloqueado até que `FunctionLeave` retorna.  
+ A implementação de `FunctionLeave` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado amigável de coleta de lixo. Se for feita uma tentativa de coleta de lixo, o tempo de `FunctionLeave` execução será bloqueado até o retorno.  
   
- Além disso, o `FunctionLeave` função não deve chamar código gerenciado ou em qualquer causa de maneira uma alocação de memória gerenciada.  
+ Além disso, `FunctionLeave` a função não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
- **Versões do .NET framework:** 1.1, 1.0  
+ **.NET Framework versões:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Consulte também
 

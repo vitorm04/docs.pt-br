@@ -2,23 +2,23 @@
 title: <transport> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dbc55db25c0c49d72ec2cd8dd1041a3f8705d8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788278"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940641"
 ---
-# <a name="transport-of-peertransport"></a>\<transporte > de \<peerTransport >
-Especifica o tipo de transporte para mensagens protegidas enviadas pelos pares configurados com essa associação.  
+# <a name="transport-of-peertransport"></a>\<> de transporte \<do peerTransport >
+Especifica o tipo de transporte para mensagens protegidas enviadas por pares configurados com essa associação.  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
-\<peerTransport>  
-\<segurança >  
-\<transporte >  
+\<> de associação  
+\<> peerTransport  
+\<> de segurança  
+\<> de transporte  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,13 +35,13 @@ Especifica o tipo de transporte para mensagens protegidas enviadas pelos pares c
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|credentialType|Opcional. Especifica o tipo de credenciais usado para verificar as mensagens enviadas com o transporte de par. Esse atributo é do tipo <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|CredentialType|Opcional. Especifica o tipo de credenciais usadas para verificar as mensagens enviadas com o transporte de mesmo nível. Esse atributo é do tipo <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
-## <a name="credentialtype-attribute"></a>credentialType atributo  
+## <a name="credentialtype-attribute"></a>Atributo CredentialType  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Certificado|A autenticação do transporte de canal par requer um certificado X509.|  
+|Certificate|A autenticação do transporte de canal par requer um certificado X509.|  
 |Senha|A autenticação do transporte de canal par requer uma senha correta.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -51,10 +51,10 @@ Especifica o tipo de transporte para mensagens protegidas enviadas pelos pares c
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Define as configurações de segurança para um transporte de par.|  
+|[\<security>](security-of-peertransport.md)|Define as configurações de segurança para um transporte de mesmo nível.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento será definido somente se o atributo do modo de [ \<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) é definido como `Transport` ou `TransportWithMessageCredential`.  
+ Esse elemento será definido somente se o atributo mode do [ \<> de segurança](security-of-peertransport.md) for definido `Transport` como `TransportWithMessageCredential`ou.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -62,10 +62,10 @@ Especifica o tipo de transporte para mensagens protegidas enviadas pelos pares c
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Segurança de transporte](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Associações](../../../../../docs/framework/wcf/bindings.md)
-- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Segurança de transporte](../../../wcf/feature-details/transport-security.md)
+- [Transportes](../../../wcf/feature-details/transports.md)
+- [Escolhendo um transporte](../../../wcf/feature-details/choosing-a-transport.md)
+- [Associações](../../../wcf/bindings.md)
+- [Estendendo associações](../../../wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

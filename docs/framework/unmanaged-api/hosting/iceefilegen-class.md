@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6fb0b11c26ff65f74681d1e3bf7324bfb0e559d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 44241d02051c9bd54f93a19fa6044e4973fdef9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766616"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950265"
 ---
 # <a name="iceefilegen-class"></a>Classe ICeeFileGen
-Fornece funcionalidade para criar um arquivo executável (PE) portátil nativo. A interface normalmente será ser usada pelos compiladores para gerar a saída executável compilada.  
+Fornece a funcionalidade para criar um arquivo PE (executável portátil) nativo. A interface normalmente será usada pelos compiladores para gerar o executável de saída compilado.  
   
 > [!NOTE]
->  `ICeeFileGen` dá suporte à infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
+> `ICeeFileGen`dá suporte à infraestrutura de .NET Framework e não se destina a ser usada diretamente do seu código.  
   
- Essa interface foi preterido e será removido em uma versão futura.  
+ Esta interface foi preterida e será removida em uma versão futura.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -237,11 +237,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ICeeFileGen.h  
   
- **Versão do .NET framework:** 1.0  
+ **Versão do .NET Framework:** 1.0  
   
 ## <a name="see-also"></a>Consulte também
 

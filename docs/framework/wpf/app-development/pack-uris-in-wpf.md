@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: f9ea4acfc7ba86d3424bb11af0de685651f99c61
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad928fb223ce22c65bb86a78c7d4cd006651a2d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950751"
 ---
 # <a name="pack-uris-in-wpf"></a>URIs "pack://" no WPF
 
@@ -85,7 +85,7 @@ As seções a seguir explicam como construir [!INCLUDE[TLA2#tla_uri#plural](../.
 
 ## <a name="resource-file-pack-uris"></a>URIs de pacote de arquivo de recurso
 
-Os arquivos de recurso são [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] configurados como `Resource` itens e são compilados em assemblies. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]dá suporte à construção do [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] pacote que pode ser usada para identificar arquivos de recursos que são compilados no assembly local ou compilados em um assembly que é referenciado do assembly local.
+Os arquivos de recurso são configurados como itens do MSBuild `Resource` e são compilados em assemblies. O WPF dá suporte à construção de URIs de pacote que podem ser usados para identificar arquivos de recursos que são compilados no assembly local ou compilados em um assembly que é referenciado do assembly local.
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -186,9 +186,9 @@ O exemplo a seguir mostra o [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sha
 
 ## <a name="page-files"></a>Arquivos de paginação
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]os arquivos configurados [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] como `Page` itens são compilados em assemblies da mesma maneira que os arquivos de recursos. Consequentemente [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] , `Page` os itens podem ser identificados [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] usando o pacote para arquivos de recurso.
+Os arquivos XAML que são configurados como itens do MSBuild `Page` são compilados em assemblies da mesma maneira que os arquivos de recursos. Consequentemente, `Page` os itens do MSBuild podem ser identificados usando URIs de pacote para arquivos de recurso.
 
-Os tipos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos que normalmente são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` itens têm um dos seguintes como seu elemento raiz:
+Os tipos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos que normalmente são configurados`Page` como itens do MSBuild têm um dos seguintes como seu elemento raiz:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 

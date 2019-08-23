@@ -2,20 +2,20 @@
 title: <secureConversationAuthentication> de <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: f35392b91d047c46e65ce433ef544b86cf6c88c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61034c2c66a6d8e27a87ec5380aa7297247eb31e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670606"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935830"
 ---
-# <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication > de \<serviceCredential >
+# <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication > de \<> do incredential
 Especifica as configurações para um serviço de conversa segura.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors>  
-\<behavior>  
+\<> de portais  
+\<> de comportamento  
 \<serviceCredentials>  
 \<secureConversationAuthentication>  
   
@@ -32,7 +32,7 @@ Especifica as configurações para um serviço de conversa segura.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`securityStateEncoderType`|Uma cadeia de caracteres que especifica o tipo de <xref:System.ServiceModel.Security.SecurityStateEncoder> a ser usado.|  
+|`securityStateEncoderType`|Uma cadeia de caracteres que especifica o <xref:System.ServiceModel.Security.SecurityStateEncoder> tipo de a ser usado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -41,10 +41,10 @@ Especifica as configurações para um serviço de conversa segura.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica a credencial a ser usado na autenticação do serviço e as configurações de relacionadas à validação de credenciais do cliente.|  
+|[\<serviceCredentials>](servicecredentials.md)|Especifica a credencial a ser usada na autenticação do serviço e as configurações relacionadas à validação da credencial do cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- Use este elemento de configuração para especificar uma lista de tipos de declaração conhecida para a serialização de cookies do contexto de segurança Token (SCT), bem como um codificador para codificar e proteger as informações de cookies. Para obter mais informações sobre SCT, consulte <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.  
+ Use este elemento de configuração para especificar uma lista de tipos de declaração conhecidos para a serialização de cookies do SCT (token de contexto de segurança), bem como um codificador para codificar e proteger informações de cookies. Para obter mais informações sobre o SCT <xref:System.ServiceModel.Security.SecureConversationServiceCredential>, consulte.  
   
 ## <a name="see-also"></a>Consulte também
 

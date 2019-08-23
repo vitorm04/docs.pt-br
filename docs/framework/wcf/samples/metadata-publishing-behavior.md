@@ -5,25 +5,25 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: 20922636f140e0ac9faff55bf94c0b2633a8070d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0385ec74c9e00472b9ba5fb68f3d97c19f86642
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755994"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930419"
 ---
 # <a name="metadata-publishing-behavior"></a>Comportamento de publicação de metadados
-O comportamento de publicação de metadados que demonstra como controlar os recursos de publicação de metadados de um serviço. Para evitar a divulgação acidental de metadados de serviço potencialmente confidenciais, a configuração padrão para serviços Windows Communication Foundation (WCF) desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar metadados importar ferramenta (como Svcutil.exe) para gerar o código de cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço é explicitamente habilitado na configuração.  
+O exemplo de comportamento de publicação de metadados demonstra como controlar os recursos de publicação de metadados de um serviço. Para evitar a divulgação não intencional de metadados de serviço potencialmente confidenciais, a configuração padrão para Windows Communication Foundation (WCF) Services desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar uma ferramenta de importação de metadados (como SvcUtil. exe) para gerar o código do cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço esteja explicitamente habilitado na configuração.  
   
 > [!IMPORTANT]
->  Para maior clareza, este exemplo demonstra como criar um ponto de extremidade de publicação de metadados não segura. Esses pontos de extremidade estão potencialmente disponíveis para os consumidores não autenticados anônimos e tome cuidado antes de implantar esses pontos de extremidade para garantir que publicamente divulga metadados de um serviço são apropriado. Consulte a [ponto de extremidade do personalizado proteger metadados](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemplo para obter um exemplo que protege um ponto de extremidade de metadados.  
+>  Para maior clareza, este exemplo demonstra como criar um ponto de extremidade de publicação de metadados não seguro. Esses pontos de extremidade estão potencialmente disponíveis para consumidores anônimos não autenticados e devem ser levados em vida antes da implantação desses pontos de extremidade para garantir que os metadados de um serviço sejam desmarcados publicamente. Consulte o exemplo de [ponto de extremidade de metadados seguro personalizado](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) para obter um exemplo que protege um ponto de extremidade de metadados.  
   
- O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado pelo Internet Information Services (IIS).  
+ O exemplo se baseia na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o contrato `ICalculator` de serviço. Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
   
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Para um serviço para expor metadados, o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> deve ser configurado no serviço. Quando esse comportamento estiver presente, você pode publicar metadados por meio da configuração de um ponto de extremidade para expor o <xref:System.ServiceModel.Description.IMetadataExchange> contrato como uma implementação de um protocolo WS-MetadataExchange (MEX). Como uma conveniência, este contrato tem o nome abreviado de configuração de "IMetadataExchange". Este exemplo usa o `mexHttpBinding`, que é uma conveniência padrão de associação que é equivalente de `wsHttpBinding` com o modo de segurança definido como `None`. Um endereço relativo "mex" é usado no ponto de extremidade, que, quando resolvido nos serviços de base endereço resulta em um endereço de ponto de extremidade de `http://localhost/servicemodelsamples/service.svc/mex`. O exemplo a seguir mostra a configuração de comportamento:  
+ Para que um serviço exponha metadados, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> o deve ser configurado no serviço. Quando esse comportamento estiver presente, você poderá publicar metadados Configurando um ponto de extremidade <xref:System.ServiceModel.Description.IMetadataExchange> para expor o contrato como uma implementação de um protocolo MEX (WS-MetadataExchange). Como uma conveniência, esse contrato recebeu o nome abreviado da configuração "IMetadataExchange". Este exemplo usa o `mexHttpBinding`, que é uma associação padrão de conveniência equivalente `wsHttpBinding` ao com o modo de segurança definido como `None`. Um endereço relativo de "MEX" é usado no ponto de extremidade, que, quando resolvido em relação ao endereço base de serviços, resulta `http://localhost/servicemodelsamples/service.svc/mex`em um endereço de ponto de extremidade de. O seguinte mostra a configuração de comportamento:  
   
 ```xml  
 <behaviors>  
@@ -42,7 +42,7 @@ O comportamento de publicação de metadados que demonstra como controlar os rec
 </behaviors>  
 ```  
   
- O exemplo a seguir mostra o ponto de extremidade MEX.  
+ O ponto de extremidade MEX é mostrado a seguir.  
   
 ```xml  
 <!-- the MEX endpoint is exposed at   
@@ -55,33 +55,33 @@ O comportamento de publicação de metadados que demonstra como controlar os rec
           contract="IMetadataExchange" />  
 ```  
   
- Este exemplo define o <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> propriedade para `true`, que também expõe metadados do serviço usando o HTTP GET. Para habilitar um ponto de extremidade de metadados HTTP GET, o serviço deve ter um endereço básico HTTP. A cadeia de caracteres de consulta `?wsdl` é usado no endereço base do serviço para acessar os metadados. Por exemplo, para ver o WSDL para o serviço em um navegador da Web você usaria o endereço `http://localhost/servicemodelsamples/service.svc?wsdl`. Como alternativa, você pode usar esse comportamento para expor metadados via HTTPS, definindo <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> para `true`. Isso requer um endereço base HTTPS.  
+ Este exemplo define a <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> Propriedade como `true`, que também expõe os metadados do serviço usando HTTP Get. Para habilitar um ponto de extremidade de metadados GET de HTTP, o serviço deve ter um endereço base HTTP. A cadeia de `?wsdl` caracteres de consulta é usada no endereço base do serviço para acessar os metadados. Por exemplo, para ver o WSDL para o serviço em um navegador da Web, você usaria o `http://localhost/servicemodelsamples/service.svc?wsdl`endereço. Como alternativa, você pode usar esse comportamento para expor metadados por HTTPS definindo <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> como. `true` Isso requer um endereço base HTTPS.  
   
- Para acessar o uso de ponto de extremidade MEX do serviço do [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Para acessar o ponto de extremidade MEX do serviço, use a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
  `svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs`  
   
  Isso gera um cliente com base nos metadados do serviço.  
   
- Para acessar os metadados do serviço usando o HTTP GET, aponte seu navegador para `http://localhost/servicemodelsamples/service.svc?wsdl`.  
+ Para acessar os metadados do serviço usando HTTP GET, aponte seu navegador para `http://localhost/servicemodelsamples/service.svc?wsdl`.  
   
- Se você remove esse comportamento e tente abrir o serviço, você receberá uma exceção. Esse erro ocorre porque sem o comportamento, o ponto de extremidade configurado com o `IMetadataExchange` contrato não tem nenhuma implementação.  
+ Se você remover esse comportamento e tentar abrir o serviço, receberá uma exceção. Esse erro ocorre porque, sem o comportamento, o ponto de extremidade `IMetadataExchange` configurado com o contrato não tem implementação.  
   
- Se você definir `HttpGetEnabled` para `false`, você verá a página de ajuda CalculatorService em vez de ver os metadados do serviço.  
+ Se você definir `HttpGetEnabled` como `false`, verá a página de ajuda do CalculatorService em vez de ver os metadados do serviço.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Metadata`  

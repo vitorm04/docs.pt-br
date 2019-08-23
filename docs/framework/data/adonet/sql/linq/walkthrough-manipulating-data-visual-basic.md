@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 27ac9de488a92d838df06d4a501a9148e87b9c9f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e6039feb68d18ff5ce16b7a0532710d672c296e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742724"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946959"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Passo a passo: manipular dados (Visual Basic)
 Essa explicação passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para adicionar, modificar e excluir dados em um banco de dados. Você usará uma cópia do banco de dados de exemplo Northwind para adicionar um cliente, alterar o nome de um cliente e excluir um pedido.  
@@ -25,11 +25,11 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 - O banco de dados de exemplo Northwind.  
   
-     Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Depois de baixar o banco de dados, copie o arquivo northwnd.mdf para a pasta c:\linqtest2.  
+     Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [baixar bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Depois de baixar o banco de dados, copie o arquivo northwnd.mdf para a pasta c:\linqtest2.  
   
 - Um arquivo de código do Visual Basic gerado do banco de dados Northwind.  
   
-     Você pode gerar esse arquivo usando a ferramenta SQLMetal ou Object Relational Designer. Este passo a passo foi escrito usando a ferramenta SQLMetal com a seguinte linha de comando:  
+     Você pode gerar esse arquivo usando o Object Relational Designer ou a ferramenta SqlMetal. Este passo a passo foi escrito usando a ferramenta SQLMetal com a seguinte linha de comando:  
   
      **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
   
@@ -38,7 +38,7 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
 ## <a name="overview"></a>Visão geral  
  Este passo a passo consiste em seis tarefas principais:  
   
-- Criando o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solução no Visual Studio.  
+- Criando a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solução no Visual Studio.  
   
 - Adicionar o arquivo do código de banco de dados ao projeto.  
   
@@ -51,32 +51,32 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
 - Enviar essas alterações para o banco de dados Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Criando uma solução LINQ to SQL  
- A primeira tarefa, você cria uma solução do Visual Studio que contém as referências necessárias para compilar e executar um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto.  
+ Nesta primeira tarefa, você cria uma solução do Visual Studio que contém as referências necessárias para compilar e executar um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para criar uma solução LINQ to SQL  
   
-1. No Visual Studio **arquivo** menu, clique em **novo projeto**.  
+1. No menu **arquivo** do Visual Studio, clique em **novo projeto**.  
   
-2. No **tipos de projeto** painel na **novo projeto** caixa de diálogo, clique em **Visual Basic**.  
+2. No painel **tipos de projeto** na caixa de diálogo **novo projeto** , clique em **Visual Basic**.  
   
 3. No painel **Modelos**, clique em **Aplicativo de Console**.  
   
-4. No **nome** , digite **LinqDataManipulationApp**.  
+4. Na caixa **nome** , digite **LinqDataManipulationApp**.  
   
 5. Clique em **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Adicionando referências e diretivas LINQ  
- Este passo a passo usa assemblies que não podem ser instalados por padrão em seu projeto. Se `System.Data.Linq` não estiver listado como uma referência em seu projeto (clique em **Show All Files** na **Gerenciador de soluções** e expanda o **referências** nó), adicioná-lo, conforme explicado em as etapas a seguir.  
+ Este passo a passo usa assemblies que não podem ser instalados por padrão em seu projeto. Se `System.Data.Linq` não estiver listado como uma referência em seu projeto (clique em **Mostrar todos os arquivos** em **Gerenciador de soluções** e expanda o nó **referências** ), adicione-o, conforme explicado nas etapas a seguir.  
   
 #### <a name="to-add-systemdatalinq"></a>Para adicionar System.Data.Linq  
   
-1. Na **Gerenciador de soluções**, clique com botão direito **referências**e, em seguida, clique em **Add Reference**.  
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **referências**e clique em **Adicionar referência**.  
   
-2. No **adicionar referência** caixa de diálogo, clique em **.NET**, clique no assembly System e, em seguida, clique em **Okey**.  
+2. Na caixa de diálogo **Adicionar referência** , clique em **.net**, clique no assembly System. Data. LINQ e, em seguida, clique em **OK**.  
   
      O assembly é adicionado ao projeto.  
   
-3. No editor de códigos, adicione as seguintes diretivas acima **Module1**:  
+3. No editor de código, adicione as seguintes diretivas acima do **Module1**:  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
@@ -85,9 +85,9 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Para adicionar o arquivo do código Northwind ao projeto  
   
-1. Sobre o **Project** menu, clique em **Add Existing Item**.  
+1. No menu **projeto** , clique em **Adicionar item existente**.  
   
-2. No **Adicionar Item existente** caixa de diálogo, navegue até c:\linqtest2\northwind.vb e, em seguida, clique em **Add**.  
+2. Na caixa de diálogo **Adicionar item existente** , navegue até c:\linqtest2\northwind.vb e clique em **Adicionar**.  
   
      O arquivo northwind.vb é adicionado ao projeto.  
   
@@ -102,9 +102,9 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
 2. Pressione F5 para testar o aplicativo neste ponto.  
   
-     Um **Console** janela é aberta.  
+     Uma janela de **console** é aberta.  
   
-     Feche o aplicativo pressionando Enter na **Console** janela, ou clicando em **parar depuração** no Visual Studio **depurar** menu.  
+     Feche o aplicativo pressionando ENTER na janela do **console** ou clicando em **parar depuração** no menu **depurar** do Visual Studio.  
   
 ## <a name="creating-a-new-entity"></a>Criando uma nova entidade  
  Criar uma nova entidade é simples. Você pode criar objetos (como `Customer`) usando a palavra-chave `New`.  
@@ -129,7 +129,7 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
      Observe que a nova linha não aparece nos resultados. Os novos dados ainda não foram enviados para o banco de dados.  
   
-3. Pressione Enter na **Console** janela para parar a depuração.  
+3. Pressione Enter na janela do **console** para parar a depuração.  
   
 ## <a name="updating-an-entity"></a>Atualizando uma entidade  
  Nas etapas a seguir, você recuperará um objeto `Customer` e alterará uma de suas propriedades.  
@@ -181,10 +181,10 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
     Customer ID: RICAR  
     ```  
   
-4. Pressione Enter na **Console** janela para parar a depuração.  
+4. Pressione Enter na janela do **console** para parar a depuração.  
   
 > [!NOTE]
->  Depois de você ter adicionado o novo cliente enviando as alterações, você não poderá executar esta solução novamente desta forma, porque não poderá adicionar o mesmo cliente novamente. Para executar novamente a solução, altere o valor da identificação do cliente a ser adicionado.  
+> Depois de você ter adicionado o novo cliente enviando as alterações, você não poderá executar esta solução novamente desta forma, porque não poderá adicionar o mesmo cliente novamente. Para executar novamente a solução, altere o valor da identificação do cliente a ser adicionado.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364323"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939703"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Visão geral das extensões de marcação para XAML
 As extensões de marcação são uma técnica XAML para obter um valor que não seja um tipo de XAML primitivo nem um específico. Para o uso do atributo, as extensões de marcação usam a sequência de caracteres conhecida `{` de uma chave de abertura para inserir o escopo da extensão de `}` marcação e uma chave de fechamento a ser encerrada. Ao usar .NET Framework serviços XAML, você pode usar algumas das extensões de marcação de linguagem XAML predefinidas do assembly System. XAML. Você também pode subclasse da <xref:System.Windows.Markup.MarkupExtension> classe, definida em System. XAML, e definir suas próprias extensões de marcação. Ou você pode usar extensões de marcação definidas por uma estrutura específica se já estiver fazendo referência a essa estrutura.  
@@ -22,7 +22,7 @@ As extensões de marcação são uma técnica XAML para obter um valor que não 
  Várias extensões de marcação são implementadas por .NET Framework serviços XAML para suporte à linguagem XAML. Essas extensões de marcação correspondem a partes da especificação do XAML como uma linguagem. Normalmente, eles são identificáveis pelo `x:` prefixo na sintaxe, como visto em uso comum. As implementações de serviços XAML .NET Framework para esses elementos de linguagem XAML derivam da <xref:System.Windows.Markup.MarkupExtension> classe base.  
   
 > [!NOTE]
->  O `x:` prefixo é usado para o mapeamento de namespace XAML típico do namespace da linguagem XAML, no elemento raiz de uma produção XAML. Por exemplo, o projeto e os modelos de página do Visual Studio para várias estruturas específicas iniciam um arquivo `x:` XAML usando esse mapeamento. Você pode escolher um token de prefixo diferente em seu próprio mapeamento de namespace XAML, mas esta documentação assumirá `x:` o mapeamento padrão como um meio de identificar as entidades que são uma parte definida do namespace XAML da linguagem XAML, em oposição a um namespace XAML padrão de uma estrutura específica ou outros namespaces CLR ou XML arbitrários.  
+> O `x:` prefixo é usado para o mapeamento de namespace XAML típico do namespace da linguagem XAML, no elemento raiz de uma produção XAML. Por exemplo, o projeto e os modelos de página do Visual Studio para várias estruturas específicas iniciam um arquivo `x:` XAML usando esse mapeamento. Você pode escolher um token de prefixo diferente em seu próprio mapeamento de namespace XAML, mas esta documentação assumirá `x:` o mapeamento padrão como um meio de identificar as entidades que são uma parte definida do namespace XAML da linguagem XAML, em oposição a um namespace XAML padrão de uma estrutura específica ou outros namespaces CLR ou XML arbitrários.  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type`fornece o <xref:System.Type> objeto para o tipo nomeado. Essa funcionalidade é usada com mais frequência em mecanismos de adiamento que usam tipo CLR subjacente e derivação de tipo como um moniker ou identificador de agrupamento. Estilos e modelos do WPF e seu uso de `TargetType` Propriedades, são um exemplo específico. Para obter mais informações, consulte a [extensão de marcação x:Type](x-type-markup-extension.md).  

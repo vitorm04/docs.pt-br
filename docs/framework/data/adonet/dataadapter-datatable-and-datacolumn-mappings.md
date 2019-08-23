@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb6841dd24c4c7587cc2424cc1e606194da34585
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032689"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944055"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Mapeamentos de DataTable e de DataColumn do DataAdapter
-Um **DataAdapter** contém uma coleção de zero ou mais <xref:System.Data.Common.DataTableMapping> objetos no seu **TableMappings** propriedade. Um **DataTableMapping** fornece um mapeamento mestre entre os dados retornados de uma consulta em relação a uma fonte de dados e um <xref:System.Data.DataTable>. O **DataTableMapping** nome pode ser passado em vez da **DataTable** nome para o **preencher** o método da **DataAdapter**. O exemplo a seguir cria uma **DataTableMapping** denominado **AuthorsMapping** para o **autores** tabela.  
+Um **DataAdapter** contém uma coleção de zero ou mais <xref:System.Data.Common.DataTableMapping> objetos em sua Propriedade TableMappings. Um **DataTableMapping** fornece um mapeamento mestre entre os dados retornados de uma consulta em relação a uma fonte de dados <xref:System.Data.DataTable>e um. O nome de DataTableMapping pode ser passado no lugar do nome **DataTable** para o método **Fill** do **DataAdapter**. O exemplo a seguir cria um DataTableMapping chamado **AuthorsMapping** para a tabela **Authors** .  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -23,11 +23,11 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors")
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");  
 ```  
   
- Um **DataTableMapping** permite que você use nomes de coluna em uma **DataTable** que são diferentes no banco de dados. O **DataAdapter** usa o mapeamento para corresponder às colunas quando a tabela é atualizada.  
+ Um **DataTableMapping** permite que você use nomes de coluna em uma **DataTable** que são diferentes daquelas no banco de dados. O **DataAdapter** usa o mapeamento para corresponder as colunas quando a tabela é atualizada.  
   
- Se você não especificar uma **TableName** ou um **DataTableMapping** nome ao chamar o **preencher** ou **atualização** método o  **DataAdapter**, o **DataAdapter** procura uma **DataTableMapping** chamado "Table". Se esse **DataTableMapping** não existir, o **TableName** dos **DataTable** será "Table". Você pode especificar um padrão **DataTableMapping** criando um **DataTableMapping** com o nome de "Table".  
+ Se você não especificar um nome **de tabela** ou de **DataTableMapping** ao chamar o método **Fill** ou **Update** do **DataAdapter**, o **DataAdapter** procurará um DataTableMapping chamado "Table". Se esse **DataTableMapping** não existir, o **TableName** da **DataTable** será "Table". Você pode especificar um **DataTableMapping** padrão criando um DataTableMapping com o nome "Table".  
   
- O exemplo de código a seguir cria uma **DataTableMapping** (da <xref:System.Data.Common> namespace) e torna o mapeamento padrão para especificado **DataAdapter** ao nomeá-lo "Table". O exemplo, em seguida, mapeia as colunas da primeira tabela no resultado da consulta (o **clientes** tabela da **Northwind** banco de dados) para um conjunto de nomes mais amigáveis no **clientes Northwind**  na tabela a <xref:System.Data.DataSet>. Para colunas que não são mapeadas, o nome da coluna na fonte de dados é usado.  
+ O exemplo de código a seguir cria um DataTableMapping ( <xref:System.Data.Common> do namespace) e o torna o mapeamento padrão para o **DataAdapter** especificado, nomeando-o como "Table". Em seguida, o exemplo mapeia as colunas da primeira tabela no resultado da consulta ( a tabela Customers do banco de dados **Northwind** ) para um conjunto de nomes mais amigáveis na tabela <xref:System.Data.DataSet>Customers da **Northwind** no. Para colunas que não são mapeadas, o nome da coluna na fonte de dados é usado.  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -49,11 +49,11 @@ mapping.ColumnMappings.Add("PostalCode", "ZIPCode");
 adapter.Fill(custDS);  
 ```  
   
- Em situações mais avançadas, você pode decidir que deseja que o mesmo **DataAdapter** para dar suporte ao carregamento de diferentes tabelas com diferentes mapeamentos. Para fazer isso, basta adicionar mais **DataTableMapping** objetos.  
+ Em situações mais avançadas, você pode decidir que deseja que o mesmo **DataAdapter** dê suporte ao carregamento de tabelas diferentes com mapeamentos diferentes. Para fazer isso, basta adicionar outros objetos DataTableMapping.  
   
- Quando o **preencher** método recebe uma instância de um **DataSet** e um **DataTableMapping** nome, se existir um mapeamento com esse nome, ele é usado; caso contrário, um  **DataTable** com esse nome é usado.  
+ Quando o método **Fill** passa uma instância de um conjunto de um **DataSet** e um nome DataTableMapping, se um mapeamento com esse nome já existir, ele será usado; caso contrário, será usada uma **DataTable** com esse nome.  
   
- Os exemplos a seguir criam uma **DataTableMapping** com um nome de **clientes** e um **DataTable** nome do **BizTalkSchema**. O exemplo, em seguida, mapeia as linhas retornadas pela instrução SELECT para o **BizTalkSchema** **DataTable**.  
+ Os exemplos a seguir criam um DataTableMapping com um nome de Customers e um nome **DataTable** de **BizTalkSchema**. Em seguida, o exemplo mapeia as linhas retornadas pela instrução SELECT para a **DataTable** **BizTalkSchema** .  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -78,19 +78,19 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
->  Se o nome de uma coluna de origem não for fornecido para um mapeamento de coluna ou se o nome de uma tabela de origem não for fornecido para um mapeamento de tabela, os nomes padrão serão gerados automaticamente. Se nenhuma coluna de origem é fornecida para um mapeamento de coluna, o mapeamento de coluna recebe um nome padrão incremental **SourceColumn** *N,* começando com **SourceColumn1**. Se nenhum nome de tabela de origem é fornecido para um mapeamento de tabela, o mapeamento de tabela é fornecido um nome padrão incremental **SourceTable** *N*, começando com **SourceTable1**.  
+> Se o nome de uma coluna de origem não for fornecido para um mapeamento de coluna ou se o nome de uma tabela de origem não for fornecido para um mapeamento de tabela, os nomes padrão serão gerados automaticamente. Se nenhuma coluna de origem for fornecida para um mapeamento de coluna, o mapeamento de coluna receberá um nome padrão incremental de **SourceColumn** *N,* começando com **SourceColumn1**. Se nenhum nome de tabela de origem for fornecido para um mapeamento de tabela, o mapeamento de tabela receberá um nome padrão incremental de **SourceTable** *N*, começando com **SourceTable1**.  
   
 > [!NOTE]
->  É recomendável que você evite a convenção de nomeação **SourceColumn** *N* para um mapeamento de coluna, ou **SourceTable** *N* para uma tabela mapeamento, porque o nome fornecido pode entrar em conflito com um nome de mapeamento de coluna padrão existente na **ColumnMappingCollection** ou o nome do mapeamento de tabela na **DataTableMappingCollection** . Se o nome fornecido já existir, será gerada uma exceção.  
+> Recomendamos que você evite a Convenção de nomenclatura de **SourceColumn** *N* para um mapeamento de coluna ou **SourceTable** *n* para um mapeamento de tabela, pois o nome que você fornece pode entrar em conflito com um nome de mapeamento de coluna padrão existente no  **ColumnMappingcollection** ou nome de mapeamento de tabela no **DataTableMappingCollection**. Se o nome fornecido já existir, será gerada uma exceção.  
   
 ## <a name="handling-multiple-result-sets"></a>Manipulando vários conjuntos de resultados  
- Se sua **SelectCommand** retorna várias tabelas, **preencher** gera automaticamente os nomes de tabela com valores incrementais para as tabelas a **conjunto de dados**, começando com o especificado o nome de tabela e continuando no formulário **TableName** *N*, começando com **TableName1**. Você pode usar mapeamentos de tabela para mapear o nome de tabela gerado automaticamente para um nome que você deseja especificado para a tabela na **conjunto de dados**. Por exemplo, para um **SelectCommand** , duas tabelas, que retorna **clientes** e **pedidos**, emita a seguinte chamada para **preencher**.  
+ Se o **SelectCommand** retornar várias tabelas, **Fill** gerará automaticamente nomes de tabela com valores incrementais para as tabelas no **conjunto**de valores, começando com o nome da tabela especificada e continuando no formato **TableName** *N*, começando com **TableName1**. Você pode usar mapeamentos de tabela para mapear o nome de tabela gerado automaticamente para um nome que você deseja especificar para a tabela no **DataSet**. Por exemplo, para um **SelectCommand** que retorna duas tabelas, **Customers** e **Orders**, emita a seguinte chamada para **Fill**.  
   
 ```  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- Duas tabelas são criadas na **conjunto de dados**: **Os clientes** e **Customers1**. Você pode usar mapeamentos de tabela para garantir que a segunda tabela é denominada **pedidos** em vez de **Customers1**. Para fazer isso, mapeie a tabela de origem do **Customers1** para o **DataSet** tabela **pedidos**, conforme mostrado no exemplo a seguir.  
+ Duas tabelas são criadas no **conjunto de conjuntos**: **Clientes** e **Customers1**. Você pode usar mapeamentos de tabela para garantir que a segunda tabela seja denominada Orders em vez de **Customers1**. Para fazer isso, mapeie a tabela de origem de **Customers1** para os **pedidos**de tabela de **conjunto** de tabelas, conforme mostrado no exemplo a seguir.  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  

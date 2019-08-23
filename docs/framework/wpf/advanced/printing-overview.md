@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545309"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958553"
 ---
 # <a name="printing-overview"></a>Visão geral da impressão
 Com o Microsoft .NET Framework, os desenvolvedores de aplicativos que usam o Windows Presentation Foundation (WPF) têm um novo conjunto avançado de APIs de gerenciamento do sistema de impressão e impressão. Com o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alguns desses aprimoramentos do sistema de impressão também estão disponíveis para os desenvolvedores que criam aplicativos do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e desenvolvedores que usam código não gerenciado. No núcleo dessa nova funcionalidade está o novo formato de arquivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e o caminho de impressão [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -35,11 +35,11 @@ Com o Microsoft .NET Framework, os desenvolvedores de aplicativos que usam o Win
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Caminho de impressão XPS  
- O caminho de impressão do XML Paper Specification (XPS) é [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] um novo recurso que redefine como a impressão é tratada em aplicativos do Windows. Como [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] o pode substituir uma linguagem de apresentação de documento (como RTF), um formato de spooler de impressão (como WMF) e uma linguagem de descrição de página (como PCL ou PostScript); o novo caminho de impressão mantém o formato XPS da publicação do aplicativo para o processamento final no driver ou dispositivo de impressão.  
+ O caminho de impressão do XML Paper Specification (XPS) é um novo recurso do Windows que redefine como a impressão é tratada em aplicativos do Windows. Como [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] o pode substituir uma linguagem de apresentação de documento (como RTF), um formato de spooler de impressão (como WMF) e uma linguagem de descrição de página (como PCL ou PostScript); o novo caminho de impressão mantém o formato XPS da publicação do aplicativo para o processamento final no driver ou dispositivo de impressão.  
   
  O caminho de impressão XPS é criado sobre o modelo de driver de impressora XPS (XPSDrv), que fornece vários benefícios para [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] os desenvolvedores, como impressão, suporte a cores aprimorados e desempenho de impressão aprimorado significativamente. (Para obter mais informações sobre XPSDrv, consulte a [documentação do kit de driver do Windows](/windows-hardware/drivers/).)  
   
- A operação do spooler de impressão para documentos XPS é essencialmente a mesma das versões anteriores do Windows. No entanto, ele foi aprimorado para dar suporte ao caminho de impressão XPS além do caminho de impressão GDI existente. O novo caminho de impressão consome nativamente um arquivo de spool XPS. Embora os drivers de impressora de modo de usuário escritos para [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] versões anteriores do continuem a funcionar, um driver de impressora XPS (XPSDrv) é necessário para usar o caminho de impressão XPS.  
+ A operação do spooler de impressão para documentos XPS é essencialmente a mesma das versões anteriores do Windows. No entanto, ele foi aprimorado para dar suporte ao caminho de impressão XPS além do caminho de impressão GDI existente. O novo caminho de impressão consome nativamente um arquivo de spool XPS. Embora os drivers de impressora do modo de usuário escritos para versões anteriores do Windows continuem a funcionar, um driver de impressora XPS (XPSDrv) é necessário para usar o caminho de impressão XPS.  
   
  Os benefícios do caminho de impressão XPS são significativos e incluem:  
   

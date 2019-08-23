@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: adfde0bd420ccb7af4c4872affe09e5f6cf47e71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 287a2ed3f54f85435a986d3a6ecd77f7009fb195
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051683"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938220"
 ---
 # <a name="-help---visual-basic"></a>/help, /? (Visual Basic)
 Exibe as opções do compilador.  
@@ -28,13 +28,13 @@ Exibe as opções do compilador.
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Se você incluir essa opção em uma compilação, nenhum arquivo de saída é criado e a compilação não ocorre.  
+ Se você incluir essa opção em uma compilação, nenhum arquivo de saída será criado e nenhuma compilação ocorrerá.  
   
 > [!NOTE]
->  O `-help` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível somente durante a compilação da linha de comando.  
+> A `-help` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ela está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir exibe a Ajuda da linha de comando.  
+ O código a seguir exibe a ajuda da linha de comando.  
   
 ```  
 vbc -help  

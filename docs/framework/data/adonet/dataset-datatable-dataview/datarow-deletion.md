@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c80294c4bc879e6a1df4c9d1170eef14b8b83de
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879860"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915806"
 ---
 # <a name="datarow-deletion"></a>Exclusão de DataRow
-Há dois métodos que você pode usar para excluir uma <xref:System.Data.DataRow> do objeto de um <xref:System.Data.DataTable> objeto: o **remover** método da <xref:System.Data.DataRowCollection> objeto e o <xref:System.Data.DataRow.Delete%2A> o método da **DataRow**objeto. Enquanto o <xref:System.Data.DataRowCollection.Remove%2A> exclusões de método uma **DataRow** da **DataRowCollection**, o <xref:System.Data.DataRow.Delete%2A> método marca apenas a linha para exclusão. A remoção real ocorre quando o aplicativo chama o **AcceptChanges** método. Usando <xref:System.Data.DataRow.Delete%2A>, você pode verificar programaticamente quais linhas estão marcadas para exclusão antes de realmente removê-las. Quando uma linha está marcada para exclusão, sua propriedade <xref:System.Data.DataRow.RowState%2A> é definida como <xref:System.Data.DataRow.Delete%2A>.  
+Há dois métodos que você pode usar para excluir um <xref:System.Data.DataRow> objeto de um <xref:System.Data.DataTable> objeto: <xref:System.Data.DataRowCollection> o método **Remove** do objeto e o <xref:System.Data.DataRow.Delete%2A> método do objeto **DataRow** . Enquanto o <xref:System.Data.DataRowCollection.Remove%2A> método exclui uma **DataRow** de **DataRowCollection**, o <xref:System.Data.DataRow.Delete%2A> método marca apenas a linha para exclusão. A remoção real ocorre quando o aplicativo chama o método **AcceptChanges** . Usando <xref:System.Data.DataRow.Delete%2A>, você pode verificar programaticamente quais linhas estão marcadas para exclusão antes de realmente removê-las. Quando uma linha está marcada para exclusão, sua propriedade <xref:System.Data.DataRow.RowState%2A> é definida como <xref:System.Data.DataRow.Delete%2A>.  
   
  Nem <xref:System.Data.DataRow.Delete%2A> ou <xref:System.Data.DataRowCollection.Remove%2A> deve ser chamado em um loop foreach ao fazer a iteração por meio de um objeto de <xref:System.Data.DataRowCollection>. Nem <xref:System.Data.DataRow.Delete%2A> ou <xref:System.Data.DataRowCollection.Remove%2A> modificam o estado da coleção.  
   
- Ao usar um <xref:System.Data.DataSet> ou **DataTable** junto com um **DataAdapter** e uma fonte de dados relacional, use o **excluir** método do  **DataRow** para remover a linha. O **excluir** método marca a linha como **Deleted** no **conjunto de dados** ou **DataTable** , mas não removê-lo. Em vez disso, quando o **DataAdapter** encontra uma linha marcada como **Deleted**, ele executa seu **DeleteCommand** método para excluir a linha na fonte de dados. A linha pode então ser permanentemente removida usando o **AcceptChanges** método. Se você usar **remova** para excluir a linha, a linha será completamente removida da tabela, mas o **DataAdapter** não excluirá a linha na fonte de dados.  
+ Ao usar uma <xref:System.Data.DataSet> **DataTable** ou em conjunto com um **DataAdapter** e uma fonte de dados relacional, use o método **delete** da **DataRow** para remover a linha. O método **delete** marca a linha como **excluída** no **DataSet** ou **DataTable** , mas não a remove. Em vez disso, quando o **DataAdapter** encontra uma linhamarcada como excluída, ele executa seu método **DeleteCommand** para excluir a linha na fonte de dados. Em seguida, a linha pode ser removida permanentemente usando o método **AcceptChanges** . Se você usar **remover** para excluir a linha, a linha será completamente removida da tabela, mas o **DataAdapter** não excluirá a linha na fonte de dados.  
   
- O **remover** método o **DataRowCollection** leva um **DataRow** como um argumento e a remove da coleção, conforme mostrado no exemplo a seguir.  
+ O método **Remove** da **DataRowCollection** usa uma **DataRow** como um argumento e a remove da coleção, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 workTable.Rows.Remove(workRow)  
@@ -29,7 +29,7 @@ workTable.Rows.Remove(workRow)
 workTable.Rows.Remove(workRow);  
 ```  
   
- Em contraste, o exemplo a seguir demonstra como chamar o **excluir** método em um **DataRow** para alterar sua **RowState** para **Deleted** .  
+ Por outro lado, o exemplo a seguir demonstra como chamar o método **delete** em uma **DataRow** para alterar seu **RowState** para **excluído**.  
   
 ```vb  
 workRow.Delete  
@@ -39,10 +39,10 @@ workRow.Delete
 workRow.Delete();  
 ```  
   
- Se uma linha está marcada para exclusão e chamar o **AcceptChanges** método o **DataTable** do objeto, a linha é removida da **DataTable**. Por outro lado, se você chamar **RejectChanges**, o **RowState** da linha será revertido ao que era antes de ser marcado como **Deleted**.  
+ Se uma linha for marcada para exclusão e você chamar o método **AcceptChanges** do objeto **DataTable** , a linha será removida da **DataTable**. Por outro lado, se você chamar **RejectChanges**, o **RowState** da linha será revertido para o que estava antes de ser marcado como **excluído**.  
   
 > [!NOTE]
->  Se o **RowState** de uma **DataRow** está **adicionado**, que significa que ele acabou de ser adicionado à tabela e está marcado como **Deleted**, é removido da tabela.  
+> Se o **RowState** de uma **DataRow** for **adicionado**, o que significa que acabou de ser adicionado à tabela e, em seguida, marcado como **excluído**, ele será removido da tabela.  
   
 ## <a name="see-also"></a>Consulte também
 

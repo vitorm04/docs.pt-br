@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364055"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943813"
 ---
 # <a name="lazy-initialization"></a>Inicialização lenta
 *Inicialização lenta* de um objeto significa que a criação dele é adiada até que ele seja usado pela primeira vez. (Para este tópico, os termos *inicialização lenta* e *instanciação lenta* são sinônimos.) A inicialização lenta é usada principalmente para melhorar o desempenho, evitar a computação dispendiosa e reduzir os requisitos de memória do programa. Estes são os cenários mais comuns:  
@@ -62,7 +62,7 @@ ms.locfileid: "68364055"
  Por padrão, objetos <xref:System.Lazy%601> são thread-safe. Ou seja, se o construtor não especificar o tipo de acesso thread-safe, os objetos <xref:System.Lazy%601> que ele criar serão thread-safe. Em cenários com vários threads, o primeiro thread para acessar a propriedade <xref:System.Lazy%601.Value%2A> de um objeto <xref:System.Lazy%601> thread-safe inicializa-o para todos os acessos subsequentes em todos os threads e todos os threads compartilham os mesmos dados. Portanto, não importa qual thread inicializa o objeto e as condições de corrida são benignas.  
   
 > [!NOTE]
->  Você pode estender essa consistência às condições de erro usando o cache de exceções. Para obter mais informações, consulte a próxima seção, [Exceções em objetos lentos](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
+> Você pode estender essa consistência às condições de erro usando o cache de exceções. Para obter mais informações, consulte a próxima seção, [Exceções em objetos lentos](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
   
  O exemplo a seguir mostra que a mesma instância `Lazy<int>` tem o mesmo valor para três threads separados.  
   
@@ -89,10 +89,10 @@ ms.locfileid: "68364055"
 ## <a name="exceptions-in-lazy-objects"></a>Exceções em objetos lentos  
  Conforme mencionado anteriormente, um objeto <xref:System.Lazy%601> sempre retorna o mesmo objeto ou valor com o qual ele foi inicializado e, portanto, a propriedade <xref:System.Lazy%601.Value%2A> é somente leitura. Se você habilitar o cache de exceção, essa imutabilidade também se estenderá ao comportamento de exceção. Se um objeto inicializado por Lazy tiver o cache de exceção habilitado e lançar uma exceção de seu método <xref:System.Lazy%601.Value%2A> de inicialização quando a propriedade for acessada pela primeira vez, essa mesma exceção será <xref:System.Lazy%601.Value%2A> lançada em todas as tentativas subsequentes de acessar a propriedade . Em outras palavras, o construtor do tipo encapsulado nunca será invocado novamente, mesmo em cenários com vários threads. Portanto, o objeto <xref:System.Lazy%601> não é capaz de gerar uma exceção em um acesso e retorna um valor em um acesso subsequente.  
   
- O cache de exceção é habilitado quando você usar qualquer construtor <xref:System.Lazy%601?displayProperty=nameWithType> que usa um método de inicialização (parâmetro `valueFactory`); por exemplo, ele é habilitado quando você usa o construtor `Lazy(T)(Func(T))`. Se o construtor também usa um valor <xref:System.Threading.LazyThreadSafetyMode> (parâmetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> ou <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Especificar um método de inicialização permite o cache de exceções para esses dois modos. O método de inicialização pode ser muito simples. Por exemplo, ele pode chamar o construtor sem parâmetros para `T`: `new Lazy<Contents>(() => new Contents(), mode)` in C#ou `New Lazy(Of Contents)(Function() New Contents())` em Visual Basic. Se você usar um <xref:System.Lazy%601?displayProperty=nameWithType> Construtor que não especifique um método de inicialização, as exceções geradas pelo construtor sem parâmetros para `T` não serão armazenadas em cache. Para obter mais informações, consulte a enumeração <xref:System.Threading.LazyThreadSafetyMode>.  
+ O cache de exceção é habilitado quando você usar qualquer construtor <xref:System.Lazy%601?displayProperty=nameWithType> que usa um método de inicialização (parâmetro `valueFactory`); por exemplo, ele é habilitado quando você usa o construtor `Lazy(T)(Func(T))`. Se o construtor também usa um valor <xref:System.Threading.LazyThreadSafetyMode> (parâmetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> ou <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Especificar um método de inicialização permite o cache de exceções para esses dois modos. O método de inicialização pode ser muito simples. Por exemplo, ele pode chamar o construtor sem parâmetros para `T`: `new Lazy<Contents>(() => new Contents(), mode)` in C#ou `New Lazy(Of Contents)(Function() New Contents())` em Visual Basic. Se você usar um construtor <xref:System.Lazy%601?displayProperty=nameWithType> que não especifique um método de inicialização, as exceções geradas pelo construtor sem parâmetros para `T` não serão armazenadas em cache. Para obter mais informações, consulte a enumeração <xref:System.Threading.LazyThreadSafetyMode>.  
   
 > [!NOTE]
->  Se você criar um objeto <xref:System.Lazy%601> com o parâmetro de construtor `isThreadSafe` definido como `false` ou o parâmetro de construtor `mode` definido como <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, você deverá acessar o objeto <xref:System.Lazy%601> de um único thread ou fornecer sua própria sincronização. Isso se aplica a todos os aspectos do objeto, incluindo o cache de exceção.  
+> Se você criar um objeto <xref:System.Lazy%601> com o parâmetro de construtor `isThreadSafe` definido como `false` ou o parâmetro de construtor `mode` definido como <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, você deverá acessar o objeto <xref:System.Lazy%601> de um único thread ou fornecer sua própria sincronização. Isso se aplica a todos os aspectos do objeto, incluindo o cache de exceção.  
   
  Conforme observado na seção anterior, objetos <xref:System.Lazy%601> criados com a especificação <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> tratam exceções de forma diferente. Com <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>, vários threads podem competir para inicializar a instância <xref:System.Lazy%601>. Nesse caso, as exceções não são armazenadas em cache e tentativas de acessar a propriedade <xref:System.Lazy%601.Value%2A> podem continuar até que a inicialização seja bem-sucedida.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68364055"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Variáveis locais de thread em Parallel.For e ForEach  
- Quando você usa o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou o método <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar por fontes de dados em paralelo, você pode usar as sobrecargas que têm suporte interno para dados locais de thread. Esses métodos, a localidade do thread é obtida usando delegados locais para criar, acessar e limpar os dados. Para obter mais informações, confira [Como: Gravar um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Como: Gravar um loop Parallel.ForEach com variáveis locais de partição](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Quando você usa o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou o método <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar por fontes de dados em paralelo, você pode usar as sobrecargas que têm suporte interno para dados locais de thread. Esses métodos, a localidade do thread é obtida usando delegados locais para criar, acessar e limpar os dados. Para obter mais informações, confira [Como: Gravar um loop Parallel.For com variáveis locais de thread](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Como: Gravar um loop Parallel.ForEach com variáveis locais de partição](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Usando inicialização lenta para cenários de baixa sobrecarga  
  Em cenários em que você precisa fazer inicialização lenta de um grande número de objetos, você pode decidir que encapsular cada objeto em um <xref:System.Lazy%601> requer memória ou recursos de computação demais. Ou então, você pode ter requisitos rigorosos para como a inicialização lenta é exposta. Nesses casos, você pode usar os métodos `static` (`Shared` no Visual Basic) da classe <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> para fazer inicialização lenta de cada objeto sem encapsulá-lo em uma instância de <xref:System.Lazy%601>.  
@@ -154,7 +154,7 @@ ms.locfileid: "68364055"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Noções básicas de threading gerenciado](../../../docs/standard/threading/managed-threading-basics.md)
-- [Threads e threading](../../../docs/standard/threading/threads-and-threading.md)
-- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Noções básicas de threading gerenciado](../../standard/threading/managed-threading-basics.md)
+- [Threads e threading](../../standard/threading/threads-and-threading.md)
+- [TPL (Biblioteca de Paralelismo de Tarefas)](../../standard/parallel-programming/task-parallel-library-tpl.md)
 - [Como: Executar inicialização lenta de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

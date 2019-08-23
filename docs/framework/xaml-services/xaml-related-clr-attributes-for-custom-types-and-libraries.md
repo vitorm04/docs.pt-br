@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a264ec3fa1232a058a3bfbabbe8b84712cf87322
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364237"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956408"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas
 Este tópico descreve os atributos de Common Language Runtime (CLR) que são definidos por .NET Framework serviços XAML. Ele também descreve outros atributos CLR que são definidos no .NET Framework que têm um cenário relacionado a XAML para aplicativos para assemblies ou tipos. A atribuição de assemblies, tipos ou membros com esses atributos CLR fornece informações do sistema de tipo XAML relacionadas aos seus tipos. As informações são fornecidas a qualquer consumidor XAML que usa .NET Framework serviços XAML para processar o fluxo do nó XAML diretamente ou por meio de leitores XAML dedicados e gravadores XAML.  
@@ -266,7 +266,7 @@ Este tópico descreve os atributos de Common Language Runtime (CLR) que são def
 - Você define o suporte a idioma XAML no assembly e tem <xref:System.Windows.Markup.XmlnsDefinitionAttribute> um `http://schemas.microsoft.com/winfx/2006/xaml`para. Nesse caso, normalmente você deve promover o prefixo `x`.  
   
 > [!NOTE]
->  .NET Framework serviços XAML também definem o atributo <xref:System.Windows.Markup.RootNamespaceAttribute>relacionado ao XAML. Esse atributo é um atributo de nível de assembly para suporte ao sistema de projeto e não é relevante para tipos personalizados XAML.  
+> .NET Framework serviços XAML também definem o atributo <xref:System.Windows.Markup.RootNamespaceAttribute>relacionado ao XAML. Esse atributo é um atributo de nível de assembly para suporte ao sistema de projeto e não é relevante para tipos personalizados XAML.  
   
 ## <a name="see-also"></a>Consulte também
 

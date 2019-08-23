@@ -2,20 +2,20 @@
 title: Segurança de associação personalizada
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 71bc3d463330b893e8b415892a9bdcc2dae88a2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99fa1e7dea09601de5efff9ef8d8c6a66eae1bac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953771"
 ---
 # <a name="custom-binding-security"></a>Segurança de associação personalizada
-Este exemplo demonstra como configurar a segurança por meio de uma associação personalizada. Ele mostra como usar uma ligação personalizada para habilitar a segurança em nível de mensagem junto com um transporte seguro. Isso é útil quando um transporte seguro é necessária para transmitir as mensagens entre o cliente e o serviço e ao mesmo tempo as mensagens devem ser seguras no nível da mensagem. Essa configuração não é suportada por associações fornecidas pelo sistema.
+Este exemplo demonstra como configurar a segurança usando uma associação personalizada. Ele mostra como usar uma associação personalizada para habilitar a segurança em nível de mensagem com um transporte seguro. Isso é útil quando um transporte seguro é necessário para transmitir as mensagens entre o cliente e o serviço e simultaneamente as mensagens devem ser seguras no nível de mensagem. Não há suporte para essa configuração por associações fornecidas pelo sistema.
 
- Esse exemplo consiste em um programa de console de cliente (EXE) e um programa de console de serviço (EXE). O serviço implementa um contrato duplex. O contrato é definido o `ICalculatorDuplex` interface, que expõe operações matemáticas (Adicionar, subtrair, multiplicar e dividir). O `ICalculatorDuplex` interface permite que o cliente a executar operações matemáticas, calculando um resultado em execução em uma sessão. De forma independente, o serviço pode retornar resultados no `ICalculatorDuplexCallback` interface. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens sendo enviadas entre o cliente e o serviço. Uma associação personalizada é definida que dá suporte à comunicação duplex e é seguro.
+ Este exemplo consiste em um programa de console do cliente (EXE) e um programa de console do serviço (EXE). O serviço implementa um contrato duplex. O contrato é definido pela `ICalculatorDuplex` interface, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir). A `ICalculatorDuplex` interface permite que o cliente execute operações matemáticas, calculando um resultado em execução em uma sessão. Independentemente, o serviço pode retornar resultados na `ICalculatorDuplexCallback` interface. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens que estão sendo enviadas entre o cliente e o serviço. Uma associação personalizada é definida com suporte à comunicação duplex e é segura.
 
 > [!NOTE]
->  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
  A configuração de serviço define uma associação personalizada que dá suporte ao seguinte:
 
@@ -23,7 +23,7 @@ Este exemplo demonstra como configurar a segurança por meio de uma associação
 
 - Segurança de mensagem do Windows.
 
- A configuração de associação personalizado permite que o transporte seguro, permitindo simultaneamente a segurança de nível de mensagem. A ordenação dos elementos de associação é importante definir uma ligação personalizada, porque cada um representa uma camada da pilha de canal (consulte [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)). A associação personalizada é definida nos arquivos de configuração de cliente e o serviço, conforme mostrado no seguinte exemplo de configuração.
+ A configuração de associação personalizada permite o transporte seguro habilitando simultaneamente a segurança em nível de mensagem. A ordenação de elementos de associação é importante na definição de uma associação personalizada, pois cada uma representa uma camada na pilha de canais (consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)). A associação personalizada é definida nos arquivos de configuração do serviço e do cliente, conforme mostrado na seguinte configuração de exemplo.
 
 ```xml
 <bindings>
@@ -41,7 +41,7 @@ Este exemplo demonstra como configurar a segurança por meio de uma associação
 </bindings>
 ```
 
- A associação personalizada usa um certificado de serviço para autenticar o serviço no nível de transporte e proteger as mensagens durante a transmissão entre cliente e serviço. Isso é feito usando o `sslStreamSecurity` elemento de associação. O certificado do serviço é configurado usando um comportamento de serviço, conforme mostrado no seguinte exemplo de configuração.
+ A associação personalizada usa um certificado de serviço para autenticar o serviço no nível de transporte e para proteger as mensagens durante a transmissão entre o cliente e o serviço. Isso é feito pelo `sslStreamSecurity` elemento Binding. O certificado do serviço é configurado usando um comportamento de serviço, conforme mostrado na seguinte configuração de exemplo.
 
 ```xml
 <behaviors>
@@ -57,9 +57,9 @@ Este exemplo demonstra como configurar a segurança por meio de uma associação
 </behaviors>
 ```
 
- Além disso, a associação personalizada usa segurança de mensagem com o tipo de credencial do Windows - esse é o tipo de credencial padrão. Isso é feito usando o `security` elemento de associação. Cliente e o serviço são autenticados usando a segurança de nível de mensagem se o mecanismo de autenticação Kerberos está disponível. Isso ocorre se a amostra for executada no ambiente do Active Directory. Se o mecanismo de autenticação Kerberos não estiver disponível, a autenticação NTLM é usada. NTLM autentica o cliente para o serviço, mas não autentica o serviço ao cliente. O `security` elemento de associação está configurado para usar `SecureConversation` `authenticationType`, que resulta na criação de uma sessão de segurança no cliente e o serviço. Isso é necessário para habilitar o contrato do serviço duplex trabalhar.
+ Além disso, a associação personalizada usa segurança de mensagem com o tipo de credencial do Windows – esse é o tipo de credencial padrão. Isso é feito pelo `security` elemento Binding. O cliente e o serviço são autenticados usando a segurança no nível da mensagem se o mecanismo de autenticação Kerberos estiver disponível. Isso ocorrerá se o exemplo for executado no ambiente de Active Directory. Se o mecanismo de autenticação Kerberos não estiver disponível, a autenticação NTLM será usada. O NTLM autentica o cliente para o serviço, mas não autentica o serviço para o cliente. O `security` elemento Binding é configurado para usar `SecureConversation` `authenticationType`, o que resulta na criação de uma sessão de segurança no cliente e no serviço. Isso é necessário para permitir que o contrato duplex do serviço funcione.
 
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
+ Quando você executa o exemplo, as solicitações e respostas da operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
 ```
 Press <ENTER> to terminate client.
@@ -70,17 +70,17 @@ Result(441.25)
 Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 ```
 
- Quando você executar o exemplo, você ver as mensagens retornadas ao cliente sobre a interface de retorno de chamada enviada do serviço. Cada resultado intermediário é exibido, seguido por toda a equação após a conclusão de todas as operações. Pressione ENTER para desligar o cliente.
+ Ao executar o exemplo, você verá as mensagens retornadas para o cliente na interface de retorno de chamada enviadas do serviço. Cada resultado intermediário é exibido, seguido de toda a equação após a conclusão de todas as operações. Pressione ENTER para desligar o cliente.
 
- O arquivo Setup. bat incluído permite que você configure o cliente e servidor com o certificado de serviço relevante para executar um aplicativo hospedado que exige a segurança baseada em certificado. Esse arquivo em lotes deve ser modificado para funcionar entre computadores ou para trabalhar em um caso de não hospedados.
+ O arquivo setup. bat incluído permite que você configure o cliente e o servidor com o certificado de serviço relevante para executar um aplicativo hospedado que requer segurança baseada em certificado. Esse arquivo em lotes deve ser modificado para funcionar em computadores ou para funcionar em um caso não hospedado.
 
- O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos de lote que se aplicam a este exemplo, para que eles podem ser modificados para executar a configuração apropriada:
+ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes que se aplicam a esse exemplo para que eles possam ser modificados para serem executados na configuração apropriada:
 
 - Criando o certificado do servidor.
 
-     As seguintes linhas do arquivo Setup. bat de criam o certificado do servidor a ser usado. O `%SERVER_NAME%` variável Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. Esse arquivo em lotes padrão é o nome do servidor ao localhost.
+     As linhas a seguir do arquivo setup. bat criam o certificado do servidor a ser usado. A `%SERVER_NAME%` variável especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. Esse arquivo em lotes padroniza o nome do servidor para localhost.
 
-     O certificado é armazenado no repositório CurrentUser para os serviços hospedados na Web.
+     O certificado é armazenado no armazenamento CurrentUser para os serviços hospedados na Web.
 
     ```bat
     echo ************
@@ -92,80 +92,80 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-- Instalando o certificado do servidor no repositório de certificados confiáveis do cliente.
+- Instalar o certificado do servidor no repositório de certificados confiáveis do cliente.
 
-     As seguintes linhas na cópia do arquivo Setup. bat o certificado do servidor as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado emitido Microsoft — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.
+     As linhas a seguir no arquivo setup. bat copiam o certificado do servidor no repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — essa etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
     > [!NOTE]
-    >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2010 Prompt de comando. Ele requer que a variável de ambiente MSSDK apontar para o diretório onde o SDK está instalado. Essa variável de ambiente é definido automaticamente dentro de um Visual Studio 2010 Prompt de comando.
+    >  O arquivo em lotes setup. bat foi projetado para ser executado em um prompt de comando do Visual Studio 2010. Ele requer que a variável de ambiente MSSDK aponte para o diretório em que o SDK está instalado. Essa variável de ambiente é definida automaticamente em um prompt de comando do Visual Studio 2010.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador
 
-1. Abra um Prompt de comando do desenvolvedor para a janela do Visual Studio com privilégios de administrador e execute Setup. bat da pasta de instalação de exemplo. Essa opção instala todos os certificados necessários para executar o exemplo.
+1. Abra um Prompt de Comando do Desenvolvedor para a janela do Visual Studio com privilégios de administrador e execute Setup. bat na pasta de instalação de exemplo. Isso instala todos os certificados necessários para executar o exemplo.
 
     > [!NOTE]
-    >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2012 Prompt de comando. A variável de ambiente PATH definido dentro de pontos de Prompt de comando do Visual Studio 2012 para o diretório que contém executáveis exigido pelo script de Setup. bat.  
+    >  O arquivo em lotes setup. bat foi projetado para ser executado em um prompt de comando do Visual Studio 2012. A variável de ambiente PATH definida no prompt de comando do Visual Studio 2012 aponta para o diretório que contém os executáveis exigidos pelo script setup. bat.  
   
-2. Inicie o Service.exe no \service\bin.  
+2. Inicie o Service. exe em \service\bin.  
   
-3. Inicie o Client.exe no \client\bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
+3. Inicie o Client.exe no \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
   
-4. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo em computadores  
+### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo entre computadores  
   
 1. No computador do serviço:  
   
     1. Crie um diretório virtual chamado servicemodelsamples no computador do serviço.  
   
-    2. Copie os arquivos de programa do serviço de \inetpub\wwwroot\servicemodelsamples para o diretório virtual no computador do serviço. Certifique-se de que você copiar os arquivos no subdiretório \bin.  
+    2. Copie os arquivos de programa do serviço do \inetpub\wwwroot\servicemodelsamples para o diretório virtual no computador do serviço. Certifique-se de copiar os arquivos no subdiretório \bin.  
   
-    3. Copie os arquivos Setup. bat e Cleanup no computador de serviço.  
+    3. Copie os arquivos Setup. bat e Cleanup. bat para o computador de serviço.  
   
-    4. Execute o seguinte comando em um Prompt de comando do desenvolvedor para Visual Studio é aberto com privilégios de administrador: `Setup.bat service`. Isso cria o certificado de serviço com o nome da entidade que corresponde ao nome do computador em que o arquivo em lotes foi executado em.  
+    4. Execute o seguinte comando em um Prompt de Comando do Desenvolvedor para Visual Studio aberto com privilégios de administrador `Setup.bat service`:. Isso cria o certificado de serviço com o nome da entidade correspondente ao nome do computador em que o arquivo em lotes foi executado.  
   
         > [!NOTE]
-        >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2010 Prompt de comando. Ele requer que a variável de ambiente path apontar para o diretório onde o SDK está instalado. Essa variável de ambiente é definido automaticamente dentro de um Visual Studio 2010 Prompt de comando.
+        >  O arquivo em lotes setup. bat foi projetado para ser executado em um prompt de comando do Visual Studio 2010. Ele requer que a variável de ambiente Path aponte para o diretório em que o SDK está instalado. Essa variável de ambiente é definida automaticamente em um prompt de comando do Visual Studio 2010.
 
-    5. Alterar o [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) dentro do arquivo Service.exe.config para refletir o nome da entidade do certificado gerado na etapa anterior.
+    5. Altere o [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) de serviço dentro do arquivo Service. exe. config para refletir o nome da entidade do certificado gerado na etapa anterior.
 
-    6. Execute Service.exe em um prompt de comando.
+    6. Execute o Service. exe em um prompt de comando.
 
 2. No computador cliente:
 
-    1. Copie os arquivos de programa do cliente da pasta \client\bin\ no computador cliente. Copie também o arquivo de CleanUp.
+    1. Copie os arquivos de programa do cliente da pasta \client\bin\ para o computador cliente. Copie também o arquivo Cleanup. bat.
 
-    2. Execute CleanUp para remover todos os certificados antigos de amostras anteriores.
+    2. Execute Cleanup. bat para remover quaisquer certificados antigos de exemplos anteriores.
 
-    3. Exportar o certificado do serviço abrindo um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos e executando o seguinte comando no computador do serviço (substitua `%SERVER_NAME%` com o nome totalmente qualificado do computador em que o serviço está em execução):
+    3. Exporte o certificado do serviço abrindo um prompt de comando do desenvolvedor para o Visual Studio com privilégios administrativos e executando o seguinte comando no computador do serviço (substitua `%SERVER_NAME%` pelo nome totalmente qualificado do computador em que o serviço está em execução):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
-    4. Copie %SERVER_NAME%.cer para o computador cliente (substitua % SERVER_NAME % com o nome totalmente qualificado do computador onde o serviço está em execução).
+    4. Copie% SERVER_NAME%. cer para o computador cliente (substitua% SERVER_NAME% pelo nome totalmente qualificado do computador em que o serviço está em execução).
 
-    5. Importar o certificado do serviço abrindo um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos e executando o seguinte comando no computador cliente (substitua % SERVER_NAME % com o nome totalmente qualificado do computador em que o serviço está em execução):
+    5. Importe o certificado do serviço abrindo um Prompt de Comando do Desenvolvedor para o Visual Studio com privilégios administrativos e executando o seguinte comando no computador cliente (substitua% SERVER_NAME% pelo nome totalmente qualificado do computador em que o serviço em execução):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 
-         Etapas de c, d e e não são necessárias se o certificado é emitido por um emissor confiável.
+         As etapas c, d e e não serão necessárias se o certificado for emitido por um emissor confiável.
 
-    6. Modifique o arquivo do cliente App. config da seguinte maneira:
+    6. Modifique o arquivo app. config do cliente da seguinte maneira:
 
         ```xml
         <client>
@@ -178,10 +178,10 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7. Se o serviço for executado sob uma conta que não seja o NetworkService ou LocalSystem em um ambiente de domínio, você talvez precise modificar a identidade do ponto de extremidade para o ponto de extremidade de serviço dentro do arquivo de App. config do cliente para definir o UPN ou o SPN com base em apropriado na conta que é usado para executar o serviço. Para obter mais informações sobre a identidade do ponto de extremidade, consulte a [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) tópico.
+    7. Se o serviço estiver sendo executado em uma conta diferente da conta NetworkService ou LocalSystem em um ambiente de domínio, talvez seja necessário modificar a identidade do ponto de extremidade para o ponto de extremidade de serviço dentro do arquivo app. config do cliente para definir o UPN ou o SPN apropriado com base na conta que é usada para executar o serviço. Para obter mais informações sobre a identidade do ponto de extremidade, consulte o tópico [identidade e autenticação de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) .
 
-    8. Execute Client.exe em um prompt de comando.
+    8. Execute Client. exe em um prompt de comando.
 
-### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra
+### <a name="to-clean-up-after-the-sample"></a>Para limpar após o exemplo
 
-- Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.
+- Execute o Cleanup. bat na pasta Samples depois de concluir a execução do exemplo.

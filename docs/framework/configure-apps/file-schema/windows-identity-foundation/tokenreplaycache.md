@@ -3,12 +3,12 @@ title: <tokenReplayCache>
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: 1567c669b5e682a7a771d7bedc95a8effa474e36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5747a4cfa93118dd41292904b168bbef02fec415
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790501"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944070"
 ---
 # <a name="tokenreplaycache"></a>\<tokenReplayCache>
 Registra um cache de reprodução de token com um serviço ou uma coleção de manipulador de token de segurança.  
@@ -38,7 +38,7 @@ Registra um cache de reprodução de token com um serviço ou uma coleção de m
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|tipo|Um tipo que deriva de <xref:System.IdentityModel.Tokens.TokenReplayCache> classe. Para obter mais informações sobre como especificar um personalizado `type`, consulte [referências de tipo personalizado].
+|tipo|Um tipo que deriva da <xref:System.IdentityModel.Tokens.TokenReplayCache> classe. Para obter mais informações sobre como especificar um personalizado `type`, consulte [referências de tipo personalizado].
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -47,10 +47,10 @@ Registra um cache de reprodução de token com um serviço ou uma coleção de m
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra os caches usados por um serviço ou uma coleção de manipulador de token de segurança.|  
+|[\<caches>](caches.md)|Registra os caches usados por um serviço ou uma coleção de manipulador de token de segurança.|  
   
 ## <a name="remarks"></a>Comentários  
- O cache de reprodução de token é usado para detectar tokens reproduzidos. Detecção de reprodução de token é habilitada pela [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) elemento, que também especifica a hora de expiração máximo de tokens.  
+ O cache de reprodução de token é usado para detectar tokens reproduzidos. A detecção de reprodução de token é habilitada pelo elemento de [ \<> tokenReplayDetection](tokenreplaydetection.md) , que também especifica o tempo de expiração máximo para tokens.  
   
 ## <a name="example"></a>Exemplo  
  O XML a seguir mostra a configuração de um cache personalizado para detectar tokens reproduzidos.  
@@ -65,4 +65,4 @@ Registra um cache de reprodução de token com um serviço ou uma coleção de m
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.IdentityModel.Tokens.TokenReplayCache>
-- [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+- [\<tokenReplayDetection>](tokenreplaydetection.md)

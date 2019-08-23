@@ -2,18 +2,18 @@
 title: Alterando os níveis de compartilhamento de cache para enviar atividades
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 587440bd343513aeff51f1ed0947573fbe612f22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363842"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952583"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Alterando os níveis de compartilhamento de cache para enviar atividades
 A <xref:System.ServiceModel.Activities.SendMessageChannelCache> extensão permite que você personalize os níveis de compartilhamento de cache, as configurações do cache da fábrica de canais e as configurações do cache do canal para fluxos de trabalho que enviam mensagens para pontos <xref:System.ServiceModel.Activities.Send> de extremidade de serviço usando atividades de mensagens. Esses fluxos de trabalho normalmente são fluxos de trabalho do cliente, mas também pode ser o serviços de fluxo de trabalho que são hospedados em um <xref:System.ServiceModel.WorkflowServiceHost>. O cache da fábrica de canais contém <xref:System.ServiceModel.ChannelFactory%601> objetos armazenados em cache. O cache do canal contém canais armazenados em cache.  
   
 > [!NOTE]
->  Os fluxos de trabalho <xref:System.ServiceModel.Activities.Send> podem usar atividades de mensagens para enviar mensagens ou parâmetros. O tempo de execução do fluxo de trabalho adiciona fábricas de canal ao cache <xref:System.ServiceModel.Channels.IRequestChannel> que cria canais do <xref:System.ServiceModel.Activities.ReceiveReply> tipo quando você <xref:System.ServiceModel.Activities.Send> usa uma atividade com <xref:System.ServiceModel.Channels.IOutputChannel> uma atividade e um <xref:System.ServiceModel.Activities.Send> ao usar apenas <xref:System.ServiceModel.Activities.ReceiveReply>uma atividade (não).  
+> Os fluxos de trabalho <xref:System.ServiceModel.Activities.Send> podem usar atividades de mensagens para enviar mensagens ou parâmetros. O tempo de execução do fluxo de trabalho adiciona fábricas de canal ao cache <xref:System.ServiceModel.Channels.IRequestChannel> que cria canais do <xref:System.ServiceModel.Activities.ReceiveReply> tipo quando você <xref:System.ServiceModel.Activities.Send> usa uma atividade com <xref:System.ServiceModel.Channels.IOutputChannel> uma atividade e um <xref:System.ServiceModel.Activities.Send> ao usar apenas <xref:System.ServiceModel.Activities.ReceiveReply>uma atividade (não).  
   
 ## <a name="the-cache-sharing-levels"></a>Os níveis de compartilhamento de cache  
  Por padrão, em um fluxo de trabalho hospedado <xref:System.ServiceModel.WorkflowServiceHost> por um cache usado <xref:System.ServiceModel.Activities.Send> pelas atividades de mensagens é compartilhado entre <xref:System.ServiceModel.WorkflowServiceHost> todas as instâncias de fluxo de trabalho no (cache de nível de host). Um fluxo de trabalho de cliente não é hospedado por um <xref:System.ServiceModel.WorkflowServiceHost>, o cache está disponível somente para a instância de fluxo de trabalho (cache de nível de instância). O cache só está disponível para <xref:System.ServiceModel.Activities.Send> atividades que não usam pontos de extremidade definidos na configuração, a menos que o cache não seguro esteja habilitado.  
