@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953264"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988307"
 ---
 # <a name="handling-datatable-events"></a>Manipulação de eventos de DataTable
 O <xref:System.Data.DataTable> objeto fornece uma série de eventos que podem ser processados por um aplicativo. A tabela a seguir `DataTable` descreve os eventos.  
@@ -33,7 +33,7 @@ O <xref:System.Data.DataTable> objeto fornece uma série de eventos que podem se
 > A maioria das operações que adicionam ou excluem linhas `ColumnChanged` não `ColumnChanging` geram os eventos e. No entanto `ReadXml` , o método `ColumnChanged` gera `ColumnChanging` `XmlReadMode` e eventos, a menos que seja `DiffGram` definido como ou seja `Auto` definido como quando o documento XML que está `DiffGram`sendo lido for um.  
   
 > [!WARNING]
->  Os dados corrompidos podem ocorrer se os dados são `DataSet` modificados em `RowChanged` um do qual o evento é gerado. Nenhuma exceção será gerada se ocorrer corrupção de dados.  
+> Os dados corrompidos podem ocorrer se os dados são `DataSet` modificados em `RowChanged` um do qual o evento é gerado. Nenhuma exceção será gerada se ocorrer corrupção de dados.  
   
 ## <a name="additional-related-events"></a>Eventos relacionados adicionais  
  A <xref:System.Data.DataTable.Constraints%2A> propriedade contém uma <xref:System.Data.ConstraintCollection> instância. A <xref:System.Data.ConstraintCollection> classe expõe um <xref:System.Data.ConstraintCollection.CollectionChanged> evento. Esse evento é acionado quando uma restrição é adicionada, modificada ou removida do `ConstraintCollection`.  
@@ -71,7 +71,7 @@ O <xref:System.Data.DataTable> objeto fornece uma série de eventos que podem se
 > As alterações nas colunas de expressão `DataTable` nunca geram eventos. As alterações nas colunas de expressão `DataView` geram e `DataRowView` apenas eventos. As colunas de expressão podem ter dependências em várias outras colunas e podem ser avaliadas várias vezes `DataRow` durante uma única operação. Cada avaliação de expressão gera eventos e uma única `DataRow` operação pode gerar vários `ListChanged` eventos `PropertyChanged` e quando as colunas de expressão são afetadas, possivelmente incluindo vários eventos para a mesma coluna de expressão.  
   
 > [!WARNING]
->  Não lance um <xref:System.NullReferenceException> dentro do manipulador `RowChanged` de eventos. Se um <xref:System.NullReferenceException> for lançado `RowChanged` no evento de a `DataTable`, o `DataTable` será corrompido.  
+> Não lance um <xref:System.NullReferenceException> dentro do manipulador `RowChanged` de eventos. Se um <xref:System.NullReferenceException> for lançado `RowChanged` no evento de a `DataTable`, o `DataTable` será corrompido.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como criar manipuladores de eventos para `RowChanged`os `RowChanging`eventos `RowDeleted`, `RowDeleting`, `ColumnChanged`, `ColumnChanging` `TableNewRow`,, `TableCleared`,, `TableClearing` e. Cada manipulador de eventos exibe a saída na janela do console quando ela é acionada.  

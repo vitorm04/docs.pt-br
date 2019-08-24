@@ -2,12 +2,12 @@
 title: Cache com suporte para serviços HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: a6a03f20fa6a853f813dc9eff3a4202ab18cad90
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 655e8807a78d542cd7fa586eca3750507891f74b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952664"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988768"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Cache com suporte para serviços HTTP Web do WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]permite que você use o mecanismo de cache declarativo já disponível em ASP.NET em seus serviços HTTP Web WCF. Isso permite que você armazene em cache as respostas de suas operações de serviço HTTP Web do WCF. Quando um usuário envia um HTTP GET para seu serviço configurado para caching, o ASP.NET envia de volta a resposta armazenada em cache e o método de serviço não é chamado. Quando o cache expira, na próxima vez que um usuário envia um HTTP GET, seu método de serviço é chamado e a resposta é armazenada novamente em cache. Para obter mais informações sobre o cache ASP.NET, consulte [visão geral do cache de ASP.net](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -40,7 +40,7 @@ public class Service
 ```
   
 > [!WARNING]
->  Se o modo de compatibilidade ASP.net não estiver ativado e <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> o for usado, uma exceção será lançada.  
+> Se o modo de compatibilidade ASP.net não estiver ativado e <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> o for usado, uma exceção será lançada.  
   
  O nome do perfil de cache especificado <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> pelo identifica um perfil de cache que é adicionado ao seu arquivo de configuração Web. config. O perfil de cache é definido com em um`outputCacheSetting`elemento < >, conforme mostrado no exemplo de configuração a seguir.  
   

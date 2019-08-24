@@ -2,12 +2,12 @@
 title: Introdução ao roteamento
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: eaf09c0d724521c3c69fde0e90ecd7cd5aadb253
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933965"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988669"
 ---
 # <a name="routing-introduction"></a>Introdução ao roteamento
 O serviço de roteamento fornece um intermediário SOAP conectável genérico que é capaz de rotear mensagens com base no conteúdo da mensagem. Com o serviço de roteamento, você pode criar uma lógica de roteamento complexa que permite implementar cenários como agregação de serviço, controle de versão de serviço, roteamento prioritário e roteamento multicast. O serviço de roteamento também fornece tratamento de erros que permite configurar listas de pontos de extremidade de backup, para as quais as mensagens são enviadas se ocorrer uma falha ao enviar para o ponto de extremidade de destino primário.  
@@ -395,7 +395,7 @@ using (ServiceHost serviceHost =
  A representação com o serviço de roteamento requer o uso da representação ASP.NET no modo de compatibilidade ASP.NET ou o uso de credenciais do Windows que foram configuradas para permitir a representação. Para obter mais informações sobre o modo de compatibilidade ASP.NET, consulte [Serviços WCF e ASP.net](wcf-services-and-aspnet.md).  
   
 > [!WARNING]
->  O serviço de roteamento do WCF não oferece suporte à representação com a autenticação básica.  
+> O serviço de roteamento do WCF não oferece suporte à representação com a autenticação básica.  
   
  Para usar a representação ASP.NET com o serviço de roteamento, habilite o modo de compatibilidade ASP.NET no ambiente de Hospedagem de serviço. O serviço de roteamento já foi marcado como permitir o modo de compatibilidade ASP.NET e a representação será habilitada automaticamente. A representação é o único uso com suporte da integração do ASP.NET com o serviço de roteamento.  
   

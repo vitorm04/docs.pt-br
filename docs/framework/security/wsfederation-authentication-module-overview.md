@@ -3,12 +3,12 @@ title: Visão geral do módulo de autenticação WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915509"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987701"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Visão geral do módulo de autenticação WSFederation
 O Windows Identity Foundation (WIF) inclui suporte para autenticação federada em aplicativos do ASP.NET por meio do módulo de autenticação WS-Federated (WS-FAM). Este tópico ajudará você a entender como a autenticação federada funciona e como usá-la.  
@@ -99,7 +99,7 @@ O Windows Identity Foundation (WIF) inclui suporte para autenticação federada 
  O XML a seguir mostra uma configuração de um aplicativo de terceira parte confiável (RP) do ASP.NET. As seções de configuração <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> e <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> são adicionadas sob o elemento `<configSections>`. O SAM e o WS-FAM são adicionados aos módulos de HTTP sob o elemento `<system.webServer>`/`<modules>`. Finalmente, os componentes do WIF estão configurados nos elementos `<system.identityModel>`/`<identityConfiguration>` e `<system.identityModel.services>`/`<federationConfiguration>`. Essa configuração especifica o manipulador de cookie em partes, como o manipulador de cookie padrão e não é um tipo de manipulador de cookie especificado no elemento `<cookieHandler>`.  
   
 > [!WARNING]
->  No exemplo a seguir, o atributo `requireHttps` do elemento `<wsFederation>` e o atributo `requireSsl` do elemento `<cookieHandler>` são `false`. Isso representa uma ameaça de segurança em potencial. Em produção, esses dois valores devem ser definidos como `true`.  
+> No exemplo a seguir, o atributo `requireHttps` do elemento `<wsFederation>` e o atributo `requireSsl` do elemento `<cookieHandler>` são `false`. Isso representa uma ameaça de segurança em potencial. Em produção, esses dois valores devem ser definidos como `true`.  
   
 ```xml  
 <configuration>  

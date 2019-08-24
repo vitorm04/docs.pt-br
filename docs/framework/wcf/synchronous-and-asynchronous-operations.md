@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 14bf9c89fd7142746b93cc45af6c2152e8700571
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952931"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988543"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operações síncronas e assíncronas
 Este tópico discute como implementar e chamar as operações de serviço assíncronas.  
@@ -76,7 +76,7 @@ public class SampleService:ISampleService
  A operação SampleMethodTaskAsync retorna Task\<string> porque a operação lógica retorna uma cadeia de caracteres. Para saber mais sobre o padrão assíncrono baseado em tarefas, confira [O padrão assíncrono baseado em tarefas](https://go.microsoft.com/fwlink/?LinkId=232504).  
   
 > [!WARNING]
->  Ao usar o padrão assíncrono baseado em tarefas, uma T: System.AggregateException pode ser gerada se uma exceção ocorrer ao aguardar a conclusão da operação. Esta exceção pode ocorrer no cliente ou nos serviços  
+> Ao usar o padrão assíncrono baseado em tarefas, uma T: System.AggregateException pode ser gerada se uma exceção ocorrer ao aguardar a conclusão da operação. Esta exceção pode ocorrer no cliente ou nos serviços  
   
 #### <a name="event-based-asynchronous-pattern"></a>O padrão assíncrono baseado em eventos  
  Um serviço que dá suporte ao padrão assíncrono baseada em eventos terá uma ou mais operações chamadas MethodNameAsync. Esses métodos podem espelhar versões síncronas, que realizam a mesma operação no thread atual. A classe também pode ter um evento MethodNameCompleted e pode ter um método MethodNameAsyncCancel (ou simplesmente CancelAsync). Um cliente que deseja chamar a operação definirá um manipulador de eventos para ser chamado quando a operação for concluída,  

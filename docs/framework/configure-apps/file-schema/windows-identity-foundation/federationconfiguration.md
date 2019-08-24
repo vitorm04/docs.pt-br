@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942774"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988330"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Configura o <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) ao usar a autenticação federada por meio do protocolo WS-Federation. Configura o <xref:System.Security.Claims.ClaimsAuthorizationManager> ao usar a <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe ou para fornecer controle de acesso baseado em declarações.  
@@ -74,7 +74,7 @@ Configura o <xref:System.IdentityModel.Services.WSFederationAuthenticationModule
  O XML a seguir mostra `<federationConfiguration>` um elemento que especifica as configurações para o WSFAM e especifica que o manipulador de cookie padrão (uma <xref:System.IdentityModel.Services.ChunkedCookieHandler> instância da classe) seja usado pelo Sam.  
   
 > [!WARNING]
->  Neste exemplo, nem o manipulador de cookie nem WSFAM são necessários para usar HTTPS. Isso ocorre porque o `requireHttps` atributo `<wsFederation>` no elemento `<cookieHandlerElement>` e o `requireSsl` atributo no são `false`. Essas configurações não são recomendadas para a maioria dos ambientes de produção, pois podem representar um risco de segurança.  
+> Neste exemplo, nem o manipulador de cookie nem WSFAM são necessários para usar HTTPS. Isso ocorre porque o `requireHttps` atributo `<wsFederation>` no elemento `<cookieHandlerElement>` e o `requireSsl` atributo no são `false`. Essas configurações não são recomendadas para a maioria dos ambientes de produção, pois podem representar um risco de segurança.  
   
 ```xml  
 <system.identityModel.services>  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912621"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987508"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Como: Adicionar Controles ao Windows Forms
 A maioria dos formulários é projetada adicionando controles à superfície do formulário para definir uma interface do usuário (IU). Um *controle* é um componente em um formulário usado para exibir informações ou aceitar a entrada do usuário. Para obter mais informações sobre controles, consulte [Controles do Windows Forms](index.md).
@@ -89,7 +89,6 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
 ## <a name="see-also"></a>Consulte também
 
 - [Controles dos Windows Forms](index.md)
-- [Organizando Controles nos Windows Forms](arranging-controls-on-windows-forms.md)
 - [Como: Redimensionar controles em Windows Forms](how-to-resize-controls-on-windows-forms.md)
 - [Como: Definir o texto exibido por um controle de Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

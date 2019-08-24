@@ -2,12 +2,12 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: d5d06953c67b90e8367f2c0d01a670a46f487526
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 262ac9be6d5ce6466cf9aff33c0c2791c0e149dd
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925420"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988379"
 ---
 # <a name="identity"></a>\<identity>
 O elemento Identity permite que um desenvolvedor cliente especifique em tempo de design a identidade esperada do serviço. No processo de handshake entre o cliente e o serviço, a infraestrutura Windows Communication Foundation (WCF) garantirá que a identidade do serviço esperado corresponda aos valores desse elemento e, portanto, possa ser autenticada. Para obter mais informações, consulte [identidade de serviço e autenticação](../../../wcf/feature-details/service-identity-and-authentication.md).  
@@ -29,7 +29,7 @@ O elemento Identity permite que um desenvolvedor cliente especifique em tempo de
   <dns value="String" />
   <rsa value="String" />
   <servicePrincipalName value="String" />
-  <usePrincipalName value="String" />
+  <userPrincipalName value="String" />
 </identity>
 ```  
   

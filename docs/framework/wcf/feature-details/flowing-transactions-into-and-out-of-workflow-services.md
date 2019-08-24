@@ -2,18 +2,18 @@
 title: Transações de fluxo de entrada e saída de serviços de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7926c5a8ce1ca1ba3e24c4d1681ae12c18039924
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963337"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988812"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Transações de fluxo de entrada e saída de serviços de fluxo de trabalho
 Os serviços de fluxo de trabalho e os clientes podem participar de transações.  Para que uma operação de serviço se torne parte de uma transação de ambiente <xref:System.ServiceModel.Activities.Receive> , coloque uma <xref:System.ServiceModel.Activities.TransactedReceiveScope> atividade em uma atividade. Todas as chamadas feitas por <xref:System.ServiceModel.Activities.Send> uma ou <xref:System.ServiceModel.Activities.SendReply> uma atividade dentro <xref:System.ServiceModel.Activities.TransactedReceiveScope> do também serão feitas dentro da transação de ambiente. Um aplicativo cliente de fluxo de trabalho pode criar uma transação de <xref:System.Activities.Statements.TransactionScope> ambiente usando a atividade e chamar operações de serviço usando a transação de ambiente. Este tópico o orienta na criação de um serviço de fluxo de trabalho e cliente de fluxo de trabalho que participam de transações.  
   
 > [!WARNING]
->  Se uma instância do serviço de fluxo de trabalho for carregada em uma transação e <xref:System.Activities.Statements.Persist> o fluxo de trabalho contiver uma atividade, a instância do fluxo de trabalho será bloqueada até que a transação expire.  
+> Se uma instância do serviço de fluxo de trabalho for carregada em uma transação e <xref:System.Activities.Statements.Persist> o fluxo de trabalho contiver uma atividade, a instância do fluxo de trabalho será bloqueada até que a transação expire.  
   
 > [!IMPORTANT]
 > Sempre que você usar <xref:System.ServiceModel.Activities.TransactedReceiveScope> um, é recomendável fazer todos os recebimentos no <xref:System.ServiceModel.Activities.TransactedReceiveScope> fluxo de trabalho dentro das atividades.  

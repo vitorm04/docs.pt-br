@@ -2,12 +2,12 @@
 title: Configurando o serviço de compartilhamento de porta Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949610"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988223"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configurando o serviço de compartilhamento de porta Net.TCP
 Os serviços de hospedagem interna que usam o transporte net. TCP podem controlar várias configurações avançadas, `ListenBacklog` como e `MaxPendingAccepts`, que regem o comportamento do soquete TCP subjacente usado para comunicação de rede. No entanto, essas configurações para cada soquete se aplicam apenas no nível de associação se a associação de transporte tiver desabilitado o compartilhamento de porta, que está habilitado por padrão.  
@@ -59,7 +59,7 @@ Os serviços de hospedagem interna que usam o transporte net. TCP podem controla
 > Em [!INCLUDE[wv](../../../../includes/wv-md.md)] sistemas com UAC (controle de conta de usuário) habilitado, os usuários locais exigem permissões elevadas, mesmo que sua conta seja membro do grupo Administradores. Para permitir que esses usuários façam uso do serviço de compartilhamento de porta sem elevação, o SID do usuário (ou o Sid de um grupo no qual o usuário é membro) deve ser adicionado explicitamente à \<seção allowAccounts > de SMSvcHost. exe. config.  
   
 > [!WARNING]
->  O arquivo SMSvcHost. exe. config padrão especifica um personalizado `etwProviderId` para impedir que o rastreamento SMSvcHost. exe interfira nos rastreamentos de serviço.  
+> O arquivo SMSvcHost. exe. config padrão especifica um personalizado `etwProviderId` para impedir que o rastreamento SMSvcHost. exe interfira nos rastreamentos de serviço.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -2,12 +2,12 @@
 title: Suporte a ligações de site do IIS
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 3a4c9a55a8479980bd12333278d8a1e28f2ca775
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a1fc2de3a10641dfc1c6181c7258bd4160f900e2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943046"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988647"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Suporte a ligações de site do IIS
 Ao hospedar um serviço de Windows Communication Foundation (WCF) em Serviços de Informações da Internet (IIS) 7,0, talvez você queira fornecer vários endereços base que usam o mesmo protocolo no mesmo site. Isso permite que o mesmo serviço responda a vários URIs diferentes. Isso é útil quando você deseja hospedar um serviço que escuta em `http://www.contoso.com` e. `http://contoso.com` Também é útil criar um serviço que tenha um endereço base para usuários internos e um endereço base separado para usuários externos. Por exemplo: `http://internal.contoso.com` e `http://www.contoso.com`.  
@@ -27,4 +27,4 @@ Ao hospedar um serviço de Windows Communication Foundation (WCF) em Serviços d
  A especificação de vários endereços base para o mesmo site afeta o conteúdo da página de ajuda do WCF, a importação do esquema e as informações de WSDL/MEX geradas pelo serviço. A página de ajuda do WCF exibe a linha de comando a ser usada para gerar um cliente WCF que pode se comunicar com o serviço. Essa linha de comando contém apenas o primeiro endereço especificado na associação IIS para o site. Da mesma forma, ao importar o esquema, apenas o primeiro endereço base especificado na associação do IIS é usado. Os dados WSDL e MEX contêm todos os endereços base especificados nas associações do IIS.  
   
 > [!WARNING]
->  Isso significa que, se um serviço tiver dois endereços base, um para usuários internos e outro para usuários externos, ambos serão especificados nas informações de WSDL/MEX geradas pelo serviço.
+> Isso significa que, se um serviço tiver dois endereços base, um para usuários internos e outro para usuários externos, ambos serão especificados nas informações de WSDL/MEX geradas pelo serviço.

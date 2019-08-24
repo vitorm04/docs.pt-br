@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c86ab618f6434a6a9ce4f056eeb001cacc84bc
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9d2ae7430c10254274eed6fb8a602aa8bc11bffb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709196"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988504"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
 
@@ -43,7 +43,7 @@ Os aplicativos .NET que usam informações de data e hora são muito diferentes 
 O .NET inclui os tipos <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan> e <xref:System.TimeZoneInfo>, que podem ser usados para criar aplicativos que funcionam com datas e horas.
 
 > [!NOTE]
-> Este tópico não aborda um quarto tipo, <xref:System.TimeZone>, porque sua funcionalidade é quase inteiramente incorporada à classe <xref:System.TimeZoneInfo>. Sempre que possível, os desenvolvedores devem usar a classe <xref:System.TimeZoneInfo> em vez da classe <xref:System.TimeZone>.
+> Este tópico não aborda <xref:System.TimeZone> porque sua funcionalidade está quase totalmente incorporada à <xref:System.TimeZoneInfo> classe. Sempre que possível, use <xref:System.TimeZoneInfo> a classe em vez <xref:System.TimeZone> da classe.
 
 ## <a name="the-datetime-structure"></a>A estrutura DateTime
 

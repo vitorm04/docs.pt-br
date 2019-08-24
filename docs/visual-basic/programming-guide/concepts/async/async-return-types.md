@@ -2,12 +2,12 @@
 title: Tipos de retorno assíncrono (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: ef059eca9b97ed0c7c4fdf5a82389eff816d53b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f331546026ac6b0799947611b54e9a147a6fe7f1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958214"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988832"
 ---
 # <a name="async-return-types-visual-basic"></a>Tipos de retorno assíncrono (Visual Basic)
 Os métodos Async têm três tipos de retorno <xref:System.Threading.Tasks.Task%601>possíveis <xref:System.Threading.Tasks.Task>:, e void. No Visual Basic, o tipo de retorno void é gravado como um procedimento [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Para obter mais informações sobre métodos assíncronos, consulte [programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -57,7 +57,7 @@ Dim result1 As Integer = Await TaskOfT_MethodAsync()
  Você pode entender melhor como isso acontece, separando a chamada ao `TaskOfT_MethodAsync` da aplicação do `Await`, como mostrado no código a seguir. Uma chamada ao método `TaskOfT_MethodAsync` que não é aguardada imediatamente, retorna um `Task(Of Integer)`, como você esperaria da declaração do método. A tarefa é atribuída à variável `integerTask` no exemplo. Já que `integerTask` é um <xref:System.Threading.Tasks.Task%601>, ele contém uma propriedade <xref:System.Threading.Tasks.Task%601.Result> do tipo `TResult`. Nesse caso, TResult representa um tipo inteiro. Quando `Await` é aplicado à `integerTask`, a expressão await é avaliada como o conteúdo da propriedade <xref:System.Threading.Tasks.Task%601.Result%2A> de `integerTask`. O valor é atribuído à variável `result2`.  
   
 > [!WARNING]
->  A propriedade <xref:System.Threading.Tasks.Task%601.Result%2A> é uma propriedade de bloqueio. Se você tentar acessá-la antes que sua tarefa seja concluída, o thread que está ativo no momento será bloqueado até que a tarefa seja concluída e o valor esteja disponível. Na maioria dos casos, você deve acessar o valor usando `Await` em vez de acessar a propriedade diretamente.  
+> A propriedade <xref:System.Threading.Tasks.Task%601.Result%2A> é uma propriedade de bloqueio. Se você tentar acessá-la antes que sua tarefa seja concluída, o thread que está ativo no momento será bloqueado até que a tarefa seja concluída e o valor esteja disponível. Na maioria dos casos, você deve acessar o valor usando `Await` em vez de acessar a propriedade diretamente.  
   
 ```vb  
 ' Call and await in separate statements.  

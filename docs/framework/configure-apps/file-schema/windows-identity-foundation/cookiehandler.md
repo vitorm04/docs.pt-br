@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942794"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988341"
 ---
 # <a name="cookiehandler"></a>\<> cookieHandler
 Configura o <xref:System.IdentityModel.Services.CookieHandler> que o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) usa para ler e gravar cookies.  
@@ -77,7 +77,7 @@ Configura o <xref:System.IdentityModel.Services.CookieHandler> que o <xref:Syste
  O XML a seguir mostra `<cookieHandler>` um elemento. Neste exemplo, como o `mode` atributo não é especificado, o manipulador de cookies padrão será usado pelo Sam. Essa é uma instância da <xref:System.IdentityModel.Services.ChunkedCookieHandler> classe. Como o `<chunkedCookieHandler>` elemento filho não é especificado, o tamanho de bloco padrão será usado. O HTTPS não será necessário porque o `requireSsl` atributo está definido `false`.  
   
 > [!WARNING]
->  Neste exemplo, o HTTPS não é necessário para gravar cookies de sessão. Isso ocorre porque o `requireSsl` atributo `<cookieHandler>` no elemento está definido como `false`. Essa configuração não é recomendada para a maioria dos ambientes de produção, pois pode representar um risco de segurança.  
+> Neste exemplo, o HTTPS não é necessário para gravar cookies de sessão. Isso ocorre porque o `requireSsl` atributo `<cookieHandler>` no elemento está definido como `false`. Essa configuração não é recomendada para a maioria dos ambientes de produção, pois pode representar um risco de segurança.  
   
 ```xml  
 <cookieHandler requireSsl="false" />  
