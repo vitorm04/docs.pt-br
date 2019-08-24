@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7d69f299b0b7638d6f8052e6aa0e77fac39c8e4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960343"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016094"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empacotando fontes com aplicativos
 Este tópico fornece uma visão geral de como empacotar fontes com [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] seu aplicativo.  
   
 > [!NOTE]
-> Assim como a maioria dos tipos de software, as fontes são licenciadas, ao invés de vendidas. As licenças que regem o uso de fontes variam de fornecedor para fornecedor, mas, em geral, a maioria das licenças [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] , incluindo aquelas que abrangem as fontes fornecidas com aplicativos e janelas, não permitem que as fontes sejam inseridas em aplicativos ou de outra forma redistribuído. Portanto, como desenvolvedor, é sua responsabilidade assegurar que você tenha os direitos de licença necessários de qualquer fonte que você inserir em um aplicativo ou redistribuir.  
+> Assim como a maioria dos tipos de software, as fontes são licenciadas, ao invés de vendidas. As licenças que regem o uso de fontes variam de fornecedor para fornecedor, mas, em geral, a maioria das licenças, incluindo aquelas que abrangem as fontes fornecidas pela Microsoft com aplicativos e janelas, não permitem que as fontes sejam inseridas em aplicativos ou redistribuídas de outra forma. Portanto, como desenvolvedor, é sua responsabilidade assegurar que você tenha os direitos de licença necessários de qualquer fonte que você inserir em um aplicativo ou redistribuir.  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Introdução a empacotamento de fontes  

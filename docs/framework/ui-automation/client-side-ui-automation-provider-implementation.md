@@ -6,18 +6,18 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: dd5f744a67481b03802887ff2baa0571b30e4b5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9079dfa03ab81bfa6875e43bfa8a6e5351e0a35d
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965241"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015109"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementação de Provedor de Automação de Interface de Usuário do Lado do Cliente
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
   
- Várias estruturas [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] diferentes estão em uso em [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] sistemas operacionais, incluindo [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]e [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]expõe informações sobre elementos de interface do usuário para clientes. No entanto, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ele não tem conhecimento dos diferentes tipos de controles existentes nessas estruturas e nas técnicas necessárias para extrair informações delas. Em vez disso, ele deixa essa tarefa para objetos chamados provedores. Um provedor extrai informações de um controle específico e passa essas informações para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]o, que os apresenta ao cliente de maneira consistente.  
+ Várias estruturas [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] diferentes estão em uso dentro dos sistemas operacionais da Microsoft, [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]incluindo [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], e [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]expõe informações sobre elementos de interface do usuário para clientes. No entanto, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ele não tem conhecimento dos diferentes tipos de controles existentes nessas estruturas e nas técnicas necessárias para extrair informações delas. Em vez disso, ele deixa essa tarefa para objetos chamados provedores. Um provedor extrai informações de um controle específico e passa essas informações para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]o, que os apresenta ao cliente de maneira consistente.  
   
  Os provedores podem existir no lado do servidor ou no lado do cliente. Um provedor do lado do servidor é implementado pelo próprio controle. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]os elementos implementam provedores, assim como qualquer outro controle de terceiros [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] escrito com em mente.  
   

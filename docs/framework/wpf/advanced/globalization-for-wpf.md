@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 8b33ac800144577ba5f8610afdc50a1ba56eec0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 948d147a0990961a8706298f1112f85882e30119
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937701"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015615"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
 Este tópico apresenta problemas que você deve estar atento ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] são `System.Globalization`definidos no no.
@@ -143,7 +143,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Interface do Usuário Multilíngue
- MUI (Multilingual User Interfaces) é um [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] suporte para alternar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] de um idioma para outro. Um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo usa o modelo de assembly para dar suporte ao mui. Um aplicativo contém assemblies de com neutralidade de idioma, bem como assemblies satélite dependentes de idioma em recursos. O ponto de entrada é .EXE gerenciado no assembly principal.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]o carregador de recursos aproveita o [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]Gerenciador de recursos do para dar suporte à pesquisa e ao fallback de recursos. Vários assemblies satélite funcionam com o mesmo assembly principal. O assembly de recurso que é carregado depende <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> do do thread atual.
+ MUI (Multilingual User Interfaces) é um suporte da Microsoft para alternar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] de um idioma para outro. Um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo usa o modelo de assembly para dar suporte ao mui. Um aplicativo contém assemblies de com neutralidade de idioma, bem como assemblies satélite dependentes de idioma em recursos. O ponto de entrada é .EXE gerenciado no assembly principal.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]o carregador de recursos aproveita o [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]Gerenciador de recursos do para dar suporte à pesquisa e ao fallback de recursos. Vários assemblies satélite funcionam com o mesmo assembly principal. O assembly de recurso que é carregado depende <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> do do thread atual.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Interface do usuário localizável

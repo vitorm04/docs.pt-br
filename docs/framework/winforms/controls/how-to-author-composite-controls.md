@@ -7,23 +7,23 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7b0ee8efa62175e2ced2a810ca6dd76e8adc103b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039889"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015931"
 ---
-# <a name="how-to-author-composite-controls"></a>Como: Criar controles compostos
+# <a name="how-to-author-composite-controls"></a>Como: Controles de composição de autor
 
 Os controles de composição podem ser usados de várias maneiras. É possível criá-los como parte de um projeto de aplicativo da área de trabalho do Windows e usá-los somente em formulários do projeto. Também é possível criá-los em um projeto da Biblioteca de Controles do Windows, compilar o projeto em um assembly e usar os controles em outros projetos. Você pode até mesmo herdar deles e usar a herança visual para personalizá-los rapidamente para fins especiais.
 
-> [!NOTE]
-> Caso queira criar um controle de composição para usar no Web Forms, consulte [Desenvolvendo Controles de Servidores ASP.NET Personalizados](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
-
 ## <a name="to-author-a-composite-control"></a>Criar um controle de composição
 
-1. No Visual Studio, crie um novo projeto de **aplicativo** do `DemoControlHost`Windows chamado.
+1. No Visual Studio, crie um novo projeto de **aplicativo do Windows** e nomeie-o **DemoControlHost**.
 
 2. No menu **projeto** , clique em **Adicionar controle de usuário**.
 
@@ -79,10 +79,8 @@ Os controles de composição podem ser usados de várias maneiras. É possível 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: Criando um controle composto com Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Passo a passo: Criando um controle composto com VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Passo a passo: Herdar de um controle de Windows Forms com Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Passo a passo: Herdar de um controle de Windows Forms com o VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Passo a passo: Criando um controle composto](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Passo a passo: Herdar de um controle de Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [Recomendações do Tipo de Controle](control-type-recommendations.md)
 - [Como: Controles de autor para Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)

@@ -1,6 +1,8 @@
 ---
 title: 'Passo a passo: Criando um controle composto com o Visual C#'
 ms.date: 03/30/2017
+dev_langs:
+- CSharp
 helpviewer_keywords:
 - custom controls [C#]
 - user controls [Windows Forms], creating with Visual C#
@@ -8,43 +10,44 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 1de1ff4147ddb8cb3316795aefd38622de205a73
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: d1af6c0e013f82569eed8d085df0249f4fb991bb
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950057"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015686"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Passo a passo: Criando um controle composto com o Visual C\#
+# <a name="walkthrough-author-a-composite-control-with-c"></a>Passo a passo: Criar um controle composto com C\#
 
 Os controles de composição fornecem um meio pelo qual as interfaces gráficas personalizadas podem ser criadas e reutilizadas. Basicamente, um controle de composição é um componente com uma representação visual. Assim, ele pode consistir em um ou mais controles, componentes ou blocos de código dos Windows Forms que podem estender a funcionalidade ao validar a entrada do usuário, modificar propriedades de exibição ou executar outras tarefas exigidas pelo autor. Os controles de composição podem ser colocados nos Windows Forms da mesma maneira que outros controles. Na primeira parte deste passo a passo, você cria um controle de composição simples chamado `ctlClock`. Na segunda parte do passo a passo, você estende a funcionalidade de `ctlClock` por meio da herança.
 
-## <a name="creating-the-project"></a>Criando o Projeto
+## <a name="create-the-project"></a>Criar o projeto
 
 Ao criar um novo projeto, você especifica seu nome para definir o namespace raiz, o nome do assembly e o nome do projeto e garante que o componente padrão estará no namespace correto.
 
 ### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>Para criar a biblioteca de controles de ctlClockLib e o controle ctlClock
 
-1. No menu **Arquivo**, aponte para **Novo** e clique em **Projeto** para abrir a caixa de diálogo **Novo Projeto**.
-
-2. Na lista de projetos visuais C# , selecione o modelo de projeto **Windows Forms biblioteca de controle** , `ctlClockLib` digite na caixa **nome** e clique em **OK**.
+1. No Visual Studio, crie um novo projeto de **biblioteca de controle Windows Forms** e nomeie-o **ctlClockLib**.
 
      O nome do projeto, `ctlClockLib`, também é atribuído ao namespace raiz por padrão. O namespace raiz é usado para qualificar os nomes dos componentes no assembly. Por exemplo, se dois assemblies fornecem componentes chamados `ctlClock`, será possível especificar o componente `ctlClock` usando `ctlClockLib.ctlClock.`
 
-3. No Gerenciador de Soluções, clique com o botão direito do mouse em **UserControl1.cs** e, em seguida, clique em **Renomear**. Altere o nome de arquivo para `ctlClock.cs`. Clique no botão **Sim** quando solicitado se deseja renomear todas as referências ao elemento de código “UserControl1”.
+2. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **UserControl1.cs**e clique em Renomear. Altere o nome de arquivo para `ctlClock.cs`. Clique no botão **Sim** quando solicitado se deseja renomear todas as referências ao elemento de código “UserControl1”.
 
     > [!NOTE]
     > Por padrão, um controle composto é herdado <xref:System.Windows.Forms.UserControl> da classe fornecida pelo sistema. A <xref:System.Windows.Forms.UserControl> classe fornece a funcionalidade exigida por todos os controles de composição e implementa métodos e propriedades padrão.
 
-4. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.
+3. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.
 
-## <a name="adding-windows-controls-and-components-to-the-composite-control"></a>Adicionando controles e componentes do Windows ao controle de composição
+## <a name="add-windows-controls-and-components-to-the-composite-control"></a>Adicionar controles e componentes do Windows ao controle composto
 
 Uma interface visual é uma parte essencial do controle de composição. Essa interface visual é implementada pela adição de um ou mais controles do Windows à superfície do designer. Na demonstração a seguir, você incorporará controles do Windows no controle de composição e escreverá um código para implementar a funcionalidade.
 
 ### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>Para adicionar um Rótulo e um Temporizador ao controle de composição
 
-1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClock.cs** e, em seguida, clique em **Exibir Designer**.
+1. No **Gerenciador de soluções**, clique com o botão direito do mouse em **ctlClock.cs**e clique em **Designer de exibição**.
 
 2. Na **Caixa de Ferramentas**, expanda o nó **Controles Comuns** e clique duas vezes em **Rótulo**.
 
@@ -89,13 +92,13 @@ Uma interface visual é uma parte essencial do controle de composição. Essa in
 
 9. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.
 
-## <a name="adding-properties-to-the-composite-control"></a>Adicionando propriedades ao controle de composição
+## <a name="add-properties-to-the-composite-control"></a>Adicionar propriedades ao controle composto
 
 O controle de relógio agora encapsula um <xref:System.Windows.Forms.Label> controle e um <xref:System.Windows.Forms.Timer> componente, cada um com seu próprio conjunto de propriedades inerentes. Embora as propriedades individuais desses controles não estejam acessíveis aos próximos usuários do controle, você poderá criar e expor propriedades personalizadas, escrevendo os blocos de código apropriados. No procedimento a seguir, você adicionará propriedades ao controle que permitem ao usuário alterar a cor da tela de fundo e do texto.
 
 ### <a name="to-add-a-property-to-your-composite-control"></a>Para adicionar uma propriedade ao controle de composição
 
-1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClock.cs** e, em seguida, clique em **Exibir Código**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **ctlClock.cs**e clique em **Exibir código**.
 
      O **Editor de Código** do controle é aberto.
 
@@ -108,7 +111,7 @@ O controle de relógio agora encapsula um <xref:System.Windows.Forms.Label> cont
 
      Essas instruções criam as variáveis particulares que você usará para armazenar os valores para as propriedades que está prestes a criar.
 
-3. Digite o código a seguir abaixo das declarações de variáveis da etapa 2.
+3. Insira ou cole o código a seguir sob as declarações de variável da etapa 2.
 
     ```csharp
     // Declares the name and type of the property.
@@ -146,25 +149,25 @@ O controle de relógio agora encapsula um <xref:System.Windows.Forms.Label> cont
 
 4. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.
 
-## <a name="testing-the-control"></a>Testando o controle
+## <a name="test-the-control"></a>Testar o controle
 
 Controles não são aplicativos autônomos; eles devem ser hospedados em um contêiner. Teste o comportamento do tempo de execução do controle e exerça suas propriedades com o **Contêiner de Teste de UserControl**. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
 
 ### <a name="to-test-your-control"></a>Para testar o controle
 
-1. Pressione F5 para compilar o projeto e execute seu controle no **Contêiner de Teste de UserControl**.
+1. Pressione **F5** para compilar o projeto e executar o controle no **contêiner de teste do UserControl**.
 
 2. Na grade de propriedades do contêiner de teste, localize a propriedade `ClockBackColor` e, em seguida, selecione a propriedade para exibir a paleta de cores.
 
 3. Escolha uma cor clicando nela.
 
-     A cor da tela de fundo do controle é alterada para a cor selecionada.
+   A cor da tela de fundo do controle é alterada para a cor selecionada.
 
 4. Use uma sequência semelhante de eventos para verificar se a propriedade `ClockForeColor` está funcionando como esperado.
 
-     Nesta seção e nas seções anteriores, você viu como os componentes e controles do Windows podem ser combinados com um código e empacotamento para fornecer funcionalidade personalizada na forma de um controle de composição. Você aprendeu a expor as propriedades no controle de composição e a testar o controle após sua conclusão. Na próxima seção, você aprenderá a construir um controle de composição herdado usando `ctlClock` como base.
+   Nesta seção e nas seções anteriores, você viu como os componentes e controles do Windows podem ser combinados com um código e empacotamento para fornecer funcionalidade personalizada na forma de um controle de composição. Você aprendeu a expor as propriedades no controle de composição e a testar o controle após sua conclusão. Na próxima seção, você aprenderá a construir um controle de composição herdado usando `ctlClock` como base.
 
-## <a name="inheriting-from-a-composite-control"></a>Herdando de um controle de composição
+## <a name="inherit-from-a-composite-control"></a>Herdar de um controle composto
 
 Nas seções anteriores, você aprendeu a combinar controles, componentes e código do Windows em controles de composição reutilizáveis. O controle de composição agora pode ser usado como base para a criação de outros controles. O processo de derivação de classe de uma classe base é chamado *herança*. Nesta seção, você criará um controle de composição chamado `ctlAlarmClock`. Esse controle será derivado de seu controle pai, `ctlClock`. Você aprenderá a estender a funcionalidade de `ctlClock`, substituindo métodos pai e adicionando novos métodos e novas propriedades.
 
@@ -172,7 +175,7 @@ A primeira etapa na criação de um controle herdado é derivá-lo de seu pai. E
 
 ### <a name="to-create-the-inherited-control"></a>Para criar o controle herdado
 
-1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClockLib**, aponte para **Adicionar** e, em seguida, clique em **Controle de Usuário**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **ctlClockLib**, aponte para **Adicionar**e clique em **controle de usuário**.
 
      A caixa de diálogo **Adicionar Novo Item** é aberta.
 
@@ -184,18 +187,18 @@ A primeira etapa na criação de um controle herdado é derivá-lo de seu pai. E
 
 4. Em **Nome do Componente**, clique duas vezes em **ctlClock**.
 
-5. No Gerenciador de Soluções, procure os projetos atuais.
+5. Em **Gerenciador de soluções**, navegue pelos projetos atuais.
 
     > [!NOTE]
     > Um arquivo chamado **ctlAlarmClock.cs** foi adicionado ao projeto atual.
 
-### <a name="adding-the-alarm-properties"></a>Adicionando as propriedades de alarme
+### <a name="add-the-alarm-properties"></a>Adicionar as propriedades do alarme
 
 As propriedades são adicionadas a um controle herdado da mesma forma que são adicionadas a um controle de composição. Agora você usará a sintaxe de declaração de propriedade para adicionar duas propriedades ao controle: `AlarmTime`, que armazenará o valor de data e hora em que o alarme será acionado e `AlarmSet`, que indicará se o alarme está definido.
 
 #### <a name="to-add-properties-to-your-composite-control"></a>Para adicionar propriedades ao controle de composição
 
-1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock** e, em seguida, clique em **Exibir Código**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **ctlAlarmClock**e clique em **Exibir código**.
 
 2. Localize a instrução `public class`. Observe que o controle herda de `ctlClockLib.ctlClock`. Sob a chave de abertura (instrução `{)`, digite o código a seguir.
 
@@ -228,13 +231,13 @@ As propriedades são adicionadas a um controle herdado da mesma forma que são a
     }
     ```
 
-### <a name="adding-to-the-graphical-interface-of-the-control"></a>Fazendo adições à interface gráfica do controle
+### <a name="add-to-the-graphical-interface-of-the-control"></a>Adicionar à interface gráfica do controle
 
 O controle herdado tem uma interface visual que é idêntica ao controle do qual ele é herdado. Ele contém os mesmos controles constituintes que seu controle pai, mas as propriedades dos controles constituintes só estarão disponíveis se forem especificamente expostas. Você pode fazer adições à interface gráfica de um controle de composição herdado da mesma maneira como faria com qualquer controle de composição. Para continuar fazendo adições à interface visual do despertador, você adicionará um controle de rótulo que piscará quando o alarme estiver soando.
 
 #### <a name="to-add-the-label-control"></a>Para adicionar o controle de rótulo
 
-1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock** e, em seguida, clique em **Exibir Designer**.
+1. No **Gerenciador de soluções**, clique com o botão direito do mouse em **ctlAlarmClock**e clique em **Designer de exibição**.
 
      O designer de `ctlAlarmClock` é aberto na janela principal.
 
@@ -257,7 +260,7 @@ O controle herdado tem uma interface visual que é idêntica ao controle do qual
     |**TextAlign**|`MiddleCenter`|
     |**Visível**|`false`|
 
-### <a name="adding-the-alarm-functionality"></a>Adicionando a funcionalidade de alarme
+### <a name="add-the-alarm-functionality"></a>Adicionar a funcionalidade de alarme
 
 Nos procedimentos anteriores, você adicionou propriedades e um controle que habilitarão a funcionalidade de alarme do controle de composição. Neste procedimento, você adicionará um código para comparar a hora atual com a hora do alarme e, se forem iguais, elas piscarão um alarme. Ao substituir o método `timer1_Tick` de `ctlClock` e adicionar um código adicional a ele, você estenderá a funcionalidade de `ctlAlarmClock` ao mesmo tempo que reterá todas as funcionalidades inerentes de `ctlClock`.
 
@@ -317,7 +320,7 @@ Nos procedimentos anteriores, você adicionou propriedades e um controle que hab
 
 #### <a name="to-implement-the-shutoff-method"></a>Para implementar o método de desligamento
 
-1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock.cs** e, em seguida, clique em **Exibir Designer**.
+1. No **Gerenciador de soluções**, clique com o botão direito do mouse em **ctlAlarmClock.cs**e clique em **Designer de exibição**.
 
      O designer será aberto.
 
@@ -346,21 +349,21 @@ Nos procedimentos anteriores, você adicionou propriedades e um controle que hab
 
 5. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.
 
-### <a name="using-the-inherited-control-on-a-form"></a>Usando o controle herdado em um formulário
+### <a name="use-the-inherited-control-on-a-form"></a>Usar o controle herdado em um formulário
 
-Você pode testar seu controle herdado da mesma maneira que testou o controle de classe `ctlClock`base,: Pressione F5 para compilar o projeto e execute seu controle no **Contêiner de Teste de UserControl**. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
+Você pode testar seu controle herdado da mesma maneira que testou o controle de classe `ctlClock`base,: Pressione **F5** para compilar o projeto e executar o controle no **contêiner de teste do UserControl**. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
 
 Para colocar o controle em funcionamento, você precisará hospedá-lo em um formulário. Assim como ocorre com um controle de composição padrão, um controle de composição herdado não pode ser autônomo e deve ser hospedado em um formulário ou em outro contêiner. Já que `ctlAlarmClock` tem uma profundidade maior de funcionalidade, um código adicional é necessário para testá-lo. Neste procedimento, você escreverá um programa simples para testar a funcionalidade de `ctlAlarmClock`. Você escreverá um código para definir e exibir a propriedade `AlarmTime` de `ctlAlarmClock` e testará suas funções inerentes.
 
 #### <a name="to-build-and-add-your-control-to-a-test-form"></a>Para criar e adicionar o controle a um formulário de teste
 
-1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClockLib** e, em seguida, clique em **Compilar**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **ctlClockLib**e clique em **Compilar**.
 
-2. Adicione um novo projeto **Aplicativo do Windows** à solução e nomeie-o `Test`.
+2. Adicione um novo projeto de **aplicativo do Windows** à solução e nomeie-o como **Test**.
 
-3. Em Gerenciador de Soluções, clique com o botão direito do mouse no nó **Referências** para seu projeto de teste. Clique em **Adicionar referência** para exibir a caixa de diálogo **Adicionar referência**. Clique na guia rotulada como **Projetos**. O projeto `ctlClockLib` estará listado em **Nome do Projeto**. Clique duas vezes no projeto para adicionar a referência ao projeto de teste.
+3. Em **Gerenciador de soluções**, clique com o botão direito do mouse no nó **referências** para seu projeto de teste. Clique em **Adicionar referência** para exibir a caixa de diálogo **Adicionar referência**. Clique na guia rotulada como **Projetos**. O projeto `ctlClockLib` estará listado em **Nome do Projeto**. Clique duas vezes no projeto para adicionar a referência ao projeto de teste.
 
-4. No Gerenciador de Soluções, clique com o botão direito do mouse em **Testar** e, em seguida, clique em **Compilar**.
+4. No **Gerenciador de soluções**, clique com o botão direito do mouse em **teste**e clique em **Compilar**.
 
 5. Na **Caixa de Ferramentas**, expanda o nó **Componentes de ctlClockLib**.
 
@@ -395,7 +398,7 @@ Para colocar o controle em funcionamento, você precisará hospedá-lo em um for
     }
     ```
 
-12. No Gerenciador de Soluções, clique com o botão direito do mouse em **Testar** e, em seguida, clique em **Definir como Projeto de Inicialização**.
+12. No **Gerenciador de soluções**, clique com o botão direito do mouse em **teste**e clique em **definir como projeto de inicialização**.
 
 13. No menu **Depuração**, clique em **Iniciar Depuração**.
 
@@ -409,7 +412,7 @@ Para colocar o controle em funcionamento, você precisará hospedá-lo em um for
 
 16. Desligue o alarme clicando em `btnAlarmOff`. Agora você pode redefinir o alarme.
 
-     Este passo a passo abordou alguns dos principais conceitos. Você aprendeu a criar um controle de composição, combinando controles e componentes em um contêiner de controle de composição. Você aprendeu a adicionar propriedades ao controle e a escrever um código para implementar a funcionalidade personalizada. Na última seção, você aprendeu a estender a funcionalidade de determinado controle de composição por meio da herança e a alterar a funcionalidade dos métodos do host ao substituí-los.
+Este artigo abordou vários conceitos importantes. Você aprendeu a criar um controle de composição, combinando controles e componentes em um contêiner de controle de composição. Você aprendeu a adicionar propriedades ao controle e a escrever um código para implementar a funcionalidade personalizada. Na última seção, você aprendeu a estender a funcionalidade de determinado controle de composição por meio da herança e a alterar a funcionalidade dos métodos do host ao substituí-los.
 
 ## <a name="see-also"></a>Consulte também
 

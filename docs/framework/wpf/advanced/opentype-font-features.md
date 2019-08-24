@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933682"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016136"
 ---
 # <a name="opentype-font-features"></a>Recursos de fonte OpenType
 
@@ -22,7 +22,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Formato de fonte OpenType  
- O formato de fonte OpenType é uma extensão do [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato de fonte, adicionando suporte para dados de fonte PostScript. O formato de fonte OpenType foi desenvolvido em conjunto [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] pelo e pela Adobe Corporation. As fontes OpenType e os serviços do sistema operacional que dão suporte a fontes OpenType fornecem aos usuários uma maneira simples de instalar e usar fontes, [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] quer as fontes contenham contornos ou contornos de CFF (PostScript).  
+ O formato de fonte OpenType é uma extensão do [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato de fonte, adicionando suporte para dados de fonte PostScript. O formato de fonte OpenType foi desenvolvido em conjunto pela Microsoft e pela Adobe Corporation. As fontes OpenType e os serviços do sistema operacional que dão suporte a fontes OpenType fornecem aos usuários uma maneira simples de instalar e usar fontes, [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] quer as fontes contenham contornos ou contornos de CFF (PostScript).  
   
  O formato de fonte OpenType aborda os seguintes desafios de desenvolvedor:  
   

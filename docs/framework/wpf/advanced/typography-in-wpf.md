@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: b4ae0d03c0207413d826e62de1d157f938b4d775
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545241"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016123"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem qualidade e desempenho aprimorados de renderização de texto, suporte a tipografia OpenType, texto internacional aprimorado, suporte avançado a fontes e novas APIs (interfaces de programação de aplicativo) de texto.  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Melhor qualidade e desempenho de texto  
- O texto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no é renderizado usando o Microsoft ClearType, o que aumenta a clareza e a legibilidade do texto. O ClearType é uma tecnologia de software [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] desenvolvida pelo que melhora a legibilidade do texto em LCDs existentes (monitores Liquid Crystal), como telas de laptops, telas de Pocket PC e monitores de tela plana. O ClearType usa renderização de sub-pixel, que permite que o texto seja exibido com uma maior fidelidade à sua forma verdadeira alinhando caracteres em uma parte fracionária de um pixel. A resolução extra aumenta a nitidez dos detalhes mínimos na exibição de texto, tornando a leitura por longos períodos muito mais fácil. Outra melhoria do ClearType no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é a suavização da direção y, que suaviza as partes superiores e inferiores das curvas superficiais em caracteres de texto. Para obter mais detalhes sobre os recursos de ClearType, consulte [visão geral de ClearType](cleartype-overview.md).  
+ O texto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no é renderizado usando o Microsoft ClearType, o que aumenta a clareza e a legibilidade do texto. O ClearType é uma tecnologia de software desenvolvida pela Microsoft que melhora a legibilidade do texto em LCDs existentes (monitores Liquid Crystal), como telas de laptops, telas de Pocket PC e monitores de tela plana. O ClearType usa renderização de sub-pixel, que permite que o texto seja exibido com uma maior fidelidade à sua forma verdadeira alinhando caracteres em uma parte fracionária de um pixel. A resolução extra aumenta a nitidez dos detalhes mínimos na exibição de texto, tornando a leitura por longos períodos muito mais fácil. Outra melhoria do ClearType no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é a suavização da direção y, que suaviza as partes superiores e inferiores das curvas superficiais em caracteres de texto. Para obter mais detalhes sobre os recursos de ClearType, consulte [visão geral de ClearType](cleartype-overview.md).  
   
  ![Texto com suavização de direção y ClearType](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Texto com suavização da direção y do ClearType  
@@ -29,7 +29,7 @@ Texto com suavização da direção y do ClearType
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Tipografia rica  
- O formato de fonte OpenType é uma extensão do [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato de fonte. O formato de fonte OpenType foi desenvolvido em conjunto [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] pelo e pela Adobe e fornece uma variedade avançada de recursos tipográficos avançados. O <xref:System.Windows.Documents.Typography> objeto expõe muitos dos recursos avançados de fontes OpenType, como alternativas estilísticos e traços violentos. O SDK do Windows fornece um conjunto de fontes OpenType de exemplo que são projetadas com recursos avançados, como as fontes Pericles e Pescadero. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
+ O formato de fonte OpenType é uma extensão do [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato de fonte. O formato de fonte OpenType foi desenvolvido em conjunto pela Microsoft e pela Adobe e fornece uma variedade avançada de recursos tipográficos avançados. O <xref:System.Windows.Documents.Typography> objeto expõe muitos dos recursos avançados de fontes OpenType, como alternativas estilísticos e traços violentos. O SDK do Windows fornece um conjunto de fontes OpenType de exemplo que são projetadas com recursos avançados, como as fontes Pericles e Pescadero. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
   
  A fonte OpenType de Pericles contém glifos adicionais que fornecem alternativas estilísticos ao conjunto padrão de glifos. O texto a seguir exibe glifos alternativos estilísticos.  
   
